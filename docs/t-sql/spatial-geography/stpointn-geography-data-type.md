@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPointN method
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15a196cf9ac1c5f560a2eeee3d0262829f88480b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 26a3974bfb122bcd44de25ba1a82cae6caba7e9b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
  Abra o tipo Geospatial Consortium (OGC): **ponto**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um **geografia** instância é criada pelo usuário, STPointN() retorna o ponto especificado por *expressão* ordenando os pontos na ordem em que eles foram originalmente de entrada.  
   
  Se um **geografia** instância é criada pelo sistema, STPointN() retorna o ponto especificado por *expressão* ordenando todos os pontos na mesma ordem, eles seriam saída: primeiro por  **Geografia** instância, depois pelo anel dentro da instância (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  
@@ -74,7 +73,6 @@ SELECT @g.STPointN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

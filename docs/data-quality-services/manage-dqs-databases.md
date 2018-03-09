@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cda0e712bd4473972c1beb0afc6c530a6d48ef1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61bdf391348154a3b395c5934ab7b60173f4eb47
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
   Esta seção fornece informações sobre as atividades de gerenciamento de banco de dados que podem ser executadas nos bancos de dados DQS como backup/restauração ou anexar/desanexar.  
@@ -53,14 +53,14 @@ ms.lasthandoff: 11/20/2017
   
  Para obter informações detalhadas sobre ideias a serem consideradas antes e durante a desanexação e anexação de bancos de dados no SQL Server, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como fazer backup e restaurar os bancos de dados do DQS.|[Fazer backup e restaurar banco de dados do DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Descreve como desanexar e anexar bancos de dados DQS.|[Desanexar e anexar bancos de dados do DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do DQS](../data-quality-services/dqs-administration.md)  
   
   

@@ -5,26 +5,27 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 626dbf4181d8d7ca9f5712f18d916f50888722ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a4f0340f6592e6298eb8392a03ea3fa971edd92
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma hierarquia recursiva é uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio com base na própria entidade.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Hierarquias recursivas não podem incluir relações circulares. Por exemplo, Katherine não poderá ser o gerente de Sandeep se Sandeep for o gerente dela. Katherine também não pode ser gerente de si mesma.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

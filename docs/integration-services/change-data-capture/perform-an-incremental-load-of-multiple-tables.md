@@ -1,5 +1,5 @@
 ---
-title: "Executar uma carga Incremental de várias tabelas | Microsoft Docs"
+title: "Executar uma carga incremental de várias tabelas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2ab0d346d48abf673dc783f0ff18ae781190fcae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Executar uma carga incremental de várias tabelas
   No tópico [Melhorando cargas incrementais com o Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), o diagrama ilustra um pacote básico que executa uma carga incremental em apenas uma tabela. No entanto, carregar uma tabela não é tão comum quanto ter que realizar uma carga incremental de diversas tabelas.  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/03/2017
          Para obter um exemplo de como usar essa transformação para aplicar atualizações e exclusões, consulte [Aplicar as alterações ao destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
   
-

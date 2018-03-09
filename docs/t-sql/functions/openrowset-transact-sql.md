@@ -27,17 +27,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c23ec85299af595305a5f6d5141dbbf3ffab96d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -224,7 +223,7 @@ FIELDQUOTE  **=**  'field_quote'
 Especifica um caractere que será usado como o caractere de aspas no arquivo CSV. Se não for especificado, o caractere de aspas (") será usado como o caractere de aspas conforme definido no [RFC 4180](https://tools.ietf.org/html/rfc4180) padrão.
 
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `OPENROWSET`pode ser usado para acessar dados remotos de fontes OLE DB dados somente quando o **DisallowAdhocAccess** opção do registro é definida explicitamente como 0 para o provedor especificado, e é a consultas distribuídas Ad Hoc opção de configuração avançada habilitado. Quando essas opções não estão definidas, o comportamento padrão não permite acesso ad hoc.  
   
  No acesso a fontes de dados OLE DB remotas, a identidade de logon das conexões confiáveis não são delegadas automaticamente do servidor no qual o cliente é conectado ao servidor que está sendo consultado. A delegação de autenticação deve ser configurada.  
@@ -284,7 +283,7 @@ Especifica um caractere que será usado como o caractere de aspas no arquivo CSV
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Usando OPENROWSET com SELECT e o provedor OLE DB SQL Server Native Client  
  O exemplo a seguir usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB para acessar o `HumanResources.Department` tabela o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados no servidor remoto `Seattle1`. (Use SQLNCLI, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará o redirecionamento para a última versão do provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Uma instrução `SELECT` é usada para definir o conjunto de linhas retornado. A cadeia de caracteres de provedor contém as palavras-chave `Server` e `Trusted_Connection`. Essas palavras-chave reconhecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client.  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -298,7 +297,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  Este exemplo pressupõe que o Access esteja instalado. Para executar este exemplo, é necessário instalar o banco de dados Northwind.  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -312,7 +311,7 @@ GO
 > [!NOTE]  
 >  Este exemplo pressupõe que o Access esteja instalado. Para executar este exemplo, é necessário instalar o banco de dados Northwind.  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -327,7 +326,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Usando OPENROWSET para inserir dados de arquivo em massa em uma coluna varbinary(max)  
  O exemplo a seguir cria uma pequena tabela a título de demonstração e insere dados de um arquivo denominado `Text1.txt`, localizado no diretório raiz `C:`, em uma coluna `varbinary(max)`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -344,7 +343,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Usando o provedor OPENROWSET BULK com um arquivo de formato para recuperar linhas de um arquivo de texto  
  O exemplo a seguir usa um arquivo de formato para recuperar linhas de um arquivo de texto delimitado por tabulação, `values.txt`, que contém os seguintes dados:  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -352,7 +351,7 @@ GO
   
  O arquivo de formato `values.fmt` descreve as colunas em `values.txt`:  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -361,7 +360,7 @@ GO
   
  Eis a consulta que recupera esses dados:  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -369,14 +368,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Especificar uma página de arquivo e o código de formato  
  O exemplo a seguir mostram como usar ambas as os formato de arquivo e código de página Opções ao mesmo tempo.  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. Acesso a dados de um arquivo CSV com um arquivo de formato  
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -386,7 +385,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Acesso a dados de um arquivo CSV sem um arquivo de formato
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -396,7 +395,7 @@ SELECT * FROM OPENROWSET(
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 O exemplo a seguir usa uma fonte de dados externa que aponta para um contêiner em uma conta de armazenamento do Azure e uma credencial no escopo do banco de dados criado para uma assinatura de acesso compartilhado.     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -423,7 +422,7 @@ Para concluir `OPENROWSET` exemplos, incluindo a configuração de credencial e 
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
@@ -438,4 +437,3 @@ Para concluir `OPENROWSET` exemplos, incluindo a configuração de credencial e 
  [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

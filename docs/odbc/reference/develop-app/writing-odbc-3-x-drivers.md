@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,100 +17,99 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>Drivers do gravação ODBC 3. x
 A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um aplicativo ODBC e o mapeamento executada pelo Gerenciador de Driver quando as funções são chamadas em relação a um ODBC 3. *x* driver.  
   
 |Função|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> driver?|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> aplicativo?|Mapeado/com suporte<br /><br /> Por que o ODBC 3. *x*<br /><br /> Gerenciador de driver para<br /><br /> um ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|Não|Nenhum [1]|Sim|  
-|**SQLAllocEnv**|Não|Nenhum [1]|Sim|  
-|**SQLAllocHandle**|Sim|Sim|Não|  
-|**SQLAllocStmt**|Não|Nenhum [1]|Sim|  
-|**SQLBindCol**|Sim|Sim|Não|  
-|**SQLBindParam**|Não|Sim [2]|Sim|  
-|**SQLBindParameter**|Sim|Sim|Não|  
-|**SQLBrowseConnect**|Sim|Sim|Não|  
-|**SQLBulkOperations**|Sim|Sim|Não|  
-|**SQLCancel**|Sim|Sim|Não|  
-|**SQLCloseCursor**|Sim|Sim|Não|  
-|**SQLColAttribute**|Sim|Sim|Não|  
-|**SQLColAttributes**|Nenhum [3]|Não|Sim|  
-|**SQLColumnPrivileges**|Sim|Sim|Não|  
-|**SQLColumns**|Sim|Sim|Não|  
-|**SQLConnect**|Sim|Sim|Não|  
+|**SQLAllocConnect**|não|Nenhum [1]|Sim|  
+|**SQLAllocEnv**|não|Nenhum [1]|Sim|  
+|**SQLAllocHandle**|Sim|Sim|não|  
+|**SQLAllocStmt**|não|Nenhum [1]|Sim|  
+|**SQLBindCol**|Sim|Sim|não|  
+|**SQLBindParam**|não|Sim [2]|Sim|  
+|**SQLBindParameter**|Sim|Sim|não|  
+|**SQLBrowseConnect**|Sim|Sim|não|  
+|**SQLBulkOperations**|Sim|Sim|não|  
+|**SQLCancel**|Sim|Sim|não|  
+|**SQLCloseCursor**|Sim|Sim|não|  
+|**SQLColAttribute**|Sim|Sim|não|  
+|**SQLColAttributes**|Nenhum [3]|não|Sim|  
+|**SQLColumnPrivileges**|Sim|Sim|não|  
+|**SQLColumns**|Sim|Sim|não|  
+|**SQLConnect**|Sim|Sim|não|  
 |**SQLCopyDesc**|Sim|Sim|Sim [4]|  
-|**SQLDataSources**|Não|Sim|Sim|  
-|**SQLDescribeCol**|Sim|Sim|Não|  
-|**SQLDescribeParam**|Sim|Sim|Não|  
-|**SQLDisconnect**|Sim|Sim|Não|  
-|**SQLDriverConnect**|Sim|Sim|Não|  
-|**SQLDrivers**|Não|Sim|Sim|  
-|**SQLEndTran**|Sim|Sim|Não|  
-|**SQLError**|Não|Nenhum [1]|Sim|  
-|**SQLExecDirect**|Sim|Sim|Não|  
-|**SQLExecute**|Sim|Sim|Não|  
-|**SQLExtendedFetch**|Sim|Não|Não|  
-|**SQLFetch**|Sim|Sim|Não|  
-|**SQLFetchScroll**|Sim|Sim|Não|  
-|**SQLForeignKeys**|Sim|Sim|Não|  
-|**SQLFreeConnect**|Não|Sim [1]|Sim|  
-|**SQLFreeEnv**|Não|Sim [1]|Sim|  
-|**SQLFreeHandle**|Sim|Sim|Não|  
-|**SQLFreeStmt**|Sim|Sim|Não|  
-|**SQLGetConnectAttr**|Sim|Sim|Não|  
+|**SQLDataSources**|não|Sim|Sim|  
+|**SQLDescribeCol**|Sim|Sim|não|  
+|**SQLDescribeParam**|Sim|Sim|não|  
+|**SQLDisconnect**|Sim|Sim|não|  
+|**SQLDriverConnect**|Sim|Sim|não|  
+|**SQLDrivers**|não|Sim|Sim|  
+|**SQLEndTran**|Sim|Sim|não|  
+|**SQLError**|não|Nenhum [1]|Sim|  
+|**SQLExecDirect**|Sim|Sim|não|  
+|**SQLExecute**|Sim|Sim|não|  
+|**SQLExtendedFetch**|Sim|não|não|  
+|**SQLFetch**|Sim|Sim|não|  
+|**SQLFetchScroll**|Sim|Sim|não|  
+|**SQLForeignKeys**|Sim|Sim|não|  
+|**SQLFreeConnect**|não|Sim [1]|Sim|  
+|**SQLFreeEnv**|não|Sim [1]|Sim|  
+|**SQLFreeHandle**|Sim|Sim|não|  
+|**SQLFreeStmt**|Sim|Sim|não|  
+|**SQLGetConnectAttr**|Sim|Sim|não|  
 |**SQLGetConnectOption**|Nenhum [5]|Nenhum [1]|Sim|  
-|**SQLGetCursorName**|Sim|Sim|Não|  
-|**SQLGetData**|Sim|Sim|Não|  
-|**SQLGetDescField**|Sim|Sim|Não|  
-|**SQLGetDescRec**|Sim|Sim|Não|  
-|**SQLGetDiagField**|Sim|Sim|Não|  
-|**SQLGetDiagRec**|Sim|Sim|Não|  
-|**SQLGetEnvAttr**|Sim|Sim|Não|  
+|**SQLGetCursorName**|Sim|Sim|não|  
+|**SQLGetData**|Sim|Sim|não|  
+|**SQLGetDescField**|Sim|Sim|não|  
+|**SQLGetDescRec**|Sim|Sim|não|  
+|**SQLGetDiagField**|Sim|Sim|não|  
+|**SQLGetDiagRec**|Sim|Sim|não|  
+|**SQLGetEnvAttr**|Sim|Sim|não|  
 |**SQLGetFunctions**|Nenhum [6]|Sim|Sim|  
-|**SQLGetInfo**|Sim|Sim|Não|  
-|**SQLGetStmtAttr**|Sim|Sim|Não|  
+|**SQLGetInfo**|Sim|Sim|não|  
+|**SQLGetStmtAttr**|Sim|Sim|não|  
 |**SQLGetStmtOption**|Nenhum [5]|Nenhum [1]|Sim|  
-|**SQLGetTypeInfo**|Sim|Sim|Não|  
-|**SQLMoreResults**|Sim|Sim|Não|  
-|**SQLNativeSql**|Sim|Sim|Não|  
-|**SQLNumParams**|Sim|Sim|Não|  
-|**SQLNumResultCols**|Sim|Sim|Não|  
-|**SQLParamData**|Sim|Sim|Não|  
-|**Para SQLParamOptions**|Não|Não|Sim|  
-|**SQLPrepare**|Sim|Sim|Não|  
-|**SQLPrimaryKeys**|Sim|Sim|Não|  
-|**SQLProcedureColumns**|Sim|Sim|Não|  
-|**SQLProcedures**|Sim|Sim|Não|  
-|**SQLPutData**|Sim|Sim|Não|  
-|**SQLRowCount**|Sim|Sim|Não|  
-|**SQLSetConnectAttr**|Sim|Sim|Não|  
+|**SQLGetTypeInfo**|Sim|Sim|não|  
+|**SQLMoreResults**|Sim|Sim|não|  
+|**SQLNativeSql**|Sim|Sim|não|  
+|**SQLNumParams**|Sim|Sim|não|  
+|**SQLNumResultCols**|Sim|Sim|não|  
+|**SQLParamData**|Sim|Sim|não|  
+|**Para SQLParamOptions**|não|não|Sim|  
+|**SQLPrepare**|Sim|Sim|não|  
+|**SQLPrimaryKeys**|Sim|Sim|não|  
+|**SQLProcedureColumns**|Sim|Sim|não|  
+|**SQLProcedures**|Sim|Sim|não|  
+|**SQLPutData**|Sim|Sim|não|  
+|**SQLRowCount**|Sim|Sim|não|  
+|**SQLSetConnectAttr**|Sim|Sim|não|  
 |**SQLSetConnectOption**|Nenhum [5]|Nenhum [1]|Sim|  
-|**SQLSetCursorName**|Sim|Sim|Não|  
-|**SQLSetDescField**|Sim|Sim|Não|  
-|**SQLSetDescRec**|Sim|Sim|Não|  
-|**SQLSetEnvAttr**|Sim|Sim|Não|  
-|**SQLSetPos**|Sim|Sim|Não|  
-|**SQLSetParam**|Não|Não|Sim|  
-|**SQLSetScrollOption**|Sim|Sim|Não|  
-|**SQLSetStmtAttr**|Sim|Sim|Não|  
+|**SQLSetCursorName**|Sim|Sim|não|  
+|**SQLSetDescField**|Sim|Sim|não|  
+|**SQLSetDescRec**|Sim|Sim|não|  
+|**SQLSetEnvAttr**|Sim|Sim|não|  
+|**SQLSetPos**|Sim|Sim|não|  
+|**SQLSetParam**|não|não|Sim|  
+|**SQLSetScrollOption**|Sim|Sim|não|  
+|**SQLSetStmtAttr**|Sim|Sim|não|  
 |**SQLSetStmtOption**|Nenhum [5]|Nenhum [1]|Sim|  
-|**SQLSpecialColumns**|Sim|Sim|Não|  
-|**SQLStatistics**|Sim|Sim|Não|  
-|**SQLTablePrivileges**|Sim|Sim|Não|  
-|**SQLTables**|Sim|Sim|Não|  
-|**SQLTransact**|Não|Nenhum [1]|Sim|  
+|**SQLSpecialColumns**|Sim|Sim|não|  
+|**SQLStatistics**|Sim|Sim|não|  
+|**SQLTablePrivileges**|Sim|Sim|não|  
+|**SQLTables**|Sim|Sim|não|  
+|**SQLTransact**|não|Nenhum [1]|Sim|  
   
  [1] essa função foi preterida no ODBC 3. *x*. ODBC 3. *x* aplicativos não devem usar essa função. No entanto, um aplicativo compatível com ISO CLI ou o Open Group pode chamar essa função.  
   
@@ -124,4 +122,3 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
  [5] em determinadas circunstâncias, drivers talvez seja necessário dar suporte a essa função. Para obter mais informações, consulte a página de referência desta função.  
   
  [6], o driver pode escolher para dar suporte a **SQLGetFunctions** se o conjunto de funções que o driver dá suporte varia de uma conexão para a conexão.
-

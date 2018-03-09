@@ -2,10 +2,13 @@
 title: Elementos de sintaxe MDX (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -18,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9a98c63b23da676a8d84adbece9b722f949b13ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ed42f669cd9e78faa738e876b1872c83c98a790
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementos MDX Syntax (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   A linguagem MDX tem vários elementos que são usados por, ou influenciam, a maioria das instruções:  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 |[Palavras-chave reservadas](../mdx/reserved-keywords-mdx-syntax.md)|Palavras-chave reservadas são palavras reservadas para utilização do MDX e que não devem ser utilizadas para nomes de objetos usados em instruções MDX.|  
 |[Membros, tuplas e conjuntos](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)|Membros, tuplas e conjuntos são conceitos principais de dados multidimensionais que você deve compreender antes de criar uma consulta MDX.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões multidimensionais &#40; MDX &#41; Referência](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

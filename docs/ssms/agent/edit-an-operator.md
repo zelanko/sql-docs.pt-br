@@ -3,9 +3,13 @@ title: Editar um operador | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,18 +18,19 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e23fd7483965d019aaaae28dab95700f04abf74
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83987735d7aab91d623c5e5fd5cfd9072d68a417
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="edit-an-operator"></a>Editar um operador
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como editar a disponibilidade de operadores para o recebimento de notificações e seus endereços de email, pager e net send no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 **Neste tópico**  
@@ -69,7 +74,7 @@ Somente membros da função de servidor fixa **sysadmin** podem editar operadore
   
 4.  Clique com o botão direito do mouse no operador que você deseja editar e selecione **Propriedades**.  
   
-    Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo *operator_name***Propriedades** , consulte:  
+    Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo *operator_name***Propriedades*, consulte:  
   
     -   [Propriedades do operador – Novo operador &#40;página Geral&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

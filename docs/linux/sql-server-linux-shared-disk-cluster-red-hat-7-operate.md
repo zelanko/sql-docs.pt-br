@@ -3,28 +3,27 @@ title: Operar o cluster compartilhado do Red Hat Enterprise Linux para o SQL Ser
 description: "Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento descreve como fazer as seguintes tarefas para o SQL Server em um cluster de failover do disco compartilhado com o Red Hat Enterprise Linux.
 
@@ -42,7 +41,7 @@ O diagrama a seguir ilustra os componentes em um cluster do Linux com o SQL Serv
 
 ![Red Hat Enterprise Linux 7 compartilhado de Cluster de disco do SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obter mais detalhes sobre a configuração de cluster recurso agentes e opções de gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obter mais informações sobre a configuração de cluster recurso agentes e opções de gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Manualmente, o cluster de failover
 
@@ -74,7 +73,7 @@ Exibir o status em tempo real do cluster e recursos:
 sudo crm_mon 
 ```
 
-Exibir os logs de agente de recursos no`/var/log/cluster/corosync.log`
+Exibir os logs de agente de recursos no `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Adicionar um nó a um cluster
 
@@ -106,7 +105,7 @@ Exibir os logs de agente de recursos no`/var/log/cluster/corosync.log`
 
 1. Siga as instruções para montar o diretório de arquivo de banco de dados para o local compartilhado:
 
-   Do servidor NFS, instalar`nfs-utils`
+   Do servidor NFS, instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -185,7 +184,7 @@ Exibir os logs de agente de recursos no`/var/log/cluster/corosync.log`
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Os anúncios de exemplo a seguir um nó denominado **vm3** para o cluster.
+    O exemplo a seguir adiciona um nó denominado **vm3** para o cluster.
 
     ```bash
     sudo pcs    cluster auth  
@@ -225,7 +224,7 @@ PCSD deve estar em execução para usar `pcs` ferramentas.
 
 ### <a name="current-cluster-status"></a>Status atual do cluster 
 
-`sudo pcs status`Retorna informações básicas sobre o status de quorum, cluster, nós, recursos e daemon para cada nó. 
+`sudo pcs status` Retorna informações básicas sobre o status de quorum, cluster, nós, recursos e daemon para cada nó. 
 
 Um exemplo de uma saída de quorum Íntegro pacemaker seria:
 
@@ -254,9 +253,9 @@ pacemaker: active/enabled
 
 No exemplo, `partition with quorum` significa que um quorum de maioria de nós está online. Se o cluster perder um quorum de maioria de nós, `pcs status` retornará `partition WITHOUT quorum` e todos os recursos serão interrompidos. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Retorna o nome de todos os nós que está participando do cluster. Se não estiverem participando de todos os nós, `pcs status` retorna `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Retorna o nome de todos os nós que está participando do cluster. Se não estiverem participando de todos os nós, `pcs status` retorna `OFFLINE: [<nodename>]`.
 
-`PCSD Status`mostra o status de cada nó do cluster.
+`PCSD Status` mostra o status de cada nó do cluster.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Motivos pelos quais um nó pode estar offline
 
@@ -266,7 +265,7 @@ Verifique os itens a seguir quando um nó está offline.
 
     As seguintes portas precisam ser abertas em todos os nós para Pacemaker ser capaz de se comunicar.
     
-    - * * TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker ou Corosync serviços em execução**
 
@@ -281,5 +280,4 @@ Verifique os itens a seguir quando um nó está offline.
 ## <a name="next-steps"></a>Próximas etapas
 
 [Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

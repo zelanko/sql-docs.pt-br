@@ -3,7 +3,7 @@ title: "Cenário de publicação na Internet | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4595cb4cadc4ebf3a2599af3f228bc6d47aaacb0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0133ec4e0c30ee6bb2c3d43e46b9c0307a689e19
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internet-publishing-scenario"></a>Cenário de publicação na Internet
 Este exemplo de código demonstra como usar ADO com o Microsoft OLE DB Provider para publicação de Internet. Nesse cenário, você criará um aplicativo do Visual Basic que usa **registros**, **registro**, e **fluxo** objetos para exibir o conteúdo de recursos publicados com a provedor de publicação na Internet.  
@@ -45,4 +44,3 @@ Este exemplo de código demonstra como usar ADO com o Microsoft OLE DB Provider 
 ## <a name="see-also"></a>Consulte também  
  [Provedor Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [O Provedor OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
-

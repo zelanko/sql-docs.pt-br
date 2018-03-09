@@ -1,5 +1,5 @@
 ---
-title: "Página Selecionar variáveis | Microsoft Docs"
+title: "Página Selecionar Variáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98e0cdc9e81497aafb35ca3b0dfed662d06bac28
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e9effda4d820e17fd7adca9894b5500c27c8de2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-variables-page"></a>Página Selecionar Variáveis
   Use a caixa de diálogo **Selecionar variáveis** para selecionar uma ou mais variáveis para as propriedades **ReadOnlyVariables** e **ReadWriteVariables** ao configurar uma tarefa Script ou um componente Script.  
@@ -45,8 +44,7 @@ ms.lasthandoff: 08/03/2017
  **Tipo**  
  Especifica o tipo de dados de uma variável.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa script &#40; Script de página &#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da Tarefa Script &#40;Página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   
-

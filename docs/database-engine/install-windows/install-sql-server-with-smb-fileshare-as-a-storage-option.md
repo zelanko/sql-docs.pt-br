@@ -2,26 +2,31 @@
 title: Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 3b1f88c6df9ea20d8fb0b2b27dbd5e40d6c6dfa7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  

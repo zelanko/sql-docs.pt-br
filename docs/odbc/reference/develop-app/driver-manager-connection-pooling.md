@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>Pooling de Conexão de Gerenciador de driver
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecida para cada uso. Depois que uma conexão foi criado e colocado em um pool, um aplicativo pode reutilizar essa conexão sem executar o processo de conexão completa.  
@@ -48,7 +48,7 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
   
  Um driver deve implementar essa opção com eficiência, ou ele será prejudicar o desempenho do pool de conexão. Especificamente, uma chamada para obter esse atributo de conexão não deve causar uma viagem para o servidor. Em vez disso, um driver de apenas deve retornar o último estado de conexão. A conexão é inativa se o último processamento para o servidor falhou e não inativo se o último processamento foi bem-sucedida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma conexão foi perdida (relatada por SQL_ATTR_CONNECTION_DEAD), o Gerenciador de Driver ODBC destruirá essa conexão chamando SQLDisconnect no driver. Novas solicitações de conexão não podem localizar uma conexão utilizável no pool. Eventualmente o Gerenciador de Driver pode fazer uma nova conexão, supondo que o pool está vazio.  
   
  Para usar um pool de conexão, um aplicativo executa as seguintes etapas:  
@@ -87,7 +87,7 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
 ## <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver  
  Começando no Windows 8, um driver ODBC pode usar conexões no pool de forma mais eficiente. Para obter mais informações, consulte [Pooling de Conexão com reconhecimento de Driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectando a dados de um fonte ou Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pool no Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)

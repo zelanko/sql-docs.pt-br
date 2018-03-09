@@ -1,29 +1,28 @@
 ---
-title: "Agendar propriedades (página relatórios) | Microsoft Docs"
+title: "Propriedades do Agendamento (página Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/30/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.scheduleproperties.reports.f1
+f1_keywords: sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "23"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d71a539f9a04942d10a3ab802b60376bf15c2864
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 938b731ea379eb31a5cf1368087fdd2eda897385
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="schedule-properties-reports-page"></a>Propriedades da Agenda (página Relatórios)
   Use a página de propriedades de agenda do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para exibir uma lista de todos os relatórios que usam a agenda compartilhada específica. As agendas podem ser usadas para atualizar instantâneos de relatório, gerar histórico de relatório, engatilhar uma assinatura ou terminar uma cópia armazenada em cache do relatório. Para descobrir como a agenda é usada, exiba a propriedade e as informações de assinatura do relatório.  
@@ -49,13 +48,12 @@ ms.lasthandoff: 08/09/2017
  **Relatório**  
  Especifica o nome do relatório que usa a agenda.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir agendas](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Agendas](../../reporting-services/subscriptions/schedules.md)   
- [Servidor de relatório na Ajuda de F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Conectar a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configurar propriedades gerais de um relatório (Gerenciador de relatórios)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
-
 

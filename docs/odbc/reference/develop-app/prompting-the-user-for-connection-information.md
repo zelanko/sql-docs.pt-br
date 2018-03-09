@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Avisar o usuário para obter informações de Conexão
 Se o aplicativo usa **SQLConnect** e precisa solicitar ao usuário informações de conexão, como um nome de usuário e senha, ele deve fazer isso em si. Enquanto isso permite que o aplicativo controlar seu "aparência", ele pode forçar o aplicativo para conter código específico do driver. Isso ocorre quando o aplicativo deve solicitar ao usuário informações de conexão específicas do driver. Isso apresenta uma situação impossível para aplicativos genéricos, que são projetados para trabalhar com todos os drivers, incluindo drivers que não existem quando o aplicativo é escrito.  
@@ -57,4 +55,3 @@ DSN=XYZ Corp;
  Depois que o usuário seleciona uma fonte de dados, o Gerenciador de Driver constrói uma cadeia de caracteres de conexão especificando essa fonte de dados e passa para o driver. O driver pode pedir ao usuário informações adicionais necessárias.  
   
  As condições sob as quais o driver solicita ao usuário são controladas pelo *DriverCompletion* sinalizador; há opções para sempre solicitar, solicitar se necessário ou nunca perguntar. Para obter uma descrição completa desse sinalizador, consulte o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrição da função.
-

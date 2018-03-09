@@ -2,14 +2,13 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1a4bf1ffb2768e21c323fd8abc80c1e0706b7b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Data Mining)
-  Particiona a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e retorna métricas de precisão para cada partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Particiona a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e retorna métricas de precisão para cada partição.  
   
  **Observação** : esse procedimento armazenado só pode ser usado com uma estrutura de mineração que contém pelo menos um modelo de clustering. Para validação cruzada de modelos que não são de clustering, você deve usar [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -106,7 +105,7 @@ SystemGetClusterCrossValidationResults(
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo do valor previsível. Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Value|O valor da medida de teste especificada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para retornar métricas de precisão para o conjunto de dados completo, use [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
  Além disso, se o modelo de mineração já tiver sido dividido em dobras, você poderá ignorar o processamento e retornar somente os resultados da validação cruzada usando [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -131,7 +130,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||1|3025|Clustering|Probabilidade de caso|0.930524511864121|  
 |Cluster 1|||2|3025|Clustering|Probabilidade de caso|0.919184178430778|  
@@ -147,7 +146,6 @@ CALL SystemGetClusterCrossValidationResults(
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

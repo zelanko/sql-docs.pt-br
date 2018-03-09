@@ -2,9 +2,12 @@
 title: "Configurar alertas de replicação predefinidos (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c94da6effb6456c32b92a58962e81d5d9fae231b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a88d254d198f88a04ad99f987d4641abc575505d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
-  A replicação oferece os seguintes alertas predefinidos que podem ser configurados para responder aos eventos de replicação:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação oferece os seguintes alertas predefinidos que podem ser configurados para responder aos eventos de replicação:  
   
 -   **Replicação: êxito do agente**  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Para configurar um alerta de replicação predefinido no Management Studio  
   
-1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó do servidor.  
+1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó de servidor.  
   
 2.  Expanda a pasta **SQL Server Agent** e então, expanda a pasta **Alertas** .  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Clique em **Fechar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar Alertas para eventos do Agente de Replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   

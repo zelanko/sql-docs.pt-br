@@ -1,27 +1,28 @@
 ---
 title: "Transações com tabelas com otimização de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a5cb6088e12b51dcc8992093b65e8dc95ad8d57
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +117,7 @@ As tabelas baseadas em disco indiretamente têm um sistema de controle de versã
   
 A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#confdetretry34ni). 
   
-| Nível de Isolamento | Descrição |   
+| Nível de Isolamento | Description |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Indisponível: as tabelas com otimização de memória não podem ser acessadas com isolamento Read Uncommitted. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ UNCOMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. | 
 | READ COMMITTED | Suporte para tabelas com otimização de memória somente quando o modo de confirmação automática está em vigor. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ COMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON.<br/><br/>Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, não será permitido acessar uma tabela com otimização de memória e uma tabela baseada em disco em isolamento READ COMMITTED na mesma instrução. |  
@@ -164,13 +165,14 @@ Há dois tipos de condições de erro relacionadas à transação que causam a f
 
 Veja abaixo as condições de erro que podem causar falhas nas transações ao acessarem as tabelas com otimização de memória.
 
-| Código do Erro | Descrição | Causa |
+| Código do Erro | Description | Causa |
 | :-- | :-- | :-- |
 | **41302** | Tentou atualizar uma linha que foi atualizada em uma transação diferente desde o início da transação atual. | Essa condição de erro ocorre se duas transações simultâneas tentam atualizar ou excluir a mesma linha ao mesmo tempo. Uma das duas transações recebe essa mensagem de erro e precisará ser repetida. <br/><br/>  | 
 | **41305**| Falha de validação de leitura repetida. Uma linha lida de uma tabela com otimização de memória – esta transação foi atualizada por outra transação que foi confirmada antes da confirmação dessa transação. | Esse erro pode ocorrer ao usar o isolamento REPEATABLE READ ou SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição FOREIGN KEY. <br/><br/>Em geral, uma violação simultânea de restrições de chave estrangeira desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou a entrada de dados. No entanto, o erro também pode ocorrer se não há nenhum índice nas colunas envolvidas com a restrição FOREIGN KEY. Portanto, a orientação é sempre criar um índice em colunas de chave estrangeira em uma tabela com otimização de memória. <br/><br/> Para obter considerações mais detalhadas sobre as falhas de validação causadas por violações de chave estrangeira, confira [esta postagem no blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) da Equipe de Consultoria ao Cliente do SQL Server. |  
 | **41325** | Falha de validação serializável. Uma nova linha foi inserida em um intervalo que foi examinado anteriormente pela transação atual. Chamamos isso de uma linha fantasma. | Esse erro pode ocorrer ao usar o isolamento SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição PRIMARY KEY, UNIQUE ou FOREIGN KEY. <br/><br/> Em geral, uma violação de restrição simultânea desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou com a entrada de dados. No entanto, de forma semelhante às falhas de validação de leitura repetida, esse erro também pode ocorrer se há uma restrição FOREIGN KEY sem nenhum índice nas colunas envolvidas. |  
 | **41301** | Falha de dependência: uma dependência foi usada em outra transação que posteriormente não foi confirmada. | Esta transação (Tx1) usou uma dependência em outra transação (Tx2) enquanto a transação (Tx2) estava em sua fase de validação ou processamento de confirmação, com a leitura dos dados gravados por Tx2. Consequentemente, ocorreu uma falha na confirmação de Tx2. As causas mais comuns de falha na confirmação de Tx2 são falhas de validação de leitura repetida (41305) e de validação serializável (41325); uma causa menos comum é a falha de E/S de log. |
-| **41839** | A transação excedido o número máximo de dependências de confirmação. | Há um limite no número de transações do qual determinada transação pode depender (Tx1). Essas transações são as dependências de saída. Além disso, há um limite no número de transações que podem depender de uma determinada transação (Tx1). Essas transações são as dependências de entrada. O limite para ambos é de 8. <br/><br/> O caso mais comum dessa falha é quando há um grande número de transações de leitura que acessam os dados gravados por uma única transação de gravação. A probabilidade de atingir essa condição aumentará se as transações de leitura estiverem todas executando verificações grandes dos mesmos dados e se o processamento de validação ou confirmação da transação de gravação levar muito tempo; por exemplo, a transação de gravação executa verificações grandes no isolamento serializável (aumenta o tamanho da fase de validação) ou o log de transações é colocado em um dispositivo de E/S de log lento (aumenta o tamanho do processamento de confirmação). Se as transações de leitura executam verificações grandes e devem acessar apenas algumas linhas, um índice pode estar ausente. Da mesma forma, se a transação de gravação usar o isolamento serializável e estiver realizando verificações grandes, mas se for esperado que ela acesse apenas algumas linhas, isso também será uma indicação de um índice ausente. <br/><br/> O limite do número de dependências de confirmação pode ser aumentado com o uso do Sinalizador de Rastreamento **9926**. Use este sinalizador de rastreamento somente se ainda estiver recebendo essa condição de erro depois de confirmar que não há nenhum índice ausente, pois isso pode mascarar esses problemas nos casos mencionados acima. Outra advertência é que os grafos de dependência complexos, em que cada transação tem um grande número de dependências de entrada, bem como dependências de saída, e transações individuais têm várias camadas de dependências, o que pode levar a ineficiências no sistema.  |
+| **41823** e **41840** | A cota para dados de usuário em tabelas com otimização de memória e variáveis de tabela foi alcançada. | O erro 41823 aplica-se ao SQL Server Express/Web/Standard Edition, bem como a bancos de dados autônomos no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. O erro 41840 se aplica a pools elásticos no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Na maioria dos casos, esses erros indicam que o tamanho máximo de dados de usuário foi alcançado e a maneira de resolver o erro é excluir dados das tabelas com otimização de memória. No entanto, há casos raros em que esse erro é transitório. Portanto, recomendamos uma nova tentativa ao encontrar esses erros pela primeira vez.<br/><br/> Como os outros erros desta lista, os erros 41823 e 41840 causam anulação da transação ativa. |
+| **41839** | A transação excedido o número máximo de dependências de confirmação. |**Aplica-se ao:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. As versões posteriores do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] não têm um limite no número de dependências de confirmação.<br/><br/> Há um limite no número de transações do qual determinada transação pode depender (Tx1). Essas transações são as dependências de saída. Além disso, há um limite no número de transações que podem depender de uma determinada transação (Tx1). Essas transações são as dependências de entrada. O limite para ambos é de 8. <br/><br/> O caso mais comum dessa falha é quando há um grande número de transações de leitura que acessam os dados gravados por uma única transação de gravação. A probabilidade de atingir essa condição aumentará se as transações de leitura estiverem todas executando verificações grandes dos mesmos dados e se o processamento de validação ou confirmação da transação de gravação levar muito tempo; por exemplo, a transação de gravação executa verificações grandes no isolamento serializável (aumenta o tamanho da fase de validação) ou o log de transações é colocado em um dispositivo de E/S de log lento (aumenta o tamanho do processamento de confirmação). Se as transações de leitura executam verificações grandes e devem acessar apenas algumas linhas, um índice pode estar ausente. Da mesma forma, se a transação de gravação usar o isolamento serializável e estiver realizando verificações grandes, mas se for esperado que ela acesse apenas algumas linhas, isso também será uma indicação de um índice ausente. <br/><br/> O limite do número de dependências de confirmação pode ser aumentado com o uso do Sinalizador de Rastreamento **9926**. Use este sinalizador de rastreamento somente se ainda estiver recebendo essa condição de erro depois de confirmar que não há nenhum índice ausente, pois isso pode mascarar esses problemas nos casos mencionados acima. Outra advertência é que os grafos de dependência complexos, em que cada transação tem um grande número de dependências de entrada, bem como dependências de saída, e transações individuais têm várias camadas de dependências, o que pode levar a ineficiências no sistema.  |
  
   
 ### <a name="retry-logic"></a>Lógica de repetição 
@@ -219,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1
@@ -303,7 +305,7 @@ go
   
 <a name="natcompstorprocs42ni"/>  
   
-## <a name="natively-compiled-stored-procedures"></a>Procedimentos armazenados compilados nativamente  
+## <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente  
   
 - Em um processo nativo, o bloco ATOMIC deve declarar o nível de isolamento de transação para o bloco inteiro, por exemplo:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  

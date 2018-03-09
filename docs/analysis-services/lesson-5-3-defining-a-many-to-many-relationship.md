@@ -2,32 +2,32 @@
 title: "Definindo uma relação muitos-para-muitos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3872befe63b01c0de21efa14c5b4fdbaa9fbed89
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lição 5-3-definir uma relação muitos-para-muitos
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
   
 No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você define uma relação muitos para muitos entre uma dimensão e um grupo de medidas especificando uma tabela de fatos intermediária que se une à tabela de dimensão. Uma tabela de fatos intermediária é unida, por sua vez, à tabela de dimensão intermediária à qual a tabela de fatos é unida. As relações muitos para muitos entre uma tabela de fatos intermediária e ambas as tabelas de dimensão na relação e a dimensão intermediária criam relações muitos para muitos entre membros da dimensão primária e medidas do grupo de medidas especificado pela relação. Para definir uma relação muitos para muitos entre uma dimensão e um grupo de medidas usando um grupo de medidas intermediário, esse grupo de medidas intermediário deve compartilhar uma ou mais dimensões com o grupo de medidas original.  
@@ -89,7 +89,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
 5.  Selecione **Contagem de Motivo de Vendas pela Internet** e revise as propriedades dessa medida na janela Propriedades.  
   
-    Observe que a propriedade **AggregateFunction** dessa medida é definida como **Contagem** em vez de **Soma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] escolheu **Contagem** porque o tipo de dados subjacentes é um tipo de dados de cadeia de caracteres. As outras duas colunas da tabela de fatos subjacente não foram selecionadas como medidas porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] identificou-as como chaves numéricas em vez de medidas reais. Para obter mais informações, consulte [Definir um comportamento semiaditivo](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Observe que a propriedade **AggregateFunction** dessa medida é definida como **Contagem** em vez de **Soma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]escolher **contagem** porque o tipo de dados é um tipo de dados de cadeia de caracteres. As outras duas colunas da tabela de fatos subjacente não foram selecionadas como medidas porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] identificou-as como chaves numéricas em vez de medidas reais. Para obter mais informações, consulte [Definir um comportamento semiaditivo](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Na janela Propriedades, altere a propriedade **Visible** da medida **Contagem do Motivo de Vendas pela Internet** para **False**.  
   
@@ -123,7 +123,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
 11. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-12. No painel **Atributos** do Designer de Dimensão da dimensão **Motivo de Vendas** , selecione **Motivo de Vendas Key**e depois altere a propriedade **Name** na janela Propriedades para **Motivo de Vendas.**.  
+12. No painel **Atributos** do Designer de Dimensão da dimensão **Motivo de Vendas** , selecione **Motivo de Vendas Key**e depois altere a propriedade **Name** na janela Propriedades para **Motivo de Vendas**.  
   
 13. No painel **Hierarquias** do Designer de Dimensão, crie uma hierarquia de usuário **Motivos de Vendas** que contenha os níveis **Tipo do Motivo de Vendas** e **Motivo de Vendas** , nessa ordem.  
   
@@ -180,13 +180,12 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
     ![Painéis de filtro e dados do Designer de cubo](../analysis-services/media/l5-many-to-many-5.gif "painéis filtro e dados do Designer de cubo")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definir a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Trabalhar com diagramas em Designer de exibição de fonte de dados &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   
   
-

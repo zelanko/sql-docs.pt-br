@@ -2,12 +2,13 @@
 title: "Definir propriedades de implantação (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
   No[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Se **Build** estiver selecionado, o Designer de Relatórios cria o projeto de relatórios e procura erros antes de exibir ou publicar em um servidor de relatórios. Se **Deploy** estiver selecionado, o Designer de Relatórios publicará os relatórios no servidor de relatórios conforme definido nas propriedades de implantação. Se **Deploy** não estiver selecionado, o Designer de Relatórios exibirá o relatório especificado na propriedade **StartItem** em uma janela de visualização local.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Visualizar relatórios](../../reporting-services/reports/previewing-reports.md)   
  [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)   

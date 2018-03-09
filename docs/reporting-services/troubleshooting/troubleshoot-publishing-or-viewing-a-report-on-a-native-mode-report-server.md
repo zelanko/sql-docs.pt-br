@@ -1,27 +1,27 @@
 ---
-title: "Solucionar problemas de publicação ou exibindo um relatório em um servidor de relatório do modo nativo | Microsoft Docs"
+title: "Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e25f72eddf16b1cbb868f0e944a803df0f40340
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
   
@@ -42,7 +42,7 @@ Verifique se a URL do servidor de relatório é o endereço do servidor de relat
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Nada acontece quando alterno itens no meu relatório publicado.  
   Quando você exibe um relatório na visualização local, pode alternar os itens no relatório e mostrá-los ou ocultá-los. Quando você exibe o mesmo relatório após publicá-lo no servidor de relatório, o recurso de alternância de itens não funciona mais.   
   
-\<nome do servidor de relatório > inclui um sublinhado (_)  
+\<report server name> Inclui um sublinhado (_)  
   
 Se um relatório for executado sem erros, mas os itens de alternância não funcionam (por exemplo, você clica em um ícone expandir (+) e nada acontece), verifique o nome do computador que está hospedando o servidor de relatório. Se o nome do computador incluir um sublinhado, isso indica que os itens de alternância não estão funcionando. Esse é um problema conhecido. Não há uma solução.   
   
@@ -57,7 +57,7 @@ Em algumas circunstâncias, quando você usa o Gerenciador de Relatórios para e
   
 Verifique se você tem permissão para acessar as pastas que contêm os arquivos em cache.   
     
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Solucionar problemas de recuperação de dados com relatórios do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -66,5 +66,4 @@ Verifique se você tem permissão para acessar as pastas que contêm os arquivos
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -2,16 +2,13 @@
 title: Exemplos do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 
@@ -19,14 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 097c3ab1c0827b9dd64bdb13a3c88a33cb0411e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 637efbc19b5ced51e06f77366e3af665439e6dbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-samples"></a>Exemplos do Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   Use as informações aqui para localizar bancos de dados de exemplo e projetos para ajudá-lo a conhecer e testar suas soluções do Analysis Services.
   

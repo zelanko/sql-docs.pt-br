@@ -2,35 +2,29 @@
 title: O objeto de modelo (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-object-tmsl"></a>Objeto de modelo (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define um modelo de tabela. Há um modelo para cada banco de dados e apenas um banco de dados que pode ser especificado em qualquer comando fornecido. Um objeto de banco de dados é o objeto pai.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define um modelo de tabela. Há um modelo para cada banco de dados e apenas um banco de dados que pode ser especificado em qualquer comando fornecido. Um objeto de banco de dados é o objeto pai.  
   
  Definições de modelo são muito grandes para reproduzir a sintaxe completa em um tópico. Por esse motivo, uma sintaxe parcial, realce as principais partes pode ser encontrada abaixo, com links para os objetos filho.  
   
@@ -47,7 +41,7 @@ ms.lasthandoff: 09/01/2017
  O local no disco para colocar o modelo.  
   
  defaultMode  
- O método padrão para disponibilizar os dados na partição.  
+ O método padrão para disponibilizar dados na partição.  
   
  defaultDataView  
  Para modelos no modo DirectQuery, essa propriedade determina quais partições são usadas para executar consultas no modelo.  Os valores válidos incluem completo e exemplo.  
@@ -101,9 +95,8 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

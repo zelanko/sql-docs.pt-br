@@ -2,31 +2,37 @@
 title: Janela Lista de Erros (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.ErrorList
-dev_langs: TSQL
+f1_keywords:
+- VS.ErrorList
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 639b50be753f5f9650601dc66a65102aa5ab0e19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76956dec2a0ad41263329dde8028b78b23bbdd87
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Depurador do Transact-SQL – Janela Lista de Erros
-  A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A **Lista de Erros** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe os erros de sintaxe e semântica gerados no código IntelliSense do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Recursos da Lista de Erros  
  A **Lista de Erros** fornece a seguinte funcionalidade:  

@@ -1,5 +1,5 @@
 ---
-title: "Transformação junção de mesclagem | Microsoft Docs"
+title: "Transformação Junção de Mesclagem | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,19 +22,18 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 5c9532a91cf1113b91e43a35e57db6cfebf66da8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem
+# <a name="merge-join-transformation"></a>Merge Join Transformation
   A transformação Junção de Mesclagem fornece uma saída que é gerada unindo-se dois conjuntos de dados ordenados que usam uma junção FULL, LEFT ou INNER. Por exemplo, você pode usar uma associação de LEFT para unir uma tabela que inclui informações de produtos com uma tabela que lista o país/região no qual um produto foi fabricado. O resultado é uma tabela que lista todos os produtos e seu país/região de origem.  
   
  Você pode configurar a transformação Junção de Mesclagem das seguintes formas:  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="buffer-throttling"></a>Limitação de buffer  
  Não é mais preciso configurar o valor da propriedade **MaxBuffersPerInput** , pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente.  
   
  Para obter mais informações sobre como definir as propriedades dessa transformação, clique em um dos tópicos a seguir:  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
   Use a caixa de diálogo **Editor de Transformação Mesclar Junção** para especificar o tipo de junção, as colunas de junção e as colunas de saída para mesclar duas entradas combinadas por uma junção.  
@@ -94,10 +93,9 @@ ms.lasthandoff: 08/19/2017
  **Alias de Saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação de mesclagem](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

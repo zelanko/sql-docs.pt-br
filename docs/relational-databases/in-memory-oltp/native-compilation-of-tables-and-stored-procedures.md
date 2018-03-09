@@ -2,26 +2,30 @@
 title: "Compilação nativa de tabelas e procedimentos armazenados | Microsoft Docs"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilação nativa de tabelas e procedimentos armazenados
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 O OLTP na memória apresenta o conceito de compilação nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode compilar nativamente procedimentos armazenados que acessam tabelas com otimização de memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também pode compilar nativamente tabelas com otimização de memória. A compilação nativa permite o acesso mais rápido a dados e a execução mais eficiente de consultas, em comparação ao [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). A compilação nativa de tabelas e procedimentos armazenados gera DLLs.
 
 A compilação nativa de tipos de tabelas com otimização de memória também tem suporte. Para obter mais informações, consulte [Tabela temporária e variável de tabela mais rápidas usando a otimização de memória](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -37,7 +41,7 @@ OLTP em memória compila tabelas com otimização de memória quando elas são c
 
 A consulta a seguir mostra todas as DLLs de tabela e procedimento armazenado atualmente carregadas na memória do servidor.
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -61,7 +65,7 @@ A criação de uma tabela com otimização de memória usando a instrução **CR
 
 Considere o script de exemplo a seguir, que cria um banco de dados e uma tabela com otimização de memória:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -154,7 +158,7 @@ Para obter mais informações sobre procedimentos armazenados nativamente compil
 
 Considere o procedimento armazenado do exemplo a seguir, que insere linhas na tabela t1 do exemplo anterior:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -211,8 +215,8 @@ Os arquivos gerados quando uma tabela ou um procedimento armazenado é compilado
 
 Nenhuma interação do usuário é necessária para gerenciar esses arquivos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criará e removerá os arquivos conforme necessário.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

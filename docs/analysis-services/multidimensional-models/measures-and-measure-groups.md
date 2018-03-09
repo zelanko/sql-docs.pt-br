@@ -2,16 +2,13 @@
 title: Grupos de medidas e | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +22,20 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>Medidas e Grupos de Medidas
-  Um cubo inclui *medidas* em *grupos de medidas*, lógica de negócios, além de um conjunto de dimensões que fornecem contexto para avaliar os dados numéricos que uma medida fornece. Medidas e grupos de medidas são um componente essencial de um cubo. Um cubo não pode existir sem pelo menos uma delas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um cubo inclui *medidas* em *grupos de medidas*, lógica de negócios, além de um conjunto de dimensões que fornecem contexto para avaliar os dados numéricos que uma medida fornece. Medidas e grupos de medidas são um componente essencial de um cubo. Um cubo não pode existir sem pelo menos uma delas.  
   
  Este tópico descreve [medidas](#bkmk_measure) e [grupos de medidas](#bkmk_mg). Ele também contém a tabela a seguir, com links para procedimentos para medidas de criação e configuração e grupos de medidas.  
   
@@ -46,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |[Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Escolha uma das várias abordagens para criar medidas e grupos de medidas.|  
 |[Configurar propriedades de medida](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Se você usou o Assistente de cubo para iniciar seu cubo, talvez seja necessário alterar o método de agregação, aplicar um formato de dados, definir a visibilidade da medida em aplicativos cliente ou possivelmente adicionar uma expressão de medida para manipular os dados antes de os valores serem agregados.|  
 |[Configurar propriedades do grupo de medidas](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Em um modelo multidimensional, um grupo de medidas é igual a uma tabela de fatos no armazém de dados de origem. Propriedades em um grupo de medidas permitem especificar comportamentos de cache, armazenamento e diretivas de processamento que operam coletivamente no nível do grupo de medidas. A configuração de partição é parcialmente determinada pelas propriedades definidas em objetos do grupo de medidas.|  
-|[Usar funções de agregação](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Compreenda os métodos de agregação que podem ser atribuídos a uma medida.|  
-|[Definir comportamento semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Comportamento semiaditivo se refere a agregações que são válidas para algumas dimensões, mas não para outras. Um exemplo comum é um saldo da conta bancária. Talvez você deseje agregar saldos por cliente e região, mas não por tempo. Por exemplo, não convém adicionar saldos da mesma conta por dias consecutivos. Para definir o comportamento semiaditivo, use o Assistente para Adicionar Business Intelligence.|  
+|[Use as funções de agregação](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Compreenda os métodos de agregação que podem ser atribuídos a uma medida.|  
+|[Definir comportamento Semiaditivo](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Comportamento semiaditivo se refere a agregações que são válidas para algumas dimensões, mas não para outras. Um exemplo comum é um saldo da conta bancária. Talvez você deseje agregar saldos por cliente e região, mas não por tempo. Por exemplo, não convém adicionar saldos da mesma conta por dias consecutivos. Para definir o comportamento semiaditivo, use o Assistente para Adicionar Business Intelligence.|  
 |[Grupos de medidas vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Reutilizar um grupo de medidas existente em outros cubos no mesmo banco de dados ou em bancos de dados diferentes do Analysis Services.|  
   
 ##  <a name="bkmk_measure"></a> Measures  

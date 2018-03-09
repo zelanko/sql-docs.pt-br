@@ -3,8 +3,9 @@ title: "Usando o ADO para publicação na Internet | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 609f4574c7f8cf9cb13fd2d5b21f3504ec3ce9fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>Usando o ADO para publicação na Internet
 [O provedor OLE DB para Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) mostra um exemplo específico de acesso a dados heterogêneos com ADO. Embora os exemplos nesta seção serão específicos usando o provedor de publicação de Internet, os princípios demonstrados devem ser semelhantes ao usar ADO com outros provedores de dados heterogêneos, como um provedor para um armazenamento de email.  

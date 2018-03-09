@@ -2,10 +2,13 @@
 title: Qtd (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: QTD
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cabe908f3d78082d6af113a60f105ba4f4e4f5c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna um conjunto de irmãos membros do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com um determinado membro, restringido pelo *trimestre* nível na dimensão de tempo.  
   
@@ -39,7 +42,7 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um expressionis de membro não especificado, o padrão será o membro atual da primeira hierarquia com um nível de tipo *trimestres* na primeira dimensão do tipo *tempo* no grupo de medidas.  
   
  O **Qtd** é uma função de atalho para o [PeriodsToDate &#40; MDX &#41; ](../mdx/periodstodate-mdx.md) função cujo argumento de expressão de nível é definido como *trimestre*. Ou seja, `Qtd(Member_Expression)` é funcionalmente equivalente a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
@@ -61,7 +64,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

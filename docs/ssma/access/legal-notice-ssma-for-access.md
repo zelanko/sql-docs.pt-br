@@ -1,10 +1,13 @@
 ---
 title: Aviso legal (SSMA para Access) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97f73d8397077a64fb9a5de6f7947dec42e716fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d91acaab84a76e5c169cfa9500a5262fa3f1f73d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  

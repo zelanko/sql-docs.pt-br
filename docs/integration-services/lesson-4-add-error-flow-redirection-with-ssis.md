@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48ed42543041f88519f106d8d9e3dcf50392799b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS
 Para tratar erros que podem ocorrer no processo de transformação, o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece a capacidade de decidir, em termos de componente e coluna, como tratar dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
@@ -44,7 +43,7 @@ Antes que os dados de erro sejam gravados em um arquivo, você incluirá um comp
 ## <a name="tasks-in-lesson"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Etapa 1: Copiando o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [Etapa 2: Criando um arquivo corrompido](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -52,11 +51,10 @@ Esta lição contém as seguintes tarefas:
   
 -   [Etapa 4: Adicionando um destino de arquivo simples](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Etapa 5: Testando o pacote de Tutorial da lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Etapa 5: Testando o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Copiando o pacote da lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Etapa 1: Copiando o pacote da Lição 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
-

@@ -1,26 +1,30 @@
 ---
 title: Propriedade SortDirection (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SortDirection property [RDS]
+helpviewer_keywords:
+- SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d1b07bebfd6b047e13c394a070757b26bd0c354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9fa72c903861d2471032218738165be474224aaa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortdirection-property-rds"></a>Propriedade SortDirection (RDS)
 Indica se uma ordem de classificação é crescente ou decrescente.  
@@ -42,7 +46,7 @@ DataControl.SortDirection = value
  *Value*  
  Um **booliano** valor que, quando definido como **True**, indica a direção de classificação é crescente. **False** indica a ordem decrescente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), **SortDirection**, [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propriedades fornecem a classificação e filtragem de funcionalidade no cache do lado do cliente. A funcionalidade de classificação ordena os registros usando valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o completo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é mantido no cache. O [redefinir](../../../ado/reference/rds-api/reset-method-rds.md) método executará os critérios e substitua atual **registros** com um atualizável **registros**.  
   
 ## <a name="applies-to"></a>Aplica-se a  

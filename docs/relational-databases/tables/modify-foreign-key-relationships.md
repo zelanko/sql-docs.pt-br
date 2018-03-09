@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51ee95780b228a723be7c5f86b4a64c171bf5df2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -147,9 +148,9 @@ ms.lasthandoff: 11/17/2017
   
     -   **Definir Padrão** Define o valor como o valor padrão que é definido para a coluna se todas as colunas de chave estrangeira para a tabela têm padrões definidos.  
   
-4.  No menu **Arquivo** , clique em **Salvar***table name*.  
+4.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave estrangeira**  
   
  Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

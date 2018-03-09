@@ -1,30 +1,30 @@
 ---
-title: "Adicionar um sub-relatório e parâmetros (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bef0babb7531e4ef6c513175515fb8e92ac89e6b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS)
   Adicione sub-relatórios a um relatório quando quiser criar um relatório principal que seja um contêiner para vários relatórios relacionados. Um sub-relatório é uma referência a outro relatório. Para relacionar os relatórios por valores de dados (por exemplo, para que diversos relatórios exibam dados para o mesmo cliente), é preciso criar um relatório com parâmetros (por exemplo, um relatório que exiba os detalhes de um cliente específico) como o sub-relatório. Ao adicionar um sub-relatório ao relatório principal, você também pode especificar os parâmetros que serão passados para o sub-relatório.  
@@ -77,9 +77,8 @@ ms.lasthandoff: 08/09/2017
   
      A alteração da ordem de um parâmetro de sub-relatório não afeta o processamento do sub-relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

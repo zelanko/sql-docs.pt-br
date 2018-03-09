@@ -1,5 +1,5 @@
 ---
-title: "Desenvolvendo uma Interface de usuário para uma tarefa personalizada | Microsoft Docs"
+title: "Desenvolver uma interface do usuário para uma tarefa personalizada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b79f177afc2c0c5014e9e50c98409f2ecc655025
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desenvolvendo uma interface do usuário para uma tarefa personalizada
   O modelo de objeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que desenvolvedores de tarefas personalizadas criem facilmente uma interface de usuário personalizada para uma tarefa que pode ser integrada e exibida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A interface de usuário pode fornecer informações úteis para o usuário no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)], e orientar usuários na configuração correta das propriedades e definições da tarefa personalizada.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
  Esta seção descreve a função do atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> e a interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> quando você está desenvolvendo uma interface de usuário para uma tarefa personalizada e fornece detalhes sobre como criar, integrar, implantar e depurar a tarefa dentro do Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
- O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer fornece vários pontos de entrada para a interface do usuário para a tarefa: o usuário pode selecionar **editar** no menu de atalho, clique duas vezes a tarefa ou clique no **Mostrar Editor** link na parte inferior da folha de propriedades. Quando o usuário acessa um desses pontos de entrada, o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] localiza e carrega o assembly que contém a interface de usuário para a tarefa. A interface de usuário para a tarefa é responsável pela criação da caixa de diálogo de propriedades que é exibida para o usuário no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ O Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] fornece vários pontos de entrada à interface do usuário para a tarefa: o usuário pode selecionar **Editar** no menu de atalho, clicar duas vezes na tarefa ou clicar no link **Mostrar Editor** no final da folha de propriedades. Quando o usuário acessa um desses pontos de entrada, o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] localiza e carrega o assembly que contém a interface de usuário para a tarefa. A interface de usuário para a tarefa é responsável pela criação da caixa de diálogo de propriedades que é exibida para o usuário no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
  Uma tarefa e sua interface de usuário são entidades separadas. Elas devem ser implementadas em assemblies separados para reduzir o trabalho de localização, implantação e manutenção. Em geral, a DLL da tarefa não carrega, chama ou contém conhecimento sobre sua interface de usuário, com exceção das informações contidas nos valores de atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> codificados na tarefa. Essa é a única forma de associação entre uma tarefa e sua interface de usuário.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se ele for usado, defina-o com um dos valores da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Por exemplo, `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Mantém informações de contato para ocasiões em que a tarefa exige suporte técnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Atribui um tipo à tarefa.|  
-|Attribute.TypeId|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este Atributo. Para obter mais informações, consulte **Attribute.TypeID** propriedade na biblioteca de classes .NET Framework.|  
+|Attribute.TypeId|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este Atributo. Para obter mais informações, consulte a propriedade **Attribute.TypeID** na biblioteca de classes .NET Framework.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|O nome de tipo do assembly que é usado pelo Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] para carregar o assembly. Esta propriedade é usada para localizar o assembly de interface de usuário para a tarefa.|  
   
  O exemplo de código a seguir mostra a aparência do <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>, codificado acima da definição de classe.  
@@ -127,7 +125,7 @@ End Class 'MyTask
   
  O designer chama o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> para solicitar a janela que é exibida no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. A tarefa cria uma instância da janela que contém a interface de usuário para a tarefa e retorna a interface de usuário a ser exibida pelo designer. Normalmente, são fornecidos os objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> e <xref:Microsoft.SqlServer.Dts.Runtime.Connections> para a janela através de um construtor sobrecarregado; assim, eles podem ser usados para configurar a tarefa.  
   
- O Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chama o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> da tarefa UI para exibir a interface de usuário para a tarefa. A interface de usuário da tarefa retorna o formulário Windows desse método e o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] mostra esse formulário como uma caixa de diálogo modal. Quando o formulário é fechado, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer examina o valor de **DialogResult** propriedade do formulário para determinar se a tarefa foi modificada e se essas modificações devem ser salvos. Se o valor de **DialogResult** é de propriedade **Okey**, o [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer chama os métodos de persistência da tarefa para salvar as alterações; caso contrário, as alterações são descartadas.  
+ O Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chama o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> da tarefa UI para exibir a interface de usuário para a tarefa. A interface de usuário da tarefa retorna o formulário Windows desse método e o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] mostra esse formulário como uma caixa de diálogo modal. Quando o formulário é fechado, o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] verifica o valor da propriedade **DialogResult** do formulário para determinar se a tarefa foi modificada e se essas modificações devem ser salvas. Se o valor da propriedade **DialogResult** for **OK**, o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] chamará os métodos de persistência da tarefa para salvar as alterações; caso contrário, as alterações serão descartadas.  
   
  O exemplo de código a seguir implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> e pressupõe a existência de uma classe de formulário do Windows nomeada SampleTaskForm.  
   
@@ -207,10 +205,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
  
-## <a name="see-also"></a>Consulte também  
- [Criando uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [Codificando uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [Desenvolvendo uma Interface de usuário para uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
+ [Codificar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+ [Desenvolver uma interface do usuário para uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

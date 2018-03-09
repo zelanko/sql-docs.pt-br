@@ -1,13 +1,14 @@
 ---
-title: "Habilitar e desabilitar meus relatórios | Microsoft Docs"
+title: "Habilitar e desabilitar Meus Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c874fc87e5f388b7b52fde156291f4357be2e06d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar e desabilitar Meus Relatórios
   O recurso Meus Relatórios aloca armazenamento pessoal no banco de dados do servidor de relatório, para que os usuários possam salvar seus relatórios em uma pasta particular. Como um administrador do servidor de relatório, você pode habilitar ou desabilitar esse recurso ou alterar a maneira como ele funciona, por meio das configurações de segurança que controlam o que os usuários podem fazer com esse espaço de trabalho.  
@@ -56,9 +56,8 @@ ms.lasthandoff: 08/09/2017
   
  Observe que se você ativar a opção Meus Relatórios, o servidor de relatório criará uma pasta Meus Relatórios para cada usuário com uma conta de domínio que clica no link Meus Relatórios, mesmo que o usuário não queria nem precise de uma pasta Meus Relatórios. Não há uma maneira sistemática de determinar quais pastas estão sendo usadas. Você deve revisar as pastas manualmente para ver se elas contêm alguma coisa.  
   
-## <a name="see-also"></a>Consulte também  
- [Proteger meus relatórios](../../reporting-services/security/secure-my-reports.md)   
- [Gerenciamento de conteúdo de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Proteger Meus Relatórios](../../reporting-services/security/secure-my-reports.md)   
+ [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BufferWithTolerance (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +44,17 @@ Retorna valores de um objeto geométrico que representa a união de todos os pon
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um **float** expressão que especifica a distância entre o **geometria** instância em torno da qual calcular o buffer.  
   
- *tolerância*  
+ *tolerance*  
  É um **float** expressão que especifica a tolerância da distância do buffer.  
   
  *Tolerância* refere-se à variação máxima na distância ideal do buffer para a aproximação linear retornada.  
   
  Por exemplo, a distância ideal de buffer de um ponto é um círculo, mas deve ser aproximado por um polígono. Quanto menor a tolerância, mais pontos o polígono terá, o que aumenta a complexidade do resultado, mas diminui o erro.  
   
- *relativo*  
+ *relative*  
  É um **bit** especificando se o *tolerância* valor é relativo ou absoluto. Se 'TRUE' ou 1, em seguida, tolerância será relativa e calculada como o produto do *tolerância* parâmetro e o diâmetro da caixa delimitadora da instância. Se 'FALSE' ou 0, tolerância será absoluta e o *tolerância* valor é a variação máxima absoluta na distância ideal do buffer para a aproximação linear retornada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -65,7 +68,7 @@ Retorna valores de um objeto geométrico que representa a união de todos os pon
 > [!NOTE]  
 >  Como *tolerância* é um **float** tipo, um `System.Runtime.InteropServices.COMException` pode ser gerada se o valor atribuído à tolerância for muito pequeno devido a problemas de arredondamento com tipos de ponto flutuante.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando *distância* > 0, uma um **polígono** ou **MultiPolygon** instância será retornada.  
   
 > [!NOTE]  

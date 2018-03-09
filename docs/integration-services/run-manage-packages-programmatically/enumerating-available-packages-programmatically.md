@@ -1,5 +1,5 @@
 ---
-title: "Enumerando pacotes disponíveis programaticamente | Microsoft Docs"
+title: "Enumerar pacotes disponíveis programaticamente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,22 +18,21 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e2498be2192787418c87d5fd8f7983c4d2fa216e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerando pacotes disponíveis programaticamente
-  <a name="top"></a>Ao trabalhar programaticamente com [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes, talvez você queira determinar se existe um pacote ou pasta individual, ou para enumerar os pacotes salvos que estão disponíveis para carregamento e execução. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.    
+  <a name="top"></a> Ao trabalhar programaticamente com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], talvez você queira determinar se existe um pacote ou pasta individual ou enumerar os pacotes salvos que estão disponíveis para carregamento e execução. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.    
     
-##  <a name="exists"></a>Determinando se existe um pacote ou pasta    
+##  <a name="exists"></a> Determinando se existe um pacote ou pasta    
  Para determinar programaticamente se existe um pacote salvo, chame um dos métodos a seguir antes de tentar carregá-lo e executá-lo:    
     
 |Local de armazenamento|Método de chamada|    
@@ -49,9 +47,9 @@ ms.lasthandoff: 09/26/2017
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Voltar ao início](#top)    
+ [Voltar ao Início](#top)    
     
-##  <a name="listing"></a>Enumerando pacotes disponíveis    
+##  <a name="listing"></a> Enumerando pacotes disponíveis    
  Para obter uma lista de pacotes salvos programaticamente, chame um dos seguintes métodos:    
     
 |Local de armazenamento|Método de chamada|    
@@ -61,7 +59,7 @@ ms.lasthandoff: 09/26/2017
     
  Os exemplos a seguir são aplicativos de console que demonstram o uso desses métodos.    
     
-###  <a name="listing_store"></a>Exemplo (armazenamento de pacotes SSIS)    
+###  <a name="listing_store"></a> Exemplo (Repositório de Pacotes do SSIS)    
  Use o método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> para listar pacotes armazenados no Armazenamento de Pacotes do SSIS. Os locais de armazenamento padrão gerenciados pelo Repositório de Pacotes do SSIS são Sistema de Arquivos e MSDB. Você pode criar pastas lógicas adicionais dentro desses locais.    
     
 ```vb    
@@ -165,9 +163,9 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [Voltar ao início](#top)    
+ [Voltar ao Início](#top)    
     
-###  <a name="listing_sql"></a>Exemplo (SQL Server)    
+###  <a name="listing_sql"></a> Exemplo (SQL Server)    
  Use o método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para listar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que estão armazenados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    
@@ -246,10 +244,9 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [Voltar ao início](#top)    
+ [Voltar ao Início](#top)    
    
-## <a name="see-also"></a>Consulte também    
+## <a name="see-also"></a>Consulte Também    
  [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

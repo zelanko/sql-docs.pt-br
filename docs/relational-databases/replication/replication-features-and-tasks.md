@@ -2,9 +2,12 @@
 title: "Recursos e tarefas de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b4ef422b369e65855321be32b171522337441e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>Recursos e tarefas de replicação
-  Encontra informações que qualquer profissional (designer, desenvolvedor, analista ou administrador) precisa para projetar e implementar soluções de replicação.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Encontra informações que qualquer profissional (designer, desenvolvedor, analista ou administrador) precisa para projetar e implementar soluções de replicação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="Interoperability"></a> Interoperabilidade de replicação e recursos de alta disponibilidade  
   
--   [Configurar a replicação para grupos de disponibilidade Sempre Ativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
+-   [Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
 -   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Referência técnica &#40;Replicação&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   

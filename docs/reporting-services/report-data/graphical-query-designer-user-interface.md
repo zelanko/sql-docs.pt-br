@@ -2,12 +2,13 @@
 title: "Interface do usuário do Designer de consultas gráficas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,20 +22,20 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 89fc51cda730b9227d80099bf3bb129d43b76a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Para obter mais informações sobre como trabalhar com tipos de fontes de dados específicos, consulte [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
- .  
+ para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ## <a name="graphical-query-designer"></a>Designer de Consultas Gráficas  
  Este designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Text**, **StoredProcedure**ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
@@ -148,7 +149,7 @@ EXEC uspGetEmployeeManagers '1';
   
  `uspGetEmployeeManagers '1';`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [O tipo de conexão do SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   

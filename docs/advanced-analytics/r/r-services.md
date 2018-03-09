@@ -1,25 +1,28 @@
 ---
 title: "Serviços de aprendizado de máquina do Microsoft | Microsoft Docs"
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 9735d257ce81e5b84ea19eeb70be8bef21127c13
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Serviços de aprendizado de máquina da Microsoft
+# <a name="microsoft-machine-learning-services"></a>Serviços de Microsoft Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A meta de serviços de aprendizado de máquina do Microsoft é fornecer uma plataforma extensível e escalonável para a integração de ferramentas e tarefas de aprendizado de máquina com os aplicativos que consomem serviços de aprendizado de máquina. A plataforma deve atender às necessidades de todos os usuários envolvidos no processo de análise e desenvolvimento de dados de cientistas de dados para arquitetos e administradores de banco de dados.
 
@@ -37,7 +40,7 @@ Principais benefícios incluem:
 
 No SQL Server 2016, a Microsoft lançou duas plataformas de servidor para integrar a linguagem R de código aberto popular com aplicativos de negócios:
 
-+ **SQL Server R Services (no Banco de Dados)**, para integração ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (no banco de dados)**, para integração com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, para implantações de R de nível corporativo em servidores Windows e Linux
 
 No SQL Server de 2017, o nome tem foi alterado para refletir o suporte para a linguagem Python popular.
@@ -60,7 +63,7 @@ Quando você instala o aprendizado de máquina do SQL Server, você obtém uma d
 Para começar, consulte estes recursos:
 
 + [SQL Server R Services](sql-server-r-services.md)
-+ [Serviços de Python do SQL Server](../python/sql-server-python-services.md)
++ [SQL Server Python Services](../python/sql-server-python-services.md)
 + [Tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]

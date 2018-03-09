@@ -3,8 +3,11 @@ title: "Caixa de diálogo Verificar Expressão de Restrição (Ferramentas de Ba
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,19 +16,19 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 295948ceb25e7176bc821b01b78d586f7a07b152
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d7cf57c1f37b4a18cb43935e1f2108933a861233
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
-Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
-Expressão  
+Expression  
 Insira a expressão  
   
 É possível criar uma expressão de restrição simples para verificar dados para uma condição simples ou você pode criar uma expressão complexa, usando operadores Boolianos, para verificar dados para várias condições. Por exemplo, suponha que a tabela de autores tenha uma coluna de código de área onde uma cadeia de caracteres de 5 dígitos é requerida. Esse exemplo de expressão de restrição garante que são permitidos apenas números de 5 dígitos:  
@@ -66,7 +69,7 @@ A sintaxe de SQL é criada para os seguintes parâmetros:
 |OU|Use expressões Booleanas para conectar duas ou mais expressões. Os resultados são retornados quando nenhuma das condições for verdadeira.<br /><br />Quando AND e OR forem ambas usadas em uma instrução, OR é avaliado após AND. É possível alterar a ordem de execução usando parênteses.|  
 |NOT|Nega qualquer expressão Booleana (que pode incluir palavras-chaves, como LIKE, NULL, BETWEEN, IN e EXISTS).<br /><br />Quando mais de um operador lógico for usado em uma instrução, NOT é processado primeiro. É possível alterar a ordem de execução usando parênteses.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Restrições exclusivas e restrições de verificação](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Criar restrições exclusivas](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
   

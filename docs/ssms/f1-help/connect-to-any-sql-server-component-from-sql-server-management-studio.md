@@ -3,8 +3,11 @@ title: Conectar a qualquer componente do SQL Server do SSMS | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,15 +20,16 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: baba622a1ec3285664ceb7867a2e0c11736940f2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fornece funcionalidade para gerenciar todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para se conectar a:  
   
 -   Uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
@@ -50,7 +54,7 @@ Ao registrar um servidor, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md
 ### <a name="saving-connections-in-solution-explorer"></a>Salvando conexões no Gerenciador de Soluções  
 O Gerenciador de Soluções permite o armazenamento de consultas relacionadas, scripts, conexões e outras informações associadas em um projeto. Cada projeto de script contém um nó denominado **Conexões**, no qual você pode salvar uma ou mais conexões. Para adicionar uma conexão, clique com o botão direito do mouse em **Conexões**e clique em **Nova Conexão**. Para acessar uma conexão salva, expanda **Conexões** e clique duas vezes na conexão. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] abre uma janela de consulta associada àquela conexão. Quando salvos, os scripts retêm sua associação com uma conexão específica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Usar o SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
   

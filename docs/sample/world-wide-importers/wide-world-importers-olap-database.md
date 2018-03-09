@@ -1,30 +1,31 @@
 ---
 title: Banco de dados do Wide World Importers OLAP | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee64562b-a6d7-420c-b9da-75b5223cf8ab
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 345f66d4fc47598ddfb253259c3ad055f534282b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de0880b7c16e2e54a45d7d138a727c3d6b696d15
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-data-warehousing-and-analytics-database"></a>Wide World Importers data warehouse e análise de banco de dados
-Documentação do Wide World Importers data warehouse e análise de banco de dados.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Documentação do Wide World Importers data warehouse e análise de banco de dados.
 
 **Configuração e instalação de WideWorldImportersDW**
 
@@ -45,4 +46,3 @@ Descreve como o WideWorldImportersDW aproveita os recursos do SQL Server para pr
 **Exemplos de consultas de WideWorldImportersDW OLAP**
 
 Exemplos de consultas de análise aproveitar o banco de dados WideWorldImportersDW.
-

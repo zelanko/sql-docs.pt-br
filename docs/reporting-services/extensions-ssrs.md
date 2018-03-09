@@ -2,26 +2,26 @@
 title: "Extensões (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fbd752c6da1b706eb2d9e7327ae042e9173f9377
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extensions-ssrs"></a>Extensões (SSRS)
   O servidor de relatório do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa extensões para modularizar os tipos de entrada ou de saída que aceita para autenticação, processamento de dados, renderização e entrega de relatórios. Isso facilita que instalações existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilizem novos padrões de software do setor, como um novo esquema de autenticação ou um tipo de fonte de dados personalizado. O servidor de relatório dá suporte aos seguintes tipos de extensões: autenticação personalizada, processamento de dados, processamento de relatórios, renderização e entrega, e as extensões que estão disponíveis para os usuários são configuráveis no arquivo de configuração RSReportServer.config. Por exemplo, você pode limitar os formatos de exportação que o visualizador de relatório tem permissão para usar. Um servidor de relatório requer pelo menos uma extensão de autenticação, de processamento de dados e de renderização. As extensões de entrega e de processamento de relatório são opcionais, mas necessárias se você desejar dar suporte aos controles de distribuição e personalização.  
@@ -61,19 +61,19 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>Extensões de Renderização  
  As extensões de renderização transformam dados e informações de layout do Processador de Relatório em um formato específico ao dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, CSV, XML, Imagem, PDF e [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **Extensão de Renderização HTML** Quando você solicita um relatório de um servidor de relatório usando um navegador da Web, o servidor de relatório usa esta extensão de renderização para renderizar o relatório. A extensão de renderização HTML gera toda linguagem HTML usando a codificação UTF-8. Para obter mais informações, consulte [Renderização para HTML &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) e [Suporte ao navegador para Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **Extensão de Renderização HTML** Quando você solicita um relatório de um servidor de relatório usando um navegador da Web, o servidor de relatório usa esta extensão de renderização para renderizar o relatório. A extensão de renderização HTML gera toda linguagem HTML usando a codificação UTF-8. Para obter mais informações, consulte [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) e [Suporte a navegador para o Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
--   **Extensão de Renderização do Excel** A extensão de renderização do Excel renderiza relatórios que possam ser exibidos e modificados no [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 ou posterior. Esta extensão de renderização cria arquivos em BIFF (Formato de Arquivo de Intercâmbio Binário). BIFF é o formato de arquivo nativo para dados do Excel. Os relatórios renderizados no [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] dão suporte a todos os recursos disponíveis para qualquer planilha. Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização do Excel** A extensão de renderização do Excel renderiza relatórios que possam ser exibidos e modificados no [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 ou posterior. Esta extensão de renderização cria arquivos em BIFF (Formato de Arquivo de Intercâmbio Binário). BIFF é o formato de arquivo nativo para dados do Excel. Os relatórios renderizados no [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] dão suporte a todos os recursos disponíveis para qualquer planilha. Para obter mais informações, consulte [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização CSV** A extensão de renderização CSV (Valor Separado por Vírgulas) renderiza relatórios em arquivos de texto não criptografado delimitados por vírgulas, sem nenhuma formatação. Os usuários podem abrir tais arquivos com um aplicativo de planilha, como o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ou com qualquer outro programa que leia arquivos de texto. Para obter mais informações, consulte [Exportar para um arquivo CSV &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização CSV** A extensão de renderização CSV (Valor Separado por Vírgulas) renderiza relatórios em arquivos de texto não criptografado delimitados por vírgulas, sem nenhuma formatação. Os usuários podem abrir tais arquivos com um aplicativo de planilha, como o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]ou com qualquer outro programa que leia arquivos de texto. Para obter mais informações, consulte [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização XML** A extensão de renderização XML renderiza relatórios em arquivos XML. Esses arquivos XML podem ser armazenados ou lidos por outros programas. Você também pode usar uma transformação XSLT para converter o relatório em outro esquema XML para ser usado por outro aplicativo. O XML gerado pela extensão de renderização XML é codificado como UTF-8. Para obter mais informações, consulte [Exportar para XML &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização XML** A extensão de renderização XML renderiza relatórios em arquivos XML. Esses arquivos XML podem ser armazenados ou lidos por outros programas. Você também pode usar uma transformação XSLT para converter o relatório em outro esquema XML para ser usado por outro aplicativo. O XML gerado pela extensão de renderização XML é codificado como UTF-8. Para obter mais informações, consulte [Exporting to XML &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização de Imagem** A extensão de renderização de Imagem renderiza bitmaps ou metarquivos. A extensão pode renderizar relatórios nos seguintes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Por padrão, a imagem é renderizada no formato TIFF, que pode ser exibido com o visualizador de imagem padrão do sistema operacional (por exemplo, Visualizador de Imagem e Fax do Windows). Você pode enviar a imagem para uma impressora a partir do visualizador. Usar a extensão de renderização de Imagem para renderizar relatórios garante que a aparência do relatório seja a mesma em todos os clientes. (Quando um usuário exibe um relatório em HTML, a aparência deste pode variar dependendo da versão ou das configurações do navegador do usuário, e das fontes disponíveis.) A extensão de renderização de Imagem renderiza o relatório no servidor, de modo que todos os usuários consultem a mesma imagem. Como o relatório é renderizado no servidor, todas as fontes usadas nele também devem estar instaladas no servidor. Para obter mais informações, consulte [Exportar para um arquivo de imagem &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização de Imagem** A extensão de renderização de Imagem renderiza bitmaps ou metarquivos. A extensão pode renderizar relatórios nos seguintes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Por padrão, a imagem é renderizada no formato TIFF, que pode ser exibido com o visualizador de imagem padrão do sistema operacional (por exemplo, Visualizador de Imagem e Fax do Windows). Você pode enviar a imagem para uma impressora a partir do visualizador. Usar a extensão de renderização de Imagem para renderizar relatórios garante que a aparência do relatório seja a mesma em todos os clientes. (Quando um usuário exibe um relatório em HTML, a aparência deste pode variar dependendo da versão ou das configurações do navegador do usuário, e das fontes disponíveis.) A extensão de renderização de Imagem renderiza o relatório no servidor, de modo que todos os usuários consultem a mesma imagem. Como o relatório é renderizado no servidor, todas as fontes usadas nele também devem estar instaladas no servidor. Para obter mais informações, consulte [Exporting to an Image File &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização PDF** A extensão de renderização PDF renderiza relatórios em arquivos PDF que podem ser abertos e exibidos com o Adobe Acrobat 6.0 ou posterior. Para obter mais informações, consulte [Exportar para um arquivo PDF &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização PDF** A extensão de renderização PDF renderiza relatórios em arquivos PDF que podem ser abertos e exibidos com o Adobe Acrobat 6.0 ou posterior. Para obter mais informações, consulte [Exporting to a PDF File &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   
--   **Extensão de Renderização do Word** A extensão de renderização do [!INCLUDE[msCoName](../includes/msconame-md.md)] Word renderiza um relatório como um documento do Word compatível com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 ou posterior. Para obter mais informações, consulte [Exportar para Microsoft Word &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
+-   **Extensão de Renderização do Word** A extensão de renderização do [!INCLUDE[msCoName](../includes/msconame-md.md)] Word renderiza um relatório como um documento do Word compatível com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 ou posterior. Para obter mais informações, consulte [Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
 ## <a name="report-processing-extensions"></a>Extensões de Processamento de Relatório  
  Podem ser adicionadas extensões de processamento de relatório a fim de prover processamento personalizado para itens de relatório que não estejam incluídos com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por padrão, um servidor de relatório pode processar tabelas, gráficos, matrizes, listas, caixas de texto, imagens e outros itens de relatório. Para adicionar recursos especiais a um relatório que necessita de processamento personalizado durante a execução do relatório (por exemplo, se você quiser inserir um mapa do [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint), crie uma extensão de processamento de relatório para tal.  
@@ -82,4 +82,3 @@ ms.lasthandoff: 08/09/2017
  O aplicativo de processamento em segundo plano usa extensões de entrega para entregar relatórios a vários locais. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email e uma extensão de entrega de compartilhamento de arquivo. A extensão de entrega de e-mail envia uma mensagem por meio do protocolo SMTP, quer o próprio relatório quer um link de URL para o relatório. Avisos curtos sem o vínculo de URL ou relatório também podem ser enviados a pagers, telefones ou outros dispositivos. A extensão de entrega de compartilhamento de arquivo salva os relatórios em uma pasta compartilhada na sua rede. É possível especificar o local, o formato da renderização, o nome do arquivo e as opções de substituição para o arquivo que você criar. A entrega de compartilhamento de arquivo pode ser usada para arquivar relatórios renderizados e como parte de uma estratégia para trabalhar com relatórios muito grandes. As extensões de entrega trabalham em conjunto com assinaturas. Quando um usuário cria uma assinatura, ele escolhe uma das extensões de entrega disponíveis para determinar como o relatório será entregue.  
   
   
-

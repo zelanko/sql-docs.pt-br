@@ -2,9 +2,12 @@
 title: Exibir e analisar rastreamentos com o SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 961e3ea99f4c6f8d801528ab20b3c9ed99465e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
-  Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Ao abrir um rastreamento por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o arquivo de rastreamento não precisa ter a extensão de arquivo .trc, caso tenha sido criado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou por procedimentos armazenados do sistema do Rastreamento do SQL.  
   

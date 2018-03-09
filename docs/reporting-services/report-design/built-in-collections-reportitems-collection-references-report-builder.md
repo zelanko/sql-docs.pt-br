@@ -1,29 +1,29 @@
 ---
-title: "Referências de coleções ReportItems (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Referências de coleções de ReportItems (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Coleções internas - referências de coleções ReportItems (construtor de relatórios)
+# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Coleções internas – referências de coleções de ReportItems (Construtor de Relatórios)
   A coleção interna de **ReportItems** é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. A coleção de **ReportItems** inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo de relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. É possível usar a coleção interna de **ReportItems** para produzir cabeçalhos de páginas em estilo de dicionário que mostram o primeiro e o último item em cada página.  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
      `=ReportItems!Textbox1.Value`  
   
--   Esta expressão, colocada em um **ReportItem** propriedade de cor, caixa de texto exibe o texto em preto quando o valor é > 0; caso contrário, o valor é exibido em vermelho:  
+-   Essa expressão, colocada em uma propriedade Color da caixa de texto **ReportItem**, exibe o texto em preto quando o valor é > 0. Caso contrário, o valor é exibido em vermelho:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -56,11 +56,10 @@ ms.lasthandoff: 08/09/2017
   
  Por exemplo, uma caixa de texto em uma linha que está em um grupo pai não deve conter uma expressão que faça referência ao nome de uma caixa de texto em uma linha do grupo filho. Essa expressão não é resolvida como um valor no relatório porque a caixa de texto da linha filho está fora do escopo. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Coleções internas em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtro, grupo e classificar dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

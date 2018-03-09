@@ -3,8 +3,11 @@ title: "Função string-length (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a01221907acd777eaaf41ca77d73bf561724c96c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c46d7c2f2e0b4f88ca8b87a3943c2df14cc543a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---string-length"></a>Funções em valores de cadeia de caracteres - comprimento de cadeia de caracteres
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o comprimento da cadeia de caracteres em caracteres.  
   
@@ -46,7 +48,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Cadeia de caracteres de origem cujo comprimento será computado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o valor de *$arg* é uma sequência vazia, um **xs: Integer** valor 0 será retornado.  
   
  O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados. Se o nível de compatibilidade for 110 ou posterior, cada par substituto será contado como um único caractere. Em níveis de compatibilidade anteriores, eles são contados como dois caracteres. Para obter mais informações, consulte [nível de compatibilidade de ALTER DATABASE &#40; Transact-SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
@@ -159,4 +161,3 @@ Result
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

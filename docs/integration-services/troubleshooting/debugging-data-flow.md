@@ -19,17 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas de fluxos de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -176,7 +175,7 @@ order by source_component_name desc
   
 4.  Clique com o botão direito do mouse no componente cujas colunas de saída de erro você deseja configurar e clique em **Mostrar Editor Avançado**.  
   
-5.  Clique o **propriedades de entrada e saída** guia e expanda  **\<nome do componente > saída de erro** e, em seguida, expanda **colunas de saída**.  
+5.  Clique na guia **Propriedades de Entrada e Saída** e expanda **Saída de Erro do \<component name>** e, em seguida, expanda **Colunas de Saída**.  
   
 6.  Clique em uma coluna e atualize suas propriedades.  
   
@@ -253,7 +252,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  O parâmetro dataflow_path_id_string do procedimento armazenado add_data_tap corresponde à propriedade IdentificationString do caminho de fluxo de dados ao qual você deseja adicionar um toque de dados. Para obter dataflow_path_id_string, clique no caminho de fluxo de dados (seta entre as tarefas no fluxo de dados) e observe o valor da propriedade **IdentificationString** na janela Propriedades.  
   
- Quando você executar o script, o arquivo de saída é armazenado em \<arquivos de programas > \Microsoft SQL Server\110\DTS\DataDumps. Se um arquivo com o mesmo nome já existir, um novo arquivo com um sufixo (por exemplo: output[1].txt) será criado.  
+ Quando você executa o script, o arquivo de saída é armazenado em \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. Se um arquivo com o mesmo nome já existir, um novo arquivo com um sufixo (por exemplo: output[1].txt) será criado.  
   
  Como mencionado anteriormente, você também pode usar o procedimento armazenado [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)em vez de usar o procedimento armazenado add_data_tap. Esse procedimento armazenado utiliza a ID da tarefa de fluxo de dados como um parâmetro em vez de task_package_path. Você pode obter a ID da tarefa de fluxo de dados da janela de propriedades no Visual Studio.  
   
@@ -279,8 +278,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="video"></a>Vídeo  
  Esse [vídeo no TechNet](http://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

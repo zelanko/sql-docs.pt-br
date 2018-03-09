@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08fc61282bda93c3c99d5c2cb28334cfd90876e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3a7afa6acf10d26f64198f7064c2ff66cfee17f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
-    -   **Banco de dados**  
+    -   **Backup de banco de dados**  
   
          Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Depois que você especificar um momento determinado, o orientador de recuperação de banco de dados garantirá que apenas os backups necessários para restaurar até esse momento determinado sejam selecionados na coluna **Restaurar** da grade **Conjuntos de backup a serem restaurados** . Esses backups selecionados compõem o plano de restauração recomendado para a sua restauração pontual. Você deve usar apenas os backups selecionados para sua operação de restauração pontual.  
   
-     Para obter informações sobre as colunas da grade **Selecionar os conjuntos de backup a serem restaurados**, veja [Restaurar banco de dados &#40;Página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md). Para obter informações sobre o Orientador de Recuperação de Banco de Dados, confira [Visão geral da restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+     Para obter informações sobre as colunas da grade **Conjuntos de backup a serem restaurados** , veja [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)). Para obter informações sobre o Orientador de Recuperação de Banco de Dados, confira [Visão geral da restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 10. Na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/17/2017
   
 14. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Before you begin**  
   
  Um momento especificado sempre é restaurado a partir de um backup de log. Em cada instrução RESTORE LOG da sequência de restauração, especifique a transação ou o tempo de destino em uma cláusula STOPAT idêntica. Como um pré-requisito para uma restauração pontual, você deve restaurar primeiro um backup de banco de dados completo cujo ponto de extremidade seja anterior ao tempo de recuperação designado. Esse backup de banco de dados completo pode ser anterior ao backup de banco de dados completo mais recente desde que você depois restaure todos os backups de log subsequentes, até o backup de log que contém o tempo determinado.  
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
  **Sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***hora***,** RECOVERY…  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
   
  O ponto de recuperação é a mais recente confirmação de transação ocorrida até o valor **datetime** especificado pela *hora*.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Restaurar o último backup de banco de dados diferencial e, se houver, sem recuperar o banco de dados (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=***hora***,** RECOVERY).  
+4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=***time***,** RECOVERY).  
   
     > [!NOTE]  
     >  As opções RECOVERY e STOPAT. Se o backup de log de transações não contiver o tempo solicitado (por exemplo, se o tempo especificado estiver além do tempo coberto pelo log de transações), um aviso será gerado e o banco de dados permanecerá sem-recuperação.  
@@ -202,7 +203,7 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

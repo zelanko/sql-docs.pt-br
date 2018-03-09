@@ -2,15 +2,13 @@
 title: "Célula elemento (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Cell Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6a57a3c7da9418dafb1899fddebc2d5646adf81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4f5aa91634660760605543114fb97fb02b312ae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cell-element-xmla"></a>Elemento Cell (XMLA)
-  Contém informações sobre uma célula a ser atualizada por um comando [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém informações sobre uma célula a ser atualizada por um [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,10 +50,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -67,14 +65,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Atributo **Long** obrigatório. Contém a posição ordinal baseada em zero da célula a ser atualizada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -2,30 +2,33 @@
 title: Implantando um Analysis Services projeto | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lição 2-5-implantar um projeto do Analysis Services
-Para exibir os dados do cubo e da dimensão para os objetos do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você deve implantar o projeto em uma instância específica do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e depois processar o cubo e suas dimensões. A*implde um projeto dotação* de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project creates the defined objects in de um projeto do instde um projeto doce of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O*processamento* dos objetos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copia os dados das fontes de dados subjacentes nos objetos de cubo. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Para exibir os dados do cubo e da dimensão para os objetos do cubo do Tutorial do  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você deve implantar o projeto em uma instância específica do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e depois processar o cubo e suas dimensões. *Implantar* um projeto  do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria os objetos definidos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O*processamento* dos objetos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copia os dados das fontes de dados subjacentes nos objetos de cubo. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurar propriedades de projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 Nesta etapa do processo de desenvolvimento, você normalmente implanta o cubo em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um servidor de desenvolvimento. Uma vez concluído o desenvolvimento do seu projeto do Business Intelligence, você provavelmente irá usar o Assistente para Implantação do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implantar seu projeto de um servidor de desenvolvimento em um servidor de produção. Para obter mais informações, consulte [Implantação de solução de modelo multidimensional](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) e [Implantar soluções de modelo usando o Assistente de Implantação](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -42,7 +45,7 @@ Na tarefa a seguir, você revisará as propriedades de implantação do projeto 
     Revise as propriedades de implantação do projeto. Por padrão, o modelo Projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implantar de forma incremental todos os projeto na instância padrão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um computador local, criar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] com o mesmo nome do projeto e processar os objetos depois da implantação usando a opção de processamento padrão. Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no computador local ou a uma instância em um servidor remoto, altere o **servidor** nome de propriedade para a instância apropriada, como \<  *ServerName**>\\<**InstanceName**>*.  
+    > Se você deseja implantar o projeto em uma instância nomeada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no computador local ou a uma instância em um servidor remoto, altere o **servidor** nome de propriedade para a instância apropriada, como \<  *ServerName**>\\<**InstanceName * * >*.  
   
 3.  Clique em **OK**.  
   
@@ -64,7 +67,7 @@ Na tarefa a seguir, você revisará as propriedades de implantação do projeto 
 Você implantou com sucesso o cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em sua instância local do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e depois processou e implantou o cubo.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Navegando pelo cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
+[Navegando no cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

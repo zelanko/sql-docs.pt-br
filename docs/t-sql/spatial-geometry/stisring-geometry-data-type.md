@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STIsRing (geometry Data Type)
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3417f5da487ea7de5d7c51820316dae3caf8bb0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e54455f50c306b4a13df2c815b75995fc15dc06a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ Retornará 1 se uma **geometria** instância atende aos seguintes requisitos:
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retornará nulo se a instância não é um **LineString**.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,8 +70,7 @@ SELECT @g.STIsRing();
  [STIsClosed &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [STGeometryType &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [STIsSimple &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

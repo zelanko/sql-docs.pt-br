@@ -1,5 +1,5 @@
 ---
-title: + (Adicionar) (Transact-SQL) | Microsoft Docs
+title: "+ (Adição) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - plus sign (+)
 - add operator (+)
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f23e9847250e6b899d990d3fdfeb710149b4c2d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0c9aca952ab6853a2456b95dab912092d7708668
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-add-transact-sql"></a>+ (Adicionar) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Soma dois números. Este operador aritmético de adição também pode adicionar um número, em dias, a uma data.  
   
@@ -131,16 +130,15 @@ ORDER BY TotalHoursAway ASC;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [+ = &#40; Adicionar EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [+= &#40;Addition Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-
 
 

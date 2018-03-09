@@ -8,25 +8,23 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a3f6211095c5f2a1506b31ca45846c15deb619b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-glossary"></a>Glossário do ODBC
 ## <a name="a"></a>Um  
@@ -507,4 +505,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="v"></a>V  
  **modo de exibição**  
  Uma maneira alternativa de examinar os dados em uma ou mais tabelas. Um modo de exibição normalmente é criado como um subconjunto das colunas de uma ou mais tabelas. No ODBC, as exibições são geralmente equivalentes a tabelas.
-

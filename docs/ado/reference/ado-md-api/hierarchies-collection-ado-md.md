@@ -3,7 +3,7 @@ title: "Coleção hierarquias (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,22 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: baba9403af996c936c65f102ae769376ccf69311
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589d3f31e73bbf6b92cbd81b85392a45f21e26e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchies-collection-ado-md"></a>Coleção hierarquias (ADO MD)
 Contém o conjunto de [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objetos de uma dimensão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **Hierarquias** é uma coleção padrão do ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
 -   Obter o número de objetos na coleção com o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade.  
@@ -51,4 +50,3 @@ Contém o conjunto de [hierarquia](../../../ado/reference/ado-md-api/hierarchy-o
  [Exemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Objeto de dimensão (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
-

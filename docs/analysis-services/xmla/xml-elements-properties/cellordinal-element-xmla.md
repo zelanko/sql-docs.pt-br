@@ -2,15 +2,13 @@
 title: O elemento CellOrdinal (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellOrdinal Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d4fee3f8cfb4bc664734944316c4fcb9996d2a2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22516eab488c566f65e353611528f2c4b3b0d10f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cellordinal-element-xmla"></a>Elemento CellOrdinal (XMLA)
-  Contém a posição ordinal dentro de um cubo de uma célula a ser atualizada por um [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém a posição ordinal dentro de um cubo de uma célula a ser atualizada por um [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +48,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Longo|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,14 +59,14 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Célula](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **CellOrdinal** elemento identifica a célula a ser atualizada pelo **UpdateCells** comando.  
   
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento de valor &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)   
  [Elemento UpdateCells &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

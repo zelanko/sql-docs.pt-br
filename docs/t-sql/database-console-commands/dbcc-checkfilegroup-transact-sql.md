@@ -1,11 +1,13 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +28,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Verifica a alocação e integridade estrutural de todas as tabelas e exibições indexadas no grupo de arquivos especificado do banco de dados atual.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Verifica a alocação e integridade estrutural de todas as tabelas e exibições indexadas no grupo de arquivos especificado do banco de dados atual.
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
@@ -104,7 +105,7 @@ DBCC CHECKFILEGROUP
 > [!CAUTION]  
 >  Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKFILEGROUP e DBCC CHECKDB são comandos DBCC semelhantes. A principal diferença é que DBCC CHECKFILEGROUP é limitado ao único grupo de arquivos especificado e às tabelas necessárias.
 DBCC CHECKFILEGROUP executa os seguintes comandos:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) do grupo de arquivos.  
@@ -232,13 +233,12 @@ WITH ESTIMATEONLY;
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[FILEGROUP_ID &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
-[sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
-[sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
-[sys. sysfilegroups &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
+[FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
+[sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
+[sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
+[sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

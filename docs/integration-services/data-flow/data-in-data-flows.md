@@ -1,5 +1,5 @@
 ---
-title: Fluam de dados em dados | Microsoft Docs
+title: Dados em fluxos de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75b3313a841152e31ca6ff52e7c523fbc1d4b249
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-in-data-flows"></a>Dados em fluxos de dados
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de tipos de dados que são usados em fluxos de dados.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  Quando você tiver implantado um pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , poderá analisar o fluxo de dados no pacote durante a execução para verificar o desempenho ou procurar outros problemas. Os relatórios padrão estão disponíveis para permitir exibir status de pacote e histórico, e você pode consultar as exibições de banco de dados que fornecem informações detalhadas sobre execução de pacote. Você também pode adicionar e remover toques de dados dinamicamente durante a execução para atingir componentes específicos de seu pacote. Para obter mais informações, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
-

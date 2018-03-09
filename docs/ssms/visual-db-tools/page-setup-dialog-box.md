@@ -3,8 +3,11 @@ title: "Caixa de diálogo Configurar Página | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 857a8a1331b49273ff82dd459c65da983c60dc4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
-Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode personalizar o design da sua página selecionando opções na caixa de diálogo **Configurar Página**. A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
   
 ## <a name="paper"></a>Papel  
 **Tamanho**  
@@ -45,7 +48,7 @@ Define a distância entre a borda esquerda da página e a borda esquerda das lin
 Right (à direita)  
 Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
   
-Início  
+TOP  
 Define a distância entre a parte superior da página e a parte superior da primeira linha na página.  
   
 Inferior  

@@ -1,29 +1,29 @@
 ---
 title: Instalar ferramentas de linha de comando do SQL Server no Linux | Microsoft Docs
-description: "Este tópico descreve como instalar as ferramentas do SQL Server no Linux."
+description: Este artigo descreve como instalar as ferramentas do SQL Server no Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar as ferramentas de linha de comando do SQL Server de sqlcmd e bcp em Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 As etapas a seguir instalar as ferramentas de linha de comando, drivers de ODBC da Microsoft e suas dependências. O **mssql ferramentas** pacote contém:
 
@@ -38,7 +38,7 @@ Instale as ferramentas para a sua plataforma:
 - [macOS](#macos)
 - [Docker](#docker)
 
-Este tópico descreve como instalar as ferramentas de linha de comando. Se você estiver procurando por exemplos de como usar **sqlcmd** ou **bcp**, consulte o [links](#next-steps) no final deste tópico.
+Este artigo descreve como instalar as ferramentas de linha de comando. Se você estiver procurando por exemplos de como usar **sqlcmd** ou **bcp**, consulte o [links](#next-steps) no final deste tópico.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalar as ferramentas em RHEL 7
 
@@ -180,15 +180,18 @@ Use as etapas a seguir para instalar o **mssql ferramentas** no SUSE Linux Enter
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Instalar as ferramentas em macOS
+## <a id="macos"></a> Instalar as ferramentas em macOS
 
 Uma visualização de **sqlcmd** e **bcp** agora está disponível em macOS. Para obter mais informações, consulte o [comunicado](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+
+*Instalar [Homebrew](https://brew.sh) se você não tiver já:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Para instalar as ferramentas para Mac El Capitan e Serra, use os seguintes comandos:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -196,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 A partir do SQL Server de 2017 CTP 2.0, as ferramentas de linha de comando do SQL Server são incluídas na imagem do Docker. Se você anexar a imagem com um prompt de comando interativo, você pode executar as ferramentas localmente.
 
@@ -261,7 +264,7 @@ Para instalar manualmente esses pacotes, use as seguintes etapas:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter um exemplo de como usar **sqlcmd** para se conectar ao SQL Server e criar um banco de dados, consulte uma da seguir rápida iniciar tutoriais:
+Para obter um exemplo de como usar **sqlcmd** para se conectar ao SQL Server e criar um banco de dados, consulte os seguintes tutoriais:
 
 - [Instalar no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

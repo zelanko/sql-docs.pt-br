@@ -1,5 +1,5 @@
 ---
-title: Tarefa Bulk Insert | Microsoft Docs
+title: "Tarefa Inserção em Massa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
   A tarefa Inserção em Massa fornece uma maneira eficiente de copiar grandes volumes de dados em uma tabela ou exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, suponha que a empresa armazena sua lista de produtos em milhões de linhas em um sistema de mainframe, mas o sistema de comércio eletrônico da empresa usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para preencher páginas da Web. Você deve atualizar a tabela de produtos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as noites com a lista principal de produtos do mainframe. Para atualizar a tabela, você salva a lista de produtos em um formato delimitado por guia e usa a tarefa de inserção em massa para copiar os dados diretamente na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -111,7 +110,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
@@ -129,9 +128,9 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **Conexão**  
- Selecione um Gerenciador de conexão OLE DB na lista ou clique em \< **nova conexão...** > para criar uma nova conexão.  
+ Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **Tabela de Destino**  
  Digite o nome da tabela ou exibição de destino ou selecione uma tabela ou exibição na lista.  
@@ -139,19 +138,19 @@ ms.lasthandoff: 08/11/2017
  **Formato**  
  Selecione a fonte do formato para a inserção em massa. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Usar Arquivo**|Selecione um arquivo que contém a especificação de formato. Selecionar esta opção faz com que seja exibida a opção dinâmica **Arquivo de Formato**.|  
 |**Especificar**|Especifique o formato. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas **RowDelimiter** e **ColumnDelimiter**.|  
   
- **Arquivo**  
- Selecione um Gerenciador de conexão de arquivo ou arquivo simples na lista ou clique em \< **nova conexão...** > para criar uma nova conexão.  
+ **File**  
+ Selecione um gerenciador de conexões de Arquivo Simples na lista ou clique em \<**Nova conexão…**> para criar uma nova conexão.  
   
  O local do arquivo está relacionado ao Mecanismo de Banco de Dados do SQL Server especificado no gerenciador de conexões para esta tarefa. O arquivo de texto deve ser acessível pelo Mecanismo de Banco de Dados do SQL Server em um disco rígido local no servidor, por um compartilhamento ou unidade mapeada para o SQL Server. O arquivo não pode ser acessado pelo Tempo de Execução do SSIS.  
   
  Se você acessa o arquivo de origem usando um gerenciador de conexões de Arquivo Simples, a tarefa de Inserção em Massa não usa o formato especificado no gerenciador de conexões de Arquivos Simples. Em vez disso, a tarefa de Inserção em massa usa o formato especificado em um arquivo de formato ou os valores das propriedades RowDelimiter e ColumnDelimiter da tarefa.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/file-connection-manager.md), [simples Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **Tópicos relacionados:** [Gerenciador de Conexões de Arquivo](../../integration-services/connection-manager/file-connection-manager.md), [Gerenciador de Conexões de Arquivo Simples](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **Atualizar Tabelas**  
  Atualize a lista de tabelas e exibições.  
@@ -179,7 +178,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Inserção em Massa.  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Editor da Tarefa Inserção em Massa (página de Opções)
@@ -221,4 +220,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Cada linha que não pode ser importada pela operação de carregamento em massa é contada como um erro.  
   
-

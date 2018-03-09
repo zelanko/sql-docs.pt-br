@@ -2,25 +2,30 @@
 title: "Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e05164fa73d36e4efa96b1f4543feaf31a24fd1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eebf733d6c0f0048c8509abf1d1e9f30d30fa912
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala uma nova versão (versão 14.0.4999.1038) do separador de palavras e lematizador para o idioma inglês, substituindo a versão anterior desses componentes (versão 12.0.6828.0). Para obter informações sobre o comportamento alterado dos novos componentes, veja [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Este tópico descreve como alternar da nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão. Para instalações em cluster, essas alterações devem ser feitas em todos os nós primários e passivos.  
   
  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usavam separadores de palavras diferentes representados por CLSIDs distintos para o inglês dos EUA (LCID 1033) e o inglês do Reino Unido (LCID 2057). Nesta versão, ambos o LCIDs usam os mesmos componentes com os mesmos CLSIDs, como é mostrado na seguinte tabela:  
@@ -126,7 +131,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reverter os separadores de palavras usados por pesquisa à versão anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

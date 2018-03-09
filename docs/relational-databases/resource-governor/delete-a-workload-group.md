@@ -2,9 +2,12 @@
 title: Excluir um grupo de carga de trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,27 +16,27 @@ helpviewer_keywords:
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc49607bc518ec521586fab4d18886f7e718d842
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8027e697f08d9e31e463015ca929e64f5fa3d182
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
-  É possível excluir um grupo de carga de trabalho ou um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível excluir um grupo de carga de trabalho ou um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para excluir um grupo de carga de trabalho, usando:**  [Pesquisador de Objetos](#DelWGObjEx), [Propriedades do Administrador de Recursos](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Não é possível excluir um grupo de carga de trabalho se ele contiver sessões ativas.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Se um grupo de cargas de trabalho contiver sessões ativas, a exclusão ou movimentação do grupo de cargas de trabalho para um pool de recursos diferente não terá êxito quando a instrução ALTER RESOURCE GOVERNOR RECONFIGURE for chamada para aplicar a alteração. Para evitar esse problema, é possível executar uma das seguintes ações:  
   
 -   Aguardar até que todas as sessões do grupo afetado sejam desconectadas e depois executar novamente a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -94,7 +97,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Criar um grupo de carga de trabalho](../../relational-databases/resource-governor/create-a-workload-group.md)   

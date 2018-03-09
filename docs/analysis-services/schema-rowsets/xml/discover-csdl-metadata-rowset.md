@@ -1,35 +1,33 @@
 ---
-title: Conjunto de linhas DISCOVER_CSDL_METADATA | Microsoft Docs
+title: DISCOVER_CSDL_METADATA Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Conjunto de linhas DISCOVER_CSDL_METADATA
-  Retorna informações sobre um modelo de dados (de tabela ou multidimensional) do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], fornecendo a definição do modelo no formato da CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI). A CSDLBI se baseia na CSDL, um esquema XML usado pela Estrutura de Dados de Entidade que é utilizada para comunicação entre um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o cliente [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . As anotações de BI (Business Intelligence) fornecem metadados adicionais sobre modelos de tabela e os objetos neles. Para obter mais informações sobre modelos de dados de tabela, consulte [CSDLBI &#40;Anotações CSDL para Business Intelligence&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna informações sobre um modelo de dados (de tabela ou multidimensional) do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , fornecendo a definição do modelo no formato da CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI). A CSDLBI se baseia na CSDL, um esquema XML usado pela Estrutura de Dados de Entidade que é utilizada para comunicação entre um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o cliente [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . As anotações de BI (Business Intelligence) fornecem metadados adicionais sobre modelos de tabela e os objetos neles. Para obter mais informações sobre modelos de dados de tabela, consulte [CSDLBI &#40;Anotações CSDL para Business Intelligence&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  O contexto de segurança do comando afeta o conjunto de linhas que é retornado. São requeridas permissões de leitura instância do Analysis Services para obter a definição CSDL do servidor.  
   
@@ -38,12 +36,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_CSDL_METADATA** contém as colunas a seguir.  
   
-|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Description**|  
+|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Descrição**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Sim|Especifica o nome do banco de dados para o qual a descrição CSDLBI é solicitada. Se ele for omitido, o banco de dados atual será usado.<br /><br /> Essa restrição é necessária para todos os tipos de modelo.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Sim|Especifica a ID de uma perspectiva que foi definida no modelo especificado por CATALOG_NAME.<br /><br /> Uma restrição opcional. Aplica-se a todos os tipos de modelo.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|Sim|Especifica o nome de uma perspectiva que foi definida no modelo especificado por CATALOG_NAME.<br /><br /> Essa restrição é necessária quando o modelo de tabela inclui perspectivas ou quando uma solução multidimensional inclui vários cubos ou perspectivas.|  
-|**METADADOS**|**DBTYPE_WSTR**|Não|Uma cadeia de caracteres que contém a definição XML de uma fonte de dados e suas propriedades, de acordo com o esquema da CSDLBI.|  
+|**METADATA**|**DBTYPE_WSTR**|não|Uma cadeia de caracteres que contém a definição XML de uma fonte de dados e suas propriedades, de acordo com o esquema da CSDLBI.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Sim|Um identificador de cadeia de caracteres.<br /><br /> Essa restrição é opcional para bancos de dados multidimensionais. Se vários cubos estiverem disponíveis e a restrição for omitida, será retornado o cubo padrão.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/01/2017
 -   IsRightToLeft  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  A consulta XMLA a seguir retorna a representação CSDL do exemplo de modelo de tabela da AdventureWorks 2012. Cada solução de tabela pode conter apenas um modelo, de modo que a restrição PERSPECTIVE_NAME pode ser deixada em branco. No entanto, esse modelo contém várias perspectivas.  
   
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Anotações CSDL para Business Intelligence &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

@@ -3,8 +3,9 @@ title: "Escrevendo seu próprio manipulador personalizado | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9301a871c5b2c55b66c13ccb57888d6e4e37ac47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Escrevendo seu próprio manipulador personalizado
 Talvez você queira gravar seu próprio manipulador se você for um administrador de servidor do IIS que deseja que o padrão de suporte de RDS, mas mais controle sobre solicitações de usuários e direitos de acesso.  
@@ -34,7 +35,7 @@ Talvez você queira gravar seu próprio manipulador se você for um administrado
 > [!IMPORTANT]
 >  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="idatafactoryhandler-interface"></a>Interface IDataFactoryHandler  
+## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler Interface  
  Essa interface possui dois métodos, **GetRecordset** e **reconectar**. Ambos os métodos requerem que o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade ser definida como **adUseClient**.  
   
  Ambos os métodos usam argumentos que apareçam depois da vírgula primeiro no "**manipulador =**" palavra-chave. Por exemplo, `"Handler=progid,arg1,arg2;"` irá passar uma cadeia de caracteres do argumento de `"arg1,arg2"`, e `"Handler=progid"` irá passar um argumento nulo.  
@@ -59,7 +60,7 @@ Talvez você queira gravar seu próprio manipulador se você for um administrado
   
  ***argumentos*** os argumentos para o manipulador.  
   
- ***pRS*** um **registros** objeto.  
+ ***pRS***  A **Recordset** object.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
  Esta é a definição de interface para **IDataFactoryHandler** que aparece no **msdfhdl.idl** arquivo.  

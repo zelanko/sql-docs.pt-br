@@ -3,8 +3,11 @@ title: "Listar informações de categoria do trabalho | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62f55e0baa0bc0518e1ae5104e7e17260aa3596a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eae47348466683d969531589c41754c0fdf85cc8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="list-job-category-information"></a>Listar informações de categoria de trabalho
-Este tópico descreve como listas informações de categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[tsql](../../includes/tsql_md.md)] ou o SQL Server Management Objects.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como listas informações de categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[tsql](../../includes/tsql_md.md)] ou o SQL Server Management Objects.  
   
 -   **Antes de começar:**  
   

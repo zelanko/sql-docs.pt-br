@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - dm_io_cluster_valid_path_names_TSQL
 - sys.dm_io_cluster_valid_path_names_TSQL
 - dm_io_cluster_valid_path_names
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_io_cluster_valid_path_names
 - sys.dm_io_cluster_valid_path_names
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceaf5223a8f86f5ede0bff6bbc20844a7ede26b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0b7612270c74a63d4bf5d89a11fad3f215a83c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**nome_do_caminho**|**Nvarchar (512)**|Ponto de montagem do volume ou caminho da unidade que pode ser usado como um diretório raiz para o banco de dados e os arquivos de log. Não permite valor nulo.|  
-|**cluster_owner_node**|**Nvarchar (64)**|Proprietário atual da unidade. Para os volumes compartilhados de cluster (CSV), o proprietário é o nó que está hospedando o servidor de metadados. Não permite valor nulo.|  
-|**is_cluster_shared_volume**|**Bits**|Retornará 1 se a unidade em que esse caminho está localizado estiver em um volume compartilhado de cluster; caso contrário, retornará 0.|  
+|**path_name**|**Nvarchar(512)**|Ponto de montagem do volume ou caminho da unidade que pode ser usado como um diretório raiz para o banco de dados e os arquivos de log. Não permite valor nulo.|  
+|**cluster_owner_node**|**Nvarchar(64)**|Proprietário atual da unidade. Para os volumes compartilhados de cluster (CSV), o proprietário é o nó que está hospedando o servidor de metadados. Não permite valor nulo.|  
+|**is_cluster_shared_volume**|**Bit**|Retornará 1 se a unidade em que esse caminho está localizado estiver em um volume compartilhado de cluster; caso contrário, retornará 0.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma instância de cluster de failover (FCI) do SQL Server deve usar armazenamento compartilhado entre todos os nós da FCI para o armazenamento de dados e de arquivo de log. Os discos listados nesta exibição são aqueles que estão no grupo de recursos de cluster associados com a instância e são os únicos discos que podem ser usados para o armazenamento de dados ou de arquivo de log.  
   
 > [!NOTE]  
@@ -63,8 +65,8 @@ SELECT * FROM sys.dm_io_cluster_valid_path_names;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM os_cluster_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.DM io_cluster_shared_drives &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

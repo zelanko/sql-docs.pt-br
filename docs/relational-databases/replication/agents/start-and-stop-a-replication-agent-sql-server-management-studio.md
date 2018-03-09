@@ -2,9 +2,12 @@
 title: "Iniciar e interromper um agente de replicação (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d281ab71b74f9c7ba977ebd3da13aaebdd73b3ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 25bcd6e945bb311de9df1735d63ef58dc6d92600
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar e interromper um Agente de Replicação (SQL Server Management Studio)
-  Inicie e pare os agentes nas pastas **Trabalhos** e **Replicação** no [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e do Replication Monitor. Inicie e pare os seguintes agentes e trabalhos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Inicie e pare os agentes nas pastas **Trabalhos** e **Replicação** no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e do Replication Monitor. Inicie e pare os seguintes agentes e trabalhos:  
   
 -   O Agente de Instantâneo, que é usado por todas as publicações.  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Clique com o botão direito em um agente e, então, clique em **Iniciar Agente** ou **Parar Agente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  

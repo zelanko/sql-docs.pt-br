@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProcessId Class (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProcessId Class (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProcessId property
+helpviewer_keywords:
+- ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b909f4f367a66468b6618399a323904e7a93573
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd2602dd9f5d27dd8c11967f1afe084318498963
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="processid-class-sqlservice-class"></a>Classe ProcessId (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Obtém a ID de processo do sistema que identifica exclusivamente um serviço.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Obtém a ID de processo de sistema que identifica exclusivamente um serviço.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +49,7 @@ object.ProcessId [= value]
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um **uint32** valor que especifica a ID que identifica exclusivamente o processo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Exemplo  
   

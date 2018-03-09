@@ -1,5 +1,5 @@
 ---
-title: Tarefa de fluxo de dados | Microsoft Docs
+title: Tarefa de Fluxo de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir mostra uma tarefa de Fluxo de Dados com vários fluxos de dados.  
   
- ![Fluxos de dados](../../integration-services/control-flow/media/mw-dts-09.gif "fluxos de dados")  
+ ![Fluxos de dados](../../integration-services/control-flow/media/mw-dts-09.gif "Fluxos de dados")  
   
 ## <a name="log-entries"></a>Entradas de log  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
  Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento **OnPipelineRowsSent** quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|Coluna|Description|Value|  
+|coluna|Description|Valor|  
 |------------|-----------------|-----------|  
 |**PathID**|O valor da propriedade **ID** do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
 |**PathName**|O valor da propriedade **Nome** do caminho.|Saída da origem OLE DB|  
@@ -118,11 +117,10 @@ ms.lasthandoff: 08/03/2017
   
 -   [Adicionando a tarefa Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Distribuidor de Dados Balanceados](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com.  
   
   
-

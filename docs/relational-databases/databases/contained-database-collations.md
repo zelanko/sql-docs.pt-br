@@ -2,27 +2,30 @@
 title: Agrupamentos de banco de dados independentes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>Agrupamentos de banco de dados contidos
-  Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, a distinção de acentos e o idioma base sendo usado. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Os agrupamentos se aplicam não apenas aos dados armazenados nas tabelas de usuário, mas também a todo o texto tratado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo metadados, objetos temporários, nomes de variável etc. O tratamento deles varia nos bancos de dados dependentes e independentes. Essa alteração não afetará muitos usuários, mas ajuda a fornecer independência de instância e uniformidade. Mas isso também pode causar alguma confusão, bem como problemas em sessões que acessam bancos de dados contidos e não contidos.  
   
@@ -34,13 +37,13 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-1"></a>Exemplo 1  
  Por exemplo, se estivéssemos trabalhando em Beijing, nós poderíamos usar um agrupamento chinês:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Agora, se criarmos uma coluna, seu agrupamento padrão será esse agrupamento chinês, mas podemos escolher outro se quisermos:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -53,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -65,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Exemplo 2  
  Por exemplo, considere o banco de dados (chinês) acima quando usado em uma instância com um agrupamento **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -89,7 +92,7 @@ JOIN #T2
   
  Podemos corrigir isso agrupando explicitamente a tabela temporária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] torna isso um pouco mais fácil ao fornecer a palavra-chave **DATABASE_DEFAULT** para a cláusula **COLLATE** .  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -139,7 +142,7 @@ END;
   
  No exemplo de tabela temp descrito anteriormente, podemos ver que esse comportamento de agrupamento elimina a necessidade de uma cláusula **COLLATE** explícita na maioria dos usos da tabela temp. Em um banco de dados contido, esse código agora é executado sem erro, mesmo que os agrupamentos de banco de dados e de instância sejam diferentes:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -280,7 +283,7 @@ GO
 ## <a name="conclusion"></a>Conclusão  
  O comportamento de agrupamento de bancos de dados contidos é sutilmente diferente daquele em bancos de dados não contidos. Esse comportamento é geralmente benéfico, fornecendo independência de instância e simplicidade. Alguns usuários podem ter problemas, particularmente quando uma sessão acessa bancos de dados contidos e não contidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   

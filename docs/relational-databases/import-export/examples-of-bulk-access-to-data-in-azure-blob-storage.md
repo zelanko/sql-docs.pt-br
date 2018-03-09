@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - BULK INSERT, Azure blob storage
 - OPENROWSET, Azure blob storage
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1ad891d370e08baf406b46c4ff090847288df33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d94d679ee6eea27302f003fb5e0b7134fff8c08
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemplos de acesso em massa a dados no Armazenamento de Blobs do Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
       FORMAT = 'CSV'); 
 ```
 
-## <a name="see-also"></a>Consulte também   
+## <a name="see-also"></a>Consulte Também   
 
 [CRIAR UMA CREDENCIAL COM ESCOPO DE BANCO DE DADOS](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
 [CRIAR UMA FONTE DE DADOS EXTERNA](../../t-sql/statements/create-external-data-source-transact-sql.md)   

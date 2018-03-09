@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a75d56944852d39d083bd1a8c075c3efb6aaa723
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 077bd57c36f7a60c75f9475401475cebbfb41b8d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +64,13 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|A coluna especificada não está no *change_columns* lista.|  
 |1|A coluna especificada está no *change_columns* lista.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK não executa nenhuma verificação para validar o *column_id* valor ou que o *change_columns* parâmetro foi obtido na tabela da qual o  *column_id* foi obtido.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir determina se a coluna `Salary` da tabela `Employees` foi atualizada. O `COLUMNPROPERTY` função retorna a ID de coluna a `Salary` coluna. A variável local `@change_columns` deve ser definida para os resultados de uma consulta usando CHANGETABLE como fonte de dados.  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  

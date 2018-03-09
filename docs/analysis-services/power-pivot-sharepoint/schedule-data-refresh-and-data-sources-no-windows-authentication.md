@@ -2,32 +2,30 @@
 title: "Agendar atualização de dados e fontes de dados - nenhuma autenticação do Windows | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Agendar atualização de dados e fontes de dados - nenhuma autenticação do Windows
-  Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
   
 ||  
 |-|  
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **(4)** A pasta de trabalho PowerPivot usa dados Oracle. As configurações de atualização da pasta de trabalho especificam a conexão da fonte de dados para usar o aplicativo de destino **(2)** para credenciais.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Existe um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

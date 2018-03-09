@@ -2,28 +2,33 @@
 title: Diretiva TYPE em consultas FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c7c87b5ab05ac170f9c6291c8b8147e20e71762
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   O suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) permite solicitar opcionalmente que o resultado de uma consulta XML FOR seja retornado como o tipo de dados **xml**, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, é possível especificar um XQuery nela, atribuir o resultado a uma variável de tipo **xml** ou gravar [Consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
@@ -150,7 +155,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

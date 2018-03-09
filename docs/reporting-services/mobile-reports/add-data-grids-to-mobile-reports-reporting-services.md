@@ -1,26 +1,27 @@
 ---
-title: "Adicionar a grade de dados para relatórios móveis | O Reporting Services | Microsoft Docs"
+title: "Adicionar grades de dados a relatórios móveis | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Adicionar grades de dados aos relatórios móveis | Reporting Services
 Às vezes, a melhor visualização são os próprios dados. Saiba mais sobre as três *grades de dados*, ou tabelas, para exibir dados em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
@@ -90,4 +91,3 @@ Quando você adiciona uma coluna de gráfico a uma grade de dados, você precisa
 * [Medidores nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
-

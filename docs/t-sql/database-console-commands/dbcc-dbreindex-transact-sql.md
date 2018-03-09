@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - DBREINDEX_TSQL
 - DBREINDEX
 - DBCC_DBREINDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index rebuilding [SQL Server]
 - rebuilding indexes
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Recria um ou mais índices para uma tabela no banco de dados especificado.
@@ -62,7 +64,7 @@ DBCC DBREINDEX
  *index_name*  
  É o nome do índice a ser recriado. Os nomes de índice devem obedecer às regras para identificadores. Se *index_name* for especificado, *table_name* deve ser especificado. Se *index_name* não for especificado ou for "", todos os índices da tabela serão recriados.  
   
- *fator de preenchimento*  
+ *fillfactor*  
  É a porcentagem de espaço em cada página de índice para armazenamento de dados quando o índice é criado ou reconstruído. *fator de preenchimento* substitui o fator de preenchimento quando o índice foi criado, tornando-se o novo padrão do índice e de qualquer outro índice não clusterizado recriado porque um índice clusterizado é recompilado.  
  Quando *fillfactor* for 0, DBCC DBREINDEX utilizará o valor de fator de preenchimento última especificado para o índice. Esse valor é armazenado no **sys. Indexes** exibição do catálogo.   
  Se *fillfactor* for especificado, *table_name* e *index_name* deve ser especificado. Se *fillfactor* não for especificado, o fator de preenchimento padrão, 100, será usado. Para obter mais informações, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -70,7 +72,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC DBREINDEX recria um índice de uma tabela ou todos os índices definidos para uma tabela. Quando você permite que um índice seja recriado dinamicamente, os índices que impõem a restrição PRIMARY KEY ou UNIQUE podem ser recriados sem a necessidade de descartar e recriar essas restrições. Isso significa que um índice pode ser recriado sem ter conhecimento da estrutura de uma tabela ou suas restrições. Isso pode ocorrer depois de uma cópia em massa de dados na tabela.
 
 DBCC DBREINDEX pode recriar todos os índices de uma tabela em uma instrução. Isso é mais fácil do que codificar várias instruções DROP INDEX e CREATE INDEX. Como o trabalho é feito por uma instrução, DBCC DBREINDEX é automaticamente atômica, considerando que as instruções DROP INDEX e CREATE INDEX, individualmente, devem ser incluídas em uma transação que será atômica. Além disso, DBCC DBREINDEX oferece mais otimizações que as instruções individuais DROP INDEX e CREATE INDEX.

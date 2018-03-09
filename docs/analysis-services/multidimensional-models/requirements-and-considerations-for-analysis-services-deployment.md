@@ -2,16 +2,13 @@
 title: "Requisitos e considerações para Analysis Services implantação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,20 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
-  O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisitos de memória e processador  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de mais recursos de memória e processador nos seguintes casos:  
@@ -113,4 +110,3 @@ ms.lasthandoff: 09/01/2017
 -   Se o desempenho da consulta é ruim, mas não é possível aumentar os recursos de processador e memória no servidor local, implante um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em dois ou mais servidores de produção. Em seguida, use o Balanceamento de Carga de Rede (NLB) para combinar os servidores em um único cluster. Em um cluster NLB, as consultas são distribuídas automaticamente entre todos os servidores do cluster NLB.  
   
   
-

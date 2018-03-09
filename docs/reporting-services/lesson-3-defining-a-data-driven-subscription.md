@@ -2,27 +2,27 @@
 title: "Lição 3: Definindo uma assinatura controlada por dados | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
@@ -52,7 +52,7 @@ Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a font
 ## <a name="destination"></a>Destino  
 1.  Na seção Destino, selecione **Compartilhamento de Arquivos do Windows** como o método de entrega.  
 
-## <a name="dataset"></a>Conjunto de dados
+## <a name="dataset"></a>Dataset
 1. Clique em **Editar Conjunto de Dados**.
 2. Selecione **Uma fonte de dados personalizada**.
 3. Selecione **Microsoft SQL Server** como o tipo de **Conexão** da fonte de dados.
@@ -87,27 +87,27 @@ Parâmetro  |Origem do valor  | Valor/campo
 **Caminho**     | Inserir valor  | Em Valor, digite o nome de um compartilhamento de arquivos públicos para os quais você tem permissões de gravação (por exemplo, `\\mycomputer\public\myreports`). 
 **Formato de renderização** | Obter valor do conjunto de dados | Formato
 **Modo de gravação**| Inserir valor| Incremento automático    
-**Extensão do arquivo** |Inserir valor |Verdadeiro
-**Nome de Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira neste formato: \<domínio >\\\<conta >. A conta de usuário precisa ter permissões para o caminho configurado. 
+**Extensão do arquivo** |Inserir valor |True
+**Nome de Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
 **Senha** | Inserir valor | Digite sua senha
 
 ## <a name="report-parameters"></a>Parâmetros de relatório
  1. No campo **OrderNumber** , selecione **Obter valor do conjunto de dados**. Em Valor, selecione **Pedido**. 
  2. Clique em **Criar Assinatura**.
    
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Quando a assinatura é executada, quatro arquivos de relatórios são entregues no compartilhamento de arquivos especificado, um para cada pedido na fonte de dados *Assinantes* . Cada entrega deve ser exclusiva em termos de dados (os dados devem ser específicos do pedido), formato de renderização e formato de arquivo. Você pode abrir cada relatório da pasta compartilhada para verificar se cada versão está personalizada com base nas opções de assinatura definidas.  
   
-![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "lista de arquivos criados pela assinatura")  
+![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de arquivos criados pela assinatura")  
   
 A página de assinatura no portal da Web conterá a data da **Última Execução** e o **Status** da assinatura. 
 **Observação:** atualize a página depois que a assinatura for executada para ver as informações atualizadas.  
     
-![Assinatura resulta no Gerenciador de relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "assinatura resulta no Gerenciador de relatórios")  
+![Resultados da assinatura no Gerenciador de Relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados da assinatura no Gerenciador de Relatórios")  
   
 Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Assinaturas e entrega &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Assinaturas controladas por dados](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Criar, modificar e excluir assinaturas controladas por dados](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -115,5 +115,4 @@ Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.
   
   
   
-
 

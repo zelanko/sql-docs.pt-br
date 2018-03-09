@@ -1,29 +1,29 @@
 ---
-title: "Exemplos de URL para itens em um servidor de relatório - modo do SharePoint | Microsoft Docs"
+title: "Exemplos de URL para itens em um servidor de relatório – modo do SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "5"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório - modo do SharePoint
+# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  
   
  Os sites do SharePoint usam endereços da Web diferentes do que um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo. A hierarquia da Web do site do SharePoint inclui o aplicativo do SharePoint Web, um site de alto nível, subsites opcionais e bibliotecas. Você deve saber criar uma URL que especifique o servidor do SharePoint, bem como o local na hierarquia do site do SharePoint em que você deseja publicar um relatório ou itens relacionados.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
  Podem ser usados os seguintes elementos da hierarquia da Web para acessar e proteger o conteúdo do servidor de relatório. Outros objetos, como listas e páginas, não são usados para acessar o conteúdo do servidor de relatório e, portanto, não estão descritos na tabela seguinte.  
   
-|Objeto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, `http:*//servername*`) e pode conter vários sites.|  
 |Site|Um site é um site pai de um aplicativo da Web ou um subsite.|  
@@ -50,26 +50,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="url-for-a-sharepoint-server"></a>URL para um servidor SharePoint  
  Você deve usar uma URL para o servidor SharePoint ao implantar um Servidor de Relatório ou um projeto de Modelo de Relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no servidor de relatório.  
   
- Para localizar o nome do servidor a ser usado, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar um relatório. O nome do servidor aparece imediatamente depois do prefixo de protocolo, por exemplo, `http:*//servername*`.  
+ Para localizar o nome do servidor a ser usado, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar um relatório. O nome do servidor é exibido imediatamente após o prefixo do protocolo, por exemplo, `http:*//servername*`.  
   
- Usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o ponto de extremidade do proxy de URL não tem suporte. Um ponto de extremidade de proxy inclui um número de porta, por exemplo, `http:*//servername:8080/reportserver*`.  
+ Usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o ponto de extremidade do proxy de URL não tem suporte. Um ponto de extremidade de proxy inclui um número da porta, por exemplo, `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL para um site ou subsite de servidor do SharePoint  
- Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome do site aparece imediatamente após o nome do servidor., por exemplo, `http://*servername/site*` ou `http://*servername/site/subsite*`.  
+ Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome do site é exibido imediatamente após o nome do servidor, por exemplo, `http://*servername/site*` ou `http://*servername/site/subsite*`.  
   
  Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Espaços de trabalho**. A lista dos sites aparece nesta seção.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL para uma biblioteca do SharePoint  
  Ao implantar um relatório ou um item relacionado à biblioteca do SharePoint, você deve usar uma URL para biblioteca do SharePoint. A URL usada para uma biblioteca difere dependendo da versão do SharePoint que você está usando.  
   
- Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], a biblioteca aparece depois do nome do servidor, por exemplo, `http://*servername/*Shared Documents`.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], a biblioteca é exibida após o nome do servidor, por exemplo, `http://*servername/*Shared Documents`.  
   
  No [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou no [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], a biblioteca aparece depois do site e do subsite. Por exemplo, `http://*servername/site/*Documents`.  
   
  Para localizar as informações de caminho para uma nova biblioteca do SharePoint ou para um site desconhecido, abra o navegador e localize a biblioteca do SharePoint onde deseja publicar seus relatórios. Se a biblioteca estiver vazia, carregue qualquer arquivo. Clique com o botão direito do mouse no arquivo e selecione **Propriedades** para abrir a janela **Propriedades** . O endereço do arquivo contém os valores da URL necessários para a publicação.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>URLs completamente qualificados para os itens em um site do SharePoint  
- Itens que são armazenados em uma biblioteca do SharePoint são sempre endereçados por meio de uma URL totalmente qualificada que inicia com o aplicativo Web (`http://*server*`) como o nó raiz e termina com o nome do arquivo que você está fazendo referência.  
+ Os itens armazenados em uma biblioteca do SharePoint são sempre endereçados por meio de uma URL totalmente qualificada que começa com o aplicativo Web (`http://*server*`) como o nó raiz e termina com o nome do arquivo que está sendo referenciado.  
   
  Os nomes de arquivo na URL devem incluir uma extensão de nome de arquivo.  
   
@@ -140,10 +140,9 @@ ms.lasthandoff: 08/09/2017
   
  Quando um servidor de relatório é executado no modo integrado do SharePoint, o conceito de um recurso tem uma definição mais restrita. O servidor de relatório retém o conceito de um recurso para armazenar relatórios referentes a uma imagem externa. Isso se aplicará se o relatório for um instantâneo ou uma cópia, mantidos para uso interno.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar um relatório em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Caixa de diálogo de páginas de propriedades do projeto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
-

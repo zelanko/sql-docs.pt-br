@@ -18,18 +18,18 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f35f2596f1dd2cdbe08ff5ea2f1b346b775893b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d179d2b485a69fabb747ed02a2e77c420db053fa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Se você desejar usar os Eventos Estendidos para coletar dados de evento equivalentes a colunas e classes de evento do Rastreamento do SQL, será útil entender como os eventos do Rastreamento do SQL são mapeados para os eventos e as ações dos Eventos Estendidos.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Para as classes de evento do Rastreamento do SQL configuráveis pelo usuário (UserConfigurable:1 a UserConfigurable:9), os Eventos Estendidos usam um único evento para substituí-las. O evento é chamado user_event. Este evento é gerado por meio de sp_trace_generateevent, o mesmo procedimento armazenado usado pelo Rastreamento do SQL. O evento user_event é retornado, independentemente de qual ID de evento é passada para o procedimento armazenado. No entanto, um campo event_id é retornado como parte dos dados do evento. Isso permite a você criar um predicado baseado na ID do evento. Por exemplo, se você usar UserConfigurable:0 (ID de evento = 82) no código, poderá adicionar o evento user_event à sessão e especificar o predicado “event_id = 82”. Portanto, você não precisa alterar o código, pois o procedimento armazenado sp_trace_generateevent gera o evento user_event dos Eventos Estendidos, e a classe de evento equivalente do Rastreamento do SQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77ccccd8ea0a26c48f5d817ea5b9c0163d8a3cb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir o formato de texto (Driver de arquivo de texto)
 Quando o driver de texto é usado, você pode usar o **definir formato de texto** caixa de diálogo para definir o formato das colunas em um arquivo selecionado. Essa caixa de diálogo permite que você especifique o esquema para cada tabela de dados. Essas informações são gravadas em um arquivo Schema.ini no diretório de origem de dados. Um arquivo Schema.ini separado é criado para cada diretório de fonte de dados de texto.  
@@ -51,5 +49,4 @@ Quando o driver de texto é usado, você pode usar o **definir formato de texto*
 |**Remover**|Exclui a coluna selecionada.|  
 |**Linhas de varredura**|O número de linhas que o programa de instalação ou o driver examinará quando definir as colunas e tipos de dados de coluna com base em dados existentes.<br /><br /> Você pode inserir um número de 1 a 32767 para o número de linhas a serem examinadas. O padrão é 25 se o formato do item selecionado no **tabelas** lista não foi definida anteriormente por essa caixa de diálogo. (Um número fora do limite retornará um erro.)|  
 |**Tabelas**|Contém uma lista de todos os arquivos no diretório selecionado no **texto instalação** caixa de diálogo que corresponde à lista de extensões especificadas.<br /><br /> Quando \<padrão > está selecionada, e um dos seguintes for verdadeiro, os valores dos atributos na tabela de **tabelas** grupo são gravados no Schema (sem outras entradas no Schema são tocadas):<br /><br /> -Não há nenhum Schema no diretório especificado.<br />-O arquivo Schema existe, mas não há uma seção Schema para um dos arquivos de texto (com a extensão especificada) no diretório.<br />-A seção de um arquivo de texto existe no Schema, mas o corpo está vazio.<br /><br /> Quando \<padrão > estiver selecionada, o **colunas** grupo está desabilitado.|  
-|**Largura**|A largura da coluna pode ser alterada para colunas CHAR ou LONGCHAR. A largura padrão é 1 se o formato do item selecionado no **tabelas** lista não foi definida anteriormente por essa caixa de diálogo.<br /><br /> Para outros tipos de dados, o controle de largura é desabilitado e nenhum valor é exibido.|
-
+|**Width**|A largura da coluna pode ser alterada para colunas CHAR ou LONGCHAR. A largura padrão é 1 se o formato do item selecionado no **tabelas** lista não foi definida anteriormente por essa caixa de diálogo.<br /><br /> Para outros tipos de dados, o controle de largura é desabilitado e nenhum valor é exibido.|

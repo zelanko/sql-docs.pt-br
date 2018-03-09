@@ -3,8 +3,9 @@ title: "Agregar funções, a função de CÁLCULO e a nova palavra-chave | Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 284a672a725e5627d0b9be61c12f0c95d565ae09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função de CÁLCULO e a palavra-chave NEW
 Modelagem de dados oferece suporte a funções a seguir. O nome atribuído o capítulo que contém a coluna a ser operado é o *capítulo alias*.  
@@ -35,21 +36,21 @@ Modelagem de dados oferece suporte a funções a seguir. O nome atribuído o cap
   
 |Funções de agregação|Description|  
 |-------------------------|-----------------|  
-|SUM (*capítulo alias*. *nome da coluna*)|Calcula a soma de todos os valores na coluna especificada.|  
-|AVG (*capítulo alias*. *nome da coluna*)|Calcula a média de todos os valores na coluna especificada.|  
-|MAX (*capítulo alias*. *nome da coluna*)|Calcula o valor máximo na coluna especificada.|  
-|MIN (*capítulo alias*. *nome da coluna*)|Calcula o valor mínimo na coluna especificada.|  
-|CONTAGEM (*capítulo alias*[. *nome da coluna*])|Conta o número de linhas em que o alias especificado. Se uma coluna for especificada, somente as linhas para o qual essa coluna é Null não são incluídas na contagem.|  
-|STDEV (*capítulo alias*. *nome da coluna*)|Calcula o desvio padrão da coluna especificada.|  
-|QUALQUER (*capítulo alias*. *nome da coluna*)|Um valor da coluna especificada. QUALQUER tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando de forma arbitrariamente retorna um dos valores como o valor de qualquer função.|  
+|SUM(*chapter-alias*.*column-name*)|Calcula a soma de todos os valores na coluna especificada.|  
+|AVG(*chapter-alias*.*column-name*)|Calcula a média de todos os valores na coluna especificada.|  
+|MAX(*chapter-alias*.*column-name*)|Calcula o valor máximo na coluna especificada.|  
+|MIN(*chapter-alias*.*column-name*)|Calcula o valor mínimo na coluna especificada.|  
+|COUNT(*chapter-alias*[.*column-name*])|Conta o número de linhas em que o alias especificado. Se uma coluna for especificada, somente as linhas para o qual essa coluna é Null não são incluídas na contagem.|  
+|STDEV(*chapter-alias*.*column-name*)|Calcula o desvio padrão da coluna especificada.|  
+|ANY(*chapter-alias*.*column-name*)|Um valor da coluna especificada. QUALQUER tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando de forma arbitrariamente retorna um dos valores como o valor de qualquer função.|  
   
 |expressão calculada|Description|  
 |---------------------------|-----------------|  
-|CÁLCULO (*expressão*)|Calcula uma expressão arbitrária, mas apenas na linha do **registros** que contém a função de CÁLCULO. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
+|CALC(*expression*)|Calcula uma expressão arbitrária, mas apenas na linha do **registros** que contém a função de CÁLCULO. Qualquer expressão usando esses [do Visual Basic for Applications (VBA) funções](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitido.|  
   
 |Palavra-chave NEW|Description|  
 |-----------------|-----------------|  
-|NOVO *tipo de campo* [(*largura* &#124; *escala* &#124; *precisão* &#124; *erro* [, *escala* &#124; *erro*])]|Adiciona uma coluna vazia do tipo especificado para o **registros**.|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Adiciona uma coluna vazia do tipo especificado para o **registros**.|  
   
  O *tipo de campo* passado com a nova palavra-chave pode ser qualquer um dos seguintes tipos de dados.  
   

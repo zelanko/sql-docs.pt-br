@@ -1,28 +1,34 @@
 ---
 title: O elemento &lt;xsd:redefine&gt; | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: xsd:redefine element
+helpviewer_keywords:
+- xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80d00134f8ebfa1360551b8d10b28650c217388f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3865dc2690b6d78acb0d24fc5190ab394dfc0a83
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-ltxsdredefinegt-element"></a>O elemento &lt;xsd:redefine&gt;
-  O elemento **redefine** do W3C XSD fornece suporte para redefinição de componentes de esquema. No entanto, o suporte para essa diretiva é potencialmente caro para o desempenho e também exige que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide todas as instâncias do tipo de dados **xml** associadas ao esquema redefinido. Portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Esquemas XML que incluem o elemento **\<xsd:redefine>** são rejeitados pelo servidor.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+O elemento **redefine** do W3C XSD fornece suporte para redefinição de componentes de esquema. No entanto, o suporte para essa diretiva é potencialmente caro para o desempenho e também exige que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide todas as instâncias do tipo de dados **xml** associadas ao esquema redefinido. Portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Esquemas XML que incluem o elemento **\<xsd:redefine>** são rejeitados pelo servidor.  
   
  Para atualizar um esquema ou seus componentes, é possível fazer o seguinte:  
   
@@ -32,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Descarte a versão antiga da coleção de esquema XML.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

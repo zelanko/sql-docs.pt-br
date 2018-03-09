@@ -2,26 +2,31 @@
 title: Colunas e tipos de dados XML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cfc290578e784712d372008aae777fee9d08b0d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
-  Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modelo de dados relacional ou XML  
  Se os dados estiverem altamente estruturados com esquema conhecido, o modelo relacional provavelmente funcionará melhor para armazenamento de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a funcionalidade exigida e ferramentas que podem ser necessárias. Por outro lado, se a estrutura estiver semiestruturada, desestruturada ou desconhecida, será necessário considerar a modelagem desses dados.  
@@ -177,7 +182,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Ele não pode ser usado como uma coluna de chaves em um índice. No entanto ele pode ser incluído como dados em um índice clusterizado ou adicionado explicitamente em um índice não clusterizado usando a palavra-chave INCLUDE quando o índice não clusterizado é criado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

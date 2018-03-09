@@ -1,33 +1,33 @@
 ---
-title: "SQL Server Parallel Data Warehouse (SSRS) do tipo de Conexão | Microsoft Docs"
+title: "Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexão do SQL Server Parallel Data Warehouse (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] é um aplicativo de data warehouse escalonável que fornece desempenho e escalabilidade por meio de um processamento paralelo em massa. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]usa bancos de dados do SQL Server para armazenamento de dados e processamento distribuído.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] é um aplicativo de data warehouse escalonável que fornece desempenho e escalabilidade por meio de um processamento paralelo em massa. O [!INCLUDE[ssDW](../../includes/ssdw-md.md)] usa bancos de dados do SQL Server para o processamento distribuído e armazenamento de dados.  
   
- As tabelas de banco de dados grande de partições de dispositivo em vários nós físicos, com cada nó executando sua própria instância do SQL Server. Ao se conectar ao [!INCLUDE[ssDW](../../includes/ssdw-md.md)] para recuperar dados de relatório, um relatório se conecta ao nó de controle, que gerencia o processamento de consulta no aplicativo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Depois que a conexão é estabelecida, não há nenhuma diferença entre trabalhar com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esteja dentro e com uma que esteja fora de um ambiente do [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .  
+ O aplicativo particiona tabelas grandes de bancos de dados em vários nós físicos, com cada nó executando sua própria instância do SQL Server. Ao se conectar ao [!INCLUDE[ssDW](../../includes/ssdw-md.md)] para recuperar dados de relatório, um relatório se conecta ao nó de controle, que gerencia o processamento de consulta no aplicativo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Depois que a conexão é estabelecida, não há nenhuma diferença entre trabalhar com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esteja dentro e com uma que esteja fora de um ambiente do [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .  
   
  Para incluir dados do [!INCLUDE[ssDW](../../includes/ssdw-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
@@ -57,7 +57,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Usar um nome de usuário e senha armazenados. Para negociar o salto duplo que ocorre quando o banco de dados que contém os dados de relatório é diferente do servidor de relatório, selecione as opções para usar as credenciais como credenciais do Windows. Também é possível optar por representar o usuário autenticado depois de se conectar à fonte de dados.  
   
--   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
+-   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
  Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar as credenciais no Construtor de Relatórios](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Texto](#QueryText)  
   
- Você usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)] com [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../includes/tsql-md.md)] com o SQL Server. Os dois dialetos da linguagem SQL são bem semelhantes. As consultas escritas para o tipo de conexão da fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente podem ser usadas para o tipo de conexão da fonte de dados do [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
+ Use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] com o [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../includes/tsql-md.md)] com o SQL Server. Os dois dialetos da linguagem SQL são bem semelhantes. As consultas escritas para o tipo de conexão da fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente podem ser usadas para o tipo de conexão da fonte de dados do [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
   
  Uma consulta que recupera dados de relatório de um banco de dados grande, inclusive um data warehouse como [!INCLUDE[ssDW](../../includes/ssdw-md.md)]pode gerar um conjunto de resultados com um número muito grande de linhas, a menos que você agregue e resuma dados para reduzir o número de linhas retornados pela consulta. É possível escrever consultas que incluam agregações e agrupamentos usando o designer de consultas gráficas ou baseado em texto.  
   
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Adicionar um filtro a um conjunto de dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Seções relacionadas  
@@ -150,13 +150,13 @@ WHERE EmployeeID = (@EmpID)
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fornece informações sobre conjuntos de dados inseridos e compartilhados.  
   
- [Coleção de campos de conjunto de dados e &#40; Construtor de relatórios e SSRS & &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -168,4 +168,4 @@ WHERE EmployeeID = (@EmpID)
 [Filtrar, agrupar e classificar dados](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressões](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

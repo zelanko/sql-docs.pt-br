@@ -1,27 +1,27 @@
 ---
-title: "Trabalhar com dados simulados em relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Trabalhar com os dados simulados em relatórios móveis do Reporting Services | Microsoft Docs"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb83717100f70933d2b1fe00bcd19a8a2901f65
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 347abee7c61c43e8453f27df2c6bb3147c4d677c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabalhar com dados simulados em relatórios do Reporting Services móveis
 Quando você coloca um elemento de galeria na superfície do design, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] gera imediatamente dados simulados para esse elemento. Esses dados servem para várias finalidades úteis ao criar relatórios móveis.   
@@ -57,5 +57,4 @@ Depois que todos os controles são associados a dados reais, as tabelas simulada
   
   
   
-
 

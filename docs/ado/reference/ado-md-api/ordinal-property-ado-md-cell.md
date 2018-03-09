@@ -3,8 +3,9 @@ title: "Propriedade ordinal (ADO MD célula) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Cell::Ordinal
 - Ordinal
-helpviewer_keywords: Ordinal property [ADO MD]
+helpviewer_keywords:
+- Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23a12b75cd2f04fcd46c8d80ce89431427bf121c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70c8bb0793791873663c561ccafcdc37bcb37b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Propriedade ordinal (ADO MD célula)
 Identifica exclusivamente um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) por sua posição dentro de um conjunto de células.  
@@ -34,7 +36,7 @@ Identifica exclusivamente um [célula](../../../ado/reference/ado-md-api/cell-ob
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **longo** inteiro e é somente leitura.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor da célula ordinal identifica exclusivamente a célula em um conjunto de células. Conceitualmente, as células são numeradas em um conjunto de células como se fosse o conjunto de células um *p*-matriz dimensional, onde *p* é o número de [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). As células são numeradas a partir do zero na ordem de linhas principais. Aqui está a fórmula para calcular o número ordinal de uma célula:  
   
  Valor ordinal da célula pode ser usado com o [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto para recuperar rapidamente o [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

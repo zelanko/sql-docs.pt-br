@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysproxies_TSQL
 - dbo.sysproxies
 - sysproxies
-dev_langs: TSQL
-helpviewer_keywords: sysproxies system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b28fdf8c7cee40fa088ee0d7634e4ea17aba91c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9a1e16809177b6bec502493d03527343fecf6923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,20 +40,20 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|ID da conta proxy.|  
+|**proxy_id**|**Int**|ID da conta proxy.|  
 |**name**|**sysname**|Nome da conta proxy.|  
-|**credential_id**|**int**|ID da credencial que a conta proxy usa.|  
-|**habilitado**|**tinyint**|Status da conta proxy:<br /><br /> **0** = desabilitado. **1** = habilitado.|  
-|**Descrição**|**nvarchar(512)**|Descrição que o usuário inseriu quando a conta proxy foi criada.|  
+|**credential_id**|**Int**|ID da credencial que a conta proxy usa.|  
+|**enabled**|**tinyint**|Status da conta proxy:<br /><br /> **0** = desabilitado. **1** = habilitado.|  
+|**description**|**nvarchar(512)**|Descrição que o usuário inseriu quando a conta proxy foi criada.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* do usuário ou grupo associado com a credencial de proxy.|  
 |**credential_date_created**|**datetime**|Data e hora em que a credencial foi criada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Somente membros do **sysadmin** a função de servidor fixa pode acessar o **sysproxies** tabela.  
   
 ## <a name="see-also"></a>Consulte também  
- [dbo.sysproxylogin &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo.sysproxysubsystem &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.syssubsystems &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+ [dbo.sysproxylogin &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

@@ -1,25 +1,28 @@
 ---
 title: "Serviços com Python de aprendizado de máquina | Microsoft Docs"
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7051781664efd2924dcb187d456197bc9bc88686
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-services-with-python"></a>Serviços de aprendizado de máquina com Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python é uma linguagem que oferece excelente flexibilidade e capacidade para uma variedade de tarefas de aprendizado de máquina. As bibliotecas de código-fonte aberto para Python incluem várias plataformas para redes neurais personalizáveis, bem como bibliotecas populares para processamento de linguagem natural. Agora, este idioma amplamente utilizado é suportado no SQL Server de 2017 CTP 2.0 e versões posteriores.
 

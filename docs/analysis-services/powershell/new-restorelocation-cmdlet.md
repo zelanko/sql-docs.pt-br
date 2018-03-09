@@ -2,32 +2,30 @@
 title: Cmdlet New-RestoreLocation | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11b5d0bd210d80698706751a3734f2e96810187e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>Cmdlet New-RestoreLocation
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Especifica as informações usadas para restaurar um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Especifica as informações usadas para restaurar um banco de dados.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<as. RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  Especifica se a fonte de dados é remota ou local, com base no local da partição.  
   
 |||  
@@ -140,8 +138,8 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma|  
+|Saídas|Nenhuma|  
   
 ## <a name="examples"></a>Exemplos  
   

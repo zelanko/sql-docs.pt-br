@@ -5,10 +5,11 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f5df36c6b9afdbdadaba8aac615c331499be7b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 871a79fce70a7c37c32b9cbdae100cddd7bd0e80
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Excluir um membro ou uma coleção (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], exclua um membro ou coleção quando não precisar mais dele. Se você quiser excluir membros em massa, use as tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Você não poderá excluir um membro se ele for usado como um valor de atributo baseado em domínio de outro membro.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
 8.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  

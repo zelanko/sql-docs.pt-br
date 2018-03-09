@@ -2,10 +2,13 @@
 title: Subconjunto (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: subset
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86014760cec4a433b43c93e8e2186b8018cf49da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6f461f979c9d064305b0004fb906673e97f2ab5f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna um subconjunto de tuplas de um conjunto especificado.  
   
@@ -45,7 +48,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Contagem*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Do conjunto especificado, o **subconjunto** função retorna um subconjunto que contém o número especificado de tuplas, começando na posição inicial especificada. A posição inicial baseia-se em um índice baseado em zero, isto é, zero (0) corresponde à primeira tupla no conjunto especificado, 1 corresponde à segunda e assim por diante.  
   
  Se *contagem* não for especificado, a função retornará todas as tuplas de *iniciar* até o final do conjunto.  
@@ -66,7 +69,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fae3a5c0b43d90fcc85b48db97e23fc444aaf7f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4e893ddd6b0461a3f6b3e20146a79e63c7fcc1c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infopackage"></a>Criar InfoPackage
   Use a caixa de diálogo **Criar Novo InfoPackage** para criar um novo InfoPackage no sistema SAP Netweaver BW.  
   
- Você pode abrir a caixa de diálogo **Criar InfoPackage** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, confira [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Você pode abrir a caixa de diálogo **Criar InfoPackage** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  A documentação do Microsoft Connector 1.1 for SAP BW supõe familiaridade com o ambiente do SAP Netweaver BW. Para obter mais informações sobre o SAP Netweaver BW ou para obter informações sobre como configurar objetos e processos do SAP Netweaver BW, consulte sua documentação do SAP.  
@@ -65,8 +64,7 @@ ms.lasthandoff: 08/03/2017
  **Salvar e Ativar**  
  Salvar e ativar o novo InfoPackage.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

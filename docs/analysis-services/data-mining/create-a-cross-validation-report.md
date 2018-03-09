@@ -2,15 +2,13 @@
 title: "Criar um relatório de validação cruzada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
-  Este tópico mostra passo-a-passo a criação de um relatório de validação cruzada usando a guia Gráfico de Precisão no Designer de Mineração de Dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico mostra passo-a-passo a criação de um relatório de validação cruzada usando a guia Gráfico de Precisão no Designer de Mineração de Dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Um relatório de validação cruzada é bem diferente de um gráfico de precisão, como um gráfico de comparação de precisão ou uma matriz de classificação.  
   

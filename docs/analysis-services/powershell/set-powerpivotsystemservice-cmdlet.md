@@ -1,33 +1,31 @@
 ---
-title: Cmdlet Set-PowerPivotSystemService | Microsoft Docs
+title: Set-PowerPivotSystemService cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3d63834fe9322f45d0524de5434154f1257056
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Cmdlet Set-PowerPivotSystemService
-  
-  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-  
-  Define as propriedades globais do objeto PowerPivotSystemService no nível do farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Define as propriedades globais do objeto PowerPivotSystemService no nível do farm.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -45,7 +43,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  Especifica o objeto pai para o qual você está atualizando propriedades. O valor deve ser um GUID válido que identifica exclusivamente o objeto no farm.  
   
 |||  
@@ -104,7 +102,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -112,8 +110,8 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   

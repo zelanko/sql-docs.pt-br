@@ -1,10 +1,13 @@
 ---
 title: Criando arquivos de Script (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4dc7653b7e78dc51bd5d52c28bad60168a0a2f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-db2tosql"></a>Criando arquivos de Script (DB2ToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -401,6 +404,6 @@ O usuário pode facilmente validar seu arquivo de script no arquivo de definiç�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [criando arquivos de valor variável &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

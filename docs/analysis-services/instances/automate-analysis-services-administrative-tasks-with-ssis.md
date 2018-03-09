@@ -2,36 +2,33 @@
 title: Automatizar tarefas administrativas do Analysis Services com SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 549a7813e4f4454eff3141a984b0eb1d0c157e7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tarefas administrativas do Analysis Services com SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que você automatize a execução de scripts de DDL, tarefas de processamento de cubo e de modelo de mineração e tarefas de consulta de mineração de dados. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite automatizar a execução de scripts DDL, cubo e processamento de tarefas e tarefas de consulta de mineração de dados de modelo de mineração. O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi projetado para executar operações de limpeza de dados durante as tarefas de processamento de dados e reunir dados de fonte de dados diferentes. Ao trabalhar com cubos e modelos de mineração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode transformar dados não numéricos em numéricos e garantir que os valores dos dados fiquem dentro dos limites previstos, criando assim dados limpos que serão usados para preencher tabelas de fatos e dimensões.  
   
@@ -48,10 +45,9 @@ ms.lasthandoff: 09/01/2017
  A Tarefa Consulta de Mining de Dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a extração e o armazenamento de informações de modelos de mineração. Com frequência, as informações são armazenadas em um banco de dados relacional e, por exemplo, podem ser usadas para isolar uma lista de possíveis clientes para uma campanha publicitária. A mineração de dados pode identificar o valor de um cliente e a probabilidade de esse cliente responder a um determinado apelo publicitário. Você pode usar a Tarefa Consulta de Mining de Dados para extrair dados e modificá-los para um formato de sua preferência. Para obter mais informações sobre como implementar essa tarefa, consulte [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Destino de processamento de partições](../../integration-services/data-flow/partition-processing-destination.md)   
+ [Destino de processamento de partição](../../integration-services/data-flow/partition-processing-destination.md)   
  [Destino de processamento de dimensão](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Transformação de consulta de mineração de dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
   
   
-

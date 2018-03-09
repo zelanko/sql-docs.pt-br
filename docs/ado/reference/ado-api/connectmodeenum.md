@@ -3,8 +3,9 @@ title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ConnectModeEnum
-helpviewer_keywords: ConnectModeEnum enumeration [ADO]
+f1_keywords:
+- ConnectModeEnum
+helpviewer_keywords:
+- ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f524d7d0385de331abed8d857296c55fcdbdc64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo um [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificar valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade o  **Registro** e [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica as permissões somente leitura.|  
 |**adModeReadWrite**|3|Indica as permissões de leitura/gravação.|  
@@ -41,8 +44,8 @@ Especifica as permissões disponíveis para modificar dados em um [Conexão](../
 |**adModeUnknown**|0|Padrão. Indica que as permissões ainda não foi definidas ou não podem ser determinadas.|  
 |**adModeWrite**|2|Indica as permissões de somente gravação.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

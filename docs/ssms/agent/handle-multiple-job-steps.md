@@ -3,9 +3,13 @@ title: "Manipular várias etapas de trabalho | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +19,19 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dbdbaa5f10ef2903793628e0b8b4adbd57b575c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Manipular várias etapas de trabalho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Se um trabalho tiver mais de uma etapa, você terá que especificar a ordem em que as etapas de trabalho devem ser executadas. Isso é chamado *controle de fluxo**.* Você pode adicionar novas etapas de trabalho e reorganizar o fluxo a qualquer hora; as alterações entram em vigor na próxima vez em que o trabalho é executado. Essa ilustração mostra o controle de fluxo para um trabalho de backup de banco de dados.  
   
 ![Controle de fluxo de etapas de trabalho do SQL Server Agent](../../ssms/agent/media/dbflow01.gif "Controle de fluxo de etapas de trabalho do SQL Server Agent")  
@@ -45,7 +50,7 @@ As etapas de trabalho devem ser autossuficientes. Ou seja, um trabalho não pode
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent registra as informações do trabalho e suas etapas no histórico de trabalhos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
 [sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  

@@ -3,10 +3,10 @@ title: banco de dados (SQL Server PDW) tempdb
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: "22"
 ms.workload: not set
-ms.openlocfilehash: 94cd8614f5098a1f065dbfe19f0ec024c42f9179
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 **tempdb** é um banco de dados de sistema do PDW do SQL Server que armazena as tabelas temporárias locais para bancos de dados do usuário. Tabelas temporárias são geralmente usadas para melhorar o desempenho da consulta. Por exemplo, você pode usar uma tabela temporária para modularizar um script e reutilizar os dados computados.  

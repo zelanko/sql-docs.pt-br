@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,25 +17,25 @@ helpviewer_keywords:
 - stored procedures [SQL Server], deleting
 - deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6334d38dd066fc5980851ebf02116c3b96568991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41143ff91f5b3ebc5f32178f5d75af1b8cdc90b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="delete-a-stored-procedure"></a>Excluir um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a> Este tópico descreve como excluir um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Para excluir um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para excluir um procedimento no Pesquisador de Objetos**  
   
-1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda essa instância.  
+1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
 2.  Expanda **Bancos de Dados**, expanda o banco de dados ao qual pertence o procedimento e expanda **Programação**.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Remova as referências ao procedimento de quaisquer objetos e scripts dependentes.  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para excluir um procedimento no Editor de Consultas**  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Obtenha o nome do procedimento armazenado a ser removido no banco de dados atual. No Pesquisador de Objetos, expanda **Programação** e, depois, expanda **Procedimentos Armazenados**. Outra alternativa é executar a instrução a seguir no editor de consultas.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -90,14 +91,14 @@ ms.lasthandoff: 11/17/2017
   
 5.  Copie e cole o exemplo a seguir no editor de consultas e insira um nome de procedimento armazenado a ser excluído do banco de dados atual.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  
   
 6.  Remova as referências ao procedimento de quaisquer objetos e scripts dependentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Renomear um procedimento armazenado](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

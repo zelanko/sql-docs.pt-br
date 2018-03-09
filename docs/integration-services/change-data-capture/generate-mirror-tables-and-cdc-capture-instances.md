@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9c6a29a7c5ec5b42dfa8d0e923563c3b21fa0c51
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c536a40d6df1ebc7a1716b70226cb32f77c9322
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Gerar tabelas de espelho e instâncias de captura CDC
   Use a página Gerar Tabelas de Espelho para gerar as tabelas de espelho para as tabelas incluídas na instância CDC  
@@ -36,8 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  Clique em **Avançar** para abrir a página [Finish](../../integration-services/change-data-capture/finish.md) .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   
-

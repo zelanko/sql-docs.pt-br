@@ -1,5 +1,5 @@
 ---
-title: Tarefa de Pig de HDInsight do Azure | Microsoft Docs
+title: Tarefa do Pig do Azure HDInsight | Microsoft Docs
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
@@ -16,40 +16,38 @@ f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9874b119b634966b146f8fa9d22c016bcd91617b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fcca1065e07f2f678d300dc0250760b24c6b34f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarefa de Pig de HDInsight do Azure
 Use a **Tarefa de Pig do Azure HDInsight** para executar o script do Pig em um cluster Azure HDInsight.
      
 Para adicionar uma **Tarefa do Pig do Azure HDInsight**, arraste e solte-a no Designer do SSIS e clique duas vezes ou com o botão direito do mouse e clique em **Editar** para ver a caixa de diálogo **Editor de Tarefa do Pig do Azure HDInsight** a seguir.  
   
-O **tarefa de Pig de HDInsight do Azure** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+A **Tarefa do Pig do Azure HDInsight** é um componente do [SSIS (SQL Server Integration Services) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
  A lista a seguir descreve os campos dessa caixa de diálogo.  
   
-1.  Para o **HDInsightConnection** campo, selecione um Gerenciador de Conexão de HDInsight do Azure existente ou crie um novo que se refere ao cluster HDInsight do Azure usada para executar o script.
+1.  Para o campo **HDInsightConnection**, selecione um Gerenciador de Conexões do Azure HDInsight existente ou crie um novo que se refere ao cluster do Azure HDInsight usado para executar o script.
   
-2.  Para o **AzureStorageConnection** campo, selecione um Gerenciador de Conexão de armazenamento do Azure existente ou crie um novo que se refere à conta de armazenamento do Azure associada ao cluster. Isso só é necessário se você deseja baixar os logs de saída e o erro de execução do script.
+2.  Para o campo **AzureStorageConnection**, selecione um Gerenciador de Conexões do Armazenamento do Azure existente ou crie um novo que se refere à Conta de Armazenamento do Azure associada ao cluster. Isso só é necessário se você deseja baixar os logs de erro e de saída de execução do script.
  
-3.  Para o **BlobContainer** , especifique o nome do contêiner de armazenamento associado ao cluster. Isso só é necessário se você deseja baixar os logs de saída e o erro de execução do script.
+3.  Para o campo **BlobContainer**, especifique o nome do contêiner de armazenamento associado ao cluster. Isso só é necessário se você deseja baixar os logs de erro e de saída de execução do script.
   
-4.  Para o **LocalLogFolder** campo, especifique a pasta à qual os logs de saída e o erro de execução do script serão baixados no. Isso só é necessário se você deseja baixar os logs de saída e o erro de execução do script.   
+4.  Para o campo **LocalLogFolder**, especifique a pasta para a qual os logs de erro e de saída de execução do script serão baixados. Isso só é necessário se você deseja baixar os logs de erro e de saída de execução do script.   
   
-5.  Há duas maneiras de especificar o script de Pig:
+5.  Há duas maneiras de especificar o script do Pig a ser executado:
   
-    1.  **Script em linha**: especifique o **Script** campo digitando o script seja executado no embutido a **Inserir Script** caixa de diálogo.
+    1.  **Script em linha**: especifique o campo **Script** digitando em linha o script a ser executado na caixa de diálogo **Inserir Script**.
   
-    2.  **Arquivo de script**: Carregue o arquivo de script para o armazenamento de Blob do Azure e especifique o **BlobName** campo. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, o **ExternalStorageAccountName** e **ExternalBlobContainer** campos devem ser especificados. Para um blob externo, verifique se ele está configurado como publicamente acessível.  
+    2.  **Arquivo de script**: carregue o arquivo de script para o Armazenamento de Blobs do Azure e especifique o campo **BlobName**. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
   
-     Se ambos forem especificados, o arquivo de script será usado e o script em linha será ignorado.
-
+     Se ambos estiverem especificados, o arquivo de script será usado e o script embutido será ignorado.

@@ -3,27 +3,28 @@ title: Trabalhando com tipos de dados R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 16
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>Tipos de dados de R e bibliotecas de R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve as bibliotecas de R que estão incluídas e os tipos de dados que têm suporte nos seguintes produtos:
 
@@ -65,14 +66,14 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 |**date**|`POSIXct`|**datetime**|Representado como GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
+|**Int**|`integer`|**Int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Representado como GMT|
-|**smallint**|`integer`|**int**||
+|**smallint**|`integer`|**Int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
+|**tinyint**|`integer`|**Int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
@@ -199,4 +200,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ## <a name="see-also"></a>Consulte também
 
 [Bibliotecas de Python e tipos de dados](../python/python-libraries-and-data-types.md)
-

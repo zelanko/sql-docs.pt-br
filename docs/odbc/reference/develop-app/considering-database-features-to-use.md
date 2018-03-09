@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>Considerando os recursos de banco de dados de uso
 Depois que o nível básico de interoperabilidade for conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL de aplicativo executará? O aplicativo irá usar cursores roláveis? Transações? Procedimentos? Dados Long? Para obter ideias sobre quais recursos talvez não tenha suporte por todos os DBMSs, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) edescriçõesdefunção[ Apêndice c: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos necessários para um aplicativo podem eliminar alguns DBMSs da lista de destino DBMSs. Eles também podem mostrar que o aplicativo pode direcionar facilmente DBMSs muitos.  
@@ -55,4 +52,3 @@ Depois que o nível básico de interoperabilidade for conhecido, os recursos de 
 -   **Suporte a várias consultas apenas se o driver.** Depois de se conectar a um driver, o aplicativo verifica o número de instruções ativas. O aplicativo permite que o usuário iniciar uma nova instrução quando uma já está ativa somente se o driver dá suporte a várias instruções ativas. O aplicativo tem maior funcionalidade e interoperabilidade, mas é mais difícil de implementar.  
   
 -   **Sempre dá suporte a várias consultas e emulá-los quando necessário.** Depois de se conectar a um driver, o aplicativo verifica o número de instruções ativas. O aplicativo sempre permite que o usuário iniciar uma nova instrução quando um já está ativo. Se o driver oferece suporte a apenas uma instrução ativa, o aplicativo abre uma conexão adicional para esse driver e executa a nova instrução em que a conexão. O aplicativo tem total funcionalidade e interoperabilidade alta, mas é mais difícil de implementar.
-

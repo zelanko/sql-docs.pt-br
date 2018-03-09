@@ -3,8 +3,11 @@ title: "Criar autojunções manualmente (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 830f65d92ec3c8b96a57944b044f6ef61303e5b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c5b4eb1ea1ad5d561bebdbcef33172940696c6fb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
-A autojunção de uma tabela pode ser feita, mesmo se a tabela não tiver uma relação reflexiva no banco de dados. Por exemplo, você pode usar uma autojunção para encontrar pares de autores que moram na mesma cidade.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A autojunção de uma tabela poderá ser feita mesmo se a tabela não tiver uma relação reflexiva no banco de dados. Por exemplo, você pode usar uma autojunção para encontrar pares de autores que moram na mesma cidade.  
   
 Como com qualquer junção, uma autojunção requer pelo menos duas tabelas. A diferença é que, em vez de acrescentar uma segunda tabela à consulta, você adicionar uma segunda instância da mesma tabela. Dessa forma, você pode comparar uma coluna na primeira instância da tabela para a mesma coluna na segunda instância, o que permite comparar os valores em uma coluna entre si. O [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) atribui um alias à segunda instância da tabela.  
   
@@ -127,7 +130,7 @@ Cheryl Carson       Abraham Bennet
   
 7.  Especifique outras opções para a consulta, como colunas de saída, critérios de pesquisa e ordem de classificação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar autojunções automaticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
 [Consultar com junções &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

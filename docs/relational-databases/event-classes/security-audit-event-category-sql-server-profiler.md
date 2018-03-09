@@ -2,10 +2,14 @@
 title: "Categoria de evento de auditoria de segurança (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Security Audit event category
 - SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef92e9908f208025de535b062aa7a0227320a82a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5b93277d27d4a797fc5ca5924794a7631673445f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria de evento de auditoria de segurança (SQL Server Profiler)
-  A categoria de evento **Security Audit** contém eventos de auditoria de segurança.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A categoria de evento **Security Audit** contém eventos de auditoria de segurança.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Classe de evento Audit Add DB User](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Indica que um logon foi adicionado ou removido como um usuário de banco de dados para um banco de dados.|  
 |[Classe de evento Audit Add Login to Server Role](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Indica que um logon foi adicionado ou removido de uma função de servidor fixa.|  

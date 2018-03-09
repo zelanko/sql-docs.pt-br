@@ -2,25 +2,29 @@
 title: "Lição 2: Gravando Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f98a8f5eee2300a6351da1718e5a6e0d485afdee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lição 2: Gravando Transact-SQL
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é um ambiente de desenvolvimento integrado para a escrita de consultas [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML, bem como de comandos SQLCMD. O tutorial ilustra o uso do Editor de Consultas do Mecanismo de Banco de Dados para gravar um script de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 >**OBSERVAÇÃO** Esta lição teve como foco o uso do SSMS durante o trabalho com instruções T-SQL, **não a escrita de instruções T-SQL**. Para obter um tutorial sobre como escrever instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Tutorial: Escrevendo instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  

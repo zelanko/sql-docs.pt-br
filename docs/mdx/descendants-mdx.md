@@ -2,10 +2,13 @@
 title: Descendentes (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DESCENDANTS
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f5558ba3eee35444027a8f4797dd82b2b722631d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a641da0586093194c2ae64614a7cdf845827001f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o conjunto de descendentes de um membro em uma distância ou nível especificado, incluindo ou excluindo, opcionalmente, descendentes em outros níveis.  
   
@@ -62,7 +65,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Uma expressão de cadeia de caracteres válida que especifica um sinalizador de descrição que distingue entre possíveis conjuntos de descendentes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um nível for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado em um nível especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*.  
   
  Se *distância* for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado que são o número especificado de níveis fora da hierarquia do membro especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*. Normalmente, você usa esta função com o argumento Distance para lidar com hierarquias com rotas. Se a distância especificada for zero (0), a função retornará um conjunto composto apenas pelo membro especificado ou pelo conjunto especificado.  
@@ -169,7 +172,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

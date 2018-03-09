@@ -1,5 +1,5 @@
 ---
-title: "Derivado de transformação de coluna | Microsoft Docs"
+title: "Transformação de Coluna Derivada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 40d4bf147d712fac833ba9aa7542529cf0e26253
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 66e45a47fd340aa62b852193ec75aac7c1cde8ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derived-column-transformation"></a>Transformação Coluna Derivada
   A transformação Coluna Derivada cria novos valores de coluna aplicando expressões às colunas de entrada de transformação. Uma expressão pode conter qualquer combinação de variáveis, funções, operadores e colunas da entrada de transformação. O resultado pode ser adicionado como uma coluna nova ou adicionado a uma coluna existente como um valor de substituição. A transformação Coluna Derivada pode definir várias colunas derivadas, e qualquer variável ou coluna de entrada pode aparecer em várias expressões.  
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Derivar valores de coluna por meio da transformação Coluna Derivada](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 08/19/2017
  **Coluna Derivada**  
  Selecione uma coluna derivada da lista. Escolha se deseja adicionar a coluna derivada como uma nova coluna de saída ou substituir os dados em uma coluna existente.  
   
- **Expressão**  
+ **Expression**  
  Digite uma expressão ou compile uma arrastando da lista anterior de colunas, variáveis, funções e operadores disponíveis.  
   
  O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
-

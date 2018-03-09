@@ -2,10 +2,14 @@
 title: Inserir trechos Transact-SQL com Surround | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23dc1addf677c549e53d69c1fa8f8c15af32c3dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir trechos Transact-SQL com Surround
-  Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
   
 ## <a name="inserting-surround-with-snippets"></a>Inserindo trechos com surround  
  Trechos com surround podem ser iniciados por uma das três maneiras: por meio de um atalho de teclado, menu **Editar** e menu de contexto.  
@@ -46,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Selecione o nome do trecho (BEGIN, IF ou WHILE) na lista usando o mouse ou digitando-o e pressionando TAB ou ENTER.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir trechos Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   

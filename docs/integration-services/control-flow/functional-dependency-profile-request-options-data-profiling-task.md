@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação do perfil dependência funcional (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação do perfil Dependência Funcional (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f9307c5f2dfb263453c2d61c024092955d05974b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Dependência Funcional** selecionada no painel de solicitações. Um perfil de Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você perfila a dependência entre uma coluna Código Postal e uma coluna estado dos Estados Unidos. Nesse perfil, o mesmo Código Postal deve sempre ter o mesmo estado, mas o perfil descobre violações da dependência.  
@@ -92,15 +91,15 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Quando você usa o curinga **(\*)** para **ColumnName**, **CompareOptions** é somente leitura e definido como **Default**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Padrão**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
@@ -115,7 +114,7 @@ ms.lasthandoff: 08/03/2017
  **ThresholdSetting**  
  Especifique a configuração de limite. O valor padrão dessa propriedade é **Especificado**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Nenhum**|Nenhum limite é especificado. A força de dependência funcional é informada independentemente do seu valor.|  
 |**Especificado**|Use o limite especificado em **FDStrengthThreshold**. A força de dependência funcional só será informada se for superior ao limite.|  
@@ -127,9 +126,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Especifique o número máximo de violações de dependência funcional a ser informado na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionado como **ThresholdSetting**.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

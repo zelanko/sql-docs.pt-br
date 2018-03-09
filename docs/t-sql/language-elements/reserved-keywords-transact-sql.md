@@ -20,20 +20,19 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="reserved-keywords-transact-sql"></a>Reservado palavras-chave-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>Palavras-chave reservadas (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa palavras-chave reservadas para definir, manipular e acessar bancos de dados. As palavras-chave reservadas fazem parte da gramática da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analisar e compreender as instruções e os lotes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora seja sintaticamente possível usar as palavras-chave reservadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores e nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)], você só pode fazer isso usando identificadores delimitados.  
   
@@ -92,7 +91,7 @@ ms.lasthandoff: 09/01/2017
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPÇÃO|Usuário|  
-|DROP|ou|VALUES|  
+|DROP|OU|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -118,85 +117,85 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**ABSOLUTO**|**EXEC**|**SOBREPOSIÇÕES**|  
-|**AÇÃO**|**EXECUTE**|**PREENCHIMENTO**|  
-|**ADA**|**EXISTE**|**PARCIAL**|  
-|**ADICIONAR**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**EXTRAIR**|**POSIÇÃO**|  
-|**ALOCAR**|**FALSE**|**PRECISÃO**|  
-|**ALTER**|**BUSCA**|**PREPARAR**|  
-|**AND**|**PRIMEIRO**|**PRESERVAR**|  
-|**QUALQUER**|**FLOAT**|**PRIMARY**|  
-|**SÃO**|**PARA**|**ANTES DE**|  
-|**AS**|**EXTERNA**|**PRIVILÉGIOS**|  
-|**ASC**|**FORTRAN**|**PROCEDIMENTO**|  
-|**ASSERÇÃO**|**ENCONTRADO**|**PÚBLICO**|  
-|**AT**|**FROM**|**LEITURA**|  
-|**AUTORIZAÇÃO**|**FULL**|**REAL**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**AÇÃO**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
+|**SÃO**|**PARA**|**PRIOR**|  
+|**AS**|**EXTERNA**|**PRIVILEGES**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
+|**ASSERTION**|**ENCONTRADO**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
 |**AVG**|**OBTER**|**REFERÊNCIAS**|  
-|**BEGIN**|**GLOBAL**|**RELATIVO**|  
-|**BETWEEN**|**GO**|**RESTRINGIR**|  
-|**BITS**|**IR PARA**|**REVOKE**|  
-|**FUNÇÃO BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**AMBOS**|**GRUPO**|**REVERSÃO**|  
-|**POR**|**TENDO**|**LINHAS**|  
-|**EM CASCATA**|**HORA**|**ESQUEMA**|  
-|**EM CASCATA**|**IDENTIDADE**|**ROLAGEM**|  
-|**CASO**|**IMEDIATA**|**SEGUNDO**|  
-|**CONVERSÃO**|**IN**|**SEÇÃO**|  
-|**CATÁLOGO**|**INCLUIR**|**SELECT**|  
-|**CHAR**|**ÍNDICE**|**SESSÃO**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
+|**BIT_LENGTH**|**GRANT**|**RIGHT**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**TENDO**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**IN**|**SEÇÃO**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**SESSÃO**|  
 |**CHAR_LENGTH**|**INDICADOR**|**SESSION_USER**|  
-|**CARACTERE**|**INICIALMENTE**|**DEFINIR**|  
-|**CHARACTER_LENGTH**|**INTERNA**|**TAMANHO**|  
-|**SELEÇÃO**|**ENTRADA**|**SMALLINT**|  
-|**FECHAR**|**NÃO DIFERENCIA**|**ALGUNS**|  
-|**UNIÃO**|**INSERT**|**ESPAÇO**|  
+|**CARACTERE**|**INITIALLY**|**DEFINIR**|  
+|**CHARACTER_LENGTH**|**INTERNA**|**SIZE**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**INSENSITIVE**|**ALGUNS**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
-|**AGRUPAMENTO**|**NÚMERO INTEIRO**|**SQLCA**|  
-|**COLUNA**|**SE CRUZAM**|**SQLCODE**|  
-|**CONFIRMAÇÃO**|**INTERVALO**|**SQLERROR**|  
-|**CONECTE-SE**|**EM**|**SQLSTATE**|  
-|**CONEXÃO**|**IS**|**SQLWARNING**|  
-|**RESTRIÇÃO**|**ISOLAMENTO**|**SUBSTRING**|  
-|**RESTRIÇÕES**|**JUNÇÃO**|**SOMA**|  
-|**CONTINUAR**|**CHAVE**|**SYSTEM_USER**|  
-|**CONVERTER**|**LANGUAGE**|**TABELA**|  
-|**CORRESPONDENTE**|**ÚLTIMO**|**TEMPORÁRIO**|  
-|**CONTAGEM**|**À ESQUERDA**|**EM SEGUIDA**|  
-|**CRIAR**|**LEFT**|**TEMPO**|  
-|**CRUZADA**|**NÍVEL**|**CARIMBO DE HORA**|  
-|**ATUAL**|**LIKE**|**TIMEZONE_HOUR**|  
+|**AGRUPAMENTO**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONEXÃO**|**É**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
+|**CONTINUE**|**CHAVE**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**À ESQUERDA**|**EM SEGUIDA**|  
+|**CREATE**|**LEFT**|**TEMPO**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**INFERIOR**|**PARA**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**À DIREITA**|  
-|**CURRENT_USER**|**MÁX.**|**TRANSAÇÃO**|  
-|**CURSOR**|**MIN**|**TRADUZIR**|  
-|**DATA**|**MINUTO**|**TRADUÇÃO**|  
-|**DIA**|**MÓDULO**|**TRIM**|  
-|**DESALOCAR**|**MÊS**|**TRUE**|  
-|**DEC**|**NOMES**|**UNIÃO**|  
-|**DECIMAL**|**NACIONAL**|**EXCLUSIVO**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATA**|**MINUTO**|**TRANSLATION**|  
+|**DAY**|**MÓDULO**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
+|**DEC**|**NAMES**|**UNIÃO**|  
+|**DECIMAL**|**NACIONAL**|**UNIQUE**|  
 |**DECLARE**|**NATURAL**|**DESCONHECIDO**|  
-|**PADRÃO**|**NCHAR**|**UPDATE**|  
-|**ADIÁVEL**|**AVANÇAR**|**SUPERIOR**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**DEFERRABLE**|**AVANÇAR**|**UPPER**|  
 |**ADIADO**|**NÃO**|**USO**|  
-|**DELETE**|**NONE**|**USUÁRIO**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**USANDO O**|  
-|**DESCREVER**|**NULL**|**VALUE**|  
-|**DESCRITOR**|**NULLIF**|**VALORES**|  
-|**DIAGNÓSTICO**|**NUMÉRICO**|**VARCHAR**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**DESCRIPTOR**|**NULLIF**|**VALORES**|  
+|**DIAGNÓSTICO**|**NUMERIC**|**VARCHAR**|  
 |**DESCONECTAR**|**OCTET_LENGTH**|**VARIÁVEL**|  
-|**DISTINCT**|**DE**|**MODO DE EXIBIÇÃO**|  
-|**DOMÍNIO**|**ON**|**QUANDO**|  
-|**DUPLO**|**SOMENTE**|**SEMPRE QUE**|  
-|**DROP**|**ABRIR**|**WHERE**|  
-|**ELSE**|**OPÇÃO**|**COM**|  
-|**END**|**OR**|**TRABALHO**|  
-|**EXEC FINAL**|**ORDEM**|**GRAVAÇÃO**|  
-|**ESCAPE**|**EXTERNA**|**ANO**|  
-|**EXCETO**|**SAÍDA**|**ZONA**|  
-|**EXCEÇÃO**|||  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**QUANDO**|  
+|**DUPLO**|**ONLY**|**WHENEVER**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OU**|**TRABALHO**|  
+|**END-EXEC**|**ORDEM**|**WRITE**|  
+|**ESCAPE**|**EXTERNA**|**YEAR**|  
+|**EXCEPT**|**SAÍDA**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>Palavras-chave futuras  
  As palavras-chave seguintes poderão ser reservadas em versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que novos recursos forem implementados. Considere evitar o uso destas palavras como identificadores.  
@@ -247,7 +246,7 @@ ms.lasthandoff: 09/01/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Não|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Nenhuma|TRAILING|  
@@ -261,7 +260,7 @@ ms.lasthandoff: 09/01/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Parâmetro|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -300,4 +299,3 @@ ms.lasthandoff: 09/01/2017
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: Preparar SQL Server para CDC | Microsoft Docs
+title: Preparar o SQL Server para CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,16 +15,16 @@ ms.topic: article
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29eee5c85a323e70dab3ac9bdb25bd72820b0489
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 598c626e94eecce208c880fd48c4aa2b6c16d793
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
   O serviço Oracle CDC exige que todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino contenham o banco de dados MSXDBCDC. Você cria este banco de dados usando a ação Preparar ação do SQL Server no Console de Configuração do Serviço CDC. Isto cria um script especial que é executado para criar as tabelas exigidas, os procedimentos armazenados e outros artefatos necessários para este banco de dados. Esta tarefa só é feita uma vez para cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -58,8 +61,8 @@ ms.lasthandoff: 08/03/2017
 ### <a name="view-script"></a>Exibir script  
  Clique em **Exibir Script** para exibir uma versão somente leitura do script de instalação. Um administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode copiar este script no Console de Gerenciamento do SQL Server para editá-lo, se for necessário. Para obter mais informações sobre o Script Preparar SQL Server, consulte [Script de visualização Preparar SQL Server para Oracle CDC](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Como trabalhar com serviços CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
- [A preparação do SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Como trabalhar com os serviços CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+ [Como preparar o SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
   

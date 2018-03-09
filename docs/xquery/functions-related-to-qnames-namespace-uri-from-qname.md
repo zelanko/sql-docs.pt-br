@@ -3,30 +3,36 @@ title: namespace-uri-de-QName (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:namespace-uri-from-QName function
 - namespace-uri-from-QName function
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34a8b738a8c4b38951ff73f4437e3327a3d6a852
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 94b19762329355d7e62e13fe7e8614755f3a96ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções relacionadas a QNames - namespace uri do QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma cadeia de caracteres que representa o uri de namespace do QName especificado por *$arg*. O resultado será a sequência vazia se *$arg* é a sequência vazia.  
   

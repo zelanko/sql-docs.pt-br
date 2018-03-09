@@ -2,9 +2,12 @@
 title: Reduzir um banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 07a436a4267617beb407597d787038141273baaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6b706efb7e6a3939f89de750a80c0abe1eb2c1da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
-  Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  A redução de arquivos de dados recupera espaço com a movimentação de páginas de dados do final do arquivo para o espaço desocupado mais próximo à frente do arquivo. Quando espaço livre suficiente é criado no final do arquivo, as páginas de dados no final do arquivo podem ser desalocadas e retornadas para o sistema de arquivos.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de reduzir um banco de dados](#FollowUp)  
+-   **Follow Up:**  [You shrink a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Aponte para **Tarefas**, depois **Reduzir**e clique em **Banco de dados**.  
   
-     **Banco de dados**  
+     **Backup de banco de dados**  
      Exibe o nome do banco de dados selecionado.  
   
      **Espaço alocado atual**  
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
@@ -121,7 +124,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="FollowUp"></a> Acompanhamento: depois de reduzir um banco de dados  
  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reduzir um arquivo](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

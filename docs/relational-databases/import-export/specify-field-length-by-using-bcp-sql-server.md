@@ -2,10 +2,14 @@
 title: Especificar tamanho do campo usando bcp (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 213f03b9f8b3fe55daa28dbc131067fca581aa31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad5143f4bc309f4156ebc4ea174ac11f4b9246fb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar tamanho do campo usando bcp (SQL Server)
-  O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados **int** usa 4 bytes. Se você especificar 0 para o comprimento do prefixo, o comando **bcp** solicitará o tamanho do campo, os tamanhos de campo padrão e o impacto do tamanho de campo no armazenamento de dados em arquivos de dados que contêm dados **char** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados **int** usa 4 bytes. Se você especificar 0 para o comprimento do prefixo, o comando **bcp** solicitará o tamanho do campo, os tamanhos de campo padrão e o impacto do tamanho de campo no armazenamento de dados em arquivos de dados que contêm dados **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>O bcp solicita um tamanho de campo  
  Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w**ou **-N**), o comando solicitará o comprimento de campo de cada campo de dados, da seguinte maneira:  
@@ -69,7 +74,7 @@ ms.lasthandoff: 11/09/2017
 |**bit**|1|  
 |**binary**|Duas vezes o comprimento definido para a coluna + 1|  
 |**varbinary**|Duas vezes o comprimento definido para a coluna + 1|  
-|**image**|0|  
+|**imagem**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -103,7 +108,7 @@ ms.lasthandoff: 11/09/2017
 |**bit**|1|  
 |**binary**|Comprimento definido para a coluna|  
 |**varbinary**|Comprimento definido para a coluna|  
-|**image**|0|  
+|**imagem**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  
@@ -123,7 +128,7 @@ ms.lasthandoff: 11/09/2017
   
  Em todos os casos anteriores, para criar um arquivo de dados para recarregar posteriormente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mantenha o espaço de armazenamento em um mínimo, use um prefixo de comprimento com o tipo de armazenamento de arquivo padrão e o tamanho do campo padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

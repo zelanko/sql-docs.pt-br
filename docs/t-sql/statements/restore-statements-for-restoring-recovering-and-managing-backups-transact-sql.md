@@ -24,17 +24,16 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81443218a21a232248d3f237aba38cfc0d833b7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>instruções RESTORE para restaurar, recuperar e gerenciar backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,10 @@ ms.lasthandoff: 09/01/2017
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE FILELISTONLY, que é usada para retornar um conjunto de resultados contendo uma lista dos bancos de dados e arquivos de log contidas no conjunto de backups.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE HEADERONLY, que é usada para retornar um conjunto de resultados que contém todas as informações de cabeçalho de backup de todos os conjuntos de backups em um dispositivo de backup em particular.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE LABELONLY, que é usada para retornar um conjunto de resultados contendo informações sobre a mídia de backup identificada pelo dispositivo de backup determinado.|  
-|[RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE REWINDONLY, que é usada para retroceder e fechar dispositivos de fita que foram deixados abertos pelas instruções BACKUP ou RESTORE executadas com a opção NOREWIND.|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE REWINDONLY, que é usada para retroceder e fechar dispositivos de fita que foram deixados abertos pelas instruções BACKUP ou RESTORE executadas com a opção NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE VERIFYONLY, que é usada para verificar o backup, mas não o restaura, e examina se o conjunto de backup está completo e se todo o backup está legível; não tenta verificar a estrutura dos dados.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
-

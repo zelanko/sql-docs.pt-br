@@ -2,16 +2,13 @@
 title: "Ações em modelos multidimensionais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
-  Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Use a guia **Ações** do Designer de Cubo para criar ações para um cubo. Especifique o seguinte:  
   
@@ -84,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|  
 |**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interativo<br /><br /> Em Aberto|  
 |**Aplicativo**|Descreve o aplicativo da ação.|  
-|**Description**|Descreve a ação.|  
+|**Descrição**|Descreve a ação.|  
 |**Caption**|Fornece uma legenda que é exibida para a ação. Se a legenda for MDX, especifique **True** para **A legenda é MDX**.|  
 |**A legenda é MDX**|Especifique **True** se a legenda for MDX ou **False** se não for.|  
   
@@ -140,4 +137,3 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  [Cubos em modelos multidimensionais](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
-

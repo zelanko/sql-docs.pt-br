@@ -8,36 +8,34 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_execution_log_tree_TSQL
 - sp_syscollector_delete_execution_log_tree
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_delete_execution_log_tree
 - data collector [SQL Server], stored procedures
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9eabcecb82b2246a7a55aee114b501c18a3b174
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c02f490c3bbb604088001e9efd24ae4cadaee96a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui todas as entradas de log para a execução de um único conjunto de coleta. Também exclui as entradas de log das tabelas do [!INCLUDE[ssIS](../../includes/ssis-md.md)] para aquela execução.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +48,10 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@log_id =** ] *log_id*  
+ [ **@log_id =** ] *log_id*  
  É o identificador de exclusividade para o log do conjunto de coleta. *log_id* é **int**.  
   
- [  **@from_collection_set =** ] *from_collection_set*  
+ [ **@from_collection_set =** ] *from_collection_set*  
  É o identificador para o conjunto de coleta. *from_collection_set* é **bit = 1**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

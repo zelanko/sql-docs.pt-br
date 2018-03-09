@@ -3,8 +3,9 @@ title: "Campo (Visual C++ sintaxe índice com #import) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: 'Field collection [ADO], Visual C++ syntax index with #import'
+dev_langs:
+- C++
+helpviewer_keywords:
+- 'Field collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e9d6e961987f21eedb1ea5410c71991004adc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18a567d5379b64c4c400370bdae0a69529aba704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Campo (Visual C++ sintaxe índice com #import)
 ## <a name="methods"></a>Métodos  

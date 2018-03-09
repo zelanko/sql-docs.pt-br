@@ -2,33 +2,30 @@
 title: "Configurar o uso de espaço em disco (PowerPivot para SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
-  Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para agilizar as recargas. Todo banco de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que é carregado na memória é armazenado primeiro no disco para agilizar a recarga posterior para atender a novas solicitações. Por padrão, o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo o espaço em disco disponível para armazenar seus bancos de dados, mas pode modificar esse comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para agilizar as recargas. Todo banco de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que é carregado na memória é armazenado primeiro no disco para agilizar a recarga posterior para atender a novas solicitações. Por padrão, o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo o espaço em disco disponível para armazenar seus bancos de dados, mas pode modificar esse comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizado.  
   
  Este tópico explica como definir os limites sobre o uso de espaço em disco.  
   
@@ -107,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

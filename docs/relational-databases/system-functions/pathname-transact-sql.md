@@ -1,5 +1,5 @@
 ---
-title: Nome do caminho (Transact-SQL) | Microsoft Docs
+title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -8,34 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
 - PathName
-dev_langs: TSQL
-helpviewer_keywords: PathName FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df55d13672e6969f5dd12f738a8f132140e379fb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 880ee799e833a3181d3ee1a6eaa51b25f1456a58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o caminho de um objeto binário grande FILESTREAM (BLOB). A API OpenSqlFilestream usa esse caminho para retornar um identificador que um aplicativo pode usar para trabalhar com os dados BLOB usando APIs do Win32. PathName é somente leitura.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome da coluna*  
+ *column_name*  
  É o nome da coluna de uma **varbinary (max)** coluna FILESTREAM. *nome da coluna* deve ser um nome de coluna. Não pode ser uma expressão nem o resultado de uma instrução CAST ou CONVERT.  
   
  Solicitação de PathName para uma coluna de qualquer outro tipo de dados ou para um **varbinary (max)** columnthat não tem o será de atributo de armazenamento FILESTREAM causará um erro de tempo de compilação de consulta.  
@@ -55,7 +54,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Um inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que define como o componente de servidor do caminho deve ser formatado. *@option*pode ser um dos valores a seguir. O padrão é 0.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |0|Retorna o nome do servidor convertido no formato de BIOS, por exemplo: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Retorna o nome do servidor sem conversão, por exemplo: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -68,7 +67,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando o banco de dados pertence a um de disponibilidade AlwaysOn de grupo, em seguida, o valor de *use_replica_computer_name* tem o seguinte efeito na saída de **PathName** função:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Não especificado.|A função retorna o VNN (nome de rede virtual) no caminho.|  
 |0|A função retorna o VNN (nome de rede virtual) no caminho.|  
@@ -80,7 +79,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valor de retorno  
  O valor retornado é o caminho lógico qualificado global ou NETBIOS do BLOB. PathName não retorna um endereço IP. NULL é retornado quando o FILESTREAM BLOB não foi criado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A coluna ROWGUID deve estar visível em qualquer consulta que chama PathName.  
   
  Um FILESTREAM BLOB só pode ser criado usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -90,7 +89,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lendo o caminho para um FILESTREAM BLOB  
  O exemplo a seguir atribui `PathName` a uma variável `nvarchar(max)`.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -102,7 +101,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Exibindo os caminhos de FILESTREAM BLOBs em uma tabela  
  O exemplo a seguir cria e exibe os caminhos para três FILESTREAM BLOBs.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  
@@ -157,7 +156,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

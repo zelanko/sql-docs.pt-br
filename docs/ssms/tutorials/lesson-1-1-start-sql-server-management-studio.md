@@ -2,27 +2,30 @@
 title: Iniciar o SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6fad886d9f1748a671ee206d02df1b9398bd73c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca25b34da611f2142c0889949c0c5d0c868984f7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lição 1-1 – Iniciar o SQL Server Management Studio
-Para iniciar este tutorial, vamos olhar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para iniciar este tutorial, vamos analisar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="opening-sql-server-management-studio"></a>Abrindo o SQL Server Management Studio  
   

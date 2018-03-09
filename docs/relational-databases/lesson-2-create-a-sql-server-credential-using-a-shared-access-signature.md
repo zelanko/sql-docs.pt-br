@@ -1,27 +1,33 @@
 ---
 title: "Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c919694f95f5a0e248f814bff523d9d7aab6981c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9de61b250b8605e5f47a58ff7bb77e10c54ab123
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a criar uma credencial para armazenar as informações de segurança que serão usadas pelo SQL Server para gravar e ler o contêiner do Azure criado na [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A credencial armazena o caminho de URI do contêiner de armazenamento e a assinatura de acesso compartilhado desse contêiner.  
@@ -66,7 +72,7 @@ Para criar uma credencial do SQL Server, siga estas etapas:
   
 [Lição 3: Backup de banco de dados em URL](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  

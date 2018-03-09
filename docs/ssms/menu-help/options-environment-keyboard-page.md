@@ -3,8 +3,11 @@ title: "Opções (página Ambiente – Teclado) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eba82fd5cbff225b5c80153036f35150de7db48a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---keyboard-page"></a>Opções (página Ambiente – Teclado)
-A caixa de diálogo **Opções** lhe permite personalizar o esquema de teclado no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A caixa de diálogo **Opções** permite personalizar o esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
   
 A lista suspensa **Esquema de teclado** fornece as coleções disponíveis de teclas de atalho. Para carregar um esquema específico, selecione-o na lista. Quando estiver pronto para sair da caixa de diálogo **Opções** , clique em **OK**. Seu esquema selecionado será carregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   

@@ -2,9 +2,12 @@
 title: "Espelhamento de Banco de Dados – usar certificados para conexões de saída | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 442135ac804feff215bb3eab09bbf7ee3464af4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de saída
-  Este tópico descreve os passos para configurar instâncias de servidor para usar certificados para autenticar conexões de saída para espelhamento de banco de dados. A configuração de conexão de saída deve ser feita antes que você possa configurar conexões de entrada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve os passos para configurar instâncias de servidor para usar certificados para autenticar conexões de saída para espelhamento de banco de dados. A configuração de conexão de saída deve ser feita antes que você possa configurar conexões de entrada.  
   
 > [!NOTE]  
 >  Todas as conexões de espelhamento em uma instância do servidor usam um único ponto de extremidade de espelhamento do banco de dados e você deve especificar o método de autenticação da instância do servidor quando criar o ponto de extremidade.  
@@ -178,7 +181,7 @@ GO
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

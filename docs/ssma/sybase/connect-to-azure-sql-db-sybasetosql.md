@@ -3,27 +3,28 @@ title: Conecte-se ao banco de dados do SQL Azure (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76a29a448dfbbba4b8fc0771edf352545d361cf9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Conecte-se ao banco de dados do SQL Azure (SybaseToSQL)
 Use a conectar-se a caixa de diálogo banco de dados do Azure SQL para se conectar ao banco de dados Azure SQL DB que você deseja migrar.  
@@ -35,14 +36,14 @@ Para acessar essa caixa de diálogo, no **arquivo** menu, selecione **conectar-s
   
 Selecione ou insira o nome do servidor para se conectar ao banco de dados de SQL do Azure.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
   
 Selecione, digite ou **procurar** o nome do banco de dados.  
   
 > [!IMPORTANT]  
 > SSMA para Sybase não oferece suporte a conexão ao banco de dados mestre no banco de dados de SQL do Azure.  
   
-**Nome de usuário**  
+**User name**  
   
 Insira o nome de usuário SSMA usará para se conectar ao banco de dados do banco de dados de SQL do Azure  
   
@@ -73,4 +74,3 @@ Para criar um novo banco de dados pela primeira vez, siga as etapas a seguir
   
     2.  **Tamanho do banco de dados:** selecione o tamanho do banco de dados que você precisa criar conta de banco de dados de SQL do Azure.  
   
-

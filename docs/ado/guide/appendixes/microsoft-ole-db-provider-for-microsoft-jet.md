@@ -3,7 +3,7 @@ title: Provedor Microsoft OLE DB para Microsoft Jet | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95bf93de0eac697aecac7e31e7b0d32b082bda22
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Provedor Microsoft OLE DB para visão geral do Microsoft Jet
 O OLE DB Provider for Microsoft Jet permite que o ADO acessar bancos de dados Microsoft Jet.
@@ -104,7 +103,7 @@ Microsoft.Jet.OLEDB.4.0
 |Transações de OLEDB:Bulk Jet (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica se as operações em massa SQL são transacionadas. Operações em massa grande podem falhar quando transacionado, devido a atrasos de recurso.|
 |Cursores do Jet OLEDB:Enable Fat (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica se Jet deve armazenar em cache várias linhas ao preencher um conjunto de registros para fontes de linha remota.|
 |Tamanho de Cache de Cursor do Jet OLEDB:Fat (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Indica o número de linhas em cache ao usar o cache de linha do repositório de dados remotos. Esse valor é ignorado, a menos que **Jet OLEDB:Enable Fat cursores** for True.|
-|Jet OLEDB: inconsistente (DBPROP_JETOLEDB_INCONSISTENT)|Indica se os resultados da consulta permitem atualizações inconsistentes.|
+|Jet OLEDB:Inconsistent (DBPROP_JETOLEDB_INCONSISTENT)|Indica se os resultados da consulta permitem atualizações inconsistentes.|
 |Jet OLEDB: bloqueio de granularidade (DBPROP_JETOLEDB_LOCKGRANULARITY)|Indica se uma tabela é aberta usando o bloqueio em nível de linha.|
 |Instrução de passagem do Jet OLEDB:ODBC (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indica que o Jet deve passar o texto SQL em um **comando** objeto para o back-end inalterado.|
 |Operações em massa de OLEDB:Partial Jet (DBPROP_JETOLEDB_BULKPARTIAL)|Indica o comportamento do Jet quando operações DML SQL falharem.|
@@ -344,4 +343,3 @@ Microsoft.Jet.OLEDB.4.0
 |Usar indicadores|DBPROP_BOOKMARKS|
 
  Para detalhes específicos de implementação e funcionais informações sobre o OLE DB Provider for Microsoft Jet, consulte [provedor Jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) na documentação do OLE DB.
-

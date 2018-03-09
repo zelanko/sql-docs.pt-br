@@ -3,7 +3,7 @@ title: "Método Execute21 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3a985a6bb9d9e50a3a6d6741a8f379abafc26af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2.1.  
@@ -77,7 +76,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Um tipo variant que contém uma matriz segura de definições de parâmetro. Se o *GetInfo* opção foi especificada no *lExecuteOptions*, esse parâmetro é usado para retornar as definições de parâmetro obtidas do provedor OLE DB. Caso contrário, esse parâmetro pode estar vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *HandlerString* parâmetro pode ser nulo. O que ocorre neste caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. MSDFMAP.dll interpretará o argumento como uma direção para usar o sample.ini para verificar se as cadeias de caracteres de conexão e consulta.  
   
 > [!NOTE]
@@ -85,6 +84,5 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

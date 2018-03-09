@@ -2,26 +2,31 @@
 title: "Desabilitar a compactação em uma tabela ou índice | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d97a717894ef2e5224d7696c7a8b02c982917599
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26617d7ebdeae568acb35d518cc17f068b607ba3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Desabilitar a compactação em uma tabela ou índice
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   Este tópico descreve como desabilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -189,7 +194,7 @@ ms.lasthandoff: 11/09/2017
   
      Quando terminar, clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para desabilitar a compactação em uma tabela  
   

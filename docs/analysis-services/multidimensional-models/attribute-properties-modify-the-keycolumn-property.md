@@ -2,16 +2,13 @@
 title: Modificar a propriedade KeyColumn de um atributo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 350266c9c21a5ab117f8e334ec5be63a581c94ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e745159dbb8a8e329ad5cbdee64831ce284439c8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---modify-the-keycolumn-property"></a>Propriedades de atributo - modificar a propriedade KeyColumn
-  Você pode modificar a propriedade **KeyColumns** de um atributo. Por exemplo, convém especificar uma chave composta em vez de uma chave única como a chave para o atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode modificar a propriedade **KeyColumns** de um atributo. Por exemplo, convém especificar uma chave composta em vez de uma chave única como a chave para o atributo.  
   
 ### <a name="to-modify-the-keycolumns-property-of-an-attribute"></a>Para modificar a propriedade KeyColumn de um atributo  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
     -   No Designer de cubo no **estrutura do cubo** guia, expanda a dimensão do cubo no **dimensões** painel e clique em **editar \<dimensão >**.  
   
-3.  Na guia **Estrutura da Dimensão** , no painel **Atributos** , clique no atributo cuja propriedade **KeyColumns** você quer modificar.  
+3.  Na guia **Estrutura da Dimensão**, no painel **Atributos**, clique no atributo cuja propriedade **KeyColumns** você quer modificar.  
   
 4.  Na janela **Propriedades** , clique o valor da propriedade **KeyColumns** .  
   

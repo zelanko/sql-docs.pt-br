@@ -2,26 +2,29 @@
 title: "Lição 3: trabalhando com modelos, soluções e projetos de script | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 73a2ecd229999669787e9b452df596cc95d7154c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 79d5c15217620308ed076a695919dfae6d8e3054
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lição 3: Trabalhando com modelos, soluções e projetos de script
-Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) para criar modelos personalizados, soluções e projetos de script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) para criar modelos personalizados, soluções e projetos de script.  
   
 Eis os tópicos desta lição:  
   

@@ -1,29 +1,29 @@
 ---
-title: "Adicionar tipos de conteúdo do Reporting Services em uma biblioteca do SharePoint | Microsoft Docs"
+title: "Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Adicionar tipos de conteúdo do Reporting Services em uma biblioteca do SharePoint
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/06/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
  Para adicionar tipos de conteúdo a uma biblioteca, é necessário que você seja administrador de site ou ter o nível de permissão Controle Total.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  Vá para **Configurações de site**.  
   
-    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações do SharePoint")  
+    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   No SharePoint 2010, clique em **Ações do Site**e, depois, em **Configurações de Site**.  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  Quando terminar de adicionar tipos de conteúdo, clique em **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Para habilitar os tipos de conteúdo e gerenciamento de conteúdo para vários sites de BI  
+##  <a name="bkmk_enable_multiple_sites"></a> Para habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites de BI  
   
 1.  Para servidores de relatório do SQL Server Reporting Services 2008 e 2008 R2, você pode habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites do Business Intelligence Center:  
   
@@ -181,4 +181,3 @@ ms.lasthandoff: 10/06/2017
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

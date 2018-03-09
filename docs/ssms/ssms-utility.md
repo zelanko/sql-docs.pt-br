@@ -1,10 +1,13 @@
 ---
 title: "Utilitário de SSMS | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4afda7e4549efc45b2d07fe2737326d2b38a0539
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a69ee6a0f66529c6cfb08216643d9c2a6c2a1482
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssms-utility"></a>Utilitário de Ssms
-  O utilitário **Ssms**abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se especificado, o **Ssms** também estabelece uma conexão com um servidor e abre consultas, scripts, arquivos, projetos e soluções.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O utilitário **Ssms** abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se especificado, o **Ssms** também estabelece uma conexão com um servidor e abre consultas, scripts, arquivos, projetos e soluções.  
   
  Você pode especificar arquivos que contenham consultas, projetos ou soluções. Arquivos que contêm consultas serão conectados automaticamente a um servidor se a informação de conexão for fornecida e o tipo de arquivo for associado com aquele tipo de servidor. Por exemplo, arquivos .sql abrirão uma janela Editor de Consultas SQL em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]e arquivos .mdx abrirão uma janela Editor de Consultas MDX em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **Soluções e Projetos do SQL Server** serão abertos no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -55,30 +58,37 @@ Ssms
  Especifica uma solução para ser aberta. O parâmetro deve conter o caminho completo para o arquivo de solução.  
   
  [**-S** *servername*]  
- Nome do servidor  
+  Nome do servidor  
   
  [**-d** *databasename*]  
- Nome do banco de dados  
+  Nome do banco de dados  
+
+ [**-G**] Conecte-se usando a Autenticação do Active Directory. O tipo de conexão é determinado se **-P** e/ou **-U** está incluído.
+ - Se **-U** e **-P** *não* estiverem incluídos, então, o **Active Directory – Integrado** será usado e nenhuma caixa de diálogo será exibida.
+ - Se ambos os **-U** e **-P** estiverem incluídos, então, o **Active Directory – Senha** será usado. O uso dessa opção **não é recomendado** porque você precisa especificar uma senha de texto não criptografado na linha de comando, o que não é recomendado.
+ - Se **-U** estiver incluído, mas **-P** estiver ausente, então, a caixa de diálogo de autenticação será exibida, mas todas as tentativas de logon falharão. 
+
+  Observe que o **Active Directory – Universal com suporte do MFA** não tem suporte atualmente. 
   
- [**-U** *username*]  
- Nome de usuário ao conectar com a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+[**-U** *username*]  
+ Nome de usuário ao se conectar com a “Autenticação do SQL” ou “Active Directory – Senha”  
   
- [**-P** *password*]  
- Senha ao conectar-se com a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+[**-P** *password*]  
+ Senha ao se conectar com a “Autenticação do SQL” ou “Active Directory – Senha”
   
- [**-E**]  
+[**-E**]  
  Conectar usando a Autenticação do Windows  
   
- [**-nosplash**]  
+[**-nosplash**]  
  Impede o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de exibir o gráfico da tela inicial ao abrir. Use essa opção ao conectar-se a um computador que executa o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] por meio de Serviços de Terminal em uma conexão com uma largura da banda limitada. Este argumento não diferencia maiúsculas e minúsculas e pode ser exibido antes ou depois de outros argumentos  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  Registra a atividade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no arquivo especificado para solucionar problemas  
   
- [**-?**]  
+[**-?**]  
  Exibe a ajuda de linha de comando  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as alternâncias são opcionais e separadas por um espaço, exceto os arquivos que são separados por vírgulas. Se você não especificar nenhuma alternância, o **Ssms** abrirá o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como especificado nas configurações de **Opções** no menu **Ferramentas** . Por exemplo, se a página **Ambiente/Geral** na opção **Na inicialização** especificar **Abrir nova janela de consulta**, o **SSMS** será aberto com um Editor de Consultas em branco.  
   
  A opção **-log** deve aparecer ao final da linha de comando, após todas as outras opções. O argumento de nome de arquivo é opcional. Se um nome de arquivo for especificado, e o arquivo não existir, o arquivo será criado. Se o arquivo não puder ser criado – por exemplo, devido à falta de acesso de gravação, o log será gravado na localidade de APPDATA não localizada (veja abaixo). Se o argumento de nome de arquivo não for especificado, dois arquivos serão gravados na pasta de dados de aplicativo não localizada do usuário atual. A pasta de dados de aplicativo não localizada para o SQL Server pode ser encontrada na variável de ambiente de APPDATA. Por exemplo, para o SQL Server 2012, a pasta é \<unidade do sistema>:\Users\\<nome de usuário\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Os dois arquivos são, por padrão, chamados de ActivityLog.xml e ActivityLog.xsl. O primeiro contém os dados de log de atividade e o segundo é uma folha de estilo XML que fornece uma maneira mais conveniente de exibir o arquivo XML. Use as seguintes etapas para exibir o arquivo de log no visualizador padrão de XML, como o Internet Explorer: clique em Iniciar, em seguida clique em Executar…" e, então, digite \<unidade do sistema>:\Users\\<nome de usuário\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml” no campo fornecido e, em seguida, pressione Enter.  
@@ -100,13 +110,21 @@ Ssms
   
 ```  
   
+ O script a seguir abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de um prompt de comando usando o *Active Directory – Integrado*:  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando, com Autenticação do Windows, com o Editor de Código definido para o servidor `ACCTG and the database AdventureWorks2012,` sem mostrar a tela inicial:  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando, e abre o script MonthEndQuery.  
   
 ```  
@@ -127,8 +145,11 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
-## <a name="see-also"></a>Consulte também  
+ 
+
+
+
+## <a name="see-also"></a>Consulte Também  
  [Usar o SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

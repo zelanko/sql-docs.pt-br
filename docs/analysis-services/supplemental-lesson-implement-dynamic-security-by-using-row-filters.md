@@ -2,14 +2,13 @@
 title: "Implementar a segurança dinâmica usando filtros de linha | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: 
@@ -17,12 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
+ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14bc3755dcbb92af2f75ed47a4df6843fe4782b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Lição suplementar - implementar a segurança dinâmica usando filtros de linha
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +35,7 @@ Para concluir esta lição suplementar, você executará uma série de tarefas. 
   
 Tempo estimado para concluir esta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico complementar da lição faz parte de um tutorial de modelagem de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição suplementar, conclua todas as lições anteriores.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Adicione a tabela dimSalesTerritory ao Projeto de Modelo de Tabela de Vendas pela Internet da AW  
@@ -135,7 +133,7 @@ Nesta tarefa, você criará uma nova função de usuário. Esta função incluir
   
 3.  Clique na nova função e, na coluna **Nome** , renomeie a função como **Funcionários de Vendas por Região**.  
   
-4.  Na coluna **Permissões** , clique na lista suspensa e selecione a permissão **Leitura** .  
+4.  Na coluna **Permissões**, clique na lista suspensa e selecione a permissão **Leitura**.  
   
 5.  Clique na guia **Membros** e em **Adicionar**.  
   
@@ -193,8 +191,7 @@ Nesta tarefa, você usará o analisar no recurso do Excel no SSDT para testar a 
   
     Este usuário não pode navegar nem consultar dados de vendas pela Internet regiões que não sejam aquela à qual eles pertencem porque o filtro de linha definido para a tabela Sales Territory na função de usuário Sales Employees by Territory efetivamente protege dados para todos os dados relacionados a outras regiões de vendas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Função USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)  
 [Função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)  
 [Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
-

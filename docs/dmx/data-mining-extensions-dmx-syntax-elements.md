@@ -5,33 +5,29 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], syntax elements
 - syntax elements [DMX]
 - statements [DMX], syntax elements
 - DMX [Analysis Services], syntax elements
 ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d5f87a4b033d4c4616e57987461be727fa01a594
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 08a8b7863bfc6f680685b910d04ce1af91108a2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxe de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +68,7 @@ ms.lasthandoff: 08/02/2017
  [Sinalizadores de modelagem &#40; DMX &#41;](../dmx/modeling-flags-dmx.md)  
  Defina dicas adicionais que o algoritmo poderá usar para processar um modelo de mineração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -80,7 +76,6 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

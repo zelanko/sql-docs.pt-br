@@ -2,33 +2,32 @@
 title: "Exibindo uma série com vários intervalos de dados em um gráfico | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e4982859cf69b107686872084ddad6561dc01a8e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Exibindo uma série com vários intervalos de dados em um gráfico
 
   O gráfico usará os valores mínimo e máximo de uma série para calcular a escala do eixo. Quando uma série do gráfico contiver mais que um intervalo de dados, os pontos de dados poderão ficar obscuros e apenas alguns deles poderão ser visualizados facilmente no gráfico. Por exemplo, suponha que um relatório exiba informações sobre o total de vendas diário de um período de 30 dias.  
   
- ![Gráfico com vários intervalos de dados](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "gráfico com vários intervalos de dados")  
+ ![Gráfico com vários intervalos de dados](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "Gráfico com vários intervalos de dados")  
   
  Na maior parte do mês, as vendas ficam entre 10 e 40. No entanto, uma campanha publicitária de uma semana provocou um aumento repentino nas vendas no início de abril. Essa alteração nos dados de vendas produz uma distribuição irregular dos pontos de dados que reduz a legibilidade geral do gráfico.  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>Exibindo vários intervalos de dados usando quebras de escala  
  Quando você habilita uma quebra de escala, o gráfico calcula onde desenhar uma linha no gráfico. Deve haver espaço suficiente entre os intervalos para desenhar uma quebra de escala. Por padrão, a quebra de escala poderá ser adicionada somente se houver uma separação entre os intervalos de dados de pelo menos 25% do gráfico.  
   
- ![Gráfico com quebra de escala](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "gráfico com quebra de escala")  
+ ![Gráfico com quebra de escala](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Gráfico com quebra de escala")  
   
 > [!NOTE]  
 >  Não é possível especificar onde posicionar a quebra de escala em um gráfico. No entanto, você pode modificar como ela será calculada, o que será descrito adiante neste tópico.  
@@ -66,16 +65,15 @@ ms.lasthandoff: 08/09/2017
   
 -   O tipo de gráfico é polar, radar, pizza, anel, funil, pirâmide ou algum gráfico empilhado.  
   
- Um exemplo de gráfico com quebras de escala está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios e Designer de relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um exemplo de gráfico com quebras de escala está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](http://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Várias séries em um gráfico](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
 [Formatando um gráfico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[3D, inclinação e outros efeitos em um gráfico](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
+[Efeitos 3D, bisel e outros efeitos em um gráfico](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Gráficos](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Caixa de diálogo de propriedades do eixo, opções de eixo](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Caixa de diálogo Propriedades do Eixo, Opções de Eixo](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [Coletar fatias pequenas em um gráfico de pizza](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,9 +2,12 @@
 title: "Tarefa Notificar Operador (plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.swb.maint.notifyoperator.f1
 helpviewer_keywords: Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ea1e759deceda040ef243e89c998651b5e23577
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b272b5d52fc3bcfadfee095f03b061c436f4508d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tarefa de Notificação do Operador (Plano de Manutenção)
-  Use a caixa de diálogo **Tarefa de Notificação do Operador** para adicionar uma notificação automática a este plano de manutenção. Para usar a tarefa deve-se ter o Database Mail habilitado e configurado de forma adequada, com o MSDB como um Banco de dados host de correio, e ter um operador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com um endereço de email válido.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa de Notificação do Operador** para adicionar uma notificação automática a este plano de manutenção. Para usar a tarefa deve-se ter o Database Mail habilitado e configurado de forma adequada, com o MSDB como um Banco de dados host de correio, e ter um operador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com um endereço de email válido.  
   
  Esta tarefa usa o procedimento armazenado sp_notify_operator.  
   
@@ -68,13 +71,13 @@ ms.lasthandoff: 11/09/2017
  **Usar nome de usuário e senha específicos**  
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
- **Nome de usuário**  
+ **User name**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
   

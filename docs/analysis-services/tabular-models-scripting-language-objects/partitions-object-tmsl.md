@@ -2,15 +2,13 @@
 title: "O objeto de partições (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ea3c1f7486caa923bcf5cfc07d83a65e76578e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-object-tmsl"></a>Objeto de partições (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define uma partição ou uma segmentação lógica, do conjunto de linhas de tabela. Uma partição consiste em uma consulta SQL usada para importar dados para dados de exemplo no ambiente de modelagem, ou como uma consulta de dados completa para passar por meio da execução de consulta por meio de DirectQuery.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define uma partição ou uma segmentação lógica, do conjunto de linhas de tabela. Uma partição consiste em uma consulta SQL usada para importar dados para dados de exemplo no ambiente de modelagem, ou como uma consulta de dados completa para passar por meio da execução de consulta por meio de DirectQuery.  
   
  As propriedades da partição determinam como os dados são originados da tabela.  Na hierarquia de objetos, o objeto pai de uma partição é um objeto de tabela.  
   
@@ -247,7 +242,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

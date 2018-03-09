@@ -1,5 +1,5 @@
 ---
-title: "Derivar valores de coluna por meio da transformação coluna derivada | Microsoft Docs"
+title: "Derivar valores de coluna por meio da transformação Coluna Derivada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
   Para adicionar e configurar uma transformação Coluna Derivada, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Se a expressão não for válida, o texto da expressão será realçado e uma Dica de Ferramenta na coluna descreverá os erros.  
   
-7.  No **coluna derivada** lista, selecione  **\<adicionar como nova coluna >** para gravar o resultado da avaliação da expressão em uma nova coluna, ou selecione uma coluna existente para atualizar com o resultado da avaliação.  
+7.  Na lista **Coluna Derivada**, selecione **\<adicionar como uma nova coluna>** para gravar o resultado da avaliação da expressão em uma nova coluna ou selecione uma coluna existente para atualizar com o resultado da avaliação.  
   
      Se você optar por usar uma nova coluna, a caixa de diálogo **Editor de Transformação Coluna Derivada** avaliará a expressão e atribuirá um tipo de dados à coluna, dependendo do tipo de dados, tamanho, precisões, escala e página de código.  
   
@@ -66,13 +65,12 @@ ms.lasthandoff: 08/03/2017
   
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação coluna derivada](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Tipos de dados do Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40; SSIS &#41; Expressões](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

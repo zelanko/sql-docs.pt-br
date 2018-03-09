@@ -2,27 +2,30 @@
 title: "Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>Orientador de Otimização do Mecanismo de Banco de Dados
-  O DTA (Orientador de Otimização do Mecanismo de Banco de Dados) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] analisa bancos de dados e faz recomendações que você pode usar para otimizar desempenho de consulta. Você pode usar o Orientador de Otimização do Mecanismo de Banco de Dados para selecionar e criar um conjunto ideal de índices, exibições indexadas e partições de tabela sem precisar de conhecimentos avançados sobre a estrutura do banco de dados ou dos recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com o DTA, é possível executar as tarefas a seguir.  
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O DTA (Orientador de Otimização do Mecanismo de Banco de Dados) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] analisa bancos de dados e faz recomendações que você pode usar para otimizar desempenho de consulta. Você pode usar o Orientador de Otimização do Mecanismo de Banco de Dados para selecionar e criar um conjunto ideal de índices, exibições indexadas e partições de tabela sem precisar de conhecimentos avançados sobre a estrutura do banco de dados ou dos recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com o DTA, é possível executar as tarefas a seguir.  
   
 -   Solucionar problemas de desempenho de uma consulta de problema específica  
   

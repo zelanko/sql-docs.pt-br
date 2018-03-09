@@ -1,5 +1,5 @@
 ---
-title: Change Data Capture Service for Oracle by Attunity sistema arquitetura | Microsoft Docs
+title: "Arquitetura de sistema do serviço Change Data Capture para Oracle da Attunity | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1834218ade0df3d83ad605effd96bd0d431e581
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Arquitetura de sistema do Serviço Change Data Capture para Oracle da Attunity
   O Serviço CDC para Oracle captura alterações feitas em tabelas selecionadas em um ou mais bancos de dados Oracle de origem em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC localizados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O diagrama a seguir mostra os componentes que compõem o Serviço CDC para Oracle.  
   
- ![Arquitetura](../../integration-services/change-data-capture/media/service-architecture.gif "arquitetura")  
+ ![Arquitetura de Serviço](../../integration-services/change-data-capture/media/service-architecture.gif "Arquitetura de Serviço")  
   
  Esta figura ilustra quatro plataformas que são usadas. Em muitos casos, estas plataformas podem se sobrepor, porém este diagrama representa um caso de uso padrão. Por exemplo, faz sentido que os bancos de dados Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sejam executados em um computador separado e não sejam compartilhados com a plataforma do Serviço Oracle CDC ou a plataforma da qual o Serviço CDC é criado. As plataformas ilustradas nesta figura são:  
   
@@ -60,4 +59,3 @@ ms.lasthandoff: 08/03/2017
  O Serviço Oracle CDC e suas Instâncias Oracle CDC filhas só podem se comunicar com o banco de dados Oracle de origem e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino como clientes. Eles não escutam ativamente em nenhuma rede e outros protocolos. O Serviço Oracle CDC monitora os bancos de dados CDC em busca de alterações de configuração e atualiza sua operação com base na configuração atualizada.  
   
   
-

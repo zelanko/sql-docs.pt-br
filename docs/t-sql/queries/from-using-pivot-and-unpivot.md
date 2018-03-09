@@ -26,17 +26,16 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 413e4e89679358f0c53c82340dcae5640387ddcb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>DE - usando PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +67,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Os identificadores de coluna no `UNPIVOT` cláusula siga o agrupamento de catálogo. Para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o agrupamento é sempre `SQL_Latin1_General_CP1_CI_AS`. Para [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] bancos de dados parcialmente independentes, o agrupamento é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas e, em seguida, uma cláusula collate (`COLLATE DATABASE_DEFAULT`) é necessária para evitar conflitos.  
 
   
@@ -213,8 +212,7 @@ VendorID    Employee    Orders
  O `Sales.vSalesPersonSalesByFiscalYears` exibir no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa do banco de dados de exemplo `PIVOT` para retornar o total de vendas de cada vendedor em cada ano fiscal. Para o modo de exibição de script [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no **Pesquisador de objetos**, localize a exibição sob o **modos de exibição** pasta para o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados. O nome de exibição e, em seguida, selecione **exibição de Script como**.  
   
 ## <a name="see-also"></a>Consulte também  
- [DE (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASO (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

@@ -2,33 +2,29 @@
 title: "Referência de linguagem (TMSL) de script de modelo de tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 875dd29a77a341e3d40502002488fc0189947c9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Referência de linguagem (TMSL) de script de modelo de tabela
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   Linguagem de script de modelo tabular (TMSL) é a sintaxe de definição de modelo de comando e o objeto para bancos de dados do Analysis Services modelo de tabela no nível de compatibilidade 1200 ou superior. O TMSL se comunica com o Analysis Services por meio do protocolo XMLA, onde o [XMLA. Executar](../analysis-services/xmla/xml-elements-methods-execute.md) método aceita com base em JSON **instrução** scripts em TMSL, bem como os scripts tradicionais baseado em XML em [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
@@ -74,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 
 ||||||  
 |-|-|-|-|-|  
-|**Versão**|**Multidimensional**|**Tabulares 110x**|**Tabela 1200**| **Tabela 1400** |
+|**Versão**|**Multidimensional**|**Tabulares 110x**|**Tabela 1200**| **Tabular 1400** |
 |Azure Analysis Services|NA|NA|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
@@ -88,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Determina o Modo de Servidor de uma instância do Analysis Services](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

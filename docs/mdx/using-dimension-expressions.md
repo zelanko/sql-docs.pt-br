@@ -2,10 +2,13 @@
 title: "Usando expressões de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -18,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c48cf34963f4fb496537cf1573cd4974949a672e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-dimension-expressions"></a>Usando expressões de dimensão
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Normalmente, expressões de dimensão e hierarquia são usadas ao passar parâmetros para funções em linguagem MDX para retornar membros, conjuntos ou tuplas a partir de uma hierarquia.  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/09/2017
   
  Um identificador de hierarquia aparece como *Dimension_Name**.* *Hierarchy_Name* na notação BNF usada para descrever instruções MDX.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   

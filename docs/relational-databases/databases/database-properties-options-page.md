@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: "67"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 367562c82bd9ed041dbd12e2fa195f75fcf99f05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  Não especifique nada ou parcial para designar se este é um banco de dados independente. Para obter mais informações sobre bancos de dados independentes, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md). A propriedade de servidor **Habilitar Bancos de Dados Independentes** deve ser definida como **TRUE** antes que um banco de dados possa ser configurado como independente.  
   
 > [!IMPORTANT]  
->  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para saber mais, veja [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## <a name="automatic"></a>Automatic  
  **Fechamento Automático**  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  A configuração dessa opção como **True** não tem nenhum efeito, salvo se **Atualização Automática de Estatísticas** também estiver definida como **True**.  
   
-## <a name="containment"></a>Contenção  
+## <a name="containment"></a>Containment  
  Nos bancos de dados independentes, algumas configurações geralmente definidas no nível de servidor podem ser configuradas no nível de banco de dados.  
   
  **LCID do Idioma de Texto Completo Padrão**  
@@ -239,7 +239,7 @@ Identificador somente leitura.
   
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

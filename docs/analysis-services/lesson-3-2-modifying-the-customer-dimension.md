@@ -2,32 +2,32 @@
 title: "Modificando a dimensão cliente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ba21519d0ea16952d3aa4cc086fc78309a2108
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lição 3-2-modificando a dimensão cliente
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Há várias formas de aumentar a facilidade de uso e melhorar a funcionalidade das dimensões em um cubo. Nas tarefas deste tópico, você modificará a dimensão Customer.  
   
 ## <a name="renaming-attributes"></a>Renomeando atributos  
@@ -280,4 +280,3 @@ Depois de alterar atributos e hierarquias, você deve implantar as alterações 
 [Renomear um atributo](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  
 [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
-

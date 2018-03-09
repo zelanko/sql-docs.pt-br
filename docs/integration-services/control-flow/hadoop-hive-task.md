@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bfd2e1fcda13aed2d95bed0ec780ff4d3372b94
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 66e0ac41dbc9015be94ec18180a5c8fa3932efe9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-hive-task"></a>Tarefa do Hive do Hadoop
   Use a Tarefa do Hive do Hadoop para executar o script de Hive em um cluster Hadoop.  
@@ -45,8 +44,7 @@ ms.lasthandoff: 08/03/2017
 |**HadoopScriptFilePath**|Quando o valor de **SourceType** for **ScriptFile**, especifique o caminho do arquivo de script no Hadoop.|  
 |**TimeoutInMinutes**|Especifique um valor de tempo limite em minutos. O trabalho do Hadoop para se não tiver sido concluído antes do tempo limite ser decorrido. Especifique 0 para agendar o trabalho do Hadoop para executar de forma assíncrona.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   
-

@@ -3,10 +3,10 @@ title: Criptografia transparente de dados para Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: "22"
-ms.openlocfilehash: b0544f5dee735b8444ce68d25e3be288be214202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -149,7 +149,7 @@ Quando um exame de recriptografia para uma operação de criptografia de banco d
   
 Você pode encontrar o estado de criptografia de banco de dados usando o **sys.dm_pdw_nodes_database_encryption_keys** exibição de gerenciamento dinâmico. Para obter mais informações, consulte o *exibições do catálogo e exibições de gerenciamento dinâmico* seção neste tópico).  
   
-### <a name="restrictions"></a>Restrições  
+### <a name="restrictions"></a>Restrictions  
 As operações a seguir não são permitidas durante a `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, ou `ALTER DATABASE...SET ENCRYPTION` instruções.  
   
 -   Descartando o banco de dados.  
@@ -282,7 +282,7 @@ Os links a seguir contêm informações gerais sobre como o SQL Server gerencia 
 -   [Chaves de criptografia do SQL Server e do banco de dados](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
 [CRIAR A CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
 [CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  

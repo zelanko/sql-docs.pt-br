@@ -9,32 +9,34 @@ ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
-- analysis-services
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Local Audit
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoria Local da coleta de comentários sobre o uso do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>Introdução
 
 O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo (“informações padrão do computador”). O componente de Auditoria Local da [Coleta de comentários sobre o uso do SQL Server](http://support.microsoft.com/kb/3153756) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da Auditoria Local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
 
 A partir do SQL Server 2016 CU2, a Auditoria Local é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). No SQL Server 2016 CU4 e no SQL Server 2016 SP1, a Auditoria Local também está habilitada para o SQL Server Integration Services (SSIS). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de Auditoria Local para coleta de comentários sobre uso. 
 
-## <a name="prerequisites"></a>Pré-requisitos 
+## <a name="prerequisites"></a>Prerequisites 
 
 A seguir estão os pré-requisitos para habilitar a Auditoria Local em cada instância do SQL Server: 
 
@@ -390,6 +392,6 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Auditoria Local da coleta de comentários sobre o uso do SSMS](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
 

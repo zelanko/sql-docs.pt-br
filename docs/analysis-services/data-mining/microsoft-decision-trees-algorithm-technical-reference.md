@@ -2,15 +2,13 @@
 title: "Referência técnica do algoritmo de árvores de decisão da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
-  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
   
  Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo para tarefas diferentes e fornece links para informações adicionais sobre como consultar modelos de árvore de decisão.  
   
@@ -212,6 +211,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Árvores de Decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Exemplos de consulta de modelo de árvores de decisão](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

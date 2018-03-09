@@ -3,7 +3,7 @@ title: Exemplo de propriedades EditMode (VC + +), CursorType e LockType | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ab38e935694c17d27d8a451465e217129b1b3a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac9f781cb1625b2dcf48fa0be8eb2e15b3759d58
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Exemplo de propriedades EditMode (VC + +), CursorType e LockType
 Este exemplo mostra a configuração de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriedades antes de abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade em várias condições. A função EditModeOutput é necessária executar este procedimento.  
@@ -174,4 +173,3 @@ void PrintComError(_com_error &e) {
  [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [Propriedade LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

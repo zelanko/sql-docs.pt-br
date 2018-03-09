@@ -2,9 +2,12 @@
 title: Instalar o Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 429751190eb204503600a09c2ca8aa7ca15713b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
-  Você pode instalar o Distributed Replay de uma destas três maneiras:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode instalar o Distributed Replay de uma das três maneiras:  
   
 -   [Instalar o Distributed Replay por meio do Assistente de Instalação](#bkmk_wizard)  
   
@@ -156,7 +159,7 @@ ms.lasthandoff: 11/09/2017
   
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|Parâmetro|Descrição|Valores com suporte|  
+|Parâmetro|Description|Valores com suporte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do controlador do Distributed Replay Utility.|Verifica a conta e a senha|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do controlador do Distributed Replay Controller.|Verifica a conta e a senha|  
@@ -220,8 +223,8 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>Consulte também  
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

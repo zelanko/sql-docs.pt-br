@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2b3241a4152d81346da17d3f9eaddefaffa00b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-service"></a>Gerenciar um serviço CDC
   Você pode usar o CDC Designer Console para exibir os serviços criados com o Console de Configuração do Serviço CDC e gerenciou todas as instâncias no Serviço Oracle CDC.  
@@ -50,10 +49,9 @@ ms.lasthandoff: 08/03/2017
   
  Clique em **Stop All Instances** para parar a captura de dados de alterações para todas as instâncias no serviço.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Como gerenciar um serviço CDC no CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use o Assistente de nova instância](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Usar o assistente para nova instância](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

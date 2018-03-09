@@ -1,26 +1,27 @@
 ---
-title: "Criar uma matriz (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Criar uma matriz (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Criar uma matriz (Construtor de Relatórios e SSRS)
   Use uma matriz para exibir dados agrupados e informações de resumo. É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. As matrizes oferecem funcionalidade semelhante às tabelas de referência cruzada e dinâmicas. Em tempo de execução, conforme os dados e as regiões de dados do relatório são combinados, uma matriz cresce horizontalmente e verticalmente na página. Os valores das células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. É possível formatar as linhas e as colunas para realçar os dados que você deseja enfatizar. Também é possível incluir alternâncias detalhadas que inicialmente ocultam dados de detalhes. Em seguida, o usuário pode clicar nas alternâncias para exibir mais ou menos detalhes, conforme o necessário.  
@@ -40,11 +41,11 @@ ms.lasthandoff: 08/09/2017
   
  Para descrever como configurar uma tabela do início ao fim, este tópico usa o modelo de matriz.  Inicialmente, a matriz tem um grupo de linhas, um grupo de colunas, uma célula de canto e uma célula de dados, conforme mostrado na figura a seguir.  
   
- ![Em branco matriz com 1 linha e 1 grupo de colunas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "matriz em branco com 1 linha e 1 grupo de colunas")  
+ ![Matriz em branco com 1 grupo de linhas e 1 grupo de colunas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz em branco com 1 grupo de linhas e 1 grupo de colunas")  
   
  Quando você seleciona uma matriz na superfície de design, alças de linha e de coluna são exibidas, conforme mostrado na figura a seguir.  
   
- ![Nova matriz adicionada da caixa de ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nova matriz adicionada da caixa de ferramentas, selecionada")  
+ ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
   
  Adicione grupos arrastando campos de conjuntos de dados para as áreas do Grupos de Linhas e Grupos de Colunas do painel Agrupamento. O primeiro campo arrastado para o painel de grupos de linhas ou de colunas substitui o grupo de padrão vazio inicial. Você pode aplicar formatação a cada célula, dependendo dos dados.  
   
@@ -72,11 +73,11 @@ ms.lasthandoff: 08/09/2017
   
  Quando o relatório é executado, os cabeçalhos das colunas dinâmicas são expandidos à direita (ou à esquerda, se a propriedade Direção da matriz estiver definida como RTL) resultando em uma coluna para cada valor de grupo exclusivo. As linhas dinâmicas são expandidas para baixo na página. Os dados exibidos nas células do corpo tablix são agregações baseadas nas interseções de grupos de linhas e de colunas, conforme mostrado na figura a seguir.  
   
- ![Matriz, linha aninhada e grupos de colunas com totais](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "aninhados de matriz, grupos de linhas e colunas com totais")  
+ ![Matriz, grupos de linhas e colunas aninhadas com totais](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matriz, grupos de linhas e colunas aninhadas com totais")  
   
  Na visualização, o relatório é exibido como na figura a seguir.  
   
- ![Grupos na visualização aninhados](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "grupos na visualização aninhados")  
+ ![Grupos aninhados na visualização](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Grupos aninhados na visualização")  
   
  Para escrever expressões que especifiquem um escopo diferente do escopo padrão, você deve especificar o nome de um conjunto de dados, uma região de dados ou um grupo na função de agregação tudo. Para calcular a porcentagem de contribuição de cada categoria para os valores do grupo da categoria Vestuário, adicione uma coluna dentro do grupo Categoria ao lado da coluna Total, formate a caixa de texto para mostrar a porcentagem e adicione uma expressão que use o escopo padrão no numerador e o escopo do grupo Categoria no denominador, conforme mostrado no exemplo a seguir.  
   
@@ -88,17 +89,17 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AddingAdjacentGroup"></a> Adicionando um grupo adjacente a uma matriz  
  Para adicionar um grupo adjacente com base em um único campo de conjunto de dados, use o menu de atalho no painel Agrupamento. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). A figura a seguir mostra um grupo baseado em geografia e um grupo adjacente baseado em ano.  
   
- ![Grupos de colunas adjacentes para geografia e ano](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "grupos de colunas adjacentes para geografia e ano")  
+ ![Grupos de colunas adjacentes para geografia e ano](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de colunas adjacentes para geografia e ano")  
   
  Neste exemplo, a consulta filtrou valores de dados para incluir apenas os valores relativos à Europa e aos anos de 2003 e 2004. No entanto é possível definir filtros independentemente em cada grupo. Na visualização, o relatório é exibido como na figura a seguir.  
   
- ![Visualização de grupos de colunas adjacentes](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "visualização de grupos de colunas adjacentes")  
+ ![Visualização de grupos de colunas adjacentes](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Visualização de grupos de colunas adjacentes")  
   
  Para adicionar uma coluna de total para um grupo de colunas adjacente, clique na célula de definição do grupo de colunas e use o comando **Adicionar Total** . Uma nova coluna estática é adicionada ao grupo de colunas, com uma soma de agregação padrão para cada campo numérico nas linhas existentes. Para alterar a expressão, edite manualmente a agregação padrão, por exemplo, `Avg([Sales])`. Para obter mais informações, consulte [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Consulte também  
- [Referência de funções de agregação &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

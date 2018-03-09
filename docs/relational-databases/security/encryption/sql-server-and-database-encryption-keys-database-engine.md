@@ -2,9 +2,12 @@
 title: Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
+O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você inicia pela primeira vez a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave é usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criptografar dados confidenciais que são armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que armazena dados confidenciais em um banco de dados.  
   

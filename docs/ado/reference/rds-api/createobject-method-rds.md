@@ -3,7 +3,7 @@ title: "Método CreateObject (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8697a45869d503a2c21dc61b2defed182b02b559
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele. Os pacotes e lê dados de proxy para o stub do lado do servidor para comunicação com o objeto de negócios enviar solicitações e dados pela Internet. Para objetos de componente em andamento, sem os proxies são usados, apenas um ponteiro para o objeto é fornecido.  
@@ -39,16 +38,16 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
   
 |Protocolo|Sintaxe|  
 |--------------|------------|  
-|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
 |HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
 |DCOM|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "computername")|  
-|Em processo|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "")|  
+|Em processo|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Parâmetros  
  *Objeto*  
  Uma variável de objeto que é avaliada como um objeto que é o tipo especificado em *ProgID*.  
   
- *Espaço de dados*  
+ *DataSpace*  
  Uma variável de objeto que representa um [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto usado para criar uma instância do novo objeto.  
   
  *ProgID*  
@@ -57,7 +56,7 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
  *awebsrvr* ou *computername*  
  Um **cadeia de caracteres** valor que representa uma URL que identifica o servidor Web de serviços de informações da Internet (IIS) em que uma instância do objeto de negócios do servidor é criada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *protocolo HTTP* é o protocolo padrão da Web; *HTTPS* é um protocolo da Web seguro. Use o *protocolo DCOM* ao executar uma rede de área local sem HTTP. O *em processo* protocolo é uma biblioteca de vínculo dinâmico (DLL) local; ele não usa uma rede.  
   
 ## <a name="applies-to"></a>Aplica-se a  
@@ -67,6 +66,5 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
  [Objeto DataFactory, método de consulta e exemplo de método CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [Exemplo de método CreateObject (VBScript) e o objeto de espaço de dados](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
 
 

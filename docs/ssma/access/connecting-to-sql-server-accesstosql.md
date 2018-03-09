@@ -1,12 +1,14 @@
 ---
 title: Conectando ao SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +27,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectando ao SQL Server (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar à instância de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando você se conectar, o SSMA obtém metadados sobre os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e exibe os metadados de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados. O SSMA armazena informações sobre qual instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que você está conectado, mas não armazena as senhas.  
@@ -73,7 +74,7 @@ Quando você define as propriedades de conexão, você também especificar o ban
   
     -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo: MyServer\MyInstance.  
   
-    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\\pipe\sql\query. Para obter mais informações, consulte o [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentação.  
+    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\.\pipe\sql\query. Para obter mais informações, consulte a documentação do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
 3.  Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para aceitar conexões em uma porta não padrão, insira o número da porta que é usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexões a **porta do servidor** caixa. Para a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o número da porta padrão é 1433. Para instâncias nomeadas, o SSMA tentará obter o número da porta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] serviço do navegador.  
   
@@ -128,10 +129,9 @@ Sua conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] perman
   
 O procedimento para reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é o mesmo que o procedimento para estabelecer uma conexão.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Se você deseja personalizar o mapeamento entre os bancos de dados de origem e de destino, consulte [bancos de dados de destino e origem do mapeamento de](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) caso contrário, a próxima etapa é converter objetos de banco de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando sintaxe [converter objetos de banco de dados](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

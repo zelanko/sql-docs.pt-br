@@ -5,34 +5,29 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
+dev_langs: DMX
+helpviewer_keywords: SELECT FROM <structure> statements
 ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8af8e861c74c92be83e8ed61893d9a02587aa9a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;estrutura&gt;. CASOS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +69,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se detalhamento for habilitada no modelo e na estrutura, qualquer membro de uma função com permissões de detalhamento na estrutura de mineração e no modelo poderá retornar colunas da estrutura que não foram incluídas no modelo, usando a seguinte sintaxe:  
   
 ```  
@@ -107,11 +102,10 @@ WHERE IsTestCase();
   
  Para retornar os casos de treinamento, substitua a função `IsTrainingCase()`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

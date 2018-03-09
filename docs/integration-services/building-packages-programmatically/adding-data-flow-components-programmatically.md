@@ -1,5 +1,5 @@
 ---
-title: Adicionando componentes de fluxo de dados programaticamente | Microsoft Docs
+title: Adicionar componentes de fluxo de dados programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,30 +21,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a8d8daada2aebcf1b2ef650cf9409c73ad6d1084
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Adicionando componentes de fluxo de dados programaticamente
-  Ao compilar um fluxo de dados, comece adicionando componentes. Em seguida, configure esses componentes e os conecte para estabelecer o fluxo de dados em tempo de execução. Esta seção descreve como adicionar um componente à tarefa de fluxo de dados, criar a instância tempo de design do componente e configurar o componente. Para obter informações sobre como conectar componentes, consulte [conectando o componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+  Ao compilar um fluxo de dados, comece adicionando componentes. Em seguida, configure esses componentes e os conecte para estabelecer o fluxo de dados em tempo de execução. Esta seção descreve como adicionar um componente à tarefa de fluxo de dados, criar a instância tempo de design do componente e configurar o componente. Para obter informaçõessobre como conectar componentes, consulte [Conectar componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-component"></a>Adicionando um componente  
  Chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> da coleção <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> para criar um componente novo e adicioná-lo à tarefa de fluxo de dados. Este método retorna a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> do componente. Contudo, neste momento, o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> não contém informações específicas de nenhum componente. Defina a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> para identificar o tipo de componente. A tarefa de fluxo de dados usa o valor dessa propriedade para criar uma instância do componente em tempo de execução.  
   
- O valor especificado na propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> pode ser o CLSID, o PROGID ou a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> do componente. O CLSID é exibido normalmente na janela Propriedades como o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> do componente. Para obter informações sobre como obter essa propriedade e outras propriedades de componentes disponíveis, consulte [descobrir o componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
+ O valor especificado na propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> pode ser o CLSID, o PROGID ou a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> do componente. O CLSID é exibido normalmente na janela Propriedades como o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> do componente. Para obter informações sobre como obter essa propriedade e outras propriedades de componentes disponíveis, consulte [Descobrir componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-managed-component"></a>Adicionando um componente gerenciado  
- Não é possível usar o CLSID ou o PROGID para adicionar um dos componentes de fluxo de dados gerenciados ao fluxo de dados, pois esses valores apontam para um wrapper e não para o componente em si. Em vez disso, você pode usar o **CreationName** propriedade ou o **AssemblyQualifiedName** propriedade conforme mostrado no exemplo a seguir.  
+ Não é possível usar o CLSID ou o PROGID para adicionar um dos componentes de fluxo de dados gerenciados ao fluxo de dados, pois esses valores apontam para um wrapper e não para o componente em si. Em vez disso, você pode usar a propriedade **CreationName** ou a propriedade **AssemblyQualifiedName** conforme mostrado no exemplo a seguir.  
   
- Se você pretende usar o **AssemblyQualifiedName** propriedade, você deve adicionar uma referência em seu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projeto para o assembly que contém o componente gerenciado. Esses assemblies não são listados na guia .NET do **adicionar referência** caixa de diálogo. Normalmente, você deve navegar para localizar o assembly no **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** pasta.  
+ Se você pretende usar a propriedade **AssemblyQualifiedName**, você deve adicionar uma referência em seu projeto [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ao assembly que contém o componente gerenciado. Esses assemblies não são listados na guia .NET da caixa de diálogo **Adicionar Referência**. Normalmente, você deve navegar para localizar o assembly na pasta **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**.  
   
  Os componentes de fluxo de dados gerenciados embutidos incluem:  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Destino DataReader  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destino Compact  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Destino Compact  
   
 -   Componente Script  
   
@@ -145,7 +143,7 @@ End Module
  Sempre que possível, você deve modificar um componente usando os métodos da instância tempo de design em vez de modificar os metadados do componente diretamente. Embora existam itens nos metadados que você deve definir diretamente, como as conexões, em geral não se aconselha modificar os metadados diretamente, pois assim você ignora a capacidade do componente de monitorar e validar alterações.  
   
 ## <a name="assigning-connections"></a>Atribuindo conexões  
- Alguns componentes, como o componente Origem OLE DB, requerem uma conexão com dados externos e usam um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> existente no pacote para esse propósito. A propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> da coleção <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> indica o número de objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> em tempo de execução requeridos pelo componente. Se a contagem for maior que zero, o componente precisará de uma conexão. Atribua um gerenciador de conexões do pacote para o componente especificando as propriedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> da primeira conexão no <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Observe que o nome do Gerenciador de conexão na coleção de conexão de tempo de execução deve corresponder ao nome de managerreferenced a conexão do pacote.  
+ Alguns componentes, como o componente Origem OLE DB, requerem uma conexão com dados externos e usam um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> existente no pacote para esse propósito. A propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> da coleção <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> indica o número de objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> em tempo de execução requeridos pelo componente. Se a contagem for maior que zero, o componente precisará de uma conexão. Atribua um gerenciador de conexões do pacote para o componente especificando as propriedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> da primeira conexão no <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Observe que o nome do gerenciador de conexões na coleção de conexões em tempo de execução deve corresponder ao nome do gerenciador de conexões referenciado do pacote.  
   
 ## <a name="setting-the-values-of-custom-properties"></a>Definindo os valores de propriedades personalizadas  
  Depois de criar a instância tempo de design do componente, chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A>. Esse método é similar a um construtor por que ele inicializa um componente recém-criado criando suas propriedades personalizadas e seus objetos de entrada e saída. Não chame <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> mais de uma vez em um componente, pois o componente pode se redefinir e perder qualquer modificação feita em seus metadados anteriormente.  
@@ -158,7 +156,7 @@ End Module
  Chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> para inicializar as colunas nas saídas de um componente de origem. Como os componentes não se conectam automaticamente a fontes de dados externas, chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> antes de chamar <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> para fornecer ao componente acesso a sua fonte de dados externa e a capacidade de preencher os metadados da sua coluna. Finalmente, chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> para liberar a conexão.  
   
 ## <a name="next-step"></a>Próxima etapa  
- Depois de adicionar e configurar o componente, a próxima etapa é criar caminhos entre componentes, que é discutido no tópico, [criando um caminho entre dois componentes](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+ Depois de adicionar e configurar o componente, a próxima etapa é criar caminhos entre componentes, que é discutido no tópico [Criando um caminho entre dois componentes](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="sample"></a>Amostra  
  O exemplo de código a seguir adiciona o componente Origem OLE DB a uma tarefa de fluxo de dados, cria uma instância tempo de design do componente e configura as propriedades do componente. Esse exemplo requer uma referência adicional ao assembly Microsoft.SqlServer.DTSRuntimeWrap.  
@@ -290,10 +288,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [EzAPI – atualizado para o SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), em blogs.msdn.com.  
+ Entrada de blog, [EzAPI – Atualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) em blogs.msdn.com.  
 
-## <a name="see-also"></a>Consulte também  
- [Conectando componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conectar componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

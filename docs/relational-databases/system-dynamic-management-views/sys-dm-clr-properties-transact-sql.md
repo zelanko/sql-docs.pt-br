@@ -1,5 +1,5 @@
 ---
-title: sys.DM clr_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_properties_TSQL
 - dm_clr_properties_TSQL
 - dm_clr_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_properties dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,14 +40,10 @@ ms.lasthandoff: 11/17/2017
   
  O **sys.DM clr_properties** exibição contém o **nome** e **valor** colunas. Cada linha nesta exibição fornece detalhes sobre uma propriedade do CLR hospedado. Use esta exibição para coletar informações sobre o CLR hospedado, como o diretório de instalação do CLR, a versão do CLR e o estado atual do CLR hospedado. Esta exibição poderá ajudá-lo a determinar se o código de integração CLR não está funcionando devido a problemas com a instalação de CLR no computador do servidor.  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
-  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (128)**|O nome da propriedade.|  
-|**valor**|**nvarchar (128)**|Valor da propriedade.|  
+|**name**|**nvarchar(128)**|O nome da propriedade.|  
+|**value**|**nvarchar(128)**|Valor da propriedade.|  
   
 ## <a name="properties"></a>Propriedades  
  O **diretório** propriedade indica o diretório em que o .NET Framework foi instalado no servidor. Pode haver várias instalações do .NET Framework no computador do servidor e o valor dessa propriedade identifica qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de instalação está sendo usada.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
  O **CLR é interrompido estado** só é visto quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo desligado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As propriedades e os valores deste modo de exibição podem ser alterado em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a aprimoramentos da funcionalidade da integração CLR.  
   
 ## <a name="permissions"></a>Permissões  

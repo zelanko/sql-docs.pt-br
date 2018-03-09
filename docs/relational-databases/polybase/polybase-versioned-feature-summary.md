@@ -13,20 +13,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 03db65550c330a1cf51d2158c660a6f5e7b511c1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumo de recursos com controle de versão do PolyBase
-
+[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)]
 Resumo dos recursos do PolyBase disponíveis para produtos e serviços do SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto  
@@ -61,8 +60,7 @@ No SQL Server e no APS, nem todos os operadores T-SQL podem ser aplicados ao clu
 |Classificações|não|não|
 
 Agregação parcial significa que uma agregação final deve ocorrer depois que os dados atingirem o SQL Server, mas uma parte da agregação ocorre no Hadoop. Este é uma agregação de computação de método comum em sistemas de Processamento Paralelo Maciço.  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

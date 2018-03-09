@@ -2,27 +2,30 @@
 title: "Dispositivo de backup (página Conteúdo de Mídia) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2aeb7c0443f6409e71640c35b1aca5e194abbc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 530a6791c6c6b8353161f4dec1f8556b434ba761
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de backup (página Conteúdo da Mídia)
-  Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
   
@@ -63,9 +66,9 @@ ms.lasthandoff: 11/09/2017
 |**Tipo**|O objeto armazenado em backup: banco de dados, arquivo ou *\<em branco>* (para logs de transação).|  
 |**Componente**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
-|**Banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
+|**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  
-|**Data**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
+|**Date**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
 |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
 |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
 |**Validade**|A data e hora de validade do conjunto de backup.|  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

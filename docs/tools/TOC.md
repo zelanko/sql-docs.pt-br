@@ -1,12 +1,17 @@
 
 # [Visão geral de Utilitários e Ferramentas do SQL Server](../tools/overview-sql-tools.md)
-# [Artigos novos e atualizados recentemente](new-updated-tools.md)
+# [Artigos novos e atualizados](new-updated-tools.md)
+
+# [SQL Operations Studio (versão prévia)](../sql-operations-studio/what-is.md)
 
 # [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)
 
 # [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (ferramenta de consulta de linha de comando)](mssql-cli.md)
+
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Orientador de Otimização do Mecanismo de Banco de Dados (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)

@@ -1,5 +1,5 @@
 ---
-title: "Desenvolvendo um componente de transformação personalizado com saídas síncronas | Microsoft Docs"
+title: "Desenvolver um componente de transformação personalizado com saídas síncronas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,20 +25,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7717bfcbe29f9d59abe25a8b295fb57b955d0c63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas síncronas
-  Os componentes de transformação com saídas síncronas recebem linhas de componentes upstream e leem ou modificam os valores das colunas dessas linhas à medida que passam as linhas para os componentes downstream. Eles também podem definir colunas de saída adicionais derivadas das colunas fornecidas pelos componentes upstream, mas não acrescentam linhas ao fluxo de dados. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Noções básicas sobre síncrona e transformações assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Os componentes de transformação com saídas síncronas recebem linhas de componentes upstream e leem ou modificam os valores das colunas dessas linhas à medida que passam as linhas para os componentes downstream. Eles também podem definir colunas de saída adicionais derivadas das colunas fornecidas pelos componentes upstream, mas não acrescentam linhas ao fluxo de dados. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Esse tipo de componente é adequado para tarefas em que os dados são modificados em linha, à medida que são fornecidos ao componente, e o componente não tem que ver todas as linhas antes de processá-las. É o componente mais fácil a desenvolver por que as transformações com saídas síncronas em geral não se conectam a fontes de dados externas, gerenciam colunas de metadados externas ou adicionam linhas a buffers de saída.  
   
@@ -194,7 +192,7 @@ End Sub
 ### <a name="processing-rows"></a>Processando linhas  
  Componentes recebem objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contêm linhas e colunas no método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Durante esse método são iteradas as linhas do buffer e as colunas identificadas durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> são lidas e modificadas. O método é chamado repetidamente pela tarefa de fluxo de dados até que nenhuma linha seja mais fornecida a partir do componente upstream.  
   
- Uma coluna individual no buffer é lida ou gravada usando o método de acesso do indexador de matriz, ou usando um do **obter** ou **definir** métodos. O **obter** e **definir** métodos são mais eficientes e deve ser usados quando o tipo de dados da coluna no buffer é conhecido.  
+ Uma coluna individual no buffer é lida ou gravada através do método de acesso do indexador matriz ou um dos métodos **Get** ou **Set**. Os métodos **Get** e **Set** são mais eficientes e devem ser usados quando o tipo de dados da coluna no buffer for conhecido.  
   
  O exemplo de código seguinte mostra uma implementação do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> que processa linhas de entrada.  
   
@@ -331,10 +329,9 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um componente de transformação personalizado com saídas assíncronas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
- [Noções básicas sobre transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Criando uma transformação síncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [Criar uma transformação síncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

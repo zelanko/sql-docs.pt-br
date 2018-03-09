@@ -3,26 +3,28 @@ title: Configurando o RDS no Windows 2000 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS configuration [ADO], Windows 2000
+helpviewer_keywords:
+- RDS configuration [ADO], Windows 2000
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 831608a7930f9fae1bef31132ee11f22654a8b5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 483cbe5243c9a5d2d6d63eb2b7c5f009a98cf33d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurando o RDS no Windows 2000
 Se você tiver dificuldade obtendo RDS funcione corretamente após a atualização para o Windows 2000, siga estas etapas para solucionar o problema:  

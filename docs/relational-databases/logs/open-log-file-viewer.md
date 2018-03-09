@@ -2,31 +2,37 @@
 title: Abrir o Visualizador do Arquivo de Log | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer, opening
+helpviewer_keywords:
+- Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6857f86877632a3efa5c3d1ce67d96070da64a26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 171e5c05bef7c98c2e0ba8402ecd0c3354028c58
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="open-log-file-viewer"></a>Abrir o Visualizador do Arquivo de Log
-  É possível usar o Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acessar informações sobre erros e eventos capturados nos seguintes logs:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+É possível usar o Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acessar informações sobre erros e eventos capturados nos seguintes logs:  
   
 -   Coleta de Auditoria  
   
--   Coleta de dados  
+-   Coleta de Dados  
   
 -   Database Mail  
   
@@ -100,7 +106,7 @@ ms.lasthandoff: 11/09/2017
   
      Os logs incluem **Coleta de Auditoria** e **Windows NT**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer.md)   
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md)  

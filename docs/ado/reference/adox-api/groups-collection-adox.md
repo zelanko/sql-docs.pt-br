@@ -3,7 +3,7 @@ title: "Grupos de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,22 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a19ec44a3d6bbea3477d64ff7618c6a5d4ad57c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dfb8a9e2f75fb11caf64b06e34016474d7b9fa7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="groups-collection-adox"></a>Coleção de grupos (ADOX)
 Contém todos os armazenados [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de um catálogo ou usuário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **grupos** coleção de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas as contas de grupo do catálogo. O **grupos** coleção para um [usuário](../../../ado/reference/adox-api/user-object-adox.md) representa apenas o grupo ao qual o usuário pertence.  
   
  O [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) método para um **grupos** coleção é exclusiva para ADOX. Você pode:  
@@ -62,4 +61,3 @@ Contém todos os armazenados [grupo](../../../ado/reference/adox-api/group-objec
 ## <a name="see-also"></a>Consulte também  
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
-

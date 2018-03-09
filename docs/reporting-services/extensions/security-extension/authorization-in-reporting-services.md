@@ -2,32 +2,31 @@
 title: "Autorização no Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "20"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 1202e4df00651505d7177ec960c2c35b70266ec9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authorization-in-reporting-services"></a>Autorização no Reporting Services
-  Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possibilitado por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros de **Microsoft.ReportingServices.Interfaces** namespace.  
+  Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possível por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros do namespace **Microsoft.ReportingServices.Interfaces**.  
   
 ## <a name="checking-access"></a>Verificando o acesso  
  Em autorização, a chave para qualquer implementação de segurança personalizada é a verificação de acesso, que é implementada no método <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> é chamado a cada vez que um usuário tenta uma operação no servidor de relatório. O método <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> é sobrecarregado para cada tipo de operação. Para operações de pasta, um exemplo de uma verificação de acesso poderia ficar assim:  
@@ -77,7 +76,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Fluxo de autorização  
  A autorização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é controlada pela extensão de segurança configurada para ser executada atualmente no servidor. A autorização é baseada em função e está limitada às permissões e operações fornecidas pela arquitetura de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O diagrama a seguir descreve o processo de autorização de usuários a operar em itens no banco de dados do servidor de relatório:  
   
- ![Fluxo de autorização de segurança de serviços do Reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "fluxo de autorização de segurança do Reporting Services")  
+ ![Fluxo de autorização de segurança do Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Fluxo de autorização de segurança do Reporting Services")  
   
  Como mostrado neste diagrama, a autorização segue esta sequência:  
   

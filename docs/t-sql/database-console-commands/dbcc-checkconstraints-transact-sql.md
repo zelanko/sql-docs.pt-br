@@ -26,17 +26,16 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c5a15f6f5af19cd0e5da400dd4deb2cfa0d4cc4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS constrói e executa uma consulta para todas as restrições FOREIGN KEY e CHECK de uma tabela.
   
 Por exemplo, uma consulta de chave estrangeira tem o seguinte formato:
@@ -102,10 +101,10 @@ Se *table_name* ou *table_id* é especificada e ela está habilitada para contro
   
 |Verificar|Informações adicionais na saída se a falha na verificação|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (atual)|[sys_end] = '{0}' e MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (atual, histórico)|[sys_start] = '{0}' AND [sys_end] = '\\{1 \\}'|  
 |PeriodStartColumn < current_utc_time (atual)|[sys_start] = '{0}' e SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (histórico)|[sys_end] = '{0}' e SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' e SYSUTCTIME|  
 |Sobreposições|(sys_start1, sys_end1), (sys_start2, sys_end2) para dois registros de sobreposição.<br /><br /> Se houver mais de 2 registros de sobreposição, saída terá várias linhas cada mostrando um par de sobreposições.|  
   
 Não é possível especificar constraint_name ou constraint_id para executar verificações de consistência temporais somente.
@@ -164,4 +163,3 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: Aviso legal (DB2toSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f549bb5f993f96e71798090311d2544806472a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2da049a8a0230abe43b690ee53c3faa678c1718
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="legal-notice-db2tosql"></a>Aviso legal (DB2toSQL)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  

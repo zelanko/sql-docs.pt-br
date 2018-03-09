@@ -1,5 +1,5 @@
 ---
-title: "Transformação de tabela dinâmica | Microsoft Docs"
+title: "Transformação Dinâmica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 41e027c10bfdb1e9309c6ee1226694c1c9601837
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
   A transformação Dinâmica transforma um conjunto de dados normalizado em um conjunto menos normalizado, em uma versão mais compacta, tornando dinâmicos os dados de entrada em um valor de coluna. Por exemplo, um conjunto de dados **Orders** normalizado que lista nome de cliente, produto e quantidade adquirida normalmente tem várias linhas para qualquer cliente que tenha comprado diversos produtos, sendo que cada linha daquele cliente apresenta detalhes do pedido para um produto diferente. Ao dinamizar o conjunto de dados na coluna de produto, a transformação dinâmica pode produzir um conjunto de dados com uma única linha por cliente. Aquela única linha lista todas as compras realizadas pelo cliente, com os nomes de produto mostrados como nomes de coluna, e a quantidade exibida como um valor na coluna de produto. Como nem todo cliente compra todos os produtos, muitas colunas podem conter valores nulos.  
@@ -141,10 +140,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>Conteúdo relacionado  
  Para obter informações sobre como definir as propriedades desse componente, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação não dinâmica](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
- [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
+ [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

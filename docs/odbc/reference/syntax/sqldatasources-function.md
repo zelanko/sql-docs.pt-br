@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSources
-helpviewer_keywords:
-- SQLDataSources function [ODBC]
+f1_keywords: SQLDataSources
+helpviewer_keywords: SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc056c3877b76bebdb0402248b6fe6cb9a919d49
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>Função SQLDataSources
 **Conformidade**  
@@ -125,7 +119,6 @@ SQLRETURN SQLDataSources(
 |Conectando a uma fonte de dados usando uma caixa de diálogo ou cadeia de caracteres de conexão|[Função SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Retornando atributos e descrições de driver|[Função SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

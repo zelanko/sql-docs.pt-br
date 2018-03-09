@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
   Este tópico descreve os conceitos necessários para criar um fluxo de dados ODBC usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- O ODBC da Attunity para [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ajuda os desenvolvedores do SSIS facilmente a criar pacotes facilmente que carregam e descarregam dados de bancos de dados com suporte do ODBC.  
+ O Conector para ODBC para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ajuda os desenvolvedores do SSIS a criar pacotes com facilidade que carregam e descarregam dados de bancos de dados com suporte do ODBC.  
   
  O Conector ODBC foi criado para obter o desempenho ideal ao carregar ou descarregar dados de um banco de dados com suporte ODBC no contexto do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
@@ -144,4 +143,3 @@ Não há nenhum suporte de tipo de dados para tipos C extensíveis conforme desc
 -   [Destino ODBC](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

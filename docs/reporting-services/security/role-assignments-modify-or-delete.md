@@ -1,13 +1,14 @@
 ---
-title: "Modificar ou excluir uma atribuição de função (Gerenciador de relatórios) | Microsoft Docs"
+title: "Modificar ou excluir uma atribuição de função (Gerenciador de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,18 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8f8606ab4516b05c71fc33f09623ea81af3da9df
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="role-assignments---modify-or-delete"></a>Atribuições de função - modificar ou excluir
+# <a name="role-assignments---modify-or-delete"></a>Atribuições de função – Modificar ou excluir
   Uma atribuição de função mapeia uma conta de grupo ou usuário para uma definição de função predefinida que inclui as tarefas que podem ser executadas. Ela determina os tipos de operações que um usuário pode executar com relação a uma pasta, relatório, modelo ou outro tipo de conteúdo. Para criar, modificar ou excluir atribuições de função, use o Gerenciador de Relatórios. Após criar uma atribuição de função para um determinado usuário ou grupo, você pode modificá-la posteriormente selecionando uma função diferente. Para revogar permissões em um servidor de relatório, exclua uma atribuição de função desse servidor.  
   
  Dependendo de seu objetivo, abordagens alternativas podem ser mais apropriadas. Os exemplos incluem a personalização ou a criação de uma nova definição de função ou a modificação da associação de uma conta de grupo no Active Directory.  
@@ -68,11 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 6.  Para excluir uma atribuição de função, marque a caixa de seleção próximo ao nome de usuário ou grupo e clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Atribuições de função](../../reporting-services/security/role-assignments.md)   
- [Página Configurações de site &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Página Configurações do Site &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Atribuições de nova função do sistema: página Editar Atribuições de Função do Sistema &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   
-

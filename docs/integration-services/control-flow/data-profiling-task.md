@@ -1,5 +1,5 @@
 ---
-title: "Tarefa de criação de perfil de dados | Microsoft Docs"
+title: "Tarefa Criação de Perfil de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: cb13596ddd01922f10632ccb3e1b801937c9941a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -163,4 +162,3 @@ ms.lasthandoff: 08/03/2017
 -   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
   
-

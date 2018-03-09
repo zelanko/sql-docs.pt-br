@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries method
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b309210790056ed6e938e037a28d7634f1582c8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8ec0dd1fac37d8040b3b2cc327127820d7761778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retornará 1 se o **geografia** instância não é um **MultiPoint**, **MultiLineString**, **MultiPolygon**, ou **GeometryCollection** instância, ou 0 se o **geografia** instância está vazia.  
   
 ## <a name="examples"></a>Exemplos  
@@ -62,7 +61,6 @@ SELECT @g.STNumGeometries();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

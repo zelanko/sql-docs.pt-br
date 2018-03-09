@@ -2,35 +2,30 @@
 title: Hierarquias desbalanceadas | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
+helpviewer_keywords: ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8bbadff8fa6d3679ad96976a3fe021b5085988a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hierarquias definidas pelo usuário - hierarquias desbalanceadas
-  Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que tem um número irregular de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que possui um número ímpar de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
   
  Na maioria das hierarquias em uma dimensão, cada nível tem o mesmo número de membros acima dele, como qualquer outro membro no mesmo nível. Uma hierarquia desbalanceada é diferente porque o pai lógico de pelo menos um membro não está no nível imediatamente acima do membro. Quando isso acontece, a hierarquia desce a níveis diferentes para caminhos de busca detalhada diferentes. Em um aplicativo cliente, isso pode tornar os caminhos de busca detalhada desnecessariamente complicados.  
   
@@ -80,11 +75,10 @@ ms.lasthandoff: 09/01/2017
 |**1**|Mostrar um valor de espaço reservado.|Esse é o padrão usado pelo Excel, pelo SSDT e pelo SSMS. Ele orienta o servidor a retornar valores de espaço reservado ao detalhar níveis vazios em uma hierarquia desbalanceada. Se você clicar no valor de espaço reservado, poderá continuar até obter os nós filho (folha)<br /><br /> O Excel tem a cadeia de conexão usada para conectar-se ao Analysis Services, e ele sempre define **MDX Compatibility** como 1 em cada nova conexão. Esse comportamento preserva a compatibilidade com versões anteriores.|  
 |**2**|Oculte um valor de espaço reservado (um valor nulo ou uma duplicata do nível pai), mas mostre outros níveis e nós com valores relevantes.|**Compatibilidade MDX**=2 costuma ser visto como a configuração preferencial em termos de hierarquias desbalanceadas. Um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alguns aplicativos cliente de terceiros talvez persistam nessa configuração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Hierarquias do usuário](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Dimensões pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
  [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

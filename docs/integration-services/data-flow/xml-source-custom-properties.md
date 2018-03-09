@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5a56fae7a047bbb49f955b36a05b068eec23195a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source-custom-properties"></a>Propriedades personalizadas da origem XML
   A origem XML contém propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
@@ -47,8 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

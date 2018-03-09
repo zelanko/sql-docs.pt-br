@@ -3,8 +3,11 @@ title: "Caixa de diálogo Comentário do SQL (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,17 +16,17 @@ ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e332ba1e60805d7cbffe3fa446a78b0d180a6a14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32c46564f3a75c08941e8d408f3dd4d3ad620e13
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Caixa de diálogo Comentário do SQL (Visual Database Tools)
-Esta caixa de diálogo fornece uma área editável onde você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Consulta e Exibição e na janela **Propriedades** , selecione o **Comentário SQL**e clique nas reticências (**…**) à direita do campo de propriedade.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta caixa de diálogo fornece uma área editável na qual você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Consulta e Exibição e na janela **Propriedades** , selecione o **Comentário SQL**e clique nas reticências (**…**) à direita do campo de propriedade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Mostrar propriedades de consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
   

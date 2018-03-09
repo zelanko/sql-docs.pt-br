@@ -1,32 +1,208 @@
 ---
 title: "SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6a1531fb335269f3b02b512a75750ebb188c82c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a87476c668bcbf8226348349d6886c39ce8563bf
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+Já disponível | Número de build: 14.0.17224.0
+
+### <a name="whats-new"></a>Novidades
+
+**SSMS geral**
+
+Descoberta e classificação de dados:
+
+- Foi adicionado um novo recurso de descoberta e classificação de dados SQL para descobrir, classificar, rotular e relatar dados confidenciais nos bancos de dados. 
+- A descoberta e a classificação automáticas dos dados mais confidenciais (de negócios, financeiros, de serviços de saúde, PII, etc.) podem desempenhar um papel fundamental na dimensão da proteção de informações organizacionais.
+- Saiba mais em [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) (Descoberta e classificação de dados SQL).
+
+Editor de consultas:
+
+- Foi adicionado o suporte para a opção SkipRows no Formato de arquivo externo de texto delimitado para o SQL DW do Azure. Esse recurso permite que os usuários ignorem um número especificado de linhas ao carregar arquivos de texto delimitados no SQL DW. Também foi adicionado o suporte do IntelliSense/SMO correspondente para a palavra-chave FIRST_ROW. 
+
+Plano de execução:
+
+- Foi habilitada a exibição do botão de plano estimado para o SQL Data Warehouse
+- Foi adicionado um novo atributo de plano de execução *EstimateRowsWithoutRowGoal* e também foram adicionados novos atributos de plano de execução para *QueryTimeStats*: *UdfCpuTime* e *UdfElapsedTime*. Para obter mais informações, confira [Informações de meta de linha do otimizador no plano de execução de consulta adicionadas no SQL Server 2017 CU3](http://support.microsoft.com/help/4051361).
+
+
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**SSMS geral**
+
+Plano de execução:
+
+- Foi corrigido o tempo decorrido das Estatísticas de Consultas Dinâmicas, para mostrar o tempo de execução do mecanismo em vez do tempo decorrido da conexão com as LQS.
+- Foi corrigido um problema no qual o plano de execução não era capaz de reconhecer os operadores lógicos Apply, como GbApply e InnerApply.
+- Foi corrigido um problema relacionado ao ExchangeSpill.
+
+Editor de consultas:
+
+- Foi corrigido um problema relacionado a SPIDs no qual o SSMS podia gerar um erro como "A cadeia de caracteres de entrada não estava no formato correto. (mscorlib)" ao executar uma consulta simples precedida por um "SET SHOWPLAN_ALL ON". 
+
+
+SMO:
+
+- Foi corrigido um problema em que o SMO não conseguia buscar as propriedades AvailabilityReplica quando o agrupamento do servidor diferenciava maiúsculas de minúsculas (como resultado, o SSMS podia exibir uma mensagem de erro como "O identificador de várias partes ‘a.delimited’ não pôde ser associado".
+- Foi corrigido um problema na classe DatabaseScopedConfigurationCollection, em que os agrupamentos eram tratados incorretamente (como resultado, um SSMS em execução em um computador com um código de idioma turco podia exibir um erro como "A estimativa de cardinalidade herdada não é uma configuração de escopo válida" ao clicar com o botão direito do mouse em um banco de dados em execução em um servidor com um agrupamento com diferenciação de maiúsculas e minúsculas).
+- Foi corrigido um problema na classe JobServer, no qual o SMO não conseguia buscar as propriedades do SQL Agent em um SQL Server 2005 (como resultado, o SSMS gerava um erro como, "Não é possível atribuir um valor padrão a uma variável local. É necessário declarar a variável escalar ‘@ServiceStartMode’”, e, por fim, o nó do SQL Agent não era exibido no Pesquisador de Objetos).
+
+Modelos: 
+
+- "Email do banco de dados": foram corrigidos alguns erros de digitação [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+
+Pesquisador de Objetos:
+- Foi corrigido um problema no qual a compactação gerenciada falhava para índices (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+
+Auditoria do:
+- Foi corrigido um problema com o recurso *Mesclar arquivos de auditoria*.
+<br>
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+Classificação de dados:
+- Remover uma classificação e, em seguida, adicionar manualmente uma nova classificação para a mesma coluna resulta na atribuição do tipo de informações e do rótulo de confidencialidade antigos à coluna na exibição principal.<br>
+*Solução alternativa*: atribuir o tipo de informações e rótulo de confidencialidade novos depois que a classificação for adicionada novamente à exibição principal e antes de salvar.
+
+
+
+## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
+
+Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![baixar](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
+Geralmente disponível| Número de build: 14.0.17213.0
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
+
+### <a name="whats-new"></a>Novidades
+
+**SSMS geral**
+
+Avaliação de Vulnerabilidades:
+- Adicionado um novo serviço de Avaliação de Vulnerabilidade de SQL para verificar seus bancos de dados para possíveis vulnerabilidades e desvios das práticas recomendadas, como configurações incorretas, excesso de permissões e dados confidenciais expostos. 
+- Os resultados da avaliação incluem etapas práticas para resolver cada problema e scripts de correções personalizadas quando aplicável. O relatório de avaliação pode ser personalizado para cada ambiente e ajustado de acordo com requisitos específicos. Saiba mais em [Avaliação de Vulnerabilidades SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO:
+- Correção do problema no qual *HasMemoryOptimizedObjects* gerava exceção no Azure.
+- Adicionado suporte para o novo recurso CATALOG_COLLATION.
+
+Painel AlwaysOn:
+- Melhorias para análise de latência em Grupos de disponibilidade.
+- Adicionados dois novos relatórios: *AlwaysOn\_Latency\_Primary* e *AlwaysOn\_Latency\_Secondary*.
+
+Plano de execução:
+- Links atualizados para apontar para a documentação correta.
+- Permita a análise de plano único diretamente do plano real produzido.
+- Novo conjunto de ícones.
+- Adicionado suporte para reconhecer "Aplicar operadores lógicos" como GbApply, InnerApply.
+        
+XE Profiler:
+- Renomeado para XEvent Profiler.
+- Os comandos de menu Parar/Iniciar agora param/iniciam a sessão por padrão.
+- Atalhos de teclado habilitados (por exemplo, CTRL-F para pesquisar).
+- Ações de nome de host \_nome e cliente\_ do banco de dados adicionadas a eventos apropriados nas sessões do XEvent Profiler. Para que a alteração entre em vigor, talvez seja necessário excluir instâncias existentes da sessão do QuickSessionStandard ou QuickSessionTSQL nos servidores – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+Linha de comando:
+- Adicionada uma nova opção de linha de comando ("-G") que pode ser usada para fazer com que o SSMS se conectar automaticamente a um servidor/banco de dados usando a Autenticação do Active Directory ('Integrado' ou 'Senha'). Para obter detalhes, consulte [Utilitário de Ssms](ssms-utility.md).
+
+Assistente Importar Arquivo Simples:
+- Adicionada uma maneira de escolher um nome de esquema diferente do padrão ("dbo") ao criar a tabela.
+
+Repositório de Consultas:
+- Restaurado o relatório "Consultas Regredidas" ao expandir a lista de relatórios disponíveis do Repositório de Consultas.
+
+**IS (Integration Services)**
+- Função de validação de pacote adicionada no Assistente de Implantação, o que ajuda o usuário a descobrir componentes dentro de pacotes do SSIS que não têm suporte no Azure SSIS IR.
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**SSMS geral**
+
+- Pesquisador de Objetos:
+    - Corrigido um problema em que o nó de função com valor de tabela não aparecia para instantâneos de banco de dados – [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
+    - Desempenho melhorado ao expandir o nó de *bancos de dados* quando o servidor tem bancos de dados de fechamento automático.
+- Editor de consultas:
+    - Corrigido um problema em que o IntelliSense falhava para usuários que não têm acesso ao banco de dados mestre.
+    - Corrigido um problema que estava fazendo com que o SSMS falhasse em alguns casos, quando a conexão com um computador remoto era fechada – [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557).
+- Visualizador do XEvent:
+    - Funcionalidade habilitada novamente para exportar para XEL.
+    - Problemas corrigidos em que, em alguns casos, o usuário não conseguia carregar um arquivo XEL inteiro.
+- XEvent Profiler:
+    - Corrigido um problema que estava fazendo com que o SSMS falhasse quando o usuário não tinha as permissões *VIEW SERVER STATE*.
+    - Corrigido um problema em que fechar a janela de Dados dinâmicos do XE Profiler não parava a sessão subjacente.
+- Servidores registrados:
+    - Corrigido um problema em que o comando "Mover para..." parava de funcionar – [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) e [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+- SMO:
+    - Corrigido um problema em que o método TransferData no objeto Transferir não estava funcionando.
+    - Corrigido um problema em que os bancos de dados do Servidor lançavam a exceção para bancos de dados SQL DW em pausa.
+    - Corrigido um problema em que o script de banco de dados SQL no SQL DW gerava valores incorretos de parâmetro T-SQL.
+    - Corrigido um problema em que o script de um banco de dados ampliado emitia incorretamente a opção *DATA\_COMPRESSION*.
+- Monitor de Atividade de Trabalho:
+    - Corrigido um problema em que o usuário recebia o erro "O índice está fora do intervalo. Deve ser não negativo e menor que o tamanho da coleção. 
+        Nome do parâmetro: índice (System.Windows.Forms) "ao tentar filtrar por categoria – [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
+- Caixa de diálogo de conexão:
+    - Corrigido um problema em que os usuários de domínio sem acesso a um controlador de domínio de Leitura/Gravação não podiam fazer logon em um SQL Server usando a autenticação do SQL – [Connect 2373381 conectar](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
+- Replicação:
+    - Corrigido um problema em que um erro semelhante a "Não é possível aplicar o valor 'null' à propriedade ServerInstance" era exibido ao olhar as propriedades de uma assinatura pull no SQL Server.
+- Instalação do SSMS:
+    - Corrigido um problema em que a instalação do SSMS fazia com que todos os produtos instalados no computador fossem reconfigurados incorretamente.
+- Configurações do Usuário:
+   - Com essa correção, os usuários de nuvem soberana do governo dos EUA terão acesso ininterrupto a seus recursos de banco de dados SQL do Azure e ARM com SSMS por meio de autenticação Universal e logon do Azure Active Directory.  Os usuários de versões anteriores do SSMS precisam abrir as Ferramentas|Opções|Serviços do Azure e, em Gerenciamento de Recursos, alterar a configuração da propriedade "Autoridade do Active Directory" para https://login.microsoftonline.us.
+
+**AS (Analysis Services)**
+
+- Criador de perfil: corrigido um problema ao tentar se conectar usando a Autenticação do Windows com o Azure AS.
+- Corrigido um problema que poderia causar uma falha ao cancelar os detalhes de conexão em um modelo de 1400.
+- Ao configurar uma chave de blob do Azure na caixa de diálogo de propriedades de conexão ao atualizar as credenciais, ela será visualmente mascarada agora.
+- Corrigido um problema em que a caixa de diálogo de seleção de Usuário do Azure Analysis Services deve mostrar o guid da ID do aplicativo em vez da ID do objeto durante a pesquisa.
+- Corrigido um problema na barra de ferramentas do designer de consulta Database\MDX que fazia com que os ícones fossem mapeados incorretamente para alguns botões.
+- Corrigido um problema que impedia a conexão com o SSAS usando endereços de http/https do IIS msmdpump.
+- Várias cadeias de caracteres na caixa de diálogo de Seletor de usuário do Azure Analysis Services agora foram traduzidas para os idiomas adicionais.
+- A propriedade MaxConnections agora está visível para fontes de dados em modelos de tabela.
+- O Assistente de Implantação agora gera definições de JSON corretas para membros da função AS do Azure.
+- Corrigido um problema no SQL Profiler em que selecionar a Autenticação do Windows no Azure ainda solicitaria o logon.
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![baixar](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Geralmente disponível| Número de build: 14.0.17199.0
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+
 
 ### <a name="enhancements"></a>Aprimoramentos
 
@@ -116,12 +292,10 @@ Geralmente disponível| Número de build: 14.0.17199.0
 - O [execution_path] em [catalog]. [event_messagea] não está correto para execuções de pacote no Scale Out. O [Execution_path] começa com "\Package" em vez do nome do objeto do executável do pacote. Ao exibir o relatório de visão geral de execuções de pacote no SSMS, o link do "Caminho de execução" na Visão geral de execução não funciona. A solução alternativa é clicar em "Exibir mensagens” no relatório de visão geral para verificar todas as mensagens do evento.
 
 
-## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
-
-Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
-
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![baixar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponibilidade geral | Número de build: 14.0.17177.0
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos
 
@@ -248,8 +422,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Corrigido um problema em que os relatórios de informações de execução de catálogo do SSISDB não podiam ser exibidos
 - Problemas corrigidos no SSMS relacionados ao desempenho insatisfatório com uma grande quantidade de pacotes/projetos
 
-## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![baixar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=799832)
 Disponibilidade geral | Número de build: 14.0.17119.0
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos
 
@@ -273,8 +449,10 @@ Disponibilidade geral | Número de build: 14.0.17119.0
 - Script: para impedir temporariamente que o SSMS exclua acidentalmente objetos de banco de dados do Azure ao tentar usar script na exclusão, tal opção foi desabilitada.  Uma correção apropriada será incluída em uma versão futura do SSMS.
 - Pesquisador de Objetos: foi corrigido um problema em que o nó “Bancos de dados” não era expandido quando conectado a um Banco de Dados do Azure criado usando “AS COPY”
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![baixar](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de build: 14.0.17099.0
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos 
 
@@ -361,7 +539,7 @@ Disponibilidade geral | Número de build: 14.0.17099.0
 - Correção de um problema no qual o SSMS estava colocando o banco de dados no modo offline ao executar o script [item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
 - Correções diversas na interface do usuário em versões localizadas (não inglês) do SSMS.
 - Correção do problema no qual o nó "Chaves do Always Encrypted" estava ausente durante o direcionamento do SQL 2016 SP1 Standard Edition.
-- Sempre Criptografado
+- Always Encrypted
     - Menu "Always Encrypted" incorretamente habilitado ao direcionar o SQL 2016 RTM Standard Edition ou qualquer servidor do SQL 2014 (e abaixo)
     - Correção de um problema em que o IntelliSense relata um erro quando a sintaxe CREATE ou ALTER é usada
     - Correção do problema em que a criptografia falha caso CMK/CEK contenha caracteres que devem ser escapados, ou seja, entre colchetes
@@ -441,6 +619,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![baixar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Disponibilidade geral | Número de build: 13.0.16106.4
 
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+
 Os seguintes problemas foram corrigidos nesta versão:
 
 * Corrigido um problema introduzido no SSMS 16.5.2 que estava causando a expansão do nó 'Table' quando a tabela tinha mais de uma coluna esparsa.
@@ -478,8 +658,11 @@ Disponibilidade geral | Número de build: 13.0.16100.1
 * Corrigido um problema em que o plano de consulta XML não abre a interface do usuário de SSMS adequada.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![baixar](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de build: 13.0.16000.28
+
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * Corrigido um problema em que uma falha pode ocorrer quando um banco de dados com o nome da tabela que contém ";:" foi clicado.
 * Corrigido um problema em que as alterações feitas na página de modelo na janela Propriedades do Banco de Dados Tabulares AS utilizariam scripts da definição original. 
@@ -502,8 +685,10 @@ Disponibilidade geral | Número de build: 13.0.16000.28
 * Corrigido o problema de falhas do SSMS que ocorrem no fechamento do aplicativo ou quando está tentando mostrar a caixa de diálogo de erro.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![baixar](../ssdt/media/download.png) [SSMS 16.4.1 (setembro de 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS 16.4.1 (setembro de 2016)](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de versão: 13.0.15900.1
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 *  Foi corrigido um problema no qual ocorria falha durante a tentativa de ALTERAR/Modificar um procedimento armazenado:  
 [Item nº 3103831 do Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -533,7 +718,7 @@ Disponibilidade geral | Número de versão: 13.0.15900.1
     
 *  Corrigido um problema em que um modelo de tabela do Analysis Services de nível 1200 não remove a senha para script, mesmo que a versão do servidor mostre [objeto de modelo do cliente está agora em sincronização antes de criar scripts].
     
-*  Corrigido um problema no qual a opção 'SELECIONAR N LINHAS SUPERIORES' gerava uma sintaxe preterido para o operador TOP.  
+*  Corrigido um problema no qual a opção “SELECT TOP N ROWS” gerava uma sintaxe preterido para o operador TOP.  
 [Item nº 3065435 do Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3065435)
     
 *  Diversos problemas de layout corrigidos em todo o SSMS, incluindo a página Propriedades de Logon e Opções Avançadas de Execução de Consulta.   
@@ -564,14 +749,17 @@ Disponibilidade geral | Número de versão: 13.0.15900.1
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![baixar](../ssdt/media/download.png) [SSMS 16.3 (agosto de 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS 16.3 (agosto de 2016)](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de versão: 13.0.15700.28
+
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * Versões mensais do SSMS agora são sinalizadas numericamente.
 
 * [Nova opção de autenticação **'Autenticação Universal do Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Esse é um mecanismo de autenticação baseada em token orientado pelo Azure Active Directory que dá suporte a mecanismos de autenticação multifator, de senha e integrada.
 
-* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
+* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect)](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Novas caixas de diálogo Criar banco de dados e Propriedades de banco de dados para bancos de dados do Azure SQL.
 
@@ -619,8 +807,10 @@ Disponibilidade geral | Número de versão: 13.0.15700.28
 
 
 ---
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![baixar](../ssdt/media/download.png) [atualização de hotfix de julho de 2016 do SSMS](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [atualização de hotfix de julho de 2016 do SSMS](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de versão: 13.0.15600.2
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * **Correção de bug no SSMS para habilitar os itens de menu de atalho ausentes**.  
 *Solicitações vinculadas de bugs dos clientes:*  
@@ -689,6 +879,8 @@ Disponibilidade geral | Número de versão: 13.0.15500.91
 ----
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS de junho de 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de versão: 13.0.15000.23
+
+[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * O SSMS tem disponibilidade geral a partir da versão de junho de 2016.
 

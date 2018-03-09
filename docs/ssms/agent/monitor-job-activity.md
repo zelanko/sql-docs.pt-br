@@ -3,8 +3,11 @@ title: Monitorar a Atividade de Trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b25b8b95fa950f7764272d2e2a47ebea4e26a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
-É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessões do SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent cria uma nova sessão toda vez que o serviço é iniciado. Quando uma nova sessão é criada, a tabela **sysjobactivity** do banco de dados **msdb** é preenchida com todos os trabalhos definidos existentes. Essa tabela preserva a última atividade dos trabalhos quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é reiniciado. Cada sessão registra a atividade normal de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent do começo ao fim do trabalho. Informações sobre essas sessões são armazenadas na tabela **syssessions** do banco de dados **msdb** .  
@@ -56,14 +59,14 @@ Para abrir o Monitor de Atividade do Trabalho, expanda **SQL Server Agent** no P
   
 Você também pode exibir a atividade de trabalhos da sessão atual, usando o procedimento armazenado **sp_help_jobactivity**.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |Descreve como exibir o estado de tempo de execução de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)  
 [sysjobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e)  
 [syssessions (Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  

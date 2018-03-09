@@ -23,17 +23,16 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08cdeecc9dc7da123ae94623a30913ed358de93b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cd8dcf23064d6caae62d10065c9aa3731823e99b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +73,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

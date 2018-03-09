@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador de Conexão de vários arquivos | Microsoft Docs"
+title: "Gerenciador de Conexões de Vários Arquivos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23dc2338948dc97d68436b23995a1817a0b3bb66
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
   Um gerenciador de conexões de Vários Arquivos permite que um pacote faça referência a arquivos e pastas existentes ou crie arquivos e pastas em tempo de execução.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  A tabela a seguir lista os valores de **FileUsageType**.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de vários arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de vários arquivos cria um arquivo.|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/03/2017
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\*.txt.  
+ Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\\*.txt.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
   
-

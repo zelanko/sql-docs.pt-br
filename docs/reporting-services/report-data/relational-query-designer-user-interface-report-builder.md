@@ -1,38 +1,38 @@
 ---
-title: "Interface de usuário do Designer de consulta relacional (construtor de relatórios) | Microsoft Docs"
+title: "Interface do usuário do Designer de Consultas Relacional (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10012"
+f1_keywords: "10012"
 helpviewer_keywords:
 - query designers
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "23"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   O Construtor de Relatórios e o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fornecem um designer de consulta gráfica e um designer de consulta com base em texto para ajudá-lo a criar uma consulta que especifique os dados a serem recuperados dos bancos de dados relacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
   
 > [!NOTE]  
->  No Construtor de Relatórios, para especificar uma consulta para tipos de fontes de dados Oracle, OLE DB, ODBC e Teradata, você deve usar o designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário de Designer de consulta baseado em texto &#40; Construtor de relatórios &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  No Construtor de Relatórios, para especificar uma consulta para tipos de fontes de dados Oracle, OLE DB, ODBC e Teradata, você deve usar o designer de consulta baseado em texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -43,15 +43,15 @@ ms.lasthandoff: 08/09/2017
  O designer de consultas gráficas é dividido em três áreas. Se a consulta usar tabelas/exibições ou procedimentos armazenados/funções com valor de tabela, o layout do designer de consulta será alterado.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]não dá suporte a procedimentos armazenados ou funções com valor de tabela.  
+>  O [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] não dá suporte a procedimentos armazenados nem a funções com valor de tabela.  
   
  A figura a seguir mostra o designer de consultas gráficas quando ele é usado com tabelas ou exibições.  
   
- ![Designer de consultas gráficas](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "designer de consultas gráficas")  
+ ![Designer gráfico para consultas](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Designer gráfico para consultas")  
   
  A figura a seguir mostra o designer de consultas gráficas quando ele é usado com procedimentos armazenados ou funções com valor de tabela.  
   
- ![Procedimento armazenado no designer de consultas gráficas](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "procedimento armazenado no designer de consultas gráficas")  
+ ![Procedimento armazenado no designer de consultas gráficas](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Procedimento armazenado no designer de consultas gráficas")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -105,11 +105,11 @@ ms.lasthandoff: 08/09/2017
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Count|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
 |Count Big|Retorna o número de itens de um grupo. Ela é a agregação SQL COUNT_BIG. A diferença entre COUNT e COUNT_BIG é que COUNT_BIG sempre retorna um valor de tipo de dados **bigint** .|  
-|Min|Retorna o valor mínimo de um grupo. Implementa a agregação SQL MIN.|  
+|Mín|Retorna o valor mínimo de um grupo. Implementa a agregação SQL MIN.|  
 |Max|Retorna o valor máximo em um grupo. Implementa a agregação SQL MAX.|  
 |StDev|Retorna o desvio padrão estatístico de todos os valores de um grupo. Implementa a agregação SQL STDEV.|  
 |StDevP|Retorna o desvio padrão estatístico para a população de todos os valores da expressão especificada de um grupo. Implementa a agregação SQL STDEVP.|  
-|Sum|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
+|SUM|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
 |Var|Retorna a variação estatística de todos os valores do grupo. Implementa a agregação SQL VAR.|  
 |VarP|Retorna a variação estatística para a população de todos os valores do grupo. Implementa a agregação SQL VARP.|  
 |Avg Distinct|Retorna médias exclusivas. Implementa uma combinação da agregação AVG e da palavra-chave DISTINCT.|  
@@ -160,7 +160,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com.  
+-   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 -   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
   
@@ -199,9 +199,9 @@ ms.lasthandoff: 08/09/2017
  Quando você seleciona tabelas e colunas ou procedimentos armazenados e exibições no painel Exibição de Banco de dados, o designer de consulta recupera a chave primária subjacente e relações de chave estrangeira do esquema de banco de dados. Ao analisar essas relações, o designer de consulta detecta as relações entre duas tabelas e adiciona junções à consulta. Dessa forma, é possível modificar a consulta adicionando grupos e agregações, adicionando ou alterando relações e adicionando filtros. Para exibir o texto da consulta que mostra as colunas das quais os dados são recuperados, as junções entre tabelas e qualquer grupo ou agregação, clique em **Editar Como Texto**.  
   
 ## <a name="text-based-query-designer"></a>Designer de Consulta com Base em Texto  
- Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário de Designer de consulta baseado em texto &#40; Construtor de relatórios &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Designers de consulta &#40; Construtor de relatórios &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+## <a name="see-also"></a>Consulte Também  
+ [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

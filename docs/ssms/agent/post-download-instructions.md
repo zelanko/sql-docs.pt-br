@@ -3,8 +3,11 @@ title: "Instruções pós-download | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b20bfc05f18b7c06f66cc8cf5f13462b073ae1bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e56266f7e6f11742fb0d298eee7fcbe736c1bce4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="post-download-instructions"></a>Instruções Pós-Download
-Use essa página para especificar instruções de download para um servidor de destino.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para especificar instruções de download para um servidor de destino.  
   
 ## <a name="options"></a>Opções  
 **Tipo de instrução**  
 Especifique o tipo de instrução de download a ser postada.  
   
-**Description**  
+**Descrição**  
 Exiba uma descrição da instrução de download.  
   
 **Intervalo de sondagem**  
@@ -40,7 +43,7 @@ Selecione essa opção para postar a instrução de download para todos os servi
 **Estes servidores de destino**  
 Selecione essa opção para postar a instrução de download  para os servidores de destino selecionados.  
   
-**Select (selecionar)**  
+**Select (selecionar) (selecionar)**  
 Especifique que o servidor de destino deve receber a instrução de download.  
   
 **Servidor de Destino**  
@@ -52,6 +55,6 @@ Exiba a data e hora do servidor de destino no fuso horário local para aquele se
 **Intervalo de sondagem**  
 Exiba o intervalo de sondagem atual para o servidor de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

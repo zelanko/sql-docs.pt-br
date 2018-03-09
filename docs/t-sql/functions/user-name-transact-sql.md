@@ -3,8 +3,11 @@ title: User_name (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna um nome de usuário de banco de dados de um número de identificação especificado.  
   
@@ -50,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Argumentos  
  *id*  
- É o número de identificação associado a um usuário do banco de dados. *ID*é **int**. Os parênteses são necessários.  
+ É o número de identificação associado a um usuário do banco de dados. *ID* é **int**. Os parênteses são necessários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>Comentários  
- Quando *id* for omitido, o usuário atual no contexto atual é assumido. Se o parâmetro contiver a palavra que NULL, retornará NULL. Quando USER_NAME for chamado sem especificar um *id* após uma execução de instrução, USER_NAME retornará o nome do usuário representado. Se um principal do Windows acessar o banco de dados por meio da associação em um grupo, USER_NAME retornará o principal do Windows em vez do grupo.  
+ Quando *id* for omitido, o usuário atual no contexto atual é assumido. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_NAME for chamado sem especificar um *id* após uma execução de instrução, USER_NAME retornará o nome do usuário representado. Se um principal do Windows acessar o banco de dados por meio da associação em um grupo, USER_NAME retornará o principal do Windows em vez do grupo.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -168,5 +170,4 @@ User7
  [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

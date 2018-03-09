@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType (geometry Data Type)
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ada5585c116ae9871b6bb08af8bf5f576202d98
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4acd897ad6fb8fdb6054707eaa40707d7b07b344
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Retorna o nome do tipo Open Geospatial Consortium (OGC) representado por um **ge
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os nomes de tipo OGC que podem ser retornados por `STGeometryType()` são **ponto**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, e  **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  
@@ -62,8 +61,7 @@ SELECT @g.STGeometryType();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

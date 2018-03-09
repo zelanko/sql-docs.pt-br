@@ -3,8 +3,9 @@ title: "Atualizar o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - _Collection::Refresh
 - Parameters::Refresh
 - Properties::Refresh
-helpviewer_keywords: Refresh method [ADO]
+helpviewer_keywords:
+- Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e7b776b5d861403909b4856406d30109ad7c6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 422f04618e6e63b6143a8459c869316e47450796
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-ado"></a>Atualizar o método (ADO)
 Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e específico ao provedor.  
@@ -39,7 +41,7 @@ Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e 
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **atualização** método realiza tarefas diferentes, dependendo da coleção na qual você chamá-lo.  
   
 ### <a name="parameters"></a>Parâmetros  

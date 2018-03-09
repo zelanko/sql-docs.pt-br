@@ -2,12 +2,13 @@
 title: "Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,13 +18,13 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 07726f5c911579650bbd73a9973841ebfeb482e6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Adicione botões de classificação interativa para permitir que os usuários alterem a ordem de classificação de linhas e colunas em tabelas e matrizes. Esse recurso só é suportado em formatos de renderização que dão suporte à interação do usuário, como o HTML.  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/09/2017
   
  ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Classificação interativa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

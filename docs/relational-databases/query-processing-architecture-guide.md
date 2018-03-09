@@ -1,10 +1,13 @@
 ---
 title: Guia de arquitetura de processamento de consultas | Microsoft Docs
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Os tópicos a seguir descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processa consultas e otimiza a reutilização de consultas por meio do cache de planos de execução.
 
@@ -34,18 +36,53 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processa consultas 
 
 O processamento de uma única instrução SQL é o modo mais básico para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executar instruções SQL. As etapas usadas para processar uma única instrução `SELECT` que referencia apenas as tabelas base locais (nenhuma exibição ou tabelas remotas) ilustram o processo básico.
 
+#### <a name="logical-operator-precedence"></a>Precedência de operador lógico
+
+Quando mais de um operador lógico é usado em uma instrução, `NOT` é avaliado primeiro, em seguida, `AND` e, finalmente, `OR`. Operadores aritméticos e bit a bit são tratados antes dos operadores lógicos. Para obter mais informações, confira [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md) (Precedência de operador).
+
+No exemplo a seguir, a condição de cor pertence ao modelo de produto 21 e não ao modelo de produto 20, porque `AND` tem precedência em relação a `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Você pode alterar o significado da consulta adicionando parênteses para forçar a avaliação de  `OR` primeiro. A consulta a seguir só encontra produtos nos modelos 20 e 21 que são vermelhos.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Usar parênteses, até mesmo quando eles não são necessários, pode melhorar a legibilidade das consultas e reduzir a chance de cometer um erro sutil devido à precedência do operador. Não há penalidade de desempenho significativa usando parênteses. O exemplo a seguir é mais legível que o exemplo original, embora eles sejam sintaticamente semelhantes.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 #### <a name="optimizing-select-statements"></a>Otimizando instruções SELECT
 
 Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas de plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
-As entradas e as saídas do otimizador de consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+As entradas e as saídas do Otimizador de Consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama:
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Uma instrução `SELECT` define apenas o seguinte:  
 * O formato do conjunto de resultados. Isso é especificado principalmente na lista de seleção. Porém, outras cláusulas como `ORDER BY` e `GROUP BY` também afetam a forma final do conjunto de resultados.
 * As tabelas que contêm os dados de origem. Isso é especificado na cláusula `FROM` .
 * A forma pela qual as tabelas estão logicamente relacionadas à finalidade da instrução `SELECT` . Isso é definido nas especificações de junção, que podem ser exibidas na cláusula `WHERE` ou em uma cláusula `ON` seguida de `FROM`.
 * As condições que as linhas das tabelas de origem devem satisfazer para serem qualificadas para a instrução `SELECT` . Essas são especificadas nas cláusulas `WHERE` e `HAVING` .
-
 
 Um plano de execução de consulta é uma definição do seguinte: 
 
@@ -102,7 +139,7 @@ Quando uma instrução SQL referencia uma exibição não indexada, o analisador
 
 Por exemplo, considere a seguinte exibição:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -115,7 +152,7 @@ GO
 
 Com base nessa exibição, estas duas instruções SQL executam as mesmas operações nas tabelas base e produzem os mesmos resultados:
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -139,7 +176,7 @@ O recurso Plano de Execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 As dicas colocadas em exibições em uma consulta podem entrar em conflito com outras dicas descobertas quando a exibição é expandida para acessar suas tabelas base. Quando isso ocorre, a consulta retorna um erro. Por exemplo, considere a seguinte exibição que contém uma dica de tabela em sua definição:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -151,7 +188,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Agora suponha que você insira esta consulta:
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -165,7 +202,7 @@ As dicas podem ser propagadas pelos níveis de exibições aninhadas. Por exempl
 
 Quando a dica `FORCE ORDER` é usada em uma consulta que contém uma exibição, a ordem de junção das tabelas na exibição é determinada pela posição da exibição na construção ordenada. Por exemplo, a seguinte consulta faz a seleção a partir de três tabelas e uma exibição:
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -175,7 +212,7 @@ OPTION (FORCE ORDER);
 
 E `View1` é definido como mostrado abaixo:
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -237,7 +274,7 @@ Não são permitidas dicas nas definições de exibições indexadas. No modo de
 
 O processador de consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] otimiza o desempenho das exibições particionadas distribuídas. O aspecto mais importante de desempenho de exibição particionada distribuída é minimizar a quantidade de dados transferida entre servidores membro.
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria planos inteligentes e dinâmicos que usam de forma eficaz as consultas distribuídas para acessar dados de tabelas de membro remoto: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria planos inteligentes e dinâmicos que usam de forma eficaz as consultas distribuídas para acessar dados de tabelas de membro remoto: 
 
 * O Processador de Consultas usa o OLE DB primeiro para recuperar as definições de restrição de verificação de cada tabela de membro. Isso permite ao processador de consultas mapear a distribuição de valores da chave entre as tabelas de membro.
 * The Query Processor compares the key ranges specified in an SQL statement `WHERE` da instrução SQL com o mapa que mostra como as linhas são distribuídas nas tabelas de membro. O processador de consultas cria um plano de execução de consulta que usa consultas distribuídas para recuperar apenas essas linhas remotas exigidas para completar a instrução SQL. O plano de execução também é criado de forma que qualquer acesso a tabelas de membro remoto, tanto para dados quanto para metadados, seja adiado até as informações serem exigidas.
@@ -246,7 +283,7 @@ Por exemplo, considere um sistema em que uma tabela de clientes é particionada 
 
 Considere o plano de execução criado para esta consulta executada em Server1:
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -256,7 +293,7 @@ O plano de execução para esta consulta extrai as linhas com valores da chave `
 
 O Processador de Consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também pode criar lógica dinâmica em planos de execução para consulta de instruções SQL em que os valores de chave não são conhecidos quando o plano precisa ser criado. Por exemplo, considere este procedimento armazenado:
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -264,9 +301,9 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode prever qual valor de chave será fornecido pelo parâmetro `@CustomerIDParameter` sempre que o procedimento for executado. Como o valor da chave não pode ser previsto, o processador de consultas também não pode prever qual tabela de membro precisará ser acessada. Para lidar com isso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um plano de execução que tem lógica condicional, conhecido como filtros dinâmicos, para controlar qual tabela de membro será acessada, com base no valor de parâmetro de entrada. Supondo que o procedimento armazenado `GetCustomer` foi executado no Server1, a lógica do plano de execução poderá ser representada como mostrado a seguir:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode prever qual valor de chave será fornecido pelo parâmetro `@CustomerIDParameter` sempre que o procedimento for executado. Como o valor da chave não pode ser previsto, o processador de consultas também não pode prever qual tabela de membro precisará ser acessada. Para lidar com isso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria um plano de execução que tem lógica condicional, conhecido como filtros dinâmicos, para controlar qual tabela de membro será acessada, com base no valor de parâmetro de entrada. Supondo que o procedimento armazenado `GetCustomer` foi executado no Server1, a lógica do plano de execução poderá ser representada como mostrado a seguir:
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -275,19 +312,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-Às vezes, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria esses tipos de planos de execução dinâmicos até para consultas que não são parametrizadas. O Otimizador de Consulta pode parametrizar uma consulta para que o plano de execução possa ser reutilizado. Se o Otimizador de Consulta parametrizar uma consulta que referencia uma exibição particionada, ele já não poderá supor que as linhas exigidas serão provenientes de uma tabela base especificada. Ele terá de usar filtros dinâmicos no plano de execução.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] às vezes, cria esses tipos de planos de execução dinâmicos até para consultas que não são parametrizadas. O Otimizador de Consulta pode parametrizar uma consulta para que o plano de execução possa ser reutilizado. Se o Otimizador de Consulta parametrizar uma consulta que referencia uma exibição particionada, ele já não poderá supor que as linhas exigidas serão provenientes de uma tabela base especificada. Ele terá de usar filtros dinâmicos no plano de execução.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Execução de procedimento armazenado e disparador
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena apenas a origem de procedimentos armazenados e disparadores. Quando um procedimento armazenado ou disparador é executado primeiro, a origem é compilada em um plano de execução. Se o procedimento armazenado ou o disparador for executado novamente antes de o plano de execução envelhecer na memória, o mecanismo relacional detectará o plano existente e o reutilizará. Se o plano envelhecer fora da memória, um plano novo será criado. Esse processo é semelhante ao processo que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue para todas as instruções SQL. A vantagem de desempenho principal que os procedimentos armazenados e os disparadores têm no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], comparada com lotes de SQL dinâmico, é que suas instruções SQL são sempre as mesmas. Portanto, o mecanismo relacional as corresponde facilmente com qualquer plano de execução existente. O planos de procedimento armazenado e disparador são reutilizados facilmente.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena apenas a origem de procedimentos armazenados e gatilhos. Quando um procedimento armazenado ou disparador é executado primeiro, a origem é compilada em um plano de execução. Se o procedimento armazenado ou o disparador for executado novamente antes de o plano de execução envelhecer na memória, o mecanismo relacional detectará o plano existente e o reutilizará. Se o plano envelhecer fora da memória, um plano novo será criado. Esse processo é semelhante ao processo que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] segue para todas as instruções SQL. A vantagem de desempenho principal que os procedimentos armazenados e os disparadores têm no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], comparada com lotes de SQL dinâmico, é que suas instruções SQL são sempre as mesmas. Portanto, o mecanismo relacional as corresponde facilmente com qualquer plano de execução existente. O planos de procedimento armazenado e disparador são reutilizados facilmente.
 
 O plano de execução de procedimentos armazenados e disparadores é executado separadamente do plano de execução do lote que chama o procedimento armazenado ou aciona o disparador. Isso permite uma grande reutilização de planos de execução de procedimento armazenado e disparador.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Reutilização e armazenamento em cache do plano de execução
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um pool de memória usado para armazenar planos de execução e buffers de dados. A porcentagem do pool alocada a planos de execução ou buffers de dados flutua dinamicamente, dependendo do estado do sistema. A parte do pool de memória usada para armazenar os planos de execução é conhecida como cache de planos.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um pool de memória usado para armazenar planos de execução e buffers de dados. A porcentagem do pool alocada a planos de execução ou buffers de dados flutua dinamicamente, dependendo do estado do sistema. A parte do pool de memória usada para armazenar os planos de execução é conhecida como cache de planos.
 
-Os planos de execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] têm os componentes principais a seguir: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] os planos de execução têm os componentes principais a seguir: 
 
 * Plano de Execução de Consulta A maior parte do plano de execução é uma estrutura de dados somente leitura reentrante usada por qualquer número de usuários. Isso é conhecido como plano de consulta. Nenhum contexto de usuário é armazenado no plano de consulta. Nunca há mais de uma ou duas cópias do plano de consulta na memória: uma cópia para todas as execuções em série e outra para todas as execuções paralelas. A cópia paralela cobre todas as execuções paralelas, independentemente do grau de paralelismo. 
 * Contexto de execução. Cada usuário que está executando a consulta atualmente tem uma estrutura de dados que retém os dados específicos para a sua execução, como valores de parâmetro. Esta estrutura de dados é conhecida como contexto de execução. As estruturas de dados de contexto de execução são reutilizadas. Se um usuário executar uma consulta e uma das estruturas não estiver sendo usada, ela será reinicializada com o contexto do usuário novo. 
@@ -296,11 +333,11 @@ Os planos de execução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Quando alguma instrução SQL for executada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o mecanismo relacional examinará primeiro o cache de planos para verificar se há um plano de execução para a mesma instrução SQL. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza qualquer plano existente que encontrar, diminuindo as despesas de recompilação da instrução SQL. Se não houver nenhum plano de execução, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerará um plano de execução novo para a consulta.
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um algoritmo eficiente para localizar qualquer plano de execução existente de qualquer instrução SQL específica. Na maioria dos sistemas, os recursos mínimos usados por esta varredura são inferiores aos recursos salvos graças à reutilização de planos existentes em vez da compilação de cada instrução SQL.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um algoritmo eficiente para localizar qualquer plano de execução existente de qualquer instrução SQL específica. Na maioria dos sistemas, os recursos mínimos usados por esta varredura são inferiores aos recursos salvos graças à reutilização de planos existentes em vez da compilação de cada instrução SQL.
 
 Os algoritmos para corresponder as instruções SQL novas a planos de execução existentes não utilizados no cache exigeem que todas as referências de objeto sejam qualificadas completamente. Por exemplo, a primeira dessas instruções `SELECT` não corresponde a um plano existente e a segunda corresponde:
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -380,13 +417,13 @@ O uso de parâmetros, inclusive de marcadores de parâmetro em aplicativos ADO, 
  
 A única diferença entre as duas instruções `SELECT` a seguir são os valores comparados na cláusula `WHERE` :
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -398,7 +435,7 @@ A separação de constantes da instrução SQL usando parâmetros ajuda o mecani
 
 * No Transact-SQL, use `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -433,7 +470,7 @@ Se você não criar parâmetros explicitamente com o design de seus aplicativos,
 
 Quando a parametrização forçada estiver habilitada, a parametrização simples ainda poderá acontecer. Por exemplo, a consulta a seguir não pode ser parametrizada de acordo com as regras de parametrização forçada:
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -451,18 +488,18 @@ Se uma instrução SQL for executada sem parâmetros, o [!INCLUDE[ssNoVersion](.
 
 Considere esta instrução:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 O valor 1 ao final da instrução pode ser especificado como um parâmetro. O mecanismo relacional cria o plano de execução para este lote como se um parâmetro tivesse sido especificado no lugar do valor 1. Devido a essa parametrização simples, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece que as duas instruções a seguir geram essencialmente o mesmo plano de execução e reutilizam o primeiro plano para a segunda instrução:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -558,7 +595,7 @@ A preparação de uma instrução é mais eficaz se forem utilizados marcadores 
 
 Usando o primeiro modo, o aplicativo pode executar uma consulta separada para cada produto solicitado:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -566,7 +603,7 @@ WHERE ProductID = 63;
 Usando o segundo modo, o aplicativo faz o seguinte: 
 
 1. Prepara uma instrução contendo um marcador de parâmetro (?):  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -596,7 +633,7 @@ Valores de parâmetro são detectados durante a compilação ou recompilação p
 
 ## <a name="parallel-query-processing"></a>Processamento paralelo de consultas
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar uma consulta ou uma operação de índice em paralelo usando vários threads de trabalho do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode executar uma consulta ou uma operação de índice em paralelo usando vários threads de trabalho do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
 
 Durante a otimização da consulta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procura consultas ou operações de índice que poderiam se beneficiar da execução paralela. Para essas consultas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insere operadores de troca no plano de execução de consulta para preparar a consulta para a execução paralela. Um operador de troca é um operador em um plano de execução de consulta que fornece gerenciamento de processo, redistribuição de dados e controle de fluxo. O operador de troca inclui como subtipos os operadores lógicos `Distribute Streams`, `Repartition Streams`e `Gather Streams` dos quais um ou mais podem aparecer na saída do Plano de Execução de um plano de consulta para uma consulta paralela. 
 
@@ -610,7 +647,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ### <a name="DOP"></a> Grau de Paralelismo
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
 
 1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU, como um computador SMP (multiprocessamento simétrico).  
   Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
@@ -619,7 +656,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente
   Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
 
 3. O tipo de operação de consulta ou de índice executada.  
-  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Embora não recomendado, os usuários podem alterar o valor padrão, 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
 
 4. Se houver um número suficiente de linhas para processar.  
   Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
@@ -651,7 +688,7 @@ A consulta a seguir conta o número de ordens emitidas em um trimestre específi
 
 Esse exemplo usa nomes teóricos de tabela e de coluna.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -669,7 +706,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Suponha que os índices a seguir estão definidos nas tabelas `lineitem` e `orders`:
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -716,9 +753,9 @@ Aqui há um possível plano paralelo gerado para a consulta mostrada anteriormen
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Plano de consulta com DOP 4, envolve uma junção de duas tabelas
+A ilustração abaixo mostra um plano de consulta executado com um grau de paralelismo igual a 4 e envolvendo uma junção de duas tabelas.
 
-A ilustração mostra um plano do Otimizador de Consulta executado com um grau de paralelismo igual a 4 e envolvendo uma junção de duas tabelas.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 O plano paralelo contém três operadores de paralelismo. O operador Index Seek do índice `o_datkey_ptr` e o operador Index Scan do índice `l_order_dates_idx` são executados em paralelo. Isso produz vários fluxos exclusivos. Isso pode ser determinado com base nos operadores Parallelism mais próximos acima dos operadores Index Scan e Index Seek, respectivamente. Ambos estão reparticionando o tipo de troca. Ou seja, eles estão apenas embaralhando novamente os dados entre os fluxos e produzindo na saída o mesmo número de fluxos existente na entrada. Esse número de fluxos é igual ao grau de paralelismo.
 
@@ -728,6 +765,8 @@ O operador de paralelismo acima do operador Index Seek está reparticionando seu
 
 O operador de paralelismo superior reúne resultados de vários fluxos em um único fluxo. As agregações parciais executadas pelo operador Stream Aggregate abaixo do operador de paralelismo são acumuladas em um único valor `SUM` de cada valor diferente de `O_ORDERPRIORITY` no operador Stream Aggregate acima do operador de paralelismo. Como esse plano tem dois segmentos de troca com grau de paralelismo igual a 4, ele usa oito threads de trabalho.
 
+Para obter mais informações sobre os operadores usados neste exemplo, consulte a [Referência de operadores físicos e lógicos do plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+
 ### <a name="parallel-index-operations"></a>Operações de índice paralelo
 
 Os planos de consulta criados para as operações de índice que criam ou recompilar um índice, ou removem um índice clusterizado, permitem operações multi-threaded de trabalho paralelas em computadores que tenham vários microprocessadores.
@@ -735,7 +774,7 @@ Os planos de consulta criados para as operações de índice que criam ou recomp
 > [!NOTE]
 > As operações de índice paralelas somente estão disponíveis no Enterprise Edition, a partir de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].
  
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads de trabalho separados a serem executados) para operações de índice que em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads de trabalho separados a serem executados) para operações de índice que em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
 
 Quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cria um plano de execução de índice, o número de operações paralelas é definido como o menor valor entre: 
 
@@ -760,7 +799,7 @@ O Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a
 * Nomes de servidor vinculado  
   Os procedimentos armazenados do sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` são usados para fornecer um nome de servidor a uma fonte de dados OLE DB. Os objetos desses servidores vinculados podem ser referenciados nas instruções Transact-SQL que usam nomes de quatro partes. Por exemplo, se um nome do servidor vinculado do `DeptSQLSrvr` for definido em relação a outra instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as seguintes referências de instrução farão referência a uma tabela naquele servidor: 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -770,14 +809,14 @@ O Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a
 * Nomes de conector ad hoc  
   Para referências de pouca frequência a uma fonte de dados, são especificadas as funções `OPENROWSET` ou `OPENDATASOURCE` com as informações necessárias para a conexão com o servidor vinculado. O conjunto de linhas pode ser referenciado do mesmo modo que uma tabela é referenciada nas instruções Transact-SQL: 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
         Employees);
   ```
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o OLE DB para se comunicar entre o mecanismo relacional e o mecanismo de armazenamento. O mecanismo relacional divide cada instrução Transact-SQL em uma série de operações nos conjuntos de linhas OLE DB simples abertos pelo mecanismo de armazenamento das tabelas base. Isso significa que o mecanismo relacional também pode abrir os conjuntos de linhas OLE DB simples em qualquer fonte de dados OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o OLE DB para se comunicar entre o mecanismo relacional e o mecanismo de armazenamento. O mecanismo relacional divide cada instrução Transact-SQL em uma série de operações nos conjuntos de linhas OLE DB simples abertos pelo mecanismo de armazenamento das tabelas base. Isso significa que o mecanismo relacional também pode abrir os conjuntos de linhas OLE DB simples em qualquer fonte de dados OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 O mecanismo relacional usa a API (interface de programação de aplicativo) do OLE DB para abrir os conjuntos de linhas em servidores vinculados, buscar as linhas e gerenciar as transações.
 
@@ -789,11 +828,11 @@ As consultas distribuídas podem permitir que os usuários acessem outra fonte d
 
 Quando possível, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envia operações relacionais como junções, restrições, projeções, classificações e operações de agrupar por para a fonte de dados OLE DB. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não assume o padrão de examinar a tabela base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e executar as operações relacionais em si. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consulta o provedor OLE DB para determinar o nível de gramática SQL ao qual ele dá suporte e, com base nessas informações, envia o máximo possível de operações relacionais para o provedor. 
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo para um provedor OLE DB retornar estatísticas que indicam como os valores de chave são distribuídos em uma fonte de dados OLE DB. Isso permite ao Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analisar melhor o padrão de dados na fonte de dados em relação aos requisitos de cada instrução SQL, aumentando a capacidade do Otimizador de Consulta de gerar planos de execução otimizados. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo para um provedor OLE DB retornar estatísticas que indicam como os valores de chave são distribuídos em uma fonte de dados OLE DB. Isso permite ao Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analisar melhor o padrão de dados na fonte de dados em relação aos requisitos de cada instrução SQL, aumentando a capacidade do Otimizador de Consulta de gerar planos de execução otimizados. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados
 
-O [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
 
 > [!NOTE]
 > Há suporte para tabelas e índices particionados apenas nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -806,13 +845,13 @@ Agora a eliminação de partição está concluída na operação de busca.
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (como a coluna lógica principal) e possivelmente em outras colunas de chave de índice e, depois, uma busca de segundo nível, com uma condição diferente, possa ser realizada em uma ou mais colunas adicionais, para cada valor diferente que atenda à qualificação para a operação de busca de primeiro nível. Ou seja, essa operação, chamada de busca seletiva, permite que o otimizador de consulta realize uma operação de busca ou de exame baseada em uma condição para determinar as partições a serem acessadas e uma operação de busca de segundo nível no operador para retornar linhas dessas partições que atendam a uma condição diferente. Por exemplo, considere a consulta abaixo.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 Para esse exemplo, suponha que a tabela T, definida como `T(a, b, c)`, seja particionada na coluna a e tenha um índice clusterizado na coluna b. Os limites de partição da tabela T são definidos pela seguinte função de partição:
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -834,7 +873,7 @@ Usando essas ferramentas, você pode averiguar as seguintes informações:
 
 #### <a name="partition-information-enhancements"></a>Aprimoramentos das informações sobre partições
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece informações aperfeiçoadas de particionamento para planos de execução de tempo de compilação e tempo de execução. Agora, os planos de execução fornecem as seguintes informações:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece informações aperfeiçoadas de particionamento para planos de execução de tempo de compilação e tempo de execução. Agora, os planos de execução fornecem as seguintes informações:
 
 * Um atributo opcional `Partitioned` que indica que um operador, como `seek`, `scan`, `insert`, `update`, `merge`ou `delete`, é executado em uma tabela particionada.  
 * Um novo elemento `SeekPredicateNew` com um subelemento `SeekKeys` que inclui `PartitionID` como a coluna de chave de índice à esquerda e as condições de filtro que especificam buscas de intervalo em `PartitionID`. A presença de dois subelementos `SeekKeys` indica que uma operação de busca seletiva no `PartitionID` é usada.   
@@ -842,7 +881,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece informações a
 
 Para demonstrar como essas informações são exibidas tanto na saída do plano de execução gráfica, quanto na saída do Plano de Execução XML, considere a seguinte consulta na tabela particionada `fact_sales`. Esta consulta atualiza dados em duas partições. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -971,7 +1010,7 @@ O exemplo a seguir cria um banco de dados de teste que contém uma única tabela
 > [!NOTE]
 > Este exemplo insere mais de 1 milhão de linhas na tabela. A execução deste exemplo pode demorar vários minutos, dependendo de seu hardware. Antes de executar este exemplo, verifique se há mais de 1.5 GB de espaço em disco disponível. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL
@@ -1039,5 +1078,5 @@ GO
  [Eventos estendidos](../relational-databases/extended-events/extended-events.md)  
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimativa de cardinalidade](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Processamento de consulta adaptável](../relational-databases/performance/adaptive-query-processing.md)
-
+ [Processamento de consulta adaptável](../relational-databases/performance/adaptive-query-processing.md)   
+ [Precedência de operador](../t-sql/language-elements/operator-precedence-transact-sql.md)

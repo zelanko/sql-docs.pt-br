@@ -2,33 +2,30 @@
 title: "Log de operações no Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
-  Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
   
  Além do recurso de registro em log integrado, muitos administradores e desenvolvedores também usam ferramentas fornecidas pela comunidade do Analysis Services para coletar dados sobre as operações do servidor, tal como o **ASTrace**. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Exemplos da Comunidade do Microsoft SQL Server: Analysis Services) para obter os links de download.  
   
@@ -55,8 +52,8 @@ ms.lasthandoff: 09/01/2017
 |Nome ou local do arquivo|Tipo|Usado para|Ativado por padrão|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
-|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|Não|  
-|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|Não|  
+|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|não|  
+|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|não|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -195,4 +192,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

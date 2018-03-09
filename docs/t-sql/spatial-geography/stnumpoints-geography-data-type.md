@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints method
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 803e631cb1e0250ebedd28a97afe4e20476396cf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bae43e02985e1270de16de2ea6bcd81e52f1db64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método conta os pontos na descrição de um **geografia** instância. Pontos duplicados são contados. No entanto, os pontos de conexão entre segmentos são contados apenas uma vez. Se esta instância é uma coleção, esse método retorna o número total de pontos na coleção.  
   
 ## <a name="examples"></a>Exemplos  
@@ -81,7 +80,6 @@ SELECT @g.STNumPoints();
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

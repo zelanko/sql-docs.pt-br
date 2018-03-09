@@ -7,26 +7,27 @@ ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b25081133a9af071fbd0dfb2ee98344c60d3d35a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a554ff290c1ea3fa8ef5382e45fafbae5b1110d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Fazer referência às bibliotecas do ADO em um aplicativo do Visual C++
 Para usar a versão mais recente do ADO em um aplicativo do Visual C++, use a seguinte `#import` diretiva:  

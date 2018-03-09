@@ -1,11 +1,15 @@
 ---
 title: Exportar um aplicativo da camada de dados | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-data-tier-apps
+ms.suite: sql
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,19 +27,20 @@ helpviewer_keywords:
 - export DAC
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6beea9c0d1803ea930cc8880412ec1a5fb89aa8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c20a0e2757366b22b4c81885106d1b9c6d362f6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
-  A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de exportação compila um arquivo de exportação DAC em duas fases.  
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
@@ -127,8 +132,8 @@ ms.lasthandoff: 11/09/2017
   
 3.  Use o método **Export** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   
   

@@ -2,9 +2,12 @@
 title: Otimizar o rastreamento do SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 385a5a642b5554f42d4d40bea712bfd6181ee18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Otimizar o Rastreamento do SQL
-  Embora a execução do Rastreamento do SQL imponha custos ao desempenho, por usar recursos do sistema para coletar os dados, há diversos procedimentos que podem minimizar esse efeito. Para minimizar os custos ao desempenho devidos a um rastreamento, tente o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Embora a execução do Rastreamento do SQL reduza o desempenho por usar recursos do sistema para coletar os dados, há diversos procedimentos que podem minimizar esse efeito. Para minimizar os custos ao desempenho devidos a um rastreamento, tente o seguinte:  
   
 -   Considere o uso do prompt de comando para executar os rastreamentos: Usar uma interface gráfica do usuário atrapalha o desempenho. Para obter mais informações, veja [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Limite o número de eventos retornados. Com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , é possível limitar o número de eventos retornados salvando o rastreamento em uma tabela e definindo o número máximo de linhas. Os resultados do rastreamento continuam sendo retornados na tela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] quando o número máximo de linhas é atingido, mas elimina-se o custo decorrido do registro dos resultados em uma tabela.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

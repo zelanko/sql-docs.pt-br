@@ -1,29 +1,30 @@
 ---
 title: "Configurações (conversão) (MySQLToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 68b16e7263c08c4941f6ad7c1f037de5a4fc0f30
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configurações de projeto (conversão) (MySQLToSQL)
 A página de conversão do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte a sintaxe do MySQL a sintaxe de SQL Server ou SQL Azure.  
@@ -119,7 +120,6 @@ O painel de conversão está disponível na **configurações de projeto** e **c
 |**Literais numéricos com precisão exceder 38**|Especifica como converter literais numéricos com precisão exceder 38.<br /><br />**Modo padrão**: arredondar se possível<br /><br />**Modo otimista**: arredondar se possível<br /><br />**Modo de inteira**: arredondar se possível|  
 |**Data de zero em colunas NULL e não**|Especifica como lidar com a atribuição não NULL colunas da data de Zero, data de Zero ou valores de data/hora inválido.<br /><br />**Modo padrão**: getDate)<br /><br />**Modo otimista**: getDate)<br /><br />**Modo de inteira**: getDate)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência de Interface do usuário &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   
-

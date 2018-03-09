@@ -3,10 +3,12 @@ title: 'C para SQL: caractere | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], character
 - converting data from c to SQL types [ODBC], character
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1496d6d5a6f130b7eea47ad11a47e763a7958e08
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-character"></a>C para SQL: caractere
 Os identificadores para o caractere de tipo de dados ODBC C são:  
@@ -69,4 +70,3 @@ Os identificadores para o caractere de tipo de dados ODBC C são:
   
 > [!NOTE]  
 >  Os desenvolvedores de aplicativos são desaconselhável de associação de dados de caractere C para um tipo de dados binário do SQL. Normalmente, essa conversão é ineficiente e lento.
-

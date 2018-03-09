@@ -1,29 +1,30 @@
 ---
 title: Gerenciamento de senhas (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f939dc06c04f0c2fb00022a688b8a2cc86e8a0b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 036fcb15ce20a2e0370913b4548e02531e665190
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-passwords-accesstosql"></a>Gerenciamento de senhas (AccessToSQL)
 Esta seção é sobre como proteger senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
@@ -129,7 +130,6 @@ O aplicativo de Console SSMA permite exportar o banco de dados criptografado sen
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar o Console do SSMA (acesso)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

@@ -1,29 +1,28 @@
 ---
-title: "Alterar o extensão de entrega de serviços de relatório padrão | Microsoft Docs"
+title: "Alterar a extensão de entrega padrão do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7e6822219bab297526467637a79e6bd46305c9e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Alterar a extensão de entrega padrão do Reporting Services
   Você pode modificar as definições de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para alterar a extensão de entrega padrão que aparece na lista **Entregue por** de uma página de definição de assinatura. Por exemplo, você pode modificar a configuração de modo que quando os usuários criem uma nova assinatura, a entrega de compartilhamento de arquivos seja selecionada por padrão, em vez da entrega de email. Você também pode alterar a ordem em que as extensões de entrega são listadas na interface do usuário.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>Configuração padrão de servidor de relatório em modo nativo  
  A ordem de uma extensão de entrega que aparece no Report Manager na lista **Entregue por** baseia-se na ordem das entradas de extensão de entrega do arquivo **RSReportServer.config** . Por exemplo, a imagem a seguir mostra email em primeiro lugar na lista e é selecionada por padrão.  
   
- ![lista de extensões de entrega padrão](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "lista padrão de extensões de entrega")  
+ ![lista padrão de extensões de entrega](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "default list of delivery extensions")  
   
  A seguir está a seção padrão de **RSReportServer.config** , que controla a extensão de entrega padrão e a ordem em que elas são exibidas no Gerenciador de relatórios. Observe que o email aparece primeiro no arquivo e é definido como o padrão.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
      Abra o arquivo RSReportServer.config em um editor de texto. Para obter mais informações sobre o arquivo de configuração, consulte [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). Após a configuração ter sido alterada, a interface do usuário será semelhante à imagem a seguir:  
   
-     ![modificou a lista de extensões de entrega](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "modificou a lista de extensões de entrega")  
+     ![lista modificada de extensões de entrega](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "lista modificada de extensões de entrega")  
   
 2.  Modifique a seção DeliveryUI para se parecer com o exemplo a seguir e observe as principais alterações:  
   
@@ -117,7 +116,7 @@ ms.lasthandoff: 08/09/2017
   
     ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Entrega de compartilhamento de arquivos no Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
  [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

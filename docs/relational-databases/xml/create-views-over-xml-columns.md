@@ -2,27 +2,33 @@
 title: "Criar exibições sobre colunas XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [XML in SQL Server]
+helpviewer_keywords:
+- views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00f455c27f3efdb2182e322112ce22f45abb4a51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c4b8bd242925ef871daa9842bc7489c364ec0b29
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-views-over-xml-columns"></a>Criar exibições sobre colunas XML
-  É possível usar uma coluna de tipo **xml** para criar exibições. O exemplo a seguir cria uma exibição na qual o valor de uma coluna de tipo `xml` é recuperada usando o método **value()** do tipo de dados **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+É possível usar uma coluna de tipo **xml** para criar exibições. O exemplo a seguir cria uma exibição na qual o valor de uma coluna de tipo `xml` é recuperada usando o método **value()** do tipo de dados **xml** .  
   
 ```  
 -- Create the table.  

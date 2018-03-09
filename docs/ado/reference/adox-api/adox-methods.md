@@ -3,7 +3,7 @@ title: "Métodos ADOX | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcd840f212ce73a0c059c74c5710cce9366126a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>Métodos ADOX
 |||  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/09/2017
 |[Acrescente (Views)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo **exibição** o objeto para o **exibições** coleção.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
 |[Criar](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
-|[Delete (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
+|[Delete (excluir) (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retorna as permissões para um grupo ou usuário em um objeto.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Especifica o proprietário de um objeto em um catálogo.|  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

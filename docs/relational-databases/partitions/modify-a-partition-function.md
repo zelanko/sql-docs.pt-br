@@ -2,26 +2,29 @@
 title: "Modificar uma função de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-function"></a>Modificar uma função de partição
-  Você pode alterar o modo como uma tabela ou um índice é particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adicionando ou subtraindo o número de partições especificadas, em incrementos de 1, na função de partição da tabela ou do índice particionado usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao adicionar uma partição, você “divide” em duas uma partição existente e redefine os limites das novas partições. Ao descartar uma partição, você "funde" os limites das duas partições criando uma só. Esta última ação repopula uma partição e deixa a outra partição não atribuída.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Você pode alterar o modo como uma tabela ou um índice é particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adicionando ou subtraindo o número de partições especificadas, em incrementos de 1, na função de partição da tabela ou do índice particionado usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao adicionar uma partição, você “divide” em duas uma partição existente e redefine os limites das novas partições. Ao descartar uma partição, você "funde" os limites das duas partições criando uma só. Esta última ação repopula uma partição e deixa a outra partição não atribuída.  
   
 > [!CAUTION]  
 >  Mais de uma tabela ou índice podem usar a mesma função de partição. Quando modifica uma função de partição, você afeta todas elas em uma única transação. Verifique as dependências da função de partição antes de modificá-la.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Na caixa de diálogo **Excluir Objeto** , verifique se a função de partição correta está selecionada e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Para dividir uma única partição em duas partições  
   

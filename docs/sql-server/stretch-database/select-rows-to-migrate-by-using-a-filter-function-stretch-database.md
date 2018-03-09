@@ -2,13 +2,14 @@
 title: "Selecionar linhas para migrar usando uma função de filtro (Stretch Database) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68a67526e9e84d62861f322b663debba754371ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Se você armazenar dados inertes em uma tabela separada, será possível configurar o Stretch Database para migrar a tabela inteira. Por outro lado, se sua tabela contiver dados dinâmicos e inertes, você poderá especificar um predicado de filtro para selecionar as linhas a serem migradas. O predicado de filtro é uma função com valor de tabela embutida. Este tópico descreve como escrever uma função com valor de tabela embutida para selecionar linhas a serem migradas.  
+
+  Se você armazenar dados inertes em uma tabela separada, será possível configurar o Stretch Database para migrar a tabela inteira. Por outro lado, se sua tabela contiver dados dinâmicos e inertes, você poderá especificar um predicado de filtro para selecionar as linhas a serem migradas. O predicado de filtro é uma função com valor de tabela embutida. Este artigo descreve como escrever uma função com valor de tabela embutida para selecionar linhas a serem migradas.  
   
 > [!IMPORTANT]
 > Se você fornecer uma função de filtro precária, a migração de dados também será precária. O Stretch Database aplica a função de filtro à tabela usando o operador CROSS APPLY.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Execute a instrução ALTER TABLE para especificar uma função de filtro depois que você sair do assistente.  
   
- A sintaxe ALTER TABLE para adicionar uma função é descrita posteriormente neste tópico.  
+ A sintaxe ALTER TABLE para adicionar uma função é descrita posteriormente neste artigo.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Requisitos básicos para a função de filtro  
  A função com valor de tabela embutida, necessária para um predicado de filtro Stretch Database é parecida com o exemplo a seguir.  
@@ -617,7 +619,7 @@ Uma conta com privilégios de db_owner comprometida pode fazer o seguinte.
   
 -   Criar e aplicar uma função com valor de tabela que torna possível inferir o conteúdo de uma tabela para a qual o usuário negou explicitamente o acesso de leitura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

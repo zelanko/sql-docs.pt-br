@@ -2,10 +2,14 @@
 title: "Excluir um índice | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], dropping
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9ea018c08ae6cfe4692c70dc624e6d385de4a62
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c41e725747527a7637785583a18245c12a8d0c5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-an-index"></a>Excluir um índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -87,9 +91,9 @@ ms.lasthandoff: 11/09/2017
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo** , selecione **Salvar***table_name*.  
+8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-an-index"></a>Para excluir um índice  
   

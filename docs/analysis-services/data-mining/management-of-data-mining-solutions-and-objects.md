@@ -2,33 +2,32 @@
 title: "Gerenciamento de soluções de mineração de dados e objetos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece ferramentas de cliente que você pode usar para gerenciar estruturas de mineração e modelos de mineração existentes. Esta seção descreve as operações de gerenciamento que você pode executar usando cada ambiente.  
   
  Além dessas ferramentas, você pode gerenciar objetos de mineração de dados programaticamente, usando AMO, ou usar outros clientes que se conectam a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
@@ -53,13 +52,13 @@ ms.lasthandoff: 11/17/2017
   
  Os links a seguir fornecem informações sobre como modificar objetos de mineração de dados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Alterar as propriedades de um modelo de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Exibir ou alterar modelagem sinalizadores &#40; mineração de dados &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Exibir ou alterar parâmetros do algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   

@@ -2,34 +2,32 @@
 title: Acumulado no ano (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- YTD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ytd function
+f1_keywords: YTD
+dev_langs: kbMDX
+helpviewer_keywords: Ytd function
 ms.assetid: b77fdba2-d4a9-4271-8c21-c1f12eba526d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99600f9684215a1147b5372c3e912040fb9f122f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna um conjunto de irmãos membros do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com um determinado membro, restringido pelo *ano* nível na dimensão de tempo.  
   
@@ -44,7 +42,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma expressão de membro não for especificada, o padrão será o membro atual da primeira hierarquia com um nível de tipo *anos* na primeira dimensão do tipo *tempo* no grupo de medidas.  
   
  O **Ytd** é uma função de atalho para o [PeriodsToDate](../mdx/periodstodate-mdx.md) função onde a propriedade de tipo da hierarquia de atributo no qual o nível é baseado é definida como *anos*. Ou seja, `Ytd(Member_Expression)` é equivalente a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Observe que essa função não funcionará quando a propriedade de tipo é definida como *FiscalYears*.  
@@ -78,8 +76,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

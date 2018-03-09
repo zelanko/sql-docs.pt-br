@@ -1,26 +1,30 @@
 ---
 title: "Sincronizar o método (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize method [ADO]
+helpviewer_keywords:
+- Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>Método (RDS) de sincronização
 Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão para uso no ADO 2.5 e superior.  
@@ -65,7 +69,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  Um ponteiro para o erro de informações retornado por **Execute**. Se for NULL, nenhuma informação de erro é retornada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *HandlerString* parâmetro pode ser nulo. O que acontece nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. Msdfmap.dll interpretará, em seguida, o argumento como uma direção para usar o sample.ini para verificar se as cadeias de caracteres de conexão e consulta.  
   
 ## <a name="applies-to"></a>Aplica-se a  

@@ -2,15 +2,13 @@
 title: Comandos (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---commands"></a>Elementos XML - comandos
-  Esta seção de referência contém XML para elementos Analysis (XMLA) que podem ser usados dentro de **comando** elemento durante um **Execute** chamada de método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Esta seção de referência contém XML para elementos Analysis (XMLA) que podem ser usados dentro de **comando** elemento durante um **Execute** chamada de método.  
   
 |Elemento|Description|  
 |-------------|-----------------|  

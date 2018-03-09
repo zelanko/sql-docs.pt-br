@@ -3,8 +3,11 @@ title: Valor booliano efetivo (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b80d848571d645e6d12e512455ecaa3d66be32ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>Valor Booliano efetivo (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Estes são os valores  Boolianos efetivos:  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Expressões condicionais](../xquery/conditional-expressions-xquery.md)  
   
--   [Expressões quantificadas](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  A seguir é apresentado um exemplo de valor Booliano efetivo. Quando o **se** expressão é processada, o valor booliano efetivo da condição é determinado. Como `/a[1]` retorna uma sequência vazia, o valor Booliano efetivo é false. O resultado é retornado como XML com um nó de texto (false).  
   
@@ -100,4 +102,3 @@ go
  [Instrução FLWOR e iteração &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   
-

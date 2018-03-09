@@ -1,13 +1,14 @@
 ---
-title: A entrega de email no Reporting Services | Microsoft Docs
+title: Entrega de email no Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cbf8b0a5e84efd67ffa41c4518b6432c2d3283e5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. Para distribuir um relatório por email, 1) configure o servidor de relatório para entrega de email e 2) defina uma assinatura padrão ou uma assinatura controlada por dados. Uma única assinatura não pode entregar vários relatórios em uma única mensagem de email. No entanto, você pode criar várias assinaturas.  
@@ -89,17 +89,16 @@ ms.lasthandoff: 09/27/2017
  Para um servidor de relatório de modo Nativo, a extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo Nativo e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para um servidor de relatório do modo do SharePoint, a extensão de entrega de email é configurada nas páginas de gerenciamento do SharePoint e em scripts do PowerShell.  
   
  
- Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte [email configurações - modo nativo do Reporting Services (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Para obter informações sobre como configurar um servidor de relatório no modo nativo, consulte [Configurações de email – modo nativo do Reporting Services (Gerenciador de Configurações)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Atribuições de função](../../reporting-services/security/role-assignments.md)  
   
   
-

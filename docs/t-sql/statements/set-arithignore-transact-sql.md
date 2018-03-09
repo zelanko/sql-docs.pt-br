@@ -1,7 +1,7 @@
 ---
 title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -25,17 +25,16 @@ helpviewer_keywords:
 - ARITHIGNORE option
 - divide-by-zero errors
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 779510e1a7a302fc4bfd4a730b88db9c4b4a4b1b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8229ccdae1e3074bf8f726a9dfdfcc4e52b8df5e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +46,17 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## <a name="remarks"></a>Comentários  
  A configuração SET ARITHIGNORE apenas controla se uma mensagem de erro é retornada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um NULL em um cálculo que envolve um erro de estouro ou divisão por zero, independentemente dessa configuração. A configuração SET ARITHABORT pode ser usada para determinar se a consulta foi terminada. Essa configuração não afeta erros que ocorrem durante instruções INSERT, UPDATE e DELETE.  
   
@@ -124,5 +121,4 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
  [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
-
 

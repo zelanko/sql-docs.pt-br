@@ -2,27 +2,28 @@
 title: "Lição 14: Implantar | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: efcf6f3c540325b07c5e8b5a3892f2ed464141f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>Lição 13: implantar
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ Nesta lição, você irá configurar propriedades de implantação. especificand
   
 Tempo estimado para concluir esta lição: **5 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 12: analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implantar o modelo  
@@ -42,7 +43,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 2.  No **páginas de propriedades de vendas de Internet AW** caixa de diálogo **o servidor de implantação**, no **Server** propriedade, digite o nome de um servidor de serviços de análise do Azure ou um instância de servidor local executando no modo de tabela. Essa será a instância de servidor que seu modelo será implantado.  
 
-    ![aas-implantar--server-propriedade de implantação](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > Você deve ter permissões de administrador na remoto do Analysis Services instância em ordem para implantar a ele.  
@@ -63,20 +64,20 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
     A caixa de diálogo Implantar aparecerá com o status de implantação dos metadados e cada tabela incluída no modelo.  
     
-    ![status implantar aas](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. Quando a implantação for concluída com êxito, continue e clique em **Fechar**.  
   
 ## <a name="conclusion"></a>Conclusão  
 Parabéns! Você terminar de criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários agora também podem se conectar ao modelo usando um aplicativo cliente de relatório, como o Microsoft Excel ou Power BI.  
 
-![como-tabela-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Consulte também  
-[Modo DirectQuery &#40;SSAS de tabela&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[Modo DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Configurar propriedades de implantação e modelagem de dados padrão](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Bancos de dados de modelo de tabela](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>O que vem a seguir?

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-caps.latest.revision: 37
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ef2edbec96d329db8f16a5046fa8c359052a0115
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-truncation-ssis"></a>Truncamento de dados (SSIS)
   Converter os valores de um tipo de dados para outro pode fazer com que os valores sejam truncados.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como tratar o truncamento de dados, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

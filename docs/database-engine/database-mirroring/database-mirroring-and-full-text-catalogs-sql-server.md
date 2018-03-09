@@ -2,9 +2,12 @@
 title: "Espelhamento de banco de dados e catálogos de texto completo (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 494ff79e56bda5b4b1415f527d9b829aa45d9a3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6dd18bfa76758bdc8ec5dfd666a2c006d66ad295
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Espelhamento de banco de dados e catálogos de texto completo (SQL Server)
-  Para espelhar um banco de dados que possui um catálogo de texto completo, use o backup como sempre para criar um backup de banco de dados completo do banco de dados principal e então restaure o backup para copiar o banco de dados no servidor espelho. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para espelhar um banco de dados que tem um catálogo de texto completo, use o backup como sempre para criar um backup de banco de dados completo do banco de dados principal e então restaure o backup para copiar o banco de dados no servidor espelho. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ## <a name="full-text-catalog-and-indexes-before-failover"></a>Catálogo de texto completo e índices antes do failover  
  Em um banco de dados espelho criado recentemente, o catálogo de texto completo é o mesmo de quando foi feito o backup do banco de dados. Depois do início do espelhamento de banco de dados, qualquer alteração no nível de catálogo feira por instruções DDL (CREATE FULLTEXT CATALOG, ALTER FULLTEXT CATALOG, DROP FULLTEXT CATALOG) é registrada e enviada ao servidor espelho para ser reproduzida no banco de dados espelho. Porém, não são reproduzidas as alterações no nível de índice no banco de dados espelho, pois ele não está registrado no servidor principal. Portanto, à medida que o conteúdo do catálogo de texto completo muda no banco de dados principal, o conteúdo do catálogo de texto completo no banco de dados espelho não é sincronizado.  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="after-forcing-service"></a>Depois de forçar serviço  
  Depois que o serviço é forçado para o servidor espelho (com possível perda de dados), inicie um rastreamento completo. O método a ser usado para iniciar um rastreamento completo depende se as alterações no índice de texto completo são rastreadas. Para obter mais informações, consulte "Índices de texto completo após o failover", anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

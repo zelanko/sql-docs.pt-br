@@ -2,28 +2,35 @@
 title: Ajuda F1 do Visualizador do Arquivo de Log | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.configurelogs.errorlog.f1
-helpviewer_keywords: Log File Viewer
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8738a1e4cdab8b4d07ec3e33dcba98d395126dde
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 63be87acc6f5ef1f550f7ec9d03cad7eab93e6a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer-f1-help"></a>Ajuda F1 do Visualizador do Arquivo de Log
-  O Visualizador do Arquivo de Log exibe informações de muitos componentes diferentes. Quando o Visualizador do Arquivo de Log estiver aberto, use o painel **Selecionar logs** para selecionar os logs que deseja exibir. Cada log exibe as colunas adequadas àquele tipo de log.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O Visualizador do Arquivo de Log exibe informações de muitos componentes diferentes. Quando o Visualizador do Arquivo de Log estiver aberto, use o painel **Selecionar logs** para selecionar os logs que deseja exibir. Cada log exibe as colunas adequadas àquele tipo de log.  
   
  Os logs disponíveis dependem de como o Visualizador do Arquivo de Log é aberto. Para obter mais informações, consulte [Abrir o Visualizador do Arquivo de Log](../../relational-databases/logs/open-log-file-viewer.md).  
   
@@ -78,7 +85,7 @@ ms.lasthandoff: 11/09/2017
   
  Para acessar arquivos de log de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão offline, é necessário ter acesso de leitura no namespace do WMI **Root\Microsoft\SqlServer\ComputerManagement10** e na pasta em que os arquivos de log estão armazenados. Para obter mais informações, veja a seção Segurança do tópico [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer.md)   
  [Abrir o Visualizador do Arquivo de Log](../../relational-databases/logs/open-log-file-viewer.md)   
  [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md)  

@@ -3,7 +3,7 @@ title: Propriedade CommandType (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 607c78b7026d482660c4866be58ffa30d0b86196
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d670a188c89ed96001c93d17a33dc0c03d601a82
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtype-property-ado"></a>Propriedade CommandType (ADO)
 Indica o tipo de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -39,7 +38,7 @@ Indica o tipo de um [comando](../../../ado/reference/ado-api/command-object-ado.
 > [!NOTE]
 >  Não use o **CommandTypeEnum** valores de **adCmdFile** ou **adCmdTableDirect** com **CommandType**. Esses valores podem ser usados apenas como opções com a [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) métodos de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CommandType** propriedade para otimizar a avaliação do [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade.  
   
  Se o **CommandType** o valor da propriedade é definido como o valor padrão, **adCmdUnknown**, você pode enfrentar desempenho reduzido porque ADO deve fazer chamadas para o provedor para determinar se o  **CommandText** propriedade é um nome de tabela, um procedimento armazenado ou uma instrução SQL. Se você souber o tipo de comando que você está usando, configurando o **CommandType** propriedade instrui o ADO para ir diretamente para o código relevante. Se o **CommandType** propriedade não corresponde ao tipo de comando no **CommandText** propriedade, um erro ocorre quando você chama o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método.  
@@ -51,4 +50,3 @@ Indica o tipo de um [comando](../../../ado/reference/ado-api/command-object-ado.
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
-

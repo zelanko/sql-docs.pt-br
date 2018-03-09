@@ -2,28 +2,33 @@
 title: Dados XML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc7a773347d9be3a7d5eec26a06ca4ef9e17b83a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c46c3a21aa5d2bed2f21b07a7085c4559bb164a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-sql-server"></a>Dados XML (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma plataforma avançada para o desenvolvimento de aplicativos avançados para gerenciamento de dados semi-estruturados. O suporte para XML é integrado em todos os componentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui o seguinte:  
   
 -   O tipo de dados **xml** . Os valores XML podem ser armazenados de modo nativo em uma coluna de tipo de dados **xml** que pode ser classificada por tipo de acordo com uma coleção de esquemas XML ou deixada sem-tipo. A coluna XML pode ser indexada.  

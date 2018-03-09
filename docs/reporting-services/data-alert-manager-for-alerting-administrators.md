@@ -1,30 +1,30 @@
 ---
-title: Gerenciador de alertas de dados para alertar os administradores | Microsoft Docs
+title: Gerenciador de Alertas de Dados para administradores de alertas | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: db92638d0dc02085e238a4702daa933dd8691107
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gerenciador de Alertas de dados para administradores de alertas
 
@@ -32,12 +32,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services fornece o Gerenciador de alertas de dados para os administradores de alerta do SharePoint gerenciar alertas de dados. Os administradores de alerta podem exibir informações sobre todos os alertas salvos no site e excluir alertas. A imagem a seguir mostra os recursos disponíveis para os gerenciadores de alerta do SharePoint no Gerenciador de Alertas de Dados.
+O SQL Server Reporting Services fornece o Gerenciador de Alertas de Dados para os administradores de alertas do SharePoint gerenciarem alertas de dados. Os administradores de alerta podem exibir informações sobre todos os alertas salvos no site e excluir alertas. A imagem a seguir mostra os recursos disponíveis para os gerenciadores de alerta do SharePoint no Gerenciador de Alertas de Dados.
 
-![Gerenciador de alertas para administradores do site do](../reporting-services/media/rs-alertmanagersite.gif "Gerenciador de alertas para administradores de site do SharePoint")
+![Gerenciador de Alertas para administradores de site do SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoint site administrators")
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
  Quando o site está habilitado para alertas de dados, duas páginas do SharePoint, MyDataAlerts.aspx e SiteDataAlerts.aspx, são criadas e adicionadas ao site do SharePoint. SiteDataAlerts.aspx é o Gerenciador de Alertas de Dados para alertar os administradores. Os administradores de alerta podem abrir o Gerenciador de Alertas de Dados na página Configurações de Site do SharePoint. Os administradores de alerta devem ter a permissão Gerenciar Alertas do SharePoint para abrir o Gerenciador de Alertas de Dados.  
   
@@ -51,9 +51,9 @@ SQL Server Reporting Services fornece o Gerenciador de alertas de dados para os 
 ##  <a name="ViewingAlerts"></a> Exibindo informações de alertas de dados  
  Quando o Reporting Services está instalado e configurado no SharePoint, a página Configurações do Site do SharePoint inclui as opções do **Reporting Services** . Os administradores de alerta clicam na opção **Gerenciar Alertas de Dados** dentro do Reporting Services para abrir o Gerenciador de Alertas de Dados. A imagem a seguir mostra de onde na página Configurações do Site você abre o Gerenciador de Alertas de Dados.  
   
- ![Seção Reporting Services da página de configurações de Site](../reporting-services/media/rs-sitesettings.gif "seção Reporting Services da página de configurações do Site")  
+ ![Seção Reporting Services da página Configurações de Site](../reporting-services/media/rs-sitesettings.gif "Seção Reporting Services da página Configurações de Site")  
   
- O Gerenciador de Alertas de dados inclui uma tabela que lista o nome do alerta, o nome do relatório, o nome do proprietário do alerta, o número da mensagem de alerta enviada, a última execução do alerta, a última vez que a definição do alerta foi modificada e o status da mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ O Gerenciador de Alertas de dados inclui uma tabela que lista o nome do alerta, o nome do relatório, o nome do proprietário do alerta, o número da mensagem de alerta enviada, a última execução do alerta, a última vez que a definição do alerta foi modificada e o status da mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  A tabela a seguir mostra dados de exemplo de uma tabela no Gerenciador de Alertas de Dados. Quando um erro ocorre, a mensagem de erro e o identificador da entrada no log (um GUID) são incluídos no campo **Status** na tabela.  
   
@@ -61,7 +61,7 @@ SQL Server Reporting Services fornece o Gerenciador de alertas de dados para os 
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|O último alerta foi executado com êxito e o alerta foi enviado.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|O último alerta foi executado com êxito, mas os dados estavam inalterados e nenhum alerta foi enviado.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<mensagem de erro > o arquivo de log contém informações detalhadas sobre o erro. Consulte a entrada de log com o identificador: \<GUID >.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>O arquivo de log contém informações detalhadas sobre o erro. Consulte a entrada de log com o identificador: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alertas criados.|  
   
  Para obter mais informações, consulte [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -80,11 +80,10 @@ SQL Server Reporting Services fornece o Gerenciador de alertas de dados para os 
 ##  <a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista um procedimento que mostra como gerenciar seus alertas.  
   
--   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

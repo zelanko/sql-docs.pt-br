@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getColumns
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getColumns
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Método getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -86,7 +82,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|A escala da coluna.|  
 |NUM_PREC_RADIX|**smallint**|A base da coluna.|  
 |NULLABLE|**smallint**|Indica se a coluna é anulável. Pode ser um dos seguintes valores:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**Cadeia de caracteres**|Os comentários associados à coluna.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null para essa coluna.  |  
+|REMARKS|**Cadeia de caracteres**|Os comentários associados à coluna.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null para essa coluna.|  
 |COLUMN_DEF|**Cadeia de caracteres**|O valor padrão da coluna.|  
 |SQL_DATA_TYPE|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Esta coluna é igual à coluna DATA_TYPE, com exceção dos tipos de dados datetime e interval do SQL-92. Esta coluna sempre retorna um valor.|  
 |SQL_DATETIME_SUB|**smallint**|Código de subtipo para os tipos de dados datetime e interval do SQL-92. Para outros tipos de dados, esta coluna retorna NULL.|  
@@ -218,4 +214,3 @@ public class c1 {
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

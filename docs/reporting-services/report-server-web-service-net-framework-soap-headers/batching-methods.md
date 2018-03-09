@@ -2,16 +2,16 @@
 title: "Métodos de envio em lote | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - methods [Reporting Services], batches
 - BatchHeader SOAP header
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - locking [Reporting Services]
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ff92d909aad4d6de65e74cd4382c49560cf473c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: ea3dc6c1bd099482234c779914336ec1c01475ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="batching-methods"></a>Métodos de processamento em lote
   O uso de cabeçalhos SOAP no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que você inclua vários métodos de serviço Web em uma única operação. Os métodos são executados dentro do escopo de uma única transação de banco de dados, na ordem que são chamados.  
@@ -107,11 +106,10 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Usando o Reporting Services cabeçalhos SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Usar cabeçalhos SOAP do Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

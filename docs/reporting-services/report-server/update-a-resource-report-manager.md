@@ -1,30 +1,30 @@
 ---
-title: "Atualizar um recurso (Gerenciador de relatórios) | Microsoft Docs"
+title: "Atualizar um recurso (Gerenciador de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: 17
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "17"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
   É possível atualizar um recurso substituindo-o por uma versão mais recente. Recursos são itens armazenados em um servidor de relatório com conteúdo de um arquivo carregado pelo usuário. Você pode substituir um recurso existente importando conteúdo de arquivo novo ou diferente no recurso existente. A atualização de um recurso fornece um modo de atualizar conteúdo e ao mesmo tempo preservar as propriedades e configurações de segurança já existentes no recurso.  
@@ -49,11 +49,10 @@ ms.lasthandoff: 08/09/2017
   
  Se o recurso que você está atualizando possuir uma imagem usada em um relatório, será necessário atualizar o relatório para visualizar a imagem atualizada.  
   
-## <a name="see-also"></a>Consulte também  
- [Página conteúdo &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Carregar arquivo de página &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+## <a name="see-also"></a>Consulte Também  
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Ajuda de F1 do Gerenciador de relatórios](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Ajuda F1 do Gerenciador de Relatórios](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   
-

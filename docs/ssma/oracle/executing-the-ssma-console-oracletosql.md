@@ -1,32 +1,32 @@
 ---
 title: Executar o Console do SSMA (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Executar o Console do SSMA (OracleToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. O aplicativo de console usa alguns comandos do arquivo de script padrão como enumerada nesta seção.  
@@ -167,7 +167,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <force-load>  
@@ -280,7 +280,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -354,7 +354,7 @@ Converter esquema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -422,7 +422,7 @@ Migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -511,7 +511,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +520,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -576,7 +576,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +585,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -635,7 +635,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -711,7 +711,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +734,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -761,4 +761,3 @@ A próxima etapa depende de seus requisitos de projeto:
   
 -   Para solucionar problemas no console, consulte [solução de problemas &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   
-

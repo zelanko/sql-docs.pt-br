@@ -2,35 +2,33 @@
 title: Criar ou personalizar uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint)
-  Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
   
 -   Criar ou editar um *documento do serviço de dados*usado para especificar uma conexão HTTP com um feed específico.  
   
@@ -49,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  [Adicionar o tipo de conteúdo do feed de dados a uma biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Pré-requisitos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Você deve ser um proprietário do site criar a biblioteca.  
   

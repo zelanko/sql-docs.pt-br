@@ -2,27 +2,30 @@
 title: "Configurar Topologia (replicação ponto a ponto) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar Topologia (replicação ponto a ponto)
-  Use a página **Configurar Topologia** para executar tarefas de configuração comuns, como adicionar novos nós, excluir nós e adicionar novas conexões entre nós existentes. O nó selecionado na página **Publicação** desse assistente é exibido na superfície de design. Para especificar opções de configuração, clique com o botão direito do mouse em um nó, em uma conexão ou na superfície de design.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Configurar topologia** para executar tarefas de configuração comuns, como adicionar novos nós, excluir nós e adicionar novas conexões entre nós existentes. O nó selecionado na página **Publicação** desse assistente é exibido na superfície de design. Para especificar opções de configuração, clique com o botão direito do mouse em um nó, em uma conexão ou na superfície de design.  
   
 > [!NOTE]  
 >  O Assistente para Configurar Topologia Ponto a Ponto solicita as informações da topologia quando o assistente é fechado. Se o assistente for fechado e reaberto antes de todos os nós responderem à solicitação de informações, o assistente poderá mostrar uma rede parcial.  
@@ -30,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="options"></a>Opções  
  A página **Configurar topologia** contém elementos de interface e opções disponíveis ao clicar com o botão direito do mouse em um elemento. A tabela a seguir descreve cada elemento de interface.  
   
-|Elemento de interface|Descrição|  
+|Elemento de interface|Description|  
 |-----------------------|-----------------|  
 |Superfície de design|Exibe outros elementos de interface. Para adicionar elementos, clique com o botão direito do mouse na superfície de design.|  
 |![O primeiro nó em uma topologia](../../relational-databases/replication/media/p2pwizard-firstnode.gif "O primeiro nó em uma topologia")|O nó original na topologia. Novos nós são iniciados usando uma cópia do banco de dados de publicação do nó original.|  
@@ -82,9 +85,9 @@ ms.lasthandoff: 11/09/2017
  **Remover Conexão de Computador Par**  
  Remova uma conexão entre dois nós. Por exemplo, se você remover uma conexão entre o Nó A e o Nó B, a replicação descartará duas assinaturas: a que habilita o Nó A a receber alterações de publicação no Nó B e a que habilita o Nó B a receber alterações de publicação no Nó A.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Replicação transacional ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -2,12 +2,13 @@
 title: "Monitorando o desempenho do servidor de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e9aed18a938de82189349d9e3eaa4dcb8e720b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e5df10c4473b9a311f4efbc7d30d91e96aa5e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
   Use as ferramentas de monitoramento de desempenho para monitorar o desempenho do servidor de relatório e avaliar a atividade do servidor, observar as tendências, diagnosticar afunilamentos do sistema e reunir dados que podem ajudar a determinar se a configuração atual do sistema é suficiente. Para ajustar o desempenho do servidor, você pode especificar com que frequência o domínio de aplicativo de servidor de relatório deve ser reciclado. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -91,16 +91,15 @@ ms.lasthandoff: 08/09/2017
  [Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2011 e objetos de desempenho do modo do SharePoint do serviço Windows MSRS 2011 &#40;modo do SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Descreve os contadores de desempenho usados pelo serviço do Windows Servidor de Relatório.  
   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Contadores de desempenho para os objetos de desempenho ReportServer:Service e ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Descreve os contadores de desempenho relacionados a memória e ao HTTP no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Eventos de um servidor de relatório no modo integrado do SharePoint  
  Descreve os eventos de diagnóstico úteis a serem registrados quando você executar um ambiente de relatórios com um produto do SharePoint.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   
   
-

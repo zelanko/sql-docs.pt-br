@@ -1,33 +1,32 @@
 ---
-title: "Definindo o Namespace Item para o método GetProperties | Microsoft Docs"
+title: "Definindo o namespace de item para o método GetProperties | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-caps.latest.revision: 38
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "38"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d6def236103e56da7022c2603f6f41ba972f1758
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Definindo o namespace Item para o método GetProperties
   Você pode usar o cabeçalho SOAP <xref:ReportService2010.ItemNamespaceHeader> no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propriedades de item baseadas em dois identificadores de item diferentes: o caminho completo do item ou a ID do item.  
@@ -127,9 +126,8 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Usando o Reporting Services cabeçalhos SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Usar cabeçalhos SOAP do Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Adicionar, alterar ou excluir um mapa ou camada do mapa (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,17 +29,16 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0bb98e926d7c06a216ef5230af9fd9a113d451dc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="ChangeLayer"></a> Para alterar opções para uma camada usando o assistente de camada do mapa  
   
--   Execute o assistente de camada do mapa. Este assistente permite alterar opções para uma camada que você criou usando o assistente de camada do mapa. No painel de mapa, clique a camada e, na barra de ferramentas, clique no botão de Assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Execute o assistente de camada do mapa. Este assistente permite alterar opções para uma camada que você criou usando o assistente de camada do mapa. No painel Mapa, clique com o botão direito do mouse na camada e, na barra de ferramentas, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Para obter mais informações, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/09/2017
 2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **Ponto**, **Linha**ou **Polígono**.  
   
     > [!NOTE]  
-    >  Embora seja possível adicionar uma camada do mapa e configurá-la manualmente, é recomendável usar o assistente de camada do mapa para adicionar novas camadas. Para iniciar o Assistente da barra de ferramentas do painel mapa, clique no botão de Assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Embora seja possível adicionar uma camada do mapa e configurá-la manualmente, é recomendável usar o assistente de camada do mapa para adicionar novas camadas. Para iniciar o assistente por meio da barra de ferramentas do painel Mapa, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Clique com o botão direito do mouse na camada e clique em **Dados da Camada**.  
   
@@ -256,9 +256,8 @@ ms.lasthandoff: 08/09/2017
   
      Você também pode ocultar condicionalmente a camada. Para obter mais informações, consulte [Ocultar um item &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear Relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

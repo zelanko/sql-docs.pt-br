@@ -1,26 +1,29 @@
 ---
 title: Propriedade SortColumn (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SortColumn property [RDS]
+helpviewer_keywords:
+- SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d8e8f610bfb6419637a6fb4aba68723af966a518
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortcolumn-property-rds"></a>Propriedade SortColumn (RDS)
 Indica qual coluna para classificar os registros.  
@@ -42,7 +45,7 @@ DataControl.SortColumn = String
  *Cadeia de caracteres*  
  Um **cadeia de caracteres** valor que representa o nome ou alias da coluna pela qual classificar os registros.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propriedades fornecem a classificação e filtragem de funcionalidade no cache do lado do cliente. A funcionalidade de classificação ordena os registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o completo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é mantido no cache. O [redefinir](../../../ado/reference/rds-api/reset-method-rds.md) método executará os critérios e substitua atual **registros** com um atualizável **registros**.  
   
  Para classificar uma **registros**, primeiro você deve salvar todas as alterações pendentes. Se você estiver usando o **RDS. DataControl**, você pode usar o [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método. Por exemplo, se seu **RDS. DataControl** é denominado ADC1, seu código seria `ADC1.SubmitChanges`. Se você estiver usando o ADO **registros**, você pode usar seu [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Usando **UpdateBatch** é o método recomendado para **registros** objetos criados com o [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) método. Por exemplo, seu código pode ser `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch`.  

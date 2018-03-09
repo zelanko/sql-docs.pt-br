@@ -2,9 +2,12 @@
 title: FileTables (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0702c1621fb3f37ef61e5fcd2df66fa9a7019cf7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
-  O recurso FileTable oferece suporte para namespace de arquivo do Windows e compatibilidade de aplicativos do Windows com dados de arquivo armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O FileTable permite que um aplicativo integre seus componentes de armazenamento e gerenciamento de dados e forneça serviços integrados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive pesquisa de texto completo e pesquisa semântica, em dados não estruturados e metadados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O recurso FileTable oferece suporte para namespace de arquivo do Windows e compatibilidade de aplicativos do Windows com dados de arquivo armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O FileTable permite que um aplicativo integre seus componentes de armazenamento e gerenciamento de dados e forneça serviços integrados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive pesquisa de texto completo e pesquisa semântica, em dados não estruturados e metadados.  
   
  Em outras palavras, você pode armazenar arquivos e documentos em tabelas especiais no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , denominadas FileTables, mas acessá-los a partir de aplicativos do Windows como se eles estivessem armazenados no sistema de arquivos, sem fazer alterações nos seus aplicativos cliente.  
   
@@ -63,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Cada linha contém os seguintes itens: Para obter mais informações sobre o esquema de uma FileTable, veja [Esquema de FileTable](../../relational-databases/blob/filetable-schema.md).  
   
-    -   Uma coluna**file_stream** para dados de fluxo e um identificador (GUID) **stream_id** . (A coluna **file_stream** é NULL para um diretório.)  
+    -   Uma coluna **file_stream** para dados de fluxo e um identificador (GUID) **stream_id**. (A coluna **file_stream** é NULL para um diretório.)  
   
-    -   As colunas **path_locator** e **parent_path_locator** para representar e manter a hierarquia de arquivos e diretórios.  
+    -   As colunas **path_locator** e **parent_path_locator** para representar e manter a hierarquia de diretórios do item atual (arquivo ou diretório).  
   
     -   10 atributos de arquivo, como a data de criação e a data de modificação que são úteis com APIs de E/S de arquivo.  
   
@@ -106,7 +109,7 @@ ms.lasthandoff: 06/22/2017
  FileTables não dão suporte a arquivos mapeados por memória. Bloco de Notas e Paint são dois exemplos comuns de aplicativos que usam arquivos mapeados por memória. Você não pode usar estes aplicativos no mesmo computador que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para abrir arquivos que estão armazenados em um FileTable. Porém, você pode usar estes aplicativos de um computador remoto para abrir arquivos que estão armazenados em um FileTable, porque, nestes circunstâncias, o recurso do mapeamento de memória não é usado.  
    
 ##  <a name="reltasks"></a> Tarefas relacionadas  
- [Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
+ [Habilitar os pré-requisitos para o FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
  Descreve como habilitar os pré-requisitos para criar e usar FileTables.  
   
  [Criar, alterar e remover FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
@@ -138,4 +141,3 @@ ms.lasthandoff: 06/22/2017
  Lista as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram adicionados ou alterados para oferecer suporte ao recurso FileTable.  
   
   
-

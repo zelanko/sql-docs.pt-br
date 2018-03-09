@@ -2,15 +2,13 @@
 title: "Algoritmo de regressão Linear da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5eb4b7d76bcb9359bf4a0b4462d48a8f2a75dd0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
-  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajuda a calcular uma relação linear entre uma variável dependente e uma independente e, depois, a usar aquela relação para previsão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajuda a calcular uma relação linear entre uma variável dependente e uma independente e, depois, a usar aquela relação para previsão.  
   
  A relação assume a forma de uma equação para uma linha que melhor represente uma série de dados. Por exemplo, a linha no diagrama a seguir é a melhor representação linear possível dos dados.  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  Além de criar um modelo de regressão linear selecionando o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , se o atributo previsível for um tipo de dados numérico contínuo, você poderá criar um modelo de árvore de decisão que contenha regressões. Neste caso, o algoritmo irá dividir quando encontrar os pontos de separação apropriados, mas criará uma fórmula de regressão para algumas regiões de dados. Para obter mais informações sobre árvores de regressão em um modelo de árvores de decisão, consulte [Conteúdo do modelo de mineração para modelos da árvore de decisão &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
@@ -89,7 +87,6 @@ ms.lasthandoff: 09/01/2017
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de regressão Linear de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de regressão Linear &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

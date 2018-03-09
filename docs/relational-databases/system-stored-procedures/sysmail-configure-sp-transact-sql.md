@@ -8,34 +8,33 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
 - sysmail_configure_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 170f4db02cf055748403a672f67f4f1ab067072f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera definições de configuração do Database Mail. As configurações especificadas com **sysmail_configure_sp** se aplicam a todo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,10 +48,10 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@parameter_name**  =] **'***parameter_name***'**  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  O nome do parâmetro a ser alterado.  
   
- [ **@parameter_value**  =] **'***parameter_value***'**  
+ [**@parameter_value** = ] **'***parameter_value***'**  
  O novo valor do parâmetro.  
   
  [ **@description**  =] **'***descrição***'**  
@@ -64,7 +63,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O Database Mail usa os seguintes parâmetros:  
   
 ||||  
@@ -104,7 +103,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

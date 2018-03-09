@@ -3,8 +3,11 @@ title: "Ordenados e não ordenados expressões (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - expressions [XQuery], ordered
 - expressions [XQuery], unordered
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 817177c377690395082429c04ca6148863f5cddb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 688d34bd82399c7a0a284fccdd0e355c30a95d3e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expressões ordenadas e não ordenadas (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Por padrão, o modo de ordenação para todas as operações em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é **ordenados**. Portanto, as sequências de nó retornado por expressões de caminho e pelas expressões FLWOR, sem o **Ordenar por** cláusula, estão na ordem do documento.  
   
@@ -44,4 +46,3 @@ ms.lasthandoff: 09/01/2017
  [Expressões de caminho &#40; XQuery &#41;](../xquery/path-expressions-xquery.md)  
   
   
-

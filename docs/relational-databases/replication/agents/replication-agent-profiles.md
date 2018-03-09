@@ -2,9 +2,12 @@
 title: "Perfis do agente de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba2b5e4cb56cc8134a3febebb5c84ff8935a235d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97d62a00f1d59bd71eb27e55fac11890821940ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
-  Um conjunto de perfis de agente é instalado no distribuidor quando a replicação é configurada. Um perfil de agente contém um conjunto de parâmetros que são usados sempre que um agente é executado: cada agente faz logon no distribuidor durante seu processo de inicialização e consulta os parâmetros em seu perfil. Para assinaturas de mesclagem que usam sincronização da Web, os perfis são baixados e armazenados no assinante. Se o perfil for alterado, o perfil no assinante será atualizado na próxima vez que o Agente de Mesclagem for executado. Para obter mais informações sobre a sincronização da Web, consulte [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um conjunto de perfis de agente é instalado no distribuidor quando a replicação é configurada. Um perfil de agente contém um conjunto de parâmetros que são usados sempre que um agente é executado: cada agente faz logon no distribuidor durante seu processo de inicialização e consulta os parâmetros em seu perfil. Para assinaturas de mesclagem que usam sincronização da Web, os perfis são baixados e armazenados no assinante. Se o perfil for alterado, o perfil no assinante será atualizado na próxima vez que o Agente de Mesclagem for executado. Para obter mais informações sobre a sincronização da Web, consulte [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  A replicação fornece um perfil padrão para cada agente e perfis adicionais predefinidos para o Log Reader Agent, o Distribution Agent e o Merge Agent. Além dos perfis fornecidos, você pode criar perfis adaptados às exigências de seu aplicativo. Um perfil de agente permite alterar, facilmente, parâmetros fundamentais para todos os agentes associados àquele perfil. Por exemplo, se você tem 20 Agente de Instantâneos e precisa alterar o valor do tempo limite de consulta (parâmetro **-QueryTimeout** ), você pode atualizar o perfil utilizado pelos Agentes de Instantâneo e todos os agentes desse tipo usarão o novo valor automaticamente na próxima vez que forem executados.  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 11/09/2017
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  

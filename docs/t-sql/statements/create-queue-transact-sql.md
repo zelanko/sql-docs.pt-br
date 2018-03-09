@@ -1,5 +1,5 @@
 ---
-title: Criar fila (Transact-SQL) | Microsoft Docs
+title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 59e7140970b80d2be64c15aefebca90bf45977e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ CREATE QUEUE <object>
  *schema_name* (object)  
  É o nome do esquema ao qual a nova fila pertence. O esquema considera como padrão o esquema padrão para o usuário que executa a instrução. Se a instrução CREATE QUEUE for executada por um membro da função de servidor fixa sysadmin ou um membro do db_dbowner ou db_ddladmin banco de dados fixa no banco de dados especificado por *database_name*, *schema_name* pode especificar um esquema diferente daquele que está associado ao logon da conexão atual. Caso contrário, *schema_name* deve ser o esquema padrão do usuário que executa a instrução.  
   
- *nome_da_fila*  
+ *queue_name*  
  É o nome da fila a ser criada. Esse nome deve satisfazer as diretrizes para identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  STATUS (Fila)  
@@ -105,13 +104,13 @@ CREATE QUEUE <object>
  STATUS (Ativação)  
  Especifica se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia o procedimento armazenado. Quando o STATUS = ON, a fila começa o procedimento armazenado especificado com PROCEDURE_NAME quando o número de procedimentos atualmente sendo executados for menos que MAX_QUEUE_READERS e quando as mensagens chegarem à fila mais rápido do que os procedimentos armazenados recebam as mensagens. Quando o STATUS = OFF, a fila não inicia o procedimento armazenado. Se essa cláusula não for especificada, o padrão será ON.  
   
- PROCEDURE_NAME = \<procedimento >  
+ PROCEDURE_NAME = \<procedure>  
  Especifica o nome do procedimento armazenado para começar a processar as mensagens nessa fila. Esse valor deve ser um identificador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *Database_Name*(procedimento)  
+ *database_name*(procedure)  
  É o nome do banco de dados que contém o procedimento armazenado.  
   
- *schema_name*(procedimento)  
+ *schema_name*(procedure)  
  É o nome do esquema que contém o procedimento armazenado.  
   
  *procedure_name*  
@@ -140,7 +139,7 @@ CREATE QUEUE <object>
  ON *arquivos |* [**Padrão**]  
  Especifica o grupo de arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual criar esta fila. Você pode usar o *arquivos* parâmetro para identificar um grupo de arquivos, ou use o identificador padrão para usar o grupo de arquivos padrão para o banco de dados do service broker. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. Quando nenhum grupo de arquivos for especificado, a fila usará o grupo de arquivos padrão para o banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma fila pode ser o destino de uma instrução SELECT. Entretanto, os conteúdos de uma fila só podem ser modificados usando instruções que operam em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)], tais como SEND, RECEIVE e END CONVERSATION. Uma fila não pode ser o destino de uma instrução INSERT, UPDATE, DELETE ou TRUNCATE.  
   
  Uma fila pode não ser um objeto temporário. Portanto, a fila de nomes que começam com  **#**  não são válidos.  
@@ -166,12 +165,12 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|Tratamento para a conversa da qual essa mensagem faz parte.|  
 |message_sequence_number|**bigint**|Número de sequência da mensagem na conversa.|  
 |service_name|**nvarchar(512)**|O nome do serviço a que se destina a conversa.|  
-|service_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço para o qual a conversa é destinada.|  
+|service_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço para o qual a conversa é destinada.|  
 |service_contract_name|**nvarchar(256)**|O nome do contrato que a conversa segue.|  
-|service_contract_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
+|service_contract_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
 |message_type_name|**nvarchar(256)**|O nome do tipo de mensagem a que descreve a mensagem.|  
-|message_type_id|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
-|validation|**nchar(2)**|Validação usada para a mensagem.<br /><br /> E = Vazio<br /><br /> N = Nenhum<br /><br /> X = XML|  
+|message_type_id|**Int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
+|validation|**nchar(2)**|Validação usada para a mensagem.<br /><br /> E = Vazio<br /><br /> N = Nenhum<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Conteúdo da mensagem.|  
 |message_id|**uniqueidentifier**|Identificador exclusivo para a mensagem.|  
   
@@ -233,11 +232,10 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [REMOVER fila &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [RECEBER &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

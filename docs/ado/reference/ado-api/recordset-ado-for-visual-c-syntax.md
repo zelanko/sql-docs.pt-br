@@ -3,8 +3,9 @@ title: O conjunto de registros (ADO para obter a sintaxe do Visual C++) | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: Recordset collection [ADO], ADO for Visual C++ syntax
+dev_langs:
+- C++
+helpviewer_keywords:
+- Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 346b682247a495e7f873bc2833309de1f7888b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a718411e6cf6b7e35712ef6b450d8057c381bac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>O conjunto de registros (ADO para obter a sintaxe do Visual C++)
 ## <a name="methods"></a>Métodos  

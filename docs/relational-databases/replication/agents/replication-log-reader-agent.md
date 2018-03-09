@@ -2,10 +2,14 @@
 title: "Agente de Leitor de Log de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d78b8bd802b407d6bc4dc75a63ed06a9e00c7ab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
-  O Replication Agente de Leitor de Log é um executável que monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O Replication Agente de Leitor de Log é um executável que monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição.  
   
 > [!NOTE]  
 >  Os parâmetros podem ser especificados em qualquer ordem. Quando não são especificados parâmetros opcionais, são usados valores predefinidos com base no perfil de agente padrão.  
@@ -72,7 +77,7 @@ logread [-?]
  Exibe informações de uso.  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** *publisher_database*  
  É o nome do banco de dados Publicador.  
@@ -84,7 +89,7 @@ logread [-?]
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar os valores de argumentos que contêm caracteres arbitrários.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-DistributorLogin** *distributor_login*  
  É o nome de logon do Distribuidor.  
@@ -98,7 +103,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Agente de Leitor de Log ao fazer conexões.  
   
-|Valor EncryptionLevel|Descrição|  
+|Valor EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -112,7 +117,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de log. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Descrição|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -144,7 +149,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Especifica se a saída deve ser detalhada.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Somente mensagens de erro são impressas.|  
 |**1**|Todas as mensagens de relatório de progresso do agente são impressas.|  
@@ -157,14 +162,14 @@ logread [-?]
  **-PacketSize** *packet_size*  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** *intervalo_de_sondagem*  
  É a frequência, em segundos, que o log é consultado para transações replicadas. O padrão é 5 segundos.  
   
  **-ProfileName** *profile_name*  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
@@ -175,7 +180,7 @@ logread [-?]
  **-PublisherPassword** *publisher_password*  
  É a senha do Publicador.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** *tempo_limite_da_consulta_em_segundos*  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
  **-ReadBatchSize** *number_of_transactions*  
@@ -187,7 +192,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  Especifica que o Agente de Leitor de Log continuará a executar, quando encontrar erros em dados de colunas publicados de um Publicador não SQL Server. Por padrão, tais erros fazem o Agente de Leitor de Log falhar. Quando você usa **-RecoverFromDataErrors**, dados de coluna são replicados erroneamente como NULL ou como um valor não nulo apropriado e as mensagens de aviso são registradas na tabela [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) . Esse parâmetro só tem suporte para Editores Oracle.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se você instalou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para executar com uma conta Sistema Local em vez de uma conta de usuário de domínio (o padrão), o serviço só poderá acessar o computador local. Se o Agente de Leitor de Log executado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent for configurado para usar o Modo de Autenticação do Windows ao fazer logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Agente de Leitor de Log falhará. A configuração padrão é Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter informações em como alterar contas de segurança, consulte [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -200,7 +205,7 @@ logread [-?]
 |---------------------|  
 |Adicionado o parâmetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

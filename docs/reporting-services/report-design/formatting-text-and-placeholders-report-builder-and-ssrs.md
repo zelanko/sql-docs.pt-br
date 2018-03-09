@@ -1,13 +1,14 @@
 ---
-title: "Formatando texto e espaços reservados (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatando texto e espaços reservados (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +19,16 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatando texto e espaços reservados (Construtor de Relatórios e SSRS)
   Uma caixa de texto pode ser um item de relatório ou uma célula individual dentro de uma região de dados que contém texto, um campo calculado, um ponteiro para um campo em um banco de dados ou uma combinação dos três itens. Você pode misturar fontes e cores, adicionar estilos em negrito e itálico e usar estilos de parágrafo, como alinhamento e recuos deslocados. Você pode formatar uma caixa de texto inteira ou formatar texto, números, expressões ou campos específicos dentro da caixa de texto.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Digite qualquer expressão simples ou complexa na caixa de texto. Por exemplo, se você digitar **Name: [Name]** na caixa de texto, o texto **[Name]** será exibido como um espaço reservado que representa a expressão `=Fields!Name.Value`.  
   
--   Digite uma expressão em uma caixa de texto vazia iniciando com um sinal de igualdade (=). Quando alterar o foco para fora a caixa de texto, a expressão resultante será convertida em um espaço reservado que pode ser editado. Se a caixa de texto não estiver vazia, ou o sinal de igualdade for inserido em um lugar diferente do primeiro caractere na caixa de texto, o sinal de igualdade será tratado como um literal de cadeia de caracteres e não será criado um espaço reservado. Para obter mais informações sobre como definir expressões simples e complexas, consulte [expressão usa relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   Digite uma expressão em uma caixa de texto vazia iniciando com um sinal de igualdade (=). Quando alterar o foco para fora a caixa de texto, a expressão resultante será convertida em um espaço reservado que pode ser editado. Se a caixa de texto não estiver vazia, ou o sinal de igualdade for inserido em um lugar diferente do primeiro caractere na caixa de texto, o sinal de igualdade será tratado como um literal de cadeia de caracteres e não será criado um espaço reservado. Para obter mais informações sobre como definir expressões simples e complexas, consulte [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Formatando espaços reservados e texto estático em uma caixa de texto  
  É possível formatar espaços reservados usando a caixa de diálogo **Propriedades do Espaço Reservado** . Você pode formatar somente o espaço reservado inteiro, e não seções dele. Para ver a expressão subjacente, pause o ponteiro sobre o espaço reservado. Você pode alterar a expressão subjacente clicando duas vezes no espaço reservado ou clicando com o botão direito do mouse no espaço reservado e selecionando **Propriedades do Espaço Reservado**. Também é possível especificar um rótulo da interface do usuário que usa a propriedade **Rótulo** em **Geral** da caixa de diálogo **Propriedades do Espaço Reservado** . Esse será o texto mostrado em tempo de design para o espaço reservado.  
@@ -71,19 +71,18 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  As ações definidas na caixa de texto têm uma prioridade mais alta que ações definidas para texto individual em uma caixa de texto.  
   
- Para obter mais informações sobre formatação mista, consulte [formatar texto em uma caixa de texto &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre formatação mista, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>Alinhando texto horizontal usando geral  
  Em **Alinhamento** na caixa de diálogo **Propriedades da Caixa de Texto** , você pode especificar como o texto deve ser alinhado horizontalmente. Se você não especificar um valor para o alinhamento, o valor padrão do alinhamento será **Padrão**. Isso significa que o texto será alinhado com base no tipo de campo do valor de espaço reservado. Se você especificar uma expressão avaliada com um valor diferente de cadeia de caracteres, ou seja, um número, o texto será alinhado à direita. Se a expressão for avaliada com um valor da cadeia de caracteres, como um número, o texto será alinhado à esquerda.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Formatando rótulos dos eixos de um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formatando escalas em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Caixa de diálogo de propriedades do espaço reservado, geral &#40; Construtor de relatórios e SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Exportando para o Microsoft Excel &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Caixas de texto &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Caixa de diálogo Propriedades do Espaço Reservado, Geral &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
-

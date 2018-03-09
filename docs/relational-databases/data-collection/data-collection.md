@@ -2,28 +2,35 @@
 title: Coleta de dados | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Coleta de dados
-helpviewer_keywords: data collection [SQL Server]
+keywords:
+- Coleta de Dados
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="data-collection"></a>Coleta de dados
-  O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
+# <a name="data-collection"></a>Coleta de Dados
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
   
 ## <a name="what-is-data-collector"></a>O que é o Coletor de Dados? 
  O coletor de dados é um componente importante da plataforma de coleta de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e para as ferramentas fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O coletor de dados fornece um ponto central para coleta de dados em seus servidores de banco de dados e aplicativos. Esse ponto de coleta pode obter dados de várias fontes e não se limita apenas aos dados de desempenho, ao contrário do Rastreamento do SQL.  
@@ -39,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="concepts"></a>Conceitos  
  O coletor de dados é integrado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e os utiliza extensivamente. Antes de trabalhar com o coletor de dados, você precisa entender determinados conceitos relacionados a cada um desses componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agente é usado para programar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é usado para programar e executar trabalhos de coleção. Você precisa entender os seguintes conceitos:  
   
 -   Trabalho  
   
@@ -53,11 +60,11 @@ ms.lasthandoff: 11/09/2017
   
  Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
- O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote  
   
--   Configuração do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] configuração do pacote  
   
  Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).  
   
@@ -112,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="things-you-can-do"></a>O que você pode fazer  
   
-|Descrição|Tópico|  
+|Description|Tópico|  
 |----------------------|-----------|  
 |Gerencie diferentes aspectos da coleta de dados; por exemplo, habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.|[Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Use esses relatórios para obter informações para monitorar a capacidade de sistema e solucionar problemas de desempenho do sistema.|[Relatórios do conjunto de coleta de dados do sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

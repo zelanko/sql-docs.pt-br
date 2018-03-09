@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 76ab7f38d33ca8940eb9f0c82a7e1279f552364d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gerenciar o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,12 +105,12 @@ ms.lasthandoff: 11/17/2017
   
  Assim como ocorre em outras tabelas internas, você pode determinar o espaço usado para as tabelas de controle de alterações usando o procedimento armazenado [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Os nomes das tabelas internas podem ser obtidos usando a exibição de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   

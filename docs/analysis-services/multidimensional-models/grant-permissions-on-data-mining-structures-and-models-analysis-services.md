@@ -2,20 +2,16 @@
 title: "Conceder permissões em estruturas de mineração de dados e modelos (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.miningmodels.f1
+f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
 - data mining [Analysis Services], security
 - permissions [Analysis Services], mining models
@@ -25,20 +21,19 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining structures
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d94d769d1eb7434a918950e2c56c87f7241d77d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Conceder permissões em estruturas e modelos de mineração de dados (Analysis Services)
-  Por padrão, apenas um administrador do servidor do Analysis Services tem permissões para exibir estruturas ou modelos de mineração no banco de dados. Siga as instruções abaixo para conceder permissões a usuários não administradores.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Por padrão, somente um administrador de servidor do Analysis Services tem permissões para exibir estruturas de mineração de dados ou modelos de mineração no banco de dados. Siga as instruções abaixo para conceder permissões a usuários não administradores.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>Definir permissões para acessar uma estrutura de mineração  
   
@@ -76,11 +71,10 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Por padrão, o envio de consultas de DMX usando OPENROWSET está desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder acesso personalizado a dimensão de dados &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

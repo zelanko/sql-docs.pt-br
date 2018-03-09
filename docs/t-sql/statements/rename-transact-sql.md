@@ -1,7 +1,7 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 09/01/2017
   Renomeia uma tabela criada pelo usuário em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomeia uma tabela criada pelo usuário ou o banco de dados em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Para renomear um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] use o procedimento armazenado [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  Para renomear um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +57,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Argumentos  
  RENOMEAR O OBJETO [:]   
-          [[*database_name* . [ *schema_name* ]. ] | [ *schema_name* . ]]*table_name* para *new_table_name*  
+          [[*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ]]*table_name* para *new_table_name*  
  **APLICA-SE A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Altere o nome de uma tabela definida pelo usuário. Especifique a tabela a ser renomeado com um uma, duas ou nome de três partes.    Especifique a nova tabela *new_table_name* como um nome de parte única.  
@@ -81,7 +80,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   pdwtempdb2  
   
--   : DWConfiguration  
+-   DWConfiguration  
   
 -   DWDiagnostics  
   
@@ -112,7 +111,7 @@ Você não pode renomear uma tabela externa, índices ou exibições. Em vez de 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-rename-a-database"></a>A. Renomear um banco de dados  
- **Aplica-se a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente    
+ **Aplica-se a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente  
   
  Este exemplo renomeia o banco de dados definido pelo usuário AdWorks para AdWorks2.  
   
@@ -164,4 +163,3 @@ KILL 'SID1234';
 ```  
   
   
-

@@ -2,33 +2,30 @@
 title: PowerPivot para SharePoint (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 108c36ae7730a9622f5b8797b3dbb20cf0e96df3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot para SharePoint (SSAS)
-  Um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fornece a hospedagem de servidor dos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são um modelo de dados analíticos que você cria usando um dos seguintes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fornece a hospedagem de servidor dos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são um modelo de dados analíticos que você cria usando um dos seguintes:  
   
 -   O suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do Excel 2010  
   
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Recuperação de desastres para PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
-

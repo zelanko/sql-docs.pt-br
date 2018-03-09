@@ -1,28 +1,28 @@
 ---
-title: "Lição 7: Adicionar ação de detalhamento no relatório pai | Microsoft Docs"
+title: "Lição 7: Adicionar uma ação de detalhamento ao relatório pai | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f894423bef4c87e53256e496ebd6f452591c4d5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lição 7: Adicionar ação de detalhamento ao relatório pai
 Depois que você adicionar um controle ReportViewer para o aplicativo de site, a próxima etapa será adicionar uma ação de detalhamento no relatório pai.  
@@ -53,5 +53,4 @@ Você adicionou uma ação de detalhamento no relatório pai. Em seguida, você 
   
   
   
-
 

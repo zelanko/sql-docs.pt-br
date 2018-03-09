@@ -3,7 +3,7 @@ title: Propriedades ADOX | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,26 +16,25 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28a29504793d2b4144fa6c01f2f80e486d0f2b90
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica o ADO **Conexão** do objeto ao qual pertence o catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Descreve as características da coluna.|  
-|[Em cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
+|[Clusterizado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice é clusterizado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica o ADO **comando** objeto que pode ser usado para criar ou executar o procedimento.|  
-|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica a data em que o objeto foi criado.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica a data em que o objeto foi modificado pela última vez.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica o tamanho máximo indicado da coluna.|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica se o índice representa a chave primária na tabela.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indica o nome da coluna relacionada na tabela relacionada (somente colunas de chave).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Indica o nome da tabela relacionada.|  
-|[Ordem de classificação](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica a sequência de classificação da coluna (somente colunas de índice).|  
+|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica a sequência de classificação da coluna (somente colunas de índice).|  
 |[Tipo (coluna)](../../../ado/reference/adox-api/type-property-column-adox.md)|Indica o tipo de dados de uma coluna.|  
 |[Tipo (chave)](../../../ado/reference/adox-api/type-property-key-adox.md)|Indica o tipo de dados da chave.|  
 |[Tipo (tabela)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica o tipo de uma tabela.|  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

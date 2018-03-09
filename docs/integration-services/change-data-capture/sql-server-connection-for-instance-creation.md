@@ -1,25 +1,28 @@
 ---
-title: "Conexão do SQL Server para a instância criação | Microsoft Docs"
+title: "Conexão do SQL Server para a criação de instância | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65f20b235b6a3c4bd22ce754467f36a9b03fdaab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2fe20acb562272e719f455a5922cfe2e94e2ba1f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Conexão de SQL Server para a criação de instância
   Uma das primeiras etapas ao criar uma Instância Oracle CDC é a criação de um banco de dados CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados CDC está habilitado para SQL Server CDC e esta habilitação exige um logon que é um membro da função de servidor fixa `sysadmin` .  
@@ -54,8 +57,8 @@ ms.lasthandoff: 08/03/2017
   
      Para obter informações sobre a caixa de diálogo Propriedades Avançadas de Conexão, consulte [Propriedades Avançadas de Conexão](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar o banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [Permissões necessárias para Conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Permissões necessárias para conexão do SQL Server para o CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

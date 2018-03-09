@@ -1,5 +1,5 @@
 ---
-title: "Instalação dos dados de tarefa criação de perfil | Microsoft Docs"
+title: "Configuração da Tarefa Criação de Perfil de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/03/2017
 |----------------|-------------------------|----------------------|  
 |Todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.|**Valores de cadeias de caracteres que não são válidos**— Por exemplo, você cria o perfil de uma coluna que deve usar dois caracteres para códigos de estados nos Estados Unidos, mas descobre valores maiores que dois caracteres.|**Distribuição de Comprimento da Coluna —**Válida para uma coluna com um dos seguintes tipos de dados de caractere:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores da cadeia de caracteres que não são válidos ou que não estão no formato correto —**Por exemplo, um perfil padrão de uma coluna CEP/Código Postal pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil Padrão da Coluna —**Válido para uma coluna com um dos seguintes tipos de dados de caractere:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|A porcentagem de valores nulos na coluna selecionada.|**Razão alta de valores nulos inesperada em uma coluna—**Por exemplo, você cria o perfil de uma coluna que deve conter CEPs dos Estados Unidos, mas descobre uma alta porcentagem inesperada de CEPs ausentes.|**Razão Nula da Coluna —**Válida para uma coluna com um dos seguintes tipos de dados:<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> tipos definidos pelo usuário<br /><br /> tipos variantes|  
+|A porcentagem de valores nulos na coluna selecionada.|**Razão alta de valores nulos inesperada em uma coluna—**Por exemplo, você cria o perfil de uma coluna que deve conter CEPs dos Estados Unidos, mas descobre uma alta porcentagem inesperada de CEPs ausentes.|**Razão Nula da Coluna —**Válida para uma coluna com um dos seguintes tipos de dados:<br /><br /> **imagem**<br /><br /> **text**<br /><br /> **xml**<br /><br /> tipos definidos pelo usuário<br /><br /> tipos variantes|  
 |Estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas **datetime** .|**Valores numéricos e datas que não são válidos**— Por exemplo, você cria o perfil de uma coluna de datas históricas e descobre uma data de máximo que está no futuro.|**Perfil de Estatística da Coluna —**Válido para uma coluna com um destes tipos de dados.<br /><br /> Tipos de dados numéricos:<br /><br /> tipos de inteiros (exceto **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipos de dados de data e hora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> Observação: Para uma coluna que tem um tipo de dados de data e hora, o perfil calcula o mínimo e o máximo apenas.|  
 |Todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. Ou, os valores que representam mais de uma porcentagem especificada na tabela.|**Um número incorreto de valores distintos em uma coluna**— Por exemplo, você cria o perfil de uma coluna que contém estados dos Estados Unidos e descobre mais de 50 valores distintos.|**Distribuição de Valores da Coluna —**Válida para uma coluna com um seguintes tipos de dados.<br /><br /> Tipos de dados numéricos:<br /><br /> tipos de inteiros (exceto **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipos de dados de caractere:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> Tipos de dados de data e hora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |Se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada.|**Valores duplicados em uma possível coluna de chave —**Por exemplo, você cria o perfil para as colunas Nome e Endereço em uma tabela Clientes e descobre valores duplicados em que as combinações de nome e endereço devem ser exclusivas.|**Chave Candidata —**Um perfil de várias colunas que informa se uma coluna ou um conjunto de colunas é apropriado para servir como uma chave para a tabela selecionada. Válida para as colunas com um destes tipos de dados.<br /><br /> Tipos de dados inteiros:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> Tipos de dados de caractere:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> Tipos de dados de data e hora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  
   
   
-

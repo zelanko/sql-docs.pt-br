@@ -32,17 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 582a78d18aea9b38d42e782f7b75486f1097e196
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: fedd2c31623fc9df2afbab7897e3de446f98a960
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,9 +59,9 @@ SYSDATETIMEOFFSET ( )
 ```  
   
 ## <a name="return-type"></a>Tipo de retorno  
- **DateTimeOffset(7)**  
+ **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]instruções podem se referir a SYSDATETIMEOFFSET em qualquer lugar, eles podem consultar um **datetimeoffset** expressão.  
   
  SYSDATETIMEOFFSET é uma função não determinística. Exibições e expressões que fazem referência a essa função em uma coluna não podem ser indexadas.  
@@ -80,7 +79,7 @@ SYSDATETIMEOFFSET ( )
 SELECT SYSDATETIME() AS SYSDATETIME  
     ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
     ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
     ,GETDATE() AS GETDATE  
     ,GETUTCDATE() AS GETUTCDATE;  
 ```  
@@ -142,10 +141,9 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
-
 

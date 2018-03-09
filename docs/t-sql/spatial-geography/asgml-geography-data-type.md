@@ -22,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - AsGml method
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f5c13754e9d889245e667dcf377ee158fb500aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f4fe914c8f6f9d6a7547e36910be78878a66f19b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - tipo de dados geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlXml**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `LineString` e usa `AsGML()` para retornar uma descrição GML da instância.  
@@ -71,7 +70,6 @@ SELECT @g.AsGml();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

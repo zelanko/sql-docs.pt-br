@@ -3,8 +3,11 @@ title: "Gerenciador de Soluções | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4d77dde666a8fb751e637265333a334075807af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solution-explorer"></a>Gerenciador de Soluções
-O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fornece contêineres chamado projetos para gerenciar itens como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fornece contêineres chamado projetos para gerenciar itens como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
   
 Uma solução inclui um ou mais projetos, mais arquivos e metadados que ajudam a definir a solução como um todo. Um projeto é um conjunto de arquivos mais metadados relacionados, como informações de conexão. Soluções e projetos contêm itens que representam scripts, consultas, informações de conexão e arquivos necessários para criar sua solução de banco de dados.  
   
@@ -50,12 +53,12 @@ Use esses contêineres para:
   
 Os itens contidos em projetos dependem do tipo de projeto e se você está usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Use os tópicos a seguir para começar a usar as Soluções do SQL Server:  
   
 |||  
 |-|-|  
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |Descreve como coletar um ou mais projetos em uma solução.|[Soluções &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Descreve como criar um projeto e adicionar itens como scripts e conexões.|[Projetos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Fornece informações sobre os arquivos usados pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para gerenciar soluções e arquivos.|[Arquivos que gerenciam soluções e projetos](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

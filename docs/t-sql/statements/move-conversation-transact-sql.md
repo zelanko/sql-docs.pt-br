@@ -26,17 +26,16 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 - conversations [Service Broker], moving
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31141afc0008b0c234a32c6c58d2d8d7b37ddadd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cd8c5e548bf45fe4a2fc6bf0638ebb5282981263
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ MOVE CONVERSATION conversation_handle
  *conversation_handle*  
  É uma variável ou constante que contém o identificador de conversa da conversa a ser movida. *conversation_handle* deve ser do tipo **uniqueidentifier**.  
   
- PARA *conversation_group_id*  
+ TO *conversation_group_id*  
  É uma variável ou constante que contém o identificador do grupo de conversa para o qual a conversa será movida. *conversation_group_id* deve ser do tipo **uniqueidentifier**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A instrução MOVE CONVERSATION move a conversa especificada por *conversation_handle* para o grupo de conversa identificado por *conversation_group_id*. Os diálogos só podem ser redirecionados entre grupos de conversa que são associados com a mesma fila.  
   
 > [!IMPORTANT]  
@@ -90,11 +89,10 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [OBTER grupo de conversação &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [Instrução END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   
-

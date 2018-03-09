@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3e1547dd65d0a604e36f4a11280cfc3d38ee88f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1013d3307b1fea0d5460c2dce1caf10556804233
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-c-data-type"></a>Tipo de dados de indicador C
 O tipo de dados C de indicador permite que um aplicativo recupere um indicador. Os tipos de indicador C são usados somente para recuperar valores de indicador que podem ser variável em comprimento; eles não devem ser convertidos em outros tipos de dados. Um aplicativo recupera um indicador de coluna 0 do resultado definido com **SQLBulkOperations** (com uma operação de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**. Para obter mais informações, consulte [indicadores](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -43,4 +41,3 @@ O tipo de dados C de indicador permite que um aplicativo recupere um indicador. 
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />(Preterido)|INDICADOR|int longo não assinado|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|
-

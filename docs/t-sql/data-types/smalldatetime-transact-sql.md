@@ -24,17 +24,16 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 50
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07012d85a54292fa763a7b291d1b7318b6969ca4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ Define uma data que é combinada com uma hora do dia. A hora se baseia em um dia
 **smalldatetime** não for ANSI ou ISO 8601 compatível.
   
 ## <a name="converting-date-and-time-data"></a>Conversão de dados de data e hora
-Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores que não pode reconhecer como datas ou horas. Para obter informações sobre como usar as funções CAST e CONVERT com dados de data e hora, consulte [CAST e CONVERT & #40; Transact-SQL & #41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores que não pode reconhecer como datas ou horas. Para obter informações sobre como usar as funções CAST e CONVERT com dados de data e hora, consulte [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Convertendo smalldatetime em outros tipos de data e hora
 Esta seção descreve o que ocorre quando um **smalldatetime** tipo de dados é convertido em outros tipos de dados de data e hora.
@@ -199,4 +198,3 @@ SELECT
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

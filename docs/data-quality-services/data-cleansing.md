@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-cleansing"></a>Limpeza de Dados
+# <a name="data-cleansing"></a>Data Cleansing
   Limpeza de dados é o processo de analisar a qualidade de dados em uma fonte de dados, aprovando/rejeitando as sugestões manualmente pelo sistema e fazer alterações assim aos dados. A limpeza de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclui um processo auxiliado por computador que analisa a conformidade dos dados em relação ao conhecimento de uma base de dados de conhecimento, e um processo interativo que permite que o administrador de dados examine e modifique resultados de processo auxiliado por computador para garantir que a limpeza de dados seja executada exatamente como desejado.  
   
  O administrador de dados também pode executar a limpeza de dados no processo de empacotamento do Integration Services. Neste caso, o administrador de dados deve usar um componente do [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] que executa automaticamente a limpeza de dados com o uso de uma base de conhecimento existente. Para obter mais informações, consulte [Transformação de Limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  Durante a exportação dos dados limpos na página **Exportar** no assistente de projeto de qualidade de dados de limpeza, especifique se deseja que os dados limpos sejam exportados no formato padronizado marcando a caixa de seleção **Padronizar Saída** . Por padrão, os dados limpos são exportados no formato unificado, ou seja, a caixa de seleção está marcada. Para obter mais informações sobre como exportar os dados limpos, consulte [Limpar dados usando o conhecimento do DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a> Tarefas relacionadas  
+##  <a name="Related"></a> Tarefas Relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 |Descreve como limpar dados usando conhecimento do serviço de dados de referência.|[Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Descreve como limpar um domínio composto.|[Limpar dados em um domínio de composição](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Projetos de qualidade de dados &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Correspondência de dados](../data-quality-services/data-matching.md)  
   

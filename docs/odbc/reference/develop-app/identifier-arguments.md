@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
 Se uma cadeia de caracteres em um argumento de identificador está entre aspas, o driver remove à esquerda e à direita de espaços em branco e literalmente trata a cadeia de caracteres entre aspas. Se a cadeia de caracteres não está entre aspas, o driver remove dobras e espaços em branco à direita a cadeia de caracteres em maiusculas. A definição de um argumento de identificador para um ponteiro nulo retornará SQL_ERROR e SQLSTATE HY009 (uso inválido de ponteiro nulo), a menos que o argumento é um nome de catálogo e não há suporte para catálogos.  

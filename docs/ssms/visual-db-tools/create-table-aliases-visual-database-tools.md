@@ -3,29 +3,31 @@ title: Criar aliases de tabelas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dc1bf1382a8a3257e7b6bbd2d6f1fd2dce999082
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d76ede0538ac5fb723e35fb32f045f3b14cd86ca
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Criar aliases de tabelas (Visual Database Tools)
-Os aliases podem facilitar o trabalho com nomes de tabela. Usar aliases é útil quando:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os aliases podem facilitar o trabalho com nomes de tabela. Usar aliases é útil quando:  
   
 -   Você quer tornar a instrução no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) mais curta e fácil de ser lida.  
   
@@ -33,7 +35,7 @@ Os aliases podem facilitar o trabalho com nomes de tabela. Usar aliases é útil
   
 -   Você está trabalhando com várias instâncias da mesma tabela (como em uma autojunção) e precisa um modo para se referir a uma instância ou a outra.  
   
-Por exemplo, você pode criar um alias `"e"` para um nome de tabela `employee`_`information`e então referir-se à tabela como `"e"` durante o resto da consulta.  
+Por exemplo, você pode criar um alias `"e"` para um nome de tabela `employee_information` e, em seguida, referenciar a tabela como `"e"` durante o resto da consulta.  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>Para criar um alias para uma tabela ou objeto com valor de tabela  
   
@@ -43,10 +45,9 @@ Por exemplo, você pode criar um alias `"e"` para um nome de tabela `employee`_`
   
 3.  Na janela **Propriedades** , digite o alias no campo **Alias** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
 [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Resumir resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

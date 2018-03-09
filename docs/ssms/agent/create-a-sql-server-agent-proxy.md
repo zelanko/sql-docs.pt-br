@@ -3,8 +3,11 @@ title: Criar um proxy do SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4c9e3db10c31083b8a134f153eddc3d9baebcd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7324511079eacd48c36309b287253f1d17fd9e9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Criar um proxy do SQL Server Agent
-Este tópico descreve como criar um proxy do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um proxy do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 Uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent define o contexto de segurança no qual uma etapa de trabalho pode ser executada. Cada proxy corresponde a uma credencial de segurança. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias para um subsistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent e atribua-o à etapa de trabalho.  
   
@@ -46,7 +49,7 @@ Uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Age
   
 -   Primeiro, é necessário criar uma credencial antes de criar um proxy, caso não haja nenhuma disponível.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usam credenciais para armazenar informações sobre as contas de usuário do Windows. O usuário especificado na credencial deve ter permissão para “Acessar esse computador pela rede” (SeNetworkLogonRight) no computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está em execução.  
+-   Os proxies do[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usam credenciais para armazenar informações sobre as contas de usuário do Windows. O usuário especificado na credencial deve ter permissão para “Acessar esse computador pela rede” (SeNetworkLogonRight) no computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está em execução.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent verifica o acesso a subsistemas de um proxy e fornece acesso ao proxy sempre que a etapa de trabalho é executada. Se o proxy já não tiver acesso ao subsistema, a etapa de trabalho falhará. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent representará o usuário especificado no proxy e executará a etapa de trabalho.  
   

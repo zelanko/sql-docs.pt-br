@@ -3,7 +3,7 @@ title: Exemplo de membros (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 828d41ee052041edd1a10445444c3a543b12436a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ec3dbbe5d79f8623e063e778aa544b57ebd9d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-example-vbscript"></a>Exemplo de membros (VBScript)
 Este exemplo usa uma cadeia de caracteres de consulta MDX para recuperar dados OLAP e grava o conjunto de células resultante para uma estrutura de tabela HTML usando recursos de abrangência de coluna para a dimensão de vários conjuntos de células.  
@@ -345,4 +344,3 @@ For h=0 to intDC0
 </body>  
 </html>  
 ```
-

@@ -2,10 +2,14 @@
 title: "Criar, modificar e remover índices espaciais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbd3f1726d55d3303f335d9b46b2c87c9abc1b5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
-  Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do tipo de dados de **geometry** ou **geography** (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do tipo de dados de **geometry** ou **geography** (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
   
  Há várias restrições na criação de índices espaciais. Para obter mais informações, consulte [Restrições em índices espaciais](#restrictions) neste tópico.  
   
@@ -66,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
 11. Na página **Espacial** , especifique os valores que você deseja usar para as propriedades espaciais do índice.  
   
-     Ao criar um índice em uma coluna de tipo **geometry** , você deve especificar as coordenadas **(***X mínima***,***Y mínima***)** e **(***X máxima***,***Y máxima***)** da caixa delimitadora. Para obter um índice em uma coluna de tipo **geography** , os campos da caixa delimitadora se tornam somente leitura após você especificar o esquema de mosaico **Grade geográfica** porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
+     Ao criar um índice em uma coluna de tipo **geometry**, você deve especificar as coordenadas **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** da caixa delimitadora. Para obter um índice em uma coluna de tipo **geography** , os campos da caixa delimitadora se tornam somente leitura após você especificar o esquema de mosaico **Grade geográfica** porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
   
      Opcionalmente, é possível especificar valores não padrão para o campo **Células por Objeto** e para a densidade da grade em qualquer nível do esquema de mosaico. O número padrão de células por objeto é 16 para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou 8 para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou versão superior, e a densidade padrão da grade é **Média** para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
  Os mosaicos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não podem ser replicados para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Você deverá usar mosaicos espaciais do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] em índices espaciais quando a compatibilidade com versões anteriores com bancos de dados do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] for um requisito.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

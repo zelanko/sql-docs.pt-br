@@ -3,8 +3,11 @@ title: "Correspondência de tipo de sequência | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 707a939ce112e612874fefb956b8ebbc3142c0c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Tipo de sistema - correspondência de tipo de sequência
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Um valor de expressão do XQuery sempre é uma sequência de zero ou mais itens. Um item pode ser tanto um valor atômico quanto um nó. O tipo de sequência se refere à habilidade de associar o tipo de sequência retornada por uma expressão de consulta com um tipo específico. Por exemplo:  
   
@@ -443,4 +445,3 @@ RETURN
  [Digite sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
-

@@ -2,27 +2,30 @@
 title: "Assinar ou cancelar a assinatura de um banco de dados a uma categoria de política | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a1a01148b8d68f096b1e4cfba9fde209c7127c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 747b220659484754677428226d5eb7467a8bf443
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Assinar ou cancelar a assinatura de um banco de dados a uma categoria de política
-  Este tópico descreve como assinar ou cancelar a assinatura de um banco de dados para uma categoria de política no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como assinar ou cancelar a assinatura de um banco de dados para uma categoria de política no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
      **Política**  
      Quando os grupos de políticas são expandidos, exibe as políticas da categoria de políticas.  
   
-     **Ativado**  
+     **Enabled**  
      Indica se as políticas estão habilitadas ou desabilitadas.  
   
      **Modo de Execução**  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Para assinar um banco de dados para uma categoria de política  
   

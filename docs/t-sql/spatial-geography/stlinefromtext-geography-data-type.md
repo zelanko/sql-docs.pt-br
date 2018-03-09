@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7137023a0c382a5114abae4676a5aead8c700f0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ace48b5cfc8be18c0867bb1c0fc43d7e09d8a9e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método lança um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,7 +70,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

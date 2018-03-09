@@ -2,15 +2,13 @@
 title: Elemento ID (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ID Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17a86cd00a2c5cd254d9c9752b7decda0ee6b325
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bccd79a186b95ccd0009442dca3f4e851882263
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="id-element-xmla"></a>Elemento ID (XMLA)
-  Identifica um bloqueio no qual executar o pai [bloqueio](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) ou [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Identifica um bloqueio no qual executar o pai [bloqueio](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) ou [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +48,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|String|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Cadeia de caracteres|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,12 +59,12 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Bloqueio](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [desbloquear](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ID** elemento contém um identificador global exclusivo (GUID) usado para identificar um bloqueio.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento de objeto &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Elemento Mode &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

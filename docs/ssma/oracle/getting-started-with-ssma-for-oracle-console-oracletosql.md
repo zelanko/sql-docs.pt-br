@@ -1,29 +1,30 @@
 ---
 title: "Guia de Introdução com o SSMA para o Console do Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7430d5ffdcd4a0b57d8b5e6faf3b37fa33d919a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Guia de Introdução com o SSMA para o Console do Oracle (OracleToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do Oracle. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  
@@ -70,7 +71,6 @@ Interpretação de cor da saída do console na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Ciano|Início, término e o resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para Oracle](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
   
-

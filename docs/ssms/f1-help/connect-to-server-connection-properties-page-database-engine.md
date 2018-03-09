@@ -3,8 +3,11 @@ title: "Conectar ao Mecanismo de Banco de Dados do Servidor (página Propriedade
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 61040d43e2e351e0dab262b549abf7f90ce7f0f8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
-Use esta guia para exibir ou especificar opções ao se conectar a uma emstância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta guia para exibir ou especificar opções ao se conectar a uma instância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Conectar ao banco de dados**  
 Selecione um banco de dados com o qual deseja se conectar na lista. Ao selecionar **<default>**, você será conectado ao banco de dados padrão do servidor. Se você selecionar **<Browse server>**, poderá procurar no servidor o banco de dados ao qual se conectar.  
@@ -63,7 +66,7 @@ Ao se conectar com a autenticação **Active Directory – Universal com MFA**, 
 **Redefinir Tudo**  
 Substitua todos os valores de propriedade de conexão digitados manualmente por seus padrões.  
   
-**Conectar**  
+**Connect**  
 Tenta estabelecer uma conexão usando os valores listados.  
   
 **Opções**  
@@ -75,6 +78,6 @@ Ao registrar o [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Regis
 **Salvar**  
 Salve as configurações em **Servidores Registrados**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Caixa de diálogo Propriedades da conexão](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

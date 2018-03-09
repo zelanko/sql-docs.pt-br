@@ -2,32 +2,32 @@
 title: "Modificando a dimensão data | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2241d24c13fa2d31a6789387f165d8285903fa0b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c514356aeabd59525fdab80e6e1c03f93d9ae34f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lição 3-4-modificando a dimensão de data
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Na tarefa deste tópico, você criará uma hierarquia definida pelo usuário e alterará os nomes de membro exibidos nos atributos Date, Month, Calendar Quarter e Calendar Semester. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
   
 ## <a name="adding-a-named-calculation"></a>Adicionando um cálculo nomeado  
@@ -114,7 +114,7 @@ Se os dados subjacentes permitirem, você também deve definir relações de atr
   
 3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **English Month Name**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**.  
   
-4.  Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+4.  Na lista **Tipo de relação**, defina o tipo de relação como **Rígida**.  
   
     O tipo de relação é **Rígida** porque as relações entre os membros não mudarão com o passar do tempo.  
   
@@ -218,7 +218,7 @@ A propriedade **KeyColumns** contém a coluna ou as colunas que representam a ch
   
 2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
   
-3.  Na caixa de diálogo **Colunas de Chaves** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
+3.  Na caixa de diálogo **Colunas de Chaves**, na lista **Colunas Disponíveis**, selecione a coluna **CalendarYear** e clique no botão **>**.  
   
     Agora, as colunas **CalendarQuarter** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   
@@ -312,4 +312,3 @@ Nesta tarefa, você poderá alterar a ordem de classificação alterando a ordem
 ## <a name="see-also"></a>Consulte também  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
-

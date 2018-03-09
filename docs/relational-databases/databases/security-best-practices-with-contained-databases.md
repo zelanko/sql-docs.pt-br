@@ -8,24 +8,26 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, threats
+helpviewer_keywords:
+- contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada ao processo de autenticação **USER WITH PASSWORD** que move o limite de autenticação do nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nível do banco de dados.  
   
@@ -61,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Criando um usuário que duplica um logon  
  Se um usuário de banco de dados independente com senha for criado com o mesmo nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectar especificando o banco de dados independente como catálogo inicial, o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá se conectar. A conexão será avaliada como a entidade do usuário com senha no banco de dados independente em vez de como um usuário baseado no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso pode provocar uma negação intencional ou acidental do serviço para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE***\<bancodedados>*. Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
+-   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE***\<database>*. Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
   
 -   Como uma prática recomendada, não crie usuários de banco de dados independente com senhas que tenham o mesmo nome que logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -92,7 +94,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Negação de serviço por meio de AUTO_CLOSE  
  Não configure bancos de dados independentes como fechamento automático. Se fechado, a abertura do banco de dados para autenticar um usuário consumirá recursos adicionais e poderá contribuir para um ataque de negação de serviço.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
  [Migrar para um banco de dados independente parcialmente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

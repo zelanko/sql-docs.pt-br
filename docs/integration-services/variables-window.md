@@ -1,11 +1,11 @@
 ---
-title: "Janela variáveis | Microsoft Docs"
+title: "Janela Variáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a9e602fb4caf9487246e13607f8f925e416a90b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
@@ -78,15 +77,15 @@ ms.lasthandoff: 09/26/2017
  **Elevar Evento de Alteração**  
  Indique se precisa gerar um evento **OnVariableValueChanged** quando o valor é alterado. Você pode atualizar o valor para as variáveis do sistema e as definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição da variável. Você pode alterar a descrição para as variáveis definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Expressão**  
+ **Expression**  
  Exiba a expressão atribuída à variável. Para atribuir uma expressão, clique botão de reticências.  
   
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
 
-## <a name="variable-grid-options-dialog-box"></a>Caixa de diálogo Opções de grade variável
+## <a name="variable-grid-options-dialog-box"></a>Caixa de diálogo Opções de Grade Variáveis
  Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 ### <a name="options-for-filter"></a>Opções para filtrar  
@@ -113,15 +112,14 @@ ms.lasthandoff: 09/26/2017
   
 -   **Levantar evento quando o valor da variável for alterado**  
   
--   **Description**  
+-   **Descrição**  
   
--   **Expressão**  
+-   **Expression**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40; SSIS &#41; Expressões](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Gerar arquivos de despejo para execução de pacote](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

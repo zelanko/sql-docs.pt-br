@@ -3,7 +3,7 @@ title: "Abrir e fechar o exemplo de métodos (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADO], VC++ example
 - Open method [ADO], VC++ example
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 33ea4347a5ef1c086d231d05112644493c4100b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c77eaed9a158270a9fa2067ec3e5b423f1514921
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-and-close-methods-example-vc"></a>Exemplo dos métodos de abertura e fechamento (VC + +)
 Este exemplo usa o **abrir** e [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos os [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  
@@ -219,4 +218,3 @@ void PrintComError(_com_error &e) {
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

@@ -1,86 +1,84 @@
 ---
-title: "Adicionar a web part do Visualizador de relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs"
-ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
+title: "Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs"
+ms.custom: 
 ms.date: 09/26/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de relatórios do SQL Server Reporting Services a uma página do SharePoint
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Exiba um relatório, do SQL Server Reporting Services ou o servidor de relatório do Power BI, adicionando uma web part do Visualizador de relatórios para uma página do SharePoint.
+Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatórios do Power BI, adicionando uma web part do Visualizador de Relatórios a uma página do SharePoint.
 
-![Web part do Visualizador de relatórios em uma página do SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
+![Web part do Visualizador de Relatórios em uma página do SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-* Para relatórios carregar com êxito, o Claims to Windows Token Service (C2WTS) deve ser definida para o Kerberos a delegação restrita. Para obter mais informações sobre como configurar o C2WTS, consulte [Claims to Windows Token Service (C2WTS) e Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
+* Para que os relatórios sejam carregados com êxito, o C2WTS (Declarações para Serviço de Token do Windows) precisa ser configurado para a delegação restrita de Kerberos. Para obter mais informações sobre como configurar o C2WTS, consulte [C2WTS (Declarações para Serviço de Token do Windows) e Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 
-* A web part do Visualizador de relatórios deve ser implantada em seu farm do SharePoint. Para obter informações sobre como implantar o projeto de solução da web part Visualizador de relatórios, consulte [implantar a web part do Visualizador de relatórios em um site do SharePoint](deploy-report-viewer-web-part.md).
+* A web part do Visualizador de Relatórios deve ser implantada no farm do SharePoint. Para obter informações sobre como implantar o projeto de solução da web part do Visualizador de Relatórios, consulte [Implantar a web part do Visualizador de Relatórios em um site do SharePoint](deploy-report-viewer-web-part.md).
 
-* Para adicionar uma web part a uma página da web, você deve ter a permissão Adicionar e personalizar páginas no nível do site. Se você estiver usando as configurações de segurança padrão, essa permissão será concedida a membros do grupo **Proprietários** que tenham nível de permissão Controle Total.
+* Para adicionar uma web part a uma página da Web, é necessário ter a permissão Adicionar e Personalizar Páginas no nível do site. Se você estiver usando as configurações de segurança padrão, essa permissão será concedida a membros do grupo **Proprietários** que tenham nível de permissão Controle Total.
 
-## <a name="add-web-part"></a>Adicionar web part
+## <a name="add-web-part"></a>Adicionar uma web part
 
-1. No site do SharePoint, selecione o **engrenagem** ícone no canto superior esquerdo e selecione **adicionar uma página**.
+1. No site do SharePoint, selecione o ícone de **engrenagem** no canto superior esquerdo e **Adicionar uma página**.
 
-    ![Adicione uma página a um site do sharepoint do ícone de engrenagem.](media/sharepoint-add-a-page.png)
+    ![Adicione uma página a um site do SharePoint por meio do ícone de engrenagem.](media/sharepoint-add-a-page.png)
 
-2. Dê um nome e selecione à sua página **criar**.
+2. Dê um nome à página e selecione **Criar**.
 
-3. No designer de página, selecione o **inserir** guia na faixa de opções. Em seguida, selecione **da web part** dentro de **partes** seção.
+3. No designer de páginas, selecione a guia **Inserir** na faixa de opções. Em seguida, selecione **web part** na seção **Partes**.
 
-    ![Inserir uma web part na faixa de opções do office.](media/sharepoint-insert-web-part.png)
+    ![Insira uma web part por meio da faixa de opções do Office.](media/sharepoint-insert-web-part.png)
 
-4. Em **categorias**, selecione **SQL Server Reporting Services (modo nativo). Em **partes**, selecione **Visualizador de relatórios**. Em seguida, selecione **adicionar**.
+4. Em **Categorias**, selecione **SQL Server Reporting Services (modo Nativo). Em **Partes**, selecione **Visualizador de Relatórios**. Em seguida, selecione **Adicionar**.
 
-    ![Adicione a web part do Visualizador de relatórios.](media/sharepoint-report-viewer-web-part.png)
+    ![Adicione a web part do Visualizador de Relatórios.](media/sharepoint-report-viewer-web-part.png)
 
-    Inicialmente, isso pode parecer com um erro. O erro ocorre porque a URL do servidor de relatório padrão é definida como *http://localhost* e pode não estar disponível neste local.
+    Inicialmente, isso pode ser exibido com um erro. O erro ocorre porque a URL padrão do servidor de relatório é definida como *http://localhost* e pode não estar disponível nesse local.
 
-## <a name="configure-the-report-viewer-web-part"></a>Configurar a web part do Visualizador de relatórios
+## <a name="configure-the-report-viewer-web-part"></a>Configurar a web part do Visualizador de Relatórios
 
-Para configurar a web part para apontar para o relatório específico, faça o seguinte:
+Para configurar a web part para que ela aponte para o relatório específico, realize o procedimento a seguir.
 
 1. Ao editar a página do SharePoint, selecione a seta para baixo no canto superior direito da web part e selecione **Editar web part**.
 
-    ![Editar página de web de web part da lista suspensa.](media/sharepoint-edit-web-part.png)
+    ![Edite a página da Web por meio do menu suspenso da web part.](media/sharepoint-edit-web-part.png)
 
-2. Insira o **URL do servidor de relatório** para o servidor de relatório que hospeda seu relatório. Isso deve ser semelhante ao *http://myrsserver/reportserver*.
+2. Insira a **URL do Servidor de Relatório** do servidor de relatório que hospeda o relatório. Isso deverá ser semelhante a *http://myrsserver/reportserver*.
 
-3. Insira o caminho e o nome do relatório que você deseja exibir na web part. Isso será semelhante ao *AdventureWorks exemplo relatórios/vendas da empresa*. Neste exemplo, o relatório *vendas da empresa* em uma pasta chamada *relatórios de exemplo AdventureWorks*.
+3. Insira o caminho e o nome do relatório que deseja exibir na web part. Isso será semelhante a */AdventureWorks Sample Reports/Company Sales*. Neste exemplo, o relatório *Vendas da Empresa* está em uma pasta chamada *Relatórios de Exemplo do AdventureWorks*.
 
-4. Se o relatório exigir parâmetros, depois que você forneceu a URL do servidor de relatório e o nome do relatório, selecione **carregar parâmetros** dentro de **parâmetros** seção.
+4. Se o relatório exigir parâmetros, depois de fornecer a URL do servidor de relatório e o nome do relatório, selecione **Carregar Parâmetros** na seção **Parâmetros**.
 
-5. Selecione **Okey** para salvar suas alterações na configuração de web part.
+5. Selecione **OK** para salvar as alterações na configuração da web part.
 
-6. Selecione **salvar**, na faixa de opções da Office, para salvar as alterações para a página do SharePoint.
+6. Selecione **Salvar**, na faixa de opções do Office, para salvar as alterações na página do SharePoint.
 
-![Web part do Visualizador de relatórios em uma página do SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
+![Web part do Visualizador de Relatórios em uma página do SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="considerations-and-limitations"></a>Considerações e limitações
 
-* A web part do Visualizador de relatórios não pode ser usada em páginas modernas no SharePoint.
-* Relatórios do Power BI não podem ser usados com a web part do Visualizador de relatórios.
-* Se você não vir o relatório web part do visualizador, para adicionar a uma página, verifique se você tem [implantado a web part do Visualizador de relatórios](deploy-report-viewer-web-part.md).
+* A web part do Visualizador de Relatórios não pode ser usada em páginas modernas no SharePoint.
+* Os relatórios do Power BI não podem ser usados com a web part do Visualizador de Relatórios.
+* Se a web part do Visualizador de Relatórios não estiver visível, para adicioná-la à página, verifique se você [implantou a web part do Visualizador de Relatórios](deploy-report-viewer-web-part.md).
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

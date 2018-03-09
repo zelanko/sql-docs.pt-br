@@ -1,10 +1,15 @@
 ---
 title: "Introdução à pesquisa de texto completo | Microsoft Docs"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.custom: 
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +18,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e87ac827013d4aa9abff8a0fb66ac3c8fc9bce62
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Por padrão, os bancos de dados do SQL Server são habilitados para texto completo. No entanto, antes de executar consultas de texto completo, é necessário criar um catálogo de texto completo e criar um índice de texto completo em tabelas ou exibições indexadas nas quais você deseja pesquisar.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Configurar uma pesquisa de texto completo em duas etapas
@@ -46,7 +52,7 @@ Para configurar a pesquisa de texto completo usando um assistente, consulte [Usa
   
 1.  Para criar um catálogo de texto completo denominado `AdvWksDocFTCat`, o exemplo usa uma instrução [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -55,13 +61,13 @@ Para configurar a pesquisa de texto completo usando um assistente, consulte [Usa
  
 2.  Para você poder criar um índice de texto completo na tabela Document, verifique se a tabela tem um índice exclusivo, de uma só coluna e não anulável. A seguinte instrução [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) cria um índice exclusivo, `ui_ukDoc`, na coluna DocumentID da tabela Documento:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  Depois que você tiver uma chave exclusiva, poderá criar um índice de texto completo na tabela `Document` por meio da instrução [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) a seguir.  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -104,14 +110,14 @@ Sempre selecione o menor índice exclusivo disponível para sua chave exclusiva 
   
  Por exemplo, a seguinte instrução [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] cria uma nova lista de palavras irrelevantes de texto completo chamada myStoplist copiando da lista de palavras irrelevantes do sistema:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  A seguinte instrução [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] altera uma lista de palavras irrelevantes chamada myStoplist, adicionando a palavra 'en', primeiro para espanhol e depois para francês:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

@@ -1,5 +1,5 @@
 ---
-title: Carregar dados em massa usando o destino do SQL Server | Microsoft Docs
+title: Carregar dados em massa por meio do destino do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9cdd73f56e17dbe97a2075d33a0ceefc032fc345
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server
-  Para adicionar e configurar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte de dados.  
+  Para adicionar e configurar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte de dados.  
   
 ### <a name="to-load-data-using-a-sql-server-destination"></a>Para carregar dados usando um destino de SQL Server  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Clique duas vezes no destino.  
   
-6.  No **Editor de Destino do SQL Server**, na página **Gerenciador de Conexões** , selecione um gerenciador de conexões OLE DB existente ou clique em **Novo** para criar um gerenciador de conexões novo. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  No **Editor de Destino do SQL Server**, na página **Gerenciador de Conexões** , selecione um gerenciador de conexões OLE DB existente ou clique em **Novo** para criar um gerenciador de conexões novo. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Para especificar a tabela ou exibir em qual tabela serão carregados os dados, siga um destes procedimentos:  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
     -   Clique em **Novo**e, na caixa de diálogo **Criar Tabela** , escreva uma instrução SQL que cria uma tabela ou exibição.  
   
         > [!NOTE]  
-        >  O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gera uma instrução CREATE TABLE padrão baseada na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+        >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gera uma instrução CREATE TABLE padrão baseada na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 8.  Clique em **Mapeamentos** e mapeie as colunas da lista **Colunas de Entrada Disponíveis** para colunas na lista **Colunas de Destino Disponíveis** arrastando colunas de uma lista para outra.  
   
@@ -73,11 +71,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
- [Destino do SQL Server](../../integration-services/data-flow/sql-server-destination.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

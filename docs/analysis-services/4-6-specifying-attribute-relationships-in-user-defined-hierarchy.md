@@ -2,32 +2,32 @@
 title: "4-6-especificando relações de atributo na hierarquia definida pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d68e4caadf4e19582fb5ccd767535baee1001762
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-especificando relações de atributo na hierarquia definida pelo usuário
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Como você já aprendeu neste tutorial, é possível organizar as hierarquias de atributo em níveis dentro das hierarquias de usuário para fornecer caminhos de navegação aos usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
   
 Em uma hierarquia natural, ao definir relações de atributo entre os atributos que criam os níveis, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar a agregação de um atributo para obter resultados a partir de um atributo relacionado. Se não houver nenhuma relação definida entre atributos, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agregará todos os atributos que não forem atributos de chave do atributo de chave. Portanto, se os dados subjacentes permitirem, você também poderá definir relações de atributo entre atributos. Definir as relações de atributo melhora a dimensão, a partição e o desempenho do processamento de consulta. Para obter mais informações, consulte [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Relações de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
@@ -48,7 +48,7 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
   
 3.  No diagrama, clique com o botão direito do mouse no atributo **Full Name** e selecione **Nova Relação de Atributo**.  
   
-4.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Full Name**. Defina o **Atributo Relacionado** como **CEP**. Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo.  
+4.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Full Name**. Defina o **Atributo Relacionado** como **CEP**. Na lista **Tipo de relação**, deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -114,7 +114,7 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
   
 2.  No diagrama, clique com o botão direito do mouse no atributo **Model Name** e selecione **Nova Relação de Atributo**.  
   
-3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**. Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível**.  
+3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**. Na lista **Tipo de relação**, deixe o tipo de relação definido como **Flexível**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -144,19 +144,19 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
   
 1.  No diagrama, clique com o botão direito do mouse no atributo **Nome do Mês** e selecione **Nova Relação de Atributo**.  
   
-2.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Nome do Mês**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+2.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Nome do Mês**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  No diagrama, clique com o botão direito do mouse no atributo **Trimestre Calendário** e selecione **Nova Relação de Atributo**.  
   
-5.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Trimestre Calendário**. Defina o **Atributo Relacionado** como **Semestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+5.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Trimestre Calendário**. Defina o **Atributo Relacionado** como **Semestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  No diagrama, clique com o botão direito do mouse no atributo **Calendar Semester** e selecione **Nova Relação de Atributo**.  
   
-8.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Semestre do Calendário**. Defina o **Atributo Relacionado** como **Ano Civil**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+8.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Semestre do Calendário**. Defina o **Atributo Relacionado** como **Ano Civil**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -191,7 +191,7 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
 14. No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **Implantar Tutorial do Analysis Services**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Definindo o membro desconhecido e as propriedades de processamento nulo](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[Definir o membro desconhecido e propriedades de processamento nulo](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
@@ -199,4 +199,3 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
   
   
   
-

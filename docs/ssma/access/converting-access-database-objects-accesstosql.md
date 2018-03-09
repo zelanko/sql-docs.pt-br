@@ -1,12 +1,14 @@
 ---
 title: Converter objetos de banco de dados do Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -33,17 +35,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5fd1535f35afdfa53895816da2e3e32f539c04b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Converter objetos de banco de dados do Access (AccessToSQL)
 Depois de ter adicionado bancos de dados do Access e conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, o SSMA exibe metadados para o acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos de banco de dados do SQL Azure. Você pode agora selecionar objetos de banco de dados do Access e, em seguida, converter os esquemas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou esquemas do SQL Azure.  
@@ -126,7 +127,6 @@ Agora você pode exibir as alterações no código no **SQL** guia.
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [carregar objetos de banco de dados convertido no SQL Server](http://msdn.microsoft.com/en-us/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

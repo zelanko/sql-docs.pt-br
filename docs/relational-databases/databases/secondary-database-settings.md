@@ -2,27 +2,30 @@
 title: "Configurações do Banco de Dados Secundário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 020bf0c01c66385380d2ba963a974acff4f58a98
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
-  Use essa caixa de diálogo para configurar e modificar as propriedades de um banco de dados secundário na configuração de envio de logs.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para configurar e modificar as propriedades de um banco de dados secundário na configuração de envio de logs.  
   
  Para obter uma explicação dos conceitos de envio de log, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
@@ -117,7 +120,7 @@ ms.lasthandoff: 11/09/2017
  **Desabilitar este trabalho**  
  Suspenda operações de restauração para o banco de dados secundário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

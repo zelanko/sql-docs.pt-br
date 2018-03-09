@@ -2,29 +2,32 @@
 title: "Definindo uma relação referenciada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fd440e03226082527441116517bb511b25099101
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lição 5-1-definir uma relação referenciada
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como base uma tabela que estava diretamente vinculada à tabela de fatos de um grupo de medidas por uma relação de chave primária para chave estrangeira. Nas tarefas deste tópico, você vinculará a dimensão **Geografia** à tabela de fatos para vendas do revendedor por meio da dimensão **Revendedor** , conhecida como *dimensão de referência*. Isso permite aos usuários dimensionar as vendas do revendedor por geografia. Para obter mais informações, consulte [Definir uma relação referenciada e as propriedades da relação referenciada](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Dimensionando as vendas do revendedor por geografia  

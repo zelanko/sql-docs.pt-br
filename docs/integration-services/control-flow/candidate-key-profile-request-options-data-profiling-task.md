@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil de chave de candidato (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação do perfil Chave de Candidato (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Chave de Candidato (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Chave de Candidato** selecionada no painel de solicitações. Um perfil Chave de Candidato informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Esse perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.  
@@ -100,15 +99,15 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Quando você usar o curinga **(\*)** para **ColumnName**, **CompareOptions** é somente leitura e definido como **Padrão**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Padrão**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
@@ -123,11 +122,11 @@ ms.lasthandoff: 08/03/2017
  **ThresholdSetting**  
  As opções dessa propriedade são listadas na tabela a seguir. O valor padrão dessa propriedade é **Especificado**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Nenhum.**|Nenhum limite é especificado. A intensidade da chave é informada independentemente de seu valor.|  
+|**Nenhuma**|Nenhum limite é especificado. A intensidade da chave é informada independentemente de seu valor.|  
 |**Especificado**|Um limite é especificado em **KeyStrengthThreshold**. A restrição de chave só será informada se for superior ao limite.|  
-|**Exact**|Nenhum limite é especificado. A restrição de chave só será informada se as colunas selecionadas forem uma chave exata.|  
+|**Exato**|Nenhum limite é especificado. A restrição de chave só será informada se as colunas selecionadas forem uma chave exata.|  
   
  **KeyStrengthThreshold**  
  Especifique o limite (usando um valor entre 0 e 1) a partir do qual a restrição de chave deve ser informada. O valor padrão dessa propriedade é 0,95. Esta opção é habilitada somente quando **Especificado** é selecionado como **KeyStrengthThresholdSetting**.  
@@ -135,9 +134,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Especifique o número máximo de violações de chave de candidato para informar na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionada como o **KeyStrengthThresholdSetting**.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

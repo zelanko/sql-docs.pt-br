@@ -2,34 +2,32 @@
 title: "Métodos MSReportServer_ConfigurationSetting | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Methods
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Methods
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1206fa05237cd3127db08acc59d69fb0e455261
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d88ff0247939668c63339ec8a6835405af8bd0a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>Métodos MSReportServer_ConfigurationSetting
   A classe MSReportServer_ConfigurationSetting do Provedor WMI do servidor de relatório fornece os métodos públicos a seguir.  
@@ -70,8 +68,7 @@ ms.lasthandoff: 08/09/2017
 |[Método SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)|Define o diretório virtual para um aplicativo.|  
 |[SetWindowsServiceIdentity](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md)|Faz com que o serviço do Servidor de Relatório seja executado como o usuário especificado do Windows e concede a esta conta permissões no sistema de arquivos suficientes para o funcionamento do servidor de relatório.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   
-

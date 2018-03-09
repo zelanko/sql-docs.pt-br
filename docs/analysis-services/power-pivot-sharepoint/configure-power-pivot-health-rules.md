@@ -2,32 +2,29 @@
 title: Configurar regras de integridade do Power Pivot | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42cc598c702a0e88063896717926e280171d0371
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurar regras de integridade do Power Pivot
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint inclui regras de integridade do SharePoint que o ajudam a monitorar e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecem na página Examinar definições de regra.  
   
  Regras de integridade fornecem a detecção de problemas de servidor que podem acabar resultando em interrupções de serviço. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint fornece vários regras para ajudá-lo a identificar e corrigir problemas antes que afetem seus usuários. Você pode personalizar muitas destas regras para ajustá-las às características exclusivas de sua implantação. Por exemplo, se você desejar mais tempo para tratar de avisos sobre espaço em disco, poderá aumentar o percentual de espaço disponível em disco de 5% para 10% de forma que receba o aviso mais cedo.  
@@ -52,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [Configurar regras de integridade usadas para avaliar a estabilidade do aplicativo (aplicativo de serviço Power Pivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Você deve ser um administrador de aplicativo de serviço para alterar propriedades de configuração da instância do Analysis Services e do aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_view"></a> Exibir regras de integridade do Power Pivot  
@@ -142,4 +139,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
  [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

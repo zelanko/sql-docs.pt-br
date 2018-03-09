@@ -3,8 +3,11 @@ title: "Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
-Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  
   
 Adicione pastas à lista **Pastas selecionadas** , digite um nome para esse conjunto de pastas no campo **Conjunto de pastas** e clique em **Aplicar** para salvá-lo. Esse escopo da pesquisa personalizado poderá, assim, ser escolhido por nome nas listas suspensas **Examinar** em **Localizar em Arquivos** e **Substituir em Arquivos**. Para remover um conjunto de pastas personalizado das listas **Examinar** , selecione seu nome no campo **Conjunto de pastas** e clique em **Excluir**.  
   

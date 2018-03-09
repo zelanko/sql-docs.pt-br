@@ -3,7 +3,7 @@ title: DataTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 289d11f586fc1bd583baeb615ce3cff491949ccc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md). O indicador de tipo OLE DB correspondente é mostrado entre parênteses na coluna Descrição da tabela a seguir.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Um valor de sinalizador, sempre combinado com outro constante de tipo de dados, que indica que uma matriz do tipo de dados. Não se aplicam a ADOX.|  
 |**adBigInt**|20|Indica um inteiro assinado de oito bytes (DBTYPE_I8).|  
@@ -76,8 +75,8 @@ Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-ob
 |**adVarWChar**|202|Indica uma cadeia de caracteres Unicode terminada em nulo.|  
 |**adWChar**|130|Indica uma cadeia de caracteres do Unicode de terminação nula (DBTYPE_WSTR).|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -128,4 +127,3 @@ Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-ob
 |-|-|  
 |[Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
 |[Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
-

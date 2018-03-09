@@ -1,11 +1,11 @@
 ---
-title: "Etapa 4: Testando o pacote de Tutorial da lição 2 | Microsoft Docs"
+title: "Etapa 4: testar o pacote de tutoriais da Lição 2 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b767baea5d3979763b2e7bfb741cb1fd6589ebfd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 98f4b32fd8575a33f2b7a074ab3fe04e043d7777
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lição 2-4: Testando o pacote de Tutorial da lição 2
+# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lição 2-4 – testar o pacote de tutoriais da Lição 2
 Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar através da coleção de 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo é encontrado e corresponde aos critérios de nome de arquivo especificado, o contêiner Loop Foreach popula a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, e uma conexão é criada para o novo arquivo simples. O contêiner Loop Foreach, então, executa a tarefa de fluxo de dados não modificados em relação aos dados no novo arquivo simples, antes de se conectar ao próximo arquivo na pasta.  
   
 Use o procedimento a seguir para testar a nova funcionalidade de loop que você adicionou ao seu pacote.  
@@ -40,11 +39,11 @@ Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados 
   
 **Fluxo de Controle**  
   
-![Controlar o fluxo do pacote](../integration-services/media/task4lesson2control.gif "controlar o fluxo do pacote")  
+![Fluxo de controle no pacote](../integration-services/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
 **Fluxo de Dados**  
   
-![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "no pacote de fluxo de dados")  
+![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>Para testar o pacote de tutorial da Lição 2  
   
@@ -57,10 +56,9 @@ Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados 
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 5: Adicionar configurações do pacote SSIS ao modelo de implantação de pacotes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Execução de projetos e pacotes](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   
-
 

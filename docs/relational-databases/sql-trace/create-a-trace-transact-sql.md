@@ -2,29 +2,34 @@
 title: Criar um rastreamento (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74224180e0977413859fcf10cd696998ad346971
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d56ed4af251bb739c6717afa6373d4eac1ed9105
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
-  Este tópico descreve como usar procedimentos armazenados para criar um rastreamento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como usar procedimentos armazenados para criar um rastreamento.  
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
@@ -37,7 +42,7 @@ ms.lasthandoff: 11/09/2017
      **sp_trace_setevent** e **sp_trace_setfilter** só podem ser executados em rastreamentos existentes que estejam parados.  
   
     > [!IMPORTANT]  
-    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (**sp_trace_*xx***) só podem ser digitados e não dão suporte à conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (**sp_trace_*xx***) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir demonstra a criação de um rastreamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ele está em três partes: criação do rastreamento, população do arquivo de rastreamento e interrupção do rastreamento. Personalize o rastreamento adicionando os eventos que deseja rastrear. Para obter a lista de eventos e colunas, veja [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
@@ -104,7 +109,7 @@ EXEC sp_trace_setstatus @TraceID, 2
 ## <a name="example"></a>Exemplo  
  Para examinar o arquivo de rastreamento, abra o arquivo SampleTrace.trc usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

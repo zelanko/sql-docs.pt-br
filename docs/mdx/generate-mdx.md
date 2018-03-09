@@ -2,34 +2,32 @@
 title: Gerar (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
+f1_keywords: GENERATE
+dev_langs: kbMDX
+helpviewer_keywords: Generate function
 ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc8cf66afbfd56a6d58f360f4c5d17b12f42e19f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Aplica um conjunto a cada membro de outro conjunto e une os conjuntos resultantes por união. Opcionalmente, essa função retorna uma cadeia de caracteres concatenada criada avaliando-se uma expressão de cadeia de caracteres sobre um conjunto.  
   
@@ -57,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Delimitador*  
  Um delimitador válido expresso como uma expressão de cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um segundo conjunto for especificado, o **gerar** função retorna um conjunto gerado aplicando as tuplas do segundo conjunto a cada tupla no primeiro conjunto*,* e, em seguida, associando os conjuntos resultantes por união. Se **todos os** for especificado, a função preservará as duplicações no conjunto resultante.  
   
  Se uma expressão de cadeia de caracteres for especificada, o **gerar** função retorna uma cadeia de caracteres gerada avaliando a expressão de cadeia de caracteres especificada em relação a cada tupla no primeiro conjunto*,* e concatenando os resultados. Opcionalmente, a cadeia de caracteres pode ser delimitada, separando-se cada resultado na cadeia de caracteres concatenada resultante.  
@@ -139,8 +137,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Essa forma do **gerar** função pode ser útil ao depurar cálculos, pois permite retornar uma cadeia de caracteres que exibe os nomes de todos os membros em um conjunto. Isso pode ser mais fácil de ler do que a representação MDX rígida de um conjunto que o [SetToStr &#40; MDX &#41; ](../mdx/settostr-mdx.md) função retorna.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

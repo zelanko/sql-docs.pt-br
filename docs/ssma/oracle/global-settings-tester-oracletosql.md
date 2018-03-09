@@ -1,10 +1,13 @@
 ---
 title: "Configurações globais (Tester) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 19e0a4e308d0ac4414bdab9c03389947d9dde28b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configurações globais (Tester) (OracleToSQL)
 Use a página de teste do **configurações globais** caixa de diálogo para especificar configurações para o SSMA Tester.  
@@ -33,7 +36,7 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
 **Modo de economia de tabelas auxiliares**  
 Essa configuração especifica como salvar tabelas auxiliares internas criadas durante a execução do caso de teste. As opções a seguir pode ser definida para essa configuração específica:  
@@ -55,7 +58,7 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
 **Interromper a execução de teste após a primeira falha**  
 Essa configuração especifica se é preciso parar o caso de teste em execução atual, se tiver ocorrido um erro durante a execução. Conjunto de opção padrão é **Sim**.  
@@ -64,8 +67,8 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Concluindo a preparação do caso de teste &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

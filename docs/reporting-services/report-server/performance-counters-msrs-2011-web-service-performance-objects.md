@@ -1,13 +1,14 @@
 ---
-title: "Contadores de desempenho do serviço da Web MSRS 2011, objetos de desempenho | Microsoft Docs"
+title: "Contadores de desempenho para os objetos de desempenho do serviço Web do MSRS 2011 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,18 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e159f7c4fa846e30fbd1ca8f43b5c18df44d4c5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de desempenho do serviço da Web MSRS 2011, objetos de desempenho
+# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do serviço Web do MSRS 2011
   Este tópico descreve contadores de desempenho para os objetos de desempenho do **Serviço Web MSRS 2011** e do **Serviço do Windows MSRS 2011** . Esses objetos fazem parte de uma implantação do Modo Nativo do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/09/2017
 |**Total de atualizações de instantâneos**|Número total de atualizações para instantâneos de execução de relatório.|  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")o script do Windows PowerShell a seguir retorna os conjuntos de contador onde o CounterSetName começa com "msr":  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O seguinte script do Windows PowerShell retorna os conjuntos de contadores cujo CounterSetName começa com “msr”:  
   
 ```  
 get-counter -listset msr*  
@@ -130,10 +130,9 @@ get-counter -listset msr*
 (get-counter -listset "MSRS 2011 Windows Service").paths  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Contadores de desempenho para o modo de SharePoint MSRS 2011 Web Service e objetos de desempenho do MSRS 2011 Windows Service SharePoint modo &#40; Modo do SharePoint &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Contadores de desempenho do modo do SharePoint do serviço Web do MSRS 2011 e objetos de desempenho do modo do SharePoint do serviço Windows do MSRS 2011 &#40;modo do SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Contadores de desempenho para os objetos de desempenho ReportServer:Service e ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

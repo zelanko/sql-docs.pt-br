@@ -2,12 +2,13 @@
 title: Criar, modificar e excluir assinaturas controladas por dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 92aab81d1e8bb487b3cbf671c4e15034abe09341
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Criar, modificar e excluir assinaturas controladas por dados
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  
   
- Para criar uma nova assinatura controlada por dados ou modificar uma assinatura existente, use as páginas Criar Assinatura Controlada por Dados no Gerenciador de Relatórios. Essas páginas fazem com que você percorra cada etapa da criação ou modificação de uma assinatura. Para acessar uma assinatura depois de criá-la, use a página Minhas Assinaturas e a lista de Assinaturas de um relatório. Para saber como criar uma assinatura controlada por dados, consulte [criar uma assinatura controlada por dados &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Para criar uma nova assinatura controlada por dados ou modificar uma assinatura existente, use as páginas Criar Assinatura Controlada por Dados no Gerenciador de Relatórios. Essas páginas fazem com que você percorra cada etapa da criação ou modificação de uma assinatura. Para acessar uma assinatura depois de criá-la, use a página Minhas Assinaturas e a lista de Assinaturas de um relatório. Para saber como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  Neste tópico:  
   
@@ -70,9 +71,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  No Gerenciador de Relatórios, navegue até a pasta que contém o relatório, focalize o relatório, abra o menu de opções e clique em **Gerenciar**.  
   
-2.  Clique na guia **Assinaturas** . Como alternativa, clique no link **Minhas Assinaturas** na parte superior do Gerenciador de Relatórios.  
+2.  Clique na guia **Assinaturas** . Como alternativa, clique no link **Minhas Assinaturas** na parte superior do gerenciador de relatórios  
   
-3.  Selecione a assinatura que você deseja modificar. O ícone seguinte indica uma assinatura controlada por dados: ![ícone de assinatura controlada por dados](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "ícone de assinatura controlada por dados")  
+3.  Selecione a assinatura que você deseja modificar. O seguinte ícone indica uma assinatura controlada por dados: ![ícone da assinatura controlada por dados](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "ícone da assinatura controlada por dados")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar uma assinatura controlada por dados existente (Modo do SharePoint)  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  Para criar uma assinatura controlada por dados, atenda aos seguintes requisitos:  
   
--   **Requisitos de relatório**. O relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar os dados durante a execução. Você não pode assinar um relatório que use credenciais não representadas ou delegadas para se conectar a uma fonte de dados externa; as credenciais do usuário que cria ou possui uma assinatura não estarão disponíveis quando a assinatura é processada. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+-   **Requisitos de relatório**. O relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar os dados durante a execução. Você não pode assinar um relatório que use credenciais não representadas ou delegadas para se conectar a uma fonte de dados externa; as credenciais do usuário que cria ou possui uma assinatura não estarão disponíveis quando a assinatura é processada. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
      Não é possível assinar um relatório do Construtor de Relatórios que use um modelo como uma fonte de dados e o modelo contiver configurações de segurança do item de modelo. Somente relatórios que usam a segurança do item de modelo são incluídos nesta restrição.  
   
@@ -105,12 +106,12 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_run_subscription"></a> Executando a assinatura  
  Você deve especificar condições para processar a assinatura. Você pode especificar uma agenda ou pode acionar a assinatura para coincidir com as atualizações para um instantâneo de execução do relatório. O processamento de assinaturas controladas por dados é o mesmo que o processamento para assinaturas padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [old_Crie e gerencie assinaturas de servidores de relatório no modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Página de assinaturas &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Página Minhas assinaturas &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Página Assinaturas &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Página Minhas Assinaturas &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

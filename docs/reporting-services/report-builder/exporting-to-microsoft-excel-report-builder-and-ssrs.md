@@ -1,26 +1,27 @@
 ---
-title: "Exportando para o Microsoft Excel (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exportando para o Microsoft Excel (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Consulte [exportar relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para Excel.  
+ Consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para o Excel.  
   
 > [!IMPORTANT]  
 >  Quando você define um parâmetro do tipo **String**, é exibida para o usuário uma caixa de texto que pode ter qualquer valor. Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão, um script ou um URL no valor de parâmetro e processar o relatório em Excel. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 08/09/2017
   
 -   O número máximo de caracteres em uma célula é limitado a 32,767. Se isto for excedido, o processador exibirá uma mensagem de erro.  
   
--   A altura de linha máxima é 409 pontos. Se o conteúdo da linha faz com que a altura da linha aumente além dos 409 pontos, a célula do Excel mostra um valor parcial de texto até 409 pontos. O restante do conteúdo da célula é ainda dentro da célula (até o número máximo do Excel de caracteres de 32.767).
+-   A altura de linha máxima é 409 pontos. Se o conteúdo da linha fizer com que a altura da linha aumente além dos 409 pontos, a célula do Excel mostrará uma quantidade parcial de texto até 409 pontos. O restante do conteúdo da célula ainda ficará dentro da célula (até o número máximo de 32.767 caracteres do Excel).
 
--  Como a altura de linha máxima é 409 pontos, se a altura definida da célula do relatório for algo maior 409 pontos, o Excel divide o conteúdo da célula em várias linhas.
+-  Como a altura máxima da linha é de 409 pontos, se a altura definida da célula do relatório for algo maior que 409 pontos, o Excel dividirá o conteúdo da célula em várias linhas.
   
 -   O número máximo de planilhas não é definido no Excel, mas fatores externos, como memória e espaço em disco, podem levar à aplicação de limitações.  
   
@@ -116,15 +117,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>Grupos de linhas e grupos de colunas de relatórios  
  Os relatórios que incluem grupos de linhas ou grupos de colunas contêm células vazias quando exportados para o Excel. Imagine um relatório que agrupa linhas segundo a distância do trabalho. Cada distância do trabalho pode conter mais de um cliente. A imagem a seguir mostra o relatório.  
   
- ![Relatórios no portal da web do Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "relatório no portal da web do Reporting Services")  
+ ![Relatório no portal da Web do Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Relatório no portal da Web do Reporting Services")  
   
  Quando o relatório é exportado para o Excel, a distância do trabalho só aparece em uma célula da coluna Distância do Trabalho. Dependendo do alinhamento do texto no relatório (parte superior, meio ou parte inferior) o valor estará na primeira, na célula do meio ou na última célula. As outras células estarão vazias. A coluna Nome que contém nomes de clientes não tem nenhuma célula vazia. A imagem a seguir mostra o relatório depois de ser exportado para o Excel. As bordas de célula vermelhas foram adicionadas para dar ênfase. As caixas cinzas são as células vazias. (As linhas vermelhas e as caixas cinzas não fazem parte do relatório exportado.)  
   
- ![Relatório exportado para o Excel, com linhas](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "relatório exportado para o Excel, com linhas")  
+ ![Relatório exportado para o Excel, com linhas](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Relatório exportado para o Excel, com linhas")  
   
  Isso significa que relatórios com grupos de linhas ou grupos de colunas exigem modificação depois da exportação para o Excel e antes que você possa exibir os dados exportados em tabela dinâmica. Você deve adicionar o valor de grupo às células nas quais eles estão ausentes para transformar a planilha em uma tabela plana com valores em todas as células. A imagem a seguir mostra a planilha atualizada.  
   
- ![Relatório exportado para o Excel, simplificado](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "relatório exportado para o Excel, simplificado")  
+ ![Relatório exportado para o Excel, combinado](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Relatório exportado para o Excel, combinado")  
   
  Sendo assim, se você criar um relatório com o objetivo específico de exportá-lo para o Excel para análise adicional dos dados do relatório, considere não agrupar em linhas ou colunas no relatório.  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Construtor de Relatórios em modo desconectado e você visualiza um relatório no Construtor de Relatórios. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração.  
   
--   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [modo Local vs. em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Relatórios no modo Local versus em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se o renderizador de opção de menu **Excel 2003** estiver configurado para ficar visível, as opções Excel e Excel 2003 estarão disponíveis nos seguintes cenários:  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 08/09/2017
 |Máximo de colunas por planilha|256|16.384|  
 |Máximo de linhas por planilha|65.536|1.048.576|  
 |Número de cores permitido em uma planilha|56 (paleta)<br /><br /> Se mais de 56 cores forem utilizadas no relatório, a extensão de renderização corresponderá à cor necessária de uma das 56 cores já disponíveis na paleta personalizada.|Aproximadamente 16 milhões (cor de 24 bits)|  
-|Arquivos compactados em ZIP|Nenhum.|compactação em ZIP|  
+|Arquivos compactados em ZIP|Nenhum|compactação em ZIP|  
 |Família de fontes padrão|Arial|Calibri|  
 |Tamanho da fonte padrão|10pt|11pt|  
 |Altura de linha padrão|12,75 pt|15 pt|  
@@ -192,7 +193,7 @@ ms.lasthandoff: 08/09/2017
   
  Gráficos, minigráficos, barras de dados, mapas, medidores e indicadores são exportados como imagens. Os dados que eles descrevem, como os rótulos de valor e membro para um gráfico, não são exportados com eles e não estão disponíveis na pasta de trabalho do Excel, a menos que sejam incluídos em uma coluna ou linha em uma região de dados dentro de um relatório.  
   
- Se desejar trabalhar com dados de gráfico, minigráfico, barra de dados, mapas, medidor e indicador, exporte o relatório para um arquivo .csv ou gere feeds de dados compatíveis com o Atom a partir do relatório. Para obter mais informações, consulte [exportando para um arquivo CSV &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [gerando Feeds de dados de relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Se desejar trabalhar com dados de gráfico, minigráfico, barra de dados, mapas, medidor e indicador, exporte o relatório para um arquivo .csv ou gere feeds de dados compatíveis com o Atom a partir do relatório. Para obter mais informações, consulte [Exportando para um arquivo CSV &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Dimensionamento de página  
  A extensão de renderização do Excel usa as definições de altura e largura da página para determinar a configuração do papel a ser definida na planilha do Excel. O Excel tenta corresponder as configurações de propriedade PageHeight e PageWidth a um dos tamanhos de papel mais comuns.  
@@ -255,7 +256,7 @@ ms.lasthandoff: 08/09/2017
   
  O esboço de mapa de documento é renderizado como um esboço de Excel recolhível. A estrutura do esboço corresponde à estrutura aninhada do mapa de documento. O estado de expansão ou de recolhimento do esboço se inicia ao segundo nível.  
   
- O nó raiz do mapa é o nome do relatório, o \< *reportname*> >.RDL e não é interativo. A fonte dos links do mapa do documento é Arial, 10pt.  
+ O nó raiz do mapa é o nome de relatório, o \<*reportname*>.rdl e não é interativo. A fonte dos links do mapa do documento é Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Links de detalhamento  
  Os links de detalhamento que aparecem nas caixas de texto são renderizados como hiperlinks Excel na célula em que o texto é renderizado. Os links de detalhamento para imagens e gráficos são renderizados como hiperlinks do Excel na imagem quando renderizada. Quando clicado, o link de detalhamento abre o navegador padrão do cliente e navega para a exibição do HTML de destino.  
@@ -272,12 +273,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="ConditionalFormat"></a> Alterando relatórios em tempo de execução  
  Se um relatório precisar ser renderizado em vários formatos e não for possível criar um layout de relatório que renderize da forma desejada em todos os formatos obrigatórios, você pode considerar usar o valor em RenderFormat global interno para alterar condicionalmente a aparência do relatório em tempo de execução. Dessa forma, é possível ocultar ou mostrar itens de relatório dependendo do renderizador usado para obter os melhores resultados em cada formato. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

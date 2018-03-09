@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geometry)
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51bde32ba27af0ed46bb176ede7bb4a61ef15292
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 368e8c16724fd11e5518db839966f4a598e51cba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **
   
  Tipo de retorno CLR: **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use `MinDbCompatibilityLevel()` para testar a compatibilidade de um objeto espacial antes de alterar o nível de compatibilidade em um banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
@@ -77,5 +76,4 @@ Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-
 

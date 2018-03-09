@@ -1,5 +1,5 @@
 ---
-title: "Transformação pesquisa de termos | Microsoft Docs"
+title: "Transformação Pesquisa de Termo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
@@ -67,13 +66,13 @@ ms.lasthandoff: 08/19/2017
   
  Quando um item de pesquisa contém termos que se sobrepõem no conjunto de referência, isto é, um subtermo é achado em mais de um registro de referência, a transformação pesquisa de termos só retorna um resultado de pesquisa. O exemplo a seguir mostra o resultado quando um item de pesquisa contém um subtermo sobreposto. O subtermo sobreposto nesse caso é *Windows*, que é achado dentro de dois termos de referência. Porém, a transformação não retorna dois resultados, mas apenas um único termo de referência: *Windows*. O segundo termo de referência, *Windows 7 Professional*não é retornado.  
   
-|Item|Value|  
+|Item|Valor|  
 |----------|-----------|  
 |Termo de entrada|Windows 7 Professional|  
 |Termos de referência|Windows, Windows 7 Professional|  
 |Saída|Windows|  
   
- A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são da seguinte maneira: %, @, &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", e '.  
+ A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
   
 ## <a name="data-types"></a>Tipos de dados  
  A transformação pesquisa de termos só pode usar uma coluna que tenha tipo de dados DT_WSTR ou DT_NTEXT. Se uma coluna contiver texto, mas não tiver um desses tipos de dados, a transformação Conversão de Dados poderá adicionar uma coluna com tipo de dados DT_WSTR ou DT_NTEXT para o fluxo de dados e copiar os valores da coluna para a coluna nova. A saída da transformação Conversão de Dados pode ser usada, então, como entrada para a transformação pesquisa de termos. Para obter mais informações, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -156,8 +155,7 @@ ms.lasthandoff: 08/19/2017
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Transformação extração de termos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+ [Transformação Extração de Termos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

@@ -3,7 +3,7 @@ title: Propriedade ActiveConnection (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae0ad910a0535599d7e134d3314030537068ab25
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>Propriedade ActiveConnection (ADO MD)
 Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) o conjunto de células atual do objeto ou o catálogo ao qual pertence atualmente.  
@@ -38,7 +37,7 @@ Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** que contém uma cadeia de caracteres que define uma conexão ou **Conexão** objeto. O padrão é vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode definir essa propriedade para um ADO válido **Conexão** objeto ou uma cadeia de caracteres de conexão válido. Quando essa propriedade é definida como uma cadeia de caracteres de conexão, o provedor cria um novo **Conexão** usando esta definição de objeto e abre a conexão.  
   
  Se você usar o *ActiveConnection* argumento do [abrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para abrir um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto, o **ActiveConnection** será de propriedade herde o valor do argumento.  
@@ -74,4 +73,3 @@ Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object
  [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Método Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
-

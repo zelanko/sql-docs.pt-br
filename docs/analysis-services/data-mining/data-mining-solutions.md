@@ -2,35 +2,33 @@
 title: "Soluções de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 64
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-solutions"></a>Soluções de mineração de dados
-  Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
   
  Os tópicos desta seção fornecem informações sobre como projetar e implementar uma solução de mineração de dados integrada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="in-this-section"></a>Nesta seção  
  [Projetos de mineração de dados](../../analysis-services/data-mining/data-mining-projects.md)  
   
- [Processando objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)  
+ [Processar objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)  
   
  [Projetos relacionados a soluções de mineração de dados](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
@@ -87,14 +85,13 @@ ms.lasthandoff: 09/01/2017
   
 |Tarefas|Tópicos|  
 |-----------|------------|  
-|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
-|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Personalize um modelo de mineração aplicando filtros aos dados de treinamento, escolhendo um algoritmo diferente ou definindo parâmetros de algoritmo avançados.|[Personalizar os modelos de mineração e a estrutura](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processar objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
+|Personalize um modelo de mineração aplicando filtros aos dados de treinamento, escolhendo um algoritmo diferente ou definindo parâmetros de algoritmo avançados.|[Personalizar a estrutura e modelos de mineração](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar modelos de mineração para uma estrutura de &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Atualize e gerencie as soluções de mineração de dados.|Link TBD|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais de Data Mining &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Tutoriais de mineração de dados &#40; Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   
-

@@ -2,15 +2,13 @@
 title: Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21b2e91cb0c388e3d61d5125366289d73c811f47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS
-  Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_STRUCTURE_COLUMNS** linhas contém as seguintes colunas.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**NOME DA COLUNA**|**DBTYPE_WSTR**|Opcional.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -3,7 +3,7 @@ title: "Seção de esquema | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Seção de esquema
 A seção de esquema é necessária. Como mostra o exemplo anterior, o ADO gravará detalhados de metadados sobre cada coluna para preservar a semântica dos valores de dados tanto quanto possível para a atualização. No entanto, para carregar no XML, ADO requer somente os nomes das colunas e o conjunto de linhas ao qual pertencem. Aqui está um exemplo de um esquema mínimo:  
@@ -184,4 +183,3 @@ A seção de esquema é necessária. Como mostra o exemplo anterior, o ADO grava
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

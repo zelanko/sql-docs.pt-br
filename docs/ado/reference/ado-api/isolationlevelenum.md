@@ -3,7 +3,7 @@ title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 98a9f6213af3fbfb523701f0a8dda1de80cc2d93
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f6f18a4cd10c70369d2e0aceb226310d7a5f4ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Especifica o nível de isolamento da transação para um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Indica que o provedor está usando um nível de isolamento diferente do especificado, mas que não é possível determinar o nível.|  
 |**adXactChaos**|16|Indica que as alterações mais altamente isolado transações pendentes não pode ser substituído.|  
@@ -45,8 +44,8 @@ Especifica o nível de isolamento da transação para um [Conexão](../../../ado
 |**adXactIsolated**|1048576|Indica que as transações sejam realizadas em isolamento de outras transações.|  
 |**adXactSerializable**|1048576|Mesmo que **adXactIsolated**.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -62,4 +61,3 @@ Especifica o nível de isolamento da transação para um [Conexão](../../../ado
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)
-

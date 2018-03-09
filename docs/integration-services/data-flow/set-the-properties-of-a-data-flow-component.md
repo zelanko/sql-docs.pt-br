@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e3dc5886a1328d8262a35d01cd5a1301ee3ffd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Definir as propriedades de um componente de fluxo de dados
   Para definir as propriedades de componentes de fluxo de dados, que incluem origens, destinos e transformações, use um dos seguintes recursos:  
@@ -146,7 +145,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
 |ValidateExternalMetadata|Booliano|Indica se os metadados de colunas externas foram validados. O valor padrão dessa propriedade é **True**.|  
 |Versão|Integer|Versão de um componente.|  
   
-###  <a name="inputs"></a>Propriedades de entrada  
+###  <a name="inputs"></a> Propriedades de entrada  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , transformações e destinos têm entradas. Uma entrada de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  A tabela a seguir descreve as propriedades das entradas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
@@ -162,11 +161,11 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
 |IsSorted|Booliano|Indica se os dados na entrada são classificados.|  
 |Nome|Cadeia de caracteres|Nome da entrada.|  
 |SourceLocale|Integer|ID de localidade (LCID) dos dados de entrada.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. . Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. para obter informações sobre a ferramenta de configuração e recursos adicionais. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
   
  Os destinos e algumas transformações não oferecem suporte a saídas de erro e as propriedades ErrorRowDisposition e TruncationRowDisposition dos componentes são somente leitura.  
   
-###  <a name="inputcolumns"></a>Propriedades de coluna de entrada  
+###  <a name="inputcolumns"></a> Propriedades da coluna de entrada  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , uma entrada contém uma coleção de colunas de entrada. Uma coluna de entrada de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  A tabela a seguir descreve as propriedades das colunas de entrada de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
@@ -190,7 +189,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  As colunas de entrada também têm as propriedades de tipo de dados descritas no item "Propriedades de Tipo de Dados".  
   
-###  <a name="outputs"></a>Propriedades de saída  
+###  <a name="outputs"></a> Propriedades de saída  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , origens e transformações têm saídas. Uma saída de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  A tabela a seguir descreve as propriedades das saídas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
@@ -206,12 +205,12 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
 |ID|Integer|Valor que identifica a saída com exclusividade.|  
 |IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a saída.|  
 |IsErrorOut|Booliano|Indica se a saída é uma saída de erro.|  
-|IsSorted|Booliano|Indica se a saída está classificada. O valor padrão é **Falso**.<br /><br /> **\*\*Importante \* \***  definindo o valor da **IsSorted** propriedade **True** não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Booliano|Indica se a saída está classificada. O valor padrão é **Falso**.<br /><br /> **\*\* Importante \*\*** Configurar o valor da propriedade **IsSorted** como **True** não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|Cadeia de caracteres|Nome da saída.|  
 |SynchronousInputID|Integer|ID de uma entrada que é síncrona à saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são **Fail component**, **Ignore failure**e **Redirect row**.|  
   
-###  <a name="outputcolumns"></a>Propriedades de coluna de saída  
+###  <a name="outputcolumns"></a> Propriedades da coluna de saída  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , uma saída contém uma coleção de colunas de saída. Uma coluna de saída de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  A tabela a seguir descreve as propriedades das colunas de saída de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
@@ -234,7 +233,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  As colunas de saída também incluem um conjunto de propriedades de tipo de dados.  
   
-### <a name="external-metadata-column-properties"></a>Propriedades de coluna de metadados externos  
+### <a name="external-metadata-column-properties"></a>Propriedades da coluna de metadados externa  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , entradas e saídas podem conter uma coleção de colunas de metadados externas. Uma coluna de metadados externa de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  A tabela a seguir descreve as propriedades das colunas de metadados externas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
@@ -348,7 +347,7 @@ Os valores de certas propriedades dos objetos de fluxo de dados podem ser especi
  
  Os valores das propriedades na lista a seguir podem ser especificados usando expressões de propriedades.  
   
-### <a name="data-flow-sources"></a>Fontes de fluxo de dados  
+### <a name="data-flow-sources"></a>Origens de fluxo de dados  
   
 |Objeto de Fluxo de Dados|Propriedade|  
 |----------------------|--------------|  
@@ -378,7 +377,6 @@ Os valores de certas propriedades dos objetos de fluxo de dados podem ser especi
 |----------------------|--------------|  
 |Destino do ADO NET|Propriedade TableOrViewName<br /><br /> Propriedade BatchSize<br /><br /> Propriedade CommandTimeout|  
 |Destino de arquivo simples|Propriedade Header|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destino Compact|Propriedade TableName|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destino|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
-
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Destino Compact|Propriedade TableName|  
+|Destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
 

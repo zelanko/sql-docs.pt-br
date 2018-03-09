@@ -2,9 +2,12 @@
 title: Resolvedores baseados em Microsoft COM | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01b82214e9d862bcd12b031a6cea6184a48ddabb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflito de replicação de mesclagem avançada – resolvedores baseados em COM
-  Todos os resolvedores baseados em COM fornecidos com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam de conflitos de atualização e, quando indicado, tratam de conflitos de inserção e exclusão. Todos eles tratam de rastreamento de colunas; a maioria também trata de rastreamento de linhas. Estes e todos os outros resolvedores baseados em COM declaram os tipos de conflito que eles podem tratar e o Merge Agent usa o resolvedor padrão para todos os outros tipos de conflito.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todos os resolvedores baseados em COM fornecidos com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam de conflitos de atualização e, quando indicado, tratam de conflitos de inserção e exclusão. Todos eles tratam de rastreamento de colunas; a maioria também trata de rastreamento de linhas. Estes e todos os outros resolvedores baseados em COM declaram os tipos de conflito que eles podem tratar e o Merge Agent usa o resolvedor padrão para todos os outros tipos de conflito.  
   
  Os resolvedores são instalados durante o processo de instalação para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Execute o procedimento armazenado **sp_enumcustomresolvers** para exibir todos os resolvedores de conflito registrados em um computador. Executar o procedimento exibe a descrição e o GUID (identificador global exclusivo) para cada resolvedor em um conjunto de resultados separado.  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
  A tabela a seguir descreve os atributos dos resolvedores específicos.  
   
-|Nome|Entrada Requerida|Descrição|Comentários|  
+|Nome|Entrada Requerida|Description|Comentários|  
 |----------|--------------------|-----------------|--------------|  
 |Resolvedor de Conflitos Suplementares do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nome da coluna que será somada. Deve ter um tipo de dado aritmético (como **int**, **smallint**, **numeric**e assim por diante).|O vencedor de conflito é determinado a partir do valor de prioridade. Valores de coluna especificados são definidos pela soma dos valores de coluna de origem e de destino. Se um for definido como NULL, eles serão definidos pelo valor da outra coluna.|Oferece suporte apenas a conflitos de atualização e rastreamento de coluna.|  
 |Resolvedor de Conflitos de Cálculo de Média do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nome da coluna a ser calculada pela média. Deve ter um tipo de dado aritmético (como **int**, **smallint**, **numeric**e assim por diante).|O vencedor de conflito é determinado a partir do valor de prioridade. Os valores de coluna resultantes são definidos pela média dos valores de coluna de origem e de destino. Se um for definido como NULL, eles serão definidos pelo valor da outra coluna.|Oferece suporte apenas a conflitos de atualização e rastreamento de coluna.|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 |Resolvedor de Conflitos Somente Download do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nenhuma entrada.|As alterações carregadas no Publicador são rejeitadas; são baixadas alterações no Assinante.|Oferece suporte a todos os tipos de conflito.|  
 |Resolvedor de Procedimento Armazenado do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server|Nome do procedimento armazenado que o resolvedor deverá chamar para tratar do conflito.|A resolução de conflito depende da lógica no procedimento armazenado que você especifica.|Oferece suporte a conflitos de atualização. Para obter mais informações, consulte [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   

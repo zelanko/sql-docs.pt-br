@@ -1,29 +1,28 @@
 ---
-title: "Encaixar o painel de dados de relatório no Designer de relatórios (SSRS) | Microsoft Docs"
+title: "Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Data pane, docking
+helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-caps.latest.revision: 17
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "17"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7300a2cd51617c29aae8c78b1b7780a1a2f1c92f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o painel de dados do relatório apresenta uma exibição hierárquica de objetos de dados que você pode usar em um relatório, incluindo fontes de dados, conjuntos de dados, campos, parâmetros e imagens. As fontes de dados dessa exibição podem ser inseridas em fontes de dados compartilhadas exibidas no Gerenciador de Soluções ou referenciadas por elas.  
@@ -48,9 +47,8 @@ ms.lasthandoff: 08/09/2017
   
      Para alternar entre os dois últimos estados de exibição, clique duas vezes na barra de título do painel de dados do relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Painel de Dados do Relatório](../../reporting-services/report-data/report-data-pane.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

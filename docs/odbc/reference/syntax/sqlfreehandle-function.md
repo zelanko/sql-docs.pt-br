@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFreeHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFreeHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFreeHandle
-helpviewer_keywords:
-- SQLFreeHandle function [ODBC]
+f1_keywords: SQLFreeHandle
+helpviewer_keywords: SQLFreeHandle function [ODBC]
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd53996a8107a577cfae703a8f68f036e5ae0eb6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfreehandle-function"></a>Função SQLFreeHandle
 **Conformidade**  
@@ -188,8 +182,7 @@ int main() {
 |Cancelando o processamento de instrução|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa ODBC de exemplo](../../../odbc/reference/sample-odbc-program.md)
-

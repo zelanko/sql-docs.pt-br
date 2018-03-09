@@ -2,15 +2,13 @@
 title: "Criar uma estrutura de mineração relacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Criar uma estrutura de mineração relacional
-  A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
   
  Uma estrutura de mineração relacional pode tirar dados de origens distintas. Os dados brutos podem ser armazenados em tabelas, arquivos ou sistemas de banco de dados relacional, contanto que os dados possam ser definidos como parte da exibição da fonte de dados. Por exemplo, você deve usar uma estrutura de mineração relacional se seus dados estiverem no Excel, um data warehouse de SQL Server ou um banco de dados de relatório de SQL Server, ou em origens externas que são acessadas pelos provedores OLE DB ou ODBC.  
   
@@ -133,10 +132,10 @@ ms.lasthandoff: 11/17/2017
 >  Para usar o detalhamento, você deve habilitá-lo quando você cria a estrutura de mineração. Você pode habilitar o detalhamento em modelos posteriormente, definindo uma propriedade no modelo, mas as estruturas de mineração exigem que esta opção seja definida no início. Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de Mineração de Dados](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Designer de mineração de dados](../../analysis-services/data-mining/data-mining-designer.md)   
  [Assistente de mineração de dados &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md)   
  [Propriedades de estrutura de mineração e colunas de estrutura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
- [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

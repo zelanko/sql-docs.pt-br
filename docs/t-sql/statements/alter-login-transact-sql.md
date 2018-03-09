@@ -26,17 +26,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9dd47cb63c56dbbfb5f31ea3f7b2c8d4f45e9d73
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -212,7 +211,7 @@ ALTER LOGIN login_name
   
 Remove uma credencial do provedor de gerenciamento de chave extensível (EKM) do logon. Para obter mais informações, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando CHECK_POLICY estiver definido como ON, o argumento HASHED não poderá ser usado.  
   
  Quando CHECK_POLICY for alterado para ON, o seguinte comportamento ocorrerá:  
@@ -265,28 +264,28 @@ Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessárias pa
 ### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado  
  O exemplo seguinte ativa o logon `Mary5`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon  
  O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### <a name="c-changing-the-name-of-a-login"></a>C. Alterando o nome de um logon  
  O exemplo seguinte altera o nome de logon `Mary5` para `John2`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### <a name="d-mapping-a-login-to-a-credential"></a>D. Mapeando um logon para uma credencial  
  O exemplo seguinte mapeia o logon `John2` para a credencial `Custodian04`.  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -296,7 +295,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -306,7 +305,7 @@ GO
  Para desbloquear um logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a seguinte instrução, substituindo **** pela senha da conta desejada.  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -314,7 +313,7 @@ GO
   
  Para desbloquear um logon sem alterar a senha, desative a política de verificação e ative-a novamente.  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -325,7 +324,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  
@@ -333,7 +332,7 @@ GO
   
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Remover logon &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
@@ -342,6 +341,5 @@ GO
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
-
 
 

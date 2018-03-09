@@ -3,27 +3,28 @@ title: Trabalhando com o SSMA para Sybase Console (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a872584b3b854de713ef6a741a8fa19f956ece8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 066094ccec0f2db38f503ebfacfa016f25c5380b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhando com o SSMA para Sybase Console (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant), versão para Sybase Adaptive Server Enterprise (ASE), agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -46,7 +47,6 @@ Os tópicos abordados nesta seção incluem:
 |[Gerando relatórios &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Lista os comandos para gerar relatórios.|  
 |[Solucionando problemas de &#40; SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Fornece breves informações sobre como corrigir problemas de migração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Introdução ao SSMA for Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   
-

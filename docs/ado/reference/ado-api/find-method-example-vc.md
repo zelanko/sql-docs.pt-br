@@ -3,7 +3,7 @@ title: "Localizar o exemplo de método (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 587289df9a029732fade5c761b07037126c4877e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa68bfc51fa7305ec97d8aacbb5a0c95ed409fa3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-vc"></a>Localizar o exemplo de método (VC + +)
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [localizar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar e contar o número de títulos de negócios a **Pubs** banco de dados. O exemplo supõe que o provedor subjacente não oferece suporte à funcionalidade semelhante.  
@@ -165,4 +164,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Consulte também  
  [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

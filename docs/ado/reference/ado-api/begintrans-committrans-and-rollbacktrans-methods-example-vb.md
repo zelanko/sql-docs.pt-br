@@ -3,7 +3,7 @@ title: "BeginTrans, CommitTrans e exemplo de métodos RollbackTrans (VB) | Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0f366c21d5ea0ee0fb0ffaa32238a29e173e63a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2c434a90d90ff2e84456b67a10c9a36370fe9a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans, CommitTrans e exemplo de métodos RollbackTrans (VB)
 Este exemplo altera o tipo de catálogo de todos os livros de psicologia do ***títulos*** tabela do banco de dados. Após o [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método inicia uma transação que isola todas as alterações feitas a ***títulos*** tabela, o [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método salva as alterações. Você pode usar o [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método para desfazer as alterações que você salvou usando o [atualização](../../../ado/reference/ado-api/update-method.md) método.  
@@ -142,4 +141,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [BeginTrans, CommitTrans e métodos RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

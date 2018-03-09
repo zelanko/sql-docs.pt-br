@@ -2,23 +2,27 @@
 title: "Em tempo real de pontuação | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="realtime-scoring"></a>Em tempo real de pontuação
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve um recurso disponível no SQL Server 2016 e no SQL Server 2017 que dá suporte a pontuação em modelos de aprendizado de máquina em tempo quase real.
 
@@ -77,11 +81,11 @@ Para obter informações sobre em tempo real de pontuação em um ambiente distr
 
 + Modelos de RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Modelos marcado com \* também oferecem suporte nativo a pontuação com a função de previsão.
 
@@ -98,7 +102,7 @@ Para obter informações sobre em tempo real de pontuação em um ambiente distr
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categóricos](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 

@@ -2,27 +2,30 @@
 title: "Propriedades da publicação, instantâneo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c0927c53dff6dc6bd14d93029cd49c376ae46bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38e2f81f0b5f1c0de7a07989e9b768e595c0670b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-snapshot"></a>Propriedades da Publicação, Instantâneo
-  A página **Instantâneo** da caixa de diálogo **Propriedades de Publicação** permite que você defina o formato do instantâneo, o local da pasta de instantâneo e os scripts a serem executados antes e depois da aplicação do instantâneo. A pasta de instantâneo deve ser designada como compartilhada e ter permissões adequadas para os agentes que leem e gravam arquivos na pasta. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Instantâneo** da caixa de diálogo **Propriedades de Publicação** permite que você defina o formato do instantâneo, o local da pasta de instantâneo e os scripts a serem executados antes e depois da aplicação do instantâneo. A pasta de instantâneo deve ser designada como compartilhada e ter permissões adequadas para os agentes que leem e gravam arquivos na pasta. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo).  
   
 > [!NOTE]  
 >  As alterações exigem um novo instantâneo para a publicação. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Insira um caminho na caixa de texto **Após aplicar o instantâneo, executar este script** ou clique em **Procurar** para especificar um local para o script.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

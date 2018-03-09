@@ -2,28 +2,34 @@
 title: Janela Pilha de Chamadas| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.callstack
-helpviewer_keywords: Call Stack Window [Transact-SQL]
+f1_keywords:
+- vs.debug.callstack
+helpviewer_keywords:
+- Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c0f984d7e59d71f46843dc8a2bef1295943fb3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9199cb8513afbd02c2cd7e656100b5375ec04e9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Depurador do Transact-SQL – Janela Pilha de Chamadas
-  A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar a janela Pilha de Chamadas**  
@@ -68,7 +74,7 @@ ms.lasthandoff: 11/09/2017
  **Idioma**  
  Exibe **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)  

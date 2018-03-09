@@ -2,9 +2,12 @@
 title: "Criar e aplicar o instantâneo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4834625127d034e228416aa5ba0f25f9314b3734
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 125aba0a73a7a3656cee3e459dcd3a1eca2f78b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-apply-the-snapshot"></a>Criar e aplicar o instantâneo
-  Instantâneos são gerados pelo Agente de Instantâneo depois que uma publicação for criada. Eles podem ser gerados:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Instantâneos são gerados pelo Agente de Instantâneo depois que uma publicação for criada. Eles podem ser gerados:  
   
 -   Imediatamente. Por padrão, um instantâneo para uma publicação de mesclagem é gerado imediatamente depois que a publicação seja criada no Assistente para Nova Publicação.  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Programação de replicação e programação de RMO: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Proteger a pasta de instantâneos](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

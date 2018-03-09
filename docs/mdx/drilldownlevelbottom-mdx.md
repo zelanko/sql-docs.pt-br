@@ -2,10 +2,13 @@
 title: DrilldownLevelBottom (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVELBOTTOM
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e805f7df3e980727841d6d9ce0f4f755429c357d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0811bbd1e0f3cf81ebe87ff200906e2489036092
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Faz uma busca detalhada dos membros mais inferiores de um conjunto, em um nível especificado, para um nível abaixo.  
   
@@ -50,7 +53,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Include_Calc_Members*  
  Opcional. Uma palavra-chave que adiciona membros calculados aos resultados da busca detalhada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma expressão numérica for especificada, o **DrilldownLevelBottom** função classificará, em ordem crescente, os filhos de cada membro no conjunto especificado, de acordo com o valor especificado, conforme avaliado sobre o conjunto de membros filho. Se uma expressão numérica não for especificada, a função classificará, em ordem crescente, os filhos de cada membro no conjunto especificado, de acordo com os valores das células representados pelo conjunto de membros filho, como determinados pelo contexto de consulta; esse comportamento é semelhante às funções BottomCount e Tail (MDX), que retornam um conjunto de membros em ordem natural, sem qualquer classificação.  
   
  Depois da classificação, o **DrilldownLevelBottom** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados em *contagem*, com o menor valor.  
@@ -88,7 +91,7 @@ DRILLDOWNLEVELBOTTOM(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   

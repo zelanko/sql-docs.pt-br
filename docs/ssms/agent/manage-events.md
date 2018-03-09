@@ -3,8 +3,11 @@ title: Gerenciar Eventos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef565c7b6ad04d504ac7b861e8610664d0d916a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aaa831f2f09c12a02fa997a912bd9d0b97ec6cba
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-events"></a>Gerenciar eventos
-É possível encaminhar a um instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] todas as mensagens de evento que atendam ou excedam um nível de severidade de erro específico. A isso chamamos *encaminhamento de evento*. O servidor de encaminhamento é um servidor dedicado que também pode ser um servidor mestre. Você pode usar o encaminhamento de eventos para centralizar o gerenciamento de alertas para um grupo de servidores, reduzindo, assim, a carga de trabalho em servidores de intensa utilização.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível encaminhar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] todas as mensagens de evento que atendam ou excedam um nível de gravidade de erro específico. A isso chamamos *encaminhamento de evento*. O servidor de encaminhamento é um servidor dedicado que também pode ser um servidor mestre. Você pode usar o encaminhamento de eventos para centralizar o gerenciamento de alertas para um grupo de servidores, reduzindo, assim, a carga de trabalho em servidores de intensa utilização.  
   
 Quando um servidor recebe eventos para um grupo de outros servidores, esse servidor é chamado de *servidor de gerenciamento de alertas*. Em um ambiente multisservidor, o servidor mestre é designado como servidor de gerenciamento de alertas.  
   
@@ -90,6 +93,6 @@ Você pode definir que um trabalho seja executado em resposta a um alerta. Por e
 > [!NOTE]  
 > Uma vez que um trabalho pode emitir um evento, tenha cuidado para não criar um loop recursivo alerta-trabalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

@@ -3,8 +3,11 @@ title: Janela Propriedades (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a96f9d9eb04873cd18219a65c73e0ae705a5096
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
-Use essa janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
   
 A janela Propriedades exibe tipos diferentes de campos de edição, dependendo das necessidades de uma propriedade em particular. As propriedades mostradas em cinza são somente leitura.  
   
@@ -40,6 +43,6 @@ A janela Propriedades exibe tipos diferentes de campos de edição, dependendo d
 |**Propriedades**|Exibe as propriedades de um objeto.|  
 |**Painel de descrição**|O painel de descrição é exibido na parte inferior da janela Propriedades e mostra o tipo de propriedade e uma descrição curta da propriedade. Você pode ativar e desativar a descrição da propriedade usando o comando **Descrição** no menu de atalho.|  
   
-## <a name="see-also"></a>Consulte também  
-[Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a>Consulte Também  
+[Elementos gerais da interface do usuário](../ssms/general-user-interface-elements.md)  
   

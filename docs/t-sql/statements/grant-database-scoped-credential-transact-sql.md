@@ -23,17 +23,16 @@ helpviewer_keywords:
 - database scoped credential [SQL Server], permissions
 - GRANT statement, database scoped credentials
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-caps.latest.revision: 3
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8fff82fbd6c81fea9cd9a7a95cabf35b0b8ecb7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6dbd261334e580904e9c6ad3b12ff761d8c909ab
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>No escopo do banco de dados de concessão de permissões de credencial (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -125,4 +124,3 @@ AS *granting_principal*
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

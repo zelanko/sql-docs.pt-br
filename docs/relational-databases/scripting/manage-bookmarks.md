@@ -2,28 +2,34 @@
 title: Gerenciar indicadores | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.BookmarkWindow
-helpviewer_keywords: bookmarks [SQL Server Management Studio]
+f1_keywords:
+- VS.BookmarkWindow
+helpviewer_keywords:
+- bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
-  Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas específicas de código dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Enquanto você está trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas de código específicas dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
   
  Para criar e navegar pelos indicadores, clique nos botões localizados na barra de ferramentas **TextEditor** na parte superior da janela **Indicadores** . Você pode adicionar e remover indicadores, pode ativá-los ou desabilitá-los e organizá-los em pastas. Alguns comandos também estão disponíveis no menu de atalho na janela **Indicadores** . Para adicionar ou remover um indicador, posicione o ponto de inserção na linha desejada do Editor e clique em **Alternar um indicador**. Para ativar um indicador, marque sua caixa de seleção na janela **Indicadores** ; para desabilitar (sem remover) um indicador, desmarque sua caixa de seleção.  
   
@@ -84,7 +90,7 @@ ms.lasthandoff: 11/09/2017
  **Delete (excluir)**  
  Remove o indicador atualmente selecionado na janela **Indicadores** e do documento em que está o indicador. Não remove a linha de código que continha o indicador.  
   
- **Rename**  
+ **Renomear**  
  Permite atribuir um novo nome para exibição para um indicador ou uma pasta.  
   
  **Desabilitar/Habilitar Indicador**  
@@ -93,7 +99,7 @@ ms.lasthandoff: 11/09/2017
  **Desabilitar/Habilitar Todos os Indicadores**  
  Desmarca ou habilita as caixas de seleção para todos os indicadores na janela **Indicadores** . Não remove indicadores ou altera as linhas de código que eles marcam.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

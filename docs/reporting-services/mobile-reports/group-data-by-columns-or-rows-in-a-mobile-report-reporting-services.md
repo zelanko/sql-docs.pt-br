@@ -1,25 +1,27 @@
 ---
-title: "Agrupar dados por colunas ou linhas em um relatório móvel | O Reporting Services | Microsoft Docs"
+title: "Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: c9fee1d3dc4099d73c2ed0af13333cdaa10a97b9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services
 Você pode organizar os dados por colunas ou linhas em vários tipos de gráficos no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Acompanhe esse passo a passo.
@@ -52,7 +54,7 @@ As etapas a seguir usam uma tabela de totais de comparação com dados simulados
 
 6. Na guia **Layout** , no painel **Propriedades visuais** , altere a **Estrutura de dados** de **Por colunas** para **Por linhas**.  
 
-7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Categoria** junto com as colunas **Métrica** e **Comparação** , com a categoria A a E. 
+7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Category**, junto com as colunas **Metric** e **Comparison**, com a Categoria A a E. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

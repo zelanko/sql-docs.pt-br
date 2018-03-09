@@ -1,7 +1,7 @@
 ---
 title: Instalar o Integration Services | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -21,83 +21,84 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: 106
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4a33adf33a12279d956ebdc3c5b2e5090e19935a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-integration-services"></a>Instalar o Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um único programa de Instalação para instalar qualquer ou todos os seus componentes, incluindo o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Com a Instalação, você pode instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com ou sem outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um único computador.    
     
- Este tópico destaca considerações importantes que você deve saber antes de instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. As informações neste tópico o ajudarão a avaliar as opções de instalação, para que seja possível fazer seleções que resultem em uma instalação com êxito.    
+ Este artigo destaca considerações importantes que você deve saber antes de instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. As informações neste artigo lhe ajudam a avaliar as opções de instalação, para que seja possível fazer seleções que resultem em uma instalação bem-sucedida.    
     
 ## <a name="preparing-to-install-integration-services"></a>Preparando para instalar o Integration Services    
- Antes de instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], revise os seguintes requisitos:    
+ Antes de instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], examine as seguintes informações:    
     
--   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
-    
--   [Verificar parâmetros do Verificador de Configuração do Sistema](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)    
+-   [Requisitos de Hardware e Software para a Instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
     
 -   [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
-## <a name="selecting-an-integration-services-configuration"></a>Selecionando uma configuração do Integration Services    
- Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nas seguintes configurações:    
+## <a name="installing-standalone-or-side-by-side"></a>Instalação autônoma ou lado a lado    
+Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nas seguintes configurações:    
     
 -   Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador que não tenha nenhuma instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
--   Você pode instalar o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] lado a lado com uma instância existente do [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e do [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].    
+-   Você pode instalar o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] lado a lado com uma instância existente do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
     
-     Quando você atualiza para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] em um computador que tem uma dessas versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] já instalada, o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] é instalado lado a lado com a versão anterior.    
+Quando você atualiza para a versão mais recente do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador que tem uma versão anterior do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] já instalada, a versão atual é instalada lado a lado com a versão anterior.    
     
-     Para obter mais informações sobre como atualizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], veja [Atualizar o Integration Services](../../integration-services/install-windows/upgrade-integration-services.md). Para obter informações sobre a compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], veja [Compatibilidade com versões anteriores do Integration Services](../../integration-services/integration-services-backward-compatibility.md).    
+Para obter mais informações sobre como atualizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], veja [Atualizar o Integration Services](../../integration-services/install-windows/upgrade-integration-services.md).
     
 ## <a name="installing-integration-services"></a>instalando o Integration Services    
  Depois de analisar os requisitos de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantir que seu computador atende esses requisitos, você estará pronto para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
-    
-> [!NOTE]    
->  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os usuários não têm acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalado, o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá executar a ferramenta Configuração de DCOM (Dcomcnfg.exe) para conceder acesso ao **SQL Server Integration Services 13.0**a usuários específicos.    
->     
->  Para obter instruções sobre como conceder permissões, consulte [serviço do Integration Services &#40; Serviço do SSIS &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).    
-    
- Se estiver usando o Assistente de Instalação para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você usará uma série de páginas para especificar componentes e opções. A tabela a seguir lista somente as páginas do Assistente de Instalação em que as opções selecionadas afetam a instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:    
-    
-|Página|Recomendações|    
-|----------|---------------------|    
-|**Seleção de recursos**|Selecione **Integration Services** para instalar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e executar pacotes fora do ambiente de design.<br /><br /> Para uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], que tenha as ferramentas e a documentação para o desenvolvimento e o gerenciamento de pacotes, selecione **Integration Services** e **Recursos Compartilhados**:<br /><br /> -<br />                    **Ferramentas de Dados do SQL Server** para instalar as ferramentas para criar pacotes.<br /><br /> -<br />                    **Ferramentas de Gerenciamento – Completas** para instalar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar pacotes.<br /><br /> -<br />                    **SDK de Ferramentas de Cliente** para instalar assemblies gerenciados para programação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Muitas soluções de data warehousing também requerem a instalação de componentes adicionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> **Instalando em um computador de 64 bits** Em um computador de 64 bits, a seleção de **Integration Services** instala apenas o tempo de execução e as ferramentas de 64 bits. Se você precisar executar pacotes em modo de 32 bits, deverá selecionar também uma opção adicional para instalar o tempo de execução e as ferramentas de 32 bits:<br /><br /> - Se o computador de 64 bits estiver executando o sistema operacional x86, selecione **SQL Server Data Tools** ou **Management Tools – Completo**.<br /><br /> - Se o computador de 64 bits estiver executando o sistema operacional [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] , selecione **Management Tools – Completo**.<br /><br /> **Instalando em um Servidor Dedicado para ETL** Para usar um servidor dedicado para processos ETL (extração, transformação e carregamento) é recomendável instalar uma instância local do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geralmente armazena pacotes em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e depende do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar esses pacotes. Se o servidor ETL não tiver uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], será necessário agendar ou executar pacotes de um servidor que tenha uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isso significa que os pacotes não serão executados no servidor ETL, mas no servidor do qual foram iniciados. Assim, os recursos do servidor ETL dedicado não estarão sendo usados como pretendido. Além disso, os recursos de outros servidores podem ser obtidos pela execução de processos ETL<br /><br /> <br /><br /> Observação: alguns componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que podem ser selecionados para instalação na página **Seleção de Recursos** do Assistente de Instalação instalam um subconjunto parcial dos componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses componentes são úteis para tarefas específicas, mas a funcionalidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será limitada. Por exemplo, a opção **Serviços de Mecanismo de Banco de Dados** instala os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessários para o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A opção **Ferramentas de Dados do SQL Server** instala os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessários para criar um pacote, mas o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é instalado e você não pode executar pacotes fora do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para assegurar uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve selecionar **Integration Services** na página **Seleção de Recursos** .|    
-|**Configuração da instância**|Qualquer seleção que você faça na página **Configuração da Instância** não afeta o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Você pode instalar apenas uma instância do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador. Você se conecta ao serviço usando o nome do computador.<br /><br /> Por padrão, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para gerenciar pacotes armazenados no banco de dados **msdb** em uma instância do Mecanismo de Banco de Banco de Dados instalada ao mesmo tempo em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se uma instância do Mecanismo de Banco de Dados não for instalada ao mesmo tempo que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será configurado para gerenciar pacotes armazenados no banco de dados **msdb** de uma instância local padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para gerenciar pacotes armazenados em uma instância nomeada ou remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou em várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], é preciso modificar o arquivo de configuração. Para obter mais informações sobre como modificar esse arquivo de configuração, consulte [serviço do Integration Services &#40; Serviço do SSIS &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).|    
-|**Configuração do Servidor**|Examine as configurações para o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] na guia **Contas de Serviço** da página **Configuração do Servidor** .<br /><br /> Se o Windows 7 ou Windows Server 2008 R2 estiver instalado, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será registrado para ser executado na conta virtual NT Services\MsDtsServer130 e o **Tipo de inicialização** será **Automático**.  Você não tem que inserir uma senha para a conta virtual. Se o Microsoft Vista ou Windows Server 2008 estiver instalado, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será registrado para ser executado na conta interna Serviço de Rede e o **Tipo de inicialização** será **Automático**. Você não tem que digitar uma senha para a conta de Serviço de Rede interna.|    
-    
- Por padrão, em uma nova instalação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para não registrar eventos relacionados à execução de pacotes no log de eventos do Aplicativo. Essa configuração evita de entradas em excesso no log de eventos quando você usa o recurso Coletor de Dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os eventos registrados são EventID 12288, "Pacote iniciado" e EventID 12289, "Pacote concluído com êxito". Para registrar esses eventos no log de eventos do Aplicativo, abra o Registro para edição. Em seguida, no Registro, localize o nó HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS e altere o valor DWORD da configuração LogPackageExecutionToEventLog de 0 para 1.    
-    
-## <a name="understanding-the-integration-services-service"></a>Compreendendo o serviço Integration Services    
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .    
-    
- O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado quando você selecionar a opção **Integration Services** na página **Seleção de Recursos** . Quando você aceita as configurações padrão na página **Configuração de Servidor** , o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é habilitado e seu **Tipo de Inicialização** é **Automática**.    
-    
- Você pode instalar apenas uma única instância do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador. O serviço não é específico a uma instância específica do Mecanismo de Banco de Dados. Você se conecta ao serviço usando o nome do computador no qual ele está sendo executado.    
-    
-## <a name="installing-integration-services-on-64-bit-computers"></a>Instalando o Integration Services em computadores de 64 bits    
-    
-### <a name="integration-services-features-installed-on-64-bit-computers"></a>Recursos do Integration Services instalados em computadores de 64 bits    
- A instalação instala vários recursos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com base nas opções de instalação selecionadas:    
-    
--   Quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seleciona o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para instalação, são instalados todos os recursos e ferramentas de 64 bits disponíveis do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .    
-    
--   Se você precisar de recursos de tempo de design do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , também deverá instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].    
-    
--   Se você precisar das versões de 32 bits das ferramentas e do tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para executar determinados pacotes no modo de 32 bits, deverá instalar também o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].    
-    
- Os recursos de 64 bits são instalados no diretório **Arquivos de Programas** e os recursos de 32 bits são instalados separadamente no diretório **Arquivos de Programas (x86)** . (Esse comportamento não é específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)    
-    
-> [!IMPORTANT]    
->  O [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ambiente de desenvolvimento de 32 bits para pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], não tem suporte no sistema operacional de 64 bits do [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e não é instalado em servidores [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].    
-    
-  
+     
+Se você está usando o Assistente de Instalação para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você usa uma série de páginas para especificar componentes e opções.
 
+-   Na página **Seleção de Recursos**, em **Recursos Compartilhados**, selecione **Integration Services**.
+
+-   Em **Recursos de Instância**, selecione opcionalmente **Serviços de Mecanismo de Banco de Dados** para hospedar o banco de dados do Catálogo do SSIS, `SSISDB`, para armazenar, gerenciar, executar e monitorar pacotes do SSIS.
+
+-   Para instalar assemblies gerenciados para programação de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], também em **Recursos Compartilhados**, selecione **SDK de Ferramentas de Cliente**.
+
+> [!NOTE]
+> Alguns componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que podem ser selecionados para instalação na página **Seleção de Recursos** do Assistente de Instalação instalam um subconjunto parcial dos componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Esses componentes são úteis para tarefas específicas, mas a funcionalidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é limitada. Por exemplo, a opção **Serviços de Mecanismo de Banco de Dados** instala os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessários para o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para assegurar uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve selecionar **Integration Services** na página **Seleção de Recursos** .
+
+### <a name="installing-a-dedicated-server-for-etl"></a>Instalando um servidor dedicado para ETL
+
+Para usar um servidor dedicado para processos ETL (extração, transformação e carregamento), instale uma instância local do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] quando você instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geralmente armazena pacotes em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e depende do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar esses pacotes. Se o servidor ETL não tiver uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], será necessário agendar ou executar pacotes de um servidor que tenha uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Como resultado, os pacotes não estão em execução no servidor ETL, mas sim no servidor do qual são iniciados. Assim, os recursos do servidor ETL dedicado não estarão sendo usados como pretendido. Além disso, os recursos de outros servidores podem ser obtidos pela execução de processos ETL
+
+### <a name="configuring-ssis-event-logging"></a>Configurando o log de eventos do SSIS
+    
+Por padrão, em uma nova instalação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para não registrar eventos relacionados à execução de pacotes no log de eventos do Aplicativo. Essa configuração evita de entradas em excesso no log de eventos quando você usa o recurso Coletor de Dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os eventos registrados são EventID 12288, "Pacote iniciado" e EventID 12289, "Pacote concluído com êxito". Para registrar esses eventos no log de eventos do Aplicativo, abra o Registro para edição. Em seguida, no Registro, localize o nó HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS e altere o valor DWORD da configuração LogPackageExecutionToEventLog de 0 para 1.    
+    
+## <a name="a-complete-installation-of-integration-services"></a>Uma instalação completa do Integration Services
+
+Para uma instalação completa do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], selecione os componentes necessários da lista a seguir:
+
+-   **Integration Services (SSIS)**. Instale o SSIS com o Assistente de instalação do SQL Server. Selecionar o SSIS instala os seguintes itens:
+    -   Suporte para o Catálogo do SSIS no Mecanismo de Banco de Dados do Microsoft SQL Server.
+    -   Opcionalmente, o recurso SSIS Scale Out, que consiste de um mestre e de trabalhos.
+    -   Componentes SSIS de 32 bits e de 64 bits.
+    -   Instalar o SSIS **não** instala as ferramentas necessárias para projetar e desenvolver pacotes do SSIS.
+-   **Mecanismo de banco de dados do SQL Server**. Instale o Mecanismo de Banco de Dados com o Assistente de Instalação do SQL Server. Selecionar o Mecanismo de Banco de Dados permite criar e hospedar o banco de dados do Catálogo do SSIS, `SSISDB`, para armazenar, gerenciar, executar e monitorar pacotes do SSIS.
+-   **SQL Server Data Tools (SSDT)**. Para baixar e instalar o SSDT, veja [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md). Instalar o SSDT permite criar e implantar pacotes do SSIS. O SSDT instala os seguintes itens:
+    -   As ferramentas de design e desenvolvimento do pacote do SSIS, incluindo o Designer SSIS.
+    -   Somente componentes SSIS de 32 bits.
+    -   Uma versão limitada do Visual Studio (se não houver uma edição do Visual Studio já instalada).
+    -   VSTA (Visual Studio Tools for Applications), o editor de scripts usado pela Tarefa Script e o Componente Script do SSIS.
+    -   Assistentes do SSIS, incluindo o Assistente de Implantação e o Assistente de Atualização de Pacote.
+    -   Assistente de Importação e Exportação do SQL Server.
+-   **Feature Pack do Integration Services para Azure**. Para baixar e instalar o Feature Pack, veja [Feature Pack do Microsoft SQL Server 2017 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=54798). Instalar o Feature Pack permite que seus pacotes se conectem aos serviços de armazenamento e análise na nuvem do Azure, incluindo os seguintes serviços:
+    -   Armazenamento de Blobs do Azure.
+    -   Azure HDInsight.
+    -   Azure Data Lake Store.
+    -   SQL Data Warehouse do Azure.
+-   **Componentes adicionais opcionais**. Opcionalmente, você pode baixar os componentes de terceiros adicionais do SQL Server Feature Package.
+    -   Microsoft® Connector para SAP BW para Microsoft SQL Server®. Para obter esses componentes, veja o [Feature Pack do Microsoft® SQL Server® 2017](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft Connector versão 5.0 para Oracle da Attunity e Microsoft Connector versão 5.0 para Teradata da Attunity. Para obter esses componentes, veja [Microsoft Connectors v5.0 para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

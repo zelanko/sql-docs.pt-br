@@ -1,11 +1,11 @@
 ---
-title: Hadoop e HDFS suporte no Integration Services (SSIS) | Microsoft Docs
+title: Suporte para Hadoop e HDFS no SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da5fafb4145da0d0122e5e57de3e025c012dca3a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e60b390dcb8549c1e776f83ef00049ff1b78d3ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Suporte para Hadoop e HDFS no Integration Services (SSIS)
   O SSIS (SQL Server Integration Services) 2016 inclui os seguintes componentes que dão suporte para Hadoop e HDFS local.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
     -   [Destino de Arquivo HDFS](../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

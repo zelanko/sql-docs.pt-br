@@ -2,23 +2,26 @@
 title: "Criando vários modelos usando rxExecBy | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: afd11d06fb7ab168e0c4025d1d94c60bb0e2fb6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Criando vários modelos usando rxExecBy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 CTP 2.0 inclui uma nova função, **rxExecBy**, que oferece suporte ao processamento paralelo de vários modelos relacionados. Em vez de treinar um modelo muito grande com base nos dados de várias entidades semelhantes, o cientista de dados pode criar rapidamente vários modelos relacionados, cada uma usando dados específicos de uma única entidade.
 

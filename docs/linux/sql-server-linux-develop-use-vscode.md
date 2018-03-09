@@ -3,30 +3,29 @@ title: "Use a extensão do Visual Studio Code mssql para o SQL Server | Microsof
 description: "Este tutorial mostra como usar a extensão mssql para o código de VS. Essa extensão permite editar e executar scripts Transact-SQL no código VS."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Use o código do Visual Studio para criar e executar scripts Transact-SQL para SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tópico mostra como usar o **mssql** extensão para o código do Visual Studio (VS código) para desenvolver bancos de dados do SQL Server.
+Este artigo mostra como usar o **mssql** extensão para o código do Visual Studio (VS código) para desenvolver bancos de dados do SQL Server.
 
 Código do Visual Studio é um editor de código gráfica para Linux, macOS e Windows que oferece suporte a extensões. O [**mssql** extensão para código VS] permite que você se conectar ao SQL Server, a consulta com o Transact-SQL (T-SQL) e exibir os resultados.
 
@@ -81,7 +80,7 @@ O **mssql** extensão habilita comandos mssql e T-SQL IntelliSense no editor qua
 
 As etapas a seguir mostram como se conectar ao SQL Server com o código de VS.
 
-1. No código VS, pressione **CTRL + SHIFT + P** (ou **F1**) para abrir a paleta de comando.
+1. No VSCode, pressione **CTRL + SHIFT + P** (ou **F1**) para abrir a paleta de comandos.
 
 2. Tipo **sql** para exibir os comandos mssql.
 
@@ -101,19 +100,19 @@ As etapas a seguir mostram como se conectar ao SQL Server com o código de VS.
    | **Nome do servidor** | O nome da instância do SQL Server. Para este tutorial, use **localhost** para se conectar à instância do SQL Server local no seu computador. Se estiver se conectando a um servidor SQL remoto, digite o nome do computador do SQL Server de destino ou endereço IP. |
    | **[Opcional] Nome do banco de dados** | O banco de dados que você deseja usar. Para fins deste tutorial, não especifique um banco de dados e pressione **ENTER** para continuar. |
    | **Nome de usuário** | Digite o nome de um usuário com acesso ao banco de dados no servidor. Para este tutorial, use o padrão **SA** conta criada durante a instalação do SQL Server. |
-   | **Senha (logon SQL)** | Digite a senha para o usuário especificado. | 
+   | **Senha (logon do SQL)** | Digite a senha para o usuário especificado. | 
    | **Salvar senha?** | Tipo **Sim** para salvar a senha. Caso contrário, digite **não** para fornecer a senha sempre que o perfil de Conexão é usado. |
    | **[Opcional] Insira um nome para este perfil** | O nome do perfil de Conexão. Por exemplo, você pode nomear o perfil **localhost perfil**. 
 
    > [!Tip] 
-   > Você pode criar e editar perfis de conexão no arquivo de configurações do usuário (settings.json). Abra o arquivo de configurações selecionando **preferência** e **as configurações do usuário** no menu de código VS. Para obter mais detalhes, consulte [gerenciar perfis de conexão].
+   > Você pode criar e editar perfis de conexão no arquivo de configurações do usuário (settings.json). Abra o arquivo de configurações selecionando **preferência** e **as configurações do usuário** no menu de código VS. Para obter mais informações, consulte [gerenciar perfis de conexão].
 
-6. Pressione a **ESC** tecla para fechar a mensagem de informações que informa que o perfil é criado e conectado.
+6. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil está criado e conectado.
 
    > [!TIP]
    > Se você receber uma falha de conexão, primeira tentativa para diagnosticar o problema da mensagem de erro no **saída** painel no código VS (selecione **saída** no **exibição** menu). Em seguida, examine as [recomendações de solução de problemas de conexão].
 
-7. Verifique se sua conexão na barra de status.
+7. Verifique sua conexão na barra de status.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 
@@ -273,4 +272,3 @@ Para obter mais informações sobre como usar código VS, consulte o [documenta�
 [Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [personalizar opções de extensão]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [wiki de projeto de extensão do mssql]: https://github.com/Microsoft/vscode-mssql/wiki
-

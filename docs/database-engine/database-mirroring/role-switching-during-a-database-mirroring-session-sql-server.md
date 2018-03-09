@@ -2,9 +2,12 @@
 title: "Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,16 +24,16 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e6c0b04fcc7b143bcdba71cb6e015f47f7f6717
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
-  No contexto da sessão de espelhamento de banco de dados, as funções principal e espelho podem ser, normalmente, alternadas em um processo conhecido como *troca de função*. Na troca de função, o servidor espelho age como o *parceiro de failover* do servidor principal, assumindo a função principal, recuperando a cópia do banco de dados e colocando-a online como novo banco de dados principal. O antigo servidor principal, quando disponível, assume a função espelho e seu banco de dados se torna o novo banco de dados espelho. Potencialmente, as funções podem ser alternadas como resposta a várias falhas ou por razões administrativas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] No contexto da sessão de espelhamento de banco de dados, as funções principal e espelho podem ser, normalmente, alternadas em um processo conhecido como *troca de função*. Na troca de função, o servidor espelho age como o *parceiro de failover* do servidor principal, assumindo a função principal, recuperando a cópia do banco de dados e colocando-a online como novo banco de dados principal. O antigo servidor principal, quando disponível, assume a função espelho e seu banco de dados se torna o novo banco de dados espelho. Potencialmente, as funções podem ser alternadas como resposta a várias falhas ou por razões administrativas.  
   
 > [!NOTE]  
 >  Este tópico pressupõe que você esteja familiarizado com os modos operacionais de espelhamento de banco de dados. Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
@@ -70,9 +73,9 @@ ms.lasthandoff: 11/09/2017
   
 ||Alto desempenho|Modo de segurança alta sem testemunha|Modo de segurança alta com testemunha|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Failover automático|Não|Não|Sim|  
-|Failover manual|Não|Sim|Sim|  
-|Serviço forçado|Sim|Sim|Não|  
+|failover automático|não|não|Sim|  
+|failover manual|não|Sim|Sim|  
+|Serviço forçado|Sim|Sim|não|  
   
  Após a troca de função, metadados específicos precisam estar presentes em ambos os parceiros para garantir que todos os usuários dos bancos de dados possam acessar o novo banco de dados principal. Além disso, os trabalhos de backup precisam ser criados no servidor principal novo, para garantir que o banco de dados continue a ser armazenado no cronograma habitual. Para obter mais informações, veja [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -313,7 +316,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Possíveis falhas durante o espelhamento de banco de dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   

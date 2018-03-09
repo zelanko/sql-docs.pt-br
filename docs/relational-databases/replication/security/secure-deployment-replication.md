@@ -2,9 +2,12 @@
 title: "Implantação segura (Replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24d325ec91abebba16dc39ee28f8c1a45ae8e03b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>Implantação segura (Replicação)
-  Esta seção fornece informações para ajudá-lo a melhorar a replicação segura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção fornece informações para ajudá-lo a melhorar a replicação segura.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Proteger o Distribuidor](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -39,13 +42,13 @@ ms.lasthandoff: 11/09/2017
  [Proteger a pasta de instantâneos](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  Descreve as permissões necessárias para acessar a pasta do instantâneo, práticas recomendadas para definir a localização da pasta e considerações de entrega de instantâneo por FTP.  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [Protegendo a replicação na Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  Inclui informações sobre redes privadas virtuais e sincronização da Web.  
   
  [Considerações de segurança para replicação compacta do SQL Server](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  
  Discute como deixar a conectividade entre uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssEW](../../../includes/ssew-md.md)] segura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral da segurança &#40;Replicação&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
  [Desenvolvimento seguro &#40;Replicação&#41;](../../../relational-databases/replication/security/secure-development-replication.md)  
   

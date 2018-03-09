@@ -5,23 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: "13"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
   As DHs (Hierarquias Derivadas) exibem relações um para muitos e, agora, também podem mostrar relações muitos para muitos.  
@@ -105,7 +106,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
 ## <a name="collections"></a>Coleções  
  As Coleções e Hierarquias Explícitas foram preteridas. O procedimento armazenado de conversão (udpConvertCollectionAndConsolidatedMembersToLeaf) converte membros da coleção em membros folha e cria Hierarquias Derivadas muitos para muitos para capturar informações de associação de coleção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

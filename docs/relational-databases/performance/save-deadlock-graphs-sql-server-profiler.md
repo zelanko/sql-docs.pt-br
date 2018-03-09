@@ -2,9 +2,12 @@
 title: "Salvar gráficos de deadlock (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,55 +17,55 @@ helpviewer_keywords:
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dcd65f7fd6d87ab186f9b2afe6b4e36502045a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0aaa9c41b63479eda21bf1f0e862639c50160495
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Salvar gráficos de deadlock (SQL Server Profiler)
-  Este tópico descreve como salvar um gráfico de deadlock usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Gráficos de deadlock são salvos como arquivos XML.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como salvar um gráfico de deadlock usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Gráficos de deadlock são salvos como arquivos XML.  
   
-### <a name="to-save-deadlock-graph-events-separately"></a>Para salvar eventos de gráfico de deadlock separadamente  
+## <a name="save-deadlock-graph-events-separately"></a>Salvar eventos de gráfico de deadlock separadamente  
   
-1.  No menu **Arquivo** , clique em **Novo Rastreamento**e conecte a uma instância do SQL Server.  
+1. No menu **Arquivo**, selecione **Novo Rastreamento** e conecte-se a uma instância do SQL Server.  
   
-     A caixa de diálogo **Propriedades do Rastreamento**é exibida.  
+     É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
     > [!NOTE]  
-    >  Se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** estiver marcada, a caixa de diálogo **Propriedades do Rastreamento**não será exibida e o rastreamento será iniciado. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções**e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
+    >  Se você selecionar **Iniciar rastreamento imediatamente após estabelecer a conexão**, a caixa de diálogo **Propriedades do Rastreamento** não será exibida e, em vez disso, o rastreamento será iniciado. Para desligar essa configuração, no menu **Ferramentas**, selecione **Opções** e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão**.  
   
-2.  Na caixa de diálogo Propriedades do Rastreamento, digite um nome para o rastreamento na caixa**Nome do rastreamento** .  
+2. Na caixa de diálogo **Propriedades do Rastreamento** , digite um nome para o rastreamento na caixa **Nome do rastreamento** .  
   
-3.  Na lista **Usar o modelo** , selecione um modelo como base para o rastreamento ou **Em branco** , se não quiser usar um modelo.  
+3. Na lista **Usar o modelo**, selecione um modelo de rastreamento no qual esse rastreamento deve ser baseado. Se você não quiser usar um modelo, selecione **Em branco**.  
   
-4.  Siga um destes procedimentos:  
+4. Siga um destes procedimentos:  
   
-    -   Marque a caixa de seleção**Salvar em arquivo** para capturar o rastreamento em um arquivo. Especifique um valor para **Definir tamanho máximo do arquivo**.  
+    -   Selecione a caixa de seleção **Salvar em arquivo** para capturar o rastreamento em um arquivo. Especifique um valor para **Definir tamanho máximo do arquivo**.  
   
-         Opcionalmente, selecione **Habilitar substituição de arquivo** e **Dados de rastreamento de processos do servidor**.  
+         Opcionalmente, marque as caixas de seleção **Habilitar substituição de arquivo** e **Dados de rastreamento de processos do servidor** . 
   
     -   Marque a caixa de seleção **Salvar em tabela** para capturar o rastreamento em uma tabela de banco de dados.  
   
-         Opcionalmente, clique em **Definir máximo de linhas**e especifique um valor.  
+         Opcionalmente, selecione **Definir máximo de linhas** e especifique um valor.  
   
-5.  Opcionalmente, marque a caixa de seleção **Habilitar horário de parada do rastreamento** e especifique uma data e hora de parada.  
+5. Opcionalmente, marque a caixa de seleção **Habilitar horário de parada do rastreamento** e especifique uma data e hora de parada. 
   
-6.  Clique na guia **Seleção de Eventos**.  
+6. Selecione a guia **Seleção de Eventos**.  
   
-7.  Na coluna de dados **Eventos**, expanda a categoria de evento **Locks**e marque a caixa de seleção **Gráfico de deadlock**. Se a categoria de evento Locks não estiver disponível, marque **Mostrar todos os eventos** para exibi-la.  
+7. Na coluna de dados **Eventos**, expanda a categoria de evento **Bloqueios** e marque a caixa de seleção **Gráfico de deadlock**. Se a categoria de evento **Bloqueios** não estiver disponível, marque a caixa de seleção **Mostrar todos os eventos** para exibi-la.  
   
-     A caixa de diálogo **Configurações de Extração de Eventos**é adicionada à caixa de diálogo **Propriedades do Rastreamento**.  
+     A guia **Configurações de Extração de Eventos** é adicionada à caixa de diálogo **Propriedades do Rastreamento**.  
   
-8.  Na guia **Configurações de Extração de Eventos**, clique em **Salvar eventos deadlock XML separadamente**.  
+8. Na guia **Configurações de Extração de Eventos**, clique em **Salvar eventos Deadlock XML separadamente**.  
   
-9. Na caixa de diálogo **Salvar Como** , digite um nome para o arquivo no qual armazenar os eventos de gráfico de deadlock.  
+9. Na caixa de diálogo **Salvar Como**, digite o nome do arquivo no qual armazenar os eventos de gráfico de deadlock.  
   
-10. Clique em **Todos os lotes de deadlock XML em um único arquivo** para salvar todos os eventos de gráfico de deadlock em um mesmo arquivo XML, ou clique em **Cada lote de deadlock XML em um arquivo distinto**, para criar um novo arquivo XML para cada gráfico de deadlock.  
+10. Selecione **Todos os lotes de Deadlock XML em um único arquivo** para salvar todos os eventos gráficos de deadlock em um único arquivo XML. Ou selecione **Cada lote de Deadlock XML em um arquivo distinto** para criar um novo arquivo XML para cada gráfico de deadlock.  
   
  Após salvar o arquivo de deadlock, você pode abri-lo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Abrir, exibir e imprimir um arquivo de deadlock &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], retrieving or setting field values
+helpviewer_keywords: descriptors [ODBC], retrieving or setting field values
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc02690bd62802f9d356851cd85522328107a707
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-descriptor-fields"></a>Campos de descritor de configuração
 Para modificar os campos de um descritor de, um aplicativo pode chamar **SQLSetDescField**. Alguns campos são somente leitura e não podem ser definidos. (Consulte o [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descrição da função.)  
@@ -35,4 +32,3 @@ Para modificar os campos de um descritor de, um aplicativo pode chamar **SQLSetD
  Ao definir campos individualmente, o aplicativo deve seguir a sequência definida no [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Definir alguns campos faz com que o driver definir outros campos. Isso garante que o descritor sempre está pronto para ser usado quando o aplicativo especificou um tipo de dados. Quando o aplicativo define o campo SQL_DESC_TYPE, o driver verifica que outros campos que especificam o tipo são válidos e consistentes.  
   
  Se uma chamada de função que seria definir um campo de descritor falhar, o conteúdo do campo de descritor é indefinido após a chamada de função com falha.
-

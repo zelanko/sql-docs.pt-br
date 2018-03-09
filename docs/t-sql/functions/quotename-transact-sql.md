@@ -24,17 +24,16 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7f4e40797fc49e8a70b01162fc6959ad60475e8b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  É uma cadeia de um caractere a ser usada como o delimitador. Pode ser uma aspa simples ( **'** ), um colchete esquerdo ou direito ( **[]** ), ou aspas duplas ( **"** ). Se *quote_character* não for especificado, serão usados colchetes.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (258)**  
+ **nvarchar(258)**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir obtém a cadeia de caracteres `abc[]def` e usa os caracteres `[` e `]` para criar um identificador delimitado válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -92,8 +91,17 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [PARSENAME &#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 

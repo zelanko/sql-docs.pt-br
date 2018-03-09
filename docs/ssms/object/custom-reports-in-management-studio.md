@@ -3,8 +3,11 @@ title: "Relatórios personalizados no Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Relatórios personalizados no Management Studio
-No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], muitos nós do Pesquisador de Objetos exibem um conjunto de relatórios padrão criados pela [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Esses relatórios resumem as informações de servidor que costumam ser solicitadas. Começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, os administradores podem executar relatórios personalizados que foram criados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], muitos nós do Pesquisador de Objetos exibem um conjunto de relatórios padrão criados por [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Esses relatórios resumem as informações de servidor que costumam ser solicitadas. Começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, os administradores podem executar relatórios personalizados que foram criados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Implementação  
 Relatórios personalizados são armazenados como arquivos de definição de relatório (.rdl) e criados na linguagem RDL (Report Definition Language). A RDL contém informações de layout e recuperação de dados de um relatório no formato XML. Ela consiste em um esquema aberto. Os desenvolvedores podem estender a RDL com atributos e elementos adicionais. Os relatórios podem executar qualquer instrução [!INCLUDE[tsql](../../includes/tsql_md.md)] válida dentro do relatório.  
@@ -73,7 +76,7 @@ Qualquer comando [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] váli
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [adicionar um relatório personalizado ao Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Cancelar supressão da execução de avisos de relatório personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

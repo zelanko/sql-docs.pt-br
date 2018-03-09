@@ -2,26 +2,31 @@
 title: Suporte de alta disponibilidade para bancos de dados OLTP in-memory | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e2a3d68d922c4e78ee154a380fc6ddd4721526
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
-  Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não há nenhuma diferença na configuração e no suporte para bancos de dados que contêm objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação a aqueles sem.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não há nenhuma diferença na configuração e no suporte para bancos de dados que contêm objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação a aqueles sem.  
   
  Quando um banco de dados OLTP in-memory for implantado em uma configuração de Grupo de Disponibilidade AlwaysOn, as alterações nas tabelas com otimização de memória na réplica primária serão aplicadas à memória para as tabelas nas réplicas secundárias, quando REDO for aplicado. Isso significa que o failover para uma réplica secundária pode ser muito rápido, pois os dados já estão na memória. Além disso, as tabelas estão disponíveis para consultas em réplicas secundárias que foram configuradas para acesso de leitura.  
   
@@ -49,7 +54,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>Suporte para replicação de transação em OLTP na memória  
  As tabelas que atuam como assinantes de replicação transacional, com exceção da replicação transacional ponto a ponto, podem ser configuradas como tabelas com otimização de memória. Outras configurações de replicação não são compatíveis com tabelas com otimização de memória.  Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

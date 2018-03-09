@@ -2,15 +2,13 @@
 title: Conjunto de linhas MDSCHEMA_KPIS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_KPIS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5eae9579701d6f3c2bea0235994cce3325c93130
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de linhas MDSCHEMA_KPIS
-  Descreve os KPIs (indicadores chave de desempenho) dentro de um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve os indicadores chave de desempenho (KPIs) dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_KPIS** linhas contém as seguintes colunas.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**KPI_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de **1**. Um bitmap com um dos seguintes valores válidos:<br /><br /> **1** CUBO<br /><br /> **2** DIMENSÃO|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

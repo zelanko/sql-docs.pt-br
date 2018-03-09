@@ -2,15 +2,13 @@
 title: "Criar uma nova estrutura de mineração relacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7bfa98f5842e77a352ef1e2b56e14be827cef872
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Criar uma nova estrutura de mineração relacional
-  Use o Assistente de Mineração de Dados para criar uma nova estrutura de mineração, usando dados de um banco de dados relacional ou outras fontes e, em seguida, salve a estrutura e os modelos relacionados em um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Use o Assistente de Mineração de Dados para criar uma nova estrutura de mineração, usando dados de um banco de dados relacional ou outras fontes e, em seguida, salve a estrutura e os modelos relacionados em um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="to-create-a-relational-mining-structure"></a>Para criar uma estrutura de mineração relacional  
   
@@ -69,7 +67,6 @@ ms.lasthandoff: 09/01/2017
 11. Na página **Concluindo o Assistente** , forneça um nome para a estrutura de mineração e o modelo de mineração inicial correspondente a ser criado e, em seguida, clique em **Concluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

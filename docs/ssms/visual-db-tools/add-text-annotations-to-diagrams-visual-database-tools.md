@@ -3,8 +3,11 @@ title: "Adicionar anotações de texto a diagramas (Ferramentas de Banco de Dado
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fa9460c29b35522acdd052bf6d5414e8119f158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d320d4b17a24a98399b967f8b461189634b8f761
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Adicionar anotações de texto a diagramas (Visual Database Tools)
-Para fazer observações ou comentários em um diagrama, você pode adicionar anotações de texto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para fazer observações ou comentários em um diagrama, você pode adicionar anotações de texto.  
   
 ### <a name="to-add-text-annotations-to-diagrams"></a>Para adicionar anotações de texto a diagramas  
   
@@ -39,6 +42,6 @@ Para fazer observações ou comentários em um diagrama, você pode adicionar an
 > [!NOTE]  
 > Para alterar a fonte, clique com o botão direito do mouse no campo de texto e clique em **Definir Fonte da Anotação de Texto**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -2,30 +2,31 @@
 title: "Trabalhando com entradas e saídas (R no início rápido do SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: 7
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Trabalhando com entradas e saídas (R no início rápido do SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Quando você quiser executar o código R no SQL Server, você deve encapsular o script R em um procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Esse procedimento armazenado é usado para iniciar o tempo de execução de R no contexto do SQL Server, que transmite dados para R, gerencia as sessões de usuário de R com segurança e retorna todos os resultados para o cliente.
 
@@ -136,7 +137,7 @@ EXECUTE sp_execute_external_script
 **Resultados**
 
 *Col1*
-*Olá*
+*hello*
 <code>   </code>
 *world*
 
@@ -145,4 +146,3 @@ EXECUTE sp_execute_external_script
 Você examinará alguns dos problemas que podem ser encontrados ao passar dados entre R e SQL Server, como conversões implícitas e diferenças em dados tabulares entre R e SQL.
 
 [Tipo de dados SQL e R e objetos de dados](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-

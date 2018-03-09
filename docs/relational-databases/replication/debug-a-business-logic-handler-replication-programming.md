@@ -2,9 +2,12 @@
 title: "Depurar um manipulador de lógica de negócios (Programação de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b11b969602aaa5a300b38b943b29cd9f374a5b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
-  Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
  O Reconciliador de replicação de mesclagem (replrec.dll) chama o assembly de código gerenciado que contém a lógica comercial. Na maior parte dos casos, o replrec.dll e a lógica comercial personalizada são executados no computador em que o Agente de Mesclagem é executado (no Assinante para a assinatura pull ou no Distribuidor da assinatura push). Com relação à sincronização da Web ou a um Assinante [!INCLUDE[ssEW](../../includes/ssew-md.md)] , o reconciliador e a lógica comercial personalizada são executados no servidor Web.  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
 11. Supondo que nenhum outro ponto de interrupção esteja definido e que os comandos tenham sido replicados, a execução para quando alcança o ponto de interrupção do manipulador de lógica de negócios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

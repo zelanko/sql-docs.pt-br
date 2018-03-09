@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetDescField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetDescField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetDescField
-helpviewer_keywords:
-- SQLSetDescField function [ODBC]
+f1_keywords: SQLSetDescField
+helpviewer_keywords: SQLSetDescField function [ODBC]
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3a67508ad9e676e679f0458eef8e46960cc72737
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
 **Conformidade**  
@@ -147,7 +141,7 @@ SQLRETURN SQLSetDescField(
   
  A inicialização de campos de cabeçalho é descrita na tabela a seguir.  
   
-|Nome do campo de cabeçalho|Tipo|R/W|Default|  
+|Nome do campo de cabeçalho|Tipo|R/W|Padrão|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|Descartar: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita ou SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|Descartar: R/W APD: R/W IRD: não utilizado IPD: não usado|Descartar: APD [1]: [1] IRD: não utilizado IPD: não usado|  
@@ -161,7 +155,7 @@ SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: R/W APD: R/W IRD: R IPD: R/W|DESCARTAR: AP
   
  A inicialização de campos de registro é conforme mostrado na tabela a seguir.  
   
-|Nome de campo do registro|Tipo|R/W|Default|  
+|Nome de campo do registro|Tipo|R/W|Padrão|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|Descartar: APD não utilizado: IRD não usado: R IPD: não usado|Descartar: APD não utilizado: IRD não usado: D IPD: não usado|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|Descartar: APD não utilizado: IRD não usado: R IPD: não usado|Descartar: APD não utilizado: IRD não usado: D IPD: não usado|  
@@ -554,7 +548,6 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |Obtendo vários campos de descritor|[Função SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Definindo vários campos de descritor|[Função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Referência de API do ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)
-

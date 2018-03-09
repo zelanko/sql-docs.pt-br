@@ -2,32 +2,37 @@
 title: Desinstalar o PowerPivot para SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fb719e205eaf63498bb4c2ab5c25138123b82d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Desinstalar o Power Pivot para SharePoint
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Desinstalar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma operação de várias etapas que inclui a preparação para desinstalação, a remoção de recursos e soluções do farm e a remoção de arquivos de programas e configurações de registro.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
- **Neste tópico:**  
+ **Neste artigo:**  
   
 -   [Pré-requisitos](#prereq)  
   
@@ -192,7 +197,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Não instale o provedor OLE DB do Analysis Services. O SharePoint instala o provedor OLE DB como pré-requisito para as pastas de trabalho do Excel que se conectam a bancos de dados do Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala uma versão mais recente, mas essa versão é compatível com versões anteriores para você deixar o sistema encarregado de evitar problemas com conexão de dados mais tarde.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Ferramentas de Configuração do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   

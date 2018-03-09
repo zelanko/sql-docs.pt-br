@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 387b2b6af2f1c2b50671f97b0bc7cd31cd4c9664
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ab0d91c444abe3121675ea79c2793c766165d0d6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geometria** instância retornada por `STGeomFromText()` é definido como a entrada de WKB correspondente.  
   
  Esse método lançará um **FormatException** se a entrada não for bem formatada.  
@@ -71,8 +70,7 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

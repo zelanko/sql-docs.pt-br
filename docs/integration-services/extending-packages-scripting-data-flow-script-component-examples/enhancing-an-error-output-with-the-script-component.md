@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,30 +19,29 @@ helpviewer_keywords:
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ff54224860771a8cbb4c21d6262558519dd771be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Aprimorando uma saída de erro com o componente Script
-  Por padrão, as duas colunas extras em uma [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] saída de erro, ErrorCode e ErrorColumn, só contêm códigos numéricos que representam um número de erro e a ID da coluna na qual ocorreu o erro. Esses valores numéricos podem ter uso limitado sem a descrição de erro correspondente e o nome da coluna.  
+  Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode e ErrorColumn, só contêm códigos numéricos que representam um número de erro e a ID da coluna na qual o erro aconteceu. Esses valores numéricos podem ser de pouca utilidade sem a descrição do erro e o nome da coluna correspondentes.  
   
- Este tópico descreve como adicionar a descrição do erro e o nome da coluna de dados de saída de erro existentes no fluxo de dados usando o componente de Script. O exemplo adiciona a descrição de erro que corresponde a um código de erro específico e predefinido do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> da interface do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, disponível através da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> do componente Script. Em seguida, o exemplo adiciona o nome da coluna que corresponde à ID de linhagem capturadas usando o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> método da interface do mesmo.  
+ Este tópico descreve como adicionar a descrição de erro e o nome da coluna a dados de saída de erro existentes no fluxo de dados usando o componente Script. O exemplo adiciona a descrição de erro que corresponde a um código de erro específico e predefinido do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> da interface do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, disponível através da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> do componente Script. Em seguida, o exemplo adiciona o nome da coluna que corresponde à ID de linhagem capturada usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> da mesma interface.  
   
 > [!NOTE]  
 >  Se desejar criar um componente que possa ser reutilizado mais facilmente em várias tarefas de fluxo de dados e em vários pacotes, procure utilizar o código deste exemplo de componente Script como o ponto inicial de um componente de fluxo de dados personalizado. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo mostrado aqui usa um componente Script configurado como uma transformação para adicionar a descrição do erro e o nome da coluna de dados de saída de erro existentes no fluxo de dados.  
+ O exemplo demonstrado aqui usa um componente Script configurado como uma transformação para adicionar a descrição de erro e o nome da coluna a dados de saída de erro existentes no fluxo de dados.  
   
- Para obter mais informações sobre como configurar o componente de Script para usar como uma transformação no fluxo de dados, consulte [criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) e [criando uma transformação assíncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obter mais informações sobre como configurar o componente Script para uso como uma transformação no fluxo de dados, consulte [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) e [Criando uma transformação assíncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar esse exemplo de componente Script  
   
@@ -53,21 +51,21 @@ ms.lasthandoff: 08/03/2017
   
 3.  Conecte a saída de erro do componente upstream ao novo componente Script.  
   
-4.  Abra o **Editor de transformação scripts**e na **Script** página, para o **ScriptLanguage** propriedade, selecione a linguagem de script.  
+4.  Abra o **Editor de Transformação Scripts** e, na página **Script**, para a propriedade **ScriptLanguage**, selecione a linguagem de script.  
   
-5.  Clique em **Editar Script** para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE e adicione o código de exemplo mostrado abaixo.  
+5.  Clique em **Editar Script** para abrir o IDE do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) e adicionar o código de exemplo mostrado abaixo.  
   
 6.  Feche o VSTA.  
   
-7.  No Editor de transformação de Script, sobre o **colunas de entrada** página, selecione as colunas ErrorCode e ErrorColumn.  
+7.  No Editor de Transformação Scripts, na página **Colunas de Entrada**, selecione as colunas ErrorCode e ErrorColumn.  
   
-8.  Sobre o **entradas e saídas** página, adicione duas novas colunas.  
+8.  Na página **Entradas e saídas**, adicione duas novas colunas.  
   
-    -   Adicionar uma nova coluna de saída do tipo **cadeia de caracteres** chamado **ErrorDescription**. Aumente o comprimento padrão da coluna nova para 255 para suportar mensagens longas.  
+    -   Adicione uma nova coluna de saída do tipo **String** chamada **ErrorDescription**. Aumente o comprimento padrão da coluna nova para 255 para suportar mensagens longas.  
   
-    -   Adicione outra nova coluna de saída do tipo **cadeia de caracteres** chamado **ColumnName**. Aumente o tamanho padrão da coluna nova para 255 para suportar valores longos.  
+    -   Adicione outra nova coluna de saída do tipo **String** chamada **ColumnName**. Aumente o tamanho padrão da nova coluna para 255 para dar suporte a mensagens longas.  
   
-9. Fechar o **Editor de transformação scripts.**  
+9. Feche o **Editor de Transformação Scripts**.  
   
 10. Anexe a saída do componente Script a um destino satisfatório. Um destino de arquivo simples é o mais fácil de configurar para testar ad hoc.  
   
@@ -110,10 +108,9 @@ public class ScriptMain:
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md)   
  [Usando saídas de erro em um componente de fluxo de dados](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
- [Criando uma transformação síncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
+ [Criar uma transformação síncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-

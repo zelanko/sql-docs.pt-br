@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488b8646d4b8c92d5f34f6b3148846f62b3f47f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como serviços em diferentes contas de domínio (nos mesmos domínios ou em domínios confiáveis), o logon de cada conta deverá ser criado no **mestre** em cada uma das outras instâncias de servidor, e esse logon deverá receber permissões CONNECT no ponto de extremidade.  
   
--   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como conta de serviço de rede, o logon da conta de cada computador host(*DomainName***\\***ComputerName$*) deverá ser criado no **mestre** em cada um dos outros servidores e esse logon deverá receber permissões CONNECT no ponto de extremidade. Isso é porque uma instância de servidor em execução sob a conta de serviço de rede é autenticada usando a conta de domínio do computador host.  
+-   Se as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem executadas como a conta de Serviço de Rede, o logon da conta de cada computador host (*DomainName***\\***ComputerName$*) deverá ser criado no **mestre** em cada um dos outros servidores e esse logon deverá receber permissões CONNECT no ponto de extremidade. Isso é porque uma instância de servidor em execução sob a conta de serviço de rede é autenticada usando a conta de domínio do computador host.  
   
 > [!NOTE]  
 >  Para obter um exemplo de como configurar a sessão de espelhamento de banco de dados usando a Autenticação do Windows, consulte [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  Opcionalmente, você pode controlar os algoritmos de criptografia que podem ser usados por um ponto de extremidade, especificando um dos seguintes valores para a opção de ALGORITHM em uma instrução CREATE ENDPOINT ou instrução ALTER ENDPOINT:  
   
-|Valor de ALGORITHM|Descrição|  
+|Valor de ALGORITHM|Description|  
 |---------------------|-----------------|  
 |RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> **\*\* Aviso \*\*** O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
 |AES|Especifica que o ponto de extremidade deve usar o algoritmo AES.|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

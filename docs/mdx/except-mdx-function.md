@@ -2,34 +2,32 @@
 title: Exceto (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- EXCEPT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Except function
+f1_keywords: EXCEPT
+dev_langs: kbMDX
+helpviewer_keywords: Except function
 ms.assetid: 5d832c82-1e6d-4308-9c26-7edb8afe11dd
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 36e19418f982542318da340664182526c2b00070
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 408d0cc61e2ca182f0549e899242c93994c85449
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="except-mdx-function"></a>Exceto a função (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Avalia dois conjuntos e remove as tuplas do primeiro conjunto e também existem no segundo, mantendo as duplicações (opcional).  
   
@@ -47,7 +45,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se **todos os** for especificado, a função preservará as duplicações encontradas no primeiro conjunto; duplicações encontradas no segundo conjunto ainda serão removidas. Os membros são retornados na ordem em que aparecem no primeiro conjunto.  
   
 ## <a name="examples"></a>Exemplos  
@@ -69,9 +67,8 @@ WHERE
    ([Measures].[Order Quantity])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [-&#40; Exceto &#41; &#40; MDX &#41;](../mdx/except-mdx-operator.md)   
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

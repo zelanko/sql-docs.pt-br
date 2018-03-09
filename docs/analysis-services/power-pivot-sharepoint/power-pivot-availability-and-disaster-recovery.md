@@ -2,33 +2,30 @@
 title: "Power Pivot disponibilidade e recuperação de desastres | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Recuperação de desastre e disponibilidade do Power Pivot
-  Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui diagramas de topologia de exemplo a serem considerados ao planejar a disponibilidade e a recuperação de desastres para a implantação de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui diagramas de topologia de exemplo a serem considerados ao planejar a disponibilidade e a recuperação de desastres para a implantação de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  ![disponibilidade do PowerPivot no 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "disponibilidade do powerpivot no 2013")  
   
--   **(1)** Os servidores front-end da Web. Use o suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 para instalar os provedores de dados em cada servidor. Para obter mais informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Os servidores front-end da Web. Use o suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 para instalar os provedores de dados em cada servidor. Para obter mais informações, consulte [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** O serviço compartilhado do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é executado **em cada** servidor de aplicativos e permite a execução do aplicativo de serviço **entre** servidores de aplicativos. Portanto, se um único servidor de aplicativos ficar offline, o aplicativo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ainda estará disponível.  
   
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/01/2017
   
 -   [Gerenciar instâncias de serviço no SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
-

@@ -2,44 +2,35 @@
 title: "Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: setup-install
+ms.suite: pro-bi
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
-  Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e como atualizar pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, veja [Novidades no Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e como atualizar pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, veja [Novidades no Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Você não pode reverter uma atualização para pastas de trabalho que são atualizadas automaticamente no servidor. Quando uma pasta de trabalho é atualizada, ela permanece atualizada. Para usar uma versão anterior, você pode republicar a pasta de trabalho anterior para o SharePoint, restaurar uma versão anterior ou reciclar a pasta de trabalho. Para obter mais informações sobre como restaurar ou reciclar um documento no SharePoint, consulte [Planejar para proteger o conteúdo usando lixeiras e controle de versão](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- Este tópico contém as seguintes seções:  
-  
--   [Visão geral de como atualizar pastas de trabalho](#bkmk_overview)  
-  
--   [Atualizar para pastas de trabalho do SQL Server 2012 Service Pack 1 (SP1) de pastas de trabalho do 2008 R2](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Atualizar, partindo de versões criadas usando o suplemento Power Pivot 2012 para Excel, para pastas de trabalho do Office 2013](#bkmk_to_2012sp1_from_2012)  
-  
--   [Atualizar para pastas de trabalho do SQL Server 2012 de versões criadas usando o suplemento Power Pivot 2008 R2 para Excel 2010](#bkmk_to_2012_from_2008R2)  
-  
--   [Executando várias versões de pasta de trabalho em um servidor mais recente](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Visão geral de como atualizar pastas de trabalho  
  Uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] é uma pasta de trabalho do Excel que contém dados inseridos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Atualizar uma pasta de trabalho tem dois benefícios:  

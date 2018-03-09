@@ -3,8 +3,9 @@ title: "Propriedade de descrição | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::Description
 - Error::GetDescription
 - Error::get_Description
-helpviewer_keywords: Description property
+helpviewer_keywords:
+- Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc23f481c709c0901eb6a2020b51629a16f659eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c0672a00ca0cd2bbf67bcb7fb2f66a2f8bd6a00b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="description-property"></a>Propriedade Description
 Descreve um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -35,7 +37,7 @@ Descreve um [erro](../../../ado/reference/ado-api/error-object.md) objeto.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **cadeia de caracteres** valor que contém uma descrição do erro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **descrição** propriedade para obter uma descrição curta do erro. Exiba esta propriedade para alertar o usuário a um erro que você não pode ou não desejar tratar. A cadeia de caracteres será proveniente do ADO ou um provedor.  
   
  Provedores são responsáveis por passar o texto do erro específico para ADO. ADO adiciona um [erro](../../../ado/reference/ado-api/error-object.md) o objeto para o **erros** coleção para cada provedor de erro ou aviso que ele recebe. Enumerar o **erros** coleção para rastrear os erros que o provedor transmite.  

@@ -2,10 +2,14 @@
 title: Database Mail | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 892737ed820795ad6ebfbe5309166736c34a30f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 530adcf1fdc0148283f8362c790cabff82314aa0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail"></a>Database Mail
-  Database Mail é uma solução empresarial para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Database Mail é uma solução empresarial para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
   
   
 ##  <a name="Benefits"></a> Benefícios do uso do Database Mail  
@@ -123,7 +128,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Programa externo do Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)  
   
--   [Registro em log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
+-   [Log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [Configurar o SQL Server Agent Mail para usar o Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   

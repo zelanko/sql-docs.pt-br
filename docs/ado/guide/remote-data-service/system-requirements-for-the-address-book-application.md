@@ -3,7 +3,7 @@ title: "Requisitos do sistema para o endereço do catálogo de aplicativo | Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9d182b879a9b99cafb2624613dc05a7416160f47
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070c809c23fcd70c5048e70f61ac74ad4bc7ce4b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos de sistema para o aplicativo de catálogo de endereços
 Para configurar o aplicativo de exemplo do catálogo de endereços, é necessário atender aos seguintes requisitos de software e o banco de dados:  
@@ -62,6 +61,5 @@ Para configurar o aplicativo de exemplo do catálogo de endereços, é necessár
  [A execução do Script SQL do catálogo de endereço](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Executando o aplicativo de exemplo do catálogo de endereços](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
 
 

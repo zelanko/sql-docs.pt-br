@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Escolha de dados de um fonte ou Driver
 A fonte de dados ou driver usado por um aplicativo às vezes é embutido no aplicativo. Por exemplo, um aplicativo personalizado escrito por um departamento de MIS para transferir dados de uma fonte de dados para outro conterá os nomes das fontes de dados, o aplicativo simplesmente não funciona com outras fontes de dados. Outro exemplo é um aplicativo vertical, como aquele usado para entrada de ordem. Esse aplicativo sempre usa a mesma fonte de dados, que tem um esquema predefinido conhecido pelo aplicativo.  
@@ -50,4 +48,3 @@ A fonte de dados ou driver usado por um aplicativo às vezes é embutido no apli
 -   **Acessando um DBMS específico em uma única vez.** Por exemplo, uma planilha que recupera dados chamando funções ODBC pode conter o **DRIVER** palavra-chave para identificar um driver específico. Como o nome do driver é significativo para todos os usuários que têm esse driver, a planilha pode ser passada entre os usuários. Se a planilha contiver um nome de fonte de dados, cada usuário teria que criar a mesma fonte de dados para usar a planilha.  
   
 -   **O sistema para todos os bancos de dados acessíveis para um determinado driver de navegação.** Para obter mais informações, consulte [conectando com SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), mais adiante nesta seção.
-

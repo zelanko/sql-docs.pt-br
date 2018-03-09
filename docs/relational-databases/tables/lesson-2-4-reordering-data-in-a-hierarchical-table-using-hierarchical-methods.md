@@ -2,9 +2,12 @@
 title: "Reordenando dados em uma tabela hierárquica usando métodos hierárquicos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 462ae9bda4e9ad92a61d7199c018c68a1278a2a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Lição 2-4 – Reordenando dados em uma tabela hierárquica usando métodos hierárquicos
-Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
   
 O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/**; se deixar os últimos dois nós (**2/3/**) inalterados, você precisará fornecer os nós que estão sendo alterados (**/1/4/**) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/**. Os dois argumentos não precisam conter o mesmo número de níveis.  
   
@@ -115,7 +118,7 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 /            Ox      0        6          David   Marketing Manager  
 /1/          0x58    1        46         Sariya  Marketing Specialist  
 /1/1/        0x5AC0  2        269        Wanida  Marketing Assistant  
-/1/1//2      0x5AD0  3        291        Kevin   Marketing Intern  
+/1/1/1/      0x5AD0  3        291        Kevin   Marketing Intern  
 /2/          0x68    1        271        John    Marketing Specialist  
 /2/1/        0x6AC0  2        272        Mary    Marketing Assistant  
 /3/          0x78    1        119        Jill    Marketing Specialist  

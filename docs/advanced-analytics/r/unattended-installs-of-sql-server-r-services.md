@@ -2,27 +2,28 @@
 title: "Instalação autônoma dos serviços de aprendizado de máquina | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Instalação autônoma dos serviços de aprendizado de máquina (no banco de dados)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como usar argumentos de linha de comando com a instalação do SQL Server para instalar a componentes de aprendizado de máquina.
 
@@ -34,7 +35,7 @@ Instalação autônoma, queremos dizer que você não usar os recursos interativ
 
 **Aplica-se a: SQL Server 2017 serviços aprendizado de máquina (no banco de dados), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 + Você deve instalar o mecanismo de banco de dados em cada instância onde você usará o aprendizado de máquina.
 
@@ -48,9 +49,9 @@ Instalação autônoma, queremos dizer que você não usar os recursos interativ
 
 > [!IMPORTANT]
 > 
-> Após a conclusão da instalação para habilitar o recurso, são necessárias etapas adicionais. Esses incluem uma reconfiguração e reiniciar a instância. Se revisar todos os itens na seção [etapas de pós-instalação] (#bkmk_PostInstall) para determinar as ações necessárias após a conclusão da instalação.
+> Após a conclusão da instalação para habilitar o recurso, são necessárias etapas adicionais. Esses incluem uma reconfiguração e reiniciar a instância. Certifique-se de examinar todos os itens na seção [etapas de pós-instalação](#bkmk_PostInstall) para determinar as ações necessárias após a conclusão da instalação.
 
-## <a name="bkmk_NewInstall"></a>Instalação de linha de comando do SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Instalação de linha de comando do SQL Server 2017
 
 Os exemplos a seguir incluem o **mínimo** recursos necessários.
 
@@ -96,7 +97,7 @@ O exemplo a seguir mostra os argumentos necessários para executar um silencioso
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Instalação de linha de comando para o SQL Server 2016
+## <a name="OldInstall"></a> Instalação de linha de comando para o SQL Server 2016
  
 O exemplo a seguir mostra os argumentos necessários para executar um silencioso, autônomo instalação do SQL Server 2016 com a linguagem R adicionada.
 

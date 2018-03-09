@@ -2,27 +2,33 @@
 title: "Criar um plano de manutenção (superfície de design do plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 039e306af582e2bc56559557eea3a5d6d57ec819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
-  Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
   
  **Neste tópico**  
   
@@ -173,7 +179,7 @@ ms.lasthandoff: 11/09/2017
          **Expression**  
          Se usar as operações **Expression**, **Expression and Constraint**ou **Expression or Constraint**, digite uma expressão. A expressão deve ser avaliada como um booliano.  
   
-         **Teste**  
+         **Testar**  
          Valide a expressão.  
   
          **Várias restrições**  
@@ -217,7 +223,7 @@ ms.lasthandoff: 11/09/2017
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name* .  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name*.  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -232,7 +238,7 @@ ms.lasthandoff: 11/09/2017
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name* .  
+     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name*.  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
@@ -255,7 +261,7 @@ ms.lasthandoff: 11/09/2017
      **Resumo do arquivo de log**  
      Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
   
-     **Data**  
+     **Date**  
      Exibe a data do evento.  
   
      **Origem**  

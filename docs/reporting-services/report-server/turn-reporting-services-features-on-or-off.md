@@ -1,30 +1,30 @@
 ---
-title: Ativar recursos do Reporting Services ou desativar | Microsoft Docs
+title: Ativar ou desativar recursos do Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2b22762e13566c3ae7a9b9ce6861c96a86f75a7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
   Você pode desativar os recursos do servidor de relatório que não são usados como parte de uma estratégia de bloqueio para reduzir a superfície de ataque de um servidor de relatório de produção. Na maioria dos casos, você deve executar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente para usar toda a funcionalidade disponível no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No entanto, dependendo de seu modelo de implantação, você pode desabilitar os recursos dos quais não precisa. Por exemplo, você pode habilitar apenas o processamento em segundo plano se todo o processamento de relatórios for configurado como operações agendadas. Da mesma maneira, você pode executar somente o serviço Web Servidor de Relatório se quiser apenas relatórios interativos sob demanda.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Para ativar ou desativar o serviço Web Servidor de Relatórios editando a configuração  
   
-1.  Abra o arquivo `RsReportServer.config` em um editor de texto. Para obter mais informações, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Abra o arquivo `RsReportServer.config` em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Para ativar o serviço Web Servidor de Relatórios, defina **IsWebServiceEnabled** como **true**:  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Para ativar ou desativar eventos e entrega agendados editando a configuração  
   
-1.  Abra o arquivo RsReportServer.config em um editor de texto. Para obter mais informações, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Abra o arquivo RsReportServer.config em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Para ativar o processamento e a entrega agendados de relatórios, defina **IsSchedulingService**, **IsNotificationService**e **IsEventService** como **true**:  
   
@@ -123,9 +123,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Não é possível desativar completamente o processamento em segundo plano porque ele fornece a funcionalidade de manutenção de banco de dados que é necessária para operações de servidor.  
   
-##  <a name="WebPortal"></a>Portal da Web
+##  <a name="WebPortal"></a> Portal da Web
   
-Nas versões anteriores, você pode desabilitar o Gerenciador de relatórios definindo **IsReportManagerEnabled** como false. **IsReportManagerEnabled** foi substituído a partir do SQL Server 2016 Reporting Services atualização cumulativa 2. O portal da web sempre será habilitado.
+Nas versões anteriores, você podia desabilitar o Gerenciador de Relatórios definindo **IsReportManagerEnabled** como falso. **IsReportManagerEnabled** foi preterido a partir do SQL Server 2016 Reporting Services Atualização Cumulativa 2. O portal da Web sempre será habilitado.
   
 ##  <a name="ReportBuilder"></a> Construtor de Relatórios  
   
@@ -159,9 +159,8 @@ Nas versões anteriores, você pode desabilitar o Gerenciador de relatórios def
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- Mais perguntas? [Tente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

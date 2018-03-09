@@ -2,9 +2,12 @@
 title: Elemento de banco de dados do servidor (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1988ac62e5a19d235915a95f27e03562f00c31b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5150ec15a3cdd1f218bb108b8e305eaae7f2121
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-server-dta"></a>Elemento de banco de dados para servidor (DTA)
-  Especifica o banco de dados que deseja ajustar em um servidor específico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o banco de dados que você deseja ajustar em um servidor específico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +49,10 @@ ms.lasthandoff: 11/09/2017
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|Elemento pai|[Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
-|Elementos filho|[Elemento Name para Database &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento Schema para Database &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|Elemento pai|[Elemento Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
+|Elementos filho|[Elemento de nome de banco de dados &#40; DTA &#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento Schema para Database &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento **Database** com aquele cujo pai raiz é o elemento **Configuration**. Para obter mais informações, veja [Elemento Database para configuração &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemplo  

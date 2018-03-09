@@ -2,32 +2,32 @@
 title: "Definindo e procurando traduções | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7d55390b1d27fb595b139c06d9dd45b24737522
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lição 9-2-Definindo e procurando traduções
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte [Traduções de cubo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduções de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)e [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
 Nas tarefas deste tópico, você define as traduções de metadados para um conjunto limitado de objetos de dimensões na dimensão Data e objetos de cubo no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Em seguida, será possível navegar pelas dimensões e objetos de cubo para examinar as traduções de metadados.  
@@ -50,7 +50,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
     Outra coluna de idioma será exibida e nela você poderá definir as traduções francesas.  
   
-5.  Na linha do objeto **Legenda** da dimensão **Data** , digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)** .  
+5.  Na linha do objeto **Legenda** da dimensão **Data**, digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)**.  
   
 6.  Na linha do objeto **Legenda** no atributo **Nome do Mês** , digite **Mes del Año** na coluna de tradução para o **Espanhol (Espanha)** e **Mois d'Année** na coluna de tradução para o **Francês (França)** .  
   
@@ -80,7 +80,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
 2.  Na barra de ferramentas da guia **Traduções** , clique no botão **Nova Tradução** .  
   
-    Uma lista de idiomas é exibida na caixa de diálogo **Selecionar Idioma** .  
+    Uma lista de idiomas é exibida na caixa de diálogo **Selecionar Idioma**.  
   
 3.  Selecione **Espanhol (Espanha)**e clique em **OK**.  
   
@@ -142,4 +142,3 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
   
   
-

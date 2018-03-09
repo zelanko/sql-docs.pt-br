@@ -1,38 +1,37 @@
 ---
-title: Propriedade de detalhe | Microsoft Docs
+title: Propriedade Detail | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 9178a7767e95d39ff380fd79fc72964571a5ddbb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="detail-property"></a>Propriedade Detail
-  O **detalhes** propriedade o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** classe tem a seguinte estrutura XML:  
+  A propriedade **Detail** da classe **SoapException** do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem a seguinte estrutura XML:  
   
 ## <a name="elements"></a>Elementos  
- **Detalhes**  
+ **Detail**  
  O elemento de alto nível que contém todos os outros elementos de detalhe de erro.  
   
  **ErrorCode**  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/12/2017
  A mensagem de erro e o código de erro atribuídos pelo servidor de relatório.  
   
  **HelpLink**  
- A URL do link de Ajuda para um site no qual poderão ser encontradas informações adicionais sobre o erro. Para obter mais informações, consulte [elemento HelpLink](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
+ A URL do link de Ajuda para um site no qual poderão ser encontradas informações adicionais sobre o erro. Para obter mais informações, consulte [Elemento HelpLink](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
   
  **LinkID**  
  A ID atribuída ao link.  
@@ -59,28 +58,27 @@ ms.lasthandoff: 08/12/2017
  **ProductLocaleId**  
  A ID de localidade ou ID de idioma da DLL INTL do aplicativo (por exemplo, 0x41A).  
   
- **Sistema operacional**  
- O sistema operacional em que o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está instalado. Os valores válidos incluem **0** para o sistema operacional independente, **1** para [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], e **16** para o Windows XP.  
+ **OperatingSystem**  
+ O sistema operacional em que o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está instalado. Os valores válidos incluem **0** para o sistema operacional independente, **1** para o [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] e **16** para o Windows XP.  
   
  **CountryLocaleId**  
  A ID de localidade ou a ID de idioma do sistema operacional. Por exemplo, o valor para a versão francesa de Windows é 0x040c.  
   
- **Mais informações**  
+ **MoreInformation**  
  Uma cadeia de caracteres XML que contém exceções aninhadas ocorridas durante a execução do método.  
   
  **Origem**  
- Um elemento filho do **MoreInformation**. A origem do erro.  
+ Um elemento filho de **MoreInformation**. A origem do erro.  
   
  **Mensagem**  
- Um elemento filho do **MoreInformation**. A mensagem de erro de uma exceção aninhada. Esse elemento inclui atributos XML para **ErrorCode** e **HelpLink**.  
+ Um elemento filho de **MoreInformation**. A mensagem de erro de uma exceção aninhada. Esse elemento inclui atributos XML para **ErrorCode** e **HelpLink**.  
   
  **Warnings**  
  Uma cadeia de caracteres XML que contém os avisos retornados do processamento de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao tratamento de exceção no Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services classe SoapException](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Usando a propriedade Detail para manipular erros específicos](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Classe SoapException do Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
+ [Usar a propriedade Detail para manipular erros específicos](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   
-

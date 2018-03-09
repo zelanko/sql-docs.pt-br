@@ -1,29 +1,28 @@
 ---
-title: rsServerConfigurationError - erro do Reporting Services | Microsoft Docs
+title: "rsServerConfigurationError – Erro do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsServerConfigurationError
+helpviewer_keywords: rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78d4fd567ce57dba6d78c45a543a68725742d686
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a9be3ec02215fec315f9972726ca0ea15e20ffd1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erro do Reporting Services
     
@@ -53,13 +52,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="user-action"></a>Ação do usuário  
  Se o erro começar a ocorrer após você ter editado manualmente um arquivo de configuração, remova as alterações e insira o valor anterior, ou restaure uma versão anterior se possuir um backup.  
   
- Para revisar as informações de mensagem de erro adicional que acompanha o **rsServerConfiguration** erro, examine o relatório servidor rastreamento arquivos de log, que estão localizados em \Microsoft SQL Server\MSRS12.\< InstanceName > \reporting. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Para examinar as informações da mensagem de erro adicionais que acompanha o erro **rsServerConfiguration**, examine os arquivos de log de rastreamento do servidor de relatório, localizados em \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Somente interno  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Modificar um arquivo de configuração do Reporting Services &#40; Rsreportserver. config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   
-

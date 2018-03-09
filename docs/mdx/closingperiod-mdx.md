@@ -2,10 +2,13 @@
 title: ClosingPeriod (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CLOSINGPERIOD
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: db1f3170f51d72f912dc84efce36eceeb9e839ec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o membro que é o último irmão entre os descendentes de um membro especificado em um nível especificado.  
   
@@ -42,7 +45,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa função foi projetada para ser usada principalmente em uma dimensão com o tipo Tempo, mas também pode ser usada com qualquer outra dimensão.  
   
 -   Se uma expressão de nível for especificada, o **ClosingPeriod** função usa a dimensão que contém o nível especificado e retorna o último irmão entre os descendentes do membro padrão no nível especificado.  
@@ -87,7 +90,7 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OpeningPeriod &#40; MDX &#41;](../mdx/openingperiod-mdx.md)   
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)  

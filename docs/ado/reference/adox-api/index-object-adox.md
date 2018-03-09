@@ -3,8 +3,9 @@ title: "Índice do objeto (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Index
-helpviewer_keywords: Index object [ADOX]
+f1_keywords:
+- Index
+helpviewer_keywords:
+- Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 584ab3c0bb5bb4616df21598d36da1b6e729d9fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb35b814dbd06136c9ce0a47a82e5956e98b6945
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="index-object-adox"></a>Objeto de índice (ADOX)
 Representa um índice de uma tabela de banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O código a seguir cria um novo **índice**:  
   
 ```  

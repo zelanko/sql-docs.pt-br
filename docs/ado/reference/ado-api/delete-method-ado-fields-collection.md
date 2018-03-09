@@ -3,8 +3,9 @@ title: "Método Delete (coleção de campos de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Fields20::Delete
 - Fields20::raw_Delete
-helpviewer_keywords: Delete method [ADO]
+helpviewer_keywords:
+- Delete method [ADO]
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2f26c6370aa87be18a1c0a2e80cffa637fcab70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 731a9fd24b1961b918efffba2f26e49a9cc782b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-ado-fields-collection"></a>Método Delete (coleção de campos do ADO)
 Exclui um objeto a partir de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
@@ -42,7 +44,7 @@ Fields.Delete Field
  *Campo*  
  Um **Variant** que designa o [campo](../../../ado/reference/ado-api/field-object.md) objeto a ser excluído. Esse parâmetro pode ser o nome do **campo** objeto ou a posição ordinal do **campo** objeto propriamente dito.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Chamando o **Fields.Delete** método em um aberto [registros](../../../ado/reference/ado-api/recordset-object-ado.md) causa um erro de tempo de execução.  
   
 ## <a name="applies-to"></a>Aplica-se a  

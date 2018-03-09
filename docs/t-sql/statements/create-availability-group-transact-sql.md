@@ -1,10 +1,13 @@
 ---
 title: Criar grupo de disponibilidade (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Cria um novo grupo de disponibilidade, se a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for habilitada para o recurso [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +75,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -118,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_grupo*  
+ *group_name*  
  Especifica o nome do novo grupo de disponibilidade. *group_name* deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [identificador](../../relational-databases/databases/database-identifiers.md), e deve ser exclusivo em todos os grupos de disponibilidade no cluster WSFC. O tamanho máximo de um nome de grupo de disponibilidade é 128 caracteres.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMÁRIO | SECONDARY_ONLY | SECUNDÁRIO | NONE}  
@@ -188,10 +190,10 @@ CREATE AVAILABILITY GROUP group_name
  Usado para criar um grupo de disponibilidade distribuída. Essa opção é usada com o parâmetro ON do grupo de disponibilidade para conectar os dois grupos de disponibilidade em Clusters de Failover do Windows Server separados.  Para obter mais informações, veja [Grupos de disponibilidade distribuídos e &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Há suporte para grupos de disponibilidade distribuídos a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduzido no SQL Server de 2017 CTP 2.2. Usado para definir um número mínimo de réplicas secundárias síncronas necessário para confirmar antes que o primário confirma uma transação. Garante que a transação do SQL Server aguarda até que os logs de transação são atualizados durante o número mínimo de réplicas secundárias. O padrão é 0, que fornece o mesmo comportamento que o SQL Server 2016. O valor mínimo é 0. O valor máximo é o número de réplicas menos 1. Essa opção se relaciona com réplicas no modo de confirmação síncrona. Quando réplicas estão no modo de confirmação síncrona, gravações na réplica primária espera até que as gravações nas réplicas secundárias síncronas são confirmadas para o log de transações do banco de dados de réplica. Se um SQL Server que hospeda uma réplica de síncrona secundária para de responder, o SQL Server que hospeda a réplica primária marcará essa réplica secundária não SINCRONIZADA e continuar. Quando o banco de dados não responder volta a ficar online está em um estado "não sincronizado" e a réplica é marcada como não íntegro até que o primário pode torná-la síncrona novamente. Essa configuração garante que a réplica primária aguarda até que o número mínimo de réplicas que foram confirmadas cada transação. Se o número mínimo de réplicas não está disponível, confirmações no primário falharem. Essa configuração se aplica a grupos de disponibilidade com o tipo de cluster `WSFC` e `EXTERNAL`. Para o tipo de cluster `EXTERNAL` a configuração é alterada quando o grupo de disponibilidade é adicionado a um recurso de cluster. Consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](../../linux/sql-server-linux-availability-group-ha.md).
+ Introduzidos no SQL Server de 2017. Usado para definir um número mínimo de réplicas secundárias síncronas necessário para confirmar antes que o primário confirma uma transação. Garante que a transação do SQL Server aguarda até que os logs de transação são atualizados durante o número mínimo de réplicas secundárias. O padrão é 0, que fornece o mesmo comportamento que o SQL Server 2016. O valor mínimo é 0. O valor máximo é o número de réplicas menos 1. Essa opção se relaciona com réplicas no modo de confirmação síncrona. Quando réplicas estão no modo de confirmação síncrona, gravações na réplica primária espera até que as gravações nas réplicas secundárias síncronas são confirmadas para o log de transações do banco de dados de réplica. Se um SQL Server que hospeda uma réplica de síncrona secundária para de responder, o SQL Server que hospeda a réplica primária marcará essa réplica secundária não SINCRONIZADA e continuar. Quando o banco de dados não responder volta a ficar online está em um estado "não sincronizado" e a réplica é marcada como não íntegro até que o primário pode torná-la síncrona novamente. Essa configuração garante que a réplica primária aguarda até que o número mínimo de réplicas que foram confirmadas cada transação. Se o número mínimo de réplicas não está disponível, confirmações no primário falharem. Para o tipo de cluster `EXTERNAL` a configuração é alterada quando o grupo de disponibilidade é adicionado a um recurso de cluster. Consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
- Introduzido no SQL Server de 2017 CTP 2.2. Usado para identificar se o grupo de disponibilidade em um Cluster de Failover do Windows Server (WSFC).  Defina como WSFC ao grupo de disponibilidade está em uma instância de cluster de failover em um cluster de failover do Windows Server. Definido como externo quando o cluster é gerenciado por um Gerenciador de cluster que não é um cluster de failover do Windows Server, como Pacemaker do Linux. Definida como NONE quando o grupo de disponibilidade não usando WSFC de coordenação de cluster. Por exemplo, quando um grupo de disponibilidade inclui servidores Linux. 
+ Introduzidos no SQL Server de 2017. Usado para identificar se o grupo de disponibilidade em um Cluster de Failover do Windows Server (WSFC).  Defina como WSFC ao grupo de disponibilidade está em uma instância de cluster de failover em um cluster de failover do Windows Server. Definido como externo quando o cluster é gerenciado por um Gerenciador de cluster que não é um cluster de failover do Windows Server, como Pacemaker do Linux. Definida como NONE quando o grupo de disponibilidade não usando WSFC de coordenação de cluster. Por exemplo, quando um grupo de disponibilidade inclui servidores Linux com nenhum Gerenciador de cluster. 
 
  Banco de dados *database_name*  
  Especifica uma lista de um ou mais bancos de dados de usuário na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (isto é, a instância de servidor na qual você está criando o grupo de disponibilidade). É possível especificar vários bancos de dados para um grupo de disponibilidade, mas cada banco de dados pode pertencer a apenas um grupo de disponibilidade. Para obter informações sobre o tipo de bancos de dados que pode dar suporte a um grupo de disponibilidade, consulte [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Para descobrir quais bancos de dados locais já pertencem a um grupo de disponibilidade, consulte o **replica_id** coluna o [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo.  
@@ -231,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Para obter informações sobre os pré-requisitos para nós WSFC e instâncias de servidor, consulte [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***porta***'**  
+ ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
  Especifica o caminho da URL para o [ponto de extremidade de espelhamento de banco de dados](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade que você está definindo na cláusula REPLICA ON atual.  
   
  A cláusula ENDPOINT_URL é necessária. Para obter mais informações, consulte [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Especifica uma URL para especificar uma URL de ponto de extremidade ou URL de roteamento somente leitura. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -245,16 +247,25 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  É um número de porta que está associado com o ponto de extremidade de espelhamento da instância do servidor parceiro (para a opção ENDPOINT_URL) ou o número da porta usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] da instância do servidor (para a opção READ_ONLY_ROUTING_URL).  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
- SYNCHRONOUS_COMMIT ou ASYNCHRONOUS_COMMIT Especifica se a réplica primária precisa aguardar a réplica secundária confirmar o fortalecimento (gravação) dos registros de log no disco antes da réplica primária pode confirmar a transação em um determinado primário banco de dados. As transações em bancos de dados diferentes na mesma réplica primária podem ser confirmadas independentemente.
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT ou ASYNCHRONOUS_COMMIT Especifica se a réplica primária precisa aguardar a réplica secundária confirmar o fortalecimento (gravação) dos registros de log no disco antes da réplica primária pode confirmar a transação em um determinado primário banco de dados. As transações em bancos de dados diferentes na mesma réplica primária podem ser confirmadas independentemente. SQL Server 2017 atualização Cumulativa 1 introduz CONFIGURATION_ONLY. Réplica CONFIGURATION_ONLY só se aplica a grupos de disponibilidade com CLUSTER_TYPE = externo ou CLUSTER_TYPE = NONE. 
   
  SYNCHRONOUS_COMMIT  
  Especifica que a réplica primária espera para confirmar transações até que eles tenham sido fortalecidas nessa réplica secundária (modo de confirmação síncrona). Você pode especificar SYNCHRONOUS_COMMIT para até três réplicas, inclusive a réplica primária.  
   
  ASYNCHRONOUS_COMMIT  
  Especifica se a réplica primária confirma transações sem esperar que essa réplica secundária fortaleça o log (modo de disponibilidade de confirmação síncrona). Você pode especificar ASYNCHRONOUS_COMMIT para até cinco réplicas de disponibilidade, inclusive a réplica primária.  
+
+ CONFIGURATION_ONLY Especifica que a réplica primária sincronicamente confirmar metadados de configuração do grupo de disponibilidade para o banco de dados mestre nesta réplica. A réplica não conterão dados de usuário. Essa opção:
+
+- Pode ser hospedado em qualquer edição do SQL Server, inclusive a Express Edition.
+- Requer que os dados de espelhamento de ponto de extremidade da réplica seja de tipo CONFIGURATION_ONLY `WITNESS`.
+- Não pode ser alterado.
+- Não é válida quando `CLUSTER_TYPE = WSFC`. 
+
+   Para obter mais informações, consulte [única réplica de configuração](../../linux/sql-server-linux-availability-group-ha.md).
   
- A cláusula AVAILABILITY_MODE é necessária. Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ A cláusula AVAILABILITY_MODE é necessária. Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMÁTICA | MANUAL}  
  Especifica o modo de disponibilidade da réplica de disponibilidade que você está definindo.  
@@ -308,9 +319,9 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Todas as conexões são permitidas com os bancos de dados na réplica secundária para acesso somente leitura.  
   
- Para obter mais informações, veja [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***porta***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  Especifica a URL a ser usada para rotear solicitações de conexão de intenção de leitura para esta réplica de disponibilidade. Esta é a URL na qual o Mecanismo de Banco de Dados do SQL Server escuta. Normalmente, a instância padrão do Mecanismo de Banco de Dados do SQL Server escuta na porta TCP 1433.  
   
  Para uma instância nomeada, você pode obter o número da porta consultando o **porta** e **type_desc** colunas do [sys.DM tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) exibição de gerenciamento dinâmico. A instância de servidor usa o ouvinte do Transact-SQL (**type_desc = 'TSQL'**).  
@@ -320,7 +331,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Para uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ouvinte do Transact-SQL deve ser configurado para usar uma porta específica. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- PRIMARY_ROLE **(** ... **)**  
+ PRIMARY_ROLE **(** … **)**  
  Especifica configurações específicas de papel que terão efeito se essa réplica de disponibilidade possui a função primária (ou seja, sempre que é a réplica primária). Dentro dos parênteses, especifique uma ou ambas as opções de função primária. Se você especificar ambas, use uma lista separada por vírgulas.  
   
  As opções de função primária são as seguintes:  
@@ -366,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name > especifica o nome do grupo de disponibilidade, o que constitui uma metade de um grupo de disponibilidade distribuída.  
   
- OUVINTE **='**TCP**://***system-address***:***porta***'**  
+ LISTENER **='**TCP**://***system-address***:***port***'**  
  Especifica o caminho da URL para o ouvinte associado ao grupo de disponibilidade.  
   
  A cláusula de OUVINTE é necessária.  
   
- **'**TCP**://***system-address***:***porta***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Especifica uma URL para o ouvinte associado ao grupo de disponibilidade. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -380,7 +391,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  É um número de porta que está associado com o ponto de extremidade do grupo de disponibilidade. Observe que isso não é a porta do ouvinte.  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
  Especifica se a réplica primária precisa aguardar o grupo de disponibilidade secundária confirmar o fortalecimento (gravação) dos registros de log no disco antes da réplica primária pode confirmar a transação em um determinado banco de dados primário.  
   
  SYNCHRONOUS_COMMIT  
@@ -408,7 +419,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Especifica a propagação manual (padrão). Esse método requer que você criar um backup do banco de dados na réplica primária e restaure manualmente esse backup em réplicas do grupo de disponibilidade secundária.  
   
- OUVINTE **'***dns_name***' (** \<listener_option > **)** define um novo ouvinte de grupo de disponibilidade para isso grupo de disponibilidade. LISTENER é um argumento opcional.  
+ OUVINTE **'***dns_name***' (** \<listener_option > **)** define um novo ouvinte de grupo de disponibilidade para este grupo de disponibilidade. LISTENER é um argumento opcional.  
   
 > [!IMPORTANT]  
 >  Antes de criar seu primeiro ouvinte, é altamente recomendável que você leia [criar ou configurar um ouvinte de grupo de disponibilidade &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -440,7 +451,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- COM o IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta  **=**  *listener_port* ]  
+ COM o IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Porta **= * listener_port* ]  
  Especifica que, em vez de usar o DHCP, o ouvinte do grupo de disponibilidade usa um ou mais endereços IP estáticos. Para criar um grupo de disponibilidade em várias sub-redes, cada sub-rede exige um endereço IP estático na configuração de ouvinte. Para determinada sub-rede, o endereço IP estático pode ser um endereço IPv4 ou um endereço IPv6. Contate o administrador de rede para obter um endereço IP estático para cada sub-rede que hospeda uma réplica para o novo grupo de disponibilidade.  
   
  Por exemplo:  
@@ -488,7 +499,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Opção de réplica|Configuração no `COMPUTER01`|Configuração no `COMPUTER02`|Configuração no `COMPUTER03`|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP: / /*COMPUTER01:5022*|TCP: / /*COMPUTER02:5022*|TCP: / /*COMPUTER03:5022*|Neste exemplo, os sistemas estão no mesmo domínio e, portanto, as URLs de pontos de extremidade podem usar o nome do sistema de computador como endereço do sistema.|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|Neste exemplo, os sistemas estão no mesmo domínio e, portanto, as URLs de pontos de extremidade podem usar o nome do sistema de computador como endereço do sistema.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Duas das réplicas usam o modo de confirmação síncrona. Quando sincronizadas, elas oferecem suporte ao failover sem perda de dados. A terceira réplica, que usa o modo de disponibilidade de confirmação assíncrona.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|As réplicas da confirmação síncrona oferecem suporte ao failover automático e manual planejado. A réplica em modo de disponibilidade de confirmação síncrona oferece suporte somente ao failover manual forçado.|  
 |BACKUP_PRIORITY|30|30|90|Uma prioridade mais alta, 90, é atribuída à réplica de confirmação assíncrona, que para as réplicas de confirmação síncrona. Backups tendem a ocorrer na instância do servidor que hospeda a réplica de confirmação assíncrona.|  
@@ -498,7 +509,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Finalmente, o exemplo especifica a cláusula LISTENER opcional para criar um ouvinte de grupo de disponibilidade para o novo grupo de disponibilidade. Um nome DNS exclusivo, `MyAgListenerIvP6`, é especificado para esse ouvinte. As duas réplicas estão em sub-redes diferentes e, portanto, o ouvinte deve usar endereços IP estáticos. Para cada uma das duas réplicas de disponibilidade, a cláusula WITH IP especifica um endereço IP estático, `2001:4898:f0:f00f::cf3c` e `2001:4898:e0:f213::4ce2`, que usam o formato IPv6. Este exemplo também especifica o uso do argumento PORT opcional para especificar a porta `60173` como a porta do ouvinte.  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -555,22 +566,21 @@ GO
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [Criar um grupo de disponibilidade &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [Usar o Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar o Assistente de grupo de disponibilidade &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Usar o Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar o Assistente de grupo de disponibilidade &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
- [DESCARTE o grupo de disponibilidade &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
+ [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Solucionar problemas de sempre configuração de grupos de disponibilidade &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e Failover de aplicativo &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

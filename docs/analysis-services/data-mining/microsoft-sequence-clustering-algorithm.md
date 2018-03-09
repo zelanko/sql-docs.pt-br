@@ -2,15 +2,13 @@
 title: Algoritmo msc | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo MSC
-  O algoritmo de Clustering de Sequência do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo de Clustering de Sequência do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
   
 -   Fluxos ou caminhos de cliques gerados quando os usuários navegam em um site  
   
@@ -85,9 +84,9 @@ ms.lasthandoff: 11/17/2017
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de Clustering de sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Procurar um modelo usando o Visualizador de Cluster de sequência da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

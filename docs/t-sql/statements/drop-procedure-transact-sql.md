@@ -27,17 +27,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], removing
 - removing procedure groups
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
-caps.latest.revision: 51
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b386dfca28622eb95eec500d909aa7190d081493
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: aef67c09e34bf23fa1185cc10b12ff3fb88e6a6c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,13 +47,13 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
@@ -105,7 +104,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
@@ -113,6 +112,5 @@ GO
  [Excluir um procedimento armazenado](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   
   
-
 
 

@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsDescendant
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsDescendant function
+f1_keywords: IsDescendant
+dev_langs: DMX
+helpviewer_keywords: IsDescendant function
 ms.assetid: d9fe7446-edb5-487b-8ea6-c9efaccf6d90
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 179a9f3f04db55cffb74f6417c3339ceeb20aa11
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4a1e7959a303b768851784af0ab9c88abd257674
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +41,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Tipo de retorno  
  Um tipo booliano.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **IsDescendant** é usado somente em [SELECT FROM &#60; modelo de &#62;. CONTEÚDO &#40; DMX &#41; ](../dmx/select-from-model-content-dmx.md) e [SELECT FROM &#60; modelo de &#62;. DIMENSION_CONTENT &#40; DMX &#41; ](../dmx/select-from-model-dimension-content-dmx.md) consultas.  
   
 ## <a name="examples"></a>Exemplos  
@@ -58,10 +52,9 @@ SELECT * FROM [TM Decision Tree].CONTENT
 WHERE IsDescendant('00000000100')  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e15b684c3bce4b0f4c0b08f915077c68afb05e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 92da55879e2d7dddd982eaba66fb2ff5c2c7ba27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
   O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite executar operações de qualidade de dados usando uma ferramenta autônoma. Esse aplicativo permite criar bases de dados de conhecimento, criar e executar projetos de qualidade de dados e executar tarefas administrativas.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="installing-the-data-quality-client-application"></a>Instalando o aplicativo cliente Data Quality  
  O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] é instalado na instalação do SQL Server. Você pode instalar o aplicativo cliente no mesmo computador do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ou em um computador remoto. Para obter mais informações sobre como instalar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], consulte [Instalar o Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |Descreve como fazer correspondências no DQS.|[Correspondência de dados](../data-quality-services/data-matching.md)|  
 |Descreve como administrar o DQS.|[Administração do DQS](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tela inicial do Data Quality Client](../data-quality-services/data-quality-client-home-screen.md)  
   
   

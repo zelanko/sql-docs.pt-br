@@ -2,31 +2,30 @@
 title: "Projetos de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
-  Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
   
  Este tópico fornece as informações básicas necessárias para entender e criar projetos de mineração de dados.  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  [Acesso programático a projetos de mineração de dados](#bkmk_API)  
   
 ##  <a name="bkmk_Overview"></a> Criando projetos de mineração de dados  
- No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você cria projetos de mineração de dados usando o modelo **Projeto OLAP e de Mineração de Dados**. Você também pode criar projetos de mineração de dados programaticamente, usando o AMO. É possível gerar o script dos objetos de mineração de dados individuais com a linguagem ASSL (Analysis Services Scripting Language). Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+ No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você cria projetos de mineração de dados usando o modelo **Projeto OLAP e de Mineração de Dados**. Você também pode criar projetos de mineração de dados programaticamente, usando o AMO. É possível gerar o script dos objetos de mineração de dados individuais com a linguagem ASSL (Analysis Services Scripting Language). Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
  Se você criar um projeto de mineração de dados dentro de uma solução existente, por padrão os objetos de mineração de dados serão implantados em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com o mesmo nome do arquivo de solução. Você pode alterar este nome e o servidor de destino usando a caixa de diálogo **Propriedades do Projeto** . Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
@@ -131,7 +130,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Se quiser filtrar dados, poderá fazê-lo na exibição da fonte de dados, mas também poderá criar filtros nos dados no nível do modelo de mineração. Como a definição de filtro está armazenada com o modelo de mineração, usar filtros de modelo facilita a determinação dos dados que foram usados para treinar o modelo. Além disso, você pode criar diversos modelos relacionados, com critérios de filtro diferentes. Para obter mais informações, consulte [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- Observe que a exibição da fonte de dados que você cria pode conter dados adicionais que não são usados diretamente para análise. Por exemplo, é possível adicionar à sua exibição da fonte de dados os dados que são usados para teste, previsões ou detalhamento. Para obter mais informações sobre esses usos, consulte [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) e [Detalhamento](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Observe que a exibição da fonte de dados que você cria pode conter dados adicionais que não são usados diretamente para análise. Por exemplo, é possível adicionar à sua exibição da fonte de dados os dados que são usados para teste, previsões ou detalhamento. Para obter mais informações sobre esses usos, consulte [Testing e Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) e [Detalhamento](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -216,16 +215,16 @@ ms.lasthandoff: 11/17/2017
 |Tarefas|Tópicos|  
 |-----------|------------|  
 |Descreve como trabalhar com colunas de estrutura de mineração|[Criar uma estrutura de mineração relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
-|Fornece links para recursos que ajudam a personalizar os algoritmos que criam modelos de mineração|[Personalizar os modelos de mineração e a estrutura](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Fornece links para informações sobre cada um dos visualizadores de modelo de mineração|[Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
-|Saiba sobre como processar opções e permissões|[Processando objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Fornece mais informações sobre Analysis Services|[Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar modelos de mineração para uma estrutura de &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Fornece links para recursos que ajudam a personalizar os algoritmos que criam modelos de mineração|[Personalizar a estrutura e modelos de mineração](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Fornece links para informações sobre cada um dos visualizadores de modelo de mineração|[Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
+|Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Saiba sobre como processar opções e permissões|[Processar objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
+|Fornece mais informações sobre Analysis Services|[Bancos de dados de modelo multidimensional ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Banco de dados de espaço de trabalho &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Designer de mineração de dados](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Criando modelos multidimensionais usando o SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Banco de dados do espaço de trabalho](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

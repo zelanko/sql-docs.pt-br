@@ -1,27 +1,27 @@
 ---
-title: "Tipo de Conexão Hyperion Essbase (SSRS) | Microsoft Docs"
+title: "Tipo de conexão do Hyperion Essbase (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -55,7 +55,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **Visualização da Consulta** Arraste as dimensões, os membros, as propriedades de membros, as medidas e os KPIs do navegador de metadados até o painel Consulta para criar uma consulta MDX. Você pode editar o texto MDX diretamente no painel Consulta. Arraste os membros calculados do painel CalculatedMembers até o painel Consulta para definir campos adicionais para o conjunto de dados.  
   
-     Para obter mais informações, consulte [Interface do usuário do Designer de Consulta do Hyperion Essbase &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
+     Para obter mais informações, consulte [Interface do usuário do Designer de Consultas do Hyperion Essbase &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
   
 -   Importe uma consulta MDX existente de um relatório. Use o botão de consulta **Importar** para procurar um arquivo .rdl e importar uma consulta. Você pode importar uma consulta de um relatório que contém um conjunto de dados inserido baseado em uma fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Não há suporte para a importação de uma consulta MDX diretamente a partir de um arquivo .mdx.  
   
@@ -81,24 +81,24 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
- Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo predefinida do conjunto de dados de relatório **UniqueName**. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!`  *\<FieldName >*`.UniqueName`.  
+ Propriedades de campo predefinidas para as quais normalmente existe suporte de vários provedores de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório. Por exemplo, a propriedade de dimensão MDX MEMBER_UNIQUE_NAME é mapeada para a propriedade de campo predefinida do conjunto de dados de relatório **UniqueName**. Para incluir o valor de nome exclusivo em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`.UniqueName`.  
   
- A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar para a fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)].  
+ A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar para a fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objeto**|Especifica o valor de dados do campo.<br /><br /> Em uma propriedade de dimensão, é mapeada para MEMBER_CAPTION. Em uma medida, é mapeada para um valor de dados.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
-|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
-|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
-|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
+|**FormattedValue**|**String**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
+|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
+|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
+|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
   
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
   
 ### <a name="custom-properties"></a>Propriedades personalizadas  
- Propriedades de campo personalizadas para as quais existe suporte de um provedor de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório, mas não aparecem no painel Conjuntos de Dados de relatório como campos daquele conjunto de dados. Por exemplo, **Nomes Longos** é uma propriedade do membro definida para um nível de dimensão. Para incluir o valor em uma caixa de texto, você pode usar a expressão `=Fields!`  *\<FieldName >*`("Long Names")`. Os nomes de campo na expressão fazem distinção de maiúsculas e minúsculas.  
+ Propriedades de campo personalizadas para as quais existe suporte de um provedor de dados e que aparecem na consulta MDX subjacente a um conjunto de dados de relatório, mas não aparecem no painel Conjuntos de Dados de relatório como campos daquele conjunto de dados. Por exemplo, **Nomes Longos** é uma propriedade do membro definida para um nível de dimensão. Para incluir o valor em uma caixa de texto, use a expressão `=Fields!`*\<FieldName>*`("Long Names")`. Os nomes de campo na expressão fazem distinção de maiúsculas e minúsculas.  
   
  Use a sintaxe a seguir para consultar as propriedades estendidas personalizadas em uma expressão:  
   
@@ -108,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**Cadeia de caracteres**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
+|**FORMAT_STRING**|**String**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
   
   
 ##  <a name="Remarks"></a> Comentários  
@@ -124,7 +124,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Adicionar um filtro a um conjunto de dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Seções relacionadas  
@@ -133,13 +133,13 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fornece informações sobre conjuntos de dados inseridos e compartilhados.  
   
- [Coleção de campos de conjunto de dados e &#40; Construtor de relatórios e SSRS & &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos gerada pela consulta do conjunto de dados.  
   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -149,10 +149,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Fornece informações detalhadas sobre como trabalhar com esta extensão de dados.  
   
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

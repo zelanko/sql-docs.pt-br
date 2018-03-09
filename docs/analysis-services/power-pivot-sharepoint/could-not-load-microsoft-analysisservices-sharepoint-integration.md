@@ -2,31 +2,30 @@
 title: "Não foi possível carregar o 'Microsoft.AnalysisServices.SharePoint.Integration' | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0854f5c3cdf740c68b8f83dcb3d847cefc256edd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a69a219376c2a67b003eaa6769843dc23791d829
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Não foi possível carregar Microsoft.AnalysisServices.SharePoint.Integration
-  Em ambientes do SharePoint 2010 com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, este erro ocorrerá se a solução no nível de aplicativo para o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não tiver sido implantada corretamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Em ambientes do SharePoint 2010 com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, este erro ocorrerá se a solução no nível de aplicativo para o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não tiver sido implantada corretamente.  
   
 ## <a name="details"></a>Detalhes  
   
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Implantar soluções Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   
-

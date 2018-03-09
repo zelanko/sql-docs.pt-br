@@ -3,8 +3,9 @@ title: Propriedade Filter | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Filter
-helpviewer_keywords: Filter property
+f1_keywords:
+- Recordset15::Filter
+helpviewer_keywords:
+- Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22b1ee344246c2a21dc143822145ba6ca09060d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e0a74efdc9eeef18eac76e582355653d6677139
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-property"></a>Propriedade de filtro
 Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -38,7 +41,7 @@ Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recor
   
 -   Um [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **filtro** propriedade seletivamente retire registros em um **registros** objeto. Filtradas **registros** torna-se o cursor atual. Outras propriedades que retornam valores com base na atual **cursor** são afetados, como [propriedade AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), e [propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Isso é porque a definição de **filtro** propriedade com um valor específico moverá o registro atual para o primeiro registro que satisfaz o novo valor.  
   
  A cadeia de caracteres de critérios é composta por cláusulas no formulário *valor de operador FieldName* (por exemplo, `"LastName = 'Smith'"`). Você pode criar cláusulas compostas concatenando cláusulas individuais com **AND** (por exemplo, `"LastName = 'Smith' AND FirstName = 'John'"`) ou **OR** (por exemplo, `"LastName = 'Smith' OR LastName = 'Jones'"`). Use as seguintes diretrizes para cadeias de caracteres de critérios:  

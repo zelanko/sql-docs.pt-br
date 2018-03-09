@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a093d431510891d0bac9616aa1058134cb168ec7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Criar um banco de dados do gráfico e executar algumas consultas usando o T-SQL de correspondência de padrões
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Este exemplo fornece uma [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados do gráfico conosco e bordas e, em seguida, usar a nova cláusula de correspondência para corresponder alguns padrões e percorrer o gráfico. Esse script de exemplo funcionará em ambos os banco de dados do SQL Azure e[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Este exemplo fornece uma [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados do gráfico conosco e bordas e, em seguida, usar a nova cláusula de correspondência para corresponder alguns padrões e percorrer o gráfico. Esse script de exemplo funcionará em ambos os banco de dados do SQL Azure e [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Esquema de exemplo  
 Este exemplo cria um esquema de gráfico, como mostrado na Figura 1, para uma rede social hipotética que tem nós de pessoas, restaurante e cidade. Esses nós são conectados entre si usando amigos, gosta, bordas LivesIn e LocatedIn. 
@@ -174,4 +175,4 @@ Esse script usa a nova sintaxe do T-SQL para criar tabelas de nó e borda. Mostr
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Criar tabela de borda ou nó de gráfico  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Inserir em uma tabela de borda ou de nó  |
-|[COINCIDIR &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)  |Use MATCH para corresponder a um padrão ou percorrer o gráfico  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Use MATCH para corresponder a um padrão ou percorrer o gráfico  |

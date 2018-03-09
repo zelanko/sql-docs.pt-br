@@ -5,20 +5,17 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - INSERT INTO
 - INSERT
 - INSERT_INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SKIP (DMX)
 - mapped model columns element
@@ -30,17 +27,16 @@ helpviewer_keywords:
 - training mining models
 - mining structures [DMX], processing
 ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eeb42798d1a095ce08a081144d33961c40ee8dd8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +66,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *consulta de fonte de dados*  
  Consulta da fonte no formato definido pelo provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você não especificar **modelo de MINERAÇÃO** ou **estrutura de MINERAÇÃO**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procura o tipo de objeto com base no nome e, em seguida, processa o objeto correto. Se o servidor contiver uma estrutura de mineração e um modelo de mineração com nomes idênticos, um erro será retornado.  
   
  Usando o segundo formulário de sintaxe, INSERT INTO*\<objeto >*. COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo, sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
@@ -91,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
 |INSERT INTO MINING STRUCTURE*\<estrutura >*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|INSERT INTO MINING MODEL*\<modelo >* que contém uma consulta de origem<br /><br /> ou<br /><br /> INSERT INTO MINING STRUCTURE*\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [Excluir &#40; DMX &#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modelo >* que contém uma consulta de origem<br /><br /> ou em<br /><br /> INSERT INTO MINING STRUCTURE*\<estrutura >* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [Excluir &#40; DMX &#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
  Usando o \<mapear colunas de modelo > elemento, você pode mapear as colunas da fonte de dados para as colunas no modelo de mineração. O \<mapear colunas de modelo > elemento tem o seguinte formato:  
@@ -146,10 +142,9 @@ SHAPE {
 AS [Models]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

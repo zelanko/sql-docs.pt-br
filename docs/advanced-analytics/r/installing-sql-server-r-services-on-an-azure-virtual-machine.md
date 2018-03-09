@@ -2,25 +2,28 @@
 title: "Instalando recursos de aprendizado de máquina do SQL Server em uma máquina virtual do Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 08c3434ec120003de6d62bc61da3637e9177bb88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalando recursos em uma máquina virtual do Azure de aprendizado de máquina do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Se você implantar uma máquina virtual do Azure que inclui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], agora você pode selecionar o aprendizado de máquina como um recurso a ser adicionado à instância quando a VM é criada.
 
@@ -104,7 +107,7 @@ Para obter mais informações, consulte [Configurar o SQL Server R Services (no 
 
 + Habilitar pipes nomeados
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usa o protocolo de Pipes Nomeados para conexões entre os computadores cliente e servidor, além de algumas conexões internas. Se a opção Pipes Nomeados não estiver habilitada, instale e habilite-a tanto na máquina virtual do Azure quanto quaisquer clientes de ciência de dados que se conectem ao servidor.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usa o protocolo Pipes nomeados para conexões entre os computadores cliente e servidor, em algumas conexões internas. Se a opção Pipes Nomeados não estiver habilitada, instale e habilite-a tanto na máquina virtual do Azure quanto quaisquer clientes de ciência de dados que se conectem ao servidor.
   
 + Habilitar TCP/IP
 

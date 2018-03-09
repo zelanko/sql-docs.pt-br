@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagField
-helpviewer_keywords:
-- SQLGetDiagField function [ODBC]
+f1_keywords: SQLGetDiagField
+helpviewer_keywords: SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8f64eb18fc6e1fb456b03ef65ef2dc33cc140
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 **Conformidade**  
@@ -263,7 +257,6 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |Obter vários campos de uma estrutura de dados de diagnóstico|[Função SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

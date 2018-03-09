@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - SVF
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 096b540d63e439677568ab68037d23c1307b40bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4715f0f4133c80276a11d5c10902a2cbc906b0d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-scalar-valued-functions"></a>Funções de valor escalar CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Uma função com valor escalar (SVF) retorna um único valor, como uma cadeia de caracteres, inteiro ou um valor de bit. Você pode criar funções definidas pelo usuário de valor escalar em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e escolhendo entre código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Uma função de valor escalar (SVF) retorna um único valor, como uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções de valor escalar definidas pelo usuário em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e escolhendo entre código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos das funções de valor escalar do CLR  
  As SVFs do .NET Framework são implementadas como métodos em uma classe de um assembly do .NET Framework. Os parâmetros de entrada e o tipo retornado de uma SVF podem ser qualquer um dos tipos de dados escalares suportados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto **varchar**, **char**, **rowversion**, **texto**, **ntext**, **imagem**, **timestamp**, **tabela**, ou **cursor** . As SVFs devem garantir uma correspondência entre o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o tipo de dados de retorno do método de implementação. Para obter mais informações sobre conversões de tipo, consulte [mapeamento de dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 >  Não marque uma função como determinística se ela sempre produzir os mesmos valores de saída, considerando os mesmos valores de entrada e o mesmo estado do banco de dados. A marcação de uma função como determinística, quando a função, de fato, não é pode resultar em exibições indexadas e colunas computadas danificadas. Você marca uma função como determinística definindo a propriedade **IsDeterministic** como true.  
   
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
- Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40; mecanismo de banco de dados &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre TVPs, consulte [usar parâmetros &#40; mecanismo de banco de dados &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Exemplo de uma função de valor escalar do CLR  
  Eis uma SVF simples que acessa dados e retorna um valor inteiro:  

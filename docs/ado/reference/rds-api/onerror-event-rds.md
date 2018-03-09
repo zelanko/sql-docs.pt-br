@@ -3,8 +3,9 @@ title: onError evento (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: onError event [ADO]
+helpviewer_keywords:
+- onError event [ADO]
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21711f6915fab9edb053010467917cc7b240517e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9abde0214d2e2a1a49060bfcf8cbfe26a711ffb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="onerror-event-rds"></a>onError evento (RDS)
 O **onError** evento é chamado sempre que ocorrer um erro durante uma operação.  
@@ -42,7 +44,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  Um inteiro que indica o código de status do erro.  
   
- *Description*  
+ *Descrição*  
  Um **cadeia de caracteres** que indica uma descrição do erro.  
   
  *Origem*  

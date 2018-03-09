@@ -1,29 +1,29 @@
 ---
-title: "Adicionar inclinação, relevo e estilos de textura a um gráfico (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Adicionar estilos de bisel, auto-relevo e textura a um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce27503bed40b45359d8c65c6eeec7674e1ce486
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efeitos do gráfico - adicionar inclinação, relevo, ou textura (construtor de relatórios)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efeitos de gráfico – Adicionar bisel, alto-relevo ou textura (Construtor de Relatórios)
   Ao usar determinados tipos de gráficos, você pode especificar um efeito de desenho para aumentar o impacto visual do seu gráfico. Esses efeitos de desenho só são aplicados à série de seu gráfico. Eles não têm nenhum efeito sobre qualquer outro elemento do gráfico.  
   
  Quando você está usando qualquer variante de um gráfico de pizza ou rosca, você pode especificar uma borda suave ou um estilo de desenho côncavo, semelhante aos efeitos de inclinação e relevo que podem ser aplicados a uma imagem.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Você não pode ter os estilos 3D e bisel ou alto-relevo no mesmo gráfico. Se você habilitou 3D para o gráfico, não verá a propriedade PieDrawingStyle.  
   
- ![Gráfico de pizza com estilo de desenho Côncavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "gráfico de pizza com estilo de desenho Côncavo")  
+ ![Gráfico de pizza com estilo de desenho côncavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Gráfico de pizza com estilo de desenho côncavo")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Para adicionar estilos de textura a um gráfico de barras ou coluna  
   
@@ -63,13 +63,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Você não pode ter os estilos 3D e bisel ou alto-relevo no mesmo gráfico. Se você habilitou 3D para o gráfico, não verá a propriedade PieDrawingStyle.  
   
- ![Gráfico de barras com efeito de desenho LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "gráfico de barras com efeito de desenho LightToDark")  
+ ![Gráfico de barras com efeito de desenho LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Gráfico de barras com efeito de desenho LightToDark")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Gráficos de colunas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Gráficos de pizza &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Formatar um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

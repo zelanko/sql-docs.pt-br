@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a32dc43776511881697b972c9279d143af917c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5f132cc69c1e4acdf20fbcf88280c212fc1a13ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método altera a orientação do anel de todos os **polígonos** em uma **GeometryCollection** , mas não remover ou alterar qualquer **pontos** ou **Linestrings** na determinada coleção.  
   
  Se um **GeometryCollection** é passado para este método, cada instância na coleção é orientada novamente, mas a coleção como um todo não será orientada novamente.  
@@ -69,7 +68,6 @@ SELECT @R.ReorientObject().STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

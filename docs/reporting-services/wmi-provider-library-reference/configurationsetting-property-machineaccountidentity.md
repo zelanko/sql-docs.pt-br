@@ -2,30 +2,29 @@
 title: Propriedade MachineAccountIdentity (WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MachineAccountIdentity property
+helpviewer_keywords: MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: db3f35e539a034d2016de9cd89fb0fe8b7c1d0a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: af908a7573b81bf04dfb78c4bc84b5a81a0b0b79
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---machineaccountidentity"></a>Propriedade ConfigurationSetting - MachineAccountIdentity
+# <a name="configurationsetting-property---machineaccountidentity"></a>Propriedade de ConfigurationSetting – MachineAccountIdentity
   Obtém a identidade da conta da máquina do computador em que o servidor de relatório está instalado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,8 +43,7 @@ public string MachineAccountIdentity;
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
   
   
-

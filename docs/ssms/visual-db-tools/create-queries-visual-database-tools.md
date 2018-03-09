@@ -3,8 +3,11 @@ title: Criar consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>Criar consultas (Visual Database Tools)
-As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), o [Painel de Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e o [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), o [Painel de Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e o [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>Para criar uma consulta  
   
@@ -45,7 +48,7 @@ As consultas permitem que você recupere dados das tabelas e exibições em seu 
   
 Para refinar ainda mais a sua consulta, você pode alterar o código SQL no **Painel SQL** ou escolher opções como ordem de classificação e aliases de coluna no **Painel de Critérios.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Salvar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

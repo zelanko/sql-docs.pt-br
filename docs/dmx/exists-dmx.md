@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Exists
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Exists function
+f1_keywords: Exists
+dev_langs: DMX
+helpviewer_keywords: Exists function
 ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a42c5690b8c80ec752490605e3c3243ee78029de
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +45,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>Tipo de Resultado  
  Retorna **true** se o conjunto de resultados retornado pela subconsulta contiver pelo menos uma linha; caso contrário, retornará **false**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode usar a palavra-chave NOT antes de EXISTS: por exemplo, `WHERE NOT EXISTS (<subquery>)`.  
   
  A lista de colunas adicionada ao argumento de subconsulta de EXISTS é irrelevante; a função verifica somente a existência de uma linha que satisfaz a condição.  
@@ -72,9 +66,8 @@ WHERE [[Model] = 'Patch kit'
   
  Outra maneira de exibir os mesmos dados que são retornados por essa consulta é abrir o modelo no Visualizador de associação, clique no conjunto de itens **kit de consertos = existente**, selecione o **Detalhar** opção e, em seguida, selecione **somente casos de modelo**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Sintaxe de filtro de modelo e exemplos &#40; Analysis Services – mineração de dados &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   
-

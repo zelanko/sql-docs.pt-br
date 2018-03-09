@@ -3,7 +3,7 @@ title: "Busca de método e exemplo de propriedade de índice (VB) | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cc9b364d38cfa14ba69598c8c8f4cc09811a0395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 683a74aa2fadb070309a40f86a448128df56906e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Exemplo de propriedade de índice (VB) e método de busca
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID de funcionário***, para localizar o nome do funcionário no ***funcionários*** tabela do banco de dados Nwind.  
@@ -127,4 +126,3 @@ End Sub
  [Propriedade Index](../../../ado/reference/ado-api/index-property.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Seek](../../../ado/reference/ado-api/seek-method.md)
-

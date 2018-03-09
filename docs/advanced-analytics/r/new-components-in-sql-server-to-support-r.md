@@ -2,27 +2,28 @@
 title: Componentes do SQL Server para dar suporte a R | Microsoft Docs
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2bff53d3e324999c7cdca743d6e7b2ff9f85780
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componentes do SQL Server para dar suporte a R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 No SQL Server 2016 e de 2017, o mecanismo de banco de dados inclui os componentes opcionais que oferecem suporte à extensibilidade para idiomas de script externo, incluindo o R e Python. Foi adicionado suporte para a linguagem R no SQL Server 2016; Python foi adicionado suporte para nos serviços de aprendizado de máquina do SQL Server de 2017.
 
@@ -38,7 +39,7 @@ O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um servi
 
 O serviço Launchpad iniciará somente inicializadores confiáveis que sejam publicados pela Microsoft ou que tenham sido certificados pela Microsoft como atendendo aos requisitos de desempenho e gerenciamento de recursos. A nomeação para os iniciadores de idioma específico é simples:
 
-  + R - RLauncher.dll
+  + R -  RLauncher.dll
   + Python - PythonLauncher.dll
 
 O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em sua própria conta de usuário. Cada processo satélite para um tempo de execução de linguagem específica herdará a conta de usuário do Launchpad. Para obter mais informações sobre a configuração e o contexto de segurança da barra inicial, consulte [visão geral de segurança](../../advanced-analytics/r/security-overview-sql-server-r.md).
@@ -111,7 +112,7 @@ Código R que é executado de "dentro" do [!INCLUDE[ssNoVersion_md](../../includ
 4. O BxlServer coordena-se com o tempo de execução do R para gerenciar a troca de dados com [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e o armazenamento de resultados funcionais.
 5. Satélite de SQL gerencia comunicações sobre tarefas relacionadas e processa a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. O BxlServer usa Satélite SQL para comunicar o status e os resultados para o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha os processos e tarefas relacionados.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha a processos e tarefas relacionadas.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Scripts R executados de um cliente remoto
 
@@ -127,7 +128,7 @@ Ao conectar-se de um cliente de ciência de dados remotos que dá suporte ao Mic
 6. O RLauncher faz uma chamada para a instância de tempo de execução do R instalada no computador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 7. Os resultados são retornados ao BxlServer.
 8. O Satélite SQL gerencia a comunicação com o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e a limpeza dos objetos de trabalho relacionados.
-9. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados de volta para o cliente.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados ao cliente.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -136,4 +137,3 @@ Ao conectar-se de um cliente de ciência de dados remotos que dá suporte ao Mic
 [Visão geral de segurança](security-overview-sql-server-r.md)
 
 [Considerações sobre segurança](security-considerations-for-the-r-runtime-in-sql-server.md)
-

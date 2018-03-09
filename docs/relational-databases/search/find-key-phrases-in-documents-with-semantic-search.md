@@ -2,27 +2,33 @@
 title: "Localizar frases chave em documentos com pesquisa semântica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], key phrase queries
+helpviewer_keywords:
+- semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6581a6ed6b79ff32cc157e48ba53233918353beb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fe02dd662836bec41032e4715171c1b016590a81
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Localizar frases chave em documentos com pesquisa semântica
-  Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  
 
 ##  <a name="howtofind"></a> Localizar frases chave em documentos com SEMANTICKEYPHRASETABLE  
  Para identificar as frases chave em documentos específicos, ou para identificar documentos que contêm frases chave específicas, veja a função [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -40,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="HowToTopPhrases"></a> Exemplo 1: Localizar as principais frases-chave em um documento específico  
  O exemplo a seguir recupera as 10 principais frases-chave do documento especificado pela variável @DocumentId na coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. A variável @DocumentId representa um valor da coluna de chave do índice de texto completo.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -57,7 +63,7 @@ GO
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave Bracket da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

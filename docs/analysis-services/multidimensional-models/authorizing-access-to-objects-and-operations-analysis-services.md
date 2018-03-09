@@ -2,16 +2,13 @@
 title: "Autorizar o acesso a objetos e operações (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
-  O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina as permissões efetivas para um usuário ou grupo específico do Windows combinando as permissões associadas a cada função de banco de dados à qual o usuário ou grupo pertence. Em resultado, se uma função de banco de dados não fornecer a um usuário ou grupo permissão para exibir uma dimensão, medida ou atributo, mas uma função de banco de dados diferente conceder essa permissão, o usuário ou grupo terá permissão para exibir o objeto.  
   

@@ -1,14 +1,14 @@
 ---
-title: "Habilitar e desabilitar a impressão do lado do cliente para o Reporting Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Habilitar e desabilitar a impressão do lado do cliente no Reporting Services | Microsoft Docs"
+ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,29 +17,27 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "14"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ada6514fe7efa57bea6e6d0ac6e484d4a4a88a7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
 
   O botão Imprimir na barra de ferramentas do visualizador de relatórios usa o formato PDF (Portable Document Format) para a impressão do lado do cliente de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exibidos em um navegador. A nova experiência de impressão remota usa a extensão de renderização de PDF incluída no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]para renderizar o relatório no formato PDF. Você pode baixar um formulário .PDF do relatório ou, se você tiver um aplicativo instalado para exibição de arquivos .PDF, o botão de impressão exibirá uma caixa de diálogo de impressão para itens de configuração de página comuns como tamanho e orientação da página, além de uma visualização do arquivo .PDF. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
   
- Versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usavam um controle ActiveX que exigia o download do servidor de relatório para o computador cliente. Se você atualizar seu servidor de relatório para o SQL Server 2016 o controle de impressão não é removido do servidor de relatório ou computadores cliente.  
+ Versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usavam um controle ActiveX que exigia o download do servidor de relatório para o computador cliente. Se você atualizar o servidor de relatório para o SQL Server 2016, o controle de impressão não será removido do servidor de relatório nem dos computadores cliente.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> A Experiência de Impressão  
- Quando você clica em Imprimir ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") botão na barra de ferramentas de Visualizador de relatórios, a experiência varia dependendo do que. Aplicativos de visualização de PDF estão instalados no computador cliente e o navegador que você está usando.   Você pode baixar o arquivo PDF ou configurar as opções de impressão de uma caixa de diálogo, ou mesmo fazer ambos, dependendo do computador cliente.  
+ Quando você clica no botão Imprimir ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") na barra de ferramentas do visualizador de relatórios, a experiência varia de acordo com quais aplicativos de visualização de .PDF estão instalados no computador cliente e de qual navegador está sendo usado.   Você pode baixar o arquivo PDF ou configurar as opções de impressão de uma caixa de diálogo, ou mesmo fazer ambos, dependendo do computador cliente.  
   
- ![Barra de ferramentas relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra de ferramentas relatório")  
+ ![Barra de ferramentas do relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de ferramentas do relatório")  
   
 |||  
 |-|-|  
@@ -121,5 +119,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,10 +1,13 @@
 ---
 title: "Configurações (conversão) (DB2ToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02cc7f58c47138b7da063151f0d8e9df08762ae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configurações de projeto (conversão) (DB2ToSQL)
 A página de conversão do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte a sintaxe para DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe.  
@@ -485,6 +488,6 @@ Visível somente quando o gerador de sequência converter é definido como **usa
   
 -   Se você selecionar **não**, SSMA marcará todas as referências para fora de gatilhos em que o objeto de sequência CURRVAL com um erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência de Interface do usuário &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

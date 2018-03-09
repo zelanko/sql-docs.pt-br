@@ -8,25 +8,26 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3257afe0feb8a6200dfcfbff47b636b49a420fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bfafab8167aa88862eadbb1c4c308acf5e1a2b0e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvar um arquivo de consulta de atalho (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], salve um arquivo de consulta de atalho quando você precisar acessar o mesmo conjunto de dados com frequência.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   A planilha ativa deve conter dados gerenciados no MDS no formato que você deseja. Por exemplo, você deve estar visualizando as colunas na ordem em que deseja, com qualquer filtro aplicado. Para obter mais informações, consulte [Filtrar dados antes de exportar &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) e [Reordenar colunas &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md).  
@@ -37,13 +38,13 @@ ms.lasthandoff: 11/20/2017
   
 2.  Opcional. Para renomear a consulta, clique na seta sob **Salvar Consulta** e clique em **Gerenciar Consultas**. Selecione a consulta e clique em **Renomear**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   Clique na seta sob **Salvar Consulta** para exibir a consulta de atalho e abri-la.  
   
 -   [Enviar um arquivo de consulta de atalho por email &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

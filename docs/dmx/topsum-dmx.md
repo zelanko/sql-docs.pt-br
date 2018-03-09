@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopSum function
+f1_keywords: TOPSUM
+dev_langs: DMX
+helpviewer_keywords: TopSum function
 ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c3f3a81f804673fa0f9586a224d881b284719ebf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7151f28a59f7020cd71388a4236ce2198ff4cbc4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +44,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **TopSum** função retorna as linhas superiores em ordem decrescente de classificação, com base no valor avaliado do \<expressão de classificação > argumento para cada linha, de modo que a soma da \<expressão de classificação > valores é pelo menos o total dado especificado pelo \<soma > argumento. **TopSum** retorna o menor número de elementos possível embora ainda assim atenda o valor de soma especificado.  
   
 ## <a name="examples"></a>Exemplos  
@@ -115,10 +109,9 @@ NATURAL PREDICTION JOIN
   
  **Observação** neste exemplo é fornecido apenas para ilustrar o uso de **TopSum**. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)  
   
   
-

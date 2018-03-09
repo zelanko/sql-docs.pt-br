@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c201b69b2f4a756233c65ad1a1f2730b04e3d79f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Executar instruções de exclusão e atualização posicionada
 > [!IMPORTANT]  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 |Delete posicionada|SQL_ROW_DELETED|Valores antigos|Valores antigos|  
   
  [1], o aplicativo deve atualizar os valores nos buffers de linhas antes de executar a instrução de atualização posicionada; Depois de executar a instrução de atualização posicionada, a biblioteca de cursores copia os valores nos buffers de conjunto de linhas para seu cache.
-

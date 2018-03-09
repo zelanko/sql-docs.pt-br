@@ -8,36 +8,34 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ba3f82db367a7607163a67edae60b765d19980f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna as informações de controle de alterações de uma tabela. Você pode usar essa instrução para retornar todas as alterações de uma tabela ou as informações de controle de alterações de uma linha específica.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +53,7 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ALTERAÇÕES *tabela* , *last_sync_version*  
+ CHANGES *table* , *last_sync_version*  
  Retorna informações de controle de todas as alterações em uma tabela que ocorreu desde a versão que é especificada pelo *last_sync_version*.  
   
  *table*  
@@ -80,7 +78,7 @@ CHANGETABLE (
  *Table*  
  É a tabela definida pelo usuário na qual devem ser obtidas as informações de controle de alterações. O controle de alterações deve ser ativado na tabela. Um nome de tabela de uma, duas, três ou quatro partes pode ser usado. O nome da tabela pode ser um sinônimo para a tabela.  
   
- *nome da coluna*  
+ *column_name*  
  Especifica o nome de coluna/colunas de chave primária. Podem ser especificados vários nomes de coluna em qualquer ordem.  
   
  *Value*  
@@ -107,7 +105,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão associado à última alteração efetuada na linha|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versão associados à última operação de inserção.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = Insert<br /><br /> **D** = excluir|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = Insert<br /><br /> **D** = excluir|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Lista as colunas alteradas desde a last_sync_version (a linha de base). Observe que as colunas computadas nunca são listadas como alteradas.<br /><br /> O valor será NULL quando qualquer uma das condições a seguir for verdadeira:<br /><br /> O controle de alterações da coluna não está habilitado.<br /><br /> A operação é de inserção ou exclusão.<br /><br /> Todas as colunas de chave não primária foram atualizadas em uma operação. Este valor binário não deve ser interpretado diretamente. Em vez disso, para interpretá-lo, use [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Alterar as informações de contexto que você pode opcionalmente especificar usando o [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) cláusula como parte de uma instrução INSERT, UPDATE ou DELETE.|  
 |\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
@@ -121,7 +119,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  
 |\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em geral, a função CHANGETABLE é usada na cláusula FROM de uma consulta como se fosse uma tabela.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -162,7 +160,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Retornando linhas para uma sincronização inicial de dados  
  O exemplo a seguir mostra como obter dados para uma sincronização inicial dos dados da tabela. A consulta retorna todos os dados de linha e suas versões associadas. Você pode inserir ou adicionar esses dados ao sistema que conterá os dados sincronizados.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -174,7 +172,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Listando todas as alterações efetuadas desde uma versão específica  
  O exemplo a seguir lista todas as alterações feitas em uma tabela desde a versão especificada (`@last_sync_version)`. [Emp ID] e SSN são colunas em uma chave primária composta.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -186,7 +184,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Obtendo todos os dados alterados para uma sincronização  
  O exemplo a seguir mostra como você pode obter todos os dados alterados. Essa consulta une as informações de controle de alterações à tabela de usuário de forma que as informações da tabela de usuário sejam retornadas. Um `LEFT OUTER JOIN` é usado de forma que uma linha seja retornada para as linhas excluídas.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -201,7 +199,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Detectando conflitos usando CHANGETABLE (VERSION...)  
  O exemplo a seguir mostra como atualizar uma linha apenas se ela não tiver sido alterada desde a última sincronização. O número de versão da linha específica é obtido usando `CHANGETABLE`. Se a linha tiver sido atualizada, as alterações não serão efetuadas e a consulta retornará informações sobre a alteração mais recente efetuada na linha.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  
@@ -221,8 +219,8 @@ WHERE
 ## <a name="see-also"></a>Consulte também  
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

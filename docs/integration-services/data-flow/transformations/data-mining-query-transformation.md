@@ -1,5 +1,5 @@
 ---
-title: "Transformação de consulta de mineração de dados | Microsoft Docs"
+title: "Transformação Consultas de Mineração de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: ddf1b1f53156a44589dfe6eb62f7468a08559769
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-transformation"></a>Transformação Consulta de Mineração de Dados
   A transformação Consulta de Mineração de Dados executa consultas de previsão em relação a modelos de mineração de dados. Essa transformação contém um construtor de consultas para criar consultas DMX (Data Mining Extensions). O construtor de consultas permite criar instruções personalizadas para avaliar os dados de entrada de transformação em relação a um modelo de mineração existente usando a linguagem DMX. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](../../../dmx/data-mining-extensions-dmx-reference.md).  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/19/2017
  **Conexão**  
  Selecione uma conexão do Analysis Services existente usando a caixa de listagem ou crie uma nova conexão usando o botão **Novo** descrito a seguir.  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Estrutura de mineração**  
@@ -78,4 +77,3 @@ ms.lasthandoff: 08/19/2017
  **Construir Nova Consulta**  
  Clique em **Construir Nova Consulta** para criar uma consulta DMX (extensões DMX) usando o construtor de consultas gráficas.  
   
-

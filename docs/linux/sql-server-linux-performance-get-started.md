@@ -1,28 +1,29 @@
 ---
 title: "Começar com recursos de desempenho do SQL Server no Linux | Microsoft Docs"
-description: "Este tópico fornece uma introdução dos recursos de desempenho do SQL Server para os usuários do Linux que são novos para o SQL Server. Muitos desses exemplos funcionam em todas as plataformas, mas o contexto deste artigo é Linux."
+description: "Este artigo fornece uma introdução dos recursos de desempenho do SQL Server para os usuários do Linux que são novos para o SQL Server. Muitos desses exemplos funcionam em todas as plataformas, mas o contexto deste artigo é Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de desempenho do SQL Server no Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Se você for um usuário do Linux que há de novo para o SQL Server, as tarefas a seguir mostram alguns dos recursos de desempenho. Eles não são exclusivas ou específicas para o Linux, mas ajuda a dar uma ideia de áreas para investigar mais. Em cada exemplo é fornecido um link para a documentação de profundidade para a área.
 
@@ -32,7 +33,7 @@ Se você for um usuário do Linux que há de novo para o SQL Server, as tarefas 
 ## <a name="create-a-columnstore-index"></a>Criar um índice Columnstore
 Um índice columnstore é uma tecnologia para armazenar e consultar grandes armazenamentos de dados em um formato de dados Colunar, chamado columnstore.  
 
-1. Adicione um índice Columnstore na tabela SalesOrderDetail executando o T-SQL a seguir:
+1. Adicione um índice Columnstore na tabela SalesOrderDetail executando os comandos de Transact-SQL a seguir:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -41,7 +42,7 @@ Um índice columnstore é uma tecnologia para armazenar e consultar grandes arma
    GO
    ```
 
-2. Execute a consulta a seguir que usará o índice Columnstore para digitalizar a tabela:
+2. Execute a consulta a seguir que usa o índice Columnstore para digitalizar a tabela:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -197,4 +198,3 @@ Para consultar a exibição de gerenciamento dinâmico dm_os_wait estatísticas:
    SELECT wait_type, wait_time_ms
    FROM sys.dm_os_wait_stats;
    ```
-

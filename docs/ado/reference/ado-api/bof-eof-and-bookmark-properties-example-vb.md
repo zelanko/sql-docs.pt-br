@@ -3,7 +3,7 @@ title: BOF, EOF e exemplo de propriedades do indicador (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec76c73c974251268f1ba018a923430f954dbfb8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e94fd93b5988ea7fb95e1276e31819575a5abd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo de propriedades do indicador (VB), BOF e EOF
 Este exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades para exibir uma mensagem se um usuário tenta mover após o primeiro ou último registro de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em uma **registros** e retornar a ele mais tarde.  
@@ -147,4 +146,3 @@ Attribute VB_Name = "BOF"
  [BOF, propriedades EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Propriedade Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

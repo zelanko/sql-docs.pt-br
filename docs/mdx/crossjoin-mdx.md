@@ -2,10 +2,13 @@
 title: Crossjoin (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CROSSJOIN
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0630ef595ec4bc72e27fd404bf2b482b3ca4c1fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24eb58744008984fca4dab647b12226769f4ab81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o produto cruzado de um ou mais conjuntos.  
   
@@ -46,7 +49,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Crossjoin** função retorna o produto cruzado de dois ou mais conjuntos especificados. A ordem das tuplas no conjunto resultante depende da ordem dos conjuntos a serem unidos e da ordem de seus membros. Por exemplo, quando o primeiro conjunto consiste em {x1, x2,..., x*n*}, e o segundo conjunto consiste em {y1, y2,..., y*n*}, o produto cruzado desses conjuntos será:  
   
  {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
@@ -135,7 +138,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

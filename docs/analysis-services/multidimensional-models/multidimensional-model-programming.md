@@ -2,45 +2,43 @@
 title: "Programação de modelo multidimensional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77aa1ba7d28147c6aa2ba4ea1e7c9deb02544f91
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-programming"></a>Programação de modelo multidimensional
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece várias APIs que você pode usar para programar em uma instância do Analysis Services e os bancos de dados multidimensionais que ele disponibiliza. Esta seção descreve as abordagens disponíveis para desenvolvedores que querem criar aplicativos personalizados usando soluções multidimensionais do Analysis Services. Você pode usar estas informações para escolher a interface de programação que melhor atende aos requisitos de um projeto específico. Os projetos de desenvolvimento do Analysis Services podem se basear em código gerenciado ou não gerenciado, executado em uma plataforma Windows ou em outras plataformas que ofereçam suporte ao acesso HTTP.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Noções básicas sobre a arquitetura Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
+ [Noções básicas sobre a arquitetura do Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
  [Desenvolvendo com ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
- [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Desenvolvendo com o Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Estendendo a funcionalidade OLAP](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Programação de mineração de dados](../../analysis-services/data-mining-programming.md)  
   
   
-

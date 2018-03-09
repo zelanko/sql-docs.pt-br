@@ -2,16 +2,13 @@
 title: Configurar o Firewall do Windows para permitir o acesso ao Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 47
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
-  Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Os requisitos de configuração de firewall variam de acordo com a maneira como você instalou o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -114,7 +111,7 @@ ms.lasthandoff: 09/01/2017
 8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , especificando o nome de rede do servidor em **Nome do servidor**.  
   
     > [!NOTE]  
-    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
+    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &amp;#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
 #### <a name="netsh-advfirewall-syntax"></a>Sintaxe de Netsh AdvFirewall  
   
@@ -247,4 +244,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   
-

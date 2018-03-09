@@ -2,43 +2,35 @@
 title: Elemento ReportingWeekToMonthPattern (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportingWeekToMonthPattern Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportingWeekToMonthPattern Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportingWeekToMonthPattern
-helpviewer_keywords:
-- ReportingWeekToMonthPattern element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportingWeekToMonthPattern
+helpviewer_keywords: ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c58d5d176b50b23f6f6f26f32a9d1b8d97456dbf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae09f2dfb0917a349f4ca3688972e0d3388d040
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>Elemento ReportingWeekToMonthPattern (ASSL)
-  Define o padrão de semana a mês de relatório para o [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define o padrão de semana a mês de relatório para o [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,20 +45,20 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|*445*|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -77,8 +69,7 @@ ms.lasthandoff: 09/01/2017
   
  A enumeração que corresponde aos valores permitidos para **ReportingWeekToMonthPattern** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

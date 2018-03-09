@@ -3,7 +3,7 @@ title: "Arquivo de personalização de conectar-se a seção | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ec65ea217935e007427a087f2a05162649f226
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-connect-section"></a>Arquivo de personalização de conectar-se a seção
 O comportamento padrão do manipulador é negar todas as conexões. O **conectar** seção especifica exceções a esse comportamento. Por exemplo, se todos os **conectar** seções foram ausente ou vazia, em seguida, por padrão não foi possível estabelecer conexões.  
@@ -59,7 +58,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 |Parte|Description|  
 |----------|-----------------|  
@@ -78,7 +77,6 @@ connectionString
  [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

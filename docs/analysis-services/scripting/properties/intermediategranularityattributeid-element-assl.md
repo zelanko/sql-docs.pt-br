@@ -2,15 +2,13 @@
 title: Elemento IntermediateGranularityAttributeID (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: IntermediateGranularityAttributeID Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abc20aa4225846d039346f56b762875efcc5cfae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ab6203fa49448fc3a9059f6cedfffd33d169d86
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>Elemento IntermediateGranularityAttributeID (ASSL)
-  Contém o identificador (ID) do atributo de granularidade das dimensões de cubo intermediárias usadas para relacionar uma dimensão de referência com uma dimensão intermediária.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o identificador (ID) do atributo de granularidade da dimensão de cubo intermediário é usada para relacionar uma dimensão de referência a uma dimensão intermediária.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,10 +46,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|String|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Cadeia de caracteres|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,12 +57,12 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ReferenceMeasureGroupDimension](../../../analysis-services/scripting/data-type/referencemeasuregroupdimension-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O elemento que corresponde ao pai do **IntermediateGranularityAttributeID** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

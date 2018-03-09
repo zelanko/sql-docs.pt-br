@@ -2,27 +2,28 @@
 title: "Arquivo de Configuração RsReportServer.config | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>Arquivo de Configuração RsReportServer.config
+# <a name="rsreportserverconfig-configuration-file"></a>Arquivo de configuração RsReportServer.config
 O arquivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** armazena configurações que são usadas pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  
 
 No modo do SharePoint, o arquivo de configuração contém as configurações que se aplicam a todas as instâncias do aplicativo de serviço em execução nesse computador. O banco de dados de configuração do SharePoint contém definições de configuração que se aplicam a aplicativos de serviço específicos. As configurações armazenadas no banco de dados Configuração e gerenciadas por meio das páginas de gerenciamento do SharePoint podem ser diferentes para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -71,13 +72,13 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |**Dsn**|Especifica a cadeia de conexão com o servidor de banco de dados que hospeda o banco de dados do servidor de relatório. Este valor é criptografado e adicionado ao arquivo de configuração quando você cria o banco de dados do servidor de relatório. Para o SharePoint, as informações de conexão de banco de dados são obtidas do banco de dados de configuração do SharePoint.|N,S|  
 |**ConnectionType**|Especifica o tipo de credenciais que o servidor de relatório usa para se conectar ao banco de dados do servidor de relatório. Os valores válidos são **Default** e **Impersonate**. **Default** será especificado se o servidor de relatório for configurado para usar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a conta de serviço para se conectar ao banco de dados do servidor de relatório. **Impersonate** será especificado se o servidor de relatório usar uma conta do Windows para se conectar ao banco de dados do servidor de relatório.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Armazena o domínio, o nome de usuário e a senha de uma conta de domínio usada por um servidor de relatório para se conectar a um banco de dados do servidor de relatório. Os valores para **LogonUser**, **LogonDomain**e **LogonCred** são criados quando a conexão do servidor de relatório é configurada para usar uma conta de domínio. Para obter mais informações sobre uma conexão de banco de dados do servidor de relatório, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Um identificador para a instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este valor especifica um nome de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, este valor é **MSRS12***\<nome da instância>*. Não modifique esta configuração. A seguir é apresentado um exemplo do valor completo: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> A seguir é apresentado um exemplo do modo do SharePoint:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Um identificador para a instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este valor especifica um nome de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, este valor é **MSRS12***\<instancename>*. Não modifique esta configuração. A seguir é apresentado um exemplo do valor completo: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> A seguir é apresentado um exemplo do modo do SharePoint:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Um identificador para a instalação do servidor de relatório criada pela Instalação. Este valor é definido como um GUID. Não modifique esta configuração.|N|  
-|**SecureConnectionLevel**|Especifica o grau até o qual as chamadas de serviço Web devem usar o protocolo SSL. Esta configuração é usada para o serviço Web Servidor de Relatório e o portal da Web. Este valor é definido quando você configura uma URL para usar HTTP ou HTTPS na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Os valores válidos variam de 0 a 3, sendo que 0 é o menos seguro. Para obter mais informações, veja [Usando métodos seguros de serviço Web](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) e [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Especifica o grau até o qual as chamadas de serviço Web devem usar o protocolo SSL. Esta configuração é usada para o serviço Web Servidor de Relatório e o portal da Web. Este valor é definido quando você configura uma URL para usar HTTP ou HTTPS na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . No SQL Server 2008 R2, o SecureConnectionLevel é transformado em uma opção de ativar/desativar. Para versões anteriores ao SQL Server 2008 R2, o intervalo de valores válidos é de 0 a 3, em que 0 é o menos seguro. Para obter mais informações, consulte [Método ConfigurationSetting – SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Usando métodos seguros de serviço Web](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) e [Configurar conexões SSL em um Servidor de Relatório de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|O valor padrão é False.<br /><br /> Especifica se deve ser desabilitada a ação de forçar o cookie usada para o formulário e a autenticação personalizada serem marcados como seguros. A partir do SQL Server 2012, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automaticamente marcará cookies de autenticação de formulários usados com extensões de autenticação personalizadas, como um cookie seguro quando enviado ao cliente. Ao alterar esta propriedade, os administradores de servidor de relatório e os autores de extensão de segurança personalizada podem reverter para o comportamento anterior que permitiu que o autor de extensão de segurança personalizado determinasse se deve marcar o cookie como um cookie seguro. É recomendado usar cookies seguros para autenticação de formulários para ajudar a impedir a detecção de rede e os ataques de retomada.|N|  
 |**CleanupCycleMinutes**|Especifica o número de minutos depois dos quais as sessões antigas e os instantâneos expirados são removidos dos bancos de dados do servidor de relatório. O intervalo de valores válidos é de 0 ao inteiro máximo. O padrão é 10. A configuração do valor como 0 desabilita o processo de limpeza do banco de dados.|N,S|  
 |**MaxActiveReqForOneUser**|Especifica o número máximo de relatórios que um usuário pode processar ao mesmo tempo. Quando o limite é atingido, solicitações adicionais de processamento do relatório são negadas. Os valores válidos são de 1 a um inteiro máximo. O padrão é 20.<br /><br /> A maioria das solicitações é processada muito rapidamente, de modo que é improvável que um único usuário tenha mais de 20 conexões abertas a qualquer momento. Se os usuários abrirem mais de 15 relatórios com processamento intenso ao mesmo tempo, talvez seja necessário aumentar esse valor.<br /><br /> Esta configuração é ignorada para servidores de relatório executados no modo integrado do SharePoint.|N,S|  
-|**MaxActiveReqForAnonymous**|Especifica o número máximo de solicitações anônimas podem estar no processo ao mesmo tempo. Quando o limite for atingido, mais solicitações de processamento são negadas. Os valores válidos são de 1 a um inteiro máximo. O padrão é 200.
+|**MaxActiveReqForAnonymous**|Especifica o número máximo de solicitações anônimas que podem estar no processo ao mesmo tempo. Quando o limite é atingido, solicitações adicionais de processamento são negadas. Os valores válidos são de 1 a um inteiro máximo. O padrão é 200.
 |**DatabaseQueryTimeout**|Especifica o número de segundos depois dos quais uma conexão com o banco de dados do servidor de relatório atinge o tempo limite. Este valor é transmitido para a propriedade System.Data.SQLClient.SQLCommand.CommandTimeout. Os valores válidos variam de 0 a 2147483647. O padrão é 120. Um valor 0 especifica um tempo de espera ilimitado e, portanto, não é recomendado.|N|  
 |**AlertingCleanupCycleMinutes**|O padrão é 20.<br /><br /> Determina com que frequência ocorre a limpeza de dados temporários armazenados no banco de dados de alertas.|P|  
 |**AlertingDataCleanupMinutes**|O padrão é 360.<br /><br /> Determina quanto tempo os dados de sessão usados para criar ou editar uma definição de alerta são mantidos dentro do banco de dados de alertas. O padrão é 6 horas.|P|  
@@ -840,14 +841,13 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Ainda tem dúvidas? [Tente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

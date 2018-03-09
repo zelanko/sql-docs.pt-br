@@ -1,5 +1,5 @@
 ---
-title: "Ferramentas de solução de problemas para execução do pacote | Microsoft Docs"
+title: "Ferramentas de solução de problemas para execução de pacotes | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Ajudar a garantir a integridade dos dados usando as transações**. Para obter mais informações, consulte [Transações do Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Capturar e manipular os erros de pacotes com os manipuladores de eventos  
  Você pode responder a muitos eventos gerados pelo pacote e os objetos no pacote usando os manipuladores de eventos.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Adicionar informações amigáveis às saídas de erro**. A análise da saída de erro pode tornar-se uma tarefa mais fácil se você adicionar a mensagem de erro e o nome da coluna além dos dois identificadores numéricos que são fornecidos pela saída de erro. Para obter um exemplo de como acrescentar essas duas colunas adicionais usando scripts, consulte [Aprimorando uma saída de erro com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
--   **Ou obtenha os nomes de coluna registrando o evento DiagnosticEx**. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).  
+-   **Ou obtenha os nomes de coluna registrando o evento DiagnosticEx**. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md).  
   
      O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preservar o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.  
   
@@ -113,9 +112,8 @@ ms.lasthandoff: 09/27/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Solucionar problemas de erros sem uma descrição  
  Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md) e procure o erro pelo número. No momento, a lista não inclui informações para solução de problemas.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](http://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  
-

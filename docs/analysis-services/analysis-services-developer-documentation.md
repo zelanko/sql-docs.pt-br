@@ -2,33 +2,33 @@
 title: "Documentação do desenvolvedor do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentação do desenvolvedor do Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 No Analysis Services, quase todos os objetos e carga de trabalho são programável e geralmente não há mais de uma abordagem para escolher.  Opções incluem escrever um código gerenciado, script ou usando os padrões abertos como XMLA e MSOLAP se seus requisitos de solução impedirem usando o .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>O que você pode fazer no código
@@ -82,5 +82,5 @@ O Analysis Services fornece várias maneiras de personalizar uma solução por m
 [Referência do Analysis Services PowerShell](../analysis-services/powershell/analysis-services-powershell-reference.md) documenta os cmdlets usados para funções administrativas, mais o uso geral **Invoke-ASCmd** cmdlet que aceita qualquer script ou consulta como entrada.
 
 ## <a name="see-also"></a>Consulte também
-[Referência técnica &#40; SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
- [Consulta e referência de linguagem de expressão &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[Referência técnica ](../analysis-services/powershell/technical-reference-ssas.md) 
+ [consulta e referência de linguagem de expressão &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

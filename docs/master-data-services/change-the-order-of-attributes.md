@@ -5,28 +5,29 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
-caps.latest.revision: "5"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea2af34476edd390634f5ef9d4c420b65f66053d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 169ef20e949c2880cf79b9634aeed9e41927726c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="change-the-order-of-attributes"></a>Alterar a ordem dos atributos
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar a ordem dos atributos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  Clique em **Mover para Cima** ou **Mover para Baixo**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

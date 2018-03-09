@@ -1,5 +1,5 @@
 ---
-title: Tarefas do sistema de arquivos Hadoop | Microsoft Docs
+title: Tarefa do Sistema de Arquivos Hadoop | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 540e8e939321a81dfcf044516ce81fd0e6b4d6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-file-system-task"></a>Tarefas do Sistema de Arquivos Hadoop
   A Tarefa do Sistema de Arquivos Hadoop habilita um pacote do SSIS a copiar arquivos de, para ou dentro de um cluster Hadoop.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
 |Campo|Description|  
 |-----------|-----------------|  
-|**Conexão do Hadoop**|Especifique um Gerenciador de Conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde os arquivos de destino estão hospedados.|  
+|**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde os arquivos de destino estão hospedados.|  
 |**Caminho de arquivo do Hadoop**|Especifique o caminho de arquivo ou diretório no HDFS.|  
 |**Tipo de arquivo do Hadoop**|Especifique se o objeto do sistema de arquivos HDFS é um arquivo ou diretório.|  
 |**Substituir o Destino**|Especifique se deseja substituir o arquivo de destino, caso ele já exista.|  
@@ -47,9 +46,8 @@ ms.lasthandoff: 08/03/2017
 |**Conexão de arquivo local**|Especifique um Gerenciador de Conexões de Arquivo existente ou crie um novo. Esse gerenciador de conexões indica onde os arquivos de origem estão hospedados.|  
 |**É Recursivo**|Especifique se deseja copiar todas as subpastas de forma recursiva.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
+ [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
-

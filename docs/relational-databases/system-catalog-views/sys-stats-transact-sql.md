@@ -1,7 +1,7 @@
 ---
 title: Stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba477c2bc30fdeccee1af448e953043f3c5d9d92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0650931e6a9c450409cd40b366a5e9fb6bf08771
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual essas estatísticas pertencem.|  
 |**name**|**sysname**|Nome da estatística. É exclusiva no objeto.|  
-|**stats_id**|**int**|ID da estatística. É exclusiva no objeto.|  
+|**stats_id**|**int**|ID da estatística. É exclusiva no objeto.<br /><br />Se as estatísticas corresponderem a um índice, o *stats_id* valor é igual a *index_id* valor o [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.|  
 |**auto_created**|**bit**|Indica se as estatísticas foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = As estatísticas não foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = As estatísticas foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Indica se as estatísticas foram criadas automaticamente por um usuário.<br /><br /> 0 = As estatísticas não foram criadas por um usuário.<br /><br /> 1 = As estatísticas foram criadas por um usuário.|  
 |**no_recompute**|**bit**|Indica se as estatísticas foram criadas com o **NORECOMPUTE** opção.<br /><br /> 0 = as estatísticas não foram criadas com o **NORECOMPUTE** opção.<br /><br /> 1 = as estatísticas foram criadas com o **NORECOMPUTE** opção.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir retornam todas as estatísticas e as colunas de estatísticas da tabela `HumanResources.Employee`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT s.name AS statistics_name  
@@ -68,12 +68,16 @@ INNER JOIN sys.stats_columns AS sc
 INNER JOIN sys.columns AS c   
     ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
-  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de objeto &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
-  
-  
+ [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Estatísticas](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ 
+
+ 

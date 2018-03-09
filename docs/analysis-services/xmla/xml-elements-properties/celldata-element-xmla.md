@@ -2,15 +2,13 @@
 title: Elemento CellData (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellData Element
@@ -29,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca30896c998b10fd948cc3dccb1a07132d579fb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10fcbcd71afa8899eb55fe4c83cd2cae12041ea2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="celldata-element-xmla"></a>Elemento CellData (XMLA)
-  Contém uma coleção de elementos Cell que representam os dados de célula contidos por um elemento [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) que usa o tipo de dados [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de elementos Cell que representam os dados de célula contidos por um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,10 +50,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -65,10 +63,10 @@ ms.lasthandoff: 11/17/2017
 |Elementos pai|[raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Elementos filho|[Célula](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  No elemento root pai, o elemento **Axes** é seguido pelo elemento **CellData** , uma coleção de elementos **Cell** que contêm os valores de propriedade de célula para cada célula retornada no conjunto de dados multidimensionais.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

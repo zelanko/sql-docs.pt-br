@@ -3,27 +3,30 @@ title: "Exemplo de método GetString (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: GetString method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: beaff0b2775dc0de9c0f2f1a334139f5cc92830d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8b74eeee381bd0c1ef9d08c265316060af45fa1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getstring-method-example-vb"></a>Exemplo de método GetString (VB)
 Este exemplo demonstra o [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  

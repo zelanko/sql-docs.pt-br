@@ -2,16 +2,13 @@
 title: Indicadores chave de desempenho (KPIs) em modelos multidimensionais | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
-  Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
   

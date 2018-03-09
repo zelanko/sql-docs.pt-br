@@ -3,8 +3,11 @@ title: Resumir ou agregar valores para todas as linhas em uma tabela | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,16 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20acaddc0be422fa1090047386d5412aae6c5ee9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10f6128d21ef9a3b1683dbae66604345e70c03a4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir ou agregar valores para todas as linhas em uma tabela (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="aggregate-function"></a>Função de agregação
 Usando uma função de agregação, você pode criar um resumo para obter todos os valores em uma tabela. Por exemplo, é possível criar uma consulta, como a seguinte, para exibir o preço total de todos os livros da tabela `titles` :  
   
@@ -43,7 +47,7 @@ FROM titles
   
 Se você adicionar um critério de pesquisa, será possível agregar o subconjunto de linhas que atendam àquela condição.  
 
-**Observação:** Você também pode contar todas as linhas na tabela ou aquelas que atendam uma condição específica. Para obter detalhes, veja [Como contar linhas em uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
+**Observação!** Você também pode contar todas as linhas na tabela ou aquelas que atendam uma condição específica. Para obter detalhes, veja [Como contar linhas em uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
   
   
 Quando você cria um valor de agregação único para todas as linhas em uma tabela, somente os valores de agregação são exibidos. Por exemplo, se você estivesse totalizando o valor da coluna `price` da tabela `titles` , você também não exibiria títulos individuais, nomes de publicador, e assim por diante.  
@@ -80,7 +84,7 @@ Quando você executar a consulta, o painel Resultados exibirá as agregações p
 > [!NOTE]  
 > O Designer de Consulta e Exibição mantém funções de agregação como parte da instrução SQL no painel SQL até que você desative o modo Agrupar por. Portanto, se você modificar sua consulta alterando o tipo, as tabelas ou os objetos com valor de tabela presentes no painel Diagrama, a consulta resultante poderá incluir funções de agregação inválidas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Resumir resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull (geometry Data Type)
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7bfd196565b33604a02a68b1380f676e7e730c45
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f9ef8ba324571a8546dfe6ebdcdcdc8234509d3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Retorna um objeto que representa a superfície convexa de uma **geometria** inst
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STConvexHull()`Retorna o menor polígono convexo que contém o determinado **geometria** instância. **Pontos de** ou **LineString** instâncias produzirá uma instância do mesmo tipo que o da entrada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -62,8 +61,7 @@ SELECT @g.STConvexHull().ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

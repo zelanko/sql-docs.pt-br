@@ -2,31 +2,29 @@
 title: Criar e personalizar a Galeria do Power Pivot | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Criar e personalizar a galeria do Power Pivot
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Neste tópico  
@@ -59,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não pode estar em um site restrito. O site principal que contém Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser adicionado ao site confiável ou à zona de intranet local.  
   
--   A solução de aplicativo Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido implantada no aplicativo, e o recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido ativado para a coleção de sites. Para obter mais informações, consulte [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) e[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   A solução de aplicativo Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido implantada no aplicativo, e o recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido ativado para a coleção de sites. Para obter mais informações, consulte [Implantar soluções Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) e[Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Para exibir ou criar um relatório do Reporting Services baseado em uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a pasta de trabalho e o relatório devem estar na mesma Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O relatório deve usar uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contenha dados incorporados, ou a pasta de trabalho deve conter pelo menos uma fonte de dados externa que seja uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  As imagens de visualização se baseiam na maneira como a pasta de trabalho é processada pelos Serviços do Excel. A representação na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser idêntica àquela que você vê ao exibir uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um navegador. No entanto, a visualização tem uma área da superfície limitada. Partes de uma pasta de trabalho ou de um relatório podem ser recortadas para ela se ajustar ao espaço disponível. Talvez você precise abrir uma pasta de trabalho ou um relatório para exibir o documento em sua totalidade.  
   
- Há suporte total para a atualização dados de pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a partir de fontes de dados externas na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas isso exige configuração adicional. O administrador de um farm ou serviço deve adicionar a Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como um local confiável dos Serviços do Excel. Para obter mais informações, consulte [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Há suporte total para a atualização dados de pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a partir de fontes de dados externas na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas isso exige configuração adicional. O administrador de um farm ou serviço deve adicionar a Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como um local confiável dos Serviços do Excel. Para obter mais informações, consulte [Criar um local confiável para sites do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Criar a Galeria do Power Pivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é criada para você durante a instalação do [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] usando-se a opção de instalação Novo Servidor. Se você adicionar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a um farm existente ou se desejar uma biblioteca adicional, poderá criar uma nova para seu aplicativo ou site.  

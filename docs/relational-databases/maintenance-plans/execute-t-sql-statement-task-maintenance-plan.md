@@ -2,9 +2,12 @@
 title: "Tarefa Executar Instrução T-SQL (Plano de Manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.swb.maint.tsql.f1
 helpviewer_keywords: Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25bddcdc576a6d436fc507bee6601fe21723c5d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a507e5599faec3047ec861e8c72d618b33c27bdf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Tarefa Executar Instrução T-SQL (Plano de Manutenção)
-  Use a caixa de diálogo **Tarefa Executar Instrução T-SQL** para personalizar seu plano de manutenção adicionando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de sua escolha a esse plano de manutenção.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa Executar Instrução T-SQL** para personalizar seu plano de manutenção adicionando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de sua escolha a esse plano de manutenção.  
   
 ## <a name="options"></a>Opções  
  **Conexão**  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
  **Usar nome de usuário e senha específicos**  
  Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
- **Nome de usuário**  
+ **User name**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  

@@ -3,8 +3,9 @@ title: Propriedade DataMember | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset20::DataMember
-helpviewer_keywords: DataMember property
+f1_keywords:
+- Recordset20::DataMember
+helpviewer_keywords:
+- DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e16e816b85cb6ccd35c40a15822f714f41215323
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c41fe1184908e3e46866d9405859a18d2181d187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datamember-property"></a>Propriedade DataMember
 Indica o nome do membro de dados que será recuperado do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) referenciado pelo [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) propriedade.  
@@ -32,7 +35,7 @@ Indica o nome do membro de dados que será recuperado do [Recordset](../../../ad
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor. O nome não diferencia maiusculas de minúsculas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade é usada para criar controles associados a dados com o ambiente de dados. O ambiente de dados mantém a chamada de conjuntos de dados (fontes de dados) que contém objetos (membros de dados) que serão representados como um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
  O **DataMember** e **DataSource** propriedades devem ser usadas juntas.  

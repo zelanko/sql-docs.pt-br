@@ -2,15 +2,13 @@
 title: Elemento Role (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02a55a4a04dc0c8705539ef0d82fa64988e1201d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dee3f366a21d19d1e57dd65a3f1a0397ca3b9ac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="role-element--xmla"></a>Elemento Role (XMLA)
-  Identifica uma extremidade de uma relação um-para-muitos a ser usada pelo pai [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Identifica uma extremidade de uma relação um-para-muitos a ser usada pelo pai [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|String|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Cadeia de caracteres|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1: Elemento requerido que pode ocorrer apenas uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -53,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   

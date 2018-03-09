@@ -1,28 +1,28 @@
 ---
-title: "Maneiras alternativas de obter uma Conexão de dados (construtor de relatórios) | Microsoft Docs"
+title: "Formas alternativas de obter uma conexão de dados (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 82eb2c26504cee7920e0c0d67fb6faa00af70b26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Formas alternativas de obter uma conexão de dados (Construtor de Relatórios)
 Uma conexão de dados contém as informações para estabelecer conexões com uma fonte de dados externa, como um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Geralmente, você obtém as informações sobre a conexão e o tipo de credenciais a ser usado do proprietário da fonte de dados.  
@@ -78,9 +78,8 @@ Para usar uma fonte de dados compartilhada, procure um servidor de relatório e 
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Conjuntos de dados de relatório &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
   
-
 

@@ -29,17 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 54
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>Cláusula SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ SELECT [ ALL | DISTINCT ]
  *table_name* | *view_name* | *tabela*_*alias*. *  
  Limita o escopo do \* para a tabela ou exibição especificada.  
   
- *nome da coluna*  
+ *column_name*  
  É o nome de uma coluna a ser retornada. Qualificar *column_name* para impedir uma referência ambígua, como ocorre quando duas tabelas na cláusula FROM têm colunas com nomes duplicados. Por exemplo, as tabelas SalesOrderHeader e SalesOrderDetail no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados tanto têm uma coluna denominada ModifiedDate. Se as duas tabelas estão unidas em uma consulta, a data modificada das entradas de SalesOrderDetail pode ser especificada na lista de seleção como SalesOrderDetail.ModifiedDate.  
   
  *expressão*  
@@ -116,10 +115,10 @@ SELECT [ ALL | DISTINCT ]
  { . | :: }  
  Especifica um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário. Use. para um método de instância (não estático), propriedade ou campo. Use :: para um método estático, propriedade ou campo. Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
   
- *Property_Name*  
+ *property_name*  
  É uma propriedade pública de *udt_column_name*.  
   
- *nome_do_campo*  
+ *field_name*  
  É um membro de dados público *udt_column_name*.  
   
  *nome_do_método*  
@@ -153,7 +152,7 @@ FROM Cities;
   
  *column_alias* pode ser usado em uma cláusula ORDER BY. Porém, não pode ser usado em uma cláusula WHERE, GROUP BY nem HAVING. Se a expressão de consulta faz parte de uma instrução DECLARE CURSOR, *column_alias* não pode ser usado na cláusula FOR UPDATE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O comprimento dos dados retornados para **texto** ou **ntext** colunas incluídas na lista de seleção é definido para o menor valor dos seguintes: o tamanho real do **texto** coluna, a configuração de sessão TEXTSIZE padrão ou o limite de aplicativo codificado. Para alterar o comprimento do texto retornado para a sessão, use a instrução SET. Por padrão, o limite no comprimento de dados de texto retornados com uma instrução SELECT é 4.000 bytes.  
   
  O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gerará a exceção 511 e reverterá a instrução atualmente em execução, se algum dos seguintes comportamentos ocorrer:  
@@ -166,8 +165,7 @@ FROM Cities;
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

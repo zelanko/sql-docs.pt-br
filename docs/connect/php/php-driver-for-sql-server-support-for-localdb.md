@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: drivers
+ms.component: php
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf75fb674ea8da86c84c3605dadef61db8b3913
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>Driver do PHP para o suporte do SQL Server para LocalDB
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/09/2017
 
 A partir do [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], denominada LocalDB, estarão disponíveis. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância LocalDB, consulte o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tópico dos Manuais Online em [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
@@ -81,6 +83,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 Você pode baixar o LocalDB do [página do SQL Server 2012 feature pack](http://go.microsoft.com/fwlink/?LinkID=236805), ou o [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express edition. Se você usar sqlcmd.exe para modificar dados em sua instância de LocalDB, será necessário sqlcmd de [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], que pode ser obtido do download Utilitários de linha de comando no [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] página Feature Pack.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)

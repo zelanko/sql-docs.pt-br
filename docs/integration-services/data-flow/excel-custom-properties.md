@@ -2,24 +2,27 @@
 title: Propriedades personalizadas do Excel | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a635dcb4facce4cb9b6cf8501dc8bd01977a1b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 0c52f5c78afff62eaad9d837c86d32112a25bd0a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
   **Propriedades personalizadas de fontes**  
@@ -64,7 +67,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [Destino do Excel](../../integration-services/data-flow/excel-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -1,19 +1,18 @@
 ---
 title: Fazendo backup, restaurar e sincronizar bancos de dados (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
   No XML for Analysis, existem três comandos que fazem backup de bancos de dados, que os restauram e que os sincronizam:  
@@ -41,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 -   O [sincronizar](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando sincroniza um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados com os dados e metadados de outro banco de dados, conforme descrito na seção, [sincronizando bancos de dados](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Fazendo backup de bancos de dados  
+##  <a name="backing_up_databases"></a> Fazendo backup de bancos de dados  
  Como mencionado anteriormente, o **Backup** comando faz backup de um especificado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados para um arquivo de backup. O **Backup** comando tem várias propriedades que permitem a você especifica o banco de dados de backup, o arquivo de backup a ser usado, como fazer backup de definições de segurança e as partições remotas será feito backup.  
   
 > [!IMPORTANT]  
@@ -68,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  O valor de **segurança** propriedade é limitada a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no arquivo de backup.|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
  Para cada fonte de dados remotos fazer backup, você pode especificar o arquivo de backup correspondente, incluindo um [local](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento o [locais](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) propriedade o **Backup** comando. O **local** elemento deve ter seu **arquivo** propriedade definida como o nome de arquivo e caminho UNC do arquivo de backup remoto e sua [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) propriedade definida como o identificador do a fonte de dados remota definida no banco de dados.  
   
-##  <a name="restoring_databases"></a>Restaurando bancos de dados  
+##  <a name="restoring_databases"></a> Restaurando bancos de dados  
  O **restaurar** comando restaura um especificado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de um arquivo de backup. O **restaurar** comando tem várias propriedades que permitem a você especifica o banco de dados para restaurar o arquivo de backup a ser usado, como restaurar definições de segurança, as partições remotas a serem armazenados e a realocação OLAP relacional (ROLAP) objetos.  
   
 > [!IMPORTANT]  
@@ -118,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  Você pode usar o **local** elemento em um **restaurar** comando para realocar objetos ROLAP. Para cada **local** elemento usado para transferir uma fonte de dados, o **DataSourceType** propriedade deve ser definida explicitamente como *Local*. Você também deve definir o **ConnectionString** propriedade o **local** elemento para a cadeia de caracteres de conexão do novo local. Durante a restauração, o **restaurar** comando substituirá a cadeia de conexão da fonte de dados identificada pelo **DataSourceID** propriedade o **local** elemento com o valor da **ConnectionString** propriedade o **local** elemento.  
   
-##  <a name="synchronizing_databases"></a>Sincronizar bancos de dados  
+##  <a name="synchronizing_databases"></a> Sincronizar bancos de dados  
  O **sincronizar** comando sincroniza os dados e metadados de um especificado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados com outro banco de dados. O **sincronizar** comando tem várias propriedades que permitem que você especifique o banco de dados de origem, como sincronizar definições de segurança, as partições remotas a serem sincronizadas e a sincronização de objetos ROLAP.  
   
 > [!NOTE]  
@@ -157,7 +156,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Consulte também  
  [Elemento de backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restaurar o elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Sincronizar o elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Backup e restauração de bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

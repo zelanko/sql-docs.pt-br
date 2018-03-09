@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>Funções numéricas
 A tabela a seguir descreve as funções numéricas que estão incluídas no conjunto de função escalar ODBC. Chamando **SQLGetInfo** com um *tipo de informação* de SQL_NUMERIC_FUNCTIONS, um aplicativo pode determinar quais funções numéricas são suportadas por um driver.  
@@ -67,4 +65,3 @@ A tabela a seguir descreve as funções numéricas que estão incluídas no conj
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Retorna a raiz quadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Retorna a tangente de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
 |**Truncar (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* truncado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será truncado para &#124; *integer_exp*&#124; casas à esquerda da vírgula decimal.|
-

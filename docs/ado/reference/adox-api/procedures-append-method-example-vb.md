@@ -3,7 +3,7 @@ title: "Procedimentos de acrescentar o exemplo de método (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8982cc8970cfbb79912688b038f1745d9d4b5612
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 925bccdc9835b8bc049f962effe8d0c3046019de
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedimentos de acrescentar o exemplo de método (VB)
 O código a seguir demonstra como usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) método para criar um novo procedimento na fonte de dados subjacente.  
@@ -87,4 +86,3 @@ End Sub
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto de procedimento (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-

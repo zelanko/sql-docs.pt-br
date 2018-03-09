@@ -2,15 +2,13 @@
 title: Elemento ServerMode | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 463af850c8af6e6db386f95be510b4eae23a5bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c0d0def053cf923474f8d8d3cd066a87bdc31833
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="servermode-element"></a>Elemento ServerMode
-  O **ServerMode** elemento server especifica o modo de servidor está operando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]O **ServerMode** elemento server especifica o modo de servidor está operando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|(nenhum)|  
@@ -53,18 +51,18 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Servidor](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O servidor opera em um dos seguintes modos:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*Multidimensional*|Modo multidimensional e de mineração de dados|  
 |*Tabela*|Modo de Tabela|  
 |*SharePoint*|SharePoint|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

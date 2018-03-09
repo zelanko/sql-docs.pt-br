@@ -3,8 +3,11 @@ title: Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,16 +31,17 @@ ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 41d97e078b7d7faa4cd15e35a2f3de6b438d09c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d308da274b3dc178dc9ed5f93122057005579920
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fornece recursos para gerenciar objetos em instâncias do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fornece recursos para gerenciar objetos em instâncias do [!INCLUDE[ssDE](../../includes/ssde_md.md)], do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Benefícios do Pesquisador de Objetos  
 O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerencia os objetos em cada instância do SQL Server. O painel de detalhes do Pesquisador de Objetos apresenta uma exibição tabular dos objetos de instância e a capacidade de procurar objetos específicos. Os recursos do Pesquisador de Objetos variam, dependendo ligeiramente do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento de todos os tipos de servidores.  
@@ -49,6 +53,6 @@ O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerenc
 |Descreve como abrir o Pesquisador de Objetos e configurar as opções que definem o comportamento do pesquisador.|[Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Descreve como conectar o Pesquisador de Objetos a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].|[Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Descreve como gerenciar objetos representados como nós na hierarquia do Pesquisador de Objetos.|[Gerenciar objetos usando o Pesquisador de Objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|Descreve o painel detalhes do Pesquisador de Objetos, uma exibição tabular de todos os objetos do servidor com uma interface de usuário para gerenciá-los.|[Painel Detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)|  
+|Descreve o painel detalhes do Pesquisador de Objetos, uma exibição tabular de todos os objetos do servidor com uma interface de usuário para gerenciá-los.|[Painel de detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)|  
 |Descreve modos de executar relatórios personalizados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|[Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
   

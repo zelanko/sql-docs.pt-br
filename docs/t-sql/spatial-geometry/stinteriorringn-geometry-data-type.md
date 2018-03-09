@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a973ba1a1f3092c6a973ce4db0b5188615075922
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7335cdeab403eb8530a7a26742c7c0d715dce0a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ Retorna o anel interior especificado de uma **Polygongeometry** instância.
   
  Abra o tipo Geospatial Consortium (OGC): **LineString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método retorna **nulo** se o **geometria** instância não é um polígono. Esse método também lançará um **ArgumentOutOfRangeException** se a expressão for maior do que o número de anéis. O número de anéis pode ser retornado usando `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Exemplos  
@@ -68,8 +67,7 @@ SELECT @g.STInteriorRingN(1).ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

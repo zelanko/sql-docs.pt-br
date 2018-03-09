@@ -3,13 +3,19 @@ title: "Tipo de regras de conversão em XQuery | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, type casting
 - casting rules [XML in SQL Server]
@@ -18,19 +24,19 @@ helpviewer_keywords:
 - cast as operator
 - implicit casting
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e1dccc658f20ce15a392e11db531a741b3cbc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6c4ea6e7fc0089fa711f3fd0e6db0ed5088b0d2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regras de conversão de tipos em XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   O diagrama de especificações de funções e operadores do W3C XQuery 1.0 e do XPath 2.0 mostra os tipos de dados internos. Isso inclui os tipos derivados e primitivos internos.  
   

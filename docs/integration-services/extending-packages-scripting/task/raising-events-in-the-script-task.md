@@ -1,5 +1,5 @@
 ---
-title: Gerando eventos na tarefa Script | Microsoft Docs
+title: Acionar eventos na tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -25,22 +25,21 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80f16c8d4fa5d4eb27eefe76b2dcf811e21cfaab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 505c7b6c5601ab78fa7004c715d52440242b4dd4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-events-in-the-script-task"></a>Gerando eventos na tarefa Script
-  Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. A tarefa Script pode gerar eventos chamando métodos no <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> propriedade o **Dts** objeto. Para obter mais informações sobre como [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratar eventos de pacotes, consulte [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md).  
+  Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. A tarefa Script pode gerar eventos chamando métodos na propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> do objeto **Dts**. Para obter mais informações sobre como pacotes [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] manipulam eventos, consulte [Manipuladores de Eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
- Os eventos podem ser registrados em qualquer provedor de log que esteja habilitado no pacote. Provedores de logs armazenam informações sobre eventos em um repositório de dados. A tarefa Script também pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar informações para um provedor de logs sem gerar um evento. Para obter mais informações sobre como usar o <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> método, consulte [log na tarefa Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
+ Os eventos podem ser registrados em qualquer provedor de log que esteja habilitado no pacote. Provedores de logs armazenam informações sobre eventos em um repositório de dados. A tarefa Script também pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar informações para um provedor de logs sem gerar um evento. Para obter mais informações sobre como usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>, consulte [Registro em log na tarefa Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
   
  Para gerar um evento, a tarefa Script chama um dos métodos expostos pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>. A tabela a seguir lista os métodos expostos pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
@@ -152,9 +151,8 @@ public class ScriptMain
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

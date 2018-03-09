@@ -3,7 +3,7 @@ title: A propriedade CommandText (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1edaf4f4d9e4132547bfa1c44308806743ed98e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60ee83c7d1f667feb0b1fcb4985dcd50edfda27b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtext-property-ado"></a>Propriedade CommandText (ADO)
 Indica o texto de um comando a ser emitido em um provedor.  
@@ -36,7 +35,7 @@ Indica o texto de um comando a ser emitido em um provedor.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Obtém ou define um **cadeia de caracteres** valor que contém um comando de provedor, como uma instrução SQL, um nome de tabela, uma URL relativa ou uma chamada de procedimento armazenado. O padrão é a cadeia de caracteres vazia ("").  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CommandText** propriedade para definir ou retornar o texto de um comando representado por um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Geralmente isso será uma instrução SQL, mas também pode ser qualquer outro tipo de instrução de comando reconhecida pelo provedor, como uma chamada de procedimento armazenado. Uma instrução SQL deve ser da versão com suporte pelo processador de consulta do provedor ou dialeto específico.  
   
  Se o [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade o **comando** objeto é definido como **True** e o **comando** objeto está associado a uma conexão aberta quando você define o **CommandText** propriedade ADO prepara a consulta (ou seja, um formulário compilado da consulta que é armazenado pelo provedor) quando você chama o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) ou [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md)métodos.  
@@ -56,4 +55,3 @@ Indica o texto de um comando a ser emitido em um provedor.
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Método Requery](../../../ado/reference/ado-api/requery-method.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
-

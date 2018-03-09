@@ -1,10 +1,13 @@
 ---
 title: Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL)
 Conjunto de caracteres (Charset) pode ser especificado para tipos de dados MySQL, expressões e literais.  
@@ -118,7 +121,7 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |CP 1251|Windows cirílico|CHAR/VARCHAR (padrão)|  
     |CP 1256|Árabe do Windows|CHAR/VARCHAR (padrão)|  
     |CP 1257|Windows báltico|CHAR/VARCHAR (padrão)|  
-    |binary|Conjunto de caracteres binária pseudo|CHAR/VARCHAR (padrão)|  
+    |BINARY|Conjunto de caracteres binária pseudo|CHAR/VARCHAR (padrão)|  
     |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (padrão)|  
     |cp932|SJIS em japonês do Windows|NCHAR/NVARCHAR (padrão)|  
     |eucjpms|UJIS para japonês do Windows|NCHAR/NVARCHAR (padrão)|  

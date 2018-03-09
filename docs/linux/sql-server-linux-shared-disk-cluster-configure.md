@@ -3,28 +3,27 @@ title: "Configurar a instância de cluster de failover - SQL Server no Linux (RH
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 11b7c2e6a782a2e1215a75e746c6def1b42f90a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar a instância de cluster de failover - SQL Server no Linux (RHEL)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Uma instância de cluster de failover de disco compartilhado de dois nós do SQL Server fornece redundância em nível de servidor para alta disponibilidade. Neste tutorial, você aprenderá como criar uma instância de cluster de failover de dois nós do SQL Server no Linux. As etapas específicas que você concluirá incluem:
 
@@ -40,9 +39,9 @@ Este artigo explica como criar uma instância de cluster de failover do disco co
 
 Para obter informações conceituais, consulte [SQL Server Failover Cluster FCI (instância) no Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-Para concluir o cenário de ponta a ponta abaixo, você precisa duas máquinas para implantar o cluster de dois nós e outro servidor para o armazenamento. Etapas a seguir descrevem como esses servidores serão configurados.
+Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para o armazenamento. Etapas a seguir descrevem como esses servidores serão configurados.
 
 ## <a name="set-up-and-configure-linux"></a>Instalar e configurar o Linux
 
@@ -64,7 +63,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Em cada
     > [!NOTE] 
     > No conjunto de tempo, uma chave mestre do servidor é gerado para a instância do SQL Server e colocado no `var/opt/mssql/secrets/machine-key`. No Linux, o SQL Server sempre é executado como uma conta local chamada mssql. Como é uma conta local, sua identidade não é compartilhada entre nós. Portanto, é necessário copiar a chave de criptografia do nó principal para cada nó secundário para que cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor. 
 
-1.  No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usará essa conta para verificar qual nó está executando o SQL Server. 
+1.  No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usa essa conta para verificar qual nó está executando o SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -208,7 +207,7 @@ Este exemplo criará uma FCI do grupo NewLinFCIGrp. O nome do grupo de recursos 
 
     \<FolderToMountNFSShare > é a pasta para montar o disco (para bancos de dados do sistema e o local padrão, ele seria /var/opt/mssql/data)
 
-     Um exemplo é mostrado abaixo:
+    Um exemplo é mostrado aqui:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -299,4 +298,3 @@ Neste tutorial, você concluiu as seguintes tarefas.
 - [Operar a instância de cluster de failover - SQL Server no Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->
-

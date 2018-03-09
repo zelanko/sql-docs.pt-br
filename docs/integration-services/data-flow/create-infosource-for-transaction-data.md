@@ -1,5 +1,5 @@
 ---
-title: "Criar InfoSource para dados de transação | Microsoft Docs"
+title: "Criar InfoSource para os dados da transação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
   Use a caixa de diálogo **Criar InfoSource para os Dados da Transação** para criar um novo InfoSource para dados de transação no sistema SAP Netweaver BW.  
   
- Você pode abrir a caixa de diálogo **Criar InfoSource para os Dados da Transação** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, confira [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Você pode abrir a caixa de diálogo **Criar InfoSource para os Dados da Transação** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  A documentação do Microsoft Connector 1.1 for SAP BW supõe familiaridade com o ambiente do SAP Netweaver BW. Para obter mais informações sobre o SAP Netweaver BW ou para obter informações sobre como configurar objetos e processos do SAP Netweaver BW, consulte sua documentação do SAP.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/03/2017
  **Sistema de origem**  
  Selecione o sistema de origem associado ao InfoSource.  
   
- **Salvar e ativar**  
+ **Salvar e Ativar**  
  Salvar e ativar o novo InfoSource.  
   
 ## <a name="infosource-transfer-structure-options"></a>Opções da estrutura de transferência do InfoSource  
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/03/2017
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  
@@ -99,9 +98,8 @@ ms.lasthandoff: 08/03/2017
  **Campo unidade**  
  Especifique as unidades que o InfoObject usará.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

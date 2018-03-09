@@ -2,14 +2,13 @@
 title: "Trabalhar com diagramas em Designer de exibição de fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,20 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], diagrams
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: 36
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3e877f63972f6a891f788a65196d2ec621cc203
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
-  Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  
   
  Para alterar a área do diagrama exibida no painel de diagrama, clique na seta de quatro pontas no canto inferior direito do painel e arraste a caixa de seleção sobre o diagrama em miniatura até selecionar a área que deve ser exibida no painel de diagrama.  
   
@@ -97,8 +96,7 @@ ms.lasthandoff: 09/01/2017
  Para evitar esse problema, adicione todas as tabelas primeiro, antes de fazer algum ajuste final. Os objetos devem agora manter sua posição no diagrama quando você abri-lo novamente mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Designer de exibição de fonte de dados &#40; Analysis Services - dados multidimensionais &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   
-

@@ -2,15 +2,13 @@
 title: Elemento MeasureGroup (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MeasureGroup Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2637e343b856d916a594a1542dfb08fc1b3b9858
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da971bb3ed38fd5099722d423221e68b9bb17173
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measuregroup-element-assl"></a>Elemento MeasureGroup (ASSL)
-  Define um conjunto de medidas no mesmo nível de granularidade.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um conjunto de medidas no mesmo nível de granularidade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,15 +75,15 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Consulte a tabela a seguir.|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 |Ancestral ou pai|Tipo de Dados|  
 |------------------------|---------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Nenhuma|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Nenhum|  
 |[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
 |[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
@@ -99,10 +97,10 @@ ms.lasthandoff: 11/17/2017
 |Ancestral ou pai|Elementos filho|  
 |------------------------|--------------------|  
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[AggregationDesigns](../../../analysis-services/scripting/collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../../../analysis-services/scripting/properties/aggregationprefix-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [DataAggregation](../../../analysis-services/scripting/properties/dataaggregation-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [EstimatedSize](../../../analysis-services/scripting/properties/estimatedsize-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../../../analysis-services/scripting/properties/ignoreunrelateddimensions-element-assl.md), [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [MeasureQualification](../../../analysis-services/scripting/properties/measurequalificaton-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Partitions](../../../analysis-services/scripting/collections/partitions-element-assl.md), [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md), [ProcessingMode](../../../analysis-services/scripting/properties/processingmode-element-assl.md), [ProcessingPriority](../../../analysis-services/scripting/properties/processingpriority-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-measure-assl.md), [State](../../../analysis-services/scripting/properties/state-element-assl.md), [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md), [StorageMode](../../../analysis-services/scripting/properties/storagemode-element-assl.md), [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md), [Type](../../../analysis-services/scripting/properties/type-element-measuregroup-assl.md)|  
-|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|Nenhuma|  
-|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Nenhuma|  
+|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|Nenhum|  
+|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as medidas de um grupo de medidas devem se originar de uma única tabela. Um grupo de medidas pode definir associações padrão que podem ser substituídas para cada partição.  
   
  O elemento **MeasureGroup** define detalhes comuns a grupos de medidas em cubos normais e em cubos virtuais. Subtipos separados definem os detalhes específicos para cada tipo.  
@@ -117,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
  Os elementos correspondentes no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

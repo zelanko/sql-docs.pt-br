@@ -2,10 +2,14 @@
 title: Carregar arquivos em FileTables | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb882532e2c368c085b3834a0332e3c716ffd1c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
-  Descreve como carregar ou migrar arquivos para FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve como carregar ou migrar arquivos para FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Carregando ou migrando arquivos para um FileTable  
  O método que você escolhe para carregar ou migrar arquivos para uma FileTable depende em onde os arquivos estão armazenados atualmente.  
@@ -33,16 +38,16 @@ ms.lasthandoff: 11/09/2017
 |Localização atual dos arquivos|Opções de migração|  
 |-------------------------------|---------------------------|  
 |Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem conhecimento dos arquivos.|Como uma FileTable é semelhante a uma pasta no sistema de arquivos do Windows, você pode carregar arquivos com facilidade em uma nova FileTable usando qualquer um dos métodos disponíveis para mover ou copiar arquivos. Esses métodos incluem o Windows Explorer, opções de linha de comando, inclusive xcopy e robocopy, e scripts ou aplicativos personalizados.<br /><br /> Você não pode converter uma pasta existente em uma FileTable.|  
-|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, consulte [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste tópico.|  
+|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, consulte [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste artigo.|  
   
 ###  <a name="HowToLoadNew"></a> Como carregar arquivos em uma nova FileTable  
- Os métodos que você pode usar para carregar arquivos em uma FileTable incluem os seguintes:  
+Você pode usar os seguintes métodos para carregar arquivos em uma FileTable:  
   
 -   Arrastar e soltar arquivos das pastas de origem para a pasta da nova FileTable no Windows Explorer.  
   
--   Usar opções de linha de comando, como MOVE, COPY, XCOPY ou ROBOCOPY, no prompt de comando ou em um arquivo em lotes ou script.  
+-   Usar opções de linha de comando, tais como MOVE, COPY, XCOPY ou ROBOCOPY, no prompt de comando ou em um script ou arquivo em lotes.  
   
--   Escrever um aplicativo personalizado em C# ou Visual Basic.NET que use métodos do namespace **System.IO** para mover ou copiar os arquivos.  
+-   Escrever um aplicativo personalizado para mover ou copiar os arquivos em C# ou no Visual Basic.NET. Chamar métodos do namespace **System.IO**.  
   
 ###  <a name="HowToMigrateFiles"></a> Exemplo: migrando arquivos do sistema de arquivos para uma FileTable  
  Neste cenário, seus arquivos são armazenados no sistema de arquivos, e você tem uma tabela de metadados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém ponteiros para os arquivos. Você deseja mover os arquivos para uma FileTable e, em seguida, substituir o caminho UNC original de cada arquivo dos metadados pelo caminho UNC da FileTable. A função [GetPathLocator & #40. O Transact-SQL e 41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) ajuda você a atingir esse objetivo.  
@@ -55,9 +60,9 @@ ms.lasthandoff: 11/09/2017
   
 2.  Use xcopy ou uma ferramenta semelhante para copiar os arquivos .jpg, com a respectiva estrutura de diretórios, no diretório raiz da FileTable.  
   
-3.  Corrija os metadados na tabela **PhotoMetadata** usando código semelhante ao seguinte:  
+3.  Corrija os metadados na tabela **PhotoMetadata** usando código semelhante ao seguinte exemplo:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   
@@ -80,9 +85,9 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> Carregando arquivos em massa em uma FileTable  
- Um FileTable tem o comportamento semelhante ao de uma tabela normal para operações em massa, com as qualificações a seguir.  
+ Um FileTable tem o comportamento semelhante ao de uma tabela normal para operações em massa, com as qualificações a seguir:  
   
- Uma FileTable possui restrições definidas pelo sistema que assegura que a integridade do namespace de arquivo e diretório seja mantida. Essas restrições têm de ser verificadas nos dados carregados em massa na FileTable. Algumas operações de inserção em massa permitem ignorar as restrições de tabela. Os requisitos a seguir são impostos.  
+ Uma FileTable tem restrições definidas pelo sistema que assegura que a integridade do namespace de arquivo e diretório seja mantida. Essas restrições têm de ser verificadas nos dados carregados em massa na FileTable. Algumas operações de inserção em massa permitem ignorar as restrições de tabela. Os requisitos a seguir são impostos.  
   
 -   As operações de carregamento em massa que impõem restrições podem ser executadas em uma FileTable como em qualquer outra tabela. Essa categoria inclui as seguintes operações:  
   
@@ -126,7 +131,7 @@ UPDATE PhotoMetadata
 ###  <a name="disabling"></a> Como desabilitar restrições de FileTable para carregamento em massa  
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar FileTables com Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

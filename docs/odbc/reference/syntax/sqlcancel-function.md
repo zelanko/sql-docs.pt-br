@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCancel
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCancel
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCancel
-helpviewer_keywords:
-- SQLCancel function [ODBC]
+f1_keywords: SQLCancel
+helpviewer_keywords: SQLCancel function [ODBC]
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7adc83a958667e963749e390518bfc792c7cd85
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 079a1ac7467348472c501c4dcb055d2cef8e9306
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcancel-function"></a>Função SQLCancel
 **Conformidade**  
@@ -124,7 +118,6 @@ SQLRETURN SQLCancel(
 |Envio de dados de parâmetro em tempo de execução|[Função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Posicionando o cursor em um conjunto de linhas, atualizar dados no conjunto de linhas, ou atualizar ou excluir dados no conjunto de resultados|[Função SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

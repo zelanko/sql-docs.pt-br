@@ -3,7 +3,7 @@ title: "Exemplo de métodos de SetPermissions (VC + +) e GetPermissions | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: baeed53157850c6be527aed6400bff25a9903fba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 615da009be8fa44c361d66d6aca43465503a7a1c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions e exemplo dos métodos SetPermissions (VC + +)
 Este exemplo demonstra o [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos. O código a seguir fornece acesso completo à tabela Orders para o usuário administrador.  
@@ -110,4 +109,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

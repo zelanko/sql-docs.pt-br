@@ -1,5 +1,5 @@
 ---
-title: "Referência de interface do usuário de caixa de diálogo de tipos de coluna de sugerir | Microsoft Docs"
+title: "Referência de interface do usuário da caixa de diálogo Sugerir Tipos de Coluna | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6e015362f115e85bb24a4a4d4603690ea892068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Sugerir Tipos de Coluna
   Use a caixa de diálogo **Sugerir Tipos de Coluna** para identificar o tipo de dados e o tamanho das colunas em um Gerenciador de Conexões de Arquivos Simples, com base em uma amostragem do conteúdo dos arquivos.  
@@ -51,9 +50,8 @@ ms.lasthandoff: 08/03/2017
  **Porcentagem de enchimento**  
  Digite ou selecione a porcentagem pela qual aumentar o tamanho de coluna para tipos de dados de caracteres. A porcentagem deve ser um inteiro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Gerenciador de Conexão de arquivo simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ [Gerenciador de Conexões de Arquivos Simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
-

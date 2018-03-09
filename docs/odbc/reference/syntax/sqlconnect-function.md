@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConnect
-helpviewer_keywords:
-- SQLConnect function [ODBC]
+f1_keywords: SQLConnect
+helpviewer_keywords: SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9f2c2d3e8b60d0a73d1beba4f68148cd956431b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3954538b63739fe19435aeb5cd30449edbc9d24
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconnect-function"></a>Função SQLConnect
 **Conformidade**  
@@ -264,7 +258,6 @@ int main() {
 |Retornando a configuração de um atributo de conexão|[Função SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

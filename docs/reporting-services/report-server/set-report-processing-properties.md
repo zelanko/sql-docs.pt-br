@@ -1,13 +1,14 @@
 ---
-title: "Definir propriedades de processamento de relatório | Microsoft Docs"
+title: "Definir as propriedades do processamento de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,22 +19,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7d276a8cd67bf9917386d8cbd68b91c07777f01
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  
   
- Para definir propriedades de execução de relatório, abra o relatório no Gerenciador de Relatórios e então navegue até a página Propriedades de Execução. Para obter mais informações, consulte [página de propriedades Opções de processamento &#40; Gerenciador de relatórios &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Você também pode definir propriedades usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; consulte [página de propriedades Opções de processamento &#40; Gerenciador de relatórios &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Para definir propriedades de execução de relatório, abra o relatório no Gerenciador de Relatórios e então navegue até a página Propriedades de Execução. Para obter mais informações, consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Você também pode definir as propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; consulte [Página de propriedades Opções de Processamento &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Modos de execução de relatório  
  É possível executar um relatório sob demanda ou como um instantâneo. A seção a seguir descreve cada tipo de abordagem.  
@@ -59,14 +59,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Assinaturas já existentes são configuradas para usarem valores de parâmetros diferentes do valor de parâmetro padrão especificado para o instantâneo.  
   
- Quando existir essa condição, o servidor de relatório desativará a assinatura na próxima vez em que a assinatura for agendada para execução. Abra a assinatura e salve-a a fim de reativá-la. Quando você abrir a assinatura, o servidor de relatórios atualizará os valores de parâmetros de assinatura para aqueles especificados para o relatório. Para obter mais informações sobre assinaturas, consulte [assinaturas e entrega &#40; Reporting Services &#41; ](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Quando existir essa condição, o servidor de relatório desativará a assinatura na próxima vez em que a assinatura for agendada para execução. Abra a assinatura e salve-a a fim de reativá-la. Quando você abrir a assinatura, o servidor de relatórios atualizará os valores de parâmetros de assinatura para aqueles especificados para o relatório. Para obter mais informações sobre assinaturas, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services conceitos &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Como: adicionar um instantâneo ao histórico de relatórios](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Conceitos do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Como adicionar um instantâneo ao histórico de relatórios](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Medidores (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Medidores (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -159,17 +160,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , uma região de dados de medidor exibe um único valor para o conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Dentro de um painel de medidor único, você pode criar vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  
@@ -184,7 +184,7 @@ ms.lasthandoff: 08/09/2017
   
  Há dois tipos de medidores: radial e linear. A ilustração a seguir mostra os elementos básicos de um único medidor radial no painel de medidores.  
   
- ![Diagrama de elementos de medidor](../../reporting-services/report-design/media/gauge-elements-diagram.gif "diagrama de elementos de medidor")  
+ ![Diagrama de elementos de medidor](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
  Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 08/09/2017
   
  Os medidores lineares são retangulares, com orientação vertical ou horizontal, e lembram réguas. Os ponteiros do medidor frequentemente são termômetros, mas podem ser marcadores ou barras. Devido à sua forma, esse tipo de medidor é útil quando para integração a regiões de dados de tabela ou matriz para mostrar dados de progresso.  
   
- Sem ser essas diferenças, os dois tipos de medidores são intercambiáveis. No entanto, se você tiver que usar um medidor simples no relatório, considere utilizar indicador, em vez de um medidor. Para obter mais informações, consulte [indicadores &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Sem ser essas diferenças, os dois tipos de medidores são intercambiáveis. No entanto, se você tiver que usar um medidor simples no relatório, considere utilizar indicador, em vez de um medidor. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  As ilustrações a seguir mostram medidores radiais e lineares. O medidor radial é redondo e usa o ponteiro de agulha. O medidor linear é horizontal e usa o ponteiro de termômetro.  
   
@@ -304,12 +304,11 @@ ms.lasthandoff: 08/09/2017
 |[Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações gerais sobre ponteiros de formatação em medidores e informações detalhadas sobre as opções de formatação para estilos de ponteiros disponíveis para medidores radiais e lineares.|  
 |[Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fornece informações sobre intervalos de formatação em medidores para indicar uma subseção importante de valores no medidor ou indicar visualmente quando o valor do ponteiro entrar em uma certa faixa de valores.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

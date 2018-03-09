@@ -3,8 +3,9 @@ title: WillChangeRecord e RecordChangeComplete eventos (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a421ba630b9cb9eeafaa2087144b765a64f78b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 314df047b5d155f2605c3fa9c98151687d57c297
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord e RecordChangeComplete eventos (ADO)
 O **WillChangeRecord** evento é chamado antes de um ou mais registros (linhas) [registros](../../../ado/reference/ado-api/recordset-object-ado.md) alterar. O **RecordChangeComplete** evento é chamado depois que um ou mais registros de alteração.  
@@ -66,7 +67,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Um **registros** objeto. O **registros** para que esse evento ocorreu.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **WillChangeRecord** ou **RecordChangeComplete** evento pode ocorrer para o primeiro campo alterado em uma linha devido ao seguinte **registros** operações: [ Atualização](../../../ado/reference/ado-api/update-method.md), [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). O valor da **registros** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) determina quais operações fazer com que os eventos ocorra.  
   
  Durante o **WillChangeRecord** evento, o **registros** [filtro](../../../ado/reference/ado-api/filter-property.md) está definida como **adFilterAffectedRecords**. Você não pode alterar essa propriedade ao processar o evento.  

@@ -2,27 +2,30 @@
 title: "Propriedades do banco de dados (página Espelhamento) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47f75acd0677fb838304de87cd9216671d019131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
-  Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
   
 > **IMPORTANTE!** A segurança deve ser configurada para você poder começar o espelhamento. Se o espelhamento não tiver sido iniciado, você deve começar usando o assistente. As caixas de texto da página **Espelhamento** ficam desabilitadas até que o assistente seja encerrado.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
  O endereço de rede do servidor tem a seguinte sintaxe básica:  
   
- TCP**://***nome_domínio_totalmente_qualificado***:***porta*  
+ TCP**://***fully_qualified_domain_name***:***port*  
   
  onde  
   
@@ -75,7 +78,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   O banco de dados espelho deve existir.  
   
-     Antes de poder iniciar o espelhamento, o banco de dados espelho deve ser criado recuperando um backup completo recente WITH NORECOVERY e, talvez, backups de log do banco de dados principal no servidor espelho. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Antes de poder iniciar o espelhamento, o banco de dados espelho deve ser criado recuperando um backup completo recente WITH NORECOVERY e, talvez, backups de log do banco de dados principal no servidor espelho. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Os endereços TCP das instâncias de servidor principal e espelho já foram especificados (na seção **Endereços de rede do servidor**).  
   
@@ -116,7 +119,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |Opção|Testemunha?|Explicação|  
 |------------|--------------|-----------------|  
 |**Alto desempenho (assíncrono)**|Nulo (se existir; não usado, mas a sessão requer um quorum)|Para maximizar o desempenho, o banco de dados espelho fica sempre um pouco atrás do banco de dados principal, nunca se aproximando muito. Porém, a lacuna entre os bancos de dados é geralmente pequena. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível, o espelhado continuará. Mas se a sessão não tiver nenhuma testemunha (como recomendado) ou a testemunha estiver conectada ao servidor espelho, este permanecerá acessível como uma espera passiva; o proprietário do banco de dados pode forçar um serviço para a instância do servidor espelho (com possível perda de dados).|  
-|**Alta segurança sem failover automático (síncrono)**|Não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual será possível se os parceiros estiverem conectados entre si.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância de servidor principal ficar indisponível, o espelhado será interrompido, mas ficará disponível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).|  
+|**Alta segurança sem failover automático (síncrono)**|não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual será possível se os parceiros estiverem conectados entre si.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância de servidor principal ficar indisponível, o espelhado será interrompido, mas ficará disponível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).|  
 |**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Disponibilidade maximizada, incluindo uma instância de servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha.<br /><br /> O failover manual será possível se os parceiros estiverem conectados entre si.<br /><br /> **\*\* Importante \*\*** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados entre si para que o banco de dados fique disponível. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Nos modos de operação síncronos, todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho. Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Depois que o espelhamento começar, você poderá alterar o modo de operação e salvar a alteração clicando em **OK**.  
@@ -140,7 +143,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Atualizar**  
  Clique para atualizar a caixa **Status** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você não estiver familiarizado com o espelhamento de banco de dados, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Adicionando um servidor testemunha a uma sessão existente  
@@ -176,7 +179,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   

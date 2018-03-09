@@ -1,5 +1,5 @@
 ---
-title: Propriedades personalizadas da tarefa controle CDC | Microsoft Docs
+title: Propriedades personalizadas da tarefa Controle de CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ed58b63b6bbeff9ffea04325c94d85fe06de1ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40805d8c0f2e070df89344babfbc607a7cd6c66f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propriedades personalizadas da tarefa Controle de CDC
   A tabela a seguir descreve as propriedades personalizadas da tarefa Controle de CDC. Todas as propriedades são de leitura/gravação.  
@@ -40,9 +39,8 @@ ms.lasthandoff: 08/03/2017
 |StateTable|Cadeia de caracteres|Especifica o nome da tabela onde o estado de contexto CDC é armazenado. Essa tabela deve ser acessível com o uso da conexão configurada para esse componente. Essa tabela deve incluir colunas de varchar chamadas **name** e **state**. (A coluna **state** deve ter, no mínimo, 256 caracteres).<br /><br /> Essa propriedade será aplicável somente quando **AutomaticStatePersistence** estiver definida como **true**.|  
 |CommandTimeOut|inteiro|Esse valor indica o tempo limite (em segundos) a ser usado ao se comunicar com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse valor é usado quando o tempo de resposta do banco de dados é muito lento e o valor padrão (30 segundos) não é o suficiente.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefa controle CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor da tarefa controle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)   
+ [Editor da Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

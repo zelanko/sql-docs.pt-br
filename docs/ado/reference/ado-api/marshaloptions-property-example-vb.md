@@ -3,7 +3,7 @@ title: Exemplo de propriedade MarshalOptions (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 52b47718ea0fdc01f768b460e5f18f1773353bee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b07cbdba152dc4ebfa59ff9b4a8425e0a670ed0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptions-property-example-vb"></a>Exemplo de propriedade MarshalOptions (VB)
 Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas ao servidor, todas as linhas ou somente as linhas modificadas.  
@@ -142,4 +141,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Propriedade MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
-

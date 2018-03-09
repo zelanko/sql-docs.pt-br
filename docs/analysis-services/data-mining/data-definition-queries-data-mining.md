@@ -2,31 +2,30 @@
 title: "Consultas de definição de dados (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04237bba7622a7b6745ff8768ea7a1bc5feda2b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 286d7cbe5d6dbb2fb0b05b937fbd1a304f89aa1e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definição de dados (mineração de dados)
-  Para mineração de dados, a categoria *consulta de definição de dados* significa instruções DMX ou comandos XMLA que fazem o seguinte:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Para mineração de dados, a categoria *consulta de definição de dados* significa instruções DMX ou comandos XMLA que fazem o seguinte:  
   
 -   Criar, alterar ou manipular objetos de mineração de dados, como um modelo.  
   
@@ -91,12 +90,12 @@ ms.lasthandoff: 11/17/2017
 |-|-|  
 |Trabalhar com modelos para consultas DMX.|[Usar modelos do Analysis Services no SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Criar consultas de todos os tipos, usando Construtor de Consultas de Previsão.|[Criar uma consulta de previsão usando o construtor de consultas de previsão](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capturar definições de consultas usando o SQL Server Profiler e usar rastreamento para monitorar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Saiba mais sobre as linguagens de scripts e linguagens de programação fornecidas para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Referência de XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Saiba como gerenciar modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|Capturar definições de consultas usando o SQL Server Profiler e usar rastreamento para monitorar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Saiba mais sobre as linguagens de scripts e linguagens de programação fornecidas para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis &#40; XMLA &#41; Referência](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Desenvolvendo com o Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|Saiba como gerenciar modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORTAR &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORTAR &#40; DMX &#41;](../../dmx/import-dmx.md)|  
 |Saiba mais sobre OPENROWSET e outros modos de consultar dados externos.|[&#60;consulta de dados de origem&#62;](../../dmx/source-data-query.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [Assistente de mineração de dados &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

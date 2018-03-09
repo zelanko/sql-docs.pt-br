@@ -2,36 +2,33 @@
 title: "Defina a propriedade fatia de partição (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0dc6d3620e26186c57a78ddb88e44548384c7b7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Definir a propriedade Fatia de Partição (Analysis Services)
-  Uma fatia de dados é um recurso de otimização importante que ajuda a direcionar consultas aos dados das partições apropriadas. Definir explicitamente a propriedade Fatia pode melhorar o desempenho da consulta, substituindo as fatias padrão geradas para partições MOLAP e HOLAP. Além disso, a propriedade Fatia fornece uma verificação de validação adicional ao processar a partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma fatia de dados é um recurso de otimização importante que ajuda a direcionar consultas aos dados das partições apropriadas. Definir explicitamente a propriedade Fatia pode melhorar o desempenho da consulta, substituindo as fatias padrão geradas para partições MOLAP e HOLAP. Além disso, a propriedade Fatia fornece uma verificação de validação adicional ao processar a partição.  
   
  É possível especificar uma fatia de dados após criar uma partição, mas antes de processá-la, usando a propriedade Fatia. Na guia Partições, expanda um grupo de medidas, clique com o botão direito do mouse em uma partição e selecione **Propriedades**.  
   
@@ -56,7 +53,6 @@ ms.lasthandoff: 09/01/2017
 >  Se você precisa definir uma fatia complexa, recomendamos definir as tuplas na fatia usando um script XMLA Alter. Em seguida, você pode usar a ferramenta de linha de comando ascmd ou a [Tarefa Executar DDL do Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) no Integration Services para executar o script e criar o conjunto especificado de membros imediatamente antes de processar a partição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [Criar e gerenciar uma partição Local &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   
-

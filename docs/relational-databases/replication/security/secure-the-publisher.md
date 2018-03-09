@@ -2,10 +2,14 @@
 title: Proteger o publicador | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebddba8eef2094c1d07a49477034d0073757a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03651a97745cb661fc4eed487e261d88fd8d8c6a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="secure-the-publisher"></a>Proteger o Publicador
-  Os seguintes agentes de replicação se conectam ao Publicador:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Os seguintes agentes de replicação se conectam ao Publicador:  
   
 -   Agente de Leitor de Log  
   
@@ -36,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Queue Reader Agent  
   
--   Agente de Mesclagem  
+-   Merge Agent  
   
  Recomendamos que você forneça um logon adequado para esses agentes, siga o princípio de conceder o mínimo possível de direitos necessários e de proteger o armazenamento de todas as senhas. Para obter mais informações sobre permissões requeridas para cada agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -74,7 +79,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="queue-reader-agent"></a>Queue Reader Agent  
  Há um Agente de Leitor de Fila para todos os Publicadores e publicações (que permite assinaturas de atualização em fila) associado a um determinado Distribuidor. Para obter mais informações, consulte [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  

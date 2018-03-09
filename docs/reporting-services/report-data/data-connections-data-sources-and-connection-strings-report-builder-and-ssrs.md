@@ -1,25 +1,25 @@
 ---
-title: "Conexões de dados, fontes de dados, o construtor de relatórios de cadeias de caracteres de Conexão-SSRS | Microsoft Docs"
+title: "Conexões de dados, fontes de dados, cadeias de conexão (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: a0930e4f060379be894870fe6ac22b85cd225283
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Conexões de dados, fontes de dados e cadeias de conexão (Construtor de Relatórios e SSRS)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Para incluir dados em relatórios paginados [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [inseridos e compartilhados conjuntos de dados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Para incluir dados em relatórios paginados [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -51,16 +51,16 @@ ms.lasthandoff: 09/21/2017
   
 |Description|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
 |-----------------|------------------------------|----------------------------|  
-|A conexão de dados é inserida na definição do relatório.|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
-|O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|  
-|Gerenciada no servidor de relatório|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|  
-|Obrigatória para conjuntos de dados compartilhados||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|  
-|Obrigatória para componentes||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|  
+|A conexão de dados é inserida na definição do relatório.|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")||  
+|O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
+|Gerenciada no servidor de relatório|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
+|Obrigatória para conjuntos de dados compartilhados||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
+|Obrigatória para componentes||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
   
 ##  <a name="bkmk_DataConnections"></a> Extensões de dados internas  
  As extensões de dados padrão no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluem os tipos de conexão de dados a seguir:  
   
--   Banco de dados SQL do Microsoft SQL Server e o Microsoft Azure
+-   Microsoft SQL Server e Banco de Dados SQL do Microsoft Azure
   
 -   Microsoft SQL Server Analysis Services  
   
@@ -109,24 +109,24 @@ ms.lasthandoff: 09/21/2017
  > [!NOTE]  
 >  [Connectionstrings.com](http://www.connectionstrings.com/) é outro recurso para obter exemplos de cadeias de conexão. 
   
-|**Data source**|**Exemplo**|**Description**|  
+|**Data source**|**Exemplo**|**Descrição**|  
 |---------------------|-----------------|---------------------|  
 |Banco de dados do SQL Server no servidor local|`data source="(local)";initial catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**. Para obter mais informações, consulte [Tipo de conexão do SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
-|Instância do SQL Server<br /><br /> banco de dados|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**.|  
+|Instância do SQL Server<br /><br /> Banco de Dados|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**.|  
 |Banco de dados do SQL Server Express|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Defina o tipo de fonte de dados como **Microsoft SQL Server**.|  
-|Banco de dados SQL do Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo de fonte de dados **banco de dados SQL do Microsoft Azure**. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Banco de dados SQL do Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo de fonte de dados como **Banco de Dados SQL do Microsoft Azure**. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo de fonte de dados como **Microsoft SQL Server Parallel Data Warehouse**. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
-|Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Para obter mais informações, consulte [tipo de Conexão do Analysis Services para MDX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [do tipo de Conexão Analysis Services para DMX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
-|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos. Para obter mais informações, consulte [Conexão de modelo de relatório &#40; SSRS &#41; ](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
+|Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos. Para obter mais informações, consulte [Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |Fonte de dados de modelo de relatório em um servidor de relatório configurado em modo integrado do SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Especifique o servidor de relatório ou a URL da biblioteca de documentos e o caminho para o modelo publicado na pasta do servidor de relatório ou no namespace da pasta da biblioteca de documentos.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Defina o tipo de fonte de dados como **OLE DB Provider for OLAP Services 8.0**.<br /><br /> É possível obter uma conexão mais rápida com fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se você definir a propriedade **ConnectTo** como **8.0**. Para definir essa propriedade, use a caixa de diálogo **Propriedades da Conexão** , guia **Propriedades Avançadas** .|  
 |Servidor do Oracle|`data source=myserver`|Defina o tipo de fonte de dados como **Oracle**. As ferramentas do cliente Oracle devem estar instaladas no computador de Designer de Relatórios e no servidor de relatório. Para obter mais informações, consulte [Tipo de conexão Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
-|Fonte de dados do Teradata|`data source=`\<NNN >. \<NNN >. \<NNN >. \<NNN >`;`|Defina o tipo de fonte de dados como **Teradata**. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos. Para obter mais informações, consulte [tipo de Conexão Teradata &#40; SSRS &#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Fonte de dados do Teradata|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\< NNN >. \<NNN>. \<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
-|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [tipo de Conexão XML &#40; SSRS &#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
+|Fonte de dados do Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Defina o tipo de fonte de dados como **Teradata**. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos. Para obter mais informações, consulte [Tipo de conexão Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
+|Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
+|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para o documento XML.|  
 |Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados como **XML**. Os dados XML são inseridos na definição do relatório.|  
 |Lista do SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Definir o tipo de fonte de dados como **lista do SharePoint**.|  
@@ -169,4 +169,3 @@ ms.lasthandoff: 09/21/2017
 [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

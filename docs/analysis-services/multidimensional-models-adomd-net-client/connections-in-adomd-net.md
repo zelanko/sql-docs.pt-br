@@ -1,35 +1,34 @@
 ---
 title: "Estabelecendo conexões no ADOMD.NET | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36325fc2b6c7dd9ed948b0e5ccf70d41f5df1b9f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet"></a>Conexões no ADOMD.NET
   No ADOMD.NET, você usa o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto para abrir conexões com fontes de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados. Quando a conexão não for mais necessária, feche-a explicitamente.  

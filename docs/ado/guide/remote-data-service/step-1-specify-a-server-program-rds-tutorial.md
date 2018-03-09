@@ -3,7 +3,7 @@ title: 'Etapa 1: Especificar um programa de servidor (Tutorial de RDS) | Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eae6b17fc9277bd5e3c4cfe9259a026681252f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c79cf47179f8fff140f4fda779b5db816c1d9418
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Etapa 1: Especificar um programa de servidor (Tutorial de RDS)
 No caso mais geral, use o [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método para especificar o programa de servidor padrão, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), ou seu próprio programa de servidor personalizado (objeto comercial). Um programa de servidor é instanciado no servidor e uma referência para o programa do servidor, ou *proxy*, será retornado.  
@@ -46,4 +45,3 @@ Sub RDSTutorial1()
 ## <a name="see-also"></a>Consulte também  
  [Etapa 2: Chamar o programa de servidor (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

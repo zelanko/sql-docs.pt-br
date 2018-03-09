@@ -1,27 +1,27 @@
 ---
-title: "Exibir números de página ou outras propriedades de relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6bf3a7865337f616cf2897919a76b3689c9fa5bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
   É fácil adicionar números de página, um título de relatório, nome de arquivo e outras propriedades de relatório aos cabeçalhos ou rodapés de seu relatório. Essas propriedades são armazenadas como campos na pasta Campos Internos no painel de dados do relatório:  
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
 2.  Arraste o campo **Número da Página** do painel de dados do relatório para o cabeçalho ou o rodapé do relatório.  
   
     > [!NOTE]  
-    >  O rodapé de página é adicionado automaticamente ao relatório. Para adicionar um cabeçalho de página, na guia **Inserir**, clique em **Cabeçalho** e em **Adicionar Cabeçalho**.  
+    >  O rodapé de página é adicionado automaticamente ao relatório. Para adicionar um cabeçalho de página, na guia **Inserir** , clique em **Cabeçalho**e em **Adicionar Cabeçalho**.  
     >   
     >  Uma caixa de texto que contém a expressão simples [&PageNumber] é adicionada.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
      A caixa de texto **Definir Expressão para: Valor** contém a expressão =Globals!PageNumber.  
   
-2.  Posicione o cursor depois do sinal de = e digite **"Página" &**.  
+2.  Coloque o cursor depois do sinal de = e digite **"Page " &**.  
   
      Agora, a expressão é ="Página "&Globals! PageNumber  
   
@@ -88,9 +88,8 @@ ms.lasthandoff: 08/09/2017
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatar texto em uma caixa de texto &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

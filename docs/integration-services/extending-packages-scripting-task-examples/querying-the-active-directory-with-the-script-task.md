@@ -1,5 +1,5 @@
 ---
-title: Consultando o Active Directory com a tarefa Script | Microsoft Docs
+title: Consultar o Active Directory com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9eb991a2cd5fa7da5e60d761b8618534a99c9dd6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Consultando o Active Directory com a tarefa Script
-  Aplicativos de processamento de dados corporativos, como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], em geral, precisam processar dados de forma diferente com base na classificação, no nome do cargo ou em outras características dos funcionários armazenadas no Active Directory. O Active Directory é um [!INCLUDE[msCoName](../../includes/msconame-md.md)] serviço de diretório do Windows que fornece um repositório centralizado de metadados, não apenas sobre usuários, mas também sobre outros ativos organizacionais, como computadores e impressoras. O **System. DirectoryServices** namespace no Microsoft .NET Framework fornece classes para trabalhar com o Active Directory, para ajudá-lo direto de processamento de dados de fluxo de trabalho com base nas informações que ele armazena.  
+  Aplicativos de processamento de dados corporativos, como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], em geral, precisam processar dados de forma diferente com base na classificação, no nome do cargo ou em outras características dos funcionários armazenadas no Active Directory. O Active Directory é um serviço de diretório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que fornece um repositório centralizado de metadados, não apenas sobre usuários, mas também sobre outros ativos organizacionais como computadores e impressoras. O namespace **System.DirectoryServices** no Microsoft .NET Framework fornece classes para trabalhar com o Active Directory, a fim de ajudar você a direcionar o fluxo de trabalho de processamento de dados com base nas informações que ele armazena.  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
@@ -47,13 +45,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  Crie as três variáveis de cadeia de caracteres `email`, `name` e `title`. Digite um endereço de email corporativo válido como o valor da variável `email`.  
   
-2.  No **Script** página do **Editor da tarefa Script**, adicionar o `email` variável para o **ReadOnlyVariables** propriedade.  
+2.  Na página **Script** do **Editor da Tarefa Script**, adicione a variável `email` à propriedade **ReadOnlyVariables**.  
   
-3.  Adicionar o `name` e `title` variáveis para o **ReadWriteVariables** propriedade.  
+3.  Adicione as variáveis `name` e `title` para a propriedade **ReadWriteVariables**.  
   
-4.  No projeto de script, adicione uma referência para o **System. DirectoryServices** namespace.  
+4.  No projeto de script, adicione uma referência ao namespace **System.DirectoryServices**.  
   
-5.  . No seu código, use um **Imports** instrução para importar o **DirectoryServices** namespace.  
+5.  para obter informações sobre a ferramenta de configuração e recursos adicionais. No seu código, use uma instrução **Imports** para importar o namespace **DirectoryServices**.  
   
 > [!NOTE]  
 >  Para executar esse script com sucesso, sua empresa deve usar o Active Directory em sua rede e armazenar as informações do funcionário que este exemplo usa.  
@@ -118,7 +116,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artigo técnico, [processamento de informações do Active Directory no SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), em social.technet.microsoft.com  
+-   Artigo técnico, [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) (em inglês), em social.technet.microsoft.com  
   
   
-

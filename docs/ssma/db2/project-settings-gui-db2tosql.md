@@ -1,10 +1,13 @@
 ---
 title: "Configurações (GUI) (DB2ToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2802ec5202d5ebac60d0df73a82a774e3e9dc36
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21dc510ed064c36a0a2a4827e6e7dd811365567e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-db2tosql"></a>Configurações de projeto (GUI) (DB2ToSQL)
 As configurações de projeto de GUI permitem que você configure como os dados aparecem no **dados** guia e mostrar o relatório de avaliação após a conversão, ou não.  

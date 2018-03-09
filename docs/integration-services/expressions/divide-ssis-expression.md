@@ -1,5 +1,5 @@
 ---
-title: "Dividir (expressão SSIS) | Microsoft Docs"
+title: "Dividir (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf7ca9400837b33ed016c03408028b0102c7418f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 268c16bb3e32bdb1a869cb8a4eacfa66f1795d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   Divide a primeira expressão numérica pela segunda.  
@@ -49,7 +48,7 @@ dividend / divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se qualquer operando for nulo, o resultado será nulo.  
   
  Dividir por zero não é legal. Dependendo de como a subexpressão *divisor* é avaliada, um do seguintes erros acontece:  
@@ -73,9 +72,8 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

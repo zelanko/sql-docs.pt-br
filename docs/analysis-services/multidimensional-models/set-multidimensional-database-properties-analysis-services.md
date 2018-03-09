@@ -2,16 +2,13 @@
 title: Definir propriedades de banco de dados Multidimensional (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], databases
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a8a742480e5855224879552bf5966936b4979ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Definir propriedades de banco de dados multidimensional (Analysis Services)
-  Há várias propriedades de banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que você pode configurar no designer de banco de dados [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Há uma série de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propriedades que você pode configurar no banco de dados de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] designer de banco de dados.  
   
  Nesse criador, você pode executar os seguintes tipos de tarefas:  
   
@@ -49,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |Agrupamento|Quando o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o banco de dados herda a propriedade do servidor de agrupamento a menos que um valor diferente seja fornecido aqui.|  
 |Informações de representação da fonte de dados|Especifica o modo de representação padrão para todos os objetos da fonte de dados no banco de dados. Esse é o modo que o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa ao processar objetos, sincronizar servidores e executar as instruções de mineração de dados OpenQuery e SystemOpenSchema.|  
 |Tamanho Estimado|Fornece um tamanho estimado dos arquivos de banco de dados no disco. Se os dados forem armazenados em vários locais, esta estimativa será limitada a apenas os arquivos de dados armazenados na pasta do banco de dados.<br /><br /> **EstimatedSize** também pode ser usado como base para estimar a memória. Geralmente, os requisitos de memória serão maiores que o tamanho dos dados em disco devido a estruturas de dados adicionais que são criadas quando o banco de dados é carregado na memória.<br /><br /> Para ampliar os requisitos de memória de estimativa, você também pode usar o Gerenciador de Tarefa para observar a memória do processo do Analysis Services antes e depois de processar o banco de dados e observar a memória utilizada como um método para entender os requisitos de memória do banco de dados.|  
-|Idioma|Quando o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o banco de dados herda a propriedade do servidor de idioma a menos que um valor diferente seja fornecido aqui.|  
+|Linguagem|Quando o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é implantando em uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o banco de dados herda a propriedade do servidor de idioma a menos que um valor diferente seja fornecido aqui.|  
 |ID do MasterDataSource|Usada com partições remotas. Para obter mais informações, consulte [Partições Remotas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Propriedades do Banco de Dados &#40;SSAS – Multidimensional&#41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
  [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: cba8b5a9b62a21fc810ff9bb5fcd3d0c6429f9f5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +42,8 @@ ms.lasthandoff: 10/17/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -77,7 +69,7 @@ ROUND (numeric_expression , length )
 |**Money** e **smallmoney** categoria|**money**|  
 |**float** e **real** categoria|**float**|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ROUND sempre retorna um valor. Se *comprimento* é negativo e maior que o número de dígitos antes do ponto decimal, ROUND retorna 0.  
   
 |Exemplo|Resultado|  
@@ -146,31 +138,11 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-round-and-estimates"></a>D. Usando ROUND e estimativas  
- O exemplo a seguir apresenta duas expressões que, usando `ROUND`, demonstram que o último dígito sempre é uma estimativa.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Teto &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
-
+ [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

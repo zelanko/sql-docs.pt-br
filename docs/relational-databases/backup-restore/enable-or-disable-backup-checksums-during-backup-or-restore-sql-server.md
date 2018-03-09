@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c363b96889bdf48710e4da2b930047d27ed3c26e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0120aab5e5615e12e4d15cd3a7d394817073037c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Na página **Opções** , na seção **Confiabilidade** , clique em **Executar soma de verificação antes de gravar na mídia**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>Para habilitar ou desabilitar a soma de verificação de backup durante operações de backup  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Para habilitar somas de verificação de backup em uma instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) , especifique a opção WITH CHECKSUM. Para desabilitar somas de verificação de backup, especifique a opção WITH NO_CHECKSUM. Esse é o comportamento padrão, com exceção de um backup compactado. O exemplo a seguir especifica que somas de verificação serão executadas.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -92,7 +92,7 @@ GO
   
 3.  Para habilitar somas de verificação de backup em uma instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , especifique a opção WITH CHECKSUM. Esse é o comportamento padrão de um backup compactado. Para desabilitar somas de verificação de backup, especifique a opção WITH NO_CHECKSUM. Esse é o comportamento padrão, com exceção de um backup compactado. O exemplo a seguir especifica que somas de verificação de backup serão executadas.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -102,7 +102,7 @@ GO
 > [!WARNING]  
 >  Se você solicitar CHECKSUM explicitamente para uma operação de restauração e se o backup contiver somas de verificação de backup, as somas de verificação de backup e as somas de verificação de página serão ambas verificadas, como no caso padrão. Porém, se o conjunto de backup não tiver as somas de verificação de backup, a operação de restauração falha com uma mensagem indicando que as somas de verificação não estão presentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   

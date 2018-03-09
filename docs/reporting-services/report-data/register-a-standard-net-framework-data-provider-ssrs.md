@@ -1,13 +1,14 @@
 ---
-title: "Registrar um provedor de dados padrão do .NET Framework (SSRS) | Microsoft Docs"
+title: "Registrar um provedor de dados .NET Framework padrão (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "18"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 90600a0b51f489dcb2a1bd21038bf30562b7f144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
-  Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  
+  Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  
   
- Os provedores de dados de terceiros não fornecem necessariamente todas as funções disponíveis nas extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Para saber como estender a funcionalidade de um .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Os provedores de dados de terceiros não fornecem necessariamente todas as funções disponíveis nas extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Para saber como estender a funcionalidade de um provedor de dados do .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Você precisa ter credenciais de administrador para instalar e registrar provedores de dados.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Para instalar um assembly do provedor de dados no servidor de relatórios  
   
-1.  Navegue até o local padrão do diretório \bin no servidor de relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . O local padrão do diretório bin do servidor de relatório é  *\<drive >*: \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Navegue até o local padrão do diretório \bin no servidor de relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório bin do servidor de relatório é *\<drive>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copie o assembly de seu local de preparação para o diretório \bin do servidor de relatórios. Como alternativa, você pode carregar seu assembly no cache de assembly global (GAC). Para obter mais informações, consulte [Trabalhando com assemblies e cache de assembly global](http://go.microsoft.com/fwlink/?linkid=63912) na documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] no MSDN.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Adicione uma entrada para o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |Atributo|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Para instalar um assembly do provedor de dados no cliente do Designer de Relatórios  
   
-1.  Navegue até o local padrão do diretório PrivateAssemblies no cliente do Designer de Relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . O local padrão do diretório PrivateAssemblies é  *\<drive >*: \Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Navegue até o local padrão do diretório PrivateAssemblies no cliente do Designer de Relatórios no qual deseja usar o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A localização padrão do diretório PrivateAssemblies é *\<drive>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copie o assembly de seu local de preparação para o diretório PrivateAssemblies do cliente do Designer de Relatórios. Como alternativa, você pode carregar seu assembly no cache de assembly global (GAC). Para obter mais informações, consulte [Trabalhando com assemblies e cache de assembly global](http://go.microsoft.com/fwlink/?linkid=63912) na documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] no MSDN.  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Adicione uma entrada para o provedor de dados.  
   
-    |Atributo|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
@@ -201,12 +202,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="platform-considerations"></a>Considerações sobre plataformas  
  Em uma plataforma de 64 bits (x64), o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é executado no modo WOW de 32 bits. Quando você cria relatórios em uma plataforma x64, é preciso que os provedores de dados de 32 bits estejam instalados no cliente que está criando o relatório para que seja possível visualizá-los. Ao publicar o relatório no mesmo sistema, é preciso que os provedores de dados de x64 estejam instalados para permitir a exibição do relatório com o Gerenciador de Relatórios.  
   
- Não há suporte para o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] em computadores com plataformas com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Não há suporte para plataformas com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  As extensões de processamento de dados que estão instaladas com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser compiladas em modo nativo para cada plataforma e instaladas nos locais corretos. Se você registrar um provedor de dados personalizado ou um provedor de dados padrão do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , sua compilação deverá ser executada em modo nativo para a plataforma adequada e a instalação deverá ocorrer em locais apropriados. Caso a execução esteja sendo realizada em uma plataforma de 32 bits, o provedor de dados deverá ser compilado para uma plataforma de 32 bits. Caso a execução esteja sendo realizada em uma plataforma de 64 bits, o provedor de dados deverá ser compilado para uma plataforma de 64 bits. Não é permitido usar um provedor de dados de 32 bits com interfaces de 64 bits em uma plataforma de 64 bits. No software de terceiro, procure por informações que possam indicar se o provedor de dados funcionará na plataforma em que você deseja instalá-lo. Para obter mais informações sobre os provedores de dados e o suporte à plataforma, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar e administrar um servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Segurança de acesso do código no Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  

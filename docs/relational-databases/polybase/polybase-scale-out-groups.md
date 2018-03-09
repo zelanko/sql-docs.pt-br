@@ -1,11 +1,15 @@
 ---
 title: Grupos de escala horizontal do PolyBase | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 989b6a52d4a0e26b32f292fad44a5ad1caf0b71b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Uma instância do SQL Server autônoma com PolyBase pode se tornar um afunilamento de desempenho ao lidar com grandes conjuntos de dados no Hadoop ou no Armazenamento de Blobs do Azure. O recurso Grupo do PolyBase permite a você criar um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira escalar horizontal para melhor desempenho de consulta.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Uma instância do SQL Server autônoma com PolyBase pode se tornar um gargalo de desempenho ao lidar com grandes conjuntos de dados no Hadoop ou no Armazenamento de Blobs do Azure. O recurso Grupo do PolyBase permite a você criar um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira escalar horizontal para melhor desempenho de consulta.  
   
  Veja [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) e [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
  O nó de cabeçalho contém a instância do SQL Server para a qual as consultas do PolyBase são enviadas. Cada grupo do PolyBase pode ter apenas um nó de cabeçalho. Um nó de cabeçalho é um grupo lógico do Mecanismo de Banco de Dados do SQL, do Mecanismo de PolyBase e do Serviço de Movimentação de Dados de PolyBase na instância do SQL Server.  
   
 ### <a name="compute-node"></a>Nó de computação  
- Um nó de computação contém a instância do SQL Server que auxilia no processamento de consulta de escala horizontal de dados externos. Um nó de cabeçalho é um grupo lógico do SQL Server e do serviço de movimentação de dados de PolyBase na instância do SQL Server. Um grupo do PolyBase pode ter vários nós de computação.  
+ Um nó de computação contém a instância do SQL Server que auxilia no processamento de consulta de escala horizontal de dados externos. Um nó de cabeçalho é um grupo lógico do SQL Server e do serviço de movimentação de dados de PolyBase na instância do SQL Server. Um grupo do PolyBase pode ter vários nós de computação.  O nó principal e os nós de computação devem executar a mesma versão do SQL Server.
   
 ### <a name="distributed-query-processing"></a>Processamento de consulta distribuída  
  As consultas do PolyBase são enviadas ao SQL Server no nó de cabeçalho. A parte da consulta que se refere a tabelas externas é entregue ao mecanismo de PolyBase.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="to-configure-a-polybase-group"></a>Para configurar um grupo do PolyBase  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   N computadores no mesmo domínio  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="steps"></a>Etapas  
   
-1.  Instale o SQL Server com PolyBase em N computadores.  
+1.  Instale a mesma versão do SQL Server com PolyBase em N computadores.  
   
 2.  Selecione uma instância do SQL Server como o nó de cabeçalho. Um nó de cabeçalho pode ser designado apenas em uma instância executando o SQL Server Enterprise.  
   
@@ -136,7 +139,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="next-steps"></a>Próximas etapas  
  Para solução de problemas, confira [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)   
  [Configuração de conectividade do PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  

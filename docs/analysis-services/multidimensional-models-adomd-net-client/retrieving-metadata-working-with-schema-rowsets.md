@@ -1,16 +1,14 @@
 ---
 title: Trabalhando com conjuntos de linhas de esquema no ADOMD.NET | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 37a9b92672496c6eebc50a99b2ea0cacee55372a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperando metadados - trabalhando com conjuntos de linhas de esquema
   Quando você precisa de mais metadados do que os que estão disponíveis no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece o recurso de recuperação de todo o intervalo de conjuntos de linhas do esquema XMLA (XML for Analysis), OLE DB, OLE DB for OLAP e OLE DB for Data Mining:  
@@ -89,4 +86,3 @@ ms.lasthandoff: 10/24/2017
  [Recuperando metadados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

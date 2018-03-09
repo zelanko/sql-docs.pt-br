@@ -1,5 +1,5 @@
 ---
-title: Conectando componentes de fluxo de dados programaticamente | Microsoft Docs
+title: Conectar componentes de fluxo de dados programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,28 +22,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f9f18de57efa9a088018b8d5a69690cbf64f387
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Conectando componentes de fluxo de dados programaticamente
   Depois de adicionar componentes à tarefa de fluxo de dados, conecte-os para criar uma árvore de execução que represente o fluxo de dados das origens às transformações nos destinos. Você usa objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> para conectar os componentes no fluxo de dados.  
   
 ## <a name="creating-a-path"></a>Criando um caminho  
- Chamar o novo método do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> propriedade o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> interface para criar um novo caminho e adicioná-lo à coleção de caminhos na tarefa de fluxo de dados. Esse método retorna um objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> novo, desconectado a ser usado para conectar dois componentes.  
+ Chame o método New da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> para criar um caminho novo e adicioná-lo à coleção de caminhos na tarefa de fluxo de dados. Esse método retorna um objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> novo, desconectado a ser usado para conectar dois componentes.  
   
  Chame o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> para conectar o caminho e notificar os componentes que participam do caminho de que eles foram conectados. Esse método aceita um <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> do componente upstream e um <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> do componente downstream como parâmetros. Por padrão, a chamada ao método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> do componente cria uma única entrada para componentes que têm entradas e uma única saída para componentes que têm saídas. O exemplo a seguir usa essa saída padrão da origem e a entrada do destino.  
   
 ## <a name="next-step"></a>Próxima etapa  
- Depois de estabelecer um caminho entre dois componentes, a próxima etapa é mapear colunas de entrada no componente downstream, que é discutido no próximo tópico, [selecionando colunas de entrada programaticamente](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
+ Depois de estabelecer um caminho entre dois componentes, a próxima etapa é mapear colunas de entrada no componente downstream, discutida no próximo tópico, [Selecionar colunas de entrada programaticamente](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
   
 ## <a name="sample"></a>Amostra  
  O exemplo de código a seguir mostra como estabelecer um caminho entre dois componentes.  
@@ -130,8 +128,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Selecionando colunas de entrada de forma programática](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Selecionar colunas de entrada programaticamente](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

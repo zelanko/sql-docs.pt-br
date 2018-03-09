@@ -2,10 +2,13 @@
 title: Hierarquize (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: HIERARCHIZE
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 71df425f851f4f7ffcf5eee6628cad6292fba339
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 14719e4ec362b140cee189231f983ac772a567af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchize-mdx"></a>Hierarquize (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Ordena os membros de um conjunto em uma hierarquia.  
   
@@ -39,7 +42,7 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Hierarchize** função organiza os membros do conjunto especificado em ordem hierárquica. A função sempre retém duplicatas.  
   
 -   Se **POST** não for especificado, a função classificará os membros em um nível em sua ordem natural. Sua ordem natural é a ordem padrão dos membros na hierarquia quando nenhuma outra condição de classificação for especificada. Os membros filho seguem imediatamente seus membros pai.  
@@ -93,7 +96,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

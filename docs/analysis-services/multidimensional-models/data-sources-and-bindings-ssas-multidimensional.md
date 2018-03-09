@@ -2,16 +2,13 @@
 title: "Fontes de dados e associações (SSAS Multidimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -38,20 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
-  Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
   
 -   Uma fonte de dados relacional.  
   
@@ -198,4 +195,3 @@ ms.lasthandoff: 09/01/2017
  Um elemento adicional permitido em uma **Binding** que não existe diretamente no DDL é o **ParentColumnID**, que é usado em tabelas aninhadas para mineração de dados. Nesse caso, é necessário identificar a coluna pai na tabela aninhada para a qual associação está sendo fornecida.  
   
   
-

@@ -2,28 +2,34 @@
 title: Janela Locais | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.locals
-helpviewer_keywords: Locals Window [Transact-SQL]
+f1_keywords:
+- vs.debug.locals
+helpviewer_keywords:
+- Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a926ffee7e7ee47178e4d84e8833d8c32cf5ee8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 12634c2ab4acec714dbedb4aa41aa45e7bc8ef4c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Depurador do Transact-SQL – janela Locais
-  A janela **Locais** exibe informações sobre as expressões locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Locais** exibe informações sobre as expressões locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)]. O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar a janela Locais**  
@@ -48,7 +54,7 @@ ms.lasthandoff: 11/09/2017
  **Tipo**  
  Exibe o tipo de dados da expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Janela de Observação](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

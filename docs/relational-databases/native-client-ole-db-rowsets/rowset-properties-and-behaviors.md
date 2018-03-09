@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |DBPROP_MAYWRITECOLUMN|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_MEMORYUSAGE|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
-|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a todas as fases de notificação.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fases de notificação do provedor OLE DB Native Client são canceláveis antes de tentar executar a modificação do conjunto de linhas indicado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não oferece suporte ao cancelamento de fase após a conclusão da tentativa.|  
+|DBPROP_NOTIFICATIONPHASES|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a todas as fases de notificação.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|Leitura/gravação: somente leitura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrição: O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fases de notificação do provedor OLE DB Native Client são canceláveis antes de tentar executar a modificação do conjunto de linhas indicado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não oferece suporte ao cancelamento de fase após a conclusão da tentativa.|  
 |DBPROP_ORDEREDBOOKMARKS|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: A configuração alterar propriedades de visibilidade faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider para usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. Para obter mais informações, consulte [conjuntos de linhas e cursores do SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Quando definido como VARIANT_TRUE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client tenta usar um cursor de servidor para o conjunto de linhas.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Coluna: ColumnID<br /><br /> Leitura/gravação: somente leitura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Padrão: VT_EMPTY<br /><br /> Descrição: uma matriz de valores de número inteiro que representam a posição ordinal (de base 1) de uma coluna de resultados da cláusula COMPUTE dentro da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT atual. Este é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente do provedor OLE DB Native Client do atributo SQL_CA_SS_COLUMN_ID ODBC.|  
+|SSPROP_COLUMN_ID|Coluna: ColumnID<br /><br /> Leitura/gravação: somente leitura<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Padrão: VT_EMPTY<br /><br /> Descrição: uma matriz de valores de número inteiro que representam a posição ordinal (de base 1) de uma coluna de resultados da cláusula COMPUTE dentro da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT atual. Este é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente do provedor OLE DB Native Client do atributo SQL_CA_SS_COLUMN_ID ODBC.|  
 |SSPROP_DEFERPREPARE|Coluna: Não<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: VARIANT_TRUE: na execução preparada, a preparação de comando é adiada até **ICommand:: execute** é chamado ou uma operação de metapropriedade é executada. Se a propriedade for definida como<br /><br /> VARIANT_FALSE: A instrução está preparada quando **icommandprepare:: Prepare** é executado.|  
 |SSPROP_IRowsetFastLoad|Coluna: Não<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Defina essa propriedade como VARIANT_TRUE para abrir um conjunto de linhas de carregamento rápido por meio de **IOpenRowset:: OPENROWSET**. Você não pode definir essa propriedade **icommandproperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Coluna: não.<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Defina essa propriedade como VARIANT_TRUE para habilitar operações assíncronas usando o [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) interface.|  

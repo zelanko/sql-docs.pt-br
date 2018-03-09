@@ -1,5 +1,5 @@
 ---
-title: sys. fulltext_languages (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fulltext_languages_TSQL
 - fulltext_languages
 - fulltext_languages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e128525420e741af2ddca0c2584f55a950d98c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb66c10f797c7951f54125c7b5b99cfc25f983ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
    
 |Coluna|Data type|Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|O LCID (identificador de localidade) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relativo ao idioma.|  
+|**lcid**|**Int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificador de localidade do Windows (LCID) do idioma.|  
 |**name**|**sysname**|É o valor do alias em [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondente ao valor de **lcid** ou a representação de cadeia de caracteres do LCID numérico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valores retornados para idiomas padrão  
@@ -48,8 +50,8 @@ ms.lasthandoff: 11/17/2017
 |Language|LCID|  
 |--------------|----------|  
 |Árabe|1025|  
-|Bengali (Índia)|1093|  
-|Inglês britânico|2057|  
+|Bengali (India)|1093|  
+|British English|2057|  
 |Búlgaro|1026|  
 |Catalão|1027|  
 |Chinês (RAE de Hong Kong, RPC)|3076|  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |Inglês|1046|  
 |Francês|1036|  
 |Alemão|1031|  
-|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Grego|1032|  
+|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Guzerati|1095|  
 |Hebraico|1037|  
 |Híndi|1081|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 |Coreano|1042|  
 |Letão|1062|  
 |Lituano|1063|  
-|Malaio - Malásia|1086|  
+|Malay - Malaysia|1086|  
 |Malaiala|1100|  
 |Marati|1102|  
 |Neutro|0|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |Romeno|1048|  
 |Russo|1049|  
 |Sérvio (Cirílico)|3098|  
-|Sérvio (latino)|2074|  
+|Serbian (Latin)|2074|  
 |Chinês simplificado|2052|  
 |Eslovaco|1051|  
 |Esloveno|1060|  
@@ -101,14 +103,14 @@ ms.lasthandoff: 11/17/2017
 |Urdu|1056|  
 |Vietnamita|1066|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para atualizar a lista de idiomas registrados na pesquisa de texto completo, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_fulltext_load_thesaurus_file &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

@@ -3,8 +3,11 @@ title: Propriedades de consulta (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53fe222a0b084b49b324bcc0de9dee053e575edf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriedades de consulta (Visual Database Tools)
-Essas propriedades aparecem na janela Propriedades quando você tiver uma consulta aberta no Designer de Consulta e Exibição. A menos que seja indicado o contrário, é possível editar essas propriedades na janela Propriedades.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essas propriedades aparecem na janela Propriedades quando você tem uma consulta aberta no Designer de Exibição e Consulta. A menos que seja indicado o contrário, é possível editar essas propriedades na janela Propriedades.  
   
 > [!NOTE]  
 > As propriedades neste tópico são ordenadas por categoria e não por ordem alfabética.  
@@ -36,7 +39,7 @@ Expanda para mostrar o **Nome** da propriedade.
 **Nome**  
 Mostra o nome da consulta atual. Não pode ser alterado no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
-**Nome do Banco de Dados**  
+**Database Name**  
 Mostra o nome da fonte de dados para a tabela selecionada.  
   
 **Nome do servidor**  
@@ -85,7 +88,7 @@ Especifique que a consulta retornará apenas os primeiros porcentuais de linhas 
 **With Ties**  
 Especifique que a exibição incluirá uma cláusula WITH TIES. O WITH TIES é útil se uma exibição incluir uma cláusula ORDER BY e uma cláusula TOP com base em porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula ORDER BY, a exibição será estendida para incluir todas as respectivas linhas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] versão 7.0 ou posterior.)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Consultar com parâmetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -8,21 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, programming
+helpviewer_keywords:
+- ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: MightyPen
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f20d7d3a90d524cbb452fc081a9a6cdcaa1ebe0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-overview-and-benefits"></a>Benefícios e visão geral de ADO
 ActiveX Data Objects (ADO) é uma interface de alto nível, fácil de usar para OLE DB. OLE DB é uma interface de nível baixo, alto desempenho para uma variedade de armazenamentos de dados. ADO e OLE DB podem trabalhar com relacional (tabela) e não relacionais (hierárquica ou fluxo) dados.

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,12 +89,12 @@ ms.lasthandoff: 09/01/2017
   
 |Termo|Definição|  
 |----------|----------------|  
-|*constante*|É um símbolo que representa um valor de dados único e específico. Para obter mais informações, consulte [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
+|*constant*|É um símbolo que representa um valor de dados único e específico. Para obter mais informações, consulte [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|É uma unidade de [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe que fornece um serviço específico e retorna um único valor. *scalar_function* podem ser funções escalares internas, como as funções SUM, GETDATE ou CAST ou funções escalares definidas pelo usuário.|  
-|[ *table_name***.** ]|É o nome ou alias de uma tabela.|  
-|*coluna*|É o nome de uma coluna. Somente o nome da coluna é permitido em uma expressão.|  
-|*variável*|É o nome de uma variável ou parâmetro. Para obter mais informações, consulte [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *expressão***)** |É qualquer expressão válida conforme definido neste tópico. Os parênteses são operadores de agrupamento que verificam se todos os operadores na expressão entre parênteses são avaliados antes de a expressão resultante ser combinada com outra.|  
+|[ *table_name *.* * ]|É o nome ou alias de uma tabela.|  
+|*column*|É o nome de uma coluna. Somente o nome da coluna é permitido em uma expressão.|  
+|*variable*|É o nome de uma variável ou parâmetro. Para obter mais informações, consulte [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
+|**(** *expression*  **)**|É qualquer expressão válida conforme definido neste tópico. Os parênteses são operadores de agrupamento que verificam se todos os operadores na expressão entre parênteses são avaliados antes de a expressão resultante ser combinada com outra.|  
 |**(** *scalar_subquery* **)**|É uma subconsulta que retorna um valor. Por exemplo:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Os operadores unários podem ser aplicados somente a expressões que avaliam qualquer um dos tipos de dados da categoria de tipo de dados numérico. É um operador que tem somente um operando numérico:<br /><br /> + indica um número positivo.<br /><br /> - indica um número negativo.<br /><br /> ~ indica o operador de complemento.|  
 |{ *binary_operator* }|É um operador que define a maneira como duas expressões são combinadas para produzir um único resultado. *binary_operator* pode ser um operador aritmético, o operador de atribuição (=), um operador bit a bit, um operador de comparação, um operador lógico, o operador de concatenação de cadeia de caracteres (+) ou um operador unário. Para obter mais informações sobre operadores, consulte [operadores &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
@@ -111,7 +110,7 @@ ms.lasthandoff: 09/01/2017
   
  Expressões complexas compostas de muitos símbolos e operadores são avaliadas como um único resultado avaliado. O tipo de dados, o agrupamento, a precisão, a escala e o valor da expressão resultante são determinados pela combinação das expressões de componentes, duas de cada vez, até o resultado final ser alcançado. A sequência na qual as expressões são combinadas é definida pela precedência dos operadores na expressão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Duas expressões podem ser combinadas por um operador se o operador oferecer suporte para os tipos de dados das duas e pelo menos uma destas condições for verdadeira:  
   
 -   As expressões têm o mesmo tipo de dados.  
@@ -137,18 +136,17 @@ GO
  A expressão `1+2` é avaliada como `3` em cada linha do conjunto de resultados. Embora a expressão `ProductID` gere um valor exclusivo em cada linha de conjunto de resultados, cada linha tem apenas um valor para `ProductID`.  
   
 ## <a name="see-also"></a>Consulte também  
- [FUSO horário &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [União &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Precedência de tipo de dados &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [NULLIF &#40; Transact-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF &#40;Transact-SQL&#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

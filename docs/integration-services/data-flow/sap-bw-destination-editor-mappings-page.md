@@ -1,5 +1,5 @@
 ---
-title: "Editor de destino do SAP BW (página mapeamentos) | Microsoft Docs"
+title: "Editor de destino SAP BW (página Mapeamentos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3019f68825fd8fd52ea85b9b1b5c0fad37b4fb2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor de Destino de SAP BW (página Mapeamentos)
   Use a página **Mapeamentos** do **Editor de Destino SAP BW** para mapear colunas de entrada para colunas de destino.  
@@ -81,16 +80,15 @@ ms.lasthandoff: 08/03/2017
  **Coluna de Entrada**  
  Visualize as colunas de entrada que você selecionou.  
   
- Para mapear uma coluna de entrada diferente para a mesma coluna de destino, selecione uma coluna diferente de entrada na lista. Para remover um mapeamento, selecione  **\<ignorar >** para excluir a coluna de entrada da saída.  
+ Para mapear uma coluna de entrada diferente para a mesma coluna de destino, selecione uma coluna diferente de entrada na lista. Para remover um mapeamento, selecione **\<ignorar>** para excluir a coluna de entrada da saída.  
   
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja essa coluna mapeada ou não.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de destino do SAP BW &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Editor de destino do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de destino do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de Destino SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de Destino SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

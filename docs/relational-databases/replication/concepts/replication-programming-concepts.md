@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01257c38de98453f4672ebcf0d9101bdeedd5ae9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|Código gerenciado|Sincronização.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Código gerenciado|Criação de manipuladores de lógica de negócios para integrar lógica personalizada ao processo de sincronização de mesclagem.|  
 |[Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Script|Administração e monitoramento.|  
-|[Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Script|Sincronização.|  
+|[Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Script|Sincronização.|  
   
 ## <a name="example"></a>Exemplo  
  No [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], os dados precisam ser publicados para 200 representantes de vendas de todo o mundo. Os representantes de venda viajam com muita frequência e precisam usar laptops ou PDAs (personal digital assistants) para alterar dados de clientes e para adicionar novos pedidos. As alterações terão de ser sincronizadas com o Publicador quando o representante de vendas conectar o laptop à rede.  

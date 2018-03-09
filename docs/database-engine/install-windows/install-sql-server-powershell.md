@@ -2,27 +2,31 @@
 title: Instalar o SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0962e563c85f7707615486bbe87847a7988e6ed6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: bfd02dc1f80b6d84525734c4abfcfc953824fa1f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-powershell"></a>Instalar o SQL Server PowerShell
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configura automaticamente os componentes do PowerShell.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A instalação configura automaticamente os componentes do PowerShell.  
 
 Você instala o software que oferece suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao Windows PowerShell usando o programa de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ao selecionar quaisquer recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que exigem suporte do PowerShell, a Instalação instala os seguintes componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell:  
   

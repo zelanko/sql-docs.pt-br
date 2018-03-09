@@ -2,32 +2,30 @@
 title: "Subseleções em consultas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
-  Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
   
 ## <a name="subselects-by-example"></a>Subseleções por exemplo  
  Comecemos com um exemplo de como subseleções podem ajudar a gerar os resultados que nós queremos mostrar. Suponha que lhe peçam para gerar uma tabela que mostra o comportamento de vendas, ao longo de anos, para os 10 principais produtos.  

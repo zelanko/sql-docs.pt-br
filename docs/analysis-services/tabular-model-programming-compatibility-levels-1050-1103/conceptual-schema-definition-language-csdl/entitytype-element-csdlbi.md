@@ -2,32 +2,32 @@
 title: Elemento EntityType (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
-  O elemento **EntityType** é um tipo complexo que representa a estrutura de uma entidade de alto nível, como um cliente ou pedido, em um modelo de dados. O elemento **bi:EntityType** estende a definição de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usada na [Estrutura de Dados de Entidade](http://msdn.microsoft.com/library/bb399567.aspx).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento **EntityType** é um tipo complexo que representa a estrutura de uma entidade de alto nível, como um cliente ou pedido, em um modelo de dados. O elemento **bi:EntityType** estende a definição de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usada na [Estrutura de Dados de Entidade](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Um elemento EntityType deve ser especificado para cada uma das entidades incluídas no modelo de dados. Os subelementos de EntityType descrevem as colunas e medidas na tabela. As relações entre as tabelas são incluídas no **EntityContainer**.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |Promoção|Atributos que representam informações de promoções de marketing.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir mostra a parte da representação CSDLBI na versão 1.1 da tabela Geography usada no modelo de tabela da AdventureWorks. A coluna RowNumber é uma coluna oculta gerada automaticamente como um identificador de linha em modelos de tabela e, portanto, tem o atributo Contents, **RowNumber**.  
   
@@ -130,6 +130,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

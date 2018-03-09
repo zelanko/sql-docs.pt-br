@@ -2,10 +2,14 @@
 title: Usar a janela Propriedades no Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff486f96a72f465b94ddcf9b0c6752e3759f0fed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 22b1e823ce0c17afe17eee0da4e3c1f62678b079
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Usar a janela Propriedades no Management Studio
-  A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como uma conexão ou um operador de plano de execução, e informações sobre objetos de banco de dados, como tabelas, exibições e designers.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tal como uma conexão ou um operador de plano de execução, bem como informações sobre objetos de banco de dados como tabelas, exibições e designers.  
   
  Você pode usar a janela Propriedades para exibir as propriedades da conexão atual. Muitas propriedades são somente leitura na janela Propriedades, mas podem ser alteradas em outros lugares no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por exemplo, a propriedade Database de uma consulta é somente leitura na janela Propriedades, mas pode ser alterada na barra de ferramentas.  
   
@@ -53,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Na guia **Plano de execução** do Editor de Consultas SQL, clique nos ícones dos operadores para exibir informações sobre os operadores na janela Propriedades.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Janela Propriedades &#40;Management Studio&#41;](http://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
   
   

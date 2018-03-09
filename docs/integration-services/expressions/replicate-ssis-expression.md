@@ -1,5 +1,5 @@
 ---
-title: "REPLICATE (expressão SSIS) | Microsoft Docs"
+title: "REPLICATE (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b4826170435f3f70a8530c891d8d797fc4b2691b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (Expressão SSIS)
   Retorna uma expressão de caractere que é replicada várias vezes. O argumento *times* deve ser avaliado como um inteiro.  
@@ -50,7 +49,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *times* for zero, a função retornará uma cadeia de comprimento zero.  
   
  Se *times* for um número negativo, a função retornará um erro.  
@@ -80,8 +79,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

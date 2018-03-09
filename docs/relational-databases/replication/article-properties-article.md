@@ -2,9 +2,12 @@
 title: "Propriedades do Artigo – &lt;Artigo&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
-  A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação**. Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
   
 > [!NOTE]  
 >  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -173,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

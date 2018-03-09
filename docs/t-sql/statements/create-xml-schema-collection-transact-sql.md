@@ -28,17 +28,16 @@ helpviewer_keywords:
 - multiple schema namespaces
 - XML schema collections [SQL Server], creating
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa0611afff415744e66f29e056b52fa1c9b57970
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6941e48f344db354902d6475382fa39e5541bd9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *sql_identifier*  
  É o identificador SQL para a coleção de esquema XML.  
   
- *Expression*  
+ *Expressão*  
  É uma constante de cadeia de caracteres ou variável escalar. É **varchar**, **varbinary**, **nvarchar**, ou **xml** tipo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você também pode adicionar novos namespaces à coleção ou adicionar novos componentes a namespaces existentes na coleção usando [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
  Para remover coleções, use [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
@@ -271,12 +270,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
- [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
-

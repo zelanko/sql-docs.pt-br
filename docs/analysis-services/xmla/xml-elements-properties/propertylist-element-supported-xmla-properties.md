@@ -2,15 +2,13 @@
 title: Suporte para propriedades XMLA (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b2e13193dc3742f23d78473a34667bbf0fa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>Elemento PropertyList - suporte para propriedades XMLA
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte a propriedades listadas na tabela a seguir. Usar estas propriedades listadas no [propriedades](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) elemento o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte a propriedades listadas na tabela a seguir. Usar estas propriedades listadas no [propriedades](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) elemento o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
   
 |Nome|Description|Tipo|Valores|  
 |----------|-----------------|----------|------------|  
@@ -148,7 +146,7 @@ ms.lasthandoff: 11/17/2017
 |UserName|Esta propriedade não é mais suportada.<br /><br /> Especifica uma cadeia de caracteres que retorna o nome de usuário que a instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] associa ao comando. Para compatibilidade com versões anteriores, essa propriedade será ignorada sem gerar um erro quando usada com a **Execute** ou **Discover** método. Esta propriedade é equivalente à propriedade OLE DB DBPROP_USERNAME.<br /><br /> O valor padrão desta propriedade é o nome de usuário que abriu a sessão ou conexão atual.<br /><br /> Essa propriedade pode ser usada com a **Execute** método.|Opcional, somente leitura **cadeia de caracteres** propriedade||  
 |VisualMode|Esta propriedade é equivalente à propriedade OLE DB MDPROP_VISUALMODE.<br /><br /> O valor padrão desta propriedade é zero (0), equivalente a DBPROPVAL_VISUAL_MODE_DEFAULT.<br /><br /> Essa propriedade pode ser usada com a **Discover** e **Execute** métodos.|Opcional, somente gravação **inteiro** propriedade||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento PropertyList &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   

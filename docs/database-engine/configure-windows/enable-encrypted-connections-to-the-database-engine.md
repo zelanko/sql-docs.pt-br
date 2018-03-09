@@ -1,7 +1,7 @@
 ---
 title: "Habilitar conexões criptografadas com o Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9986789b1734fb8d5651a591876043754d94efbf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Complete o **Assistente para Exportação de Certificados**armazenando o arquivo de certificado em um local conveniente.  
   
-##  <a name="ConfigureServerConnections"></a> Para configurar o servidor para aceitar conexões criptografadas  
+##  <a name="ConfigureServerConnections"></a> Para configurar o servidor para forçar conexões criptografadas  
   
 1.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** *\<server instance>* e, depois, selecione **Propriedades**.  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  Reinicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
+
+> [!NOTE]
+> Para garantir a conectividade segura entre o cliente e o servidor, configure o cliente para solicitar conexões criptografadas. Mais detalhes são explicados [mais adiante neste artigo](#client-request-encrypt-connect-23h).
+
+
+
 ### <a name="wildcard-certificates"></a>Certificados curinga  
 A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dão suporte a certificados curinga. Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, consulte a documentação do cliente. O certificado curinga não pode ser selecionado usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para usar um certificado curinga, é necessário editar a chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e inserir a impressão digital do certificado, sem espaços, no valor **Certificado**.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> Para configurar o cliente para solicitar conexões criptografadas  
   
 1.  Copie o certificado original ou o arquivo de certificado exportado no computador cliente.  
@@ -113,7 +120,7 @@ A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, o [!
   
 3.  Na guia **Propriedades de Conexão** , clique em **Criptografar conexão**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
 

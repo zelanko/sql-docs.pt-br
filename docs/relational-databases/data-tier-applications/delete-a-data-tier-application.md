@@ -2,9 +2,12 @@
 title: Excluir um aplicativo da camada de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,20 +23,20 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 334e2674b9ccb720af74435d521c350984063f50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
-  Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 |Desanexar banco de dados|O banco de dados associado é desanexado. A instância do Mecanismo de Banco de Dados não pode fazer referência ao banco de dados, mas os dados e os arquivos de log estão intatos.|  
 |Excluir banco de dados|O banco de dados associado é removido. Os dados e os arquivos de log são excluídos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Não há nenhum mecanismo automático para restaurar os metadados da definição do DAC ou o banco de dados depois que um DAC é excluído. A maneira como a instância do DAC pode ser recriada manualmente depende da opção de exclusão.  
   
 |Opção|Como recriar a instância do DAC|  
@@ -235,7 +238,7 @@ $dacName  = "MyApplication"
   
  [Excluir um DAC usando o PowerShell](#DeleteDACPowerShell)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

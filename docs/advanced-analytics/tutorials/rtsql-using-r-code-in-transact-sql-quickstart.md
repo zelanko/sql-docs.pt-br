@@ -1,28 +1,34 @@
 ---
 title: "Usando o código R no Transact-SQL (R no início rápido do SQL) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d0915986d39aa6fb376063bf6a2a31a5c5953aa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Usando o código R no Transact-SQL (R no início rápido do SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tutorial orienta a mecânica básica de chamar um script R de um procedimento armazenado T-SQL.
 
@@ -37,7 +43,7 @@ Este tutorial orienta a mecânica básica de chamar um script R de um procedimen
 
 30 minutos, não incluindo a instalação
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você deve ter acesso a uma instância do SQL Server com um dos seguintes já instalados:
 
@@ -48,7 +54,7 @@ A instância do SQL Server pode estar em uma máquina virtual do Azure ou no loc
 
 Para executar consultas SQL que incluem script R, você pode usar qualquer outro aplicativo que possa se conectar a um banco de dados e executar o código T-SQL. Profissionais do SQL podem usar o SQL Server Management Studio (SSMS) ou o Visual Studio.
 
-Para este tutorial, para mostrar como é fácil executar R dentro do SQL Server, usamos o novo **extensão mssql para o código do Visual Studio**. Código do VS é um ambiente de desenvolvimento gratuito que pode ser executado em Windows, macOS ou Linux. O **mssql*** extensão é uma extensão leve para execução de consultas do SLq. Para instalá-lo, consulte este artigo: [Usar a extensão mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Para este tutorial, para mostrar como é fácil executar R dentro do SQL Server, usamos o novo **extensão mssql para o código do Visual Studio**. Código do VS é um ambiente de desenvolvimento gratuito que pode ser executado em Windows, macOS ou Linux. O **mssql** extensão é uma extensão leve para execução de consultas T-SQL. Para instalá-lo, consulte este artigo: [Usar a extensão mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Conectar-se ao banco de dados e executar um script de teste do Olá, Mundo
 

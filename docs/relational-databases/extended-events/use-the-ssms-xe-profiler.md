@@ -3,8 +3,11 @@ title: Usar o XEvent Profiler do SSMS | Microsoft Docs
 ms.custom: 
 ms.date: 10/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: genemi
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -20,14 +23,14 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d76bcf75112533bce6d74fda23dc43d983cf555
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Usar o XEvent Profiler do SSMS
-O XEvent Profiler do SSMS é um recurso do SSMS (SQL Server Management Studio) que exibe uma janela do visualizador dinâmico de eventos estendidos. Esta visão geral descreve os motivos para usar esse criador de perfil, os principais recursos e as instruções para começar a exibir eventos estendidos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O XEvent Profiler do SSMS é um recurso do SSMS (SQL Server Management Studio) que exibe uma janela do visualizador dinâmico de eventos estendidos. Esta visão geral descreve os motivos para usar esse criador de perfil, os principais recursos e as instruções para começar a exibir eventos estendidos.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>Por que usar o XEvent Profiler?
 Ao contrário do SQL Profiler, o XEvent Profiler é integrado diretamente ao SSMS e criado com base na tecnologia de Eventos Estendidos escalonáveis no mecanismo do SQL. Esse recurso permite acesso rápido a uma exibição de transmissão ao vivo de eventos de diagnóstico no SQL Server. Essa exibição pode ser personalizada e as personalizações podem ser compartilhadas com outros usuários do SSMS como um arquivo .viewsettings. A sessão criada pelo XE Profiler é menos intrusiva para o SQL Server em execução do que ocorreria com um rastreamento SQL semelhante ao usar o SQL Profiler. Essa sessão também pode ser personalizada pelo usuário usando a interface do usuário existente das propriedades da sessão do XE ou pelo T-SQL.

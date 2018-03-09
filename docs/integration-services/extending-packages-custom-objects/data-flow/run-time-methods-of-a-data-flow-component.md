@@ -1,5 +1,5 @@
 ---
-title: "Métodos de tempo de execução de dados de componente de fluxo | Microsoft Docs"
+title: "Métodos de tempo de execução de um componente de fluxo de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 874bc64760b93f2d7757022534c3d25a87d1d62c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos de tempo de execução de um componente de fluxo de dados
   No tempo de execução, a tarefa de fluxo de dados examina a sequência de componentes, prepara um plano de execução e gerencia um pool de threads de trabalho que executa o plano de trabalho. A tarefa carrega linhas de dados de origens, processa essas linhas através de transformações e as salva em destinos.  
@@ -167,10 +165,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Para obter mais informações sobre como desenvolver componentes que adicionam linhas a buffers de saída, consulte [desenvolvendo um componente de origem personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) e [desenvolvendo um componente de transformação personalizado com saídas assíncronas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Para obter mais informações sobre o desenvolvimento de componentes que adicionam linhas a buffers de saída, consulte [Desenvolver um componente de origem personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) e [Desenvolver um componente de transformação personalizado com saídas assíncronas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Recebendo linhas  
- Os componentes recebem linhas de componentes upstream em objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. A tarefa de fluxo de dados fornece um objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contém as linhas adicionadas ao fluxo de dados pelos componentes upstream como um parâmetro para o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Esse buffer de entrada pode ser usado para examinar e modificar as linhas e colunas no buffer, mas não pode ser usado para adicionar ou remover linhas. O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> é chamado repetidamente até que não haja mais nenhum buffer disponível. A última vez que ele é chamado, o <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> é de propriedade **true**. Você pode repetir a coleção de linhas no buffer usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, que avança o buffer à próxima linha. Este método retorna **false** quando o buffer está na última linha da coleção. Não é necessário verificar a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, a menos que você tenha de executar uma ação adicional depois que as últimas linhas de dados forem processadas.  
+ Os componentes recebem linhas de componentes upstream em objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. A tarefa de fluxo de dados fornece um objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contém as linhas adicionadas ao fluxo de dados pelos componentes upstream como um parâmetro para o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Esse buffer de entrada pode ser usado para examinar e modificar as linhas e colunas no buffer, mas não pode ser usado para adicionar ou remover linhas. O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> é chamado repetidamente até que não haja mais nenhum buffer disponível. Na última vez que é chamada, a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> é **true**. Você pode repetir a coleção de linhas no buffer usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, que avança o buffer à próxima linha. Esse método retorna **false** quando o buffer está na última linha da coleção. Não é necessário verificar a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, a menos que você tenha de executar uma ação adicional depois que as últimas linhas de dados forem processadas.  
   
  O texto abaixo mostra o padrão correto para usar o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> e a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>:  
   
@@ -216,10 +214,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- Para obter mais informações sobre como desenvolver componentes que recebem linhas em buffers de entrada, consulte [desenvolvendo um componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) e [desenvolvendo um componente de transformação personalizado com saídas síncronas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
+ Para obter mais informações sobre o desenvolvimento de componentes que recebem linhas em buffers de entrada, consulte [Desenvolver um componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) e [Desenvolver um componente de transformação personalizado com saídas síncronas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos de tempo de design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

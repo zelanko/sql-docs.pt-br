@@ -8,25 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94d03448ee23c653864ad42f1893b821bbad0af7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1b580be2ada4c13541a9cad6eb037c62627337b1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-master-data-services-database"></a>Criar um banco de dados do Master Data Services
   Crie um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] quando precisar de um novo banco de dados para oferecer suporte ao aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e ao serviço Web do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Para obter informações sobre os requisitos para o computador que hospeda o banco de dados, veja [Requisitos do banco de dados &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Conclua o assistente **Criar Banco de Dados** para criar e configurar o banco de dados. Para obter informações sobre as opções da interface do usuário no assistente, veja [Assistente para Criar Banco de Dados &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   Defina as configurações do sistema para o banco de dados e o aplicativo Web. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md).  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Configure um plano de manutenção para fazer backup dos logs de banco de dados e de transação. Para obter mais informações, veja [Requisitos do banco de dados &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

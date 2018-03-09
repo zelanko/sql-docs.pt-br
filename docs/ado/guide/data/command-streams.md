@@ -3,8 +3,9 @@ title: Comando fluxos | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef9db34ecfc7ee0ba3fbd41a052658a065a010
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7564f349c25fda5d39f977320937b2515bb9dfd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-streams"></a>Fluxos de comando
 ADO sempre tem suporte para entrada de comando no formato de cadeia de caracteres especificado pelo **CommandText** propriedade. Como alternativa, com o ADO 2.7 ou posterior, você também pode usar um fluxo de informações para a entrada de comando atribuindo o fluxo para o **CommandStream** propriedade. Você pode atribuir um ADO **fluxo** ou qualquer objeto que ofereça suporte a COM **IStream** interface.  

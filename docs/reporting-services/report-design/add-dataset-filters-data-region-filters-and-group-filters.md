@@ -1,27 +1,27 @@
 ---
-title: "Adicionar filtros de conjunto de dados, filtros de região de dados e filtros de grupo | Microsoft Docs"
+title: "Adicionar filtros de conjunto de dados, de região de dados e de grupo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
   Em um relatório, um filtro faz parte de um conjunto de dados, uma região de dados ou um grupo de regiões de dados criado por você para limitar os dados usados no relatório. Os filtros são uma forma de ajudar você a controlar os dados do relatório, caso você não possa alterar a consulta do conjunto de dados; por exemplo, se estiver usando um conjunto de dados compartilhado.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
  As seções a seguir descrevem cada parte da equação de filtro.  
   
-### <a name="expression"></a>Expressão  
+### <a name="expression"></a>Expression  
  Quando a equação de filtro é avaliada pelo processador de relatórios em tempo de execução, os tipos de dados da expressão e o valor devem ser iguais. O tipo de dados do campo selecionado para **Expressão** é determinado pela extensão de processamento de dados ou pelo provedor de dados usado para recuperar dados da fonte de dados. O tipo de dados da expressão digitado para **Valor** é determinado pelo padrão [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As opções do tipo de dados são determinadas pelos tipos de dados suportados para uma definição de relatório. Os valores do banco de dados podem ser convertidos pelo provedor de dados em um tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de Dados  
@@ -104,9 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  Voltar ao Início  
   
-## <a name="see-also"></a>Consulte também  
- [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de relatórios, Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

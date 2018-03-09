@@ -3,8 +3,9 @@ title: Objeto de coluna (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Column
-helpviewer_keywords: Column object [ADOX]
+f1_keywords:
+- Column
+helpviewer_keywords:
+- Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a12b65adf6e13dd04573453c588f07b796e778d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90ca5950c857ea5037381daae3568bc6c7becd71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="column-object-adox"></a>Objeto de coluna (ADOX)
 Representa uma coluna de uma tabela, índice ou chave.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O código a seguir cria um novo **coluna**:  
   
  `Dim obj As New Column`  

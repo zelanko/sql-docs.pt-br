@@ -1,30 +1,35 @@
 ---
 title: "Polígono | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 398a4b22222443d66390d461d4f6a535e38b59b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5026800fe6d7c37a8d02559b605d3d1039d508b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="polygon"></a>Polígono
-  Um **Polygon** é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
+# <a name="polygon"></a>Polygon
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Um **Polygon** é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
   
 ## <a name="polygon-instances"></a>Instâncias de polígono  
  Uma instância **Polygon** pode ser formada de um anel que tem, pelo menos, três pontos distintos. Uma instância **Polygon** também pode estar vazia.  
@@ -139,7 +144,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  Este é outro exemplo de conversão de uma instância inválida em uma instância de geometry válida. No exemplo a seguir, a instância `Polygon` foi criada usando três pontos que são exatamente iguais:  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  
@@ -148,7 +153,7 @@ SELECT @g.ToString()
   
  A instância de geometry retornada acima é um `Point(1 3)`.  Se o `Polygon` fornecido for `POLYGON((1 3, 1 5, 1 3, 1 3))` , `MakeValid()` retornaria `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STArea &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

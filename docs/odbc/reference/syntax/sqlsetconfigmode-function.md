@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConfigMode
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConfigMode
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConfigMode
-helpviewer_keywords:
-- SQLSetConfigMode function [ODBC]
+f1_keywords: SQLSetConfigMode
+helpviewer_keywords: SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3b9305a4b9cbbf8ce7316d1c3eccf71115e5f0fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8919f758c486e6569b9620fcaa7bcf76f4dac0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconfigmode-function"></a>Função SQLSetConfigMode
 **Conformidade**  
@@ -86,4 +80,3 @@ BOOL SQLSetConfigMode(
 |Criar uma fonte de dados|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |Conectando a uma fonte de dados usando uma caixa de diálogo ou cadeia de caracteres de conexão|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Recuperando o modo de configuração|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
-

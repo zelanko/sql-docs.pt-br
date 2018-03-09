@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55f1b7e612a1c7d120e06078b0fdba45d6409d36
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>Criar função (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -75,7 +74,7 @@ RETURNS return_data_type
  *schema_name*  
  É o nome do esquema ao qual a função definida pelo usuário pertence.  
   
- *nome_da_função*  
+ *function_name*  
  É o nome da função definida pelo usuário. Nomes de função devem estar de acordo com as regras para identificadores e devem ser exclusivos no banco de dados e seu esquema.  
   
 > [!NOTE]  
@@ -94,7 +93,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  É o tipo de dados do parâmetro. Para [!INCLUDE[tsql](../../includes/tsql-md.md)] funções, todos os tipos de dados escalares com suporte no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de hora (rowversion) não é um tipo com suporte.  
   
- [=*padrão* ]  
+ [ =*default* ]  
  É um valor padrão para o parâmetro. Se um *padrão* valor for definido, a função pode ser executada sem especificar um valor para esse parâmetro.  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão.  
@@ -110,7 +109,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  Especifica que a função terá uma ou mais das opções a seguir.  
   
@@ -203,6 +202,5 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
  [Remover função (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
-
 
 

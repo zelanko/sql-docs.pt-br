@@ -2,33 +2,30 @@
 title: Configurar o acesso HTTP ao Analysis Services no IIS 8.0 | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS 8.0
-  Este artigo explica como configurar um ponto de extremidade HTTP para acessar uma instância do Analysis Services. É possível habilitar o acesso HTTP configurando o MSMDPUMP.dll, uma extensão de ISAPI que é executada no IIS (Serviços de Informações da Internet) e que bombeia dados entre os aplicativos cliente e um servidor do Analysis Services. Esta abordagem oferece um meio alternativo de se conectar ao Analysis Services quando sua solução de BI requer os seguintes recursos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este artigo explica como configurar um ponto de extremidade HTTP para acessar uma instância do Analysis Services. É possível habilitar o acesso HTTP configurando o MSMDPUMP.dll, uma extensão de ISAPI que é executada no IIS (Serviços de Informações da Internet) e que bombeia dados entre os aplicativos cliente e um servidor do Analysis Services. Esta abordagem oferece um meio alternativo de se conectar ao Analysis Services quando sua solução de BI requer os seguintes recursos:  
   
 -   O acesso de cliente está em conexões via Internet ou extranet, com restrições quanto às portas a serem habilitadas.  
   
@@ -132,11 +129,11 @@ ms.lasthandoff: 09/01/2017
   
 4.  Verifique se a pasta \inetpub\wwwroot\OLAP no servidor Web contém o seguinte: MSMDPUMP.DLL, MSMDPUMP.INI e uma pasta Resources. A estrutura de pastas devem ter a seguinte aparência:  
   
-    -   \<unidade >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<unidade >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<unidade >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Etapa 2: Criar um pool de aplicativos e um diretório virtual no IIS  
  Em seguida, crie um pool de aplicativos e um ponto de extremidade para a bomba.  
@@ -327,4 +324,3 @@ ms.lasthandoff: 09/01/2017
  [Como configurar o SSL no IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
-

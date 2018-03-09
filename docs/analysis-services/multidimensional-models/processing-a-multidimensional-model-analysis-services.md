@@ -2,16 +2,13 @@
 title: Processando um modelo multidimensional (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,20 +23,20 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Processando um modelo multidimensional (Analysis Services)
-  O processamento é a etapa ou uma série de etapas nas quais o Analysis Services carrega dados de uma fonte de dados relacional para um modelo multidimensional. Para objetos que usam o armazenamento MOLAP, os dados são salvos em disco na pasta do arquivo de banco de dados. No armazenamento ROLAP, o processamento ocorre sob demanda, em resposta a uma consulta MDX sobre um objeto. Para objetos que usam armazenamento ROLAP, o processamento refere-se à atualização do cache antes de retornar os resultados da consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O processamento é a etapa ou uma série de etapas nas quais o Analysis Services carrega dados de uma fonte de dados relacional para um modelo multidimensional. Para objetos que usam o armazenamento MOLAP, os dados são salvos em disco na pasta do arquivo de banco de dados. No armazenamento ROLAP, o processamento ocorre sob demanda, em resposta a uma consulta MDX sobre um objeto. Para objetos que usam armazenamento ROLAP, o processamento refere-se à atualização do cache antes de retornar os resultados da consulta.  
   
  Por padrão, o processamento ocorre quando você implanta uma solução no servidor. Você também pode processar toda a solução ou parte dela, usando ferramentas ad hoc como o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou em um agendamento usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o SQL Server Agent. Ao fazer uma alteração estrutural no modelo, como remover uma dimensão ou alterar seu nível de compatibilidade, você precisará processar novamente para sincronizar os aspectos físicos e lógicos do modelo.  
   
@@ -90,7 +87,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Arquitetura lógica &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

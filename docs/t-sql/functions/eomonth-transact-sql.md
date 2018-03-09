@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-caps.latest.revision: 19
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: a4356c6472b5757374909ae0350d597a91e4252d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: af048d17aadfece5e1deecf8a5aa4b008f1bd0fd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,7 +56,7 @@ EOMONTH ( start_date [, month_to_add ] )
 ## <a name="return-type"></a>Tipo de retorno  
  **date**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa função pode ser remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode ser remota para servidores com versão anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
@@ -100,7 +99,7 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH com e sem o parâmetro month_to_add  
   
-```tsql  
+```sql  
 DECLARE @date DATETIME = GETDATE();  
 SELECT EOMONTH ( @date ) AS 'This Month';  
 SELECT EOMONTH ( @date, 1 ) AS 'Next Month';  
@@ -131,5 +130,4 @@ Last Month
 ```  
   
   
-
 

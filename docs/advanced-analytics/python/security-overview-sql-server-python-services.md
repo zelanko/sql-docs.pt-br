@@ -2,25 +2,28 @@
 title: "Visão geral de segurança para Python no SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8e0f7b35f91fa9f62b1ac4ab2e32c56ff0265bdf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c4fc8ef42cf38e908aca8dbbfeacbfd5fdf0ece4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>Visão geral de segurança para Python no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve a arquitetura de segurança que é usada para conectar o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] componentes de Python e mecanismo de banco de dados. Exemplos do processo de segurança são fornecidos para dois cenários comuns: executando Python no SQL Server usando um procedimento armazenado e executando o Python com o SQL Server como o contexto de computação remota.
 

@@ -2,34 +2,32 @@
 title: Conjunto de linhas DISCOVER_TRACE_COLUMNS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d017cee6e363f3a035baaf67c756f00edeaea3f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>Conjunto de linhas DISCOVER_TRACE_COLUMNS
-  Retorna um documento XML que descreve as colunas disponíveis em um rastreamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna um documento XML que descreve as colunas disponíveis em um rastreamento.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

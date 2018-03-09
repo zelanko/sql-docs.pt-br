@@ -1,5 +1,5 @@
 ---
-title: "Criar e implantar um Cache para a transformação pesquisa | Microsoft Docs"
+title: "Criar e implantar um cache para a transformação Pesquisa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 76b6c9efffe9f87dc9bae67958b8ccf85a79bd76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Criar e implantar um cache para a Transformação Pesquisa
   Você pode criar e implementar um arquivo de cache (.caw) para uma transformação Pesquisa. O conjunto de dados de referência é armazenado no arquivo de cache.  
@@ -94,12 +93,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  Configure o projeto para criar um utilitário de implantação e, em seguida, crie o projeto. Para obter mais informações, consulte [Criar um utilitário de implantação](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Um arquivo de manifesto, \< *nome do projeto*>. &Gt;.ssisdeploymentmanifest.XML é criado que lista os arquivos diversos no projeto, os pacotes e as configurações de pacote.  
+     Um arquivo de manifesto, \<*nome do projeto*>.SSISDeploymentManifest.xml é criado e lista os arquivos diversos no projeto, os pacotes e as configurações de pacote.  
   
 5.  Implemente os pacotes no sistema de arquivos Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um utilitário de implantação](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

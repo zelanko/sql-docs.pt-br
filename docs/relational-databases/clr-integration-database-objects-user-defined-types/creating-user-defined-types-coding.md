@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -33,19 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71fd426940e8cf9b5970bcd24a3f982bc9dc8f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Criando tipos definidos pelo usuário - codificação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ao codificar sua definição de tipo definido pelo usuário (UDT), você deve implementar vários recursos, dependendo se você estiver implementando o UDT como uma classe ou estrutura, bem como sobre as opções de serialização e o formato escolhido.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
   
  O exemplo nesta seção ilustra a implementação de um **ponto** UDT como uma **struct** (ou **estrutura** no Visual Basic). O **ponto** UDT consiste em X e Y coordenadas implementadas como procedimentos de propriedade.  
   

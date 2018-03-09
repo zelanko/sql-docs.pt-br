@@ -2,32 +2,32 @@
 title: Elemento AssociationSet (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
-  O elemento **AssociationSet** é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento **AssociationSet** é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
   
  Um **AssociationSet** deve ser especificado para cada relação exclusiva em um modelo. O **AssociationSet** define os pontos de extremidade usando o elemento **Association** . O elemento **AssociationSet** também define os metadados sobre a relação e seu uso no modelo de dados.  
   
@@ -46,13 +46,13 @@ ms.lasthandoff: 11/17/2017
   
  A tabela a seguir lista os valores do elemento **State** .  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |Ativa|A associação está ativa.|  
 |Inativa|A associação está ativa.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir mostra uma relação no modelo de tabela da AdventureWorks (na versão 1.1 da CSDLBI). A associação é marcada como Inactive, pois existe uma relação (entre OrderKey e Date).  
   
@@ -83,6 +83,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

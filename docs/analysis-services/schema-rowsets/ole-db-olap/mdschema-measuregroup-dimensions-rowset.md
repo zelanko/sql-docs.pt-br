@@ -2,15 +2,13 @@
 title: Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEASUREGROUP_DIMENSIONS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d94779b19769a5ee5ac9d5d10f2804114911cde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS
-  Enumera as dimensões de grupos de medidas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera as dimensões de grupos de medidas.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **MDSCHEMA_MEASUREGROUP_DIMENSIONS** contém as colunas a seguir.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> 1 Visível<br /><br /> 2 não visível<br /><br /> A restrição padrão tem valor 1.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

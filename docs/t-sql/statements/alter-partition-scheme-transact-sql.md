@@ -24,24 +24,27 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: 17
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545fe3da48f0d0c98d72b32e5a82d9fd55579d00
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f339a83559e565d5046c721657becd6cf6a5940d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adiciona um grupo de arquivos a um esquema de partição ou altera a designação do grupo de arquivos NEXT USED para o esquema de partição.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Adiciona um grupo de arquivos a um esquema de partição ou altera a designação do grupo de arquivos NEXT USED para o esquema de partição. 
+
+>[!NOTE]
+>Banco de dados do SQL Azure têm suporte apenas grupos de arquivos primários.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do artigo") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +71,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ## <a name="permissions"></a>Permissões  
- Seção permissões a seguir podem ser usadas para executar ALTER PARTITION SCHEME:  
+ As seguintes permissões podem ser usadas para executar ALTER PARTITION SCHEME:  
   
 -   Permissão ALTER ANY DATASPACE. Essa permissão tem como padrão os membros da função de servidor fixa **sysadmin** e das funções de banco de dados fixas **db_owner** e **db_ddladmin** .  
   
@@ -104,4 +107,3 @@ NEXT USED test5fg;
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

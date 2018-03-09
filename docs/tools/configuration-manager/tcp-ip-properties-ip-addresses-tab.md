@@ -2,29 +2,34 @@
 title: "Propriedades de TCP/IP (guia de endereços IP) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 495e934aacbe30c4692a242bc44a10f809122c29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
-  Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
   
  As alterações terão efeito quando o SQL Server for reiniciado. Para obter informações sobre como iniciar e interromper o serviço SQL Server Browser, consulte [Iniciar e interromper o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -38,7 +43,7 @@ ms.lasthandoff: 11/09/2017
  **Ativa**  
  Indica que o endereço IP está ativo no computador. Não disponível para **IP Tudo**.  
   
- **Ativado**  
+ **Enabled**  
  Se a propriedade **Escutar Tudo** em **Propriedades do TCP/IP (Guia Protocolo)** for definida como **Não**, essa propriedade indicará ser o SQL Server está escutando no endereço IP. Se a propriedade **Escutar Tudo** em **Propriedades do TCP/IP (Guia Protocolo)** estiver definida como **Sim**, a propriedade será desconsiderada. Não disponível para **IP Tudo**.  
   
  **Endereço IP**  
@@ -54,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
  O mecanismo de banco de dados pode escutar em várias portas no mesmo endereço IP. Liste as portas, separadas por vírgula, no formato 1433,1500,1501. Este campo é limitado a 2.047 caracteres.  
   
- Para configurar um único endereço IP para escutar em várias portas, o parâmetro **Escutar Tudo** também deve ser definido como **Não**, na **Guia Protocolos** da caixa de diálogo **Propriedades do TCP/IP** . Para obter mais informações, consulte “Como configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP” nos Manuais Online do SQL Server.  
+ Para configurar um único endereço IP para escutar em várias portas, o parâmetro **Escutar Tudo** também deve ser definido como **Não**, na **Guia Protocolos** da caixa de diálogo **Propriedades do TCP/IP**. Para obter mais informações, consulte “Como configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP” nos Manuais Online do SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Adicionando ou removendo endereços IP  
  O SQL Server Configuration Manager exibe os endereços IP que estavam disponíveis no momento em que o SQL Server foi instalado. Os endereços IP disponíveis podem ser alterados quando placas de rede são adicionadas ou removidas, quando um endereço IP atribuído dinamicamente expira, quando a estrutura de rede é reconfigurada ou quando o local físico do computador é alterado, como quando um computador laptop se conecta à rede em um edifício diferente. Para alterar um endereço IP, edite a caixa **Endereço IP** e reinicie o SQL Server.  

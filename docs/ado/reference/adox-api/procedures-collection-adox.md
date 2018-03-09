@@ -3,8 +3,9 @@ title: "Coleção de procedimentos (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,24 @@ apitype: COM
 f1_keywords:
 - Procedures
 - Catalog::Procedures
-helpviewer_keywords: Procedures collection [ADOX]
+helpviewer_keywords:
+- Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0a3c09cf4c82a12882ab4716830c580f2716fd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c02ac401065cfb605bcf097b8305d3e5cbb424a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-collection-adox"></a>Coleção de procedimentos (ADOX)
 Contém todos os [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) objetos de um catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) método para um **procedimentos** coleção é exclusiva para ADOX. Você pode:  
   
 -   Adicionar um novo procedimento à coleção com o **Append** método.  

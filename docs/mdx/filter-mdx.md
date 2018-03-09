@@ -2,10 +2,13 @@
 title: Filtro (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: filter
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b106f1777996821a808d68a2d389161db70ce872
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o conjunto resultante da filtragem de um conjunto especificado com base em um critério de pesquisa.  
   
@@ -42,7 +45,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Uma expressão lógica MDX válida avaliada como verdadeira ou falsa.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **filtro** função avalia a expressão lógica especificada em relação a cada tupla no conjunto especificado. A função retorna um conjunto que consiste em cada tupla no conjunto especificado em que a expressão lógica é avaliada como **true**. Se nenhuma tupla for avaliada como **true**, um conjunto vazio será retornado.  
   
  O **filtro** função funciona de maneira semelhante do [IIf](../mdx/iif-mdx.md) função. O **IIf** função retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto o **filtro** função retorna um conjunto de tuplas que atendem à condição de pesquisa especificada. Na verdade, o **filtro** função executa `IIf(Logical_Expression, Set_Expression.Current, NULL)` em cada tupla no conjunto e retorna o conjunto resultante.  
@@ -91,7 +94,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

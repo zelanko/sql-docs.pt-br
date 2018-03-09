@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,24 +46,8 @@ ms.lasthandoff: 11/17/2017
  Um índice com colunas não chave pode melhorar o desempenho de consulta significativamente quando todas as colunas na consulta são incluídas no índice como colunas de chave ou não chave. Os ganhos de desempenho são alcançados pois o otimizador de consulta pode localizar todos os valores de coluna dentro do índice, a tabela, ou dados de índice clusterizado não são acessados, resultando em poucas operações de E/S de disco.  
   
 > [!NOTE]  
->  Quando um índice contém todas as colunas referenciadas por uma consulta, ele costuma ser referenciado como se *abrangendo a consulta*.  
-  
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Recomendações de design](#DesignRecs)  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Segurança](#Security)  
-  
--   **Para criar um índice com colunas não chave, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+> Quando um índice contém todas as colunas referenciadas por uma consulta, ele costuma ser referenciado como se *abrangendo a consulta*.  
+   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="DesignRecs"></a> Recomendações de design  
@@ -110,19 +95,19 @@ ms.lasthandoff: 11/17/2017
   
 6.  Na guia **Colunas de chave de índice** , clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
+7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
   
 8.  Clique em **OK**.  
   
 9. Na guia **Colunas incluídas** , clique em **Adicionar…**.  
   
-10. Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
+10. Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
   
 11. Clique em **OK**.  
   
 12. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para criar um índice com colunas não chave  
   
@@ -132,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +128,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+
+## <a name="related-content"></a>Conteúdo relacionado  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

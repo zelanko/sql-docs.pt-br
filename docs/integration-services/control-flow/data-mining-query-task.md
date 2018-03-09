@@ -1,5 +1,5 @@
 ---
-title: "Tarefa consulta de mineração de dados | Microsoft Docs"
+title: "Tarefa Consulta de Mineração de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,19 +21,18 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-mining-query-task"></a>Tarefa Consulta de Mineração de Dados
+# <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece tarefas que desempenham outras operações de business intelligence, como executar instruções DDL (linguagem de definição de dados) e objetos de análise de processamento.  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/11/2017
   
  **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
- **Novo**  
+ **Nova**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -179,13 +178,12 @@ ms.lasthandoff: 08/11/2017
  **Conexão**  
  Selecione um gerenciador de conexões na lista ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Novo**  
+ **Nova**  
  Crie um novo gerenciador de conexões. Só podem ser usados os tipos de gerenciador de conexões ADO.NET e OLE DB.  
   
  **Tabela de saída**  
  Especifique a tabela na qual a consulta de previsão deve gravar seus resultados.  
   
- **Descartar e recriar a tabela de saída**  
+ **Ignorar e recriar tabela de saída**  
  Indique se a consulta de previsão deve substituir o conteúdo na tabela de destino, ignorando e, em seguida, recriando a tabela.  
   
-

@@ -1,26 +1,31 @@
 ---
 title: "Exemplo de estado de prontidão é de propriedade (VBScript) | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: ReadyState property [ADO], VBScript example
+dev_langs:
+- VB
+helpviewer_keywords:
+- ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3cc3f3ecd687b0a00054e8fd82c24e83d9f7ea6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 49aac89e8d209582ac461080a02bfd3e2d3db397
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readystate-property-example-vbscript"></a>Exemplo de estado de prontidão é de propriedade (VBScript)
 > [!IMPORTANT]

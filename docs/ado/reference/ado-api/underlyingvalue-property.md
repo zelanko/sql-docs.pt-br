@@ -3,7 +3,7 @@ title: Propriedade UnderlyingValue | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 739852d4cbfa4aaf2cf45a59b81b60e23617597f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4699695a6a74c5da7dca4445c35d605cd399795d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="underlyingvalue-property"></a>Propriedade UnderlyingValue
 Indica o valor atual de um [campo](../../../ado/reference/ado-api/field-object.md) objeto no banco de dados.  
@@ -38,7 +37,7 @@ Indica o valor atual de um [campo](../../../ado/reference/ado-api/field-object.m
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **Variant** valor que indica o valor de **campo**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **UnderlyingValue** propriedade para retornar o valor do campo atual do banco de dados. O valor do campo no **UnderlyingValue** propriedade é o valor que é visível para a transação e pode ser o resultado de uma atualização recente por outra transação. Isso pode ser diferente do [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) propriedade, que reflete o valor que foi originalmente retornado para o [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Isso é semelhante a usar o [Resync](../../../ado/reference/ado-api/resync-method.md) método, mas o **UnderlyingValue** propriedade retorna apenas o valor de um determinado campo do registro atual. Esse é o mesmo valor que o [Resync](../../../ado/reference/ado-api/resync-method.md) usa o método para substituir o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade.  
@@ -56,4 +55,3 @@ Indica o valor atual de um [campo](../../../ado/reference/ado-api/field-object.m
  [Exemplo de propriedades de UnderlyingValue (VC + +) e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Propriedade OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Método Resync](../../../ado/reference/ado-api/resync-method.md)
-

@@ -2,25 +2,26 @@
 title: "Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5dd771760822004cf75dfb602882bb739b2e396d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bfecbec1812a15ec582c8e5d91afb8e471f8de3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
 Saiba como adicionar ações de hiperlink a caixas de texto, imagens, gráficos e medidores nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Links podem ir para outros relatórios, indicadores em um relatório ou URLs estáticas ou dinâmicas. 
@@ -92,7 +93,7 @@ Tente adicionar hiperlinks com os dados de exemplo no [Tutorial: Formatar texto 
   
 7.  Para testar o link, clique em **Executar** para visualizar o relatório e, em seguida, no item de relatório no qual você definiu esse link.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Criar um mapa de documentos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   

@@ -2,12 +2,13 @@
 title: "Sintaxe do caminho do elemento para dados de relatório XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,15 +16,15 @@ helpviewer_keywords:
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 121f98cb4b10c480b2f6e215c9432361f963475c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -71,7 +72,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir resume os termos do caminho do elemento. Os exemplos na tabela referem-se ao documento XML de exemplo Customers.xml, que está incluído na seção Exemplos deste tópico.  
   
 > [!NOTE]  
@@ -86,7 +87,7 @@ XMLLocalName :: =
 |**FieldList**|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada (**{}**), nenhum campo deste nó será usado.<br /><br /> Um **FieldList** pode não conter um **Value** nem um **Element** ou **ElementNode**.|  
 |**Campo**|Especifica os dados recuperados como um campo do conjunto de dados.|  
 |**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<ID do Cliente="1">, **ID** é um atributo e **@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
-|**Valor**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se ele for incluído no final de um caminho do elemento, o valor de **Return {@}** será **Chair**.|  
+|**Value**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se ele for incluído no final de um caminho do elemento, o valor de **Return {@}** será **Chair**.|  
 |**Element**|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |**Tipo**|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  
 |**NamespacePrefix**|O**NamespacePrefix** é definido no elemento Consulta XML. Se não existir nenhum elemento Consulta XML, os namespaces no **ElementPath** XML serão ignorados. Se existir um elemento Consulta XML, o **ElementPath** XML terá um atributo **IgnoreNamespaces**opcional. Se IgnoreNamespaces for **true**, os namespaces no **ElementPath** XML e no documento XML serão ignorados. Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -208,7 +209,7 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  

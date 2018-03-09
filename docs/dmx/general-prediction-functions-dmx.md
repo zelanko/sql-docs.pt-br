@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bb62e03f1f151bde68dd2fbc10d64ac32ef9c993
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e767d0243a8600c0f20cffebebfa92baffc2fc4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="general-prediction-functions-dmx"></a>Funções de previsão gerais (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,17 +75,17 @@ ms.lasthandoff: 11/20/2017
   
  Para obter informações gerais sobre funções em DMX, consulte [extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-|Tipo de consulta|Funções suportadas|Comentários|  
+|Tipo de consulta|Funções suportadas|Remarks|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<modelo >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)|Essas funções podem ser usadas para fornecer valores máximos, valores mínimos e médias para qualquer coluna que contenha tipos de dados numéricos, independentemente de a coluna ser contínua ou ter sido diferenciada.|  
-|[SELECT FROM \<modelo >. CONTEÚDO](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [SELECT FROM \<modelo >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40; DMX &#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40; Analysis Services – mineração de dados &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Se você tiver salvo o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX que estão disponíveis para consultar uma hierarquia de atributo.|  
+|[SELECT FROM \<modelo >. CONTEÚDO](../dmx/select-from-model-content-dmx.md)<br /><br /> ou em<br /><br /> [SELECT FROM \<modelo >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40; DMX &#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40; Analysis Services – mineração de dados &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Se você tiver salvo o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX que estão disponíveis para consultar uma hierarquia de atributo.|  
 |[SELECT FROM \<modelo >. CASOS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag Class](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40; DMX &#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md)|A função Lag é suportada somente para modelos de série temporal.<br /><br /> Há suporte para a função IsTestCase modelos com base em uma estrutura que foi criada usando a opção de validação para criar um conjunto de dados de teste. Se o modelo não for baseado em uma estrutura com um conjunto de teste de validação, todos os casos serão considerados como casos de treinamento.|  
 |[SELECT FROM \<modelo >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)|Nesse contexto, a função IsInNode retornará um caso que pertence a um conjunto de casos de amostra idealizados.|  
 |SELECT FROM \<modelo >. PMML|Não aplicável. Em vez disso, use funções de consulta XML.|As representações PMML são suportadas apenas pelos tipos de modelo a seguir:<br /><br /> Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<modelo > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](../analysis-services/data-mining/data-mining-queries.md).|  
 |[SELECT FROM \<modelo >](../dmx/select-from-model-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](../analysis-services/data-mining/data-mining-queries.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   

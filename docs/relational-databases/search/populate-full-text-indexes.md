@@ -2,10 +2,14 @@
 title: "Preencher índices de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +27,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c1d56c9d50735bb3a97bbfc150359ae06941dc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
-  A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
 ##  <a name="types"></a> Types of population  
 Um índice de texto completo dá suporte aos seguintes tipos de população:
@@ -55,7 +60,7 @@ Para criar um índice de texto completo sem populá-lo imediatamente, especifiqu
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Exemplo – criar um índice de texto completo sem executar uma população completa  
  O exemplo a seguir cria um índice de texto completo na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` . Este exemplo usa `WITH CHANGE_TRACKING OFF, NO POPULATION` para atrasar a população completa inicial.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -74,7 +79,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Exemplo – executar uma população completa em uma tabela  
  O exemplo a seguir executa uma população completa na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -107,7 +112,7 @@ Há dois tipos de controle de alterações:
     **Exemplo -– alterar um índice de texto completo para usar o controle de alterações automático**  
     O exemplo a seguir altera o índice de texto completo da tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` para usar o controle de alterações com população automática.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -127,7 +132,7 @@ Há dois tipos de controle de alterações:
     **Exemplo – criar um índice de texto completo com controle de alterações manual**  
     O exemplo a seguir cria um índice de texto completo que usará o controle de alterações com população manual na tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -141,7 +146,7 @@ Há dois tipos de controle de alterações:
     **Exemplo – executar uma população manual**  
     O exemplo a seguir executa uma população manual no índice de texto completo com controle de alterações da tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -224,7 +229,7 @@ As partes variáveis do nome do arquivo de log de rastreamento são as seguintes
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

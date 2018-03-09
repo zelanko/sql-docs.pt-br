@@ -2,33 +2,30 @@
 title: "Configurar contas de serviço do Power Pivot | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar contas de serviço Power Pivot
-  Uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** é um serviço Windows que fornece processamento de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** é um serviço Windows que fornece processamento de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
   
  Uma segunda conta deve ser especificada para o aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um serviço Web compartilhado executado sob uma identidade de pool de aplicativos em um farm do SharePoint. Essa conta é especificada quando você configura uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação usando a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou o PowerShell.  
   
@@ -123,7 +120,7 @@ ms.lasthandoff: 09/01/2017
 |Requisito de provisionamento|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço do Sistema é um recurso compartilhado no farm que fica disponível quando você cria um aplicativo de serviço. O pool de aplicativos de serviço deve ser especificado quando o aplicativo de serviço é criado. Ele pode ser especificado de dois modos: usando a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou por comandos do PowerShell.<br /><br /> Você pode ter configurado a identidade do pool de aplicativos para executar sob uma conta exclusiva. Mas se você não fez isso, considere alterá-la agora para executar sob uma conta diferente.|  
 |Requisito da conta de usuário de domínio|A identidade do pool de aplicativos deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local).|  
 |Requisitos de permissão|Esta conta não precisa de permissões de Administrador do sistema local no computador. Entretanto, essa conta deve ter permissões de administrador de sistema do Analysis Services no [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local instalado no mesmo computador. Essas permissões são concedidas automaticamente pela Instalação do SQL Server, ou quando você define ou altera a identidade de pool e aplicativos na Administração Central.<br /><br /> Permissões administrativas são necessárias para encaminhar consultas ao [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elas também são necessárias para monitorar a integridade, fechar sessões inativas e escutar eventos de rastreamento.<br /><br /> A conta precisa ter permissões de conexão, leitura e gravação no banco de dados do aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Essas permissões são concedidas automaticamente quando o aplicativo é criado e são atualizadas automaticamente quando você altera as contas ou senhas na Administração Central.<br /><br /> O aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verificará se um usuário do SharePoint está autorizado a exibir dados antes de recuperar o arquivo, mas ele não representa o usuário. Não há requisitos de permissão para representação.|  
-|Requisitos de expansão|Nenhum.|  
+|Requisitos de expansão|Nenhuma.|  
   
 ##  <a name="updatemanually"></a> Solucionando problemas: Conceder permissões administrativas manualmente  
  As permissões administrativas não atualizarão se a pessoa que atualiza as credenciais não for um administrador local no computador. Se isto ocorrer, você poderá conceder permissões administrativas manualmente. O modo mais fácil de fazer isto é executar o trabalho do temporizador de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na Administração Central. Com esta abordagem, você pode reiniciar permissões para todos os servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Observe que esta abordagem somente funcionará se o trabalho de timer do SharePoint estiver sendo executado como administrador de farm e como administrador local no computador.  
@@ -194,4 +191,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar a conta da atualização de dados autônoma PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   
-

@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,13 +124,13 @@ A tabela a seguir lista os componentes do SQL Server e indica se eles podem usar
 |Nome do processo   |Programa executável |Usar mais de 64 CPUs |  
 |----------|----------|----------|  
 |Mecanismo de Banco de Dados do SQL Server |Sqlserver.exe  |Sim |  
-|Reporting Services |Rs.exe |Não |  
-|Analysis Services  |As.exe |Não |  
-|Integration Services   |Is.exe |Não |  
-|Service Broker |Sb.exe |Não |  
-|Pesquisa de Texto Completo   |Fts.exe    |Não |  
-|SQL Server Agent   |Sqlagent.exe   |Não |  
-|SQL Server Management Studio   |Ssms.exe   |Não |  
-|instalação do SQL Server   |Setup.exe  |Não |  
+|Reporting Services |Rs.exe |não |  
+|Analysis Services  |As.exe |não |  
+|Integration Services   |Is.exe |não |  
+|Service Broker |Sb.exe |não |  
+|Pesquisa de Texto Completo   |Fts.exe    |não |  
+|SQL Server Agent   |Sqlagent.exe   |não |  
+|SQL Server Management Studio   |Ssms.exe   |não |  
+|instalação do SQL Server   |Setup.exe  |não |  
 
 

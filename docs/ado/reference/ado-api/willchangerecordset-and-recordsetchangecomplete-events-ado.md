@@ -3,7 +3,7 @@ title: WillChangeRecordset e RecordsetChangeComplete eventos (ADO) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b720776cd7c230e55e77cb37f7a66de3ad6772b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a3ff0f75d5e9ef9d71e4eb2a103367a97f263d8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset e RecordsetChangeComplete eventos (ADO)
 O **WillChangeRecordset** evento é chamado antes de uma operação pendente altera o [registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **RecordsetChangeComplete** evento é chamado após o **registros** foi alterado.  
@@ -66,7 +65,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Um **registros** objeto. O **registros** para que esse evento ocorreu.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **WillChangeRecordset** ou **RecordsetChangeComplete** evento pode ocorrer devido a **registros** [Requery](../../../ado/reference/ado-api/requery-method.md) ou [Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos.  
   
  Se o provedor não oferece suporte a indicadores, um **RecordsetChange** notificação de evento ocorre toda vez que novas linhas são recuperadas do provedor. A frequência desse evento depende de **RecordsetCacheSize** propriedade.  
@@ -76,4 +75,3 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-

@@ -1,19 +1,18 @@
 ---
 title: Cancelando comandos (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [XML for Analysis]
 - associated connections [XML for Analysis]
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - server process IDs [XML for Analysis]
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86c304f8735cc8933fd9c466af4f58f4d980c74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="canceling-commands-xmla"></a>Cancelando comandos (XMLA)
   Dependendo das permissões administrativas do usuário que emite o comando, o [Cancelar](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando em XML for Analysis (XMLA) pode cancelar um comando em uma sessão, uma sessão, uma conexão, um processo de servidor ou uma sessão associada ou conexão.  

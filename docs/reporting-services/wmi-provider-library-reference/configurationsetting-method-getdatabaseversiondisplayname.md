@@ -2,30 +2,29 @@
 title: "Método GetDatabaseVersionDisplayName (WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetDatabaseVersionDisplayName method
+helpviewer_keywords: GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b4743439f2edf3f3cfb253aa981af83350f5aff7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 34369ec94a9370b01886f0ff5516caa27a01f556
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método ConfigurationSetting - GetDatabaseVersionDisplayName
+# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting – GetDatabaseVersionDisplayName
   Obtém o nome para exibição para uma determinada cadeia de caracteres da versão do banco de dados do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -48,17 +47,17 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra o mapeamento da versão do banco de dados para exibir a cadeia de caracteres.  
   
 |**Versão**|**Versão**|**Nome de Exibição**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|@DBVersion= 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|@DBVersion= 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|@DBVersion= 'C.0.8.40'|SQL Server 2005|  
-|RS 2000 SP2|@DBVersion= '0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|@DBVersion= 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|@DBVersion= 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Hotfix||Versão mais próxima aplicável|  
   
  Para uma *Versão* anterior ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000, é retornado um HRESULT de ACT_E_BAD_VERSION.  
@@ -69,8 +68,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

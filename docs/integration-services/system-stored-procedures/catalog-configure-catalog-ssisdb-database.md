@@ -1,5 +1,5 @@
 ---
-title: Catalog. configure_catalog (banco de dados SSISDB) | Microsoft Docs
+title: catalog.configure_catalog (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 6d1f8926d398a90214a5ad1903f04ac1e29d8854
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,33 +36,33 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @property_name =] *property_name*  
- O nome da propriedade do catálogo. O *property_name* é **nvarchar (255)**. Para obter mais informações sobre propriedades disponíveis, consulte [Catalog. catalog_properties &#40; Banco de dados SSISDB &#41; ](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ [ @property_name = ] *property_name*  
+ O nome da propriedade do catálogo. O *property_name* é **nvarchar(255)**. Para obter mais informações sobre propriedades disponíveis, consulte [catalog.catalog_properties &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
- [ @property_value =] *property_value*  
- O valor da propriedade do catálogo. O *property_value* é **nvarchar (255)**. Para obter mais informações sobre valores de propriedade, consulte [Catalog. catalog_properties &#40; Banco de dados SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ [ @property_value = ] *property_value*  
+ O valor da propriedade do catálogo. O *property_value* é **nvarchar(255)**. Para obter mais informações sobre valores de propriedades, consulte [catalog.catalog_properties &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
-## <a name="remarks"></a>Comentários  
- Esse procedimento armazenado determina se o *property_value* é válido para cada *property_name*.  
+## <a name="remarks"></a>Remarks  
+ Este procedimento armazenado determina se o *property_value* é válido para cada *property_name*.  
   
  Este procedimento armazenado pode ser realizado somente quando não há execução ativa, como execuções pendentes, enfileiradas, em execução e em pausa.  
   
- Enquanto o catálogo está sendo configurado, todos os outros catálogo armazenadas procedimentos falha com a mensagem de erro "Servidor atualmente está sendo configurado."
+ Enquanto o catálogo está sendo configurado, todos os outros procedimentos armazenados de catálogo apresentam falha com a mensagem de erro "O servidor está sendo configurado no momento".
   
  Quando o catálogo está configurado, uma entrada é escrita no log de operação.  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -73,4 +72,3 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 -   O valor de propriedade é inválido  
   
   
-

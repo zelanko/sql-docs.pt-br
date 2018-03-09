@@ -2,35 +2,33 @@
 title: "Criar, modificar ou excluir uma relação de atributo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1824a9c8c4632c0875890463b8f44ae2dec93308
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Atributo relações - criar, modificar ou excluir relação
-  Você pode criar, modificar ou excluir uma relação de atributo entre atributos em uma dimensão usando a guia **Relações de Atributo** do Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode criar, modificar ou excluir uma relação de atributo entre atributos em uma dimensão usando a guia **Relações de Atributo** do Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Para criar uma relação de atributo  
   
@@ -69,6 +67,6 @@ ms.lasthandoff: 11/17/2017
 3.  Na caixa de diálogo **Excluir Objetos** , clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Relações de Atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relações de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

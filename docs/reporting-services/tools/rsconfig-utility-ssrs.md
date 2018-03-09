@@ -2,12 +2,13 @@
 title: "Utilitário rsconfig (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  
@@ -58,10 +58,10 @@ rsconfig {-?}
 |**-e**|Obrigatório se o argumento **-c** não for usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Os argumentos que você pode especificar com **-e** incluem **-u** e **-p**. Você também pode definir **-t**.|  
 |**-m**  *computername*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será **localhost**.|  
 |**-s**  *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
-|**-i**  *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeada para hospedar o banco de dados do servidor de relatório, esse valor especificará a instância nomeada.|  
+|**-i**  *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância nomeada do Reporting Services, esse valor especifica o nome da instância do Reporting Services.|  
 |**-d**  *databasename*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
 |**-a**  *authmethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são **Windows** ou **SQL** (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O**Windows** especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O**SQL** especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
-|**-u***[domínio\\] nome de usuário* |Obrigatório com **-e** , opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
+|**-u**  *[domain\\]username*|Obrigatório com **-e** , opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
 |**-p**  *password*|Obrigatório se **-u** for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
 |**-t**|Opcional.|Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -71,16 +71,16 @@ rsconfig {-?}
 ## <a name="file-location"></a>Local do arquivo  
  O Rsconfig.exe está localizado em **\Arquivos de Programas\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe é usado para dois propósitos:  
   
 -   Para modificar a informações de conexão que um servidor de relatório usa para conectar-se a um banco de dados do servidor de relatório.  
   
 -   Para configurar uma conta especial que o servidor de relatório usa para fazer logon em um servidor de banco de dados remoto quando outras credenciais não estão disponíveis.  
   
- Você pode executar o utilitário**rsconfig** em uma instância local ou remota do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você não pode usar o utilitário **rsconfig** para descriptografar e exibir valores já definidos.  
+Execute o utilitário **rsconfig** em uma instância local ou remota do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você não pode usar o utilitário **rsconfig** para descriptografar e exibir valores já definidos.  
   
- Antes de executar esse utilitário, o WMI (Instrumentação de Gerenciamento do Windows) deve ser instalado no computador que você está configurando.  
+Antes de executar esse utilitário, o WMI (Instrumentação de Gerenciamento do Windows) deve ser instalado no computador que você está configurando.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir ilustram as maneiras de usar o **rsconfig**.  
@@ -127,14 +127,13 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Criptografados de armazenamento de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Utilitários de Prompt de comando do servidor de relatório &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

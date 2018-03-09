@@ -1,30 +1,42 @@
 ---
 title: Novidades do SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: sql-ssma
+ms.suite: sql
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79f9f01b8811f67f252c68192825d17084467da1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novidades do SSMA para SAP ASE (SybaseToSQL)
 Este tópico lista SSMA para alterações de SAP ASE (anteriormente SSMA para Sybase) em cada versão. 
+
+## <a name="ssma-v77"></a>O SSMA v7.7
+A versão v7.7 do SSMA para SAP ASE contém as seguintes alterações:
+- SSMA para SAP ASE foi aprimorado com correções de destino que melhoram a métrica de qualidade e a conversão.
+- A versão de 32 bits do SSMA para SAP ASE com base na demanda popular, está de volta. Em comparação com a implementação anterior (antes da v 7.4), existem dois pacotes de instalador, mas eles não podem ser instalados lado a lado. Como resultado, você deve escolher a versão mais adequada com base nos componentes de conectividade, que você tem. Sempre é preferível usar a versão de 64 bits, se possível.
+
+> [!IMPORTANT]
+> Com a v 7.4 do SSMA e versões posteriores, o .net 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v76"></a>O SSMA v7.6
 A versão v7.6 do SSMA para SAP ASE contém as seguintes alterações:
@@ -42,7 +54,7 @@ A versão v 7.5 do SSMA para SAP ASE contém as seguintes alterações:
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v SSMA 7.5. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.  
 
-## <a name="ssma-v74"></a>V 7.4 do SSMA
+## <a name="ssma-v74"></a>SSMA v7.4
 A versão v 7.4 do SSMA for Sybase contém as seguintes alterações:
 - O **tempo limite da consulta** opção agora está disponível durante a descoberta de objeto de esquema na origem e no destino.
 ![opção de tempo limite de consulta](../media/query-timeout_red.png)
@@ -51,7 +63,7 @@ A versão v 7.4 do SSMA for Sybase contém as seguintes alterações:
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v 7.4 do SSMA. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.  
 
-## <a name="ssma-v73"></a>O SSMA 7.3
+## <a name="ssma-v73"></a>SSMA v7.3
 A versão 7.3 do SSMA for Sybase contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Estrutura de extensibilidade do SSMA exposta por meio de itens a seguir:
@@ -63,7 +75,7 @@ A versão 7.3 do SSMA for Sybase contém as seguintes alterações:
       - Instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [recursos de conversão do estendendo o SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       - Projeto de exemplo para a conversão pode ser baixar este [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>V 7.2 do SSMA
+## <a name="ssma-v72"></a>SSMA v7.2
 A versão v 7.2 do SSMA for Sybase contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Aprimoramentos de telemetria para fornecer melhor pontos de dados para solucionar problemas do cliente e melhorar as taxas de conversão do SSMA.

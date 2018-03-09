@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - dm_fts_index_keywords_by_property_TSQL
 - sys.dm_fts_index_keywords_by_property
 - sys.dm_fts_index_keywords_by_property_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], troubleshooting
 - search property lists [SQL Server], viewing keywords by property
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a03bd54d417afae72ddc8d8f4221faf39472dfd2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0257f4a6ce50ff3e28497e3e27bdd704e40cbf84
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +54,6 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Para obter informações sobre listas de propriedades de pesquisa, consulte [pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -68,10 +66,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- db_id ('*database_name*')  
+ db_id('*database_name*')  
  Uma chamada para o [db_id](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID de banco de dados, que sys.DM fts_index_keywords_by_property usa para localizar o banco de dados especificado. Se *database_name* for omitido, a ID do banco de dados atual será retornada.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Uma chamada para o [object_id ()](../../t-sql/functions/object-id-transact-sql.md) função. Essa função aceita um nome de tabela e retorna a ID da tabela que contém o índice de texto completo a ser inspecionado.  
   
 ## <a name="table-returned"></a>Tabela retornada  
@@ -80,11 +78,11 @@ OBJECT_ID('table_name')
 |------------|---------------|-----------------|  
 |palavra-chave|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
-|column_id|**int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
-|document_id|**int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
-|property_id|**int**|ID de propriedade interna da propriedade de pesquisa dentro do índice de texto completo da tabela que você especificou no OBJECT_ID ('*table_name*') parâmetro.<br /><br /> Quando uma determinada propriedade é adicionada a uma lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui a ela uma ID de propriedade interna que é específica dessa lista de propriedades. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir a associação entre property_id e o nome da propriedade:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|column_id|**Int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
+|document_id|**Int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
+|property_id|**Int**|ID de propriedade interna da propriedade de pesquisa dentro do índice de texto completo da tabela que você especificou no OBJECT_ID ('*table_name*') parâmetro.<br /><br /> Quando uma determinada propriedade é adicionada a uma lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui a ela uma ID de propriedade interna que é específica dessa lista de propriedades. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir a associação entre property_id e o nome da propriedade:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa exibição de gerenciamento dinâmico pode responder a perguntas como estas:  
   
 -   Que conteúdo é armazenado em uma determinada propriedade para um determinado DocID?  
@@ -141,13 +139,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
  [Melhorar o desempenho de índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [sp_fulltext_keymappings &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys.DM fts_index_keywords_by_document &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys.DM fts_index_keywords &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys. registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62d91e0a8fdccfe55b077fb52014a3ccc92e92ae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolumns-function"></a>Função SQLColumns
 **Conformidade**  
@@ -159,7 +159,7 @@ SQLRETURN SQLColumns(
   
  A tabela a seguir lista as colunas no conjunto de resultados. Colunas adicionais além da coluna 18 (IS_NULLABLE) podem ser definidas pelo driver. Um aplicativo deve acessar colunas específicas do driver contando do final do conjunto em vez de especificar uma posição ordinal explícita de resultados. Para obter mais informações, consulte [dados retornados pelas funções de catálogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nome da coluna|Coluna<br /><br /> number|Tipo de dados|Comentários|  
+|Nome da coluna|coluna<br /><br /> number|Tipo de dados|Comentários|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome do catálogo; NULL se não for aplicável à fonte de dados. Se um driver dá suporte a catálogos para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não possuem catálogos.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome do esquema; NULL se não for aplicável à fonte de dados. Se um driver dá suporte a esquemas para algumas tabelas, mas não para outras pessoas, como quando o driver recupera os dados de diferentes DBMSs, ele retorna uma cadeia de caracteres vazia ("") para as tabelas que não têm esquemas.|  
@@ -299,6 +299,6 @@ int main() {
 |Retornando uma lista de tabelas em uma fonte de dados|[Função SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
 |Retornando privilégios para uma tabela ou tabelas|[Função SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

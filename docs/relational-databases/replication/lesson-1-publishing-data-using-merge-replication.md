@@ -2,27 +2,34 @@
 title: "Lição 1: Publicando dados usando a replicação de mesclagem | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e60a79a2a0526ad5401e13798d1a311547e1b73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lição 1: Publicando dados usando replicação de mesclagem
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto das tabelas **Employee**, **SalesOrderHeader**e **SalesOrderDetail** no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Essas tabelas são filtradas com filtros de linha com parâmetros de modo que cada assinatura contenha uma partição exclusiva dos dados. Você também adicionará o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agente de Mesclagem à PAL (lista de acesso à publicação). Este tutorial exige a conclusão do tutorial anterior, [Preparando o servidor para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
@@ -86,7 +93,7 @@ Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [
   
 21. Selecione **Criar um instantâneo imediatamente**, desmarque a opção **Agendar o agente de instantâneo para ser executado nos seguintes momentos**e clique em **Avançar**.  
   
-22. Na página Segurança do Agente, clique em **Configurações de Segurança**, digite \<*Machine_Name>***\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**. Clique em **Concluir**.  
+22. Na página Segurança do Agente, clique em **Configurações de Segurança**, digite \<*Machine_Name>***\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e, em seguida, clique em **OK**. Clique em **Concluir**.  
   
 23. Na página Concluir o Assistente, insira **AdvWorksSalesOrdersMerge** na caixa **Nome da publicação** e clique em **Concluir**.  
   
@@ -112,11 +119,11 @@ Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [
   
 4.  Na caixa de diálogo Adicionar Acesso à Publicação, selecione *<Machine_Name>***\repl_merge** e clique em **OK**. Clique em **OK**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Você criou a publicação de mesclagem com sucesso. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação de mesclagem](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Consulte também  
-[Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md)  
+## <a name="see-also"></a>Consulte Também  
+[Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)  
 [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Defina um Artigo](../../relational-databases/replication/publish/define-an-article.md)  
   

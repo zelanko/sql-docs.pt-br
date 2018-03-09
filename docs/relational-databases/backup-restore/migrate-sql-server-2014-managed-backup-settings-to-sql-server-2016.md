@@ -2,26 +2,29 @@
 title: "Migrar as configurações de backup gerenciado do SQL Server 2014 para o SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 caps.latest.revision: "7"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6df945737348bf0f8e158b375d6af1ebcbfb6784
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0bbc82f05c8bd82abf999602a2881a47b435d7a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>Migrar as Configurações de Backup Gerenciado do SQL Server 2014 para o SQL Server 2016
-  Este tópico aborda considerações sobre a migração para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durante a atualização do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda considerações sobre a migração para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ao atualizar do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  Os procedimentos e o comportamento subjacente do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] foram alterados no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. As seções a seguir descrevem as alterações funcionais e suas implicações.  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Os procedimentos do **smart_admin** não têm suporte para as novas configurações do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. É necessário usar os novos procedimentos e a funcionalidade **managed_backup** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

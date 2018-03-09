@@ -8,7 +8,8 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 330a9b9a12312ab22389e8de0849ab164b8f0d47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-started-with-polybase"></a>Introdução ao PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Exemplos de consultas que usam objetos PolyBase  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Uma instância do [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) com o seguinte:  
   
 -   Microsoft .NET Framework 4.5.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="how-to-confirm-installation"></a>Como confirmar a instalação  
  Após a instalação, execute o comando a seguir para confirmar que o PolyBase foi instalado com êxito. Se o PolyBase estiver instalado, retornará 1; caso contrário, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -103,7 +104,7 @@ O Hadoop segue o padrão de "Major.Minor.Version" para suas novas versões. Há 
 ### <a name="external-data-source-configuration"></a>Configuração da fonte de dados externa  
   
 1.  Execute [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) “conectividade hadoop” e defina um valor apropriado. Por padrão, a conectividade de hadoop é definida como 7. Para encontrar o valor, veja [Configuração do PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +290,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Consultas ad hoc  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +304,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Importando dados  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  
@@ -365,7 +366,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="next-steps"></a>Próximas etapas  
  Para entender o recurso de expansão, veja [Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  Para monitorar o PolyBase, veja [Solução de problemas do PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md). Para solucionar problemas de desempenho do PolyBase, confira [Solução de problemas do PolyBase com exibições dinâmicas de gerenciamento](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)   
  [Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [Procedimentos armazenados do PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   

@@ -1,7 +1,7 @@
 ---
 title: Membros SQLServerException | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fbf76879f386a589347d188fee1c29e8835a4f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 458866705a67f0c41c5ae582f121562bdbdaf840
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverexception-members"></a>Membros SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,16 +30,19 @@ ms.lasthandoff: 09/09/2017
   As tabelas a seguir listam os membros expostos pelo [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe.  
   
 ## <a name="constructors"></a>Construtores  
- Nenhum.  
+
+|Nome|Description|  
+|----------|-----------------|  
+|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Inicializa uma nova instância da classe SQLServerException.|  
   
 ## <a name="fields"></a>Campos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="inherited-fields"></a>Campos herdados  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="inherited-methods"></a>Métodos herdados  
   
@@ -54,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  [Classe SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
   
-

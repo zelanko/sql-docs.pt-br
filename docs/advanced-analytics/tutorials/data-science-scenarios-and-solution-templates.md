@@ -2,26 +2,30 @@
 title: "Cenários de ciência de dados e modelos de solução | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dabce30d55a38f4ecd93a88f3cebf01e53a0335e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Os modelos são soluções de exemplo que demonstram as práticas recomendadas e fornecem os blocos de construção para ajudá-lo a implementar uma solução rápida. Cada modelo é projetado para resolver um problema específico, para um vertical específico ou mercado. As tarefas de cada modelo vão desde a preparação de dados, engenharia de recursos até o treinamento e a pontuação do modelo. Use esses modelos para saber como [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] funciona. Em seguida, fique à vontade para personalizar o modelo para ajustar seu próprio cenário e criar uma solução personalizada. 
 

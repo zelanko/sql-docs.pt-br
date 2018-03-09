@@ -1,39 +1,39 @@
 ---
-title: "Quais são as novidades no Reporting Services (SSRS) | Microsoft Docs"
+title: Novidades do Reporting Services (SSRS) | Microsoft Docs
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Saiba mais sobre o que há de novo no SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso aborda as principais áreas de recurso e é atualizado à medida que novos itens são lançados.
+Saiba mais sobre as novidades do SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso aborda as principais áreas de recurso e é atualizado à medida que novos itens são lançados.
 
-  Para obter informações sobre o que há de novo em outras áreas do SQL Server, consulte [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) ou [o que há de novo no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+  Para obter informações sobre as novidades em outras áreas do SQL Server, consulte [Novidades do SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) ou [Novidades do SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
  **Download** ![download](../analysis-services/media/download.png "download")
 
-- Para baixar o SQL Server de 2017 Reporting Services, vá para o  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
+- Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Para obter as notas de versão atual, consulte [notas de versão do SQL Server de 2017](../sql-server/sql-server-2017-release-notes.md) ou [notas de versão do servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Para obter informações sobre o servidor de relatório do Power BI, consulte [Introdução ao servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Para obter as notas de versão atuais, consulte [Notas de versão do SQL Server 2017](../sql-server/sql-server-2017-release-notes.md) ou [Notas de versão do Servidor de Relatórios do Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Para obter informações sobre o Servidor de Relatórios do Power BI, consulte [Introdução ao Servidor de Relatórios do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 
@@ -43,7 +43,7 @@ Agora, é possível inserir comentários nos relatórios, como uma forma de ampl
 
 ![Comentários em um servidor de relatório](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-Para obter mais informações, consulte [adicionar comentários a um relatório em um servidor de relatório](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+Para obter mais informações, consulte [Adicionar comentários a um relatório em um servidor de relatório](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
 
 ### <a name="dax-queries-in-reporting-tools"></a>Consultas DAX em ferramentas de relatório
 
@@ -51,18 +51,18 @@ Nas versões mais recentes do Construtor de Relatórios e do SQL Server Data Too
 
 ### <a name="rest-api-support"></a>Suporte à API REST
 
-Para habilitar o desenvolvimento de aplicativos modernos e personalização, o SQL Server Reporting Services agora oferece suporte a uma totalmente OpenAPI compatível com API RESTful. A especificação de API e a documentação completa agora podem ser encontradas em [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+Para possibilitar o desenvolvimento de aplicativos modernos e personalização, o SQL Server Reporting Services agora dá suporte a uma API RESTful em total conformidade com a OpenAPI. A especificação de API e a documentação completa agora podem ser encontradas no [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Consultar o suporte do designer de DAX agora no construtor de relatórios e o SQL Server Data Tools
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Suporte do designer de consultas para DAX agora no Construtor de Relatórios e SQL Server Data Tools
 
-Nas versões mais recentes do construtor de relatórios e o SQL Server Data Tools – versão Release Candidate, agora você pode criar consultas DAX nativo em modelos de dados de tabela do SQL Server Analysis Services com suporte. Você pode usar o designer de consulta em ambas as ferramentas para arrastar e soltar os campos que você deseja e fazer a consulta DAX gerada para você, em vez de gravá-la.  
+Nas últimas versões do Construtor de Relatórios e SQL Server Data Tools – versão Release Candidate, agora você pode criar consultas DAX nativas em modelos de dados de tabela do SQL Server Analysis Services com suporte. Use o designer de consultas em ambas as ferramentas para arrastar e soltar os campos que deseja e gere a consulta DAX, em vez de escrevê-la.  
  
 Leia mais sobre o [blog do Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Baixar [construtor de relatórios do SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
-* Baixar [SQL Server Data Tools – versão Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
+* Baixe o [Construtor de Relatórios do SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
+* Baixe o [SQL Server Data Tools – versão Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Observação**: você só pode usar o designer de consulta para DAX com fontes de dados de tabela do SSAS criadas no SQL Server 2016 +.
+> **Observação**: só é possível usar o designer de consultas para DAX com fontes de dados de tabela do SSAS criadas no SQL Server 2016+.
  
 ## <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
   
@@ -112,7 +112,7 @@ Os relatórios móveis do Reporting Services são relatórios dedicados e otimiz
  
 Para obter mais informações, consulte:  
   
--   [Combinações com suporte do SharePoint e Reporting Services Server e suplemento &#40; SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [Combinações com suporte do SharePoint e do servidor e suplemento Reporting Services &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +129,15 @@ Para obter mais informações, consulte:
 
 **Relatórios paginados modernos:** desenvolva relatórios paginados modernos perfeitos com estilos novos e modernos para gráficos, medidores, mapas e outras visualizações de dados.
   
-**Gráficos explosão solar e mapa de árvore:** Aprimore seus relatórios com mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") gráficos, excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos de mapa de árvore e explosão solar:** aprimore seus relatórios com gráficos de mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Inserção de relatório:** agora você pode incorporar relatórios móveis e paginados a outras páginas da Web e aplicativos usando um iframe juntamente com os parâmetros da URL.  
 
-**Fixar itens de relatórios a um Painel do Power BI:** Ao exibir um relatório no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], você pode selecionar itens de relatório e fixá-los a um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Os itens que você pode fixar são gráficos, painéis de medidores, mapas e imagens. Você pode selecionar **(1)** o grupo que contém o painel que você quer fixar, **(2)** selecionar o painel no qual você quer fixar o item e **(3)** selecionar a frequência com que você quer que o bloco seja atualizado no painel.   ![Observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") a atualização é gerenciada pelo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] assinaturas e depois que o item é fixado, você pode editar a assinatura e configurar uma agenda de atualização diferentes.  
+**Fixar itens de relatórios a um Painel do Power BI:** Ao exibir um relatório no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], você pode selecionar itens de relatório e fixá-los a um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Os itens que você pode fixar são gráficos, painéis de medidores, mapas e imagens. Você pode selecionar **(1)** o grupo que contém o painel que você quer fixar, **(2)** selecionar o painel no qual você quer fixar o item e **(3)** selecionar a frequência com que você quer que o bloco seja atualizado no painel.   ![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- Para obter mais informações, consulte [integração do servidor de relatório do Power BI &#40; Configuration Manager &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [itens de Pin do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+ Para obter mais informações, consulte [Integração do Servidor de Relatórios do Power BI &#40;Gerenciador de Configurações&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
  **Renderização e exportação do PowerPoint:** o formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
@@ -159,10 +159,10 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  
 |Recurso|Modo de servidor com suporte|  
 |-------------|---------------------------|  
-|**Habilitar e desabilitar assinaturas**. Novas opções de interface de usuário para desabilitar e habilitar rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente habilitadas.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para saber mais, confira [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Modo nativo|  
+|**Habilitar e desabilitar assinaturas**. Novas opções de interface de usuário para desabilitar e habilitar rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente habilitadas.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para saber mais, confira [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|nativo|  
 |**Descrição da assinatura**. Quando você cria uma nova assinatura, você pode incluir uma descrição do relatório como parte das propriedades de assinatura. A descrição será incluída na página de resumo da assinatura.|Modo do SharePoint e Nativo|  
 |**Alterar o proprietário da assinatura**. Interface de usuário aprimorada para alterar rapidamente o proprietário de uma assinatura. As versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permitem que os administradores alterem os proprietários de assinatura usando o script. A partir da versão [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , você pode alterar os proprietários da assinatura usando a interface do usuário ou o script. Alterar o proprietário da assinatura é uma tarefa administrativa comum quando os usuários deixam ou alteraram funções em sua organização.|Modo do SharePoint e Nativo|  
-|**Credenciais compartilhadas para assinaturas de compartilhamento de arquivos**. Agora existem dois fluxos de trabalho com as assinaturas de compartimento de arquivos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Novidades desta versão, o administrador do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode configurar uma conta única de compartilhamento de arquivo, que é usada para várias assinaturas. A conta de compartilhamento de arquivo é configurada no gerenciador de configuração do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Especificar uma conta de compartilhamento de arquivo**e, em seguida, na página de configuração da assinatura, os usuários selecionam **Usar uma conta de compartilhamento de arquivo**.<br /><br /> Configure assinaturas individuais com credenciais específicas para o compartilhamento de arquivos de destino.<br /><br /> Você também pode combinar as duas abordagens e fazer com que algumas assinaturas de compartilhamento de arquivos usem a conta de compartilhamento de arquivos central, enquanto outras assinaturas usam credenciais específicas.|Modo nativo|  
+|**Credenciais compartilhadas para assinaturas de compartilhamento de arquivos**. Agora existem dois fluxos de trabalho com as assinaturas de compartimento de arquivos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Novidades desta versão, o administrador do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode configurar uma conta única de compartilhamento de arquivo, que é usada para várias assinaturas. A conta de compartilhamento de arquivo é configurada no gerenciador de configuração do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Especificar uma conta de compartilhamento de arquivo**e, em seguida, na página de configuração da assinatura, os usuários selecionam **Usar uma conta de compartilhamento de arquivo**.<br /><br /> Configure assinaturas individuais com credenciais específicas para o compartilhamento de arquivos de destino.<br /><br /> Você também pode combinar as duas abordagens e fazer com que algumas assinaturas de compartilhamento de arquivos usem a conta de compartilhamento de arquivos central, enquanto outras assinaturas usam credenciais específicas.|nativo|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
  A nova versão do SSDT inclui os modelos de projeto para o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistente de Projeto do Servidor de Relatório e Projeto do Servidor de Relatório. Para saber mais sobre como baixar o SSDT, veja [Ferramentas de Dados do SQL Server para Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
@@ -178,7 +178,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 **Painel de parâmetros personalizado:** agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.   Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
- ![Lista de parâmetros no painel de dados de relatório e, no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "lista de parâmetros no painel de dados de relatório e, no painel de parâmetros")  
+ ![Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros")  
 
   
 **Suporte a alto DPI:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] dá suporte a dispositivos e dimensionamento de Alto DPI (Pontos por Polegada).  Para saber mais sobre Alto DPI, veja o seguinte:  
@@ -199,4 +199,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Servidor de Relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

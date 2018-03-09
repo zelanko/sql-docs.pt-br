@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de dados C em ODBC
 ODBC define os tipos de dados de C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondente. Eles são usados pelos buffers que estão associados a colunas do conjunto de resultados e parâmetros de instrução. Por exemplo, suponha que um aplicativo que deseja recuperar dados de uma coluna do conjunto de resultados em formato de caractere. Declara uma variável com o SQLCHAR * tipo de dados e liga a essa variável para a coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -58,6 +56,5 @@ ODBC define os tipos de dados de C que são usados por variáveis de aplicativo 
   
  Para obter mais informações sobre ODBC 3.8, consulte [o que há de novo no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do C](../../../odbc/reference/appendixes/c-data-types.md)
-

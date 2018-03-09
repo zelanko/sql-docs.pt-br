@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e537a1a767d0789333659d1aa26e57e11c42195e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-results"></a>Vários resultados
 Um *resultados* é algo retornado pela fonte de dados depois que uma instrução é executada. ODBC tem dois tipos de resultados: conjuntos de resultados e contagens de linhas. *Contagens de linhas* são o número de linhas afetadas por uma atualização, excluir ou inserir a instrução. Lotes, descrito em [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), pode gerar vários resultados.  
@@ -61,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  É específico do driver se a instrução de lote inteiro é executada antes de todos os resultados estão disponíveis. Em algumas implementações, esse é o caso; em outras, chamando **SQLMoreResults** dispara a execução da próxima instrução no lote.  
   
  Se uma das instruções em um lote falhar, **SQLMoreResults** retornará SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Se o lote foi anulado quando a instrução falha ou a instrução que falhou foi a última instrução no lote, **SQLMoreResults** retornará SQL_ERROR. Se o lote foi anulado não quando a instrução falha e a instrução com falha não era a última instrução no lote, **SQLMoreResults** retornará SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indica que pelo menos um conjunto de resultados ou contagem foi gerada e que o lote não foi anulado.
-

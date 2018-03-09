@@ -5,23 +5,24 @@ ms.date: 12/20/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6194ffef0fdf5e94669e84f071d51623458b3395
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 306d66b832e5df725d3a3b619998be960ac5fd8e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-manager-web-application"></a>Aplicativo Web Master Data Manager
   O aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] é usado principalmente por administradores para executar tarefas administrativas. Por exemplo, apenas administradores podem criar modelos, regras de negócio ou versões de dados. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  

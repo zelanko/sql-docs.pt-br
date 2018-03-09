@@ -2,10 +2,14 @@
 title: "Relatórios do conjuntos de coleta de dados do sistema | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e89dca7a25fa6a6a0e89c2fe4983ff3c1dc9a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
-  O coletor de dados fornece um relatório histórico para cada um dos conjuntos de coleta de Dados do Sistema. Cada um dos relatórios a seguir usa dados que estão armazenados no data warehouse de gerenciamento:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O coletor de dados fornece um relatório histórico para cada um dos conjuntos de coleta de Dados do Sistema. Cada um dos relatórios a seguir usa dados que estão armazenados no data warehouse de gerenciamento:  
   
 -   [Resumo de Uso do Disco](#Disk)  
   
@@ -59,13 +64,13 @@ ms.lasthandoff: 11/09/2017
  A tabela abaixo do gráfico lista as horas de coleta de dados e os dados de uso correspondentes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sub-relatório Uso de Disco para o Banco de Dados: <database_name>.  
- O sub-relatório **Uso de disco para o banco de dados:***<database_name>* é exibido quando você clica no nome de um banco de dados na tabela de resumo do relatório Conjunto de Coleta de Uso do Disco. Esse relatório fornece uma análise numérica e gráfica do uso do espaço pelos arquivos de dados e log de transação do banco de dados. O uso de espaço para arquivos de dados é categorizado como uma porcentagem alocada a páginas de índice, espaço alocado, páginas de dados e espaço não utilizado. Essas categorias são definidas da seguinte forma:  
+ O sub-relatório **Uso de disco para o banco de dados:***<nome_do_banco_de_dados>* é exibido quando você clica no nome de um banco de dados na tabela de resumo do relatório do Conjunto de Coleta de Uso do Disco. Esse relatório fornece uma análise numérica e gráfica do uso do espaço pelos arquivos de dados e log de transação do banco de dados. O uso de espaço para arquivos de dados é categorizado como uma porcentagem alocada a páginas de índice, espaço alocado, páginas de dados e espaço não utilizado. Essas categorias são definidas da seguinte forma:  
   
 |Categoria|Definição|  
 |--------------|----------------|  
 |Índice|A quantidade de espaço em disco usada para manter páginas de índice.|  
 |Não alocado|A quantidade de espaço em disco disponível para o banco de dados, mas que ainda não foi alocada a objeto algum.|  
-|Dados|A quantidade de espaço em disco usada para manter páginas de dados.|  
+|data|A quantidade de espaço em disco usada para manter páginas de dados.|  
 |Não usado|A quantidade de espaço em disco alocada a um ou mais objetos, mas que ainda não foi utilizada.|  
   
  O uso de espaço para arquivos de log de transação é categorizado como uma espaço usado e não usado.  
@@ -135,7 +140,7 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esperas|O gráfico Esperas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe as esperas encontradas por threads executados por categoria de espera. Para acessar um relatório detalhado, clique em qualquer segmento do gráfico. Além de fornecer estatísticas de espera do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em gráficos em um período reduzido, esse relatório fornece informações sobre as categorias de espera no formato em tabela. Para cada categoria, como CPU e suas subcategorias, a tabela mostra o número de esperas, o tempo de espera e a porcentagem do tempo de espera total.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atividade|Aspectos diferentes de atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessados pelo gráfico Atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os relatórios que você pode obter clicando em um ponto na linha de gráfico Compilações do SQL/segundo são como se segue:<br /><br /> <br /><br /> Conexões e sessões<br /><br /> Solicitações<br /><br /> Taxa de acertos do cache de plano<br /><br /> recursos de tempdb|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

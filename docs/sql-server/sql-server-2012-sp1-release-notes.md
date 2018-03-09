@@ -1,26 +1,30 @@
 ---
 title: "Notas de Versão do SQL Server 2012 SP1 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
   
 ## <a name="bkmk_top"></a>Conteúdo  
@@ -200,7 +204,7 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
   
 [Conteúdo](#bkmk_top)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como determinar a versão e a edição do SQL Server](http://support.microsoft.com/kb/321185)  
 [Recursos com suporte nas edições do SQL Server 2014](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   

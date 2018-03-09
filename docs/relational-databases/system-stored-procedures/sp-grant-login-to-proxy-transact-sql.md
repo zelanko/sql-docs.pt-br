@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_proxy
 - sp_grant_login_to_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_grant_login_to_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1d3fb0ea64fc6e6545c5eb5754853d667ff4110
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b5a4788da049ef1d3c69f604aacdf9000f9ed624
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,25 +51,25 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login_name**  =] **'***login_name***'**  
+ [ **@login_name** = ] **'***login_name***'**  
  O nome de logon para o qual o acesso será concedido. O *login_name* é **nvarchar (256)**, com um padrão NULL. Um dos  **@login_name** ,  **@fixed_server_role** , ou  **@msdb_role**  devem ser especificados, ou o procedimento armazenado falhará.  
   
- [  **@fixed_server_role** =] **'***fixed_server_role***'**  
+ [ **@fixed_server_role**= ] **'***fixed_server_role***'**  
  A função de servidor fixa para a qual o acesso será concedido. O *fixed_server_role* é **nvarchar (256)**, com um padrão NULL. Um dos  **@login_name** ,  **@fixed_server_role** , ou  **@msdb_role**  devem ser especificados, ou o procedimento armazenado falhará.  
   
- [  **@msdb_role** =] '*msdb_role*'  
+ [ **@msdb_role**= ] '*msdb_role*'  
  A função de banco de dados no **msdb** banco de dados para conceder acesso a. O *msdb_role* é **nvarchar (256)**, com um padrão NULL. Um dos  **@login_name** ,  **@fixed_server_role** , ou  **@msdb_role**  devem ser especificados, ou o procedimento armazenado falhará.  
   
- [  **@proxy_id** =] *id*  
+ [ **@proxy_id**= ] *id*  
  O identificador do proxy ao qual o acesso será concedido. O *id* é **int**, com um padrão NULL. Um dos  **@proxy_id**  ou  **@proxy_name**  devem ser especificados, ou o procedimento armazenado falhará.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  O nome do proxy ao qual o acesso será concedido. O *proxy_name* é **nvarchar (256)**, com um padrão NULL. Um dos  **@proxy_id**  ou  **@proxy_name**  devem ser especificados, ou o procedimento armazenado falhará.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_grant_login_to_proxy** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -87,7 +90,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

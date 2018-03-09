@@ -1,32 +1,38 @@
 ---
-title: 'SQL: Column Function (XQuery) | Microsoft Docs'
+title: sql:column() Function (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 332119a40a2bb06c2d71982fd00580fe80772e3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de extensão XQuery - SQL: Column
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar o **sql:column(()** funcionar quando você usar [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
   
@@ -41,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Observe que essa referência a uma coluna especificada no **SQL: Column** função dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
   
  Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode fazer referência a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir a colunas do tipo **xml** ou um CLR tipo definido pelo usuário.  
@@ -137,7 +143,7 @@ select @x
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

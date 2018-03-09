@@ -2,43 +2,35 @@
 title: Elemento Miningstructures (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructure Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructure Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructure
-helpviewer_keywords:
-- MiningStructure element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructure
+helpviewer_keywords: MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 455d874cf279e44e8381c5183d2d376e40e2a351
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0f0ce9ca930e54c1cf8ac989330e00f298a06a28
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="miningstructure-element-assl"></a>Elemento MiningStructures (ASSL)
-  Define a estrutura para um conjunto de modelos de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define a estrutura para um conjunto de modelos de mineração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,10 +65,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -86,7 +78,7 @@ ms.lasthandoff: 09/01/2017
 |Elementos pai|[MiningStructures](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)|  
 |Elementos filho|[Anotações](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CacheMode](../../../analysis-services/scripting/properties/cachemode-element-assl.md), [agrupamento](../../../analysis-services/scripting/properties/collation-element-assl.md), [colunas](../../../analysis-services/scripting/collections/columns-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [ Descrição](../../../analysis-services/scripting/properties/description-element-assl.md), [ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md),<br /><br /> [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [idioma](../../../analysis-services/scripting/properties/language-element-assl.md), [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [MiningModels](../../../analysis-services/scripting/collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md), [nome](../../../analysis-services/scripting/properties/name-element-assl.md), [fonte](../../../analysis-services/scripting/properties/source-element-binding-assl.md), [estado](../../../analysis-services/scripting/properties/state-element-assl.md), [traduções](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A estrutura de mineração define as colunas e as associações. Depois de definir uma estrutura de mineração, você pode usar aquela estrutura para definir muitos modelos de mineração. A estrutura de mineração e cada modelo de mineração que contém, pode ser processada independentemente.  
   
 > [!NOTE]  
@@ -99,10 +91,9 @@ ms.lasthandoff: 09/01/2017
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento MiningModel &#40; ASSL &#41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)   
  [SELECIONAR &#40; DMX &#41;](../../../dmx/select-dmx.md)  
   
   
-

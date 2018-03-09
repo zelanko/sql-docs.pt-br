@@ -2,28 +2,32 @@
 title: "No banco de dados análise do Python para desenvolvedores em SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 725d69f4c0799cf5911cb8764aa7d0f3b6cbc48d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Análise de Python no banco de dados para desenvolvedores em SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O objetivo deste passo a passo é fornecer os programadores SQL com experiência prática na criação de uma solução usando Python é executado no SQL Server de aprendizado de máquina. Este passo a passo, você aprenderá como adicionar código Python para procedimentos armazenados e executar procedimentos armazenados para criar e previsão dos modelos.
 
@@ -43,7 +47,7 @@ O processo de criação de uma solução de aprendizado de máquina é complexo 
 
 Os dados são do conjunto de dados NYC táxi bem conhecido. Para tornar este passo a passo rápido e fácil, os dados são amostrados. Você criará um modelo de classificação binária que prevê se uma viagem específica é provável obter uma dica ou não, com base em colunas, como a hora do dia, distância e local de coleta.
 
-Todas as tarefas podem ser realizadas usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Todas as tarefas podem ser realizadas usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Etapa 1: Baixar os dados de exemplo](sqldev-py1-download-the-sample-data.md)
 
@@ -74,7 +78,7 @@ Todas as tarefas podem ser realizadas usando [!INCLUDE[tsql](../../includes/tsql
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 + Instale uma instância do SQL Server 2017 com serviços de aprendizado de máquina e Python habilitado. Para obter mais informações, consulte [configurar serviços de aprendizado de máquina do SQL Server com Python](../python/setup-python-machine-learning-services.md).
 + O logon usado para este passo a passo deve ter permissões para criar bancos de dados e outros objetos, carregar dados, selecionar dados e executar procedimentos armazenados.

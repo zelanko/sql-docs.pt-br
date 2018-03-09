@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromWKB (geometry Data Type)
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 142b170e0cb12342fc640635a3294d8bcccf5ef2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c36780e823c67469b72cdaebda8e2e877daaee8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
  Tipo OGC: **MultiPolygon**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STMPolyFromWKB()` para criar uma instância `geometry`:  
@@ -70,8 +69,7 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

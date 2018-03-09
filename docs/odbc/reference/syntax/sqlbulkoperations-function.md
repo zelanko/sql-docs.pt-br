@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBulkOperations
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBulkOperations
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBulkOperations
-helpviewer_keywords:
-- SQLBulkOperations function [ODBC]
+f1_keywords: SQLBulkOperations
+helpviewer_keywords: SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea439a41a6a3d42c9266bbccfe53aace1c0f37f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbulkoperations-function"></a>Função SQLBulkOperations
 **Conformidade**  
@@ -468,7 +462,6 @@ int main() {
 |Posicionando o cursor, atualizar dados no conjunto de linhas, ou atualizar ou excluir dados no conjunto de linhas|[Função SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

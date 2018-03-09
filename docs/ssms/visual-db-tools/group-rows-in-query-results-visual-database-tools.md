@@ -3,8 +3,11 @@ title: Agrupar linhas em resultados da consulta (Ferramentas de Banco de Dados V
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f5de6f1138be5413cfc7112d697ea662b04b9d44
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar linhas em resultados da consulta (Visual Database Tools)
-Para criar subtotais ou para mostrar outro resumo informativo de subconjuntos de uma tabela, crie grupos usando uma consulta de agregação. Cada grupo resume os dados de todas as linhas da tabela que possuem o mesmo valor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para criar subtotais ou para mostrar outro resumo informativo de subconjuntos de uma tabela, crie grupos usando uma consulta de agregação. Cada grupo resume os dados de todas as linhas da tabela que possuem o mesmo valor.  
   
 Por exemplo, pode ser necessário exibir o preço médio de um livro na tabela `titles` , mas classifique os resultados por editora. Para isso, agrupe a consulta por publicador (por exemplo, `pub_id`). A saída da consulta resultante poderá ter a seguinte aparência:  
   
@@ -85,6 +88,6 @@ A saída resultante pode ter a seguinte aparência:
     GROUP BY pub_id  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classificar e agrupar resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

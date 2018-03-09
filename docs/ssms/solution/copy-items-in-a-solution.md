@@ -3,8 +3,11 @@ title: "Copiar itens em uma solução | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9124691f2d423ced6ab9fe4bc416549a7ebfdd82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8698de1d3a70ef122800367b1090a62eef683832
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar itens em uma solução
-Você pode copiar itens que usam o Gerenciador de Soluções ou o Windows Explorer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode copiar itens que usam o Gerenciador de Soluções ou o Windows Explorer.  
   
 ### <a name="to-copy-items-within-solution-explorer"></a>Para copiar itens dentro do Gerenciador de Soluções  
   
@@ -40,7 +43,7 @@ Você pode copiar itens que usam o Gerenciador de Soluções ou o Windows Explor
 > [!NOTE]  
 > As conexões não podem ser copiadas entre projetos. Ao copiar uma consulta com uma conexão associada em outro projeto, a conexão associada não será copiada no projeto de destino. Você deve criar a conexão manualmente no projeto de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Mover itens em uma solução](../../ssms/solution/move-items-in-a-solution.md)  
   

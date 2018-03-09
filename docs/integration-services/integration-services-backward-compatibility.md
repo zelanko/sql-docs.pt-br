@@ -5,7 +5,7 @@ ms.date: 06/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9303874bc5b9fd769063e89caa982f211cca0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a68afe88221975bd616c96976684e42640e6884
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Integration Services
   Este tópico descreve as alterações entre as versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve alterações no produto que são conhecidas por interromper ou alterar o comportamento de um aplicativo existente que inclua a funcionalidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -58,4 +57,3 @@ Esta seção descreve as alterações recentes do [!INCLUDE[ssISnoversion](../in
 Esta seção descreve as alterações no comportamento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. As alterações no comportamento afetam a maneira como os recursos funcionam ou interagem na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Não há alterações de comportamento para recursos do Integration Services no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-

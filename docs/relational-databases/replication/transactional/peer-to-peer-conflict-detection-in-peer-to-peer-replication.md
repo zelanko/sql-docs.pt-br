@@ -2,9 +2,12 @@
 title: "Detecção de conflitos na replicação ponto a ponto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a2c2b23d8fd86531e7a29707f1b0930b3c794f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Ponto a ponto – Detecção de conflitos na replicação ponto a ponto
-  A replicação transacional ponto a ponto permite inserir, atualizar ou excluir dados em qualquer modo em uma topologia e faz com que as alterações de dados sejam propagadas para os outros nós. Uma vez que você pode alterar dados em qualquer nó, as alterações de dados em nós diferentes podem entrar em conflito umas com as outras. Se uma linha for modificada em mais de um nó, isso poderá causar um conflito ou mesmo uma atualização perdida quando a linha for propagada para outros nós.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação transacional ponto a ponto permite inserir, atualizar ou excluir dados em qualquer nó em uma topologia e faz com que as alterações de dados sejam propagadas para os outros nós. Uma vez que você pode alterar dados em qualquer nó, as alterações de dados em nós diferentes podem entrar em conflito umas com as outras. Se uma linha for modificada em mais de um nó, isso poderá causar um conflito ou mesmo uma atualização perdida quando a linha for propagada para outros nós.  
   
  A replicação ponto a ponto no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e em versões posteriores oferece a opção de habilitar a detecção de conflito em uma topologia ponto a ponto. Essa opção ajuda a evitar os problemas causados por conflitos não detectados, inclusive o comportamento inconsistente do aplicativo e as atualizações perdidas. Com essa opção habilitada, por padrão uma alteração de conflito é tratada como erro crítico que causa a falha do Agente de Distribuição. No evento de um conflito, a topologia é mantida em um estado inconsistente até que o conflito seja resolvido e os dados sejam tornados consistentes em toda a topologia.  
   
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
     5.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): especifique “p2p_continue_onconflict” para o parâmetro @property e **false** para o parâmetro @value.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

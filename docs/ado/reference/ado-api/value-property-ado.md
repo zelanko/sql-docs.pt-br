@@ -3,7 +3,7 @@ title: Valor de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c48952d89eb58a835ab3372784c0fea468f492af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17e3c9f28e42dbd70118bb29a330514a9c29e013
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-ado"></a>Propriedade de valor (ADO)
 Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
@@ -37,7 +36,7 @@ Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-obje
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** valor que indica o valor do objeto. Valor padrão depende do [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **valor** propriedade para definir ou retornar dados de **campo** objetos, para definir ou retornar valores de parâmetro com **parâmetro** objetos, ou para definir ou retornar as configurações de propriedade com **Propriedade** objetos. Se o **valor** propriedade é leitura/gravação ou somente leitura depende de vários fatores??? Consulte os tópicos do respectivo objeto para obter mais informações.  
   
  ADO permite definir e retornar dados binários longos com o **valor** propriedade.  
@@ -56,4 +55,3 @@ Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-obje
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de propriedade de valor (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)   
  [Exemplo da propriedade Value (VC++)](../../../ado/reference/ado-api/value-property-example-vc.md)   
-

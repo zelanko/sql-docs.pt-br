@@ -2,27 +2,28 @@
 title: "Configuração do SQL Server (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo é o segundo de uma série que descreve a otimização de desempenho para serviços de R com base em dois estudos de caso.  Este artigo fornece orientação sobre a configuração de hardware e de rede do computador que é usada para executar o SQL Server R Services. Ele também contém informações sobre maneiras de configurar a instância do SQL Server, banco de dados ou tabelas usadas em uma solução. Como o uso de no SQL Server Desfoca a linha entre as otimizações de hardware e de banco de dados, uma terceira seção discute governança de recursos e a relação de CPU em detalhes.
 
@@ -72,7 +73,7 @@ O sistema operacional Windows usa um arquivo de paginação para gerenciar os de
 
 A velocidade do disco no qual o arquivo de paginação está armazenado também pode afetar o desempenho. Armazenar o arquivo de paginação em um SSD ou usar vários arquivos de paginação em vários SSDs pode melhorar o desempenho.
 
-Para obter informações sobre o dimensionamento de arquivo de paginação, consulte [como determinar o tamanho do arquivo de página apropriada para versões de 64 bits do Windows](https://support.microsoft.com/en-us/kb/2860880).
+Para obter informações sobre o dimensionamento de arquivo de paginação, consulte [como determinar o tamanho do arquivo de página apropriada para versões de 64 bits do Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Otimizações de nível de instância ou banco de dados
 
@@ -169,7 +170,7 @@ Para obter detalhes, incluindo o código de exemplo, consulte este tutorial: [SQ
 
 **Outros recursos:**
 
-+ [Soft-no SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-no SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Como mapear nós de software para CPUs
 
@@ -243,4 +244,3 @@ No entanto, dependendo do algoritmo usado, alguns modelos podem ser muito grande
 [Ajuste de desempenho para R - R otimização de código e dados](../r/r-and-data-optimization-r-services.md)
 
 [Ajuste de desempenho - resultados de estudo de caso](../r/performance-case-study-r-services.md)
-

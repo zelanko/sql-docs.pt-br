@@ -23,17 +23,16 @@ helpviewer_keywords:
 - DROP AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], dropping
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c1cd1e16d7d25810d571f940aaf1dece825406c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_grupo*  
+ *group_name*  
  Especifica o nome do grupo de disponibilidade a ser cancelado.  
   
 ## <a name="limitations-and-recommendations"></a>Limitações e recomendações  
@@ -90,8 +89,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Remover um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [CRIAR GRUPO de DISPONIBILIDADE &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Remover um grupo de disponibilidade &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
-

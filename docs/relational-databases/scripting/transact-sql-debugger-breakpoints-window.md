@@ -2,28 +2,34 @@
 title: "Janela Pontos de Interrupção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpoints
-helpviewer_keywords: Breakpoints Window [Transact-SQL]
+f1_keywords:
+- vs.debug.breakpoints
+helpviewer_keywords:
+- Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1e7f59da9b783e33b68212f703438e8db2de63d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e65aa2535f4c0f1aebb9723edf29c041a9c74fed
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Depurador do Transact-SQL – Janela Pontos de Interrupção
-  A janela **Pontos de Interrupção** lista todos os pontos de interrupção definidos no atual Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para gerenciar os pontos de interrupção, use a barra de ferramentas da janela **Pontos de Interrupção** . Pontos de interrupção são locais no código onde a execução pausa no modo de depuração de forma que é possível exibir os dados de depuração.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Pontos de Interrupção** lista todos os pontos de interrupção definidos no atual Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para gerenciar os pontos de interrupção, use a barra de ferramentas da janela **Pontos de Interrupção** . Pontos de interrupção são locais no código onde a execução pausa no modo de depuração de forma que é possível exibir os dados de depuração.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar a janela Pontos de Interrupção**  
@@ -44,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
  Você pode adicionar e remover as seguintes colunas selecionando-as na lista **Colunas** .  
   
- **Filtro**  
+ **Filter**  
  Exibe **(nenhum)**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a filtros de ponto de interrupção de configuração.  
   
  **Quando Visitado**  
@@ -56,7 +62,7 @@ ms.lasthandoff: 11/09/2017
  **Função**  
  Exibe o número da linha onde o ponto de interrupção está definido.  
   
- **Arquivo**  
+ **File**  
  Exibe o nome do arquivo de origem que contém o ponto de interrupção e o número da linha na qual o ponto de interrupção está definido.  
   
  **Endereço**  
@@ -86,7 +92,7 @@ ms.lasthandoff: 11/09/2017
  **Colunas**  
  Lista todas as colunas que podem ser exibidas na janela **Pontos de Interrupção** . Uma caixa de seleção indica as colunas em exibição. Para adicionar ou remover uma coluna na janela **Pontos de Interrupção** , selecione a coluna na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

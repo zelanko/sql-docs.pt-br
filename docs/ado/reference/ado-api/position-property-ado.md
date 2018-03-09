@@ -3,8 +3,9 @@ title: Posicione a propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Position
-helpviewer_keywords: Position property [ADO]
+f1_keywords:
+- _Stream::Position
+helpviewer_keywords:
+- Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34f95df4ee5e4ab4ac5c4ce3934ceabe4dacc64f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c11f5153f63c0fcacd6286b64ee6628c2e0ee439
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="position-property-ado"></a>Propriedade Position (ADO)
 Indica a posição atual dentro de um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -32,7 +35,7 @@ Indica a posição atual dentro de um [fluxo](../../../ado/reference/ado-api/str
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que especifica o deslocamento, em número de bytes, da posição atual do início do fluxo. O padrão é 0, que representa o primeiro byte no fluxo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A posição atual pode ser movida para um ponto após o final do fluxo. Se você especificar a posição atual além do fim do fluxo de [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) do **fluxo** objeto aumentará adequadamente. Qualquer novo bytes adicionados dessa forma, será nulos.  
   
 > [!NOTE]

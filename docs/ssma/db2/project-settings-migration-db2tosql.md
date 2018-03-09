@@ -1,29 +1,30 @@
 ---
 title: "Configurações (migração) (DB2ToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7cc8dbd9eaf1f0cce54d142f775076d58528c4fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-db2tosql"></a>Configurações de projeto (migração) (DB2ToSQL)
 A página de migração do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA migra os dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -68,4 +69,3 @@ O painel de migração está disponível em ambos o **configurações de projeto
 > [!IMPORTANT]  
 > Quando o **modo de migração de dados paralela** opção é definida como **personalizado**, um novo projeto definindo a opção **a contagem de threads** é exibido. Especifica o número de threads usados para migração de dados.  
   
-

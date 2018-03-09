@@ -2,13 +2,18 @@
 title: Pesquisar palavras perto de outra palavra com NEAR | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -18,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81230587be4efd864fb2ec3958a1473db8de2e53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
-  Você pode usar um *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Você pode usar um *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
   
 ##  <a name="Custom_NEAR"></a> Visão geral de NEAR  
 **NEAR** inclui os seguintes recursos:  
@@ -76,7 +82,7 @@ Para obter mais informações sobre a sintaxe, consulte [CONTAINS &#40;Transact-
 ### <a name="example-1"></a>Exemplo 1
  Por exemplo, você pode procurar 'John' dentro de duas condições de 'Smith', da seguinte maneira:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -89,7 +95,7 @@ Para obter mais informações sobre a sintaxe, consulte [CONTAINS &#40;Transact-
 ### <a name="example-2"></a>Exemplo 2
  O exemplo a seguir pesquisa a tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` para todos os resumos de documento que contêm o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -112,15 +118,15 @@ GO
 ## <a name="combine-near-with-other-terms"></a>Combinar NEAR com outros termos  
  Você pode combinar NEAR com outros termos. Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade personalizada com outra, uma condição simples ou uma condição de prefixo. Por exemplo:  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NOT *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NOT *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NEAR((*term3*,*term4*),2)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NEAR((*term3*, *term4*),2)')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
  Por exemplo,  
   
@@ -155,7 +161,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      O valor de **transformar palavras de ruído** afetará como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata palavras irrelevantes se elas forem especificadas em pesquisas de proximidade. Para saber mais, veja [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)   

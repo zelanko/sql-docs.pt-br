@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 330ad1186afa47b55ed6365be76fe96d1878e980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +61,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*é **nvarchar (128)**, sem padrão.  
   
  [  **@enabled =** ] *habilitado*  
@@ -76,13 +79,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@category_id =** ] *category_id*  
  Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão NULL.  
   
- [  **@owner_login_name =** ] **'***login***'**  
+ [ **@owner_login_name =** ] **'***login***'**  
  O nome do logon que é o proprietário do trabalho. *logon*é **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente membros do **sysadmin** função de servidor fixa pode definir ou alterar o valor de  **@owner_login_name** . Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de  **@owner_login_name** , ocorrerá falha na execução deste procedimento armazenado e um erro será retornado.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
  Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Caso haja êxito|  
@@ -92,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_email =** ] *email_level*  
  Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores como *eventlog_level*.  
   
- [  **@notify_level_netsend =** ] *netsend_level*  
+ [ **@notify_level_netsend =** ] *netsend_level*  
  Um valor que indica quando enviar uma mensagem da rede após a conclusão deste trabalho. *netsend_level*é **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores como *eventlog_level*.  
   
  [  **@notify_level_page =** ] *page_level*  
  Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores como *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***nome_email***'**  
+ [ **@notify_email_operator_name =** ] **'***email_name***'**  
  O nome de email da pessoa para enviar email quando *email_level* for atingido. *nome_email* é **sysname**, com um padrão NULL.  
   
  [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
@@ -113,7 +116,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Quando *delete_level* é **3**, o trabalho é executado apenas uma vez, independentemente de quaisquer agendas definidas para o trabalho. Além disso, se um trabalho excluir a si próprio, todo o histórico do trabalho também será excluído.  
   
- [  **@job_id =** ] *job_id***saída**  
+ [  **@job_id =** ] *job_id * saída**  
  O número de identificação atribuído ao trabalho caso ele seja criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -122,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **@originating_server**existe em **sp_add_job,** , mas não está listado em argumentos. **@originating_server**é reservado para uso interno.  
   
  Depois de **sp_add_job** foi executado para adicionar um trabalho, **sp_add_jobstep** pode ser usado para adicionar etapas que executam as atividades para o trabalho. **sp_add_jobschedule** pode ser usado para criar a agenda que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usará para executar o trabalho. Use **sp_add_jobserver** para definir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em que o trabalho é executado, e **sp_delete_jobserver** para remover o trabalho da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  
@@ -185,16 +188,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_apply_job_to_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

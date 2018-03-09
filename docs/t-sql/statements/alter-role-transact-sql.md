@@ -24,17 +24,16 @@ helpviewer_keywords:
 - database roles [SQL Server], modifying
 - names [SQL Server], database roles
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: 64
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3eaee2d346eda964545caa60cd7168b531f47ad9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
   
  O exemplo a seguir altera o nome da função `buyers` para `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -138,13 +137,13 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  Este exemplo cria uma função de banco de dados denominada `Sales`. Ele adiciona um usuário de banco de dados chamado Barry para a associação e, em seguida, mostra como remover o membro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
@@ -153,4 +152,3 @@ ALTER ROLE Sales DROP MEMBER Barry;
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   
-

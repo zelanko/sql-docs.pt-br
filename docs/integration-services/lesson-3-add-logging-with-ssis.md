@@ -1,11 +1,11 @@
 ---
-title: "Lição 3: Adicionar o registro em log com o SSIS | Microsoft Docs"
+title: "Lição 3: adicionar um loop com o SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,22 +15,21 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bfc02e0c5930fca3dec339274167cbad5716461
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dfbf0d2deb62b4942800e5427166890fa9123a1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lição 3: Adicionar o log com o SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui recursos de log que permitem solucionar problemas e monitorar a execução do pacote fornecendo um rastreamento de eventos de tarefa e contêiner. Os recursos de log são flexíveis, e podem ser habilitados no nível do pacote ou em tarefas individuais e contêineres dentro do pacote. Você pode selecionar quais eventos quer você anotar, e criar múltiplos logs vários em um único pacote.  
   
-O log é fornecido por um provedor de log. Cada provedor de log pode gravar informações de log em diferentes formatos e tipos de destino. O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece os seguintes provedores de log:  
+O log é fornecido por um provedor de log. Cada provedor de log pode gravar informações de log em diferentes formatos e tipos de destino. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece os seguintes provedores de log:  
   
 -   Arquivo de texto  
   
@@ -50,15 +49,14 @@ Nesta lição, você aprenderá a criar uma cópia do pacote criado em [Lição 
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Etapa 1: Copiando o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Etapa 2: Adicionando e Configurando registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+-   [Etapa 2: Adicionando e configurando registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Etapa 3: Testando o pacote de Tutorial da lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Etapa 3: Testando o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Copiando o pacote da lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[Etapa 1: Copiando o pacote da Lição 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
   
   
-

@@ -2,26 +2,28 @@
 title: "Lição 6: Adicionando agrupamentos e totais (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar e resumir os dados.  
@@ -37,7 +39,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
     Observe que a alça de linha agora exibe um colchete para mostrar um grupo. A tabela também tem duas colunas Data – uma em cada lado de uma linha pontilhada vertical.  
   
-    ![Data de grupo adicionada](../reporting-services/media/rs-basictablegroups1design.png "data grupo adicionado")  
+    ![grupo de datas adicionado](../reporting-services/media/rs-basictablegroups1design.png "grupo de datas adicionado")  
   
 4.  No painel **Dados do Relatório** , arraste o campo **Order** para o painel **Grupos de Linhas** . Coloque-o abaixo de Data e acima de **(Detalhes)**.
 
@@ -47,7 +49,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 5.  Exclua as colunas **Data** e **Pedido** originais à **direita** da linha dupla. Isso removerá os valores do registro individual para que apenas o valor do grupo seja exibido. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e clique em **Excluir Colunas**.  
   
-    ![Selecione as colunas para excluir](../reporting-services/media/rs-basictablegroupsdeletecols.gif "selecionar colunas para exclusão")  
+    ![Selecionar colunas a serem excluídas](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Selecionar colunas a serem excluídas")  
   
 6.  Para formatar a nova coluna de data, clique com o botão direito do mouse na célula com a expressão de campo `[Date]` e clique em **Propriedades da Caixa de Texto**.  
   
@@ -55,7 +57,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 8.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 10.  Alterne para a guia **Visualizar** para visualizar o relatório. Sua aparência deve ser similar a esta ilustração:  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
@@ -78,7 +80,7 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 6.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Cinza Claro**e clique em **OK**.  
   
-    ![Exibição de design: tabela básica com total do pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "exibição de Design: tabela básica com total do pedido")  
+    ![Modo de exibição de Design: tabela básica com total do pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Modo de exibição de Design: tabela básica com total do pedido")  
   
 ## <a name="bkmk_adddailytotal"></a>Para adicionar um total diário a um relatório  
   
@@ -106,13 +108,13 @@ Nesta lição do tutorial, você adicionará agrupamentos e totais ao relatório
   
 4.  No menu **Formatar** , clique em **Cor do Plano de Fundo**, clique em **Azul Claro**e clique em **OK**.  
   
-    ![Exibição de design: total geral em tabela básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "exibição de Design: total geral em tabela básica")  
+    ![Modo de exibição de Design: total geral em tabela básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Modo de exibição de Design: total geral em tabela básica")  
   
 5.  Clique em **Visualizar**.  
   
     A última página deve ser semelhante à imagem a seguir. Na barra de ferramentas, clique em Última Página ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Visualização: Tabela básica com total geral](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "visualização: tabela básica com total geral")  
+    ![Visualização: tabela básica com total geral](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")  
   
 ## <a name="bkmk_publishreport"></a>Para publicar o relatório no Servidor de Relatório (opcional)  
   
@@ -159,12 +161,11 @@ Clique no nome do relatório **Pedidos de Venda** para exibir o relatório rende
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-* * Você concluiu com êxito o criando um relatório de tabela básico tutorial.* *  
+** Você concluiu com êxito o tutorial Criando um relatório de tabela básico.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

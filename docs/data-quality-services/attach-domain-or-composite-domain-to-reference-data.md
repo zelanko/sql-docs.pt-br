@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5ed6d30db3643d9e027d7d7c2a537a9deb72d60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d87911a70dd4f1c891fade863804af7c7f5fd3ea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviços de Dados de Referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpeza de dados](../data-quality-services/data-cleansing.md)  
   

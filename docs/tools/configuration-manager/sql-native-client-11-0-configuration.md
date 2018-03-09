@@ -2,27 +2,33 @@
 title: "Configuração do SQL Native Client 11.0 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: client configuration [SQL Server], SQL Server Native Client
+helpviewer_keywords:
+- client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8ae731300f9e8ca6064db17cfce5311c77c71b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b49f2efcee75e737d6caeacc752999203c2358af
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuração do SQL Native Client 11.0
-  Esta seção contém os tópicos da Ajuda F1 das caixas de diálogo **Configuração do SQL Server Native Client** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é a biblioteca de rede que os computadores cliente usam para se conectarem ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partir do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Esta seção contém os tópicos da Ajuda F1 das caixas de diálogo **Configuração do SQL Server Native Client** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é a biblioteca de rede que os computadores cliente usam para se conectarem ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partir do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  As definições feitas na Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client são usadas no computador que está executando o programa cliente. Quando definidas no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elas afetam somente os programas clientes executados no servidor.  
   
@@ -50,8 +56,8 @@ ms.lasthandoff: 11/09/2017
   
     -   [Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
-    -   [Criando uma cadeia de conexão válida usando TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+    -   [Criando uma cadeia de Conexão válida usando TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [Criando uma cadeia de conexão válida usando pipes nomeados](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [Criando uma cadeia de Conexão válida usando Pipes nomeados](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

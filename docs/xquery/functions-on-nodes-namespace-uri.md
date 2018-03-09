@@ -3,8 +3,11 @@ title: "Função namespace-uri (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - fn:namespace-uri function
 - namespace-uri function
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d765c32fc0387a1aff755a59d454f9b5797eb297
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89c8cf916143a1041c340aeea48642c87c1d17cd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em nós - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o namespace URI do QName especificado em *$arg* como xs: String.  
   
@@ -45,7 +47,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nome de nó cuja parte do namespace URI será recuperada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Se o argumento for omitido, o padrão será o nó de contexto.  
   
@@ -117,4 +119,3 @@ WHERE ProductModelID=19
  [Função &#40; de nome local XQuery &#41;](../xquery/functions-on-nodes-local-name.md)  
   
   
-

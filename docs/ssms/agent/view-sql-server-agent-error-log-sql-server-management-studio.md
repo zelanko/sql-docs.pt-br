@@ -3,9 +3,13 @@ title: Exibir um log de erros do SQL Server Agent (SQL Server Management Studio)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +19,19 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 724d7c290a22922c73483fdd5bbb8c739086fefd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e34811ab5bdff948a59bcf69a7abc1f7d5b8827c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como exibir o log de erros do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 O Visualizador do Arquivo de Log exibe informações de muitos componentes diferentes. Quando o Visualizador do Arquivo de Log estiver aberto, use o painel **Selecionar logs** para selecionar os logs que deseja exibir. Cada log exibe as colunas adequadas àquele tipo de log. Os logs disponíveis dependem de como o Visualizador do Arquivo de Log é aberto.  
@@ -73,7 +78,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 4.  Clique com o botão direito do mouse no log de erros que você deseja exibir e selecione **Exibir Log do Agente**.  
   
-    As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name* :  
+    As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name*:  
   
     **Carregar Log**  
     Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
@@ -102,7 +107,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
     **Instância**  
     O nome da instância do na qual ocorreu o evento. Esse nome é exibido como *nome do computador*\\*nome da instância*.  
   
-    **Data**  
+    **Date**  
     Exibe a data do evento.  
   
     **Origem**  

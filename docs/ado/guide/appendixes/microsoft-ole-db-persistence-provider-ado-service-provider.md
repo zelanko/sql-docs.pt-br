@@ -3,7 +3,7 @@ title: "Provedor de persistência do Microsoft OLE DB (provedor de serviços de 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508b983c514031587f2b6507b806d3f279e0f822
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência OLE DB da Microsoft
 O Microsoft OLE DB provedor de persistência permite que você salve uma [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto em um arquivo e, em seguida, restaurá-lo mais tarde **registros** objeto do arquivo. Informações de esquema, dados e as alterações pendentes serão preservadas.
@@ -49,7 +48,7 @@ O Microsoft OLE DB provedor de persistência permite que você salve uma [regist
 |E_BADSTREAM|O arquivo aberto não tem um formato válido (ou seja, o formato não é ADTG ou XML).|
 |E_CANTPERSISTROWSET|O **registros** objeto salvo tem características que impedem que está sendo armazenado.|
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  O Microsoft OLE DB provedor de persistência não expõe nenhum propriedades dinâmicas.
 
  Atualmente, apenas parametrizados hierárquica **registros** objetos não podem ser salvos.
@@ -60,4 +59,3 @@ O Microsoft OLE DB provedor de persistência permite que você salve uma [regist
 
 ## <a name="see-also"></a>Consulte também
 [Provedor de persistência do Microsoft OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
-

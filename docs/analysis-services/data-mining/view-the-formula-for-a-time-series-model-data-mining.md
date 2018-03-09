@@ -2,15 +2,13 @@
 title: "Exibir a fórmula para uma série temporal (mineração de dados) do modelo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
-  Se você tiver criado um modelo de série temporal usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, a maneira mais fácil de ver a equação de regressão para o modelo será usar a **Legenda de Mineração** do [Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Se você tiver criado um modelo de série temporal usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, a maneira mais fácil de ver a equação de regressão para o modelo será usar a **Legenda de Mineração** do [Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Para exibir a fórmula de regressão ARTXP para um modelo de série temporal  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 11/17/2017
     >  Se você procurar o conteúdo de um modelo misto que use ambos os modelos ARIMA e ARTXP, os dois modelos estarão em árvores separadas e unidas no nó raiz que representa o modelo. Embora os modelos ARIMA e ARTXP sejam apresentados em um visualizador para sua conveniência, as estruturas são muito diferentes, assim como as equações, que não podem ser combinadas ou comparadas. A árvore ARTXP na verdade é mais como uma árvore de decisão, enquanto a árvore ARIMA representa uma série de médias móveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

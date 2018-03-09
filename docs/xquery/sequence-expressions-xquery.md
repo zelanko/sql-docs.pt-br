@@ -3,32 +3,37 @@ title: "Sequência de expressões (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fff2568f6793efe8c21d6d37dd92851fe9bece89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-expressions-xquery"></a>Expressões de sequência (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte aos operadores XQuery usados para construir, filtrar e combinar uma sequência de itens. Um item pode ser um valor atômico ou um nó.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte os operadores XQuery que são usados para construir, filtrar e combinar uma sequência de itens. Um item pode ser um valor atômico ou um nó.  
   
 ## <a name="constructing-sequences"></a>Construindo sequências  
  Você pode usar o operador vírgula para construir uma sequência que concatena itens em uma única sequência.  

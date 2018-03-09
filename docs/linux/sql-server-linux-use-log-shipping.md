@@ -3,41 +3,40 @@ title: Configurar o envio de logs para SQL Server no Linux | Microsoft Docs
 description: "Este tutorial mostra um exemplo básico de como replicar uma instância do SQL Server no Linux para uma instância secundária usando envio de logs."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc8c8094c6701af90aa9f645dc24fff8a70394b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Envio de Log do SQL Server é uma configuração de alta disponibilidade em um banco de dados de um servidor primário é replicado para um ou mais servidores secundários. Resumindo, um backup do banco de dados de origem é restaurado para o servidor secundário. Em seguida, o servidor primário cria backups de log de transação periodicamente e os servidores secundários restauração-los atualizando a cópia secundária do banco de dados. 
 
   ![Envio de logs](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Conforme descrito na figura acima, uma sessão de envio de logs envolve as seguintes etapas:
+Conforme descrito em essa imagem, uma sessão de envio de logs envolve as seguintes etapas:
 
 - Fazendo backup de arquivo de log de transações na instância primária do SQL Server
 - Copiar o arquivo de backup de log de transações em toda a rede para uma ou mais instâncias do SQL Server secundárias
 - Restaurar o arquivo de backup do log de transações em instâncias do SQL Server secundários
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 - [Instalar o agente do SQL Server no Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurar um compartilhamento de rede para o envio de logs usando CIFS 
@@ -315,6 +314,5 @@ Conforme descrito na figura acima, uma sessão de envio de logs envolve as segui
     GO  
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
 
 

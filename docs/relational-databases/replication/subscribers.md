@@ -2,9 +2,12 @@
 title: Assinantes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.rep.newsubwizard.subscribers.f1
 helpviewer_keywords: Subscribers [SQL Server replication]
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecff48e599dbec4e2bb7253f4e6a932a380db200
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 195906a887d385c670f1ba4de1305f43ace1276d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscribers"></a>Assinantes
-  Especifique os Assinantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que receberão uma assinatura para a publicação selecionada.  
+# <a name="subscribers"></a>Publicadores
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Especifique os Assinantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que receberão uma assinatura para a publicação selecionada.  
   
 ## <a name="options"></a>Opções  
  **Assinantes**  
@@ -68,10 +71,10 @@ ms.lasthandoff: 11/09/2017
   
     -   A publicação permite assinaturas anônimas.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Assinantes Não SQL Server](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

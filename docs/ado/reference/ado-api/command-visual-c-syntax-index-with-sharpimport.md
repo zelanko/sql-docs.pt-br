@@ -3,8 +3,9 @@ title: "Comando (Visual C++ sintaxe índice com #import) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: 'Command collection [ADO], Visual C++ syntax index with #import'
+dev_langs:
+- C++
+helpviewer_keywords:
+- 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4009eaa33cb1e91fbc9f687f86fc304aa447e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61afd9aa8eaf18e5154ec2279d87c0cccb58c547
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Comando (Visual C++ sintaxe índice com #import)
 ## <a name="methods"></a>Métodos  

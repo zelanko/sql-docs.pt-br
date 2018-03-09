@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -81,7 +82,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *user_name*  
  Uma opção válida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de logon de autenticação. Número máximo de caracteres é 128.  
   
- *senha*  
+ *password*  
  A senha de logon. Número máximo de caracteres é 128.  
   
  *batch_size*  

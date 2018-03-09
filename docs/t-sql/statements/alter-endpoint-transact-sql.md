@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER ENDPOINT
 - ALTER_ENDPOINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER ENDPOINT statement
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +114,10 @@ FOR DATABASE_MIRRORING (
  **AUTORIZAÇÃO** *logon*  
  O **autorização** opção não está disponível em **ALTER ENDPOINT**. A propriedade só pode ser atribuída quando o ponto de extremidade é criado.  
   
- **PARA** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Você não pode alterar o tipo de carga com **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você usar ALTER ENDPOINT, especifique somente os parâmetros que deseja atualizar. Todas as propriedades de um ponto de extremidade existente permanecem as mesmas, a não ser que você as altere explicitamente.  
   
  Não podem ser executadas instruções ENDPOINT DDL em uma transação de usuário.  
@@ -132,10 +134,10 @@ FOR DATABASE_MIRRORING (
   
  Para alterar a propriedade de um ponto de extremidade existente, você deve usar a instrução ALTER AUTHORIZATION. Para obter mais informações, consulte [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Remover ponto de EXTREMIDADE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

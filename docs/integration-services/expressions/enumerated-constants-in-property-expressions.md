@@ -1,5 +1,5 @@
 ---
-title: "Constantes em expressões de propriedade enumeradas | Microsoft Docs"
+title: "Constantes enumeradas em expressões de propriedade | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode** , use o valor numérico 2 em vez do nome amigável Desabilitada.  
@@ -99,16 +98,16 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em DTSPrecedenceEvalOp|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Expressão|1|  
+|Expression|1|  
 |Constraint|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
  Propriedade**Value** — definida usando valores da enumeração **DTSExecResult** .  
   
-|Nome Amigável|Valor numérico|  
+|Nome amigável|Valor numérico|  
 |-------------------|-------------------|  
-|Success|0|  
+|Êxito|0|  
 |Failure|1|  
 |Completion|2|  
 |Canceled|3|  
@@ -213,7 +212,7 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------------------|-------------------|  
 |Normal|0|  
 |Archive|1|  
-|Oculto|2|  
+|Hidden|2|  
 |ReadOnly (somente-leitura)|4|  
 |Sistema|8|  
   
@@ -231,7 +230,7 @@ ms.lasthandoff: 08/03/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>Tarefa Fila de Mensagens  
+### <a name="message-queue-task"></a>Message Queue Task  
  Propriedade**MessageType** — definida usando valores da enumeração **MQMessageType** .  
   
 |Nome amigável em MQMessageType|Valor numérico|  
@@ -465,7 +464,7 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em DTSXMLDiffOptions|Valor numérico|  
 |----------------------------------------|-------------------|  
-|Nenhum.|0|  
+|Nenhum|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -495,7 +494,7 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
-|Nenhum.|0|  
+|Nenhum|0|  
 |Todos|1|  
 |Sistema|2|  
 |Usuário|3|  
@@ -505,7 +504,7 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Nenhum.|0|  
+|Nenhum|0|  
 |Todos|1|  
 |Specific|2|  
   
@@ -536,7 +535,7 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em BackupTaskType|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Banco de dados|0|  
+|banco de dados|0|  
 |Arquivos|1|  
 |Log|2|  
   
@@ -565,14 +564,14 @@ ms.lasthandoff: 08/03/2017
 |Day|0|  
 |Week|1|  
 |Month|2|  
-|Ano|3|  
+|Year|3|  
   
 ### <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas  
  Propriedade**UpdateType** — definida usando valores da enumeração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do SMO ( **do SMO (** Management Objects).  
   
 |Nome amigável em StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Coluna|1|  
+|coluna|1|  
 |Índice|2|  
 |Todos|3|  
   
@@ -583,8 +582,8 @@ ms.lasthandoff: 08/03/2017
   
 |Nome amigável em DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Nenhum.|-1|  
-|Success|0|  
+|Nenhum|-1|  
+|Êxito|0|  
 |Failure|1|  
 |Completion|2|  
   
@@ -595,7 +594,7 @@ ms.lasthandoff: 08/03/2017
 |Nome amigável em DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Ativado|1|  
+|Habilitado|1|  
 |Desabilitado|2|  
   
  Propriedade**TransactionOption** — definida usando valores da enumeração **DTSTransactionOption** .  
@@ -604,17 +603,16 @@ ms.lasthandoff: 08/03/2017
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |Tem suporte|1|  
-|Required|2|  
+|Obrigatório|2|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40; SSIS &#41; Pacotes](../../integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

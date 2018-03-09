@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], scalar function calls
+helpviewer_keywords: escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
@@ -60,4 +57,3 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  Para determinar quais funções escalares têm suporte por uma fonte de dados, um aplicativo chama **SQLGetInfo** com SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_ Opções de funções. Para determinar quais operações de conversão são suportadas pelo **converter** função, um aplicativo chama **SQLGetInfo** com qualquer uma das opções que começam com SQL_CONVERT.
-

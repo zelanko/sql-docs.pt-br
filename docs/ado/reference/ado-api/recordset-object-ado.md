@@ -3,8 +3,9 @@ title: O objeto de conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset
-helpviewer_keywords: Recordset object [ADO]
+f1_keywords:
+- Recordset
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e28a7413bc510865e1553e9a548ac1f00d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa todo o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **registros** objeto se refere a um único registro dentro do conjunto de como o registro atual.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você usa **registros** objetos para manipular os dados de um provedor. Quando você usa ADO, você manipula dados quase inteiramente usando **registros** objetos. Todos os **registros** objetos consistem em registros (linhas) e campos (colunas). Dependendo da funcionalidade com suporte pelo provedor, alguns **registros** métodos ou propriedades podem não estar disponíveis.  
   
  ADODB. Conjunto de registros é o ProgID que deve ser usado para criar um **registros** objeto. Aplicativos existentes que fazem referência a objeto ADOR desatualizado. ProgID do conjunto de registros continuarão a funcionar sem recompilar, mas novos desenvolvimentos devem fazer referência a objeto ADODB. Conjunto de registros.  
@@ -54,7 +57,7 @@ Representa todo o conjunto de registros de uma tabela base ou os resultados de u
   
  Você pode usar o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, e **MovePrevious** métodos; o [mover](../../../ado/reference/ado-api/move-method-ado.md) método; e o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), e [filtro](../../../ado/reference/ado-api/filter-property.md) propriedades para reposicionar o registro atual, supondo que o provedor oferece suporte a relevantes funcionalidade. Somente avanço **registros** objetos oferecem suporte apenas a [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método. Quando você usa o **mover** métodos para visitar cada registro (ou enumerar o **registros**), você pode usar o **BOF** e **EOF** propriedades para determinar se você tiver movido para fora o início ou término do **registros**.  
   
- Antes de usar qualquer funcionalidade de um **registros** do objeto, você deve chamar o **suporta** método no objeto para verificar se a funcionalidade está disponível ou com suporte. Você não deve usar a funcionalidade quando o **suporta** método retornará false. Por exemplo, você pode usar o **MovePrevious** somente se do método `Recordset.Supports(adMovePrevious)` retorna **True**. Caso contrário, você obterá um erro, porque o **registros** objeto fechado e a funcionalidade fique indisponível na instância. Se não há suporte para um recurso que lhe interessam, **suporta** retornará false também. Nesse caso, você deve evitar chamando o método ou propriedade correspondente no **Recrodset** objeto.  
+ Antes de usar qualquer funcionalidade de um **registros** do objeto, você deve chamar o **suporta** método no objeto para verificar se a funcionalidade está disponível ou com suporte. Você não deve usar a funcionalidade quando o **suporta** método retornará false. Por exemplo, você pode usar o **MovePrevious** somente se do método `Recordset.Supports(adMovePrevious)` retorna **True**. Caso contrário, você obterá um erro, porque o **registros** objeto fechado e a funcionalidade fique indisponível na instância. Se não há suporte para um recurso que lhe interessam, **suporta** retornará false também. Nesse caso, você deve evitar chamando o método ou propriedade correspondente no **registros** objeto.  
   
  **Conjunto de registros** objetos podem dar suporte a dois tipos de atualização: imediatas e em lotes. Em atualização imediata, todas as alterações de dados são gravadas imediatamente para a fonte de dados depois de você chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Você também pode passar matrizes de valores como parâmetros com o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) e **atualizar** métodos e atualizar simultaneamente vários campos em um registro.  
   

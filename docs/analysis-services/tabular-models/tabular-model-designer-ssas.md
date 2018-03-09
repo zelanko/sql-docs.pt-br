@@ -1,33 +1,32 @@
 ---
 title: Designer de modelo tabular | Microsoft Docs
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>Designer de Modelos Tabulares (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado com o Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], com modelos adicionais de tipo de projeto especificamente para desenvolver soluções profissionais de modelo tabular.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é instalado como um download gratuito da Web. Consulte [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) para obter detalhes.    
   
 ##  <a name="bkmk_benefits"></a> Benefícios  
@@ -35,7 +34,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
  Além dos novos modelos e ferramentas para criar soluções profissionais multidimensionais de modelo tabular, o ambiente de desenvolvimento do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] fornece recursos de desenvolvimento, depuração e ciclo de vida de projeto que garantem a criação das mais avançadas soluções de BI para sua organização. Para obter mais informações sobre o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consulte o [Guia de Introdução ao Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Modelos de projeto  
+##  <a name="bkmk_proj_temp"></a> Modelos de projeto  
  Quando você instala o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], os seguintes modelos de projeto de modelo de tabela são adicionados aos tipos de projeto de Business intelligence:  
   
  **Projeto tabular do Analysis Services**  
@@ -99,7 +98,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
 -   Measure  
   
- As Propriedades do Projeto exibem somente o nome de projeto e a pasta do projeto na janela de Propriedades. Projetos também têm opções de implantação adicionais e configurações de servidor de implantação que você pode definir usando uma caixa de diálogo de propriedades modais. Para exibir essas propriedades, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
+ Propriedades do projeto exibem somente o nome do projeto e a pasta do projeto na janela Propriedades. Projetos também têm opções de implantação adicionais e configurações de servidor de implantação que você pode definir usando uma caixa de diálogo de propriedades modais. Para exibir essas propriedades, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
  Os campos na janela Propriedades têm controles inseridos que são abertos quando você clica neles. O tipo de controle de edição depende da propriedade específica. Esses controles incluem caixas de edição, listas suspensas e links para caixas de diálogo personalizadas. Propriedades que são mostradas esmaecidas são somente leitura.  
   
@@ -129,8 +128,8 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
 ### <a name="toolbar"></a>Barra de Ferramentas  
  A barra de ferramentas de Analysis Services fornece acesso rápido e fácil aos comandos de criação de modelo mais frequentemente usados.  
   
-##  <a name="bkmk_vsint"></a>Integração do Visual Studio  
- **Controle de origem**  
+##  <a name="bkmk_vsint"></a> Integração do Visual Studio  
+ **Controle do código-fonte**  
  Os projetos do Analysis Services são integrados com o plug-in de controle do código-fonte selecionado. Se você configurou o Visual Studio para usar o controle do código-fonte, poderá usar check in/check out no Gerenciador de Soluções. Para configurar o uso do Team Foundation Server, consulte [Configurar o Visual Studio com o controle de versão do Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). Muitos plug-ins de controle do código-fonte de terceiros também têm suporte.  
   
  **Fontes**  
@@ -140,7 +139,7 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  Os atalhos de teclado do Analysis Services podem ser configurados/remapeados pela caixa de diálogo Ferramentas->Opções->Teclado. Alguns atalhos globais [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como criar, salvar, depurar, novo projeto, etc. têm suporte no contexto do designer de modelo de tabela. Outros atalhos específicos do designer de modelo tabular estão no contexto do Analysis Services.  
   
 ## <a name="see-also"></a>Consulte também  
- [Projetos de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriedades &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Projetos de modelo tabular](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propriedades](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

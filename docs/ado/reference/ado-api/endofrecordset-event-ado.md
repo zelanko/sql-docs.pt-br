@@ -1,9 +1,9 @@
 ---
-title: Evento EndOfRecordset (ADO) | Microsoft Docs
+title: EndOfRecordset Event (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,19 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 79d37ae42a9c9e607ba4d8dba8917fccd7f20c42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf00efb278f6ea9937bd0fa87f929d45b8294cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
+# <a name="endofrecordset-event-ado"></a>EndOfRecordset Event (ADO)
 O **EndOfRecordset** evento é chamado quando há uma tentativa de mover para uma linha após o término do [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +54,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  Um **registros** objeto. O **registros** para que esse evento ocorreu.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **EndOfRecordset** evento pode ocorrer se o [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Falha na operação.  
   
  Este manipulador de eventos é chamado quando é feita uma tentativa de mover após o término do **registros** objeto, talvez como resultado da chamada **MoveNext**. No entanto, enquanto esse evento, você pode recuperar mais registros de um banco de dados e anexá-la ao final do **registros**. Nesse caso, defina *fMoreData* VARIANT_TRUE e o retorno de **EndOfRecordset**. Em seguida, chame **MoveNext** novamente para acessar os registros recuperados recentemente.  
@@ -63,4 +62,3 @@ EndOfRecordset fMoreData, adStatus, pRecordset
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-

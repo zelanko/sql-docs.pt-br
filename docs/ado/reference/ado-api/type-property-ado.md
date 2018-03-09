@@ -3,8 +3,9 @@ title: Tipo de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::Type
 - Field20::Type
-helpviewer_keywords: Type property [ADO]
+helpviewer_keywords:
+- Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdc4aa735c131b800b77086c76902dbe688e9399
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9ffca02966eb67bda45dd9edf35451e85dd1e02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-ado"></a>Propriedade Type (ADO)
 Indica o tipo de dados ou tipo operacional de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
@@ -34,7 +36,7 @@ Indica o tipo de dados ou tipo operacional de um [parâmetro](../../../ado/refer
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para **parâmetro** objetos, o **tipo** propriedade é leitura/gravação. Para o novo **campo** objetos que foram acrescentados ao [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **tipo** é leitura/gravação somente após o [ Valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade para o **campo** foi especificado e o provedor de dados foi adicionado com êxito o novo **campo** chamando o [atualizar](../../../ado/reference/ado-api/update-method.md)método o **campos** coleção.  
   
  Para todos os outros objetos, o **tipo** propriedade é somente leitura.  

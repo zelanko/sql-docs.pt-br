@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GeomFromGML (geometry Data Type)
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b16e57ed05ba2d0bccf46db95b1e515a7d1d0efd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5b3c279f25c0de73040d6069362f7763b5330132
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ GeomFromGml ( GML_input, SRID )
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método lançará um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -75,8 +74,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

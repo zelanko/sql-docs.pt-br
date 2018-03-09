@@ -1,26 +1,27 @@
 ---
 title: Conecte-se ao Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d685be15fb8d0c6fea21d539e3370b3377316324
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Conecte-se ao Oracle (OracleToSQL)
 Use o **conectar-se ao Oracle** caixa de diálogo para se conectar ao banco de dados Oracle que você deseja migrar.  
@@ -61,7 +62,7 @@ Insira o SID para o banco de dados. O SID é um identificador que distingue o ba
   
 Essa é uma opção de modo padrão.  
   
-**Nome de usuário**  
+**User name**  
 Digite o nome de usuário SSMA usará para se conectar ao banco de dados Oracle.  
   
 **Senha**  
@@ -79,4 +80,3 @@ Cadeias de caracteres de Conexão consistem de pares de nome e valor de parâmet
   
 Cadeias de caracteres de conexão do SSMA, sempre inclua o parâmetro de provedor. Além disso, certifique-se de incluir o parâmetro Port quando você se conectar ao Oracle.  
   
-

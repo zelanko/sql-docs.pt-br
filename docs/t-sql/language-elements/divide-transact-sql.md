@@ -22,20 +22,19 @@ helpviewer_keywords:
 - division [SQL Server]
 - divide operator (/)
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e3e8a94a92ca592ce6a2deb5d13915606f04f984
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a327ba041992614b4da0817d4b9f669b1e83b2f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="divide-transact-sql"></a>(Divisão) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-division-transact-sql"></a>/ (Divisão) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divide um número por outro (um operador de divisão aritmética).  
   
@@ -59,7 +58,7 @@ dividend / divisor
   
  Se um número inteiro *dividendo* é dividido por um número inteiro *divisor*, o resultado é um inteiro que tenha qualquer parte fracionária do resultado truncado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor real retornado pelo operador / é o quociente da primeira expressão dividido pela segunda expressão.  
   
 ## <a name="examples"></a>Exemplos  
@@ -103,13 +102,12 @@ FROM DimEmployee;
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#40; dividir EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [/= &#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

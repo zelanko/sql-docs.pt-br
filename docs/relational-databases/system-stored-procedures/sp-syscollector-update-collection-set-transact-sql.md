@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 205e6dfd618bcf771fb035eafffc97578428b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +39,6 @@ ms.lasthandoff: 11/17/2017
   
 > [!WARNING]  
 >  Nos casos em que a conta do Windows configurada como um proxy é um usuário não interativo ou interativo que ainda não fez logon, o diretório de perfil não existirá e a criação do diretório de preparo falhará. Portanto, se você estiver usando uma conta proxy em um controlador de domínio, deverá especificar uma conta interativa que tenha sido usada pelo menos uma vez para assegurar que o diretório de perfil foi criado.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +62,7 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] '*nome*'  
@@ -85,10 +83,10 @@ sp_syscollector_update_collection_set
   
  Se alterar de modo não armazenado em cache para o modo de cache (0), você deve também especificar *schedule_uid* ou *schedule_name*.  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* é **int**.  
   
  [  **@proxy_name =** ] '*proxy_name*'  
@@ -104,7 +102,7 @@ sp_syscollector_update_collection_set
  [  **@schedule_name =** ] '*schedule_name*'  
  É o nome da agenda. *schedule_name* é **sysname** e é anulável. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  É o nível de registro em log. *logging_level* é **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
@@ -133,7 +131,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_update_collection_set deve ser executado no contexto do banco de dados do sistema msdb.  
   
  O *collection_set_id* ou *nome* deve ter um valor, não pode ser NULL. Para obter esses valores, consulte a exibição de sistema syscollector_collection_sets.  
@@ -201,8 +199,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo. sysschedules &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

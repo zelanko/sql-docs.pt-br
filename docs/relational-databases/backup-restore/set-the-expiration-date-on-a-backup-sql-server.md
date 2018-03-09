@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database backups [SQL Server], expiration dates
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc8338262652df5b3be8ea42c93a718b6c77b02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5630b7b8cb705f32980ae10d278807fdfa88a811
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>Definir a data de validade em um backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-the-expiration-date-on-a-backup"></a>Para definir a data de validade em um backup  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Na instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) , especifique a opção EXPIREDATE ou RETAINDAYS para determinar quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode substituir o backup. Se nenhuma opção estiver especificada, a data de validade será determinada pela definição da configuração de servidor de [retenção de mídia](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) . Este exemplo usa a opção `EXPIREDATE` para especificar a data de validade de 30 de junho de 2015 (`6/30/2015`).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -90,7 +90,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   

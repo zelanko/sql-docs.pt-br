@@ -2,16 +2,13 @@
 title: "Operadores unários em dimensões pai-filho | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Atributos de dimensão pai-filho - operadores unários
-  Em uma dimensão que contém uma relação pai-filho no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você especifica um operador unário (ou rollup personalizado) que determina o rollup personalizado para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados. A **UnaryOperatorColumn** em um atributo pai (**Usage**=Pai) especifica a coluna de uma tabela da exibição da fonte de dados que contém operadores unários. Os valores dos operadores de acúmulo personalizado armazenados nessa coluna são aplicados a cada membro do atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Em uma dimensão que contém uma relação pai-filho no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você especifica um operador unário (ou rollup personalizado) que determina o rollup personalizado para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados. A **UnaryOperatorColumn** em um atributo pai (**Usage**=Pai) especifica a coluna de uma tabela da exibição da fonte de dados que contém operadores unários. Os valores dos operadores de acúmulo personalizado armazenados nessa coluna são aplicados a cada membro do atributo.  
   
  Você pode criar e especificar um cálculo nomeado em uma tabela de dimensões da exibição da fonte de dados como coluna de operador unário. A expressão mais simples, como '+', retorna o mesmo operador para todos os membros. Mas é possível usar qualquer expressão desde que ela retorne um operador para cada membro.  
   

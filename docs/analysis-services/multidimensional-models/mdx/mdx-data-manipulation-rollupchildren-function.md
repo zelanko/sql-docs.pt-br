@@ -2,16 +2,13 @@
 title: "Trabalhando com a função RollupChildren (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa1200dd746dcb1ffc7ae7372b0d85a3d60d49f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulação de dados MDX - função RollupChildren
-  A função MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula os filhos de um membro, aplicando um operador unário diferente a cada um deles, e retorna o valor desse rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A função MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula os filhos de um membro, aplicando um operador unário diferente a cada um deles, e retorna o valor desse rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
   
 ## <a name="rollupchildren-function-examples"></a>Exemplos da função RollupChildren  
  O uso da função **RollupChildren** em instruções MDX é simples de explicar, mas seu efeito sobre as consultas MDX pode ser bem abrangente.  
@@ -83,7 +80,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  A instrução MDX analisa o operador unário do membro filho. Se o operador unário for usado em uma subtração (como no caso dos membros dos retornos interno e externo), a função **IIf** substituirá o operador unário til (~). Caso contrário, a função **IIf** utilizará o operador unário do membro filho. Por fim, o total acumulado retornado é então multiplicado por 1,1 para apresentar o valor estimado de vendas brutas internas e exportações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Manipulando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipulação de dados &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

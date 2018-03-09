@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74c345bb8bdfae60a06576b43b655ef78e4a6dfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Configurando o isolamento de transação de nível
 Para definir o nível de isolamento da transação, um aplicativo usa o atributo de conexão SQL_ATTR_TXN_ISOLATION. Se a fonte de dados não der suporte para o nível de isolamento solicitado, o driver ou fonte de dados pode definir um nível mais alto. Para determinar os níveis de isolamento da transação que uma fonte de dados oferece suporte e o nível de isolamento padrão é, um aplicativo chama **SQLGetInfo** com as opções SQL_TXN_ISOLATION_OPTION e SQL_DEFAULT_TXN_ISOLATION, respectivamente.  
@@ -41,4 +39,3 @@ Para definir o nível de isolamento da transação, um aplicativo usa o atributo
 -   Quando a velocidade é mais crítica que a precisão e a quaisquer erros têm probabilidade de ser pequeno. Por exemplo, suponha que uma empresa faz vendas pequenas muitas e que as vendas grandes são raras. Uma transação que calcula o valor total de todas as vendas pode usar o nível de isolamento Read Uncommitted com segurança. Embora a transação incluiria pedidos que estão sendo aberto ou fechado e posteriormente revertida, esses geralmente seriam Cancelar uns aos outros e a transação é muito mais rápida porque cada vez que ele encontra esse uma ordem não está bloqueado.  
   
  Para obter mais informações, consulte [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

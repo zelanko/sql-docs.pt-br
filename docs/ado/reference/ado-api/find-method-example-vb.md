@@ -3,7 +3,7 @@ title: "Localizar o exemplo de método (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2e3dc1b6668341674acf545ff06f10bc37fe0fe1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aa6b5f0621d1a932197e65b0daecf56e08fd02c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-vb"></a>Localizar o exemplo de método (VB)
 Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [localizar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar e contar o número de títulos de negócios a ***Pubs*** banco de dados. O exemplo supõe que o provedor subjacente não oferece suporte à funcionalidade semelhante.  
@@ -110,4 +109,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

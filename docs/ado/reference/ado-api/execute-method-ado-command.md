@@ -3,7 +3,7 @@ title: "Executar método (comando ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 651123d3112ca58c028412bd025325f303f0d637
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>Executar método (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado no [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade o [o objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -57,7 +56,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Use o **ExecuteOptionEnum** valor **adExecuteNoRecords** para melhorar o desempenho, reduzindo o processamento interno. Se **adExecuteStream** foi especificado, as opções de **adAsyncFetch** e **adAsynchFetchNonBlocking** são ignorados. Não use o **CommandTypeEnum** valores de **adCmdFile** ou **adCmdTableDirect** com **Execute**. Esses valores podem ser usados apenas como opções com a [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) métodos de um **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Usando o **Execute** método em um **comando** objeto executa a consulta especificada no **CommandText** propriedade ou **CommandStream** propriedade do objeto.  
   
  Os resultados são retornados em uma **registros** (por padrão) ou como um fluxo de informações binárias. Para obter um fluxo binário, especifique **adExecuteStream** na *opções*, em seguida, forneça um fluxo definindo **Command.Properties ("fluxo de saída")**. ADO **fluxo** objeto pode ser especificado para receber os resultados ou outro objeto de fluxo, como o objeto de resposta de IIS pode ser especificado. Se nenhum fluxo foi especificado antes de chamar **Execute** com **adExecuteStream**, ocorrerá um erro. A posição do fluxo no retorno de **Execute** é o provedor específico.  
@@ -88,4 +87,3 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
  [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Evento ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)
-

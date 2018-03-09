@@ -2,29 +2,34 @@
 title: "Definir o método de propagação de alterações de dados para artigos transacionais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79b21cea8d1edfbb3c1aecf5bbaf2f4fa86624a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f97ecca34a7c61305e243ce75a11dc58a5f641f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Definir o método de propagação de alterações de dados para artigos transacionais
-  Este tópico descreve como definir o método de propagação para alterações de dados para artigos transacionais no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como definir o método de propagação para alterações de dados para artigos transacionais no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Por padrão, a replicação transacional propaga alterações para os Assinantes usando um conjunto de procedimentos armazenados para cada um dos artigos. É possível substituir esses procedimentos por procedimentos personalizados. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -77,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
      Após a geração do instantâneo, vá até a pasta do instantâneo da publicação à qual esse artigo pertence e localize o arquivo **.sch** com nome idêntico ao do artigo. Abra esse arquivo usando o Bloco de Notas ou outro editor de textos, localize o comando CREATE PROCEDURE para os procedimentos de inserir, atualizar ou excluir e edite a definição do procedimento para fornecer todas as lógicas de personalização para a propagação das alterações de dados. Se o instantâneo for regenerado, será preciso recriar o procedimento personalizado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  A replicação transacional permite que você controle como as alterações são propagadas do Publicador para os Assinantes, e esse método de propagação pode ser definido programaticamente quando um artigo é criado e posteriormente alterado usando procedimentos armazenados de replicação.  
   
 > [!NOTE]  
@@ -119,11 +124,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados a ser publicado para **@source_object**, um valor para o bitmask **@schema_option** que contém o valor **0x02** (habilita geração automática de procedimentos armazenados personalizados) e pelo menos um dos seguintes parâmetros:  
   
-    -   **@ins_cmd** – especifique um valor de **CALL sp_MSins_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@ins_cmd** – especificar um valor de **CALL sp_MSins_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
-    -   **@del_cmd** – especifica um valor de **CALL sp_MSdel_*article_name*** ou **XCALL sp_MSdel_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@del_cmd** – especificar um valor de **CALL sp_MSdel_*article_name*** ou **XCALL sp_MSdel_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
-    -   **@upd_cmd** – especifique um valor de **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name* **ou **MCALL sp_MSupd_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@upd_cmd** – especificar um valor de **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name*** ou **MCALL sp_MSupd_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
     > [!NOTE]  
     >  Para cada um dos parâmetros de comando acima, você pode especificar seu próprio nome para os procedimentos armazenados que a replicação gera.  
@@ -139,11 +144,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados a ser publicado para **@source_object**, um valor para o bitmask **@schema_option** que contém o valor **0x02** (habilita geração automática de procedimentos armazenados personalizados) e pelo menos um dos seguintes parâmetros:  
   
-    -   **@ins_cmd** – especifique um valor de **CALL sp_MSins_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@ins_cmd** – especificar um valor de **CALL sp_MSins_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
-    -   **@del_cmd** – especifica um valor de **CALL sp_MSdel_*article_name*** ou **XCALL sp_MSdel_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@del_cmd** – especificar um valor de **CALL sp_MSdel_*article_name*** ou **XCALL sp_MSdel_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
-    -   **@upd_cmd** – especifique um valor de **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, **MCALL sp_MSupd_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
+    -   **@upd_cmd** – especificar um valor de **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, **MCALL sp_MSupd_*article_name***, em que ***article_name*** é o valor especificado para **@article**.  
   
     > [!NOTE]  
     >  Para cada um dos parâmetros de comando acima, você pode especificar seu próprio nome para os procedimentos armazenados que a replicação gera.  
@@ -161,7 +166,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Repita a etapa 1 para cada método de propagação a ser alterado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar como as alterações são propagadas para artigos transacionais](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
   

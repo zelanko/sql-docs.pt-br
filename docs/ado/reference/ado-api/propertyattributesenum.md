@@ -3,7 +3,7 @@ title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 57c232c27dc538cbbdc8203855a27ee2ff56b7f8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6614f74546fab23a1e1ce453ac12c10082011a25
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Especifica os atributos de uma [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica que a propriedade não é suportada pelo provedor.|  
 |**adPropRequired**|1|Indica que o usuário deve especificar um valor para essa propriedade antes da inicialização da fonte de dados.|  
@@ -41,8 +40,8 @@ Especifica os atributos de uma [propriedade](../../../ado/reference/ado-api/prop
 |**adPropRead**|512|Indica que o usuário pode ler a propriedade.|  
 |**adPropWrite**|1024|Indica que o usuário pode definir a propriedade.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -54,4 +53,3 @@ Especifica os atributos de uma [propriedade](../../../ado/reference/ado-api/prop
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-

@@ -1,13 +1,14 @@
 ---
-title: Agendas | Microsoft Docs
+title: Agendamentos | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,18 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "51"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d148c29185b72fe433a34034993342afa61970be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="schedules"></a>Agendas
+# <a name="schedules"></a>Agendamentos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece **agendas compartilhadas** e **específicas de relatório** para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.
   
   -   São criadas agendas compartilhadas como itens separados. Depois que eles são criados, você faz referência a eles ao definir uma assinatura ou alguma outra operação agendada.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
 |Crie, modifique ou exclua agendas específicas do relatório em uma assinatura definida pelo usuário|Administrar assinaturas individuais|Navegador, Construtor de Relatórios, Meus Relatórios, Gerenciador de Conteúdo|Visitantes, membros|  
 |Crie, modifique ou exclua agendas específicas do relatório para todas as outras operações agendadas|Gerenciar o histórico de relatório, gerenciar todas as assinaturas, gerenciar relatórios|Gerenciador de Conteúdo|Proprietários|  
   
- Para obter mais informações sobre a segurança no modo Nativo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md), [Concedendo permissões em um Servidor de Relatório no modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) e [Tarefas e Permissões](../../reporting-services/security/tasks-and-permissions.md). Para o modo do SharePoint, consulte [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Para obter mais informações sobre a segurança no modo Nativo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md), [Concedendo permissões em um Servidor de Relatório no modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) e [Tarefas e Permissões](../../reporting-services/security/tasks-and-permissions.md). Para o modo do SharePoint, consulte [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Como o Processador de Agendamento e Entrega funciona  
  O Processador de Agendamento e Entrega fornece as seguintes funcionalidades:  
@@ -138,13 +138,12 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="bkmk_stoppingservice"></a> Efeitos de parar o serviço Servidor de Relatório  
  Se você parar o serviço Servidor de Relatório, o SQL Server Agent continuará a adicionar solicitações de processamento de relatório à fila. As informações de status do SQL Server Agent indicam que o trabalho teve êxito. Porém, como o serviço Servidor de Relatório foi interrompido, nenhum processamento de relatório realmente ocorre. As solicitações continuarão a acumular na fila até que o serviço Servidor de Relatório seja reiniciado. Quando o serviço Servidor de Relatório é reiniciado, todas as solicitações de processamento de relatório que estão na fila são processadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir instantâneos no histórico de relatório](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Cache de relatórios &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Gerenciamento de conteúdo de servidor de relatório e &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

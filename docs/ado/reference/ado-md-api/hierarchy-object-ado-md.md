@@ -3,7 +3,7 @@ title: Objeto de hierarquia (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto de hierarquia (ADO MD)
 Representa uma forma em que os membros de um [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) podem ser agregados ou "acumulados". Uma dimensão pode ser agregada a uma ou mais hierarquias.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Com as coleções e propriedades de um **hierarquia** do objeto, você pode fazer o seguinte:  
   
 -   Identificar o **hierarquia** com o [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) e [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriedades.  
@@ -50,7 +49,7 @@ Representa uma forma em que os membros de um [dimensão](../../../ado/reference/
 |----------|-----------------|  
 |AllMember|O membro no nível mais alto do rollup na hierarquia.|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
-|Nome do cubo|O nome do cubo.|  
+|CubeName|O nome do cubo.|  
 |DefaultMember|O nome exclusivo do membro padrão para essa hierarquia.|  
 |Description|Uma descrição significativa da hierarquia.|  
 |DimensionType|O tipo de dimensão à qual pertence essa hierarquia.|  
@@ -72,4 +71,3 @@ Representa uma forma em que os membros de um [dimensão](../../../ado/reference/
  [Coleção hierarquias (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Coleção de níveis (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

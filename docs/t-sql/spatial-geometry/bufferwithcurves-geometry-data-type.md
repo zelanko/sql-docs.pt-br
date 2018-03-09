@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a88ea4010ec1cfd48661b34e990634fe371141f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d248c248d4b5d9b4a4e90954e01f15841d305319
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um **float** indicando a distância máxima em que os pontos que formam o buffer pode ser do **geometria** instância.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -59,7 +58,7 @@ Tipo de retorno do SQL Server: **geometry**
   
 -   **NULO** é transmitido ao método, como`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A ilustração a seguir mostra um exemplo de uma instância de geometria retornado por este método.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -164,6 +163,5 @@ Tipo de retorno do SQL Server: **geometry**
  Os dois primeiros **selecione** instruções retornam uma `GeometryCollection` instância porque o parâmetro *distância* é menor ou igual a 1/2 a distância entre os dois pontos (1 1) e (1 4). O terceiro **selecione** instrução retorna um `CurvePolygon` instância porque as instâncias armazenadas em buffer dos dois pontos (1 1) e (1 4) se sobrepõem.  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  
-

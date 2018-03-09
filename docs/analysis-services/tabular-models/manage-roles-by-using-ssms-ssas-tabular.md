@@ -1,34 +1,31 @@
 ---
-title: "Gerenciar funções usando SSMS (SSAS Tabular) | Microsoft Docs"
+title: "Gerenciar funções usando SSMS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gerenciar funções usando SSMS (SSAS tabular)
-  Você pode criar, editar e gerenciar funções para um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="manage-roles-by-using-ssms"></a>Gerenciar funções usando SSMS 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Você pode criar, editar e gerenciar funções para um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Tarefas neste tópico:  
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 09/01/2017
   
 ###  <a name="bkmk_edit_role"></a> Para editar uma função  
   
--   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
+-   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções** e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
   
      No **propriedades de função** \<rolename > caixa de diálogo, você pode alterar as permissões, adicionar ou remover membros, e filtros de linha de adicionar/editar.  
   
@@ -92,7 +89,6 @@ ms.lasthandoff: 09/01/2017
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja excluir, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   
-

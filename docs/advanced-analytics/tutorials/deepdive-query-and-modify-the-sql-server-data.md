@@ -1,38 +1,48 @@
 ---
-title: Consultar e modificar os dados do SQL Server | Microsoft Docs
+title: Consultar e modificar dados do SQL Server (SQL e R mergulho profundo) | Microsoft Docs
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: db6a2ee4c642ca6e868170629460c4722020d935
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 901ae76597dd9a9ab1136a35442cc27b6ea63e61
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="query-and-modify-the-sql-server-data"></a>Consultar e modificar os dados do SQL Server
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Consultar e modificar dados do SQL Server (SQL e R mergulho profundo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Agora que você carregou os dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderá usar as fontes de dados criadas como argumentos para funções do R no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para obter informações básicas sobre as variáveis e gerar resumos e histogramas.
 
-Nesta etapa, você usará novamente as fontes de dados para análise rápida e, em seguida, aprimorar os dados.
+Nesta etapa, você reutilizar as fontes de dados para análise rápida e, em seguida, aprimorar os dados.
 
 ## <a name="query-the-data"></a>Consultar os dados
 
 Primeiro, obtenha uma lista das colunas e seus tipos de dados.
 
-1.  Use a função **à função rxGetVarInfo** e especifique a fonte de dados que você deseja analisar.
+1.  Use a função [à função rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e especifique a fonte de dados que você deseja analisar.
+
+    Dependendo de sua versão do RevoScaleR, você também pode usar [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -63,7 +73,9 @@ Primeiro, obtenha uma lista das colunas e seus tipos de dados.
 
 Todas as variáveis são armazenadas como inteiros, mas algumas delas representam dados categóricos, chamados de *variáveis de fator* no R. Por exemplo, a coluna *state* contém números usados como identificadores para 50 estados, além do Distrito de Colúmbia.  Para facilitar a compreensão dos dados, você pode substituir os números por uma lista de abreviações de estado.
 
-Nesta etapa, você fornecerá um vetor de cadeia de caracteres que contém as abreviações e, em seguida, mapear esses valores categóricos para os identificadores inteiros originais. Depois que essa variável estiver pronta, você vai usá-la no argumento *colInfo* para especificar que essa coluna seja tratada como um fator. Depois disso, as abreviações serão usadas e a coluna será tratada como um fator sempre que esses dados forem analisados ou importados.
+Nesta etapa, você cria um vetor de cadeia de caracteres que contém as abreviações e, em seguida, mapear esses valores categóricos para os identificadores de inteiro original. Em seguida, usar a nova variável no *colInfo* argumento, para especificar que essa coluna ser tratado como um fator. Sempre que você analise os dados ou movê-la, as abreviações são usadas e a coluna é tratada como um fator.
+
+Mapear a coluna para as abreviações antes de usá-la como um fator também melhora o desempenho. Para obter mais informações, consulte [otimização R e dados](..\r\r-and-data-optimization-r-services.md).
 
 1. Comece criando uma variável do R, *stateAbb*, e definindo o vetor de cadeias de caracteres a ser adicionado a ela, da seguinte maneira:
   
@@ -100,7 +112,7 @@ Nesta etapa, você fornecerá um vetor de cadeia de caracteres que contém as ab
     )
     ```
   
-3. Para criar a fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa os dados atualizados, chame a função *RxSqlServerData* como antes, mas adicione o argumento *colInfo* .
+3. Para criar a fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa os dados atualizados, chame a função **RxSqlServerData** como antes, mas adicione o argumento *colInfo* .
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -110,9 +122,8 @@ Nesta etapa, você fornecerá um vetor de cadeia de caracteres que contém as ab
   
     - No parâmetro *table* , passe a variável *sqlFraudTable*, que contém a fonte de dados criada anteriormente.
     - No parâmetro *colInfo* , passe a variável *ccColInfo* , que contém os tipos de dados de coluna e níveis de fator.
-    - Mapear a coluna para as abreviações antes de usá-la como um fator também melhora o desempenho. Para obter mais informações, consulte [R e otimização de dados](https://msdn.microsoft.com/library/mt723575.aspx)
-  
-4.  Agora você pode usar à função rxGetVarInfo de função para exibir as variáveis na nova fonte de dados.
+
+4.  Agora, você pode usar a função **rxGetVarInfo** para exibir as variáveis na nova fonte de dados.
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -146,7 +157,4 @@ Agora as três variáveis especificadas (_gender_, _state_e _cardholder_) são t
 
 ## <a name="previous-step"></a>Etapa anterior
 
-[Criar Objetos de Dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-
+[Criar objetos de dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

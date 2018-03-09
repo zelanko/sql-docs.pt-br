@@ -3,27 +3,30 @@ title: Atributos de exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Attributes property [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04b6964031e8fcc16d4278f4623732ae43cd2d6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 736d3c89b24a4a7da05aa4e754f1776ffff53c92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-example-vb"></a>Exemplo da propriedade Attributes (VB)
 Este exemplo demonstra o [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md). Definindo-a como **adColNullable** permite que o usuário defina o valor de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) para uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro de onde os dados não são conhecidos e um registro de onde os dados não se aplica.  

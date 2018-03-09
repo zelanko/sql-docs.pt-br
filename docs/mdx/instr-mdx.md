@@ -2,10 +2,13 @@
 title: InStr (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
@@ -14,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7639632a9f82d0ee18fadbfc2fff9b561e5fb3e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a6b5a1a987662fbe4ec0bcab4241ac0d6ff3109
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a posição da primeira ocorrência de uma cadeia de caracteres em outra.  
   
@@ -58,7 +61,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 não foi localizada|zero (0)|  
 |start é maior que Len (String2)|zero (0)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]  
 >  **InStr** sempre executa uma comparação que diferencia maiusculas de minúsculas.  

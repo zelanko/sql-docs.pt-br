@@ -3,27 +3,30 @@ title: "Procedimentos excluir exemplo de método (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Delete method [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f6cc17defabc0c8f3232e4ca091ada8df6ff38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba50f19ffa04380e2783eabeacab1b695656e0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedimentos de exemplo de método (VB)-excluir
 O código a seguir demonstra como excluir um procedimento usando o [excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md) método o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção.  

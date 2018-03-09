@@ -2,13 +2,13 @@
 title: "Categoria de evento de relatórios de andamento | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Progress Reports event category
 - event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c45bcf105dcd2de68f1ba25bdafebc9cb77c295d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c90cfbe7e30d0678d13a329737c21f7d45575e22
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="progress-reports-event-category"></a>categoria de evento de relatórios de andamento
-  A categoria de evento de relatórios de andamento tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria de evento de relatórios de andamento tem as classes de evento descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
 |-----------------|--------------|-----------------|  

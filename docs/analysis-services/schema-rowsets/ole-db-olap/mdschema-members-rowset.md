@@ -2,39 +2,33 @@
 title: Conjunto de linhas MDSCHEMA_MEMBERS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEMBERS
+apiname: MDSCHEMA_MEMBERS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEMBERS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1402e80fc0746407e4057916adebd0cc373577b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de linhas MDSCHEMA_MEMBERS
-  Descreve os membros dentro de um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve os membros dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_MEMBERS** linhas contém as seguintes colunas.  
@@ -87,8 +81,7 @@ ms.lasthandoff: 09/01/2017
 |**TREE_OP**|**DBTYPE_I4**|(Opcional) Só se aplica a um único membro:<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) retorna todos os ancestrais.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) retorna somente os filhos imediatos.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) Retorna membros no mesmo nível.<br /><br /> **MDTREEOP_PARENT** (**0x04**) retorna somente o pai imediato.<br /><br /> **MDTREEOP_SELF** (**0x08**) retorna ele mesmo na lista de linhas retornadas.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) retorna todos os descendentes.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de 1. Um bitmap com um dos seguintes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSÃO|  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

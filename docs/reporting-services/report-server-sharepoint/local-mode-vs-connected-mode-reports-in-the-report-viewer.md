@@ -1,27 +1,27 @@
 ---
-title: "Modo local vs modo conectado relatórios no Visualizador de relatórios | Microsoft Docs"
+title: "Relatórios em modo local vs. modo conectado no Visualizador de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: e637d9494252548081a0cfe7aa8aabd2e61646d4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Modo local vs modo conectado relatórios no Visualizador de relatórios
+# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Relatórios em modo local vs. modo conectado no Visualizador de Relatórios
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/06/2017
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os relatórios podem ser configurados para serem executados no *modo local* ou no *modo conectado*, que aproveita um servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Em vez disso, você pode usar o Visualizador de Relatórios para renderizar relatórios diretamente do SharePoint quando a extensão de dados der suporte a relatório no modo local. Essa abordagem é chamada de *modo local*. Em versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o farm do SharePoint precisava estar conectado a um servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado no modo do SharePoint para que o controle do Visualizador de Relatórios pudesse renderizar relatórios. Essa abordagem é chamada *modo remoto* ou *modo conectado*.  
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
  No *modo local* , não há nenhum servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você deve instalar o suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint, mas nenhum servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é necessário. Com o modo local, os usuários podem exibir relatórios, mas não terão acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 10/06/2017
 > [!NOTE]  
 >  Assim como em versões anteriores, não é possível inserir nomes de usuários e senhas no arquivo .rsds.  
   
-## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Configurar serviços de acesso e modo locais com o SharePoint 2013
+## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Configurar o modo local e os serviços do Access com o SharePoint 2013
 
  Você pode configurar seu farm do SharePoint 2013 para dar suporte a bancos de dados da Web existentes do Access 2010 e o modo local de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Instalação e configuração dos Serviços do Access 2010 para bancos de dados da Web no SharePoint Server 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 10/06/2017
   
 -   [Tarefas básicas para um aplicativo do Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
-## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurar o modo local reporting com o SharePoint 2010
+## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurar relatórios no modo local com o SharePoint 2010
 
  O modo local requer o estado de sessão ASP.NET. A instalação de serviços do Access habilitará esse estado. Também é possível habilitá-lo usando o PowerShell.  
   
@@ -89,7 +89,6 @@ ms.lasthandoff: 10/06/2017
   
 ## <a name="see-also"></a>Consulte também
 
- [Fontes de dados suportadas pelo Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Fontes de dados com suporte no Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

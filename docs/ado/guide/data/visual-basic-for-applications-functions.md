@@ -3,7 +3,7 @@ title: "Visual Basic para funções de aplicativos | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2352c6de536981aee960617ad5afc8f2598721e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para funções de aplicativos
 Para funções de aplicativos do Visual Basic seguir podem ser usado em expressões de CÁLCULO de formatação de dados:  
@@ -42,7 +41,7 @@ Para funções de aplicativos do Visual Basic seguir podem ser usado em express�
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Erro|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left (à esquerda)|  
 |LeftB|Left$|LeftB$|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
@@ -63,4 +62,3 @@ Para funções de aplicativos do Visual Basic seguir podem ser usado em express�
  [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
  [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md)
-

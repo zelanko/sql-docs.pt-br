@@ -1,27 +1,27 @@
 ---
-title: "Solucionar problemas de relatórios: Mapear relatórios (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.date: 01/17/2018
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6c59854aa8fc9f976e52f9c9f678563be0174b44
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
@@ -29,9 +29,9 @@ ms.lasthandoff: 08/09/2017
    ## <a name="need-more-help"></a>Precisa de mais ajuda?  
    
   Experimente:  
- *  Fórum do MSDN para [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)  
- * [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016) no Stack Overflow  
- * Registre um problema ou sugestão no [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+ * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) no Stack Overflow  
+ * Registre um problema ou uma sugestão no [UserVoice do Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
+
   
 ##  <a name="Embedded"></a> Problemas de tamanho da definição de relatório  
  Use esta seção para ajudar a resolver problemas relacionados ao tamanho da definição do relatório.  
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Para a visualização local, você deve ter acesso à Internet. Para um relatório executado a partir do servidor de relatório, o servidor de relatório deve ser configurado para dar suporte ao plano de fundo da peça. Para obter mais informações, consulte "Planejando o suporte ao mapa" na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
- Para obter mais informações sobre a adição de uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRSSSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como adicionar uma camada de bloco, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## <a name="how-do-i-control-the-text-on-a-tile-layer"></a>Como eu controlo o texto em uma camada de peças?  
  As exibições **Rodoviária** e **Híbrida** incluem texto. O texto faz parte das peças que vêm de Serviços Web Bing Maps.  
@@ -212,9 +212,8 @@ ms.lasthandoff: 08/09/2017
   
  Para especificar dados relacionados a dados espaciais que não fazem parte de um conjunto de dados de relatório, você deve usar o símbolo #seguido por um rótulo que especifica o nome dos dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de construtor de relatórios](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+## <a name="see-also"></a>Consulte Também  
+ [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solução de problemas do Construtor de Relatórios](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

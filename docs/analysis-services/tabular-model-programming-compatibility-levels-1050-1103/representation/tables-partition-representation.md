@@ -2,34 +2,32 @@
 title: "Representação (tabela) de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a3df4bd31c72c38a34167693c542b0fce87d8eb4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---partition-representation"></a>Tabelas - representação de partição
-  Para fins operacionais, uma tabela pode ser dividida em subconjuntos diferentes de linhas que, quando combinados formam a tabela; cada um desses subconjuntos é uma partição da tabela.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Para fins operacionais, uma tabela pode ser dividida em subconjuntos diferentes de linhas que, quando combinados formam a tabela; cada um desses subconjuntos é uma partição da tabela.  
   
 ## <a name="partition-representation"></a>Representação de partição  
  Em termos de objetos AMO, uma representação de partição tem uma relação de mapeamento de um para um com <xref:Microsoft.AnalysisServices.Partition> e nenhum outro objeto AMO principal é necessário.  
@@ -106,4 +104,3 @@ private void AddPartition(
  No entanto, para compreender como usar o AMO para criar e manipular representações de partição, consulte o código-fonte do exemplo AMO para Tabela. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
   
   
-

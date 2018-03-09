@@ -1,5 +1,5 @@
 ---
-title: "Criar um Gerenciador de Conexão personalizado | Microsoft Docs"
+title: "Criar um gerenciador de conexões personalizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +16,16 @@ applies_to:
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c617741134c19c012f487bc00263c2e4b071810
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4475be5ca48df7445fd92780258f41c9f059b84c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-connection-manager"></a>Criando um gerenciador de conexões personalizado
   As etapas a seguir para criar um gerenciador de conexões personalizado são semelhantes às etapas de criação de qualquer outro objeto personalizado do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -46,16 +44,16 @@ ms.lasthandoff: 08/03/2017
 ## <a name="getting-started-with-a-custom-connection-manager"></a>Guia de Introdução com um gerenciador de conexões personalizado  
   
 ### <a name="creating-projects-and-classes"></a>Criando projetos e classes  
- Como todos os gerenciadores de conexões gerenciados derivam da classe base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, o primeiro passo para criar um gerenciador de conexões personalizado é criar um projeto de biblioteca de classes na linguagem de programação gerenciada de sua preferência e criar uma classe herdada da classe base. Esta classe derivada, você substituirá os métodos e propriedades da classe base para implementar sua funcionalidade personalizada.  
+ Como todos os gerenciadores de conexões gerenciados derivam da classe base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, o primeiro passo para criar um gerenciador de conexões personalizado é criar um projeto de biblioteca de classes na linguagem de programação gerenciada de sua preferência e criar uma classe herdada da classe base. Nessa classe derivada, você substituirá os métodos e propriedades da classe base para implementar sua funcionalidade personalizada.  
   
  Na mesma solução, crie um segundo projeto de biblioteca de classe para a interface de usuário personalizada. Recomenda-se um assembly separado para a interface do usuário para facilitar a implantação, pois ela permite que você atualize e implemente de novo o gerenciador de conexões ou sua interface do usuário de forma independente.  
   
  Configure ambos os projetos para atribuir os assemblies que serão gerados no momento de compilação usando um arquivo de chave de nome forte.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Aplicando o atributo DtsConnection  
- Aplique o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à classe que você criou para identificá-la como um gerenciador de conexões. Esse atributo fornece informações de tempo de design como o nome, a descrição e o tipo de conexão do gerenciador de conexões. O <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> e **descrição** propriedades correspondem ao **tipo** e **descrição** colunas exibidas no **adicionar Gerenciador de Conexão SSIS** caixa de diálogo que é exibida ao configurar as conexões de um pacote de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Aplique o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à classe que você criou para identificá-la como um gerenciador de conexões. Esse atributo fornece informações de tempo de design como o nome, a descrição e o tipo de conexão do gerenciador de conexões. As propriedades <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> e **Description** correspondem às colunas **Tipo** e **Descrição** exibidas na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS**, exibida ao configurar conexões para um pacote no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
- Use a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> para vincular o gerenciador de conexões à sua interface do usuário personalizada. Para obter o token de chave pública é necessário para essa propriedade, você pode usar **sn.exe -t** para exibir o token de chave pública do arquivo de par de chaves (. snk) que você pretende usar para assinar o assembly de interface do usuário.  
+ Use a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> para vincular o gerenciador de conexões à sua interface do usuário personalizada. Para obter o token de chave pública exigido para essa propriedade, você pode usar o **sn.exe -t** para exibir o token de chave pública por meio do arquivo de par de chaves (.snk) a ser usado para assinar o assembly da interface do usuário.  
   
 ```vb  
 <DtsConnection(ConnectionType:="SQLVB", _  
@@ -81,11 +79,10 @@ ConnectionManagerBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Compilando, implantando e depurando um gerenciador de conexões personalizado  
- As etapas para compilar, implantar e depurar um gerenciador de conexões personalizado no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são semelhantes às etapas para outros tipos de objetos personalizados. Para obter mais informações, consulte [compilando, implantando e Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
+ As etapas para compilar, implantar e depurar um gerenciador de conexões personalizado no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são semelhantes às etapas para outros tipos de objetos personalizados. Para obter mais informações, consulte [Compilar, implantar e depurar objetos personalizados](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
   
-## <a name="see-also"></a>Consulte também  
- [Codificando um Gerenciador de Conexão personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
- [Desenvolvendo uma Interface de usuário para um Gerenciador de Conexão personalizada](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Codificar um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
+ [Desenvolver uma interface do usuário para um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

@@ -8,33 +8,34 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a4abc3371fc5a692034840231ae5a53d3529490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b043fb065a9b9930c6cd86d23bd6fefaf1de4af
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementando SQL_VARIANT em uma tabela com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Considere um exemplo de uma tabela com a coluna **SQL_VARIANT** :  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
  Suponha que a coluna de chave possa ser apenas um **BIGINT** ou **NVARCHAR(300)**. Você pode modelar essa tabela como se segue:  
   
-```tsql  
+```sql  
 -- original disk-based table  
 CREATE TABLE [dbo].[T1_disk]([Key] int not null primary key,  
        [Value] [sql_variant])  
@@ -74,7 +75,7 @@ from dbo.T1_inmem
   
  Agora, você pode carregar dados em [T1_HK] de T1 abrindo um cursor em T1:  
   
-```tsql  
+```sql  
 DECLARE T1_rows_cursor CURSOR FOR    
 select *  
 FROM dbo.T1  
@@ -122,13 +123,13 @@ DEALLOCATE T1_rows_cursor
   
  Você pode converter dados de volta a **SQL_VARIANT** da seguinte maneira:  
   
-```tsql  
+```sql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
                        else convert(sql_variant, [Key_nv])   
                        end  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

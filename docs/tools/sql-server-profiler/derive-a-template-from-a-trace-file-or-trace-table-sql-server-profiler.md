@@ -2,9 +2,12 @@
 title: Derivar um modelo de um arquivo de rastreamento ou tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efdaa77339c2f6679d1cc67f581a7b98a7179828
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02f621e6b63a03ea6875dfc68fa6bae86b2d7ae4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivar um modelo a partir de um arquivo ou tabela de rastreamento (SQL Server Profiler)
-  Este tópico descreve como criar um modelo de rastreamento a partir de um arquivo ou tabela de rastreamento existente, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como criar um modelo de rastreamento de um arquivo de rastreamento ou tabela usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>Para derivar um modelo a partir de um arquivo ou tabela de rastreamento  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 >  Se você selecionar um arquivo de modelo existente, será perguntado se você deseja substituir o arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Criar um modelo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Modificar um modelo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [Derivar um modelo de um rastreamento em execução &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

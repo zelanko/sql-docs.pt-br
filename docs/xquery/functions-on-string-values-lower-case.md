@@ -3,30 +3,36 @@ title: "Função LOWER-case (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - lower-case Function (XQuery)
 - lower-case
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8503ca4813259e22a2d9f77b583d56b63fb67461
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b03fbc55fbcf7d49e318480ab42af1339aac1be0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funções em valores de cadeia de caracteres - minúsculas
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   A função LOWER-Case converte cada caractere em *$arg* para seu equivalente letras em minúsculas. No Microsoft Windows, a conversão binária de maiúsculas e minúsculas para pontos de código Unicode especifica como os caracteres são convertidos em letras minúsculas. Esse padrão não é idêntico ao mapeamento para o padrão de ponto de código Unicode.  
   
@@ -44,7 +50,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |Termo|Definição|  
 |*$arg*|O valor de cadeia de caracteres a ser convertido para letras minúsculas.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o valor de *$arg* está vazia, uma cadeia de caracteres de comprimento zero será retornada.  
   
 ## <a name="examples"></a>Exemplos  

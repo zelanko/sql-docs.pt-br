@@ -2,15 +2,13 @@
 title: "Processamento de requisitos e considerações (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos e considerações de processamento (mineração de dados)
-  Este tópico descreve algumas considerações técnicas para lembrar ao processar objetos de mineração de dados. Para obter uma explicação geral do que é processamento e como isso se aplica à mineração de dados, consulte [Processando objetos de Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve algumas considerações técnicas para lembrar ao processar objetos de mineração de dados. Para obter uma explicação geral do que é processamento e como isso se aplica à mineração de dados, consulte [Processando objetos de Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Consultas em repositório relacional](#bkmk_QueryReqs)  
   
@@ -96,9 +94,8 @@ ms.lasthandoff: 09/01/2017
  Para obter mais informações, consulte [Exportar e importar objetos de Data Mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Estruturas de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

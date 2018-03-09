@@ -1,5 +1,5 @@
 ---
-title: "Transformação exportar colunas | Microsoft Docs"
+title: "Transformação Exportar Colunas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
   A transformação Exportar Coluna lê dados em um fluxo de dados e os insere em um arquivo. Por exemplo, se o fluxo de dados contiver informações de produtos, como uma imagem de cada produto, você poderá usar a transformação Exportar Coluna para salvar essas imagens em arquivos.  
@@ -44,14 +43,14 @@ ms.lasthandoff: 08/19/2017
   
 |Acrescentar|Truncar|O arquivo existe|Resultados|  
 |------------|--------------|-----------------|-------------|  
-|Falso|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
-|Verdadeiro|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
-|Falso|Verdadeiro|Não|A transformação cria um novo arquivo e grava os dados nele.|  
-|Verdadeiro|Verdadeiro|Não|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como **true**.|  
+|Falso|Falso|não|A transformação cria um novo arquivo e grava os dados nele.|  
+|True|Falso|não|A transformação cria um novo arquivo e grava os dados nele.|  
+|Falso|True|não|A transformação cria um novo arquivo e grava os dados nele.|  
+|True|True|não|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como **true**.|  
 |Falso|Falso|Sim|Ocorre um erro em tempo de execução. O arquivo existe, mas a transformação não pode ser gravada nele.|  
-|Falso|Verdadeiro|Sim|A transformação exclui e recria o arquivo e grava os dados nele.|  
-|Verdadeiro|Falso|Sim|A transformação abre o arquivo e grava os dados no final do arquivo.|  
-|Verdadeiro|Verdadeiro|Sim|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como **true**.|  
+|Falso|True|Sim|A transformação exclui e recria o arquivo e grava os dados nele.|  
+|True|Falso|Sim|A transformação abre o arquivo e grava os dados no final do arquivo.|  
+|True|True|Sim|A transformação falha na validação do tempo de design. Ela não é válida para definir ambas as propriedades como **true**.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Configuração da transformação Exportar Coluna  
  Pode-se configurar a transformação Exportar Coluna com os seguintes procedimentos:  
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/19/2017
  **Truncation**  
  Especifique o que deve acontecer se ocorrer um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Visualize a descrição da operação.  
   
  **Definir este valor para células selecionadas**  
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/19/2017
  Aplique a opção de tratamento de erros às células selecionadas.  
   
   
-

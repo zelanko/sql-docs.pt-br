@@ -2,9 +2,12 @@
 title: "Resolução e detecção de conflitos de atualização na fila | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Assinaturas atualizáveis – Resolução de conflitos com atualização em fila
-  Como as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados forem sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Já que as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados são sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
   
 -   Conflitos de atualização e inserção. Esse conflito acontece quando os mesmos dados são alterados em dois locais. Uma alteração vence e a outra perde.  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="subscriber-wins"></a>Assinante vence  
  A detecção de conflitos segundo a política Assinante vence significa que a última transação de Assinante que atualizar o Publicador vence. Nesse caso, quando um conflito é detectado, a transação enviada pelo Assinante ainda é usada, e o Publicador é atualizado. Essa política é adequada para aplicativos em que essas alterações não comprometem a integridade de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -3,7 +3,7 @@ title: "Parâmetros de evento | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Parâmetros de evento
 Cada manipulador de eventos tem um parâmetro de status que controla o manipulador de eventos. Para eventos de conclusão, esse parâmetro também é usado para indicar o êxito ou falha da operação que gerou o evento. Eventos mais completas também têm um parâmetro de erro para fornecer informações sobre quaisquer erros que possam ter ocorrido e um ou mais parâmetros de objeto que se referem a objetos de ADO usados para executar a operação. Por exemplo, o [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento inclui parâmetros de objeto para o **comando**, **registros**, e **Conexão** objetos associado ao evento. No exemplo a seguir do Microsoft® Visual Basic®, você pode ver os pCommand, pRecordset e pConnection objetos que representam o **comando**, **registros**, e **Conexão** objetos que são usados pelo **Execute** método.  
@@ -51,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Parâmetro de status  
  Quando a rotina do manipulador de eventos é chamada, o *Status* parâmetro é definido como um dos valores a seguir.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|Passado será e eventos de conclusão. Esse valor significa que a operação que causou o evento foi concluído com êxito.|  
 |**adStatusErrorsOccurred**|Passado para apenas os eventos de conclusão. Esse valor significa que a operação que causou o evento teve êxito, ou um evento será cancelada a operação. Verifique o *erro* parâmetro para obter mais detalhes.|  
@@ -61,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se você não deseja processar um evento, você pode definir *Status* para **adStatusUnwantedEvent** e seu aplicativo deixarão de receber a notificação de evento. No entanto, lembre-se de que alguns eventos podem ser gerados por mais de um motivo. Nesse caso, você deve especificar **adStatusUnwantedEvent** para cada motivo possíveis. Por exemplo, para parar de receber notificações de pendente **RecordChange** eventos, você deve definir o *Status* parâmetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** conforme elas ocorrem.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Solicite que este manipulador de eventos não recebe nenhuma notificação adicional.|  
 |**adStatusCancel**|Solicite o cancelamento da operação que está prestes a ocorrer.|  
@@ -99,4 +98,3 @@ End Sub
  [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Como os manipuladores de eventos funcionam em conjunto](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
-

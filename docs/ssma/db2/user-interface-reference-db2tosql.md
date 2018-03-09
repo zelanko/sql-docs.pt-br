@@ -1,10 +1,13 @@
 ---
 title: "Referência da Interface de usuário (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c7e0a6e50df2e448d63be99d4aefe9bea9e3e5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5540e2c9a197145db5fbd60250b56a04b74b60e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referência da Interface de usuário (DB2ToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para DB2.  
@@ -53,7 +56,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Atualização do banco de dados &#40; DB2ToSQL &#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Use o **de atualização do banco de dados** caixa de diálogo para selecionar objetos para atualização do banco de dados DB2.|  
 |[Salvar metadados &#40; DB2ToSQL &#41;](../../ssma/db2/save-metadata-db2tosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrando bancos de dados do DB2 para SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

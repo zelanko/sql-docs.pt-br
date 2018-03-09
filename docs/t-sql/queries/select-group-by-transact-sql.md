@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,7 +23,8 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -32,18 +34,18 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---group-by--transact-sql"></a>Selecione - BY - Transact-SQL GROUP
+# <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Uma cláusula de instrução SELECT que divide o resultado da consulta em grupos de linhas, normalmente, para fins de executar um ou mais agregações em cada grupo. A instrução SELECT retorna uma linha por grupo.  
@@ -100,7 +102,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Argumentos 
  
-### <a name="column-expression"></a>*expressão de coluna*  
+### <a name="column-expression"></a>*column-expression*  
 Especifica uma coluna ou um cálculo de não agregação em uma coluna. Esta coluna pode pertencer a uma tabela, uma tabela derivada ou uma exibição. A coluna deve aparecer na cláusula FROM da instrução SELECT, mas não é necessária para aparecer na lista de seleção. 
 
 Para expressões válidas, consulte [expressão](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -176,7 +178,7 @@ A ordem da coluna afeta a saída do pacote cumulativo de atualizações e pode a
 
 Por exemplo, `GROUP BY ROLLUP (col1, col2, col3, col4)` cria grupos para cada combinação de expressões de coluna nas listas a seguir.  
 
-- Col1, col2, col3, col4 
+- col1, col2, col3, col4 
 - Col1 col2, col3, NULL
 - Col1 col2, NULL, NULL
 - Col1, NULL, NULL, NULL
@@ -347,7 +349,7 @@ A cláusula GROUP BY dá suporte a todos os recursos GROUP BY que estão incluí
 |Recurso|SQL Server Integration Services|Nível de compatibilidade 100 ou superior do SQL Server|Nível de compatibilidade 90 do SQL Server 2008 ou posterior.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregações de DISTINCT|Não há suporte para WITH CUBE ou WITH ROLLUP.|Há suporte para WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Igual ao nível de compatibilidade 100.|  
-|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|Função definida pelo usuário **dbo. Cube (***arg1***,***... argn***)** ou  **dbo. Rollup (***arg1***,**... *argN***)** em GROUP BY cláusula é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Função definida pelo usuário **dbo. Cube (***arg1***,**... argn**)** ou **dbo. Rollup (**arg1**,***... argn***)** em GROUP BY cláusula não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A seguinte mensagem de erro é retornada: "sintaxe incorreta próxima a palavra-chave 'cubo' &#124;' pacote cumulativo de atualizações '. "<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Função definida pelo usuário **dbo. Cube (***arg1***,***... argn*) ou **dbo. Rollup (** *arg1***,***... argn***)** em GROUP BY cláusula é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|Função definida pelo usuário **dbo. Cube (***arg1***,***... argn***)** ou **dbo. Rollup (***arg1***,**... *argN *)* * em GROUP BY cláusula é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Função definida pelo usuário **dbo. Cube (***arg1***,**... argn**)** ou **dbo. Rollup (**arg1**,***... argn*** )** em GROUP BY cláusula não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A seguinte mensagem de erro é retornada: "sintaxe incorreta próxima a palavra-chave 'cubo' &#124;' pacote cumulativo de atualizações '. "<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Função definida pelo usuário **dbo. Cube (***arg1***, *... argn*) ou **dbo. Rollup (***arg1***,***... argn***)**em GROUP BY cláusula é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Sem suporte|Tem suporte|Tem suporte|  
 |CUBE|Sem suporte|Tem suporte|Sem suporte|  
 |ROLLUP|Sem suporte|Tem suporte|Sem suporte|  
@@ -468,10 +470,10 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [AGRUPAMENTO &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [Cláusula SELECT &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

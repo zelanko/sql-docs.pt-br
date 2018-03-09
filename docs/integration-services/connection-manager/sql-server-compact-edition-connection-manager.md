@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Compact Edition Conexão Manager | Microsoft Docs"
+title: "Gerenciador de Conexões do SQL Server Compact Edition | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 52662ac737fe33d151a423f8fa34feec7013e2dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gerenciador de Conexões do SQL Server Compact Edition
   Um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact permite que um pacote se conecte a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. O destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usa esse gerenciador de conexões para carregar dados em uma tabela no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -104,7 +103,7 @@ ms.lasthandoff: 08/09/2017
   
  A opção Modo tem quatro valores, como descrito na tabela seguinte.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Somente Leitura**|Especifica acesso somente de leitura ao banco de dados.|  
 |**Leitura Gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  
@@ -123,4 +122,3 @@ ms.lasthandoff: 08/09/2017
  **Senha**  
  Digite a senha para o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
-

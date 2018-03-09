@@ -2,10 +2,14 @@
 title: "Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43bfc29045efc22d72becb20dbd4d4441c97baa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 81d0af19646a19135d6d52b2e6384b84cf23a5e2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade
-  Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  
   
 > [!NOTE]  
 >  O termo "URL de ponto de extremidade" é sinônimo do termo "endereço de rede de servidor" usado pela interface do usuário e pela documentação de espelhamento de banco de dados.  
@@ -58,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
          *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
   
-         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.***domain_segment*] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name* é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.***domain_segment*] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Para obter mais informações, consulte [Encontrando o nome de domínio completamente qualificado](#Finding_FQDN), posteriormente neste tópico.  
   
@@ -155,7 +160,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  

@@ -2,9 +2,12 @@
 title: Pausando e retomando o espelhamento de banco de dados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausando e retomando o espelhamento de banco de dados (SQL Server)
-  O proprietário de banco de dados pode pausar e depois retomar uma sessão de espelhamento de banco de dados a qualquer hora. Pausar preserva o estado de sessão enquanto suspende o espelhamento. Durante o afunilamento, pausar pode ser útil para melhorar o desempenho no servidor principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O proprietário de banco de dados pode pausar e depois retomar uma sessão de espelhamento de banco de dados a qualquer hora. Pausar preserva o estado de sessão enquanto suspende o espelhamento. Durante o gargalo, pausar pode ser útil para melhorar o desempenho no servidor principal.  
   
  Quando uma sessão é pausada, o banco de dados principal permanece disponível. Pausar define o estado da sessão de espelhamento para SUSPENDED e o banco de dados espelho já não mantém o ritmo do banco de dados principal, fazendo o banco de dados principal executar exposto.  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Remover o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

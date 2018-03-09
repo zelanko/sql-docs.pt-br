@@ -2,15 +2,13 @@
 title: "Algoritmo de regressão logística da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a62e3bad1e9bfcae6c929061000ebcc8d3b7af7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
-  A regressão logística é uma técnica estatística conhecida, usada para modelar resultados binários.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A regressão logística é uma técnica estatística conhecida, usada para modelar resultados binários.  
   
  Há várias implementações de regressão logística em pesquisa de estatísticas, usando técnicas de aprendizagem diferentes. O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi implementado usando uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo compartilha muitas das qualidades de redes neurais mas é mais fácil treinar.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Para obter exemplos de consultas em um modelo de regressão logística, consulte [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não suporta detalhamento. Isso acontece porque a estrutura dos nós do modelo de mineração não corresponde diretamente aos dados subjacentes.  
   

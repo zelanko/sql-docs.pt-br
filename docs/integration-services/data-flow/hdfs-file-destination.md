@@ -15,24 +15,23 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02a2ecf62d91110bfd7e8a1429d5e1b835e4244e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2624d36c31fd6ac77cce7cee61895b40a176d059
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hdfs-file-destination"></a>Destino de Arquivo HDFS
   O componente Destino de Arquivo HDFS permite que um pacote do SSIS grave dados de um arquivo HDFS. Os formatos de arquivo com suporte são Texto, Avro e ORC.  
   
  Para configurar o Destino de Arquivo HDFS, arraste e solte a Origem de Arquivo HDFS no designer de fluxo de dados e clique duas vezes no componente para abrir o editor.  
   
- ![Editor de destino do arquivo HDFS](../../integration-services/data-flow/media/hdfs-file-dest.png "Editor de destino do arquivo HDFS")  
+ ![Editor de Destino de Arquivo HDFS](../../integration-services/data-flow/media/hdfs-file-dest.png "Editor de Destino de Arquivo HDFS")  
   
 ## <a name="options"></a>Opções  
  Configure as seguintes opções na guia **Geral** da caixa de diálogo **Editor de Destino de Arquivo Hadoop** .  
@@ -47,9 +46,8 @@ ms.lasthandoff: 08/03/2017
   
  Depois de configurar essas opções, selecione a guia **Colunas** para mapear colunas de origem para colunas de destino no fluxo de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Origem do arquivo HDFS](../../integration-services/data-flow/hdfs-file-source.md)  
+ [Origem de arquivo HDFS](../../integration-services/data-flow/hdfs-file-source.md)  
   
   
-

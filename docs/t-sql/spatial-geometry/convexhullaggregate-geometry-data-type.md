@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ConvexHullAggregate method (geometry)
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df18875ed28cce014ac5aeb9c871cdfde5efa442
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5af06350c50f4d0e18af329f2d5b0a242fd472b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="return-types"></a>Tipos de retorno  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>Exceção  
  Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Método ignora **nulo** entradas.  
@@ -77,8 +76,7 @@ ConvexHullAggregate ( geometry_operand )
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

@@ -2,12 +2,13 @@
 title: "Proteger relatórios e recursos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  O relatório é publicado em um servidor de relatórios ou de outra forma disponibilizado de modo que o valor de parâmetro de relatório possa ser controlado pela URL de uma página da Web.  
   
-3.  Um invasor cria um link para a página da web ou o servidor de relatório especificando o valor do parâmetro no formulário "javascript:\<script mal-intencionado aqui >" e envia esse link para alguém em um ataque de atração.  
+3.  Um invasor cria um link para a página da Web ou o servidor de relatório, especificando o valor do parâmetro no formato “javascript:\<malicious script here>” e envia esse link a outra pessoa em um ataque de atração.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Atenuando ataques de injeção de script em um hiperlink de um relatório ou documento publicado  
  Relatórios podem conter hiperlinks inseridos no valor da propriedade Action de um item de relatório ou parte de um item de relatório. Hiperlinks podem ser associados a dados que recuperados de uma fonte de dados externa quando o relatório é processado. Se um usuário mal-intencionado modificar os dados subjacentes, o hiperlink pode correr o risco de explorações de script. Se um usuário clicar no link no relatório publicado ou exportado, o script mal-intencionado pode ser executado.  
@@ -77,14 +77,13 @@ ms.lasthandoff: 08/09/2017
 >  Em versões anteriores da documentação, foi incluído um exemplo de criação de uma consulta dinâmica como uma expressão. Esse tipo de consulta cria uma vulnerabilidade a ataques de injeção SQL e, portanto, não é recomendado.  
   
 ## <a name="securing-confidential-reports"></a>Protegendo relatórios confidenciais  
- Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](../../reporting-services/security/secure-folders.md).  
+ Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](../../reporting-services/security/secure-folders.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar o acesso do construtor de relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Itens de fontes de dados compartilhadas segura](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Armazenar credenciais em uma fonte de dados Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Proteger itens de fontes de dados compartilhadas](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

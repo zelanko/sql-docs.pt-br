@@ -1,14 +1,14 @@
 ---
 title: Importar dados usando uma consulta nativa (Analysis Services) | Microsoft Docs
 ms.custom: 
-ms.date: 10/26/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/20/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,16 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be1de1271558dd840f12214b8986be85572ebe6d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importar dados usando uma consulta nativa
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 1400 para modelos de tabela, a nova experiência de obter dados em projetos do Visual Studio Analysis Services fornece enorme flexibilidade em como você pode mashup seus dados durante a importação. Este artigo descreve a criação de uma conexão a uma fonte de dados e, em seguida, criar uma consulta SQL nativa para especificar a importação de dados.
 
 Para concluir as tarefas descritas neste artigo, verifique se que você estiver usando a versão mais recente do SSDT. Se você estiver usando o Visual Studio de 2017, verifique se você baixou e instalou o de 2017 setembro ou posterior VSIX de projetos Microsoft Analysis Services.

@@ -1,12 +1,14 @@
 ---
 title: Vincular os aplicativos de acesso ao SQL Server - banco de dados SQL do Azure | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -26,17 +28,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 0a0acdf34e916fc3748b0ba33947259e1a361230
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculando a aplicativos de acesso ao SQL Server - banco de dados do SQL do Azure (AccessToSQL)
 Se você deseja usar seus aplicativos existentes do Access com [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode vincular suas tabelas originais do Access para o migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tabelas do SQL Azure. Vinculação modifica seu banco de dados do Access para que suas páginas de acesso de consultas, formulários, relatórios e dados de usam os dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados do SQL Azure em vez dos dados em seu banco de dados do Access.  
@@ -164,4 +165,3 @@ Recordset.LastModified
 ## <a name="see-also"></a>Consulte também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

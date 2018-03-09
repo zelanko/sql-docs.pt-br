@@ -1,5 +1,5 @@
 ---
-title: "Mapeamento de tipo de dados no SQL Server Assistente de importação e exportação | Microsoft Docs"
+title: "Mapeamento de Tipo de Dados no Assistente para Importação e Exportação do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -13,25 +13,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 2
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapeamento de Tipo de Dados no Assistente para Importação e Exportação do SQL Server
  No Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode definir o nome, o tipo de dados e as propriedades do tipo de dados das colunas nas novas tabelas e arquivos de destino, mas não é possível especificar conversões personalizadas para valores de coluna. Como resultado, o mapeamento interno dos tipos de dados de origem para destino é importante.  
   
 ##  <a name="wizardMapping"></a> Como o assistente mapeia tipos de dados entre a origem e o destino?
 O assistente usa arquivos de mapeamento que são instalados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mapear os tipos de dados de um sistema ou versão de um banco de dados para outro. Por exemplo, é possível mapear do tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados Oracle. Por padrão, os arquivos de mapeamento em formato XML são instalados nas seguintes pastas.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (para 64 bits)
--   **C:\Program arquivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (para 32 bits).  
+-   **C:\Arquivos de Programas\Microsoft SQL Server\130\DTSMappingFiles\** (para 64 bits)
+-   **C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (para 32 bits).  
   
  Se editar um arquivo de mapeamento existente ou adicionar um novo arquivo de mapeamento à pasta, você deverá fechar e reabrir o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para carregar os arquivos novos ou alterados.  
  
@@ -85,5 +84,4 @@ Esta é uma parte do arquivo de mapeamento XML que mapeia de tipos de dados do S
 </dtm:DataTypeMappings>  
   
 ```  
-
 

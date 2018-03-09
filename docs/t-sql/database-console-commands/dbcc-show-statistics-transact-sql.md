@@ -1,14 +1,15 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +92,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAMA | STATS_STREAM [ **,**  *n*  ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  A especificação de um ou mais desses parâmetros limita os conjuntos de resultados retornados pela instrução para a opção ou as opções especificadas. Se nenhuma opção for especificada, todas as informações de estatísticas serão retornadas.  
   
  STATS_STREAM é [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -101,7 +103,7 @@ A tabela a seguir descreve as colunas retornadas no conjunto de resultados quand
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
 |Nome|O nome do objeto de estatísticas.|  
-|Atualizado|Data e hora da última atualização de estatísticas. O [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) função é uma forma alternativa de recuperar essas informações.|  
+|Atualizado|Data e hora da última atualização de estatísticas. O [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) função é uma forma alternativa de recuperar essas informações. Para obter mais informações, consulte o [comentários](#Remarks) seção nesta página.|  
 |Linhas|O número total de linhas na tabela ou exibição indexada quando as estatísticas foram atualizadas pela última vez. Se as estatísticas forem filtradas ou corresponderem a um índice filtrado, o número de linhas talvez seja menor do que o número de linhas na tabela. Para obter mais informações, consulte[estatísticas](../../relational-databases/statistics/statistics.md).|  
 |Linhas Amostradas|O número total de linhas amostradas para cálculos de estatísticas. Se Linhas Amostradas < Linhas, o histograma e os resultados de densidade exibidos serão estimativas com base nas linhas amostradas.|  
 |Etapas|O número de etapas no histograma. Cada etapa abrange uma gama de valores de colunas seguidos por um valor de coluna associada superior. As etapas do histograma são definidas na primeira coluna de chave nas estatísticas. O número máximo de etapas é 200.|  
@@ -130,9 +132,11 @@ A tabela a seguir descreve as colunas retornadas no conjunto de resultados quand
 |DISTINCT_RANGE_ROWS|Número estimado de linhas com um valor de coluna distinto dentro de uma etapa do histograma, excluindo-se o limite superior.|  
 |AVG_RANGE_ROWS|Número médio de linhas com valores de colunas duplicados em uma etapa do histograma, excluindo o limite superior (RANGE_ROWS / DISTINCT_RANGE_ROWS para DISTINCT_RANGE_ROWS > 0).| 
   
-## <a name="remarks"></a>Comentários  
+## <a name="Remarks"></a> Comentários 
+
+Data de atualização de estatísticas é armazenada no [objeto de estatísticas de blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto com o [histograma](#histogram) e [vetor de densidade](#density), não nos metadados. Quando nenhum dado será lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não estiver disponível e o *atualizado* coluna será NULL. Esse é o caso para estatísticas filtradas para que o predicado não retornar linhas, ou para novas tabelas vazias.
   
-## <a name="histogram"></a>Histograma  
+## <a name="histogram"></a> Histograma  
 Um histograma mede a frequência de ocorrência de cada valor distinto em um conjunto de dados. O otimizador de consulta calcula um histograma com base nos valores de coluna na primeira coluna de chave do objeto de estatísticas, selecionando os valores de coluna por amostragem estatística das linhas ou pela execução de uma verificação completa de todas as linhas na tabela ou na exibição. Se o histograma for criado com base em um conjunto amostrado de linhas, os totais armazenados para o número de linhas e o número de valores distintos são estimativas e não precisam ser números inteiros.
   
 Para criar o histograma, o otimizador de consulta classifica os valores de colunas, calcula o número de valores que correspondem a cada valor de coluna distinta e agrega os valores de colunas em um máximo de 200 etapas de histograma contíguas. Cada etapa inclui uma gama de valores de colunas seguidos por um valor de coluna associada superior. O intervalo inclui todos os possíveis valores de coluna entre valores de limite, excluindo-se os próprios valores de limite em si. O mais baixo dos valores de coluna classificados é o valor do limite superior da primeira etapa do histograma.
@@ -148,8 +152,8 @@ Para cada etapa do histograma:
   
 O otimizador de consulta define as etapas do histograma de acordo com o significado estatístico delas. Ele usa um algoritmo de diferença máxima para minimizar o número de etapas no histograma, enquanto maximiza a diferença entre os valores de limite. O número máximo de etapas é 200. O número de etapas do histograma pode ser menor do que o número de valores distintos, até mesmo para colunas com menos de 200 pontos de limite. Por exemplo, uma coluna com 100 valores distintos pode ter um histograma com menos de 100 pontos de limite.
   
-## <a name="density-vector"></a>Vetor de densidade  
-O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, densidade é calculada para cada um dos seguintes prefixos de coluna.
+## <a name="density"></a> Vetor de densidade  
+O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, a densidade será calculada em cada um dos prefixos de coluna a seguir.
   
 |Prefixo de coluna|Densidade calculada em|  
 |---|---|
@@ -185,7 +189,7 @@ DBCC SHOW_STATISTICS não é suportada em tabelas externas.
 ### <a name="a-returning-all-statistics-information"></a>A. Retornando todas as informações de estatísticas  
 O exemplo a seguir exibe todas as informações de estatísticas para o `AK_Address_rowguid` índice da `Person.Address` tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +197,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. Especificando a opção HISTROGRAM  
 Isso limita as informações de estatísticas exibidas para Customer_LastName para os dados de HISTOGRAMA.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +206,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Exibir o conteúdo de estatísticas de um objeto  
  O exemplo a seguir exibe o conteúdo das estatísticas Customer_LastName na tabela DimCustomer.  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -220,10 +224,10 @@ Os resultados mostram o cabeçalho, o vetor de densidade e parte do histograma.
 [Estatísticas](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-[DROP STATISTICS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
-[STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-[sys.DM db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

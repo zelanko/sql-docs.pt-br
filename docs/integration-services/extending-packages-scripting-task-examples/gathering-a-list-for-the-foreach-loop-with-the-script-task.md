@@ -1,5 +1,5 @@
 ---
-title: Uma lista de coleta para o Loop ForEach com a tarefa Script | Microsoft Docs
+title: Obter uma lista para o loop ForEach com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,29 +19,28 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 36238c0129534f2789daecc30242fa318b853982
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
-  O Enumerador Foreach De Variável enumera os itens em uma lista que é passada para ele em uma variável e executa as mesmas tarefas em cada item. Você pode usar o código personalizado em uma tarefa Script para preencher uma lista com esse propósito. Para obter mais informações sobre o enumerador, consulte [contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+  O Enumerador Foreach De Variável enumera os itens em uma lista que é passada para ele em uma variável e executa as mesmas tarefas em cada item. Você pode usar o código personalizado em uma tarefa Script para preencher uma lista com esse propósito. Para obter mais informações sobre o enumerador, consulte [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- O exemplo a seguir usa métodos do **System.IO** namespace para reunir uma lista de pastas de trabalho do Excel no computador que são mais antigos do que um número de dias especificado pelo usuário em uma variável ou mais recente. Ele busca diretórios na Unidade C recursivamente para arquivos com a extensão .xls e verifica a data da última modificação em cada arquivo para determinar se o arquivo pertence a essa lista. Ele adiciona arquivos de qualificação a um **ArrayList** e salva o **ArrayList** em uma variável para uso posterior em um contêiner de Foreach Loop. O contêiner do Loop de Foreach é configurado para usar o Foreach de enumerador de Variável.  
+ O exemplo a seguir usa métodos do namespace **System.IO** para reunir uma lista de pastas de trabalho do Excel no computador, que são anteriores ou posteriores a um número de dias especificado pelo usuário em uma variável. Ele busca diretórios na Unidade C recursivamente para arquivos com a extensão .xls e verifica a data da última modificação em cada arquivo para determinar se o arquivo pertence a essa lista. Ele adiciona arquivos de qualificação a uma **ArrayList** e salva a **ArrayList** em uma variável para uso posterior em um contêiner do Loop de Foreach. O contêiner do Loop de Foreach é configurado para usar o Foreach de enumerador de Variável.  
   
 > [!NOTE]  
->  A variável que você usa com o enumerador Foreach de variável deve ser do tipo **objeto**. O objeto que você coloca na variável deve implementar uma das seguintes interfaces: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System. ComponentModel IListSource**, ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Um **matriz** ou **ArrayList** normalmente é usado. O **ArrayList** requer uma referência e um **Imports** instrução para o **System. Collections** namespace.  
+>  A variável que você usa com o Foreach de Enumerador de Variável deve ser do tipo **Object**. O objeto que você coloca na variável deve implementar uma das seguintes interfaces: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Uma **Array** ou **ArrayList** é comumente usada. A **ArrayList** requer uma referência e uma instrução **Imports** para o namespace **System.Collections**.  
   
  Você pode testar essa tarefa usando diferentes valores positivos e negativos para a variável do pacote `FileAge`. Por exemplo, você pode digitar 5 para procurar arquivos criados nos últimos cinco dias, ou digitar -3 para procurar arquivos criados há mais de três dias. Essa tarefa pode levar um ou dois minutos em uma unidade com várias pastas a serem pesquisadas.  
   
@@ -50,11 +48,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  Crie uma variável do pacote nomeada `FileAge` do tipo inteiro e digite um valor inteiro positivo ou negativo. Quando o valor é positivo, o código busca arquivos posteriores ao número especificado de dias; quando ele é negativo, o código busca arquivos anteriores ao número especificado de dias.  
   
-2.  Crie uma variável de pacote nomeada `FileList` do tipo **objeto** para receber a lista de arquivos reunidos pela tarefa Script para uso posterior, o Foreach de enumerador de variável.  
+2.  Crie uma variável de pacote nomeada `FileList` do tipo **Object** para receber a lista de arquivos reunidos pela tarefa Script para uso posterior pelo Enumerador Foreach De Variável.  
   
-3.  Adicionar o `FileAge` variável para a tarefa de Script **ReadOnlyVariables** propriedade e adicione o `FileList` variável para o **ReadWriteVariables** propriedade.  
+3.  Adicione a variável `FileAge` à propriedade **ReadOnlyVariables** da tarefa Script e adicione a variável `FileList` à propriedade **ReadWriteVariables**.  
   
-4.  No seu código, importe o **System. Collections** e **System.IO** namespaces.  
+4.  No seu código, importe os namespaces **System.Collections** e **System.IO**.  
   
 ### <a name="code"></a>Código  
   
@@ -183,7 +181,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    ArrayList listForEnumerator = new ArrayList();  
+    listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -255,9 +253,8 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Contêiner Loop foreach](../../integration-services/control-flow/foreach-loop-container.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
  [Configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

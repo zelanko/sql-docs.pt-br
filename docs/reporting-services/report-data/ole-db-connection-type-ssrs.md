@@ -1,27 +1,27 @@
 ---
-title: "Tipo de Conexão OLE DB (SSRS) | Microsoft Docs"
+title: "Tipo de conexão do OLE DB (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 294cddfd0f3cc35c2f4a3b2b6861bc062648d849
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dcd1dc663a4e80845bcb725774bb8b591130c62c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexão OLE DB (SSRS)
   Para incluir dados de um provedor de dados OLE DB, é necessário ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo OLE DB. Esse tipo de fonte de dados interna tem como base a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensão de processamento de dados OLE DB.  
@@ -61,7 +61,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
 ##  <a name="Remarks"></a> Comentários  
- OLEDB é uma tecnologia nativa para criação de provedores de dados para fontes de dados específicas. A tecnologia OLEDB é baseada em interfaces COM (Component Object Model). A tecnologia OLEDB é posterior à ODBC e anterior aos provedores de dados ADO.NET. Os provedores de dados OLEDB são registrados com o sistema operacional, como qualquer outro componente COM. Há provedores de dados OLEDB disponibilizados pela Microsoft e por fornecedores terceirizados. A Microsoft fornece também o MSDASQL, um provedor de dados OLEDB que faz a comunicação com drivers ODBC. Para obter mais informações, consulte [tipo de Conexão do ODBC &#40; SSRS &#41; ](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
+ OLEDB é uma tecnologia nativa para criação de provedores de dados para fontes de dados específicas. A tecnologia OLEDB é baseada em interfaces COM (Component Object Model). A tecnologia OLEDB é posterior à ODBC e anterior aos provedores de dados ADO.NET. Os provedores de dados OLEDB são registrados com o sistema operacional, como qualquer outro componente COM. Há provedores de dados OLEDB disponibilizados pela Microsoft e por fornecedores terceirizados. A Microsoft fornece também o MSDASQL, um provedor de dados OLEDB que faz a comunicação com drivers ODBC. Para obter mais informações, consulte [Tipo de conexão ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
  Para recuperar os dados desejados com êxito, é necessário fornecer uma sintaxe de consulta que seja suportada pelo provedor de dados. O suporte a parâmetros varia de acordo com o provedor de dados. Para obter mais informações, consulte os tópicos específicos do provedor de dados selecionado. Por exemplo:  
   
@@ -81,7 +81,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Adicionar um filtro a um conjunto de dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Seções relacionadas  
@@ -90,23 +90,22 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fornece informações sobre conjuntos de dados inseridos e compartilhados.  
   
- [Coleção de campos de conjunto de dados e &#40; Construtor de relatórios e SSRS & &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

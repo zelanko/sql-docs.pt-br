@@ -3,7 +3,7 @@ title: O objeto de campo | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-field-object"></a>O objeto de campo
 Cada **campo** objeto geralmente corresponde a uma coluna em uma tabela de banco de dados. No entanto, um **campo** também pode representar um ponteiro para outro **registros**, chamado um capítulo. Exceções, como colunas de capítulo serão abordadas posteriormente neste guia.  
@@ -126,4 +125,3 @@ Cada **campo** objeto geralmente corresponde a uma coluna em uma tabela de banco
  Se não houver nenhum registro atual quando você usa o **GetChunk** ou **AppendChunk** método em um **campo** do objeto, ocorrerá erro 3021 (não há registro atual).  
   
  Para obter um exemplo de como usar esses métodos para manipular dados binários, consulte o [método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [método GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) exemplos de *referência do programador de ADO*.
-

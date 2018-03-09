@@ -2,9 +2,12 @@
 title: Monitorar o uso da CPU | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,18 +25,18 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-cpu-usage"></a>Monitorar o uso da CPU
-  Monitore uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para determinar se as taxas de uso de CPU estão dentro dos intervalos normais. Uma taxa de uso de CPU continuamente alta pode indicar a necessidade de atualizar a CPU ou de adicionar vários processadores. Alternativamente, uma taxa de uso de CPU alta pode indicar um aplicativo mal-ajustado ou malprojetado. Otimizar o aplicativo pode baixar a utilização de CPU.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitore uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para determinar se as taxas de uso de CPU estão dentro dos intervalos normais. Uma taxa de uso de CPU continuamente alta pode indicar a necessidade de atualizar a CPU ou de adicionar vários processadores. Alternativamente, uma taxa de uso de CPU alta pode indicar um aplicativo mal-ajustado ou malprojetado. Otimizar o aplicativo pode baixar a utilização de CPU.  
   
  Um modo eficiente de determinar o uso de CPU é usar o contador **Processador: %tempo de processador** do Monitor do Sistema. Esse contador monitora o tempo gasto pela CPU para executar um thread que não está ocioso. Um estado consistente de 80 a 90 por cento pode indicar a necessidade de atualizar a CPU ou de adicionar mais processadores. Para sistemas com vários processadores, monitore uma instância separada desse contador para cada processador. Esse valor representa a soma do tempo de processador em um processador específico. Para determinar a média de todos os processadores, use o contador **Sistema: %tempo total de processador** .  
   
@@ -52,10 +55,10 @@ ms.lasthandoff: 11/09/2017
   
 -   **Sistema: Comprimento da fila de processador**  
   
-     Corresponde ao número de threads que esperam por tempo de processador. Um afunilamento de processador acontece quando os threads de um processo exigem mais ciclos de processador do que os disponíveis. Se muitos processos tentarem utilizar o tempo de processador, pode ser necessário instalar um processador mais rápido. Caso seja um sistema com vários processadores, você pode adicionar um processador.  
+     Corresponde ao número de threads que esperam por tempo de processador. Um gargalo de processador acontece quando os threads de um processo exigem mais ciclos de processador do que os disponíveis. Se muitos processos tentarem utilizar o tempo de processador, pode ser necessário instalar um processador mais rápido. Caso seja um sistema com vários processadores, você pode adicionar um processador.  
   
  Ao examinar o uso de processador, considere o tipo de trabalho que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua muitos cálculos, como consultas envolvendo agregações ou consultas associadas à memória que não requerem E/S em disco, pode ser usado 100 % do tempo de processador. Se isso influir no desempenho de outros aplicativos, experimente alterar a carga de trabalho. Por exemplo, dedique o computador à execução da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Taxas de uso em torno de 100 %, quando estão sendo processadas muitas solicitações de cliente, podem indicar que os processos estão formando fila para aguardar o tempo de processador e provocando um afunilamento. Resolva o problema adicionando processadores mais rápidos.  
+ Taxas de uso em torno de 100 %, quando estão sendo processadas muitas solicitações de cliente, podem indicar que os processos estão formando fila para aguardar o tempo de processador e provocando um gargalo. Resolva o problema adicionando processadores mais rápidos.  
   
   

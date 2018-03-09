@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af636e20cc2da22adf0607529f29959c1a005c9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, a permissão **CREATE ENDPOINT** ) podem ser concedidas a um logon.  
   
-> **OBSERVAÇÃO:** quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **OBSERVAÇÃO:** quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Segurança  
 

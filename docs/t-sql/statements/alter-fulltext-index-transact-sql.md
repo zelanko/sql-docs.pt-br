@@ -24,17 +24,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48861e0c85263e98333ea3fad6a4da0fa0674b1f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -209,7 +208,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  **Para localizar a propriedade de pesquisa listas no banco de dados atual**  
   
--   [registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
+-   [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
  Para obter mais informações sobre listas de propriedades de pesquisa, consulte [pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -363,4 +362,3 @@ GO
  [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)  
   
   
-

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLWriteDSNToIni
-apilocation:
-- sqlsrv32.dll
+apiname: SQLWriteDSNToIni
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLWriteDSNToIni
-helpviewer_keywords:
-- SQLWriteDSNToIni [ODBC]
+f1_keywords: SQLWriteDSNToIni
+helpviewer_keywords: SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 315ea45ac8f88d482f0b2cf81ed3b9d15b80a7b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 230accf6ae34f7b6bbced597e6e8bf2991bc8544
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlwritedsntoini-function"></a>Função SQLWriteDSNToIni
 **Conformidade**  
@@ -87,4 +81,3 @@ BOOL SQLWriteDSNToIni(
 |Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(na configuração de DLL)|  
 |Adicionar, modificar ou remover uma fonte de dados|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Remover um nome de fonte de dados das informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
-

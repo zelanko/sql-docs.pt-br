@@ -2,44 +2,37 @@
 title: Elemento Axis (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Axis Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Axis Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.axis
 - http://schemas.microsoft.com/analysisservices/2003/engine#Axis
-helpviewer_keywords:
-- Axis element
+helpviewer_keywords: Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 162c143ed257114ec33851e2b071c093058ca155
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
-  Contém um conjunto de tuplas utilizado para representar um único eixo em um conjunto de dados multidimensional contido por um [eixos](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) retornado pelo tipo de dados, o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém um conjunto de tuplas utilizado para representar um único eixo em um conjunto de dados multidimensional contido por um [eixos](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) retornado pelo tipo de dados, o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,10 +52,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -72,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 |Elementos pai|[Eixos](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Elementos filho|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) ou [tuplas](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O conteúdo do **eixo** elemento varia dependendo do valor da **AxisFormat** propriedade XMLA usada pelo **Execute** método.  
   
 ## <a name="tupleformat"></a>TupleFormat  
@@ -191,8 +184,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

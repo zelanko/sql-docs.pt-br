@@ -8,31 +8,32 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03676da7d12179dcccd1d82e0601c9fbda3c826d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
-  O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Como os fluxos de trabalho personalizados são processados  
  Há três componentes principais envolvidos no processamento de fluxos de trabalho personalizados: o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server e o assembly de manipulador de fluxo de trabalho. Esses componentes processam um fluxo de trabalho personalizado da seguinte forma:  
   
 1.  Você usa o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para validar uma entidade que inicia um fluxo de trabalho.  
   
-2.  O [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envia membros que conhecem as condições de regra de negócio a uma fila do Service Broker no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envia membros que conhecem as condições de regra de negócios a uma fila do Service Broker no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  Em intervalos regulares, o Serviço de Integração de Fluxo de trabalho MDS do SQL Server chama um procedimento armazenado no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="view-the-service-broker-queue"></a>Exibir a fila do Service Broker  
  A fila do Service Broker que contém os dados mestre transmitidos como parte do fluxo de trabalho é: mdm.microsoft/mdm/queue/externalaction. As filas podem ser localizadas no **Pesquisador de Objetos** do SQL Management Studio sob o nó do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Esteja ciente de que, se o serviço limpou a fila corretamente, ela fila estará vazia.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Descrição XML do fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

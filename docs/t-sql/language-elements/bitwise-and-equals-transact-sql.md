@@ -1,5 +1,5 @@
 ---
-title: '&amp;= (AND bit a bit EQUALS) (Transact-SQL) | Microsoft Docs'
+title: "&amp;= (Atribuição AND bit a bit) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -19,22 +19,24 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - compound operators, &=
+- assignment operators, &=
+- augmented operators, &=
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f5c52444f3ba653db65c5ad700dd8d11704466c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 933555582a035d6db79c1f0676fd2befc2fd70d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-equals-transact-sql"></a>&amp;= (AND bit a bit EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Atribuição AND bit a bit) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   Executa uma operação AND lógica bit a bit entre dois valores inteiros e define um valor para o resultado da operação.  
   
@@ -53,14 +55,13 @@ expression &= expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações, consulte [& &#40; AND bit a bit &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

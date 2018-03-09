@@ -2,32 +2,32 @@
 title: Elemento EntityContainer (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Elemento EntityContainer (CSDLBI)
-  O elemento EntityContainer é um tipo complexo que se baseia no tipo CSDL, EntityContainer, que define uma coleção de entidades em um único modelo de dados. Em um aplicativo business intelligence, o modelo de dados representado por um EntityContainer pode conter várias tabelas com colunas vinculadas por relações, bem como cálculos, medidas e KPIs. Ele é conceitualmente semelhante a um banco de dados ou uma fonte de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento EntityContainer é um tipo complexo que se baseia no tipo CSDL, EntityContainer, que define uma coleção de entidades em um único modelo de dados. Em um aplicativo business intelligence, o modelo de dados representado por um EntityContainer pode conter várias tabelas com colunas vinculadas por relações, bem como cálculos, medidas e KPIs. Ele é conceitualmente semelhante a um banco de dados ou uma fonte de dados.  
   
  O EntityContainer deve especificar cada um dos tipos de entidade inclusos no modelo de dados, incluindo tabelas e relações. Informações sobre essas entidades de modelo são especificadas por meio da lista de entidades filho do tipo de elemento Entity. Para obter mais informações, consulte [Elemento EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |DirectQuery|Indica se as consultas no modelo usarão dados somente na fonte de dados relacional.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, representa uma parte do modelo de dados de tabela da AdventureWorks.  
   

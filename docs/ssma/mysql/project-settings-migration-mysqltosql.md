@@ -1,29 +1,30 @@
 ---
 title: "Configurações (migração) (MySQLToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configurações de projeto (migração) (MySQLToSQL)
 A página de migração do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA migra os dados do MySQL para o SQL Server.  
@@ -88,7 +89,6 @@ O painel de migração está disponível na **configurações de projeto** e **c
   
 |Termo|Definição|  
 |--------|--------------|  
-|**Tratamento de erros**|Especifica como tratar erros na migração dos valores de tipos de dados espaciais. Se substituir NULL for especificado, todos os valores espaciais causando erros serão substituídos com NULL. Nenhuma substituição é feita caso contrário.<br /><br />**Modo padrão**: gerar um erro<br /><br />**Modo otimista**: gerar um erro<br /><br />**Modo de inteira**: gerar um erro|  
+|**Tratando erros**|Especifica como tratar erros na migração dos valores de tipos de dados espaciais. Se substituir NULL for especificado, todos os valores espaciais causando erros serão substituídos com NULL. Nenhuma substituição é feita caso contrário.<br /><br />**Modo padrão**: gerar um erro<br /><br />**Modo otimista**: gerar um erro<br /><br />**Modo de inteira**: gerar um erro|  
 |**Validação do valor**|Especifica como tratar valores espaciais inválidos. Se 'Tente fazer válido' for especificado, está sendo feita uma tentativa para modificar valores inválidos para torná-las válido.<br /><br />**Modo padrão**: tornar válida<br /><br />**Modo otimista**: não altere<br /><br />**Modo de inteira**: tornar válida|  
   
-

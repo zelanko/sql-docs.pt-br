@@ -2,27 +2,32 @@
 title: Desinstalar o Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 89bd9331c7e4d8d89bdd617200dbce2664f00074
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-reporting-services"></a>Desinstalar o Reporting Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A desinstalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não remove o conteúdo que você criou ou a configuração que você modificou. Porém, se algum conteúdo precisar ser utilizado depois que a desinstalação for concluída, é recomendável fazer cópias do conteúdo antes de começar o processo de desinstalação.  
   
 ## <a name="uninstall-sharepoint-mode"></a>Desinstalar o modo do SharePoint  
@@ -54,9 +59,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  No Painel de Controle do Windows, clique em **Programas e Recursos**.  
   
-2.  Em **Programas e Recursos** , selecione **Microsoft SQL Server 2012**.  
+2.  Em **Programas e Recursos**, selecione **Microsoft SQL Server 2016**.  
   
-3.  No assistente de desinstalação, selecione a instância que inclui o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recurso de instância **RS** do.  
+3.  No assistente de desinstalação, selecione a instância que inclui o  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recurso de instância **RS**do .  
   
      ![rs_nativemode_uninstall_selectinstance](../../sql-server/install/media/rs-nativemode-uninstall-selectinstance.gif "rs_nativemode_uninstall_selectinstance")  
   
@@ -66,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Conclua o assistente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

@@ -2,47 +2,45 @@
 title: "Implementando uma classe DataReader para uma extensão de processamento de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
 - data readers [Reporting Services]
 - DataReader class
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cfd3a6cb38c59b1810d046839cb3be4f0dc9846a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 617f9d0a31ced8b38c79d3a3996c13a919b004f0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>Implementando uma classe DataReader para uma extensão de processamento de dados
-  O **DataReader** objeto permite que um cliente recuperar um fluxo de dados somente leitura, somente encaminhamento de uma fonte de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicite usando o **leitura** método o **DataReader** classe. Para criar um **DataReader** classe, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e, opcionalmente, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>. Usando um **DataReader** objeto aumenta o desempenho do aplicativo ao recuperar dados assim que ele estiver disponível, em vez de aguardar por todos os resultados da consulta a ser retornada e (por padrão) armazenar somente uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
+  O objeto **DataReader** permite que um cliente recupere um fluxo de dados somente leitura, somente encaminhamento de uma fonte de dados. Os resultados são retornados à medida que a consulta é executada e são armazenados no buffer de rede no cliente até que você solicite-os usando o método **Read** da classe **DataReader**. Para criar uma classe **DataReader**, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e, opcionalmente, implemente <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>. O uso de um objeto **DataReader** aumenta o desempenho do aplicativo recuperando dados assim que eles estão disponíveis, em vez de aguardar que todos os resultados da consulta sejam retornados e (por padrão) armazenando somente uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
   
- Depois de criar uma instância do seu **comando** classe, você cria um **DataReader** objeto chamando **ExecuteReader** para recuperar linhas da fonte de dados. O **DataReader** implementação deverá fornecer dois recursos básicos: acesso somente de encaminhamento de resultados define obtido executando um comando e acesso para os tipos de coluna, nomes e valores em cada linha. Os clientes usam o **leitura** método o **DataReader** para obter uma linha dos resultados da consulta.  
+ Depois de criar uma instância da classe **Command**, você cria um objeto **DataReader** chamando **Command.ExecuteReader** para recuperar linhas da fonte de dados. A implementação de **DataReader** deve fornecer duas funcionalidades básicas: acesso somente encaminhamento aos conjuntos de resultados obtidos pela execução de um comando e acesso aos tipos de coluna, nomes e valores de cada linha. Os clientes usam o método **Read** do objeto **DataReader** para obter uma linha dos resultados da consulta.  
   
- No Designer de relatórios, sua **DataReader** objeto é usado para recuperar uma lista de campos, bem como informações de esquema sobre o conjunto de resultados. Isso é realizado pela implementação de **GetName**, **GetValue**, **GetFieldType** e **GetOrdinal** métodos do <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interface.  
+ No Designer de Relatórios, o objeto **DataReader** é usado para recuperar uma lista de campos, além de informações de esquema sobre o conjunto de resultados. Isso é realizado pela implementação dos métodos **GetName**, **GetValue**, **GetFieldType** e **GetOrdinal** da interface <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>.  
   
- A interface de <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> permite que você ofereça informações específicas de agregação sobre o seu conjunto de resultados. Para obter um exemplo **DataReader** implementação da classe, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ A interface de <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> permite que você ofereça informações específicas de agregação sobre o seu conjunto de resultados. Para obter uma implementação de exemplo da classe **DataReader**, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implementando uma extensão de processamento de dados](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

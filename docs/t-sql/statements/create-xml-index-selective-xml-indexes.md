@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 870d6391732d87c08f64d016ea6325107c791c88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b0cd1c2dd0c77409768e8ea7838724ca4d6b827e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -92,7 +94,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  COM \<index_options > para obter informações sobre as opções de índice, consulte [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Pode haver vários índices XML seletivos secundários em cada coluna XML na tabela base.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  

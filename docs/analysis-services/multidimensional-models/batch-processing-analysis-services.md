@@ -2,35 +2,30 @@
 title: Processamento em lotes (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- batches [Analysis Services]
+helpviewer_keywords: batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7770a5b6f5a6ba26cfa89d1200a776ec55c0942
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-processing-analysis-services"></a>Processamento em lotes (Analysis Services)
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o comando Batch para enviar vários comandos de processamento para o servidor em uma única solicitação. O processamento em lotes dá a você uma maneira de controlar quais objetos serão processados e em qual ordem. Além disso, o processamento em lotes pode ser executado como uma série de trabalhos autônomos ou uma transação na qual a falha de um processo causa uma reversão do lote completo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o comando Batch para enviar vários comandos de processamento para o servidor em uma única solicitação. O processamento em lotes dá a você uma maneira de controlar quais objetos serão processados e em qual ordem. Além disso, o processamento em lotes pode ser executado como uma série de trabalhos autônomos ou uma transação na qual a falha de um processo causa uma reversão do lote completo.  
   
  O processamento em lotes maximiza a disponibilidade de dados consolidando e reduzindo a quantidade de tempo gasto para confirmar alterações. Ao processar uma dimensão completamente, qualquer partição que usa aquela dimensão é marcada como não processada. Como resultado, os cubos que contêm as partições não processadas ficam indisponíveis para navegar. Para resolver isso, use um trabalho de processamento em lotes e processe as dimensões junto com as partições afetadas. A execução do trabalho de processamento em lotes como uma transação assegura que todos os objetos incluídos na transação permaneçam disponíveis para consulta até a conclusão do processamento. Como a transação confirma as alterações, são colocados bloqueios nos objetos afetados, tornando-os temporariamente indisponíveis, mas, em geral, a quantidade de tempo usada para confirmar as alterações é menor que se você tivesse processado os objetos individualmente.  
   
@@ -84,8 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  Para obter instruções passo a passo, consulte **Exemplo 2** em [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

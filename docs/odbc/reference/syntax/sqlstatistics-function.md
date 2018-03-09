@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>Função SQLStatistics
 **Conformidade**  
@@ -82,7 +82,7 @@ SQLRETURN SQLStatistics(
  *Exclusivo*  
  [Entrada] Tipo de índice: SQL_INDEX_UNIQUE ou SQL_INDEX_ALL.  
   
- *Reservado*  
+ *Reserved*  
  [Entrada] Indica a importância das colunas CARDINALIDADE e as páginas no conjunto de resultados. As opções a seguir afetam o retorno de CARDINALIDADE e as páginas de colunas. informações de índice serão retornadas mesmo se a CARDINALIDADE e as páginas não são retornadas.  
   
  SQL_ENSURE solicita que o driver recupere as estatísticas incondicionalmente. (Drivers de acordo com apenas o padrão Open Group e não oferecem suporte a extensões ODBC não será capazes de dar suporte a SQL_ENSURE.)  
@@ -170,6 +170,6 @@ SQLRETURN SQLStatistics(
 |Retornando as colunas de chaves estrangeiras|[Função SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
 |Retornando as colunas de uma chave primária|[Função SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

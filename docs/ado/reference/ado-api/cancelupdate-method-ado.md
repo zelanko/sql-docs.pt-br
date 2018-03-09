@@ -3,8 +3,9 @@ title: "Método CancelUpdate (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CancelUpdate
-helpviewer_keywords: CancelUpdate method [ADO]
+f1_keywords:
+- Recordset15::CancelUpdate
+helpviewer_keywords:
+- CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7a118a37c403d9d50019e72b10f482d7b3f089c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd858ec4d40f307027a75fa657c4e4d2b0539064
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelupdate-method-ado"></a>Método CancelUpdate (ADO)
 Cancela as alterações feitas na linha atual ou nova de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto antes de chamar o [atualização ](../../../ado/reference/ado-api/update-method.md) método.  
@@ -36,7 +39,7 @@ Cancela as alterações feitas na linha atual ou nova de um [registros](../../..
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use o **CancelUpdate** método para cancelar as alterações feitas na linha atual ou para descartar uma linha adicionada recentemente. Você não pode cancelar as alterações para a linha atual ou uma nova linha depois de chamar o **atualização** método, a menos que as alterações são parte de uma transação que é possível revertê-lo com o [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método ou parte de uma atualização em lotes. No caso de uma atualização em lotes, você pode cancelar o **atualizar** com o **CancelUpdate** ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  

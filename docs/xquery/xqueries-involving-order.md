@@ -3,31 +3,37 @@ title: XQueries que envolvem ordem | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4aaddc6a3809a65300784786ece895695266d43c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar o primeiro \<Customer > elemento. Então, você sempre recuperará o mesmo cliente.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape de ODBC
 Um número de recursos de idioma, como junções externas e chamadas de função escalar, geralmente é implementado por DBMSs. No entanto, sintaxes para esses recursos costumam ser DBMS específico, mesmo quando sintaxes padrão são definidos por vários corpos de padrões. Por isso, o ODBC define sequências de escape que contêm sintaxes padrão para os seguintes recursos de idioma:  
@@ -48,7 +48,7 @@ Um número de recursos de idioma, como junções externas e chamadas de função
   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A sequência de escape é reconhecida e analisada por drivers, substitua as sequências de escape a gramática de DBMS específico. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) na gramática do apêndice c: SQL.  
   
 > [!NOTE]  

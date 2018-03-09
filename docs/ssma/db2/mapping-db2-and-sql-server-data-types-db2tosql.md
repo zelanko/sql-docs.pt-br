@@ -1,29 +1,30 @@
 ---
 title: Mapeamento de DB2 e tipos de dados do SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18ee9dc4b0e646b4eb6bd374af55c1ac0f98bf4b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapeamento de DB2 e tipos de dados do SQL Server (DB2ToSQL)
 Os tipos de banco de dados do DB2 variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
@@ -93,10 +94,9 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa no processo de migração é como [avaliação relatório &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) ou [convertendo esquemas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se você criar um relatório de avaliação, objetos do DB2 são convertidos automaticamente durante a avaliação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do DB2 para SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

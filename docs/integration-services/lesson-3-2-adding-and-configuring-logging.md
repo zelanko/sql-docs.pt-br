@@ -1,11 +1,11 @@
 ---
-title: 'Etapa 2: Adicionando e Configurando registro em log | Microsoft Docs'
+title: 'Etapa 2: adicionar e configurar o registro em log | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 37702c62d20217d11785351b69252e08f03c0985
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 30ac8ecc9fb9b5b18b5dea5d0112a2d9fd045865
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-2---adding-and-configuring-logging"></a>Lição 3-2-adicionando e Configurando registro em log
+# <a name="lesson-3-2---adding-and-configuring-logging"></a>Lição 3-2: adicionar e configurar o registro em log
 Nesta tarefa, você habilitará o log do fluxo de dados no pacote Lesson 3.dtsx. Então, você configurará um provedor de log de arquivo de texto para armazenar os eventos PipelineExecutionPlan e PipelineExecuteTrees em log. O provedor de log de arquivos de texto cria logs que são fáceis exibir e transportar. A simplicidade destes arquivos de log faz estes arquivos especialmente úteis durante a fase de teste básico de um pacote. É possível também exibir as entradas de log na janela Eventos de Log do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Adicionar log ao pacote  
@@ -67,7 +66,6 @@ Nesta tarefa, você habilitará o log do fluxo de dados no pacote Lesson 3.dtsx.
   
 14. Clique em **OK**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 [Etapa 3: Testando o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
-

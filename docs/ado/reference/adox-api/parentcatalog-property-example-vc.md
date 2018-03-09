@@ -3,27 +3,30 @@ title: Exemplo de propriedade ParentCatalog (VC + +) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: ParentCatalog property [ADOX], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bc5ad6692dc217b728cfdd62023e5130fd69cc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b98423b519809f94d1956971c9613bc4747632b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-example-vc"></a>Exemplo de propriedade ParentCatalog (VC + +)
 O código a seguir demonstra como usar o [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propriedade para acessar uma propriedade específica de provedor antes de anexar a uma tabela a um catálogo. A propriedade é **AutoIncrement**, que cria um campo de incremento automático em um banco de dados Microsoft Jet.  

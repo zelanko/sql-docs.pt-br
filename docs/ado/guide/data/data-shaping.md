@@ -3,7 +3,7 @@ title: Modelagem de dados | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 37fb29f39fd6d9a5b5b3e7b0c1b1c97aa2627654
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ad3b257166308fe2c5a4bd94da5427dc0ca2649
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping"></a>Formatação de dados
 Esta seção contém os tópicos a seguir.  
@@ -57,4 +56,3 @@ Esta seção contém os tópicos a seguir.
 -   [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)  
   
 -   [Visual Basic para funções de aplicativos](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

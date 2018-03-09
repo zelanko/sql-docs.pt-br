@@ -2,13 +2,18 @@
 title: Exibir ou alterar propriedades do servidor (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.connectionproperties.f1
+f1_keywords:
+- sql13.swb.connectionproperties.f1
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 - Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ddad50d30130091b741b8117e1fb2bfc3e3154f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 501375d52cb16f1919c82bfb65f84220bcbbe6a7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
-  Este tópico descreve como exibir ou alterar as propriedades de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como exibir ou alterar as propriedades de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
   
  **Neste tópico**  
   
@@ -74,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Na caixa de diálogo **Propriedades do Servidor** , clique em uma página para exibir ou alterar informações de servidor sobre ela. Algumas propriedades são somente leitura.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para exibir propriedades de servidor usando a função interna SERVERPROPERTY  
   
@@ -84,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa a função [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) em uma função interna em uma instrução `SELECT` para retornar informações sobre o servidor atual. Essa situação é útil quando existem diversas instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no servidor Windows e o cliente deve abrir outra conexão à mesma instância usada pela conexão atual.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -97,7 +103,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição de catálogo [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) para retornar o nome (`name`) e a ID (`server_id`) do servidor atual e o nome do provedor OLE DB (`provider`) para conectar a um servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -131,7 +137,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para alterar a propriedade de um servidor. O exemplo altera o valor da opção `fill factor` para `100`. O servidor deve ser reiniciado para que a alteração entre em vigor.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -162,7 +168,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois que você altera as propriedades de servidor  
  Para algumas propriedades, o servidor terá que ser reiniciado antes de a alteração entrar em vigor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

@@ -2,24 +2,27 @@
 title: Propriedades personalizadas OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b10906c0cb7ba618c029bc79f9c5918a936dc918
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: fc8a8b573062af1cf719367896e2933556cfdfae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-custom-properties"></a>Propriedades personalizadas OLE DB
   **Propriedades personalizadas de fontes**  
@@ -71,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

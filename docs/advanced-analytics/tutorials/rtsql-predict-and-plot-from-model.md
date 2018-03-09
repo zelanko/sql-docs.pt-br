@@ -2,28 +2,31 @@
 title: "Prever e diagrama de modelo de (R no início rápido do SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0200ade3d3968357841f70ebcb27979fbdb9089a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Prever e diagrama de modelo de (R no início rápido do SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Para executar _pontuação_ usando novos dados, obter um dos modelos treinados da tabela e, em seguida, chamar um novo conjunto de dados no qual basear as previsões. A pontuação é um termo usado muitas vezes em ciência de dados para significar a geração de previsões, as probabilidades ou outros valores com base nos novos dados inseridos em um modelo treinado.
 

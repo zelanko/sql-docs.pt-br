@@ -5,35 +5,31 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_MINING_STRUCTURE
 - CREATE MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - CREATE MINING STRUCTURE statement
 - mining structures [DMX], creating
 - RELATED TO column
 ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cb0b52cf7ac2b866119ff75bbd0d7e8da8cbac84
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Padrão: REPETÍVEL(0)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma estrutura de mineração é definida especificando uma lista de colunas, especificando, opcionalmente, as relações de hierarquia entre as colunas e particionamento, opcionalmente, a estrutura de mineração em conjuntos de dados de treinamento e de teste.  
   
  A palavra-chave opcional SESSION indica que a estrutura é temporária e você pode usá-la somente durante a sessão atual. Quando a sessão terminar, a estrutura e os modelos baseados nela serão excluídos. Para criar modelos e estruturas de mineração temporários, você deve primeiro definir a propriedade de banco de dados, AllowSessionMiningModels. Para obter mais informações, consulte [Propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
@@ -197,10 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

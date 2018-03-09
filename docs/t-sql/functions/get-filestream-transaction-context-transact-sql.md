@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ba8077d0df80044a66da4863bba1dd603d369f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valor de retorno  
  NULL será retornado se a transação não tiver sido iniciada, ou tiver sido cancelada ou confirmada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A transação deve ser explícita. Use BEGIN TRANSACTION seguido por COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
  Quando você chama GET_FILESTREAM_TRANSACTION_CONTEXT, o chamador recebe acesso de sistema de arquivos à transação durante a sua duração. Para permitir que outro usuário acesse a transação pelo sistema de arquivos, use EXECUTE AS para executar GET_FILESTREAM_TRANSACTION_CONTEXT como outro usuário.  
@@ -284,8 +283,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Caminho &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

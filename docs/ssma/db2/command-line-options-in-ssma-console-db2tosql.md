@@ -1,10 +1,13 @@
 ---
 title: "Opções de linha de comando no Console do SSMA (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d76e30b140438b09b49cfe43e5b7781c078f5eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opções de linha de comando no Console do SSMA (DB2ToSQL)
 Microsoft fornece opções de linha de comando um conjunto robusto para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  

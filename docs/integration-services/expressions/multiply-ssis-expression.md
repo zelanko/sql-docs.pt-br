@@ -1,5 +1,5 @@
 ---
-title: "* (Multiplicação) (Expressão SSIS) | Microsoft Docs"
+title: "* (Multiplicar) (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb439e9221a1bcb169776eec1f6251b49ed4b861
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2576ff7968f18b58343a6d22d6295d17af89e9d9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="-multiply-ssis-expression"></a>* (Multiplicar) (Expressão SSIS)
   Multiplica duas expressões numéricas.  
@@ -46,7 +45,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se qualquer operando for nulo, o resultado será nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
@@ -68,9 +67,8 @@ ListPrice * .10
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

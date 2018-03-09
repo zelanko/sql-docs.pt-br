@@ -1,103 +1,111 @@
 ---
-title: "SQL Server Integration Services (SSIS) expansão Support for High Availability | Microsoft Docs"
+title: Suporte do Scale Out para Alta Disponibilidade do SSIS (SQL Server Integration Services) | Microsoft Docs
+ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.date: 12/19/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2405235bcfa09d2cc49e007f4eae6975d9ebf7a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="scale-out-support-for-high-availability"></a>Suporte de expansão para alta disponibilidade
+# <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 
-No SSIS expansão, do lado do trabalho de alta disponibilidade é fornecida por meio de pacotes com vários escala Out trabalhadores em execução.
-No lado do mestre de alta disponibilidade é obtida com [sempre no catálogo do SSIS](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) e o cluster de failover do Windows. Várias instâncias de escala Out mestre são hospedadas em um cluster de failover do Windows. Quando o serviço de escala Out mestre ou o SSISDB está inativo no nó primário, o serviço ou SSISDB no nó secundário continuará aceitar solicitações do usuário e se comunicar com operadores fora de escala. 
+No SSIS Scale Out, a alta disponibilidade do lado do Trabalho do Scale Out é fornecida com a execução de pacotes com vários Trabalhos do Scale Out.
 
-Para configurar a alta disponibilidade do lado do mestre, siga as etapas abaixo.
+A alta disponibilidade do lado do Mestre do Scale Out é obtida com o [Always On para o Catálogo do SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) e o clustering de failover do Windows. Nesta solução, várias instâncias do Mestre do Scale Out são hospedadas em um cluster de failover do Windows. Quando o serviço Mestre do Scale Out ou o SSISDB está inativo no nó primário, o serviço ou o SSISDB no nó secundário continua aceitando as solicitações do usuário e se comunicando com os Trabalhos do Scale Out. 
 
-## <a name="1-prerequisites"></a>1. Pré-requisitos
-Configurar um cluster de failover do Windows. Confira a postagem do blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012) para obter instruções. Você deve instalar o recurso e as ferramentas em todos os nós de cluster.
+Para configurar a alta disponibilidade do lado do Mestre do Scale Out, siga estas etapas:
 
-## <a name="2-install-scale-out-master-on-primary-node"></a>2. Instalar escala Out mestre no nó primário
-Instale serviços de mecanismo de banco de dados, serviços de integração e escala Out mestre no nó primário para escala Out mestre. 
+## <a name="1-prerequisites"></a>1. Prerequisites
+Configurar um cluster de failover do Windows. Confira a postagem no blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalando o recurso Cluster de Failover e as Ferramentas para o Windows Server 2012) para obter instruções. Instale o recurso e as ferramentas em todos os nós de cluster.
 
-Durante a instalação, você deve: 
-### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 Defina a conta que executa o serviço de escala Out mestre para uma conta de domínio.
-Essa conta deve ser capaz de acessar SSISDB no nó secundário no cluster de failover do Windows no futuro. Como serviço de escala Out mestre e SSISDB separadamente de failover, eles podem não estar no mesmo nó.
+## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalar o Mestre do Scale Out no nó primário
+Instale os Serviços de Mecanismo de Banco de Dados do SQL Server, o Integration Services e o Mestre do Scale Out no nó primário do Mestre do Scale Out. 
+
+Durante a instalação, faça o seguinte:
+
+### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 Defina a conta que executa o serviço Mestre do Scale Out com uma conta de domínio
+Essa conta deve poder acessar o SSISDB no nó secundário no cluster de failover do Windows no futuro. Já que o serviço Mestre do Scale Out e o SSISDB podem fazer failover separadamente, eles podem não estar no mesmo nó após o failover.
 
 ![Configuração do servidor de alta disponibilidade](media/ha-server-config.PNG)
 
-### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2.2 incluem escala Out mestre serviço nome de host DNS no certificado CNs de escala Out mestre.
+### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Inclua o nome do host DNS do serviço Mestre do Scale Out nos CNs do certificado do Mestre do Scale Out
 
-Esse nome de host será usado no ponto de extremidade de escala Out mestre. 
+Esse nome do host é usado no ponto de extremidade do Mestre do Scale Out. 
 
-![Configuração de HA mestre](media/ha-master-config.PNG)
+![Configuração do mestre de alta disponibilidade](media/ha-master-config.PNG)
 
-## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Instalar escala Out mestre no nó secundário
-Instale serviços de mecanismo de banco de dados, serviços de integração e escala Out mestre no nó secundário para escala Out mestre. 
+## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Instalar o Mestre do Scale Out no nó secundário
+Instale os Serviços de Mecanismo de Banco de Dados do SQL Server, o Integration Services e o Mestre do Scale Out no nó secundário do Mestre do Scale Out. 
 
-Você deve usar o mesmo certificado de escala Out mestre com o nó primário. Exportar o certificado SSL de escala Out mestre no nó primário com chave privada e instalá-lo ao repositório de certificados raiz da máquina loacl no nó secundário. Selecione este certificado durante a instalação mestre fora de escala.
+Use o mesmo certificado do Mestre do Scale Out usado no nó primário. Exporte o certificado SSL do Mestre do Scale Out no nó primário com uma chave privada e instale-o no repositório de certificados Raiz do computador local no nó secundário. Selecione esse certificado durante a instalação do Mestre do Scale Out no nó secundário.
 
-![Configuração HA mestre 2](media/ha-master-config2.PNG)
+![Configuração do mestre de alta disponibilidade 2](media/ha-master-config2.PNG)
 
-> [!Note]
-> Você pode definir o backup de vários mestres fora de escala, repetindo as operações de escala secundária Out mestre.
+> [!NOTE]
+> Configure vários Mestres do Scale Out de backup repetindo essas operações para o Mestre do Scale Out nos outros nós secundários.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configurar o SSISDB sempre no
+## <a name="4-set-up-ssisdb-always-on"></a>4. Configurar o Always On do SSISDB
 
-As instruções para configurar o sempre em para SSISDB pode ser visto no [sempre ligado para catálogo do SSIS (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Siga as instruções para configurar o Always On para o SSISDB em [Always On para o Catálogo do SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
-Além disso, você precisa criar um ouvinte de gourp de disponibilidade para o grupo de disponibilidade do que SSISDB é adicionado ao. Consulte [criar ou configurar um ouvinte de grupo de disponibilidade](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
+Além disso, é necessário criar um ouvinte do grupo de disponibilidade para o grupo de disponibilidade ao qual o SSISDB será adicionado. Consulte [Criar ou configurar um ouvinte de grupo de disponibilidade](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
-## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Atualizar o arquivo de configuração do serviço de escala Out mestre
-Arquivo de configuração de serviço de escala Out mestre de atualização, \<driver\>: \Program Files\Microsoft Server\140\DTS\Binn\MasterSettings.config SQL, em nós primários e secundários. Atualização **SqlServerName** para *[nome do DNS do ouvinte de grupo de disponibilidade], [porta]*.
+## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Atualizar o arquivo de configuração de serviço do Mestre do Scale Out
+Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, nos nós primários e secundários. Atualize **SqlServerName** para *[Nome DNS do Ouvinte do Grupo de Disponibilidade],[Porta]*.
 
-## <a name="6-enable-package-execution-logging"></a>6. Habilitar log de execução do pacote
+## <a name="6-enable-package-execution-logging"></a>6. Habilitar log de execução de pacote
 
-Registro em log no SSISDB é feito pelo logon **MS_SSISLogDBWorkerAgentLogin # # # #**, cuja senha é gerado automaticamente. Para fazer log funciona para todas as réplicas do SSISDB, faça o seguinte.
+O log no SSISDB é feito pelo logon **##MS_SSISLogDBWorkerAgentLogin##**, cuja senha é gerada automaticamente. Para fazer com que o log funcione em todas as réplicas do SSISDB, faça o seguinte
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 alterar a senha de **MS_SSISLogDBWorkerAgentLogin # # # #** no Sql Server primário.
-### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2 Adicione o logon para o Sql Server secundário.
-### <a name="63-update-connection-string-of-logging"></a>6.3 Atualize a cadeia de caracteres de conexão do log.
-Chame o procedimento armazenado [catalog]. [update_logdb_info] com 
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Altere a senha de **##MS_SSISLogDBWorkerAgentLogin##** no SQL Server primário
 
-@server_name= '*[Nome do DNS do ouvinte de grupo de disponibilidade], [porta]*' 
+### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 Adicione o logon ao SQL Server secundário
 
-e @connection_string = ' Data Source =*[nome do DNS do ouvinte de grupo de disponibilidade]*,*[Port]*; Initial Catalog = SSISDB; Id de usuário = # # MS_SSISLogDBWorkerAgentLogin # #; Senha =*[senha]*];'.
+### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 Atualize a cadeia de conexão usada para o log.
+Chame o procedimento armazenado `[catalog].[update_logdb_info]` com os seguintes valores de parâmetro:
 
-## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Função de serviço Congifure escala Out mestre de cluster de failover do Windows
+-   `@server_name = '[Availability Group Listener DNS name],[Port]' `
 
-Gerenciador de cluster de failover, conecte-se ao cluster para expansão. Selecione o cluster e clique em **ação** no menu e, em seguida, **configurar função...** .
+-   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-Na ser exibido para cima **Assistente para alta disponibilidade**, selecione **serviço genérico** em **Selecionar função** página e selecione SQL Server Integration Services escala Out mestre 14.0 no **Selecionar serviço** página.
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configure a função de serviço do Mestre do Scale Out do cluster de failover do Windows
 
-No **ponto de acesso para cliente** , insira o nome de host do DNS de serviço escala Out mestre.
+1.  No Gerenciador de Cluster de Failover, conecte-se ao cluster do Scale Out. Selecione o cluster. Selecione **Ação** no menu e, em seguida, selecione **Configurar Função**.
 
-![HA assistente 1](media/ha-wizard1.PNG)
+2.  Na caixa de diálogo **Assistente para Alta Disponibilidade**, selecione **Serviço Genérico** na página **Selecionar Função**. Selecione o Mestre do SQL Server Integration Services Scale Out 14.0 na página **Selecionar Serviço**.
 
-Conclua o assistente.
+3.  Na página **Ponto de Acesso para Cliente**, insira o nome do host DNS do serviço Mestre do Scale Out.
 
-## <a name="8-update-master-address-in-ssisdb"></a>8. Atualizar mestre endereço no SSISDB
+    ![Assistente de Alta Disponibilidade 1](media/ha-wizard1.PNG)
 
-No SQL Server primário, execute o procedimento armazenado [SSIS]. [catalog]. [update_master_address] com o parâmetro @MasterAddress = N'https: / / [nome do host DNS do serviço de escala Out mestre]: [porta mestre]'. 
+4.  Conclua o assistente.
 
-## <a name="9-add-scale-out-worker"></a>9. Adicionar o trabalho de expansão
+## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Atualizar o endereço do Mestre do Scale Out no SSISDB
 
-Agora, você pode adicionar operadores fora de escala com a Ajuda de [gerenciador fora de escala](integration-services-ssis-scale-out-manager.md). Digite *[nome do DNS de ouvinte de grupo de disponibilidade do SQL Server]*,*[Port]* na página de conexão.
+No SQL Server primário, execute o procedimento armazenado `[catalog].[update_master_address]` com o valor de parâmetro `@MasterAddress = N'https://[Scale Out Master service DNS host name]:[Master Port]'`. 
 
+## <a name="9-add-the-scale-out-workers"></a>9. Adicionar os Trabalhos do Scale Out
 
+Agora, você pode adicionar Trabalhos do Scale Out com a ajuda do [Gerenciador do Integration Services Scale Out](integration-services-ssis-scale-out-manager.md). Insira `[SQL Server Availability Group Listener DNS name],[Port]` na página de conexão.
 
-
-
+## <a name="next-steps"></a>Próximas etapas
+Para saber mais, veja os tópicos a seguir:
+-   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
+-   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

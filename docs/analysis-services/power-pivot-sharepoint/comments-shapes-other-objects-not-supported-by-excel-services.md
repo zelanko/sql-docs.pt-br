@@ -2,31 +2,30 @@
 title: "Comentários, formas, outros objetos que não tem suportados pelos serviços do Excel | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e81433f28d9b3b3f20ceb99f2e6436a689ba4e86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb73f60aea4a67a2e7fe7967dc9411762fe8e8f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Comentários, formas, outros objetos que não tem suportados pelos serviços do Excel
-  Este erro ocorre quando você adiciona Segmentações de dados a uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] por meio de uma Lista de Campos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este erro ocorre quando você adiciona Segmentações de dados a uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] por meio de uma Lista de Campos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="details"></a>Detalhes  
   
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  Este erro pode ser ignorado. Clique em **OK** para fechar a mensagem de erro e continuar a usar a pasta de trabalho e as Segmentações de Dados sem problema.  
   
   
-

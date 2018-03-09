@@ -3,8 +3,11 @@ title: "Descartar alterações feitas em diagramas (Ferramentas de Banco de Dado
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d8bca44d80234f7176c14edd55ead755ccba6eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ea453dd39647ed7087495a05a6daa0268e0909cc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Descartar alterações feitas em diagramas (Visual Database Tools)
-Você pode descartar alterações do diagrama de banco de dados que não desejar salvar no banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode descartar alterações do diagrama de banco de dados que não deseja salvar no banco de dados.  
   
 ### <a name="to-discard-pending-modifications"></a>Para descartar modificações pendentes  
   
@@ -36,7 +39,7 @@ Você pode descartar alterações do diagrama de banco de dados que não desejar
     > [!CAUTION]  
     > Se houver outros diagramas de banco de dados ou janelas de design de tabela conectados ao mesmo banco de dados, feche-os igualmente, sem salvar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Trabalhar com tabelas no diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

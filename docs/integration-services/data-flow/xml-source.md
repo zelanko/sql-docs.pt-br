@@ -22,17 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>Origem XML
   A origem XML lê um arquivo de dados XML e preenche as colunas na saída de origem com os dados.  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/17/2017
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Localização do arquivo XML|Recupera dados de um arquivo XML.|  
 |Arquivo XML de variável|Especifica o nome de arquivo XML em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 08/17/2017
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição do erro.  
   
  **Definir este valor para células selecionadas**  
@@ -176,6 +175,5 @@ ms.lasthandoff: 08/17/2017
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Extrair dados por meio da origem XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
-

@@ -5,31 +5,32 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29be013a001857b2e8341d250a187be0fadc75ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73c02feffd3033ed22e784e1c54b945bb80f5fe5
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="unlock-a-version-master-data-services"></a>Desbloquear uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], desbloqueie uma versão de um modelo para permitir alterações para os membros do modelo e seus atributos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
@@ -50,11 +51,11 @@ ms.lasthandoff: 11/20/2017
   
 4.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

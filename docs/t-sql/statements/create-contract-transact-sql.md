@@ -1,5 +1,5 @@
 ---
-title: CRIAR contrato (Transact-SQL) | Microsoft Docs
+title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - contracts [Service Broker], creating
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 962ce2d6568a597bd580f7fc9bcd2e9243e44dc4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Indica que este contrato dá suporte a mensagens do tipo padrão. Por padrão, todos os bancos de dados contêm um tipo de mensagem denominado DEFAULT. Esse tipo de mensagem usa uma validação de NONE. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. O Microsoft SQL Server também fornece um contrato DEFAULT que especifica o tipo de mensagem DEFAULT.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A ordem de tipos de mensagem no contrato não é significativa. Depois que o destino recebe a primeira mensagem, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que cada lado da conversa envie qualquer mensagem permitida para aquele lado a qualquer hora. Por exemplo, se o iniciador da conversa pode enviar o tipo de mensagem **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que o iniciador envie qualquer número de **SubmitExpense**mensagens durante a conversa.  
   
  Os tipos e as direções de mensagens não podem ser alterados em um contrato. Para alterar a AUTHORIZATION para um contrato, use a instrução ALTER AUTHORIZATION.  
@@ -131,8 +130,7 @@ CREATE CONTRACT
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Remover contrato &#40; Transact-SQL &#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
+ [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

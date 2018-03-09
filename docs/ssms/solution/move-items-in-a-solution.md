@@ -3,8 +3,11 @@ title: "Mover itens em uma solução | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b6393b571e0458d64ff16952268eeda8e8a2ae5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d56df29ee9a9db55e3c5b5c0cc645b7dc5b9c9a9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="move-items-in-a-solution"></a>Mover itens em uma solução
-Os itens de projeto do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] são consultas, conexões e arquivos diversos. Você pode mover as consultas e os arquivos diversos entre projetos no Gerenciador de Soluções, mas as conexões não podem ser movidas.  
+Os itens de projeto [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] em projetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] são Consultas, Conexões e arquivos Diversos. Você pode mover as consultas e os arquivos diversos entre projetos no Gerenciador de Soluções, mas as conexões não podem ser movidas.  
   
 ### <a name="to-move-items-in-solution-explorer"></a>Para mover itens no Gerenciador de Soluções  
   
@@ -42,7 +45,7 @@ Você pode mover itens arrastando consultas e arquivos diversos dentro do Gerenc
 > [!NOTE]  
 > Mover uma consulta conectada não move a conexão para o projeto de destino. A consulta perderá sua conexão depois de ser movida para o projeto de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Copiar itens em uma solução](../../ssms/solution/copy-items-in-a-solution.md)  
   

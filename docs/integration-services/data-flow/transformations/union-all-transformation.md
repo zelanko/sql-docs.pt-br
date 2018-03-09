@@ -1,5 +1,5 @@
 ---
-title: Union All Transformation | Microsoft Docs
+title: "Transformação Unir Tudo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 74e98acbcae377291e0a0632e5bce0bba07a10cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="union-all-transformation"></a>transformação Unir Tudo
   A transformação Union All combina várias entradas em apenas uma saída. Por exemplo, as saídas provenientes de cinco origens de Arquivo Simples diferentes podem ser aplicadas à transformação Unir Tudo e combinadas em apenas uma saída.  
@@ -69,8 +68,7 @@ ms.lasthandoff: 08/19/2017
  **Union All Entrada n**  
  Selecione a partir da lista de colunas de entrada disponíveis na segunda entrada e adicionais. Os metadados das colunas mapeadas devem ser correspondentes.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Mesclar dados por meio da transformação Unir Tudo](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   
-

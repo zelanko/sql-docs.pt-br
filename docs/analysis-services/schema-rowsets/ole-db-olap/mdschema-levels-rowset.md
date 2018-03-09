@@ -2,39 +2,33 @@
 title: Conjunto de linhas MDSCHEMA_LEVELS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_LEVELS
+apiname: MDSCHEMA_LEVELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_LEVELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7eb78b431b77dadfe216db5e30e77e9d5722b2a8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d9a56387365489615b6b7665dedb3edc7f367f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemalevels-rowset"></a>Conjunto de linhas MDSCHEMA_LEVELS
-  Descreve cada nível dentro de uma hierarquia específica.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve cada nível dentro de uma hierarquia específica.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_LEVELS** linhas contém as seguintes colunas.  
@@ -85,8 +79,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de 1. Um bitmap com um dos seguintes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSÃO|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de 1. Um bitmap com um dos seguintes valores:<br /><br /> 1 Visível<br /><br /> 2 não visível|  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

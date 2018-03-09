@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFreeStmt
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFreeStmt
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFreeStmt
-helpviewer_keywords:
-- SQLFreeStmt function [ODBC]
+f1_keywords: SQLFreeStmt
+helpviewer_keywords: SQLFreeStmt function [ODBC]
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d758d7ec03a7d67e7f943a01d19c4959aa18bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 929fc50091c914936b5bedfb58bd42c1d07d99ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfreestmt-function"></a>Função SQLFreeStmt
 **Conformidade**  
@@ -129,7 +123,6 @@ int main() {
 |Liberando um identificador|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

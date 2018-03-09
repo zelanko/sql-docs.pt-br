@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6934524cdf8183359b59c971439ebaa564932045
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="group-or-ungroup-components"></a>Agrupa ou desagrupa componentes
   As guias **Fluxo de Controle**, **Fluxo de dados**e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/03/2017
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Conecte tarefas e contêineres usando uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
-

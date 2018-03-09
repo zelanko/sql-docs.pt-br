@@ -2,29 +2,34 @@
 title: "Definir a conta de serviço para o Iniciador do Daemon de Filtro de Texto Completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f25dd338c1492afe66bdb4ecb0bf98e0b92a2da7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
- Este tópico descreve como definir ou alterar a conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL (MSSQLFDLauncher) usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. A conta de serviço padrão usada pelo programa de instalação do SQL Server é `NT Service\MSSQLFDLauncher`.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico descreve como definir ou alterar a conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL (MSSQLFDLauncher) usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. A conta de serviço padrão usada pelo programa de instalação do SQL Server é `NT Service\MSSQLFDLauncher`.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>Sobre o serviço do Iniciador do Daemon de Filtro de Texto Completo do SQL
@@ -78,7 +83,7 @@ O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de recon
   
      Os serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atua como um servidor de pipe nomeado para o cliente do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL. Se o pipe nomeado já foi criado por outro processo antes de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser iniciado, um erro será registrado no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no Log de Eventos do Windows, e a pesquisa de texto completo não estará disponível.  Determine qual processo ou aplicativo está tentando usar o mesmo pipe nomeado e interrompa o aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
   

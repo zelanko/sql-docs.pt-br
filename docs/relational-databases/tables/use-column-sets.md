@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -263,7 +263,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md)  
   
   

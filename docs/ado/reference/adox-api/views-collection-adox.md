@@ -3,7 +3,7 @@ title: "Exibições de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,22 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d1eabbf43dbfffaf3304b72b18adc15cce4e75e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-adox"></a>Coleção de exibições (ADOX)
 Contém todos os [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos de um catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-views.md) método para um **exibições** coleção é exclusiva para ADOX. Você pode:  
   
 -   Adicionar uma nova exibição à coleção com o **Append** método.  
@@ -61,4 +60,3 @@ Contém todos os [exibição](../../../ado/reference/adox-api/view-object-adox.m
  [Exemplo de método (VB) de atualização de modos de exibição](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
-

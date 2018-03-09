@@ -2,9 +2,12 @@
 title: "Exibindo recomendações de ajuste | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,26 +15,26 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lição 1-2 - exibindo recomendações de ajuste
-Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). Depois que você ajusta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando o script MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] , o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe os resultados na guia **Recomendações** . A tarefa a seguir apresenta a guia **Recomendações** da GUI (interface gráfica do usuário) do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como explorar as informações fornecidas sobre os resultados da sessão de ajuste.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Essa tarefa usa a sessão de ajuste que você criou na [ajuste uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md). Depois que você ajusta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando o script MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] , o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe os resultados na guia **Recomendações** . A tarefa a seguir apresenta a guia **Recomendações** da GUI (interface gráfica do usuário) do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como explorar as informações fornecidas sobre os resultados da sessão de ajuste.  
   
 ### <a name="view-tuning-recommendations"></a>Exibir recomendações de ajuste  
   
 1.  Iniciar o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Verifique se você está conectado à mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada na prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
-2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] carrega a informações da sessão de ajuste anterior e exibe a guia **Recomendações** . Observe que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não fez **Recomendações de Partição** porque você aceitou todas as opções de ajuste padrão e **Nenhum particionamento** foi selecionado na guia **Opções de Ajuste** .  
+2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Orientador de otimização carrega as informações da sessão da sessão de ajuste anterior e exibe o **recomendações** guia. Observe que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não fez **Recomendações de Partição** porque você aceitou todas as opções de ajuste padrão e **Nenhum particionamento** foi selecionado na guia **Opções de Ajuste** .  
   
-3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe uma janela **Visualização de Script SQL** , na qual você pode exibir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
+3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Orientador de otimização exibe um **visualização de Script SQL** janela onde você pode exibir o [!INCLUDE[tsql](../../includes/tsql-md.md)] script que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
   
     Se você estiver tendo dificuldades em localizar uma **Definição** que contenha um link, clique para desmarcar a caixa de seleção **Mostrar objetos existentes** na parte inferior da página da guia, o que diminuirá o número de linhas exibidas. Quando você desmarca essa caixa de seleção, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mostra só os objetos para os quais gerou uma recomendação. Marque a caixa de seleção **Mostrar objetos existentes** para exibir todos os objetos do banco de dados que existem atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Use a barra de rolagem à direita da página da guia para exibir todos os objetos.  
   

@@ -3,7 +3,7 @@ title: "Executar método (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 68796c4fa28d3ee553ccf7c44e9bbd9850f32fb7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-rds"></a>Executar método (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2.5 e superior.  
@@ -85,11 +84,10 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Um ponteiro para o erro de informações retornado pela execução. Se for NULL, nenhuma informação de erro é retornada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *HandlerString* parâmetro pode ser nulo. O que acontece nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. MSDFMAP.dll interpretará o argumento como uma direção para usar o sample.ini para verificar se as cadeias de caracteres de conexão e consulta.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: Revisar e gerar Scripts de log suplementares | Microsoft Docs
+title: Examinar e gerar scripts de log suplementares | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9b3f2ea4c6484544663cb00c15db662da56ee05
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar e gerar scripts de log suplementares
   Use a guia **Scripts** para executar ou executar novamente um script no banco de dados de origem Oracle que configura o registro em log suplementar.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Quando você executa os scripts de log suplementares, a caixa de diálogo Oracle Credentials for Running Script abre e você fornece um nome de usuário e senha do Oracle válidos. Para obter informações sobre como fornecer as credenciais corretas do Oracle, consulte [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Você também pode executar os scripts manualmente usando o SQL * Plus, se necessário.  
+ Você também pode executar os scripts manualmente usando o SQL\*Plus, se necessário.  
   
 ### <a name="to-run-the-scripts-manually"></a>Para executar os scripts manualmente  
   
@@ -61,9 +60,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  Dê ao arquivo um nome e clique em **Salvar** para salvar o arquivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como editar as propriedades de instância CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Credenciais Oracle para executar o Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Credenciais Oracle para executar scripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

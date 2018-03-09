@@ -1,26 +1,30 @@
 ---
 title: "Gerenciando e monitorando soluções de aprendizado de máquina | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f7b5737f9b8713688d654a0b1b286162e8f38929
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Gerenciando e monitorando soluções de aprendizado de máquina
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve os recursos do SQL Server Machine Learning Services que são relevantes para os administradores de banco de dados que precisam para começar a trabalhar com soluções de R e Python.
 

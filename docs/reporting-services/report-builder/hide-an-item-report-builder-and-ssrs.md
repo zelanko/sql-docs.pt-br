@@ -1,30 +1,30 @@
 ---
-title: "Ocultar um Item (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Ocultar um item (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3135ec02eb0f52e7d5c1155caa7966eb0732329b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
   Defina a visibilidade de um item de relatório quando quiser ocultar condicionalmente um item com base em um parâmetro de relatório ou alguma outra expressão que você especificar.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
         > [!NOTE]  
         >  Quando você especifica uma expressão para visibilidade, você está configurando a propriedade Hidden do item de relatório, conforme mostrado na imagem a seguir. A expressão avaliada mostra o item de relatório quando o valor é False e oculta o item de relatório quando o valor é True.   
-        > ![Caixa de diálogo Properties_Visibility e oculta a propriedade](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "caixa de diálogo Properties_Visibility e oculta a propriedade")  
+        > ![Caixa de diálogo Properties_Visibility e propriedade Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade Hidden")  
   
 4.  Clique duas vezes em **OK** .  
   
@@ -75,10 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  Na caixa de diálogo **Visibilidade da Coluna** , siga as etapas 3 e 4 do primeiro procedimento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Adicionar um expandir ou recolher ação para um Item &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

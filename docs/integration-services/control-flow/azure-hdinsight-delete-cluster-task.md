@@ -1,5 +1,5 @@
 ---
-title: Azure tarefa excluir Cluster HDInsight | Microsoft Docs
+title: Tarefa Excluir Cluster do Azure HDInsight | Microsoft Docs
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
@@ -16,36 +16,34 @@ f1_keywords:
 - sql13.dts.designer.afpdelcltask.f1
 - sql14.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f98b69e8bd3b2e78f6dd20a19ca17a83a834c3b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: db580410f37f1310ccc2bf30f6620157fcb60cf9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Tarefa Excluir Cluster do Azure HDInsight
-O **Azure tarefa excluir Cluster HDInsight** permite que um pacote do SSIS exclua um cluster HDInsight do Azure ao grupo de recursos e assinatura do Azure especificado.
+A **Tarefa Excluir Cluster do Azure HDInsight** permite que um pacote do SSIS exclua um cluster do Azure HDInsight na assinatura e grupo de recursos do Azure especificados.
   
-O **Azure tarefa excluir Cluster HDInsight** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+A **Tarefa Excluir Cluster do Azure HDInsight** é um componente do [SSIS (SQL Server Integration Services) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
 > [!NOTE]
-> Excluir um cluster HDInsight pode levar 10 ~ 20 minutos.  
+> Excluir um cluster HDInsight pode levar entre 10 e 20 minutos.  
   
 Para adicionar uma **Tarefa Excluir Cluster do Azure HDInsight**, arraste e solte-a no Designer SSIS e clique duas vezes ou com o botão direito do mouse e clique em **Editar** para ver a caixa de diálogo **Editor de Tarefa Excluir Cluster do Azure HDInsight** a seguir.  
   
-A tabela a seguir fornece uma descrição dos campos na caixa de diálogo.  
+A tabela a seguir fornece uma descrição dos campos nessa caixa de diálogo.  
   
 |||  
 |-|-|  
-|**Campo**|**Description**|  
-|AzureResourceManagerConnection|Selecione um Gerenciador de Conexão do Gerenciador de recursos do Azure existente ou crie um novo que será usado para excluir o cluster HDInsight.|
-|subscriptionId|Especifique a ID da assinatura, em que o cluster HDInsight está.|
-|Grupo de recursos|Especifique o grupo de recursos do Azure que está o cluster HDInsight.|
+|**Campo**|**Descrição**|  
+|AzureResourceManagerConnection|Selecione um gerenciador de conexões do Azure Resource Manager existente ou crie um novo que será usado para excluir o cluster HDInsight.|
+|SubscriptionId|Especifique a ID da assinatura na qual o cluster HDInsight está.|
+|ResourceGroup|Especifique o grupo de recursos do Azure no qual o cluster HDInsight está.|
 |ClusterName|Especifique o nome do cluster a ser excluído.|  
 |FailIfNotExists|Especifique se a tarefa deve falhar ou não caso o cluster não exista.|
-

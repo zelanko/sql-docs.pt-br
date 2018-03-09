@@ -1,44 +1,51 @@
 ---
-title: "Visualizar dados do SQL Server usando o R (Aprofundamento da ciência de dados) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+title: " Visualizar dados do SQL Server usando o R (SQL e R mergulho profundo) | Microsoft Docs"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a67480daf011a021002e1688b006a1f0593f8e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13bf00b9b1a196e0a83c7cca62a0504a5b3bcbcd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="visualize-sql-server-data-using-r"></a>Visualizar dados do SQL Server usando o R
+#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualizar dados do SQL Server usando o R (SQL e R mergulho profundo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Os pacotes avançados do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluem várias funções que foram otimizadas para escalabilidade e processamento paralelo. Normalmente, essas funções tem como prefixo *rx* ou *Rx*.
+Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Para este passo a passo, você usará a função **rxHistogram** para exibir a distribuição dos valores na coluna _creditLine_ por gênero.
+Os pacotes avançados do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluem várias funções que foram otimizadas para escalabilidade e processamento paralelo. Normalmente, essas funções tem como prefixo **rx** ou **Rx**.
+
+Para este passo a passo, você deve usar o **rxHistogram** função para exibir a distribuição de valores no _creditLine_ coluna sexo.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizar dados usando rxHistogram
 
-1. Use o seguinte código R para chamar a função rxHistogram e passar uma fórmula e fonte de dados. Você pode executá-lo localmente a princípio, para ver os resultados esperados e quanto tempo demora.
+1. Use o seguinte código R para chamar a função [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) e passar uma fórmula e fonte de dados. Você pode executá-lo localmente a princípio, para ver os resultados esperados e quanto tempo demora.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    Internamente, rxHistogram chama a função rxCube, que está incluída no **RevoScaleR** pacote. A função rxCube gera uma única lista (ou quadro de dados) que contém uma coluna para cada variável especificada na fórmula, além de uma coluna de contagens.
+    Internamente, **rxHistogram** chama a função [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , que está incluída no pacote **RevoScaleR** . **rxCube** gera uma única lista (ou quadro de dados) que contém uma coluna para cada variável especificada na fórmula, além de uma coluna de contagens.
     
-2. Agora, defina o contexto de computação para o computador remoto do SQL Server e execute rxHistogram novamente.
+2. Agora, defina o contexto de computação para o computador remoto do SQL Server e execute **rxHistogram** novamente.
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -48,29 +55,27 @@ Para este passo a passo, você usará a função **rxHistogram** para exibir a d
    
 ![resultados do histograma](media/rsql-sue-histogramresults.jpg "resultados do histograma")
 
-4. Você também pode chamar a função rxCube e passar os resultados para uma função de plotagem de R.  Por exemplo, o exemplo a seguir usa rxCube para calcular a média de *fraudRisk* para cada combinação de *numTrans* e *numIntlTrans*:
+4. Você também pode chamar o **rxCube** de função e passar os resultados para um R plotagem de função.  Por exemplo, o exemplo a seguir usa **rxCube** para calcular a média de *fraudRisk* de cada combinação de *numTrans* e *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    Para especificar os grupos usados para calcular os meios de grupo, use a notação `F()` . Neste exemplo, `F(numTrans):F(numIntlTrans)` indica que os inteiros nas variáveis _numTrans_ e _numIntlTrans_ devem ser tratados como variáveis categóricas, com um nível para cada valor de inteiro.
+    Para especificar os grupos usados para calcular os meios de grupo, use a notação `F()` . Neste exemplo, `F(numTrans):F(numIntlTrans)` indica que os inteiros nas variáveis de `_numTrans` e `numIntlTrans` devem ser tratados como variáveis categóricas, com um nível para cada valor de inteiro.
   
-    Como os níveis baixo e alto já foram adicionados à fonte de dados *sqlFraudDS* (usando o parâmetro *colInfo* ), os níveis serão usados no histograma automaticamente.
+    Como os níveis de baixos e altos já foram adicionados à fonte de dados `sqlFraudDS` (usando o `colInfo` parâmetro), os níveis são usados automaticamente no histograma.
   
-5. O valor de retorno de rxCube é por padrão uma *rxCube objeto*, que representa uma referência cruzada. No entanto, você pode usar a função **rxResultsDF** para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
+5. O padrão retornam o valor de **rxCube** é um *rxCube objeto*, que representa uma referência cruzada. No entanto, você pode usar a função [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    > [!TIP]
-    > 
-    > Observe que a função rxCube inclui um argumento opcional, *returnDataFrame* = TRUE, que você pode usar para converter os resultados em um quadro de dados diretamente. Por exemplo:
-    >   
-    > `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
-    >   
-    > No entanto, a saída de rxResultsDF é mais limpa e preserva os nomes das colunas de origem.
+    O **rxCube** função inclui um argumento opcional, *returnDataFrame* = **TRUE**, que você pode usar para converter os resultados em um quadro de dados diretamente. Por exemplo:
+    
+    `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
+       
+    No entanto, a saída de **rxResultsDF** é muito mais limpa e preserva os nomes das colunas de origem.
   
 6. Por fim, execute o seguinte código para criar um mapa de calor usando o `levelplot` de função do **entrelaçadas** pacote, que é incluído com todas as distribuições de R.
   
@@ -84,14 +89,12 @@ Para este passo a passo, você usará a função **rxHistogram** para exibir a d
   
 Até mesmo com essa análise rápida, você pode ver que o risco de fraude aumenta com o número de transações e o número de transações internacionais.
 
-Para obter mais informações sobre a função de rxCube e referências cruzadas em geral, consulte [resumos de dados](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries).
+Para obter mais informações sobre o **rxCube** função e referências cruzadas em geral, consulte [resumos de dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-step"></a>Próxima etapa
 
-[Criar modelos](../../advanced-analytics/tutorials/deepdive-create-models.md)
+[Criar modelos de R usando dados do SQL Server](../../advanced-analytics/tutorials/deepdive-create-models.md)
 
 ## <a name="previous-step"></a>Etapa anterior
 
-[Lição 2: Criar e executar scripts do R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
-
+[Criar e executar scripts do R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

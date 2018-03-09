@@ -2,15 +2,13 @@
 title: Elemento DataType (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DataType Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e0f2ccfcda05eb554dcd20a9c419edb74377bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34e1e88cef7b608bef7995849a170d8ce6ec8e70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datatype-element-assl"></a>Elemento DataType (ASSL)
-  Define o tipo de dados do elemento associado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define o tipo de dados do elemento associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,20 +45,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md), [medidas](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores para **DataType** são definidos no **System.Data.OleDb.OleDbType** enumeração. No entanto, apenas os valores de enumeração na tabela a seguir são válidos no **DataType** elemento.  
   
 |Valor|Description|  
@@ -80,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |*WChar*|Um fluxo com terminação nula de caracteres Unicode. Esse tipo de dados mapeado para o **cadeia de caracteres** tipo de dados no .NET Framework e o tipo de dados DBTYPE_WSTR no OLE DB.|  
 |*Herdado*|O tipo de dados a **DataItem** contidos no [fonte](../../../analysis-services/scripting/properties/source-element-measure-assl.md) elemento do **medidas** elemento.<br /><br /> Observação: Aplicável somente a **medidas** elementos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

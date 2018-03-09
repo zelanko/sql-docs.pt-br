@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47262b65d2909974fcf801b62dc4baddbfbac0be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1436d8e9b6ba22f98d2ee127e7049d97239833b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Monitorar instâncias do SQL Server no Utilitário do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |[Exibir resultados da política de integridade de recursos &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|Descreve a exibição do painel do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a exibição de lista no Gerenciador do Utilitário do SSMS.|  
 |[Modificar uma definição de política de integridade de recursos &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|Descreve a exibição ou a modificação das definições de política de integridade de recurso do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

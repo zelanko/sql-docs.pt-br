@@ -1,10 +1,13 @@
 ---
 title: "Definir as opções de projeto (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b5c32983e341aa831de0a1752c744fa29252528
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definindo opções de projeto (MySQLToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino.  Antes de converter os objetos no SQL Server ou SQL Azure ou migrar dados para o SQL Server ou SQL Azure, verifique se as opções de configuração apropriadas para o projeto.  
@@ -44,7 +47,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 As configurações de projeto podem ser configuradas de quatro maneiras:  
   
--   Default  
+-   Padrão  
   
 -   Otimistas  
   
@@ -106,6 +109,6 @@ A próxima etapa da migração depende de suas necessidades de projeto:
   
 -   Caso contrário, você pode converter as definições de objeto de banco de dados MySQL no SQL Server ou definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Mapeamento de tipos de dados do SQL Server &#40; e MySQL MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

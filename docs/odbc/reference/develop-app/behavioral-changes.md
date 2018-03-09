@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ccd4cdd57771d32a6a09bf1c1030ba173ee18486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes"></a>Alterações de comportamento
 Alterações de comportamento são as alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  
@@ -55,4 +53,3 @@ Alterações de comportamento são as alterações para o qual o *sintaxe* da in
 -   [Mapeamentos SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Alterações de tipo de dados datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
-

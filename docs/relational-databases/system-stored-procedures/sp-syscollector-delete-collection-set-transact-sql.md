@@ -8,36 +8,34 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
 - sp_syscollector_delete_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2f7eeff5b125469add891c39b83151c755b20b5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b731d14f7b0dc8e583ad5625ac3d7bf013be013d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui um conjunto de coletas definido pelo usuário e todos os seus itens.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +48,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  É o identificador de exclusividade para o conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
@@ -59,7 +57,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_delete_collection_set deve ser executado no contexto do banco de dados do sistema msdb.  
   
  O *collection_set_id* ou *nome* deve ter um valor, não pode ser NULL. Para obter esses valores, consulte a exibição de sistema syscollector_collection_set.  
@@ -81,7 +79,7 @@ EXEC dbo.sp_syscollector_delete_collection_set
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

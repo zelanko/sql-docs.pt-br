@@ -2,9 +2,12 @@
 title: Mover um grupo de carga de trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,27 +17,27 @@ helpviewer_keywords:
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96ccc6c3215822bd19239cc781bb3f259fb6386f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9059139e5ccdc4327095a913752d55a84443d810
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-workload-group"></a>Mover um Grupo de Cargas de Trabalho
-  Você pode mover um grupo de cargas de trabalho do Administrador de Recursos para um pool de recursos diferente usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode mover um grupo de cargas de trabalho do Resource Governor para um pool de recursos diferente usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para mover um grupo de cargas de trabalho, usando:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Você não pode mover um grupo de cargas de trabalho se houver uma operação de configuração do Administrador de Recursos pendente.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Você não pode mover um grupo de cargas de trabalho se houver uma operação de configuração do Administrador de Recursos pendente. É possível determinar se há uma configuração pendente consultando a exibição de gerenciamento dinâmico de [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obter o status atual de is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissões  
@@ -75,7 +78,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   

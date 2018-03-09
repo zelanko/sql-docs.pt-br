@@ -2,9 +2,12 @@
 title: "Assinar publicações | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,18 +26,18 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c662e63ac48ad1ae3b64fdc8de428bc5090abba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>Assinar publicações
-  Uma assinatura é uma solicitação para se obter uma cópia dos dados e objetos do banco de dados em uma publicação. Uma assinatura define qual publicação será recebida, e onde e quando será recebida. Ao planejar assinaturas, considere onde o processamento de agente deverá acontecer. O tipo de assinatura selecionado controla onde o agente é executado. Com uma assinatura push, o Agente de Mesclagem ou o Agente de Distribuição são executados no Distribuidor, enquanto que, com uma assinatura pull, os agentes são executados nos Assinantes. Após a criação de uma assinatura, ela não pode ser alterada de um tipo para outro.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Uma assinatura é uma solicitação para se obter uma cópia dos dados e objetos de banco de dados em uma publicação. Uma assinatura define qual publicação será recebida, e onde e quando será recebida. Ao planejar assinaturas, considere onde o processamento de agente deverá acontecer. O tipo de assinatura selecionado controla onde o agente é executado. Com uma assinatura push, o Agente de Mesclagem ou o Agente de Distribuição são executados no Distribuidor, enquanto que, com uma assinatura pull, os agentes são executados nos Assinantes. Após a criação de uma assinatura, ela não pode ser alterada de um tipo para outro.  
   
 |Assinatura|Características|Use quando|  
 |------------------|---------------------|--------------|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="merge-replication-subscription-types"></a>Tipos de assinatura de replication de mesclagem  
  Todos os tipos de replicação permitem assinaturas push e pull. A replicação de mesclagem usa duas condições a mais para distinguir assinaturas: assinatura de cliente e assinatura de servidor. Os tipos de assinatura de cliente e de servidor podem ser usados com assinaturas push e pull. As assinaturas de cliente são apropriadas para a maioria dos Assinantes, enquanto que as assinaturas de servidor são usadas, em geral, para Assinantes que republicam dados em outros Assinantes. A opção de assinatura também afeta a resolução de conflitos.  
   
-## <a name="non-sql-server-subscribers"></a>Assinantes não SQL Server  
+## <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
  O Oracle e o IBM DB2 podem assinar as publicações de instantâneo e transacionais usando assinaturas push. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ## <a name="creating-subscriptions"></a>Criando assinaturas  
@@ -91,8 +94,8 @@ ms.lasthandoff: 11/09/2017
   
  [Excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Proteger o Assinante](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Desativação e expiração de assinatura](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

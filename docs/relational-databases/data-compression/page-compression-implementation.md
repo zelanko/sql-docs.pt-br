@@ -16,15 +16,15 @@ helpviewer_keywords:
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4950aa2d27d46ba80e1456d6dbd8857c26e5b794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 88c9afd04b30360316f6476364831a35e23638a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="page-compression-implementation"></a>Implementação da compactação de página
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando uma tabela existente que contém dados for convertida para compactação de página, cada página será recriada e avaliada. A recriação de todas as páginas causará a recriação da tabela, do índice ou da partição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compactação de dados](../../relational-databases/data-compression/data-compression.md)   
  [Implementação da compactação de linha](../../relational-databases/data-compression/row-compression-implementation.md)  
   

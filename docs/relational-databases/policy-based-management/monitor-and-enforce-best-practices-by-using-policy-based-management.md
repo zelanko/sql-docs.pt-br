@@ -2,27 +2,30 @@
 title: "Monitorar e impor as melhores práticas usando o gerenciamento baseado em políticas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
-  O Gerenciamento Baseado em Políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados. Avalie as políticas manualmente, defina-as para avaliar um conjunto de destino de acordo para um agendamento ou defina-as para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciamento Baseado em Políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados. Avalie as políticas manualmente, defina-as para avaliar um conjunto de destino de acordo para um agendamento ou defina-as para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Política e regras para o mecanismo de banco de dados  
  A tabela a seguir lista as políticas que são incluídas com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e informações sobre as regras de práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 |Erro de Tempo Limite de I_O do Sistema de Armazenamento do Log de Eventos do Windows|[Tempo limite de entrada e saída dd sistema de armazenamento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Erro de Falha do Sistema do Log de Eventos do Windows|[Falhas inesperadas do sistema](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com facetas do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

@@ -20,14 +20,14 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bd08b3188bc8b7a968753c01d09dba3ecf49a7e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 51130dcbecc1fcb3c83771d5fab680863d01b40d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no nível do banco de dados. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Este tópico revisa as diferenças e os benefícios de usar o modelo de banco de dados independente em comparação com o modelo de logon/usuário tradicional e Windows ou as regras de firewall em nível de servidor. Cenários específicos, lógica de negócios do aplicativo ou a capacidade de gerenciamento ainda podem exigir o uso do modelo tradicional de logon/usuário e regras de firewall em nível de servidor.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------------|-----------------------------------|  
 |Para alterar a senha no contexto do banco de dados mestre:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Para alterar a senha no contexto do banco de dados do usuário:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usuários de bancos de dados independentes devem estar habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Opção contained database authentication de configuração de servidor](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Use senhas com a mesma força que normalmente usaria para logons.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
  [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

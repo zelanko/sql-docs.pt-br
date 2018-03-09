@@ -1,28 +1,28 @@
 ---
-title: "Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com um gráfico de colunas, exibindo uma série como um conjunto de barras verticais agrupadas por categoria. 
@@ -37,7 +37,7 @@ A ilustração seguinte mostra o gráfico de coluna que você criará, com uma m
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -69,7 +69,7 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **Crie uma consulta**, clique em **Editar como Texto**.  
+6.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -130,7 +130,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 2.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-3.  Na guia **Número**, em **Categoria**, selecione **Data**.  
+3.  Na guia **Número** , em **Categoria**, selecione **Data**.  
   
 5.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
@@ -152,7 +152,7 @@ A data é exibida no formato selecionado. O gráfico ainda não rotula cada cate
   
 3.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-5.  Na guia **Rótulos**, em **Alterar as opções de ajuste automático do rótulo do eixo**, selecione **Desabilitar ajuste automático**.  
+5.  Na guia **Rótulos** , em **Alterar as opções de ajuste automático do rótulo do eixo**, selecione **Desabilitar ajuste automático**.  
   
 7.  Em **Ângulo de rotação do rótulo**, selecione **-90**.  
   
@@ -206,7 +206,7 @@ Por padrão, o eixo vertical exibe valores em um formato geral que é dimensiona
   
 5.  Clique com o botão direito do mouse no eixo vertical > **Propriedades do Eixo Vertical**.  
   
-6.  Na guia **Número**, observe que a opção **Moeda** já está selecionada na caixa **Categoria** e **Casas decimais** já é **0** (zero).  
+6.  Na guia **Número** , observe que a opção **Moeda** já está selecionada na caixa **Categoria** e **Casas decimais** já é **0** (zero).  
   
 7.  Marque **Mostrar Valores em**. **Milhares** já está selecionado.  
   
@@ -306,12 +306,11 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 4.  Clique em **Salvar**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 -    [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 -    [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

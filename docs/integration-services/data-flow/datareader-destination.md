@@ -18,17 +18,16 @@ helpviewer_keywords:
 - DataReader destination
 - destinations [Integration Services], DataReader
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7fd213d85558c2c9e114dc2b71854f21ac29a6c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 693ee97d88152cff08b6c82492c962e988f71ff1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datareader-destination"></a>Destino DataReader
   O destino do DataReader expõe os dados em um fluxo de dados com o uso da interface **DataReader** do ADO.NET. Os dados podem ser consumidos por outros aplicativos. Por exemplo, você pode configurar a fonte de dados de um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para usar o resultado de execução de um pacote [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para fazer isso, crie um fluxo de dados que implementa o destino do DataReader.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   
-

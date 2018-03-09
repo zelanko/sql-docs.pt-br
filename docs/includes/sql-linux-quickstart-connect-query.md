@@ -107,7 +107,7 @@ Para outras ferramentas que executam o Windows, mas se conectam ao SQL Server no
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SSDT (SQL Server Data Tools)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="additional-resources"></a>Recursos adicionais
 
 Para outros cenários de instalação, veja os seguintes recursos:
 
@@ -118,6 +118,21 @@ Para outros cenários de instalação, veja os seguintes recursos:
 | [Instalação autônoma](../linux/sql-server-linux-setup.md#unattended) | Saiba como gerar o script da instalação sem prompts |
 | [Instalação offline](../linux/sql-server-linux-setup.md#offline) | Saiba como baixar manualmente os pacotes para instalação offline |
 
-Para explorar outras maneiras de se conectar e gerenciar o SQL Server, veja [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) e [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+Para explorar outras maneiras de se conectar e gerenciar o SQL Server, explore as seguintes ferramentas:
+
+|||
+|---|---|
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código da GUI de plataforma cruzada que executam instruções Transact-SQL com a extensão mssql. |
+| [Operações do SQL Server Studio](../sql-operations-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando de plataforma cruzada para a execução de comandos Transact-SQL. |
+| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | Um utilitário de gerenciamento de banco de dados de GUI baseada no Windows que pode se conectar e gerenciar instâncias do SQL Server no Linux. |
 
 Para saber mais sobre como escrever consultas e instruções em Transact-SQL, veja [Tutorial: Escrever instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+
+> [!TIP]
+> Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](../linux/sql-server-linux-faq.md).
+
+## <a name="next-steps"></a>Próximas etapas
+
+> [!div class="nextstepaction"]
+> [Explore os tutoriais para SQL Server no Linux](../linux/sql-server-linux-migrate-restore-database.md)

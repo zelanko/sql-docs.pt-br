@@ -3,8 +3,9 @@ title: "Botões de navegação do catálogo de endereços | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3c23cb02c58179306e9be87e6b61d00ab3c08a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 211e05c548d38ad364e8a7daa85f280e8ca62414
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-navigation-buttons"></a>Botões de navegação do catálogo de endereços
 O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar pelos dados na exibição de grade HTML, selecionando a primeira ou última linha de dados, ou linhas adjacentes à seleção atual.  

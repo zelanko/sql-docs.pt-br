@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetPos
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetPos
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetPos
-helpviewer_keywords:
-- SQLSetPos function [ODBC]
+f1_keywords: SQLSetPos
+helpviewer_keywords: SQLSetPos function [ODBC]
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 310adbb9cc67ffe6982ca6838285ffe4967ab7c4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6140625da489bcb573b3beb4ca2be0838805f8d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetpos-function"></a>Função SQLSetPos
 **Conformidade**  
@@ -386,7 +380,6 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 |Definindo vários campos de um descritor|[Função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7478f7db8ab7b90806d4019bf62420f596588985
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d05c919b5d532434c33c269d1c287871ff818ac9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Exibir a definição de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para exibir a definição de um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir a definição de um procedimento armazenado no Pesquisador de Objetos**  
   
-1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda essa instância.  
+1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
 2.  Expanda **Bancos de Dados**, expanda o banco de dados ao qual pertence o procedimento e expanda **Programação**.  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Selecione **Janela do Editor de Nova Consulta**. Isso exibirá a definição de procedimento.  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir a definição de um procedimento no Editor de Consultas**  
   
  Procedimento armazenado do sistema: **sp_helptext**  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/17/2017
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Excluir um procedimento armazenado](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   

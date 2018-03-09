@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictAdjustedProbability
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictAdjustedProbability function
+f1_keywords: PredictAdjustedProbability
+dev_langs: DMX
+helpviewer_keywords: PredictAdjustedProbability function
 ms.assetid: 9a1e2ec5-5a37-4df6-a78e-26a495cc9301
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5ce9eb11c74da251c7d123c83e93d459c2718fed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0ced04fb08ab3896fa535a7c11b697f85d8395a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +44,7 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Tipo de retorno  
  Valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir a partição de estados faltantes, defina o \<estado previsto > para **INCLUDE_NULL**.  
   
  Para retornar a probabilidade ajustada para os estados faltantes, defina o \<estado previsto > como NULL.  
@@ -74,10 +68,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

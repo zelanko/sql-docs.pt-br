@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a5d5caf63abd6b9800ee6e65b7f6c30de108703
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-descriptors"></a>Tipos de descritores
 Um descritor é usado para descrever um dos seguintes:  
@@ -58,4 +55,3 @@ Um descritor é usado para descrever um dos seguintes:
  Um descritor pode executar diferentes funções. Instruções diferentes podem compartilhar qualquer descritor que o aplicativo aloca explicitamente. Um descritor de linha em uma instrução pode servir como um descritor de parâmetro em outra instrução.  
   
  Sempre é conhecido se um determinado descritor é um descritor de aplicativo ou um descritor de implementação, mesmo se o descritor ainda não foi usado em uma operação de banco de dados. Para os descritores de que a implementação aloca implicitamente, a implementação registra a linha predefinida em relação ao identificador de instrução. Nenhum descritor que o aplicativo aloca chamando **SQLAllocHandle** é um descritor de aplicativo.
-

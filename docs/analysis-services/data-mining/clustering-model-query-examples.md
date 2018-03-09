@@ -2,15 +2,13 @@
 title: Exemplos de consulta de modelo de clustering | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
-  Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
   
  Esta seção explica como criar consultas para modelos baseados no algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
   
@@ -382,17 +380,17 @@ NATURAL PREDICTION JOIN
 |[Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md)|Retorna o cluster com maior probabilidade de conter o caso de entrada.|  
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Retorna a distância do caso de entrada do cluster especificado ou, caso nenhum cluster tenha sido especificado, a distância do caso de entrada do cluster mais provável.<br /><br /> Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Determina se um nó é um filho de outro nó no modelo.|  
-|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso atual.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ponderada.|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Prevê associação de membro em um conjunto de dados associativo.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina se um nó é um filho de outro nó no modelo.|  
+|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso atual.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ponderada.|  
+|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|Prevê associação de membro em um conjunto de dados associativo.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Retorna a probabilidade de que um caso de entrada se ajuste ao modelo existente.|  
 |[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Retorna uma tabela de valores relacionados ao valor previsto atual.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Retorna Node_ID para cada caso.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para o valor previsto.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retorna o desvio padrão previsto para a coluna especificada.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retorna a variação de uma coluna especificada.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Retorna Node_ID para cada caso.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para o valor previsto.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Retorna o desvio padrão previsto para a coluna especificada.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Retorna a variação de uma coluna especificada.|  
   
  Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -402,4 +400,3 @@ NATURAL PREDICTION JOIN
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
-

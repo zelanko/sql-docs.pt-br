@@ -2,43 +2,35 @@
 title: Elemento NamingTemplate (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NamingTemplate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NamingTemplate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NamingTemplate
-helpviewer_keywords:
-- NamingTemplate element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NamingTemplate
+helpviewer_keywords: NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1a4e48c3c66aab602ed8f76f39da952aa85f9a9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38a37b2e9aa2006916e110cbdf4ba622ee742fab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
-  Define como os níveis são nomeados em uma hierarquia pai-filho construída a partir de [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define como os níveis são nomeados em uma hierarquia pai-filho construída a partir de [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,20 +45,20 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|String|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Comprimento e tipo de dados|Cadeia de caracteres|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor da **NamingTemplate** elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md) elemento do **DimensionAttribute** elemento pai é definido como *pai*).  
   
  Quando um atributo pai é usado para construir uma hierarquia, os níveis da hierarquia são determinados pelas relações pai-filho entre os membros contidos no atributo pai. Entretanto, ao contrário de outras dimensões, os nomes de nível não podem ser formulados a partir dos nomes de atributo usados para a hierarquia.  
@@ -83,10 +75,9 @@ ms.lasthandoff: 09/01/2017
   
  O elemento que corresponde ao pai do **NamingTemplate** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento NamingTemplateTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)   
  [Tipo de dados DimensionAttribute &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

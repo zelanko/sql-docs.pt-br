@@ -2,9 +2,12 @@
 title: "Instantâneos compactados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f3bde8699bb77fd733604d81ddf65000cc55ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1cd65c06c8bc07a144f02cf0817302db1867b231
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="compressed-snapshots"></a>Instantâneos compactados
-  A compactação de arquivos de instantâneo é apropriada quando se está transferindo instantâneos por uma rede lenta ou salvando-os em mídia removível e um instantâneo não compactado é grande demais para a mídia. A compactação de arquivos de instantâneo é útil nessas situações, mas a compactação aumenta o tempo para gerar e aplicar o instantâneo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A compactação de arquivos de instantâneo é apropriada quando se está transferindo instantâneos por uma rede lenta ou salvando-os em mídia removível e um instantâneo não compactado é grande demais para a mídia. A compactação de arquivos de instantâneo é útil nessas situações, mas a compactação aumenta o tempo para gerar e aplicar o instantâneo.  
   
  Arquivos de instantâneo compactados são gravados no formato de arquivo CAB [!INCLUDE[msCoName](../../includes/msconame-md.md)] , capaz de compactar arquivos de 2 GB ou menos (se os arquivos de instantâneo forem maiores do que 2GB, eles não podem ser compactados). Para compactar arquivos, eles precisam ser gravados em uma pasta de instantâneo alternativa (arquivos gravados na pasta de instantâneo padrão não podem ser compactados). Para obter mais informações sobre pastas de instantâneo alternativos, consulte [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Configurar propriedades de instantâneo &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Opções de instantâneo](../../relational-databases/replication/snapshot-options.md)  
   

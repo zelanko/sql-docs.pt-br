@@ -3,8 +3,11 @@ title: "Especificação de eixo em uma etapa de expressão de caminho | Microsof
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c34c230f6df65610466e087da5707622c3911e42
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressões de caminho - especificação de eixo
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
   
@@ -52,11 +54,11 @@ ms.lasthandoff: 09/01/2017
   
 |Axis|Description|  
 |----------|-----------------|  
-|**filho**|Retorna os filhos do nó de contexto.|  
-|**descendente**|Retorna todos os descendentes do nó de contexto.|  
-|**pai**|Retorna o pai do nó de contexto.|  
-|**atributo**|Retorna os atributos do nó de contexto.|  
-|**Self**|Retorna o próprio nó de contexto.|  
+|**child**|Retorna os filhos do nó de contexto.|  
+|**descendant**|Retorna todos os descendentes do nó de contexto.|  
+|**parent**|Retorna o pai do nó de contexto.|  
+|**attribute**|Retorna os atributos do nó de contexto.|  
+|**self**|Retorna o próprio nó de contexto.|  
 |**descendant-or-self**|Retorna o nó de contexto e todos os descendentes do nó de contexto.|  
   
  Todos esses eixos, exceto o **pai** eixo, são eixos encaminhados. O **pai** eixo é um eixo inverso, pois ele pesquisa para trás na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera o \<ProductDescription > elemento filho do nó de contexto. Para cada \<ProductDescription > nó de elemento, a segunda etapa recupera o \<resumo > filhos do nó de elemento.  
@@ -246,4 +248,3 @@ WHERE ProductModelID=19
  Observe que o predicado `[1]` na expressão de caminho é adicionado para assegurar que um valor de singleton seja retornado.  
   
   
-

@@ -3,8 +3,9 @@ title: Propriedade CursorLocation (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::CursorLocation
 - Recordset15::CursorLocation
-helpviewer_keywords: CursorLocation property [ADO]
+helpviewer_keywords:
+- CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd17fab34b0534e87eb63de88bee6a113563ebbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 194035b9ac6dfe320d90266c406976d93e18484a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursorlocation-property-ado"></a>Propriedade CursorLocation (ADO)
 Indica o local do serviço de cursor.  
@@ -34,7 +36,7 @@ Indica o local do serviço de cursor.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que pode ser definido como uma da [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade permite que você escolha entre várias bibliotecas de cursor acessíveis para o provedor. Normalmente, você pode escolher entre usar uma biblioteca de cursores do lado do cliente ou que está localizado no servidor.  
   
  Essa configuração de propriedade afeta conexões estabelecidas somente depois que a propriedade foi definida. Alterando o **CursorLocation** propriedade não tem efeito sobre conexões existentes.  

@@ -3,7 +3,7 @@ title: "Passando parâmetros para um comando nomeado | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f98080e73f2a0eb32450c0bc8e5779471adc74c6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33d1ee3fe4e24695deccd0615f17868bfdfd988c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passando parâmetros para um comando nomeado
 Assim como o resultado do comando é passado a como um *out* variável do comando nomeado, parâmetros para um comando parametrizado pode foi passada como *em* variáveis para o comando nomeado.  
@@ -102,4 +101,3 @@ objConn.GetOrdersOf "12345", objRs
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

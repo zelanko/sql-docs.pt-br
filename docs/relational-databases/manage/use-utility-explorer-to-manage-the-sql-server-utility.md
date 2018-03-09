@@ -2,26 +2,29 @@
 title: "Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
-  O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer uma exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer um modo de exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Criar ponto de controle do utilitário  
  Para que você possa usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deve criar um ponto de controle do utilitário. Para obter mais informações, veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) ou [Criar um ponto de controle do utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
@@ -67,8 +70,8 @@ ms.lasthandoff: 11/09/2017
   
  O PowerShell não tem a ajuda F1, mas inclui um cmdlet **Get-Help** que fornece informações sobre como usá-lo. Para obter mais informações sobre como usar Get-Help, veja [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurar políticas de integridade &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
  [Pesquisador de Objetos](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   

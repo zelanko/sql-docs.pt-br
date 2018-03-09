@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b19c5190d6256b0a5fd5d71976c5078ea86dee8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,9 +61,9 @@ ms.lasthandoff: 09/09/2017
   
  Se um aplicativo estabelecer uma conexão com SQL_DRIVER_COMPLETE_REQUIRED e posteriormente tentar executar uma instrução em uma conexão interrompida, o driver ODBC não exibirá a caixa de diálogo novamente. Além disso, durante a recuperação em andamento:  
   
--   Durante a recuperação, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_TRUE**.  
+-   Durante a recuperação, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_FALSE**.  
   
--   Se recuperação falhar, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_FALSE**.  
+-   Se recuperação falhar, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_TRUE**.  
   
  Os seguintes códigos de estado são retornados por qualquer função que execute um comando no servidor:  
   
@@ -180,8 +178,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   
-

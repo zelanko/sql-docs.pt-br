@@ -2,9 +2,12 @@
 title: "Iniciando o utilitário de Prompt de comando dta e ajustando uma carga de trabalho | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02d4e4276953d0e9ff54ac49fda434cb2509e7f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lição 3-1-Iniciando o utilitário de Prompt de comando dta e ajustando uma carga de trabalho
-Essa tarefa descreve a inicialização do utilitário **dta** , a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Essa tarefa orienta você na inicialização do **dta** utilitário, exibindo a Ajuda e, em seguida, usá-lo para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
 O tutorial usa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
   

@@ -1,30 +1,29 @@
 ---
 title: Migrar bancos de dados para o SQL Server no Linux | Microsoft Docs
-description: "Este tópico descreve as diferentes opções para migrar bancos de dados e os dados para o SQL Server no Linux."
+description: "Este artigo descreve as diferentes opções para migrar bancos de dados e os dados para o SQL Server no Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrar bancos de dados e os dados estruturados para o SQL Server no Linux 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Você pode migrar seus bancos de dados e dados para 2017 do SQL Server em execução no Linux. O método que você optar por usar depende dos dados de origem e o seu cenário específico. As seções a seguir fornecem práticas recomendadas para vários cenários de migração.
 
@@ -53,4 +52,3 @@ Para obter mais informações sobre essas técnicas, consulte os tópicos a segu
 
 - [Dados de cópia em massa com bcp](sql-server-linux-migrate-bcp.md)
 - [Extrair, transformar e carregar dados para o SQL Server no Linux com o SSIS](sql-server-linux-migrate-ssis.md) 
-

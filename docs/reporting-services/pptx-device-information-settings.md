@@ -1,14 +1,14 @@
 ---
-title: "Configurações de informações do dispositivo PPTX | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Configurações de informações de dispositivo PPTX | Microsoft Docs"
+ms.custom: 
 ms.date: 09/11/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b83a1cd9142dab2b74f5dbb3148576d851faf24
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pptx-device-information-settings"></a>Configurações de informações do dispositivo PPTX
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no formato PPTX.  
   
-|Configuração|Value|  
+|Configuração|Valor|  
 |-------------|-----------|  
 |**Colunas**|O número de colunas a ser definido para o relatório. Esse valor substitui as configurações originais do relatório.|  
 |**ColumnSpacing**|O espaçamento entre colunas a ser definido para o relatório. Esse valor substitui as configurações originais do relatório.|  
@@ -48,11 +47,10 @@ ms.lasthandoff: 08/09/2017
 |**StartPage**|A primeira página do relatório a ser renderizada. O valor **0** indica que todas as páginas serão renderizadas. O valor padrão é **1**.|  
 |**UseReportPageSize**|Se UseReportPageSize =**false** , o tamanho do slide padrão é o padrão do PowerPoint de 13,333” x 7,5” (taxa de proporção de 16:9). Se UseReportPageSize = true, o tamanho do slide padrão é o tamanho da página definido do relatório.<br /><br /> O valor padrão é **false**<br /><br /> Observação: as configurações PageWidth e PageHeight substituem a largura e a altura padrão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em rsreportserver. config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Referência técnica &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

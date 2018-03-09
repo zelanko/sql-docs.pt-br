@@ -1,5 +1,5 @@
 ---
-title: Tarefa controle CDC | Microsoft Docs
+title: Tarefa Controle CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-control-task"></a>Tarefa Controle de CDC
   A tarefa Controle de CDC é usada para controlar o ciclo de vida de pacotes de captura de dados de alterações (CDC). Ela trata a sincronização de pacotes CDC com o pacote de carga inicial e o gerenciamento de intervalos de LSN (número de sequência de log) processados na execução de um pacote CDC. Além disso, a tarefa Controle de CDC lida com cenários de erro e recuperação.  
@@ -78,9 +77,9 @@ ms.lasthandoff: 08/11/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Propriedades personalizadas da tarefa controle CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Propriedades personalizadas da tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir uma variável de estado](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
@@ -161,4 +160,3 @@ ms.lasthandoff: 08/11/2017
  **Nome do estado**  
  Digite um nome para associar com o estado de CDC persistente. A carga cheia e os pacotes CDC que funcionam com o mesmo contexto de CDC especificará um nome de estado comum. Esse nome é usado para verificar a linha de estado na tabela de estado  
   
-

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
   O verificador ortográfico do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) verifica a sintaxe, a ortografia e a estrutura de frase de valores da cadeia de caracteres em um domínio. O verificador ortográfico é um recurso autônomo, do lado do cliente, sem integração com mecanismos do lado do servidor e sem implicações em fluxos ou status atuais. O verificador ortográfico identifica esses valores da cadeia de caracteres que considera serem erros potenciais e, então, marca-os com um sublinhado vermelho no mesmo local no qual você faz outras alterações manuais em valores de domínio. Esses locais incluem:  

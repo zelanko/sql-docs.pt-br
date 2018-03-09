@@ -2,29 +2,29 @@
 title: Habilitar erros remotos (Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71d8664ab522a8e33bafaf4fd6916c0721a1713b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar erros remotos (Reporting Services)
   É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre este erro, navegue até o servidor de relatório na máquina de servidor local ou habilite erros remotos", você poderá configurar a propriedade **EnableRemoteErrors** para acessar informações adicionais que podem ajudá-lo a resolver o problema. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Clique com o botão direito do mouse no nó do servidor de relatório e selecione **Propriedades**.  
   
-3.  Clique em **Avançado** para abrir a página de propriedades. Para obter mais informações, consulte [Propriedades do Servidor &#40;página Avançado&#41;](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Clique em **Avançado** para abrir a página de propriedades. Para obter mais informações, consulte [Propriedades do Servidor &#40;página Avançado&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Em **EnableRemoteErrors**, selecione **True**.  
   
@@ -120,4 +120,3 @@ ms.lasthandoff: 08/09/2017
     >  É possível editar a tabela **ConfigurationInfo** no banco de dados do servidor de relatório para definir **EnableRemoteErrors** como **True**, mas se o servidor de relatório for usado ativamente, você deverá usar o SQL Server Management Studio ou um script para modificar as configurações. Se você modificar a configuração no banco de dados, precisará reiniciar o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] antes de as alterações entrarem em vigor.  
   
   
-

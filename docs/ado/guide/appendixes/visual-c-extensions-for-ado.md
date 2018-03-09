@@ -3,7 +3,7 @@ title: "Extensões do Visual C++ para ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d2c48eff858219640bf58bcd9abd9b222e48619b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbc17b15d552f9b7afeeb4841febdd7d08e54808
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 O método preferido de programação ADO com o Visual C++ está usando o **#import** diretiva, conforme discutido em [programação do Microsoft Visual C++ ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md). No entanto, versões anteriores do ADO fornecido com um método alternativo de programação usando o Visual C++: as extensões do Visual C++. Esta seção documenta esse recurso para aqueles que deve manter o código de extensões do Visual C++, mas o novo código ADO deve ser escrito usando #**importar**.
@@ -49,4 +48,3 @@ O método preferido de programação ADO com o Visual C++ está usando o **#impo
 
 ## <a name="see-also"></a>Consulte também
  [ADO para o índice da sintaxe do Visual C++ COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [exemplo de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [usando as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md) [cabeçalho de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

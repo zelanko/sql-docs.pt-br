@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff061fe76976ea39168744d66d417a6624c23189
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-tracing-options"></a>Definindo opções de rastreamento
 O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diálogo permite que você configure a maneira como as chamadas de função ODBC são rastreadas.  
@@ -72,4 +70,3 @@ O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diá
 >  Suporte para Visual Studio Analyzer foi removido a partir do Windows 8 (Visual Studio Analyzer foi incluído somente nas versões anteriores do Visual Studio.). Para obter uma alternativa mecanismo de solução de problemas, use o rastreamento BID.  
   
  Rastreamento do Visual Studio® Analyzer fornece desempenho e informações de depuração sobre a camada de ODBC. Todos os eventos de saída serão disparados na interface de nível superior para apresentar uma imagem como precisas possível sobre tempo gasto em componentes ODBC. Rastreamento do Visual Studio Analyzer requer qualquer fonte de eventos para registrar quando a fonte é configurada. Para obter mais informações sobre esse tipo de rastreamento, consulte a documentação do Visual Studio.
-

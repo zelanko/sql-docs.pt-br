@@ -3,8 +3,9 @@ title: Fonte de propriedade (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,18 +21,19 @@ f1_keywords:
 - Recordset15::GetSource
 - Recordset15::PutRefSource
 - Recordset15::put_Source
-helpviewer_keywords: Source property [ADO Recordset]
+helpviewer_keywords:
+- Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 543299eb14a06ebdbb7e9b09fe89f28e9cbeee6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-recordset"></a>Propriedade Source (conjunto de registros ADO)
 Indica a fonte de dados para um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -39,7 +41,7 @@ Indica a fonte de dados para um [registros](../../../ado/reference/ado-api/recor
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define um **cadeia de caracteres** valor ou [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto referência; retorna apenas um **cadeia de caracteres** valor que indica a fonte do **Recordset**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **fonte** propriedade para especificar uma fonte de dados para um **registros** objeto usando um dos seguintes: um **comando** objeto variável, uma instrução SQL, um procedimento armazenado, ou um nome de tabela.  
   
  Se você definir o **fonte** propriedade para um **comando** objeto, o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do **registros** objeto herdará o valor de **ActiveConnection** propriedade especificado **comando** objeto. No entanto, ler o **fonte** propriedade não retorna um **comando** objeto; em vez disso, ele retorna o [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade o **comando** do objeto que você definir o **fonte** propriedade.  

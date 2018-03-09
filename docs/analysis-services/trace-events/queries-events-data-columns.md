@@ -2,33 +2,30 @@
 title: Colunas de dados de eventos de consultas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Queries Events event category
+helpviewer_keywords: Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f329c73f2fbfd0b99e45c2012fb90b90ec52f879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="queries-events-data-columns"></a>Colunas de dados de eventos de consulta
-  A categoria de evento Queries Events tem as seguintes classes de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria Queries Events tem as seguintes classes de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Contém a hora atual do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém a quantidade de tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Contém a quantidade de tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |Severity|22|1|Contém o nível de severidade de uma exceção associada ao evento de consulta. Os valores são:<br /><br /> 0 = Êxito<br /><br /> 1 = Informativo<br /><br /> 2 = Aviso<br /><br /> 3 = Erro|  
 |Success|23|1|Contém o êxito ou a falha do evento de consulta. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  
@@ -85,8 +82,7 @@ ms.lasthandoff: 09/01/2017
 |TextData|42|9|Contém os dados de texto associados ao evento de consulta.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual ocorreu o evento de consulta.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Categoria Queries Events](../../analysis-services/trace-events/queries-events-category.md)  
   
   
-

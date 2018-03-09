@@ -2,9 +2,12 @@
 title: "Medir a latência e validar as conexões para a replicação transacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3ba3c3a7fa30209c1777bcc7ddd5b1754924fa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 18fdb025e8e3314e44c2441b2e9a037e743ac939
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
-  Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
   
 -   O tempo decorrido entre a confirmação de uma transação no Publicador e o comando correspondente inserido no banco de dados de distribuição no Distribuidor.  
   
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Informações de token de rastreamento são retidas para o mesmo período de tempo que outros dados históricos, os quais são governados pelo período de retenção de histórico do banco de dados de distribuição. Para obter informações sobre como alterar as propriedades do banco de dados de distribuição, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para publicar um token de rastreamento em uma publicação transacional  
   

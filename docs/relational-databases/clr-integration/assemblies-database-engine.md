@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5736e0f3c0a77debca361739cd16ff5cef2d079
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7e6626da65db973b6d8726518be357985a164b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Os tópicos nesta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Os tópicos desta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
   
  Assemblies são arquivos DLL usados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR Common language runtime (), em vez de usar [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

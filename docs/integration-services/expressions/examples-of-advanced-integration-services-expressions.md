@@ -1,5 +1,5 @@
 ---
-title: "Exemplos de integração avançada serviços expressões | Microsoft Docs"
+title: "Exemplos de expressões avançadas do Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fa22181293dbed40608169d402738446e34397bc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemplos de expressões avançadas do Integration Services
   Esta seção fornece exemplos de expressões avançadas que combinam múltiplos operadores e funções. Se uma expressão for usada em uma restrição precedente ou na transformação Divisão Condicional, ela deve ser avaliada como uma expressão Booleana. No entanto, essa restrição não se aplica a expressões usadas em expressões de propriedades, variáveis, na transformação Coluna Derivada ou no contêiner Loop For.  
@@ -107,11 +106,10 @@ ms.lasthandoff: 08/03/2017
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Usar uma expressão em um componente de fluxo de dados](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
   
-

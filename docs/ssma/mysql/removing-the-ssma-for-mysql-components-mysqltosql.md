@@ -1,12 +1,14 @@
 ---
 title: Removendo o SSMA para componentes do MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 504a35ff20ee162bef8e2524cc382dde190fb3e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 765696847ddb1abd44dfac3463fdfd75f9a5c97a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Removendo o SSMA para componentes do MySQL (MySQLToSql)
 Quando terminar de migrar bancos de dados do MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], talvez você queira desinstalar componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, se você desinstalar o pacote de extensão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , em seguida, SSMA não oferecerá suporte a migração de dados do MySQL para dados de destino (SQL Server/SQL Azure) usando o mecanismo de migração de dados do servidor.  
@@ -65,8 +66,7 @@ Você pode remover o pacote de extensão usando **adicionar ou remover programas
   
 Depois que o processo de desinstalação for concluído, você pode confirmar que os objetos no **sysdb.ssma_MySQL** esquema e, possivelmente, todo o **sysdb** banco de dados, foi removido usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. No entanto, se você usar outros produtos do SSMA, eles também usam o **sysdb** banco de dados. Se o banco de dados existe e você tiver certeza de que nenhum outro banco de dados fazem referência aos objetos nesse banco de dados, é possível desanexar o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para MySQL cliente &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Instalando componentes do SSMA no SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+[Instalar os componentes do SSMA no SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
-

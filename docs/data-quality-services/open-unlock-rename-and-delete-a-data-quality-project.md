@@ -19,22 +19,22 @@ helpviewer_keywords:
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b92dba54db168d503d371c927df66d8e9e8dbf7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c46bc57e30a9d6b119e708ad3a93aabb4183b7fd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Abrir, desbloquear, renomear e excluir um projeto do Data Quality
   Este tópico descreve como gerenciar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , por exemplo, como abrir, desbloquear, renomear e excluir um projeto de qualidade de dados.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
   
 -   Você não pode abrir um projeto bloqueado criado por outro usuário.  
   

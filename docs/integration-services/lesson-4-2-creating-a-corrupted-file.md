@@ -1,11 +1,11 @@
 ---
-title: 'Etapa 2: Criando um arquivo corrompido | Microsoft Docs'
+title: 'Etapa 2: criar um arquivo corrompido | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 62350fd26606de512d982b66ff7f114addc3eb39
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>Lição 4-2: criar um arquivo corrompido
+# <a name="lesson-4-2---creating-a-corrupted-file"></a>Lição 4-2 – criar um arquivo corrompido
 Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
   
 Nesta tarefa, você criará uma cópia de um arquivo simples de amostra existente. Você deverá então abrir o arquivo no Bloco de Notas e editar a coluna **CurrencyID** para certificar-se de que não produzirá uma correspondência durante a pesquisa de transformações. Quando o arquivo novo for processado, a falha na pesquisa irá causar a falha da transformação Pesquisa de Códigos de Moeda e criará, portanto, uma falha no resto do pacote. Depois de criar o arquivo de amostra corrompido, você executará o pacote para exibir a falha do pacote.  
@@ -70,9 +69,8 @@ Nesta tarefa, você criará uma cópia de um arquivo simples de amostra existent
     > [!NOTE]  
     > O número 27 é a ID do componente. Esse valor é atribuído quando você cria o fluxo de dados, ou seja, o valor do seu pacote pode ser diferente.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 [Etapa 3: Adicionando redirecionamento de fluxo de erro](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   
-

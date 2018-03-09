@@ -2,31 +2,37 @@
 title: Classe de evento Audit Logout | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Logout event class
+helpviewer_keywords:
+- Audit Logout event class
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8434d544c02f720277db5526ccc5854cf3d9dc68
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 07d96ee2ea1cf3a53b0009d988b0927f922b6b4c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-logout-event-class"></a>Classe de evento Audit Logout
-  A classe de evento **Audit Logout** indica que um usuário se desconectou (fez logoff) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento **Audit Logout** indica que um usuário se desconectou (fez logoff) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Logout  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -35,13 +41,13 @@ ms.lasthandoff: 11/09/2017
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**Duration**|**bigint**|Tempo desde que o usuário fez logon (aproximadamente).|13|Sim|  
 |**EndTime**|**datetime**|Hora de término do logoff.|15|Sim|  
-|**EventClass**|**int**|Tipo de evento = 15.|27|Não|  
-|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
+|**EventClass**|**int**|Tipo de evento = 15.|27|não|  
+|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
 |**EventSubClass**|**int**|Tipo de conexão usado pelo logon. 1 = Não em pool, 2 = Em pool.|21|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome do logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO\nomedeusuário).|11|Sim|  
-|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**Reads**|**bigint**|Número de E/Ss de leitura lógicas emitidas pelo usuário durante a conexão.|16|Sim|  
@@ -54,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 |**Writes**|**bigint**|Número de E/Ss de gravação lógicas emitidas pelo usuário durante a conexão.|17|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

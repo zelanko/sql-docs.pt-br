@@ -3,8 +3,11 @@ title: "Caixa de diálogo Índices/Chaves (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb8d410d76c06b79884f9c2674221c5a46b4cbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 342d284b458c1eacb6ba358e51a502630268bc67
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
-Use essa caixa de diálogo para criar ou modificar índices, chaves primárias e chaves exclusivas. Para acessar essa caixa de diálogo, abra a definição da tabela com o índice ou chave; clique com o botão direito do mouse na grade de definição da tabela e depois clique em **Índices/Chaves**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta caixa de diálogo para criar ou modificar índices, chaves primárias e chaves exclusivas. Para acessar essa caixa de diálogo, abra a definição da tabela com o índice ou chave; clique com o botão direito do mouse na grade de definição da tabela e depois clique em **Índices/Chaves**.  
   
 > [!NOTE]  
 > Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
@@ -116,7 +119,7 @@ Especifique se o [!INCLUDE[ssDE](../../includes/ssde_md.md)] subjacente deve cal
 **Bloqueios de Linha Permitidos**  
 Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados. A configuração recomendada é **Sim**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhando com restrições (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Trabalhando com chaves (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

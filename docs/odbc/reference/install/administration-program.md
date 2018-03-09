@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d2fce2aa391f452286a15aa635e26c52ca96952
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administration-program"></a>Programa de administração
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **Adicionar, modificar ou excluir fontes de dados silenciosamente.** O programa chamar administração **SQLConfigDataSource** na DLL do instalador e passa-uma janela nula manipular, o nome de uma fonte de dados para adicionar, modificar ou excluir e uma lista de valores para o registro. As chamadas DLL do instalador **ConfigDSN** na configuração do driver DLL, na verdade, adicionar, modificar ou excluir a fonte de dados.  
   
 -   **Adicionar, modificar ou excluir uma fonte de dados padrão.** A fonte de dados padrão é o mesmo que qualquer outra fonte de dados, exceto que o seu nome é o padrão. Ele é adicionado, modificado ou excluído da mesma maneira como qualquer outra fonte de dados.
-

@@ -1,10 +1,13 @@
 ---
 title: Trabalhando com o SSMA para o Console do Oracle (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90f472a8eaa4bcfadf13eaea3d5145fe25c74a63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9beccd6e742a7081f9590717b7a0620c56ca5e39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Trabalhando com o SSMA para o Console do Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Versão do SSMA (Assistente) de migração para DB2 agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -32,7 +35,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Description**|  
+|**Tópicos**|**Descrição**|  
 |[Guia de Introdução com o SSMA para DB2 Console &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Explica como criar um arquivo de script.|  
@@ -44,6 +47,6 @@ Os tópicos abordados nesta seção incluem:
 |[Gerando relatórios &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)|Lista os comandos para gerar relatórios.|  
 |[Solucionando problemas de &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Fornece breves informações sobre como corrigir problemas de migração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para o Console do DB2](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
   

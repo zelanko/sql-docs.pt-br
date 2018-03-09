@@ -1,25 +1,27 @@
 ---
-title: "Habilitar um servidor de relatório para acesso ao Power BI móvel | Microsoft Docs"
+title: "Habilitar um servidor de relatório para acesso ao Power BI Mobile | Microsoft Docs"
 ms.date: 12/17/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9c4b3e4ce530f822f28e7a3db52e802c90d492a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 50223aba5cb1fecaf8da2ef7f09e8f6ddd36e3d1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Habilitar um servidor de relatórios para acesso ao Power BI Móvel
 Você pode usar o aplicativo Power BI Móvel para consumir relatórios móveis. Há algumas coisas que você precisa configurar para permitir que o aplicativo Power BI Móvel conecte-se ao Reporting Services.  
@@ -64,5 +66,4 @@ Para obter mais informações sobre como configurar o Firewall do Windows, consu
   
   
   
-
 

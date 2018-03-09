@@ -2,27 +2,30 @@
 title: "Conteúdos do dispositivo (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8323c69a4d919f4e4e82eca5ff038733e29f041f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 54eb5c1750289784ed7a15016b6047287fdb15a9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-contents-sql-server"></a>Conteúdos do dispositivo (SQL Server)
-  Use essa caixa de diálogo para exibir informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para exibir informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
   
@@ -61,14 +64,14 @@ ms.lasthandoff: 11/09/2017
 |**Tipo**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
 |**Componente**|O componente com backup: Banco de Dados, Arquivo ou *\<blank>* (para logs de transações).|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
-|**Banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
+|**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  
-|**Data**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
+|**Date**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
 |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
 |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
 |**Validade**|A data e hora de validade do conjunto de backup.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

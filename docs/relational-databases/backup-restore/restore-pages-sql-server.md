@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
      **Restaurar**  
      Esta seção executa a mesma função de **Restaurar em** em [Restaurar Banco de Dados (Página Geral)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
-     **Banco de Dados**  
+     **Backup de banco de dados**  
      Especifica o banco de dados a ser restaurado. Você pode digitar um novo banco de dados ou selecionar um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, exceto os bancos de dados do sistema **mestre** e **tempdb**.  
   
     > [!WARNING]  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
     |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
     |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
-    |**Banco de Dados**|Nome do banco de dados envolvido na operação de backup.|  
+    |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
     |**Primeiro LSN**|Número de sequência de log (LSN) da primeira transação do conjunto de backup. Em branco para backups de arquivo.|  
     |**Último LSN**|O número de sequência de log (LSN) da última transação do conjunto de backup. Em branco para backups de arquivo.|  
@@ -170,7 +170,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Para restaurar as páginas listadas na grade de páginas, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para especificar uma página em uma instrução RESTORE DATABASE, você precisará da ID do arquivo que contém a página e da ID da página. A sintaxe necessária é a seguinte:  
   
  `RESTORE DATABASE <database_name>`  
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir restaura quatro páginas danificadas do arquivo `B` com `NORECOVERY`. Em seguida, dois backups de log são aplicados com `NORECOVERY`, seguido pelo backup do final do log que é restaurado com `RECOVERY`. Este exemplo executa uma restauração online. No exemplo, a ID de arquivo de `B` é `1`, e as IDs de página das páginas danificadas são `57`, `202`, `916`e `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -224,7 +224,7 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   

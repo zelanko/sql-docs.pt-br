@@ -2,32 +2,30 @@
 title: "Banco de dados (DBCC) do verificador de consistência para o Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
-  O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
 O comando usa uma definição de objeto e retornará um conjunto de resultados vazio ou informações de erro detalhadas se o objeto estiver corrompido.   Neste artigo, você vai aprender a executar o comando, interpretar os resultados e resolver os problemas que surgirem.  
   
  Para bancos de dados tabulares, verificações de consistência executadas pelo DBCC são equivalentes à validação interna que ocorre automaticamente sempre que você recarrega, sincroniza ou restaura um banco de dados.  Por outro lado, verificações de consistência de bancos de dados multidimensionais ocorrem somente quando você executa o DBCC sob demanda.  
@@ -175,7 +173,7 @@ Execution complete
   
 4.  No SQL Server Profiler, atividade do DBCC é indicada por meio de eventos de **Command** com uma subclasse de evento de DBCC:  
   
-     ![SSAS dbcc-profiler eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc-profiler eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      O código de evento 32 é a execução de DBCC.  
   
@@ -227,8 +225,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**Objeto**|**Descrição de verificação do DBCC**|**Erro na falha**|  
-|Banco de dados|Verifica a contagem de tabelas no banco de dados.  Um valor menor que zero indica corrupção.|Há corrupção na camada de armazenamento. A coleção de tabelas no banco de dados '%{parent/}' está corrompida.|  
-|Banco de dados|Verifica a estrutura interna usada para rastrear a integridade referencial e lança um erro se o tamanho estiver incorreto.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
+|banco de dados|Verifica a contagem de tabelas no banco de dados.  Um valor menor que zero indica corrupção.|Há corrupção na camada de armazenamento. A coleção de tabelas no banco de dados '%{parent/}' está corrompida.|  
+|banco de dados|Verifica a estrutura interna usada para rastrear a integridade referencial e lança um erro se o tamanho estiver incorreto.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
 |Table|Verifica o valor interno usado para determinar se a tabela é uma tabela de dimensão ou de fatos.  Um valor que está fora do intervalo conhecido que indica corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da tabela.|  
 |Table|Verifica se o número de partições no mapa do segmento da tabela corresponde ao número de partições definidas para a tabela.|Há corrupção na camada de armazenamento. A coleção de partições na tabela '%{parent/}' está corrompida.|  
 |Table|Se um banco de dados tabular for criado ou importado do PowerPivot para Excel 2010 e tiver uma contagem de partição maior que um, um erro será gerado, pois o suporte de partição foi adicionado em versões posteriores e isso poderia indicar corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  

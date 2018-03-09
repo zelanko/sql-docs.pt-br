@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e51a4fb96520cd5a887fe27fb5eddd62062f4eae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lição 3 de 3: Testando os pacotes implantados
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lição 3-3 – Testando os pacotes implantados
 Nesta tarefa, você testará os pacotes implantados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Em outros tutoriais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você executou pacotes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usando a opção **Iniciar Depuração** no menu **Depurar** . Desta vez você executará os pacotes de modo diferente.  
@@ -52,7 +51,7 @@ As pastas de nível superior dentro da pasta Pacotes Armazenados são as pastas 
     > [!IMPORTANT]  
     > Se você não consegue se conectar ao [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], provavelmente o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não está sendo executado. Para saber o status do serviço, clique em **Iniciar**, aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**. No painel esquerdo, clique em **Serviços do SQL Server**. No painel direito, localize o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Inicie o serviço se ainda não estiver em execução.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]é aberta. Por padrão, a janela Pesquisador de Objetos é aberta e colocada no canto superior direito do estúdio. Se o Pesquisador de Objetos não for aberto, clique em **Pesquisador de Objetos** no menu **Exibir** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é aberto. Por padrão, a janela Pesquisador de Objetos é aberta e colocada no canto superior direito do estúdio. Se o Pesquisador de Objetos não for aberto, clique em **Pesquisador de Objetos** no menu **Exibir** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Para executar os pacotes usando o Utilitário do Pacote de Execução  
   
@@ -113,9 +112,8 @@ As pastas de nível superior dentro da pasta Pacotes Armazenados são as pastas 
   
     A consulta retorna 21 linhas de dados. O resultado de retorno consiste em linhas do arquivo de dados XML, orders.xml. Cada linha é um resumo por país/região; a linha lista o nome do país/região, o número de ordens de cada país/região e as datas das ordens mais antigas e mais recentes.  
   
-## <a name="see-also"></a>Consulte também  
-[Utilitário DTExec](../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Consulte Também  
+[Utilitário dtexec](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

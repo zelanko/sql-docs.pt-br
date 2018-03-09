@@ -2,33 +2,30 @@
 title: Agendar tarefas administrativas do SSAS com o SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 857540f661aa8eaecd42d98a648c03c043d06e2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
-  Usando o serviço SQL Server Agent, você pode agendar tarefas administrativas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para executar na ordem e nos horários em que você precisa. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Usando o serviço SQL Server Agent, você pode agendar tarefas administrativas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para executar na ordem e nos horários em que você precisa. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
   
  Com etapas de trabalho, você tem controle sobre o fluxo de execução. Em caso de falha de um trabalho, é possível configurar o SQL Server Agent para continuar executando as demais tarefas ou interromper a execução. Você também pode configurar o SQL Server Agent para enviar notificações sobre o sucesso ou a falha da execução do trabalho.  
   
@@ -37,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="prerequisites"></a>Pré-requisitos  
  O serviço SQL Server Agent deve ser instalado.  
   
- Por padrão, os trabalhos são executados na conta de serviço. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão do SQL Server Agent é NT Service\SQLAgent$\<nome_da_instância >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Por padrão, os trabalhos são executados na conta de serviço. A conta padrão do SQL Server Agent é NT Service\SQLAgent$\<nome_da_instância >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
@@ -235,4 +232,3 @@ ms.lasthandoff: 09/01/2017
  [Opções de processamento e as configurações de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   
-

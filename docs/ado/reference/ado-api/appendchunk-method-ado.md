@@ -3,8 +3,9 @@ title: "Método AppendChunk (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::AppendChunk
 - Field20::AppendChunk
-helpviewer_keywords: AppendChunk method [ADO]
+helpviewer_keywords:
+- AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea0599f91817fcefcb35871e41fbd4f727e5d2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32430fd62de54adfba22af5d3ea5447a70fd75a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
 Acrescenta dados a um texto grande ou dados binários [campo](../../../ado/reference/ado-api/field-object.md), ou um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -45,7 +47,7 @@ object.AppendChunk Data
  *Dados*  
  Um **Variant** que contém os dados para acrescentar ao objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **AppendChunk** método em um **campo** ou **parâmetro** objeto preenchê-lo com dados binários longos ou de caractere. Em situações em que a memória do sistema é limitada, você pode usar o **AppendChunk** método para manipular valores longos em partes em vez de em sua totalidade.  
   
 ## <a name="field"></a>Campo  

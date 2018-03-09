@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b523200fa68920d51a8421bb4968c8d98dff2d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d714a9c5ee8e05fde0b4ec327823cdebeb5116f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,15 +37,15 @@ ms.lasthandoff: 11/17/2017
   
 -   O formato de **datetime** e **datetimeoffset** cadeias de caracteres é:  
   
-     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   O formato de **tempo** cadeias de caracteres é:  
   
-     *hh*:*mm*:*ss*[. *9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   O formato de **data** cadeias de caracteres é:  
   
-     *aaaa*-*mm*-*dd*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  

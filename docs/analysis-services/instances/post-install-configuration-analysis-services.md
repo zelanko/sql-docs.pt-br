@@ -2,36 +2,32 @@
 title: "(Analysis Services) de configuração de pós-instalação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuração de pós-instalação (Analysis Services)
-  Após a instalação do Analysis Services, será necessário definir uma configuração adicional para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Após a instalação do Analysis Services, será necessário definir uma configuração adicional para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Posteriormente, será necessário realizar outras tarefas quando houver bancos de dados prontos para serem implantados. Basicamente, você precisará configurar as associações de função no banco de dados para conceder ao usuário acesso aos dados, criar uma estratégia de backup e recuperação de banco de dados, e determinar se você precisa de uma carga de trabalho de processamento agendado para atualizar dados em intervalos regulares. Mais informações sobre a administração e a implantação de bancos de dados podem ser encontradas nestes links: [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Posteriormente, será necessário realizar outras tarefas quando houver bancos de dados prontos para serem implantados. Basicamente, você precisará configurar as associações de função no banco de dados para conceder ao usuário acesso aos dados, criar uma estratégia de backup e recuperação de banco de dados, e determinar se você precisa de uma carga de trabalho de processamento agendado para atualizar dados em intervalos regulares. Para obter mais informações sobre a implantação de banco de dados e administração podem ser encontradas nestes links: [bancos de dados modelo multidimensionais ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [bancos de dados de modelo Tabular](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuração da instância  
  O Analysis Services é um serviço replicável, o que significa que você pode instalar várias instâncias do serviço em um único servidor. Cada instância adicional é instalada separadamente como uma instância nomeada, usando a Instalação do SQL Server, e é configurada de forma independente para oferecer suporte conforme pretendido. Por exemplo, um servidor de desenvolvimento poderá executar o Flight Recorder ou usar valores padrão para armazenamento de dados que você poderia alterar em servidores que oferecem suporte a cargas de trabalho de produção. Outro exemplo que requer o ajuste da configuração do sistema é a instalação da instância do Analysis Services no hardware compartilhado por outros serviços. Ao hospedar vários aplicativos com uso intensivo de dados no mesmo hardware, talvez você queira configurar propriedades de servidor que reduzam os limites de memória para otimizar recursos disponíveis em todos os aplicativos.  
@@ -45,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 |[Configurar software antivírus em computadores que executam o SQL Server](https://support.microsoft.com/kb/309422) |Talvez você precise configurar softwares de verificação, como aplicativos antivírus e antispyware, para excluir pastas e tipos de arquivos do SQL Server. Se o software de verificação bloquear um programa ou arquivo de dados quando o Analysis Services precisar usá-lo, poderá ocorrer interrupção do serviço ou dados corrompidos. |
 |[Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)|Durante a instalação, a conta de serviço do Analysis Services foi fornecida, com permissões apropriadas para permitir o acesso controlado a programas executáveis e a arquivos de banco de dados. Como uma tarefa pós-instalação, agora você deve considerar se deve permitir o uso da conta de serviço ao executar tarefas adicionais. As cargas de trabalho de processamento e de consulta podem ser executadas na conta de serviço. Essas operações terão êxito somente quando a conta de serviço tiver as permissões apropriadas.|  
 |[Registrar uma instância do Analysis Services em um grupo de servidores](../../analysis-services/instances/register-an-analysis-services-instance-in-a-server-group.md)|O SQL Server Management Studio (SSMS) permite criar grupos de servidores para organizar as instâncias do SQL Server. As implantações escalonáveis compostas de várias instâncias de servidor são mais fáceis de gerenciar em grupos de servidores. Use as informações deste tópico para organizar as instâncias do Analysis Services em grupos no SSMS.|  
-|[Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Durante a instalação, você escolhe um modo de servidor que determine o tipo de modelo (multidimensional ou de tabela) executado no servidor. Se você não tiver certeza do modo de servidor, use as informações deste tópico para determinar qual modo foi instalado.|  
+|[Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Durante a instalação, você escolhe um modo de servidor que determine o tipo de modelo (multidimensional ou de tabela) executado no servidor. Se você não tiver certeza do modo de servidor, use as informações deste tópico para determinar qual modo foi instalado.|  
 |[Renomear uma instância do Analysis Services](../../analysis-services/instances/rename-an-analysis-services-instance.md)|Um nome descritivo pode ajudá-lo a fazer a distinção entre as várias instâncias que têm diferentes modos de servidor, ou entre as instâncias usadas principalmente por departamentos ou equipes da organização. Se você quiser alterar o nome da instância para uma que o ajude a gerenciar melhor as instalações, use as informações deste tópico para saber como fazer.|  
   
 ## <a name="next-steps"></a>Próximas etapas  
@@ -58,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [Instale o Analysis Services no modo do Power Pivot.](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
-

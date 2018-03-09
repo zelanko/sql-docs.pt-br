@@ -3,8 +3,11 @@ title: nchar e nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Tipos de dados que são de comprimento fixo, caracteres **nchar**, ou de comprimento variável, **nvarchar**, conjunto de caracteres de dados Unicode e usar o UNICODE UCS-2.
   
@@ -37,7 +39,7 @@ Tipos de dados que são de comprimento fixo, caracteres **nchar**, ou de comprim
 Dados de cadeia de caracteres Unicode de comprimento fixo. *n*Define o comprimento da cadeia de caracteres e deve ser um valor de 1 a 4.000. O tamanho de armazenamento é duas vezes  *n*  bytes. Quando a página de código do agrupamento usa caracteres de byte duplo, o tamanho de armazenamento ainda será  *n*  bytes. Dependendo da cadeia de caracteres, o tamanho do armazenamento de  *n*  bytes pode ser menor que o valor especificado para  *n* . Os sinônimos ISO para **nchar** são **national char** e **caracteres nacionais**...
   
 **nvarchar** [(n | **máximo** )]  
-Dados de cadeia de caracteres Unicode de comprimento variável. *n*Define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 4.000. **Max** indica que o tamanho máximo de armazenamento é 2 ^ 31-1 bytes (2 GB). O tamanho de armazenamento, em bytes, é duas vezes o comprimento real dos dados digitados + 2 bytes. Os sinônimos ISO para **nvarchar** são **national char variados** e **variáveis de caractere nacional**.
+Dados de cadeia de caracteres Unicode de comprimento variável. *n*Define o comprimento da cadeia de caracteres e pode ser um valor de 1 a 4.000. **Max** indica que o tamanho máximo de armazenamento é 2 ^ 31-1 caracteres (2 GB). O tamanho de armazenamento, em bytes, é duas vezes o comprimento real dos dados digitados + 2 bytes. Os sinônimos ISO para **nvarchar** são **national char variados** e **variáveis de caractere nacional**.
   
 ## <a name="remarks"></a>Comentários  
 Quando  *n*  não for especificado em uma definição de dados ou uma instrução de declaração de variável, o comprimento padrão é 1. Quando  *n*  não é especificado com a função CAST, o comprimento padrão é 30.
@@ -103,4 +105,3 @@ Test data       More test data
 [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

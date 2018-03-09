@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ O SQL Server 2016 introduz a propagação automática de grupos de disponibilida
 
 Para obter mais informações de histórico, consulte [Propagação automática para réplicas secundárias](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 No SQL Server 2016, a propagação automática exige que os dados e o caminho do arquivo de log sejam os mesmos em cada instância do SQL Server que participa do grupo de disponibilidade. No SQL Server 2017, você pode usar caminhos diferentes, porém a Microsoft recomenda usar os mesmos caminhos quando todas as réplicas estão hospedadas na mesma plataforma (por exemplo Windows ou Linux). Os grupos de disponibilidade da plataforma cruzada têm caminhos diferentes para as réplicas. Para obter detalhes, consulte [Layout de disco](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -215,7 +215,7 @@ GO
 
 A seguinte tabela lista os eventos estendidos relacionados à propagação automática: 
 
-| Nome | Descrição|
+| Nome | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Mensagem de solicitação de propagação.
 |hadr_physical_seeding_backup_state_change |    Alteração de estado lateral de backup da propagação física.

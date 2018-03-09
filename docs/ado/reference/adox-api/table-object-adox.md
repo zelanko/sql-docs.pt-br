@@ -3,8 +3,9 @@ title: Tabela de objeto (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Table
-helpviewer_keywords: Table object [ADOX]
+f1_keywords:
+- Table
+helpviewer_keywords:
+- Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d4e461d9f63180f1965a5bfdd3034c0dc9ba2d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da9c76799df8983b50298ee7005f5a357905e4d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-adox"></a>Objeto de tabela (ADOX)
 Representa uma tabela de banco de dados, incluindo colunas, índices e chaves.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O código a seguir cria um novo **tabela**:  
   
 ```  

@@ -3,7 +3,7 @@ title: Marcador de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e98d0519652cc5d28723e635672815629ce1621
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bookmark-property-ado"></a>Propriedade Bookmark (ADO)
 Indica um marcador que identifica exclusivamente o registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.  
@@ -36,7 +35,7 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** expressão que avalia um indicador válido.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **indicador** propriedade para salvar a posição do registro atual e retornar a esse registro a qualquer momento. Indicadores estão disponíveis apenas em **registros** objetos que dão suporte à funcionalidade de indicador.  
   
  Quando você abre um **registros** do objeto, cada um dos seus registros possui um indicador exclusivo. Para salvar o indicador para o registro atual, atribuir o valor de **indicador** propriedade a uma variável. Para retornar rapidamente a esse registro a qualquer momento depois de mover para um registro diferente, defina o **registros** do objeto **indicador** propriedade para o valor da variável.  
@@ -55,4 +54,3 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
  [Exemplo de propriedades do indicador (VB), BOF e EOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [Exemplo de propriedades do indicador (VC + +), BOF e EOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)
-

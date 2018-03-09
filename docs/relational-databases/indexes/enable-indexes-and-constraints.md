@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - constraints [SQL Server], enabling
 - clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05993c2ce383b65938712557cd82db47aaaf28bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d57ace5eda942fe9dba91d8a4f521bbd1dbca25
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-indexes-and-constraints"></a>Habilitar índices e restrições
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +76,9 @@ ms.lasthandoff: 11/17/2017
     |ALTER INDEX REBUILD.|A ação falha.|A ação tem êxito.|  
     |DROP INDEX.|A ação tem êxito.|A ação tem êxito.|  
     |CREATE INDEX WITH DROP_EXISTING.|A ação falha.|A ação tem êxito.|  
-  
+
+-   Quando a recompilação desabilitar os índices não clusterizados compactados, data_compression usará “none” como padrão, o que significa que os índices serão descompactados. Isso ocorre devido à perda dos metadados das configurações de compactação quando os índices não clusterizados são desabilitados. Para resolver esse problema, é necessário especificar a compactação de dados explícita na instrução de recompilação.
+
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
  As seguintes informações estão disponíveis na caixa de diálogo **Recriar Índices** :  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Para habilitar um índice desabilitado usando ALTER INDEX  
   

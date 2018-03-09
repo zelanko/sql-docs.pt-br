@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_property (banco de dados SSISDB) | Microsoft Docs
+title: catalog.set_environment_property (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8eedfe6919a69759cc6de3645b3e1f965dcdd0c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 463a904a6c9e049074cb76ead1faea1be47f5a5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,32 +39,32 @@ catalog.set_environment_property [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o ambiente. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- O nome do ambiente. O *environment_name* é **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ O nome do ambiente. O *environment_name* é **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- O nome de uma propriedade de ambiente. O *property_name* é **nvarchar (128)**.  
+ [ @property_name = ] *property_name*  
+ O nome de uma propriedade de ambiente. O *property_name* é **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- O valor da propriedade de ambiente. O *property_value* é **nvarchar (1024)**.  
+ [ @property_value = ] *property_value*  
+ O valor da propriedade de ambiente. O *property_value* é **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -76,8 +75,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   O nome do ambiente não é válido  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nesta versão, somente a propriedade `Description` pode ser definida. O valor da propriedade `Description` não pode exceder 4000 caracteres.  
   
   
-

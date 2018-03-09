@@ -3,12 +3,17 @@ title: "Expressões de comparação (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - node comparison operators [XQuery]
 - comparison expressions [XQuery]
@@ -17,19 +22,19 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98cb462f370a2008b82983973ecacf1b9a581404
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O XQuery fornece os seguintes tipos de operadores de comparação:  
   

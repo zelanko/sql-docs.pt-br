@@ -1,36 +1,33 @@
 ---
-title: Importar do PowerPivot (SSAS Tabular) | Microsoft Docs
+title: Importar do PowerPivot | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>Importar do PowerPivot (SSAS de tabela)
-  Este tópico descreve como criar um novo projeto de modelo tabular importando os metadados e dados de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando o modelo de projeto Importar do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+# <a name="import-from-power-pivot"></a>Importar do PowerPivot 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve como criar um novo projeto de modelo tabular importando os metadados e dados de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho usando a importação de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo de projeto em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Criar um novo Modelo Tabular de um arquivo PowerPivot para Excel  
  Ao criar um novo projeto de modelo tabular importando de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os metadados que definem a estrutura da pasta de trabalho são usados para criar e definir a estrutura do projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Objetos como tabelas, colunas, medidas e relações são mantidos e aparecerão no projeto de modelo tabular tal como estão na pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Nenhuma alteração é feita ao arquivo da pasta de trabalho .xlsx.  
@@ -57,8 +54,7 @@ ms.lasthandoff: 09/01/2017
 4.  Na caixa de diálogo **Abrir** , selecione o arquivo do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que contém os metadados e dados modelo que você deseja importar e clique em **Abrir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Banco de dados de espaço de trabalho &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [Copiar e colar dados &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [Banco de dados do espaço de trabalho](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [Copiar e colar dados](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

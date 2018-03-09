@@ -2,32 +2,30 @@
 title: "Nível de compatibilidade de um banco de dados Multidimensional (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f408b0bb6b2b0fbed6b53046f6ce6e70adb49040
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Nível de compatibilidade de um banco de dados multidimensional (Analysis Services)
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade **1100** tem um significado diferente quando o banco de dados é multidimensional ou tabular.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade **1100** tem um significado diferente quando o banco de dados é multidimensional ou tabular.  
   
  Este tópico descreve o nível de compatibilidade apenas para bancos de dados multidimensionais. Para obter mais informações sobre soluções tabulares, consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  A definição da compatibilidade do banco de dados como um nível mais alto é irreversível. Após aumentar o nível de compatibilidade para **1100**, você deve continuar executando o banco de dados em servidores mais recentes. Não é possível reverter para **1050**. Você não pode anexar nem restaurar um banco de dados **1100** em uma versão de servidor anterior ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Os níveis de compatibilidade do banco de dados são apresentados no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Você precisa ter um [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou superior para exibir ou definir o nível de compatibilidade do banco de dados.  
   
  O banco de dados não pode ser um cubo local. Os cubos locais não dão suporte à propriedade **CompatibilityLevel** .  

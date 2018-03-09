@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>Associação de parâmetros ODBC
 Cada parâmetro em uma instrução SQL deve ser associado, ou *associado,* a uma variável no aplicativo antes da instrução é executada. Quando o aplicativo associa uma variável para um parâmetro, ele descreve essa variável, endereço, tipo de dados C e assim por diante — para o driver. Ele também descreve o próprio parâmetro — dados SQL tipo, precisão e assim por diante. O driver armazena essas informações na estrutura, ele mantém para essa instrução e usa as informações para recuperar o valor da variável quando a instrução é executada.  

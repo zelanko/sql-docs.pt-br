@@ -1,28 +1,30 @@
 ---
 title: "Exemplos de código do RDS | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS samples [ADO]
+helpviewer_keywords:
+- RDS samples [ADO]
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af848d0237c7f3df12cc187f3827ae64ebe52768
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c94dbe0a2c8566924783fb59d542295531209e22
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-code-examples"></a>Exemplos de código do RDS
 > [!IMPORTANT]

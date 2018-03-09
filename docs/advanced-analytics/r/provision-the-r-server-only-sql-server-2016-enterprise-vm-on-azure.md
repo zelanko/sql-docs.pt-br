@@ -2,24 +2,27 @@
 title: "Provisionar uma máquina virtual para o aprendizado de máquina do Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a57f9d0e392818ec1198f3d0a19106e9db9c7810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Provisionar uma máquina virtual para o aprendizado de máquina do Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Máquinas virtuais no Azure são uma opção conveniente para configurar rapidamente um ambiente de servidor completo para soluções de aprendizado de máquina.
 
@@ -83,9 +86,7 @@ Para obter mais informações, consulte [instalando o SQL Server R Services em u
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>Usando o aprendizado de máquina no banco de dados do SQL Azure
 
-A partir de ficar 2017, banco de dados do SQL Azure oferece suporte ao uso de R para treinar modelos e usá-los para previsão. 
-
-Serviços de R no banco de dados está disponível como um recurso de visualização e tem algumas limitações em comparação com a edição no local do SQL Server. Para obter mais informações, consulte [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
+A visualização de suporte de R no SQL Azure está suspensa no momento, para o trabalho de desenvolvimento contínuo. Para obter mais informações, consulte [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>Posso atualizar a versão do SQL Server em uma máquina virtual?
 

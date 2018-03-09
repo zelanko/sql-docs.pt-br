@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
  Vamos considerar duas tabelas, Customer e Order. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir contém as definições dessas duas tabelas e os índices associados, em seu formato baseado em disco (tradicional):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -74,13 +73,13 @@ GO
   
  Considere a consulta a seguir, que une as tabelas Customer e Order e retorna a ID da ordem e as informações de cliente associadas:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  O plano de execução estimado, conforme exibido pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é como segue  
   
- ![Plano de consulta para a junção de tabelas com base em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Plano de consulta para uma junção de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Plano de consulta para uma junção de tabelas baseadas em disco.")  
 Plano de consulta para a junção de tabelas com base em disco.  
   
  Sobre esse plano de consulta:  
@@ -93,13 +92,13 @@ Plano de consulta para a junção de tabelas com base em disco.
   
  Considere uma ligeira variação nessa consulta, que retorna todas as linhas da tabela Order, não apenas OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  O plano estimado para essa consulta é:  
   
- ![Plano de consulta para uma junção hash de tabelas com base em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
 Plano de consulta para uma junção hash de tabelas com base em disco.  
   
  Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico **Hash Match** agora é usado para **Inner Join**. O índice clusterizado em Order não é classificado em CustomerID e, portanto, **Merge Join** exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador **Hash Match** (75%) comparado com o custo do operador **Merge Join** no exemplo anterior (46%). O otimizador consideraria o operador **Hash Match** também no exemplo anterior, mas concluiu que o operador **Merge Join** forneceu melhor desempenho.  
@@ -107,7 +106,7 @@ Plano de consulta para uma junção hash de tabelas com base em disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para consultas ad hoc:  
   
- ![Pipeline do processamento de consulta do SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Pipeline de processamento de consulta do SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Pipeline de processamento de consulta do SQL Server.")  
 Pipeline do processamento de consulta do SQL Server.  
   
  Neste cenário:  
@@ -131,7 +130,7 @@ Pipeline do processamento de consulta do SQL Server.
   
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pode ser usado para acessar tabelas com otimização de memória e baseadas em disco. A figura a seguir ilustra o processamento de consulta para acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória:  
   
- ![Pipeline de processamento da consulta para tsql interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![Pipeline de processamento de consulta para TSQL interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Pipeline de processamento de consulta para TSQL interpretado.")  
 Pipeline do processamento de consulta para acesso do Transact-SQL interpretado a tabelas com otimização de memória.  
   
  Conforme ilustrado pela figura, na maioria das vezes, o pipeline do processamento de consulta permanece inalterado:  
@@ -146,7 +145,7 @@ Pipeline do processamento de consulta para acesso do Transact-SQL interpretado a
   
  O script [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir contém versões com otimização de memória das tabelas Order e Customer, usando índices de hash:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -163,13 +162,13 @@ GO
   
  Considere a mesma consulta executada em tabelas com otimização de memória:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  O plano estimado é o seguinte:  
   
- ![Plano de consulta para a junção de tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![Plano de consulta para uma junção de tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Plano de consulta para uma junção de tabelas com otimização de memória.")  
 Plano de consulta para a junção de tabelas com otimização de memória.  
   
  Observe as seguintes diferenças em relação ao plano para a mesma consulta em tabelas baseadas em disco (figura 1):  
@@ -182,10 +181,10 @@ Plano de consulta para a junção de tabelas com otimização de memória.
   
 -   Esse plano contém **Hash Match** em vez de **Merge Join**. Os índices nas tabelas Order e Customer são índices de hash e, portanto, não são ordenados. Um **Merge Join** exigiria os operadores de classificação que diminuiriam o desempenho.  
   
-## <a name="natively-compiled-stored-procedures"></a>Procedimentos armazenados compilados nativamente  
+## <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente  
  Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados para código de máquina, não sendo interpretados pela mecanismo de execução de consulta. O script a seguir cria um procedimento armazenado originalmente compilado que executa a consulta de exemplo (na seção Consulta de exemplo).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -210,7 +209,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Processamento de compilação e consulta  
  O diagrama a seguir ilustra o processo de compilação para procedimentos armazenados compilados nativamente:  
   
- ![Compilação original dos procedimentos armazenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Compilação nativa de procedimentos armazenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Compilação nativa de procedimentos armazenados.")  
 Compilação original dos procedimentos armazenados.  
   
  O processo é descrito como:  
@@ -227,12 +226,12 @@ Compilação original dos procedimentos armazenados.
   
  A invocação de um procedimento armazenado originalmente compilado é convertida para chamar uma função na DLL.  
   
- ![Execução de procedimentos armazenados compilados nativamente.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Execução de procedimentos armazenados compilados nativamente.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execução de procedimentos armazenados compilados nativamente.")  
 Execução de procedimentos armazenados compilados nativamente.  
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
   
-1.  O usuário emite uma instrução **EXEC***usp_myproc* .  
+1.  O usuário emite uma instrução **EXEC***usp_myproc*.  
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   
@@ -251,7 +250,7 @@ Execução de procedimentos armazenados compilados nativamente.
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperando um plano de execução de consulta para procedimentos armazenados compilados de forma nativa  
  O plano de execução de consulta para um procedimento armazenado compilado nativamente pode ser recuperado usando o **Plano de Execução Estimado** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usando a opção SHOWPLAN_XML no [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -270,11 +269,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete (excluir)|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Esse operador é usado para funções intrínsecas e conversões de tipo. Nem todas as funções e conversões de tipos têm suporte em procedimentos armazenados compilados nativamente.|  
 |Nested Loops Join|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops é o único operador de junção com suporte em procedimentos armazenados compilados nativamente. Todos os planos que contêm junções usarão o operador Nested loops, mesmo se o plano para a mesma consulta executada como [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado contiver uma junção de mesclagem ou hash.|  
-|Classificação|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|Início|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|A expressão **TOP** (o número de linhas a serem retornadas) não pode exceder 8.000 linhas. Menos se também houver operadores de junção e agregação na consulta. As junções e a agregação normalmente reduzem o número de linhas a serem classificadas, em comparação com a contagem de linhas das tabelas base.|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que o operador Hash Match não tem suporte para agregação. Desse modo, todas as agregações em procedimentos armazenados compilados nativamente usam o operador Stream Aggregate, mesmo se o plano para a mesma consulta no [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado usar o operador Hash Match.|  
   
@@ -309,8 +308,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   A verificação de índice completo em IX_CustomerID foi substituída por uma busca de índice. Isso resultou na verificação de 5 linhas, em vez das 830 linhas exigidas para a verificação de índice completo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

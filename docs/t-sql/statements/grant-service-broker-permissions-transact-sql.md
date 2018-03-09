@@ -23,17 +23,16 @@ helpviewer_keywords:
 - message types [Service Broker], permissions
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 185950b1872ca5f11663f3d5051d1a2303cce090
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>Permissões GRANT do Agente de Serviços (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +59,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um Service Broker protegível.  Listada abaixo.  
   
- CONTRATO **::***contract_name*  
+ CONTRATO **:: * contract_name*  
  Especifica o contrato no qual a permissão está sendo concedida. O qualificador de escopo "::" é necessária.  
   
- TIPO de mensagem **::***message_type_name*  
+ TIPO de mensagem **:: * message_type_name*  
  Especifica o tipo de mensagem no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- A associação de serviço remoto **::***remote_binding_name*  
+ A associação de serviço remoto **:: * remote_binding_name*  
  Especifica a associação de serviço remoto na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- ROTA **::***route_name*  
+ ROTA **:: * route_name*  
  Especifica a rota na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- SERVIÇO **::***service_name*  
+ SERVIÇO **:: * service_name*  
  Especifica o serviço no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
@@ -119,7 +118,7 @@ GRANT permission  [ ,...n ] ON
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratos do Agente de Serviços  
  Um contrato do Agente de Serviços é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um contrato do Agente de Serviços são listadas a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
@@ -201,4 +200,3 @@ GRANT permission  [ ,...n ] ON
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

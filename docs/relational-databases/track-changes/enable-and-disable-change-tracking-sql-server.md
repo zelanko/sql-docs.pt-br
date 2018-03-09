@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - change tracking [SQL Server], configuring
 - data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a293cb894ac3a0c4eac086a8740d16c98c955e83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a8ebd0d24e5c3e52d469342ed8fe6d23cc96a215
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar e desabilitar o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="enable-change-tracking-for-a-database"></a>Habilitar o controle de alterações para um banco de dados  
  Antes de usar o controle de alterações, você deve habilitar o controle de alterações no nível de banco de dados. O exemplo a seguir mostra como habilitar o controle de alterações usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -63,7 +64,7 @@ SET CHANGE_TRACKING = ON
   
  O exemplo a seguir mostra como habilitar o controle de alterações para uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -78,19 +79,19 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  Quando nenhuma tabela de um banco de dados controlar as alterações, você pode desabilitar o controle de alterações no banco de dados. O exemplo a seguir mostra como desabilitar o controle de alterações para um banco de dados usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  O exemplo a seguir mostra como desabilitar o controle de alterações para uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
  [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   

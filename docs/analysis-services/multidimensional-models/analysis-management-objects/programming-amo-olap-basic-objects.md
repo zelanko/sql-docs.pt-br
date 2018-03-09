@@ -1,16 +1,14 @@
 ---
 title: "Programando objetos OLAP AMO básicos | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programando objetos OLAP AMO básicos
   A criação de objetos complexos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é simples e direta, mas requer atenção aos detalhes. Este tópico explica os detalhes de programação de objetos OLAP básicos. Este tópico contém as seguintes seções:  
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Objetos de agregação](#AD)  
   
-##  <a name="Dim"></a>Objetos de dimensão  
+##  <a name="Dim"></a> Objetos de dimensão  
  Para administrar ou processar uma dimensão, você programa o objeto <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>Criando, descartando e localizando uma dimensão  
@@ -183,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>Objetos de cubo  
+##  <a name="Cub"></a> Objetos de cubo  
  Para administrar ou processar um cubo, você programa o objeto <xref:Microsoft.AnalysisServices.Cube>.  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>Criando, descartando e localizando um cubo  
@@ -268,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>Objetos MeasureGroup  
+##  <a name="MG">Objetos MeasureGroup</a>  
  Para administrar ou processar um grupo de medidas, você programa o objeto <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>Criando, descartando e localizando um MeasureGroup  
@@ -437,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>Objetos de partição  
+##  <a name="Part">Objetos de partição</a>  
  Para administrar ou processar uma partição, você programa o objeto <xref:Microsoft.AnalysisServices.Partition>.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>Criando, descartando e localizando uma partição  
@@ -488,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>Processando uma partição  
+###  <a name="ProcPart"></a> Processando uma partição  
  O processamento de uma partição é tão simples quanto usar o método Process do objeto <xref:Microsoft.AnalysisServices.Partition>.  
   
  Para obter mais informações sobre opções de processamento, consulte [processamento de objetos &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) e [processando um modelo multidimensional &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -536,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>Objetos de agregação  
+##  <a name="AD">Objetos de agregação</a>  
  Para criar uma agregação e aplicá-la a uma ou mais partições, você programa o objeto <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ### <a name="creating-and-dropping-aggregations"></a>Criando e descartando agregações  
@@ -582,4 +579,3 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [Instalar dados de exemplo e projetos do Analysis Services Multidimensional Modeling Tutorial](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SRV_NOFREESRVPROC|  
-|Texto da mensagem|Não foi possível estabelecer conexão porque o número máximo de '%ld' conexões de usuário já foi atingido. The system administrator can use sp_configure to increase the maximum value. A conexão foi fechada.%.*ls|  
+|Texto da mensagem|Não foi possível estabelecer conexão porque o número máximo de '%ld' conexões de usuário já foi atingido. O administrador do sistema pode usar sp_configure para aumentar o valor máximo. A conexão foi fechada.%.*ls|  
   
 ## <a name="explanation"></a>Explicação  
 Mensagem autoexplicativa.  

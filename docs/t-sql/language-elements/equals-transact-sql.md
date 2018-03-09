@@ -1,5 +1,5 @@
 ---
-title: = (Igual a) (Transact-SQL) | Microsoft Docs
+title: = (Equals) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - = (Equals)
 - Equals
 - =_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - equals operator (=)
 - = (equals operator)
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d985df87124a7d682673e92fd92ebf6b54629563
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 256eaef54ad11a3a73751ae5ef23f7d52cdbef3a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-equals-transact-sql"></a>= (É igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +54,7 @@ expression = expression
 ## <a name="result-types"></a>Tipos de resultado  
  Booliano  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você compara duas expressões NULL, o resultado depende de `ANSI_NULLS` configuração:  
   
 -   Se `ANSI_NULLS` está definida como ON, o resultado será NULL, seguindo a convenção ANSI que um valor nulo (ou desconhecido) não é igual a outro valor NULL ou desconhecido.  
@@ -226,7 +228,7 @@ NULL
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

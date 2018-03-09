@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b01f4f3c3487fbd9f68c899e2c9e71dae7efd0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +47,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  O número de identificação da agenda a ser excluída. *schedule_id* é **int**, com um padrão NULL.  
   
 > **Observação:** ou *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  O nome da agenda a ser excluída. *schedule_name* é **sysname**, com um padrão NULL.  
   
 > **Observação:** ou *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [  **@force_delete**  =] *force_delete*  
+ [ **@force_delete** = ] *force_delete*  
  Especifica se o procedimento deve falhar se a agenda estiver anexada a um trabalho. *Force_delete* é bit, com um padrão de **0**. Quando *force_delete* é **0**, o procedimento armazenado falhará se a agenda estiver anexada a um trabalho. Quando *force_delete* é **1**, a agenda será excluída, independentemente se a agenda estiver anexada a um trabalho.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -63,7 +66,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Por padrão, uma agenda não poderá ser excluída se estiver anexada a um trabalho. Para excluir uma agenda que é anexada a um trabalho, especifique um valor de **1** para *force_delete*. A exclusão de uma agenda não para trabalhos que estejam atualmente em execução.  
   
 ## <a name="permissions"></a>Permissões  

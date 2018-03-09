@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>Rolagem relativas e absolutas
 A maioria das opções de rolagem no **SQLFetchScroll** posicionar o cursor em relação à posição atual ou para uma posição absoluta. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiro e últimos conjuntos de linhas, como busca bem como relativa (buscar o conjunto de linhas  *n*  linhas desde o início do conjunto de linhas atual) e busca absoluta (busca de conjunto de linhas começando na linha  *n* ). Se  *n*  é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Portanto, uma busca absoluta da linha -1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  
@@ -52,4 +50,3 @@ A maioria das opções de rolagem no **SQLFetchScroll** posicionar o cursor em r
  O número de linhas no cursor, que é o tamanho do resultado definido, está disponível como o campo SQL_DIAG_CURSOR_ROW_COUNT do cabeçalho de diagnóstico. O valor neste campo é definido somente depois **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResult** foi chamado. Esta contagem pode ser uma contagem aproximada ou uma contagem exata, dependendo dos recursos do driver. O suporte do driver pode ser determinado chamando **SQLGetInfo** com os tipos de informações de atributos de cursor e verificando se o bit SQL_CA2_CRC_APPROXIMATE ou SQL_CA2_CRC_EXACT é retornado para o tipo de cursor.  
   
  Uma contagem de linhas exato nunca é suportada para um cursor dinâmico. Para outros tipos de cursores, o driver pode suportar o contagens de linhas exato ou aproximado, mas não ambos. Se o driver dá suporte nem exato ou aproximado contagens de linha de um tipo de cursor específico, o campo SQL_DIAG_CURSOR_ROW_COUNT contém o número de linhas que foram buscadas até o momento. Independentemente do que o driver dá suporte a, **SQLFetchScroll** com um *operação* de SQL_FETCH_LAST fará com que o campo SQL_DIAG_CURSOR_ROW_COUNT conter o número exato de linhas.
-

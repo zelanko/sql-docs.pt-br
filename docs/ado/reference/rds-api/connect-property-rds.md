@@ -3,7 +3,7 @@ title: Conecte-se a propriedade (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bd6987efb685449d5decde777d4f67ba465a545e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46668b0b90099994724e39dc5f9d911431e6fd85
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-property-rds"></a>Conecte-se a propriedade (RDS)
 Indica o nome do banco de dados do qual as operações de consulta e atualização são executadas.  
@@ -62,6 +61,5 @@ Run time: DataControl.Connect = "ConnectionString"
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Atualizar o método (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

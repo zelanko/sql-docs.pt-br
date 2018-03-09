@@ -2,35 +2,33 @@
 title: "Referência de propriedades de atributo de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 76a57719a0e6e5fcfe899cfcd96f3187bc11ec30
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referência de propriedades de atributo de dimensão
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existem muitas propriedades que determinam como funcionam as dimensões e os atributos da dimensão. A tabela a seguir lista e descreve cada uma dessas propriedades de atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existem muitas propriedades que determinam como funcionam as dimensões e os atributos da dimensão. A tabela a seguir lista e descreve cada uma dessas propriedades de atributo.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -42,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |**CustomRollupColumn**|Especifica a coluna que define uma fórmula de rollup personalizado.|  
 |**CustomRollupPropertiesColumn**|Especifica a coluna que contém as propriedades de uma fórmula de rollup personalizado.|  
 |**DefaultMember**|Especifica uma expressão de linguagem MDX que define a medida padrão para o atributo.|  
-|**Description**|Contém a descrição do atributo.|  
+|**Descrição**|Contém a descrição do atributo.|  
 |**DiscretizationBucketCount**|Contém o número de recipientes nos quais são diferenciados.|  
 |**DiscretizationMethod**|Define o método a ser usado para diferenciação.|  
 |**EstimatedCount**|Especifica o número estimado de membros no atributo. Até a execução do Assistente de Design de Agregação, o valor padrão é zero. Você pode permitir que o assistente conte o número de registros ou digitar um valor estimado. Digite um valor manualmente se você souber o número de membros e quiser economizar o tempo necessário para consultar o banco de dados da conta. Se você estiver trabalhando com um subconjunto de testes de seus dados de produção, será possível usar as contagens dos dados de produção de forma que o design de agregação seja otimizado para os dados de produção em vez dos dados de teste.|  
@@ -72,6 +70,6 @@ ms.lasthandoff: 11/17/2017
 >  O membro padrão em um atributo será usado para avaliar as expressões quando um membro da hierarquia não for incluído explicitamente em uma consulta. O membro padrão de um atributo é especificado pela sua propriedade **DefaultMember** . Sempre que uma hierarquia de uma dimensão for incluída em uma consulta, todos os membros padrão de atributos correspondentes a níveis na hierarquia serão ignorados. Se nenhuma hierarquia de uma dimensão for incluída em uma consulta, os membros padrão serão usados em todos os atributos da dimensão. Para obter mais informações, consulte [Definir um membro padrão](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

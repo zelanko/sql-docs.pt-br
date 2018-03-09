@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-odbc"></a>Transações ODBC
 Um *transação* é uma unidade de trabalho que é feito como uma única operação atômica; ou seja, a operação for bem-sucedida ou falhar como um todo. Por exemplo, considere a transferência de dinheiro de uma conta bancária para outra. Isso envolve duas etapas: Retirando o dinheiro da primeira conta e depositando-lo no segundo. É importante que as duas etapas tiverem êxito; não é aceitável para uma etapa seja bem-sucedida e o outro falhar. Um banco de dados que oferece suporte a transações é capaz de garantir isso.  
@@ -46,4 +44,3 @@ Um *transação* é uma unidade de trabalho que é feito como uma única operaç
 -   [Isolamento de transação](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [Controle de simultaneidade](../../../odbc/reference/develop-app/concurrency-control.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil de padrão de coluna (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação de Perfil de Padrão de Coluna (tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Padrão de Coluna** selecionada no painel de solicitações. Um perfil de Padrão de Coluna informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres. Esse perfil pode ajudá-lo a identificar problemas em seus dados, como cadeias de caracteres inválidas, além de sugerir expressões regulares que podem ser usadas posteriormente para validar novos valores. Por exemplo, um perfil de padrão de uma coluna de Códigos Postais dos Estados Unidos pode produzir as expressões regulares \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Delimitadores** Por padrão, a lista de delimitadores contém os seguintes caracteres: espaço, guia horizontal (\t), nova linha (\n) e retorno de carro (\r). É possível especificar delimitadores adicionais, mas não é possível remover os delimitadores padrão.  
   
--   **Símbolos** por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%` , bem como a marca de escala. Por exemplo, se os símbolos forem "`()-`", será gerado o token ["(", "425", ")", "123", "-", "4567", ")"] para o valor "(425) 123-4567".  
+-   **Símbolos** Por padrão, a lista de **Símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`, além da marca de escala. Por exemplo, se os símbolos forem "`()-`", será gerado o token ["(", "425", ")", "123", "-", "4567", ")"] para o valor "(425) 123-4567".  
   
  Um caractere não pode ser um delimitador e um símbolo ao mesmo tempo.  
   
@@ -136,7 +135,7 @@ ms.lasthandoff: 10/05/2017
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
  **Símbolos**  
- Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e " @ " para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **Símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
@@ -150,9 +149,8 @@ ms.lasthandoff: 10/05/2017
   
  Para obter mais informações, consulte "Compreendendo o uso da tabela de marcas" anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

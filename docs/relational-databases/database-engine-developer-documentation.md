@@ -2,29 +2,33 @@
 title: "Documentação do desenvolvedor do Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a00f76db34b27e6bb13f7b7ddc5422774746adb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23d61cdb9d6f82ddd2e35e7e4e8999cd814557b7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Documentação do desenvolvedor do Mecanismo de Banco de Dados
-  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um rico conjunto de ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/09/2017
  [Programação da caixa de mensagem de exceção](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Descreve como você pode usar a interface programática da caixa de mensagens de exceção em seus aplicativos de forma a fornecer mais controle sobre a experiência de mensagens, dar aos usuários a opção de salvar o conteúdo de mensagens de erro para referência posterior e obter ajuda com as mensagens.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação de mineração de dados](../analysis-services/data-mining-programming.md)   
  [Documentação do desenvolvedor do Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
  [Documentação do desenvolvedor do Integration Services](../integration-services/integration-services-developer-documentation.md)   

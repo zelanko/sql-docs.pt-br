@@ -2,27 +2,30 @@
 title: "Propriedades do banco de dados (página Arquivos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ecac22fb15ab111571fdfdb8285d30f515bd8e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>Propriedades do Banco de Dados (página Arquivos)
-  Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do banco de dados**  
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
  Para obter informações sobre arquivos, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

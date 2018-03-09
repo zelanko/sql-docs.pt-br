@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4d94cc3308964a97e5355de0f68306dcd375058
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-the-driver-manager-does"></a>O que faz o Gerenciador de Driver
 A tabela a seguir resume como o ODBC 3*. x* Gerenciador de Driver mapeia chamadas para ODBC 2. *x* e o ODBC 3*. x* drivers.  
@@ -46,4 +44,3 @@ A tabela a seguir resume como o ODBC 3*. x* Gerenciador de Driver mapeia chamada
 |**SQLFetchScroll**|Retorna o conjunto de linhas especificado. A seguir estão os detalhes de implementação:<br /><br /> -Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2. *x* driver, o ODBC 3*. x* Gerenciador de Driver mapeia para **SQLExtendedFetch**. Ele usa o valor armazenado em cache do atributo de instrução SQL_ATTR_ROW_STATUS_PTR para o *RowStatusArray* argumento e o valor armazenado em cache do atributo SQL_ATTR_ROWS_FETCHED_PTR de instrução para o *RowCountPtr* argumento. Se o *FetchOrientation* argumento **SQLFetchScroll** é SQL_FETCH_BOOKMARK, ele usa o valor armazenado em cache do atributo de instrução SQL_ATTR_FETCH_BOOKMARK_PTR para o *FetchOffset*  argumento e retorna um erro se o *FetchOffset* argumento de **SQLFetchScroll** é não em 0.<br />-Quando um aplicativo chama isso em um ODBC 3*. x* driver, o ODBC 3*. x* Gerenciador de Driver passará a chamada para o driver.|  
 |**SQLSetPos**|Executa várias operações posicionadas. O ODBC 3*. x* Gerenciador de Driver passa chamadas para **SQLSetPos** para o driver, independentemente da versão do driver.|  
 |**SQLSetScrollOptions**|Quando o Gerenciador de Driver mapeia **SQLSetScrollOptions** para um aplicativo trabalhando com um ODBC 3*. x* driver não oferece suporte a **SQLSetScrollOptions**, o Driver Manager define a opção de instrução SQL_ROWSET_SIZE, não o atributo SQL_ATTR_ROW_ARRAY_SIZE instrução para o *RowsetSize* argumento **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** não pode ser usado por um aplicativo ao buscar várias linhas por uma chamada para **SQLFetch** ou **SQLFetchScroll**. Ele pode ser usado somente quando a busca de várias linhas por uma chamada para **SQLExtendedFetch**.|
-

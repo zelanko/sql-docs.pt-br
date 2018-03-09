@@ -2,9 +2,12 @@
 title: "Populando uma tabela com os dados hierárquicos existentes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f9580f99974d4453a7633c6640f8b5ca418e35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lição 1-2 – Populando uma tabela com os dados hierárquicos existentes
-Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo** . Essa tarefa tem as seguintes etapas:  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  
   
 -   Crie uma nova tabela que contém uma coluna **hierarchyid** . Essa coluna pode substituir as colunas **EmployeeID** e **ManagerID** existentes. Entretanto, você manterá essas colunas. Isso porque os aplicativos existentes podem se referir a essas colunas e, também, para ajudar a compreender os dados depois da transferência. A definição da tabela especifica que **OrgNode** é a chave primária, exigindo que a coluna contenha valores exclusivos. O índice clusterizado da coluna **OrgNode** armazenará a data na sequência **OrgNode** .  
   

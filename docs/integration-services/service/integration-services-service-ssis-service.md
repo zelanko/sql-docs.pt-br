@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (serviço SSIS) | Microsoft Docs"
+title: "Serviço SSIS (Serviço Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -25,22 +25,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 06b632de9ef477e31de110f98a8fca4295144bb9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
   Os tópicos desta seção discutem o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para gerenciamento de pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Este serviço não é exigido para criar, salvar e executar pacotes do Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena objetos, configurações e dados operacionais no banco de dados **SSISDB** para projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projetos. O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que é uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , hospeda o banco de dados. Para obter mais informações sobre o banco de dados, consulte [Catálogo do SSIS](../../integration-services/service/ssis-catalog.md). Para obter mais informações sobre como implantar projetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, consulte [implantar Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena objetos, configurações e dados operacionais no banco de dados **SSISDB** para projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projetos. O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que é uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , hospeda o banco de dados. Para obter mais informações sobre o banco de dados, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md). Para obter mais informações sobre como implantar projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ## <a name="management-capabilities"></a>Recursos de gerenciamento  
  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é um serviço Windows para gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está disponível apenas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -175,7 +174,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 -   As pastas raiz para exibir para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são as pastas MSDB e Sistema de arquivos.  
   
--   Os pacotes no sistema de arquivos que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serviço gerencia estão localizados em %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
+-   Os pacotes no sistema de arquivos que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gerencia estão localizados em %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
   
  Esse arquivo de configuração também especifica qual banco de dados msdb contém os pacotes que o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] administrará. Por padrão, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para gerenciar pacotes no banco de dados msdb de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que é instalada ao mesmo tempo em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não for instalada ao mesmo tempo, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será configurado para gerenciar pacotes no banco de dados msdb de uma instância local padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -255,17 +254,17 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Modificar o local do arquivo de configuração  
- A chave do registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** Especifica o local e o nome para a configuração de arquivo que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serviço usa. O valor padrão da chave do registro é **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Você pode atualizar o valor da chave do Registro para usar um nome e local diferentes para o arquivo de configuração. Observe que o número de versão no caminho (120 para o SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) irão variar dependendo da versão do SQL Server.
+ A chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** especifica o local e o nome do arquivo de configuração usado pelo serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. O valor padrão da chave do Registro é **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Você pode atualizar o valor da chave do Registro para usar um nome e local diferentes para o arquivo de configuração. Observe que o número de versão no caminho (120 para o SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) pode variar dependendo da versão do SQL Server.
   
 > [!CAUTION]  
 >  A edição incorreta do Registro pode provocar problemas sérios que exigem a reinstalação do sistema operacional. [!INCLUDE[msCoName](../../includes/msconame-md.md)] não pode garantir que os problemas resultantes da edição incorreta do Registro podem ser resolvidos. Antes de editar o Registro, faça backup de todos os dados valiosos. Para obter informações sobre como fazer backup, restaurar e editar o Registro, consulte o artigo da Base de Dados de Conhecimento sobre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Descrição do Registro do Microsoft Windows](http://support.microsoft.com/kb/256986).  
   
  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] carrega o arquivo de configuração quando o serviço é iniciado. Qualquer alteração na entrada do Registro exige que o serviço seja reiniciado.  
 
-## <a name="connect-to-the-local-service"></a>Conecte-se ao serviço local
+## <a name="connect-to-the-local-service"></a>Conectar-se ao serviço local
   Antes de você se conectar ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o administrador deve conceder a você acesso para o serviço. 
   
-### <a name="to-connect-to-the-integration-services-service"></a>Para se conectar ao serviço do Integration Services  
+### <a name="to-connect-to-the-integration-services-service"></a>Para se conectar ao Serviço Integration Services  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -277,7 +276,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 5.  Clique em **Conectar**.  
 
-## <a name="connect-to-a-remote-ssis-server"></a>Conectar a um servidor remoto do SSIS
+## <a name="connect-to-a-remote-ssis-server"></a>Conectar-se a um servidor remoto do SSIS
   
  Para se conectar a uma instância do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um servidor remoto, a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de outro aplicativo de gerenciamento, é necessário um conjunto específico de direitos no servidor para os usuários do aplicativo.  
   
@@ -361,20 +360,20 @@ Para obter mais informações, consulte [Getting Cross Domain Kerberos and Deleg
  
 ## <a name="configure-the-firewall"></a>Configurar o firewall
   
- O sistema de firewall do Windows ajuda a evitar acesso não autorizado aos recursos do computador em uma conexão de rede. Para acessar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] por meio desse firewall, você precisa configurar o firewall para habilitar o acesso.  
+ O sistema de firewall do Windows ajuda a impedir o acesso não autorizado a recursos do computador em uma conexão de rede. Para acessar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] por meio desse firewall, você precisa configurar o firewall para habilitar o acesso.  
   
 > [!IMPORTANT]  
 >  Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto.
   
  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o protocolo DCOM. Para obter mais informações sobre como o protocolo DCOM funciona por meio de firewalls, consulte o artigo “[Usando COM distribuída com firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)”, na Biblioteca MSDN.  
   
- Há muitos sistemas de firewall disponíveis. Se você estiver executando um firewall diferente do firewall do Windows, consulte a documentação do firewall para obter informações específicas para o sistema que você está usando.  
+ Há muitos sistemas de firewall disponíveis. Se estiver executando um firewall diferente do firewall do Windows, consulte a documentação do firewall para obter informações específicas ao sistema utilizado.  
   
  Se o firewall oferecer suporte a filtros no nível de aplicativo, você poderá usar a interface do usuário que o Windows fornece para especificar as exceções permitidas pelo firewall, como programas e serviços. Caso contrário, você precisará configurar o DCOM para usar um conjunto limitado de portas TCP. O link do site da Microsoft fornecido anteriormente inclui informações sobre como especificar as portas TCP a serem usadas.  
   
  O serviço Integration Services usa a porta 135, e ela não pode ser alterada. Você precisa abrir a porta TCP 135 para acessar o SCM (Gerenciador de Controle de Serviços). O SCM executa tarefas como iniciar e parar os serviços [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e transmitir solicitações de controle ao serviço em execução.  
   
- As informações na seção a seguir são específicas para o firewall do Windows. Você pode configurar o sistema de firewall do Windows ao executar um comando no prompt de comando, ou definindo propriedades na caixa de diálogo firewall do Windows.  
+ As informações da seção a seguir são específicas ao firewall do Windows. Configure o sistema do firewall do Windows executando um comando no prompt de comando ou configurando as propriedades na caixa de diálogo do firewall do Windows.  
   
  Para obter mais informações sobre as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -400,7 +399,7 @@ Para obter mais informações, consulte [Getting Cross Domain Kerberos and Deleg
   
  O procedimento a seguir descreve como usar a interface do usuário do Windows para abrir a porta TCP 135, adicionar o MsDtsSrvr.exe à lista de exceções e especificar o escopo de desbloqueio para o firewall.  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Para configurar um firewall usando a caixa de diálogo firewall do Windows  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Para configurar um firewall usando a caixa de diálogo Firewall do Windows  
   
 1.  No Painel de Controle, clique duas vezes em **Firewall do Windows**.  
   
@@ -424,5 +423,4 @@ Para obter mais informações, consulte [Getting Cross Domain Kerberos and Deleg
 9. Para fechar a caixa de diálogo **Firewall do Windows** , clique em **OK**.  
   
     > [!NOTE]  
-    >  Para configurar o firewall do Windows, esse procedimento usa o **Firewall do Windows** item no painel de controle. O item **Firewall do Windows** configura apenas o firewall do perfil do local de rede local. No entanto, você também pode configurar o firewall do Windows usando o **netsh** ferramenta de linha de comando ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] snap-in Management Console (MMC) denominado firewall do Windows com segurança avançada. Para obter mais informações sobre como fazer isso, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
-
+    >  Para configurar o firewall do Windows, este procedimento usa o item **Firewall do Windows** no Painel de Controle. O item **Firewall do Windows** configura apenas o firewall do perfil do local de rede local. No entanto, também configure o firewall do Windows usando a ferramenta de linha de comando **netsh** ou o snap-in MMC (Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)]) chamado Firewall do Windows com Segurança Avançada. Para obter mais informações sobre como fazer isso, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

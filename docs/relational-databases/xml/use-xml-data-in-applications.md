@@ -2,10 +2,14 @@
 title: Usar dados XML em aplicativos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9679fc0d98f7a4dab82aa866cb2a190c4a111f60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0422e858859ee86c460a875b11b97c4f348efa94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
-  Este tópico descreve as opções disponíveis para trabalhar com o tipo de dados **xml** em seu aplicativo. O tópico contém informações sobre o seguinte:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve as opções disponíveis para trabalhar com o tipo de dados **xml** em seu aplicativo. O tópico contém informações sobre o seguinte:  
   
 -   Tratando XML de uma coluna de tipo **xml** usando o ADO e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
@@ -157,7 +162,7 @@ Row 2
   
  Para obter mais informações e um código de exemplo, confira “Valores XML como parâmetros de comando” na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbfe6e6d06a71e54b93e90cf42c121fdaab7927
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Políticas AlwaysOn para problemas operacionais – disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +77,12 @@ ms.lasthandoff: 11/20/2017
 |Estado da Função das Réplica de Disponibilidade|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
 |Estado da conexão em réplicas de disponibilidade|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
 |Estado da função da réplica de disponibilidade|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
-|Estado da Conexão da Réplica de Disponibilidade|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Crítico|réplica de disponibilidade|  
-|Estado da junção da réplica de disponibilidade|[A réplica de disponibilidade não está unida](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Aviso|réplica de disponibilidade|  
-|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|réplica de disponibilidade|  
-|Estado de Suspensão do Banco de Dados de Disponibilidade|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Aviso|banco de dados de disponibilidade|  
-|Estado de junção do banco de dados de disponibilidade|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Aviso|banco de dados de disponibilidade|  
-|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|banco de dados de disponibilidade|  
+|Estado da Conexão da Réplica de Disponibilidade|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Crítico|Réplica de disponibilidade|  
+|Estado da junção da réplica de disponibilidade|[A réplica de disponibilidade não está unida](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Aviso|Réplica de disponibilidade|  
+|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|Réplica de disponibilidade|  
+|Estado de Suspensão do Banco de Dados de Disponibilidade|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Aviso|Banco de dados de disponibilidade|  
+|Estado de junção do banco de dados de disponibilidade|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Aviso|Banco de dados de disponibilidade|  
+|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|Banco de dados de disponibilidade|  
   
 > [!IMPORTANT]  
 >  **\*** Para as políticas AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administração de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   

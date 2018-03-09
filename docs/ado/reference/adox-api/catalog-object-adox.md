@@ -3,7 +3,7 @@ title: "Catálogo de objeto (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5d8f47b63022f481c5ed102bcc9e97f5fa563aea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26033bff0a1a88da25ed2eae566ffef49538c35f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-adox"></a>Objeto de catálogo (ADOX)
 Contém coleções ([tabelas](../../../ado/reference/adox-api/tables-collection-adox.md), [exibições](../../../ado/reference/adox-api/views-collection-adox.md), [usuários](../../../ado/reference/adox-api/users-collection-adox.md), [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), e [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md)) que Descreva o catálogo de esquema de uma fonte de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode modificar o **catálogo** objeto adicionando ou removendo objetos ou modificando os objetos existentes. Alguns provedores podem não dar suporte a todos os **catálogo** suporte somente para exibir informações de esquema ou objetos.  
   
  Com as propriedades e métodos de um **catálogo** do objeto, você pode:  
@@ -69,4 +68,3 @@ Contém coleções ([tabelas](../../../ado/reference/adox-api/tables-collection-
  [Coleção de tabelas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Coleção de usuários (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

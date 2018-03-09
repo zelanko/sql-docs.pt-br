@@ -3,12 +3,17 @@ title: "Opção de failover de detecção de integridade do banco de dados | Mic
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -16,22 +21,22 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: "4"
-author: JasonWHowell
-ms.author: jasonh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce5cf8ff6cbbddd0e4a65d702494d80cf7537490
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+A partir do SQL Server 2016, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade AlwaysOn. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade.
 
-A partir do SQL Server 2016, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade AlwaysOn. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade. 
-
-A detecção de integridade no nível do banco de dados está habilitada no grupo de disponibilidade como um todo e, portanto, a detecção de integridade no nível do banco de dados monitora cada banco de dados no grupo de disponibilidade. Ela não pode ser habilitada seletivamente em bancos de dados específicos no grupo de disponibilidade. 
+A detecção de integridade no nível do banco de dados está habilitada no grupo de disponibilidade como um todo e, portanto, a detecção de integridade no nível do banco de dados monitora cada banco de dados no grupo de disponibilidade. Ela não pode ser habilitada seletivamente em bancos de dados específicos no grupo de disponibilidade.
 
 ## <a name="benefits-of-database-level-health-detection-option"></a>Benefícios da opção de detecção de integridade no nível do banco de dados
 ---
@@ -41,15 +46,15 @@ Por exemplo, com a opção de detecção de integridade no nível do banco de da
 
 <a name="enabling-database-level-health-detection"></a>Habilitando a detecção de integridade no nível do banco de dados
 ----
-Embora geralmente seja recomendada, a opção Integridade do Banco de Dados está **desativada por padrão**, em um esforço para manter a compatibilidade das configurações padrão em versões anteriores. 
+Embora geralmente seja recomendada, a opção Integridade do Banco de Dados está **desativada por padrão**, em um esforço para manter a compatibilidade das configurações padrão em versões anteriores.
 
 Há várias maneiras fáceis de habilitar a configuração de detecção de integridade no nível do banco de dados:
 
-1. No SQL Server Management Studio, conecte-se ao mecanismo de banco de dados do SQL Server. Usando a janela Pesquisador de Objetos, clique com o botão direito do mouse no nó Alta Disponibilidade AlwaysOn e execute o **Assistente de Novo Grupo de Disponibilidade**. Marque a caixa de seleção **Detecção de Integridade no Nível do Banco de Dados** na página Especificar Nome. Em seguida, conclua o restante das páginas do assistente. 
+1. No SQL Server Management Studio, conecte-se ao mecanismo de banco de dados do SQL Server. Usando a janela Pesquisador de Objetos, clique com o botão direito do mouse no nó Alta Disponibilidade AlwaysOn e execute o **Assistente de Novo Grupo de Disponibilidade**. Marque a caixa de seleção **Detecção de Integridade no Nível do Banco de Dados** na página Especificar Nome. Em seguida, conclua o restante das páginas do assistente.
 
    ![Caixa de seleção Habilitar Integridade do Banco de Dados do AlwaysOn](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. Exiba as **Propriedades** de um Grupo de Disponibilidade existente no SQL Server Management Studio. Conecte-se ao SQL Server. Usando a janela Pesquisador de Objetos, expanda o nó Alta Disponibilidade AlwaysOn. Expanda Grupos de Disponibilidade. Clique com o botão direito do mouse no grupo de disponibilidade e escolha Propriedades. Marque a opção **Detecção de Integridade no Nível do Banco de Dados** e, em seguida, clique em OK ou em Criar script da alteração. 
+2. Exiba as **Propriedades** de um Grupo de Disponibilidade existente no SQL Server Management Studio. Conecte-se ao SQL Server. Usando a janela Pesquisador de Objetos, expanda o nó Alta Disponibilidade AlwaysOn. Expanda Grupos de Disponibilidade. Clique com o botão direito do mouse no grupo de disponibilidade e escolha Propriedades. Marque a opção **Detecção de Integridade no Nível do Banco de Dados** e, em seguida, clique em OK ou em Criar script da alteração.
 
    ![Detecção de Integridade no Nível do Banco de Dados nas propriedades do AG AlwaysOn](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
@@ -57,13 +62,13 @@ Há várias maneiras fáceis de habilitar a configuração de detecção de inte
 3. Sintaxe do Transact-SQL de **CREATE AVAILABILITY GROUP**. O parâmetro DB_FAILOVER aceita valores ON ou OFF.
 
    ```Transact-SQL
-   CREATE AVAILABILITY GROUP [Contoso-ag] 
+   CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
-   FOR DATABASE [AutoHa-Sample] 
-   REPLICA ON 
-       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022', 
-         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT), 
-       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',  
+   FOR DATABASE [AutoHa-Sample]
+   REPLICA ON
+       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022',
+         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT),
+       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
     ```
 
@@ -71,20 +76,20 @@ Há várias maneiras fáceis de habilitar a configuração de detecção de inte
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
-   
+
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
    ```
 
 ### <a name="caveats"></a>Advertências
 
-É importante observar que, atualmente, a opção Detecção de Integridade no Nível do Banco de Dados não faz com que o SQL Server monitore o tempo de atividade de disco e o SQL Server não monitora diretamente a disponibilidade do arquivo de banco de dados. Caso uma unidade de disco falhe ou não esteja disponível, isso por si só não necessariamente disparará o grupo de disponibilidade para fazer failover de modo automático. 
+É importante observar que, atualmente, a opção Detecção de Integridade no Nível do Banco de Dados não faz com que o SQL Server monitore o tempo de atividade de disco e o SQL Server não monitora diretamente a disponibilidade do arquivo de banco de dados. Caso uma unidade de disco falhe ou não esteja disponível, isso por si só não necessariamente disparará o grupo de disponibilidade para fazer failover de modo automático.
 
 Por exemplo, quando um banco de dados está ocioso sem nenhuma transação ativa e não está ocorrendo nenhuma gravação física, caso alguns dos arquivos do banco de dados fiquem inacessíveis, o SQL Server poderá não executar a E/S de leitura ou gravação para os arquivos nem alterar o status desse banco de dados imediatamente e, portanto, nenhum failover será disparado. Posteriormente, quando ocorrer um ponto de verificação do banco de dados ou ocorrer uma leitura ou gravação física para atender a uma consulta, o SQL Server poderá perceber o problema de arquivo e responder alterando o status do banco de dados e, mais tarde, o grupo de disponibilidade com a detecção de integridade no nível do banco de dados definida como ativada fará failover devido à alteração da integridade do banco de dados.
 
-Como outro exemplo, quando o mecanismo de banco de dados do SQL Server precisar ler uma página de dados para atender a uma consulta, se a página de dados estiver armazenada em cache na memória do pool de buffers, nenhuma leitura de disco com acesso físico poderá ser necessária para atender à solicitação de consulta. Portanto, um arquivo de dados ausente ou não disponível poderá não disparar um failover automático imediatamente, mesmo quando a opção de integridade do banco de dados estiver habilitada, já que o status do banco de dados não está imediatamente.  
+Como outro exemplo, quando o mecanismo de banco de dados do SQL Server precisar ler uma página de dados para atender a uma consulta, se a página de dados estiver armazenada em cache na memória do pool de buffers, nenhuma leitura de disco com acesso físico poderá ser necessária para atender à solicitação de consulta. Portanto, um arquivo de dados ausente ou não disponível poderá não disparar um failover automático imediatamente, mesmo quando a opção de integridade do banco de dados estiver habilitada, já que o status do banco de dados não está imediatamente.
 
 
-## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>O failover de banco de dados é separado da política de failover flexível 
+## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>O failover de banco de dados é separado da política de failover flexível
 A detecção de integridade no nível do banco de dados implementa uma política de failover flexível que configura os limites da integridade do processo do SQL Server para a política de failover. A detecção de integridade no nível do banco de dados é configurada com o parâmetro DB_FAILOVER, enquanto a opção de grupo de disponibilidade FAILURE_CONDITION_LEVEL é separada para configurar a detecção de integridade do processo do SQL Server. As duas opções são independentes.
 
 ## <a name="managing-and-monitoring-database-level-health-detection"></a>Gerenciando e monitorando a detecção de integridade no nível do banco de dados
@@ -100,14 +105,14 @@ select name, db_failover from sys.availability_groups
 
 Saída de DMV de exemplo:
 
-name  |  db_failover  
+NAME  |  db_failover
 ---------|---------
 | Contoso-ag |  1  |
 
-### <a name="errorlog"></a>ErrorLog 
-O Log de erros do SQL Server (ou o texto de sp_readerrorlog) mostrará a mensagem de erro 41653 quando um grupo de disponibilidade tiver feito failover, devido às verificações de detecção de integridade no nível do banco de dados. 
+### <a name="errorlog"></a>ErrorLog
+O Log de erros do SQL Server (ou o texto de sp_readerrorlog) mostrará a mensagem de erro 41653 quando um grupo de disponibilidade tiver feito failover, devido às verificações de detecção de integridade no nível do banco de dados.
 
-Por exemplo, esse trecho do log de erros mostra que uma gravação do log de transações falhou devido a um problema de disco e, posteriormente, o banco de dados chamado AutoHa-Sample foi desligado, o que disparou a detecção de integridade no nível do banco de dados para fazer failover do grupo de disponibilidade.  
+Por exemplo, esse trecho do log de erros mostra que uma gravação do log de transações falhou devido a um problema de disco e, posteriormente, o banco de dados chamado AutoHa-Sample foi desligado, o que disparou a detecção de integridade no nível do banco de dados para fazer failover do grupo de disponibilidade.
 
 >2016-04-25 12:20:21.08 spid1s      Erro: 17053, Severidade: 16, Estado: 1.
 >
@@ -132,22 +137,22 @@ Por exemplo, esse trecho do log de erros mostra que uma gravação do log de tra
 
 ### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Evento Estendido sqlserver.availability_replica_database_fault_reporting
 
-Há um novo Evento Estendido definido a partir do SQL Server 2016, que é disparado pela detecção de integridade no nível do banco de dados.  O nome do evento é **sqlserver.availability_replica_database_fault_reporting** 
+Há um novo Evento Estendido definido a partir do SQL Server 2016, que é disparado pela detecção de integridade no nível do banco de dados.  O nome do evento é **sqlserver.availability_replica_database_fault_reporting**
 
-Esse XEvent é disparado somente na réplica primária. Esse XEvent é disparado quando um problema de integridade no nível do banco de dados é detectado em um banco de dados hospedado em um grupo de disponibilidade. 
+Esse XEvent é disparado somente na réplica primária. Esse XEvent é disparado quando um problema de integridade no nível do banco de dados é detectado em um banco de dados hospedado em um grupo de disponibilidade.
 
 Este é um exemplo para criar uma sessão de XEvent que captura esse evento. Como nenhum caminho é especificado, o arquivo de saída de XEvent deve estar localizado no caminho do log de erros padrão do SQL Server. Execute isto na réplica primária do grupo de disponibilidade:
 
 Script de exemplo da sessão de evento estendido
 ```
-CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
 WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,
     MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
-GO 
+GO
 ALTER EVENT SESSION AlwaysOn_dbfault ON SERVER STATE=START
-GO 
+GO
 ```
 
 #### <a name="extended-event-output"></a>Saída de evento estendido
@@ -163,7 +168,7 @@ Explicação sobre os campos:
 |availability_replica_name  |O nome da réplica de disponibilidade.
 |database_name  |O nome do banco de dados que relata a falha.
 |database_replica_id    |A ID do banco de dados de réplica de disponibilidade.
-|failover_ready_replicas    |O número de réplicas secundárias de failover automático que são sincronizadas. 
+|failover_ready_replicas    |O número de réplicas secundárias de failover automático que são sincronizadas.
 |fault_type     | A ID de falha relatada. Valores possíveis:  <br/> 0 – NONE <br/>1 – Desconhecido<br/>2 – Desligamento
 |is_critical    | Esse valor deve sempre retornar verdadeiro para o XEvent, a partir do SQL Server 2016.
 
@@ -180,7 +185,7 @@ Nesta saída de exemplo, o fault_type mostra que ocorreu um evento crítico no g
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
 |failover_ready_replicas |  1
 |fault_type |   2
-|is_critical    | Verdadeiro
+|is_critical    | True
 
 
 ### <a name="related-references"></a>Referências relacionadas

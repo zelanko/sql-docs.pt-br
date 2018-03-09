@@ -2,9 +2,12 @@
 title: Modelo de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>Banco de dados modelo
-  O banco de dados **modelo** é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O **modelo** de banco de dados é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Bancos de dados de usuários recém-criados usam o mesmo [modelo de recuperação](../../relational-databases/backup-restore/recovery-models-sql-server.md) do banco de dados modelo. O padrão é configurável pelo usuário. Para saber mais sobre o modelo de recuperação atual do modelo, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
@@ -65,15 +68,15 @@ ms.lasthandoff: 11/09/2017
 |AUTO_SHRINK|OFF|Sim|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|Não|  
+|CHANGE_TRACKING|OFF|não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Sim<br /><br /> Sim|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> Sim<br /><br /> Sim|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|OFF|Não|  
-|ENCRYPTION|OFF|Não|  
-|MIXED_PAGE_ALLOCATION|ON|Não|  
+|DB_CHAINING|OFF|não|  
+|ENCRYPTION|OFF|não|  
+|MIXED_PAGE_ALLOCATION|ON|não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
@@ -81,14 +84,14 @@ ms.lasthandoff: 11/09/2017
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
 |RECOVERY|Depende da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|Não|  
-|TRUSTWORTHY|OFF|Não|  
+|Opções do Service Broker|DISABLE_BROKER|não|  
+|TRUSTWORTHY|OFF|não|  
   
  *Para confirmar o modelo de recuperação atual do banco de dados, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrições  
+## <a name="restrictions"></a>Restrictions  
  As operações a seguir não podem ser executadas no banco de dados **modelo** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  

@@ -3,8 +3,9 @@ title: "Método Update | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Update
-helpviewer_keywords: Update method [ADO]
+f1_keywords:
+- Recordset15::Update
+helpviewer_keywords:
+- Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cf6ded5026c89caa6e8656cf9160ab192650484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-method"></a>Método Update
 Salva as alterações feitas à linha atual de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
@@ -38,13 +41,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Campos*  
+ *Fields*  
  Opcional. Um **Variant** que representa um único nome, ou um **Variant** matriz que representa os nomes ou posições ordinais de campos que você deseja modificar.  
   
  *Valores*  
  Opcional. Um **Variant** que representa um único valor, ou um **Variant** matriz que representa valores de campos no novo registro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use o **atualização** método para salvar as alterações feitas para o registro atual de um **registros** objeto desde a chamada a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método ou desde alterar quaisquer valores de campo em um registro existente. O **registros** objeto deve dar suporte a atualizações.  

@@ -1,13 +1,14 @@
 ---
-title: "Relatório de funções de serviços-tarefas vs. Permissões de grupos do SharePoint | Microsoft Docs"
+title: "Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,18 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
-ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Relatório de funções de serviços-tarefas vs. Permissões de grupos do SharePoint
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Funções-tarefas do Reporting Services versus Grupos-permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
   
 ||  
@@ -108,12 +108,11 @@ ms.lasthandoff: 11/07/2017
 |Exibir propriedades do servidor de relatório|Sistema|Nenhum (não aplicável). O servidor de relatório não controla se um usuário tem permissão para exibir configurações de integração em Administração Central.|  
 |Exibir agendas compartilhadas|Sistema|Abrir itens.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Definir permissões para operações de servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)   
  [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

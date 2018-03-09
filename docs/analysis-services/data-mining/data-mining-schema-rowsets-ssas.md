@@ -2,15 +2,13 @@
 title: "Conjuntos de linhas do esquema (SSAs) de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], retrieving
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afa0eedc469956d5b3e8886775feaf8f61a36328
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7b91dca4cc8b5ca8968a864f75a7c91668a980d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Conjuntos de linhas de esquema de mineração de dados (SSAs)
-  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Você também pode consultar os conjuntos de linhas de esquema de mineração de dados usando o XMLA. Para obter mais informações sobre como fazer isso no SQL Server Management Studio, consulte [Criar uma consulta de mineração de dados usando o XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  

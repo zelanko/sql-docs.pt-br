@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: daec5ed8b8ea3aece68c5bcde3522e8e3f9de9f4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar um servidor para escutar em uma porta TCP específica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ Como a porta 1433 é o padrão conhecido para o [!INCLUDE[ssNoVersion](../../inc
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Na caixa de diálogo **Propriedades de***n* **Propriedades** , na caixa **Porta TCP** , digite o número da porta em que esse endereço IP deve escutar e clique em **OK**.  
+4.  Na caixa de diálogo da área **Propriedades** de**IP***n*, na caixa **Porta TCP**, digite o número da porta em que esse endereço IP deve escutar e, em seguida, clique em **OK**.  
   
 5.  No painel de console, clique em **Serviços do SQL Server**.  
   
@@ -74,7 +75,7 @@ Após configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par
 -   Crie um alias no cliente, especificando o número da porta.  
 -   Programe o cliente para se conectar usando uma cadeia de conexão personalizada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Serviço Navegador do SQL Server](../../tools/configuration-manager/sql-server-browser-service.md)  
   

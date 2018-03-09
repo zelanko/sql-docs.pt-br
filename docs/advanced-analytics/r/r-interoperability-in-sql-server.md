@@ -2,25 +2,28 @@
 title: Interoperabilidade de R no SQL Server R Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 817c05a5f677e1466d4e573c3af3d66145ce0ca9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilidade de R no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico enfoca o mecanismo de execução de R no SQL Server e descreve as diferenças entre o Microsoft R e software livre R.
 
@@ -30,11 +33,11 @@ Para obter informações sobre os componentes adicionais, consulte [novos compon
 
 ### <a name="open-source-r-components"></a>Componentes de software livre R
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] inclui uma distribuição completa dos pacotes R de base e ferramentas. Para obter mais informações sobre o que está incluído na distribuição de base, consulte a documentação instalada durante a instalação no seguinte local padrão: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] inclui uma distribuição completa dos pacotes de R base e ferramentas. Para obter mais informações sobre o que está incluído na distribuição de base, consulte a documentação instalada durante a instalação no seguinte local padrão: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Como parte da instalação do [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], você deve concordar com os termos da Licença Pública de GNU. Depois disso, você poderá executar pacotes R padrão sem modificações adicionais como faria em qualquer outra distribuição de software livre de R.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] não modifica o tempo de execução de R de nenhuma maneira. O tempo de execução de R é executado fora do processo [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e pode ser executado independentemente de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. No entanto, é altamente recomendável que você não execute essas ferramentas enquanto [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está usando R, para evitar contenção de recursos.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Não modifique o tempo de execução de R de qualquer forma. O tempo de execução de R é executado fora do processo [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e pode ser executado independentemente de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. No entanto, é altamente recomendável que você não execute essas ferramentas enquanto [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está usando R, para evitar contenção de recursos.
 
 A distribuição de pacote base de R que está associada a uma determinada instância [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser encontrada na pasta associada à instância. Por exemplo, se você instalou o R Services na instância padrão, as bibliotecas de R estão localizadas na pasta por padrão:
 

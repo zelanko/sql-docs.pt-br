@@ -1,5 +1,5 @@
 ---
-title: "Concluir o Assistente para dimensões de alteração lenta | Microsoft Docs"
+title: "Concluir o Assistente para Dimensões de Alteração Lenta | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f3e966952f36966c21c6732845224510b543e9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 52c3f9f2606d3ced4928e877f9a4a41dfdacfa72
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Conclua o Assistente para Dimensões de Alteração Lenta
   Use a caixa de diálogo **Conclua o Assistente para Dimensões de Alteração Lenta** para verificar as escolhas antes que o assistente crie o suporte para dimensões de alteração lenta.  
@@ -36,8 +35,7 @@ ms.lasthandoff: 08/03/2017
  **As seguintes saídas serão configuradas**  
  Confirme se a lista de saídas é adequada para seus objetivos.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar saídas por meio do Assistente para dimensões de alteração lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

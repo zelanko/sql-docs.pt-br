@@ -1,5 +1,5 @@
 ---
-title: "Procedimentos (catálogo do Integration Services) armazenados | Microsoft Docs"
+title: "Procedimentos armazenados (Catálogo do Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -15,24 +15,23 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 21715bf65f3a85669dfe823511ddb9b6c2dd4d57
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c937ee4c21b3446a50dbd7ce29bbe8b5fb25b0f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Procedimentos armazenados (Catálogo do Integration Services)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Esta seção descreve os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] disponíveis para administrar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implantados a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Chamar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] procedimentos armazenados para adicionar, remover, modificar ou executar objetos armazenados na **SSISDB** catálogo.  
+ Chame os procedimentos armazenados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para adicionar, remover, modificar ou executar objetos armazenados no catálogo do **SSISDB**.  
   
  O nome padrão do catálogo é SSISDB. Os objetos armazenados no catálogo incluem projetos, pacotes, parâmetros, ambientes e histórico operacional.  
   
@@ -48,10 +47,10 @@ ms.lasthandoff: 09/26/2017
  [catalog.check_schema_version](../../integration-services/system-stored-procedures/catalog-check-schema-version.md)  
  Determina se o esquema de catálogo SSISDB e os binários [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (ISServerExec e SQLCLR assembly) são compatíveis.  
   
- [Catalog. clear_object_parameter_value &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
+ [catalog.clear_object_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
  Limpa o valor de um parâmetro para um projeto ou pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existente armazenado no servidor.  
   
- [Catalog. configure_catalog &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
+ [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
  Configura o catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] definindo uma propriedade de catálogo como um valor especificado.  
   
  [catalog.create_environment &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
@@ -63,7 +62,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.create_environment_variable &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md)  
  Cria uma variável de ambiente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. create_execution &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
+ [catalog.create_execution &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
  Cria uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.create_execution_dump](../../integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
@@ -87,19 +86,19 @@ ms.lasthandoff: 09/26/2017
  [catalog.delete_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
  Exclui um projeto existente de uma pasta no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. deny_permission &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
+ [catalog.deny_permission &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
  Nega uma permissão em um objeto protegível no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.deploy_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
  Implanta um projeto a uma pasta no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou atualiza um projeto existente que foi implantado anteriormente.  
   
- [Catalog. get_parameter_values &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
+ [catalog.get_parameter_values &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
  Resolve e recupera os valores de parâmetro padrão de um projeto e os pacotes correspondentes no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.get_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
  Recupera as propriedades de um projeto existente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. grant_permission &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
  Concede uma permissão em um objeto protegível no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.move_environment &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
@@ -120,7 +119,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.restore_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
  Restaura um projeto no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para uma versão anterior.  
   
- [Catalog. revoke_permission &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
+ [catalog.revoke_permission &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
  Revoga uma permissão em um objeto protegível no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.set_environment_property &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md)  
@@ -132,13 +131,13 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_environment_variable_property &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md)  
  Define a propriedade de uma variável de ambiente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. set_environment_variable_protection &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
+ [catalog.set_environment_variable_protection &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
  Define o bit de sensibilidade de uma variável de ambiente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.set_environment_variable_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
  Define o valor de uma variável de ambiente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  Define o valor de um parâmetro para uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.set_execution_property_override_value](../../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md)  
@@ -147,32 +146,31 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_folder_description &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
  Define a descrição de uma pasta do catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. set_object_parameter_value &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
+ [catalog.set_object_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
  Define o valor de um parâmetro no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associa o valor a uma variável de ambiente ou atribui um valor literal que será usado por padrão se nenhum outro valor for atribuído.  
   
- [Catalog. start_execution &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
+ [catalog.start_execution &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
  Inicia uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md)  
  Executa a manutenção do estado das operações para o catálogo SSISDB.  
   
- [Catalog. stop_operation &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
+ [catalog.stop_operation &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
  Para uma validação ou instância de execução no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. validate_package &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
+ [catalog.validate_package &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
  De forma assíncrona, valida um pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog. validate_project &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
+ [catalog.validate_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
  De forma assíncrona, valida um projeto no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-[Catalog.add_execution_worker &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-Adiciona um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala Out trabalho a uma instância de execução em expansão.
+[catalog.add_execution_worker &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
+Adiciona um Trabalho do Scale Out do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma instância de execução no Scale Out.
 
-[Catalog.enable_worker_agent &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-Habilitar um trabalho de fora de escala para escala Out mestre funcionam com essa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catálogo.
+[catalog.enable_worker_agent &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
+Habilite um Trabalho do Scale Out para o Mestre do Scale Out que trabalha com este catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
-[Catalog.disable_worker_agent &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-Desabilitar um trabalho de fora de escala para escala Out mestre funcionam com essa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catálogo.
-
+[catalog.disable_worker_agent &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
+Desabilite um Trabalho do Scale Out para o Mestre do Scale Out que trabalha com este catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 

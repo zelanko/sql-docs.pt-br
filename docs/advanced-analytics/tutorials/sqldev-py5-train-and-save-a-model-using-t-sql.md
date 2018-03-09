@@ -2,31 +2,32 @@
 title: 'Etapa 5: Treinar e salvar um modelo de Python usando o T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Etapa 5: Treinar e salvar um modelo de Python usando o T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -132,7 +133,7 @@ Para tornar mais fácil treinar novamente o modelo em dados novos, encapsule a c
 
 3. Abra a tabela *nyc\_taxi_models*. Você pode ver que uma nova linha foi adicionada, que contém o modelo serializado na coluna _modelo_.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -197,7 +198,7 @@ Usando **revoscalepy**, você pode criar contextos de computação remota, compu
 
 3. Abra a tabela *nyc_taxi_models*. Você pode ver que uma nova linha foi adicionada, que contém o modelo serializado na coluna _modelo_.
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 Na próxima etapa, você pode usar os modelos treinados para criar previsões.
 
@@ -208,4 +209,3 @@ Na próxima etapa, você pode usar os modelos treinados para criar previsões.
 ## <a name="previous-step"></a>Etapa anterior
 
 [Etapa 4: Criar recursos de dados usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-

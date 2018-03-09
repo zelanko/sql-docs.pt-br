@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 712ba7cb9705769ae805503a47880d5f349351d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 208878805dcf7c812caa1e6fb4f06120431ad803
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tolerância*  
+ *tolerance*  
  É um **duplo** expressão que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
   
- *relativo*  
+ *relative*  
  É um **bool** indicando se deve usar um máximo relativo para o desvio de expressão. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter.  Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -59,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="exceptions"></a>Exceções  
  Definição da tolerância < = 0 lança um **ArgumentOutOfRange** exceção.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método permite uma quantidade de tolerância de erro deve ser especificado para o resultante **LineString**.  
   
  **CurveToLineWithTolerance** método retornará um **LineString** instância para uma **CircularString** ou **CompoundCurve** instância e **Polígono** instância para uma **CurvePolygon** instância.  
@@ -102,7 +101,6 @@ ms.lasthandoff: 09/01/2017
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

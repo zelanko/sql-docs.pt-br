@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4ac08b5b7b44ad9338a722e0dd4fd35ca20fd35a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para editar as propriedades de configuração para uma instância CDC.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/03/2017
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
   
-

@@ -2,35 +2,33 @@
 title: "Alterar as propriedades de um modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4319c2394df0e2edae0e037c14305dae09968fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Alterar as propriedades de um modelo de mineração
-  Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade **Drillthrough** , que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade **Description** . Propriedades que se aplicam à coluna incluem **Usage** e **ModelingFlags**, que controlam como os dados na coluna são usados no modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade **Drillthrough** , que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade **Description** . Propriedades que se aplicam à coluna incluem **Usage** e **ModelingFlags**, que controlam como os dados na coluna são usados no modelo.  
   
  As propriedades modelo a seguir têm editores avançados que você pode usar para criar expressões ou configurar propriedades de modelo complexas. Estas propriedades oferecem:  
   
@@ -60,7 +58,6 @@ ms.lasthandoff: 09/01/2017
      O novo valor entrará em vigor quando você selecionar um elemento diferente no designer.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

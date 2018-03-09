@@ -2,43 +2,35 @@
 title: Elemento EstimatedSize (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EstimatedSize Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EstimatedSize Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EstimatedSize
-helpviewer_keywords:
-- EstimatedSize element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EstimatedSize
+helpviewer_keywords: EstimatedSize element
 ms.assetid: a9c63a22-d424-4f27-a186-5372f7b0224d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eb3d8ba649579d77406bb22a6bc63d80275112cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51e7f88b41a5567424554e88f68c1b7465de4321
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="estimatedsize-element-assl"></a>Elemento EstimatedSize (ASSL)
-  Contém o tamanho estimado somente leitura, em bytes, do elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o somente leitura tamanho estimado, em bytes, do elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,24 +45,23 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Longo|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [partição](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os elementos que correspondem aos pais de  no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.Partition>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

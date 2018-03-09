@@ -2,9 +2,12 @@
 title: "Fazer backup de banco de dados (página Opções de Mídia) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ f1_keywords:
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8d57e71183e433cb9c3c3038cecac6adf992072
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
-  Use a página  **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
   
  **Para criar um backup usando o SQL Server Management Studio**  
   
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/09/2017
  **Rebobinar a fita antes de descarregar**  
  Antes de descarregar, libere e rebobine a fita. Isso só será habilitado se **Descarregar a fita após o backup** for selecionado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

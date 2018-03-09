@@ -2,14 +2,13 @@
 title: Propriedades do Pool de threads | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b7cf85d5e9c8be15a74d99c1e4181b0e206d869
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  
   
  Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém seu próprio conjunto de pools de threads. Há diferenças em como as instâncias tabulares e multidimensionais usam pools de threads. Por exemplo, apenas instâncias multidimensionais usam o pool de thread **IOProcess** . Dessa forma, a propriedade **PerNumaNode** , descrita neste tópico, não é significativa para instâncias tabulares. Na seção [Referência de Propriedade](#bkmk_propref) abaixo, os requisitos do modo são indicados para cada propriedade.
@@ -295,4 +294,3 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
  [Guia de operações do SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   
-

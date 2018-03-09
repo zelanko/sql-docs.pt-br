@@ -3,7 +3,7 @@ title: "Exemplo do método CreateRecordset (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aab6469e8b8352ed1981831509469323f803599a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9014696c4d13cb9bcecb3f244d01fe24f2869b9c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>Exemplo do método CreateRecordset (VB)
 Você pode criar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto e especifique as informações de coluna. Você pode inserir dados no **registros** objeto; os buffers de linhas subjacentes as inserções.  
@@ -157,4 +156,3 @@ ErrorHandler:
 End Sub  
 'EndRsDefineShapeVB  
 ```
-

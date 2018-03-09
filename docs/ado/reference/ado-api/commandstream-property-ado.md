@@ -3,7 +3,7 @@ title: A propriedade CommandStream (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ba80c7527dad72860c2c58336ffe3bfabcc29ad
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28e4c73b4fdc94be1687ec011ad3a42e5b51bd78
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandstream-property-ado"></a>Propriedade CommandStream (ADO)
 Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -36,7 +35,7 @@ Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna o fluxo usado como entrada para uma **comando** objeto. O formato para esse fluxo é específica do provedor; Consulte a documentação do provedor para obter detalhes. Esta propriedade é semelhante de [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade usada para especificar uma cadeia de caracteres para a entrada de um **comando**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **CommandStream** e **CommandText** são mutuamente exclusivos. Quando o usuário define o **CommandStream** propriedade, o **CommandText** propriedade será definida como a cadeia de caracteres vazia (""). Se o usuário define o **CommandText** propriedade, o **CommandStream** propriedade será definida como **nada**.  
   
  Os comportamentos do **Command.Parameters.Refresh** e **Command.Prepare** métodos são definidos pelo provedor. Os valores dos parâmetros em um fluxo não podem ser atualizados.  
@@ -52,4 +51,3 @@ Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-
  [Propriedade CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Propriedade Dialect](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)
-

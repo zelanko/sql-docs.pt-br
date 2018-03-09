@@ -2,9 +2,12 @@
 title: "Considerações para usar servidores de teste | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
-  Usar um servidor de teste para ajustar um banco de dados em um servidor de produção é uma vantagem importante do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Usando esse recurso, você pode descarregar a sobrecarga de ajuste em um servidor de teste sem copiar os dados reais no servidor de teste do servidor de produção.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usar um servidor de teste para ajustar um banco de dados em um servidor de produção é uma vantagem importante do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Usando esse recurso, você pode descarregar a sobrecarga de ajuste em um servidor de teste sem copiar os dados reais no servidor de teste do servidor de produção.  
   
 > [!NOTE]  
 >  O recurso de ajuste do servidor de teste não é suportado na interface gráfica de usuário do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Todas as informações da sessão são armazenadas no **msdb** do servidor de produção. Isso permite explorar qualquer servidor de teste disponível para o ajuste e as informações sobre todas as sessões estão disponíveis em um só lugar (o servidor de produção).  
   
-## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell  
+## <a name="issues-related-to-the-shell-database"></a>Problemas relacionados ao banco de dados shell   
   
 -   Depois de ajustar, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deverá remover quaisquer metadados que criou no servidor de teste durante o processo de ajuste. Isso inclui o banco de dados shell. Se você estiver executando uma série de sessões de ajuste com os mesmos servidores de produção e de teste, poderá desejar reter esse banco de dados shell para economizar tempo. No arquivo de entrada XML, especifique o subelemento **RetainShellDB** com os outros subelementos no elemento pai **TuningOptions** . Usar essas opções faz o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] reter o banco de dados shell. Para obter mais informações, veja [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   

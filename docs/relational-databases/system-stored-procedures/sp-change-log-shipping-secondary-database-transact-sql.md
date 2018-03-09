@@ -8,34 +8,33 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_database
 - sp_change_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bd044b1b620b78448ca7dc84dc254684efe859d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc7ed57e7f6f64f3fc2527cdaff3766690032489
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as configurações do banco de dados secundário.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +58,13 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@restore_delay =** ] '*restore_delay*'  
+ [ **@restore_delay =** ] '*restore_delay*'  
  A quantidade de tempo, em minutos, que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* é **int** e não pode ser NULL. O valor padrão é 0.  
   
  [  **@restore_all =** ] '*restore_all*'  
  Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele será interrompido depois de um arquivo foi restaurado. *restore_all* é **bit** e não pode ser NULL.  
   
- [  **@restore_mode =** ] '*restore_mode*'  
+ [ **@restore_mode =** ] '*restore_mode*'  
  O modo de restauração do banco de dados secundário.  
   
  0 = restaure o log NORECOVERY.  
@@ -83,7 +82,7 @@ sp_change_log_shipping_secondary_database
  [  **@buffer_count =** ] '*buffer_count*'  
  Número total de buffers usado pela operação de backup ou restauração. *buffer_count* é **int** com um valor padrão de -1.  
   
- [  **@max_transfer_size =** ] '*max_transfer_size*'  
+ [ **@max_transfer_size =** ] '*max_transfer_size*'  
  O tamanho, em bytes, da solicitação máxima de entrada ou de saída emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
   
  [  **@restore_threshold =** ] '*restore_threshold*'  
@@ -104,7 +103,7 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Altera as configurações de **log_shipping_secondary_database** registra conforme necessário.  
@@ -130,7 +129,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

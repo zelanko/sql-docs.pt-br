@@ -3,27 +3,30 @@ title: "Exemplo do método (VBScript) clone | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Clone method [ADO], VBScript example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19c72838cd08fc1a5661b65e85dd340058bad9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a38db68c56955eb9d17a83ee5156674859b7c5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-example-vbscript"></a>Exemplo do método clone (VBScript)
 Este exemplo usa o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar cópias de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicionar o ponteiro de registro de cada cópia independentemente.  

@@ -2,26 +2,27 @@
 title: Propriedades de Trabalho (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83d8aa2129ec916241436e356d47da56fc0ef055
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 54fd700c21148803ce21ae83ee473753de139bd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="job-properties-management-studio"></a>Propriedades do Trabalho (Management Studio)
   Use a página **Propriedades do Trabalho** para exibir informações sobre um relatório ou uma assinatura em andamento antes de serem cancelados.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/09/2017
  **Nome do Usuário**  
  Para processos iniciados por um usuário, essa coluna mostra o nome do usuário. Para trabalhos do sistema, este é o nome do servidor de relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md)  

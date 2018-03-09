@@ -2,9 +2,12 @@
 title: "Configuração de visibilidade de metadados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,16 +24,16 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: "51"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f487f1add0343573ff70fd7fee49f28628c3da59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10d93d94543bca50d57aee2647e28fadd16064a4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
-  A visibilidade de metadados é limitada aos protegíveis que pertencem a um usuário ou sobre os quais recebeu alguma permissão. Por exemplo, a consulta a seguir retornará uma linha se o usuário recebeu uma permissão SELECT ou INSERT na tabela `myTable`.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A visibilidade dos metadados é limitada aos protegíveis que pertencem a um usuário ou nos quais ele recebeu alguma permissão. Por exemplo, a consulta a seguir retornará uma linha se o usuário recebeu uma permissão SELECT ou INSERT na tabela `myTable`.  
   
 ```  
 SELECT name, object_id  

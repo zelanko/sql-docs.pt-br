@@ -3,27 +3,32 @@ title: "Parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab101583f2e16a13dc42d8b8800c2befec2f536f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="parameters"></a>Parâmetros
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 São usados parâmetros para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamam o procedimento armazenado ou a função: 
 
 *  Os parâmetros de entrada permitem que o chamador transfira valores de dados para procedimentos armazenados ou funções.
@@ -83,7 +88,7 @@ GO
 
 Um aplicativo pode usar marcadores de parâmetro associados a variáveis de programa para trocar dados entre variáveis de aplicativo, parâmetros e códigos de retorno.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

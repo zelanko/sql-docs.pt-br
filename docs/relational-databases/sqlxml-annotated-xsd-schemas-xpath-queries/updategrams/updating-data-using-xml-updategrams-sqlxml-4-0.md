@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Quando você atualizar os dados existentes, você deve especificar ambos os  **\<antes >** e  **\<depois >** blocos. Os elementos especificados no  **\<antes >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados no  **\<antes >** bloco para identificar os registros existentes no banco de dados. Os elementos correspondentes no  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Quando você atualizar os dados existentes, você deve especificar ambos os  **\<antes >** e  **\<depois >** blocos. Os elementos especificados no  **\<antes >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados no  **\<antes >** bloco para identificar os registros existentes no banco de dados. Os elementos correspondentes no  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
   
  Este é o formato do diagrama de atualização para uma operação de atualização:  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg: antes de >**  
+ **\<updg:before>**  
  Os elementos de  **\<antes >** bloco identificam os registros existentes nas tabelas de banco de dados.  
   
- **\<updg: após >**  
+ **\<updg:after>**  
  Os elementos no  **\<depois >** bloco descrevem como os registros especificados no  **\<antes >** bloco deve aparecer depois que as atualizações são aplicadas.  
   
  O **esquema de mapeamento** atributo identifica o esquema de mapeamento a ser usado pelo diagrama de atualização. Se o diagrama Especifica um esquema de mapeamento, os nomes de elementos e atributos especificados no  **\<antes >** e  **\<depois >** blocos devem corresponder aos nomes no esquema. O esquema de mapeamento mapeia esses nomes de elemento ou atributo para os nomes de tabela de banco de dados e de coluna.  

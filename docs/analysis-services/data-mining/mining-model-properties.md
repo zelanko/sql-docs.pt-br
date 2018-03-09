@@ -2,15 +2,13 @@
 title: "Propriedades do modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
-  Os modelos de mineração têm os seguintes tipos de propriedades:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Os modelos de mineração têm os seguintes tipos de propriedades:  
   
 -   As propriedades que são herdadas da estrutura de mineração que definem o tipo de dados e o tipo de conteúdo dos dados usados pelo modelo;  
   
@@ -69,12 +67,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Estruturas de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Alterar as propriedades de um modelo de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
  [Criar uma estrutura de mineração relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Criar um alias para uma coluna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Criar um Alias para uma coluna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   
-

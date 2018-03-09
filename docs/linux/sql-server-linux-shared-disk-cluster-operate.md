@@ -3,28 +3,27 @@ title: "Operar a instância de cluster de failover - SQL Server no Linux | Micro
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a8595b61afd374d6127f6cc7b9b363f325a257b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Operar a instância de cluster de failover - SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo explica como operar uma instância de cluster de failover (FCI) do SQL Server no Linux. Se você não tiver criado um FCI do SQL Server no Linux, consulte [configurar instância de cluster de failover - SQL Server no Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -39,7 +38,7 @@ A forma de failover depende da distribuição de Linux. Siga as instruções par
 - [RHEL ou Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>Failover manual (RHEL ou Ubuntu)
+## <a name = "#rhelFailover"></a> Failover manual (RHEL ou Ubuntu)
 
 Para executar um failover manual, onn Red Hat Enterprise Linux (RHEL) ou servidores Ubuntu execute as etapas a seguir.
 1.  Execute o seguinte comando: 
@@ -60,7 +59,7 @@ Para executar um failover manual, onn Red Hat Enterprise Linux (RHEL) ou servido
 
 \<FCIResourceName > é o nome do recurso Pacemaker para a FCI. 
 
-## <a name = "#slesFailover"></a>Failover manual (SLES)
+## <a name = "#slesFailover"></a> Failover manual (SLES)
 
 
 No Suse Linux Enterprise Server (SLES), use o `migrate` de comando para o failover manualmente um FCI do SQL Server. Por exemplo:
@@ -86,4 +85,3 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 - [Configurar a instância de cluster de failover - SQL Server no Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
-

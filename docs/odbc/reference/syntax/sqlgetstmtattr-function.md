@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetStmtAttr
-helpviewer_keywords:
-- SQLGetStmtAttr function [ODBC]
+f1_keywords: SQLGetStmtAttr
+helpviewer_keywords: SQLGetStmtAttr function [ODBC]
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 478d69a608740a0c8886336ca567ebc8ec75d6eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtattr-function"></a>Função SQLGetStmtAttr
 **Conformidade**  
@@ -132,7 +126,6 @@ SQLRETURN SQLGetStmtAttr(
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

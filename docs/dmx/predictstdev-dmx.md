@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictStdev
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictStdev function
+f1_keywords: PredictStdev
+dev_langs: DMX
+helpviewer_keywords: PredictStdev function
 ms.assetid: 2614aad0-f3f2-4f56-9dad-9c436f11a35f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 80972c7888cab4c64e30e346064d321715e5f2ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 049749935abfe015944189ad3b0c9c5789f92970
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +44,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="return-type"></a>Tipo de retorno  
  Um valor escalar do tipo especificado pelo  *\<referência de coluna escalar >*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a referência de coluna for discreta, **PredictStdev** retornará 0 porque o desvio padrão não pode ser calculado a partir de valores discretos.  
   
 ## <a name="examples"></a>Exemplos  
@@ -70,10 +64,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

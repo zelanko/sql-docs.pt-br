@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2910a47227b9ee20a3d39eb115639d3374758228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4471b9f4d85240a51d456ea90973c852f5e5db76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Executar diretamente uma instrução (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Chame [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) para executar a instrução.  
   
-3.  Se forem usados parâmetros de entrada de dados em execução, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retornará SQL_NEED_DATA. Envie os dados em partes useo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+3.  Se forem usados parâmetros de entrada de dados em execução, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retornará SQL_NEED_DATA. Envie os dados em partes usando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Para executar uma instrução várias vezes usando a associação de parâmetros por coluna  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Chame [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) para executar a instrução. O driver executa a instrução de maneira eficiente S vezes, sendo uma para cada conjunto de parâmetros.  
   
-6.  Se forem usados parâmetros de entrada de dados em execução, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retornará SQL_NEED_DATA. Envie os dados em partes useo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+6.  Se forem usados parâmetros de entrada de dados em execução, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) retornará SQL_NEED_DATA. Envie os dados em partes usando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
  **Observação** As associações por coluna e por linha geralmente são mais usadas em conjunto com [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) do que com [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   

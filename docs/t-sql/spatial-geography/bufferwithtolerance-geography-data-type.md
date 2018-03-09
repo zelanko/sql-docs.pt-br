@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: feaa401cfd6e2077035d164412941392412011ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um **float** expressão que especifica a distância entre o **geografia** instância em torno da qual calcular o buffer.  
   
  A distância máxima do buffer não pode exceder 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
   
- *tolerância*  
+ *tolerance*  
  É um **float** expressão que especifica a tolerância da distância do buffer.  
   
  O *tolerância* valor refere-se à variação máxima na distância ideal do buffer para a aproximação linear retornada.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  O limite mínimo é 0,1 por cento da distância; qualquer tolerância menor que isso será arredondada até o limite mínimo.  
   
- *relativo*  
+ *relative*  
  É um **bit** especificando se o *tolerância* valor é relativo ou absoluto. Se 'TRUE' ou 1, tolerância será relativa e calculada como o produto do *tolerância* parâmetro e da extensão angular \* raio equatorial do elipsoide. Se 'FALSE' ou 0, tolerância será absoluta e o *tolerância* valor é a variação máxima absoluta na distância ideal do buffer para a aproximação linear retornada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método lançará um **ArgumentException** se o *distância* não é um número (NAN), ou se *distância* é infinito positivo ou negativo.  Esse método também lançará um **ArgumentException** se *tolerância* é zero (0), e não um número (NaN), infinito negativo, ou positivo ou negativo.  
   
  `STBuffer()`retornará um **FullGlobe** instância em certos casos; por exemplo, `STBuffer()` retorna um **FullGlobe** instância em dois polos quando a distância do buffer é maior que a distância do Equador para os polos.  
@@ -93,7 +92,6 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
   
 ## <a name="see-also"></a>Consulte também  
  [STBuffer &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

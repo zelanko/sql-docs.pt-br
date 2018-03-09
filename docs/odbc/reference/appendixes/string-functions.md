@@ -5,33 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>Funções de cadeia de caracteres
 A tabela a seguir lista as funções de manipulação de cadeia de caracteres. Um aplicativo pode determinar quais funções de cadeia de caracteres são suportadas por um driver chamando **SQLGetInfo** com um *tipo de informação* de SQL_STRING_FUNCTIONS.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Argumentos denotado como *string_exp* pode ser o nome de uma coluna, um *literal de cadeia de caracteres*, ou o resultado de outra função escalar, onde o tipo de dados pode ser representado como SQL_CHAR, SQL _ VARCHAR ou SQL_LONGVARCHAR.  
   
  Argumentos denotado como *character_exp* são uma cadeia de caracteres de comprimento variável.  
@@ -67,4 +65,3 @@ A tabela a seguir lista as funções de manipulação de cadeia de caracteres. U
 |**ESPAÇO (** *contagem* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que consiste em *contagem* espaços.|  
 |**SUBSTRING (** *string_exp*, *iniciar*, comprimento**)** (ODBC 1.0)|Retorna uma cadeia de caracteres que é derivada de *string_exp*, começando na posição do caractere especificada por *iniciar* para *comprimento* caracteres.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Retorna uma cadeia de caracteres igual de *string_exp*, com todos os caracteres convertidos em letras maiusculas de minúsculas.|
-

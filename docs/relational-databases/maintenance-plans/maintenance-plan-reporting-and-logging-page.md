@@ -2,27 +2,30 @@
 title: "Plano de manutenção (página Relatório e Log) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94a7b05ebe694c668bfb9e8763e1be479cddf51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 05d9eac7b81f5a17d5f2b9de71cc0a7027896354
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plano de manutenção (página Relatório e log)
-  Use a caixa de diálogo **Relatório e Log** , para configurar os relatórios e logs gerados quando os planos de manutenção são executados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Relatório e Log**, para configurar os relatórios e logs gerados quando os planos de manutenção são executados.  
   
 ## <a name="options"></a>Opções  
  **Gerar um relatório de arquivo de texto**  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
  **Nova**  
  Exibe a caixa de diálogo **Propriedades da Conexão** . Usada para configurar informações de conexão novas para fazer o logon em um servidor remoto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

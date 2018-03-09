@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RECONFIGURE
 - RECONFIGURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - reconfiguring configuration options
 - configuration options [SQL Server], reconfiguring
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 363a7f12b0be75dd73a2a72402c82be4ba403ed6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 432e5157969a10f36273db3bbd8990fa9e332b68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Quase qualquer opção de configuração pode ser reconfigurada usando a opção WITH OVERRIDE, no entanto, alguns fatais erros ainda são impedidos. Por exemplo, o **memória mínima do servidor** opção de configuração não pode ser configurada com um valor maior que o valor especificado no **memória máxima do servidor** opção de configuração.
       
-## <a name="remarks"></a>Comentários    
+## <a name="remarks"></a>Remarks    
  **sp_configure** não aceita novos valores de opção de configuração fora dos intervalos válidos documentados para cada opção de configuração.    
     
  RECONFIGURE não é permitido em uma transação explícita ou implícita. Ao reconfigurar várias opções ao mesmo tempo, se alguma das operações de reconfiguração falhar, nenhuma delas entrará em vigor.    
@@ -77,7 +79,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>Consulte também    
- [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
+ [Opções de configuração do servidor &#40; SQL Server e &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
   

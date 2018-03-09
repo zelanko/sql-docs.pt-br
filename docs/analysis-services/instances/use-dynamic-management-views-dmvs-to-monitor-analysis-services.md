@@ -1,17 +1,14 @@
 ---
 title: "Usar exibições de gerenciamento dinâmico (DMVs) para monitorar o Analysis Services | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 12/15/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
@@ -20,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5df4b77f4a373a69360c8e51f9c3f1362a4bf904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
-  As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services dinâmico gerenciamento DMVS (exibições) são estruturas de consulta que expõem informações sobre operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
   
  Para a maioria das consultas DMV, use uma instrução **SELECT** e o esquema **$System** com um conjunto de linhas de esquema XML/A.  
   
@@ -37,24 +34,12 @@ SELECT * FROM $System.<schemaRowset>
   
  As consultas DMV retornam informações sobre o estado atual do servidor no momento em que a consulta foi executada. Para monitorar as operações em tempo real, use o rastreamento. Para obter mais informações, consulte [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- Este tópico inclui as seguintes seções:  
-  
- [Benefícios do uso de consultas DMV](#bkmk_ben)  
-  
- [Exemplos e cenários](#bkmk_ex)  
-  
- [Sintaxe da consulta](#bkmk_syn)  
-  
- [Ferramentas e permissões](#bkmk_tools)  
-  
- [Referência de DMV](#bkmk_ref)  
-  
-##  <a name="bkmk_ben"></a> Benefícios do uso de consultas DMV  
+##  <a name="bkmk_ben"></a>Benefícios das consultas de DMV usando  
  As consultas DMV retornam informações sobre operações e consumo de recursos que não estão disponíveis por outros meios.  
   
  As consultas de DMV são uma alternativa à execução de comandos XML/UM Discover. Para a maioria dos administradores, gravar uma consulta DMV é mais simples porque a sintaxe dessa consulta se baseia em SQL. Além disso, o conjunto de resultados é retornado em um formato de tabela que torna mais fácil a leitura e a cópia.  
   
-##  <a name="bkmk_ex"></a> Exemplos e cenários  
+##  <a name="bkmk_ex"></a>Exemplos e cenários  
  Uma consulta DMV pode ajudá-lo a responder perguntas sobre sessões ativas e conexões e quais objetos estão consumindo a maior parte da CPU ou da memória em um determinado momento. Esta seção fornece exemplos de cenários em que as consultas DMV são geralmente mais usadas. Você também pode examinar o [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) para obter insights sobre como usar consultas DMV para monitorar uma instância de servidor.  
   
  `Select * from $System.discover_object_activity` /** Esta consulta relata a atividade do objeto desde a última vez em que o serviço foi iniciado. Por exemplo, para consultas baseadas nesta DMV, consulte [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -65,7 +50,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** Esta consulta retorna um instantâneo dos bloqueios usados em um momento específico.  
   
-##  <a name="bkmk_syn"></a> Sintaxe da consulta  
+##  <a name="bkmk_syn"></a>Sintaxe de consulta  
  O mecanismo de consulta para DMVs é o analisador de Mineração de Dados. A sintaxe da consulta DMV se baseia na instrução [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
  Embora a sintaxe da consulta DMV se baseie em uma instrução SQL SELECT, ela não oferece suporte à sintaxe completa de uma instrução SELECT. Em especial, não há suporte para JOIN, GROUP BY, LIKE, CAST e CONVERT.  
@@ -90,14 +75,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Ferramentas e permissões  
+##  <a name="bkmk_tools"></a>Ferramentas e permissões  
  Você deve ter permissões de administrador de sistema na instância do Analysis Services para consultar uma DMV.  
   
  Você pode usar qualquer aplicativo cliente que tenha suporte para consultas MDX ou DMX, incluindo o SQL Server Management Studio, um relatório do Reporting Services ou um PerformancePoint Dashboard.  
   
  Para executar uma consulta DMV a partir do Management Studio, conecte-se à instância que você deseja consultar e clique em **Nova Consulta**. Você pode executar uma consulta em uma janela de consulta MDX ou DMX.  
   
-##  <a name="bkmk_ref"></a> Referência de DMV  
+##  <a name="bkmk_ref"></a>Referência de DMV  
  Nem todos os conjuntos de linhas de esquema têm uma interface DMV. Para retornar uma lista de todos os conjuntos de linhas de esquema que possam ser consultadas usando DMV, execute a consulta a seguir.  
   
 ```  
@@ -171,8 +156,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retorna um nome totalmente qualificado de cada propriedade, junto com o tipo de propriedade, o tipo de dados e outros metadados.|  
 |[Conjunto de linhas MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retorna uma lista de conjuntos definidos na conexão atual.|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>Consulte também   
  [Novo System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas restritos e DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

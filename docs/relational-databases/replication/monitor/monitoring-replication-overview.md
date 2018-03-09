@@ -2,9 +2,12 @@
 title: "Monitorando a replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb736bd150252f9081184ba589b8033b750c7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d753e6f33d721fe409af8ca71afc6812f500a95f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-overview"></a>Visão geral da replicação do monitoramento
-  O Replication Monitor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma ferramenta gráfica que permite monitorar a integridade geral de uma topologia de replicação. O Replication Monitor fornece informações detalhadas sobre o status e o desempenho das publicações e das assinaturas, permitindo responder a perguntas comuns tais como:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Replication Monitor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma ferramenta gráfica que permite monitorar a integridade geral de uma topologia de replicação. O Replication Monitor fornece informações detalhadas sobre o status e o desempenho das publicações e das assinaturas, permitindo responder a perguntas comuns tais como:  
   
 -   Meu sistema de replicação está íntegro?  
   
@@ -61,13 +64,13 @@ ms.lasthandoff: 11/09/2017
  [Monitorar o desempenho com o Replication Monitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
  Descreve como monitorar o desempenho no Replication Monitor, inclusive as informações em como definir limiares de desempenho. Inclui informações sobre as estatísticas em nível de artigo para a replicação de mesclagem, as quais fornecem uma visão detalhada do processamento.  
   
- [Medir a latência e validar as conexões para a replicação transacional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
  Descreve os tokens de rastreamento que permitem medir o desempenho de uma topologia de replicação transacional.  
   
  [Monitorar agentes de replicação](../../../relational-databases/replication/monitor/monitor-replication-agents.md)  
  Descreve como localizar informações sobre cada agente de replicação.  
   
- [Definir limites e avisos no Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
  Descreve os avisos, limiares e alertas que você pode definir no Replication Monitor. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  [Desempenho de Cache, da atualização e do Replication Monitor](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)  

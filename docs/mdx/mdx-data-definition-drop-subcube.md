@@ -2,10 +2,13 @@
 title: "Instrução DROP SUBCUBE (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 55de825c25eb75be2800ae920dac52c3aa7a8800
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: de5bf7aa07600c15372f70b0a868637e12c704d7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Definição de dados MDX - SOLTAR SUBCUBO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Descarta um subcubo especificado, revertendo para o cubo previamente definido ou para a definição de subcubo com o nome especificado.  
   
@@ -48,7 +51,7 @@ DROP SUBCUBE Subcube_Name
  *Subcube_Name*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de subcubo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [Criar SUBCUBO instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)  
   

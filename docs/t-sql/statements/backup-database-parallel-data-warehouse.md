@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 11
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>Banco de dados de BACKUP (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -162,11 +161,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Metadados  
  Essas exibições de gerenciamento dinâmico contêm informações sobre todos os backup, restauração e operações de carregamento. As informações persistem entre as reinicializações do sistema.  
   
--   [sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Desempenho  
  Para executar um backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] primeiro faz backup dos metadados e, em seguida, ele executa um backup paralelo do banco de dados armazenados em nós de computação. Dados são copiados diretamente de cada nós de computação para o diretório de backup. Para obter o melhor desempenho para mover dados de nós de computação para o diretório de backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controla o número de nós de computação que está copiando dados simultaneamente.  
@@ -252,4 +251,3 @@ WITH (
  [RESTAURAR banco de dados &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
-

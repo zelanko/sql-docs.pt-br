@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec642adb7cf5096b5e110d41224d79705e8a3f33
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9498cdd80879f3b87cb43f75dcb839400256c9e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ogc-static-geography-methods"></a>Métodos de geografia estática do OGC
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Consulte também  
  [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Métodos de Geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

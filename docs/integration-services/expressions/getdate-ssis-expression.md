@@ -1,5 +1,5 @@
 ---
-title: "GETDATE (expressão SSIS) | Microsoft Docs"
+title: "GETDATE (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 290899a8b4b1bca1fb20bd18f7703d63c7bb8f51
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (Expressão SSIS)
   Retorna a data atual do sistema em um formato DT_DBTIMESTAMP. A função GETDATE não usa nenhum argumento.  
@@ -43,7 +42,7 @@ GETDATE()
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhum.  
+ Nenhum  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_DBTIMESTAMP  
@@ -67,9 +66,8 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [GETUTCDATE &#40; Expressão do SSIS &#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [GETUTCDATE &#40;Expressão do SSIS&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

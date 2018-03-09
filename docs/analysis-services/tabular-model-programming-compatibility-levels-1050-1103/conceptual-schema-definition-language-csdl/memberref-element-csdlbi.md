@@ -2,32 +2,32 @@
 title: Elemento MemberRef (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 345a9df28803736c1dc7cf1b075bc101cb76ed27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memberref-element-csdlbi"></a>Elemento MemberRef (CSDLBI)
-  O elemento MemberRef identifica o nome de uma propriedade que é o destino de uma referência.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento MemberRef identifica o nome de uma propriedade que é o destino de uma referência.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento MemberRef.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |MemberRef|Sim|Uma cadeia de caracteres que contém a referência do membro.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, representa uma parte do exemplo do modelo de dados da AdventureWorks que define a tabela Products. Aqui, o elemento MemberRef é usado para cada coluna que é incluída no conjunto de campos padrão do modelo.  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: OU (Transact-SQL) | Microsoft Docs
+title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OR_TSQL
 - OR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conditions [SQL Server], combining
 - combining conditions
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05fcf73b02b0ea1f049db32828bc0eeb5a17d2f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 32e93a12ed79b6cbb2f2796e6362ba97f69abc21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +56,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Valor do resultado  
  OR retorna TRUE quando qualquer uma das condições é TRUE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra o resultado do operador OR.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -96,11 +98,11 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

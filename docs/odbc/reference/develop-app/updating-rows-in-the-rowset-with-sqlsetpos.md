@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 898bbdbf15cec2e583d9fa55a82ec8b0caa32d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a041d356171785b0f4496a300e784bf910261942
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Atualizando linhas no conjunto de linhas com SQLSetPos
 A operação de atualização de **SQLSetPos** faz com que a fonte de dados atualizar uma ou mais linhas selecionadas de uma tabela, usando dados nos buffers de aplicativo para cada coluna associada (a menos que o valor no buffer de comprimento/indicador é SQL_COLUMN_IGNORE). Colunas que não são associadas não serão atualizadas.  
@@ -140,4 +138,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

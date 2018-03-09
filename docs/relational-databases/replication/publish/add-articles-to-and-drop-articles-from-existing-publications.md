@@ -2,9 +2,12 @@
 title: "Adicionar e remover artigos de publicações existentes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fea1fa67796e56359eed3bb7bfd9746a48f18cf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 082b20b502afb8201ab63db204bf0fff25e17c66
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
-  Depois que uma publicação é criada, é possível adicionar e descartar artigos. Os artigos podem ser adicionados a qualquer hora, mas as ações necessárias para descartar artigos dependem do tipo de replicação e de quando o artigo é descartado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois que uma publicação é criada, é possível adicionar e remover artigos. Os artigos podem ser adicionados a qualquer hora, mas as ações necessárias para descartar artigos dependem do tipo de replicação e de quando o artigo é descartado.  
   
 ## <a name="adding-articles"></a>adicionando artigos  
  Adicionar um artigo envolve: adicionar o artigo à publicação; criar um novo instantâneo para a publicação; sincronizar a assinatura para aplicar o esquema e os dados para o novo artigo.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/09/2017
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou superior e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou superior dão suporte a remover tabelas usando o comando DLL **DROP TABLE** para artigos que participam da Replicação Transacional. Se a publicação der suporte para DROP TABLE DDL, a operação de DROP TABLE removerá a tabela da publicação e do banco de dados. O agente do leitor de log lançará um comando de limpeza para o banco de dados de distribuição da tabela removida e fará a limpeza dos metadados do publicador. Se o leitor de log não tiver processado todos os registros de log que fazem referência à tabela removida, ele ignorará novos comandos associados à tabela removida. Registros já processados serão entregues ao banco de dados de distribuição. Eles poderão ser aplicados ao banco de dados do Assinante se o Agente de Distribuição processá-los antes que o Leitor de Log limpar os artigos obsoletos (removidos). A configuração **padrão** para todas as publicações de replicação transacional é não dar suporte a DLL de DROP TABLE. O artigo [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) apresenta mais detalhes sobre essa melhoria.
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Fazer alterações de esquema em bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

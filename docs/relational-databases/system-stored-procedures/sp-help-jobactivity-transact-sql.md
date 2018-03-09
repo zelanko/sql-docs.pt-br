@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  O nome do trabalho. *job_name*é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -64,28 +67,28 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Número de identificação da sessão do agente.|  
+|**session_id**|**Int**|Número de identificação da sessão do agente.|  
 |**job_id**|**uniqueidentifier**|Identificador do trabalho.|  
 |**job_name**|**sysname**|Nome do trabalho.|  
 |**run_requested_date**|**datetime**|Momento em que foi solicitada a execução do trabalho.|  
 |**run_requested_source**|**sysname**|A origem da solicitação para executar o trabalho. Um dos seguintes:<br /><br /> **1** = executar em um agendamento<br /><br /> **2** = executar em resposta a um alerta<br /><br /> **3** = executar na inicialização<br /><br /> **4** = executar pelo usuário<br /><br /> **6** = executar em um agendamento ocioso de CPU|  
 |**queued_date**|**datetime**|Data em que a solicitação foi colocada em fila. NULL se o trabalho foi executado diretamente.|  
 |**start_execution_date**|**datetime**|Data em que o trabalho foi atribuído a um thread executável.|  
-|**last_executed_step_id**|**int**|A ID de etapa da última etapa de trabalho executada.|  
+|**last_executed_step_id**|**Int**|A ID de etapa da última etapa de trabalho executada.|  
 |**last_exectued_step_date**|**datetime**|A data em que começou a execução da última etapa de trabalho.|  
 |**stop_execution_date**|**datetime**|A data em que o trabalho parou de ser executado.|  
 |**next_scheduled_run_date**|**datetime**|Quando o trabalho lado é agendado para execução.|  
-|**job_history_id**|**int**|Identificador para o histórico de trabalho na tabela de histórico de trabalho.|  
-|**Mensagem**|**nvarchar (1024)**|Mensagem produzida durante a última execução do trabalho.|  
-|**run_status**|**int**|Status retornado da última execução do trabalho:<br /><br /> **0** = erro de falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = status desconhecido|  
-|**operator_id_emailed**|**int**|Número de ID do operador notificado por email na conclusão do trabalho.|  
-|**operator_id_netsent**|**int**|Número de identificação do operador notificado **net send** na conclusão do trabalho.|  
-|**operator_id_paged**|**int**|Número de ID do operador notificado por pager na conclusão do trabalho.|  
+|**job_history_id**|**Int**|Identificador para o histórico de trabalho na tabela de histórico de trabalho.|  
+|**message**|**nvarchar(1024)**|Mensagem produzida durante a última execução do trabalho.|  
+|**run_status**|**Int**|Status retornado da última execução do trabalho:<br /><br /> **0** = erro de falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = status desconhecido|  
+|**operator_id_emailed**|**Int**|Número de ID do operador notificado por email na conclusão do trabalho.|  
+|**operator_id_netsent**|**Int**|Número de identificação do operador notificado **net send** na conclusão do trabalho.|  
+|**operator_id_paged**|**Int**|Número de ID do operador notificado por pager na conclusão do trabalho.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse procedimento fornece um instantâneo do status atual dos trabalhos. Os resultados retornados representam as informações no momento em que a solicitação é processada.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova ID de sessão sempre que seu serviço é iniciado. A id de sessão é armazenada na tabela **syssessions**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente cria uma id de sessão sempre que o serviço de agente é iniciado. A id de sessão é armazenada na tabela **syssessions**.  
   
  Quando nenhum *session_id* for fornecido, a lista informações sobre a sessão mais recente.  
   

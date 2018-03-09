@@ -3,7 +3,7 @@ title: "Seção SQL do arquivo de personalização | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 766e734626f650bccca3a48a5f2dcf7942612053
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 O **sql** seção pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL da seção, a seção será ignorada.  
@@ -50,7 +49,7 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxe  
  É uma entrada de cadeia de caracteres SQL da substituição do formulário:  
   
- **SQL =**   
+ **SQL=**   
  ***sqlString***  
   
 |Parte|Description|  
@@ -66,6 +65,5 @@ SQL = " "
  [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

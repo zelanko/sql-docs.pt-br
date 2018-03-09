@@ -3,8 +3,9 @@ title: Propriedade Version (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::GetVersion
 - Connection15::Version
 - Connection15::get_Version
-helpviewer_keywords: Version property [ADO]
+helpviewer_keywords:
+- Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cff8cd7404ae02d4ed6aaafa1dd8155398c1bb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f79774c39e3ba3a877329867664d6ab1b303532d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-ado"></a>Propriedade Version (ADO)
 Indica o número de versão do ADO.  
@@ -35,7 +37,7 @@ Indica o número de versão do ADO.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **cadeia de caracteres** valor que indica a versão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **versão** propriedade para retornar o número de versão da implementação do ADO.  
   
  A versão do provedor estarão disponível como uma propriedade dinâmica no [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção.  

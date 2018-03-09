@@ -5,21 +5,19 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: 37fe358eb7e11cb878ebd9b0c8356ac2295ca7e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: d23639aa98492228fdec5d45799718f59b809425
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implantar um projeto do SSIS com o PowerShell
 Este tutorial de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e implantar um projeto do SSIS no catálogo do SSIS.
@@ -28,7 +26,7 @@ Este tutorial de início rápido demonstra como usar um script do PowerShell par
 Forneça os valores adequados para as variáveis na parte superior do script a seguir e, em seguida, execute o script para implantar o projeto do SSIS.
 
 > [!NOTE]
-> O exemplo a seguir usa a autenticação do Windows. Para usar a autenticação do SQL Server, substitua o `Integrated Security=SSPI;` argumento com `User ID=<user name>;Password=<password>;`.
+> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -68,17 +66,16 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
-- Considere a possibilidade de outras maneiras de implantar um pacote.
-    - [Implantar um pacote do SSIS com o SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Implantar um pacote do SSIS com Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Implantar um pacote do SSIS com Transact-SQL (VS código)](ssis-quickstart-deploy-tsql-vscode.md)
-    - [Implantar um pacote do SSIS no prompt de comando](./ssis-quickstart-deploy-cmdline.md)
-    - [Implantar um pacote do SSIS com c#](./ssis-quickstart-deploy-dotnet.md) 
-- Execute um pacote implantado. Para executar um pacote, você pode escolher entre várias ferramentas e linguagens. Para obter mais informações, consulte os seguintes artigos:
+- Considere outras maneiras de implantar um pacote.
+    - [Implantar um pacote do SSIS com SSMS](./ssis-quickstart-deploy-ssms.md)
+    - [Implantar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Implantar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
+    - [Implantar um pacote do SSIS com o C#](./ssis-quickstart-deploy-dotnet.md) 
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (VS código)](ssis-quickstart-run-tsql-vscode.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Executar um pacote do SSIS no prompt de comando](./ssis-quickstart-run-cmdline.md)
     - [Executar um pacote do SSIS com o PowerShell](ssis-quickstart-run-powershell.md)
-    - [Executar um pacote do SSIS com c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md) 

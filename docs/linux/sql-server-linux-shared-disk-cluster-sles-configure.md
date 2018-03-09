@@ -3,36 +3,35 @@ title: Configurar o cluster de disco compartilhado SLES no SQL Server | Microsof
 description: "Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do SUSE Linux Enterprise Server (SLES) para o SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 30187dcf31421be045bb54e9824336e5d258f555
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no SUSE Linux Enterprise Server (SLES). A camada de clustering é baseada no SUSE [alta disponibilidade extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
 
-Para obter mais detalhes sobre a configuração de cluster, opções do recurso de agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Para obter mais informações sobre a configuração de cluster, opções do recurso de agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-Para concluir o cenário de ponta a ponta abaixo, você precisa duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento de NFS. Etapas a seguir descrevem como esses servidores serão configurados.
+Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento de NFS. Etapas a seguir descrevem como esses servidores serão configurados.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar e configurar o sistema operacional em cada nó de cluster
 
@@ -51,7 +50,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
 
     > [!NOTE]
     > No momento da instalação, uma chave mestre do servidor é gerado para a instância do SQL Server e colocado no `/var/opt/mssql/secrets/machine-key`. No Linux, o SQL Server sempre é executado como uma conta local chamada mssql. Como é uma conta local, sua identidade não é compartilhada entre nós. Portanto, é necessário copiar a chave de criptografia do nó principal para cada nó secundário para que cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor.
-4. No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usará essa conta para verificar qual nó está executando o SQL Server.
+4. No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usa essa conta para verificar qual nó está executando o SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -204,7 +203,7 @@ As etapas a seguir explicam como configurar o recurso de cluster do SQL Server. 
 - **Nome de recurso do SQL Server**: um nome para o recurso de cluster do SQL Server. 
 - **Valor de tempo limite**: O valor de tempo limite é a quantidade de tempo que o cluster espera enquanto um recurso é colocado online. Para o SQL Server, essa é a hora em que você espera que o SQL Server para colocar o `master` banco de dados online. 
 
-Atualize os valores do script abaixo para o seu ambiente. Execute em um nó para configurar e iniciar o serviço de cluster.
+Atualize os valores do script a seguir para o seu ambiente. Execute em um nó para configurar e iniciar o serviço de cluster.
 
 ```bash
 sudo crm configure
@@ -255,7 +254,7 @@ Full list of resources:
 
 Para gerenciar seus recursos de cluster, consulte o tópico a seguir SUSE: [Gerenciando recursos de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>Failover manual
+### <a name="manual-failover"></a>failover manual
 
 Embora os recursos estiverem configurados para failover automaticamente (ou migrar) para outros nós do cluster em caso de falha de hardware ou software, você pode mover um recurso também manualmente para outro nó do cluster usando a GUI do Pacemaker ou a linha de comando. 
 
@@ -269,4 +268,3 @@ migrate mssqlha SLES2
 ## <a name="additional-resources"></a>Recursos adicionais
 
 [Extensão de alta disponibilidade do SUSE Linux Enterprise - guia de administração](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
-

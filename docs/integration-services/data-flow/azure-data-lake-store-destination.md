@@ -1,5 +1,5 @@
 ---
-title: "Destino do repositório Azure Data Lake | Microsoft Docs"
+title: Destino do Azure Data Lake Store | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSDEST.F1
 - sql14.dts.designer.afpadlsdest.f1
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "6"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f8cfa5230a36a27a7e98fa6f336bcee56fa062e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4df566ea5f379e80a1f8348578d2f3c823644a26
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-data-lake-store-destination"></a>Destino do Azure Data Lake Store
   O componente **Destino do Azure Data Lake Store** permite que um pacote SSIS grave dados em um Azure Data Lake Store. Os formatos de arquivo com suporte são Texto, Avro e ORC. 
   
- O **destino de repositório Azure Data Lake** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+ O **Destino do Azure Data Lake Store** é um componente do [SSIS (SQL Server Integration Services) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
  >   [!NOTE]
  > Para garantir que o Gerenciador de conexões do Azure Data Lake Store e os componentes que o utilizam, isto é, a Fonte do Azure Data Lake Store e o Destino do Azure Data Lake Store, possam se conectar aos serviços, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). 
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/26/2017
 3.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.  
   
   
-

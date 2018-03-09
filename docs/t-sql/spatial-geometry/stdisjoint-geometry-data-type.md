@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDisjoint_TSQL
 - STDisjoint (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STDisjoint (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STDisjoint (geometry Data Type)
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 089f69b619d7ee84bd8d41b1b2182b06b6ad1127
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 8257a4a8d3e73d3afd59f9d0774ecc5fb055428f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dois **geometria** instâncias são não contíguas se a interseção de seus conjuntos de pontos estiver vazia.  
   
  Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  

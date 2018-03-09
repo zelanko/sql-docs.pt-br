@@ -1,33 +1,32 @@
 ---
 title: "Programação do servidor do ADOMD.NET | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd825c22b7b6b4436d57c0baaeaf6abdb416cd91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c1049b869257c08f1c699e908c33302fed9771e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-server-programming"></a>Programando o servidor no ADOMD.NET
   Os componentes de servidor do ADOMD.NET residem dentro de **adomdserver** namespace (em msmgdsrv.dll). Use estes componentes do servidor para criar funções personalizadas de MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  

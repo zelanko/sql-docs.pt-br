@@ -3,42 +3,41 @@ title: Configurar RHEL Cluster para o grupo de disponibilidade do SQL Server | M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7930fd8cee6f6fabe00a711f9109573e42550563
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar RHEL Cluster para o grupo de disponibilidade do SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento explica como criar um cluster do grupo de disponibilidade de três nós para o SQL Server no Red Hat Enterprise Linux. Para alta disponibilidade, um grupo de disponibilidade no Linux requer três nós - consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [HA complemento](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
 
 > [!NOTE] 
 > Acesso à documentação completa do Red Hat requer uma assinatura válida. 
 
-Para obter mais detalhes sobre a configuração de cluster recurso agentes e opções de gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obter mais informações sobre a configuração de cluster recurso agentes e opções de gerenciamento, visite [documentação de referência do RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server não está integrado como intimamente com Pacemaker no Linux quanto com clustering de failover do Windows Server. Uma instância do SQL Server não está ciente do cluster. Pacemaker fornece orquestração de recurso de cluster. Além disso, o nome de rede virtual é específico para clustering de failover do Windows Server - não há nenhum equivalente em Pacemaker. Exibições de gerenciamento dinâmico disponibilidade grupo (DMVs) que consultar informações de cluster retornam linhas vazias em clusters de Pacemaker. Para criar um ouvinte para a reconexão depois do failover transparente, registre manualmente o nome do ouvinte no DNS com o IP usado para criar o recurso IP virtual. 
 
 As seções a seguir percorrer as etapas para configurar um cluster Pacemaker e adicionar um grupo de disponibilidade como recursos no cluster para alta disponibilidade.
 
-## <a name="roadmap"></a>Roteiro
+## <a name="roadmap"></a>Roadmap
 
 As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 
@@ -130,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Defina a propriedade cluster Iniciar falha-for-fatal como false
 
-`start-failure-is-fatal`Indica se uma falha ao iniciar um recurso em um nó adicional impede as tentativas de iniciar nesse nó. Quando definido como `false`, o cluster decide se tentar iniciar no mesmo nó novamente com base no limite do recurso atual falha contagem e a migração. Após o failover, começando a disponibilidade de repetições de Pacemaker recurso de grupo no primeiro primário depois que a instância do SQL está disponível. Pacemaker Rebaixa a réplica secundária e ele retoma automaticamente o grupo de disponibilidade. 
+`start-failure-is-fatal` Indica se uma falha ao iniciar um recurso em um nó adicional impede as tentativas de iniciar nesse nó. Quando definido como `false`, o cluster decide se tentar iniciar no mesmo nó novamente com base no limite do recurso atual falha contagem e a migração. Após o failover, começando a disponibilidade de repetições de Pacemaker recurso de grupo no primeiro primário depois que a instância do SQL está disponível. Pacemaker Rebaixa a réplica secundária e ele retoma automaticamente o grupo de disponibilidade. 
 
 Para atualizar o valor da propriedade `false` executar:
 
@@ -149,10 +148,10 @@ Para obter informações sobre propriedades de cluster Pacemaker, consulte [Pace
 
 ## <a name="create-availability-group-resource"></a>Criar o recurso de grupo de disponibilidade
 
-Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. O comando a seguir cria um `ocf:mssql:ag` mestre/escravo de recursos para o grupo de disponibilidade com o nome `ag1`.
+Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. O comando a seguir cria um `ocf:mssql:ag` primário/secundário de recursos para o grupo de disponibilidade com o nome `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -161,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Criar o recurso IP virtual
 
-Para criar o recurso de endereço IP virtual, execute o seguinte comando em um nó. Use um endereço IP estático disponível da rede. Substitua o endereço IP entre `**<10.128.16.240>**` com um endereço IP válido.
+Para criar o recurso de endereço IP virtual, execute o seguinte comando em um nó. Use um endereço IP estático disponível da rede. Substitua o endereço IP entre `<10.128.16.240>` com um endereço IP válido.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Não há nenhum nome de servidor virtual equivalente em Pacemaker. Para usar uma cadeia de caracteres de conexão que aponta para um nome de servidor de cadeia de caracteres em vez de um endereço IP, registre o endereço do recurso IP virtual e o nome do servidor virtual desejado no DNS. Para configurações de recuperação de desastres, registre o nome do servidor virtual desejada e o endereço IP com os servidores DNS primário e site de recuperação de desastres.
@@ -211,4 +210,3 @@ O failover manualmente o grupo de disponibilidade com `pcs`. Não inicie o failo
 ## <a name="next-steps"></a>Próximas etapas
 
 [Operar o grupo de disponibilidade de alta disponibilidade](sql-server-linux-availability-group-failover-ha.md)
-

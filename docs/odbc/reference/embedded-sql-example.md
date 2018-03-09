@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 13890248b3e724f2a41db5a3425c62dc7635b63a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql-example"></a>Exemplo SQL incorporado
 O código a seguir é um programa SQL incorporado simple, escrito em C. O programa ilustra muitas, mas não em todas as incorporado técnicas do SQL. O programa solicita ao usuário um número de pedido, recupera o número do cliente, o vendedor e o status do pedido e exibe as informações recuperadas na tela.  
@@ -81,4 +79,3 @@ bad_number:
 -   **Tratamento de erros** o DBMS relata erros de tempo de execução do programa de aplicativos por meio de uma área de comunicações do SQL, ou SQLCA. No exemplo de código anterior, a primeira instrução SQL inserida é incluir SQLCA. Isso informa o pré-compilador para incluir a estrutura SQLCA no programa. Isso é necessário sempre que o programa processará os erros retornados pelo DBMS. WHENEVER... Instrução GOTO informa o pré-compilador para gerar o código de tratamento de erros que ramificações para um rótulo específico quando um erro ocorre.  
   
 -   **Singleton selecione** a instrução usada para retornar os dados é uma instrução SELECT singleton; ou seja, ele retorna somente uma única linha de dados. Portanto, o exemplo de código não declarar ou usar cursores.
-

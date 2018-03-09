@@ -2,27 +2,30 @@
 title: "Propriedades da publicação – &lt;Publicação&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2746522285557ff444d2da9b1e5d71b7ecf3661
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fa06b62a1b687af1db14b15e255c3aa4a596c549
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties----ltpublicationgt"></a>Propriedades da publicação – &lt;Publicação&gt;
-  Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades de Publicação** :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades de Publicação**:  
   
 -   [Propriedades de Publicação, Geral](../../relational-databases/replication/publication-properties-general.md)  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Propriedades de Publicação, Partições de Dados](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   

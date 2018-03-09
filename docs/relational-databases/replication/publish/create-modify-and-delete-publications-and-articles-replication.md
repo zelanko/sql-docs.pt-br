@@ -2,9 +2,12 @@
 title: "Criar, modificar e excluir publicações e artigos (Replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,24 +16,24 @@ helpviewer_keywords:
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f467bc9010932f0d29304dc004dc7d4fc9d1777c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee95ce967637c9b1be05d0ee4de552b1cb7ea4e4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Criar, modificar e excluir publicações e artigos (Replicação)
-  Esta seção da documentação contém informações de procedimentos sobre tarefas relacionadas para criar publicações e definir artigos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção da documentação contém informações de procedimentos sobre tarefas relacionadas para criar publicações e definir artigos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Definir um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Especificar a resolução de conflitos interativa para artigos de mesclagem](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

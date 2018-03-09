@@ -3,8 +3,11 @@ title: "Especificar critérios de pesquisa (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cf5249d181909e5b4c2473c0dc33d4ad1340eb2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d811d773e5cb85f94e32aa27cdf3c746b35089ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Especificar critérios de pesquisa (Visual Database Tools)
-Você pode usar os critérios de pesquisa para restringir o número de linhas retornado por uma consulta.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar os critérios de pesquisa para restringir o número de linhas retornado por uma consulta.  
   
 Para obter detalhes sobre etapas específicas para criar critérios de pesquisa, consulte os tópicos listados na tabela a seguir.  
   

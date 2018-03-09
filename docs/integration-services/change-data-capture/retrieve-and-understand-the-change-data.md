@@ -1,5 +1,5 @@
 ---
-title: "Recuperar e compreender os dados de alteração | Microsoft Docs"
+title: "Recuperar e compreender os dados de alterações | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: caf66f974e832fcd1b27caf650d187942b3f19fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8ff4d2567d455744270b3fa317b3290ac1ced123
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recuperar e compreender os dados de alteração
   No fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a primeira tarefa é executar a consulta que recupera os dados de alteração. Você executa esta consulta dentro de um componente de origem em uma tarefa Fluxo de Dados. As transformações downstream e os destinos podem ser usados para aplicar os dados de alteração em seu destino.  
@@ -68,4 +67,3 @@ ms.lasthandoff: 08/03/2017
  **Próximo tópico:** [Processar inserções, atualizações e exclusões](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   
-

@@ -2,16 +2,13 @@
 title: Associar um atributo a uma coluna de chave | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 059527f4f36552b2247cb156458d3e839cc67e39
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Propriedades de atributo - associar um atributo a uma coluna de chave
-  Este procedimento descreve como alterar a configuração da propriedade **Name** de um atributo de uma dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este procedimento descreve como alterar a configuração da propriedade **Name** de um atributo de uma dimensão.  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>Ligar um atributo a uma coluna de chave  
   
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/01/2017
     >  Você também pode definir a propriedade **Nome** de um atributo selecionado na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   
-

@@ -3,8 +3,11 @@ title: "Remover vários servidores de destino de um servidor mestre | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e2c38be3173c025c9d4afccffe7660de8194a22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: baf80c3e31c410ba6c50eb8dbf7b9a89a0c05361
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="defect-multiple-target-servers-from-a-master-server"></a>Remover vários servidores de destino de um servidor mestre
-Este tópico descreve como remover vários servidores de destino de uma configuração de administração multisservidor no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Execute este procedimento a partir do servidor mestre.  
+# <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como remover vários servidores de destino de uma configuração de administração multisservidor no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Execute este procedimento a partir do servidor mestre.  
   
 ## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
@@ -46,7 +49,7 @@ Este tópico descreve como remover vários servidores de destino de uma configur
   
     -   Clique em **Estes servidores de destino**e então clique na caixa **Selecionar** correspondente aos servidores de destino que devem ser removidos desse servidor mestre, para remover apenas alguns deles.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md)  
 [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  

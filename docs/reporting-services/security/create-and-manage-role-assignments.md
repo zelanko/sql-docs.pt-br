@@ -2,12 +2,13 @@
 title: "Criar e gerenciar atribuições de função | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "39"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0e8cc3d577c678b60ead9a5e5e7983980059a728
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
   Uma *atribuição de função* é uma política de segurança que determina se um usuário ou grupo pode acessar um item de servidor de relatório específico ou executar uma operação. Uma atribuição de função consiste em um único nome de conta de usuário ou grupo e em uma ou mais definições de função.  
@@ -67,12 +67,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="deleting-a-role-assignment"></a>Excluindo atribuições de função  
  Você pode excluir atribuições de função marcando a caixa de seleção de cada atribuição que deseja excluir e clicando em **Excluir**. Você também pode excluir atribuições de função clicando em **Reverter em Segurança Pai**. Ao clicar nesse botão, as atribuições de função existentes para o item são excluídas e as atribuições fornecidas por um item pai são usadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Atribuições de função](../../reporting-services/security/role-assignments.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)   
- [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

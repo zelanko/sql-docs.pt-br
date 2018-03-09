@@ -2,29 +2,32 @@
 title: Definindo um cubo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 16cc78325be6d6c2759d630740f54045b02f6bb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Lição 2-2-definir um cubo
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 O Assistente para Cubos ajuda-o a definir os grupos de medidas e dimensões de um cubo. Na tarefa a seguir, você usará o Assistente para Cubos para criar um cubo.  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Para definir um cubo e suas propriedades  

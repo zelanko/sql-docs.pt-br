@@ -2,9 +2,12 @@
 title: Otimizando a tabela NewOrg | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2526b0a159349655b68f6364e6a070e4661e422
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>Lição 1-3 – Otimizando a tabela NewOrg
-A tabela **NewOrd** criada na tarefa [Populando uma tabela com dados hierárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contém todas as informações de funcionários e representa a estrutura hierárquica usando um tipo de dados **hierarchyid** . Essa tarefa adiciona índices novos para dar suporte às pesquisas na coluna **hierarchyid** .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] A tabela **NewOrd** criada na tarefa [Populando uma tabela com os dados hierárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contém todas as informações de funcionários e representa a estrutura hierárquica usando um tipo de dados **hierarchyid**. Essa tarefa adiciona índices novos para dar suporte às pesquisas na coluna **hierarchyid** .  
   
 ## <a name="clustered-index"></a>Índice clusterizado  
 A coluna **hierarchyid** (**OrgNode**) é a chave primária da tabela **NewOrg** . Quando a tabela foi criada, ela continha um índice clusterizado chamado **PK_NewOrg_OrgNode** para impor a exclusividade da coluna **OrgNode** . Esse índice clusterizado também oferece suporte a uma pesquisa primária detalhada da tabela.  

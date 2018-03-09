@@ -3,8 +3,9 @@ title: "Método AddNew (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::AddNew
 - Recordset15::raw_AddNew
-helpviewer_keywords: AddNew method [ADO]
+helpviewer_keywords:
+- AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1db70bfb438d7954a5874c80631c9a72c83e7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>Método AddNew (ADO)
 Cria um novo registro para um atualizável [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -39,7 +41,7 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *conjunto de registros*  
+ *recordset*  
  Um **registros** objeto.  
   
  *FieldList*  
@@ -48,7 +50,7 @@ recordset.AddNew FieldList, Values
  *Valores*  
  Opcional. Um único valor ou uma matriz de valores para os campos no novo registro. Se *Fieldlist* é uma matriz, *valores* também deve ser uma matriz com o mesmo número de membros; caso contrário, ocorrerá um erro. A ordem dos nomes de campo deve corresponder à ordem dos valores de campo em cada matriz.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **AddNew** método para criar e inicializar um novo registro. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método com **adAddNew** (uma [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valor) para verificar se você pode adicionar registros a atual **registros**objeto.  
   
  Depois de chamar o **AddNew** método, o novo registro se tornará o registro atual e permanece atual depois de chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Desde que o novo registro é anexado ao **registros**, uma chamada para **MoveNext** após a atualização moverá após o término do **registros**, tornando **EOF**  True. Se o **registros** objeto não oferece suporte a indicadores, você não poderá acessar o novo registro depois que você vai para outro registro. Dependendo de seu tipo de cursor, talvez seja necessário chamar o [Requery](../../../ado/reference/ado-api/requery-method.md) método para disponibilizar o novo registro.  

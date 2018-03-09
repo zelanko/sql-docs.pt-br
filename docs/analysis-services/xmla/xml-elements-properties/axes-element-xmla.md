@@ -2,46 +2,39 @@
 title: Eixos elemento (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Axes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Axes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - Axes
 - http://schemas.microsoft.com/analysisservices/2003/engine#Axes
 - microsoft.xml.analysis.axes
 - urn:schemas-microsoft-com:xml-analysis#Axes
-helpviewer_keywords:
-- Axes element
+helpviewer_keywords: Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fd10148d82ac0be83bfab721653cc1e200464fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
-  Contém uma coleção de [eixo](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elementos que representam dados de eixo contidos por um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de dados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de [eixo](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elementos que representam dados de eixo contidos por um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,10 +51,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Any (qualquer)|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -71,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 |Elementos pai|[raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Elementos filho|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Sob o **eixos** elemento, o **eixo** elementos são listados na ordem em que eles ocorrem no conjunto de dados, começando com zero. O **AxisFormat** XMLA propriedade determina como **eixo** elementos são formatados. Para obter mais informações sobre o **AxisFormat** propriedade, consulte [suporte para propriedades de XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Um eixo representa um conjunto de tuplas no qual todas as tuplas têm a mesma dimensionalidade. Um conjunto pode ser representado de modos diferentes com vantagens diferentes. Por exemplo, o seguinte conjunto de quatro tuplas pode ser representado como uma coleção de tuplas bidimensionais ou o produto Cartesiano de dois conjuntos unidimensionais.  
@@ -127,9 +120,8 @@ CrossProduct (
   
  Um cliente pode usar o **AxisFormat** propriedade para solicitar uma representação específica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipo de dados MDDataSet &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

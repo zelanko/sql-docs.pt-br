@@ -2,9 +2,11 @@
 title: "Estimar o tamanho de um índice clusterizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,17 +24,20 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c750d3887f36b5f8d4a0dd826d6cc1b5e990bf3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af9ddff95b36fadee6dcd25d864ae77128fb6676
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar o tamanho de um índice clusterizado
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um índice clusterizado:  
   
 1.  Calcule o espaço usado para armazenar dados no nível folha do índice clusterizado.  
@@ -224,13 +229,13 @@ ms.lasthandoff: 11/09/2017
   
      Para obter informações sobre os requisitos de espaço de colunas esparsas, consulte [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Estimar o tamanho de uma tabela](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Estimar o tamanho de um índice não clusterizado](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)   
- [Estimando o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
+ [Estimar o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
  [Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   

@@ -3,8 +3,9 @@ title: "O que é um bloqueio? | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 133cd38feed1b55557112abe45872d333cc08c2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 945416224804a6e3b384981912d2375351012a8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-is-a-lock"></a>O que é um bloqueio?
 O bloqueio é o processo pelo qual um DBMS restringe o acesso a uma linha em um ambiente multiusuário. Quando uma linha ou coluna está bloqueada exclusivamente, outros usuários não têm permissão para acessar os dados bloqueados até que o bloqueio seja liberado. Isso garante que os dois usuários não é possível atualizar simultaneamente a mesma coluna em uma linha.  

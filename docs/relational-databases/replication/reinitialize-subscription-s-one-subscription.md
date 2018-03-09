@@ -2,9 +2,12 @@
 title: "Reinicializar Assinatura(s) – uma assinatura | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.rep.reinit.single.f1
 helpviewer_keywords: Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e79ea2c89375473d31e1ec44e783b5af37c90a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f880d02edec3fdd62aba702781c290b985e5dafd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Reiniciar Assinatura(s) - uma assinatura
-  A caixa de diálogo **Reinicializar Assinatura(s)** permite marcar uma assinatura para reinicialização. A reinicialização envolve a aplicação de um instantâneo no Assinante; é executada pelo Distribution Agent para assinaturas em publicações transacionais e pelo Merge Agent para assinaturas em publicações de mesclagem.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Reinicializar Assinaturas** permite marcar uma assinatura para reinicialização. A reinicialização envolve a aplicação de um instantâneo no Assinante; é executada pelo Distribution Agent para assinaturas em publicações transacionais e pelo Merge Agent para assinaturas em publicações de mesclagem.  
   
 ## <a name="options"></a>Opções  
  **Usar o instantâneo atual**  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
  **Marcar para Reinicialização**  
  Clique para marcar a assinatura para reinicialização. Depois que um instantâneo válido estiver disponível, da próxima vez que o Distribution Agent ou Merge Agent forem executados para a assinatura, o instantâneo será aplicado ao Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

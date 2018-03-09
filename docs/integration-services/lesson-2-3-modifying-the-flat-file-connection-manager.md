@@ -1,11 +1,11 @@
 ---
-title: "Etapa 3: Modificando o Gerenciador de Conexão de arquivo simples | Microsoft Docs"
+title: "Etapa 3: modificar o gerenciador de conexões de arquivo simples | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 525557f034199c5e6823c18ab9fdb7c3b505a434
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c447e50a05b1b705690262f322bd1ceeeee72868
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Lição 2-3: modificando o Gerenciador de Conexão de arquivo simples
+# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Lição 2-3 – modificar o gerenciador de conexões de arquivo simples
 Nesta tarefa, você modificará o gerenciador de conexões de arquivo simples que você criou e configurou na Lição 1. Quando foi criado originalmente, o gerenciador de conexões de arquivo simples foi configurado para carregar estatisticamente um único arquivo. Para habilitar o gerenciador de conexões de Arquivo Simples a carregar arquivos de forma iterativa, você deve modificar a propriedade ConnectionString do gerenciador de conexões para aceitar a variável definida pelo usuário `User:varFileName`, que contém o caminho do arquivo a ser carregado em tempo de execução.  
   
 Ao modificar o gerenciador de conexões para usar o valor da variável definida pelo usuário, `User::varFileName`, para popular a propriedade ConnectionString do gerenciador de conexões, o gerenciador de conexões poderá se conectar a diferentes arquivos simples. No tempo de execução, cada iteração do contêiner Loop Foreach atualizará dinamicamente a variável `User::varFileName` . Atualizar a variável, por sua vez, faz com que o gerenciador de conexões se conecte a um arquivo simples diferente e a tarefa de fluxo de dados processe um conjunto diferente de dados.  
@@ -55,4 +54,3 @@ Ao modificar o gerenciador de conexões para usar o valor da variável definida 
   
   
   
-

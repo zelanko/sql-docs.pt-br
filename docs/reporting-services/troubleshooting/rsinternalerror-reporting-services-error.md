@@ -1,29 +1,28 @@
 ---
-title: rsInternalError - erro do Reporting Services | Microsoft Docs
+title: "rsInternalError – erro do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsInternalError
+helpviewer_keywords: rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "23"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 95f0e2c76aac661977ba0eedac84125c5b1e1888
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Erro do Reporting Services
     
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  Erros internos são incomuns. Se esse erro for exibido, mais informações estarão disponíveis nos logs de rastreamento de servidor de relatório. Além disso, se estiver executando como administrador local no mesmo computador em que ocorreu o erro, será possível exibir a pilha de chamadas para obter mais informações.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Para determinar a causa específica para essa mensagem, examine os arquivos de log de servidor de relatório, localizados em \Microsoft SQL Server\MSRS12. \<instancename > \reporting. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Para determinar a causa específica dessa mensagem, examine os arquivos de log do servidor de relatório, localizados em \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
  Para exibir a pilha de chamadas, clique com o botão direito do mouse na página em que ocorreu o erro e aponte para **Exibir Código-Fonte**. A exibição da pilha de chamadas exige permissões de administrador no mesmo computador em que o erro ocorreu.  
   
@@ -51,8 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="internal-only"></a>Somente interno  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   
-

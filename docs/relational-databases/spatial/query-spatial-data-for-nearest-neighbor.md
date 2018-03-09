@@ -2,26 +2,31 @@
 title: "Consultar dados espaciais do vizinho mais próximo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2cb970b15ae4d310f5fb835da67886a0200108a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d71460a10728236763ed3c3d168d0e7b079b8403
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
-  Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
   
  Uma consulta de Vizinho Mais Próximo pode ser escrita em uma variedade de formatos de consulta válidos, mas, para que a consulta de Vizinho Mais Próximo use um índice espacial, a sintaxe a seguir deve ser usada.  
   
@@ -80,7 +85,7 @@ SELECT TOP ( number )
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que pode usar um índice espacial. O exemplo usa a tabela `Person.Address` no banco de dados `AdventureWorks2012` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -95,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que não pode usar um índice espacial.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -106,7 +111,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  A consulta não tem uma cláusula **WHERE** que usa `STDistance()` em uma forma especificada na seção de sintaxe; portanto, a consulta não pode usar um índice espacial.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

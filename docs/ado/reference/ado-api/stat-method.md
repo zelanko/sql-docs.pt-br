@@ -3,8 +3,9 @@ title: "Método STAT | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Stat
-helpviewer_keywords: Stat method [ADO]
+f1_keywords:
+- _Stream::Stat
+helpviewer_keywords:
+- Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c33383de27f2685849034cec79c6b4589dfb0a79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ad80d2f42e11834b0872f581913ad64939d25af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stat-method"></a>Método STAT
 Recupera informações sobre um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -46,12 +49,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Especifica que este método não retorna alguns dos membros na estrutura STATSTG, economizando uma operação de alocação de memória. Os valores são obtidos da enumeração STATFLAG. A enumeração STATFLAG tem dois valores  
   
-|Constante|Valor|  
+|Constante|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A versão do método Stat implementado para o objeto de fluxo ADO preenche os campos a seguir da estrutura de STATSTG:  
   
  *pwcsName*  

@@ -3,8 +3,11 @@ title: Operadores | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465ec6d532e4ee46a7c4158475b2890eccf1b0be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9c8caffe4e8172585c1e17fdf9368dbbb3c87d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators"></a>Operadores
-Operadores são aliases de pessoas ou grupos que podem receber notificações eletrônicas sobre a conclusão de trabalhos ou emissões de alertas. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dá suporte à notificação de administradores através de operadores. Os operadores habilitam a notificação e o monitoramento de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Operadores são aliases de pessoas ou grupos que podem receber notificações eletrônicas sobre a conclusão de trabalhos ou emissões de alertas. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dá suporte à notificação de administradores através de operadores. Os operadores habilitam a notificação e o monitoramento de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="operator-attributes-and-concepts"></a>Atributos e conceitos do operador  
 Os atributos primários de um operador são:  
@@ -116,7 +119,7 @@ O operador à prova de falhas é um recurso de segurança. Não é possível exc
   
 -   Para usar **net send**, o operador deve ter feito logon no computador especificado e este deve permitir mensagens do Windows Messenger.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -124,6 +127,6 @@ O operador à prova de falhas é um recurso de segurança. Não é possível exc
 |Tarefas relacionadas à criação de um operador|[Criar um operador](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Contêiner Host da tarefa | Microsoft Docs"
+title: "Contêiner do Host da Tarefa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - containers [Integration Services], Task Host
 - Task Host container
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27fc5684d3ed15dcd8638e0515af57f7164d6e9c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2c1f9de6131f52454b991165b228c7e78958a5c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
   O contêiner do host da tarefa encapsula uma única tarefa. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o host da tarefa não é configurado separadamente, ele é configurado quando você define as propriedades da tarefa que ele encapsula. Para obter mais informações sobre as tarefas que os contêineres do host da tarefa encapsulam, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
@@ -42,12 +41,11 @@ ms.lasthandoff: 08/03/2017
   
  Para obter informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Definir as propriedades de uma tarefa ou de um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   
   
-

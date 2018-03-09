@@ -3,8 +3,11 @@ title: Alertas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alerts"></a>Alertas
-Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
   
 Para definir um alerta, especifique:  
   
@@ -155,6 +158,6 @@ Encontram-se, a seguir, os links para tarefas comuns:
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   

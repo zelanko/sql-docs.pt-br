@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d88e4c11359e5861e1f3758a9397ccbef5209ffa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc4c797f149d3139beede4617a7b81721397615c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  A ID do perfil a ser atualizado. *profile_id* é **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  O nome do perfil a ser atualizado. *profile_name* é **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  A ID da conta a ser atualizada. *account_id* é **int**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  O nome da conta a ser atualizada. *account_name* é **sysname**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
   
- [  **@sequence_number**  =] *sequence_number*  
+ [ **@sequence_number** = ] *sequence_number*  
  O novo número de sequência da conta. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -67,7 +70,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Retorna um erro se a conta especificada não estiver associada ao perfil especificado.  
   
  O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail inicia com a conta que tem o número de sequência mais baixo. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se houver falha na conta com o número de sequência mais alto, a mensagem de email falhará.  

@@ -2,10 +2,14 @@
 title: "Comparar XML tipado com XML não tipado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
-  É possível criar variáveis, parâmetros e colunas do tipo **xml** . Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+É possível criar variáveis, parâmetros e colunas do tipo **xml** . Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML bem formado e o tipo de dados xml  
  O tipo de dados **xml** implementa o tipo de dados **xml** padrão ISO. Portanto ele pode armazenar documentos bem formados em XML versão 1.0 e também os chamados fragmentos de conteúdo XML com nós de texto e um número arbitrário de elementos de nível superior em uma coluna XML sem-tipo. Os sistema verifica se os dados estão bem formados, se não requerem que a coluna esteja associada a esquemas XML e rejeita dados que não são bem formados no sentido estendido. Isso também é verdadeiro para variáveis e parâmetros XML sem-tipo.  
@@ -71,7 +76,7 @@ ms.lasthandoff: 11/09/2017
  Nos exemplos a seguir, uma convenção de nomenclatura de duas partes é usada para especificar o nome da coleção de esquema XML. A primeira parte é o nome do esquema e a segunda parte é o nome da coleção de esquema XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquema com uma variável de tipo xml  
- O exemplo a seguir cria uma variável de tipo**xml** e associa uma coleção de esquema a ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
+ O exemplo a seguir cria uma variável de tipo **xml** e associa uma coleção de esquema a ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -158,9 +163,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Observe que você ainda pode usar uma instrução select SQL simples para recuperar o tipo de dados XML inteiro, mesmo que ele contenha anos negativos. É recomendável substituir anos negativos por um ano dentro do intervalo com suporte recente ou alterar o tipo do elemento ou atributo para **xs:string**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

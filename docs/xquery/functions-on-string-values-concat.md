@@ -3,30 +3,36 @@ title: "Função concat (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97825cfdb9d633904d973b205ce965d3f5eb8f10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---concat"></a>Funções em valores de cadeia de caracteres - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Aceita zero ou mais cadeias de caracteres como argumentos e retorna uma cadeia de caracteres criada concatenando os valores de cada um desses argumentos.  
   
@@ -43,7 +49,7 @@ fn:concat ($string as xs:string?
  *$string*  
  Cadeia de caracteres opcional para concatenar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função requer pelo menos dois argumentos. Se um argumento for uma sequência vazia, será tratado como a cadeia de caracteres de comprimento zero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  

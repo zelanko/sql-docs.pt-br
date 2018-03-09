@@ -2,29 +2,34 @@
 title: Definir ou alterar o agrupamento de coluna | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d16e4c40ceb37e5d4b54a8c5baec0605704ae60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4efa74ea16002a35c372d90b9c69fca88fab8aef
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar o agrupamento de coluna
-  É possível substituir o agrupamento de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar**e **ntext** especificando um agrupamento diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+É possível substituir o agrupamento de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar**e **ntext** especificando um agrupamento diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
   
 -   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Por exemplo:  
   
@@ -39,7 +44,7 @@ ms.lasthandoff: 11/09/2017
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para obter informações sobre a ferramenta de configuração e recursos adicionais. Para obter mais informações, [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   Usando a propriedade **Column.Collation** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
@@ -112,7 +117,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir ou alterar o agrupamento do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Definir ou alterar o agrupamento de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  

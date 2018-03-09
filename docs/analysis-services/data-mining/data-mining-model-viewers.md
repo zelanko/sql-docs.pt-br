@@ -2,15 +2,13 @@
 title: "Visualizadores do modelo de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +20,20 @@ helpviewer_keywords:
 - support [data mining]
 - exploring data mining models [Analysis Services]
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d511fe97903969218f9f052132fc0521baa976b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60d9d0bc1d8f78e4baa7c2d36291c76e00c88015
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-model-viewers"></a>Visualizadores do Modelo de Mineração de Dados
-  Após treinar em um modelo de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode explorar o modelo para procurar tendências interessantes. Como os resultados dos modelos de mineração são complexos e de difícil entendimento quando em um formato bruto, muitas vezes a verificação visual dos dados é a maneira mais fácil de interpretar as regras e as relações que os algoritmos identificam nos dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Após treinar em um modelo de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode explorar o modelo para procurar tendências interessantes. Como os resultados dos modelos de mineração são complexos e de difícil entendimento quando em um formato bruto, muitas vezes a verificação visual dos dados é a maneira mais fácil de interpretar as regras e as relações que os algoritmos identificam nos dados.  
   
  Cada algoritmo usado para criar um modelo retorna um tipo de resultado diferente. Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um visualizador separado para cada algoritmo. Quando você navega em um modelo de mineração no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o modelo é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados, usando o visualizador adequado ao modelo.  
   
@@ -65,32 +64,32 @@ ms.lasthandoff: 11/17/2017
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir descrevem em mais detalhe cada um dos visualizadores, e como interpretar as informações neles.  
   
- [Procurar um modelo usando a Exibição de Árvore da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Procurar um modelo usando o Visualizador de árvore da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
  Descreve o Visualizador de Árvore da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e com o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Procurar um modelo usando o Visualizador de Cluster da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
  Descreve o Visualizador de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo Clustering da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
  Descreve o Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador do Microsoft Naive Bayes](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Procurar um modelo usando o visualizador Microsoft Naive Bayes](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  Descreve o Visualizador Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Procurar um modelo usando o Visualizador de Cluster de sequência da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  Descreve o Visualizador de Cluster de Sequência da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo MSC da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
  Descreve o Visualizador de Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ [Procurar um modelo usando o Visualizador de rede Neural da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  Descreve o Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esse visualizador exibe os modelos de mineração criados com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluindo os modelos que usam o algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
+ [Procurar um modelo usando o Visualizador de árvore de conteúdo genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Descreve as informações detalhadas disponíveis no visualizador genérico de todos os modelos de mineração de dados e fornece exemplos de como interpretar as informações para cada algoritmo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Designer de Mineração de dados](../../analysis-services/data-mining/data-mining-designer.md)  
+ [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Designer de mineração de dados](../../analysis-services/data-mining/data-mining-designer.md)  
   
   

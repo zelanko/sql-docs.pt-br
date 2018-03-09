@@ -1,5 +1,5 @@
 ---
-title: "Transformação pesquisa | Microsoft Docs"
+title: "Transformação Pesquisa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,19 +26,18 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lookup-transformation"></a>Transformação Pesquisa
+# <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
   
  O conjunto de dados de referência pode ser um arquivo de cache, uma tabela ou uma exibição existente, uma nova tabela ou o resultado de uma consulta SQL. A transformação Pesquisa usa um gerenciador de conexões OLE DB ou um gerenciador de conexões de cache para se conectar ao conjunto de dados de referência. Para obter mais informações, consulte [Gerenciador de Conexões do OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/19/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diferem quanto à forma que comparam cadeias de caracteres. Se a transformação Pesquisa é configurada para carregar o conjunto de dados de referência no cache antes da execução da transformação Pesquisa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] faz a comparação de pesquisa no cache. Por outro lado, a operação de pesquisa usa uma instrução SQL parametrizada e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz a comparação de pesquisa. Isso significa que a transformação Pesquisa pode retornar um número diferente de correspondências a partir da mesma tabela de consulta, dependendo do tipo de cache.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente. Para obter mais detalhes, consulte os tópicos a seguir.  
   
 -   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/19/2017
  **Gerenciador de conexões do cache**  
  Configure a transformação Pesquisa para usar um Gerenciador de conexão de cache. Esta opção estará disponível somente se a opção Cache cheio for selecionada.  
   
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Configure a transformação Pesquisa para usar um Gerenciador de conexões OLE DB.  
   
  **Especificar como lidar com linhas com entradas sem-correspondência**  
@@ -281,11 +280,10 @@ ms.lasthandoff: 08/19/2017
 ### <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
- [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
+ [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

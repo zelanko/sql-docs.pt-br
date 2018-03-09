@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STGeometryType (geography Data Type)
 - STGeometryType_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STGeometryType method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STGeometryType method
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 814958f4cafd98266529e9ee237aaf3375ea6a4b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ba32b26da5f46470b2e8b22d65fa59025a689e6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os nomes de tipo OGC que podem ser retornados por `STGeometryType()` são **ponto**, **LineString**, **CircularString**, **CompoundCurve**, **Polígono**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, e **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  

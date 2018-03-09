@@ -38,17 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -439,7 +438,7 @@ RETURNS return_data_type
   
  Define o tipo de dados da tabela. A declaração da tabela inclui definições de coluna e restrições. Para funções CLR, apenas *column_name* e *data_type* pode ser especificado.  
   
- *nome da coluna*  
+ *column_name*  
  É o nome de uma coluna da tabela. Os nomes de coluna devem estar em conformidade com as regras de identificadores e devem ser exclusivos na tabela. *nome da coluna* pode consistir de 1 a 128 caracteres.  
   
  *data_type*  
@@ -501,7 +500,7 @@ RETURNS return_data_type
   
  Especifica uma coluna computada. Para obter mais informações sobre colunas computadas, consulte [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
   
- *nome da coluna*  
+ *column_name*  
  É o nome da coluna computada.  
   
  *computed_column_expression*  
@@ -655,8 +654,8 @@ RETURNS return_data_type
 |Exibição do sistema|Description|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Consulte o exemplo E, na seção exemplos abaixo.|  
-|[assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Exibe informações sobre funções CLR definidas pelo usuário.|  
-|[sys. Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.|  
+|[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Exibe informações sobre funções CLR definidas pelo usuário.|  
+|[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Exibe os objetos subjacentes referenciados por uma função.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -671,7 +670,7 @@ RETURNS return_data_type
   
  Esta é a chamada da função. Observe que `DATEFIRST` está definido como `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -706,7 +705,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Criando uma função com valor de tabela embutida  
  O exemplo a seguir retorna uma função com valor de tabela embutida no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Ela retorna três colunas `ProductID`, `Name` e a agregação dos totais acumulados no ano por loja como `YTD Total` para cada produto vendido para a loja.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -725,14 +724,14 @@ GO
 
  Para invocar a função, execute esta consulta.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Criando uma função com valor de tabela de várias instruções  
  O exemplo a seguir cria a função com valor de tabela `fn_FindReports(InEmpID)` no banco de dados AdventureWorks2012. Quando fornecida com uma ID de funcionário válida, a função retorna uma tabela que corresponde a todos os funcionários subordinados ao funcionário direta ou indiretamente. A função usa uma CTE (expressão de tabela comum) recursiva para produzir a lista hierárquica de funcionários. Para obter mais informações sobre CTEs recursivas, consulte [com common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -782,7 +781,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -806,7 +805,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Exibindo a definição de [!INCLUDE[tsql](../../includes/tsql-md.md)] funções definidas pelo usuário  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   
@@ -816,7 +815,7 @@ GO
   
  A definição de funções criadas com a opção ENCRYPTION não pode ser exibida usando sys.sql_modules; no entanto, outras informações sobre as funções criptografadas são exibidas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
@@ -828,5 +827,4 @@ GO
  [Criar política de segurança &#40; Transact-SQL &#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
-
 

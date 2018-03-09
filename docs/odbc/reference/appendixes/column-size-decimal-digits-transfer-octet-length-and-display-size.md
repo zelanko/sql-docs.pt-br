@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Tamanho da coluna, dígitos decimais, transferir o comprimento do octeto e exibir tamanho - ODBC
 Tipos de dados são caracterizados por tamanho de coluna (ou parâmetro), dígitos decimais, comprimento e tamanho de exibição. As seguintes funções ODBC retornam esses atributos para um parâmetro em uma instrução SQL ou para um tipo de dados SQL em uma fonte de dados. Cada função ODBC retorna um conjunto diferente desses atributos, da seguinte maneira:  
@@ -61,4 +59,3 @@ Tipos de dados são caracterizados por tamanho de coluna (ou parâmetro), dígit
 -   [Dígitos decimais](../../../odbc/reference/appendixes/decimal-digits.md)  
 -   [Comprimento do octeto de transferência](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [Tamanho de exibição](../../../odbc/reference/appendixes/display-size.md)
-

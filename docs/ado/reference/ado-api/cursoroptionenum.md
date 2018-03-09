@@ -3,7 +3,7 @@ title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8c57737a5162f902c349f74b941de6d8f5ca30e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qual funcionalidade o [suporta](../../../ado/reference/ado-api/supports-method.md) deve testar o método para.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Oferece suporte a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para adicionar novos registros.|  
 |**adApproxPosition**|0x4000|Oferece suporte a [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriedades.|  
@@ -49,8 +48,8 @@ Especifica qual funcionalidade o [suporta](../../../ado/reference/ado-api/suppor
 |**adUpdate**|0x1008000|Oferece suporte a [atualização](../../../ado/reference/ado-api/update-method.md) método para modificar os dados existentes.|  
 |**adUpdateBatch**|0x10000|Oferece suporte a atualização em lotes ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos) para transmitir grupos de alterações no provedor.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -70,4 +69,3 @@ Especifica qual funcionalidade o [suporta](../../../ado/reference/ado-api/suppor
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)
-

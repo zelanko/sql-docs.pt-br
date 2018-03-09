@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02fcbfb195c913396d6013f62a76853045ac3b9b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,29 +43,29 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifica a sessão associada a esta conexão. Permite valor nulo.|  
-|most_recent_session_id|**int**|Representa a ID de sessão da solicitação mais recente associada a esta conexão. (As conexões SOAP podem ser reutilizadas por outra sessão.) Permite valor nulo.|  
+|session_id|**Int**|Identifica a sessão associada a esta conexão. Permite valor nulo.|  
+|most_recent_session_id|**Int**|Representa a ID de sessão da solicitação mais recente associada a esta conexão. (As conexões SOAP podem ser reutilizadas por outra sessão.) Permite valor nulo.|  
 |connect_time|**datetime**|Carimbo de data/hora de quando a conexão foi estabelecida. Não permite valor nulo.|  
-|net_transport|**nvarchar (40)**|Sempre retorna **sessão** quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados.<br /><br /> **Observação:** descreve o protocolo de transporte físico usado por esta conexão. Não permite valor nulo.|  
-|protocol_type|**nvarchar (40)**|Especifica o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
-|protocol_version|**int**|Versão do protocolo de acesso a dados associada a esta conexão. Permite valor nulo.|  
-|endpoint_id|**int**|Um identificador que descreve qual é o tipo da conexão. Este endpoint_id pode ser usado para consultar a exibição sys.endpoints. Permite valor nulo.|  
-|encrypt_option|**nvarchar (40)**|Valor booliano que descreve se a criptografia está habilitada para esta conexão. Não permite valor nulo.|  
-|auth_scheme|**nvarchar (40)**|Especifica o esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticação do Windows usado com esta conexão. Não permite valor nulo.|  
+|net_transport|**nvarchar(40)**|Sempre retorna **sessão** quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados.<br /><br /> **Observação:** descreve o protocolo de transporte físico usado por esta conexão. Não permite valor nulo.|  
+|protocol_type|**nvarchar(40)**|Especifica o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
+|protocol_version|**Int**|Versão do protocolo de acesso a dados associada a esta conexão. Permite valor nulo.|  
+|endpoint_id|**Int**|Um identificador que descreve qual é o tipo da conexão. Este endpoint_id pode ser usado para consultar a exibição sys.endpoints. Permite valor nulo.|  
+|encrypt_option|**nvarchar(40)**|Valor booliano que descreve se a criptografia está habilitada para esta conexão. Não permite valor nulo.|  
+|auth_scheme|**nvarchar(40)**|Especifica o esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticação do Windows usado com esta conexão. Não permite valor nulo.|  
 |node_affinity|**smallint**|Identifica o nó de memória com o qual esta conexão tem afinidade. Não permite valor nulo.|  
-|num_reads|**int**|Número de leituras de bytes que ocorreram essa conexão. Permite valor nulo.|  
-|num_writes|**int**|Número de gravações de bytes que ocorreram essa conexão. Permite valor nulo.|  
+|num_reads|**Int**|Número de leituras de bytes que ocorreram essa conexão. Permite valor nulo.|  
+|num_writes|**Int**|Número de gravações de bytes que ocorreram essa conexão. Permite valor nulo.|  
 |last_read|**datetime**|Carimbo de data/hora de quando a última leitura ocorreu nesta conexão. Permite valor nulo.|  
 |last_write|**datetime**|Carimbo de data/hora de quando a última gravação ocorreu nesta conexão. Não permite valor nulo.|  
-|net_packet_size|**int**|Tamanho de pacote de rede usado para transferência de informações e de dados. Permite valor nulo.|  
+|net_packet_size|**Int**|Tamanho de pacote de rede usado para transferência de informações e de dados. Permite valor nulo.|  
 |client_net_address|**varchar(48)**|Endereço do host do cliente conectado a este servidor. Permite valor nulo.<br /><br /> Antes de V12 no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
-|client_tcp_port|**int**|Número da porta no computador cliente que está associado a esta conexão. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
+|client_tcp_port|**Int**|Número da porta no computador cliente que está associado a esta conexão. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
 |local_net_address|**varchar(48)**|Representa o endereço IP no servidor ao qual esta conexão foi destinada. Disponível apenas para conexões que usam o provedor de transporte TCP. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
-|local_tcp_port|**int**|Representa a porta do servidor TCP ao qual esta conexão foi destinada se houver uma conexão que use o transporte TCP. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
+|local_tcp_port|**Int**|Representa a porta do servidor TCP ao qual esta conexão foi destinada se houver uma conexão que use o transporte TCP. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
 |connection_id|**uniqueidentifier**|Identifica cada conexão exclusivamente. Não permite valor nulo.|  
 |parent_connection_id|**uniqueidentifier**|Identifica a conexão primária que a sessão MARS está usando. Permite valor nulo.|  
 |most_recent_sql_handle|**varbinary(64)**|O identificador SQL da última solicitação executada nesta conexão. A coluna most_recent_sql_handle sempre está em sincronia com a coluna most_recent_session_id. Permite valor nulo.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
@@ -82,7 +85,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
 ## <a name="examples"></a>Exemplos  
  Consulta típica para reunir informações sobre a própria conexão de consultas.  
   
-```t-sql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

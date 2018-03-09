@@ -20,17 +20,16 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bf0c19cc6e7058878de8daf3e3d263b4a06b283
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 37b480bd0bc638c1cc7d40bfbce66e64d616d209
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="string-operators-transact-sql"></a>Operadores de cadeia de caracteres (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,14 @@ ms.lasthandoff: 09/01/2017
 ## <a name="section-heading"></a>Cabeçalho da seção  
  [+ (Concatenação de cadeias de caracteres)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+ = (Concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+= (Concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [% (Curinga – Caracteres para corresponder)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
  [&#91; &#93; (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
  [&#91; ^ &#93; (Curinga - caracteres não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
- [_ (Curinga – corresponde a um caractere)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [_ (Curinga – Corresponder um caractere)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
-

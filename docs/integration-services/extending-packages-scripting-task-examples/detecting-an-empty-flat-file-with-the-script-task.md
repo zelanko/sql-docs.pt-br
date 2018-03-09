@@ -1,5 +1,5 @@
 ---
-title: Detectando um arquivo simples vazio com a tarefa Script | Microsoft Docs
+title: Detectar um arquivo simples vazio com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40deae6a08a597114fbc721271a789895e1d8fa2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a722343ed2a7cc0afcdb62d9871efeb26945ffd4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Detectando um arquivo simples vazio com a tarefa Script
   A origem Arquivo Simples não determina se um arquivo simples contém linhas de dados antes de tentar processá-las. Talvez você queira aumentar a eficácia de um pacote, especialmente de um pacote que itera em diversos arquivos simples, ignorando os arquivos que não contêm linhas de dados. A tarefa Script pode procurar um arquivo simples vazio antes de o pacote começar a processar o fluxo de dados.  
@@ -39,21 +37,21 @@ ms.lasthandoff: 09/26/2017
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- O exemplo a seguir usa métodos do **System.IO** namespace para testar o arquivo simples especificado em um Gerenciador de conexão de arquivo simples para determinar se o arquivo está vazio ou se ele contém apenas esperado de linhas de dados não como coluna cabeçalhos ou uma linha vazia. O script verifica primeiro o tamanho do arquivo; se o tamanho é zero bytes, o arquivo está vazio. Quando o tamanho do arquivo é maior que zero, o script lê linhas do arquivo até não encontrar mais linhas ou até o número de linhas exceder o número esperado de linhas que não são de dados. Quando o número de linhas no arquivo é menor que ou igual ao número esperado de linhas que não são de dados, o arquivo é considerado vazio. Os resultados são retornados como um valor booliano em uma variável de usuário, cujo valor pode ser usado para criar ramificação no fluxo de controle do pacote. O **FireInformation** método também exibe o resultado no **saída** janela o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+ O exemplo a seguir utiliza métodos do namespace **System.IO** para testar o arquivo simples especificado em um gerenciador de conexões de arquivo simples, a fim de determinar se o arquivo está vazio ou se ele contém apenas linhas esperadas que não são de dados, assim como títulos de coluna ou uma linha vazia. O script verifica primeiro o tamanho do arquivo; se o tamanho é zero bytes, o arquivo está vazio. Quando o tamanho do arquivo é maior que zero, o script lê linhas do arquivo até não encontrar mais linhas ou até o número de linhas exceder o número esperado de linhas que não são de dados. Quando o número de linhas no arquivo é menor que ou igual ao número esperado de linhas que não são de dados, o arquivo é considerado vazio. Os resultados são retornados como um valor booliano em uma variável de usuário, cujo valor pode ser usado para criar ramificação no fluxo de controle do pacote. O método **FireInformation** também exibe o resultado na janela de **Saída** do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications).  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Criar e configurar um Gerenciador de conexão de arquivo simples nomeado **EmptyFlatFileTest**.  
+1.  Crie e configure um gerenciador de conexões de arquivo simples nomeado **EmptyFlatFileTest**.  
   
 2.  Crie uma variável de inteiro nomeada `FFNonDataRows` e defina seu valor como o número de linhas que não são de dados esperadas no arquivo simples.  
   
 3.  Crie uma variável booliana nomeada `FFIsEmpty`.  
   
-4.  Adicionar o `FFNonDataRows` variável para a tarefa de Script **ReadOnlyVariables** propriedade.  
+4.  Adicione a variável `FFNonDataRows` à propriedade **ReadOnlyVariables** da tarefa Script.  
   
-5.  Adicionar o `FFIsEmpty` variável para a tarefa de Script **ReadWriteVariables** propriedade.  
+5.  Adicione a variável `FFIsEmpty` à propriedade **ReadWriteVariables** da tarefa Script.  
   
-6.  No seu código, importe o **System.IO** namespace.  
+6.  No seu código, importe o namespace **System.IO**.  
   
  Se você estiver iterando em arquivos com um enumerador de arquivo Foreach, em vez de utilizar um único gerenciador de conexões de arquivos simples, modifique o código de exemplo a seguir para obter o nome e o caminho do arquivo a partir da variável em que o valor enumerado é armazenado, e não do gerenciador de conexões.  
   
@@ -149,8 +147,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de tarefa Script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   
-

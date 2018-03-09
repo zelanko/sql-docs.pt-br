@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas na indexação de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   O indexador não consegue localizar ou carregar um filtro ou componente do separador de palavra. Essa falha pode ocorrer se a linha da tabela tiver um formato de documento ou conteúdo em idioma não registrado com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa falha também pode ocorrer se o componente do filtro ou o separador de palavra registrado não estava assinado ou se houve falha na verificação de assinatura ao carregar.  
   
--   Um componente, como um separador de palavra ou filtro, falha e retorna um erro para o indexador, o que pode ocorrer se o documento a indexar estiver corrompido e o filtro não conseguir extrair seu texto. Isso também pode ocorrer quando um componente não puder tratar o conteúdo de uma única linha acima de um determinado tamanho, devido a limites de memória no host do daemon do filtro (fdhost.exe).  
+-   Um componente, tal como um separador de palavras ou filtro, falha e retorna um erro ao indexador. Essa falha pode ocorrer se o documento a indexar estiver corrompido e o filtro não conseguir extrair seu texto. Essa falha também pode ocorrer quando um componente não puder tratar o conteúdo de uma única linha acima de um determinado tamanho, devido a limites de memória no host do daemon do filtro (fdhost.exe).  
   
  Para cada falha do nível de linha, o log de rastreamento contém detalhes da razão da falha. As contas de erro são resumidas no término de uma população completa ou com incremento.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Um grupo de arquivo que contém a tabela cujo texto completo passa por indexação fica offline ou é do tipo somente leitura.  
   
- Você deve exibir o registro de rastreamento no final de qualquer operação significativa de indexação de texto completo ou ao descobrir que a população não foi concluída.  
+ Examine o log de rastreamento ao término de qualquer operação significativa de população de índice de texto completo ou ao descobrir que a população não foi concluída.  
   
 ### <a name="unsigned-components"></a>Componentes não assinados  
  Por padrão, o indexador de texto completo requer os filtros e separadores de palavras que carrega ao assinar. Se não estiverem assinados, o que algumas vezes é o caso quando os componentes personalizados são instalados, é necessário configurar o indexador de texto completo para ignorar a verificação de assinatura.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Ao restaurar o log de transações de um banco de dados, é possível que apareça um aviso indicando que o índice de texto completo não está em um estado consistente. O motivo pelo qual isso ocorre é que o índice de texto completo de uma tabela foi modificado após ter sido feito o backup do banco de dados. Para trazer o índice de texto completo a um estado consistente, você deve executar uma população completa (rastreamento) na tabela. Para obter mais informações, veja [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)  
   

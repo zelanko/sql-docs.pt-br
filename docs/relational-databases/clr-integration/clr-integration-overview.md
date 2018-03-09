@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,26 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d215a536ccca2a2f48ec1f928d5ca752bd489a1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration---overview"></a>Integração do CLR - visão geral
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O common language runtime (CLR) é a essência do Microsoft .NET Framework e fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O CLR (Common Language Runtime) é o centro do Microsoft .NET Framework; ele fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
   
  Com o CLR hospedado no Microsoft SQL Server (a chamada integração CLR), você pode criar procedimentos armazenados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidas pelo usuário no código gerenciado. Como o código gerenciado é compilado em código nativo antes da execução, você pode obter aumentos significativos de desempenho em alguns cenários.  
   
  O código gerenciado usa a CAS (segurança de acesso do código) para impedir que os assemblies executem determinadas operações. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a CAS para ajudar a proteger o código gerenciado e evitar o comprometimento do sistema operacional ou do servidor de banco de dados.  
   
 ## <a name="advantages-of-clr-integration"></a>Vantagens da integração CLR  
- O [!INCLUDE[tsql](../../includes/tsql-md.md)] foi especificamente projetado para a manipulação e o acesso direto a dados no banco de dados. Embora o [!INCLUDE[tsql](../../includes/tsql-md.md)] se destaque no gerenciamento e no acesso a dados, ele não é uma linguagem de programação totalmente desenvolvida. Por exemplo, o [!INCLUDE[tsql](../../includes/tsql-md.md)] não oferece suporte a matrizes, coleções, loops for-each, deslocamento de bit ou classes. Embora algumas dessas construções possam ser simuladas no [!INCLUDE[tsql](../../includes/tsql-md.md)], o código gerenciado oferece suporte integrado a elas. Dependendo do cenário, esses recursos podem representar um motivo convincente para implementar determinada funcionalidade de banco de dados no código gerenciado.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] foi projetado especificamente para acesso direto a dados e manipulação no banco de dados. Embora o [!INCLUDE[tsql](../../includes/tsql-md.md)] se destaque no gerenciamento e no acesso a dados, ele não é uma linguagem de programação totalmente desenvolvida. Por exemplo, o [!INCLUDE[tsql](../../includes/tsql-md.md)] não oferece suporte a matrizes, coleções, loops for-each, deslocamento de bit ou classes. Embora algumas dessas construções possam ser simuladas no [!INCLUDE[tsql](../../includes/tsql-md.md)], o código gerenciado oferece suporte integrado a elas. Dependendo do cenário, esses recursos podem representar um motivo convincente para implementar determinada funcionalidade de banco de dados no código gerenciado.  
   
  O Microsoft Visual Basic .NET e o Microsoft Visual C# oferecem recursos orientados a objeto, como encapsulamento, herança e polimorfismo. Agora, o código relacionado pode ser facilmente organizado em classes e namespaces. Ao trabalhar com grandes quantidades de código de servidor, isso permite organizar e manter seu código de forma mais fácil.  
   

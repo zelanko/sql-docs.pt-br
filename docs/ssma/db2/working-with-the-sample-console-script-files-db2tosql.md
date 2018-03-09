@@ -1,10 +1,13 @@
 ---
 title: Trabalhando com os arquivos de Script do Console de exemplo (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (DB2ToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -76,14 +79,14 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
 5.  **ConversionAndDataMigrationSample.xml:** Este exemplo permite que o usuário executar uma migração de ponta a ponta de conversão de migração de dados. A lista de valores de atributo obrigatório que eles terão de alterar esteja listada abaixo:  
   
-    |Nome de comando|Description|Atributo|  
+    |Nome de comando|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapeamento de esquema de banco de dados de origem para o esquema de destino.|`source-schema:`Especifica o banco de dados de origem que requer a ser convertido.<br /><br />`sql-server-schema`: Especifica o banco de dados de destino que deve ser migrada para|  
     |`convert-schema`|Executa a conversão de esquema de origem para o esquema de destino.<br /><br />Se o usuário tem que avaliar a vários objetos de bancos de dados pode especificar vários `metabase-object` nós, conforme ilustrado a `convert-schema` exemplo 4 do comando do arquivo de script de console de exemplo.|`object-name`: Especifique o banco de dados de origem / object name que requer a ser convertido. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`|  
     |`synchronize-target`|Os objetos de destino será sincronizado com o banco de dados de destino.<br /><br />Se o usuário tem que avaliar a vários objetos de bancos de dados pode especificar vários `metabase-object` nós, conforme ilustrado a `synchronize-target` exemplo 3 do comando do arquivo de script de console de exemplo.|`object-name:`Especifique o banco de dados do sql server / nome que requer a criação do objeto. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`|  
     |`migrate-data`|Migra os dados de origem para o destino.<br /><br />Se o usuário tem que avaliar a vários objetos de bancos de dados pode especificar vários `metabase-object` nós, conforme ilustrado a `migrate-data` exemplo 2 do comando do arquivo de script de console de exemplo.|`object-name:`Especifica o banco de dados de origem / tabelas nome que requer a serem migradas. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
 [Criar os arquivos de Conexão do servidor &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [Gerando relatórios &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  

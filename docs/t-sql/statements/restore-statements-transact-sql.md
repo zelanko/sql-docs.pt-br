@@ -1,5 +1,5 @@
 ---
-title: "RESTAURAÇÃO (Transact-SQL) | Microsoft Docs"
+title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -42,17 +42,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e233de35336d5246c439c5dfb7b934cd2469b92c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTAURAR instruções (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -269,7 +268,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Preparar um banco de dados espelho para espelhamento de banco de dados  
   
-     Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Restauração online  
   
@@ -541,7 +540,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Início do exemplos &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. Restaurando o log de transações até uma marca  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Restaurando o log de transações até uma marca  
  O exemplo a seguir restaura o log de transações até a marca na transação marcada denominada `ListPriceUpdate`.  
   
 ```  
@@ -579,7 +578,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Início do exemplos &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. Restaurando com o uso da sintaxe de TAPE  
+###  <a name="restoring_using_TAPE"></a> H. Restaurando com o uso da sintaxe de TAPE  
  O exemplo a seguir restaura um backup de banco de dados completo de um dispositivo de backup `TAPE`.  
   
 ```  
@@ -589,7 +588,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Início do exemplos &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>I. Restaurando usando a sintaxe FILE e FILEGROUP  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Restaurando usando a sintaxe FILE e FILEGROUP  
  O exemplo a seguir restaura um banco de dados nomeado `MyDatabase` que tem dois arquivos, um grupo de arquivos secundário e um log de transações. O banco de dados usa o modelo de recuperação completa.  
   
  O backup do banco de dados é o nono conjunto de backup no conjunto de mídias em um dispositivo de backup lógico nomeado `MyDatabaseBackups`. Depois, três backups de log, que estão nos próximos três conjuntos de backup (`10`, `11` e `12`) no dispositivo `MyDatabaseBackups`, são restaurados usando `WITH NORECOVERY`. Depois de restaurar o último backup de log, o banco de dados é recuperado.  
@@ -631,7 +630,7 @@ GO
   
  [&#91; Início do exemplos &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. Revertendo de um instantâneo do banco de dados  
+###  <a name="reverting_from_db_snapshot"></a> J. Revertendo de um instantâneo do banco de dados  
  O exemplo a seguir reverte um banco de dados para um instantâneo do banco de dados. O exemplo presume que existe apenas um instantâneo atualmente no banco de dados. Para obter um exemplo de como criar esse instantâneo de banco de dados, consulte [criar um instantâneo de banco de dados &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Observação:** reverter para um instantâneo descarta todos os catálogos de texto completo.  
@@ -645,7 +644,7 @@ GO
 
  [&#91; Início do exemplos &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Restauração do serviço de armazenamento de BLOBs do Microsoft Azure  
+###  <a name="Azure_Blob"></a> K. Restauração do serviço de armazenamento de BLOBs do Microsoft Azure  
 Os três exemplos a seguir envolvem o uso do serviço de armazenamento do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner para arquivos de dados é chamado `myfirstcontainer`.  O contêiner para arquivos de backup é chamado `mysecondcontainer`.  Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista, para cada contêiner.  Credenciais do SQL Server foram criadas usando assinaturas de acesso compartilhado que estão associados com as políticas de acesso armazenado.  Para obter informações específicas para o backup do SQL Server e a restauração com o armazenamento de BLOBs do Microsoft Azure, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Restaurar um backup completo do banco de dados de serviço de armazenamento do Microsoft Azure**  
@@ -689,11 +688,10 @@ RESTORE DATABASE Sales
  - [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
  - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
  - [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

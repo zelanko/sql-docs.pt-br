@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62ca02bae8fd806b87d3c6a1f2b26b8324be9ad6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a1932081db399952f0cbecccca98153fec8036b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  Tipo OGC: **MultiPolygon**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método lança um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,7 +70,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

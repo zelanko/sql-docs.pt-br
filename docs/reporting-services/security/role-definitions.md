@@ -2,12 +2,13 @@
 title: "Definições de função | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions"></a>Definições de função
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição* de *função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  
@@ -60,13 +60,12 @@ ms.lasthandoff: 08/09/2017
   
  Você poderá excluir uma definição de função se já não estiver mais a utilizando. Não será possível excluir a definição de função selecionada para o recurso Meus Relatórios se esse recurso estiver habilitado. Antes de excluir a definição de função usada por Meus Relatórios, desabilite o recurso ou selecione outra definição de função para usar com ele.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e Permissões](../../reporting-services/security/tasks-and-permissions.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Criar, excluir ou modificar uma função &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder acesso de usuário a um servidor de relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   
-

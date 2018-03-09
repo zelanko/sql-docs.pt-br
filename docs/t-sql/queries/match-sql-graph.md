@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>CORRESPONDÊNCIA (Transact-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Especifica um critério de pesquisa para um gráfico. CORRESPONDÊNCIA pode ser usada apenas com as tabelas de nó e borda gráfico, na instrução SELECT como parte da cláusula WHERE. 
@@ -70,7 +72,7 @@ Nome ou alias de uma tabela de nó fornecida na cláusula FROM.
 Nome ou alias de uma tabela de borda fornecida na cláusula FROM.
 
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Os nomes de nó dentro de correspondência podem ser repetidos.  Em outras palavras, um nó pode ser percorridos um número arbitrário de vezes na mesma consulta.  
 Um nome de borda não pode ser repetido dentro de correspondência.  
 Uma borda pode apontar em qualquer direção, mas deve ter uma direção explícita.  
@@ -152,5 +154,5 @@ AND Person1.name = 'Alice';
 
 ## <a name="see-also"></a>Consulte também  
  [Criar tabela &#40; Gráfico SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (gráfico SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Gráfico de processamento com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

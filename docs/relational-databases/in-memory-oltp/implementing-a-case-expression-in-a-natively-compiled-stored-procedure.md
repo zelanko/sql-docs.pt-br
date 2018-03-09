@@ -1,7 +1,7 @@
 ---
 title: "Implementando uma expressão CASE em um procedimento armazenado compilado nativamente | Microsoft Docs"
 ms.custom: 
-ms.date: 04/24/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -13,22 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementando uma expressão CASE em um procedimento armazenado compilado nativamente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  As expressões CASE são compatíveis com os procedimentos armazenados compilados nativamente. O exemplo a seguir demonstra uma maneira de usar a expressão CASE em uma consulta. A solução alternativa descrita para expressões CASE em módulos compilados nativamente não será necessária.
+**Aplica-se ao:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] e ao SQL Server começando pelo [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+
+Há suporte para expressões CASE em módulos T-SQL compilados nativamente. O exemplo a seguir demonstra uma maneira de usar a expressão CASE em uma consulta. 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -47,12 +48,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+**Aplica-se ao:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] e ao SQL Server começando pelo [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  As expressões CASE *não* têm suporte em procedimentos armazenados compilados nativamente. O exemplo a seguir mostra uma maneira de implementar a funcionalidade de uma expressão CASE em um procedimento armazenado compilado nativamente.  
+  *Não* há suporte para expressões CASE em módulos T-SQL compilados nativamente. O exemplo a seguir mostra uma maneira de implementar a funcionalidade de uma expressão CASE em um procedimento armazenado compilado nativamente.  
   
  Os exemplos de código usam uma variável de tabela para construir um único conjunto de resultados. Isso é adequado somente durante o processamento de um número de linhas limitado, porque ela envolve a criação de uma cópia adicional das linhas de dados.  
   
@@ -107,9 +107,8 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de migração para procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Construções do Transact-SQL sem suporte pelo OLTP na memória](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

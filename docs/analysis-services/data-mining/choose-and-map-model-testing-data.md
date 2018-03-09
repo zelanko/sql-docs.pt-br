@@ -2,15 +2,13 @@
 title: Escolher e mapear o modelo de dados de teste | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
-  Para criar um gráfico de precisão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha os dados que serão usados para testar o modelo e mapeie os dados para o modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Para criar um gráfico de precisão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha os dados que serão usados para testar o modelo e mapeie os dados para o modelo.  
   
  Por padrão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará os dados de teste do modelo de mineração, desde que você tenha criado um conjunto de dados de controle quando criou a estrutura de mineração. A criação de um conjunto de testes de controle é a maneira mais fácil de testar modelos baseados na mesma estrutura de mineração porque os nomes de colunas e os tipos de dados sempre coincidirão com o modelo. Além disso, você tem uma garantia razoável de que a distribuição dos dados é semelhante. Somado a isso, o designer criará automaticamente as relações entre as colunas de entrada e saída.  
   
@@ -128,6 +127,6 @@ ms.lasthandoff: 11/17/2017
      Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna** . Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Teste e validação de tarefas e instruções &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

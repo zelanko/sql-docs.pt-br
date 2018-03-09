@@ -1,13 +1,14 @@
 ---
-title: "Gráficos (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Gráficos (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,49 +22,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 84aa1b349c9667b1f9dba44c6b29476081956c53
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
-Leia sobre como usar regiões de dados do gráfico para ajudar os leitores do seu [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatórios paginados entender grandes volumes de dados agregados em um relance.  
+Leia mais sobre como usar regiões de dados do gráfico para ajudar os leitores de seus relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a entender grandes volumes de dados agregados em uma visão rápida.  
 
-Mais tempo que gasto preparando cuidadosamente e entender seus dados antes de criar um gráfico, mais fácil será criar os gráficos de forma rápida e eficiente. Para ajudar a escolher o gráfico a ser usado, consulte [tipos de gráfico](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) para começar a experimentar com gráficos imediatamente, consulte a barra, coluna, Minigráfico e tutoriais do gráfico de pizza em [tutoriais do construtor de relatórios](../../reporting-services/report-builder-tutorials.md).  
+Quanto mais tempo você passa preparando cuidadosamente e entendendo seus dados antes de criar um gráfico, mais fácil será criar os gráficos com rapidez e eficiência. Para ajudar a escolher qual gráfico será usado, consulte [Tipos de gráfico](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) Para começar a experimentar os gráficos imediatamente, consulte os tutoriais de gráfico de barras, colunas, minigráfico e gráfico de pizza em [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md).  
   
  A ilustração a seguir mostra muitos dos diferentes elementos usados no gráfico.  
   
- ![Diagrama de elementos de gráfico](../../reporting-services/report-design/media/rs-chartelementsc.gif "diagrama de elementos de gráfico")  
+ ![Diagrama de elementos do gráfico](../../reporting-services/report-design/media/rs-chartelementsc.gif "Diagrama de elementos do gráfico")  
   
- É possível publicar gráficos separadamente de um relatório como *partes de relatório*. Para obter mais informações, consulte [partes de relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
+ É possível publicar gráficos separadamente de um relatório como *partes de relatório*. Para obter mais informações, consulte [Partes de relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
  
 ##  <a name="DesigningChart"></a> Criando um gráfico  
- Depois de adicionar uma região de dados do gráfico à superfície de design, você pode arrastar campos do conjunto de dados do relatório de dados numéricos e não numéricos para o painel Dados do Gráfico do gráfico. Quando você clica no gráfico na superfície de design, o painel Dados do Gráfico aparece, com três áreas: Grupos de Categorias, Grupos de Séries e Valores. Se o relatório possui um conjunto de dados compartilhado ou inserido, os campos no conjunto de dados aparecem no painel Dados do Relatório. Arraste campos do conjunto de dados para a área do painel de dados do gráfico. Por padrão, quando um campo é adicionado a uma das áreas do gráfico, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo. Também é possível usar agrupamento de séries para gerar séries dinamicamente. Um gráfico é [organizados como uma matriz](#SimilarMatrix).  
+ Depois de adicionar uma região de dados do gráfico à superfície de design, você pode arrastar campos do conjunto de dados do relatório de dados numéricos e não numéricos para o painel Dados do Gráfico do gráfico. Quando você clica no gráfico na superfície de design, o painel Dados do Gráfico aparece, com três áreas: Grupos de Categorias, Grupos de Séries e Valores. Se o relatório possui um conjunto de dados compartilhado ou inserido, os campos no conjunto de dados aparecem no painel Dados do Relatório. Arraste os campos do conjunto de dados para a área apropriada do painel Dados do Gráfico. Por padrão, quando um campo é adicionado a uma das áreas do gráfico, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula uma agregação para o campo. Também é possível usar agrupamento de séries para gerar séries dinamicamente. Um gráfico é [organizado como uma matriz](#SimilarMatrix).  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  Os dados no gráfico na hora da criação são diferentes dos dados no gráfico quando o relatório é processado. Não são seus dados reais. São dados gerados que foram adicionados para possibilitar o design do gráfico com uma ideia de qual será a aparência do gráfico.  
   
-##  <a name="SimilarMatrix"></a>Como um gráfico é como uma matriz  
+##  <a name="SimilarMatrix"></a> Como um gráfico é semelhante a uma matriz  
  Uma maneira de entender como os gráficos trabalham é compará-los a matrizes.  
   
- ![Nova matriz adicionada da caixa de ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nova matriz adicionada da caixa de ferramentas, selecionada")  
+ ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
   
  Conceitualmente, a organização deles é idêntica:  
   
--   O grupo de colunas na matriz é como a área de grupos de categorias no gráfico.  
+-   O grupo Colunas na matriz é semelhante à área Grupo de Categorias no gráfico.  
   
--   O grupo de linhas na matriz é como a área de grupos de séries no gráfico.  
+-   O grupo Linhas na matriz é semelhante à área Grupo de Séries no gráfico.  
   
--   A área de dados na matriz é como a área de valores no gráfico.  
+-   A área Dados na matriz é semelhante à área Valores no gráfico.  
   
  
 ##  <a name="AddingData"></a> Adicionando dados ao gráfico  
@@ -142,12 +143,12 @@ Mais tempo que gasto preparando cuidadosamente e entender seus dados antes de cr
  [Solução de problemas de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  Descreve dicas para trabalhar com gráficos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Classificação interativa, mapas de documentos e Links &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de coluna ao seu relatório &#40; Construtor de relatórios &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Adicionar um gráfico de barras ao relatório &#40; Construtor de relatórios &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um gráfico de barras ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

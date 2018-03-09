@@ -1,27 +1,27 @@
 ---
-title: "Nativo para migração do SharePoint (SSRS) | Microsoft Docs"
+title: "Migração do Modo Nativo para o SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1a58f3884e041b06f741a40ada0bbff6ce7e3181
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migração do modo nativo para o SharePoint (SSRS)
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/17/2017
   
  A tabela a seguir resume os objetos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você pode migrar com scripts:  
   
-|Objeto|Pode ser gerado por script|Comentários|  
+|Object|Pode ser gerado por script|Comentários|  
 |------------|---------------------|--------------|  
 |Relatórios|Sim|Após a migração, reinsira senhas para fontes de dados.|  
 |Fontes de dados|Sim|Após a migração, revincule relatórios a fontes de dados.|  
@@ -60,5 +60,4 @@ ms.lasthandoff: 08/17/2017
 |Assinaturas|Sim|Veja o método [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) de List Subscriptions e o método <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Instantâneos|||
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

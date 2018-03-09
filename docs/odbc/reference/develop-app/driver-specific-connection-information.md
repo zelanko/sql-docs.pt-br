@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-connection-information"></a>Informações de Conexão específicos de driver
 **SQLConnect** supõe que um nome de fonte de dados, ID de usuário e senha são suficientes para se conectar a uma fonte de dados e que todas as outras informações de conexão podem ser armazenadas no sistema. Isso frequentemente não for o caso. Por exemplo, um driver talvez seja necessário uma ID de usuário e senha para fazer logon um servidor e um ID de usuário diferente e uma senha para fazer logon um DBMS. Porque **SQLConnect** aceita um ID de usuário único e uma senha, isso significa que a ID de usuário e senha devem ser armazenados com as informações de fonte de dados do sistema se **SQLConnect** deve ser usado. Essa é uma possível violação de segurança e deve ser evitada, a menos que a senha é criptografada.  
@@ -50,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Pares de valor de palavra-chave no **SQLDriverConnect** devem seguir determinadas regras de sintaxe. As palavras-chave e seus valores não devem conter o **[] {} (),? \*=! @** caracteres. O valor de **DSN** palavra-chave não pode consistir apenas de espaços em branco e não deve conter espaços em branco à esquerda. Devido a gramática do registro, nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres. Não são permitidos espaços em torno do sinal de igual do par de valor de palavra-chave.  
   
  O **FILEDSN** palavra-chave pode ser usado em uma chamada para **SQLDriverConnect** para especificar o nome de um arquivo que contém informações de fonte de dados (consulte [se conectar usando o arquivo de fontes de dados](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), mais adiante nesta seção). O **SAVEFILE** palavra-chave pode ser usado para especificar o nome de um arquivo. DSN em que os pares de valor de palavra-chave de uma conexão bem-sucedida feitas pela chamada para **SQLDriverConnect** será salvo. Para obter mais informações sobre fontes de dados de arquivo, consulte o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrição da função.
-

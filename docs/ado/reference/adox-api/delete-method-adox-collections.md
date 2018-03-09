@@ -3,7 +3,7 @@ title: "Método (ADOX coleções) Delete | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -33,17 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4efe8d4528d0085d2bef7f97bf9b1958be208547
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72dd3f6d514b20bb28f9daee6fc16c5c7c346095
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-adox-collections"></a>Excluir método (ADOX coleções)
 Remove um objeto de uma coleção.  
@@ -59,7 +58,7 @@ Collection.Delete Name
  *Nome*  
  Um **Variant** que especifica o nome ou a posição ordinal (índice) do objeto a ser excluído.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ocorrerá um erro se o *nome* não existe na coleção.  
   
  Para [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) e [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleções, ocorrerá um erro se o provedor não oferecer suporte a excluir tabelas ou usuários, respectivamente. Para [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) e [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleções, **excluir** falhará se o provedor não oferece suporte a comandos persistentes.  
@@ -75,4 +74,3 @@ Collection.Delete Name
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos de exemplo de método (VB)-excluir](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Exemplo do método Delete de exibições (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
-

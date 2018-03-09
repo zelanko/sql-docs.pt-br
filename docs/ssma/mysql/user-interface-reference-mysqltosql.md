@@ -1,29 +1,30 @@
 ---
 title: "Referência da Interface de usuário (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e39a5ca8327230660a0a6dc1c0a6d1170ae7c279
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referência da Interface de usuário (MySQLToSQL)
 Esta seção inclui tópicos de ajuda para o SQL Server SSMA (Migration Assistant) para MySQL.  
@@ -45,7 +46,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Editar mapeamento de tipo de &#40; MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Use o **editar mapeamento de tipo** caixa de diálogo para criar ou modificar o mapeamento de tipos de dados entre bancos de dados de origem e de destino e objetos de banco de dados.|  
 |[Configurações globais &#40; Editor de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Use a página do Editor do **configurações globais** caixa de diálogo Configurar opções do editor de código.|  
 |[Global configurações &#40; caixas de diálogo &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para definir configurações de aviso e de caixa de diálogo padrão.|  
-|[Configurações globais (log)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|Use a página de registro em log do **configurações globais** caixa de diálogo para configurar o log.|  
+|[Configurações globais (registro em log)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|Use a página de registro em log do **configurações globais** caixa de diálogo para configurar o log.|  
 |[Global configurações &#40; a janela de saída &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Use o **configurações globais** caixa de diálogo para definir as preferências para o SSMA para interface de usuário do MySQL.|  
 |[Novo projeto de &#40; O SSMA &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Use o **novo projeto** caixa de diálogo para criar um novo SSMA para o projeto do MySQL.|  
 |[Configurações de projeto &#40; Conversão de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Use a página de conversão do **configurações de projeto** caixa de diálogo para especificar como o SSMA para MySQL converte funções e variáveis globais.|  
@@ -57,8 +58,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Atualização do banco de dados &#40; MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Use o **de atualização do banco de dados** caixa de diálogo para selecionar objetos para atualização do banco de dados MySQL.|  
 |[Salvar metadados &#40; MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

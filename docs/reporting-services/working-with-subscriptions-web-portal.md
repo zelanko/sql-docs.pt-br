@@ -1,28 +1,28 @@
 ---
-title: Trabalhando com assinaturas (portal da web) | Microsoft Docs
+title: Trabalhando com assinaturas (portal da Web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bee70a9c4d77be578aae8c77af8772bdd2faadc0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +36,7 @@ Antes de criar uma nova assinatura, você deve verificar se a fonte de dados do 
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Você pode obter a página de assinaturas, selecionando o **reticências (...)**  de um relatório, selecionando **gerenciar** e selecionando **assinaturas**.  
+Acesse a página Assinaturas selecionando as **reticências (...)** de um relatório e, em seguida, selecione **Gerenciar** e **Assinaturas**.  
   
 Na página Assinaturas, você pode criar novas assinaturas selecionando **+ Nova assinatura**. Você também pode editar as assinaturas existentes ou excluir assinaturas que você selecionou.  
   
@@ -96,5 +96,4 @@ Depois que a consulta tiver sido criada, você pode atribuir valores aos campos 
 [Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

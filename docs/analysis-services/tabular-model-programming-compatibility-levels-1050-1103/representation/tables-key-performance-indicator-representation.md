@@ -2,34 +2,32 @@
 title: "Representação de indicador de desempenho (tabela) de chave | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabelas - representação de indicador chave de desempenho
-  Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
   
 ## <a name="key-performance-indicator-representation"></a>Representação de indicador chave de desempenho  
  Em modelos de objeto de tabela, um indicador chave de desempenho –kpi- é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  
@@ -235,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  Para ter um entendimento sobre como usar o AMO para criar e manipular indicador chave de desempenho representações, consulte o código-fonte do AMO para exemplo de Tabular; Verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
   
   
-

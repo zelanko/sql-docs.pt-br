@@ -1,27 +1,27 @@
 ---
-title: "Solucionar problemas de recuperação de dados com relatórios do Reporting Services | Microsoft Docs"
+title: "Solução de problemas de recuperação de dados com relatórios do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "4"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e58fa865cfa0465e6256bda88819ad2a73253cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solucionar problemas de recuperação de dados com relatórios do Reporting Services
 A primeira etapa durante o processamento do relatório é recuperar seus dados para cada conjunto de dados executando a consulta de conjunto de dados. Quando você visualiza um relatório localmente, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados para o computador. Quando você executa um relatório no servidor de relatório, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados nesse servidor. Use este tópico para ajudar a solucionar problemas sobre a recuperação de dados do relatório.   
@@ -67,13 +67,12 @@ Para popular a coleção de campos do conjunto de dados, siga este procedimento:
 * Execute a consulta no painel de consultas da caixa de diálogo **Propriedades do Conjunto de Dados** . Para saber mais, confira [Conjuntos de Dados de Relatório (Construtor de Relatórios 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Adicione campos manualmente. Para saber mais, confira [Como adicionar, editar e atualizar campos no painel de dados do relatório (Construtor de Relatórios 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

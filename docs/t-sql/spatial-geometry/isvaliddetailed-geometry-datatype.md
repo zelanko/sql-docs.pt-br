@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: IsValidDetailed geometry
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55b67a0a3db22697b9f320f3c8861b08e09a2475
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 96f7531e9b692db3a026e4697e502f3d10e39cfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
   
  Tipo de retorno CLR: **cadeia de caracteres**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir contém os valores de retorno possíveis:  
   
 |Valor de retorno|Description|  
@@ -68,7 +71,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir de um objeto espacial inválido ilustra como o **isvaliddetailed ()** métodos se comporta.  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  

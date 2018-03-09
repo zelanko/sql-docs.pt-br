@@ -3,8 +3,9 @@ title: "Componentes e provedores de serviço | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61232bd2d028c9beb1b5471bb6db0b1c28b7b7e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97e738fb4f5bd4635a8a53a87d000b72736edc5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="service-providers-and-components"></a>Provedores de serviços e componentes
 Provedores de serviços são componentes que estendem a funcionalidade dos provedores de dados implementando interfaces estendidas que não são suportados nativamente pelo repositório de dados.  

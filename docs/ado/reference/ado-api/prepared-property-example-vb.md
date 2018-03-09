@@ -3,7 +3,7 @@ title: Preparado exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f15594f3892b3f5aa87185f70ad258565fa214b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8389d25750e59cce3ce00d6fe98c57744b40b994
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-example-vb"></a>Exemplo da propriedade preparada (VB)
 Este exemplo demonstra o [preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propriedade abrindo dois [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos — preparada e não preparado.  
@@ -125,4 +124,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Propriedade Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
-

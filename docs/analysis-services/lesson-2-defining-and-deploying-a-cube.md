@@ -2,30 +2,33 @@
 title: "Lição 2: Definir e implantar um cubo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c09c3c4ce31c969b4ec6096a19e53cd2b225de04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lição 2: Definindo e implantando um cubo
-Depois de definir uma exibição da fonte de dados em seu projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você estará pronto para definir um cubo inicial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Depois de definir uma exibição da fonte de dados em seu projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você estará pronto para definir um cubo inicial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 Você pode definir um cubo e suas dimensões em uma etapa usando o Assistente para Cubos. Como alternativa, você pode definir uma ou mais dimensões e depois usar o Assistente para Cubos para definir um cubo que use aquelas dimensões. Se você estiver criando uma solução complexa, normalmente começará definindo as dimensões. Para obter mais informações, consulte [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubos em modelos multidimensionais](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md).  
   
@@ -46,10 +49,10 @@ Nesta tarefa, você adicionará atributos às dimensões criadas.
 [Revisando as propriedades de dimensão e cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
 Nesta tarefa, você revisará a estrutura do cubo definido usando o Assistente para Cubos.  
   
-[Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Implantar um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
 Nesta tarefa, você implantará o projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em sua instância local do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e aprenderá sobre determinadas propriedades de implantação.  
   
-[Navegando pelo cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
+[Navegando no cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
 Nesta tarefa, você navegará no cubo e dimensões de dados usando o Excel ou o designer de consulta MDX.  
   
 ## <a name="next-lesson"></a>Próxima lição  
@@ -57,10 +60,10 @@ Nesta tarefa, você navegará no cubo e dimensões de dados usando o Excel ou o 
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Cubos em modelos multidimensionais](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[Configurar propriedades de projeto do Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [Criar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

@@ -3,7 +3,7 @@ title: "Conceitos básicos de ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 76892d6ae394b41c64852cd721e22f494aee51af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-fundamentals"></a>Conceitos básicos de ADO
 ADO fornece aos desenvolvedores um modelo de objeto avançado, lógica para acessar programaticamente, editar e atualizar dados de uma ampla variedade de fontes de dados por meio de interfaces de OLE DB do sistema. É o uso mais comum do ADO consultar uma tabela ou tabelas em um banco de dados relacional, recuperar e exibir os resultados em um aplicativo e talvez permitem aos usuários fazer e salvar as alterações nos dados. Outras tarefas incluem o seguinte:  
@@ -71,4 +70,3 @@ ADO fornece aos desenvolvedores um modelo de objeto avançado, lógica para aces
 -   [Provedores OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [Erros](../../../ado/guide/data/errors-ado.md)
-

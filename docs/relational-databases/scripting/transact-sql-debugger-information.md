@@ -2,10 +2,14 @@
 title: "Informações do depurador Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
-  Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
   
 ## <a name="debugger-windows"></a>Janelas do depurador  
  Em modo de depurador, o depurador abre duas janelas na parte inferior da janela principal do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . O depurador exibe toda as suas informações nessas duas janelas. Cada uma das janelas de depurador tem guias que você pode selecionar para controlar o conjunto de informações exibido na janela. A janela esquerda do depurador contém as guias **Locais**, **Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4** . A janela direita do depurador contém as guias **Pilha de Chamadas**, **Threads**, **Pontos de Interrupção**, **Janela de Comando**e **Saída** .  
@@ -98,7 +102,7 @@ ms.lasthandoff: 11/09/2017
   
  Em modo de depuração, as guias **Resultados** e **Mensagens** ainda ficam ativas no Editor de Consultas. A guia **Resultados** continua a exibir os conjuntos de resultados das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que são executados durante uma sessão de depuração. A guia **Mensagens** continua a exibir mensagens de sistema, como, por exemplo, *xx* Linhas Afetadas e a saída de instruções PRINT e RAISERROR.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Janela Locais](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Janela de Observação](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Caixa de diálogo QuickWatch](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

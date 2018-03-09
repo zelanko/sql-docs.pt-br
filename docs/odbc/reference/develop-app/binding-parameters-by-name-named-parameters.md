@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9548f671ce082d41423c1f85eb543c55b6194a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3047d17ff1e9785e203b6be0ab48c7c27fd88d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Associando parâmetros por nome (parâmetros nomeados)
 Determinados DBMSs permitir que um aplicativo especificar os parâmetros para um procedimento armazenado por nome em vez de por posição na chamada de procedimento. Esses parâmetros são chamados *parâmetros nomeados*. ODBC oferece suporte ao uso de parâmetros nomeados. No ODBC, os parâmetros nomeados são usados somente em chamadas para procedimentos armazenados em não podem ser usados em outras instruções SQL.  
@@ -65,4 +63,3 @@ SQLSetDescField(hIpd, 1, SQL_DESC_NAME, "@quote", SQL_NTS);
 // execute.  
 SQLExecute(hstmt);  
 ```
-

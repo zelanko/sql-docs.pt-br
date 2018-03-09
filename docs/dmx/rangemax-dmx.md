@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMax
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMax function
+f1_keywords: RangeMax
+dev_langs: DMX
+helpviewer_keywords: RangeMax function
 ms.assetid: 6798d9d7-c3dc-40fb-bd8e-56cb1a6d0e5f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24559ff09a5791897a41627941d0cf98c7c3cabf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b8cb363e9d5db767ed172206f497ff300bb29a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +44,7 @@ RangeMax(<scalar column reference>)
 ## <a name="return-type"></a>Tipo de retorno  
  Valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **RangeMax** função pode ser usada em [SELECT DISTINCT FROM &#60; modelo de &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md) consultas. Quando usada com esse tipo de consulta, a referência da coluna escalar poderá conter colunas contínuas ou distintas que são tanto previsíveis como de entrada.  
   
  Quando usado com [SELECT FROM &#60; modelo de &#62; JUNÇÃO de previsão &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), o **RangeMin**, **RangeMid**, e **RangeMax** funções retornam os valores de limite real da partição especificada. Por exemplo, se uma previsão for realizada em uma coluna de dados discretos, a consulta retornará o número de partição previsto na coluna de dados discretos. O **RangeMin**, **RangeMid**, e **RangeMax** funções descrevem a partição que especifica a previsão. Quando o **RangeMax** função é usada com uma instrução PREDICTION JOIN, a referência de coluna escalar só pode conter colunas previsíveis discretas.  
@@ -66,7 +60,7 @@ SELECT DISTINCT
 FROM [TM Decision Tree]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
@@ -74,4 +68,3 @@ FROM [TM Decision Tree]
  [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
   
   
-

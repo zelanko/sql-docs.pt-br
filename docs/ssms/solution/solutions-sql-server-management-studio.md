@@ -3,8 +3,11 @@ title: "Soluções (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
-A solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Uma solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  
   
 ## <a name="solution-overview"></a>Visão geral da solução  
 Você pode usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] como uma plataforma de desenvolvimento de scripts para o [!INCLUDE[ssDE](../../includes/ssde_md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Use os editores de códigos do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para desenvolver scripts e consultas para bancos de dados relacionais e multidimensionais, e coletar scripts e consultas relacionados em projetos.  
@@ -55,7 +58,7 @@ Soluções e projetos podem ser integrados em um banco de dados do [!INCLUDE[msC
 |Descreve como mover itens entre projetos em uma solução.|[Mover itens em uma solução](../../ssms/solution/move-items-in-a-solution.md)|  
 |Descreve como renomear uma solução ou os itens na solução.|[Renomear soluções e itens de projeto](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Projetos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

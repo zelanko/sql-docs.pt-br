@@ -77,7 +77,7 @@ Um tipo de cluster Nenhum pode ser usado com grupos de disponibilidade do Window
 > [!IMPORTANT] 
 > O SQL Server 2017 não permite a capacidade de alterar um tipo de cluster para um grupo de disponibilidade depois que ele é criado. Isso significa que um grupo de disponibilidade não pode ser alternado de Nenhum para Externo ou WSFC ou vice-versa. 
 
-Para aqueles que estão procurando apenas adicionar outras cópias de somente leitura de um banco de dados ou como o que um grupo de disponibilidade fornece para migração/atualizações, mas não deseja que seja vinculado à complexidade adicional de um cluster subjacente ou até mesmo a replicação, um grupo de disponibilidade com um tipo de cluster Nenhum é a solução perfeita. Para obter mais informações, consulte as seções [Migrações e Atualizações](#Migrations) e [Ler Expansão](#ReadScaleOut). 
+Para aqueles que estão procurando apenas adicionar outras cópias de somente leitura de um banco de dados ou como o que um grupo de disponibilidade fornece para migração/atualizações, mas não deseja que seja vinculado à complexidade adicional de um cluster subjacente ou até mesmo a replicação, um grupo de disponibilidade com um tipo de cluster Nenhum é a solução perfeita. Para obter mais informações, consulte as seções [Migrações e upgrades](#Migrations) e [Escala de leitura](#ReadScaleOut). 
 
 A captura de tela abaixo mostra o suporte para os diferentes tipos de cluster no SSMS. Você deve estar executando a versão 17.1 ou posterior. A captura de tela abaixo é da versão 17.2.
 
@@ -226,7 +226,7 @@ Se um grupo de disponibilidade estiver configurado com um tipo de cluster Nenhum
 
 Como o envio de logs baseia-se somente no backup e na restauração, e não existem diferenças nos bancos de dados, estruturas de arquivos, entre outros, para o SQL Server no Windows Server em comparação com o SQL Server no Linux. Isso significa que o envio de logs pode ser configurado entre uma instalação do SQL Server com base no Windows Server e uma do Linux, bem como entre distribuições do Linux. Todo o resto permanece o mesmo. A única ressalva é que o envio de logs, assim como um grupo de disponibilidade, não funciona quando a fonte estiver em uma versão principal superior do SQL Server em relação a um destino que é uma versão inferior do SQL Server. 
 
-## <a name = "ReadScaleOut"></a> Expansão de leitura
+## <a name = "ReadScaleOut"></a> Escala de leitura
 
 Desde seu lançamento no SQL Server 2012, as réplicas secundárias tiveram a capacidade de serem usadas para consultas somente leitura. Há duas maneiras que podem ser obtidas com um grupo de disponibilidade: permitindo o acesso direto ao secundário, bem como [configurando o roteamento de somente leitura](http://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), que requer o uso do ouvinte.  O SQL Server 2016 introduziu a capacidade de balancear carga de conexões de somente leitura por meio do ouvinte usando um algoritmo de round robin, permitindo que as solicitações de somente leitura sejam distribuídas em todas as réplicas legíveis. 
 
@@ -243,7 +243,7 @@ A única principal ressalva é que, devido a nenhum cluster subjacente com um ti
 
 Uma espera passiva para envio de logs pode tecnicamente ser configurada para uso legível ao restaurar o banco de dados WITH STANDBY. No entanto, como os logs de transações exigem o uso exclusivo do banco de dados para restauração, isso significa que usuários não podem estar acessando o banco de dados enquanto isso acontece. Isso torna o envio de logs uma solução abaixo do ideal, especialmente se os dados quase em tempo real forem necessários. 
 
-Uma coisa que deve ser observada em todos os cenários de expansão de leitura com grupos de disponibilidade é que, ao contrário de usar a replicação transacional na qual todos os dados são dinâmicos, cada réplica secundária não está em um estado no qual os índices exclusivos podem ser aplicados, a réplica é uma cópia exata da primária. Isso significa que, se todos os índices forem necessários para relatórios ou os dados precisarem ser manipulados, isso deverá ser feito em bancos de dados na réplica primária. Se você precisar dessa flexibilidade, a replicação será uma solução melhor para dados legíveis.
+Uma coisa que deve ser observada em todos os cenários de escala de leitura com grupos de disponibilidade é que, ao contrário de usar a replicação transacional na qual todos os dados são dinâmicos, cada réplica secundária não está em um estado no qual os índices exclusivos podem ser aplicados, a réplica é uma cópia exata da primária. Isso significa que, se todos os índices forem necessários para relatórios ou os dados precisarem ser manipulados, isso deverá ser feito em bancos de dados na réplica primária. Se você precisar dessa flexibilidade, a replicação será uma solução melhor para dados legíveis.
 
 ## <a name="summary"></a>Resumo
 

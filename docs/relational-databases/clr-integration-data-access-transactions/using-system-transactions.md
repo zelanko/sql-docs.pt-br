@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **System. Transactions** namespace fornece uma estrutura de transação que está totalmente integrada com o ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração common language runtime (CLR). Uma classe **System.Transactions.TransactionScope** torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Chame o método **Complete** no final do bloco de código marcado pelo **TransactionScope**. O método **Dispose** será invocado quando a execução do programa deixar um bloco de código, fazendo a transação ser descontinuada se o método **Complete** não for chamado. Se tiver sido lançada uma exceção que faz o código deixar o escopo, a transação será considerada descontinuada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O **System.Transactions** fornece uma estrutura de transação que é totalmente integrada com o ADO.NET e a integração CLR (Common Language Runtime) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uma classe **System.Transactions.TransactionScope** torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Chame o método **Complete** no final do bloco de código marcado pelo **TransactionScope**. O método **Dispose** será invocado quando a execução do programa deixar um bloco de código, fazendo a transação ser descontinuada se o método **Complete** não for chamado. Se tiver sido lançada uma exceção que faz o código deixar o escopo, a transação será considerada descontinuada.  
   
  É recomendável utilizar um bloco **using** para assegurar que o método **Dispose** seja chamado no objeto **TransactionScope** ao sair do bloco **using** . Uma falha ao confirmar ou reverter transações pendentes pode diminuir muito o desempenho, pois o tempo limite padrão para o **TransactionScope** é de um minuto. Se você não usar uma instrução **using** , deverá executar todo o trabalho em um bloco **Try** e chamar explicitamente o método **Dispose** no bloco **Finally** .  
   

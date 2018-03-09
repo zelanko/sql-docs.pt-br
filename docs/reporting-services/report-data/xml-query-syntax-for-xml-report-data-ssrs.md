@@ -2,12 +2,13 @@
 title: "Sintaxe de consulta XML para dados de relatório XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "49"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a76ff48f3c6f98f426ee5805898a0a1a9caf716
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
-  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma **Query** XML ou um caminho de elemento. Um XML **consulta** começa com um  **\<consulta >** marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho do elemento para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma **Query** XML ou um caminho de elemento. Uma **Consulta** XML é iniciada com uma marcação **\<Query>** e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
  É possível criar uma fonte de dados XML para os seguintes tipos de dados XML:  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/09/2017
 |Documento XML que usa padrão.|*Nenhuma consulta*.<br /><br /> O caminho de elemento deriva do próprio documento XML e independe do namespace.|  
   
 > [!NOTE]  
->  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, você deve criar uma nova fonte de dados e definir a cadeia de caracteres de conexão `http://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> utiliza dois parâmetros: **Item** e **Recursive**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
+>  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como `http://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> utiliza dois parâmetros: **Item** e **Recursive**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificando namespaces  
  Use o elemento **Query** XML para especificar os namespaces usados nos dados XML da fonte de dados. A seguinte consulta XML usa o namespace **sales**. Os nós XML **ElementPath** para `sales:LineItems` e `sales:LineItem` usam o namespace **sales**.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
 |Elemento de consulta XML|Campos resultantes no conjunto de dados|  
 |-----------------------|-------------------------------------|  
-|\<Consulta / >|Valor r:`http://schemas.microsoft.com/...`<br /><br /> Valor b:`http://schemas.microsoft.com/...`<br /><br /> Valor c:`http://schemas.microsoft.com/...`|  
+|\<Query/>|Valor A: `http://schemas.microsoft.com/...`<br /><br /> Valor B: `http://schemas.microsoft.com/...`<br /><br /> Valor C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
@@ -114,9 +114,8 @@ ms.lasthandoff: 08/09/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipo de conexão XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services tutoriais &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

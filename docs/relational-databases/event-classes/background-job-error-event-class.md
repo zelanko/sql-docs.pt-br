@@ -2,37 +2,43 @@
 title: Classe de evento Background Job Error | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Background Job Error event class
+helpviewer_keywords:
+- Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a1a955752ffac7e153065ccd8a5e2f4dc01dd3d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1c2644233c06589a4a30970060d8d2c7df3930a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="background-job-error-event-class"></a>classe de evento Background Job Error
-  A classe de evento **Background Job Error** ocorre quando um trabalho em segundo plano é encerrado de maneira anormal. Essa condição pode exigir a atenção de um administrador do sistema.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento **Background Job Error** ocorre quando um trabalho em segundo plano é encerrado de maneira anormal. Essa condição pode exigir a atenção de um administrador do sistema.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Colunas de dados da classe de evento Background Job Error  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pelo trabalho. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**Erro**|**int**|Número de erro da última tentativa (**EventSubClass** 1, apenas).|31|Sim|  
-|**EventClass**|**int**|Tipo de evento = 193.|27|Não|  
-|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
+|**EventClass**|**int**|Tipo de evento = 193.|27|não|  
+|**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Trabalho em segundo plano encerrado após falha.<br /><br /> 2 = Trabalho em segundo plano descartado — a fila está cheia.<br /><br /> 3 = Trabalho em segundo plano retornou erro.|21|Sim|  
 |**IndexID**|**int**|ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|24|Sim|  
 |**IntegerData**|**int**|Número de tentativas feitas pelo trabalho (**EventSubClass** 1, apenas).|25|Sim|  
@@ -45,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 |**TextData**|**ntext**|Texto descritivo do valor de subclasse do evento.|1|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)  

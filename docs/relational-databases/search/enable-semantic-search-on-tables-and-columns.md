@@ -2,27 +2,33 @@
 title: "Habilitar a pesquisa semântica em tabelas e colunas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caca4cf61fe71392178f3243928888cd2ba51225
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
-  Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
  A pesquisa semântica estatística usa os índices que são criados pela Pesquisa de Texto Completo e cria índices adicionais. Como resultado dessa dependência na pesquisa de texto completo, você cria um novo índice semântico ao definir um novo índice de texto completo ou ao alterar um índice de texto completo existente. Você pode criar um novo índice semântico usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou usando o Assistente para Indexação de Texto Completo e outras caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conforme descrito neste tópico.  
   
@@ -63,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
  O exemplo a seguir cria um catálogo de texto completo padrão, **ft**. O exemplo cria um índice exclusivo na coluna **JobCandidateID** da tabela **HumanResources.JobCandidate** do banco de dados de exemplo AdventureWorks2012. Este índice exclusivo é necessário como a coluna de chave de um índice de texto completo. O exemplo cria um índice de texto completo um índice semântico na coluna **Retomar** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -87,7 +93,7 @@ GO
   
  Este exemplo também especifica que o controle de alterações está desativado sem nenhuma população. Posteriormente, fora do horário de pico, o exemplo usa uma instrução **ALTER FULLTEXT INDEX** para iniciar uma população completa no novo índice e habilitar o controle de alterações automático.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -110,7 +116,7 @@ GO
   
  Posteriormente, fora do horário de pico, o índice é populado:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -136,7 +142,7 @@ GO
   
  O exemplo a seguir altera um índice de texto completo existente na tabela **Production.Document** no banco de dados de exemplo AdventureWorks2012. O exemplo adiciona um índice semântico na coluna **Document** da tabela **Production.Document** , que já tem um índice de texto completo. O exemplo especifica que o índice não será repopulado automaticamente.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -159,9 +165,9 @@ GO
 Você pode remover a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode descartar a indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Descartar um novo índice semântico usando Transact-SQL  
-Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
+Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***nome_da_coluna***DROP STATISTICAL_SEMANTIC**. Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -171,9 +177,9 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Para remover a indexação semântica e de texto completo de uma coluna, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***column_name***DROP** .  
+Para remover a indexação semântica e de texto completo de uma coluna, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***nome_da_coluna***DROP**.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -199,7 +205,7 @@ GO
   
  Um valor de retorno 1 indica a pesquisa de texto completo e a pesquisa semântica estão habilitada para o banco de dados; um valor de retorno 0 indica que não são habilitadas.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -223,7 +229,7 @@ GO
   
      Um valor de retorno 1 indica a pesquisa semântica está habilitada para a coluna; um valor de retorno 0 indica que ela não está habilitada.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -232,7 +238,7 @@ GO
   
      Um valor 1 na coluna **statistical_semantics** indica que a coluna especificada está habilitada para a indexação semântica, além da indexação de texto completo.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -250,16 +256,16 @@ GO
   
  Consulte a exibição de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
  Há suporte para os seguintes idiomas na indexação semântica. Esta lista representa a saída da exibição de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), ordenada por LCID.  
   
-|Idioma|LCID|  
+|Linguagem|LCID|  
 |--------------|----------|  
-|Alemão|1031|  
+|German|1031|  
 |Inglês (EUA)|1046|  
 |Francês|1036|  
 |Italiano|1040|  

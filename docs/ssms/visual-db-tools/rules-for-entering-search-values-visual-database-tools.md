@@ -3,8 +3,11 @@ title: "Regras para inserção de valores de pesquisa (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde4d45d9b161c54a03051a76bc867136ac34128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regras para inserção de valores de pesquisa (Visual Database Tools)
-Este tópico discute as convenções que devem ser usadas para inserir os seguintes tipos de valores literais em um critério de pesquisa:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico discute as convenções que devem ser usadas para inserir os seguintes tipos de valores literais em um critério de pesquisa:  
   
 -   Valores de texto  
   
@@ -119,7 +122,7 @@ A tabela a seguir resume o formato de data que pode ser usado em diferentes pain
   
 |**Painel**|**Formato de data**|  
 |------------|-------------------|  
-|Critério|Padrão ANSI específico de Banco de dados e específico de localidade<br /><br />As datas inseridas no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) são convertidas em formato compatível com banco de dados no painel SQL.|  
+|Critérios|Padrão ANSI específico de Banco de dados e específico de localidade<br /><br />As datas inseridas no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) são convertidas em formato compatível com banco de dados no painel SQL.|  
 |SQL|Padrão ANSI específico de banco de dados|  
 |Resultados|Específico de localidade|  
   
@@ -147,6 +150,6 @@ O formato de dados lógicos varia entre os bancos de dados. Muito frequentemente
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

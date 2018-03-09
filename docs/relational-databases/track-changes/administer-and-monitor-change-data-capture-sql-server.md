@@ -2,10 +2,14 @@
 title: "Administrar e monitorar a captura de dados de alteração (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
-  Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
   
 ##  <a name="Capture"></a> Trabalho de captura  
  O trabalho de captura é iniciado com a execução do procedimento armazenado sem parâmetros **sp_MScdc_capture_job**. Esse procedimento armazenado é iniciado com a extração de valores configurados para *maxtrans*, *maxscans*, *continuous*e *pollinginterval* para o trabalho de captura de msdb.dbo.cdc_jobs. Esses valores configurados são passados como parâmetros ao procedimento armazenado **sp_cdc_scan**. Ele é usado para invocar **sp_replcmds** para executar a verificação de log.  
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Execute o código a seguir para criar um coletor personalizado para captura de dados de alteração.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

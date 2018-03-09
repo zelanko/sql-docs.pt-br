@@ -1,5 +1,5 @@
 ---
-title: BEGIN... END (Transact-SQL) | Microsoft Docs
+title: BEGIN...END (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BEGIN
 - BEGIN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - enclosing statements [SQL Server]
 - BEGIN statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - executing Transact-SQL statements together [SQL Server]
 - statements [SQL Server], grouping
 ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b00ceec423103a1f53a1b6434aaf6da0598fba20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7b14d9586895a2bdf713314f8ed18f28175b6b46
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +56,7 @@ END
  { *sql_statement* | *statement_block* }  
  É qualquer instrução ou agrupamento de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] válido, como definido com o uso de um bloco de instrução.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os blocos BEGIN...END podem ser aninhados.  
   
  Embora todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam válidas em um bloco BEGIN...END, certas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não devem ser agrupadas no mesmo lote ou bloco de instrução.  
@@ -102,7 +104,7 @@ END;
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [FINAL &#40; BEGIN... FINAL &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
+ [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   
   
 

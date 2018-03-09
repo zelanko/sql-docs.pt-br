@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLValidDSN
-apilocation:
-- sqlsrv32.dll
+apiname: SQLValidDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLValidDSN
-helpviewer_keywords:
-- SQLValidDSN [ODBC]
+f1_keywords: SQLValidDSN
+helpviewer_keywords: SQLValidDSN [ODBC]
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c745b7ac285f09ff80478dab911b3cd3a9fc94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 473670a87ede935267c91537f301589b94666acf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlvaliddsn-function"></a>Função SQLValidDSN
 **Conformidade**  
@@ -76,4 +70,3 @@ BOOL SQLValidDSN(
 |Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (na configuração de DLL)|  
 |Adicionar, modificar ou remover uma fonte de dados|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Escrevendo um nome de fonte de dados para as informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

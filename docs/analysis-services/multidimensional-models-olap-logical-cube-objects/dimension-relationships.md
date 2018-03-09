@@ -2,15 +2,13 @@
 title: "Relações de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,20 +24,20 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 46
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c3c2a4d5104b95b1742c4e45d9f881fe81ffbc6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
-  O uso de dimensões define as relações entre uma dimensão de cubo e os grupos de medidas em um cubo. Uma dimensão de cubo é uma instância de uma dimensão de banco de dados usada em um cubo específico. Um cubo pode ter, e frequentemente tem, dimensões de cubo que não estão diretamente relacionadas ao grupo de medidas, mas que podem estar indiretamente relacionadas ao grupo de medidas por meio de outra dimensão ou grupo de medidas. Quando você adiciona um grupo de medidas ou dimensões de banco de dados para um cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta determinar o uso da dimensão examinando relações entre as tabelas de dimensões e tabelas de fatos na exibição da fonte de dados do cubo e examinando as relações entre atributos em dimensões. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define as configurações de uso de dimensão automaticamente para as relações que pode detectar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O uso de dimensões define as relações entre uma dimensão de cubo e os grupos de medidas em um cubo. Uma dimensão de cubo é uma instância de uma dimensão de banco de dados usada em um cubo específico. Um cubo pode ter, e frequentemente tem, dimensões de cubo que não estão diretamente relacionadas ao grupo de medidas, mas que podem estar indiretamente relacionadas ao grupo de medidas por meio de outra dimensão ou grupo de medidas. Quando você adiciona um grupo de medidas ou dimensões de banco de dados para um cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta determinar o uso da dimensão examinando relações entre as tabelas de dimensões e tabelas de fatos na exibição da fonte de dados do cubo e examinando as relações entre atributos em dimensões. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define as configurações de uso de dimensão automaticamente para as relações que pode detectar.  
   
  Uma relação entre uma dimensão e um grupo de medidas consiste na dimensão e tabelas de fatos participantes da relação e um atributo de granularidade que especifica a granularidade da dimensão em um determinado grupo de medidas.  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/01/2017
   
  ![Relação de dimensão lógicas esquema/muitos-para-muitos](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-many-dimension1.gif "relação de dimensão lógicas esquema/muitos-para-muitos")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação muitos-para-muitos entre uma dimensão e uma tabela de fatos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação muitos-para-muitos entre uma dimensão e uma tabela de fatos.  
   
 > [!NOTE]  
 >  Para oferecer suporte a uma relação de dimensão muitos para muitos, a exibição da fonte de dados deve ter uma relação de chave estrangeira definida entre todas as tabelas envolvidas, conforme mostrado no diagrama anterior. Caso contrário, será possível selecionar o grupo de medidas intermediário correto ao estabelecer a relação no **uso da dimensão** guia do Designer de dimensão.  
@@ -95,7 +93,6 @@ ms.lasthandoff: 09/01/2017
  Para obter mais informações sobre as relações muitos-para-muitos, consulte [definir um-para-muitos relação e muitos-para-muitos e propriedades da relação](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

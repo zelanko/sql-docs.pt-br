@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source"></a>Origem ODBC
   A origem ODBC extrai dados de um banco de dados com suporte do ODBC usando uma tabela de banco de dados, uma exibição ou uma instrução SQL.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/17/2017
  Dependendo da configuração de comportamento de erro, a origem ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
- Para obter informações sobre os tipos de dados com suporte da origem ODBC, consulte Conector para ODBC da Attunity.  
+ Para obter informações sobre os tipos de dados com suporte da fonte ODBC, consulte Conector para ODBC.  
   
 ## <a name="extract-options"></a>Extrair opções  
  A origem ODBC opera no modo **Lote** ou **Linha a Linha** . O modo usado é determinado pela propriedade **FetchMethod** . A lista seguinte descreve os modos.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/17/2017
   
  Para obter mais informações sobre a propriedade **FetchMethod** , consulte [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Paralelismo  
+## <a name="parallelism"></a>Parallelism  
  Não há nenhuma limitação no número de componentes de origem ODBC que podem ser executados em paralelo na mesma tabela ou tabelas diferentes, na mesma máquina ou em máquinas diferentes (diferente de limites de sessão globais normais).  
   
  No entanto, as imitações do provedor ODBC sendo usado podem restringir o número de conexões simultâneas pelo provedor. Essas limitações restringem o número de instâncias paralelas com suporte possível para a fonte ODBC. O desenvolvedor SSIS deve estar consciente das limitações de qualquer provedor ODBC usado e considerá-las ao compilar pacotes SSIS.  
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="options"></a>Opções  
   
-#### <a name="connection-manager"></a>Gerenciador de Conexões  
+#### <a name="connection-manager"></a>Gerenciador de conexões  
  Selecione na lista um gerenciador de conexões ODBC existente ou clique em **Novo** para criar uma nova conexão. A conexão pode ser com qualquer banco de dados com suporte ODBC.  
   
 #### <a name="new"></a>Nova  
@@ -169,7 +168,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="inputoutput"></a>Entrada/Saída  
  Exibe o nome da fonte de dados.  
   
-#### <a name="column"></a>Coluna  
+#### <a name="column"></a>coluna  
  Não usado.  
   
 #### <a name="error"></a>Erro  
@@ -200,4 +199,3 @@ ms.lasthandoff: 08/17/2017
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro da origem ODBC.  
   
   
-

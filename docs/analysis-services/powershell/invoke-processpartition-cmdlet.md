@@ -2,34 +2,29 @@
 title: Cmdlet Invoke-ProcessPartition | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b29970facb251e859e1e845c00d4c12587ca33c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Cmdlet Invoke-ProcessPartition
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Processe uma partição usando uma variável de tipo de processamento específica.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Processe uma partição usando uma variável de tipo de processamento específica.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -118,8 +113,8 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhum|  
+|Saídas|Nenhum|  
   
 ## <a name="example-1"></a>Exemplo 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\Sales Orders\Partitions\Total_Orders_2004 > Get-Item .| Invoke-ProcessPartition –ProcessType:ProcessDefault`  
@@ -133,4 +128,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

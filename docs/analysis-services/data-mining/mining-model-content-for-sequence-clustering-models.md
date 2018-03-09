@@ -2,35 +2,33 @@
 title: "Conteúdo do modelo para modelos de Clustering de sequência de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c14ab5147125207eb63ad9e97ba2a94876d4ddce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Conteúdo do modelo de mineração para modelos de clustering de sequências
-  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo MSC (Microsoft Sequence Clustering). Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo MSC (Microsoft Sequence Clustering). Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Entendendo a estrutura de um modelo de clustering de sequência  
  Um modelo de clustering de sequência tem um único nó pai (NODE_TYPE = 1) que representa o modelo e seus metadados. O nó pai, que recebe o rótulo **(All)**, tem um nó de sequência relacionado (NODE_TYPE = 13) que lista todas as dimensões detectadas nos dados de treinamento.  
@@ -270,9 +268,8 @@ ORDER BY Count(*) DESC
  Para saber como obter a lista dos caminhos observados ao consultar o conteúdo do modelo e para verificar exemplos de consultas em um modelo de clustering de sequência, consulte [Exemplos de consulta de modelo de clustering em sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Conteúdo do modelo de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exemplos de consulta dos modelos de clustering de sequências](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
-

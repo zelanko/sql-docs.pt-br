@@ -2,35 +2,32 @@
 title: "Método SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetWindowsServiceIdentity method
+helpviewer_keywords: SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c7c0887b3049f935b5a8cab7649acb7ce8a9f000
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método ConfigurationSetting - SetWindowsServiceIdentity
+# <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método de ConfigurationSetting – SetWindowsServiceIdentity
   Faz com que o serviço do Windows do servidor de relatório seja executado como um usuário do Windows especificado e concede a esta conta permissões de sistema de arquivos suficientes para permitir que o servidor de relatório opere.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -61,7 +58,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método teve êxito. Um valor diferente de zero indica que ocorreu um erro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] ou no Windows XP, os valores dos parâmetros *Name*, *Domain*e *Password* serão ignorados e a conta sistema Local será usada.  
   
  Quando o parâmetro *UseBuiltInAccount* estiver definido como **true** e o servidor de relatório estiver em execução no Windows Server 2003, as propriedades *Domain* e *Password* serão ignoradas e o campo de nome deverá conter “Builtin\NetworkService”, “Builtin\System” ou “Builtin\LocalService”.  
@@ -73,8 +70,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

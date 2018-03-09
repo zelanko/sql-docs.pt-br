@@ -3,26 +3,26 @@ title: "Configurar o failover cluster instância armazenamento SMB - SQL Server 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 11300c84bd7453845176d179ea69d3ea3ba0f437
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar a instância de cluster de failover - SMB - SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo explica como configurar o armazenamento SMB para uma instância de cluster de failover (FCI) no Linux. 
  
@@ -81,7 +81,7 @@ Aqui estão algumas dicas e observações para usar com êxito o SMB:
     mkdir <TempDir>
     ```
 
-    <TempDir>é o nome da pasta. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/tmp.
+    <TempDir> é o nome da pasta. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -165,7 +165,7 @@ Aqui estão algumas dicas e observações para usar com êxito o SMB:
 
    *    Digite Sair para não ser raiz
 
-   *    Inicie o SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
+   *    Start SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
 
     ```bash
     sudo systemctl start mssql-server
@@ -209,7 +209,7 @@ Aqui estão algumas dicas e observações para usar com êxito o SMB:
     mkdir <FolderName>
     ```
 
-    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta precisa ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
+    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta deve ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Aqui estão algumas dicas e observações para usar com êxito o SMB:
  
    * Tipo de saída não seja o superusuário.
 
-   * Para testar, crie um banco de dados nessa pasta. O exemplo abaixo usa o sqlcmd para criar um banco de dados, alterne o contexto para ele, verifique se os arquivos existem no nível do sistema operacional e, em seguida, exclui o local temporário. Você pode usar o SSMS.
+   * Para testar, crie um banco de dados nessa pasta. O exemplo a seguir usa o sqlcmd para criar um banco de dados, alterne o contexto para ele, verifique se os arquivos existem no nível do sistema operacional e, em seguida, exclui o local temporário. Você pode usar o SSMS.
  
    * Desmontar o compartilhamento 
 

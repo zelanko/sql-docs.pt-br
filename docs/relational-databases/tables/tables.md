@@ -16,15 +16,15 @@ helpviewer_keywords:
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 058ea2dfad2c308bf5cd9b197babebb208c34d3c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tables"></a>Tabelas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Além da função padrão de tabelas básicas definidas pelo usuário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os tipos de tabelas a seguir que servem para propósitos especiais em um banco de dados.  
   
  Tabelas particionadas  
- As tabelas particionadas são aquelas cujos dados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Por padrão, o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ As tabelas particionadas são aquelas cujos dados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Por padrão, o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Tabelas temporárias  
  As tabelas temporárias são armazenadas em **tempdb**. Há dois tipos de tabelas temporárias: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. As tabelas temporárias locais têm um único sinal numérico (#) como primeiro caractere no nome; elas são visíveis somente na conexão atual para o usuário e são excluídas quando o usuário se desconecta da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As tabelas temporárias globais têm dois sinais numéricos (##) como primeiros caracteres no nome; elas são visíveis a qualquer usuário após serem criadas e são excluídas quando todos os usuários que consultam a tabela se desconectam da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |Descreve como criar uma coluna computada em uma tabela.|[Especificar colunas computadas em uma tabela](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Descreve como especificar um valor padrão para uma coluna. Este valor é usado quando outro valor não é fornecido.|[Especificar valores padrão para colunas](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restrições de chave primária e chave estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

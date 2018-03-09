@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5675d39ff68b3ddd9231a90a54fd19793bd829be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de função Unicode
 O Gerenciador de Driver ODBC 3.5 (ou superior) oferece suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou SQLPOINTER em seus argumentos. As funções de Unicode são implementadas como funções (com um sufixo de *W*), e não como macros. As funções ANSI (que pode ser chamado com ou sem um sufixo de *um*) são idênticas às funções de API ODBC atuais.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Funções de Unicode que sempre retornaram ou colocar cadeias de caracteres ou argumentos de comprimento são passadas como contagem de caracteres. Para funções que retornam informações de comprimento de dados do servidor, o tamanho de exibição e a precisão são descritos em número de caracteres. Quando um comprimento (tamanho de transferência de dados) pode se referir aos dados de cadeia de caracteres ou não-String, o comprimento é descrito em comprimentos de octeto. Por exemplo, **SQLGetInfoW** ainda terão comprimento como contagem de bytes, mas **SQLExecDirectW** usará a contagem de caracteres.  
   
  Contagem de caracteres se refere ao número de bytes (octetos) para funções ANSI e o número de WCHAR (palavras de 16 bits) para funções UNICODE. Em particular, uma sequência de caracteres de dois bytes (DBCS) ou uma sequência de caracteres multibyte (MBCS) pode ser composta de vários bytes. Uma sequência de caracteres Unicode UTF-16 pode ser composta de vários WCHARs.  

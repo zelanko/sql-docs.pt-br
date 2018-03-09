@@ -3,7 +3,7 @@ title: Tratamento de erros em outras linguagens | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c837cfb2ae96e1e36256ceaca88d41b1a3a9b854
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7979675016813de372102e19743a1e7c0f9effe
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-errors-in-other-languages"></a>Tratamento de erros em outros idiomas
 Até aqui, esta seção discutiu erros de um ponto de vista do Microsoft® Visual Basic®. O restante desta seção fornece uma visão geral de tratamento de erros em idiomas diferentes do Visual Basic.  
@@ -35,4 +34,3 @@ Até aqui, esta seção discutiu erros de um ponto de vista do Microsoft® Visua
 -   [Tratamento de erro em Visual C++](../../../ado/guide/data/handling-errors-in-visual-c.md)  
   
 -   [Tratamento de erro em JScript](../../../ado/guide/data/handling-errors-in-jscript.md)
-

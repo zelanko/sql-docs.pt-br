@@ -1,27 +1,28 @@
 ---
 title: Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure | Microsoft Docs
 ms.custom: 
-ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.date: 10/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure
-Use uma variedade de métodos para importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure. Esses métodos incluem instruções Transact-SQL, ferramentas de linha de comando e assistentes.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use uma variedade de métodos para importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure. Esses métodos incluem instruções Transact-SQL, ferramentas de linha de comando e assistentes.
 
 Também importe e exporte dados em uma variedade de formatos. Esses formatos incluem arquivos simples, Excel, os principais bancos de dados relacionais e vários serviços de nuvem.
 
@@ -35,6 +36,7 @@ Importe e exporte dados com o utilitário de linha de comando BCP. Para obter ma
 
 ### <a name="use-the-import-flat-file-wizard"></a>Usar o Assistente Importar Arquivo Simples
 Caso não precise de todas as opções de configuração disponíveis no Assistente de Importação e Exportação e em outras ferramentas, você pode importar um arquivo de texto para o SQL Server usando o **Assistente Importar Arquivo Simples** no SQL Server Management Studio. Para saber mais, veja os tópicos a seguir:
+- [Assistente Importar Arquivo Simples para SQL](import-flat-file-wizard.md)
 - [Novidades do SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -53,7 +55,7 @@ Se desejar criar uma importação de dados personalizada, use um dos seguintes r
 Importe e exporte dados para arquivos simples ou uma variedade de outros formatos de arquivo, bancos de dados relacionais e serviços de nuvem. Para saber mais sobre essas opções de ferramentas específicas, consulte os seguintes tópicos
 -   Para o Assistente para Importação e Exportação do SQL Server, consulte [Conectar-se a fontes de dados com o Assistente para Importação e Exportação do SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Para o SQL Server Integration Services, consulte [Conexões do SSIS (Integration Services)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Para o Azure Data Factory, consulte [Conectores do Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Para o Azure Data Factory, consulte [Conectores do Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Formatos de dados usados com frequência
 
@@ -65,4 +67,3 @@ Há considerações especiais e exemplos disponíveis para alguns formatos de da
 
 ## <a name="next-steps"></a>Próximas etapas
 Caso não tenha certeza de onde começar com a tarefa de importação ou exportação, considere a possibilidade de usar o Assistente para Importação e Exportação do SQL Server. Para obter uma introdução rápida, consulte [Começar com este exemplo simples do Assistente para Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
-

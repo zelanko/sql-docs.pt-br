@@ -2,14 +2,20 @@
 title: Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.tsqlquery.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Query Editor [Database Engine]
 - Transact-SQL Editor See Query Editor [Database Engine]
@@ -19,19 +25,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
-  Use o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para criar e executar scripts que contenham instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . O editor também dá suporte à execução de scripts que contêm comandos do **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para criar e executar scripts que contenham instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. O editor também dá suporte à execução de scripts que contêm comandos do **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Ajuda F1 do Transact-SQL  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte à vinculação ao tópico de referência de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica quando você seleciona F1. Para fazer isso, realce o nome de uma instrução Transact-SQL e selecione F1. O utilitário de pesquisa de ajuda procurará um tópico que tenha um atributo de ajuda F1 correspondente à cadeia de caracteres realçada.  
@@ -149,7 +155,7 @@ ms.lasthandoff: 11/09/2017
  **Windows**  
  Abre a janela **Ponto de Interrupção** ou a janela **Imediato** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

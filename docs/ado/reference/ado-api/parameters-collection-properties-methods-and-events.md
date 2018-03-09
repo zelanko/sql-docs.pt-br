@@ -3,26 +3,28 @@ title: "Propriedades de coleção de parâmetros, métodos e eventos | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Parameters collection [ADO], members
+helpviewer_keywords:
+- Parameters collection [ADO], members
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8097fa1b6f015e21320c2033defaec0cf4de533
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c335592f59736e0ef8b5dfcfda7fa43bc79c7be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Eventos, métodos e propriedades de coleção de parâmetros
 ## <a name="properties"></a>Propriedades  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

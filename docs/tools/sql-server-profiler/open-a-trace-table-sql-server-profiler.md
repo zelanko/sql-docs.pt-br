@@ -2,30 +2,30 @@
 title: Abra uma tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- opening trace tables
+helpviewer_keywords: opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f251fd08716dcacef95f5af1f5dffcb2788243c3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22347d1a08d90be44526e390b31112e798a68352
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Abrir uma tabela de rastreamento (SQL Server Profiler)
-  Este tópico descreve como abrir uma tabela de rastreamento existente usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como abrir uma tabela de rastreamento existente usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-open-a-trace-table"></a>Para abrir uma tabela de rastreamento  
   
@@ -43,4 +43,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

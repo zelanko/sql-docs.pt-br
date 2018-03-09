@@ -3,7 +3,7 @@ title: "Abra o método (conjunto de registros ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1977d0381311ac2d7f43bd161099d1f0eb0f6665
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Método Open (conjunto de registros ADO)
 Abre um cursor em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -63,7 +62,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  O **ExecuteOpenEnum** valores de **adExecuteNoRecords** ou **adExecuteStream** não deve ser usada com **abrir**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O cursor padrão para ADO **registros** é um cursor somente de avanço, somente leitura, localizado no servidor.  
   
  Usando o **abrir** método em um **registros** objeto abre um cursor que representa os registros de uma tabela base, os resultados de uma consulta ou salvo anteriormente **registros**.  
@@ -122,4 +121,3 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Método Save](../../../ado/reference/ado-api/save-method.md)
-

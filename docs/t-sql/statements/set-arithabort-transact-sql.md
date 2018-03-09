@@ -1,14 +1,15 @@
 ---
 title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ARITHABORT
 - SET ARITHABORT
 - SET_ARITHABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - terminating queries
 - queries [SQL Server], terminating
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 977cf066d10f3318497720da7b32b1caad16e0fc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 372e4ff2a6f1c89395f30a7e1d6a000ec5ebea7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +49,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-SET ARITHABORT { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHABORT ON   
-[ ; ]  
-```  
+SET ARITHABORT { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ARITHABORT ON
+```
   
 ## <a name="remarks"></a>Comentários  
  Você sempre deve definir ARITHABORT como ON nas sessões de logon. Configuração de ARITHABORT como OFF pode otimização de consulta de impacto, levando a problemas de desempenho negativo.  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  Se SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
   
- Se SET ARITHABORT for definida como OFF e ocorrer um erro de interrupção durante a avaliação da condição Booleana de uma instrução IF, a ramificação FALSE será executada.  
+ Se SET ARITHABORT for definido como OFF e ocorre um erro de interrupção durante a avaliação da condição booleana de uma instrução IF, a ramificação FALSE será executada.
   
- SET ARITHABORT deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET ARITHABORT for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou modos de exibição indexados falhará.  
+ SET ARITHABORT deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET ARITHABORT for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou modos de exibição indexados falhará.
   
  A configuração de SET ARITHABORT é definida no momento da execução e não no momento da análise.  
   
- Para exibir a configuração atual dessa configuração, execute a consulta a seguir.  
+ Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  

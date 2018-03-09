@@ -2,9 +2,12 @@
 title: Nome de elemento de coluna (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06d9a6eb98a793f777a8e209a49a8655939208c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>Elemento de nome para coluna (DTA)
-  Especifica o nome para uma coluna de índice em uma configuração especificada pelo usuário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o nome de uma coluna de índice em uma configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento Column para Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Elemento pai**|[Elemento Column para Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
 |**Elementos filho**|Nenhuma.|  
   
 ## <a name="example"></a>Exemplo  

@@ -3,29 +3,31 @@ title: "Cabeçalho de extensões do Visual C++ | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cb1c9de2672077e98b930b18b8e1bc382feb5a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd4add0612acdf4d55dc8ba17d0ba13b9c2f804d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions-header"></a>Cabeçalho de extensões do Visual C++
 O seguinte cabeçalho, **icrsint.h**, fornece detalhes sobre a interface que permite que clientes recuperar campos de um **registros** em variáveis definidas em uma classe derivada de **CADORecordBinding**. Você deve especificar uma macro de associação do ADO para cada campo que você pretende acessar.  

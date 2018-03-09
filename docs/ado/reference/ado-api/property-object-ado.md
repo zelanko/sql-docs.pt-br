@@ -3,8 +3,9 @@ title: Objeto Property (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Property
-helpviewer_keywords: Property object [ADO]
+f1_keywords:
+- Property
+helpviewer_keywords:
+- Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ffca466a4803e6dbf8817d4f7ad5c819cb0d46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e0e5fdf3b949eb95bab26c3bdf4fc98b3f7e616
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
 Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Objetos de ADO têm dois tipos de propriedades: interna e dinâmicos.  
   
  Propriedades internas são as propriedades implementadas no ADO e imediatamente disponíveis para qualquer novo objeto, usando o `MyObject.Property` sintaxe. Eles não aparecem como **propriedade** objetos em um objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção, portanto, embora você possa alterar seus valores, você não pode modificar suas características.  

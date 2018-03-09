@@ -2,15 +2,13 @@
 title: "Sintaxe de filtro e exemplos de modelo (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b487f4e00d8ae1aa3dd644eadef07516fcbfb45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
-  Esta seção fornece informações detalhadas sobre a sintaxe de filtros de modelo, além de expressões de exemplo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta seção fornece informações detalhadas sobre a sintaxe de filtros de modelo, além de expressões de exemplo.  
   
  [Sintaxe de Filtro](#bkmk_Syntax)  
   
@@ -320,7 +319,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Filtros para modelos de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Teste e validação &#40; mineração de dados &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

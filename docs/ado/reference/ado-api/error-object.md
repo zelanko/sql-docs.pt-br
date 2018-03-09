@@ -3,8 +3,9 @@ title: Objeto de erro | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Error
-helpviewer_keywords: error object [ADO]
+f1_keywords:
+- Error
+helpviewer_keywords:
+- error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00f04d9ccdfd4547e7d207edc21db44a4e04508b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-object"></a>Objeto Error
 Contém detalhes sobre erros de acesso de dados que pertencem a uma única operação que envolve o provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Como cada erro, um ou mais **erro** objetos são colocados no [erros](../../../ado/reference/ado-api/errors-collection-ado.md) coleção do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Quando outra operação ADO gera um erro, o **erros** coleção é desmarcada e o novo conjunto de **erro** objetos é colocado no **erros** coleção.  
   
 > [!NOTE]

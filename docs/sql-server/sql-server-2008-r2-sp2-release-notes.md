@@ -1,11 +1,14 @@
 ---
 title: "Notas de Versão do SQL Server 2008 R2 SP2 | Microsoft Docs"
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2008 R2 Service Pack 2. O documento de Notas de Versão aplica-se a todas as edições do SQL Server 2008 R2 SP2 e está disponível somente online. Ele é atualizado periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2008 R2 Service Pack 2. O documento de Notas de Versão aplica-se a todas as edições do SQL Server 2008 R2 SP2 e está disponível somente online. Ele é atualizado periodicamente.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 O que há de novo no Service Pack 2  
 Modo de exibição de gerenciamento dinâmico (DMV) adicionado **sys.dm_db_stats_properties**. Você pode usar essa DMV para retornar propriedades de estatísticas para uma tabela especificada ou exibição indexada no banco de dados atual. Por exemplo, essa DMV retorna o número de linhas da amostra e o número de etapas no histograma.  

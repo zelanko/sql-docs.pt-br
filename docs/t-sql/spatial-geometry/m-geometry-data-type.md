@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - M (geometry Data Type)
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0946bc24abaee28973f8afd409ac68d04a428c8d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 39f6677b10632363f91c2572c4a0856a67e436c3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="m-geometry-data-type"></a>M (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor dessa propriedade é null se o **geometria** instância não é um **ponto**, bem como para qualquer **ponto** instância para que ele não está definido.  
   
  Esta propriedade é somente leitura.  
@@ -73,5 +72,4 @@ SELECT @g.M;
  [AsTextZM &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
   
-
 

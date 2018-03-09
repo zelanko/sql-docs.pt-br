@@ -1,13 +1,14 @@
 ---
-title: "Gerenciar um servidor de relatório do Reporting Services modo nativo | Microsoft Docs"
+title: "Gerenciar um servidor de relatório no modo nativo do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +16,18 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cc02a2eca3169d02254a24d142499705f9bc0184
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatórios de modo nativo do Reporting Services
+# <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
  Explica como abrir as portas usadas para solicitações de entrada e respostas de saída de um servidor de relatório.  
   
  [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Descreve as etapas adicionais necessárias para se conectar ao Gerenciador de relatórios ou um servidor de relatório usando `http://localhost`.  
+ Descreve as etapas adicionais necessárias para conexão com o Gerenciador de Relatórios ou com um servidor de relatório usando `http://localhost`.  
   
  [Configurar um servidor de relatório para administração remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica como configurar uma instância do servidor de relatório remoto para que seja possível conectar e configurá-la a partir de um computador diferente.  
@@ -71,9 +71,8 @@ ms.lasthandoff: 08/09/2017
  [Habilitar erros remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  
  Explica como definir as propriedades do servidor em um servidor de relatório para retornar informações adicionais sobre condições de erros que ocorrem em servidores remotos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configuração e administração de um servidor de relatório &#40; Reporting Services no modo do SharePoint &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Configuração e administração de um servidor de relatório &#40;modo do SharePoint do Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   
-

@@ -2,25 +2,28 @@
 title: "Visão geral da arquitetura (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Visão geral da arquitetura de R no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Esta seção fornece uma visão geral da arquitetura do SQL Server 2016 R Services e de serviços de aprendizado de máquina do SQL Server de 2017.
 

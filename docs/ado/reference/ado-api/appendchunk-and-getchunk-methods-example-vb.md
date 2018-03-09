@@ -3,29 +3,31 @@ title: "AppendChunk e GetChunk métodos exemplo (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dc8e9ec12357e0e92e2d94fe80ad54029740ff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ba03fbbb502e648127bf5bfab7e9ec79f2839fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk e GetChunk métodos exemplo (VB)
 Este exemplo usa o [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) métodos para preencher um campo de imagem com dados de outro registro.  

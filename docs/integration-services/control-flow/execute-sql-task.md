@@ -1,11 +1,13 @@
 ---
 title: Tarefa Executar SQL | Microsoft Docs
-ms.custom:
-- ssisdev020617
+ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c6e8206cfceb0fe643fc537fa4e343731e7c21cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -47,17 +49,17 @@ ms.lasthandoff: 08/03/2017
   
  A tarefa Executar SQL pode ser usada em combinação com os contêineres Loop Foreach e Loop For para executar várias instruções SQL. Esses contêineres implementam fluxos de controle repetitivos em um pacote e eles podem executar a tarefa Executar SQL várias vezes. Por exemplo, usando o contêiner Loop Foreach, um pacote pode enumerar arquivos em uma pasta e executar uma tarefa Executar SQL várias vezes para executar a instrução SQL armazenada em cada arquivo.  
   
-## <a name="connect-to-a-data-source"></a>Conectar a uma fonte de dados  
+## <a name="connect-to-a-data-source"></a>Conectar-se a uma fonte de dados  
  A tarefa Executar SQL pode usar tipos diferentes de gerenciadores de conexões para se conectar à fonte de dados onde a instrução SQL ou o procedimento armazenado é executado. A tarefa pode usar os tipos de conexão listados na tabela a seguir.  
   
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
-|EXCEL|[Gerenciador de conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|EXCEL|[Gerenciador de Conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|ODBC|[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|SQLMOBILE|[SQL Server Compact Edition Conexão Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|SQLMOBILE|[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="create-sql-statements"></a>Criar instruções SQL  
  A origem das instruções SQL usada por essa tarefa pode ser uma propriedade de tarefa que contém uma instrução, uma conexão com um arquivo que contém uma ou várias instruções ou o nome de uma variável que contém uma instrução. As instruções SQL devem ser gravadas na linguagem do sistema de gerenciamento de banco de dados de origem (DBMS). Para obter mais informações, consulte [Consultas do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -93,7 +95,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Você só poderá usar parâmetros em uma tarefa Executar SQL se o provedor de dados der suporte a eles.  
   
-## <a name="specify-a-result-set-type"></a>Especifique um conjunto de resultados tipo  
+## <a name="specify-a-result-set-type"></a>Especificar um tipo de conjunto de resultados  
  Dependendo do tipo de comando SQL, um conjunto de resultados pode ou não ser retornado para a tarefa Executar SQL. Por exemplo, uma instrução SELECT normalmente retorna um conjunto de resultados, mas uma instrução INSERT não. O conjunto de resultados de uma instrução SELECT pode conter nenhuma linha, uma linha ou muitas linhas. Os procedimentos armazenados também podem retornar um valor inteiro, chamado de código de retorno, para indicar o status de execução do procedimento. Nesse caso, o conjunto de resultados consiste em uma única linha.  
   
 ## <a name="configure-the-execute-sql-task"></a>Configurar a tarefa Executar SQL  
@@ -113,7 +115,7 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades programaticamente ou por meio do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
 
-## <a name="general-page---execute-sql-task-editor"></a>Página geral - executar SQL Editor da tarefa
+## <a name="general-page---execute-sql-task-editor"></a>Página Geral – Editor da Tarefa Executar SQL
  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar SQL** para configurar a tarefa Executar SQL e fornecer a instrução SQL executada pela tarefa.  
 
 Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referência de Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
@@ -122,7 +124,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **Nome**  
  Forneça um nome exclusivo para a tarefa Executar SQL no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva a tarefa Executar SQL. Como prática recomendável, para tornar os pacotes autodocumentados e mais fáceis de manter, descreva a tarefa de acordo com a sua finalidade.  
   
  **TimeOut**  
@@ -140,7 +142,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **TypeConversionMode**  
  Quando você definir essa propriedade como **Allowed**, a Tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados estão atribuídos. Isso se aplica ao tipo de conjunto de resultados de **Linha única** .  
   
- **Conjunto de resultados**  
+ **ResultSet**  
  Especifique o tipo de resultado esperado pela instrução SQL que está sendo executada. Escolha entre **Linha Simples**, **Conjunto de Resultados Completo**, **XML**, ou **Nenhum**.  
   
  **ConnectionType**  
@@ -149,7 +151,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **Tópicos relacionados:** [Gerenciador de conexões do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)e [Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)e [Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)e [Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)e [Gerenciador de conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexão**  
- Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \< **nova conexão...** >.  
+ Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…**>.  
   
  **SQLSourceType**  
  Selecione o tipo de origem da instrução SQL que a tarefa executa.  
@@ -158,7 +160,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
   
  As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a fonte como uma instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **Instrução SQL**é exibida.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém uma instrução Transact-SQL. Definindo essa opção, a opção dinâmica **FileConnection**é exibida.|  
@@ -191,22 +193,22 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexão do Arquivo  
  **FileConnection**  
- Selecione um Gerenciador de conexão de arquivo existente ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
- Selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
-## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Página de mapeamento de parâmetro - executar SQL Editor da tarefa
+## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Página Mapeamento de Parâmetros – Editor da Tarefa Executar SQL
 Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tarefa Executar SQL** para mapear as variáveis para os parâmetros na instrução SQL.  
   
 ### <a name="options"></a>Opções  
  **Nome da Variável**  
- Depois de adicionar um mapeamento de parâmetros clicando **adicionar**, selecione um sistema ou uma variável definida pelo usuário na lista ou clique em \< **nova variável...** > para adicionar uma nova variável usando o **Adicionar variável** caixa de diálogo.  
+ Depois de adicionar um mapeamento de parâmetros clicando em **Adicionar**, selecione uma variável de sistema ou definida pelo usuário na lista ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -219,9 +221,9 @@ Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tar
  **Nome do parâmetro**  
  Forneça um nome de parâmetro.  
   
- Dependendo do tipo de gerenciador de conexões usado pela tarefa, você deve usar números ou nomes de parâmetro. Alguns tipos de Gerenciador de conexão requerem que o primeiro caractere do nome do parâmetro é o sinal de @ específico nomes como @Param1, ou nomes de coluna como nomes de parâmetro.  
+ Dependendo do tipo de gerenciador de conexões usado pela tarefa, você deve usar números ou nomes de parâmetro. Alguns tipos de gerenciadores de conexões exigem que o primeiro caractere do nome do parâmetro seja o sinal @, nomes específicos como @Param1 ou então nomes de coluna como nomes de parâmetro.  
   
- **Tamanho do parâmetro**  
+ **Tamanho do Parâmetro**  
  Informe o tamanho dos parâmetros com comprimento variável, como cadeias de caracteres e campos binários.  
   
  Esta configuração garante que o provedor aloque espaço suficiente para obter valores de parâmetro de comprimento variável.  
@@ -232,7 +234,7 @@ Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tar
  **Remover**  
  Selecione um mapeamento de parâmetros na lista e clique em **Remover**.  
  
-## <a name="result-set-page---execute-sql-task-editor"></a>Página do conjunto de resultados - Execute o Editor da tarefa SQL
+## <a name="result-set-page---execute-sql-task-editor"></a>Página Conjunto de Resultados – Editor da Tarefa Executar SQL
 Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa Executar SQL** para mapear o resultado da instrução SQL para variáveis novas ou já existentes. As opções dessa caixa de diálogo serão desabilitadas se o **ResultSet** na página Geral for definido como **Nenhum**.  
   
 ### <a name="options"></a>Opções  
@@ -245,7 +247,7 @@ Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa
  
   
  **Nome da Variável**  
- Mapear o conjunto de resultados para uma variável selecionando uma variável ou clique em \< **nova variável...** > para adicionar uma nova variável usando o **Adicionar variável** caixa de diálogo.  
+ Mapeie o conjunto de resultados para uma variável selecionando uma variável ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
   
  **Adicionar**  
  Clique para adicionar um mapeamento de conjunto de resultados.  
@@ -253,7 +255,7 @@ Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa
  **Remover**  
  Selecione um mapeamento de conjunto de resultados na lista e clique em **Remover**.  
  
-## <a name="parameters-in-the-execute-sql-task"></a>Parâmetros de tarefa Executar SQL
+## <a name="parameters-in-the-execute-sql-task"></a>Parâmetros na Tarefa Executar SQL
 As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros **input** , parâmetros **output** e códigos de retorno. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a tarefa Execute SQL dá suporte aos tipos de parâmetro **Input**, **Output** e **ReturnValue**. Use o tipo **Input** para parâmetros de entrada, **Output** para parâmetros de saída e **ReturnValue** para códigos de retorno.  
   
 > [!NOTE]  
@@ -263,7 +265,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  No entanto, trabalhar com parâmetros e códigos de retorno em uma tarefa Executar SQL é mais do que apenas saber para quais tipos de parâmetro a tarefa tem suporte e como esses parâmetros serão mapeados. Há requisitos de uso adicionais e diretrizes para usar parâmetros e códigos de retorno de modo bem-sucedido na tarefa Executar SQL. Esses requisitos de uso e diretrizes são abordados no restante deste tópico:  
   
--   [Usando marcadores e nomes de parâmetros](#Parameter_names_and_markers)  
+-   [Usando nomes e marcadores de parâmetros](#Parameter_names_and_markers)  
   
 -   [Usando parâmetros com tipos de dados de data e hora](#Date_and_time_data_types)  
   
@@ -273,8 +275,8 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   [Obtendo valores de códigos de retorno](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a>Marcadores e nomes de parâmetro  
- Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] manager-tipo de conexão exige que o comando SQL usa um marcador de parâmetro no formato  **@varParameter** , enquanto que o tipo de conexão OLE DB requer o marcador de parâmetro de ponto de interrogação (?).  
+###  <a name="Parameter_names_and_markers"></a> Marcadores e nomes de parâmetro  
+ Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o tipo de gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exige que o comando SQL use um marcador de parâmetro no formato **@varParameter**, enquanto que o tipo de conexão OLE DB exige o marcador de parâmetro ponto de interrogação (?).  
   
  Os nomes que você pode usar como nomes de parâmetro nos mapeamentos entre as variáveis e os parâmetros também variam por tipo de gerenciador de conexões. Por exemplo, o tipo de gerenciador de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa um nome definido pelo usuário com um prefixo @, enquanto o tipo de gerenciador de conexões OLE DB requer que você use o valor numérico de ordinal de base 0 como o nome do parâmetro.  
   
@@ -283,34 +285,34 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 |Tipo de conexão|Marcador de parâmetro|Nome do parâmetro|Exemplo de comando SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2,...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome do parâmetro >|@\<nome do parâmetro >|Selecione FirstName, LastName, título da Person. Contact onde ContactID =@parmContactID |  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome do parâmetro>|@\<nome do parâmetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
-#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros com os gerenciadores de Conexão do ADO e ADO.NET  
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)]e gerenciadores de conexão ADO têm requisitos específicos para comandos SQL que usam parâmetros:  
+#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros com os gerenciadores de conexões ADO.NET e ADO  
+ Gerenciadores de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e ADO têm requisitos específicos para comandos SQL que usam parâmetros:  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]os gerenciadores de conexão requerem que o comando SQL use nomes de parâmetro como marcadores de parâmetro. Isso significa que as variáveis podem ser mapeadas diretamente para parâmetros. Por exemplo, a variável `@varName` é mapeada para o parâmetro denominado `@parName` e fornece um valor para o parâmetro `@parName`.  
+-   Gerenciadores de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requerem que o comando SQL use nomes de parâmetro como marcadores de parâmetro. Isso significa que as variáveis podem ser mapeadas diretamente para parâmetros. Por exemplo, a variável `@varName` é mapeada para o parâmetro denominado `@parName` e fornece um valor para o parâmetro `@parName`.  
   
 -   Os gerenciadores de conexões ADO requerem que o comando SQL use pontos de interrogação (?) como marcadores de parâmetro. No entanto, você pode usar qualquer nome definido pelo usuário, com exceção de valores de número inteiro, como nomes de parâmetro.  
   
  Para fornecer valores a parâmetros, as variáveis são mapeadas para nomes de parâmetro. Em seguida, a tarefa Executar SQL usa o valor ordinal do nome do parâmetro na lista de parâmetros para carregar valores de variáveis a parâmetros.  
   
-#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>Usar parâmetros com o EXCEL, ODBC e OLE DB Conexão gerentes  
+#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>Usar parâmetros com os gerenciadores de conexões EXCEL, ODBC e OLE DB  
  Os gerenciadores de conexões EXCEL, ODBC e OLE DB requerem que o comando SQL use pontos de interrogação (?) como marcadores de parâmetro e valores numéricos de base 0 ou base 1 como nomes de parâmetros. Se a tarefa Executar SQL utilizar o gerenciador de conexões ODBC, o nome do parâmetro mapeado para o primeiro parâmetro na consulta será denominado 1; caso contrário, o parâmetro será denominado 0. Para os parâmetros subsequentes, o valor numérico do nome do parâmetro indica o parâmetro no comando SQL para o qual o nome do parâmetro é mapeado. Por exemplo, o parâmetro denominado 3 é mapeado para o terceiro parâmetro, que é representado pelo terceiro ponto de interrogação (?) no comando SQL.  
   
  Para fornecer valores a parâmetros, as variáveis são mapeadas para nomes de parâmetros e a tarefa Executar SQL usa o valor ordinal do nome do parâmetro para carregar valores de variáveis a parâmetros.  
   
  Dependendo do provedor utilizado pelo gerenciador de conexões, alguns tipos de dados OLE DB talvez não tenham suporte. Por exemplo, o driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Para obter mais informações sobre o comportamento do provedor Jet com o driver do Excel, consulte [Origem do Excel](../../integration-services/data-flow/excel-source.md).  
   
-#### <a name="use-parameters-with-ole-db-connection-managers"></a>Usar parâmetros com OLE DB Conexão gerentes  
+#### <a name="use-parameters-with-ole-db-connection-managers"></a>Usar parâmetros com gerenciadores de conexões OLE DB  
  Quando a tarefa Executar SQL usa o gerenciador de conexões OLE DB, a propriedade BypassPrepare da tarefa está disponível. Defina esta propriedade como **true** se a tarefa Executar SQL usar instruções SQL com parâmetros.  
   
  Quando você usa um gerenciador de conexões OLE DB, não pode usar subconsultas com parâmetros, porque a tarefa Executar SQL não pode derivar informações de parâmetro por meio do provedor OLE DB. Entretanto, você pode usar uma expressão para concatenar os valores de parâmetro na cadeia de caracteres de consulta de definir a propriedade SqlStatementSource da tarefa.  
   
-###  <a name="Date_and_time_data_types"></a>Usar parâmetros com tipos de dados de data e hora  
+###  <a name="Date_and_time_data_types"></a> Usar parâmetros com tipos de dados de data e hora  
   
-#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Use os parâmetros de data e hora com os gerenciadores de Conexão do ADO e ADO.NET  
+#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parâmetros de data e hora com os gerenciadores de conexões ADO.NET e ADO  
  Ao ler dados de tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **time** e **datetimeoffset**, uma tarefa Executar SQL que usa um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou o gerenciador de conexão ADO tem os seguintes requisitos adicionais:  
   
 -   Em dados de **time**, um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requer que esses dados sejam armazenados em um parâmetro cujo tipo é **Input** ou **Output** e cujo tipo de dados é **string**.  
@@ -325,14 +327,14 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  Para obter mais informações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como eles são associados a tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Use os parâmetros de data e hora com OLE DB Conexão gerenciadores  
+#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Usar parâmetros de data e hora com os gerenciadores de conexões OLE DB  
  Quando você usa um gerenciador de conexões OLE DB, uma tarefa Executar SQL tem requisitos de armazenamento específicos para os dados nos tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **date**, **time**, **datetime**, **datetime2** e **datetimeoffset**. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
   
 -   Um parâmetro de entrada do tipo de dados NVARCHAR.  
   
 -   Um parâmetro de saída com o tipo de dados apropriado, como listado na tabela a seguir.  
   
-    |Tipo de parâmetro**Output** |Tipo de dados de data|  
+    |Tipo de parâmetro **Output**|Tipo de dados de data|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -341,7 +343,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  Se os dados não forem armazenados no parâmetro de entrada ou saída apropriado, o pacote falhará.  
   
-#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Use os parâmetros de data e hora com gerenciadores de Conexão ODBC  
+#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Usar parâmetros de data e hora com os gerenciadores de conexões ODBC  
  Quando você usa um gerenciador de conexões ODBC, uma tarefa Executar SQL tem requisitos de armazenamento específicos para dados com um dos tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **date**, **time**, **datetime**, **datetime2** ou **datetimeoffset**. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
   
 -   Um parâmetro **input** do tipo de dados SQL_WVARCHAR  
@@ -357,7 +359,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
  Se os dados não forem armazenados no parâmetro de entrada ou saída apropriado, o pacote falhará.  
   
-###  <a name="WHERE_clauses"></a>Usar parâmetros em cláusulas WHERE  
+###  <a name="WHERE_clauses"></a> Usar parâmetros em cláusulas WHERE  
  Os comandos SELECT, INSERT, UPDATE e DELETE frequentemente incluem cláusulas WHERE para especificar filtros que definem as condições que cada linha nas tabelas de origem devem atender para se qualificar para um comando SQL. Os parâmetros fornecem os valores de filtro nas cláusulas WHERE.  
   
  Você pode usar marcadores de parâmetro para fornecer valores de parâmetros dinamicamente. As regras para quais marcadores e nomes de parâmetros podem ser usados na instrução SQL dependem do tipo de gerenciador de conexões utilizado por Executar SQL.  
@@ -376,9 +378,9 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   O tipo de conexão ADO pode usar quaisquer dois nomes de parâmetro, como Param1 e Param2, mas os parâmetros devem ser mapeados pela posição original na lista de parâmetros.  
   
--   O [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o tipo de conexão usa os nomes de parâmetro @parmMinProductID e @parmMaxProductID   
+-   O tipo de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa os nomes de parâmetro @parmMinProductID e @parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a>Usar parâmetros com procedimentos armazenados  
+###  <a name="Stored_procedures"></a> Usar parâmetros com procedimentos armazenados  
  Os comandos SQL que executam procedimentos armazenados também podem usar mapeamento de parâmetro. As regras de como usar marcadores e nomes de parâmetros dependem do tipo de gerenciador de conexões utilizado por Executar SQL, assim como as regras para consultas parametrizadas.  
   
  A tabela a seguir lista exemplos do comando EXEC por tipo de gerenciador de conexões. Os exemplos executam o procedimento armazenado **uspGetBillOfMaterials** em [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. O procedimento armazenado usa os parâmetros `@StartProductID` e `@CheckDate` **e** .  
@@ -387,14 +389,14 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
-|ADO|Se IsQueryStoredProcedure for definido como **False**,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure for definido como **True**,`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure for definido como **False**,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure for definido como **True**,`uspGetBillOfMaterials`|  
+|ADO|Se IsQueryStoredProcedure estiver definido como **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure for definido como **True**, `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure estiver definido como **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure for definido como **True**, `uspGetBillOfMaterials`|  
   
  Para usar parâmetros de saída, a sintaxe requer que a palavra-chave OUTPUT seja colocada após cada marcador de parâmetro. Por exemplo, a sintaxe do parâmetro de saída a seguir está correta: `EXEC myStoredProcedure ? OUTPUT`.  
   
  Para obter mais informações sobre como usar parâmetros de entrada e saída com procedimentos armazenados Transact-SQL, consulte [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
  
-### <a name="map-query-parameters-to-variables"></a>Mapear parâmetros de consulta para variáveis
+### <a name="map-query-parameters-to-variables"></a>Mapear parâmetros para variáveis
 Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Executar SQL e criar mapeamentos entre variáveis e os parâmetros na instrução SQL.  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com o qual você deseja trabalhar.  
@@ -422,7 +424,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
     |Tipo de conexão|Marcador de parâmetro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|@\<nome do parâmetro >|  
+    |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -445,7 +447,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
     |Tipo de conexão|Nome do Parâmetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2,...|  
-    |ADO.NET e SQLMOBILE|@\<nome do parâmetro >|  
+    |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL e OLE DB|0, 1, 2, 3, …|  
   
@@ -465,7 +467,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
 14. Clique em **OK**.  
 
-##  <a name="Return_codes"></a>Obter os valores dos códigos de retorno  
+##  <a name="Return_codes"></a> Obter os valores de códigos de retorno  
  Um procedimento armazenado pode retornar um valor inteiro chamado código de retorno para indicar o status de execução de um procedimento. Para implementar códigos de retorno na tarefa Executar SQL, use parâmetros do tipo **ReturnValue** .  
   
  A tabela a seguir lista, por tipo de conexão, alguns exemplos de comandos EXEC que implementam códigos de retorno. Todos os exemplos usam um parâmetro **input** . As regras de uso de marcadores e nomes de parâmetro são as mesmas para todos os tipos de parâmetros —**Input**, **Output**e **ReturnValue**.  
@@ -476,7 +478,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
-|ADO|Se IsQueryStoreProcedure for definido como **False**,`EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure for definido como **True**,`myStoredProcedure`|  
+|ADO|Se IsQueryStoreProcedure estiver definido como **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure estiver definido como **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoreProcedure for definido como **True**.<br /><br /> `myStoredProcedure`|  
   
  Na sintaxe mostrada na tabela anterior, a tarefa Executar SQL usa o tipo de fonte **Entrada Direta** para executar o procedimento armazenado. A tarefa Executar SQL também pode usar o tipo de fonte **Conexão de Arquivo** para executar um procedimento armazenado. Independentemente de a tarefa Executar SQL usar o tipo de origem **Entrada Direta** ou **Conexão de Arquivo** , use um parâmetro do tipo **ReturnValue** para implementar o código de retorno.
@@ -492,9 +494,9 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
 -   [Especificando um tipo de conjunto de resultados](#Result_set_type)  
   
--   [Populando uma variável com um conjunto de resultados](#Populate_variable_with_result_set)  
+-   [Popular uma variável com um conjunto de resultados](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a>Especifique um conjunto de resultados tipo  
+###  <a name="Result_set_type"></a> Especificar um tipo de conjunto de resultados  
  O a tarefa Executar SQL dá suporte aos seguintes tipos de conjuntos de resultados:  
   
 -   O conjunto de resultados **Nenhum** é usado quando a consulta não retorna nenhum resultado. Por exemplo, esse conjunto de resultados é usado para consultas que adicionam, alteram e excluem registros em uma tabela.  
@@ -507,12 +509,12 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
   
  Se a tarefa Executar SQL usar o **Conjunto de resultados completo** e a consulta retornar vários conjuntos de linhas, a tarefa retornará apenas o primeiro. Se este conjunto de linhas gerar um erro, a tarefa informará o erro. Se outros conjuntos de linhas gerarem erros, a tarefa não os informará.  
   
-###  <a name="Populate_variable_with_result_set"></a>Preencher uma variável com um conjunto de resultados  
+###  <a name="Populate_variable_with_result_set"></a> Popular uma variável com um conjunto de resultados  
  Você poderá associar o conjunto de resultados retornado por uma consulta a uma variável definida pelo usuário se o tipo de conjunto de resultados for uma única linha, um conjunto de linhas ou XML.  
   
  Se o tipo de conjunto resultante for **Linha simples**, você poderá associar uma coluna no resultado de retorno a uma variável usando o nome da coluna como o nome do conjunto de resultados ou pode usar a posição ordinal da coluna na lista de colunas como o nome do conjunto de resultados. Por exemplo, o nome do conjunto de resultados da consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` pode ser **Color** ou **0**. Se a consulta retornar várias colunas e você quiser acessar os valores em todas elas, associe cada coluna a uma variável diferente. Se você mapear as colunas para variáveis usando números como nomes do conjunto de resultados, os números refletirão a ordem em que as colunas aparecerão na lista de colunas da consulta. Por exemplo, na consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, você usa 0 para a coluna **Color** e 1 para a coluna **ListPrice** . A capacidade de usar um nome de coluna como o nome do conjunto de resultados depende do provedor que a tarefa está configurada para usar. Nem todos os provedores tornam os nomes das colunas disponíveis.  
   
- Algumas consultas que retornam um único valor podem não incluir nomes de colunas. Por exemplo, a instrução `SELECT COUNT (*) FROM Production.Product` não retorna nenhum nome de coluna. Você pode acessar o resultado de retorno usando a posição ordinal, 0, como o nome do resultado. Para acessar o resultado de retorno por nome de coluna, a consulta deve incluir um \<nome do alias > cláusula para fornecer um nome de coluna. A instrução `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`fornece a coluna **CountOfProduct** . Você pode acessar a coluna de resultado de retorno que usa o nome de coluna **CountOfProduct** ou a posição ordinal 0.  
+ Algumas consultas que retornam um único valor podem não incluir nomes de colunas. Por exemplo, a instrução `SELECT COUNT (*) FROM Production.Product` não retorna nenhum nome de coluna. Você pode acessar o resultado de retorno usando a posição ordinal, 0, como o nome do resultado. Para acessar o resultado de retorno por nome de coluna, a consulta deve incluir uma cláusula AS \<nome do alias> para fornecer um nome de coluna. A instrução `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`fornece a coluna **CountOfProduct** . Você pode acessar a coluna de resultado de retorno que usa o nome de coluna **CountOfProduct** ou a posição ordinal 0.  
   
  Se o tipo de conjunto de resultados for **Conjunto de resultados completo** ou **XML**, será necessário usar 0 como o nome de conjunto de resultados.  
   
@@ -528,7 +530,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
 |---------------------|---------------------------|--------------------|  
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
 |Conjunto de resultados completo|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **Recordset**ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Data.DataSet**.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto **System.Data.DataSet** , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**Cadeia de caracteres**|**Cadeia de caracteres**|  
+|XML|**String**|**String**|  
 |XML|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **MSXML6.IXMLDOMDocument**.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Xml.XmlDocument**.|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
@@ -581,5 +583,4 @@ Esta seção descreve como criar um mapeamento entre um conjunto de resultados e
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
-
 

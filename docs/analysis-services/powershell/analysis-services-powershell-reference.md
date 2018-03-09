@@ -2,13 +2,13 @@
 title: "Referência do PowerShell do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 06/21/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
@@ -17,16 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8f23632c4b4dde2943d74a40e7ea0c75de963a4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9fbe93dba70125f12d20ee6ae2227d477b08ef19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Referência do Analysis Services PowerShell
-
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Cmdlets do PowerShell são incluídos no [módulo do SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
@@ -43,8 +41,8 @@ ms.lasthandoff: 11/17/2017
 |[Cmdlet Add-RoleMember](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Adicionar um membro a uma função de banco de dados.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
 |[Cmdlet Backup-ASDatabase](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Fazer backup de um banco de dados do Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
 |[Cmdlet Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Executar uma consulta ou script no formato XMLA ou TSML (JSON).|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
-|[Chamar ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Processar um banco de dados.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Processar um cubo.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Processar um banco de dados.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Invoke-ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Processar um cubo.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Cmdlet Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Processar uma dimensão.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Cmdlet Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)|Processar uma partição.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Cmdlet Invoke-ProcessTable](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Processe uma tabela em um modelo Tabular, o modelo de compatibilidade 1200 ou superior.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  

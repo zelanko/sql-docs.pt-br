@@ -1,116 +1,178 @@
 ---
 title: "Convertendo código R para uso no R Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/29/2017
-ms.prod: sql-server-2016
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed5f9052467492fe4bbbfb4ac0682c08a7ba8062
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="converting-r-code-for-use-in-r-services"></a>Convertendo o Código de R para Uso no R Services
+# <a name="converting-r-code-for-execution-in-database"></a>Converter o código de R para execução no banco de dados
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Quando você move o código R no Studio de R ou outro ambiente para o SQL Server, geralmente o código funciona sem modificações adicionais quando adicionado para o  *@script*  parâmetro [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Isso é especialmente verdadeiro se você tiver desenvolvido em sua solução usando o **RevoScaleR** funções, facilitando relativamente simples para alterar os contextos de execução.
+Este artigo fornece instruções de alto nível sobre como modificar o código de R para trabalhar no SQL Server. 
 
-No entanto, normalmente você desejará modificar seu código R para executar no SQL Server, para aproveitar uma integração maior com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para evitar a cara transferência de dados.
+Quando você move o código R no Studio de R ou outro ambiente para o SQL Server, geralmente o código funciona sem modificações adicionais: por exemplo, se o código é simples, como uma função que usa algumas entradas e retorna um valor. Também é mais fácil para soluções de porta que usam o **RevoScaleR** ou **MicrosoftML** pacotes, que oferece suporte à execução em contextos de execução diferentes com alterações mínimas.
 
-Para exibir exemplos de como o código R pode ser executado no SQL Server, consulte estas instruções passo a passo:
+No entanto, seu código pode exigir alterações substanciais se qualquer uma das seguintes opções for aplicável:
 
-+ [No banco de dados de análise do desenvolvedor do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) demonstra como você pode fazer seu código R mais modular encapsulando-os em procedimentos armazenados
++ Você usar bibliotecas de R que acessam a rede ou que não pode ser instalado no SQL Server.
++ O código faz chamadas separadas para fontes de dados fora do SQL Server, como planilhas do Excel, arquivos em compartilhamentos e outros bancos de dados. 
++ Você deseja executar o código de  *@script*  parâmetro [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) e também parametrizar o procedimento armazenado.
++ Sua solução original inclui várias etapas que podem ser mais eficientes em um ambiente de produção se executadas independentemente, como preparação de dados ou de engenharia de recurso versus modelo de treinamento, classificação ou relatório.
++ Você deseja melhorar a otimizar o desempenho alterando bibliotecas, usando a execução paralela ou descarregamento de algum processamento para o SQL Server. 
 
-+ [Solução de ciência de dados de ponta a ponta](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) inclui uma comparação de engenharia de recurso em T-SQL e R
+## <a name="step-1-plan-requirements-and-resources"></a>Etapa 1. Planejar os requisitos e recursos
 
-## <a name="how-the-data-science-process-changes-in-sql-server"></a>Como o processo de ciência de dados é alterado no SQL Server
+**Pacotes**
 
-Quando você estiver trabalhando em um ambiente de desenvolvimento R dedicado, como [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] ou RStudio, o fluxo de trabalho típico é para extrair dados em seu computador, analisar os dados interativamente e, em seguida, gravar ou exibir os resultados. No entanto, quando o código de R autônomo é migrado para o SQL Server, grande parte desse processo pode ser simplificado ou delegado para outras ferramentas do SQL Server. Além disso, isso pode melhorar o desempenho em muitos casos.
++ Determinar quais pacotes são necessários e certifique-se de que eles funcionam no SQL Server.
+ 
++ Instale pacotes com antecedência, a biblioteca de pacote padrão usada pelos serviços de aprendizado de máquina. Não há suporte para bibliotecas do usuário.
 
-| Código externo | R no SQL Server |
-|-------|-------|
-| Ingerir dados| Defina dados de entrada como uma consulta SQL. Evita a movimentação de dados. |
-| Resumir e visualizar dados| Gráficos podem ser exportados como imagens ou enviados a uma estação de trabalho remota.|
-|Engenharia de recursos| Use o R no banco de dados se você não quiser alterar o seu código, mas examine otimizar suas consultas. Investigue se ele pode ser mais eficiente de chamar funções T-SQL ou UDFs personalizados.|
-|Parte de limpeza de dados do processo de análise| Execute engenharia de recurso, a extração do recurso e a limpeza de dados com antecedência como parte dos fluxos de trabalho de dados.|
-|Transmitir previsões para o arquivo| Previsões de saída a uma tabela para evitar a movimentação de dados. Wrap prever funções em procedimentos armazenados para acessar diretamente por aplicativos.|
+**Fontes de Dados** 
 
-## <a name="best-practices"></a>Práticas recomendadas
++ Se você pretende inserir o código de R [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), identificar as fontes de dados primários e secundários. 
 
-+ Tome nota das dependências, como os pacotes necessários, com antecedência. Em um ambiente de teste e de desenvolvimento, pode ser aceitável instalar os pacotes como parte do seu código, mas essa prática não é recomendada em um ambiente de produção. Notifique o administrador para que os pacotes possam ser instalados e testados antes de implantar seu código.
+    + **Primário** fontes de dados são grandes conjuntos de dados, como dados de treinamento do modelo ou dados de entrada para previsões. Planejar mapear o maior conjunto de dados para o parâmetro de entrada de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ Faça uma lista de verificação dos possíveis problemas de tipo de dados. Documente o esquema dos resultados esperados em cada seção do código.
-
-+ Identifique fontes de dados primárias como dados de treinamento de modelo ou dados de entrada para previsões versus fontes secundárias como fatores, variáveis adicionais de agrupamento e assim por diante. Mapeie seu maior conjunto de dados para o parâmetro de entrada de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-
-+ Altere suas instruções de dados de entrada para elas trabalharem diretamente no banco de dados. Em vez de mover dados para um arquivo CSV local ou fazendo repetidas chamadas de ODBC, você pode obter um melhor desempenho usando consultas SQL ou exibições que podem ser executadas diretamente no banco de dados, evitando a movimentação de dados.
-
-+ Use planos de consulta do SQL Server para identificar as tarefas que podem ser realizadas em paralelo. Se a consulta de entrada pode ser colocadas em paralelo, defina `@parallel=1` como parte de seus argumentos para [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Normalmente, o processamento paralelo com esse sinalizador será possível sempre que o SQL Server puder trabalhar com tabelas particionadas ou distribuir uma consulta entre vários processos e agregar os resultados no final.
-
-  Normalmente o processamento paralelo com esse sinalizador não será possível se você estiver treinando modelos usando algoritmos que exigem que todos os dados sejam lidos ou se for necessário criar agregações.
-
-+ Sempre que possível, substitua as funções R convencionais por funções **ScaleR** que dão suporte à execução distribuída. Para obter mais informações, consulte [funções escala e comparação de Base R](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
-
-+ Examine seu código R para determinar se há etapas que podem ser executadas de maneira independente ou executadas com mais eficiência usando uma chamada de procedimento armazenado separado. Por exemplo, você pode decidir realizar a engenharia de recursos ou extração de recursos separadamente e adicionar os valores em uma nova coluna. 
-
-  Use T-SQL em vez do código de R para cálculos com base em conjunto. Para obter um exemplo de uma solução de R que compara UDFs e R para tarefas de engenharia de recurso, consulte [passo a passo de ponta a ponta de ciência de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
-
-+ Use o pacote R **sqlrutils** para converter seu código para uma única função com claramente definida de entradas e saídas, que podem ser facilmente mapeadas para parâmetros de procedimento armazenado. Para obter mais informações e exemplos, consulte [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
-
-
-## <a name="restrictions"></a>Restrições
-
- Tenha em mente as seguintes restrições ao converter seu código R:
-
-### <a name="data-types"></a>Tipos de dados
-
--   Há suporte para todos os tipos de dados do R. No entanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a uma maior variedade de tipos de dados do que o R. Portanto, algumas conversões de tipo de dados implícitos são realizadas ao enviar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o R e vice-versa. Você talvez precise para explicitamente converter alguns dados.
-
-- Há suporte para valors NULL. R usa o `na` construção de dados para representar um valor ausente, que é semelhante a um valor nulo.
-
-Para obter mais informações, consulte [tipos de dados e bibliotecas de R](../r/r-libraries-and-data-types.md).
-
-### <a name="inputs-and-outputs"></a>Entradas e Saídas
-
-+ É possível definir apenas um conjunto de dados de entrada como parte dos parâmetros de procedimento armazenado. Essa consulta de entrada para o procedimento armazenado pode ser qualquer instrução SELECT única válida. É recomendável que você use essa entrada para o conjunto de dados maior e obter conjuntos de dados menores conforme necessário, usando chamadas para RODBC.
-
-+ Chamadas de procedimento armazenado precedidas por executar não podem ser usadas como uma entrada para [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-
-+ Todas as colunas no conjunto de dados de entrada devem ser mapeadas para as variáveis no script R. As variáveis são mapeadas automaticamente por nome. Por exemplo, suponha que seu script R contém uma fórmula como esta:
+    + **Secundário** fontes de dados são geralmente menores conjuntos de dados, como listas de fatores ou variáveis de agrupamento adicional. 
     
+    Atualmente, o sp_execute_external_script oferece suporte a apenas um único conjunto de dados como entrada para o procedimento armazenado. No entanto, você pode adicionar várias entradas de escalares ou binárias.
+
+    Chamadas de procedimento armazenado precedidas por executar não podem ser usadas como uma entrada para [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Você pode usar consultas, exibições ou qualquer outra instrução SELECT válida.
+
++ Determine as saídas que você precisa. Se você executar código R usando sp_execute_external_script, o procedimento armazenado pode produzir um quadro de dados como resultado. No entanto, você também pode gerar várias saídas escalares, incluindo gráficos e modelos no formato binário, bem como outros valores escalares derivam do SQL ou código R parâmetros.
+
+**Tipos de dados**
+
++ Faça uma lista de verificação dos possíveis problemas de tipo de dados.
+
+    Todos os tipos de dados R têm suporte pelos serviços de aprendizado de máquina do SQL Server. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a uma maior variedade de tipos de dados que R. Portanto, algumas conversões de tipo de dados implícitas são executadas durante o envio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados em R e vice-versa. Talvez seja necessário converter explicitamente ou converter alguns dados. 
+
+    Há suporte para valors NULL. No entanto, R usa o `na` construção de dados para representar um valor ausente, que é semelhante a um valor nulo.
+
++ Considere eliminar a dependência de dados não podem ser usados por r: por exemplo, rowid e tipos de dados GUID do SQL Server não podem ser consumidos por R e gerarem erros.
+
+    Para obter mais informações, consulte [tipos de dados e bibliotecas de R](../r/r-libraries-and-data-types.md).
+
+## <a name="step-2-convert-or-repackage-code"></a>Etapa 2. Converter ou remontar o código
+
+Quanto você alterar o código depende se você pretende enviar o código de R de um cliente remoto para ser executado no contexto de computação do SQL Server, ou pretende implantar o código como parte de um procedimento armazenado, o que pode oferecer melhor desempenho e segurança de dados. Encapsular seu código em um procedimento armazenado impõe algumas exigências adicionais. 
+
++ Defina os dados de entrada principais como uma consulta SQL sempre que possível, para evitar a movimentação de dados.
+
++ Ao executar R em um procedimento armazenado, você pode passar por meio de vários **escalar** entradas. Para todos os parâmetros que você deseja usar na saída, adicione o **saída** palavra-chave. 
+
+    Por exemplo, a seguinte entrada escalar `@model_name` contém o nome do modelo, que também é a saída em sua própria coluna nos resultados:
+
+    ```SQL
+    EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
+    ``` 
+
++ Todas as variáveis que você passar como parâmetros do procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) devem ser mapeados para variáveis no código R. Por padrão, as variáveis são mapeadas por nome.
+
+    Todas as colunas do conjunto de dados de entrada também devem ser mapeadas para variáveis no script R.  Por exemplo, suponha que seu script R contém uma fórmula como esta:
+
     ```R
     formula <- ArrDelay ~ CRSDepTime + DayOfWeek + CRSDepHour:DayOfWeek
     ```
     
-     Um erro será gerado se o conjunto de dados de entrada não contém colunas com os nomes correspondentes ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour e DayOfWeek.
+    Um erro será gerado se o conjunto de dados de entrada não contém colunas com os nomes correspondentes ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour e DayOfWeek.
 
-+ Também é possível fornecer vários parâmetros escalares como entrada. No entanto, quaisquer variáveis que você passar como parâmetros do procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) deverão ser mapeadas para variáveis no código R. Por padrão, as variáveis são mapeadas por nome.
++ Em alguns casos, um esquema de saída deve ser definido com antecedência para os resultados.
 
-+ Para incluir variáveis escalares de entrada na saída do código R, basta acrescentar a palavra-chave **OUTPUT** ao definir a variável.
+    Por exemplo, para inserir os dados em uma tabela, você deve usar o **com o conjunto de resultados** cláusula para especificar o esquema.
 
-+ Em [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], seu código R é limitado à transmissão de um único conjunto de dados como um objeto data.frame. No entanto, também é possível transmitir várias saídas escalares, incluindo gráficos em formato binário e modelos no formato varbinary.
+    O esquema de saída também é necessário se o script de R usa o argumento `@parallel=1`. O motivo é que vários processos podem ser criados pelo SQL Server para executar a consulta em paralelo, com os resultados coletados no final. Portanto, o esquema de saída deve ser preparado antes da criação de processos paralelos.
+    
+    Em outros casos, você pode omitir o esquema de resultados usando a opção **com RESULT SETS UNDEFINED**. Esta instrução retorna o conjunto de dados do script R sem nomear as colunas ou especificando os tipos de dados SQL.
 
-+ Geralmente, é possível transmitir o conjunto de dados retornado pelo script R sem a necessidade de especificar os nomes das colunas de saída, usando a opção WITH RESULT SETS UNDEFINED. Entretanto, quaisquer variáveis no script R que você deseja transmitir devem ser mapeadas para parâmetros de saída do SQL.
++ Considere gerar dados de rastreamento ou de andamento usando o T-SQL em vez de R.
 
-+ Se o seu script R usar o argumento `@parallel=1`, será necessário definir o esquema de saída. O motivo é que vários processos podem ser criados pelo SQL Server para executar a consulta em paralelo, com os resultados coletados no final. Portanto, o esquema de saída deve ser definido antes da criação de processos paralelos.
+    Por exemplo, você poderia passar a hora do sistema ou outras informações utilizadas para armazenamento de auditoria e adição de uma chamada de T-SQL que é passada para os resultados, em vez de gerar dados semelhantes no script R. 
 
-### <a name="dependencies"></a>Dependências
+**Melhorar o desempenho e segurança**
 
- + Evite instalar pacotes de código R. No SQL Server, os pacotes devem ser instalados com antecedência.
- 
-  Certifique-se de instalar os pacotes para a biblioteca de pacote padrão usada pelos serviços de aprendizado de máquina. Para obter mais informações, consulte [gerenciamento de pacotes de R para o SQL Server](../r/r-package-management-for-sql-server-r-services.md)
++ Evite escrever previsões ou resultados intermediários no arquivo. Grave previsões em uma tabela em vez disso, para evitar a movimentação de dados.
 
++ Execute todas as consultas com antecedência e examine os planos de consulta do SQL Server para identificar as tarefas que podem ser executadas em paralelo.
+
+    Se a consulta de entrada pode ser colocadas em paralelo, defina `@parallel=1` como parte de seus argumentos para [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
+
+    Normalmente, o processamento paralelo com esse sinalizador será possível sempre que o SQL Server puder trabalhar com tabelas particionadas ou distribuir uma consulta entre vários processos e agregar os resultados no final. Normalmente o processamento paralelo com esse sinalizador não será possível se você estiver treinando modelos usando algoritmos que exigem que todos os dados sejam lidos ou se for necessário criar agregações.
+
++ Examine seu código R para determinar se há etapas que podem ser executadas de maneira independente ou executadas com mais eficiência usando uma chamada de procedimento armazenado separado. Por exemplo, você pode obter um melhor desempenho fazendo engenharia de recurso ou extração de um recurso separadamente e salvar os valores em uma tabela.
+
++ Procure maneiras de usar o T-SQL em vez do código de R para cálculos com base em conjunto.
+
+    Por exemplo, esta solução R mostra como-funções definidas pelo usuário T-SQL e R pode executar a mesma tarefa de engenharia de recurso: [passo a passo de ponta a ponta de ciência de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
+
++ Se possível, substitua convencionais funções de R com **ScaleR** funções que oferece suporte à execução distribuída. Para obter mais informações, consulte [funções escala e comparação de Base R](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
+
++ Consultar um desenvolvedor de banco de dados para determinar maneiras de melhorar o desempenho usando os recursos do SQL Server, como [tabelas com otimização de memória](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), ou, se você tiver a Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
+
+    Para obter mais informações, consulte [dicas de otimização do SQL Server e truques para serviços de análise](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+
+### <a name="step-3-prepare-for-deployment"></a>Etapa 3. Preparar para implantação
+
++ Notifique o administrador para que os pacotes possam ser instalados e testados antes de implantar seu código. 
+
+    Em um ambiente de desenvolvimento, ele pode ser okey instalar os pacotes como parte do seu código, mas essa é uma prática incorreta em um ambiente de produção. 
+
+    Bibliotecas de usuário não têm suporte, independentemente se você estiver usando um procedimento armazenado ou executando o código R no contexto de computação do SQL Server.
+
+**Empacotar seu código R em um procedimento armazenado**
+
++ Se seu código é relativamente simple, você pode inseri-lo em uma função definida pelo usuário do T-SQL sem modificação, conforme descrito nesses exemplos:
+
+    + [Criar uma função de R que é executado em rxExec](..\tutorials\deepdive-create-a-simple-simulation.md)
+    + [Engenharia de recurso usando o T-SQL e R](..\tutorials\sqldev-create-data-features-using-t-sql.md)
+
++ Se o código for mais complexo, use o pacote R **sqlrutils** para converter seu código. Esse pacote foi projetado para ajudar usuários experientes do R a escrever código bom procedimento armazenado. 
+
+    A primeira etapa é reescrever o código de R como uma única função com claramente definidas entradas e saídas.
+
+    Em seguida, use o **sqlrutils** pacote para gerar a entrada e saída no formato correto. O **sqlrutils** pacote gera o código de procedimento armazenado completa para você e também pode registrar o procedimento armazenado no banco de dados. 
+
+    Para obter mais informações e exemplos, consulte [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+
+**Integrar com outros fluxos de trabalho**
+
++ Utilizar ferramentas de T-SQL e os processos ETL. Execute engenharia de recurso, a extração do recurso e a limpeza de dados com antecedência como parte dos fluxos de trabalho de dados.
+
+    Quando você estiver trabalhando em um ambiente de desenvolvimento R dedicado, como [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] ou RStudio, você pode extrair dados em seu computador, analisar os dados interativamente e, em seguida, gravar ou exibir os resultados. 
+    
+    No entanto, quando o código de R autônomo é migrado para o SQL Server, grande parte desse processo pode ser simplificado ou delegado para outras ferramentas do SQL Server. 
+
++ Use as estratégias de visualização segura e assíncrona.
+
+    Os usuários do SQL Server geralmente não podem acessar arquivos no servidor e ferramentas de cliente SQL normalmente não oferecem suporte a dispositivo de gráficos de R. Se você gerar gráficos ou outros elementos gráficos como parte da solução, considere exportar os gráficos como dados binários e salvando em uma tabela ou gravação.
+
++ Encapsule previsão e as funções de pontuação em procedimentos armazenados para acessar diretamente por aplicativos.
+
+### <a name="other-resources"></a>Outros recursos
+
+Para exibir exemplos de como uma solução R pode ser implantada no SQL Server, consulte estes exemplos:
+
++ [Criar um modelo de previsão para empresas de aluguel ski usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
+
++ [No banco de dados de análise do desenvolvedor do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) demonstra como você pode fazer seu código R mais modular encapsulando-os em procedimentos armazenados
+
++ [Solução de ciência de dados de ponta a ponta](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) inclui uma comparação de engenharia de recurso em T-SQL e R

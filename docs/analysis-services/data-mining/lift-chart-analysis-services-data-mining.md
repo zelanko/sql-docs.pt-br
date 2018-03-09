@@ -2,15 +2,13 @@
 title: "Gráfico de comparação de precisão (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
-  Um *Gráfico de comparação de precisão* representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de uma pontuação de *comparação de precisão* . Comparando as pontuações de comparação de precisão de modelos diferentes, você pode determinar qual modelo é melhor. Você também pode determinar o ponto no qual as previsões do modelo se tornam menos úteis. Por exemplo, ao analisar o gráfico de comparação de precisão, você pode perceber que uma campanha promocional é provavelmente eficaz apenas para 30% dos clientes e usar esse valor para limitar o escopo da campanha.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um *Gráfico de comparação de precisão* representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de uma pontuação de *comparação de precisão* . Comparando as pontuações de comparação de precisão de modelos diferentes, você pode determinar qual modelo é melhor. Você também pode determinar o ponto no qual as previsões do modelo se tornam menos úteis. Por exemplo, ao analisar o gráfico de comparação de precisão, você pode perceber que uma campanha promocional é provavelmente eficaz apenas para 30% dos clientes e usar esse valor para limitar o escopo da campanha.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, o gráfico de comparação de precisão pode comparar a exatidão dos vários modelos que têm o mesmo atributo previsível. Você também pode avaliar a exatidão de previsão para um único resultado (um único valor do atributo previsível), ou para todos os resultados (todos os valores do atributo especificado).  
   
@@ -130,6 +129,6 @@ ms.lasthandoff: 11/17/2017
  [Voltar ao Início](#bkmk_Top)  
   
 ## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

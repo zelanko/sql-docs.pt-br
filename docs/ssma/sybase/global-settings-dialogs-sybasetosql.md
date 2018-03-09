@@ -3,27 +3,28 @@ title: "Configurações globais (caixas de diálogo) (SybaseToSQL) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b25e702cec71f04f680d6c24f09f3b9e1e003ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3dff8ea924403f228432eda60ede9bd096c1ead2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>Configurações globais (caixas de diálogo) (SybaseToSQL)
 Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para especificar as configurações de aviso para o SSMA e uma ação do usuário padrão.  
@@ -49,4 +50,3 @@ Use esta opção para especificar o comportamento de substituição de objeto pa
   
 -   Se você selecionar **False**, SSMA não substitui os metadados do objeto durante a conversão.  
   
-

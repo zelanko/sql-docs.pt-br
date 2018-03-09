@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 753aa0f97ccfe8b5c63fff0e117e5f1a541bccb5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Como exibir as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para exibir informações sobre as instâncias que você cria para ajudar a gerenciar a operação das instâncias.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
      Esta guia exibe uma lista de propriedades avançadas que você define no editor de propriedades. Para obter mais informações sobre o que é exibido nessa guia, consulte [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
   
-

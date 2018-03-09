@@ -2,28 +2,27 @@
 title: "Criar um relatório vinculado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- linked reports [Reporting Services], creating
+helpviewer_keywords: linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 509e5164f16d6fb5e2c537500d668633954b7b05
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
   Um relatório vinculado é um item de servidor de relatório que fornece um ponto de acesso a um relatório existente. Conceitualmente, é semelhante a um atalho de programa usado para executar um programa ou abrir um arquivo.  
@@ -40,21 +39,20 @@ ms.lasthandoff: 08/09/2017
   
 2.  Digite um nome para o novo relatório vinculado. Como opção, digite uma descrição.  
   
-3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]Se você não selecionar uma pasta diferente, o relatório vinculado é criado na pasta atual (em que o relatório se baseia está armazenado).  
+3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Se você não selecionar uma pasta diferente, o relatório vinculado será criado na pasta atual (em que o relatório no qual ele se baseia está armazenado).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]O relatório vinculado é aberto.  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] O relatório vinculado é aberto.  
   
      O ícone de um relatório vinculado difere de outros itens gerenciados por um servidor de relatório. O ícone a seguir indica um relatório vinculado:  
   
      ![Ícone Relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Ícone Relatório vinculado")  
   
-## <a name="see-also"></a>Consulte também  
- [Abrir e fechar um relatório &#40;Gerenciador de relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Página novo relatório vinculado &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Escolha o Item local página &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Página Propriedades gerais, relatórios &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Reporting Services conceitos &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+## <a name="see-also"></a>Consulte Também  
+ [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Página Novo Relatório Vinculado &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Página Escolher Local do Item &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Conceitos do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

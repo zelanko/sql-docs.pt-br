@@ -3,7 +3,7 @@ title: Exemplo de propriedades de CommandText (VC + +) e comando | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CommandText property [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 84972ea0e0c3da5c2a2b789bb922b57d3b3df3e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57a039333cd89dc45c3edfb6d9ba6b145c12c6d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Exemplo de propriedades de CommandText (VC + +) e comando
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade para atualizar o texto de um procedimento.  
@@ -100,4 +99,3 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)
-

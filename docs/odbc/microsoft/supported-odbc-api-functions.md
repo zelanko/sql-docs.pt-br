@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f898533861d389336da3aafa6f839f8a66a340a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Funções de API de ODBC com suporte
 A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Os Drivers de banco de dados de área de trabalho do Microsoft ODBC oferecem suporte a todas as funções principal e o nível 1.  

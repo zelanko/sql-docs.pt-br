@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STLength (geometry Data Type)
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9eacaffeb5998152e5a87f4cf058aa7374076a92
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4611b911e765135235f06fa656751e6cebd9ea18
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Retorna o comprimento total dos elementos em uma **geometria** instância.
   
  Tipo de retorno CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um **geometria** instância está fechada, seu comprimento será calculado como o comprimento total ao redor da instância; o comprimento de qualquer polígono é seu perímetro e o comprimento de um ponto é 0. O comprimento de qualquer **geometrycollection** tipo é a soma dos comprimentos de suas independente **geometria** instâncias.  
   
  STLength () funciona em LineStrings válidos e inválidos. Em geral, um LineString é inválido devido aos segmentos sobrepostos, que podem ser causados por anomalias como rastreamentos de GPS imprecisos. STLength () não remove segmentos sobrepostos ou inválidos. Ele inclui segmentos sobrepostos e inválidos no valor de comprimento que ele retorna. O método MakeValid () pode remover segmentos sobrepostos de um LineString.  
@@ -64,8 +63,7 @@ SELECT @g.STLength();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

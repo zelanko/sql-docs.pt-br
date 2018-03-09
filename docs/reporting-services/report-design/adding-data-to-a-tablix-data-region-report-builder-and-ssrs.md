@@ -2,25 +2,26 @@
 title: "Adicionando dados a uma região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13337dbbc9c1546c7e5443b8b2d2c9e02a7d66ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Adicionando dados a uma região de dados Tablix (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , para exibir dados de um conjunto de dados de relatório em uma tabela ou matriz, em cada célula de dados, especifique o nome de um campo do conjunto de dados a ser exibido. É possível exibir dados de detalhes ou dados agrupados. Se você adicionar grupos a uma tabela ou matriz, linhas e colunas para valores de grupo e dados de grupo serão adicionados automaticamente. Em seguida, é possível adicionar subtotais e totais aos dados.  
@@ -55,7 +56,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversio
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Adicionando uma região de dados Tablix existente de outro relatório  
  É possível copiar uma região de dados de outro relatório e colá-la em um relatório novo ou existente. Depois que colar a região de dados, você deve assegurar que o banco de dados usado pela região de dados seja definido e que os campos do conjunto de dados tenham nomes e tipos de dados idênticos aos do relatório original. Você não pode copiar conjuntos de dados de um relatório para outro, mas se seus relatórios usarem fontes de dados compartilhadas, você poderá duplicar o conjunto de dados rapidamente no outro relatório. Além disso, é possível importar o texto da consulta para as consultas que recuperam os dados do conjunto de dados, o que simplifica a duplicação de consultas nos relatórios. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

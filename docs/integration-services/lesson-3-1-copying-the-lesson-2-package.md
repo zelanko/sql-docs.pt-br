@@ -1,11 +1,11 @@
 ---
-title: "Etapa 1: Copiando o pacote da lição 2 | Microsoft Docs"
+title: "Etapa 1: copiar o pacote da Lição 2 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,30 +15,29 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 827e86f490522ea9df0f53bbe55836f6ca3bc385
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d805e07ffbdf1cf5685ebcf20dc63dae5652ca7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lição 3-1: copiando o pacote da lição 2
+# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lição 3-1 – copiar o pacote da Lição 2
 Nesta tarefa, você criará uma cópia do pacote Lesson 2.dtsx criado na Lição 2. Como alternativa, é possível adicionar o pacote concluído da Lição 2 incluído no tutorial do projeto e copiá-lo. Você usará essa cópia nova durante toda a Lição 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Para criar o pacote da Lição 3  
   
-1.  Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, **Microsoft SQL Server 2012**e clique em **SQL Server Data Tools**.  
+1.  Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, **Microsoft SQL Server 2012** e clique em **SQL Server Data Tools**.  
   
 2.  No menu **Arquivo** , clique em **Abrir**, clique em **Projeto/Solução**, selecione **Tutorial do SSIS** , clique em **Abrir**e clique duas vezes em **SSIS Tutorial.sln**.  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Lesson 2.dtsx**e clique em **Copiar**.  
   
-4.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS**e clique em **Colar**.  
+4.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS** e clique em **Colar**.  
   
     Por padrão, o pacote copiado recebe o nome de Lesson 3.dtsx.  
   
@@ -73,4 +72,3 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 2.dtsx criado na Lição
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: Adicionando e configurando registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
-

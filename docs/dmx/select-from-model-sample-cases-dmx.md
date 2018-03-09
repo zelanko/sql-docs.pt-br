@@ -5,37 +5,33 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SAMPLE_CASES
 - SELECT
 - FROM
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SELECT FROM <model>.SAMPLE_CASES statement
 - mining models [Analysis Services], sample cases
 - sample cases [DMX]
 - training mining models
 ms.assetid: e7a34b9b-3562-4503-bfa7-dd9b12db480a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 07874acbfd9d3df19b77a4885cab50d8c31862b9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3c1e90c2d4fd6b7dab565550bc4b08a4a33192ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;modelo&gt;. SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +64,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Casos de exemplo podem ser gerados e podem não existir de fato nos dados de treinamento. O caso retornado é representativo do nó de conteúdo especificado.  
   
  Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo msc é o único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo oferece suporte ao uso de SELECT FROM \<modelo >. SAMPLE_CASES, algoritmos de terceiros podem também dar suporte a ele.  
@@ -81,11 +77,10 @@ Select * from [Sequence Clustering].SAMPLE_Cases
 WHERE IsInNode('000000003')  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-t-sql-objects"></a>Objetos T-SQL do PolyBase
-  Para usar o PolyBase, você precisa criar tabelas externas para fazer referência a seus dados externos.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para usar o PolyBase, você precisa criar tabelas externas para fazer referência a seus dados externos.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]
 >  O PolyBase no SQL Server 2016 dá suporte somente a usuários do Windows. Se você tentar usar um usuário do SQL para consultar uma tabela externa do PolyBase, a consulta falhará.
 
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Configurar o PolyBase. Veja [Configuração do PolyBase](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Criar tabelas externas para Hadoop
@@ -299,9 +299,8 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 ## <a name="next-steps"></a>Próximas etapas  
  Para obter exemplos de consultas, veja [Consultas do PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

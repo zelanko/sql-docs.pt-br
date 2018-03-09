@@ -2,15 +2,13 @@
 title: "Referência técnica do algoritmo msc | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
-  O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
   
  Para obter mais informações gerais sobre o algoritmo, inclusive como navegar e consultar modelos de clusterização de sequência, consulte [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
@@ -151,8 +150,8 @@ ms.lasthandoff: 11/17/2017
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte ao detalhamento, ao uso de modelos de mineração OLAP e ao uso de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de Clustering de sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Conteúdo do modelo de mineração para modelos de Clustering de sequência &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

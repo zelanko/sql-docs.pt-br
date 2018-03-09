@@ -2,30 +2,27 @@
 title: "Lição 9 criar perspectivas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 76fc2643bf8d160b38dbcc1009ad37926051407c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 993cf02a47240c0a74667f6220c6b2dd5d6df86c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-create-perspectives"></a>Lição 8: Criar perspectivas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -38,7 +35,7 @@ A finalidade desta lição é descrever como criar perspectivas e se familiariza
   
 Tempo estimado para concluir esta lição: **5 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 7: criar indicadores chave de desempenho](../analysis-services/lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Criar perspectivas  
@@ -63,4 +60,3 @@ Vá para a próxima lição: [lição 9: criar hierarquias](../analysis-services
   
   
   
-

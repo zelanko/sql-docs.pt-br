@@ -24,17 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], statistical information
 - XML [SQL Server], statement execution information
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 45191a544866451e5208325eb2cafcab60bc8fb5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 99ef0199258d6d4a87a041979dd0f75bbc6b835f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A configuração de SET STATISTICS XML é definida no momento da execução ou do tempo de execução, e não no momento da análise.  
   
  Quando SET STATISTICS XML estiver ON (acionado), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações de execução para cada instrução, depois de executá-las. Depois que essa opção estiver definida como ON, as informações sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas até que a opção esteja definida como OFF. Note que SET STATISTICS XML não precisa ser a única instrução em um lote.  
@@ -106,4 +105,3 @@ GO
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
   
   
-

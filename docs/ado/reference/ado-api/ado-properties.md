@@ -3,8 +3,9 @@ title: Propriedades do ADO | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-properties"></a>Propriedades do ADO
 |||  
@@ -36,29 +37,29 @@ ms.lasthandoff: 11/17/2017
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica o comprimento real do valor do campo.|  
 |[Atributos](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica uma ou mais características de um objeto.|  
 |[BOF e EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica que a posição do registro atual é anterior ao primeiro registro em um objeto de conjunto de registros.<br /><br /> **EOF** indica que a posição do registro atual é após o último registro de um objeto de conjunto de registros.|  
-|[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica um marcador que identifica exclusivamente o registro atual em um **registros** do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica um marcador que identifica exclusivamente o registro atual em um **registros** do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica o número de registros de um **registros** objeto são armazenadas localmente em cache.|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Obtém ou define um banco de dados OLE **capítulo** objeto de/em uma **ADORecordsetConstruction** objeto.|  
-|[Conjunto de caracteres](../../../ado/reference/ado-api/charset-property-ado.md)|Indica o caractere definido no qual o conteúdo de um texto **fluxo** deve ser convertido.|  
+|[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica o caractere definido no qual o conteúdo de um texto **fluxo** deve ser convertido.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Indica o fluxo usado como entrada para uma **comando** objeto.|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Indica o texto de um comando a ser emitido em um provedor.|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indica por quanto tempo de espera durante a execução de um comando antes de encerrar a tentativa e gerar um erro.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica o tipo de um **comando** objeto.|  
 |[Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica por quanto tempo a aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.|  
-|[Contagem](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica o local do serviço de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica o tipo de cursor usado em uma **registros** objeto.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica o nome do membro de dados que será recuperado do objeto referenciado pelo **DataSource** propriedade.|  
-|[Fonte de dados](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a ser representado como um **registros** objeto.|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a ser representado como um **registros** objeto.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica o banco de dados padrão para um **Conexão** objeto.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica a capacidade de dados de um **campo** objeto.|  
-|[Description](../../../ado/reference/ado-api/description-property.md)|Descreve um **erro** objeto.|  
+|[Descrição](../../../ado/reference/ado-api/description-property.md)|Descreve um **erro** objeto.|  
 |[Dialeto](../../../ado/reference/ado-api/dialect-property.md)|Indica a sintaxe e regras gerais que o provedor usará para analisar o **CommandText** ou **CommandStream** propriedades.|  
 |[Direção](../../../ado/reference/ado-api/direction-property.md)|Indica se o **parâmetro** representa um parâmetro de entrada, um parâmetro de saída ou ambos, ou se o parâmetro é o valor de retorno de um procedimento armazenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica o status de edição do registro atual.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se a posição atual está no final do fluxo.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro de dados em um **registros**.|  
+|[Filtro](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro de dados em um **registros**.|  
 |[HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica o arquivo de Ajuda e o tópico associado a um **erro** objeto.<br /><br /> **IdentificaçãoDoContextoDaAjuda** retorna uma ID de contexto, como um **longo** valor para um tópico em um arquivo de Ajuda.<br /><br /> **Arquivo de Ajuda** retorna um **cadeia de caracteres** valor que é avaliada para um caminho totalmente resolvido de um arquivo de Ajuda.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica o nome do índice atualmente em vigor para um **registros** objeto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica o nível de isolamento para um **Conexão** objeto.|  

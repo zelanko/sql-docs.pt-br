@@ -1,34 +1,30 @@
 ---
-title: "Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2016) | Microsoft Docs"
+title: "Compatibilidade de fórmula do DAX no modo DirectQuery | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d7c13126b258662572b5ad5a9b02bcf7921c2346
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmulas DAX no modo DirectQuery 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmula do DAX no modo DirectQuery 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 1200 e superior para modelos de tabela no modo DirectQuery, muitas limitações funcionais em versões anteriores não se aplicarão mais. Especificamente para as fórmulas DAX:
 
 - O DirectQuery agora gera consultas mais simples, fornecendo melhor desempenho.
@@ -353,8 +349,7 @@ Em um modelo na memória, o resultado termina no último caractere da cadeia de 
 
 
 ## <a name="see-also"></a>Consulte também  
-[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modo DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
-
 
 

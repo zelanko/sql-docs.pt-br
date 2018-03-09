@@ -3,8 +3,11 @@ title: "Caixa de diálogo Erros de Sintaxe SQL Encontrados (Visual Database Tool
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b39dcefcef74a5d652b7e4acb5195b68b0ebad05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2e262ce93a610c0e0e184a0083eedcc1326499fd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Caixa de diálogo Erros de Sintaxe SQL Encontrados (Visual Database Tools)
-Essa caixa de diálogo o notifica que o designer não pode analisar a instrução SQL no painel SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essa caixa de diálogo o notifica que o designer não pode analisar a instrução SQL no painel SQL.  
   
 Essa caixa de diálogo aparece quando você digita ou edita uma instrução SQL no painel SQL; então, você pode alterar para outro painel, verificar a consulta ou tentar executar a consulta e uma das seguintes condições é aplicada:  
   
@@ -39,6 +42,6 @@ Essa caixa de diálogo aparece quando você digita ou edita uma instrução SQL 
   
 A caixa de diálogo exibe uma mensagem com a razão pela qual a instrução SQL não pôde ser analisada. Clique em **OK** para continuar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

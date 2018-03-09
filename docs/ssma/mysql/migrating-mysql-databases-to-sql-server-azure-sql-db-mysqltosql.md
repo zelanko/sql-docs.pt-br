@@ -1,29 +1,30 @@
 ---
 title: Migrar bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3e2f0f13d57b242e9f17b7241a1311df17b39612
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d86a7d779212a781a4bab29a85a963cf163b9ade
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migrando bancos de dados MySQL para o SQL Server - banco de dados do SQL Azure (MySQLToSql)
 SQL Server SSMA (Migration Assistant) para MySQL é um ambiente abrangente que ajuda você a migrar rapidamente bancos de dados MySQL para o SQL Server ou SQL Azure. Usando o SSMA para MySQL, você pode examinar os dados e objetos de banco de dados, avaliar bancos de dados para migração, migrar objetos de banco de dados do SQL Server ou SQL Azure e, em seguida, migrar dados para o SQL Server ou SQL Azure.  
@@ -62,8 +63,7 @@ Para migrar com êxito objetos e dados de bancos de dados MySQL para o SQL Serve
 > [!NOTE]  
 > Você não pode migrar esquemas Information_schema e MySQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para MySQL &#40; MySqlToSql &#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [Guia de Introdução com o SSMA para MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   
-

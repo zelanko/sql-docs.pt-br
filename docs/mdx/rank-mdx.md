@@ -2,34 +2,32 @@
 title: "Classificação (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RANK
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Rank function [MDX]
+f1_keywords: RANK
+dev_langs: kbMDX
+helpviewer_keywords: Rank function [MDX]
 ms.assetid: 3cea35ed-57c4-4b47-a736-cee00275509b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 89983af39b21ee508a0ddea06bbe953c1cb68b5a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a classificação de base um de uma tupla especificada em um conjunto especificado.  
   
@@ -50,7 +48,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma expressão numérica for especificada, o **classificação** função determina a classificação baseada em um para a tupla especificada, avaliando a expressão numérica especificada em relação à tupla. Se uma expressão numérica for especificada, o **classificação** função atribui a mesma classificação a tuplas com valores duplicados no conjunto. Essa atribuição da mesma classificação para valores duplicados afeta as classificações de tuplas subsequentes no conjunto. Por exemplo, um conjunto é formado pelas seguintes tuplas, `{(a,b), (e,f), (c,d)}`. A tupla `(a,b)` tem o mesmo valor que a tupla `(c,d)`. Se a tupla `(a,b)` tiver uma classificação 1, então tanto `(a,b)` quanto `(c,d)` terão uma classificação 1. No entanto, a tupla `(e,f)` teria uma classificação 3. Não poderia haver uma tupla com classificação 2 nesse conjunto.   
   
  Se uma expressão numérica não for especificada, o **classificação** função retorna a posição ordinal baseada em um da tupla especificada.  
@@ -93,9 +91,8 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ordem &#40; MDX &#41;](../mdx/order-mdx.md)   
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

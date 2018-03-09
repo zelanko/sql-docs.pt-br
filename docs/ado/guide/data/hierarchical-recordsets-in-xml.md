@@ -3,7 +3,7 @@ title: "Conjuntos de registros hierárquicos em XML | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,22 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3e33d176e47a9d509c504755d336985bb8a060df
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5d4a03801d4f126185ba63fe3fb6409947219bf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
 ADO permite a persistência de objetos hierárquicas do conjunto de registros em XML. Com objetos hierárquicos do conjunto de registros, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho no fluxo XML em vez de um atributo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O exemplo a seguir demonstra esse caso:  
   
 ```  
@@ -134,4 +133,3 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

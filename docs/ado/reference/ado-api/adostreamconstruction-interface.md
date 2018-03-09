@@ -3,7 +3,7 @@ title: Interface ADOStreamConstruction | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,19 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 87d609abefd972ec6fe3c9443f658ffbcc069511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9090cd99a7a43645165b9b1095f9cd9e789788f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="adostreamconstruction-interface"></a>Interface ADOStreamConstruction
+# <a name="adostreamconstruction-interface"></a>ADOStreamConstruction Interface
 O **ADOStreamConstruction** interface é usada para construir um ADO **fluxo** objeto a partir de um banco de dados OLE **IStream** objeto em um aplicativo C/C++.  
   
 ## <a name="properties"></a>Propriedades  
@@ -40,12 +39,12 @@ O **ADOStreamConstruction** interface é usada para construir um ADO **fluxo** o
 |[Propriedade Stream](../../../ado/reference/ado-api/stream-property.md)|Leitura/gravação. Obtém/define um banco de dados OLE **fluxo** objeto.|  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dado um banco de dados OLE **IStream** objeto (`pStream`), a construção de ADO **fluxo** objeto (`adoStr`) de valores para as três operações básicas a seguir:  
   
 1.  Criar um ADO **fluxo** objeto:  
@@ -76,10 +75,9 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2.0 ou posterior  
   
- **Biblioteca:** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
-

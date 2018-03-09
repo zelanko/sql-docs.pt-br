@@ -1,13 +1,14 @@
 ---
-title: "Relatórios de Clickthrough (SSRS) | Microsoft Docs"
+title: "Relatórios de clickthrough (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff805dbe62b75603d90dead84c4e25ca08c08236
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
   Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como designer de modelo, determina o que é exibido nos relatórios de clickthrough definindo as propriedades **DefaultDetailAttribute** e **DefaultAggregateAttribute** que você atribui a uma entidade no modelo de relatório.  
@@ -39,12 +39,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>Modelos de uma instância  
  Um modelo de uma instância exibe todos os atributos da entidade de destino e todos os atributos de agregação padrão especificados para as entidades relacionadas que tenham uma relação um para muitos a partir da entidade de destino. Um modelo de uma instância parece semelhante à imagem a seguir.  
   
- ![De muitas para relatório de clickthrough 1. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "De muitas para relatório de clickthrough 1.")  
+ ![Um relatório de clickthrough muitos-para-um.] (../../reporting-services/reports/media/manytooneclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
   
 #### <a name="multiple-instance-templates"></a>Modelos de várias instâncias  
  Um modelo de várias instâncias exibe somente os atributos de detalhes padrão da entidade de destino e todos os atributos de agregação padrão especificados para as entidades relacionadas que tenham uma relação um para muitos a partir da entidade de destino. Um modelo de várias instâncias parece semelhante à imagem a seguir.  
   
- ![De muitas para relatório de clickthrough 1. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "De muitas para relatório de clickthrough 1.")  
+ ![Um relatório de clickthrough muitos-para-um.] (../../reporting-services/reports/media/onetomanyclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
   
 ## <a name="customizing-clickthrough-reports"></a>personalizando relatórios de clickthrough  
  Em vez de usar os modelos padrão gerados pelo servidor de relatórios, você pode criar um relatório no Construtor de Relatórios e usá-lo como um relatório de clickthrough personalizado. Em seguida, você pode vincular seu relatório ao modelo como um relatório detalhado no Gerenciador de Relatórios.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 08/09/2017
 > [!IMPORTANT]  
 >  A entidade principal, ou básica, usada no relatório deve ser a mesma entidade à qual você vincula o relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Vincular um relatório a um modelo como um relatório de clickthrough](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

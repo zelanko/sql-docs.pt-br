@@ -1,26 +1,30 @@
 ---
 title: "Notas de Versão do SQL Server 2012 SP2 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Este documento de Notas de Versão descreve os problemas com os quais você deve estar familiarizado antes de instalar ou solucionar problemas do SQL Server 2012 Service Pack 2. As Notas de Versão listadas aqui estão disponíveis somente online, e não em mídia de instalação. Elas são atualizadas periodicamente, conforme os problemas são descobertos. Veja os [bugs corrigidos no SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) para mais informações.  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Escolha o arquivo correto para baixar e instalar  

@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29a2b0f8bceb00e0e7afb253d02bc0d0926f54a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Como gerenciar um serviço CDC no CDC Designer Console
   Este procedimento descreve como usar o CDC Designer Console para gerenciar um serviço CDC.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
  Outras tarefas de serviço CDC são realizadas usando o Console de Configuração do Serviço CDC. Para obter informações sobre as tarefas que você pode realizar no console de configuração do serviço, consulte a ajuda online incluída com o console de configuração.  
   
   
-

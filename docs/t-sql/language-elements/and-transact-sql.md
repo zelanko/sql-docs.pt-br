@@ -1,5 +1,5 @@
 ---
-title: E (Transact-SQL) | Microsoft Docs
+title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AND_TSQL
 - AND
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], TRUE
 - TRUE
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34014541d124b0226218012d907fd2f99e0b1610
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 340905e1f4ed4917fa4485278e43c6dc754f6164
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +58,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valor do resultado  
  Retorna TRUE quando as duas expressões são TRUE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O gráfico a seguir mostra os resultados ao comparar valores TRUE e FALSE usando o operador AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -100,8 +102,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

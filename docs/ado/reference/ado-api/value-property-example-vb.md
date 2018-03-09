@@ -3,7 +3,7 @@ title: Valor de exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9db32221c278eceafc9dd237b7e1fdb3140817e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2a17b5e2ee2f8f206ec924ae898d0bcb702a16f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-example-vb"></a>Exemplo de propriedade de valor (VB)
 Este exemplo demonstra o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade com [campo](../../../ado/reference/ado-api/field-object.md) e [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos exibindo valores de campo e de propriedade para o ***funcionários*** tabela.  
@@ -112,4 +111,3 @@ End Sub
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Propriedade Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
-

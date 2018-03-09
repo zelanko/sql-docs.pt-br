@@ -2,27 +2,33 @@
 title: "Logon para assinaturas atualizáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
-  Para a atualização imediata, se você selecionou **Replicar** na página **Assinaturas Atualizáveis** desse assistente, terá de especificar uma conta no Assinante na qual as conexões com o Publicador são feitas. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para a atualização imediata, se você selecionou **Replicar** na página **Assinaturas Atualizáveis** desse assistente, terá de especificar uma conta no Assinante na qual as conexões com o Publicador são feitas. 
   
  Conexões são usadas pelos gatilhos acionados no Assinante e propagam as alterações no Publicador. Essa conta é necessária mesmo que você selecionou **Colocar alterações na fila e confirmar quando possível** na página **Assinaturas Atualizáveis**. Por padrão, o Assistente para Nova Assinatura configura a atualização na fila com a capacidade de alternar para a atualização imediata, se necessário.  
   
@@ -55,6 +61,6 @@ ms.lasthandoff: 11/09/2017
  [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

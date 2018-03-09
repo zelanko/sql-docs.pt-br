@@ -2,34 +2,32 @@
 title: Elemento Property (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d61770b935ad397d5d0db48a3651f143ebef5522
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Elemento Property (CSDLBI)
-  O elemento Property na CSDLBI é um tipo complexo que fornece adições ao elemento CSDL Property, como suporte dos modelos de dados de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento Property na CSDLBI é um tipo complexo que fornece adições ao elemento CSDL Property, como suporte dos modelos de dados de business intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento CSDLBI Property.  
@@ -59,14 +57,14 @@ ms.lasthandoff: 09/01/2017
 ## <a name="stability"></a>Stability  
  A tabela a seguir lista os valores de **estabilidade** tipo simples.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Stable|A propriedade permanece constante entre operações de atualização.|  
 |RowNumber|A propriedade contém um número de linha.|  
 |Volatile|A propriedade pode não permanecer constante entre operações de atualização.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O XML a seguir mostra a representação, na versão 1.1 da CSDLBI, de algumas propriedades no exemplo de modelo de tabela da AdventureWorks.  
   
@@ -140,4 +138,3 @@ ms.lasthandoff: 09/01/2017
  [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

@@ -1,31 +1,33 @@
 ---
-title: Catalog.add_execution_worker (banco de dados SSISDB) | Microsoft Docs
+title: catalog.add_execution_worker (Banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8ce83f2678a1f3dcae6539f33beb33070b8e771b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 42d1332c727f26b6850c7fd7227c3a124ebc50a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>Catalog.add_execution_worker (banco de dados SSISDB)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (Banco de dados SSISDB)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Adiciona um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala Out trabalho a uma instância de execução em expansão.
+Adiciona um Trabalho do Scale Out do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma instância de execução no Scale Out.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,26 +36,26 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 ```
 
 ## <a name="arguments"></a>Argumentos
-[ @execution_id =] *execution_id*  
+[ @execution_id = ] *execution_id*  
  O identificador exclusivo da instância de execução. O *execution_id* é **bigint**.  
  
-[@workeragent_id =] *workeragent_id*  
-A id do agente de trabalho de um trabalho de fora de escala. O *workeragent_id* é **uniqueIdentifier**.
+[@workeragent_id = ] *workeragent_id*  
+A ID do agente de trabalho de um Trabalho do Scale Out. O *workeragent_id* é **uniqueIdentifier**.
 
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
 
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
  
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -62,11 +64,10 @@ A id do agente de trabalho de um trabalho de fora de escala. O *workeragent_id* 
 
 - O identificador da execução não é válido.
 
-- A id do agente de trabalho não é válida.
+- A ID do agente de trabalho não é válida.
 
-- A execução não está em expansão.
+- A execução não está no Scale Out.
 
-## <a name="see-also"></a>Consulte também
-[Executar pacotes em expansão](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
-
+## <a name="see-also"></a>Consulte Também
+[Execute pacotes no Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Estatísticas de Agente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 261b9a59cc8ba61b7ad2b2dbadbfd252b1474255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
-  O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho SQLServer:Estatísticas do Broker inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
-|Contadores do SQL Server Broker Statistics|Descrição|  
+|Contadores do SQL Server Broker Statistics|Description|  
 |-------------------------------------------|-----------------|  
 |**Total de Erros de Ativação**|O número de vezes que um procedimento armazenado de ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] fechou com um erro.|  
 |**Reversões de Transações do Agente**|O número de transações revertidas que continham instruções DML relacionadas ao [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND e RECEIVE.|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/09/2017
 |**SEND Total do SQL**|O número total de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas.|  
 |**SENDs do SQL/s**|O número de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas por segundo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

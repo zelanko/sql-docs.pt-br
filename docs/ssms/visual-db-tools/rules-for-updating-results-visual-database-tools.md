@@ -3,8 +3,11 @@ title: "Regras para atualização de resultados (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a4c523c915ec236189f9b97104fcd78c725b4fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0ab1925f265eb27a6c0efd1b55b4770e4be7cf3d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Regras para atualização de resultados (Visual Database Tools)
-Em muitos casos, você pode atualizar o conjunto de resultados exibido no [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Porém, em alguns casos você não pode.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em muitos casos, você pode atualizar o conjunto de resultados exibido no [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Porém, em alguns casos você não pode.  
   
 No geral, para poder atualizar os resultados, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) deve ter informações suficientes para identificar exclusivamente a linha na tabela. Um exemplo será se a consulta incluir uma chave primária na lista de saída. Além disso, você deve ter permissão suficiente para atualizar o banco de dados.  
   
@@ -67,6 +70,6 @@ Além disso, talvez você pode não possa atualizar colunas específicas no resu
   
 -   Carimbo de data/hora ou colunas BLOB  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

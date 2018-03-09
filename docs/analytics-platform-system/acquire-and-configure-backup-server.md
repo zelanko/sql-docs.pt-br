@@ -3,10 +3,10 @@ title: Adquirir e configurar um servidor de Backup para PDW APS
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Adquirir e configurar um servidor de backup
 Este tópico descreve como configurar um sistema do Windows não seja de aplicação como um servidor de backup para uso com os recursos de backup e restauração no Analytics Platform System (APS) e SQL Server Parallel Data Warehouse (PDW).  
@@ -154,6 +154,6 @@ Operações no servidor de carregamento podem usar um caminho UNC para extrair d
 - Exigir assinatura em que a conexão. 
 - No servidor do carregamento, defina a opção de política de grupo a seguir nas opções de diretivas de configurações de segurança: o cliente de rede Microsoft: assinar comunicações digitalmente (sempre): habilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Backup e restauração](backup-and-restore-overview.md)  
   

@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e153b3bbaf18e6c4b69171e56f2fdae6965396a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 89f1a91310ea7ccbc6d4ab8724022c3463e4ea8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="point-geometry-data-type"></a>Point (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ Point ( X, Y, SRID )
  *X*  
  É um **float** expressão que representa a coordenada X do **ponto** que está sendo gerado.  
   
- *Y*  
+ *S*  
  É um **float** expressão que representa a coordenada Y do **ponto** que está sendo gerado.  
   
  *SRID*  
@@ -59,7 +58,7 @@ Point ( X, Y, SRID )
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `Point()` para criar uma instância `geometry`.  
@@ -71,8 +70,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

@@ -3,8 +3,9 @@ title: Dados persistentes | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecda57863abf45f1256f192d933c99bfb09a67dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 533801c5f6717ec32a821a79acadce3f953c8d71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="persisting-data"></a>Dados persistentes
 Computação portátil (por exemplo, usando laptops) gerou a necessidade de aplicativos que podem ser executados em um estado conectado ou desconectado. ADO adicionou suporte para isso fornecendo a capacidade de salvar um cursor do cliente para o desenvolvedor **registros** em disco e recarregá-lo mais tarde.  
@@ -118,7 +119,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta seção contém os tópicos a seguir.  
   
 -   [Mais informações sobre a persistência do conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md)  

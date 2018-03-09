@@ -19,16 +19,15 @@ helpviewer_keywords:
 - isolation levels [SQL Server], metadata access
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0acd70fad20d0ad1c2727f93da52b2e938ee21fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7afedcca33139a18a54c35e37250d7f893516280
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transaction-isolation-levels"></a>Níveis de isolamento da transação
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,10 @@ ms.lasthandoff: 09/01/2017
   
 |Nível de isolamento|Tem suporte|Cumprido|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|Não|Não garantido|  
+|READ UNCOMMITTED|não|Não garantido|  
 |READ COMMITTED|Sim|Sim|  
-|REPEATABLE READ|Não|Não|  
-|SNAPSHOT ISOLATION|Não|Não|  
-|SERIALIZABLE|Não|Não|  
+|REPEATABLE READ|não|não|  
+|SNAPSHOT ISOLATION|não|não|  
+|SERIALIZABLE|não|não|  
   
   
-

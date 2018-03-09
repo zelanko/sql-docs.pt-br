@@ -2,10 +2,13 @@
 title: CurrentMember (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CURRENTMEMBER
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6537a990050ad7b4aed83ba3868d2ac93572f3e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currentmember-mdx"></a>Função CurrentMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o membro atual ao longo de uma hierarquia especificada durante a iteração.  
   
@@ -39,7 +42,7 @@ Hierarchy_Expression.CurrentMember
  *Expressão_Hierarquia*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Durante a iteração de um conjunto de membros de hierarquia, em cada etapa da iteração, o membro que está sendo operado é o membro atual. O **CurrentMember** função retorna esse membro.  
   
 > [!IMPORTANT]  
@@ -124,7 +127,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

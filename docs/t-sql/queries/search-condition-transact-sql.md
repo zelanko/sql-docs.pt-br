@@ -1,7 +1,7 @@
 ---
 title: "Pesquisar condição (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -39,17 +39,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: aff1f4010182b601111ed2ba892bb06b6e82b71d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="search-condition-transact-sql"></a>Critério de pesquisa (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +100,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<search_condition >  
+ \<search_condition>  
  Especifica as condições para as linhas retornadas no conjunto de resultados para uma instrução SELECT, expressão de consulta ou subconsulta. Para uma instrução UPDATE, especifica as linhas a serem atualizadas. Para uma instrução DELETE, especifica as linhas a serem excluídas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  NOT  
@@ -110,7 +109,7 @@ ms.lasthandoff: 10/24/2017
  AND  
  Combina duas condições e avalia como TRUE quando ambas são TRUE. Para obter mais informações, consulte [AND &#40; Transact-SQL &#41; ](../../t-sql/language-elements/and-transact-sql.md).  
   
- ou  
+ OU  
  Combina duas condições e avalia como TRUE quando uma delas é TRUE. Para obter mais informações, consulte [ou &#40; Transact-SQL &#41; ](../../t-sql/language-elements/or-transact-sql.md).  
   
  \<predicado >  
@@ -120,7 +119,9 @@ ms.lasthandoff: 10/24/2017
  É um nome de coluna, uma constante, uma função, uma variável, uma subconsulta escalar ou qualquer combinação de nomes de colunas, constantes e funções conectadas por um operador ou operadores ou por uma subconsulta. A expressão também pode conter a expressão CASE.  
   
 > [!NOTE]  
->  Ao fazer referência a tipos de dados de caractere Unicode **nchar**, **nvarchar**, e **ntext**, 'expression' deve ser prefixado com a letra maiuscula ' n '. Se N não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte a cadeia na página de código correspondente ao agrupamento padrão do banco de dados ou coluna. Qualquer caractere não localizado nessa página de código será perdido.  
+>  Variáveis e constantes de cadeia de caracteres Unicode não usam a página de código que corresponde ao agrupamento padrão do banco de dados. Código de página conversões pode occurr ao trabalhar com dados de caractere não Unicode somente e referenciar tipos de dados de caractere não Unicode **char**, **varchar**, e **texto**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Converte as variáveis e constantes de cadeia de caracteres não Unicode para a página de código que corresponde ao agrupamento da coluna referenciada ou especificados usando COLLATE, se a página de código é diferente da página de código que corresponde ao agrupamento padrão do banco de dados. Qualquer caractere não localizado na nova página de código será convertido em um caractere semelhante, se um [mapeamento de melhor ajuste](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) pode ser encontrado, caso contrário, será convertido para o caractere de substituição padrão de "?".  
+>  
+> Ao trabalhar com várias páginas de código, as constantes de caractere podem ser prefixadas com a letra maiuscula ' n ', Unicode e variáveis podem ser usadas, para evitar conversões de página de código.  
   
  =  
  É o operador usado para testar a igualdade entre duas expressões.  
@@ -171,9 +172,9 @@ ms.lasthandoff: 10/24/2017
  Fornece uma forma simples de consulta de idioma natural pesquisando colunas que contêm dados baseados em caracteres para obter valores que correspondam ao significado em vez das palavras exatas no predicado. Esta opção só pode ser usada com instruções SELECT. Para obter mais informações, consulte [FREETEXT &#40; Transact-SQL &#41; ](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- Especifica a pesquisa de uma expressão, com base na inclusão ou exclusão da expressão em uma lista. A expressão da pesquisa pode ser uma constante ou um nome de coluna, e a lista pode ser um conjunto de constantes ou, normalmente, uma subconsulta. Inclua a lista de valores em parênteses. Para obter mais informações, consulte [IN &#40; Transact-SQL &#41; ](../../t-sql/language-elements/in-transact-sql.md).  
+ Especifica a pesquisa de uma expressão, com base na inclusão ou exclusão da expressão em uma lista. A expressão da pesquisa pode ser uma constante ou um nome de coluna, e a lista pode ser um conjunto de constantes ou, normalmente, uma subconsulta. Inclua a lista de valores em parênteses. Para obter mais informações, consulte [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
- *subconsulta*  
+ *subquery*  
  Pode ser considerada uma instrução SELECT restrita e é semelhante ao \<query_expresssion > na instrução SELECT. A cláusula ORDER BY e a palavra-chave INTO não são permitidas. Para obter mais informações, consulte [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
@@ -185,7 +186,7 @@ ms.lasthandoff: 10/24/2017
  EXISTS  
  Usada com uma subconsulta para testar para a existência de linhas retornadas pela subconsulta. Para obter mais informações, consulte [EXISTS &#40; Transact-SQL &#41; ](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A ordem de precedência para operadores lógicos é NOT (mais alto), seguido por AND, seguido por OR. Podem ser usados parênteses para substituir essa precedência em uma condição de pesquisa. A ordem de avaliação de operadores lógicos pode variar, dependendo das escolhas feitas pelo otimizador de consultas. Para obter mais informações sobre como os operadores lógicos funcionam em valores lógicos, consulte [AND &#40; Transact-SQL &#41; ](../../t-sql/language-elements/and-transact-sql.md), [Ou &#40; Transact-SQL &#41; ](../../t-sql/language-elements/or-transact-sql.md), e [não &#40; Transact-SQL &#41; ](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
@@ -240,16 +241,15 @@ WHERE LastName LIKE N'%and%';
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-
 

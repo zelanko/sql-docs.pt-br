@@ -2,15 +2,13 @@
 title: "Conteúdo do modelo de rede Neural modelos de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63b64dcdf9cf4b94933b978c030418e1baebbfb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de rede neural (Analysis Services – Mineração de Dados)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Entendendo a estrutura de um modelo de rede neural  
  Cada modelo de rede neural tem um único nó pai que representa o modelo e seus metadados, além de um nó de estatísticas marginais (NODE_TYPE = 24) que fornece estatísticas descritivas sobre os atributos de entrada. O nó de estatísticas marginais é útil porque resume informações sobre entradas, para que não seja necessário consultar dados de nós individuais.  
@@ -245,8 +244,8 @@ ms.lasthandoff: 11/17/2017
  **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Exemplos de consulta de modelos de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Algoritmo rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

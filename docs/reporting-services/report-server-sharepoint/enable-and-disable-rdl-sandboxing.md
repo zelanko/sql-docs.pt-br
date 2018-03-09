@@ -1,33 +1,33 @@
 ---
-title: Habilitar e desabilitar o RDL sandboxing para o Reporting Services no modo integrado do SharePoint | Microsoft Docs
+title: Habilitar e desabilitar o RDL Sandboxing para o Reporting Services no modo integrado do SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar e desabilitar o RDL sandboxing para o Reporting Services no modo integrado do SharePoint
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar e desabilitar o RDL Sandboxing para o Reporting Services no modo integrado do SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-O recurso de área restrita RDL (linguagem de definição de relatório) permite que você detecte e restrinja o uso de tipos específicos de recurso por locatários individuais em um ambiente de vários locatários que usam um único web farm de servidores de relatório. Um exemplo disso é um cenário de serviços de hospedagem onde você poderia manter um único web farm de servidores de relatório que são usados por vários locatários e talvez empresas diferentes. Como administrador de servidor de relatório, você pode permitir que esse recurso ajude a obter os objetivos seguintes:  
+O recurso RDL Sandboxing (Linguagem RDL) permite que você detecte e restrinja o uso de tipos específicos de recursos, por locatários individuais, em um ambiente de vários locatários que usam um único web farm de servidores de relatório. Um exemplo disso é um cenário de serviços de hospedagem onde você poderia manter um único web farm de servidores de relatório que são usados por vários locatários e talvez empresas diferentes. Como administrador de servidor de relatório, você pode permitir que esse recurso ajude a obter os objetivos seguintes:  
   
 -   Restringir tamanhos de recursos externos. Recursos externos incluem imagens, arquivos .xslt e dados de mapa.  
   
@@ -36,20 +36,20 @@ O recurso de área restrita RDL (linguagem de definição de relatório) permite
 -   Na hora do processamento do relatório, limite o comprimento do texto e o tamanho do valor de retorno para expressões.
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
  Quando o RDL Sandboxing está habilitado, os seguintes recursos são desabilitados:  
   
--   Código personalizado no  **\<código >** elemento de uma definição de relatório.  
+-   Código personalizado no elemento **\<Code>** de uma definição de relatório.  
   
 -   Modo de compatibilidade com versões anteriores do RDL para itens de relatório personalizados do [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] .  
   
 -   Parâmetros nomeados em expressões.  
   
- Este tópico descreve cada elemento de \< **RDLSandboxing**> elemento no arquivo rsreportserver. config. Para obter mais informações sobre como modificar esse arquivo, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Um log de rastreamento de servidor registra atividade relacionada ao recurso RDL Sandboxing. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ Este tópico descreve cada elemento do elemento \<**RDLSandboxing**> no arquivo RSReportServer.Config. Para obter mais informações sobre como modificar esse arquivo, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Um log de rastreamento de servidor registra atividade relacionada ao recurso RDL Sandboxing. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="example-configuration"></a>Exemplo de configuração
- O exemplo a seguir mostra as configurações e valores de exemplo para o \< **RDLSandboxing**> elemento no arquivo rsreportserver. config.  
+## <a name="example-configuration"></a>Configuração de exemplo
+ O exemplo a seguir mostra as configurações e valores de exemplo para o elemento \<**RDLSandboxing**> no arquivo RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  
@@ -81,12 +81,12 @@ O recurso de área restrita RDL (linguagem de definição de relatório) permite
 |**Types**|A lista de membros para permitir dentro de expressões RDL.|  
 |**Allow**|Um tipo ou conjunto de tipos para permitir em expressões RDL.|  
 |**Namespace**|Atributo para **Allow** que é o namespace que contém um ou mais tipos que se aplicam a Valor. Esta propriedade não diferencia maiúsculas e minúsculas.|  
-|**AllowNew**|Atributo booleano para **permitir** que controla se novas instâncias do tipo podem ser criados em expressões RDL ou em um RDL  **\<classe >** elemento.<br /><br /> Quando **RDLSandboxing** estiver habilitado, novas matrizes não podem ser criados em expressões RDL, independentemente da configuração de **AllowNew**.|  
+|**AllowNew**|Atributo booliano para **Allow** que controla se novas instâncias do tipo têm permissão para serem criadas em expressões RDL ou em um elemento RDL **\<Class>**.<br /><br /> Quando **RDLSandboxing** está habilitado, novas matrizes não podem ser criadas em expressões RDL, seja qual for a configuração de **AllowNew**.|  
 |**Value**|Valor para **Allow** que é o nome do tipo para permitir em expressões RDL. O valor **\*** indica que todos os tipos no namespace são permitidos. Esta propriedade não diferencia maiúsculas e minúsculas.|  
-|**Membros**|Para obter a lista de tipos que estão incluídos no  **\<tipos >** elemento, a lista de nomes de membros que não são permitidos em expressões RDL.|  
-|**Deny**|O nome de um membro que não é permitido em expressões RDL. Esta propriedade não diferencia maiúsculas e minúsculas.<br /><br /> Quando **Deny** é especificado para um membro, todos os membros com este nome para todos os tipos não são permitidos.|  
+|**Membros**|Para a lista de tipos incluídos no elemento **\<Types>**, a lista de nomes de membros que não são permitidos em expressões RDL.|  
+|**Deny**|O nome de um membro que não é permitido em expressões RDL. Esta propriedade não diferencia maiúsculas e minúsculas.<br /><br /> Quando **Deny** é especificado para um membro, nenhum membro com esse nome para todos os tipos é permitido.|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabalhando com expressões quando o RDL sandboxing está habilitado
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabalhando com expressões quando o RDL Sandboxing está habilitado
 
 Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que são usados por uma expressão das seguintes maneiras:  
   
@@ -105,7 +105,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Resultados de expressão RDL são verificados em tempo de execução. Expressões RDL são verificadas na definição de relatório quando o relatório é publicado. Monitore o log de rastreamento de servidor de relatório em busca de violações. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-### <a name="working-with-types"></a>Trabalhando com tipos de
+### <a name="working-with-types"></a>Trabalhando com tipos
 
  Quando você acrescentar um tipo à lista de permissões, estará controlando os seguintes pontos de entrada para acessar expressões RDL:  
   
@@ -113,7 +113,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
 -   O método [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
   
--   O  **\<Classes >** elemento na definição de relatório.  
+-   O elemento **\<Classes>** na definição de relatório.  
   
 -   Membros que você acrescentou à lista de contatos bloqueados para um tipo na lista de permissões.  
   
@@ -127,7 +127,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Para habilitar um membro de um tipo mas negar um membro com o mesmo nome para um tipo diferente, você deve fazer o seguinte:  
   
--   Adicionar um  **\<Deny >** elemento para o nome do membro.  
+-   Adicione um elemento **\<Deny>** ao nome do membro.  
   
 -   Crie um membro de proxy com um nome diferente em uma classe em um assembly personalizado para o membro que você deseja habilitar.  
   
@@ -135,7 +135,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Para acrescentar funções de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente os tipos correspondentes do namespace Microsoft.VisualBasic à lista de permissões.  
   
- Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] palavra-chave do .NET Framework **inteiro**, adicione o seguinte fragmento XML para o  **\<RDLSandboxing >** elemento:  
+ Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar a palavra-chave **Integer** do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, adicione o seguinte fragmento de XML ao elemento **\<RDLSandboxing>**:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -149,7 +149,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Acrescentar um tipo de um assembly personalizado à lista de permissões não concede implicitamente permissão de execução no assembly. Você deve modificar especificamente o arquivo de segurança de acesso a código e fornecer permissão de execução ao assembly. Para obter mais informações, veja [Segurança de acesso do código no Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Manter o \<Deny > lista de membros
+#### <a name="maintaining-the-deny-list-of-members"></a>Mantendo a lista \<Deny> de membros
 
  Quando você acrescentar um tipo à lista de permissões, use a lista a seguir para determinar quando você deverá atualizar a lista de membros bloqueados.  
   
@@ -163,9 +163,9 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
 -   Quando você atualiza um servidor de relatório para tratar um esquema de RDL posterior, porque novos membros podem ter sido adicionados a tipos RDL.  
   
-### <a name="working-with-operators-and-new"></a>Trabalhando com operadores e novo
+### <a name="working-with-operators-and-new"></a>Trabalhando com operadores e New
 
- Por padrão, os operadores de linguagem do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, com exceção de **New**, sempre são permitidos. O **novo** operador é controlado pelo **AllowNew** atributo no  **\<permitir >** elemento. Outros operadores de linguagem, tais como o operador de acessador de coleção padrão **!** e macros de conversão do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework como **CInt**sempre são permitidos.  
+ Por padrão, os operadores de linguagem do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, com exceção de **New**, sempre são permitidos. O operador **New** é controlado pelo atributo **AllowNew** no elemento **\<Allow>**. Outros operadores de linguagem, tais como o operador de acessador de coleção padrão **!** e macros de conversão do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework como **CInt**sempre são permitidos.  
   
  Acrescentar operadores a uma lista de contatos bloqueados, incluindo operadores personalizados, não tem suporte. Para excluir operadores para um tipo, você deve fazer o seguinte:  
   
@@ -183,8 +183,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
 ## <a name="see-also"></a>Consulte também
 
- [Arquivo de configuração rsreportserver. config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Log de rastreamento de serviço do servidor de relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

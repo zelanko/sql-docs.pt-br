@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@dbname =** ] **'***database_name***'**  
  É o nome do banco de dados a ser desanexado. *Database_Name* é um **sysname** valor, com um valor padrão de NULL.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  Especifica se UPDATE STATISTIC deve ser ignorado ou executado. *skipchecks* é um **nvarchar (10)** valor, com um valor padrão de NULL. Para ignorar UPDATE STATISTICS, especifique **true**. Para executar explicitamente UPDATE STATISTICS, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
@@ -70,7 +72,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados padrão de qualquer conta de logon, o banco de dados **mestre** torna-se o seu banco de dados padrão.  
   
 > [!NOTE]  

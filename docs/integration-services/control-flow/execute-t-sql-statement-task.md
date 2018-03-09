@@ -1,5 +1,5 @@
 ---
-title: "Tarefa executar instrução T-SQL | Microsoft Docs"
+title: "Tarefa Executar Instrução T-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ec1d7b5264d880b3cec0ec8b6348441e89147d6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarefa Executar Instrução T-SQL
   A tarefa Executar Instrução T-SQL executa instruções Transact-SQL. Para obter mais informações, consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md) e [Integration Services &#40;SSIS&#41; Consultas](../../integration-services/integration-services-ssis-queries.md).  
@@ -47,10 +46,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Fluxo de controle](../../integration-services/control-flow/control-flow.md)   
+ [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [MERGE em pacotes do Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   
-

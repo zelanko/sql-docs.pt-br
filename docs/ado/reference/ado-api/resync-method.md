@@ -3,7 +3,7 @@ title: "Ressincronizar método | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 392dd82f2b6412c537a86cc68331cffc852069b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method"></a>Sincronizar de método
 Atualiza os dados no atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto do banco de dados subjacente.  
@@ -50,7 +49,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  Opcional. Um [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valor que especifica se valores subjacentes são substituídos. O valor padrão é **adResyncAllValues**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use o **Resync** método ressincronizar registros no atual **registros** com o banco de dados subjacente. Isso é útil se você estiver usando um cursor estático ou de somente avanço, mas você deseja ver as alterações no banco de dados subjacente.  
@@ -83,4 +82,3 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  [Sincronizar de exemplo do método (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Método Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
-

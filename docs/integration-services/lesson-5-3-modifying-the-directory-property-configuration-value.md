@@ -1,11 +1,11 @@
 ---
-title: "Etapa 3: Modificando o valor de configuração de propriedade de diretório | Microsoft Docs"
+title: "Etapa 3: modificar o valor de configuração da propriedade de diretório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 881aab31aab8cc4dc339b5f399f8cd207feb6ebb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: dd43287ea112274c707471a5d485807df0627f08
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lição 5-3: modificando o valor de configuração de propriedade de diretório
+# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lição 5-3 – modificar o valor de configuração da propriedade de diretório
 Nesta tarefa, você modificará a definição de configuração, armazenada no arquivo SSISTutorial.dtsConfig, da propriedade Value da variável no nível de pacote `User::varFolderName`. A variável atualiza a propriedade Directory do contêiner Loop Foreach. O valor modificado apontará para a pasta **Novos Dados de Exemplo** criada na tarefa anterior. Depois de modificar a definição de configuração e executar o pacote, a propriedade Directory será atualizada pela variável, usando o valor populado do arquivo de configuração, em vez do valor de diretório originalmente configurado no pacote.  
   
 ### <a name="to-modify-the-configuration-setting-of-the-directory-property"></a>Para modificar a definição de configuração da propriedade de diretório  
@@ -47,4 +46,3 @@ Nesta tarefa, você modificará a definição de configuração, armazenada no a
   
   
   
-

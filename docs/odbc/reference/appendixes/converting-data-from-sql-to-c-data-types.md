@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversão de dados do SQL para tipos de dados C
 Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados no qual o driver recuperá-lo para o tipo de dados especificado pelo *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Finalmente, ele armazena os dados no local apontado pelo *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
@@ -81,4 +79,3 @@ Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, 
 -   [SQL to C: intervalos de tempo-dia](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [Exemplos de conversão de dados SQL to C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
-

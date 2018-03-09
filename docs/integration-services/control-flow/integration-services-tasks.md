@@ -29,17 +29,16 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 00504d62d603f43b567394180b9e03dee34a1ed7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b33ae44bfdadf24771772fe5a834acb39256b469
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-tasks"></a>Tarefas do Integration Services
   As tarefas são elementos de fluxo de controle que definem unidades de trabalho que são executadas em um fluxo de controle de pacote. Um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é composto de uma ou mais tarefas. Se o pacote contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência.  
@@ -85,12 +84,11 @@ ms.lasthandoff: 08/03/2017
  Toda tarefa pode ser configurada individualmente usando as caixas de diálogo personalizadas de cada tarefa que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] oferece, ou a janela Propriedades incluída no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um pacote pode incluir várias tarefas do mesmo tipo, por exemplo, seis tarefas Execute SQL, e cada tarefa pode ser configurada de forma diferente. Para obter mais informações, consulte [Definir as propriedades de tarefas ou contêineres](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="tasks-connections-and-groups"></a>Conexões e grupos de tarefas  
- Se a tarefa contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Se a tarefa contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
  As tarefas podem ser agrupadas e executadas como uma única unidade de trabalho ou repetidas em um loop. Para obter mais informações, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md), [Contêiner Loop For](../../integration-services/control-flow/for-loop-container.md)e [Contêiner Sequência](../../integration-services/control-flow/sequence-container.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   
-

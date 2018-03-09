@@ -2,26 +2,26 @@
 title: "Conceder permissões a usuários e administradores de alerta | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 9a4aa4f2ce4b9b69035fe45642a8247794f1e395
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Conceder permissões a usuários e administradores de alerta
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/17/2017
 Para que os usuários e os administradores de alerta possam criar, editar, excluir e exibir alertas de dados, eles devem receber permissões do SharePoint. Não há nenhuma permissão especial a ser usada com o recurso de alerta de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Você usa as permissões internas do SharePoint.
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
 **Operadores de informações**— As permissões devem incluir as permissões Criar Alerta e Exibir Itens do SharePoint. Os níveis de permissão internos do SharePoint denominados Design, Colaborar, Ler e Apenas Exibir incluem as permissões Criar Alerta e Exibir Itens do SharePoint. Você também pode criar um nível de permissão personalizado com as permissões necessárias dar suporte a usuários que criam, editam, executam e exibem alertas de dados.
 
@@ -58,10 +58,9 @@ Para obter mais informações sobre as permissões do SharePoint, consulte [Perm
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40; O Reporting Services no SharePoint integrado modo &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
-[Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+[Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

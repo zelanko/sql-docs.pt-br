@@ -2,30 +2,27 @@
 title: "Lição 7: Criar medidas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f486e0094e66ed503b63fb52c4cba88dbcadbb62
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-create-measures"></a>Lição 6: Criar medidas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -40,7 +37,7 @@ Nesta lição, você criará medidas inserindo uma fórmula DAX na barra de fór
   
 Tempo estimado para concluir esta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 5: criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Criar medidas  
@@ -95,16 +92,16 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 1.  Usando o recurso AutoSoma, crie e nomeie as seguintes medidas:  
   
-    |Nome da Medida|Coluna|AutoSoma (∑)|Fórmula|  
+    |Nome da Medida|coluna|AutoSoma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margem|Sum|=SUM([Margem])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Frete|Sum|=SUM([Frete])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margem|SUM|=SUM([Margem])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([Frete])|  
   
 2.  Clicando em uma célula vazia na grade de medida e usando a barra de fórmulas, crie e nomeie as seguintes medidas na ordem:  
   
@@ -138,4 +135,3 @@ As medidas criadas para a tabela FactInternetSales podem ser usadas para analisa
 Vá para a próxima lição: [lição 7: criar indicadores chave de desempenho](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   
-

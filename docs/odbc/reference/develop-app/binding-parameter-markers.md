@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f465e072b7ca7f2b551778eec67f1893e3875f28
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parâmetro de associação
 O aplicativo associa parâmetros chamando **SQLBindParameter**. **SQLBindParameter** associa um parâmetro de cada vez. Com ele, o aplicativo especifica o seguinte:  
@@ -70,4 +68,3 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  No ODBC 1.0, os parâmetros foram associados com **SQLSetParam**. O Gerenciador de Driver mapeia chamadas entre **SQLSetParam** e **SQLBindParameter**, de acordo com as versões do ODBC usada pelo aplicativo e pelo driver.
-

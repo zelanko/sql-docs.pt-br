@@ -2,24 +2,25 @@
 title: "Introdução ao revoscalepy | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>Introdução ao revoscalepy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** é uma nova biblioteca fornecido pela Microsoft para dar suporte a computação distribuída, de computação remota contextos e algoritmos de alto desempenho para Python.
 
@@ -91,7 +92,7 @@ Os seguintes algoritmos de aprendizado de máquina e o resumo de funções de Re
 |`rx_predict` | Gerar previsões de um modelo treinado|`rx_predict_ex`No CTP 2.0|
 |`rx_summary` | Gerar um resumo do modelo||
 
-Novos algoritmos de aprendizado de máquina também são fornecidos pela versão do Python [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+Novos algoritmos de aprendizado de máquina também são fornecidos pela versão do Python [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Função| Description|
 | ------ | ------ |
@@ -125,7 +126,7 @@ Você pode executar o código que inclui **revoscalepy** funções localmente ou
 
 Quando em execução localmente, você normalmente executar um script de Python de linha de comando ou de um ambiente de desenvolvimento do Python e especificar um contexto de computação do SQL Server usando uma da **revoscalepy** funções. Você pode usar o contexto de computação remota para todo o código ou funções individuais. Por exemplo, você talvez queira descarregamento de treinamento de modelo para o servidor para usar os dados mais recentes e evita a movimentação de dados.
 
-Se você deseja colocar um script de Python concluído dentro do procedimento armazenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), recomendamos que você reescreva o código como uma única função que claramente definida entradas e saídas. Entradas e saídas devem ser **pandas** quadros de dados. Quando isso for feito, você pode chamar o procedimento armazenado de qualquer cliente que dá suporte a T-SQL, facilmente passar consultas SQL como entradas e salvar os resultados em tabelas do SQL. Para obter um exemplo, consulte [análise de Python no banco de dados para desenvolvedores L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Se você deseja colocar um script de Python concluído dentro do procedimento armazenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), recomendamos que você reescreva o código como uma única função que claramente definida entradas e saídas. Entradas e saídas devem ser **pandas** quadros de dados. Quando isso for feito, você pode chamar o procedimento armazenado de qualquer cliente que dá suporte a T-SQL, facilmente passar consultas SQL como entradas e salvar os resultados em tabelas do SQL. Para obter um exemplo, consulte [análise de Python no banco de dados para desenvolvedores em SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>Usando contextos de computação remota
 

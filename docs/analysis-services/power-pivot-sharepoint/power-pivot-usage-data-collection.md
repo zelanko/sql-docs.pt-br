@@ -2,38 +2,36 @@
 title: Power Pivot Usage Data Collection | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="power-pivot-usage-data-collection"></a>Coleta de dados de uso do PowerPivot
-  A coleta de dados de uso é um recurso do SharePoint em nível de farm. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+# <a name="power-pivot-usage-data-collection"></a>Coleta de dados de uso do Power Pivot
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A coleta de dados de uso é um recurso do SharePoint em nível de farm. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Para obter informações sobre os dados de uso no Painel de Gerenciamento [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , consulte [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
   
 ##  <a name="usagearch"></a> Coleta de dados de uso e arquitetura de relatórios  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]dados de uso são coletados, armazenados e gerenciados usando uma combinação de recursos da infraestrutura do SharePoint e componentes de servidor do PowerPivot. A infraestrutura do SharePoint fornece um serviço de uso centralizado e trabalhos de timer internos. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint adiciona o repositório de prazo mais longo para dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e relatórios exibidos na Administração Central do SharePoint.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dados de uso são coletados, armazenados e gerenciados usando uma combinação de recursos da infraestrutura do SharePoint e componentes de servidor do PowerPivot. A infraestrutura do SharePoint fornece um serviço de uso centralizado e trabalhos de timer internos. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint adiciona o repositório de prazo mais longo para dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e relatórios exibidos na Administração Central do SharePoint.  
   
  No sistema de coleta de dados de uso, informações de evento inserem o sistema de coleção de uso no servidor de aplicativos ou front-end da Web. Dados de uso se movem pelo sistema em resposta a trabalhos de timer que levam dados a se moverem de arquivos de dados temporários no servidor físico para o repositório persistente em um servidor de banco de dados. O diagrama a seguir ilustra os componentes e processos que movem dados de uso pela coleta de dados e pelo sistema de relatórios.  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |---------------|----------------------|-----------------|  
 |Serviço de timer do SharePoint (SPTimerV4)||Esse serviço do Windows é executado localmente em cada computador membro do farm e processa todos os trabalhos de timer definidos em nível de farm.|  
 |Importação de Dados de Uso do Microsoft SharePoint Foundation|A cada 30 minutos no SharePoint 2010. A cada 5 minutos no SharePoint 2013.|Esse trabalho de timer é configurado globalmente no nível do farm. Ele move dados de uso de arquivos de log de uso locais para o banco de dados de coleta de dados de uso central. É possível executar esse trabalho de timer manualmente para forçar uma operação de importação de dados.|  
-|Trabalho de timer de processamento de dados de uso do Microsoft SharePoint Foundation|Diariamente às 3h|Do SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint em diante, há suporte para este trabalho do temporizador nos cenários de atualização ou migração em que ainda possa haver dados de uso antigos nos bancos de dados de uso do SharePoint. Do SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint em diante, o banco de dados de uso do SharePoint não é usado para o fluxo de trabalho de coleta de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e do painel de gerenciamento. Os trabalhos do temporizador podem ser executados manualmente para mover todos os dados restantes relacionados ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] do banco de dados de uso do SharePoint para os bancos de dados de aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .<br /><br /> Esse trabalho de timer é configurado globalmente no nível do farm. Ele verifica dados de uso expirados no banco de dados de coleta de dados de uso central (ou seja, qualquer registro com mais de 30 dias). Para servidores do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] no farm, este trabalho do temporizador executa uma verificação adicional para dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Quando dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são detectados, o trabalho do temporizador move os dados para um banco de dados de aplicativo de serviço usando um identificador de aplicativo para localizar o banco de dados correto.<br /><br /> É possível executar esse trabalho do temporizador manualmente para forçar uma verificação nos dados expirados ou uma importação dos dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para um banco de dados de aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
+|Trabalho de timer de processamento de dados de uso do Microsoft SharePoint Foundation|Diariamente às 3h|Do SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint em diante, há suporte para este trabalho do temporizador nos cenários de atualização ou migração em que ainda possa haver dados de uso antigos nos bancos de dados de uso do SharePoint. Do SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint em diante, o banco de dados de uso do SharePoint não é usado para o fluxo de trabalho de coleta de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e do painel de gerenciamento. Os trabalhos do temporizador podem ser executados manualmente para mover todos os dados restantes relacionados ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] do banco de dados de uso do SharePoint para os bancos de dados de aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .<br /><br /> Esse trabalho de timer é configurado globalmente no nível do farm. Ele verifica dados de uso expirados no banco de dados de coleta de dados de uso central (ou seja, qualquer registro com mais de 30 dias). Para servidores do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] no farm, este trabalho do temporizador executa uma verificação adicional para dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Quando dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são detectados, o trabalho do temporizador move os dados para um banco de dados de aplicativo de serviço usando um identificador de aplicativo para localizar o banco de dados correto.<br /><br /> É possível executar esse trabalho do temporizador manualmente para forçar uma verificação nos dados expirados ou uma importação dos dados de uso do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para um banco de dados de aplicativo de serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)].|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Trabalho do temporizador do Processamento de Painel de Gerenciamento|Diariamente às 3h|Esse trabalho de temporizador atualiza a pasta de trabalho do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] interna, que fornece dados administrativos ao Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Ele obtém informações atualizadas que são gerenciadas pelo SharePoint, inclusive nomes de servidores, nomes de usuários, nomes de aplicativos e nomes de arquivos que aparecem em relatórios de painel de gerenciamento ou em Web Parts.|  
   
 ##  <a name="reporting"></a> Relatórios sobre dados de uso  

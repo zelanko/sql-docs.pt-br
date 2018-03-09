@@ -1,5 +1,5 @@
 ---
-title: "Índices columnstore – visão geral| Microsoft Docs"
+title: "Índices columnstore – visão geral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,26 +19,25 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Índices columnstore – visão geral
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O *índice columnstore* é o padrão para armazenar e consultar grandes tabelas de fatos de repositório de dados. Ele usa armazenamento de dados baseado em coluna e processamento de consultas para alcançar um **desempenho de consulta até 10 vezes melhor** no data warehouse em relação ao armazenamento tradicional orientado por linha e até **10 vezes mais compactação de dados** em relação ao tamanho dos dados descompactados. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os índices columnstore permitem a análise operacional, a capacidade de executar análises de alto desempenho em tempo real em uma carga de trabalho transacional.  
+Os *índices columnstore* são o padrão para armazenar e consultar tabelas de fatos com armazenamento de dados grandes. Ele usa armazenamento de dados baseado em coluna e processamento de consultas para alcançar um **desempenho de consulta até 10 vezes melhor** no data warehouse em relação ao armazenamento tradicional orientado por linha e até **10 vezes mais compactação de dados** em relação ao tamanho dos dados descompactados. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os índices columnstore permitem a análise operacional, a capacidade de executar análises de alto desempenho em tempo real em uma carga de trabalho transacional.  
   
  Passar para cenários:  
   
--   [Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
+-   [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>O que é um índice columnstore?  
@@ -50,21 +50,19 @@ ms.lasthandoff: 11/17/2017
  Um *columnstore* são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de coluna.  
   
  rowstore  
- Um *rowstore* são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de linha. Esse tem sido o modo tradicional de armazenar dados da tabela relacional. No SQL Server, rowstore refere-se à tabela em que o formato de armazenamento de dados subjacente é um heap, um índice clusterizado ou uma tabela com otimização de memória.  
+ Um *rowstore* são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de linha. Esse tem sido o modo tradicional de armazenar dados da tabela relacional. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rowstore refere-se à tabela em que o formato de armazenamento de dados subjacente é um heap, um índice clusterizado ou uma tabela com otimização de memória.  
   
 > [!NOTE]  
->  Em discussões sobre índices columnstore, usamos os termos *rowstore* e *columnstore* para enfatizar o formato do armazenamento de dados.  
+> Em discussões sobre índices columnstore, usamos os termos *rowstore* e *columnstore* para enfatizar o formato do armazenamento de dados.  
   
  rowgroup  
  Um *row group* é um grupo de linhas que são compactadas no formato columnstore ao mesmo tempo. Um grupo de linhas normalmente contém o número máximo de linhas por grupo de linhas que é 1.048.576 linhas.  
   
  Para altas taxas de desempenho e compactação, o índice columnstore fatia a tabela em grupos de linhas, chamados de rowgroups, e depois compacta cada um desses grupos com um método com reconhecimento de coluna. O número de linhas no rowgroup deve ser grande o suficiente para melhorar as taxas de compactação e pequeno o suficiente para se beneficiar com as operações na memória.  
-  
  segmento de coluna  
  Um *segmento de coluna* é uma coluna de dados do grupo de linhas.  
   
 -   Cada rowgroup contém um segmento de coluna para cada coluna na tabela.  
-  
 -   Cada segmento de coluna é compactado junto e armazenado em meio físico.  
   
  ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
@@ -121,41 +119,25 @@ ms.lasthandoff: 11/17/2017
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Posso combinar rowstore e columnstore na mesma tabela?  
  Sim. Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar um índice columnstore não clusterizado atualizável em uma tabela rowstore. O índice columnstore armazena uma cópia das colunas escolhidas, então você precisa de espaço adicional, mas ela será compactada em 10 vezes, em média. Com isso, você pode executar análises no índice columnstore e transações no índice rowstore ao mesmo tempo. O repositório de colunas é atualizado quando dados são alterados na tabela rowstore, assim, ambos os índices trabalham com os mesmos dados.  
   
- Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode ter um ou mais índices rowstore não clusterizados em um índice columnstore. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o SQL Server não pode inserir o valor no columnstore.  
+ Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode ter um ou mais índices rowstore não clusterizados em um índice columnstore. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá inserir o valor no columnstore.  
   
 ## <a name="metadata"></a>Metadados  
  Todas as colunas em um índice columnstore são armazenadas nos metadados como colunas incluídas. O índice columnstore não tem colunas de chave.  
+
+|||
+|-|-|  
+|[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
--   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ Todas as tabelas relacionais usam rowstore como formato de dados subjacente, a menos que você as especifique como um índice columnstore clusterizado. `CREATE TABLE` cria uma tabela rowstore, a menos que a opção `WITH CLUSTERED COLUMNSTORE INDEX` seja especificada.  
   
--   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
--   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)  
-  
--   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)  
-  
--   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
-  
-## <a name="related-tasks"></a>Tarefas relacionadas  
- Todas as tabelas relacionais usam rowstore como formato de dados subjacente, a menos que você as especifique como um índice columnstore clusterizado. CREATE TABLE cria uma tabela rowstore, a menos que você especifique a opção WITH CLUSTERED COLUMNSTORE INDEX.  
-  
- Ao criar uma tabela com a instrução CREATE TABLE, você pode criá-la como columnstore especificando a opção WITH CLUSTERED COLUMNSTORE INDEX. Se você já tiver uma tabela rowstore e quiser convertê-la em columnstore, pode usar a instrução CREATE COLUMNSTORE INDEX. Para obter exemplos, veja.  
+ Ao criar uma tabela com a instrução `CREATE TABLE`, você pode criar a tabela como um columnstore especificando a opção `WITH CLUSTERED COLUMNSTORE INDEX`. Caso já tenha uma tabela rowstore e deseje convertê-la em um columnstore, use a instrução `CREATE COLUMNSTORE INDEX`.  
   
 |Tarefa|Tópicos de referência|Observações|  
 |----------|----------------------|-----------|  
@@ -166,7 +148,7 @@ ms.lasthandoff: 11/17/2017
 |Crie um índice columnstore em uma tabela rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Uma tabela rowstore pode ter um índice columnstore.  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o índice columnstore pode ter uma condição filtrada. Exemplos mostram a sintaxe básica.|  
 |Crie índices de alto desempenho para análises operacionais.|[Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descreve como criar índices de árvore B e columnstore complementares para que consultas OLTP usem índices de árvore B e consultas de análise usem índices columnstore.|  
 |Crie índices columnstore de alto desempenho para data warehouse.|[Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descreve como usar índices de árvore B em tabelas columnstore para criar consultas de data warehouse de alto desempenho.|  
-|Use um índice de árvore B para impor uma restrição de chave primária em um índice columnstore.|[Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Mostra como combinar índices columnstore e de árvore B para impor restrições de chave primária no índice columnstore.|  
+|Use um índice de árvore B para impor uma restrição de chave primária em um índice columnstore.|[Índices columnstore para Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Mostra como combinar índices columnstore e de árvore B para impor restrições de chave primária no índice columnstore.|  
 |Remover um índice columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|A remoção de um índice columnstore usa a sintaxe DROP INDEX padrão usada pelos índices de árvore B. Remover um índice columnstore clusterizado converterá a tabela columnstore em uma pilha.|  
 |Excluir uma linha de um índice columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) para excluir uma linha.<br /><br /> **linha columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente, mas não recupera o armazenamento físico da linha até que o índice seja recriado.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui a linha lógica e fisicamente.|  
 |Atualizar uma linha no índice columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) para atualizar uma linha.<br /><br /> **linha columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente e insere a linha atualizada no deltastore.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza a linha no deltastore.|  
@@ -175,13 +157,15 @@ ms.lasthandoff: 11/17/2017
 |Desfragmentar um índice columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE desfragmenta os índices columnstore online.|  
 |Mescle tabelas com índices columnstore.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Carregamento de dados dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Resumo de recursos com versão dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [Desempenho de consultas de índices ColumnStore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Desfragmentação de índices columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Desfragmentação de índices columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)   
+ [Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
+ [Arquitetura de índices columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
 

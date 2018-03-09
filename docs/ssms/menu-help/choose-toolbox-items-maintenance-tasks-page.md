@@ -3,8 +3,11 @@ title: "Escolher itens da caixa de ferramenta (página Tarefas de Manutenção) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Escolher itens da caixa de ferramenta (página Tarefas de Manutenção)
-Esta guia da caixa de diálogo **Personalizar Caixa de Ferramentas** exibe uma lista de todos os componentes de tarefas de manutenção registrados em seu computador e permite alterar os que são exibidos na caixa de ferramentas. Você pode abrir a caixa de diálogo **Personalizar Caixa de Ferramentas** no menu **Ferramentas** . Para ordenar a lista de componentes, selecione qualquer título de coluna.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta guia da caixa de diálogo **Personalizar Caixa de Ferramentas** exibe uma lista de todos os componentes de tarefas de manutenção registrados em seu computador e permite alterar os que são exibidos na Caixa de Ferramentas. Você pode abrir a caixa de diálogo **Personalizar Caixa de Ferramentas** no menu **Ferramentas** . Para ordenar a lista de componentes, selecione qualquer título de coluna.  
   
 ## <a name="options"></a>Opções  
 A guia **Tarefas de Manutenção** inclui as colunas de informações a seguir.  

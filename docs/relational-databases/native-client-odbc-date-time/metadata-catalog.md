@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08b1040be9e8c0b8d81fea2995de86e10d5707be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7b3d671bc21676ca81bddf4bd4df81c8985a585
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---catalog"></a>Metadados - catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 
   Este tópico descreve os metadados de coluna retornados por **SQLColumns** e **SQLProcedureColumns**, e o tipo de dados metadados retornados por **SQLGetTypeInfo**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os seguintes valores de coluna são retornados para tipos de data/hora por **SQLColumns** e **SQLProcedureColumns**.  
   
 |Tipo de parâmetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  

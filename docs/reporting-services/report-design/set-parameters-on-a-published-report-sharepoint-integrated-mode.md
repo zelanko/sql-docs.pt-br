@@ -1,32 +1,32 @@
 ---
-title: "Definir parâmetros em um relatório publicado - modo integrado do SharePoint | Microsoft Docs"
+title: "Definir parâmetros em um relatório publicado – modo integrado do SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Definir parâmetros em um relatório publicado - modo integrado do SharePoint
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Definir parâmetros em um relatório publicado – modo integrado do SharePoint
   Um relatório parametrizado aceita valores de entrada usados para filtrar dados quando você executa o relatório. Os parâmetros são definidos quando o relatório é criado. Dependendo de como um parâmetro de relatório é configurado na definição do relatório, ele pode aceitar um único valor, vários valores ou valores dinâmicos, que se alteram em resposta a uma seleção anterior (por exemplo, quando você seleciona uma categoria de produto, a próxima seleção pode ser um produto específico dessa categoria). Um parâmetro pode ter um valor padrão, que pode ser usado para executar automaticamente uma versão filtrada do relatório ou pode ser substituído por um valor diferente.  
   
  Essas propriedades podem ser estabelecidas na definição do relatório ou depois que o relatório for publicado. Embora você possa modificar algumas propriedades de parâmetro em uma publicação para alterar o valor e exibir propriedades, você não pode alterar o nome do parâmetro nem o tipo de dados. O nome do parâmetro e o tipo de dados só podem ser alterados pelo autor do relatório na definição do relatório.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  Para definir as propriedades do parâmetro em um relatório publicado, você deve ter a permissão Editar Itens para o relatório. Você pode modificar algumas ou todas as propriedades de parâmetros em um relatório executado de um site do SharePoint. Não é possível personalizar um relatório salvando uma combinação de valores de parâmetros que você queira usar repetidas vezes. Todos os valores padrão que você especificar serão usados por todos os usuários que abrirem o relatório.  
   
- Se o relatório estiver inserido em uma Web Part do Visualizador de Relatórios configurada para sempre mostrar esse relatório, defina as propriedades na Web Part do Visualizador de Relatórios. Para obter mais informações, consulte [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md).  
+ Se o relatório estiver inserido em uma Web Part do Visualizador de Relatórios configurada para sempre mostrar esse relatório, defina as propriedades na Web Part do Visualizador de Relatórios. Para obter mais informações, consulte [Adicionar a web part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md).  
   
 ### <a name="to-run-a-parameterized-report"></a>Para executar um relatório com parâmetros  
   
@@ -87,8 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

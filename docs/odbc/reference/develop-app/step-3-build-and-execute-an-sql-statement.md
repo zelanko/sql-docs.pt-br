@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Etapa 3: Criar e executar uma instrução SQL
 A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na ilustração a seguir. Os métodos usados para executar essa etapa serão prováveis podem variar muito. O aplicativo pode solicitar que o usuário insira uma instrução SQL, crie uma instrução SQL com base na entrada do usuário, ou usar uma instrução SQL embutido. Para obter mais informações, consulte [construindo instruções de SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -46,4 +44,3 @@ A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na i
 |**Selecione** ou função de catálogo|[Etapa 4a: Buscar os resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ATUALIZAÇÃO**, **excluir**, ou **inserir**|[Etapa 4b: Buscar a contagem de linhas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Todas as outras instruções SQL|Etapa 3: Criar e executar uma instrução SQL (Este tópico) ou [etapa 5: confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

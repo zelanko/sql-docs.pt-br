@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], numeric
 - converting data from c to SQL types [ODBC], numeric
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 788a317dc58eaa83b0caadd3d2a6c02d49398d7c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-numeric"></a>C para SQL: numérico
 Os identificadores para os tipos de dados ODBC C numéricos são:  
@@ -76,4 +74,3 @@ Os identificadores para os tipos de dados ODBC C numéricos são:
  [b] para o caso de "n / a", um driver pode opcionalmente retornar SQL_SUCCESS_WITH_INFO e 01S07 quando há um truncamento fracionário.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados de tipos de dados numéricos do C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados numérico do C. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
-

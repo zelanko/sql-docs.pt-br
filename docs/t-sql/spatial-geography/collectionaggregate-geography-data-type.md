@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CollectionAggregate method (geography)
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae882f4c0f4f1a1f489b22cac14b84933f96ecf2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c697a43ac6b79fd137da968ce5f01e49e60c105
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="return-types"></a>Tipos de retorno  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>Exceção  
  Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Método ignora **nulo** entradas.  
@@ -71,7 +70,6 @@ ConvexHullAggregate ( geography_operand )
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

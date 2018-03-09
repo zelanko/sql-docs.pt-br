@@ -20,19 +20,18 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 149e9cb31f5e7cecfba9d0c221c1cbddb2b76cfa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a89f9c1fde9d4a14776d37bc648341a5b5fa4aad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, cadeia de caracteres e numéricos
+# <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, de cadeia de caracteres e numéricos
  Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  
   
 ## <a name="numeric-literals"></a>Literais numéricos  
@@ -84,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
     |Sufixo|Tipo de resultado|  
     |------------|-----------------|  
-    |Nenhum.|DT_I4|  
+    |Nenhum|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -123,4 +122,3 @@ ms.lasthandoff: 09/26/2017
 > **OBSERVAÇÃO:** Em uma expressão, um literal booliano deve ser delimitado por espaços.  
   
   
-

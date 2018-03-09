@@ -1,7 +1,7 @@
 ---
 title: "Noções básicas sobre o suporte ao Java EE | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 26
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b878069cb0ddf04d4c8c743795f876b00fef23dc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Entendendo suporte ao Java EE
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 09/09/2017
  Primeiro, tenha certeza de que seu ambiente Java (JDK, JRE) inclua o pacote javax.sql. Este é um pacote exigido por qualquer aplicativo do JDBC que usa a API opcional. O JDK 1.5 e versões posteriores já contêm este pacote; portanto, você não terá que instalá-lo separadamente.  
   
 ## <a name="driver-name"></a>Nome do driver  
- O nome de classe do driver é **sqlserverdriver**. Para os Drivers JDBC 4.0, 4.1, 4.2 e 6.0, o driver está contido no arquivo sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar. Para o JDBC Driver 6.2, o driver está contido em mssql-jdbc-6.2.1.jre7.jar ou mssql-jdbc-6.2.1.jre8.jar.
+ O nome de classe do driver é **sqlserverdriver**. JDBC Drivers 4.1, 4.2 e 6.0, o driver está contido no arquivo sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar. Para o JDBC Driver 6.2, o driver está contido em mssql-jdbc-6.2.1.jre7.jar ou mssql-jdbc-6.2.1.jre8.jar. Para 6.4 do Driver JDBC, o driver está contido em mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar ou mssql-jdbc-6.4.0.jre9.jar.
   
  O nome da classe é usado sempre que você carregar o driver com a classe do Gerenciador de driver JDBC. Também é usado sempre que você precisar especificar o nome de classe do driver em qualquer configuração de driver. Por exemplo, configurar uma fonte de dados dentro de um servidor de aplicativos do Java EE pode exigir que você insira o nome de classe do driver.  
   
@@ -74,4 +73,3 @@ Connection c = ds.getConnection("user", "pwd");
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

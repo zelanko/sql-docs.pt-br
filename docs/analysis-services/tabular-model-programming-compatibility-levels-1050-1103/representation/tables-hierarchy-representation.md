@@ -2,34 +2,32 @@
 title: "Representação de hierarquia (tabela) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 411491544f01c1aad7655a692b7542269f5c0844
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6483e1e3fe0e616c3c870183fcb265f1d2d252ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---hierarchy-representation"></a>Tabelas - representação de hierarquia
-  Em modelos de tabela, uma hierarquia é o caminho de navegação de um atributo para outro com base em valores selecionados pelo usuário.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Em modelos de tabela, uma hierarquia é o caminho de navegação de um atributo para outro com base em valores selecionados pelo usuário.  
   
 ## <a name="hierarchy-representation"></a>Representação de hierarquia  
   
@@ -111,4 +109,3 @@ private void addHierarchy(
 ```  
   
   
-

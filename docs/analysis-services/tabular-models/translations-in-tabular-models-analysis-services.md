@@ -2,29 +2,30 @@
 title: "Traduções em modelos de tabela (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traduções em modelos de tabela (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Adiciona suporte a tradução de strings para modelos de tabela. Um único objeto no modelo pode ter várias traduções de um nome ou descrição, possibilitando o suporte a versões de vários idiomas na definição de modelo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Adiciona suporte a tradução de strings para modelos de tabela. Um único objeto no modelo pode ter várias traduções de um nome ou descrição, possibilitando o suporte a versões de vários idiomas na definição de modelo.  
   
  Strings traduzidas destinam-se apenas a metadados de objetos (nomes e descrições de tabelas e colunas) que aparecem em uma ferramenta de cliente, como uma lista de Tabela Dinâmica do Excel.  Para usar strings traduzidas, a conexão do cliente especifica a cultura. No recurso **Análise no Excel** , você pode escolher o idioma em uma lista suspensa. Para outras ferramentas, você precisará especificar a cultura na string de conexão.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Clique em **Exportar Arquivo de Idioma**.  Forneça um nome e uma descrição para o arquivo.  
   
- ![SSAS-tabela-converter-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabela-converter-export")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>Adicionar traduções  
  Um arquivo de tradução JSON vazio inclui metadados para traduções de um idioma específico. Espaços reservados de tradução para nomes e descrições de objetos são especificados na seção **Culture** no final da definição do modelo. Traduções podem ser adicionadas para:  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  O exemplo a seguir mostra legendas e descrições traduzidas para as tabelas **DimProduct** e **DimCustomer** .  
   
- ![SSAS-tabela-converter-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabela-converter-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  Você pode usar qualquer editor de JSON para abrir o arquivo, mas é recomendável usar o editor de JSON no Visual Studio para poder usar o comando Exibir Código no Gerenciador de Soluções para exibir a definição de modelo de tabela no SSDT. Para obter o editor de JSON, é necessário ter uma [versão de instalação completa do Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). A edição Community gratuita inclui o editor de JSON.  
@@ -111,13 +112,13 @@ ms.lasthandoff: 11/17/2017
   
 2.  Na caixa de diálogo de conexão do Excel, escolha a cultura para as quais existem traduções de strings no seu modelo. O Excel detecta culturas definidas no modelo e preenche a lista suspensa adequadamente.  
   
-     ![SSAS-tabela-traduções-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabela-traduções-excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      Ao criar uma Tabela Dinâmica, você deve ver os nomes de tabela e coluna traduzidos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Cenários de globalização para o Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Analisar no Excel &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

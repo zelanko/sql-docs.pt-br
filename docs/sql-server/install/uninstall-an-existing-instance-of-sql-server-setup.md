@@ -2,10 +2,10 @@
 title: "Desinstalar uma instância existente do SQL Server (configuração) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/27/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -20,22 +20,23 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 73fbf3d170d51817089eaf2b4efb9c533d5ec293
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f5c422a4d1a25ed210f857b9de31aaadec481847
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
  > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Desinstalar uma instância existente do SQL Server (Instalação)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
 
-  Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste tópico, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste artigo, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >**IMPORTANTE:** Para desinstalar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve ser um administrador local com permissão para fazer logon como um serviço.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Se você não conseguir corrigir a causa da falha na desinstalação, entre em contato com o suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Em alguns casos, como a exclusão não intencional de arquivos importantes, talvez seja necessário reinstalar o sistema operacional antes de reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tarefa transferir trabalhos | Microsoft Docs
+title: Tarefa Transferir Trabalhos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8b14cdb7e26c103104e0e98725f00905f75630af
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
   A tarefa Transferir Trabalhos transfere um ou mais trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Transferir Trabalhos.  
   
 ## <a name="transfer-jobs-task-editor-jobs-page"></a>Editor da Tarefa Transferir Trabalhos (página Trabalhos)
@@ -107,17 +106,17 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
   
  **TransferAllJobs**  
  Selecione se a tarefa deve copiar todas ou apenas os trabalhos de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados do servidor de origem para o servidor de destino.  
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copia todas as tarefas.|  
 |**Falso**|Copia apenas os trabalhos especificados.|  
@@ -135,7 +134,7 @@ ms.lasthandoff: 08/11/2017
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem trabalhos com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir trabalhos de mesmo nome no servidor de destino.|  
@@ -146,14 +145,13 @@ ms.lasthandoff: 08/11/2017
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Verdadeiro**|Habilita trabalhos no servidor de destino.|  
 |**Falso**|Desabilita trabalhos no servidor de destino.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

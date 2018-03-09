@@ -3,8 +3,11 @@ title: Monitorar e responder a eventos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,17 @@ ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3eda2e99be82aa0809168c5dccaa46d52933c41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9599d16a627d3bef2c5a1f0261d6395b08ec1ecd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitorar e responder a eventos
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent pode monitorar e responder automaticamente a *eventos*, como mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], condições de desempenho específicas e eventos WMI (Instrumentação de Gerenciamento do Windows).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent pode monitorar e responder automaticamente a *eventos*, como mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], condições de desempenho específicas e eventos WMI (Instrumentação de Gerenciamento do Windows).  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Alertas](../../ssms/agent/alerts.md)  
@@ -70,6 +74,6 @@ Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] registra uma 
   
 Independentemente da origem do evento, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent responde ao evento executando as tarefas especificadas no alerta correspondente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
   

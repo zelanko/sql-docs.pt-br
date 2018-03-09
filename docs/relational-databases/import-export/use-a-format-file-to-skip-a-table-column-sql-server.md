@@ -1,36 +1,44 @@
 ---
 title: Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.date: 02/15/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02dff7296690e0ecf3bfd76f9e7be1808885b2f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ffe13b9772d5c281897fa2e9099060e6858660b6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)
-  Este tópico descreve arquivos de formato. Você pode usar um arquivo de formato para ignorar a importação de uma coluna de tabela, quando o campo não existir no arquivo de dados. Um arquivo de dados só poderá conter um número menor de campos que o número de colunas na tabela, se as colunas ignoradas forem anuláveis e/ou possuírem valor padrão.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+Este artigo descreve como usar um arquivo de formato para ignorar a importação de uma coluna de tabela quando os dados da coluna ignorada não existem no arquivo de dados de origem. Um arquivo de dados pode conter menos campos do que o número de colunas na tabela de destino, ou seja, será possível ignorar a importação de uma coluna apenas se pelo menos uma das seguintes condições for verdadeira na tabela de destino:
+-   A coluna ignorada permite valor nulo.
+-   A coluna ignorada tem um valor padrão.  
   
 ## <a name="sample-table-and-data-file"></a>Tabela e arquivo de dados de exemplo  
- Os exemplos a seguir requerem uma tabela chamada `myTestSkipCol` , no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , no esquema **dbo** . Crie essa tabela como se segue:  
+ Os exemplos neste artigo esperam uma tabela chamada `myTestSkipCol` no esquema **dbo**. É possível criar esta tabela em um banco de dados de exemplo como *WideWorldImporters* ou *AdventureWorks* ou em qualquer outro banco de dados. Crie essa tabela como se segue:  
   
 ```sql
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
 GO  
 CREATE TABLE myTestSkipCol   
    (  
@@ -41,74 +49,90 @@ CREATE TABLE myTestSkipCol
 GO  
 ```  
   
- Os exemplos seguintes usam um arquivo de dados de exemplo `myTestSkipCol2.dat`com somente dois campos, ainda que a tabela correspondente tenha três colunas:  
-  
+Os exemplos neste artigo também usam um arquivo de dados de exemplo, `myTestSkipCol2.dat`. Este arquivo de dados contém apenas dois campos, embora a tabela de destino contenha três colunas.
+
 ```  
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
 ```  
   
- Para importar dados em massa do `myTestSkipCol2.dat` para a tabela `myTestSkipCol` , o arquivo de formato deve mapear o primeiro campo de dados para `Col1`, o segundo campo para `Col3`e ignorar a `Col2`.  
+## <a name="basic-steps"></a>Etapas básicas
+
+É possível usar um arquivo de formato não XML ou um arquivo de formato XML para ignorar uma coluna de tabela. Em ambos os casos, há duas etapas:
+
+1.   Use o utilitário de linha de comando **bcp** para criar um arquivo de formato padrão.
+
+2.   Modifique o arquivo de formato padrão em um editor de texto.
+
+O arquivo de formato modificado deve mapear cada campo existente para sua coluna correspondente na tabela de destino. Ele também deve indicar qual coluna ou colunas da tabela a serem ignoradas. 
+
+Por exemplo, para importar dados em massa do `myTestSkipCol2.dat` para a tabela `myTestSkipCol`, o arquivo de formato deve mapear o primeiro campo de dados para `Col1`, ignorar `Col2` e mapear o segundo campo para `Col3`.  
+ 
+## <a name="option-1---use-a-non-xml-format-file"></a>Opção 1: usar um arquivo de formato não XML  
   
-## <a name="using-a-non-xml-format-file"></a>Usando um arquivo de formato não XML  
- É possível modificar um arquivo de formato não XML para ignorar uma coluna de tabela. Em geral, isso envolve o uso do utilitário **bcp** para criar um arquivo de formato não XML padrão e a modificação do arquivo padrão em um editor de texto. O arquivo de formato modificado deve mapear cada campo existente para sua coluna de tabela correspondente e indicar qual, ou quais, coluna de tabela deve ser ignorada. Há duas alternativas para se modificar um arquivo de dados não XML padrão. Ambas indicam que o campo de dados não existe no arquivo de dados e que nenhum dado será inserido na coluna de tabela correspondente.  
-  
-### <a name="creating-a-default-non-xml-format-file"></a>Criando um arquivo de formato não XML padrão  
- Este tópico usa o arquivo de formato não XML padrão criado para a tabela de exemplo `myTestSkipCol` , usando o seguinte comando **bcp** :  
+### <a name="step-1---create-a-default-non-xml-format-file"></a>Etapa 1: criar um arquivo de formato não XML padrão  
+Crie um arquivo de formato não XML padrão para a tabela de exemplo `myTestSkipCol` executando o seguinte comando **bcp** no prompt de comando:  
   
 ```cmd
-bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
+bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
-  
- O comando anterior cria um arquivo de formato não XML, `myTestSkipCol_Default.fmt`. Esse arquivo de formato é denominado *arquivo de formato padrão* , pois esse é o formato gerado pelo **bcp**. Geralmente, um arquivo de formato padrão descreve uma correspondência um-para-um entre campos de arquivo de dados e colunas de tabela.  
-  
+
 > [!IMPORTANT]  
->  Talvez seja preciso especificar o nome da instância do servidor ao qual você está conectando. Talvez também seja preciso especificar o nome de usuário e a senha. Para obter mais informações, consulte [bcp Utility](../../tools/bcp-utility.md).  
+>  Talvez seja necessário especificar o nome da instância do servidor à qual você está se conectando com o argumento `-S`. Além disso, talvez seja necessário especificar o nome de usuário e a senha com os argumentos `-U` e `-P`. Confira mais informações em [bcp Utility](../../tools/bcp-utility.md).  
+
+O comando anterior cria um arquivo de formato não XML, `myTestSkipCol_Default.fmt`. Esse arquivo de formato é denominado *arquivo de formato padrão* , pois esse é o formato gerado pelo **bcp**. Um arquivo de formato padrão descreve uma correspondência um para um entre campos de arquivo de dados e colunas de tabela.  
   
- A ilustração a seguir exibe os valores nesses exemplos de arquivos de formato padrão. A ilustração também mostra o nome de cada campo do arquivo de formato.  
+ A captura de tela a seguir exibe os valores nesses exemplos de arquivos de formato padrão. 
   
  ![arquivo de formato não XML padrão para myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "arquivo de formato não XML padrão para myTestSkipCol")  
   
 > [!NOTE]  
->  Para obter mais informações sobre campos de arquivo de formato, consulte [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
+>  Confira mais informações sobre campos de arquivo de formato em [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### <a name="methods-for-modifying-a-non-xml-format-file"></a>Métodos para modificar um arquivo de formato não XML  
- Para ignorar uma coluna de tabela, edite o arquivo de formato não XML padrão e modifique o arquivo, recorrendo a um dos seguintes métodos alternativos:  
+### <a name="step-2---modify-a-non-xml-format-file"></a>Etapa 2: modificar um arquivo de formato não XML  
+Para modificar um arquivo de formato não XML padrão, há duas alternativas. Ambas indicam que o campo de dados não existe no arquivo de dados e que nenhum dado deve ser inserido na coluna de tabela correspondente.
+
+Para ignorar uma coluna de tabela, edite o arquivo de formato não XML padrão e modifique o arquivo, recorrendo a um dos seguintes métodos alternativos:  
+
+#### <a name="option-1---remove-the-row"></a>Opção 1: remover a linha
+O método preferencial para ignorar uma coluna envolve as três etapas a seguir:
+
+1.   Primeiro, exclua qualquer linha do arquivo de formato que descreva um campo ausente do arquivo de dados de origem.
+2.   Então, reduza o valor da "Ordem do campo de arquivo host" de cada linha do arquivo de formato que segue uma linha excluída. A meta são valores sequenciais "Ordem do campo de arquivo host", de 1 a *n*que reflitam a posição atual de cada campo de dados no arquivo de dados.
+3.   Finalmente, reduza o valor no campo "Número de colunas" para refletir o número real de campos no arquivo de dados.  
   
--   O método preferencial compreende três etapas básicas. Primeiro, exclua qualquer linha do arquivo de formato que descreva um campo ausente do arquivo de dados. Então, reduza o valor da "Ordem do campo de arquivo host" de cada linha do arquivo de formato que segue uma linha excluída. A meta são valores sequenciais "Ordem do campo de arquivo host", de 1 a *n*que reflitam a posição atual de cada campo de dados no arquivo de dados. Finalmente, reduza o valor no campo "Número de colunas" para refletir o número real de campos no arquivo de dados.  
+O exemplo a seguir é baseado no arquivo de formato padrão da tabela `myTestSkipCol`. Este arquivo de formato modificado mapeia o primeiro campo de dados para a `Col1`, ignora a `Col2`e mapeia o segundo campo de dados para a `Col3`. A linha da `Col2` foi excluída. O delimitador após o primeiro campo também foi alterado de `\t` para `,`.
   
-     O exemplo a seguir foi baseado no arquivo de formato padrão para a tabela `myTestSkipCol` , criada anteriormente neste tópico, em "Criando um arquivo de formato não XML padrão". Este arquivo de formato modificado mapeia o primeiro campo de dados para a `Col1`, ignora a `Col2`e mapeia o segundo campo de dados para a `Col3`. A linha da `Col2` foi excluída.  
+```  
+14.0  
+2  
+1       SQLCHAR       0       7       ","      1     Col1         ""  
+2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
+```  
   
-    ```  
-    9.0  
-    2  
-    1       SQLCHAR       0       7       "\t"     1     Col1         ""  
-    2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
-    ```  
+#### <a name="option-2---modify-the-row-definition"></a>Opção 2: modificar a definição de linha
+
+Como alternativa para ignorar uma coluna de tabela, é possível modificar a definição da linha do arquivo de formato que corresponde à coluna de tabela. Nessa linha do arquivo de formato, os valores "comprimento do prefixo", "comprimento dos dados do arquivo host" e "ordem da coluna do servidor" devem ser definidos como 0. Além disso, os campos "agrupamento de colunas" e "terminador" devem ser definidos como "" (ou seja, um valor NULO ou vazio). O valor "nome da coluna de servidor" requer uma cadeia de caracteres não vazia, embora o nome real da coluna não seja necessário. Os campos de formato restantes requerem seus valores padrão.  
   
--   Como alternativa para ignorar uma coluna de tabela, é possível modificar a definição da linha do arquivo de formato que corresponde à coluna de tabela. Nessa linha do arquivo de formato, os valores "comprimento do prefixo", "comprimento dos dados do arquivo host" e "ordem da coluna do servidor" devem ser definidos como 0. Além disso, o campos "terminador" e "agrupamento de colunas" devem ser definidos como "" (NULO).  
+O exemplo a seguir também é derivado do arquivo de formato padrão da tabela `myTestSkipCol` .  
   
-     O valor "nome da coluna de servidor" requer uma cadeia de caracteres não vazios, ainda que o nome de coluna em si não seja necessário. Os campos de formato restantes requerem seus valores padrão.  
+```  
+14.0  
+3  
+1       SQLCHAR       0       7       ","      1     Col1         ""  
+2       SQLCHAR       0       0       ""       0     Col2         ""  
+3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
+```  
   
-     O exemplo a seguir também é derivado do arquivo de formato padrão da tabela `myTestSkipCol` .  
-  
-    ```  
-    9.0  
-    3  
-    1       SQLCHAR       0       7       "\t"     1     Col1         ""  
-    2       SQLCHAR       0       0       ""       0     Col2         ""  
-    3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
-    ```  
-  
-### <a name="examples"></a>Exemplos  
- Os exemplos a seguir também são baseados na tabela de exemplo `myTestSkipCol` e no arquivo de dados de exemplo `myTestSkipCol2.dat` criados anteriormente neste tópico, em "Tabela de exemplo e arquivo de dados".  
+### <a name="examples-with-a-non-xml-format-file"></a>Exemplos com um arquivo de formato não XML 
+Os exemplos a seguir são baseados na tabela de exemplo `myTestSkipCol` e no arquivo de dados de exemplo `myTestSkipCol2.dat` descritos anteriormente neste artigo.  
   
 #### <a name="using-bulk-insert"></a>Usando BULK INSERT  
- Esse exemplo funciona usando qualquer um dos arquivos de formato não XML modificados criados anteriormente neste tópico, em "Métodos para modificar um arquivo de formato não XML". Nesse exemplo, o nome do arquivo de formato modificado é `C:\myTestSkipCol2.fmt`. Para usar o `BULK INSERT` para importar em massa o arquivo de dados `myTestSkipCol2.dat` , no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o código a seguir:  
+Este exemplo funciona usando os arquivos de formato não XML modificados criados conforme descrito na seção anterior. Nesse exemplo, o nome do arquivo de formato modificado é `myTestSkipCol2.fmt`. Para usar o `BULK INSERT` para importar o arquivo de dados `myTestSkipCol2.dat` em massa, no SSMS, execute o seguinte código. Atualize os caminhos do sistema de arquivos do local dos arquivos de exemplo em seu computador.
   
 ```sql  
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
 GO  
 BULK INSERT myTestSkipCol   
    FROM 'C:\myTestSkipCol2.dat'   
@@ -118,65 +142,100 @@ SELECT * FROM myTestSkipCol;
 GO  
 ```  
   
-## <a name="using-an-xml-format-file"></a>Usando um arquivo de formato XML  
- Com um arquivo de formato XML, não é possível ignorar uma coluna durante a importação direta para uma tabela usando um comando **bcp** ou uma instrução BULK INSERT. No entanto, é possível realizar a importação para todas as colunas de uma tabela, exceto para a última. Se for preciso ignorar alguma que não a última coluna, crie uma exibição da tabela de destino que contenha apenas as colunas contidas no arquivo de dados. Depois, importe em massa os dados desse arquivo para a exibição.  
+## <a name="option-2---use-an-xml-format-file"></a>Opção 2: usar um arquivo de formato XML  
   
- Para usar um arquivo de formato XML para ignorar uma coluna de tabela usando OPENROWSET(BULK...), é necessário fornecer uma lista explícita de colunas na lista de seleção e também na tabela de destino, como se segue:  
-  
- INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)  
-  
-### <a name="creating-a-default-xml-format-file"></a>Criando um arquivo de formato XML padrão  
- Os exemplos dos arquivos de formato modificados se baseiam na tabela de exemplo `myTestSkipCol` e no arquivo de dados criado anteriormente neste tópico, em "Tabela de exemplo e arquivo de dados". O comando **bcp** a seguir cria um arquivo de formato XML padrão para a tabela `myTestSkipCol` :  
+### <a name="step-1---create-a-default-xml-format-file"></a>Etapa 1: criar um arquivo de formato XML padrão   
+
+Crie um arquivo de formato XML padrão para a tabela de exemplo `myTestSkipCol` executando o seguinte comando **bcp** no prompt de comando:  
   
 ```cmd
-bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
+bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
- O arquivo de formato não XML padrão resultante descreve uma correspondência um-para-um entre campos de arquivo de dados e colunas de tabela, da seguinte maneira:  
+> [!IMPORTANT]  
+>  Talvez seja necessário especificar o nome da instância do servidor à qual você está se conectando com o argumento `-S`. Além disso, talvez seja necessário especificar o nome de usuário e a senha com os argumentos `-U` e `-P`. Confira mais informações em [bcp Utility](../../tools/bcp-utility.md).  
+ 
+O comando anterior cria um arquivo de formato XML, `myTestSkipCol_Default.xml`. Esse arquivo de formato é denominado *arquivo de formato padrão* , pois esse é o formato gerado pelo **bcp**. Um arquivo de formato padrão descreve uma correspondência um para um entre campos de arquivo de dados e colunas de tabela.  
   
 ```xml
-\<?xml version="1.0"?>  
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<?xml version="1.0"?>  
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
  </RECORD>  
  <ROW>  
-  \<COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
-  \<COLUMN SOURCE="2" NAME="Col2" xsi:type="SQLNVARCHAR"/>  
-  \<COLUMN SOURCE="3" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
+  <COLUMN SOURCE="2" NAME="Col2" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="3" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
  </ROW>  
 </BCPFORMAT>  
 ```  
   
 > [!NOTE]  
->  Para obter informações sobre a estrutura de arquivos de formato XML, consulte [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
-  
-### <a name="examples"></a>Exemplos  
- Os exemplos desta seção usam a tabela de exemplo `myTestSkipCol` e o arquivo de dados de exemplo `myTestSkipCol2.dat` criados anteriormente neste tópico, em "Tabela de exemplo e arquivo de dados". Para importar os dados de `myTestSkipCol2.dat` para a tabela `myTestSkipCol` , os exemplos usam o seguinte arquivo de formato XML modificado, `myTestSkipCol2-x.xml`. A base para isso é o arquivo de formato criado anteriormente neste tópico, em "Criando um arquivo de formato XML padrão".  
-  
+>  Confira mais informações sobre a estrutura de arquivos de formato XML em [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+
+### <a name="step-2---modify-an-xml-format-file"></a>Etapa 2: modificar um arquivo de formato XML
+
+Aqui está o arquivo de formato XML modificado, `myTestSkipCol2.xml`, que ignora `Col2`. As entradas `FIELD` e `ROW` para `Col2` foram removidas e as entradas foram numeradas novamente. O delimitador após o primeiro campo também foi alterado de `\t` para `,`.
+
 ```xml
-\<?xml version="1.0"?>  
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<?xml version="1.0"?>  
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
  </RECORD>  
  <ROW>  
-  \<COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
-  \<COLUMN SOURCE="2" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
+  <COLUMN SOURCE="2" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
  </ROW>  
 </BCPFORMAT>  
 ```  
+ 
+### <a name="examples-with-an-xml-format-file"></a>Exemplos com um arquivo de formato XML   
+Os exemplos a seguir são baseados na tabela de exemplo `myTestSkipCol` e no arquivo de dados de exemplo `myTestSkipCol2.dat` descritos anteriormente neste artigo.
+
+Para importar os dados de `myTestSkipCol2.dat` para a tabela `myTestSkipCol` , os exemplos usam o arquivo de formato XML modificado, `myTestSkipCol2.xml`.   
   
-#### <a name="using-openrowsetbulk"></a>Usando OPENROWSET(BULK...)  
- O exemplo a seguir usa o provedor de conjunto de linhas em massa `OPENROWSET` e o arquivo de formato `myTestSkipCol2.xml` . O exemplo importa em massa o arquivo de dados `myTestSkipCol2.dat` para a tabela `myTestSkipCol` . A instrução contém uma lista explícita de colunas na lista de seleção e também na tabela de destino, como exigido.  
+#### <a name="using-bulk-insert-with-a-view"></a>Como usar a INSERÇÃO EM MASSA com uma exibição  
+
+Com um arquivo de formato XML, não é possível ignorar uma coluna durante a importação direta para uma tabela usando um comando **bcp** ou uma instrução `BULK INSERT`. No entanto, é possível realizar a importação para todas as colunas de uma tabela, exceto para a última. Se for preciso ignorar alguma coluna que não seja a última, crie uma exibição da tabela de destino que contenha apenas as colunas contidas no arquivo de dados. Depois, importe em massa os dados desse arquivo para a exibição.  
   
- No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
+O exemplo a seguir cria a exibição `v_myTestSkipCol` na tabela `myTestSkipCol` . Essa exibição ignora a segunda coluna da tabela, `Col2`. O exemplo usa o `BULK INSERT` para importar o arquivo de dados `myTestSkipCol2.dat` para essa exibição.  
+  
+No SSMS, execute o seguinte código. Atualize os caminhos do sistema de arquivos do local dos arquivos de exemplo em seu computador. 
   
 ```sql  
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
+GO  
+
+CREATE VIEW v_myTestSkipCol AS  
+    SELECT Col1,Col3  
+    FROM myTestSkipCol;  
+GO  
+  
+BULK INSERT v_myTestSkipCol  
+FROM 'C:\myTestSkipCol2.dat'  
+WITH (FORMATFILE='C:\myTestSkipCol2.xml');  
+GO  
+```  
+
+#### <a name="using-openrowsetbulk"></a>Usando OPENROWSET(BULK...)  
+
+Para usar um arquivo de formato XML para ignorar uma coluna de tabela usando `OPENROWSET(BULK...)`, é necessário fornecer uma lista de colunas explícita na lista de seleção e também na tabela de destino, como segue:  
+  
+    ```sql
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+    ```
+
+O exemplo a seguir usa o provedor de conjunto de linhas em massa `OPENROWSET` e o arquivo de formato `myTestSkipCol2.xml` . O exemplo importa em massa o arquivo de dados `myTestSkipCol2.dat` para a tabela `myTestSkipCol` . A instrução contém uma lista explícita de colunas na lista de seleção e também na tabela de destino, como exigido.  
+  
+No SSMS, execute o seguinte código. Atualize os caminhos do sistema de arquivos do local dos arquivos de exemplo em seu computador.
+  
+```sql  
+USE WideWorldImporters;  
 GO  
 INSERT INTO myTestSkipCol  
   (Col1,Col3)  
@@ -185,28 +244,9 @@ INSERT INTO myTestSkipCol
       FORMATFILE='C:\myTestSkipCol2.Xml'    
        ) as t1 ;  
 GO  
-```  
-  
-#### <a name="using-bulk-import-on-a-view"></a>Usando o BULK IMPORT em uma exibição  
- O exemplo a seguir cria o `v_myTestSkipCol` na tabela `myTestSkipCol` . Essa exibição ignora a segunda coluna da tabela, `Col2`. O exemplo usa o `BULK INSERT` para importar o arquivo de dados `myTestSkipCol2.dat` para essa exibição.  
-  
- No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
-  
-```sql  
-CREATE VIEW v_myTestSkipCol AS  
-    SELECT Col1,Col3  
-    FROM myTestSkipCol;  
-GO  
-  
-USE AdventureWorks2012;  
-GO  
-BULK INSERT v_myTestSkipCol  
-FROM 'C:\myTestSkipCol2.dat'  
-WITH (FORMATFILE='C:\myTestSkipCol2.xml');  
-GO  
-```  
-  
-## <a name="see-also"></a>Consulte também  
+```
+
+## <a name="see-also"></a>Confira também  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

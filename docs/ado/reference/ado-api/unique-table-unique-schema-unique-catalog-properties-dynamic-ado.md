@@ -3,8 +3,9 @@ title: "Controle de alterações na tabela de Base do conjunto de registros (ADO
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f62e184e4a51d82fc0b0369444ce78a9b2619039
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, de esquema exclusivo exclusiva catálogo propriedades dinâmica (ADO)
 Permite que você atentamente as modificações de controle para uma tabela base específica em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) que foi formado por uma operação de junção em várias tabelas base.  
@@ -40,7 +41,7 @@ Permite que você atentamente as modificações de controle para uma tabela base
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor que é o nome da tabela, esquema ou catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela base desejada é identificada exclusivamente por seus nomes de tabela, esquema e catálogo. Quando o **tabela exclusiva** propriedade for definida, os valores da **esquema exclusivo** ou **catálogo exclusivo** propriedades são usadas para localizar a tabela base. É pretendido, mas não obrigatório, que um ou ambos o **esquema exclusivo** e **catálogo exclusivo** propriedades ser definida antes do **tabela exclusiva** está definida.  
   
  A chave primária do **tabela exclusiva** é tratado como a chave primária de todo o **registros**. Esta é a chave usada para qualquer método que exigem uma chave primária.  

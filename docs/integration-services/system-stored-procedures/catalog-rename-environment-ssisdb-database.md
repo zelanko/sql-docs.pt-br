@@ -1,5 +1,5 @@
 ---
-title: Catalog. rename_environment (banco de dados SSISDB) | Microsoft Docs
+title: catalog.rename_environment (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 07839e0dbe6e15d096cb56c655b71d7bc56086be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,29 +38,29 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o ambiente. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- O nome original da variável de ambiente. O *environment_name* é **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ O nome original da variável de ambiente. O *environment_name* é **nvarchar(128)**.  
   
- [ @new_environment_name =] *new_environment_name*  
- O novo nome do ambiente. O *new_environment_name* é **nvarchar (128)**.  
+ [ @new_environment_name = ] *new_environment_name*  
+ O novo nome do ambiente. O *new_environment_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões MODIFY no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -70,11 +69,10 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   O novo nome já foi usado em um ambiente existente  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As referências de ambiente de projetos não são atualizadas automaticamente quando você renomeia o ambiente. As referências de ambiente devem ser atualizadas de forma correspondente. Esse procedimento armazenado terá êxito mesmo que as referências de ambiente sejam desfeitas com a alteração do nome do ambiente. As referências de ambiente devem ser atualizadas depois da conclusão desse procedimento armazenado.  
   
 > [!NOTE]  
 >  Quando uma referência de ambiente não for válida, a validação e a execução dos pacotes correspondentes que usam essas referências falharão.  
   
   
-

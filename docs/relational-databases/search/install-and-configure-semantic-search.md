@@ -2,29 +2,34 @@
 title: "Instalar e configurar a pesquisa semântica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8b6a2fd8328f1b81234fd153886e828d4ed883
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3e5be07b316f2975a56181e6e58805e88023939
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
-  Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
   
 ## <a name="install-semantic-search"></a>Instalar a pesquisa semântica  
   
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
  Um valor de retorno 1 indica que a pesquisa de texto completo e a pesquisa semântica estão instaladas; um valor de retorno 0 indica que não estão instaladas.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -51,7 +56,7 @@ GO
   
  Se o banco de dados de estatísticas semânticas de idioma for instalado e registrado para a instância, os resultados da consulta conterão uma única linha de informações sobre o banco de dados.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
@@ -84,7 +89,7 @@ GO
   
  Por padrão, o nome do banco de dados é **semanticsdb**. Se desejar, você poderá atribuir ao banco de dados um nome diferente quando anexá-lo. Você tem que fornecer esse nome ao registrar o banco de dados na etapa subsequente.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -98,7 +103,7 @@ GO
   
  Chame o procedimento armazenado [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) e forneça o nome que você atribuiu ao banco de dados quando o anexou.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -123,7 +128,7 @@ GO
    
  Chame o procedimento armazenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). Você não precisa fornecer o nome do banco de dados, já que uma instância pode ter somente um banco de dados de estatísticas semânticas de idioma.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -132,7 +137,7 @@ GO
  
  Chame o procedimento armazenado [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) e forneça o nome do banco de dados.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
@@ -147,6 +152,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Instalar suporte opcional para tipos de documento mais novos  
   
 ###  <a name="office"></a> Instalar os filtros mais recentes para Microsoft Office e outros tipos de documento Microsoft  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala os separadores de palavras e lematizadores mais recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , mas não instala os últimos filtros de documentos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros tipos de documento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esses filtros são necessários para indexação de documentos criados com versões recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros aplicativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para baixar os filtros mais recentes, consulte [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (Não parece haver uma versão do pacote de filtro para Office 2013 ou Office 2016.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala os separadores de palavras e lematizadores mais recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)], mas não instala os últimos filtros de documentos [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Office e outros tipos de documento [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Esses filtros são necessários para indexação de documentos criados com versões recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros aplicativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para baixar os filtros mais recentes, consulte [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (Não parece haver uma versão do pacote de filtro para Office 2013 ou Office 2016.)
   
   

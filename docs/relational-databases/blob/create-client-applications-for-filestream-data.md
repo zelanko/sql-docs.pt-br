@@ -2,9 +2,12 @@
 title: Criar aplicativos clientes para dados FILESTREAM | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 59471e22accea7996e3bd5d87b5cf6ff077e26c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Criar aplicativos clientes para dados FILESTREAM
-  Você pode usar Win32 para ler e gravar dados em um FILESTREAM BLOB. As seguintes etapas são exigidas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Você pode usar as APIs do Win32 para ler e gravar dados em um FILESTREAM BLOB. As seguintes etapas são exigidas:  
   
 -   Leia o caminho do arquivo de FILESTREAM.  
   
@@ -89,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Se um aplicativo usar o protocolo SMB1, os dados BLOB de FILESTREAM deverão ser lidos em múltiplos de 60 KB para otimizar o desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

@@ -1,11 +1,11 @@
 ---
-title: Integration Services (SSIS) manipuladores de eventos | Microsoft Docs
+title: Manipuladores de eventos do SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bf61c56b66a6a64f6e2156c5f458c8e09fe976e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
   Em tempo de execução, os executáveis (pacotes e contêineres Loop Foreach, Loop For, de Sequência e de host da tarefa) geram eventos. Por exemplo, um evento OnError será gerado quando acontecer um erro. Você pode criar manipuladores de eventos personalizados para esses eventos a fim de estender a funcionalidade do pacote e fazer com que os pacotes sejam mais fáceis de administrar em tempo de execução. Os manipuladores de eventos podem executar tarefas como:  
@@ -51,11 +50,11 @@ ms.lasthandoff: 09/26/2017
   
  O diagrama a seguir mostra um pacote simples que tem um contêiner Loop For que contém uma tarefa Executar SQL.  
   
- ![Pacote, Loop For, host de tarefas e tarefa Executar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "pacote, Loop For, host de tarefas e tarefa Executar SQL")  
+ ![Pacote, Loop For, host da tarefa e tarefa Executar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host da tarefa e tarefa Executar SQL")  
   
  Só o pacote tem um manipulador de eventos, para seu evento **OnError** . Se ocorrer um erro quando a tarefa Executar SQL for executada, o manipulador de eventos **OnError** do pacote entrará em execução. O diagrama a seguir mostra a sequência de chamadas que faz o manipulador de eventos **OnError** do pacote executar.  
   
- ![Fluxo do manipulador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "fluxo do manipulador de eventos")  
+ ![Fluxo do manipulador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "Fluxo do manipulador de eventos")  
   
  Manipuladores de eventos são membros de uma coleção de manipuladores de eventos e todos os contêineres incluem esta coleção. Se você criar o pacote usando o Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , poderá ver os membros das coleções de manipuladores de eventos nas pastas **Manipuladores de Eventos** , na guia **Explorador de Pacotes** , do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -105,7 +104,7 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
   
  A guia **Manipuladores de Eventos** também inclui a área Gerenciadores de **Conexões** , em que você pode criar e modificar os gerenciadores de conexões que os manipuladores de eventos usam para conectar servidores e fontes de dados. Para obter mais informações, consulte [Criar gerenciadores de conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Adicionar um manipulador de eventos na guia manipuladores de eventos  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Adicionar um manipulador de eventos na guia Manipuladores de Eventos  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -113,7 +112,7 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
   
 3.  Clique na guia **Manipuladores de Eventos** .  
   
-     ![Captura de tela da superfície de design com manipulador de eventos](../integration-services/media/eventhandlers.gif "captura de tela da superfície de design com manipulador de eventos")  
+     ![Captura de tela da área de design com o manipulador de eventos](../integration-services/media/eventhandlers.gif "Captura de tela da área de design com o manipulador de eventos")  
   
      Criar o fluxo de controle e os fluxos de dados em um manipulador de eventos é semelhante a criar o fluxo de controle e os fluxos de dados em um pacote. Para obter mais informações, consulte [Fluxo de Controle](../integration-services/control-flow/control-flow.md) e [Fluxo de Dados](../integration-services/data-flow/data-flow.md).  
   
@@ -136,8 +135,7 @@ No momento da execução, contêineres e tarefas elevam os eventos. Você pode c
   
  Para obter informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como adicionar um manipulador de eventos a um pacote, consulte [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
-

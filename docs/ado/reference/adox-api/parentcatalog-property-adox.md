@@ -3,8 +3,9 @@ title: Propriedade ParentCatalog (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -39,18 +40,19 @@ f1_keywords:
 - _User::PutRefParentCatalog
 - _Group::GetParentCatalog
 - _Group::PutRefParentCatalog
-helpviewer_keywords: ParentCatalog property [ADOX]
+helpviewer_keywords:
+- ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c255beddbc240f30f51642a0e8fe4fd785cf88bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-adox"></a>Propriedade ParentCatalog (ADOX)
 Especifica o catálogo do pai de um objeto de tabela, o usuário ou a coluna para fornecer acesso a propriedades específicas do provedor.  
@@ -58,7 +60,7 @@ Especifica o catálogo do pai de um objeto de tabela, o usuário ou a coluna par
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) objeto. Configuração **ParentCatalog** para um abrir **catálogo** permite o acesso a propriedades específicas do provedor antes de anexar a uma tabela ou coluna para um **catálogo** coleção.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Alguns provedores de dados permitem que os valores de propriedade específica de provedor a ser gravada somente no momento da criação: ou seja, quando uma tabela ou coluna é acrescentada ao seu **catálogo** coleção. Para acessar essas propriedades antes de anexar esses objetos para um **catálogo**, especifique o **catálogo** no **ParentCatalog** propriedade primeiro.  
   
  Um erro ocorre quando a tabela ou coluna é anexada a outro **catálogo** que o **ParentCatalog**.  

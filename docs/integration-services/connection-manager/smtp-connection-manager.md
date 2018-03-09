@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador de Conexão SMTP | Microsoft Docs"
+title: "Gerenciador de conexões SMTP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - SMTP connection manager [Integration Services]
 - connection managers [Integration Services], SMTP
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53e61c4ac404999314a738f0da7c5d3f5f4b4fda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="smtp-connection-manager"></a>Gerenciador de conexões SMTP
   Um gerenciador de conexões SMTP permite que um pacote conecte-se a um servidor SMTP. A tarefa Enviar Email incluída pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa um gerenciador de conexões SMTP.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
  **Nome**  
  Forneça um nome exclusivo para o gerenciador de conexões.  
   
- **Description**  
+ **Descrição**  
  Descreva o gerenciador de conexões. Como prática recomendável, descreva o gerenciador de conexões em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
  **Servidor SMTP**  
@@ -85,4 +84,3 @@ ms.lasthandoff: 08/09/2017
  **Habilitar SSL (Secure Sockets Layer)**  
  Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  
   
-

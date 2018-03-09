@@ -2,10 +2,14 @@
 title: "Percorrer código Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eae8d3d85744058fef34a6bfb97460f531c6c2be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 978f53bf3d04afd9c42b23af63675b65bf905a04
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
-  O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você controle quais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] são executadas em uma janela Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode pausar o depurador em instruções individuais e exibir o estado dos elementos de código nesse ponto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você controle quais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] são executadas em uma janela Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode pausar o depurador em instruções individuais e exibir o estado dos elementos de código nesse ponto.  
   
 ## <a name="breakpoints"></a>Pontos de interrupção  
  Um ponto de interrupção sinaliza o depurador para pausar a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica. Para mais informações sobre pontos de interrupção, consulte [Pontos de interrupção de Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
@@ -60,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 |Sair de um módulo|No menu **Depurar** , clique em **Sair** .<br /><br /> Na barra de ferramentas de **Depurar** , clique no botão **Sair** .<br /><br /> Pressione SHIFT+F11.|  
 |Executar para o local do cursor atual|Clique com o botão direito do mouse na janela Editor de Consultas e então clique em **Executar até o Cursor**.<br /><br /> Pressione CTRL+F10.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

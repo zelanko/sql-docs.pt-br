@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
 3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:    
     
-    -   **Banco de dados**    
+    -   **Backup de banco de dados**    
     
          Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .    
     
@@ -80,9 +80,9 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
             **Adicionar**  
             Dependendo do tipo de mídia selecionado no campo **Tipo de mídia de backup** , clicar em **Adicionar** abre uma das caixas de diálogo a seguir. (Se a lista na caixa de listagem **Mídia de backup** estiver cheia, o botão **Adicionar** não estará disponível.)
 
-            |Típo de mídia|Caixa de diálogo|Descrição|    
+            |Típo de mídia|Caixa de diálogo|Description|    
             |----------------|----------------|-----------------|    
-            |**Arquivo**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
+            |**File**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|    
             |**Fita**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|    
             |**URL**|**Selecionar um local de arquivo de backup**|Nesta caixa de diálogo, você pode selecionar um contêiner de armazenamento do Azure/credenciais do SQL Server, adicionar um novo contêiner de armazenamento do Azure com uma assinatura de acesso compartilhado ou gerar uma assinatura de acesso compartilhado e uma credencial do SQL Server para um contêiner de armazenamento existente.  Veja também [Conectar-se a uma Assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
@@ -277,7 +277,7 @@ O banco de dados `Sales` será restaurado para o contêiner de armazenamento do 
 12. Clique em **OK**.
 
 
-## <a name="see-also"></a>Consulte também    
+## <a name="see-also"></a>Consulte Também    
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

@@ -2,29 +2,31 @@
 title: "Classificando membros de atributo com base em um atributo secundário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lição 4-5 - membros de atributo de classificação com base em um atributo secundário
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 Na Lição 3, você aprendeu a classificar membros de atributo com base no nome ou valor de chave deles. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  
   
 As relações de atributos definem as relações ou dependências entre atributos. Em uma dimensão com base em apenas uma tabela relacional, todos os atributos são geralmente relacionados uns aos outros através do atributo de chave. Isso acontece porque todos os atributos de uma dimensão fornecem informações sobre os membros vinculados pelo atributo de chave da dimensão aos fatos de uma tabela de fatos para cada grupo de medidas relacionado. Em uma dimensão com base em várias tabelas relacionais, os atributos são geralmente vinculados com base na chave de junção entre as tabelas. Se os dados subjacentes derem suporte, os atributos relacionados poderão ser usados para especificar uma ordem de classificação. Por exemplo, você pode criar um novo atributo que forneça a lógica de classificação para um atributo relacionado.  

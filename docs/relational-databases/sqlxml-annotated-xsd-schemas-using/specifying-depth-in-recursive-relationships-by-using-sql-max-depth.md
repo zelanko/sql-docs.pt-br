@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a2915b3a06d86bac97cb2202f914e03b826a823
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87461f0a421f7a1dd3e225acfdb40667161855cf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificando a profundidade em relações recursivas usando sql:max-depth
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Bancos de dados relacionais, quando uma tabela está envolvida em uma relação consigo mesma, ele é chamado uma relação recursiva. Por exemplo, em uma relação supervisor-supervisionado, uma tabela que armazena os registros dos funcionários está envolvida em uma relação com si mesma. Nesse caso, a tabela de funcionários desempenha a função de supervisor em um lado da relação e a mesma tabela desempenha a função de supervisionado no outro lado.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Em bancos de dados relacionais, quando uma tabela está envolvida em uma relação com si mesma, a relação é chamada de relação recursiva. Por exemplo, em uma relação supervisor-supervisionado, uma tabela que armazena os registros dos funcionários está envolvida em uma relação com si mesma. Nesse caso, a tabela de funcionários desempenha a função de supervisor em um lado da relação e a mesma tabela desempenha a função de supervisionado no outro lado.  
   
  O mapeamento de esquemas pode incluir relações recursivas, em que um elemento e seu ancestral são do mesmo tipo.  
   

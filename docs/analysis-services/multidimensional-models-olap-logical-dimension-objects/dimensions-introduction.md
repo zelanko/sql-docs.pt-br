@@ -2,18 +2,17 @@
 title: "Noções básicas sobre dimensões (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
 - storage [Analysis Services], dimensions
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimensions---introduction"></a>Dimensões - Introdução
-  A Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensões são grupos de atributos com base nas colunas de tabelas ou exibições em uma exibição da fonte de dados. As dimensões existem independentes de um cubo, podem ser usadas em vários cubos, podem ser usadas várias vezes em um único cubo e estarem vinculadas entre instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Uma dimensão que existe, independentemente de um cubo, é chamada de dimensão de banco de dados e uma instância de uma dimensão de banco de dados dentro de um cubo é chamada de dimensão do cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensões são grupos de atributos com base nas colunas de tabelas ou exibições em uma exibição da fonte de dados. As dimensões existem independentes de um cubo, podem ser usadas em vários cubos, podem ser usadas várias vezes em um único cubo e estarem vinculadas entre instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Uma dimensão que existe, independentemente de um cubo, é chamada de dimensão de banco de dados e uma instância de uma dimensão de banco de dados dentro de um cubo é chamada de dimensão do cubo.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimensão com base em Design de esquema em estrela  
  A estrutura de uma dimensão é amplamente direcionada pela estrutura da tabela ou tabelas de dimensões subjacentes. A estrutura mais simples é chamada de esquema em estrela, onde cada dimensão com base em uma única tabela de dimensões diretamente vinculada à tabela de fatos por uma relação chave primária-chave estrangeira.  

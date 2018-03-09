@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14af02864d6e0810ffa6ffa49a35bf676c000aea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c2ca8ae4b0b7b522259677b252e2b0d24d14b5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindparam-mapping"></a>Mapeamento de SQLBindParam
 **SQLBindParam** não podem realmente ser chamado preterido porque ele nunca houve no ODBC; no entanto, ele ainda representa funções duplicadas — deve exportá-lo porque ISO e abrir grupo compatível com aplicativos usará o Gerenciador de Driver. Porque **SQLBindParameter** contém toda a funcionalidade de **SQLBindParam**, **SQLBindParam** serão mapeados na parte superior do **SQLBindParameter** (quando o driver subjacente é um ODBC 3*. x* driver). Um ODBC 3*. x* driver não precisa implementar **SQLBindParam**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando a seguinte chamada para **SQLBindParam** é feita:  
   
 ```  
@@ -44,5 +44,5 @@ SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    
   
  Consulte [informações de ODBC de 64 bits](../../../odbc/reference/odbc-64-bit-information.md), se o aplicativo será executado em um sistema operacional de 64 bits.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções preteridas de mapeamento](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

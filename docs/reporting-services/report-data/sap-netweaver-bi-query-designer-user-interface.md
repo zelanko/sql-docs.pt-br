@@ -1,13 +1,14 @@
 ---
-title: "Interface de usuário do Designer de consulta BI SAP NetWeaver | Microsoft Docs"
+title: "Interface do usuário do Designer de Consultas do SAP NetWeaver BI | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,32 +19,31 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-caps.latest.revision: 38
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "38"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0617201275bec8a2ff254d328f8105f18d6a35b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c965dc09098b955fde99748258202d23f6cf3519
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Interface do usuário do Designer de Consulta do SAP NetWeaver BI
-  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consulta gráfica para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
   
- Para obter mais informações sobre como trabalhar com uma fonte de dados multidimensionais do SAP, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).  
+ Para obter mais informações sobre como trabalhar com uma fonte de dados multidimensionais do SAP, consulte [Tipo de conexão do SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).  
   
  Esta seção descreve os botões da barra de ferramentas e os painéis do designer de consulta para cada modo do designer de consultas gráficas.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Designer de Consultas Gráficas no modo Design  
  Quando você edita uma consulta de um conjunto de dados que usa uma fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] , o designer de consultas gráficas é aberto no modo Design. A figura a seguir mostra os painéis do modo Design.  
   
- ![Designer de consulta usando MDX no modo de Design](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "usando MDX no modo de Design do Designer de consulta")  
+ ![Designer de Consultas usando MDX no modo de Design](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "Designer de Consultas usando MDX no modo de Design")  
   
  A tabela a seguir lista os painéis neste modo.  
   
@@ -63,22 +63,22 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Atualizar campos de conjunto de dados](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
+|![Atualizar campos de conjunto de dados](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
 |![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
-|![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "alternância para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
-|![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
+|![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
+|![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
 |![Excluir](../../reporting-services/report-data/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
-|![Ícone da caixa de diálogo parâmetros de consulta](../../reporting-services/report-data/media/iconqueryparameter.gif "ícone da caixa de diálogo parâmetros de consulta")|Exiba a caixa de diálogo **Variáveis** . Esse botão é habilitado somente quando o cubo selecionado é um cubo de Consulta (porque somente os cubos de consulta oferecem suporte a variáveis). Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado.|  
+|![Ícone da caixa de diálogo Parâmetros de Consulta](../../reporting-services/report-data/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Variáveis** . Esse botão é habilitado somente quando o cubo selecionado é um cubo de Consulta (porque somente os cubos de consulta oferecem suporte a variáveis). Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
-|![Cancelar a consulta](../../reporting-services/report-data/media/rsqdicon-cancel.gif "cancelar a consulta")|Cancela a consulta.|  
-|![Alternar para o modo de Design](../../reporting-services/media/rsqdicon-designmode.gif "alternar para modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Cancelar a consulta](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
+|![Alternar para o modo de Design](../../reporting-services/media/rsqdicon-designmode.gif "Alternar para o modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Designer de consultas gráficas no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo Consulta, clique no botão de alternância **Modo Design** na barra de ferramentas.  
   
  A figura a seguir indica as partes do designer de consulta no modo Consulta.  
   
- ![Designer de consulta do SAP BW MDX no modo de exibição de consulta](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-querymode.gif "designer de consulta do SAP BW MDX no modo de exibição de consulta")  
+ ![Designer de consultas MDX do SAP BW na exibição de consulta](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-querymode.gif "Designer de consultas MDX do SAP BW na exibição de consulta")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -103,15 +103,14 @@ ms.lasthandoff: 08/09/2017
   
 -   **Adicionar Membro Calculado** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Mostrar células vazias** (![alternância para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "alternância para mostrar células vazias"))  
+-   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
--   **Executar automaticamente** (![executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "executar a consulta automaticamente"))  
+-   **Executar automaticamente** (![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
   
 -   **Excluir** (![Excluir](../../reporting-services/report-data/media/rsqdicon-delete.gif "Excluir"))  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um conjunto de dados compartilhado ou conjunto de dados inserido &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

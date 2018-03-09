@@ -3,7 +3,7 @@ title: "Método (ADOX exibições) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a5db1507f6574567cc6acd54e9ede053e36f1552
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 535f25f475f6357d467e2f7ac19a96ed6eea1605
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-views"></a>Método (ADOX exibições) append
 Cria um novo [exibição](../../../ado/reference/adox-api/view-object-adox.md) do objeto e anexa-o para o [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleção.  
@@ -48,7 +47,7 @@ Views.Append Name, Command
  *Comando*  
  ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que representa o modo de exibição para criar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Cria uma nova exibição da fonte de dados com o nome e atributos especificados no **comando** objeto.  
   
  Se o texto do comando que especifica o usuário representa um procedimento em vez de um modo de exibição, o comportamento depende do provedor. **Acrescentar** falhará se o provedor não oferece suporte a comandos persistentes.  
@@ -68,4 +67,3 @@ Views.Append Name, Command
  [Acrescente o método (ADOX procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [(Tabelas ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Método Append (Usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)
-

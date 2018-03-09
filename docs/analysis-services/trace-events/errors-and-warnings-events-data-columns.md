@@ -2,13 +2,13 @@
 title: Erros e avisos de colunas de dados de eventos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Errors and Warnings event category [SQL Server]
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78a12a28e4178d5839217d472d686e6e2e08f3d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c3e94c56f836301b853902751c2fb4085e2df7e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Colunas de dados de eventos de erros e de avisos
-  A categoria de evento de segurança de auditoria tem a seguinte classe de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento de auditoria de segurança tem a seguinte classe de evento:  
   
 -   Classe de erro  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|42|9|Contém os dados de texto associados ao evento de erro.|  
 |ServerName|43|8|Contém o nome do servidor que executa a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual o evento de erro ocorreu.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

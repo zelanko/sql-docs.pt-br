@@ -2,16 +2,13 @@
 title: Acesso a dados modelo multidimensional (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Acesso a dados de modelo multidimensional (Analysis Services – Dados Multidimensionais)
-  Use as informações neste tópico para saber como acessar os dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando métodos programáticos, script ou aplicativos cliente que incluem suporte interno para conexão a um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em sua rede.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Use as informações neste tópico para saber como acessar os dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando métodos programáticos, script ou aplicativos cliente que incluem suporte interno para conexão a um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em sua rede.  
   
  Este tópico contém as seguintes seções:  
   
@@ -78,11 +76,11 @@ ms.lasthandoff: 11/17/2017
   
  [Consultando dados multidimensionais com MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Principais conceitos em MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Conceitos básicos do script MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Conceitos básicos de script MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Interfaces programáticas  
  Se você estiver criando um aplicativo personalizado que usa dados multidimensionais, sua abordagem para acessar os dados provavelmente cairá em uma das categorias a seguir:  
@@ -108,6 +106,6 @@ ms.lasthandoff: 11/17/2017
  [Conectar-se ao Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Desenvolvendo com XMLA no Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Acesso a dados de modelo de tabela](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Acesso de dados de modelo de tabela](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

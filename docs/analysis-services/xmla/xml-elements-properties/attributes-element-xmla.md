@@ -2,15 +2,13 @@
 title: Atributos de elemento (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Attributes Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0647c088e158d4ccccb42b7e6af5650f5209824
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1deed9a02aaaf3883ac8a3a40ec4ca7280d959fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributes-element-xmla"></a>Elemento Attributes (XMLA)
-  Contém uma coleção de elementos [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) usados pelo comando pai [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) ou [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) ou pelo elemento pai [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elementos usados pelo pai [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) ou [atualização](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) comando, ou pelo pai [onde](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,11 +50,11 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 11/17/2017
 |Elementos pai|[Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)|  
 |Elementos filho|[Atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

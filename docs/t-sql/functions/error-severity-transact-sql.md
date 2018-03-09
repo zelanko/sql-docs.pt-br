@@ -24,17 +24,16 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-caps.latest.revision: 41
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 5c3cd713bcbb239c037ff0a43083058de117cb9b
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: d5c8b4aa0a53a39ed6773fdf90ff42dc6128b2f3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,5 +135,4 @@ GO
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
-
 

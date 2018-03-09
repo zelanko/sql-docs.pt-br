@@ -3,8 +3,9 @@ title: "Comandos com os comandos de computação parametrizados | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18bfbc4a2e18e0232380edf157410fbd4eb3b12c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de computação de comandos com parâmetros com intervenção
 Uma forma com parâmetros típica comando APPEND possui uma cláusula que cria um pai **registros** com um comando de consulta e outra cláusula que cria um filho **registros** com um comando de consulta parametrizada — ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Resultante em forma de **registros** possui dois níveis, em que o pai ocupa o nível superior e o filho ocupa um nível inferior.  

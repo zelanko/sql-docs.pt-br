@@ -2,35 +2,30 @@
 title: Comando MergePartitions (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 290e5e99219a37a1ff1f6793d640756ba21f7467
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>Comando MergePartitions (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Mescla os dados de uma ou mais partições de origem em uma partição de destino e, em seguida, exclui a partição de origem. A consulta SQL da partição de destino não será atualizada como parte da mesclagem. Para garantir que o processamento subsequente da partição recupera todos os dados, você deve revisar a consulta para que ele seleciona todos os dados na partição mesclada.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Mescla os dados de uma ou mais partições de origem em uma partição de destino e, em seguida, exclui a partição de origem. A consulta SQL da partição de destino não será atualizada como parte da mesclagem. Para garantir que o processamento subsequente da partição recupera todos os dados, você deve revisar a consulta para que ele seleciona todos os dados na partição mesclada.  
   
 ## <a name="request"></a>Solicitação  
  Você deve especificar o banco de dados, tabela e partições de origem e destino. Só é possível mesclar partições da mesma tabela.  
@@ -78,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="see-also"></a>Consulte também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Criar e gerenciar partições de modelos de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Criar e gerenciar partições de modelos de tabela](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   
-

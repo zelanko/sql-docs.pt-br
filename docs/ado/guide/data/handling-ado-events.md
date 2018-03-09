@@ -3,8 +3,9 @@ title: "Manipulação de eventos de ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b1eb14b35aa2031dc405f3c1b7f5a9e1d932e9f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-ado-events"></a>Manipulação de eventos de ADO
 O modelo de evento do ADO dá suporte a determinadas operações síncronas e assíncronas do ADO que emitem *eventos*, ou notificações, antes do início da operação ou após a sua conclusão. Um evento é realmente uma chamada para uma rotina de manipulador de eventos que você define no seu aplicativo.  

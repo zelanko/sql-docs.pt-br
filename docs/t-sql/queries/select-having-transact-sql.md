@@ -1,7 +1,7 @@
 ---
-title: TENDO (Transact-SQL) | Microsoft Docs
+title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -23,22 +23,21 @@ helpviewer_keywords:
 - HAVING clause
 - HAVING clause, about HAVING clause
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9bff75a84689090f6e416db052a2561e57fa98a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ec700e859eda5b1a6313183a7485686ce3727ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---having-transact-sql"></a>Selecione - ter (Transact-SQL)
+# <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Especifica um critério de pesquisa para um grupo ou uma agregação. HAVING pode ser usado somente com a instrução SELECT. HAVING é usado normalmente em uma cláusula GROUP BY. Quando GROUP BY não é usado, HAVING se comporta como uma cláusula WHERE.  
+  Especifica um critério de pesquisa para um grupo ou uma agregação. HAVING pode ser usado somente com a instrução SELECT. HAVING é normalmente usado com uma cláusula GROUP BY. Quando GROUP BY não for usado, há um grupo único, agregado implícita.   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<search_condition > especifica o critério de pesquisa para o grupo ou a agregação atender.  
+\<search_condition > especifica um ou mais predicados para grupos e/ou agregações atender. Para obter mais informações sobre critérios de pesquisa e predicados, consulte [critério de pesquisa &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  O **texto**, **imagem**, e **ntext** tipos de dados não podem ser usados em uma cláusula HAVING.  
   
@@ -80,9 +79,8 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 

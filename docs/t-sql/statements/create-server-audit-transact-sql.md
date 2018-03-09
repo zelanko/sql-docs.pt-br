@@ -1,7 +1,7 @@
 ---
 title: Criar auditoria de servidor (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - CREATE SERVER AUDIT statement
 - audits [SQL Server], creating
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bbeb32f18755a9ecd0bf57f094f0504b60f6eebf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b6e637bec3ddcfd7b24bb4f4adb87011bbbe2471
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ CREATE SERVER AUDIT audit_name
  MAX_ROLLOVER_FILES =*{inteiro* | UNLIMITED}  
  Especifica o número máximo de arquivos a serem retidos no sistema de arquivos além do arquivo atual. O *MAX_ROLLOVER_FILES* valor deve ser um inteiro ou UNLIMITED. O valor padrão é UNLIMITED. Esse parâmetro é avaliado sempre que a auditoria reinicia (que pode ocorrer quando a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é reiniciado ou quando a auditoria é desativada logoff e, em seguida, novamente) ou quando um novo arquivo é necessário porque o MAXSIZE foi alcançado. Quando *MAX_ROLLOVER_FILES* é avaliado, se o número de arquivos exceder o *MAX_ROLLOVER_FILES* configuração, o arquivo mais antigo é excluído. Como resultado, quando a configuração de *MAX_ROLLOVER_FILES* é 0, um novo arquivo é criado cada vez que o *MAX_ROLLOVER_FILES* configuração será avaliada. Somente um arquivo é automaticamente excluído quando *MAX_ROLLOVER_FILES* configuração é avaliada, portanto, quando o valor de *MAX_ROLLOVER_FILES* é reduzido, o número de arquivos não reduz a menos que sejam de arquivos antigos excluídos manualmente. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
   
- MAX_FILES =*inteiro*  
+ MAX_FILES =*integer*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o número máximo de arquivos de auditoria que pode ser criado. Não substitui o primeiro arquivo quando o limite é atingido. Quando o limite MAX_FILES é atingido, qualquer ação que faz com que os eventos de auditoria adicional a ser gerado, falhará com um erro.  
@@ -101,7 +100,7 @@ CREATE SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  Essa opção pré-aloca o arquivo no disco para o valor MAXSIZE. Isso só valerá se MAXSIZE não for igual a UNLIMITED. O valor padrão é OFF.  
   
- QUEUE_DELAY =*inteiro*  
+ QUEUE_DELAY =*integer*  
  Determina o tempo, em milissegundos, que pode decorrer antes de ações de auditoria são forçadas a serem processadas. Um valor 0 indica entrega síncrona. O valor mínimo de atraso de consulta configurável é 1000 (1 segundo), que é o padrão. O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos). Especificar um número inválido, gera o erro MSG_INVALID_QUEUE_DELAY.  
   
  ESPECIFICAÇÃO DE ON_FAILURE = {CONTINUAR | DESLIGAMENTO | FAIL_OPERATION}  
@@ -128,8 +127,18 @@ Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
  event_field_name  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- É o nome do campo de evento que identifica a origem do predicado. Campos de auditoria são descritos em [sys. fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos os campos podem ser auditados menos `file_name` e `audit_file_offset`.  
-  
+ É o nome do campo de evento que identifica a origem do predicado. Campos de auditoria são descritos em [sys. fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos os campos podem ser filtrados exceto `file_name`, `audit_file_offset`, e `event_time`.  
+
+> [!NOTE]  
+>  Enquanto o `action_id` e `class_type` campos são do tipo **varchar** em sys. fn_get_audit_file, podem ser usados somente com números quando eles são uma origem de predicado para filtragem. Para obter a lista de valores a serem usados com `class_type`, execute a seguinte consulta:  
+> ```sql
+> SELECT spt.[name], spt.[number]
+> FROM   [master].[dbo].[spt_values] spt
+> WHERE  spt.[type] = N'EOD'
+> ORDER BY spt.[name];
+> ```
+
+
  number  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -140,7 +149,7 @@ Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  Uma cadeia de caracteres ANSI ou Unicode, conforme requerido pela comparação de predicado. Nenhuma conversão de tipo de cadeia de caracteres implícita é executada para as funções de comparação de predicado. A transferência do tipo incorreto resulta em um erro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando uma auditoria de servidor é criada, ela permanece em um estado desabilitado.  
   
  A instrução CREATE SERVER AUDIT está no escopo de uma transação. Se a transação for revertida, a instrução também será revertida.  
@@ -210,26 +219,25 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [Criar especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTERAR a especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [Remova a especificação de auditoria de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys. fn_get_audit_file &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys. server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys. database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.DM server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.DM audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.DM audit_class_type_map &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
-

@@ -1,27 +1,27 @@
 ---
-title: "Formatando ponteiros em um medidor (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatando ponteiros em um medidor (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87c71f596a77834f3552ddaa6aa382b569a860ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eaee62d06fd3ab67d10b64cb44282377ace28914
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um ponteiro do medidor indica o valor atual do medidor.   
@@ -58,10 +58,9 @@ ms.lasthandoff: 08/09/2017
   
  Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para obter mais informações, consulte [Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Intervalos de formatação em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Medidores &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

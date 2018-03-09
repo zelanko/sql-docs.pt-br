@@ -3,8 +3,11 @@ title: "Funções de construtor (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ dev_langs:
 helpviewer_keywords:
 - constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa07aa65f1ab46c63f86d9168b4e699427c235a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   De uma entrada especificada, as funções do construtor criam instâncias de qualquer tipo atômico interno XSD definido pelo usuário.  
   
@@ -50,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Qualquer tipo XSD interno.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Há suporte para construtores de tipos base e XSD derivados atômicos. No entanto, os subtipos de **xs: Duration**, que inclui **XDT: yearmonthduration e XDT: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: Notation** não têm suporte. Tipos atômicos definidos pelo usuário, que estejam disponíveis nas coleções de esquemas associadas também estarão disponíveis, desde que eles sejam direta ou indiretamente derivados dos tipos a seguir.  
   
 #### <a name="supported-base-types"></a>Tipos de base com suporte  
@@ -199,4 +201,3 @@ select @x.query('
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

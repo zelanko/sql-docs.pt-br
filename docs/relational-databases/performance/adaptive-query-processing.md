@@ -2,10 +2,13 @@
 title: "Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure."
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,19 +16,16 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este artigo apresenta estes recursos de processamento de consulta adaptável que você pode usar para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure:
 - Comentários de concessão de memória do modo de lote.
@@ -71,7 +71,7 @@ Com os comentários de concessão de memória habilitado, na segunda execução,
 Diferentes valores de parâmetros também podem exigir diferentes planos de consulta para continuarem sendo ideais. Esse tipo de consulta é definido como "sensível a parâmetro". Para planos sensíveis a parâmetro, os comentários de concessão de memória serão desabilitados em uma consulta se ela tiver requisitos de memória instáveis.  O plano é desabilitado após várias execuções da consulta repetidas e isso pode ser observado pelo monitoramento do XEvent *memory_grant_feedback_loop_disabled*.
 
 ### <a name="memory-grant-feedback-caching"></a>Armazenamento em cache dos comentários de concessão de memória
-Os comentários podem ser armazenados no plano em cache para uma única execução. No entanto, são as execuções consecutivas dessa instrução que se beneficiam dos ajustes dos comentários de concessão de memória. Esse recurso aplica-se à execução repetida de instruções. Os comentários de concessão de memória vão alterar somente o plano armazenado em cache. Atualmente, as alterações não são capturadas na consulta Ssore.
+Os comentários podem ser armazenados no plano em cache para uma única execução. No entanto, são as execuções consecutivas dessa instrução que se beneficiam dos ajustes dos comentários de concessão de memória. Esse recurso aplica-se à execução repetida de instruções. Os comentários de concessão de memória vão alterar somente o plano armazenado em cache. No momento, as alterações não são capturadas no Repositório de Consultas.
 Os comentários não serão mantidos se o plano for removido do cache. Os comentários também serão perdidos se houver um failover. Uma instrução que usa OPTION(RECOMPILE) cria um novo plano e não o armazena em cache. Como ele não é armazenado em cache, nenhum comentário de concessão de memória é produzido e ele não é armazenado para essa compilação e execução.  No entanto, se uma instrução equivalente (ou seja, com o mesmo hash de consulta) que *não* usou OPTION(RECOMPILE) for armazenada em cache e, em seguida, executada novamente, a instrução consecutiva poderá se beneficiar dos comentários de concessão de memória.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Acompanhando a atividade de comentários de concessão de memória
@@ -183,7 +183,7 @@ Compare o plano anterior com o plano real gerado com a execução intercalada ha
 1. Além disso, observe que não há mais avisos de despejo necessários, pois estamos concedendo mais memória, com base na contagem verdadeira de linhas que fluem da verificação da tabela de MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instruções qualificadas para execução intercalada
-A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, as MSTVFs não serão qualificadas para execução intercalada se forem usadas dentro de um CROSS APPLY.
+A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, MSTVFs não serão qualificados para execução intercalada se não usarem constantes em tempo de execução.
 
 ### <a name="interleaved-execution-benefits"></a>Benefícios de execução intercalada
 Em geral, quanto maior a distorção entre o número de linhas real e estimado, juntamente com o número de operações do plano de downstream, maior o impacto no desempenho.
@@ -224,12 +224,11 @@ Uma instrução que usar OPTION(RECOMPILE) criará um novo plano usando a execu�
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilidade entre execução intercalada e repositório de consultas
 Os planos que usam execução intercalada podem ser forçados. O plano é a versão que tem as estimativas de cardinalidade corrigidas com base na execução inicial.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrando o Processamento de Consulta Adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

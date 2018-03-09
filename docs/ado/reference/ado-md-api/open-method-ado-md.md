@@ -3,8 +3,9 @@ title: "Abra o método (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Open
 - Cellset::Open
-helpviewer_keywords: Open method [ADO MD]
+helpviewer_keywords:
+- Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b80a0a92956315d7d19db5d17a535b6fe2204b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c23630224808a70c20583759b6d62c8475ede66a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-md"></a>Método Open (ADO MD)
 Recupera os resultados de uma consulta multidimensional e retorna os resultados para um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -45,7 +47,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  Opcional. Um **Variant** que é avaliada como uma cadeia de caracteres especificando o um ADO válido [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) nome de variável ou uma definição para uma conexão do objeto. O *ActiveConnection* argumento especifica a conexão para abrir o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Se você passar uma definição de conexão para esse argumento, o ADO abre uma nova conexão usando os parâmetros especificados. O *ActiveConnection* argumento corresponde do [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriedade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **abrir** método gera um erro se qualquer um dos seus parâmetros for omitido e o valor da propriedade correspondente não foi definida antes de tentar abrir o **conjunto de células**.  
   
 ## <a name="applies-to"></a>Aplica-se a  

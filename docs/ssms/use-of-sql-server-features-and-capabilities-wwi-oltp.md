@@ -3,8 +3,11 @@ title: Argumentos de ferramentas externas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e445022950d162f84239cc91f79da8e720179d44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b0634f3f7fff7a96f972302a3f7f4da7e3f75ac2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
-Argumentos são variáveis para as quais o ambiente do Studio fornece valores para quando uma ferramenta externa é iniciada no menu **Ferramentas** . Ferramentas externas, como o Bloco de Notas, podem ser adicionadas ao menu **Ferramentas** que usa a caixa de diálogo **Ferramentas Externas** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Argumentos são variáveis para as quais o ambiente do Studio fornece valores para quando uma ferramenta externa é iniciada no menu **Ferramentas**. Ferramentas externas, como o Bloco de Notas, podem ser adicionadas ao menu **Ferramentas** que usa a caixa de diálogo **Ferramentas Externas** .  
   
 A tabela a seguir relaciona os argumentos de ferramentas externas.  
   
@@ -48,7 +51,7 @@ A tabela a seguir relaciona os argumentos de ferramentas externas.
   
 *A linha atual, a coluna atual ou o texto atual se baseia na posição do cursor no editor de texto conforme mostrado na barra de status.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Caixa de diálogo Ferramentas Externas](../ssms/external-tools-dialog-box.md)  
 [Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
   

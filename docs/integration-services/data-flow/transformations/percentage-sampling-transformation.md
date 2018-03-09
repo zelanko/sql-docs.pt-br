@@ -1,5 +1,5 @@
 ---
-title: "Transformação amostragem percentual | Microsoft Docs"
+title: "Transformação Amostragem Percentual | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: be38451e2fc359949ad71d143c5eaea6a1eaf41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="percentage-sampling-transformation"></a>transformação Amostragem Percentual
   A transformação Amostragem Percentual cria um conjunto de dados de exemplo, selecionando um percentual das linhas de entrada da transformação. O conjunto de dados de exemplo é uma seleção aleatória das linhas da entrada da transformação, para que o exemplo resultante seja representativo da entrada.  
@@ -84,4 +83,3 @@ ms.lasthandoff: 08/19/2017
  Especifique a semente de amostra para o gerador de números aleatórios que a transformação usa para criar uma amostra. Recomendado apenas para desenvolvimento e teste. A transformação usará a contagem de tiques do Microsoft Windows se não for especificada uma semente aleatória.  
   
   
-

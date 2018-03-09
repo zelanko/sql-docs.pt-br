@@ -1,5 +1,5 @@
 ---
-title: Eventos registrados por um pacote do Integration Services | Microsoft Docs
+title: Eventos registrados em log por um pacote do Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 30cec734f1bf60180475e1bebc6b8c66c7686bf5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
   Um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens de eventos no log de eventos de Aplicativo do Windows. Um pacote registra estas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/27/2017
 8.  Na caixa de diálogo **Entrada de Log** , clique nas setas para baixo e para cima para exibir a entrada de log anterior ou posterior e clique no ícone de cópia para copiar a entrada de log.  
   
 9. Abra um editor de textos, cole e salve a entrada de log em um arquivo de texto.
-

@@ -2,36 +2,31 @@
 title: Conjunto de linhas DISCOVER_SESSIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_SESSIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_SESSIONS rowset
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79aeb0bedd96eb02138c424f4e381115ae47d8b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoversessions-rowset"></a>Conjunto de linhas DISCOVER_SESSIONS
-  Oferece uso de recursos e de informações de atividade sobre as sessões atualmente abertas no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de uso e a atividade de recurso sobre as sessões atualmente abertas no servidor.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_SESSIONS** contém as colunas a seguir.  
@@ -78,8 +73,7 @@ ms.lasthandoff: 09/01/2017
 |SESSION_IDLE_TIME_MS|DBTYPE_UI8|Opcional.|  
 |SESSION_STATUS|DBTYPE_I4|Opcional.|  
   
-## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

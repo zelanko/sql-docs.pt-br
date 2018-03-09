@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f31ab70d00820fc1e0b279754c998c777dc6688
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-conformance-levels"></a>Níveis de conformidade de interface
 A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Um esquema de redistribuição com base em funções não suficientemente atingi-lo. Em ODBC 3. *x*, drivers são classificados com base nos recursos que eles possuem. O recurso de suporte pode incluir suporte a função. Ele também pode incluir um campo de descrição, um atributo de instrução, um valor de "Y" de suporte para um tipo de informação retornado por **SQLGetInfo**, e assim por diante.  
@@ -59,4 +57,3 @@ A finalidade de redistribuição é informar ao aplicativo de quais recursos est
 -   [Conformidade de atributo](../../../odbc/reference/develop-app/attribute-conformance.md)  
   
 -   [Conformidade de campo de descritor](../../../odbc/reference/develop-app/descriptor-field-conformance.md)
-

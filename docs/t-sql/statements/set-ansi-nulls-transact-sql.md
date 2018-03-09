@@ -1,14 +1,15 @@
 ---
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ANSI_NULLS
 - SET ANSI_NULLS
 - ANSI_NULLS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET ANSI_NULLS statement
 - not equal to operator (<>)
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - null values [SQL Server], comparison operators
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 19f61f2ba3274bb854f60073408cbceea9f4def7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,24 +44,24 @@ ms.lasthandoff: 11/21/2017
   Especifica o comportamento compatível ISO dos operadores de comparação Igual a (=) e Diferente de (<>) quando usados com valores nulos na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS sempre estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
+>  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## <a name="syntax"></a>Sintaxe
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## <a name="remarks"></a>Comentários  
  Quando SET ANSI_NULLS for ON, uma instrução SELECT que usa WHERE *column_name* = **nulo** retorna zero linhas mesmo que haja valores nulos em *column_name*. Uma instrução SELECT que usa WHERE *column_name* <> **nulo** retorna zero linhas mesmo que haja valores não nulos em *column_name*.  
   
@@ -73,7 +75,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS deve ser definido como ON para executar consultas distribuídas.  
   
- SET ANSI_NULLS também deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET ANSI_NULLS estiver OFF, haverá falha em qualquer instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou exibições indexadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro que lista todas as opções de SET que violam os valores necessários. Além disso, ao executar uma instrução SELECT, se SET ANSI_NULLS for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá ignorar os valores de índice nas exibições ou colunas computadas e resolverá a operação selecionada como se não houvessem tais índices nas tabelas ou exibições.  
+ SET ANSI_NULLS também deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET ANSI_NULLS estiver OFF, haverá falha em qualquer instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou exibições indexadas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna um erro que lista todas as opções SET que violam os valores necessários. Além disso, quando você executa uma instrução SELECT, se SET ANSI_NULLS for OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora os valores de índice em colunas computadas ou modos de exibição e resolver a operação select como não se houvesse nenhum tais índices nas tabelas ou exibições.  
   
 > [!NOTE]  
 >  ANSI_NULLS é uma das sete opções SET que devem ser definidas como valores requeridos ao lidar com índices em colunas computadas ou exibições indexadas. As opções ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER e CONCAT_NULL_YIELDS_NULL também devem ser definidas como ON, e NUMERIC_ROUNDABORT deve ser definida como OFF.  
@@ -84,7 +86,7 @@ SET ANSI_NULLS ON;
   
  A configuração de ANSI_NULLS é definida durante a execução ou em tempo de execução e não no momento da análise.  
   
- Para exibir a configuração atual dessa configuração, execute a consulta a seguir.  
+ Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

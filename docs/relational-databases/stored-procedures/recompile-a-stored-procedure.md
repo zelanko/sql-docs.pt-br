@@ -2,10 +2,14 @@
 title: Recompilar um procedimento armazenado | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec48fb989e7735b52603aecc2059d0806cbf9c53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53384581291b653d119d08932c66bf3fb6f8db44
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
-  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile** . Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile** . Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
   
  **Neste tópico**  
   
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
  Procedimento armazenado do sistema**sp_recompile**   
  Exige a permissão ALTER no procedimento especificado.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE  
   
@@ -108,7 +113,7 @@ AS
   
      E copie e cole o segundo exemplo de código na janela de consulta e clique em **Executar**. Isso executa o procedimento e recompila o plano de consulta do procedimento.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -126,7 +131,7 @@ GO
   
      Em seguida, copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Isso não executa o procedimento, mas marca-o para recompilação de modo que seu plano de consulta seja atualizada na próxima vez em que o procedimento for executado.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
@@ -134,7 +139,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Renomear um procedimento armazenado](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

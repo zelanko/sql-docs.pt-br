@@ -1,5 +1,5 @@
 ---
-title: os_threads (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_threads (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_threads
 - dm_os_threads
 - sys.dm_os_threads_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_threads dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9108fa8c4af25be975394a3388cd26da99b9b595
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41727f804fb31ed6773c671a40b63cb02ca6793b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,33 +43,33 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|thread_address|**varbinary (8)**|Endereço de memória (Chave Primária) do thread.|  
+|thread_address|**varbinary(8)**|Endereço de memória (Chave Primária) do thread.|  
 |started_by_sqlservr|**bit**|Indica o iniciador de thread.<br /><br /> 1 = O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciou o thread.<br /><br /> 0 = Outro componente iniciou o thread, como um procedimento armazenado estendido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|os_thread_id|**int**|ID do thread atribuído pelo sistema operacional.|  
-|status|**int**|Sinalizador de estado interno.|  
-|instruction_address|**varbinary (8)**|Endereço da instrução que está sendo executada atualmente.|  
+|os_thread_id|**Int**|ID do thread atribuído pelo sistema operacional.|  
+|status|**Int**|Sinalizador de estado interno.|  
+|instruction_address|**varbinary(8)**|Endereço da instrução que está sendo executada atualmente.|  
 |creation_time|**datetime**|Hora em que esse thread foi criado.|  
 |kernel_time|**bigint**|Tempo de kernel usado por esse thread.|  
 |usermode_time|**bigint**|Tempo do usuário usado por esse thread.|  
-|stack_base_address|**varbinary (8)**|Endereço de memória do endereço de pilha mais alto para esse thread.|  
-|stack_end_address|**varbinary (8)**|Endereço de memória do endereço de pilha mais baixo desse thread.|  
-|stack_bytes_committed|**int**|Número de bytes confirmados na pilha.|  
-|stack_bytes_used|**int**|Número de bytes ativamente usados no thread.|  
+|stack_base_address|**varbinary(8)**|Endereço de memória do endereço de pilha mais alto para esse thread.|  
+|stack_end_address|**varbinary(8)**|Endereço de memória do endereço de pilha mais baixo desse thread.|  
+|stack_bytes_committed|**Int**|Número de bytes confirmados na pilha.|  
+|stack_bytes_used|**Int**|Número de bytes ativamente usados no thread.|  
 |affinity|**bigint**|Máscara de CPU na qual este thread está sendo executado. Isso depende do valor configurado pelo **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** instrução. Pode ser diferente do agendador em caso de afinidade flexível.|  
-|Prioridade|**int**|Valor de prioridade deste thread.|  
-|Localidade|**int**|LCID de localidade em cache do thread.|  
-|Token|**varbinary (8)**|Identificador de token de representação em cache para o thread.|  
-|is_impersonating|**int**|Indica se esse thread está usando a representação do Win32.<br /><br /> 1 = O thread está usando credenciais de segurança que são diferentes do padrão do processo. Isso indica que o thread está representando uma entidade diferente daquela que criou o processo.|  
-|is_waiting_on_loader_lock|**int**|Status do sistema operacional indicando se o thread está aguardando o bloqueio de carregador.|  
-|fiber_data|**varbinary (8)**|Fibra do Win32 atual sendo executada no thread. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
-|thread_handle|**varbinary (8)**|Somente para uso interno.|  
-|event_handle|**varbinary (8)**|Somente para uso interno.|  
-|scheduler_address|**varbinary (8)**|Endereço de memória do agendador associado a esse thread. Para obter mais informações, consulte [sys.DM os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary (8)**|Endereço de memória do trabalhador ligado a esse thread. Para obter mais informações, consulte [sys.DM os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|fiber_context_address|**varbinary (8)**|Endereço de contexto de fibra interno. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
-|self_address|**varbinary (8)**|Ponteiro de consistência interno.|  
+|Prioridade|**Int**|Valor de prioridade deste thread.|  
+|Localidade|**Int**|LCID de localidade em cache do thread.|  
+|Token|**varbinary(8)**|Identificador de token de representação em cache para o thread.|  
+|is_impersonating|**Int**|Indica se esse thread está usando a representação do Win32.<br /><br /> 1 = O thread está usando credenciais de segurança que são diferentes do padrão do processo. Isso indica que o thread está representando uma entidade diferente daquela que criou o processo.|  
+|is_waiting_on_loader_lock|**Int**|Status do sistema operacional indicando se o thread está aguardando o bloqueio de carregador.|  
+|fiber_data|**varbinary(8)**|Fibra do Win32 atual sendo executada no thread. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
+|thread_handle|**varbinary(8)**|Somente para uso interno.|  
+|event_handle|**varbinary(8)**|Somente para uso interno.|  
+|scheduler_address|**varbinary(8)**|Endereço de memória do agendador associado a esse thread. Para obter mais informações, consulte [sys.DM os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|Endereço de memória do trabalhador ligado a esse thread. Para obter mais informações, consulte [sys.DM os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|fiber_context_address|**varbinary(8)**|Endereço de contexto de fibra interno. Só é aplicável quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para lightweight pooling.|  
+|self_address|**varbinary(8)**|Ponteiro de consistência interno.|  
 |processor_group|**smallint**|**Aplica-se a**: do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID do grupo de processadores.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
@@ -87,7 +90,7 @@ SELECT *
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-  [sys.DM os_workers &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
+  [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

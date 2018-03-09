@@ -1,27 +1,27 @@
 ---
-title: "Planejar a implantação de relatório e design de relatório | O Reporting Services | Microsoft Docs"
+title: "Planejar o design e a implantação de relatório | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.
@@ -115,10 +115,9 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
 -   [Adicionando e configurando controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Ferramentas do Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
  [Linguagem RDL &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
-

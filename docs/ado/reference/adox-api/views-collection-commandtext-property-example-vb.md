@@ -3,7 +3,7 @@ title: "Exibições de coleção, o exemplo da propriedade CommandText (VB) | Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0d610a39e0f22a893597652fcf4916e0164a920b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Coleção de modos de exibição, o exemplo da propriedade CommandText (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade para atualizar o texto de uma exibição.  
@@ -90,4 +89,3 @@ End Sub
  [Propriedade de comando (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Objeto de exibição (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

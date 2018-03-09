@@ -3,7 +3,7 @@ title: "Abra o método (registro de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7e7f1c5e35ced700818954056b380a44c75570c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Método Open (ADO registro)
 Abre um existente [registro](../../../ado/reference/ado-api/record-object-ado.md) de objeto ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  
@@ -63,7 +62,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha, se necessário, verifica *nome de usuário*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  *Origem* pode ser:  
   
 -   UMA URL. Se o protocolo para a URL é http, o provedor de Internet será invocado por padrão. Se a URL aponta para um nó que contém um script executável (como um. Página ASP), um **registro** que contém a origem em vez de executado conteúdo é aberto por padrão. Use o *opções* argumento para modificar esse comportamento.  
@@ -89,4 +88,3 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

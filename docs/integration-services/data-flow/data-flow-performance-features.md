@@ -26,19 +26,18 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-flow-performance-features"></a>Data Flow Performance Features
+# <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
   
 ## <a name="configuring-the-data-flow"></a>Configurando o Fluxo de Dados  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
  Independente do componente de fluxo de dados, existem duas instruções gerais que devem ser seguidas para melhorar o desempenho: otimizar consultas e evitar cadeias de caracteres desnecessárias.  
   
 #### <a name="optimize-queries"></a>Otimizar Consultas  
- Um determinado número de componentes de fluxo de dados usa consultas, tanto quando extraem dados das origens quanto em operações de pesquisa para criar tabelas de referências. A consulta padrão usa o SELECT * FROM \<tableName > sintaxe. Este tipo de consulta retorna todas as colunas na tabela de origem. Considerando que você tenha todas as colunas disponíveis no momento da criação, é possível escolher qualquer coluna como uma coluna de pesquisa, passagem ou origem. No entanto, depois de selecionar as colunas que serão usadas, será preciso revisar a consulta para incluir somente as colunas selecionadas. Remover as colunas supérfluas faz com que o fluxo de dados torne-se mais eficaz, pois quanto menor for o número de colunas, menor será a linha criada. Uma linha pequena significa que mais linhas podem ser ajustadas no buffer e o trabalho para processar todas as linhas no conjunto de dados é menor.  
+ Um determinado número de componentes de fluxo de dados usa consultas, tanto quando extraem dados das origens quanto em operações de pesquisa para criar tabelas de referências. A consulta padrão usa a sintaxe SELECT * FROM \<tableName>. Este tipo de consulta retorna todas as colunas na tabela de origem. Considerando que você tenha todas as colunas disponíveis no momento da criação, é possível escolher qualquer coluna como uma coluna de pesquisa, passagem ou origem. No entanto, depois de selecionar as colunas que serão usadas, será preciso revisar a consulta para incluir somente as colunas selecionadas. Remover as colunas supérfluas faz com que o fluxo de dados torne-se mais eficaz, pois quanto menor for o número de colunas, menor será a linha criada. Uma linha pequena significa que mais linhas podem ser ajustadas no buffer e o trabalho para processar todas as linhas no conjunto de dados é menor.  
   
  Para construir uma consulta, é preciso inseri-la ou usar o Construtor de Consultas.  
   
@@ -144,13 +143,13 @@ ms.lasthandoff: 08/03/2017
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
  Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
   
-#### <a name="lookup-transformation"></a>Transformação Pesquisa  
+#### <a name="lookup-transformation"></a>transformação Pesquisa  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
  Não é mais preciso configurar o valor da propriedade **MaxBuffersPerInput** , pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Transformação Dimensão de Alteração Lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta  
  O Assistente para Dimensão Alteração Lenta e a transformação Dimensão Alteração Lenta são ferramentas de uso geral que atendem às necessidades da maioria dos usuários. Entretanto, o fluxo de dados gerado pelo assistente não é otimizado para o desempenho.  
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
@@ -160,20 +159,20 @@ ms.lasthandoff: 08/03/2017
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
   
-#### <a name="sql-server-destination"></a>Destino do SQL Server  
+#### <a name="sql-server-destination"></a>destino do SQL Server  
  Quando um pacote carregar dados para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador, use um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino é otimizado para carregamento em massa de alta velocidade.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Testando o desempenho de destinos  
  Você pode achar que salvar os dados em destinos leva mais tempo que o esperado. Para identificar se a lentidão é causada por uma incapacidade do destino em processar dados rápido o suficiente, você pode substituir temporariamente o destino por uma transformação Contagem de Linhas. Se a taxa de transferência melhorar significativamente, é provável que o destino que está carregando os dados esteja causando a lentidão.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisar as informações na guia Progresso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]Fornece informações adicionais sobre o fluxo de controle e fluxo de dados quando você executa um pacote [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece informações adicionais sobre o fluxo de controle e o fluxo de dados quando você executa um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
   
  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
@@ -208,9 +207,8 @@ ms.lasthandoff: 08/03/2017
   
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
   
-## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Ferramentas de solução de problemas para execução do pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

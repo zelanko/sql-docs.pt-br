@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba2869a8fb8272251f6a23df0808b12e68ec5a59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-date"></a>C para SQL: data
 O identificador para o tipo de dados do ODBC C data é:  
@@ -50,4 +48,3 @@ O identificador para o tipo de dados do ODBC C data é:
  Quando dados de data C são convertidos em dados de SQL de caractere, os dados de caracteres resultante estão no "*aaaa*-*mm*-*dd*" formato.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados de tipo de dados date C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados de data C. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
-

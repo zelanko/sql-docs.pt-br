@@ -2,43 +2,34 @@
 title: "Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: setup-install
+ms.suite: pro-bi
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint
-  Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
   
-|||  
-|-|-|  
-|![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")|Um script completo do PowerShell é incluído na parte final do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell") um script completo do PowerShell está incluído na parte inferior do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] .
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
-  
- **Neste tópico**: os itens indicados após o sumário correspondem às áreas do diagrama. O diagrama ilustra os  
-  
-|||  
-|-|-|  
-|[Preparar o ambiente do PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomas e ações recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Serviço Windows do Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService e PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicativo(s) de serviço e proxies do Power Pivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bancos de dados](#bkmk_databases)<br /><br /> [Recursos do SharePoint](#bkmk_features)<br /><br /> [Trabalhos de timer](#bkmk_timer_jobs)<br /><br /> [Regras de integridade](#bkmk_health_rules)<br /><br /> **(E)** [Logs do Windows e do ULS](#bkmk_logs)<br /><br /> [Provedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Regras de coleta de dados de integridade](#bkmk_health_collection)<br /><br /> [Soluções](#bkmk_solutions)<br /><br /> [Etapas de verificação manual](#bkmk_manual)<br /><br /> [Mais recursos](#bkmk_more_resources)<br /><br /> [Script completo do PowerShell](#bkmk_full_script)|![verificação de PowerShell do powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "verificação de powershell do powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Preparar o ambiente do PowerShell  
  As etapas desta seção preparam o ambiente do PowerShell. As etapas podem não ser necessárias, dependendo de como o ambiente de script está configurado no momento.  

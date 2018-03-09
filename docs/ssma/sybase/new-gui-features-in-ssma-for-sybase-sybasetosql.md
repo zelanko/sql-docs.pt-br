@@ -3,27 +3,28 @@ title: "Novos recursos de interface gráfica do usuário do SSMA para Sybase (Sy
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2dd0e259bdb6b5e31cd60da49561f47acde784b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Novos recursos de interface gráfica do usuário do SSMA para Sybase (SybaseToSQL)
 Este capítulo descreve novos recursos da Interface de usuário do SSMA.  
@@ -132,4 +133,3 @@ Você pode executar a pesquisa de texto rápida usando os seguintes recursos:
 ### <a name="advanced-search"></a>Pesquisa avançada  
 Para abrir a caixa de diálogo de pesquisa avançada, no menu Editar ponto localizar, em seguida, clique em pesquisa avançada. Na caixa de diálogo, você poderá encontrar qualquer objeto usando o padrão. Na parte superior da caixa de diálogo, você pode escolher categorias de objeto e de área de pesquisa.  
   
-

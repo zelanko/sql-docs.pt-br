@@ -1,13 +1,14 @@
 ---
-title: "Configurar o acesso do construtor de relatórios | Microsoft Docs"
+title: "Configurar o acesso ao Construtor de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  Para usar o Construtor de Relatórios, você deve ter um modelo de relatório publicado.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O Construtor de Relatórios não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  O computador cliente deve ter o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 instalado. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece a infraestrutura para executar aplicativos [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
@@ -54,14 +54,14 @@ ms.lasthandoff: 08/09/2017
   
  Para definir propriedades de sistema do servidor de relatório, você pode usar o Management Studio ou script:  
   
--   Para usar o Management Studio, conecte-se ao servidor de relatório e use a página Propriedades Avançadas do Servidor para definir **EnableReportDesignClientDownload** como **false**. Para obter mais informações sobre como abrir essa página, consulte [definir propriedades do servidor de relatório &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Para usar o Management Studio, conecte-se ao servidor de relatório e use a página Propriedades Avançadas do Servidor para definir **EnableReportDesignClientDownload** como **false**. Para obter mais informações sobre como abrir essa página, consulte [Definir as propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Para ver um exemplo de script que define uma propriedade de servidor de relatório, consulte [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Atribuições de função que concedem o acesso ao Construtor de Relatórios em um servidor de relatório no modo nativo  
  Em um servidor de relatório no modo nativo, crie atribuições de função de usuário que incluem tarefas para usar o Construtor de Relatórios. Você deve ser Gerenciador de Conteúdo e Administrador de Sistema para criar ou modificar definições de função e atribuições de função em itens e no nível de site.  
   
- As instruções a seguir presumem que você está usando funções predefinidas. Se você tiver modificado as definições de função ou feito a atualização a partir do SQL Server 2000, verifique se as funções contêm as tarefas necessárias. Para obter mais informações sobre como criar atribuições de função, consulte [conceder acesso de usuário para um servidor de relatório &#40; Gerenciador de relatórios &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ As instruções a seguir presumem que você está usando funções predefinidas. Se você tiver modificado as definições de função ou feito a atualização a partir do SQL Server 2000, verifique se as funções contêm as tarefas necessárias. Para obter mais informações sobre como criar atribuições de função, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Depois que você criar as atribuições de função, os usuários terão permissão para fazer o seguinte:  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Se uma atribuição de função já existir para o usuário ou grupo para o qual deseja configurar o acesso do Construtor de Relatórios, clique em **Editar**.  
   
-     Caso contrário, clique em **Atribuição de Nova Função**. No grupo ou usuário, insira uma conta Windows de usuário ou grupo de domínio neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+     Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
   
 5.  Selecione **Usuário do Sistema**e clique em **OK**.  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Se uma atribuição de função já existir para o usuário ou grupo para o qual deseja configurar o acesso do Construtor de Relatórios, clique em **Editar**.  
   
-     Caso contrário, clique em **Atribuição de Nova Função**. No grupo ou usuário, insira uma conta Windows de usuário ou grupo de domínio neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+     Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
   
 10. Selecione **Construtor de Relatórios**e clique em **Aplicar**.  
   
@@ -168,13 +168,12 @@ ms.lasthandoff: 08/09/2017
 |Autenticação Básica|O ClickOnce não dá suporte à autenticação básica. Ele não fará solicitações que especificam a autenticação básica no cabeçalho de autenticação. Não transmitirá credenciais nem solicitará que o usuário as forneça. Você pode resolver esses problemas habilitando o acesso Anônimo aos arquivos de aplicativo do Construtor de Relatórios.<br /><br /> As solicitações serão bem-sucedidas se o acesso Anônimo for habilitado para os arquivos de aplicativo do Construtor de Relatórios porque o servidor de relatórios ignora o cabeçalho de autenticação. Para obter mais informações sobre como habilitar o acesso Anônimo ao Construtor de Relatórios, consulte [Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Depois que o ClickOnce recupera os arquivos de aplicativo, o Construtor de Relatórios abre uma conexão separada com um servidor de relatório. Os usuários devem digitar novamente suas credenciais para conectar o Construtor de Relatórios ao servidor de relatório. O Construtor de Relatórios não coleta credenciais a partir do Internet Explorer ou do ClickOnce.<br /><br /> As solicitações falharão se o servidor de relatório estiver configurado para a autenticação básica e você não tiver habilitado o acesso Anônimo aos arquivos de programa do Construtor de Relatórios. A solicitação falha porque o ClickOnce especifica a segurança integrada do Windows em suas solicitações. Se o servidor de relatório for configurado para a autenticação básica, a solicitação será rejeitada porque especifica um pacote de segurança inválido e não tem as credenciais esperadas pelo servidor de relatório.<br /><br /> Além disso, se o servidor de relatório estiver configurado para usar o modo integrado do SharePoint e o site do SharePoint usar a autenticação Básica, os usuários encontrarão um erro 401 quando tentarem usar o ClickOnce para instalar o Construtor de Relatórios em seus computadores cliente. Isso acontece porque o SharePoint usa um cookie para manter um usuário autenticado enquanto durar a sessão, mas o ClickOnce não dá suporte ao cookie. Quando um usuário iniciar um aplicativo ClickOnce, como o Construtor de Relatórios, o aplicativo não passará o cookie para o SharePoint e, portanto, o SharePoint negará o acesso e retornará um erro 401.<br /><br /> Você pode contornar esse problema tentando uma das seguintes opções:<br /><br /> -Selecione a opção **Lembrar minha senha** ao fornecer suas credenciais de usuário.<br /><br /> -Habilite o acesso Anônimo à coleção de sites do SharePoint.<br /><br /> -Configure o ambiente de forma que o usuário não forneça credenciais. Por exemplo, em um ambiente de Intranet, você poderá configurar o servidor do SharePoint para pertencer a um Grupo de Trabalho e, em seguida, criar contas de usuário no computador local.|  
 |Personalizar|Ao configurar um servidor de relatório para usar a autenticação personalizada, o acesso Anônimo é habilitado no servidor de relatório e as solicitações são aceitas sem nenhuma verificação de autenticação.<br /><br /> Depois que o ClickOnce recupera os arquivos de aplicativo, o Construtor de Relatórios abre uma conexão separada com um servidor de relatório. Os usuários devem digitar novamente suas credenciais para conectar o Construtor de Relatórios ao servidor de relatório. O Construtor de Relatórios não coleta credenciais a partir do Internet Explorer ou do ClickOnce.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Conectar a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriedades de sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Propriedades do sistema do Servidor de Relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

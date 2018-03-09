@@ -1,5 +1,5 @@
 ---
-title: sys.DM tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_active_snapshot_database_transactions
 - sys.dm_tran_active_snapshot_database_transactions
 - dm_tran_active_snapshot_database_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_active_snapshot_database_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58cd17e6d7a5a71ae2e922a492d6e52598954140
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cd3b38057150bbc8768169c362ec643b13a30c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,20 +69,20 @@ sys.dm_tran_active_snapshot_database_transactions
 |**transaction_id**|**bigint**|Número de identificação exclusivo atribuído à transação. O ID transação é usado principalmente para identificar a transação em operações de bloqueio.|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação. Trata-se de um número de sequência exclusivo atribuído a uma transação quando ela se inicia. Transações que não geram registros de versão e não usam verificações de instantâneo não receberão um número de sequência de transação.|  
 |**commit_sequence_num**|**bigint**|Número de sequência que indica quando a transação termina (confirmações ou paradas). Para transações ativas, o valor é NULL.|  
-|**is_snapshot**|**int**|0 = Não é uma transação de isolamento de instantâneo.<br /><br /> 1 = É uma transação de isolamento de instantâneo.|  
-|**session_id**|**int**|ID da sessão que iniciou a transação.|  
+|**is_snapshot**|**Int**|0 = Não é uma transação de isolamento de instantâneo.<br /><br /> 1 = É uma transação de isolamento de instantâneo.|  
+|**session_id**|**Int**|ID da sessão que iniciou a transação.|  
 |**first_snapshot_sequence_num**|**bigint**|Número de sequência de transação mais baixo das transações que estavam ativas quando o instantâneo foi feito. Em execução, uma transação de instantâneo faz um instantâneo de todas as transações ativas naquele momento. No caso de transações não instantâneo, esta coluna mostra 0.|  
-|**max_version_chain_traversed**|**int**|Comprimento máximo da cadeia de versão que é atravessada para localizar a versão consistente transacional.|  
+|**max_version_chain_traversed**|**Int**|Comprimento máximo da cadeia de versão que é atravessada para localizar a versão consistente transacional.|  
 |**average_version_chain_traversed**|**real**|Número médio de versões de linha nas cadeias de versão que são atravessadas.|  
 |**elapsed_time_seconds**|**bigint**|Tempo decorrido desde que a transação obteve seu número de sequência de transação.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
   
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sys.DM tran_active_snapshot_database_transactions** relata as transações que são atribuídas a um número de sequência da transação (XSN). O XSN é atribuído quando a transação acessa o armazenamento de versões pela primeira vez. Em um banco de dados habilitado para isolamento de instantâneo ou isolamento confirmado por leitura utilizando controle de versão de linhas, os exemplos mostram quando um XSN é atribuído a uma transação:  
   
 -   Se uma transação estiver executando em nível de isolamento de serializável, um XSN será atribuído quando a transação executar, pela primeira vez, uma instrução, como uma operação UPDATE, que cause a criação de uma versão de linha.  
@@ -157,7 +160,7 @@ elapsed_time_seconds
 -   XSN-60: Esta é a segunda transação que está sendo executada em isolamento de instantâneo. A saída mostra as mesmas informações de XSN-59.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir nível de ISOLAMENTO da transação &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

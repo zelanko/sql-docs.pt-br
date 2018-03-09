@@ -2,9 +2,11 @@
 title: "Estimar o tamanho de um índice não clusterizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,17 +21,20 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5b51166ff798bf62cbd24c3f9d0c640f0bc6161
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03eaa651f6184c9dc1dc53913e1662798664b983
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Siga estas etapas para estimar a quantidade de espaço necessária para armazenar um índice não clusterizado:  
   
 1.  Calcule as variáveis a serem usadas nas etapas 2 e 3.  
@@ -258,7 +263,7 @@ ms.lasthandoff: 11/09/2017
   
      Para obter informações sobre os requisitos de espaço de colunas esparsas, consulte [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Editor da tarefa (página de solicitações de perfil) de criação de perfil de dados | Microsoft Docs"
+title: "Editor de Tarefa Criação de Perfil de Dados (Página de Solicitações de Perfil) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Use a página **Solicitações de Perfil** do **Editor da Tarefa Criação de Perfil de Dados** para selecionar e configurar os perfis que deseja computar. Em uma tarefa Criação de Perfil de Dados simples, você pode calcular várias perfis para várias colunas ou combinações de colunas em várias tabelas ou exibições.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="requests-pane-options"></a>Opções do painel de solicitações  
  O painel de solicitações tem as seguintes opções:  
   
- **Exibição**  
+ **Exibir**  
  Selecione se deseja visualizar todos os perfis configurados para a tarefa ou somente um dos perfis.  
   
  As colunas no painel de solicitações foram alteradas com base na **Exibição** selecionada. Para obter mais informações sobre cada uma dessas colunas, consulte a próxima seção, "Colunas do painel de solicitações".  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  **Tipo de Perfil**  
  Selecione um perfil de dados das opções seguintes:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Solicitação do Perfil Chave de Candidato**|Compute um perfil Chave de Candidato.<br /><br /> Este perfil informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Este perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.|  
 |**Solicitação do Perfil Distribuição de Comprimento de Coluna**|Computa um perfil Distribuição de Comprimento da Coluna.<br /><br /> O perfil Distribuição de Comprimento de Coluna informa todos os comprimentos distintos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa. Este perfil pode ajudar a identificar problemas em seus dados, como valores que não são válidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos com dois caracteres e descobre valores maiores que dois caracteres.|  
@@ -138,25 +137,24 @@ ms.lasthandoff: 08/03/2017
   
  Essas opções variam com base no perfil selecionado. Para obter mais informações sobre as opções para tipos de perfil individual, consulte os seguintes tópicos:  
   
--   [Opções de solicitação do perfil chave de candidato &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de distribuição do coluna valor &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil Distribuição de Valor de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Comprimento de coluna distribuição opções de solicitação de perfil &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de padrão de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Padrão de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Funcional opções de solicitação de perfil de dependência &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Dependência Funcional &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de inclusão de valor &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

@@ -1,7 +1,7 @@
 ---
-title: sys. column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a23388dd2333694f779b9f78de81dd9659916b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,25 +39,25 @@ Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
-|**column_id**|**int**|ID da coluna columnstore.|  
-|**segment_id**|**int**|ID do rowgroup. Para compatibilidade com versões anteriores, o nome da coluna continua a ser chamado segment_id, mesmo que isso é a ID do grupo de linhas. Você pode identificar exclusivamente um segmento usando \<hobt_id, partition_id, column_id >, < segment_id >.|  
-|**version**|**int**|Versão de formato do segmento de coluna.|  
-|**encoding_type**|**int**|Tipo de codificação usada para esse segmento:<br /><br /> 1 = VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário (muito semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED - coluna não-cadeia de caracteres/binários com valores comuns no dicionário<br /><br /> 3 = STRING_HASH_BASED - coluna de cadeia de caracteres/binário com valores comuns no dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - cadeia de caracteres/binário com nenhum dicionário<br /><br /> Todas as codificações tirar proveito de codificação de bit de remessa e comprimento de execução quando possível.|  
-|**row_count**|**int**|Número de linhas no grupo de linhas.|  
-|**has_nulls**|**int**|1 se o segmento de coluna tiver valores nulos.|  
-|**base_id**|**bigint**|Id do valor base se tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, base_id será definido como 1.|  
-|**magnitude**|**float**|Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, magnitude é definido como 1.|  
-|**primary_dictionary_id**|**int**|Um valor 0 representa o dicionário global. Um valor de -1 indica que não há nenhum dicionário global criado para esta coluna.|  
-|**secondary_dictionary_id**|**int**|Um valor diferente de zero aponta para o dicionário de local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento.|  
+|**column_id**|**Int**|ID da coluna columnstore.|  
+|**segment_id**|**Int**|ID do rowgroup. Para compatibilidade com versões anteriores, o nome da coluna continua a ser chamado segment_id, mesmo que isso é a ID do grupo de linhas. Você pode identificar exclusivamente um segmento usando \<hobt_id, partition_id, column_id >, < segment_id >.|  
+|**version**|**Int**|Versão de formato do segmento de coluna.|  
+|**encoding_type**|**Int**|Tipo de codificação usada para esse segmento:<br /><br /> 1 = VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário (muito semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED - coluna não-cadeia de caracteres/binários com valores comuns no dicionário<br /><br /> 3 = STRING_HASH_BASED - coluna de cadeia de caracteres/binário com valores comuns no dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - cadeia de caracteres/binário com nenhum dicionário<br /><br /> Todas as codificações tirar proveito de codificação de bit de remessa e comprimento de execução quando possível.|  
+|**row_count**|**Int**|Número de linhas no grupo de linhas.|  
+|**has_nulls**|**Int**|1 se o segmento de coluna tiver valores nulos.|  
+|**base_id**|**bigint**|Id do valor base se tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, base_id será definido como -1.|  
+|**magnitude**|**float**|Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, magnitude é definido como -1.|  
+|**primary_dictionary_id**|**Int**|Um valor 0 representa o dicionário global. Um valor de -1 indica que não há nenhum dicionário global criado para esta coluna.|  
+|**secondary_dictionary_id**|**Int**|Um valor diferente de zero aponta para o dicionário de local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento.|  
 |**min_data_id**|**bigint**|Id de dados mínimo no segmento de coluna.|  
 |**max_data_id**|**bigint**|Id de dados máximo no segmento de coluna.|  
 |**null_value**|**bigint**|Valor usado para representar nulos.|  
 |**on_disk_size**|**bigint**|Tamanho do segmento em bytes.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A consulta a seguir retorna informações sobre segmentos de um índice columnstore.  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -80,8 +80,8 @@ GO
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [all_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [. computed_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guia de Índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

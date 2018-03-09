@@ -3,8 +3,9 @@ title: "Método GetRows (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetRows
 - Recordset15::raw_GetRows
-helpviewer_keywords: Getrows method [ADO]
+helpviewer_keywords:
+- Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera vários registros de uma [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto em uma matriz.  
@@ -48,10 +50,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Iniciar*  
  Opcional. Um **cadeia de caracteres** valor ou **Variant** que é avaliada para o indicador para o registro do que o **GetRows** comece a operação. Você também pode usar um [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
- *Campos*  
+ *Fields*  
  Opcional. Um **Variant** que representa um único nome de campo ou a posição ordinal ou uma matriz de nomes de campo ou números de posição ordinal. ADO retorna apenas os dados nesses campos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **GetRows** método para copiar os registros de um **registros** em uma matriz bidimensional. O primeiro subscrito identifica o campo e o segundo identifica o número do registro. O *matriz* variável é dimensionada automaticamente para o correto quando o tamanho de **GetRows** método retorna os dados.  
   
  Se você não especificar um valor para o *linhas* argumento, o **GetRows** método automaticamente recupera todos os registros de **Recordset** objeto. Se você solicitar registros que não estão disponíveis, **GetRows** retorna somente o número de registros disponíveis.  

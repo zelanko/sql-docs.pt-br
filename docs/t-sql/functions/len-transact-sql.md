@@ -22,17 +22,16 @@ helpviewer_keywords:
 - characters [SQL Server], number of
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-caps.latest.revision: 47
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 532b996c23a8f9746a52434d78783da2a24d1add
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4f81bca5986279d53ea1fce44c50ab400ad03d50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,9 +56,9 @@ LEN ( string_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint** se *expressão* é o **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados. Caso contrário, **int**.  
   
- Se você estiver usando agrupamentos de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Se você estiver usando agrupamentos de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  LEN exclui os espaços em branco. Se esse for um problema, considere o uso de [DATALENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) função trim não a cadeia de caracteres. Se o processamento de uma cadeia de caracteres unicode, DATALENGTH retornará duas vezes o número de caracteres. O exemplo a seguir demonstra LEN e DATALENGTH com um espaço à direita.  
   
 ```  
@@ -105,13 +104,14 @@ FNameLength  FirstName  LastName
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)   
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [ESQUERDA &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)   
- [DIREITA &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
   
   
-
 
 

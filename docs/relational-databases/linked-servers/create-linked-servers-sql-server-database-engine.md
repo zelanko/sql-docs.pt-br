@@ -8,7 +8,8 @@ ms.service:
 ms.component: linked-servers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.swb.linkedserver.properties.security.f1
 - sql13.swb.linkedserver.properties.provider.f1
 - sql13.swb.linkedserver.properties.options.f1
-helpviewer_keywords: linked servers [SQL Server], creating
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aef8e627adca014fbc9213f0a88f0588a950a4ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,14 +202,14 @@ ms.lasthandoff: 11/17/2017
      **Oferece suporte ao operador 'Like'**  
      Indica que o provedor oferece suporte a consultas que usam a palavra-chave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para criar um servidor vinculado usando [!INCLUDE[tsql](../../includes/tsql-md.md)], use as instruções [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
   
 1.  No Editor de Consultas, digite o comando [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir para vincular a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +221,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Execute o código a seguir para configurar o servidor vinculado para usar as credenciais de domínio do logon que está usando o servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +236,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Execute o código a seguir para testar a conexão com o servidor vinculado. Este exemplo retorna os nomes dos bancos de dados no servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +246,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Use nomes de quatro partes para referir-se a um objeto em um servidor vinculado. Execute o código a seguir para retornar uma lista de todos os logons no servidor local e seus logons correspondentes no servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -254,7 +256,7 @@ ms.lasthandoff: 11/17/2017
   
      Quando NULL é retornado para o logon do servidor vinculado, ele indica que o logon não existe no servidor vinculado. Esses logons não poderão usar o servidor vinculado, a menos que o servidor vinculado seja configurado para passar um contexto de segurança diferente ou o servidor vinculado aceite conexões anônimas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

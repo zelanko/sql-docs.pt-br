@@ -3,8 +3,9 @@ title: "A execução do Script SQL do catálogo de endereço | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab669066b0440807a4a2475817e0dbda047cb79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 684c2d49dd46433efe676e5cca8c7f9ce7847bf2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sql-script"></a>A execução do Script SQL do catálogo de endereço
 > [!IMPORTANT]

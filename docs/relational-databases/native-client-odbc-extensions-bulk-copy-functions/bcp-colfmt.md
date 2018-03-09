@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a18017f252d787ed9a5322e32ccf6997b208890
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c19dd268f958bc35f6e41fd6a6283ca23beb60e9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função **bcp_colfmt** permite especificar o formato do arquivo de usuário para cópias em massa. Para cópia em massa, um formato contém as seguintes partes:  
   
 -   Um mapeamento de colunas do arquivo de usuário para colunas de banco de dados.  
@@ -144,7 +144,7 @@ RETCODE bcp_colfmt (
  O [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) função pode ser usada para manter a especificação de formato.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_colfmt a recursos aprimorados de data e hora  
- Para informações aboutt ele tipos usado com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para aprimorados de data e hora tipos &#40; OLE DB e ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Para obter informações sobre os tipos usados com o *eUserDataType* parâmetro para tipos de data/hora, consulte [alterações de cópia em massa para aprimorados de data e hora tipos &#40; OLE DB e ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Para obter mais informações, consulte [data e hora melhorias &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

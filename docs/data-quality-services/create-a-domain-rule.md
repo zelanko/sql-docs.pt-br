@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
   Este tópico descreve como criar uma regra de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio é uma condição usada para validar, corrigir e padronizar valores de domínio. A regra de domínio deve se repetir em um domínio para que os valores de domínio sejam considerados precisos e em conformidade com os requisitos comerciais. As regras de domínio podem incluir regras de validação usadas para validar valores de domínio, mas não são usadas para corrigir dados em um projeto de qualidade de dados. As regras também incluem regras de padronização que são aplicadas com base nos dados válidos e usadas na correção de dados.  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Clique em **Descartar Todas as Alterações** para remover qualquer alteração feita nas regras de domínio, fazendo a reversão para as regras previamente aplicadas, sabendo que qualquer alteração feita após a última aplicação das regras não se aplicará mais. A validade de cada valor no domínio será atualizada para estar em conformidade com as regras aplicadas anteriormente, e não com as alterações descartadas.  
   
-3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  Você tem alternativas para escolher ao criar uma regra de domínio. Por exemplo, para validar se os valores começarão com a letra A, B ou C, você pode criar uma regra simples com uma condição complexa (como uma expressão regular com caracteres de pipe) ou criar uma regra complexa que contém várias condições simples. Um exemplo da primeira regra é “Valor contém a expressão regular (^A|^B|^C)”. Um exemplo da segunda regra é “’Valor começa com A’ OU ‘Valor começa com B’ OU ‘Valor começa com C’”.  
   
-|Condição|Descrição|Exemplo|  
+|Condição|Description|Exemplo|  
 |---------------|-----------------|-------------|  
 |Comprimento é igual a|Somente os valores compostos pelo número de caracteres designado pelo operando serão válidos.|Operando de exemplo: 3<br /><br /> Valor válido: BB1<br /><br /> Valor inválido: AA|  
 |O comprimento é maior ou igual a|Somente os valores compostos pelo número de caracteres designado pelo operando, ou um número de caracteres superior, serão válidos.|Operando de exemplo: 3<br /><br /> Valores válidos: BB1, BBAA<br /><br /> Valor inválido: AA|  

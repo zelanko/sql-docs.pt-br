@@ -2,29 +2,34 @@
 title: "Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c2dd37cf69f59d90d1f9e271ef4c41e602d8c5e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização in-loco de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
@@ -42,7 +47,7 @@ O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 > * [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Fazer upgrade do Power Pivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto, e ser um administrador local.  
   
 > [!WARNING]  
@@ -108,7 +113,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
      **Instâncias instaladas**  — A grade mostrará as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador onde a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. O fluxo de trabalho do restante deste tópico depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
+13. O fluxo de trabalho do restante deste artigo depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
   
 14. Na página Configuração do Servidor — Contas de Serviço, as contas de serviço padrão são exibidas para os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos que estão sendo atualizados.  
   
@@ -116,7 +121,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
-     **Observação sobre segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
@@ -132,7 +137,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 20. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Depois de atualizar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conclua as seguintes tarefas:  
   
 -   **Registre os servidores** — A atualização remove as configurações do Registro da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar, você deve registrar os servidores novamente.  
@@ -141,7 +146,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 -   **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** – Para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações sobre a configuração da área de superfície, consulte o arquivo leiame desta versão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores_excluída](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

@@ -1,65 +1,73 @@
 ---
-title: "Introdução à escala SSIS Out em um único computador | Microsoft Docs"
+title: "Introdução ao SSIS Scale Out em um único computador | Microsoft Docs"
+ms.description: This article shows you everything you need to know to get started with SSIS Scale Out on a single computer
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.date: 12/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
+ms.reviewer: douglasl
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7175c63be4c0e15e50f2020f75d283ac0e3dfdbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ed813ca6ea9775c6aeb3c40dac63d7ec5b630ee5
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2017
 ---
-# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introdução ao Integration Services (SSIS) expansão em um único computador
-Esta seção fornece as diretrizes de configuração de integração de serviços de expansão em um ambiente de uma caixa com as configurações padrão.
+# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introdução ao SSIS (Integration Services) Scale Out em um único computador
+Esta seção fornece diretrizes de configuração do Integration Services Scale Out em um ambiente de um único computador com as configurações padrão.
 
 ## <a name="1-install-sql-server-features"></a>1. Instalar recursos do SQL Server
-No Assistente de instalação do SQL Server, selecione Serviços de mecanismo de banco de dados, Integration Services, escala Out mestre e escala Out trabalhador no **seleção de recursos** página.
+No assistente de instalação do SQL Server, na página **Seleção de Recursos**, selecione os seguintes itens:
+-   Serviços do Mecanismo de Banco de Dados
+-   Integration Services
+    -   Mestre do Scale Out
+    -   Trabalho do Scale Out
 
-![Recurso Onebox selecione 1](media/feature-select-onebox1.PNG)
+![A primeira metade da lista de Seleção de Recursos](media/feature-select-onebox1.PNG)
 
-![Recurso selecione Onebox 2](media/feature-select-onebox2.PNG)
+![A segunda metade da lista de Seleção de Recursos](media/feature-select-onebox2.PNG)
 
-Sobre o **configuração do servidor** página, basta clicar em "Avançar" para usar contas de serviço padrão e tipos de inicialização.
+Na página **Configuração do Servidor**, clique em **Avançar** para aceitar as contas de serviço e os tipos de inicialização padrão.
 
-Sobre o **configuração do mecanismo de banco de dados** página, selecione "**modo misto**"e clique em"**adicionar usuário atual**" botão. 
+Na página **Configuração do Mecanismo de Banco de Dados**, selecione **Modo Misto** e clique em **Adicionar Usuário Atual**. 
 
-![Configuração do mecanismo](media/engine-config.PNG)
+![Configuração do Mecanismo](media/engine-config.PNG)
 
-Um o **escala Out configuração do Integration Services - mestre nó** e **escala Out configuração do Integration Services - trabalho nó** páginas, basta clicar em "Avançar" para aplicar as configurações padrão de porta e certificados.
+Nas páginas **Configuração do Integration Services Scale Out – Nó Mestre** e **Configuração do Integration Services Scale Out – Nó de Trabalho**, clique em **Avançar** para aceitar as configurações padrão da porta e dos certificados.
 
 Conclua o Assistente de instalação do SQL Server.
 
 ## <a name="2-install-sql-server-management-studio"></a>2. Instalar o SQL Server Management Studio
 
-[Baixar](../../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio e instalá-lo.
+Baixe e instale o [SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="3-enable-scale-out"></a>3. Habilitar de expansão
-Abra o SSMS e conecte-se à instância local do Sql Server.
-Clique com botão direito **catálogos do Integration Services** no Pesquisador de objetos e selecione **criar catálogo**.
+## <a name="3-enable-scale-out"></a>3. Habilitar Scale Out
+Abra o SSMS e conecte-se a uma instância local do SQL Server.
+No Pesquisador de Objetos, clique com o botão direito do mouse em **Catálogos do Integration Services** e selecione **Criar Catálogo**.
 
-No **criar catálogo** caixa de diálogo, **habilitar este servidor como o mestre de expansão do SSIS** é selecionada por padrão. Basta crie o catálogo como de costume. 
+Na caixa de diálogo **Criar Catálogo**, a opção **Habilitar este servidor como o mestre do SSIS Scale Out** está selecionada por padrão.
 
-## <a name="4-enable-scale-out-worker"></a>4. Habilitar o trabalho de expansão
-No SSMS, clique com botão direito **SSISDB** e selecione **gerenciar expansão...** . 
-![Gerenciar a expansão](media/manage-scale-out.PNG)
+## <a name="4-enable-a-scale-out-worker"></a>4. Habilitar um Trabalho do Scale Out
+No SSMS, clique com o botão direito do mouse em **SSISDB** e selecione **Gerenciar Scale Out**. 
 
-O Integration Services escala Out Manager será exibida. Você pode gerenciar a expansão com ele. Para obter mais informações, consulte [escala Out Gerenciador de serviços de integração](integration-services-ssis-scale-out-manager.md).
+![Gerenciar Scale Out](media/manage-scale-out.PNG)
 
-Para habilitar o trabalho de fora de escala, alterne para o **Gerenciador de trabalho** e selecione o trabalho que você deseja habilitar. O trabalhador originalmente está desabilitado. Clique em **habilitar trabalho** para habilitá-lo.
+O aplicativo Gerenciador do Integration Services Scale Out será aberto. Para obter mais informações, consulte [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md).
+
+Para habilitar um Trabalho do Scale Out, alterne para o **Gerenciador do Trabalho** e selecione o trabalho que deseja habilitar. Os trabalhos estão desabilitados por padrão. Clique em **Habilitar Trabalho** para habilitar o trabalho selecionado.
 
 ## <a name="5-run-packages-in-scale-out"></a>5. Executar pacotes em Expansão
-Agora, você está pronto para executar pacotes SSIS em expansão. Consulte [executar pacotes do Integration Services (SSIS) expansão](run-packages-in-integration-services-ssis-scale-out.md).
+Agora, você está pronto para executar pacotes do SSIS no Scale Out. Para obter mais informações, consulte [Executar pacotes no SSIS (Integration Services) Scale Out](run-packages-in-integration-services-ssis-scale-out.md).
 
-
-Para adicionar mais trabalhadores de expansão, consulte [adicionar um trabalhador escala Out com o Gerenciador de fora da escala](add-scale-out-worker.md).
+## <a name="next-steps"></a>Próximas etapas
+-   [Adicionar um Trabalho do Scale Out com o Gerenciador do Scale Out](add-scale-out-worker.md).

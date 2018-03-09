@@ -2,16 +2,13 @@
 title: "Modos de exibição em modelos multidimensionais da fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Exibições de fontes de dados em modelos multidimensionais
-  Uma DSV (exibição da fonte de dados) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e das dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma DSV (exibição da fonte de dados) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e das dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  
   
  Você pode compilar várias exibições de fontes de dados em um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em uma ou mais fontes de dados e construir cada uma delas para atender aos requisitos de uma solução diferente.  
   

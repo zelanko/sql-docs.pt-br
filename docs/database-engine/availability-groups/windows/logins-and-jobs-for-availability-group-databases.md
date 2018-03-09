@@ -2,9 +2,12 @@
 title: Logons e trabalhos dos bancos de dados do grupo de disponibilidade | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce98cfd35c45966509fcee5d4cc9594fd4c48139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b89518482de615615229457a7195311ece7ab6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Logons e trabalhos dos bancos de dados do grupo de disponibilidade
-  Você deve manter o mesmo conjunto de logons de usuários e trabalhos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent rotineiramente em todo banco de dados primário de um grupo de disponibilidade AlwaysOn e nos bancos de dados secundários correspondentes. Os logons e trabalhos devem ser reproduzidos em toda instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospede uma réplica de disponibilidade para o grupo de disponibilidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você deve manter o mesmo conjunto de logons de usuários e trabalhos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent rotineiramente em todo banco de dados primário de um grupo de disponibilidade Always On e nos bancos de dados secundários correspondentes. Os logons e trabalhos devem ser reproduzidos em toda instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospede uma réplica de disponibilidade para o grupo de disponibilidade.  
   
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Trabalhos do agente**  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
      Se qualquer um dos seus aplicativos usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Autenticação ou um logon local do Windows, consulte [Os logons dos aplicativos que usam a autenticação do SQL Server ou Logon local do Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), mais adiante neste tópico.  
   
     > [!NOTE]  
-    >  Um usuário de banco de dados para o qual o logon do SQL Server não está definido ou está definido incorretamente em uma instância do servidor não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. Se um usuário se tornar órfão em uma determinada instância de servidor, você poderá configurar os logons de usuários a qualquer momento. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Um usuário de banco de dados para o qual o logon do SQL Server não está definido ou está definido incorretamente em uma instância do servidor não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. Se um usuário se tornar órfão em uma determinada instância de servidor, você poderá configurar os logons de usuários a qualquer momento. Para obter mais informações, consulte [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Metadados adicionais**  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Bancos de dados independentes](../../../relational-databases/databases/contained-databases.md)   
  [Criar trabalhos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  

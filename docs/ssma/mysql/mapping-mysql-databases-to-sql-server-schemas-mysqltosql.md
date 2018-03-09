@@ -1,12 +1,14 @@
 ---
 title: Mapeamento de bancos de dados MySQL para esquemas SQL Server (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f6472656dbfd31ca64348d066cca19f303b4a5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapeamento de bancos de dados MySQL para esquemas SQL Server (MySQLToSQL)
 Por padrão, o SSMA para MySQL migra todos os objetos em um esquema do MySQL para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou nomeado para o esquema de banco de dados do SQL Azure. No entanto, você pode personalizar o mapeamento entre esquemas de MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou bancos de dados do SQL Azure.  
@@ -74,13 +75,12 @@ Se você personalizar o mapeamento entre um esquema MySQL e um esquema do SQL Se
   
 1.  Na guia mapeamento de esquema, selecione qualquer linha e clique em **Redefinir para padrão** para reverter para o banco de dados padrão e o esquema.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Se você quiser analisar a conversão de objetos do MySQL em objetos do SQL Server ou SQL Azure, você pode [criar um relatório de conversão](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) caso contrário, você pode [converter as definições de objeto de banco de dados MySQL](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) em esquemas do SQL Server ou SQL Azure  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configurações de projeto &#40; Conversão de &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Conectar-se ao banco de dados SQL do Azure &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conectar-se ao SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-

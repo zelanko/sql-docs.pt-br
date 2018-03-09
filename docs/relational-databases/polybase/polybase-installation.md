@@ -8,28 +8,30 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>Instalação do PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Para instalar uma versão de avaliação do SQL Server, vá para [avaliações do SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Edição de avaliação do SQL Server de 64 bits  
   
@@ -52,6 +54,7 @@ Antes de iniciar a instalação do PolyBase nas Instâncias do SQL Server, é bo
 - Todos os computadores estão no mesmo domínio.
 - A mesma conta de serviço e senha sejam usadas durante a instalação.
 - As Instâncias do SQL Server podem se comunicar entre si pela rede.
+- As instâncias do SQL Server são todas da mesma versão do SQL Server.
 
 Depois de instalar o PolyBase como um grupo autônomo ou de escala horizontal, não é possível alterar essa configuração. Você precisará desinstalar e reinstalar o recurso para alterar essa configuração.
 
@@ -83,15 +86,15 @@ Depois de instalar o PolyBase como um grupo autônomo ou de escala horizontal, n
 ##  <a name="installing"></a> Instalar usando um prompt de comando  
  Use os valores nesta tabela para criar scripts de instalação. Os dois serviços, **Mecanismo de PolyBase do SQL Server** e **Serviço de Movimentação de Dados de PolyBase do SQL Server** devem ser executados na mesma conta. Em um grupo de escala horizontal do PolyBase, os serviços do PolyBase em todos os nós devem ser executados na mesma conta de domínio.  
   
-|Componente do SQL Server|Parâmetro e valores|Descrição|  
+|Componente do SQL Server|Parâmetro e valores|Description|  
 |--------------------------|--------------------------|-----------------|  
 |Controle de instalação do SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Seleciona o recurso PolyBase.|  
 |Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
-|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
-|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual|  
+|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
+|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual|  
 |Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica a conta do serviço de movimentação de dados. O padrão é **NT Authority\NETWORK SERVICE**.|  
-|Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica a senha para a conta de movimentação de dados.|  
-|Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica o modo de inicialização para o serviço de movimentação de dados: Automático (padrão), Desabilitado e Manual|  
+|Serviço de movimentação de dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica a senha para a conta de movimentação de dados.|  
+|Serviço de movimentação de dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica o modo de inicialização para o serviço de movimentação de dados: Automático (padrão), Desabilitado e Manual|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica se a instância do SQL Server será usada como parte do grupo computacional de escala horizontal do PolyBase. <br />Valores com suporte: **True**, **False**|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
@@ -116,7 +119,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>Como confirmar a instalação  
  Execute o comando a seguir. Se o PolyBase estiver instalado, retornará 1; caso contrário, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   

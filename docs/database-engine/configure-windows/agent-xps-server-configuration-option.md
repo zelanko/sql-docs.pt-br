@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 290696ab631e76cca038799cde6973d568f50c0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abd44bb6bfd0d8cf20525c6a0d6e9ee55b20bde
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-xps-server-configuration-option"></a>Opção Agent XPs de configuração do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. 
   
-```tsql 
+```sql 
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -64,7 +64,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
  [Iniciar, parar ou pausar o serviço do SQL Server Agent](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

@@ -2,16 +2,13 @@
 title: "Definir o write-back de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
-  Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
   
  Os dados de write-back podem ser procurados ou excluídos. Também é possível converter os dados de write-back em uma partição. Em uma partição habilitada para gravação, é possível usar funções de cubo para conceder acesso de leitura/gravação a usuários e grupos de usuários e para limitar o acesso a células ou grupos de células específicos da partição.  
   
@@ -71,8 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Habilitar Write-back em um cubo OLAP no nível de célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitando e protegendo a entrada de dados com write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Habilitando o write-back em um cubo OLAP no nível da célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitando e protegendo a entrada de dados com o write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

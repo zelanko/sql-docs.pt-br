@@ -2,9 +2,12 @@
 title: "Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 851ca8cf8c899f5028c2de73e59186000ee93abf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: abf07c71d02103153a968bcbb102a25e563387a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
-  Este tópico descreve como você pode recuperar o acesso ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador do sistema. Um administrador do sistema pode perder o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a um dos seguintes motivos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como você pode recuperar o acesso ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador do sistema. Um administrador do sistema pode perder o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a um dos seguintes motivos:  
   
 -   Todos os logons que são membros da função de servidor fixa sysadmin foram removidos por engano.  
   
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/09/2017
   
  Você poderá se conectar normalmente a uma das contas, que agora é membro da função de servidor fixa de **sysadmin** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o SQL Server no modo de usuário único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

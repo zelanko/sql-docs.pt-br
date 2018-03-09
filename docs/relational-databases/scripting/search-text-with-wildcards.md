@@ -2,10 +2,14 @@
 title: Pesquisar texto com curingas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +20,19 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], wildcard searches
 - wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2030de50a7fb70e9e276803af12300bbb4ecf0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 37b204b63dbc6cf39d2be442a16afc7cf6b5c970
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
-  As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **do** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de diálogo **Localizar e Substituir** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   
@@ -38,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|Description|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  
@@ -46,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 |Um ou mais caracteres|*|Corresponde a qualquer um ou mais caracteres. Por exemplo, new* corresponde a qualquer texto que inclui "new", como newfile.txt.|  
 |Conjunto de caracteres|[ ]|Corresponde a qualquer um dos caracteres especificados no conjunto.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar texto com expressões regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5efcf8fb5b5169bbf03390b02ddc068bf6a30d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +54,6 @@ ms.lasthandoff: 11/17/2017
  CONTAINSTABLE é útil para os mesmos tipos de correspondências como o [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) e usa as mesmas condições de pesquisa que contém.  
   
  Diferentemente de CONTAINS, as consultas que usam CONTAINSTABLE retornam um valor de classificação de relevância (RANK) e uma chave de texto completo (KEY) para cada linha.  Para obter informações sobre os formulários de pesquisas de texto completo que são suportados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([visualização em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -126,7 +124,7 @@ CONTAINSTABLE
   
  *tabela* não é possível especificar um nome de servidor e não pode ser usado em consultas em servidores vinculados.  
   
- *nome da coluna*  
+ *column_name*  
  É o nome de uma ou mais colunas indexadas para pesquisa de texto completo. As colunas podem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **texto**, **ntext**, **imagem**, **xml**, **varbinary**, ou **varbinary (max)**.  
   
  *column_list*  
@@ -138,7 +136,7 @@ CONTAINSTABLE
  IDIOMA *language_term*  
  É o idioma cujos recursos serão usados para separação de palavras, lematização e dicionário de sinônimos e palavras de ruído (ou [palavra irrelevante](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) remoção como parte da consulta. Esse parâmetro é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se *language_term* for especificado, o idioma que ele representa será aplicado a todos os elementos da condição de pesquisa. Se nenhum valor for especificado, o idioma de texto completo da coluna será usado.  
   
- Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificando *idioma**language_term* pode aumentar a probabilidade de uma boa correspondência.  
+ Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificando *idioma * * language_term* pode aumentar a probabilidade de uma boa correspondência.  
   
  Quando especificado como uma cadeia de caracteres, *language_term* corresponde do **alias** valor de coluna no [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) exibição de compatibilidade.  A cadeia de caracteres deve ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é o LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal do LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
@@ -152,7 +150,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Especifica o texto a ser pesquisado em *column_name* e as condições para uma correspondência. Para obter informações sobre critérios de pesquisa, consulte [CONTAINS &#40; Transact-SQL &#41; ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As funções e os predicados de texto completo trabalham em uma única tabela, que está implícita no predicado FROM. Para pesquisar em várias tabelas, use uma tabela unida na cláusula FROM para pesquisar em um conjunto de resultados que é o produto de duas ou mais tabelas.  
   
  A tabela retornada tem uma coluna denominada **chave** que contém valores de chave de texto completo. Cada tabela indexada de texto completo tem uma coluna cujos valores têm garantia de exclusividade e os valores retornados no **chave** coluna são os valores de chave de texto completo das linhas que correspondem aos critérios de seleção especificados de pesquisa contains condição. O **TableFulltextKeyColumn** propriedade, obtida da função OBJECTPROPERTYEX, fornece a identidade dessa coluna de chave exclusiva. Para obter a ID da coluna associada à chave de texto completo do índice de texto completo, use **fulltext_indexes**. Para obter mais informações, consulte [fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  

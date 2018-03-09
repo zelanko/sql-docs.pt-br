@@ -2,32 +2,30 @@
 title: "Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação
-  Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
   
  Este tópico contém as seguintes seções:  
   

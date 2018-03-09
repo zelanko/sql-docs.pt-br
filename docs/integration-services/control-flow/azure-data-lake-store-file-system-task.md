@@ -1,5 +1,5 @@
 ---
-title: "Tarefa de sistema de arquivos do repositório Azure Data Lake | Microsoft Docs"
+title: Tarefa do sistema de arquivos do Azure Data Lake Store | Microsoft Docs
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -17,44 +17,42 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 5b04b005bde1b6ef3f930de614c8e7fb003b0985
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="azure-data-lake-store-file-system-task"></a>Tarefa de sistema de arquivos do repositório Azure Data Lake
+# <a name="azure-data-lake-store-file-system-task"></a>Tarefa do sistema de arquivos do Azure Data Lake Store
 
-A tarefa de sistema de arquivos do Azure Data Lake repositório permite que os usuários a executar várias operações de sistema de arquivos em [Azure Data Lake ADLS (repositório)](https://azure.microsoft.com/services/data-lake-store/).
+A Tarefa do Sistema de Arquivos do Azure Data Lake Store permite aos usuários executar várias operações de sistema de arquivos no [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
-A tarefa de sistema de arquivos do Azure Data Lake repositório é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+A Tarefa de Sistema de Arquivos do Azure Data Lake Store é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Configurar a tarefa de sistema de arquivos do repositório Azure Data Lake
+## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Configurar a tarefa do sistema de arquivos do Azure Data Lake Store
 
-Para adicionar uma tarefa de sistema de arquivos do Azure Data Lake repositório para um pacote, arraste-o na caixa de ferramentas do SSIS para a tela do designer. Em seguida, clique duas vezes em tarefa, ou a tarefa e selecione **editar**para abrir o **Editor da tarefa do sistema do arquivo armazenamento do Azure Data Lake** caixa de diálogo.
+Para adicionar uma tarefa do sistema de arquivos do Azure Data Lake Store para um pacote, arraste-o da Caixa de Ferramentas do SSIS para a tela do designer. Em seguida, clique duas vezes na tarefa ou clique com o botão direito do mouse na tarefa e selecione **Editar** para abrir a caixa de diálogo **Editor de Tarefa do Sistema de Arquivos do Azure Data Lake Store**.
 
-O **operação** propriedade especifica a operação do sistema de arquivos para executar. Selecione uma das seguintes operações:
+A propriedade **Operation** especifica a operação do sistema de arquivos a ser executada. Selecione uma das operações a seguir:
 
-- **CopyToADLS:** carregar arquivos para ADLS.
+- **CopyToADLS:** carregar arquivos para o ADLS.
 - **CopyFromADLS:** baixar arquivos do ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurar as propriedades para a operação
-Para qualquer operação, você precisa especificar um Gerenciador de conexão do Azure Data Lake.
+Para qualquer operação, você precisa especificar um gerenciador de conexões do Azure Data Lake.
 
 Aqui estão as propriedades específicas para cada operação:
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory:** Especifica o diretório local de origem que contém os arquivos a serem carregados.
-- **FileNamePattern:** Especifica um filtro de nome de arquivo para arquivos de origem. Somente os arquivos cujo nome corresponde ao padrão especificado são carregados. Curingas `*` e `?` têm suporte.
-- **SearchRecursively:** Especifica se a pesquisa recursivamente dentro do diretório de origem para os arquivos carregar.
-- **AzureDataLakeDirectory:** Especifica o diretório de destino do ADLS para carregar arquivos.
-- **FileExpiry:** Especifica uma data de expiração para os arquivos carregados ADLS. Essa propriedade deixe em branco para indicar que os arquivos nunca expirarem.
+- **LocalDirectory:** especifica o diretório de origem local que contém os arquivos a serem carregados.
+- **FileNamePattern:** especifica um filtro de nome de arquivo para arquivos de origem. Somente os arquivos cujo nome corresponde ao padrão especificado são carregados. Curingas `*` e `?` são compatíveis.
+- **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a serem carregados.
+- **AzureDataLakeDirectory:** especifica o diretório de destino do ADLS para o qual carregar arquivos.
+- **FileExpiry:** especifica uma data de expiração para os arquivos carregados para o ADLS. Deixe essa propriedade em branco para indicar que os arquivos nunca expiram.
 
 ### <a name="copyfromadls"></a>CopyFromADLS
-- **AzureDataLakeDirectory:** Especifica o diretório de origem do ADLS que contém os arquivos para baixar.
-- **SearchRecursively:** Especifica se deseja pesquisar dentro do diretório de origem de arquivos para baixar de forma recursiva.
-- **LocalDirectory:** Especifica o diretório de destino para armazenar arquivos baixados.
-
+- **AzureDataLakeDirectory:** especifica o diretório de origem do ADLS que contém os arquivos a serem baixados.
+- **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a serem baixados.
+- **LocalDirectory:** especifica o diretório de destino no qual armazenar arquivos baixados.

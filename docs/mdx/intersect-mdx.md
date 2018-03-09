@@ -2,10 +2,13 @@
 title: "Função Intersect (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: INTERSECT
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5b0c893ae58a1040912366492b8cec0ddcbc4a86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d073e4bc1916720224b7b355b00e23c35430b86a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="intersect-mdx"></a>Função Intersect (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a interseção de dois conjuntos de entrada, mantendo as duplicatas.  
   
@@ -42,7 +45,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Intersect** função retorna a interseção de dois conjuntos. Por padrão, a função remove as duplicações antes de interseccionar os dois conjuntos. Os dois conjuntos devem ter a mesma dimensionalidade.  
   
  Opcional **todos os** sinalizador preservará as duplicações. Se **todos os** for especificado, o **Intersect** função intercepta fará elementos como de costume e também interseccionará cada duplicação do primeiro conjunto que tem uma duplicação correspondente no segundo conjunto. Os dois conjuntos devem ter a mesma dimensionalidade.  
@@ -80,7 +83,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

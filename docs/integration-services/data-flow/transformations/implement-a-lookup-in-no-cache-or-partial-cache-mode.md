@@ -1,5 +1,5 @@
 ---
-title: Implementar uma pesquisa no modo sem Cache ou Cache parcial | Microsoft Docs
+title: Implementar uma pesquisa no modo Sem cache ou Cache parcial | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4312836f421788df8a2927afc8f6e0986a0490d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
   Você pode configurar a transformação Pesquisa para usar o modo cache parcial ou sem-cache:  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/03/2017
   
 14. Clique em **OK** para salvar suas alterações na transformação Pesquisa e, então, execute o pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

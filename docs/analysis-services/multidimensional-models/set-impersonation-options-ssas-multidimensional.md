@@ -2,16 +2,13 @@
 title: "Definir opções de representação (SSAS - Multidimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
@@ -22,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
-  Ao criar um objeto **data source** em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao criar um **fonte de dados** do objeto em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
   
  Para conexões que usam a autenticação do Windows, a opção de representação também determina a identidade de usuário sob a qual as consultas são executadas na fonte de dados externa. Por exemplo, se você definir a opção de representação como **contoso\dbuser**, as consultas usadas para recuperar os dados durante o processamento serão executadas como **contoso\dbuser** no servidor de banco de dados.  
   
@@ -105,7 +102,7 @@ ms.lasthandoff: 11/17/2017
 
  Para bancos de dados multidimensionais, **Padrão** significa o uso da conta de serviço e do usuário atual para operações de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

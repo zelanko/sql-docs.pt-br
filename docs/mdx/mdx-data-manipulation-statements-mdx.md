@@ -2,10 +2,13 @@
 title: "Instruções de manipulação de dados MDX (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 81d4e10f24ef6a7b10f011b6f545b46dde5facf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 91ef03b9b43dba3e76d921abf3a32fdbb456f49b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Instruções de manipulação de dados MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Na linguagem MDX, as instruções de manipulação de dados recuperam e manipulam dados de objetos multidimensionais. A tabela a seguir lista as instruções de manipulação de dados em MDX.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 |[Instrução SELECT &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)|Recupera dados de um cubo especificado.|  
 |[Instrução UPDATE CUBE &#40; MDX &#41;](../mdx/mdx-data-manipulation-update-cube.md)|Atualiza o valor de uma célula folha ou célula não folha especificada em um cubo, alocando opcionalmente o valor para uma célula não folha especificada por células folha dependentes.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de instrução MDX &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  

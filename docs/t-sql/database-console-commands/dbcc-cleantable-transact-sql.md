@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CLEANTABLE_TSQL
 - DBCC CLEANTABLE
 - CLEANTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk space [SQL Server], reclaiming
 - reclaiming space
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Recupera o espaço de colunas de comprimento variável descartadas em tabelas ou exibições indexadas.
@@ -56,7 +58,7 @@ DBCC CLEANTABLE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  É o banco de dados ao qual pertence a tabela a ser limpa. Se 0 for especificado, será usado o banco de dados atual. Nomes de banco de dados devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
@@ -68,7 +70,7 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC CLEANTABLE recupera espaço depois que uma coluna de comprimento variável é descartada. Uma coluna de comprimento variável pode ser um dos seguintes tipos de dados: **varchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **varbinary**, **varbinary (max)**, **texto**, **ntext**, **imagem**,  **sql_variant**, e **xml**. O comando não recupera espaço depois que uma coluna de comprimento fixo é descartada.
 Se as colunas descartadas forem armazenadas em linha, DBCC CLEANTABLE recuperará espaço da unidade de alocação IN_ROW_DATA da tabela. Se as colunas forem armazenadas fora de linha, o espaço será recuperado da unidade de alocação LOB_DATA ou ROW_OVERFLOW_DATA, dependendo do tipo de dados da coluna descartada. Se o espaço recuperado de uma página ROW_OVERFLOW_DATA ou LOB_DATA resultar em uma página vazia, DBCC CLEANTABLE removerá a página.
 DBCC CLEANTABLE executa como uma ou mais transações. Se não for especificado um tamanho de lote, o comando processará a tabela inteira em uma transação e a tabela será bloqueada exclusivamente durante a operação. Para algumas tabelas grandes, o comprimento da única transação e o espaço do log requeridos podem ser muito grandes. Se um tamanho de lote for especificado, o comando executará em uma série de transações, cada qual incluindo o número especificado de linhas. DBCC CLEANTABLE não pode ser executado como uma transação dentro de outra transação.
@@ -165,6 +167,6 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

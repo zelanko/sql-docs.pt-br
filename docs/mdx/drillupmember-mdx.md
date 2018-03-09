@@ -2,34 +2,32 @@
 title: DrillupMember (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLUPMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrillupMember function
+f1_keywords: DRILLUPMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: DrillupMember function
 ms.assetid: debcd966-ea4e-4ecf-8600-0a4d346d03f8
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7062d26fa444eefcdcf77519be5e6d28e42ce9cf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b00ed25dc0771982e8ce48a005faded40b029d72
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna os membros em um conjunto especificado não descendentes de membros em um segundo conjunto especificado.  
   
@@ -47,7 +45,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **DrillupMember** retorna um conjunto de membros com base nos membros especificados no primeiro conjunto de descendentes de membros no segundo conjunto. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto. A função constrói o conjunto incluindo apenas aqueles membros do primeiro conjunto que sejam descendentes imediatos de membros do segundo conjunto. Se o ancestral imediato de um membro no primeiro conjunto não estiver presente no segundo conjunto, o membro no primeiro conjunto será incluído no conjunto retornado por essa função.  Descendentes no primeiro conjunto que precedem um membro ancestral no segundo conjunto também são incluídos.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. Busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
@@ -106,8 +104,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

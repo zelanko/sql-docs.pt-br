@@ -1,29 +1,30 @@
 ---
 title: Criando arquivos de Script (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>Criando arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -404,4 +405,3 @@ A próxima etapa no operando o console é [criando arquivos de valor variável &
 ## <a name="see-also"></a>Consulte também  
 [Criando arquivos do valor da variável &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-

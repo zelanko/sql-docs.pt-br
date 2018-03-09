@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a58b18fab1fe40220b20e8b18849acc4de11a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-basic"></a>Recuperando resultados (Basic)
 Um *conjunto de resultados de* é um conjunto de linhas na fonte de dados que corresponda a determinados critérios. É uma tabela conceitual que os resultados de uma consulta e que está disponível para um aplicativo em formato tabular. **Selecione** instruções, funções de catálogo e alguns procedimentos criam conjuntos de resultados. No exemplo a seguir, a primeira instrução SQL cria um conjunto de resultados contendo todas as linhas e todas as colunas na tabela Orders e a segunda instrução SQL cria um conjunto de resultados contendo colunas OrderID, o vendedor e o Status das linhas na tabela Orders em que o Status é aberto:  
@@ -58,4 +56,3 @@ SELECT * FROM Orders WHERE 1 = 2
 -   [Buscando dados](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Fechando o cursor](../../../odbc/reference/develop-app/closing-the-cursor.md)
-

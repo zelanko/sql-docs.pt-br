@@ -2,12 +2,13 @@
 title: "Criar relatórios com o Designer de Relatórios (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Designer [Reporting Services], report creation
@@ -15,13 +16,13 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: "77"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: aefabb7036b92d9350f42e6a1727e6e836d356fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Criar relatórios paginados do Reporting Services com o Designer de relatórios (SSRS)
 

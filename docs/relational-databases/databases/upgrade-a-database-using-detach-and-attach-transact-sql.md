@@ -2,10 +2,14 @@
 title: Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-caps.latest.revision: "73"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a6e2f8514fea8a4815cd46d3603e3a8f62ea4c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7ebdb4123e449cd024a6dd828364090890138f2c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
-  Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado.  
   
  **Neste tópico**  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
      [Usando operações de anexação e desanexação](#SSMSProcedure)  
   
--   **Acompanhamento:**  [depois de atualizar um banco de dados do SQL Server](#FollowUp)  
+-   **Follow Up:**  [After Upgrading a SQL Server Database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -91,7 +96,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  Para um banco de dados de produção, coloque o banco de dados e o log de transações em discos separados.  
   
-     Para copiar arquivos pela rede para um disco ou um computador remoto, utilize o nome UNC (Convenção Universal de Nomenclatura) do local remoto. Um nome UNC possui o formato **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. Assim como ocorre com a gravação de arquivos no disco rígido local, deverão ser concedidas, à conta do usuário utilizada pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as permissões apropriadas exigidas para ler ou gravar em um arquivo no disco remoto.  
+     Para copiar arquivos pela rede para um disco ou um computador remoto, utilize o nome UNC (Convenção Universal de Nomenclatura) do local remoto. Um nome UNC assume o formato **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. Assim como ocorre com a gravação de arquivos no disco rígido local, deverão ser concedidas, à conta do usuário utilizada pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as permissões apropriadas exigidas para ler ou gravar em um arquivo no disco remoto.  
   
 3.  Anexe o banco de dados movido e, opcionalmente, seu log executando a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

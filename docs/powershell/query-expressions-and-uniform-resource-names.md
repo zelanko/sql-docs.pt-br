@@ -17,18 +17,26 @@ helpviewer_keywords:
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404e929c7fd184162df6d68d2dceb0dceb532ff6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
-  Os modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilizam dois tipos de cadeia de caracteres de expressão semelhantes às expressões XPath. As expressões de consulta são cadeias de caracteres que especificam um conjunto de critérios para enumerar um ou mais objetos em uma hierarquia de modelo de objetos. Um URN (Uniform Resource Name) é um tipo específico de cadeia de caracteres de expressão de consulta que identifica exclusivamente um único objeto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+Os modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilizam dois tipos de cadeia de caracteres de expressão semelhantes às expressões XPath. As expressões de consulta são cadeias de caracteres que especificam um conjunto de critérios para enumerar um ou mais objetos em uma hierarquia de modelo de objetos. Um URN (Uniform Resource Name) é um tipo específico de cadeia de caracteres de expressão de consulta que identifica exclusivamente um único objeto.  
+
+> [!NOTE]
+> Há dois módulos do SQL Server PowerShell; **SqlServer** e **SQLPS**. O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o módulo do **SqlServer**. O módulo do **SqlServer** contém versões atualizadas dos cmdlets no **SQLPS** e também inclui novos cmdlets para dar suporte aos recursos mais recentes do SQL.  
+> As versões anteriores do módulo do **SqlServer** *foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
+> Para instalar o módulo do **SqlServer**, consulte [Instalar o SQL Server PowerShell](download-sql-server-ps-module.md).
+
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -93,7 +101,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |yyyy|Ano com quatro dígitos.|  
-|mm|Mês com dois dígitos (01 a 12).|  
+|MM|Mês com dois dígitos (01 a 12).|  
 |dd|Dia com dois dígitos (01 a 31).|  
 |hh|Hora com dois dígitos usando o formato de 24 horas (01 a 23).|  
 |min|Minutos com dois dígitos (01 a 59).|  
@@ -108,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  Nega o valor de avaliação de *PropertyExpression*, enumerando todos os objetos que não correspondem à condição especificada em *PropertyExpression*. Por exemplo, not(contains(@Name, 'xyz')) enumera todos os objetos que não têm a cadeia de caracteres xyz em seus nomes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Expressões de consulta são cadeias de caracteres que enumeram os nós em uma hierarquia de modelos SMO. Cada nó tem uma expressão de filtro que especifica os critérios de determinação dos objetos desse nó que são enumerados. As expressões de consultas são modeladas na linguagem de expressão XPath. As expressões de consulta implementam um pequeno subconjunto de expressões com suporte em XPath e também possuem algumas expressões que não são encontradas em XPath. As expressões Xpath são cadeias de caracteres que especificam um conjunto de critérios usados para enumerar uma ou mais marcas em um documento XML. Para obter mais informações sobre XPath, consulte [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  As expressões de consulta devem iniciar com uma referência absoluta ao objeto Servidor. Não são permitidas expressões relativas com uma / à esquerda. A sequência de objetos especificados em uma expressão de consulta deve seguir a hierarquia dos objetos de coleção do modelo de objetos associado. Por exemplo, uma expressão de consulta que faz referência a objetos no namespace Microsoft.SqlServer.Management.Smo deve começar com um nó Servidor, seguido por um nó Banco de Dados e assim por diante.  
@@ -166,8 +174,8 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [cmdlet Invoke-PolicyEvaluation](../powershell/invoke-policyevaluation-cmdlet.md)   
+## <a name="see-also"></a>Consulte Também  
+ [cmdlet Invoke-PolicyEvaluation](invoke-policyevaluation-cmdlet.md)   
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

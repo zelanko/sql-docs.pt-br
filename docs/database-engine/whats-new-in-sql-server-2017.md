@@ -1,29 +1,30 @@
 ---
 title: "Novidades no mecanismo de banco de dados – SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] para o [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Clique nos links para obter mais informações sobre cada item.
 
@@ -36,7 +37,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Uma nova DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), foi introduzida, para expor atributos no nível de resumo e informações sobre arquivos de log de transações; útil para monitorar a integridade do log de transações.  
 - A recompilação de índice online retomável. A recompilação de índice online retomável permite retomar uma operação de rebuild de índice online do ponto em que foi interrompida após uma falha (como um failover para uma réplica ou espaço em disco insuficiente). Também é possível pausar e retomar uma operação de recompilação de índice online posteriormente. Por exemplo, talvez seja necessário liberar temporariamente os recursos do sistema para executar uma tarefa de alta prioridade ou concluir a recompilação de índice em outra janela de manutenção, caso as janelas de manutenção disponíveis sejam muito curtas para uma tabela grande. Por fim, a recompilação de índice online retomável não exige espaço de log significativo, o que permite executar o truncamento de log durante a execução da operação de recompilação retomável. Veja [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Diretrizes para operações de índice online](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Opção IDENTITY_CACHE para ALTER DATABASE SCOPED CONFIGURATION**. Uma nova opção IDENTITY_CACHE foi adicionada à instrução T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Quando essa opção é definida como `OFF`, ela permite que o Mecanismo de Banco de Dados evite lacunas nos valores das colunas de identidade, caso um servidor seja reiniciado inesperadamente ou faça failover para um servidor secundário. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
--  O [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] agora oferece funcionalidades de banco de dados de gráfico para modelar relações muitos para muitos. Isso inclui a nova sintaxe [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para criar tabelas de nó e de borda e a palavra-chave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Para obter mais informações, consulte [Processamento de gráficos com o SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] agora oferece recursos de banco de dados do gráfico para modelar dados orientados a relacionamento mais úteis. Isso inclui a nova sintaxe [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para criar tabelas de nó e de borda e a palavra-chave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Para obter mais informações, consulte [Processamento de gráficos com o SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
 - Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Veja [Processamento de consultas adaptável em bancos de dados SQL](../relational-databases/performance/adaptive-query-processing.md).
 - O ajuste automático é um recurso de banco de dados que fornece informações sobre possíveis problemas de desempenho de consultas, recomenda soluções e corrige automaticamente os problemas identificados. O ajuste automático do [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] notifica você sempre que um possível problema de desempenho é detectado e permite aplicar as ações corretivas ou permite que o [!INCLUDE[ssde-md](../includes/ssde-md.md)] corrija automaticamente os problemas de desempenho. Para obter mais informações, consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md).
 - MELHORIA DE DESEMPENHO PARA BUILD DE ÍNDICE NÃO CLUSTERIZADO EM TABELAS COM OTIMIZAÇÃO DE MEMÓRIA. O desempenho da recompilação de índice bwtree (não clusterizado) em tabelas MEMORY_OPTIMIZED durante a recuperação de banco de dados foi otimizado de modo significativo. Essa melhoria reduz consideravelmente o tempo de recuperação de banco de dados quando os índices não clusterizados são usados.  
@@ -47,7 +48,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Uma nova DMV [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) foi introduzida para controlar o uso do repositório de versão por banco de dados. Essa nova DMV é útil no monitoramento do uso do repositório de versão no tempdb, a fim de planejar de modo proativo o dimensionamento do tempdb de acordo com o requisito de uso do repositório de versão por banco de dados, sem cobrança de desempenho nem sobrecargas de executá-lo em servidores de produção.
 - Uma nova DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) foi introduzida para expor as informações de VLF semelhantes a DBCC LOGINFO, a fim de monitorar, emitir alertas e evitar possíveis problemas de log de transações causados pelo número de VLFs, tamanho de VLF ou problemas de redução de arquivo enfrentados pelos clientes.
 - Melhor desempenho de backup para bancos de dados pequenos em servidores de alto nível – ao fazer backup de bancos de dados no SQL Server, o processo de backup exige iterações múltiplas do pool de buffers para esvaziar as E/Ss em andamento. Como resultado, o tempo de backup não é apenas a função do tamanho do banco de dados, mas também uma função do tamanho do pool de buffers ativo. No SQL Server 2017, o backup é otimizado para evitar iterações múltiplas do pool de buffers, resultando em ganhos substanciais no desempenho de backup de bancos de dados pequenos a médios. O ganho de desempenho é reduzido, à medida que o tamanho do banco de dados aumenta e à medida que as páginas a serem copiadas em backup e a E/S de backup levam mais tempo, comparado ao pool de buffers de iteração.  
-- O Repositório de Consultas agora acompanha as informações resumidas das estatísticas de espera. O acompanhamento das categorias de estatísticas de espera por consulta no Repositório de Consultas possibilita o próximo nível da experiência de solução de problemas de desempenho, fornecendo ainda mais informações sobre o desempenho da carga de trabalho e seus afunilamentos, ao mesmo tempo que preserva as principais vantagens do Repositório de Consultas.  
+- O Repositório de Consultas agora acompanha as informações resumidas das estatísticas de espera. O acompanhamento das categorias de estatísticas de espera por consulta no Repositório de Consultas possibilita o próximo nível da experiência de solução de problemas de desempenho, fornecendo ainda mais informações sobre o desempenho da carga de trabalho e seus gargalos, ao mesmo tempo que preserva as principais vantagens do Repositório de Consultas.  
 - Tabelas temporais com controle de versão do sistema agora dão suporte a CASCADE DELETE e CASCADE UPDATE.  
 - Melhorias indiretas de desempenho do ponto de verificação.
 - Suporte a grupos de disponibilidade sem cluster adicionado.
@@ -67,7 +68,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
     - Operador`CROSS APPLY` em módulos compilados nativamente.   
 - Foram adicionadas as novas funções de cadeia de caracteres [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)e [TRIM](../t-sql/functions/trim-transact-sql.md) .   
 - Agora há suporte para a cláusula `WITHIN GROUP` pela função [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) .
-- Foram adicionadas duas novas famílias de agrupamento em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140), além da opção de agrupamento de Seletor sensível à variação (_VSS) para uso em agrupamentos em japonês. Para obter mais detalhes, consulte [Suporte a Agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
+- Duas novas famílias de agrupamento em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140) foram adicionadas, além da opção de agrupamento Variation-selector-sensitive (_VSS) para uso nesses novos agrupamentos em japonês. Além disso, todos os novos agrupamentos dão suporte automático a caracteres suplementares sem a necessidade de especificar a opção _SC. Para obter mais detalhes, consulte [Suporte a Agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
 - As novas opções de acesso em massa [[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)] permitem acessar os dados diretamente em um arquivo especificado como o formato CSV e em arquivos armazenados no armazenamento de Blobs do Azure por meio da nova opção `BLOB_STORAGE` de [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - **COMPATIBILITY_LEVEL** 140 do banco de dados foi adicionado.   Os clientes executando neste nível obterão os últimos recursos de linguagem e comportamentos de otimizador de consulta. Isso inclui alterações em cada versão de pré-lançamento que a Microsoft lançar.
 - Melhorias na forma como os limites de atualização de estatísticas incrementais são computados (necessário modo de compatibilidade 140).
@@ -86,5 +87,4 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Novas permissões: `DATABASE SCOPED CREDENTIAL` agora é uma classe de protegível, suporte `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`e `VIEW DEFINITION` permissões. `ADMINISTER DATABASE BULK OPERATIONS`, que é restrito ao Banco de Dados SQL, agora está visível em `sys.fn_builtin_permissions`.   
 - A DMV [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) foi adicionada para fornecer informações de sistema operacional para Windows e Linux.   
 - As funções de banco de dados são criadas com R Services para gerenciar permissões associadas aos pacotes. Para obter mais informações, consulte [Gerenciamento de pacotes de R para o SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

@@ -2,10 +2,10 @@
 title: "Estrutura de aplicativo da camada de dados – termos de licença | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: ssdt
-ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67d200f7fd16799631dd3f01be5eb2a820fe6def
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Estrutura de aplicativo da camada de dados – termos de licença
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

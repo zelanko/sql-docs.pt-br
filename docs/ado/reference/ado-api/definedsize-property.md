@@ -3,7 +3,7 @@ title: Propriedade DefinedSize | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44c44b0dd7528634cc6db88b3d5bb04a8a1237e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 650eb80c6d4301c1a5881b3348dc2bbef9269fb3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property"></a>Propriedade DefinedSize
 Indica a capacidade de dados de um [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -44,7 +43,7 @@ Indica a capacidade de dados de um [campo](../../../ado/reference/ado-api/field-
   
 4.  Para tipos de dados que não têm um comprimento, isso é definido como ~ 0 (bit a bit, o valor não for 0; todos os bits são definidos como 1).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **DefinedSize** propriedade para determinar a capacidade de dados de um **campo** objeto.  
   
  O **DefinedSize** e [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) propriedades são diferentes. Por exemplo, considere um **campo** objeto com um tipo declarado de **adVarChar** e um **DefinedSize** valor da propriedade de 50, que contém um único caractere. O **ActualSize** valor de propriedade retornado é o comprimento em bytes do caractere único.  
@@ -56,4 +55,3 @@ Indica a capacidade de dados de um [campo](../../../ado/reference/ado-api/field-
  [Exemplo de propriedades de DefinedSize (VB) e ActualSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [Exemplo de propriedades de DefinedSize (VC + +) e ActualSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Propriedade ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)
-

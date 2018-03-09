@@ -3,8 +3,11 @@ title: "Adicionar um relatório personalizado ao Management Studio | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a46f60b50eee6f24c9f9cd20571a9954c9630560
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b682c71e77188ea46cea5f85590953c17d61bda
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
-Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que é salvo como um arquivo .rdl e, em seguida, adicionar esse arquivo rdl ao [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como um relatório personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] pode criar um ampla variedade de relatórios sofisticados. Para criar um relatório com o uso desse tópico, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] deve estar instalado no computador. Não é necessário instalar o [!INCLUDE[ssRS](../../includes/ssrs_md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para executar um relatório personalizado com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que é salvo como um arquivo .rdl e, em seguida, adicionar esse arquivo rdl ao [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como um relatório personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] pode criar um ampla variedade de relatórios sofisticados. Para criar um relatório com o uso desse tópico, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] deve estar instalado no computador. Não é necessário instalar o [!INCLUDE[ssRS](../../includes/ssrs_md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para executar um relatório personalizado com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>Para criar um relatório simples salvo como um arquivo .rdl  
@@ -69,7 +72,7 @@ Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversio
   
     2.  Ajuste o número para **Exibir arquivos na lista dos usados recentemente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Cancelar supressão da execução de avisos de relatório personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

@@ -2,9 +2,12 @@
 title: SQL Server, objeto FileTable | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33e3d956a8b863bc24c8f5a756c8fae90c4b40a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
-O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 
@@ -58,5 +61,5 @@ A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 |**Tempo para obter um item FileTable BASE**|Somente para uso interno.|
 |**Tempo para atualizar um item FileTable BASE**|Somente para uso interno.| 
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

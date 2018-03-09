@@ -3,8 +3,9 @@ title: "Objeto de associação de dados do catálogo de endereços | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados de catálogo de endereço
 O aplicativo de catálogo de endereços usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto para associar dados do banco de dados do SQL Server a um objeto visual (no caso, uma tabela DHTML) na página de cliente HTML do aplicativo. A lógica de programação controlada por evento VBScript usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
@@ -58,7 +59,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parâmetro|Description|  
 |---------------|-----------------|  
-|***IDENTIFICAÇÃO DE CLASSE***|Um número exclusivo de 128 bits que identifica o tipo de objeto inserido no sistema. Esse identificador é mantido no registro do sistema do computador local. (Para as IDs de classe do **RDS. DataControl** de objeto, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
+|***CLASSID***|Um número exclusivo de 128 bits que identifica o tipo de objeto inserido no sistema. Esse identificador é mantido no registro do sistema do computador local. (Para as IDs de classe do **RDS. DataControl** de objeto, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Define um identificador de todo o documento para o objeto incorporado que é usado para identificá-lo no código.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Parâmetros de marca DataControl  
@@ -67,7 +68,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |Parâmetro|Description|  
 |---------------|-----------------|  
 |[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor é o nome do computador do servidor precedido por `http://`.|  
-|[CONECTE-SE](../../../ado/reference/rds-api/connect-property-rds.md)|Fornece as informações de conexão necessárias para o **RDS. DataControl** para se conectar ao SQL Server.|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornece as informações de conexão necessárias para o **RDS. DataControl** para se conectar ao SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Define ou retorna a cadeia de caracteres de consulta usada para recuperar o [registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
 ## <a name="see-also"></a>Consulte também  

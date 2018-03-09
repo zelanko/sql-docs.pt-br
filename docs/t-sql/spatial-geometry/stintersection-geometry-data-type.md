@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection (geometry Data Type)
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: accdd0fe059521ec45beeb386db6bfa34e66ccc0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1f6b2674cbd4c1443a3762459a543fb9712253d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Retorna um objeto que representa os pontos onde uma **geometria** instância int
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STIntersection()`sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contêm.  
   
 ## <a name="examples"></a>Exemplos  
@@ -79,8 +78,7 @@ SELECT @g.STIntersection(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

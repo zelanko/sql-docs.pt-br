@@ -2,18 +2,17 @@
 title: "Partições (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -28,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partições (Analysis Services – Dados Multidimensional)
-  Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
   
  Um objeto simples <xref:Microsoft.AnalysisServices.Partition> é composto de: informações básicas, definição de divisão, design de agregação e outros. As informações básicas incluem o nome da partição, o modo de armazenamento, o modo de processamento e outros. A definição de divisão é uma expressão MDX que especifica uma tupla ou um conjunto. A definição de divisão tem as mesmas restrições que a função MDX StrToSet. Juntamente com o parâmetro CONSTRAINED, a definição de divisão pode usar dimensão, hierarquia, nomes de nível e de membro, chaves, nomes exclusivos e outros objetos nomeados no cubo, mas não pode usar as funções MDX. O design de agregação é uma coleção de definições de agregação que podem ser compartilhadas por várias partições. O padrão é obtido do design de agregação do cubo pai.  
   

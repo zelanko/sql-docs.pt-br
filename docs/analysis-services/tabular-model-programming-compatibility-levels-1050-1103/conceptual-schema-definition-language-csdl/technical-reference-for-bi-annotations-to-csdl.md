@@ -2,34 +2,32 @@
 title: "Referência técnica para anotações de BI para CSDL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0cf821eb8c5db3410901f3d72826e0c2c8b8a274
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Referência técnica para anotações de BI em CSDL
-  Esta seção lista os elementos, o atributo e as propriedades em CSDL usadas para representar modelos tabulares do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Alguns elementos são novos; outros foram anotados ou estendidos para oferecer suporte à modelagem de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Esta seção lista os elementos, o atributo e as propriedades em CSDL usadas para representar modelos tabulares do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Alguns elementos são novos; outros foram anotados ou estendidos para oferecer suporte à modelagem de business intelligence.  
   
  Para obter uma visão geral de modelos de tabela e como as entidades, relações e fórmulas são representadas na CSDL, consulte [anotações CSDL para Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
@@ -95,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Conceitos da CSDLBI](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   
-

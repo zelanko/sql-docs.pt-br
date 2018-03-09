@@ -23,17 +23,16 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49bd324f97f6ba1d2e8a8120bb502199b4ca0f06
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  *scr_text_ptr* valor não deve ser o mesmo que *dest_text_ptr*valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os dados recém-inseridos podem ser um único *inserted_data* constante, o nome da tabela, o nome da coluna ou o ponteiro de texto.  
   
 |Ação de atualizar|Parâmetros UPDATETEXT|  
@@ -133,8 +132,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   
-

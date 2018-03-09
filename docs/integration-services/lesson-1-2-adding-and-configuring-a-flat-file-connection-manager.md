@@ -1,11 +1,11 @@
 ---
-title: "Etapa 2: Adicionando e configurando um Gerenciador de Conexão de arquivo simples | Microsoft Docs"
+title: "Etapa 2: adicionar e configurar um gerenciador de conexões de arquivo simples | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d721552ae0560733c8c544ce7576447c8a1c4fdf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lição 1-2-adicionando e configurando um Gerenciador de Conexão de arquivo simples
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lição 1-2 – adicionar e configurar um gerenciador de conexões de arquivo simples
 Nesta tarefa, você adiciona um gerenciador de conexões de Arquivos Simples ao pacote que acabou de criar. Um gerenciador de conexões de Arquivos Simples habilita um pacote para extrair dados de um arquivo simples. Com o gerenciador de conexões de Arquivos Simples, você pode especificar o nome e o local do arquivo, a localidade e a página de códigos e o formato do arquivo, incluindo os delimitadores de coluna, a serem aplicados quando o pacote extrai os dados do arquivo simples. Além disso, é possível especificar manualmente o tipo de dados das colunas individuais ou usar a caixa de diálogo **Sugerir Tipos de Coluna** para mapear automaticamente as colunas de dados extraídos para os tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Você deve criar um novo gerenciador de conexões de Arquivos Simples para cada formato de arquivo com os quais você trabalha. Como este tutorial extrai dados de vários arquivos simples que apresentam exatamente o mesmo formato de dados, será preciso adicionar e configurar apenas um gerenciador de conexões de Arquivos Simples para seu pacote.  
@@ -95,10 +94,10 @@ O gerenciador de conexões de Arquivos Simples fornece informações de localida
   
     |Coluna de Arquivos Simples|Tipo Sugerido|Coluna de Destino|Tipo de Destino|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     O tipo de dados sugerido para a coluna **CurrencyID** não é compatível com o tipo de dados do campo na tabela de destino. Como o tipo de dados de `DimCurrency.CurrencyAlternateKey` é nchar (3), **CurrencyID** deve ser alterado de cadeia de caracteres [DT_STR] para a cadeia de caracteres [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; portanto, **CurrencyDate** deve ser alterado da data [DT_Date] para a data do banco de dados [DT_DBDATE].  
   
@@ -111,10 +110,9 @@ O gerenciador de conexões de Arquivos Simples fornece informações de localida
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de conexões de arquivos simples](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Tipos de dados do Integration Services](../integration-services/data-flow/integration-services-data-types.md)  
   
   
   
-

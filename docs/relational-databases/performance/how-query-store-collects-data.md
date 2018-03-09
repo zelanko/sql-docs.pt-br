@@ -14,29 +14,29 @@ ms.topic: article
 helpviewer_keywords: Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72e1970bf68219376f3f2a9d16d03e133ec0832b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e8f4fdae89572403ec8e5b7a5575b6ea61b132
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O Repositório de Consultas funciona como um **gravador de dados de voo** constantemente coletando informações de compilação e tempo de execução relacionadas a consultas e planos. As consultas relacionadas a dados são mantidas em tabelas internas e apresentadas aos usuários por meio de um conjunto de exibições.  
   
-## <a name="views"></a>Exibições  
+## <a name="views"></a>exibições  
  O diagrama a seguir mostra os modos de exibição do Repositório de Consultas e suas relações lógicas, com informações de tempo de compilação, apresentadas como entidades azuis:  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Descrições de exibições**  
   
-|Exibição|Descrição|  
+|Exibição|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Apresenta os textos de consulta exclusivos executados no banco de dados. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados. Cada instrução no lote gera uma entrada de texto de consulta separada.|  
 |**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta executado com um plano diferente, afetando as configurações produz a entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
@@ -74,7 +74,7 @@ No caso de encerramento de sessão ou reinicialização/falha de aplicativo do c
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

@@ -3,8 +3,9 @@ title: "Informações de erro relacionada ao campo | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,21 +16,21 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6513328c3d26d794e3881f8a29fb3ecf51feee15
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionada ao campo
 Se o erro está relacionado diretamente a um campo — por exemplo, se os dados estão ausentes ou se ele é do tipo errado para o campo — você pode recuperar mais informações sobre a causa do problema examinando o **campo** do objeto **Status**  propriedade. Essa propriedade foi aprimorada para fornecer informações específicas sobre o problema. Assim, por exemplo, quando uma chamada para **UpdateBatch** falhar, a causa do problema pode ser determinada examinando o **Status** propriedade o **campos** em cada uma da afetados registros. A propriedade conterá um dos valores a **FieldStatusEnum** constante. A tabela a seguir inclui os valores que são de interesse específico quando ocorre um erro.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica que o campo não pode ser recuperado ou armazenado sem perda de dados.|  
 |**adFieldDataOverflow**|6|Indica que os dados retornados do provedor estouraram o tipo de dados do campo.|  

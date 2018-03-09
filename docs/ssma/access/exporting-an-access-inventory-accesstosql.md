@@ -1,12 +1,14 @@
 ---
 title: "Exportando um inventário de acesso (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55f91e6b5e83b3a317f74b71e591de7e08009413
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário de acesso (AccessToSQL)
 Se você tiver vários bancos de dados do Access e você não tiver certeza sobre quais para migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode exportar um inventário de todos os bancos de dados do Access em um projeto. Você pode revisar e consultar os metadados de inventário para determinar quais bancos de dados e objetos dentro desses bancos de dados para migrar. Esse inventário permite a rápida encontrar respostas para perguntas, como o seguinte:  
@@ -235,7 +236,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Se você não souber o nome da coluna, você pode escrever uma consulta para retornar todas as colunas. Para fazer isso, remova a cláusula WHERE da consulta anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Preparar bancos de dados do Access para a migração](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-

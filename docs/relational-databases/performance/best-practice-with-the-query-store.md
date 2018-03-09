@@ -1,32 +1,35 @@
 ---
 title: "Práticas recomendadas com o repositório de consultas | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e41e78e7e4ffc1699a79bee2e7ed6236210e52d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve as práticas recomendadas para usar o Repositório de Consultas com sua carga de trabalho.  
   
-##  <a name="SSMS"></a> Usar o SQL Server Management Studio mais recente  
+##  <a name="SSMS"></a> Use a versão mais recente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem um conjunto de interfaces do usuário projetadas para configurar o Repositório de Consultas, bem como para consumir os dados sobre sua carga de trabalho coletados.  
 Baixe a versão mais recente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aqui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -54,7 +57,7 @@ Os parâmetros padrão são bons para um início rápido, mas você deve monitor
   
  O valor padrão (100 MB) pode não ser suficiente se sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -65,14 +68,14 @@ FROM sys.database_query_store_options;
   
  O script a seguir define um novo Tamanho Máximo (MB):  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervalo de Coleta de Estatísticas:** define o nível de granularidade para a estatística de tempo de execução coletada (o padrão é 1 hora). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use o SSMS ou Transact-SQL para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -81,7 +84,7 @@ Por padrão, o Repositório de Consultas está configurado para manter os dados 
   
  Evite manter dados históricos que você não planeja usar. Isso reduzirá as alterações para o status somente leitura. O tamanho dos dados do Repositório de Consultas, bem como o tempo para detectar e reduzir o problema, serão mais previsíveis. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o script a seguir para configurar a política de limpeza com base em tempo:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -90,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  É altamente recomendável ativar limpeza com base no tamanho para certificar-se de que o repositório de consultas seja sempre executado no modo de leitura-gravação e colete sempre os dados mais recentes.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -105,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  O script a seguir define o Modo de Captura de Consultas para Auto:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -117,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Habilite o Repositório de Consultas usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] conforme descrito na seção anterior, ou execute a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir:  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados no Pesquisador de Objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir modos de exibição de solução de problemas para cenários específicos.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Os modos de exibição do Repositório de Consultas operam com o conjunto de métricas de execução, cada uma expressa em qualquer uma das seguintes funções de estatística:  
   
-|Métrica de execução|Função estatística|  
-|----------------------|------------------------|  
-|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória e Leituras Físicas|Média, Máximo, Mínimo, Desvio Padrão, Total|  
+|Versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Métrica de execução|Função estatística|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória, Leituras Físicas, tempo de CLR, DOP (Grau de Paralelismo) e Contagem de Linhas|Média, Máximo, Mínimo, Desvio Padrão, Total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória, Leituras Físicas, tempo de CLR, DOP (Grau de Paralelismo), Contagem de Linhas, Memória de log, Memória TempDB e Tempos de espera|Média, Máximo, Mínimo, Desvio Padrão, Total|
   
  O gráfico a seguir mostra como localizar os modos de exibição do Repositório de Consultas:  
   
@@ -175,7 +179,7 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
 ##  <a name="Verify"></a> Verificar se o Repositório de Consultas está coletando dados de consulta continuamente  
  O Repositório de Consultas pode alterar o modo de operação silenciosamente. Você deve monitorar regularmente o estado do Repositório de Consultas para garantir que o repositório de consultas esteja operando, e agir para evitar falhas devido a causas previsíveis. Execute a consulta a seguir para determinar o modo de operação e exibir os parâmetros mais relevantes:  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -196,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Limpe os dados do Repositório de Consultas usando a instrução a seguir:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Você pode aplicar uma destas etapas ou ambas executando a seguinte instrução que altera explicitamente o modo de operação para leitura-gravação:  
+Você pode aplicar uma destas etapas ou ambas executando a seguinte instrução que altera explicitamente o modo de operação para leitura-gravação:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -218,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Estado de erro  
  Para recuperar o Repositório de Consultas, tente definir explicitamente o modo de leitura-gravação e verifique o estado real novamente.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -234,9 +238,9 @@ FROM sys.database_query_store_options;
  
  O Repositório de Consultas poderia ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
  
- Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura / gravação.  
+ Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -252,7 +256,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## <a name="set-the-optimal-query-capture-mode"></a>Definir o Modo de Captura de Consulta Ideal  
+## <a name="set-the-optimal-query-capture-mode"></a>Definir o modo de captura de consulta ideal  
  Mantenha os dados mais relevantes no Repositório de Consultas. A tabela a seguir descreve os cenários típicos para cada Modo de Captura de Consulta:  
   
 |Modo de Captura de Consulta|Cenário|  
@@ -299,7 +303,7 @@ Como resultado, o desempenho da carga de trabalho será abaixo do ideal e o Repo
 
  A imposição de plano é um mecanismo prático para corrigir o desempenho das consultas críticas e torná-las mais previsíveis. No entanto, assim como ocorre com as dicas de plano e guias de plano, impor um plano não é uma garantia de que ele será usado em execuções futuras. Normalmente, quando o esquema de banco de dados é alterado de forma que os objetos referenciados pelo plano de execução são alterados ou removidos, a imposição de plano passará a falhar. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] voltará à recompilação de consultas, enquanto o motivo real da falha da imposição será exposto em [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). A consulta a seguir retorna informações sobre planos impostos:  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -326,7 +330,7 @@ Se você renomear um banco de dados, a imposição de plano falhará, causando r
   
   O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o SQL Server execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Usar o Repositório de Consultas com OLTP na memória](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

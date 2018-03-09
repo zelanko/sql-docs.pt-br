@@ -21,17 +21,16 @@ helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9556834a173302e19358f5333b059d7b4f902519
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*nome_do_assembly*  
+*assembly_name*  
 É o nome do assembly.
   
-*Property_Name*  
+*property_name*  
 É o nome de uma propriedade sobre a qual recuperar informações. *Property_Name* pode ser um dos valores a seguir.
   
-|Valor|Description|  
+|Value|Description|  
 |---|---|
 |**CultureInfo**|Localidade do assembly.|  
 |**PublicKey**|Chave pública ou token de chave pública do assembly.|  
@@ -83,4 +82,3 @@ SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   
   
-

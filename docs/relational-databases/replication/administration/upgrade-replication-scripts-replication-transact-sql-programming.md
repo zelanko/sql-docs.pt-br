@@ -2,9 +2,12 @@
 title: "Atualizar scripts de replicação (Programação Transact-SQL de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c19ed05d9f7a324d8e6ae834c9c1528b3249625
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09f8ed7bf8cbd407a8bd9dc706d5e9aadf34ce65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Atualizar scripts de replicação (Programação Transact-SQL de replicação)
-  Podem ser usados arquivos de script[!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar uma topologia de replicação programaticamente. Para obter mais informações, consulte [Conceitos de procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Arquivos de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] podem ser usados para configurar uma topologia de replicação programaticamente. Para obter mais informações, consulte [Conceitos de procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Embora não se exija a atualização de scripts executados por membros da função **sysadmin** , recomendamos que você modifique os scripts existentes como descrito neste tópico. Especifique uma conta que tenha permissões mínimas para cada agente de replicação como descrito na seção "Permissões exigidas por agentes" do tópico [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Após executar o procedimento armazenado que cria a assinatura, certifique-se de executar o procedimento armazenado que cria um trabalho do agente de distribuição para sincronizar a assinatura. O procedimento armazenado usado dependerá do tipo de assinatura.  
   
-    -   Para uma assinatura pull, atualize a execução do [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para fornecer as credenciais do Windows no qual o Agente de Distribuição é executado no Assinante para **@job_name** e **@job_password**. Isso é feito após a execução de [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Para obter mais informações, confira [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Para uma assinatura pull, atualize a execução do [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para fornecer as credenciais do Windows no qual o Agente de Distribuição é executado no Assinante para **@job_name** e **@job_password**. Isso é feito após a execução de [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Para obter mais informações, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Para uma assinatura push, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) no Publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, as credenciais do Windows onde o agente de distribuição é executado no Distribuidor para **@job_name** e **@job_password**e um cronograma para esse trabalho de agente. Para obter mais informações, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Isso é feito após a execução de [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Para obter mais informações, consulte [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Após executar o procedimento armazenado que cria a assinatura, assegure-se de executar o procedimento armazenado que cria um trabalho do Agente de Mesclagem para sincronizar a assinatura. O procedimento armazenado usado dependerá do tipo de assinatura.  
   
-    -   Para uma assinatura pull, atualize a execução do [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para fornecer as credenciais do Windows no qual o Agente de Mesclagem é executado no Assinante para **@job_name** e **@job_password**. Isso é feito após a execução de [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obter mais informações, confira [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Para uma assinatura pull, atualize a execução do [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para fornecer as credenciais do Windows no qual o Agente de Mesclagem é executado no Assinante para **@job_name** e **@job_password**. Isso é feito após a execução de [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obter mais informações, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Para uma assinatura push, execute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) no Publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, as credenciais do Windows onde o Agente de Mesclagem no Distribuidor executa para **@job_name** e **@job_password**e um cronograma para esse trabalho de agente. Para obter mais informações, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Isso é feito após a execução de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Para obter mais informações, consulte [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -189,7 +192,7 @@ ms.lasthandoff: 11/09/2017
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   

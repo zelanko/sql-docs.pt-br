@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8341c752bef3ba12087356e9b84ac25a6c4c015
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0fd097f81d5139e7775a8418c5f20c0aeefacb9d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe
+# <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   Para uma instalação existente do DQS, você pode exportar de uma só vez todas as bases de dados de conhecimento de seu [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] para um arquivo de backup DQS (.dqsb) e, depois, usar o arquivo .dqsb para importar todas as bases de dados de conhecimento de uma só vez para um [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] diferente, executando o arquivo DQSInstaller.exe no prompt de comando. Para obter mais informações sobre a execução de DQSInstaller.exe do prompt de comando, consulte [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) em [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
  Este recurso lhe permite fazer um backup de *todas* as bases de dados de conhecimento no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma só vez, sem precisar exportar individualmente cada base de dados de conhecimento para um arquivo .dqs usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Da mesma forma, você pode importar *todas* as bases de dados de conhecimento do arquivo de backup para outro [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma só vez, sem precisar importar cada base de dados de conhecimento individualmente de um arquivo .dqs usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Isso é particularmente útil ao fazer backup e restaurar suas bases de dados de conhecimento quando você está desinstalando o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] em um computador, e reinstalando-o em outro computador. Você pode exportar facilmente todas as bases de dados de conhecimento em uma instalação existente do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] para um arquivo de backup DQS (.dqsb) e, depois importar todas as bases de dados de conhecimento do arquivo de backup após instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] em outro computador.  
@@ -60,7 +60,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
   
  Se existirem bases de dados de conhecimento em seu [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] com o mesmo nome que aquelas importadas, os nomes das bases de dados de conhecimento importadas serão anexados com um sublinhado (_) seguido de um valor inteiro, começando em 1. Por exemplo, se o domínio "CompanyName" for duplicado, o nome de domínio importado será "CompanyName_1".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Exportar uma base de dados de conhecimento para um arquivo .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   

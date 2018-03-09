@@ -2,9 +2,12 @@
 title: "Visão geral dos agentes de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,18 +27,18 @@ helpviewer_keywords:
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dc785f8c2d465be373708df45cd0252420cce70
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5939006ffc38b5d3ced2028feb544ead35b447f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agents-overview"></a>Visão geral dos agentes de replicação.
-  A replicação usa um número de programas autônomos, chamados agentes, para executar as tarefas associadas ao rastreamento de alterações e dados de distribuição. Por padrão, os agentes de replicação são executados como tarefas programadas sob o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ficar executando para os trabalhos a executar. Os agentes de replicação também podem ser executados a partir da linha de comando e por aplicativos que usam RMO (Replication Management Objects). Os agentes de replicação podem ser administrados a partir do Monitor de Replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação usa um número de programas autônomos, chamados agentes, para executar as tarefas associadas ao controle de alterações e dados de distribuição. Por padrão, os agentes de replicação são executados como tarefas programadas sob o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ficar executando para os trabalhos a executar. Os agentes de replicação também podem ser executados a partir da linha de comando e por aplicativos que usam RMO (Replication Management Objects). Os agentes de replicação podem ser administrados a partir do Monitor de Replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="sql-server-agent"></a>SQL Server Agent  
  O agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hospeda e programa os agentes usados em replicação e fornece uma maneira fácil para executar os agentes de replicação. O agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também controla e monitora operações fora de replicação. Para obter mais informações, consulte [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="distribution-agent"></a>Agente de Distribuição  
  O Agente de Distribuição é usado com a replicação de instantâneo e com a replicação transacional. Ele aplica o instantâneo inicial ao Assinante e move as transações contidas no banco de dados de distribuição para os Assinantes. O Agente de Distribuição é executado no Distribuidor para assinaturas push ou no Assinante para assinaturas pull. Para obter mais informações, consulte [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-## <a name="merge-agent"></a>Agente de Mesclagem  
+## <a name="merge-agent"></a>Merge Agent  
  O Agente de Mesclagem é usado com replicação de mesclagem. Ele aplica o instantâneo inicial ao Assinante e move e reconcilia as alterações de dados incrementais que ocorrem. Cada assinatura de mesclagem possui seu próprio Agente de Mesclagem que se conecta ao Publicador e ao Assinante e atualiza os dois. O Agente de Mesclagem é executado no Distribuidor para assinaturas push ou no Assinante para assinaturas pull. Por padrão, o Agente de Mesclagem carrega alterações do Assinante ao Publicador e, em seguida, baixa as alterações do Publicador para o Assinante. Para obter mais informações, consulte [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
 ## <a name="queue-reader-agent"></a>Queue Reader Agent  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="replication-maintenance-jobs"></a>Trabalhos de Manutenção de Replicação  
  A replicação possui diversos trabalhos de manutenção que executam manutenção programada e sob demanda. Para obter mais informações, consulte [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md) (Administração do agente de replicação).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Executar trabalhos de manutenção de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   

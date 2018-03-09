@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- header files [ODBC]
+helpviewer_keywords: header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 197c7ef28124fb1b1c52facbec541913330c69c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8cec0dc5105addb28606a12c99dd2d77b0a48a64
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-files"></a>Arquivos de cabeçalho
 O arquivo de cabeçalho do SQL contém protótipos para as funções e recursos no nível de conformidade a principal Interface de ODBC. O arquivo de cabeçalho Sqlext.h contém protótipos para as funções e recursos no nível 1 e níveis de conformidade de API do nível 2. O arquivo de cabeçalho sqlext contém definições de tipo e indicadores para os tipos de dados SQL.  
@@ -57,4 +54,3 @@ O arquivo de cabeçalho do SQL contém protótipos para as funções e recursos 
 |SQL_OJ_CAPABILITIES|SQL_OUTER_JOIN_CAPABILITIES|  
 |SQL_TXN_CAPABLE|SQL_TRANSACTION_CAPABLE|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TRANSACTION_ISOLATION_OPTION|
-

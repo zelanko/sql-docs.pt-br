@@ -3,8 +3,11 @@ title: "Caixa de diálogo Agrupamento (Ferramentas de Banco de Dados Visual) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16504f76025571fa7627027ba37267aac6e41a41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b99f35322872e33f4bd727724dd9167465d6f1ea
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Caixa de diálogo Agrupamento (Visual Database Tools)
-Essa caixa de diálogo lhe permite especificar uma sequência de agrupamento para a coluna. A sequência de agrupamento de uma coluna é usada em qualquer operação que compare os valores da coluna com os de outra coluna ou com valores constantes. Isso também afeta o comportamento de algumas funções de cadeia de caracteres, como SUBSTRING e CHARINDEX. Para uma lista completa dos efeitos da configuração de agrupamento de uma coluna, consulte a documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta caixa de diálogo permite especificar uma sequência de agrupamento para a coluna. A sequência de agrupamento de uma coluna é usada em qualquer operação que compare os valores da coluna com os de outra coluna ou com valores constantes. Isso também afeta o comportamento de algumas funções de cadeia de caracteres, como SUBSTRING e CHARINDEX. Para uma lista completa dos efeitos da configuração de agrupamento de uma coluna, consulte a documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 Essa caixa de diálogo aparece:  
   
@@ -56,6 +59,6 @@ Use opções de comparação alfabéticas. Aplicável apenas se você selecionar
 **Botão Restaurar padrão**  
 Aplica à coluna o agrupamento padrão para o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com colunas em consultas de agregação &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
   

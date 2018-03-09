@@ -3,7 +3,7 @@ title: "Propriedade ordinal (ADO MD posição) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 06763eff76230a28bf2bf76c47cf0bdb032c8205
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d29ba5afddbdd1aa3f477a8311538dac59611685
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordinal-property-ado-md-position"></a>Propriedade ordinal (posição do ADO MD)
 Identifica exclusivamente um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) ao longo do eixo.  
@@ -37,7 +36,7 @@ Identifica exclusivamente um [posição](../../../ado/reference/ado-md-api/posit
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **longo** inteiro e é somente leitura.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Ordinal** propriedade de um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto corresponde ao índice da **posição** dentro de [posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) coleção.  
   
  Uma célula rapidamente pode ser recuperada usando o **Ordinal** do **posição** em cada eixo com o [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto .  
@@ -49,4 +48,3 @@ Identifica exclusivamente um [posição](../../../ado/reference/ado-md-api/posit
  [Objeto de conjunto de células (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Propriedade item (conjunto de células do ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Propriedade Ordinal (Célula do ADO MD)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)
-

@@ -1,10 +1,13 @@
 ---
 title: Selecionando e Configurando objetos para teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d33e430c5ecb7957e3886bf05c4fdb9d30b7614a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selecionando e Configurando objetos para teste (OracleToSQL)
 Nesta etapa, você seleciona objetos a testar e definir configurações para a comparação dos procedimentos e dos funções parâmetros de saída, bem como os valores de retorno de funções.  
@@ -84,6 +87,6 @@ Você pode especificar valores de parâmetro de entrada no **valores chamar** p�
 ## <a name="next-step"></a>Próxima etapa  
 [Selecionando e configurando afetados objetos &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

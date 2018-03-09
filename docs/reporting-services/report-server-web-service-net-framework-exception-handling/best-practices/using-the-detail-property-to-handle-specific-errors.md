@@ -1,38 +1,37 @@
 ---
-title: "Usando a propriedade Detail para manipular erros específicos | Microsoft Docs"
+title: "Usando a propriedade Detail para tratar erros específicos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], Detail property
 - Detail property
 - InnerText property
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-caps.latest.revision: 30
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "30"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cbbaf57ce4726bbb16c8cb722f50ac186fe59d81
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fc814305248038592b82c0cb06184611987d59d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Usando a propriedade Detail para manipular erros específicos
-  Para classificar ainda mais as exceções, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] retorna informações de erro adicionais no **InnerText** propriedade dos elementos filhos da exceção SOAP **detalhes** propriedade. Porque o **detalhes** propriedade é um **XmlNode** do objeto, você pode acessar o texto interno do **mensagem** elemento filho usando o código a seguir.  
+  Para classificar ainda mais as exceções, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] retorna informações de erro adicionais na propriedade **InnerText** dos elementos filho da propriedade **Detail** da exceção SOAP. Como a propriedade **Detail** é um objeto **XmlNode**, você pode acessar o texto interno do elemento filho **Message** usando o código a seguir.  
   
- Para obter uma lista de todos os elementos filhos disponíveis contidos no **detalhes** propriedade, consulte [propriedade Detail](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). Para obter mais informações, consulte "Propriedade Detail" o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentação do SDK.  
+ Para obter uma lista de todos os elementos filho disponíveis contidos na propriedade **Detail**, consulte [Propriedade Detail](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). Para obter mais informações, consulte “Propriedade Detail” na documentação do SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 ```vb  
 Try  
@@ -90,10 +89,9 @@ Console.WriteLine(ex.Detail("ErrorCode").InnerXml)
 Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao tratamento de exceção no Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services classe SoapException](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Tabela de erros SoapException](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
+ [Classe SoapException do Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
+ [Tabela de erros de SoapException](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   
   
-

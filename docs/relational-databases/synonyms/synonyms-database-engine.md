@@ -2,28 +2,35 @@
 title: "Sinônimos (Mecanismo de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: synonyms
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86fb16833f248731becb9e40f7525281a8b52e94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
-  Um sinônimo é um objeto de banco de dados que atende aos seguintes propósitos:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Um sinônimo é um objeto de banco de dados que atende aos seguintes propósitos:  
   
 -   Fornece um nome alternativo para outro objeto do banco de dados referido como o objeto base que pode existir em um servidor local ou remoto.  
   
@@ -65,8 +72,8 @@ ms.lasthandoff: 11/09/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
+|CONTROL|Delete (excluir)|  
+|Execute|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -76,8 +83,8 @@ ms.lasthandoff: 11/09/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|Subseleções|  
+|UPDATE|Delete (excluir)|  
+|Execute|Subseleções|  
   
  Quando você está trabalhando com sinônimos nos contextos declarados anteriormente, o objeto base é afetado. Por exemplo, se um sinônimo fizer referência a um objeto base que está em uma tabela e você inserir uma linha no sinônimo, na verdade você estará inserindo uma linha na tabela referida.  
   

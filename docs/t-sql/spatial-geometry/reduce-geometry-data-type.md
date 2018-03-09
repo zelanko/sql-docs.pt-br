@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Reduce_TSQL
 - Reduce
-dev_langs: TSQL
-helpviewer_keywords: Reduce method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f92ff59bff23d1b3cd2909c0d6aedd45443a159f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fb6c4a66f3233620ef5d24506d41e7659fc3b82d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ Retorna uma aproximação do determinado **geometria** instância produzida pela
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tolerância*  
+ *tolerance*  
  É um valor do tipo **float**. *tolerância* é a tolerância de entrada para o algoritmo de aproximação.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -49,7 +52,7 @@ Retorna uma aproximação do determinado **geometria** instância produzida pela
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para tipos de coleção, esse algoritmo funciona independentemente em cada **geometria** contidos na instância.  
   
  Esse algoritmo não modifica **ponto** instâncias.  

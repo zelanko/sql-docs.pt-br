@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dab32294edbe982817a03cc81c33d6623ff973ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0bd21d912ae53d62f85ac9388d2d696ab0a439c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valores retornados para dBASE SQLGetInfo
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando listada linguagem C# defines **SQLGetInfo** no *fInfoType* argumento. Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte o *referência do programador de ODBC*.  
@@ -149,7 +148,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Vários valores|  
-|CONFORMIDADE SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|No Gerenciador de Driver|  
 |SQL_OJ_CAPABILITIES|Vários valores|  
@@ -176,4 +175,3 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Vários valores|  
 |SQL_USER_NAME|""|
-

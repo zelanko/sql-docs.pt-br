@@ -1,25 +1,28 @@
 ---
 title: "Perguntas frequentes sobre atualização e instalação de aprendizado de máquina do SQL Server | Microsoft Docs"
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 3c4fb79f04daeff6d98856b521fa1602a2334cdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>Perguntas frequentes sobre atualização e instalação de aprendizado de máquina do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico fornece respostas para algumas perguntas comuns sobre a instalação de recursos do SQL Server de aprendizado de máquina. Ele também aborda perguntas comuns sobre atualizações.
 

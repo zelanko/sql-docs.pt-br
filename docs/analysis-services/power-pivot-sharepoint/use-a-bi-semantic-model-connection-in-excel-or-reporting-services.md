@@ -2,33 +2,30 @@
 title: "Usar uma Conexão de modelo semântico de BI no Excel ou Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services
-  Este tópico explica como usar as conexões de modelo semântico de BI que você criou usando as instruções em outros tópicos. Se você ainda não tiver criado um modelo semântico de BI, veja [Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [Criar uma conexão de modelo semântico de BI para um banco de dados modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico explica como usar as conexões de modelo semântico de BI que você criou usando as instruções em outros tópicos. Se você ainda não tiver criado um modelo semântico de BI, veja [Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [Criar uma conexão de modelo semântico de BI para um banco de dados modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Conecte do Excel  
  Você pode especificar uma conexão de modelo semântico de BI como uma fonte de dados em Excel ou qualquer outro aplicativo de negócios que use dados de modelo de tabela do Analysis Services. Esta seção explica as duas abordagens para conectar-se a dados de modelo semântico de BI usando o Excel.  
@@ -69,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  Para o design de relatórios ad hoc no SharePoint, o usuário que cria o relatório deve ter permissões do SharePoint no arquivo de conexão de modelo semântico de BI (.bism) e no banco de dados do modelo semântico de business intelligence. O contexto de segurança da conexão é o usuário interativo que está criando o relatório.  
   
   
-

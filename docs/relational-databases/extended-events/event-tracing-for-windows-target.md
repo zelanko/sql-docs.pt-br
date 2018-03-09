@@ -18,16 +18,16 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a3902085accac37a3649d407ff1504e01e0ac16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  
@@ -96,7 +96,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Para obter mais informações sobre um exemplo completo que mostra como usar o destino ETW, inclusive como exibir os dados, veja [Monitorar a atividade do sistema usando Eventos Estendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destinos de eventos estendidos do SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   

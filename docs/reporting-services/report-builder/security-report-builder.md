@@ -2,25 +2,26 @@
 title: "Segurança (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 927607181f78077fdaf9a02f959b2c37d7ed9c51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc8d7563067160dd011835cf201ff6e5eec8ec83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
   O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/09/2017
  Depois que os itens são publicados em um servidor de relatório, o administrador de servidor de relatório pode ajudar a protegê-los, atribuindo segurança com base em função ou segurança no nível do item ou da pasta. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar e desinstalar o Construtor de Relatórios](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

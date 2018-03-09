@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b1785dc0435baf024a68c62e256e54498d1c8d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-matching"></a>Correspondência de dados
   O processo de correspondência de dados do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ajuda você a reduzir a duplicação de dados e a aprimorar a exatidão dos dados em uma fonte de dados. A correspondência analisa o grau de duplicação em todos os registros de uma única fonte de dados, retornando probabilidades ponderadas de uma correspondência entre cada conjunto de registros comparados. Você pode decidir então quais registros são correspondências e executar a ação apropriada nos dados de origem.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - DBCC_PROCCACHE_TSQL
 - PROCCACHE_TSQL
 - PROCCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - procedure cache [SQL Server]
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f818e3204f16892cb3bde8e8570a219abbd48aa3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 27a247f0900ad39ef77d96a54d68c795dc8f6f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Suprime todas as mensagens informativas que têm níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 O cache de procedimento é usado para armazenar em cache os planos compilados e executáveis a fim de acelerar a execução de lotes. As entradas em um cache de procedimento estão no nível de um lote. O cache de procedimento inclui as seguintes entradas:
 -   Planos compilados  
 -   Planos de execução  

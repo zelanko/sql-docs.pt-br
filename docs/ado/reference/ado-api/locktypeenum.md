@@ -3,8 +3,9 @@ title: LockTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: LockTypeEnum
-helpviewer_keywords: LockTypeEnum enumeration [ADO]
+f1_keywords:
+- LockTypeEnum
+helpviewer_keywords:
+- LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9fe62c251092eb182925de0fa7b6d70c359a25d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Especifica o tipo de bloqueio colocado em registros durante a edição.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Indica as atualizações em lotes otimista. Necessário para o modo de atualização em lotes.|  
 |**adLockOptimistic**|3|Indica o bloqueio otimista, registro por registro. O provedor usa bloqueio otimista, bloqueando registros somente quando você chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método.|  
@@ -37,8 +40,8 @@ Especifica o tipo de bloqueio colocado em registros durante a edição.
 |**adLockReadOnly**|1|Indica os registros de somente leitura. Você não pode alterar os dados.|  
 |**adLockUnspecified**|-1|Não especifique um tipo de bloqueio. Para clones, o clone é criado com o mesmo tipo de bloqueio que o original.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

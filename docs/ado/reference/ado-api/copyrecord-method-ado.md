@@ -3,8 +3,9 @@ title: "Método CopyRecord (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
 - _Record::CopyRecord
-helpviewer_keywords: CopyRecord method [ADO]
+helpviewer_keywords:
+- CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -54,13 +56,13 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Opções*  
  Opcional. Um [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valor que tem um valor padrão de **adCopyUnspecified**. Especifica o comportamento desse método.  
   
- *Assíncrono*  
+ *Async*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que esta operação deve ser assíncrona.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um **cadeia de caracteres** valor que geralmente retorna o valor de *destino*. No entanto, o valor exato retornado depende do provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores de *fonte* e *destino* não deve ser idêntico; caso contrário, ocorre um erro de tempo de execução. Pelo menos um dos nomes de servidor, caminho ou recurso deve ser diferente.  
   
  Todos os filhos (por exemplo, subdiretórios) de *fonte* são copiado repetidamente, a menos que **adCopyNonRecursive** for especificado. Em uma operação recursiva, *destino* não deve ser um subdiretório do *fonte*; caso contrário, a operação não será concluída.  

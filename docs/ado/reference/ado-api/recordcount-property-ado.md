@@ -3,7 +3,7 @@ title: Propriedade RecordCount (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 92faeb5d2ec0b62c03292f71e0299c779e362478
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 402a481ef7db03e2d7197eb02010a1c93b974570
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordcount-property-ado"></a>Propriedade RecordCount (ADO)
 Indica o número de registros em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -38,7 +37,7 @@ Indica o número de registros em um [registros](../../../ado/reference/ado-api/r
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **longo** valor que indica o número de registros a **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **RecordCount** são de propriedade para descobrir quantos registros em um **registros** objeto. A propriedade retorna -1 quando o ADO não é possível determinar o número de registros ou se o tipo de cursor ou o provedor não oferece suporte **RecordCount**. Lendo o **RecordCount** propriedade em um fechado **registros** causa um erro.  
   
  Se o **registros** objeto oferece suporte ao posicionamento aproximado ou indicadores??? ou seja, **suporta (adApproxPosition)** ou **suporta (adBookmark)**, respectivamente, retornar **True**??? Esse valor será o número exato de registros de **registros**, independentemente de se ele foi totalmente preenchido. Se o **registros** objeto não dá suporte para o posicionamento aproximado, essa propriedade pode ser um consumo significativo de recursos porque todos os registros terá que ser recuperados e contadas para retornar uma precisão **RecordCount** valor.  
@@ -56,4 +55,3 @@ Indica o número de registros em um [registros](../../../ado/reference/ado-api/r
  [Exemplo de propriedades de RecordCount (VC + +) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
  [Propriedade AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [Propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
-

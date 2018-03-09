@@ -1,27 +1,28 @@
 ---
-title: "Tutorial: Adicionar um gráfico de barras ao relatório (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
 Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Em seguida, adicione um filtro e aprimore o gráfico. 
@@ -38,7 +39,7 @@ A ilustração a seguir mostra o gráfico de barras que você criará, com as ve
   
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para instruções passo a passo sobre como navegar até um servidor de relatório, crie um conjunto de dados e escolha uma fonte de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -55,7 +56,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
-     ![Iniciar o construtor de relatórios](../reporting-services/media/rb-getstarted.png "iniciar o construtor de relatórios")  
+     ![Introdução ao Construtor de Relatórios](../reporting-services/media/rb-getstarted.png "Introdução ao Construtor de Relatórios")  
   
      Se a caixa de diálogo **Introdução** não estiver visível, clique em **Arquivo** >**Novo**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** . 
       
@@ -220,7 +221,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 2.  Clique no eixo horizontal ao longo da parte inferior do gráfico para selecioná-lo.  
   
-3.  Sobre o **início** guia > **número** grupo > **moeda**. Os rótulos do eixo horizontal são alterados para moeda.  
+3.  Na guia **Início** > grupo **Número** > **Moeda**. Os rótulos do eixo horizontal são alterados para moeda.  
   
 3.  (Opcional) Remova os dígitos decimais. Próximo ao botão **Moeda** , clique no botão **Diminuir Decimal** duas vezes.  
   
@@ -301,12 +302,11 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 4.  Clique em **Salvar**.   
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Você concluiu com êxito o tutorial Adicionando um gráfico de barras seu relatório. Para saber mais sobre gráficos, consulte [Gráficos](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Gráficos de Barras](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

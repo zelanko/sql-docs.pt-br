@@ -2,9 +2,12 @@
 title: Usar o SQL Server Profiler para criar e testar guias de plano | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,18 +25,18 @@ helpviewer_keywords:
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9df245120d4de965c932071851125b47dbd65208
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
-  Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide** . Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide**. Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capturando texto de consulta usando o SQL Server Profiler  
  Se você executar uma consulta e capturar o texto exatamente como foi submetido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], será possível criar um guia de plano do tipo SQL ou TEMPLATE que corresponderá exatamente ao texto de consulta. Isto certifica que o guia de plano seja usado pelo otimizador de consulta.  
@@ -99,7 +102,7 @@ EXEC sp_create_plan_guide
   
 5.  Se o guia de plano for do tipo OBJECT ou SQL, verifique se o evento **Plano de Execução XML** contém os atributos **PlanGuideDB** e **PlanGuideName** para o guia de plano que você espera que corresponda à consulta. Ou, no caso de um guia de plano de TEMPLATE, verifique se o evento **Plano de Execução XML** contém os atributos **TemplatePlanGuideDB** e **TemplatePlanGuideName** para o guia de plano esperada. Isto verifica se o guia de plano está funcionando. Esses atributos estão contidos no elemento do plano **\<StmtSimple>**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

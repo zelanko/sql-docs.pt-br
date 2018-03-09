@@ -2,10 +2,14 @@
 title: Dispositivos de backup (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: "93"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2decbc706e1bbc8ee6bb1057684ae0e643f129c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de backup (SQL Server)
-  Durante uma operação de backup em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os dados submetidos a backup (o *backup*) são gravados em um dispositivo de backup físico. Esse dispositivo de backup físico é inicializado quando o primeiro backup em um conjunto de mídias é gravado nele. Backups em um conjunto de um ou mais dispositivos de backup compõem um único conjunto de mídias.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Durante uma operação de backup em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os dados submetidos a backup (o *backup*) são gravados em um dispositivo de backup físico. Esse dispositivo de backup físico é inicializado quando o primeiro backup em um conjunto de mídias é gravado nele. Backups em um conjunto de um ou mais dispositivos de backup compõem um único conjunto de mídias.  
    
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
  disco de backup  

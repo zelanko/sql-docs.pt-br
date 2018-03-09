@@ -1,5 +1,5 @@
 ---
-title: Conecte-se para uma pasta de trabalho do Excel | Microsoft Docs
+title: Conectar-se a uma pasta de trabalho do Excel | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -15,36 +15,35 @@ ms.topic: article
 helpviewer_keywords:
 - Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ece6c4ef032f7b60f82f3f58ee602d0a4ac1196
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-workbook"></a>Conectar-se a uma pasta de trabalho do Excel
   A conexão de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma pasta de trabalho do Microsoft Office Excel requer um gerenciador de conexões do Excel.  
   
  Você pode criar esses gerenciadores de conexões na área Gerenciadores de Conexões do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou no Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  
-## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para os arquivos do Microsoft Excel e Access
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para arquivos do Microsoft Excel e Access
   
-Você precisará baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixar a versão mais recente dos componentes de conectividade para o Excel e acessar arquivos aqui: [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
+Talvez seja preciso baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixe a versão mais recente dos componentes de conectividade para arquivos do Excel e do Access aqui: [Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
-A versão mais recente dos componentes pode abrir arquivos criados por versões anteriores do Excel.
+A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
 
-Se o computador tiver uma versão de 32 bits do Office, em seguida, você precisa instalar a versão de 32 bits dos componentes e você também precisa garantir que você execute o pacote no modo de 32 bits.
+Se o computador tiver uma versão de 32 bits do Office, você precisará instalar a versão de 32 bits dos componentes e precisará também certificar-se de executar o pacote no modo de 32 bits.
 
-Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o redistribuível de 2016 do mecanismo de banco de dados de acesso e não o Microsoft Access 2016 Runtime. Quando você executar o instalador, você verá uma mensagem de erro que você não pode instalar a download lado a lado com componentes do Office clique para executar. Para ignorar essa mensagem de erro e instalar os componentes com êxito, execute a instalação no modo silencioso abrindo uma janela de Prompt de comando e executando o. Arquivo EXE baixado com o `/quiet` alternar. Por exemplo:
+Se você tem uma assinatura do Office 365, verifique se você baixou o Mecanismo de Banco de Dados do Access 2016 Redistribuível e não o Tempo de Execução do Microsoft Access 2016. Quando você executar o instalador, você verá uma mensagem de erro dizendo que você não pode instalar o download lado a lado com componentes do tipo clique para executar do Office. Para ignorar essa mensagem de erro e instalar os componentes com êxito, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="create-an-excel-connection-manager"></a>Criar uma Excel Gerenciador de conexão
+## <a name="create-an-excel-connection-manager"></a>Criar um gerenciador de conexões do Excel
 
 ### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões do Excel na área Gerenciadores de Conexões  
   
@@ -64,8 +63,7 @@ Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o 
   
      Para obter informações sobre as opções de configuração que estão disponíveis para este tipo de conexão, consulte [Editor de Gerenciador de Conexões Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar-se a um banco de dados do Access](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   
-

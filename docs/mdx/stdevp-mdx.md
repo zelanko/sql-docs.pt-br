@@ -2,34 +2,32 @@
 title: StdevP (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- STDEVP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StdevP function [MDX]
+f1_keywords: STDEVP
+dev_langs: kbMDX
+helpviewer_keywords: StdevP function [MDX]
 ms.assetid: cd8ae7c9-3cef-49f0-bb41-8f577c7b6f31
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 697f1da527f797a203a8536c80894ba8bffe5dec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d72eb148aafccc60aa5097c8c7fed7f8b842a583
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o desvio padrão da população de uma expressão numérica avaliada em um conjunto, usando a fórmula de população polarizada (dividindo por  *n* ).  
   
@@ -47,7 +45,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **StdevP** função usa a população polarizada fórmulas, enquanto o [Stdev](../mdx/stdev-mdx.md) função usa a fórmula de população não polarizada.  
   
 ## <a name="example"></a>Exemplo  
@@ -64,8 +62,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

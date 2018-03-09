@@ -1,27 +1,27 @@
 ---
-title: "Preparar os dados do Excel para relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Preparar dados do Excel para relatórios móveis do Reporting Services | Microsoft Docs"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparar dados do Excel para relatórios móveis do Reporting Services
   
@@ -103,5 +103,4 @@ Os objetos personalizados em planilhas do Excel, incluindo Tabelas Dinâmicas, v
   
   
   
-
 

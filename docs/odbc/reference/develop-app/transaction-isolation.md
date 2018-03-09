@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3bf295bdbaf259a9ca305fc1202d58bfe68b05b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b1c9419b8b26a150e717a690fd9c03395e648845
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-isolation"></a>Isolamento de transação
 *Isolamento de transação* se refere ao grau de interação entre várias transações simultâneas. Para ver por que isso é importante, você precisará primeiro examinar a ideia de serialização.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [Configurando o nível de isolamento da transação](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)  
   
 -   [Cursores roláveis e isolamento da transação](../../../odbc/reference/develop-app/scrollable-cursors-and-transaction-isolation.md)
-

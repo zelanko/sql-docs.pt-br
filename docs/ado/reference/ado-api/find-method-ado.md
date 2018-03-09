@@ -3,8 +3,9 @@ title: "Localizar o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords: Find method [ADO]
+helpviewer_keywords:
+- Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Localizar o método (ADO)
 Pesquisa um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, linha inicial e o deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida ao final (ou início) da **registros**.  
@@ -51,7 +53,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Iniciar*  
  Opcional. Um **Variant** indicador que funciona como a posição inicial da pesquisa.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Apenas um nome de coluna única que pode ser especificado em *critérios*. Este método não oferece suporte a pesquisas de várias colunas.  
   
  O operador de comparação em *critérios* pode ser "**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior ou igual) "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrão).  

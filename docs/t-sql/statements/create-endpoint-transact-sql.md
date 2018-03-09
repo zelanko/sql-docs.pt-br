@@ -1,5 +1,5 @@
 ---
-title: CRIAR ponto de EXTREMIDADE (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -34,17 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 135
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 072e142531102533d278ec57573079f5bd90c99e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +134,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  O ponto de extremidade está desabilitado. Neste estado, o servidor escuta as solicitações da porta, mas devolve erros aos clientes.  
   
- **INTERROMPIDO**  
+ **STOPPED**  
  O ponto de extremidade está parado. Nesse estado, o servidor não escuta a porta do ponto de extremidade nem responde a qualquer solicitação de tentativa para usar o ponto de extremidade.  
   
  Para alterar o estado, use [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -152,10 +151,10 @@ FOR DATABASE_MIRRORING (
   
  Os argumentos a seguir se aplicam apenas à opção protocolo TCP.  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **= * listenerPort*  
  Especifica o número da porta de escuta para conexões pelo protocolo TCP/IP service broker. Por convenção, 4022 é usado, mas qualquer número entre 1024 e 32767 é válido.  
   
- LISTENER_IP  **=**  todos os | **(***parte 4-ip* **)** | **(** "*ip_address_v6*"  **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  Especifica o endereço IP de escuta do ponto de extremidade. O padrão é ALL. Isso significa que o ouvinte aceitará uma conexão em qualquer endereço IP válido.  
   
  Se você configurar o espelhamento de banco de dados com um endereço IP, em vez de um nome de domínio totalmente qualificado (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), especifique `LISTENER_IP =IP_address`, em vez de `LISTENER_IP=ALL`, ao criar pontos de extremidade de espelhamento.  
@@ -174,9 +173,9 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  Todas as conexões de espelhamento em uma instância de servidor usam um único ponto de extremidade de espelhamento de banco de dados. Qualquer tentativa para criar um ponto de extremidade de espelhamento de banco de dados adicional falhará.  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Especifica que o ponto de extremidade deve ser conectado usando o protocolo de Autenticação do Windows para autenticar os pontos de extremidade. Esse é o padrão.  
   
  Se você especificar um método de autorização (NTLM ou KERBEROS), esse método sempre será usado como o protocolo de autenticação. O valor padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos.  
@@ -184,10 +183,10 @@ FOR DATABASE_MIRRORING (
  CERTIFICADO *certificate_name*  
  Especifica que o ponto de extremidade autenticar a conexão usando o certificado especificado por *certificate_name* para estabelecer identidade para autorização. Os pontos de extremidade distantes devem ter um certificado com a chave pública correspondente à chave privada do certificado especificado.  
   
- WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] CERTIFICADO *certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Especifica que ponto de extremidade deve tentar conexão usando a Autenticação do Windows e, se essa tentativa falhar, tentar o certificado especificado.  
   
- CERTIFICADO *certificate_name* WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Especifica que ponto de extremidade deve tentar conexão usando certificado especificado e, se essa tentativa falhar, tentar a Autenticação do Windows.  
   
  CRIPTOGRAFIA = {DESABILITADO | SUPORTE | **REQUIRED** } [ALGORITMO { **AES** | RC4 | AES RC4 | RC4 AES}]  
@@ -237,7 +236,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta mensagens para serviços localizados em outro lugar. Esse é o padrão.  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **= * forward_size*  
  Especifica a quantidade máxima de armazenamento em megabytes a ser alocada para ser usada no ponto de extremidade ao armazenar mensagens a serem encaminhadas.  
   
  **Opções DATABASE_MIRRORING**  
@@ -264,7 +263,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Não há nenhuma porta padrão para DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Instruções DDL de ponto de EXTREMIDADE não podem ser executadas dentro de uma transação de usuário. Instruções ENDPOINT DDL não falham, mesmo que uma transação ativa de nível de isolamento de instantâneo esteja usando o ponto de extremidade que está sendo alterado.  
   
  Podem ser executadas solicitações em um ENDPOINT pelo seguinte:  
@@ -276,7 +275,7 @@ FOR DATABASE_MIRRORING (
 -   Usuários ou grupos com permissão CONNECT no ponto de extremidade  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão CREATE ENDPOINT ou associação na função de servidor fixa **sysadmin** . Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Requer permissão CREATE ENDPOINT ou associação na função de servidor fixa **sysadmin** . Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -296,10 +295,9 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Escolha um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [Remover ponto de EXTREMIDADE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

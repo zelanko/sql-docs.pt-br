@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-result-set-columns"></a>Colunas do conjunto de resultados de associação
 Os aplicativos podem associar como muitas ou poucas colunas do conjunto de resultados como quiser, incluindo sem colunas de associação em todos os. Quando uma linha de dados for encontrada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, aplicativos que geram relatórios geralmente têm um formato fixo; Esses aplicativos criar um conjunto de resultados que contém todas as colunas usadas no relatório e, em seguida, vincular e recuperam os dados de todas essas colunas. Aplicativos que exibem as telas de dados, às vezes, permitir que o usuário decidir quais colunas serão exibidas; Esses aplicativos criam um conjunto de resultados contendo todas as colunas, o usuário pode desejar, mas vincular e recuperar os dados somente para as colunas escolhidos pelo usuário.  
@@ -50,4 +48,3 @@ SELECT * FROM Lines
 ```  
   
  no identificador da instrução, as associações de coluna para o primeiro conjunto de resultados ainda estão em vigor porque essas são as associações armazenadas na estrutura de instrução. Na maioria dos casos, isso é uma prática de programação ruim e deve ser evitado. Em vez disso, o aplicativo deve chamar **SQLFreeStmt** com a opção SQL_UNBIND para desassociar todas as colunas antigas e, em seguida, associar novas.
-

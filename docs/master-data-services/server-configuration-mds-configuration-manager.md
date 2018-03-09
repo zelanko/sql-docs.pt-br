@@ -5,24 +5,26 @@ ms.date: 01/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.srvinfopg.f1
+f1_keywords:
+- sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: "11"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d6e1fd92da6c48f3eabf34016e69dd17220271a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66f0dd522e5a0d15f62403b2ecefa7654ca46f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Configuração do servidor (Gerenciador de Configuração do MDS)
   Use a página **Configuração do Servidor** para exibir informações de configuração para o computador do servidor local.  

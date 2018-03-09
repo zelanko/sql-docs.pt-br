@@ -2,15 +2,13 @@
 title: Cubos locais (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5872bd5a1efda8d8add71bc1ce0e089785352e11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locais (Analysis Services – Dados Multidimensionais)
-  Para criar, atualizar ou excluir cubos locais, você deve escrever e executar um script ASSL ou um programa AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Para criar, atualizar ou excluir cubos locais, você deve gravar e executar um script ASSL ou um programa AMO.  
   
  Os cubos locais e os modelos de mineração locais permitem a análise em uma estação de trabalho cliente enquanto ela estiver desconectada da rede. Por exemplo, um aplicativo cliente pode chamar o OLE DB for OLAP 9.0 Provider (MSOLAP.3), que carrega o mecanismo do cubo local para criar e consultar cubos locais, conforme mostra a seguinte ilustração:  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  Os cubos locais não são protegidos por meio de funções como os cubos de servidor. Qualquer um com acesso no nível de arquivo a um arquivo de cubo local pode consultar os cubos. Você pode usar o **senha de criptografia** propriedade de conexão em um arquivo de cubo local para definir uma senha no arquivo de cubo local. A definição de uma senha em um arquivo de cubo local requer que todas as conexões futuras com o arquivo de cubo local utilizem essa senha para consultar o arquivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar cubo GLOBAL instrução &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
  [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Instrução do cubo de atualização de &#40; MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  

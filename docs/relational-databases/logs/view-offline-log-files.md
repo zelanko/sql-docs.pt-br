@@ -2,29 +2,34 @@
 title: Exibir arquivos de log offline | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fbac24caac2af64ba28178a1cfebd9bd860581d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
-  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
   
  Você pode acessar os arquivos de log offline de Servidores Registrados, ou programaticamente por WMI e o WQL (Linguagem WQL) consulta.  
   
@@ -121,7 +126,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Se os arquivos de log levarem muito tempo para carregar, você poderá clicar em **Parar** na barra de ferramentas do Visualizador do Arquivo de Log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer.md)  
   
   

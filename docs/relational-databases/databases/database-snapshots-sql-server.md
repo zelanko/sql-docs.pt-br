@@ -2,9 +2,12 @@
 title: "Instantâneos do banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
-  Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Quando o banco de dados de origem é atualizado, o instantâneo do banco de dados é atualizado. Portanto, quanto mais tempo o instantâneo de banco de dados existir, maior será a probabilidade de ele usar todo o espaço em disco disponível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Quando o banco de dados de origem é atualizado, o instantâneo do banco de dados é atualizado. Portanto, quanto mais tempo o instantâneo de banco de dados existir, maior será a probabilidade de ele usar todo o espaço em disco disponível.  
   
  Vários instantâneos podem existir em um banco de dados de origem. Cada instantâneo de banco de dados persiste até que seja explicitamente removido pelo proprietário do banco de dados.  
   
@@ -238,7 +241,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados e instantâneos de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

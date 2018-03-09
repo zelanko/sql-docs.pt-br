@@ -1,27 +1,27 @@
 ---
 title: "Preparar dados para relatórios móveis do Reporting Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f995ee637ce4a05f3f4339abf363e02ff96f6f95
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparar dados para relatórios móveis do Reporting Services
   
@@ -96,5 +96,4 @@ Nesta tabela, os itens de ParentKey primeiro são listados na coluna ItemKey, em
   
   
   
-
 

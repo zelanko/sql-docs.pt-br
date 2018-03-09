@@ -2,16 +2,13 @@
 title: "Adicionar inteligência de conta a uma dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Assistente de BI - adicionar inteligência de conta a uma dimensão
-  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
   
 > [!NOTE]  
 >  A inteligência de conta está disponível somente para dimensões baseadas nas fontes de dados existentes. Para dimensões que foram criadas sem usar uma fonte de dados, execute o Assistente de Geração de Esquema para criar uma exibição da fonte de dados antes de adicionar a inteligência de conta.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
     |Tipo de conta de servidor|Agregação|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**Estatística**|**Nenhum.**|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
+    |**Estatística**|**Nenhuma**|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
     |**Dívida**|**LastNonEmpty**|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Ativo**|**LastNonEmpty**|O dinheiro ou valor de coisas de propriedade em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente com o decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Saldo**|**LastNonEmpty**|A contagem de algo em um momento especificado. Esse tipo de conta é acumulado, mas não agregado naturalmente com o passar do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados.|  
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/01/2017
 4.  Na caixa de listagem suspensa **Função de Agregação** , altere a Função de Agregação padrão para esse tipo de conta.  
   
   
-

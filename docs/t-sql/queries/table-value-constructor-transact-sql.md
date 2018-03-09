@@ -20,17 +20,16 @@ helpviewer_keywords:
 - row constructor [SQL Server]
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9920f0a7e6b466541dbd60257385b31ba04cdb5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87fc6196f740c0bf3cfd9fa1f94f73872942fa1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -190,9 +189,8 @@ GROUP BY Change;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Mesclar &#40; Transact-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   
-

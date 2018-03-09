@@ -3,8 +3,11 @@ title: Criar e anexar agendas a trabalhos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ad28993e894bc45ad25e5db296777c66d36328
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9d367f1a130f9bcdffa1ab28af8bac99fec00deb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
-Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
   
 Há dois modos de criar um agenda:  
   
@@ -84,16 +87,16 @@ Antes de definir trabalhos para execução durante o tempo ocioso de CPU, determ
   
 Defina a condição de ociosidade de CPU na forma de uma porcentagem abaixo da qual deve permanecer o uso de CPU por um tempo especificado. Em seguida, defina o intervalo de tempo. Quando o uso de CPU se encontrar abaixo da porcentagem especificada pelo intervalo de tempo especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent iniciará todos os trabalhos que têm uma agenda de tempo ocioso de CPU. Para obter mais informações sobre como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] ou o Monitor de Desempenho para monitorar o uso de CPU, consulte [Monitoramento do uso de CPU](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |Descreve como criar uma agenda para um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Agendar um trabalho](../../ssms/agent/schedule-a-job.md)|  
 |Explica como definir a condição de ociosidade de CPU para seu servidor.|[Definir o momento e a duração de ociosidade da CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
 [sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

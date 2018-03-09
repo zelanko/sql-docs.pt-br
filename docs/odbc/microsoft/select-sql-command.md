@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>Selecione - o comando SQL
 Recupera dados de uma ou mais tabelas.  
@@ -276,7 +276,7 @@ WHERE customer.cust_id NOT IN ;
   
  Resultados da consulta aparecem fora de ordem, se você não especificar uma ordem com ORDER BY.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Selecione é um comando SQL interno do Visual FoxPro como qualquer outro comando do Visual FoxPro. Quando você usa Selecione para representar uma consulta, Visual FoxPro interpreta a consulta e recupera os dados especificados das tabelas. Você pode criar uma consulta SELECT de dentro da janela de Prompt de comando ou um programa do Visual FoxPro (como acontece com qualquer outro comando do Visual FoxPro).  
   
 > [!NOTE]  
@@ -285,7 +285,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Comentários de driver  
  Quando o aplicativo envia a instrução SQL ODBC SELECT para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando Selecionar do Visual FoxPro sem conversão, a menos que o comando contém uma sequência de escape ODBC. Itens colocados em uma sequência de escape ODBC são convertidos em sintaxe do Visual FoxPro. Para obter mais informações sobre como usar o ODBC sequências de escape, consulte [funções de data e hora](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) e no *referência do programador de ODBC do Microsoft*, consulte [sequências de Escape no ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CRIAR TABELA - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERIR - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.DM repl_traninfo (Transact-SQL) | Microsoft Docs
+title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,44 +41,44 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Se a transação estiver em um banco de dados publicado com o uso de replicação transacional ponto a ponto. Se verdadeiro, o valor será 1; caso contrário, será 0.|  
-|**db_ver**|**int**|Versão do banco de dados.|  
-|**comp_range_address**|**varbinary (8)**|Define um intervalo de reversão parcial que deve ser ignorado.|  
-|**textinfo_address**|**varbinary (8)**|Endereço na memória da estrutura de informações do texto em cache.|  
-|**fsinfo_address**|**varbinary (8)**|Endereço na memória da estrutura de informações do fluxo de arquivos em cache.|  
-|**begin_lsn**|**nvarchar (64)**|Número de sequência de log (LSN) do registro de log inicial da transação.|  
-|**commit_lsn**|**nvarchar (64)**|LSN de registro de log de confirmação da transação.|  
-|**DBID**|**smallint**|ID do banco de dados.|  
-|**linhas**|**int**|ID do comando replicado na transação.|  
-|**xdesid**|**nvarchar (64)**|ID da transação.|  
-|**artcache_table_address**|**varbinary (8)**|Endereço na memória da estrutura de tabela de artigo em cache usada pela última vez nesta transação.|  
-|**servidor**|**nvarchar(514)**|Nome de servidor.|  
+|**db_ver**|**Int**|Versão do banco de dados.|  
+|**comp_range_address**|**varbinary(8)**|Define um intervalo de reversão parcial que deve ser ignorado.|  
+|**textinfo_address**|**varbinary(8)**|Endereço na memória da estrutura de informações do texto em cache.|  
+|**fsinfo_address**|**varbinary(8)**|Endereço na memória da estrutura de informações do fluxo de arquivos em cache.|  
+|**begin_lsn**|**nvarchar(64)**|Número de sequência de log (LSN) do registro de log inicial da transação.|  
+|**commit_lsn**|**nvarchar(64)**|LSN de registro de log de confirmação da transação.|  
+|**dbid**|**smallint**|ID do banco de dados.|  
+|**rows**|**Int**|ID do comando replicado na transação.|  
+|**xdesid**|**nvarchar(64)**|ID da transação.|  
+|**artcache_table_address**|**varbinary(8)**|Endereço na memória da estrutura de tabela de artigo em cache usada pela última vez nesta transação.|  
+|**server**|**nvarchar(514)**|Nome de servidor.|  
 |**server_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do nome do servidor.|  
-|**database**|**nvarchar(514)**|Nome do banco de dados.|  
+|**banco de dados**|**nvarchar(514)**|Nome do banco de dados.|  
 |**db_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do nome do banco de dados.|  
-|**originador**|**nvarchar(514)**|Nome do servidor em que a transação foi originada.|  
+|**originator**|**nvarchar(514)**|Nome do servidor em que a transação foi originada.|  
 |**originator_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do servidor em que a transação foi originada.|  
 |**orig_db**|**nvarchar(514)**|Nome do banco de dados em que a transação foi originada.|  
 |**orig_db_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do banco de dados em que a transação foi originada.|  
-|**cmds_in_tran**|**int**|Número de comandos replicados na transação atual, que é usado para determinar quando uma transação lógica deve ser confirmada.|  
+|**cmds_in_tran**|**Int**|Número de comandos replicados na transação atual, que é usado para determinar quando uma transação lógica deve ser confirmada.|  
 |**is_boundedupdate_singleton**|**tinyint**|Especifica se uma atualização de coluna exclusiva afeta apenas uma linha.|  
-|**begin_update_lsn**|**nvarchar (64)**|LSN usado em uma atualização de coluna exclusiva.|  
-|**delete_lsn**|**nvarchar (64)**|LSN a excluir como parte de uma atualização.|  
-|**last_end_lsn**|**nvarchar (64)**|Último LSN em uma transação lógica.|  
+|**begin_update_lsn**|**nvarchar(64)**|LSN usado em uma atualização de coluna exclusiva.|  
+|**delete_lsn**|**nvarchar(64)**|LSN a excluir como parte de uma atualização.|  
+|**last_end_lsn**|**nvarchar(64)**|Último LSN em uma transação lógica.|  
 |**fcomplete**|**tinyint**|Especifica se o comando é uma atualização parcial.|  
 |**fcompensated**|**tinyint**|Especifica se a transação está envolvida em uma reversão parcial.|  
 |**fprocessingtext**|**tinyint**|Especifica se a transação inclui uma coluna de tipo de dados grandes binários.|  
-|**max_cmds_in_tran**|**int**|Número máximo de comandos em uma transação lógica, como especificado pelo Log Reader Agent.|  
+|**max_cmds_in_tran**|**Int**|Número máximo de comandos em uma transação lógica, como especificado pelo Log Reader Agent.|  
 |**begin_time**|**datetime**|Hora em que a transação foi iniciada.|  
 |**commit_time**|**datetime**|Hora em que a transação foi confirmada.|  
-|**session_id**|**int**|ID da sessão de verificação do log do Change Data Capture. Esta coluna é mapeada para o **session_id** coluna [sys.DM cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**int**|Número que indica a fase em que a sessão estava na ocasião em que o erro ocorreu. Esta coluna é mapeada para o **phase_number** coluna [sys.DM cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_id**|**Int**|ID da sessão de verificação do log do Change Data Capture. Esta coluna é mapeada para o **session_id** coluna [sys.DM cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
+|**session_phase**|**Int**|Número que indica a fase em que a sessão estava na ocasião em que o erro ocorreu. Esta coluna é mapeada para o **phase_number** coluna [sys.DM cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indica a transação controlada pelo Change Data Capture.<br /><br /> 0 = Transação de replicação de transações.<br /><br /> 1 = Transação do Change Data Capture.|  
-|**error_count**|**int**|Número de erros encontrados.|  
+|**error_count**|**Int**|Número de erros encontrados.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados de publicação ou no banco de dados habilitado para Change Data Capture.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As informações só serão retornadas para objetos de banco de dados replicados ou tabelas habilitadas para Change Data Capture atualmente armazenados no cache de artigo.  
   
 ## <a name="see-also"></a>Consulte também  

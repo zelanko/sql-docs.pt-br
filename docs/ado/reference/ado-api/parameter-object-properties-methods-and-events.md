@@ -3,26 +3,28 @@ title: "Propriedades do objeto de parâmetro, métodos e eventos | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Parameter object [ADO], members
+helpviewer_keywords:
+- Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225afcbb96be03a06d79e955a1642c5cdcd7e74e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4aed60607b071183c3ba6a88ccab7a549aa9d755
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de parâmetro
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  [Método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

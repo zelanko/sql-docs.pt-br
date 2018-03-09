@@ -2,28 +2,27 @@
 title: "Adicionar um relatório novo ou existente a um projeto de relatório (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "20"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e29acdb16ec95fa3e2504cef099e26f55b82b792
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Adicionar um relatório novo ou existente a um projeto de relatório (SSRS)
   Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando o Assistente de Relatório ou acrescentando um novo relatório em branco ao projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
@@ -31,13 +30,13 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Para visualizar um relatório com fontes de dados existentes, é preciso ter as permissões para a fonte de dados do cliente que está criando o relatório. Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Depois de adicionar um relatório, é possível definir as fontes de dados e os conjuntos de dados, e criar um layout de relatório. Para começar, consulte [Criando um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Depois de adicionar um relatório, é possível definir as fontes de dados e os conjuntos de dados, e criar um layout de relatório. Para começar, consulte [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Para adicionar um novo relatório usando o Assistente de Relatórios  
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta Relatórios e clique em **Adicionar Novo Relatório**. A caixa de diálogo **Assistente de Relatório** é aberta.  
   
-     O assistente orienta você na criação de uma fonte de dados, criando um conjunto de dados com uma consulta, definir grupos, especificando um layout e criando o relatório. As etapas incluem:  
+     O assistente orientará você pela criação de uma fonte de dados, criação de um conjunto de dados com uma consulta, definição de grupos, especificação de um layout e criação do relatório. As etapas incluem:  
   
     -   **Selecionar uma fonte de dados.** A primeira etapa ao criar um relatório é definir uma fonte de dados. O Assistente de Relatório apresenta uma lista de todas as fontes de dados compartilhadas no projeto de relatório, além de uma opção para criar uma nova fonte de dados.  
   
@@ -65,9 +64,8 @@ ms.lasthandoff: 08/09/2017
   
      O relatório é acrescentado ao projeto na pasta **Relatórios** . Quando você fechar e reabrir o projeto, os relatórios serão classificados pela ordem alfabética.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- Mais perguntas? [Tente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Um único formulário de perfil rápido de tabela (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Formulário de Perfil Rápido de Tabela Única (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Single Table Quick Profile Form (Data Profiling Task)
   Use o **Formulário de Perfil Rápido de Tabela Única** para configurar a tarefa Criação de Perfil de Dados para criar um perfil de uma tabela ou exibição única usando as configurações padrão.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
  **Computar**  
  Selecione quais perfis devem ser computados.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Perfil Razão Nula de Coluna**|Compute um perfil Razão Nula de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Perfil Estatísticas de Coluna**|Compute um perfil Estatísticas de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas **datetime** . Este perfil pode ajudá-lo a identificar problemas em seus dados, como datas inválidas. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil de Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -59,9 +58,8 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  O tipo de perfil Valor Inclusão não está disponível no **Formulário de Perfil Rápido de Tabela Única**.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Editor da tarefa &#40; de criação de perfil de dados Página de solicitações de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

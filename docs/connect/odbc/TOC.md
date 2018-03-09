@@ -6,3 +6,4 @@
 # [Referência ODBC e detalhes +](../../odbc/microsoft-open-database-connectivity-odbc.md)
 # [Baixar o driver ODBC para SQL Server](download-odbc-driver-for-sql-server.md)
 
+# [Atributos e palavras-chave da cadeia de conexão DSN](dsn-connection-string-attribute.md)

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STRING_SPLIT
 - STRING_SPLIT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STRING_SPLIT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,13 +54,13 @@ STRING_SPLIT ( string , separator )
  *cadeia de caracteres*  
  É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de caractere (isto é, **nvarchar**, **varchar**, **nchar** ou **char**).  
   
- *separador*  
+ *separator*  
  É um caractere único [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de caractere (por exemplo, **nvarchar(1)**, **varchar (1)**, **nchar (1)** ou  **char (1)**) que é usado como separador de cadeias de caracteres concatenadas.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna uma tabela de coluna única com fragmentos. O nome da coluna é **valor**. Retorna **nvarchar** se qualquer um dos argumentos de entrada são **nvarchar** ou **nchar**. Caso contrário, retornará **varchar**. O comprimento do tipo de retorno é o mesmo que o comprimento do argumento da cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **STRING_SPLIT** usa uma cadeia de caracteres que deve ser dividida e o separador que será usado para dividir a cadeia de caracteres. Retorna uma tabela de coluna única com subcadeias de caracteres. Por exemplo, a instrução a seguir `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` usando o caractere de espaço como separador de retorna resultados de tabela a seguir:  
   
 |value|  
@@ -171,7 +174,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Subcadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

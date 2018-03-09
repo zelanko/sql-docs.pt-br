@@ -2,26 +2,31 @@
 title: "Criar, alterar e remover índices XML seletivos secundários | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 592dc9da5c279d224ad05a40ec56f520e9566370
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6236f26bea1a5eb579c103a4727eb0257da360c4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Criar, alterar e remover índices XML seletivos secundários
-  Descreve como criar um novo índice XML seletivo secundário, ou como alterar ou remover um índice XML seletivo secundário.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Descreve como criar um novo índice XML seletivo secundário, ou como alterar ou remover um índice XML seletivo secundário.  
   
 ##  <a name="create"></a> Criando um índice XML seletivo secundário  
   
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
  O exemplo a seguir cria um índice XML seletivo secundário no caminho `'pathabc'`. O caminho para o índice é identificado pelo nome atribuído a ele quando ele foi criado com a instrução CREATE SELECTIVE XML INDEX. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  
@@ -57,7 +62,7 @@ FOR
   
  O exemplo a seguir altera um índice XML seletivo secundário removendo-o e recriando-o.  
   
-```tsql  
+```sql  
 DROP INDEX filt_sxi_index_c  
   
 CREATE XML INDEX filt_sxi_index_c  
@@ -80,13 +85,13 @@ FOR
   
  O exemplo a seguir mostra uma instrução DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX ssxi_index  
 ON tbl  
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

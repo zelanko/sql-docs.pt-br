@@ -1,5 +1,5 @@
 ---
-title: Gerenciando a executar pacotes programaticamente | Microsoft Docs
+title: "Gerenciar pacotes em execução programaticamente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,27 +17,26 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - running packages [Integration Services]
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 34f2c773e89c0162df5d13a16d27f01eb5d8f4df
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 93a72d16f8d99c7328929c72410751e5dca988aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-running-packages-programmatically"></a>Gerenciando pacotes em execução programaticamente
   Ao trabalhar programaticamente com pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], determine quais pacotes estão em execução no momento. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece métodos e classes que atendem a esses requisitos.  
   
- Para obter mais informações sobre como monitorar pacotes, consulte [pacote de gerenciamento &#40; Serviço do SSIS &#41; ](../../integration-services/service/package-management-ssis-service.md).  
+ Para obter mais informações sobre o monitoramento de pacotes, consulte [Gerenciamento de Pacotes &#40;Serviço SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).  
   
- Todos os métodos discutidos neste tópico exigem uma referência para o **manageddts** assembly. Após adicionar a referência em um novo projeto, importe o <xref:Microsoft.SqlServer.Dts.Runtime> namespace com um **usando** ou **Imports** instrução.  
+ Todos os métodos discutidos neste tópico exigem uma referência ao assembly **Microsoft.SqlServer.ManagedDTS**. Após adicionar a referência em um novo projeto, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução **using** ou **Imports**.  
   
 > [!IMPORTANT]  
->  Os métodos do <xref:Microsoft.SqlServer.Dts.Runtime.Application> suporta somente a classe para trabalhar com o repositório de pacotes do SSIS ".", localhost ou o nome do servidor para o servidor local. Você não pode usar "(local)".  
+>  Os métodos da classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> para funcionar com o Repositório de Pacotes do SSIS dão suporte apenas a “.”, localhost ou ao nome do servidor local. Você não pode usar "(local)".  
   
 ## <a name="determining-which-packages-are-currently-running"></a>Determinando quais pacotes estão em execução atualmente  
  Para determinar quais pacotes estão em execução atualmente no servidor especificado, chame o método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetRunningPackages%2A>. Esse método retorna uma coleção <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackages> de objetos <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage>.  
@@ -69,9 +67,8 @@ ms.lasthandoff: 08/03/2017
 ### <a name="stopping-a-running-package"></a>Interrompendo um pacote em execução  
  Você pode chamar o método <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage.Stop%2A> de um objeto <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> para solicitar que o pacote seja interrompido. Pode haver um atraso entre a hora em que uma solicitação de interrupção é emitida e a hora em que o pacote é realmente interrompido.  
   
-## <a name="see-also"></a>Consulte também  
- [Pacote de gerenciamento &#40; Serviço do SSIS &#41;](../../integration-services/service/package-management-ssis-service.md)   
- [Enumerando pacotes disponíveis programaticamente](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciamento de Pacotes &#40;Serviço SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)   
+ [Enumerar pacotes disponíveis programaticamente](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 648e58e6b8f86648d1e3bf1d80ff02916c4276be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
   Quando você está trabalhando no designer de fluxo de controle, a Caixa de Ferramentas do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lista as tarefas que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece para criar o fluxo de controle em um pacote. Para obter mais informações a Barra de Ferramentas, consulte [Caixa de Ferramentas do SSIS](../../integration-services/ssis-toolbox.md).  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/26/2017
   
  Os procedimentos a seguir descrevem como adicionar ou excluir uma tarefa ou um contêiner no fluxo de controle de um pacote.  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Adicione uma tarefa ou um contêiner para um fluxo de controle  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Adicionar uma tarefa ou um contêiner a um fluxo de controle  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -74,7 +73,7 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
   
  Os procedimentos a seguir descrevem como definir as propriedades de uma tarefa ou de um contêiner usando as janelas **Propriedades** ou o editor de tarefas ou de contêineres correspondente.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Definir as propriedades de uma tarefa ou contêiner com a janela Propriedades  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Definir as propriedades de uma tarefa ou contêiner usando a janela Propriedades  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -93,7 +92,7 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
   
 7.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Definir as propriedades de uma tarefa ou contêiner com o editor de tarefa ou contêiner  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Definir as propriedades de uma tarefa ou de um contêiner com o editor de tarefas ou de contêineres  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -118,10 +117,9 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
   
 8.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

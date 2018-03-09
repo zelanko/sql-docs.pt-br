@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ Este artigo fornece informações sobre como desenvolver aplicativos .NET usando
 O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um driver habilitado para Sempre Criptografado, como o Provedor de Dados .NET Framework para SQL Server, consegue fazer isso criptografando e descriptografando de modo transparente dados confidenciais no aplicativo cliente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, veja [Always Encrypted (Mecanismo de Banco de Dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provisionamento de chaves do Sempre Criptografado e a configuração de criptografia de colunas de banco de dados selecionadas. Se você ainda não tiver um banco de dados com o Sempre Criptografado configurado, siga as instruções em [Getting Started with Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)(Introdução ao Sempre Criptografado).
 - Verifique se a versão 4.6 ou posterior do .NET Framework está instalada no computador de desenvolvimento. Para obter detalhes, confira [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Você também precisa verificar se a versão 4.6 ou posterior do .NET Framework está configurada como a versão de destino do .NET Framework no ambiente de desenvolvimento. Se estiver usando o Visual Studio, veja [Como transformar uma versão do .NET Framework em uma versão de destino](https://msdn.microsoft.com/library/bb398202.aspx). 
@@ -283,7 +284,7 @@ O processo para obter uma chave de criptografia de coluna:
 O Provedor de Dados do .NET Framework para SQL Server é fornecido com os provedores internos de repositórios de chaves mestras de coluna a seguir, que são pré-registrados com os nomes do provedor específico (usados para pesquisar o provedor).
 
 
-| Classe | Descrição | Nome (de pesquisa) do provedor |
+| Classe | Description | Nome (de pesquisa) do provedor |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Um provedor do Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE |
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 e versões posteriores. |Um provedor de um repositório de chaves que dá suporte à [API do CNG da Microsoft (Cryptography API: Next Generation)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.  | MSSQL_CNG_STORE|
@@ -553,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nome|Descrição|Introduzido na versão do .NET
+|Nome|Description|Introduzido na versão do .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Um provedor de repositório de chaves para o Repositório de Certificados do Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Um provedor de repositório de chaves para o Microsoft CNG (Cryptography API: Next Generation).|  4.6.1
@@ -571,9 +572,9 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Nova palavra-chave da [cadeia de conexão](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) : `Column Encryption Setting=enabled`|Habilita ou desabilita a funcionalidade Sempre Criptografado para a conexão.| 4.6 
   
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-- [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Sempre Criptografado (Mecanismo de Banco de Dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog do Always Encrypted](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial do Banco de Dados SQL: Proteger dados confidenciais com o Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

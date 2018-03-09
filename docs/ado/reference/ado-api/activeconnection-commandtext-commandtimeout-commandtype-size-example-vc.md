@@ -3,7 +3,7 @@ title: Armazenado exemplo de propriedades de procedimento (VC + +) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8766ba23e2765c46003af51311b07e5d4045782a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4d9ede231a0b6d9a4c326385850202f81fe78a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)
 Este exemplo usa o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direção](../../../ado/reference/ado-api/direction-property.md) propriedades para executar um procedimento armazenado.  
@@ -225,4 +224,3 @@ Authors With  25  Percent Royalty
  [Propriedade CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Propriedade de direção](../../../ado/reference/ado-api/direction-property.md)   
  [Propriedade Size (Parâmetro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-

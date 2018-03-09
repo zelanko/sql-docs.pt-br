@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER BROKER PRIORITY
 - ALTER BROKER
 - ALTER_BROKER_PRIORITY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd2cfd04ccc1de66fab7c518fdc31191955b24b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,12 +109,12 @@ FOR CONVERSATION
   
  Se REMOTE_SERVICE_NAME não for especificado, a propriedade de serviço remoto da prioridade de conversa não será alterada.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **padrão** }  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica o nível de prioridade a ser atribuído a qualquer ponto de extremidade de conversa que use os contratos e serviços especificados na prioridade de conversa. *PriorityValue* deve ser um inteiro literal de 1 (prioridade mais baixa) a 10 (prioridade mais alta).  
   
  Se PRIORITY_LEVEL não for especificado, a propriedade do nível de prioridade da prioridade de conversa não será alterada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nenhuma propriedade alterada por ALTER BROKER PRIORITY se aplica a conversas existentes. As conversas existentes continuam com a prioridade que foi atribuída quando elas foram iniciadas.  
   
  Para obter mais informações, consulte [CREATE BROKER PRIORITY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-broker-priority-transact-sql.md).  
@@ -144,8 +146,8 @@ ALTER BROKER PRIORITY SimpleContractPriority
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

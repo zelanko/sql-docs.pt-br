@@ -2,29 +2,34 @@
 title: Configurar propriedades de um coletor de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.datacollectionprop.general.f1
 - sql13.swb.dc.datacollectionprop.advanced.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
-caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9faaadb66ece341464ef9f1720817f00cad7b3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fb01bee5ac0dd68dc4cda375e076a72543e3988f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurar propriedades de um coletor de dados
-  Este tópico discute como você pode configurar as propriedades de um coletor de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico discute como você pode configurar as propriedades de um coletor de dados.  
   
 ## <a name="data-collection-properties-general-tab"></a>Propriedades de Coleta de Dados (guia Geral)  
  Use esta página para definir configurações para o data warehouse de gerenciamento e especifique em que lugar os dados coletados devem ser armazenados antes de serem carregados no data warehouse.  
@@ -50,7 +55,7 @@ ms.lasthandoff: 11/09/2017
  **Número de tentativas se o carregamento falhar**  
  Especifica o número de novas tentativas de carregamento no data warehouse de gerenciamento se o carregamento falhar. O padrão é 1.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)   
  [Configurar o Data Warehouse de Gerenciamento &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

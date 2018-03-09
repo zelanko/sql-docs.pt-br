@@ -2,39 +2,33 @@
 title: Linhas de DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_COLUMNS
+apiname: DBSCHEMA_COLUMNS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_COLUMNS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 93cd52a3f37c9e14af6132708fd36591ac846f59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de linhas de DBSCHEMA_COLUMNS
-  Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de coluna para todas as colunas que atendem aos critérios de restrição fornecidos.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DBSCHEMA_COLUMNS** linhas contém as seguintes colunas.  
@@ -84,8 +78,7 @@ ms.lasthandoff: 09/01/2017
 |**NOME DA COLUNA**|**DBTYPE_WSTR**|Opcional|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Opcional|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas do esquema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

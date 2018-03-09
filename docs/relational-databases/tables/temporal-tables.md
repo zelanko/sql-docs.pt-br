@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Exemplos:**  
   
-    -   [Como criar uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
+    -   [Criando uma tabela temporal com controle de versão do sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
   
     -   [Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
   
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>Como faço para consultar dados temporais?  
- A instrução **SELECT** da cláusula **FROM***\<table>* tem uma nova cláusula **FOR SYSTEM_TIME** com cinco subcláusulas temporais específicas para consultar dados das tabelas atual e histórica. Essa nova sintaxe de instrução **SELECT** é suportada diretamente em uma única tabela, propagada por meio de várias associações e exibições em várias tabelas temporais.  
+ A instrução **SELECT** da cláusula **FROM***\<table>* tem uma nova cláusula **FOR SYSTEM_TIME** com cinco subcláusulas específicas temporais para consultar dados das tabelas atual e histórica. Essa nova sintaxe de instrução **SELECT** é suportada diretamente em uma única tabela, propagada por meio de várias associações e exibições em várias tabelas temporais.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -144,7 +145,7 @@ SELECT * FROM Employee
   
  Na tabela a seguir, SysStartTime na coluna Qualifying Rows representa o valor na coluna **SysStartTime** da tabela que está sendo consultada e **SysEndTime** representa o valor da coluna **SysEndTime** da tabela que está sendo consultada. Para obter a sintaxe completa e exemplos, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-|Expressão|Linhas de qualificação|Descrição|  
+|Expression|Linhas de qualificação|Description|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>*. O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>*.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|  
@@ -158,7 +159,7 @@ SELECT * FROM Employee
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Cenários de uso da tabela temporal](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

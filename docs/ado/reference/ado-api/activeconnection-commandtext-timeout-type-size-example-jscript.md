@@ -3,7 +3,7 @@ title: Armazenado exemplo de propriedades de procedimento (JScript) | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9de22a7cb7d4fa673f37368c72ab3390841304d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c975baf653e9cc32432bfec9359ff2caef7dc1c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)
 Este exemplo usa o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direção](../../../ado/reference/ado-api/direction-property.md) propriedades para executar um procedimento armazenado. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **ActiveConnectionJS.asp**.  
@@ -192,4 +191,3 @@ BODY {
  [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Size (Parâmetro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-

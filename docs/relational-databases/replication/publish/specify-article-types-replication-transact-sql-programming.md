@@ -2,9 +2,12 @@
 title: "Especificar tipos de artigo (Programação Transact-SQL de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30aa9302585d7a7eabc8dee8e9a1cd27695e0bab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2fbfcc58464f73d16af3b50b93e3c9c5776d371b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artigo (Programação Transact-SQL de replicação)
-  Os tipos de artigo padrão para replicação são artigos da tabela, mas é possível publicar outros objetos de banco de dados como artigos, inclusive exibições, procedimentos armazenados, funções definidas pelo usuário e execução de procedimento armazenado. Você pode usar procedimentos armazenados de replicação para especificar um tipo de artigo programaticamente quando definir um artigo. Os procedimentos usados dependerão do tipo de replicação e do tipo de artigo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os tipos de artigo padrão para replicação são artigos da tabela, mas é possível publicar outros objetos de banco de dados como artigos, inclusive exibições, procedimentos armazenados, funções definidas pelo usuário e execução de procedimento armazenado. Você pode usar procedimentos armazenados de replicação para especificar um tipo de artigo programaticamente quando definir um artigo. Os procedimentos usados dependerão do tipo de replicação e do tipo de artigo.  
   
 > [!NOTE]  
 >  A designação somente esquema, ao definir tabela, exibição e artigos de procedimento armazenado, indica que apenas a definição de objeto é replicada.  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **proc exec** - replica a execução do procedimento armazenado para todos os Assinantes do artigo. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-    -   **serializable proc exec** - replica a execução do procedimento armazenado apenas se for executado no contexto de uma transação serializável. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **serializable proc exec** - replica a execução do procedimento armazenado apenas se for executado no contexto de uma transação serializável. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
     -   **func schema only** - um artigo de função definida pelo usuário e somente de esquema.  
   
@@ -108,8 +111,8 @@ ms.lasthandoff: 11/09/2017
   
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

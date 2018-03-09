@@ -1,5 +1,5 @@
 ---
-title: "Transformação extração de termos | Microsoft Docs"
+title: "Transformação Extração de Termos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,17 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -157,7 +156,7 @@ ms.lasthandoff: 08/19/2017
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   Os caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  
@@ -213,10 +212,10 @@ ms.lasthandoff: 08/19/2017
  **Usar termos de exclusão**  
  Indique se devem ser excluídos termos específicos durante uma extração de termos especificando uma coluna que contém termos de exclusão. Você deve especificar as seguintes propriedades de origem caso opte por excluir termos.  
   
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente ou crie uma nova conexão clicando em **Novo**.  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão com um banco de dados usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Tabela ou exibição**  
@@ -259,8 +258,7 @@ ms.lasthandoff: 08/19/2017
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

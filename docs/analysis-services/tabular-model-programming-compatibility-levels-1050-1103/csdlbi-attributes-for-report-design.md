@@ -2,52 +2,47 @@
 title: "Atributos CSDLBI para Design de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Atributos de Modelo  
  Estes atributos são definidos em um subelemento de um elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
   
-|Nome do atributo|Tipo de dados|Descrição|  
+|Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
 |Cultura|Texto|Indica a cultura usada para formatos de conversor de moedas. Se for omitido, pt-BR será usado.|  
-|IsRightToLeft|Boolean|Indica se os valores de campos de texto devem ser lidos da direita para a esquerda por padrão|  
+|IsRightToLeft|Booliano|Indica se os valores de campos de texto devem ser lidos da direita para a esquerda por padrão|  
   
 ## <a name="entity-attributes"></a>Atributos da entidade  
  Estes atributos são definidos em um subelemento de um elemento EntitySet ou EntityType de CSDL.  
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
+|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado dos dados.|  
 |**Oculto**|Booliano|Indica se a entidade deve ser exibida. O padrão é **false**.|  
@@ -64,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
+|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade. Se ele for omitido, o **ReferenceName** do campo será usado.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado do campo.|  
 |**Oculto**|Booliano|Indica se o campo deve ser exibido. O padrão é **false**; isso significa que o campo é exibido.|  
@@ -83,4 +78,3 @@ ms.lasthandoff: 09/01/2017
 |**KPI**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelemento|Indica que o elemento de medida será usado como um KPI. O subelemento de KPI usa os elementos KpiGoal e KpiStauts para definir a imagem de exibição associada e os intervalos de destino.|  
   
   
-

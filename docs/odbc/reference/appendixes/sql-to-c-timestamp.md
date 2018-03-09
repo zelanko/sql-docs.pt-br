@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para c: Timestamp
 O identificador para o tipo de dados SQL ODBC timestamp é:  
@@ -58,4 +56,3 @@ _C_TYPE_TIMESTAMP|A parte fracionária de segundos de carimbo de hora não será
  [f] este é o tamanho do tipo de dados C correspondente.  
   
  Quando dados SQL de carimbo de hora são convertidos em dados de caractere C, a cadeia de caracteres resultante é a "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "formato, onde pode ser usado até nove dígitos para segundos fracionários. Esse formato não é afetado pela configuração de país Windows®. (Com exceção do ponto decimal e frações de segundo, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)
-

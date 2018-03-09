@@ -1,36 +1,33 @@
 ---
 title: Armazenamento de cadeia e agrupamento em modelos de tabela | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>Armazenamento de cadeia e agrupamento em modelos de tabela
-  Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e o agrupamento são herdados hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e o agrupamento do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pelo agrupamento pai.  
+# <a name="string-storage-and-collation-in-tabular-models"></a>Armazenamento de cadeia de caracteres e agrupamento em modelos de tabela
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e o agrupamento são herdados hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e o agrupamento do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pelo agrupamento pai.  
   
- Este tópico descreve o mecanismo pelo qual cadeias de caracteres são compactadas e armazenados e também fornece exemplos de como o agrupamento e o idioma afetam os resultados de fórmulas de texto em modelos de tabela.  
+ Este artigo descreve o mecanismo pelo qual as cadeias de caracteres são compactadas e armazenadas e fornece exemplos de como o agrupamento e idioma afetam os resultados das fórmulas de texto em modelos de tabela.  
   
 ## <a name="storage"></a>Armazenamento  
  Em modelos de tabela, todos os dados são compactados para melhor ajuste na memória. Como consequência, todas as cadeias de caracteres consideradas lexicalmente equivalentes são armazenadas apenas uma vez. A primeira instância da cadeia de caracteres é usada como a representação canônica e, a partir daí, cada cadeia de caracteres equivalente é indexada com o mesmo valor compactado que a primeira ocorrência.  
@@ -95,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  É importante observar que normalmente o identificador de idioma e a ordem de agrupamento no banco de dados de origem têm pouco ou nenhum efeito sobre a forma como valores são armazenados na coluna de modelo de tabela. A exceção será se o banco de dados de origem transformar ou filtrar os valores solicitados.  
   
   
-

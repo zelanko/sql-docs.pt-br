@@ -3,7 +3,7 @@ title: "Exemplo de propriedades de Conexão (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 54105075f853a46ccb00379738c844246451701a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 036913baf18e836412b9d9fadea3b7eff0c33d74
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Exemplo de propriedades de estado (VC + +), ConnectionTimeout e ConnectionString
 Este exemplo demonstra as diferentes maneiras de usar o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para abrir um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propriedade para definir um período de tempo limite de conexão e o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade para verificar o estado das conexões. A função GetState é necessária executar este procedimento.  
@@ -179,4 +178,3 @@ void PrintComError(_com_error &e) {
  [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Propriedade ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [Propriedade State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

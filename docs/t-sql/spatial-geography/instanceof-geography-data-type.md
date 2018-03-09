@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - InstanceOf
 - InstanceOf_TSQL
-dev_langs: TSQL
-helpviewer_keywords: InstanceOf method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa35fb390b51699d4291a51efaea373129273365
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1178b0287c167666216b090a87c6c9dd645622f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Retornará 1 se o tipo de um **geografia** instância é o mesmo que o tipo especificado ou se o tipo especificado for um ancestral do tipo de instância; caso contrário, retornará 0.  
   
  Isso **geografia** método dá suporte ao tipo de dados **FullGlobe** instâncias ou a instâncias espaciais maiores que um hemisfério.  

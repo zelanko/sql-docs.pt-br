@@ -3,8 +3,9 @@ title: Fluxo de objeto (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Stream
-helpviewer_keywords: Stream object [ADO]
+f1_keywords:
+- Stream
+helpviewer_keywords:
+- Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05f40c6060440d1f8535ec4d79b18a6438b766ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a76afcb82114fe47748d63b9a7f83451c03cb18
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-object-ado"></a>Objeto de fluxo (ADO)
 Representa um fluxo de dados binários ou de texto.  

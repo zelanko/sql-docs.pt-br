@@ -2,34 +2,32 @@
 title: Current (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CURRENT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Current function
+f1_keywords: CURRENT
+dev_langs: kbMDX
+helpviewer_keywords: Current function
 ms.assetid: 6f689742-f9b6-4339-a691-31ff28582c36
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 826457b678e249c3c578c229f726e6fde7a4692a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e12e6549e02161589c769610625c82243decd17
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="current-mdx"></a>Função Current (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a tupla atual de um conjunto durante a iteração.  
   
@@ -44,7 +42,7 @@ Set_Expression.Current
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em cada etapa durante uma iteração, a tupla que está sendo operada em é a tupla atual. O **atual** função retorna essa tupla. Essa função só é válida durante uma iteração em um conjunto.  
   
  Incluem funções MDX que iterar por meio de um conjunto de [gerar](../mdx/generate-mdx.md) função.  
@@ -79,8 +77,7 @@ Set_Expression.Current
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

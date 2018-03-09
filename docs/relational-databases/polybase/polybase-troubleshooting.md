@@ -18,28 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-troubleshooting"></a>Solucionando problemas do PolyBase
-
-  Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.  
   
 ## <a name="catalog-views"></a>Exibições do catálogo  
  Use as exibições do catálogo listadas aqui para gerenciar as operações de PolyBase.  
   
 |||  
 |-|-|  
-|Exibição|Descrição|  
+|Exibição|Description|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifica tabelas externas.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifica fontes de dados externas.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifica formatos de arquivo externos.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 10/12/2017
   
      Registre a ID de execução da consulta mais longa em execução.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/12/2017
   
     -   DMS: implica uma operação de serviço de movimentação de dados do PolyBase. Vá para a etapa 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/12/2017
   
          Use a ID de execução e o índice de etapa registrados nas etapas anteriores. Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -120,7 +119,7 @@ ms.lasthandoff: 10/12/2017
   
          Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -134,7 +133,7 @@ ms.lasthandoff: 10/12/2017
   
      Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   
@@ -248,4 +247,3 @@ Para solucionar erros de tabela externa, confira o blog de Murshed Zaman [https:
 
 ## <a name="see-also"></a>Consulte também
 [Solucionar problemas de conectividade do PolyBase Kerberos](polybase-troubleshoot-connectivity.md)
-

@@ -2,9 +2,12 @@
 title: "Aprimorar o desempenho de replicação de mesclagem | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6589d1fc212f1169fa645fdb9c02ac9627597ef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
-  Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
   
 ## <a name="database-design"></a>Design de banco de dados  
   
@@ -66,11 +69,11 @@ ms.lasthandoff: 11/09/2017
   
 -   Use partições pré-computadas com filtros com parâmetros (esse recurso é usado por padrão). Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
-     Partições pré-computadas impõem vários limites no comportamento de filtragem. Se seu aplicativo não puder aderir a essas limitações, defina a opção **keep_partition_changes** como **True**, fornecendo um benefício de desempenho. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Partições pré-computadas impõem vários limites no comportamento de filtragem. Se seu aplicativo não puder aderir a essas limitações, defina a opção **keep_partition_changes** como **True**, fornecendo um benefício de desempenho. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Use partições não sobrepostas se os dados forem filtrados, mas não forem compartilhados entre os usuários.  
   
-     A replicação pode aperfeiçoar o desempenho para obter dados que não são compartilhados entre as partições ou assinaturas. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     A replicação pode aperfeiçoar o desempenho para obter dados que não são compartilhados entre as partições ou assinaturas. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Não crie hierarquias de filtro de junção complexas.  
   
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/09/2017
   
     -   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Considere aumentar o valor do parâmetro **-MakeGenerationInterval** , especialmente se a sincronização envolver mais carregamentos de Assinantes do que downloads para Assinantes.  
   

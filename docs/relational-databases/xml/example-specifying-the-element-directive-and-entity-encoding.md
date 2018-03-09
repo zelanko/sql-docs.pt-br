@@ -2,29 +2,34 @@
 title: "Exemplo: especificando a diretiva ELEMENT e a codificação de entidade | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a386d65bc4a0c6b807f8e8b072bc48b1c50bd689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3ffd9bd6df20bef46bdc4e5f96d6e9f525abd171
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemplo: Especificando a diretiva ELEMENT e codificação de entidade
-  Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
   
  Considere esta consulta:  
   
@@ -95,7 +100,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

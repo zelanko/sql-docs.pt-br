@@ -2,34 +2,32 @@
 title: Elemento CollectionCaption (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f241e60e8861974245c0f8b23ac6c291f29d8b3c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03540ac5858144e8d986494318dde5cf1a938dec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collectioncaption-element-assl"></a>Elemento CollectionCaption (ASSL)
-  Contém o nome do elemento pai no plural.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Contém o nome do elemento pai no plural.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,8 +53,7 @@ ms.lasthandoff: 09/01/2017
 |Elementos pai|[RelationshipEndTranslation](../../../analysis-services/scripting/data-type/relationshipendtranslation-element-assl.md)|  
 |Elementos filho|Nenhuma|  
   
-## <a name="remarks"></a>Comentários  
- O elemento que corresponde ao pai do **CollectionCaption** no objeto Analysis Management Objects (AMO) o modelo é t:Microsoft.AnalysisServices.relationshipendtranslation..  
+## <a name="remarks"></a>Remarks  
+ O elemento que corresponde ao pai do **CollectionCaption** no objeto Analysis Management Objects (AMO) o modelo é t:Microsoft.AnalysisServices.relationshipendtranslation.  
   
   
-

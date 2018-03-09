@@ -2,13 +2,13 @@
 title: Idiomas e agrupamentos (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Testar o Analysis Services
@@ -26,13 +26,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e agrupamentos (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e agrupamentos fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais do Windows. As propriedades**Language** e **Collation** são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia do objeto.  
   
  Em um modelo multidimensional (somente), você pode definir essas propriedades em um banco de dados ou cubo – você também pode defini-las em traduções que você cria para objetos em um cubo. Em um modelo tabular, a linguagem e o agrupamento são herdados do sistema operacional do host.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_lcid"></a> O valor da propriedade de Idioma é um LCID (Identificador de Localidade)  
  Os valores válidos incluem qualquer LCID que aparece na lista suspensa. No Management Studio e SQL Server Data Tools, LCIDs são representados em equivalentes de cadeia de caracteres. Os mesmos idiomas aparecem sempre que a propriedade **Language** é exposta, independentemente da ferramenta. Ter uma lista idêntica de idiomas garante que você possa implementar e testar traduções de forma consistente em todo o modelo.  
   
- Embora o Analysis Services liste os idiomas por nome, o valor real armazenado para a propriedade é um LCID. Ao definir uma propriedade de idioma programaticamente ou por meio do arquivo msmdsrv.ini, use o [identificador de localidade (LCID)](http://en.wikipedia.org/wiki/Locale) como o valor. Um LCID é um valor de 32 bits que consiste em uma ID de idioma, ID de classificação e bits reservados que identificam um idioma específico. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa LCIDs para especificar o agrupamento selecionado para instâncias e objetos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+ Embora o Analysis Services liste os idiomas por nome, o valor real armazenado para a propriedade é um LCID. Ao definir uma propriedade de idioma programaticamente ou por meio do arquivo msmdsrv.ini, use o [identificador de localidade (LCID)](http://en.wikipedia.org/wiki/Locale) como o valor. Um LCID é um valor de 32 bits que consiste em uma ID de idioma, ID de classificação e bits reservados que identificam um idioma específico. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa LCIDs para especificar o idioma selecionado para instâncias e objetos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Você pode definir o LCID usando formatos hexadecimais ou decimais. Alguns exemplos de valores válidos para a propriedade **Idioma** incluem:  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_collations"></a> Suporte a agrupamento no Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa o Windows (versões _90 e _100) e exclusivamente agrupamentos binários. Ele não usa agrupamentos herdados do SQL Server. Em um cubo, um único agrupamento é usado no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre a definição de conversões de atributos, consulte [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Os agrupamentos controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres maiúsculos e minúsculos em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pelo agrupamento, mas pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente do agrupamento. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
+ Os agrupamentos controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres maiúsculos e minúsculos em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pelo agrupamento, mas pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente do agrupamento. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Para obter detalhes, consulte [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
  O agrupamento do Analysis Services é compatível com o do mecanismo de banco de dados relacional do SQL Server, supondo que você mantenha a paridade nas opções de classificação selecionadas para cada serviço. Por exemplo, se o banco de dados relacional diferenciar acentos, você deverá configurar o cubo da mesma maneira. Podem ocorrer problemas quando as configurações de agrupamento divergem. Para obter um exemplo e soluções alternativas, consulte [Blanks in a Unicode string have different processing outcomes based on collation (Espaços em branco em uma cadeia de caracteres Unicode têm resultados de processamento diferentes com base no agrupamento)](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Para saber mais sobre o agrupamento e o mecanismo de banco de dados, consulte [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 |Ordem de classificação (sufixo)|Descrição da ordem de classificação|  
 |---------------------------|----------------------------|  
 |Binário (_BIN) ou BIN2 (_BIN2)|Existem dois tipos de agrupamentos binários no SQL Server; os agrupamentos BIN mais antigos e os agrupamentos BIN2 mais recentes. Em um agrupamento BIN2 todos os caracteres são classificados de acordo com seus pontos de código. Em um agrupamento BIN apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)<br /><br /> Para agrupamentos binários em tipos de dados Unicode, a localidade não é considerada em classificações de dados. Por exemplo, Latin_1_General_BIN e Japanese_BIN geram resultados de classificação idênticos quando usados em dados Unicode.<br /><br /> A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
-|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Para obter detalhes, consulte [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas das letras são iguais para fins de classificação. É possível definir a não diferenciação de acentos especificando _AI.|  
 |Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se essa opção não for selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que caracteres hiragana e katakana são iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para kana.|  
 |Width-sensitive (_WS)|Distingue entre um caractere de byte único e o mesmo caractere quando representado como um caractere de byte duplo. Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará as representações de byte único e byte duplo do mesmo caractere como iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para distinção de largura.|  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ee3aeccb0b6c84fbd265ab1ad2f566ef9f30a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6710911638bf23755bf31450d8d4c82054c48be6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -73,7 +73,7 @@ Esta tarefa requer a permissão CREATE TABLE no banco de dados e a permissão AL
   
 11. Para exibir a nova tabela, em **Pesquisador de Objetos**, expanda o nó **Tabelas** e pressione **F5** para atualizar a lista de objetos. A nova tabela é exibida na lista de tabelas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ## <a name="using-query-editor"></a>Uso do Editor de Consultas  
   

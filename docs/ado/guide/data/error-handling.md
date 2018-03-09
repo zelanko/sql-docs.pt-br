@@ -3,7 +3,7 @@ title: Tratamento de erro | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eeb8b4abe5d199e3887b526c77163dcb8f1272fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-handling"></a>Tratamento de erros
 ADO usa vários métodos diferentes para notificar um aplicativo de erros que ocorrem. Esta seção aborda os tipos de erros que podem ocorrer quando você estiver usando o ADO e como o aplicativo é notificado. Ele conclui fazendo sugestões sobre como lidar com esses erros.  
@@ -60,4 +59,3 @@ ADO usa vários métodos diferentes para notificar um aplicativo de erros que oc
 -   [Tratamento de erro em outras linguagens](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [Antecipando erros](../../../ado/guide/data/anticipating-errors.md)
-

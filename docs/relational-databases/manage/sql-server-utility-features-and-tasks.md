@@ -2,9 +2,12 @@
 title: "Recursos e tarefas do Utilitário do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c099214c37d6f3a2d8f1198e6f172f1a11d1b64e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do utilitário do SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Benefícios do Utilitário do SQL Server  
  O Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modela as entidades relacionadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de uma organização em uma exibição unificada. O Gerenciador do Utilitário e os pontos de vista do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no SSMS ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ) fornecem aos administradores uma visão holística da integridade dos recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que funciona como um UCP (ponto de controle do utilitário). A combinação de dados resumidos e detalhados apresentada no UCP para políticas de subutilização e de superutilização, e para uma variedade de parâmetros chave, permite que oportunidades de consolidação de recursos e de superutilização de recursos sejam identificadas facilmente. As políticas de integridade são configuráveis e podem ser ajustadas para alterar os limites inferior e superior da utilização de recursos. É possível alterar as políticas de monitoramento globais ou configurar políticas de monitoramento individuais para cada entidade gerenciada no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
  Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativo da camada de dados gerenciado pelo Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorado com base nas definições da política global ou com base nas definições de políticas individuais.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida ao utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |||  

@@ -3,8 +3,11 @@ title: "Tópicos de instruções de como criar consultas e exibições (Ferramen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4212d888298d36e7a2aa9365de7153e3e353fff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Tópicos de instruções de como criar consultas e exibições (Visual Database Tools)
-O Designer de Consulta e Exibição pode ajudar a criar e a manter a recuperação de dados e as partes de manipulação de dados de seu aplicativo.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Designer de Exibição e Consulta pode ajudar a criar e a manter a recuperação de dados e as partes de manipulação de dados de seu aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Abrir o Designer de Consulta e Exibição &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

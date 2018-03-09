@@ -2,26 +2,29 @@
 title: Habilitar o backup gerenciado do SQL Server no Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 10/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: "25"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91c22016bea09269c1c9be14d8895e9319cd9de8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c6762af12c0b669335fbe965f85fada74d1ef3e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar o backup gerenciado do SQL Server no Microsoft Azure
-  Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
   
  Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  **Criar uma Credencial do SQL para a URL SAS:** use o token SAS para criar uma Credencial do SQL para a URL do contêiner de blob. No SQL Server Management Studio, use a seguinte consulta Transact-SQL a fim de criar a credencial para a URL de seu contêiner de blob, com base no exemplo a seguir:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  Para habilitar o backup gerenciado no nível da instância, especifique `NULL` ou para o parâmetro `database_name` .  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
@@ -177,7 +180,7 @@ ms.lasthandoff: 11/09/2017
   
  As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema e fornecer os novos valores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

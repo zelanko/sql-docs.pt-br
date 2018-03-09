@@ -3,8 +3,9 @@ title: Propriedade NumericScale (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::NumericScale
 - _Column::put_NumericScale
 - _Column::get_NumericScale
-helpviewer_keywords: NumericScale property [ADOX]
+helpviewer_keywords:
+- NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719c0164cd33f3d88f07c77414f7105e17b2477d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d24bb11f0bc8cad13b53fd418b799a40dab13f16
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-adox"></a>Propriedade NumericScale (ADOX)
 Indica a escala de um valor numérico na coluna.  
@@ -37,7 +39,7 @@ Indica a escala de um valor numérico na coluna.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **bytes** valor que é a escala de valores de dados na coluna quando o [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) é de propriedade **adNumeric** ou **adDecimal**. **NumericScale** é ignorado para todos os outros tipos de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é zero (0).  
   
  **NumericScale** é somente leitura para [coluna](../../../ado/reference/adox-api/column-object-adox.md) já está anexados a uma coleção de objetos.  

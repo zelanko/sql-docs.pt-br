@@ -3,7 +3,7 @@ title: "Etapa 5: DataControl é feita utilizável (Tutorial de RDS) | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f59e167dfad5ddd4b99d784b34e37556a076a2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Etapa 5: DataControl é feita utilizável (Tutorial de RDS)
 Retornado **registros** objeto está disponível para uso. Você pode examinar, navegue ou editá-la como faria com qualquer outro **registros**. O que você pode fazer com o **registros** depende do ambiente. Visual Basic e Visual C++ tem controles visuais que podem usar um **registros** direta ou indiretamente com a Ajuda de um habilitar o controle de dados.  
@@ -54,4 +53,3 @@ Sub RDSTutorial5()
 ## <a name="see-also"></a>Consulte também  
  [Etapa 6: As alterações são enviadas ao servidor (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

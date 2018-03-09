@@ -1,11 +1,11 @@
 ---
-title: "Adicionar cópia de pacote existente | Microsoft Docs"
+title: "Adicionar Cópia de Pacote Existente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c81b378a82156493fd88119f83ef814350cf091f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-copy-of-existing-package"></a>Adicionar Cópia de Pacote Existente
   Use a caixa de diálogo **Adicionar Cópia de Pacote Existente** para adicionar uma cópia de um pacote armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacote do SSIS a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  **Tipo de autenticação**  
  Se copiar do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione um tipo de autenticação.  
   
- **Nome de usuário**  
+ **User name**  
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário.  
   
  **Senha**  
@@ -51,10 +50,9 @@ ms.lasthandoff: 09/26/2017
  **Caminho do pacote**  
  Digite o caminho do pacote ou clique no botão Procurar **(...)** e localize o pacote a ser copiado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar cópia de pacote](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Salvar pacotes](../integration-services/save-packages.md)   
  [Serviço Integration Services &#40;Serviço SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   
   
-

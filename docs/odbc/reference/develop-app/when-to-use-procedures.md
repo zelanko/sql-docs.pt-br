@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f62c820f57fba7af608a870e00e0b2ddf0ad13b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-to-use-procedures"></a>Quando usar procedimentos
 Há inúmeras vantagens de usar os procedimentos, todos com base no fato de que usando procedimentos move instruções SQL do aplicativo para a fonte de dados. O restante do aplicativo é uma chamada de procedimento interoperável. Essas vantagens incluem:  
@@ -54,4 +52,3 @@ Há inúmeras vantagens de usar os procedimentos, todos com base no fato de que 
  A segunda desvantagem é que muitas DBMSs não dão suporte a procedimentos. Novamente, isso é provavelmente um problema para aplicativos verticais projetado para ser executado com um número de DBMSs. Para determinar se há suporte para procedimentos, um aplicativo chama **SQLGetInfo** com a opção SQL_PROCEDURES.  
   
  A desvantagem de terceira, que é aplicável principalmente a ambientes de desenvolvimento de aplicativos, é que o ODBC não define uma gramática padrão para a criação de procedimentos. Ou seja, embora os aplicativos podem chamar procedimentos interoperably, eles não é possível criá-los interoperably.
-

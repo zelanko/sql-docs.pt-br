@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b33eef062e4a72cb84c077979de7717a10fdc3a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 523923276b499fb1be3af1e61066ac323b3e90d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  Tipo OGC: **polígono**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método lança um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,7 +70,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

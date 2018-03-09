@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Comprimento de dados, o tamanho do Buffer e o truncamento
 O *comprimento dos dados* é o comprimento de bytes dos dados como ele deve ser armazenado em buffer de dados do aplicativo, não como ele é armazenado na fonte de dados. Essa distinção é importante porque os dados geralmente são armazenados em tipos diferentes no buffer de dados na fonte de dados. Assim, para dados enviados para a fonte de dados, isso é o comprimento de bytes dos dados antes da conversão em tipo de fonte de dados. Para os dados recuperados da fonte de dados, esse é o comprimento de bytes dos dados após a conversão para tipo de buffer de dados e antes de qualquer truncamento é feito.  

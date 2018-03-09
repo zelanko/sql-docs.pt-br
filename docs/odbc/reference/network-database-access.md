@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: acdc1f994d6fd598051ceb2e4e955650f17ffc27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="network-database-access"></a>Acesso de banco de dados de rede
 Acessar um banco de dados em uma rede requer um número de componentes, cada um deles é independente do e reside abaixo, a interface de programação. Esses componentes são mostrados na ilustração a seguir.  
@@ -47,4 +45,3 @@ Acessar um banco de dados em uma rede requer um número de componentes, cada um 
 -   **Entre processos mecanismo de comunicação** o mecanismo de comunicação entre processos (IPC) é o processo pelo qual um processo se comunica com o outro. Exemplos incluem DECnet soquetes, soquetes TCP/IP e pipes nomeados. A escolha do mecanismo IPC é restrito pelo sistema operacional e rede que está sendo usada.  
   
 -   **Protocolo de rede** o protocolo de rede usado para transportar o fluxo de dados em uma rede. Ele pode ser considerado o encanamento que oferece suporte os mecanismos IPC usados para implementar os dados de fluxo de protocolo, bem como suporte a operações de rede básica, como transferências de arquivos e compartilhamento de impressão. Protocolos de rede incluem NetBEUI, TCP/IP, DECnet e SPX/IPX e são específicos para cada rede.
-

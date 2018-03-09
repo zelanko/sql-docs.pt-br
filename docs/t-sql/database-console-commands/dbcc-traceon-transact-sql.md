@@ -23,17 +23,16 @@ helpviewer_keywords:
 - DBCC TRACEON statement
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1950c1ab5214066a92a037358c26f7edd054aa0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8c173779833562123c9ba3820fef76bf23b80a43
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*Trace #*  
+*trace#*  
 É o número do sinalizador de rastreamento a ser ativado.  
   
 *n*  
@@ -61,10 +60,10 @@ Ativa globalmente os sinalizadores de rastreamento especificados.
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Em um servidor de produção, para evitar comportamento imprevisível, recomendamos que você habilite sinalizadores de rastreamento no servidor usando somente um dos seguintes métodos:
 -   Use o **-T** opção de inicialização de linha de comando do Sqlservr.exe. Essa é a prática mais recomendada, porque assegura que todas as instruções sejam executadas com o sinalizador de rastreamento habilitado. Isso inclui comandos em scripts de inicialização. Para obter mais informações, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
--   Use DBCC TRACEON **(***trace #* [**,** ... *n*]**, -1)** somente enquanto usuários ou aplicativos são não executando instruções simultaneamente no sistema.  
+-   Use DBCC TRACEON  **(* trace #* [* *,**... *n*]**, -1)** somente enquanto usuários ou aplicativos são não executando instruções simultaneamente no sistema.  
 
 Sinalizadores de rastreamento são usados para personalizar certas características que controlam o modo operacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinalizadores de rastreamento, depois de habilitados, permanecem assim no servidor até que sejam desabilitados executando uma instrução DBCC TRACEOFF. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Para determinar o status dos sinalizadores de rastreamento, use DBCC TRACESTATUS. Para desabilitar sinalizadores de rastreamento, use DBCC TRACEOFF.
   
@@ -105,9 +104,8 @@ GO
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
-[DBCC TRACESTATUS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
 [Habilitar que afetam o plano do SQL Server query optimizer comportamento que pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](https://support.microsoft.com/kb/2801413)
   
   
-

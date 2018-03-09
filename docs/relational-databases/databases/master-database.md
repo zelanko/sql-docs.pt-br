@@ -2,9 +2,12 @@
 title: Banco de dados mestre | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,17 +16,17 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>Banco de dados mestre
-  O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O banco de dados **mestre** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
   
 ## <a name="physical-properties-of-master"></a>Propriedades físicas de mestre  
  A tabela a seguir lista os valores iniciais de configuração dos dados **mestre** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,39 +43,39 @@ ms.lasthandoff: 11/09/2017
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
-|AUTO_CLOSE|OFF|Não|  
+|AUTO_CLOSE|OFF|não|  
 |AUTO_CREATE_STATISTICS|ON|Sim|  
-|AUTO_SHRINK|OFF|Não|  
+|AUTO_SHRINK|OFF|não|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|Não|  
+|CHANGE_TRACKING|OFF|não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> não<br /><br /> não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|Não|  
-|ENCRYPTION|OFF|Não|  
-|MIXED_PAGE_ALLOCATION|ON|Não|  
+|DB_CHAINING|ON|não|  
+|ENCRYPTION|OFF|não|  
+|MIXED_PAGE_ALLOCATION|ON|não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
-|READ_COMMITTED_SNAPSHOT|OFF|Não|  
+|READ_COMMITTED_SNAPSHOT|OFF|não|  
 |RECOVERY|SIMPLE|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
-|Opções do Service Broker|DISABLE_BROKER|Não|  
+|Opções do Service Broker|DISABLE_BROKER|não|  
 |TRUSTWORTHY|OFF|Sim|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrições  
+## <a name="restrictions"></a>Restrictions  
  As seguintes operações não podem ser executadas no banco de dados **mestre** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  

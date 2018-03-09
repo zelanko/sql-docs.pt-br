@@ -3,9 +3,13 @@ title: Atribuir um trabalho a uma categoria de trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +20,19 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d98e285a8463818b30dd9002a0a4e99df96e68f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 924c9c2c5ab1f18907f48528ab4043b6899d77cb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Atribuir um trabalho a uma categoria de trabalho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como atribuir trabalhos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a categorias de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou o SQL Server Management Objects.  
   
 As categorias de trabalho ajudam a organizar os trabalhos de modo a facilitar sua filtragem e agrupamento. Por exemplo, você pode organizar todos os seus trabalhos de backup de banco de dados na categoria Manutenção de Banco de Dados. É possível atribuir trabalhos a categorias de trabalho internas ou criar uma categoria de trabalho definida pelo usuário e atribuir trabalhos a ela.  
@@ -61,9 +66,9 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
   
 3.  Clique no sinal de adição para expandir a pasta **Trabalhos** .  
   
-4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecionar **Propriedades**.  
+4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho -***job_name* , na lista **Categoria** , selecione a categoria de trabalho a qual deseja atribuir o trabalho.  
+5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, na lista **Categoria**, selecione a categoria de trabalho a qual deseja atribuir o trabalho.  
   
 6.  Clique em **OK**.  
   

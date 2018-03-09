@@ -1,11 +1,11 @@
 ---
-title: Reutilizar o fluxo de controle entre pacotes usando partes do pacote de fluxo de controle | Microsoft Docs
+title: Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle
   Salve um contêiner ou tarefa de fluxo de controle frequentemente usado em um arquivo de parte autônomo, um arquivo ".dtsxp", e reutilize-o várias vezes em um ou mais pacotes usando as partes do pacote do fluxo de controle. Essa capacidade de reutilização facilita o desenvolvimento e manutenção dos pacotes do SSIS.  
@@ -36,18 +35,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>Criar uma nova parte do pacote do fluxo de controle  
  Para criar uma nova parte do pacote do fluxo de controle, no Gerenciador de Soluções, expanda a pasta **Partes do Pacote** . Clique com o botão direito do mouse em **Fluxo de Controle** e selecione **Nova Parte do Pacote do Fluxo de Controle**.  
   
- ![Criar um novo modelo de fluxo de controle](../integration-services/media/control-flow-templates-create-new.png "criar um novo modelo de fluxo de controle")  
+ ![Criar um novo modelo de fluxo de controle](../integration-services/media/control-flow-templates-create-new.png "Criar um novo modelo de fluxo de controle")  
   
  Um novo arquivo de parte com a extensão “.dtsxp” é criado na pasta **Partes do Pacote | Fluxo de Controle** . Ao mesmo tempo, um novo item com o mesmo nome também é adicionado à caixa de ferramentas do SSIS. (Esse item de caixa de ferramentas só fica visível enquanto você tiver um projeto com a parte aberta no Visual Studio.)  
   
- ![Modelos de fluxo de caixa de ferramentas de controle](../integration-services/media/control-flow-templates-in-toolbox.png "modelos de fluxo de caixa de ferramentas de controle")  
+ ![Modelos de fluxo de controle na caixa de ferramentas](../integration-services/media/control-flow-templates-in-toolbox.png "Modelos de fluxo de controle na caixa de ferramentas")  
   
 ## <a name="design-a-control-flow-package-part"></a>Projetar uma nova parte do pacote do fluxo de controle  
  Para abrir o editor de parte do pacote, clique duas vezes no arquivo de parte no Gerenciador de Soluções. Você pode projetar a parte da mesma maneira que projeta um pacote.  
   
- ![Etapa 1 de design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-1.png "etapa 1 do design do modelo de fluxo de controle")  
+ ![Etapa 1 do design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-1.png "Etapa 1 do design do modelo de fluxo de controle")  
   
- ![Etapa 2 do design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-2.png "etapa 2 do design do modelo de fluxo de controle")  
+ ![Etapa 2 do design do modelo de fluxo de controle](../integration-services/media/control-flow-template-design-step-2.png "Etapa 2 do design do modelo de fluxo de controle")  
   
  As partes do pacote do fluxo de controle têm as seguintes limitações.  
   
@@ -65,9 +64,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>Arrastar e soltar uma parte do pacote do fluxo de controle  
  Para reutilizar uma parte em um projeto, basta arrastar e soltar o item da parte da caixa de ferramentas, assim como qualquer outra tarefa ou contêiner. Você pode arrastar e soltar a parte várias vezes em um pacote a fim de reutilizar a lógica em vários locais no pacote. Use esse método para reutilizar uma parte que faça parte do projeto atual.  
   
- ![Adicionar um modelo de fluxo de controle a um pacote](../integration-services/media/control-flow-templates-add-to-package.png "adicionar um modelo de fluxo de controle a um pacote")  
+ ![Adicionar um modelo de fluxo de controle a um pacote](../integration-services/media/control-flow-templates-add-to-package.png "Adicionar um modelo de fluxo de controle a um pacote")  
   
- ![Pacote com vários modelos de fluxo de controle](../integration-services/media/control-flow-templates-in-package.png "pacote com vários modelos de fluxo de controle")  
+ ![Pacote com vários modelos de fluxo de controle](../integration-services/media/control-flow-templates-in-package.png "Pacote com vários modelos de fluxo de controle")  
   
  Quando você salva o pacote, o designer do SSIS verifica se há qualquer instância da parte no pacote.  
   
@@ -75,14 +74,14 @@ ms.lasthandoff: 08/03/2017
   
 -   Se o pacote não usar partes, o designer excluirá qualquer arquivo .dtsx.designer criado anteriormente do pacote (ou seja, qualquer. arquivo .dtsx.designer que tenha o mesmo nome que o pacote).  
   
- ![Gerenciador de soluções com modelos de fluxo de controle](../integration-services/media/control-flow-templates-in-solution-explorer.png "Gerenciador de soluções com modelos de fluxo de controle")  
+ ![Gerenciador de Soluções com modelos de fluxo de controle](../integration-services/media/control-flow-templates-in-solution-explorer.png "Gerenciador de Soluções com modelos de fluxo de controle")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Adicionar uma cópia de uma parte do pacote do fluxo de controle existente, ou uma referência a uma parte existente  
  Para adicionar uma cópia de uma parte existente no sistema de arquivos a um pacote, no Gerenciador de Soluções, expanda a pasta **Partes do Pacote** . Clique com o botão direito do mouse em **Fluxo de Controle** e selecione **Adicionar Parte do Pacote do Fluxo de Controle Existente**.  
   
- ![Adicionar um novo modelo de fluxo de controle do menu](../integration-services/media/control-flow-templates-add-from-menu.png "adicionar um novo modelo de fluxo de controle de menu")  
+ ![Adicionar um novo modelo de fluxo de controle por meio do menu](../integration-services/media/control-flow-templates-add-from-menu.png "Adicionar um novo modelo de fluxo de controle por meio do menu")  
   
- ![Caixa de diálogo Adicionar cópia de modelos existentes](../integration-services/media/control-flow-templates-add-copy-dialog.png "caixa de diálogo Adicionar cópia de modelos existentes")  
+ ![Caixa de diálogo Adicionar Cópia de Modelos Existentes](../integration-services/media/control-flow-templates-add-copy-dialog.png "Caixa de diálogo Adicionar Cópia de Modelos Existentes")  
   
  **Opções**  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="properties-tab"></a>Guia Propriedades  
  Use a guia **Propriedades** da caixa de diálogo **Configuração da Parte do Pacote**  para especificar as propriedades da parte.  
   
- ![Guia Propriedades da caixa de diálogo de configuração de modelo](../integration-services/media/template-configuration-properties-tab.png "guia Propriedades da caixa de diálogo de configuração de modelo")  
+ ![Guia Propriedades da caixa de diálogo Configuração de Modelo](../integration-services/media/template-configuration-properties-tab.png "Guia Propriedades da caixa de diálogo Configuração de Modelo")  
   
  A hierarquia do modo de exibição de árvore no painel esquerdo lista todas as propriedades configuráveis da instância de parte.  
   
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-managers-tab"></a>Guia Gerenciadores de Conexões  
  Use a guia **Gerenciadores de Conexões** da caixa de diálogo **Configuração da Parte do Pacote**  para especificar as propriedades dos gerenciadores de conexões para a instância da parte.  
   
- ![Guia de gerenciadores de Conexão da caixa de diálogo de configuração de modelo](../integration-services/media/template-configuration-connection-managers-tab.png "guia de gerenciadores de Conexão da caixa de diálogo de configuração de modelo")  
+ ![Guia Gerenciadores de Conexões da caixa de diálogo Configuração de Modelo](../integration-services/media/template-configuration-connection-managers-tab.png "Guia Gerenciadores de Conexões da caixa de diálogo Configuração de Modelo")  
   
  A tabela no painel esquerdo lista todos os gerenciadores de conexão definidos na parte do fluxo de controle. Escolha o gerenciador de conexões que você deseja configurar.  
   
@@ -156,7 +155,6 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir demonstra a relação entre as partes (arquivos ".dtsxp"), o designer SSIS e o tempo de execução do SSIS.  
   
- ![Arquivos de modelos de fluxo e fluxo de controle](../integration-services/media/control-flow-templates-intro.png "arquivos de modelos de fluxo e fluxo de controle")  
+ ![Arquivos de modelos de fluxo de controle e fluxo](../integration-services/media/control-flow-templates-intro.png "Arquivos de modelos de fluxo de controle e fluxo")  
   
   
-

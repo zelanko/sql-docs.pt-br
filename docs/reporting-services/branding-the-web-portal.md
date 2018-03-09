@@ -1,26 +1,26 @@
 ---
-title: Identidade visual do portal da web | Microsoft Docs
+title: Criando uma identidade visual para o portal da Web | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c01c3c7f6c05e0005f92addf82fb7e45d142b338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +74,7 @@ A folha de estilos LESS contém blocos que fazem referência a algumas variávei
         background-color:@primaryButtonBg;   
     }  
   
-Enquanto isso é semelhante a sintaxe CSS, os valores de cor, prefixados com o @symbol, são exclusivos ao LESS. Eles são variáveis cujos valores são definidos pelo arquivo json.  
+Embora isso se pareça com a sintaxe CSS, os valores de cor, prefixados com o @symbol, são exclusivos ao LESS. Eles são variáveis cujos valores são definidos pelo arquivo json.  
   
 Por exemplo, se o arquivo colors.json tiver os valores a seguir.  
   
@@ -247,5 +247,4 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
         }  
     }  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

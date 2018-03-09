@@ -2,10 +2,14 @@
 title: "Recuperação de bancos de dados relacionados que contêm uma transação marcada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,21 +25,22 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64c02014a1a5dca2e2ed40869f24bea3e2a682f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
-  Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
   
- Para obter informações sobre os requisitos de restauração para um ponto de recuperação específico, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+ Para obter informações sobre os requisitos de restauração para um ponto de recuperação específico, veja [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à inserção de marcas nomeadas no log de transações, permitindo a recuperação nessa marca específica. As marcas de log são transações específicas e são inseridas apenas se as suas transações associadas forem confirmadas. Desse modo, as marcas podem ser ligadas ao trabalho específico e você pode recuperá-las em um ponto que inclua ou exclua esse trabalho.  
   
@@ -62,13 +67,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
- Quando você assinala uma transação marcada usando uma instrução [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
+ Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
--   Use a cláusula WITH STOPATMARK = **'***<nome_marca>***'** para especificar que a transação marcada é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK = **'***<mark_name>***'** para especificar que a transação marcada é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use a cláusula WITH STOPATMARK = **'***<nome_marca>***'** para especificar que o log de eventos que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK = **'***<mark_name>***'** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   
@@ -113,7 +118,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Recupere cada banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

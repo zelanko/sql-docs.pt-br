@@ -3,7 +3,7 @@ title: Receber resultados | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a13be909891455c21b3409ea53072a5f2c9268e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="receiving-results"></a>Receber resultados
 No ADO a maioria dos comandos resultar em algumas informações retornadas ao chamador. Para retornar o conjunto de linhas de comandos, os resultados são recebidos em uma **registros** objeto, que é provavelmente os objetos ADO mais usados.  
@@ -48,4 +47,3 @@ No ADO a maioria dos comandos resultar em algumas informações retornadas ao ch
  Para receber a mais de um conjuntos de resultados significa que você precisa fazer várias processamentos pela rede, uma para cada conjunto de dados encapsulado em uma **registros** objeto. Para redes lentas ou congestionadas, reduzindo o número de viagens de ida e pode ajudar a melhorar o desempenho do aplicativo. Portanto, alguns provedores oferecem suporte para receber vários **registros**s em uma única viagem de ida. Isso é discutido no tópico a seguir:  
   
 -   [Recebendo vários conjuntos de registros](../../../ado/guide/data/receiving-multiple-recordsets.md)
-

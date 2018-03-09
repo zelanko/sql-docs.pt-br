@@ -28,17 +28,16 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f3d3b47d9bc553edd49f6f401d1a1c7a857d0a7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c4166a34b06531389b4f8ad57f6c826bfbb664d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Use DBCC OPENTRAN para determinar se uma transação aberta existe no log de transações. Quando você usa a instrução BACKUP LOG, só a parte inativa do log pode ser truncada; uma transação aberta pode impedir que o log seja truncado completamente. Para identificar uma transação aberta, use sp_who para obter a ID de processo do sistema.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -140,10 +139,9 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[CONFIRMAR transação &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   
-

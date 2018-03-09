@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
+f1_keywords: StructureColumn
+dev_langs: DMX
+helpviewer_keywords: StructureColumn function
 ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3e7f727e1007c6502e6612ccef563f670837cf5c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +47,7 @@ StructureColumn('structure column name')
   
  Se a coluna da estrutura de mineração mencionada for uma tabela aninhada, a função retornará um valor de tabela. O valor de tabela retornado pode ser usado na cláusula FROM de uma instrução sub-SELECT.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função é polimórfica e pode ser usada em qualquer lugar de uma instrução que permite expressões, incluindo uma lista de expressões SELECT, uma expressão de condição WHERE e uma expressão ORDER BY.  
   
  O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e como tal, devem ser colocado entre aspas simples: por exemplo, `StructureColumn('` **coluna 1**`')`. Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
@@ -152,10 +146,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

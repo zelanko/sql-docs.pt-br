@@ -1,11 +1,11 @@
 ---
-title: "Etapa 3: Testando o pacote de Tutorial da lição 3 | Microsoft Docs"
+title: "Etapa 3: testar o pacote de tutoriais da Lição 3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da9d8f8f1ec3977d559aae8941c311f9602e1c04
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lição 3 de 3: Testando o pacote de Tutorial da lição 3
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lição 3-3 – testar o pacote de tutoriais da Lição 3
 Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  
   
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
@@ -35,11 +34,11 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
 **Fluxo de Controle**  
   
-![Controlar o fluxo do pacote](../integration-services/media/task4lesson2control.gif "controlar o fluxo do pacote")  
+![Fluxo de controle no pacote](../integration-services/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
 **Fluxo de Dados**  
   
-![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "no pacote de fluxo de dados")  
+![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Para executar o pacote de tutorial da lição 4  
   
@@ -60,4 +59,3 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
   
   
-

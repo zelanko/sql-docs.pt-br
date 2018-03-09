@@ -2,32 +2,31 @@
 title: Elemento DropOnlyMode (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DropOnlyMode element
+dev_langs: XML
+helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fac9ba968a7288b7bb7b9a31f93aeb1b597b7ba7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
-  Especifica que o Orientador de Otimização do Mecanismo de Banco de Dados deve apenas considerar descartar índices, exibições indexadas ou partições existentes durante a sessão de ajuste. Nenhuma nova estrutura de design físico é considerada quando esta opção de ajuste é especificada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica que o orientador de otimização do mecanismo de banco de dados deve apenas considerar descartar índices existentes, exibições indexadas ou partições durante a sessão de ajuste. Nenhuma nova estrutura de design físico é considerada quando esta opção de ajuste é especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
  **Ocorrência**: opcional. Pode-se usar apenas uma vez para cada elemento **TuningOptions** . Não poderá ser usado se os elementos seguintes forem especificados no elemento de **TuningOptions** :  
   
--   [Elemento FeatureSet &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
+-   [Elemento FeatureSet &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
   
 -   [Elemento de particionamento &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/02/2017
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

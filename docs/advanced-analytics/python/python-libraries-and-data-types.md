@@ -2,23 +2,26 @@
 title: Bibliotecas de Python | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d38ae016bedde519e2be239718f9846bb607a12b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Bibliotecas de Python e tipos de dados
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve as bibliotecas do Python que estão incluídas com os seguintes produtos:
 
@@ -50,7 +53,7 @@ Esta tabela lista as conversões implícitas que são fornecidas. Não há supor
 |**bit**|`bool`|
 |**char**|`str`|
 |**float**|`float64`|
-|**int**|`int32`|
+|**Int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|

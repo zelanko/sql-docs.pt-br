@@ -2,26 +2,32 @@
 title: "Configurar um servidor para executar a política desativada por padrão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-query-tuning
+ms.suite: sql
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebc24ef97d0dc3bce65b4f9e9e0dd419d7ffa524
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b92cd0c1cebaacca432cb45422682f12423f67ea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>Lição 1-2 – Configurar um servidor para executar a política desativada por padrão
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Agora você tem uma política chamada Desativada por Padrão. Nesta tarefa, você verificará se o servidor está em conformidade com os requisitos dessa política.  
   
 ### <a name="to-run-the-off-by-default-policy"></a>Para executar a política Desativada por Padrão  

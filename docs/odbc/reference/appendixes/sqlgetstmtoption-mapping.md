@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f19743c0d01c5e1a58650284f0254724c8320936
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Mapeamento de SQLGetStmtOption
 Quando um aplicativo chama **SQLGetStmtOption** para um ODBC 3*. x* driver que não dá suporte a ele, a chamada para  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  A opção de instrução SQL_GET_BOOKMARK foi preterida no ODBC 3*. x*. Para um ODBC 3*. x* driver para trabalhar com ODBC 2. *x* aplicativos que usam SQL_GET_BOOKMARK, deverá dar suporte a SQL_GET_BOOKMARK. Para um ODBC 3*. x* driver para trabalhar com ODBC 2. *x* aplicativos, deverá dar suporte a configuração SQL_USE_BOOKMARKS para SQL_UB_ON e deve expor indicadores de comprimento fixo. Se um ODBC 3*. x* driver dá suporte a indicadores de comprimento variável apenas, indicadores de não-comprimento fixo, ele deve retornar SQLSTATE HYC00 (recurso opcional não implementado) se um ODBC 2. *x* aplicativo tenta configurar SQL_USE_BOOKMARKS SQL_UB_ON.  
   
  Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica para ver se *opção* é entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar isso.
-

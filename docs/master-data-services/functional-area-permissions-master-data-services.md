@@ -5,10 +5,11 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bd9415733f02d54875ecb936e750a877e0e32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cee8bca8d48df114780a29d8bde97319102c1c6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
   É possível atribuir permissão a cada uma das áreas funcionais da interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Estas são as áreas funcionais:  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  Um usuário ou grupo deve ter permissão a, pelo menos, uma área funcional e um modelo na guia **Modelos** para acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

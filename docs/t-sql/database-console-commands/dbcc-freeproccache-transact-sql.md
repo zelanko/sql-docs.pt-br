@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -62,7 +64,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ({ *plan_handle* | *sql_handle* | *nome_do_pool* })  
+ ( { *plan_handle* | *sql_handle* | *pool_name* } )  
 *plan_handle* identifica exclusivamente um plano de consulta para um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary(64)** e pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
@@ -92,7 +94,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache de procedimento (plano) para o banco de dados no escopo.
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. Limpando o procedimento (plano) faz com que o cache de todos os planos a ser removido e consulta de entrada execuções compilará um novo plano, em vez de reutilizá qualquer plano armazenado em cache anteriormente. 
 
 Isso pode causar uma queda repentina e temporária no desempenho de consulta conforme o número de novas compilações. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
@@ -221,6 +223,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
-[ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   

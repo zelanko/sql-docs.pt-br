@@ -2,9 +2,12 @@
 title: "Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -33,18 +36,18 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7f37ca2ef38feed107028015ce8dc6ffd60c77c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
-  Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb** . Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb**. Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
   
 > [!IMPORTANT]  
 >  Para gerenciar o risco de perder alterações recentes no seu histórico de backup e restauração, faça backup do **msdb** com frequência. Para obter informações sobre de quais bancos de dados do sistema você deve fazer backup, veja [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
  Esta seção apresenta as tabelas de histórico que armazenam backup e restauram metadados no banco de dados do sistema **msdb** .  
   
-|Tabela de histórico|Descrição|  
+|Tabela de histórico|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Contém uma linha para cada arquivo de dados ou arquivo de log para o qual é feito o backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contém uma linha para cada grupo de arquivos em um conjunto de backup.|  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  As instruções Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY exigem a permissão CREATE DATABASE. Com essa exigência, seus arquivos e suas informações de backup estão mais protegidos do que nas versões anteriores. Para obter informações sobre essa permissão, veja [Permissões de banco de dados GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Instrução de informações|Tabela de histórico de backup|Descrição|  
+|Instrução de informações|Tabela de histórico de backup|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  
@@ -220,7 +223,7 @@ ms.lasthandoff: 11/09/2017
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

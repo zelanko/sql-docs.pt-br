@@ -1,5 +1,5 @@
 ---
-title: "~ (Not bit a bit) (expressão SSIS) | Microsoft Docs"
+title: "~ (Não bit a bit) (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 398f902d224f49e00b3fdc62bf39300ba180fda8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1b209c8b8c224022b5cce905dbfea29fe81e269
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Não de bit a bit) (Expressão SSIS)
   Executa uma negação bit a bit de um inteiro. Esse operador pode ser se aplicado a tipos de dados inteiro assinados e não assinados.  
@@ -46,8 +45,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados de *integer_expression.*  
   
-## <a name="remarks"></a>Comentários  
- Nenhum.  
+## <a name="remarks"></a>Remarks  
+ Nenhum  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
  Esse exemplo executa uma operação ~ (NOT) bit a bit no número 170 (0000 0000 1010 1010). O número é um inteiro assinado.  
@@ -65,9 +64,8 @@ ms.lasthandoff: 08/03/2017
   
  1111111101010101  
   
-## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

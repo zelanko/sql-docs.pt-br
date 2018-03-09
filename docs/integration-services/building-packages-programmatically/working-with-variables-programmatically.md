@@ -1,5 +1,5 @@
 ---
-title: "Trabalhando com variáveis programaticamente | Microsoft Docs"
+title: "Trabalhar com variáveis programaticamente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -27,34 +26,33 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 5c8968302f42e1b8fde55894810ecb77cf715ab6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43e707fdd05c7716d9b3fe61867bbee67550b577
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
   As variáveis são uma forma de definir valores e controlar processos dinamicamente em pacotes, contêineres, tarefas e manipuladores de eventos. As variáveis também podem ser usadas por restrições de precedência para controlar a direção do fluxo de dados para tarefas diferentes. As variáveis têm uma série de usos:  
   
 -   Atualizar propriedades de um pacote em tempo de execução.  
   
--   Preencha valores de parâmetro para instruções Transact-SQL em tempo de execução.  
+-   Popule valores de parâmetro para instruções Transact-SQL em tempo de execução.  
   
--   Controlar o fluxo de um loop Foreach. Para obter mais informações, consulte [adicionar enumeração a um fluxo de controle](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Controlar o fluxo de um loop Foreach. Para obter mais informações, consulte [Adicionar enumeração a um fluxo de controle](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
   
 -   Controlar uma restrição de precedência por seu uso em uma expressão. Uma restrição de precedência pode incluir variáveis na definição de restrição. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
--   Controlar a repetição condicional de um contêiner de Loop For. Para obter mais informações, consulte [adicionar iteração a um fluxo de controle](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Controlar a repetição condicional de um contêiner de Loop For. Para obter mais informações, consulte [Adicionar iteração a um fluxo de controle](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
   
--   Crie expressões que incluem valores de variáveis.  
+-   Crie expressões que incluam valores de variáveis.  
   
--   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, **Foreach Loop** contêineres, **para Loop** contêineres, **sequência** contêineres, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, contêineres **Loop Foreach**, contêineres **Loop For**, contêineres de **Sequência**, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="scope"></a>Escopo  
  Cada contêiner tem sua própria coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Quando uma nova variável é criada, ela fica dentro do escopo de seu contêiner pai. Como o contêiner de pacote está no topo da hierarquia de contêineres, as variáveis com escopo de pacote funcionam como variáveis globais e ficam visíveis para todos os contêineres de pacote. A coleção de variáveis para o contêiner também pode ser acessada pelos filhos do contêiner através da coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, usando o nome da variável ou o índice da variável na coleção.  
@@ -165,23 +163,23 @@ End Module
   
  `Variable: VersionMinor, Int32, 0`  
   
- Observe que todas as variáveis com escopo no **sistema** namespace estão disponíveis para o pacote. Para obter mais informações, consulte [Variáveis de sistema](../../integration-services/system-variables.md).  
+ Observe que todas as variáveis com escopo no namespace **System** estão disponíveis para o pacote. Para obter mais informações, consulte [Variáveis de sistema](../../integration-services/system-variables.md).  
   
 ## <a name="namespaces"></a>Namespaces  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão onde as variáveis residem; **Usuário** e **sistema** namespaces. Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada para o **usuário** namespace. Variáveis de sistema residem no **sistema** namespace. Você pode criar namespaces adicionais que o **usuário** namespace para manter variáveis personalizadas e você pode alterar o nome do **usuário** namespace, mas você não pode adicionar ou modificar as variáveis no **sistema** namespace, ou atribuir variáveis de sistema para um namespace diferente.  
+ O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão em que as variáveis residem; os namespaces **User** e **System**. Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada ao namespace **User**. As variáveis de sistema residem no namespace **System**. Você pode criar namespaces adicionais, além do namespace **User** para manter variáveis personalizadas e você pode alterar o nome do namespace **User**, mas não pode adicionar ou modificar variáveis no namespace **System** nem atribuir variáveis do sistema a outro namespace.  
   
- As variáveis de sistema que estão disponíveis diferem dependendo do tipo de contêiner. Para obter uma lista das variáveis de sistema disponíveis para pacotes, contêineres, tarefas e manipuladores de eventos, consulte [variáveis de sistema](../../integration-services/system-variables.md).  
+ As variáveis de sistema que estão disponíveis diferem dependendo do tipo de contêiner. Para uma lista das variáveis de sistema disponíveis para pacotes, contêineres, tarefas e manipuladores de eventos, consulte [System Variables](../../integration-services/system-variables.md).  
   
-## <a name="value"></a>Value  
+## <a name="value"></a>Valor  
  O valor de uma variável personalizada pode ser literal ou uma expressão:  
   
 -   Se você quiser a variável para conter um valor literal, defina o valor de sua propriedade <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  
   
--   Se você quiser a variável para conter uma expressão, para que você pode usar os resultados da expressão como seu valor, defina o <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> propriedade da variável a ser **true**e forneça uma expressão no <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A> propriedade. Em tempo de execução, a expressão é avaliada e o resultado da expressão é usado como valor da variável. Por exemplo, se a propriedade da expressão de uma variável for `"100 * 2""100 * 2"`, a variável avaliará a um valor de 200.  
+-   Se você deseja que a variável contenha uma expressão para que você possa usar os resultados da expressão como o valor dessa variável, defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> da variável como **true** e forneça uma expressão na propriedade <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A>. Em tempo de execução, a expressão é avaliada e o resultado da expressão é usado como valor da variável. Por exemplo, se a propriedade da expressão de uma variável for `"100 * 2""100 * 2"`, a variável avaliará a um valor de 200.  
   
- Para uma variável, você não pode definir o valor de seu <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> explicitamente. O valor <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> é inferido do valor inicial atribuído à variável e não pode ser alterado posteriormente. Para obter mais informações sobre os tipos de dados da variável, consulte [tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
+ Para uma variável, você não pode definir o valor de seu <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> explicitamente. O valor <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> é inferido do valor inicial atribuído à variável e não pode ser alterado posteriormente. Para obter mais informações sobre tipos de dados de variável, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
- O exemplo de código a seguir cria uma nova variável, define <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> para **true**, atribui a expressão `"100 * 2"` para a propriedade de expressão da variável e, em seguida, gera o valor da variável.  
+ O exemplo de código a seguir cria uma nova variável, define-a <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> como **true**, atribui a expressão `"100 * 2"` à propriedade da expressão da variável e produz o valor da variável.  
   
 ```csharp  
 using System;  
@@ -236,11 +234,10 @@ End Module
  A expressão deve ser uma expressão válida que usa a sintaxe da expressão [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Literais são permitidos em expressões variáveis, além dos operadores e funções que a sintaxe da expressão fornece, mas as expressões não podem fazer referência a outras variáveis ou colunas. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Se um arquivo de configuração incluir uma variável personalizada, a variável poderá ser atualizada em tempo de execução. Isso significa que quando o pacote é executado, o valor da variável originalmente no pacote é substituído por um novo valor do arquivo de configuração. Essa técnica de substituição é útil quando um pacote é implantado em vários servidores que requerem valores de variável diferentes. Por exemplo, uma variável pode especificar o número de vezes que um **Foreach Loop** contêiner repete seu fluxo de trabalho, ou lista os destinatários que um manipulador de eventos envia email quando ocorre um erro ou alterar o número de erros que podem ocorrer antes do pacote falhará. Essas variáveis são fornecidas dinamicamente em arquivos de configuração para cada ambiente. Portanto, somente as variáveis de leitura/gravação são permitidas em arquivos de configuração. Para obter mais informações, consulte [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md).  
+ Se um arquivo de configuração incluir uma variável personalizada, a variável poderá ser atualizada em tempo de execução. Isso significa que quando o pacote é executado, o valor da variável originalmente no pacote é substituído por um novo valor do arquivo de configuração. Essa técnica de substituição é útil quando um pacote é implantado em vários servidores que requerem valores de variável diferentes. Por exemplo, uma variável pode especificar o número de vezes que um contêiner **Loop Foreach** repete seu fluxo de trabalho ou então listar os recipientes para os quais um manipulador de eventos envia email quando um erro é gerado ou alterar o número de erros que podem ocorrer antes de o pacote falhar. Essas variáveis são fornecidas dinamicamente em arquivos de configuração para cada ambiente. Portanto, somente as variáveis de leitura/gravação são permitidas em arquivos de configuração. Para obter mais informações, consulte [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Variáveis](../../integration-services/integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

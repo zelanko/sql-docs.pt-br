@@ -2,43 +2,35 @@
 title: "Conteúdo de elemento (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Content Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Content Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Content
-helpviewer_keywords:
-- Content element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Content
+helpviewer_keywords: Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c42c6d4af398dd08021b8b9e308155f2d23b11cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
-  Descreve o conteúdo da coluna no [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve o conteúdo da coluna no [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,10 +45,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -64,9 +56,9 @@ ms.lasthandoff: 09/01/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa enumeração descreve o tipo de conteúdo representado por uma coluna da estrutura de mineração e pode ser estendida conforme necessário pelos provedores de algoritmo de mineração. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../../analysis-services/data-mining/content-types-data-mining.md).  
   
  Os valores listados na tabela a seguir normalmente têm suporte em todos os provedores de algoritmo de mineração.  
@@ -97,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  A enumeração que corresponde aos valores permitidos para **conteúdo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento ClassifiedColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

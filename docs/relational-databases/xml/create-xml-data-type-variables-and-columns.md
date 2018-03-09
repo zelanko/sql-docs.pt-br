@@ -2,29 +2,34 @@
 title: "Criar variáveis e colunas de tipo de dados XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34d820e076639a944e216d00d02b90b7f2c63e2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d4ac6f45c25b13f71edf7e2003d8b4facefea6fb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
-  O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, é possível usar o tipo de dados **xml** como um tipo de coluna quando você cria uma tabela como um tipo variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, é possível usar o tipo de dados **xml** como um tipo de coluna quando você cria uma tabela como um tipo variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="creating-columns-and-variables"></a>Criando colunas e variáveis  
  Para criar uma coluna de tipo `xml` como parte de uma tabela, use uma instrução `CREATE TABLE` , conforme mostrado no exemplo a seguir:  

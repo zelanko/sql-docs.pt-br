@@ -8,24 +8,21 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine Tuning Advisor, Query Store
+helpviewer_keywords: Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "9"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8d43a90f7c4bebef8bb9753dd02b29b46a2f30b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ No GUI do DTA, selecione o botão de opção **Repositório de Consultas** no pa
 Na linha de comando (dta.exe), escolha a opção **-iq** para selecionar a carga de trabalho do Repositório de Consulta. 
 
 Há duas opções adicionais disponíveis por meio da linha de comando que ajuda a ajustar o comportamento do DTA ao selecionar a carga de trabalho no Repositório de Consultas. Essas opções não estão disponíveis por meio do GUI:
-  1. Número de eventos de carga de trabalho a ajustar: essa opção, especificada usando a linha de comando **-n**, permite ao usuário controlar quantos eventos do Repositório de Consultas são ajustados. Por padrão, o DTA usa um valor de 1000 para essa opção. Observe que o DTA sempre escolhe os eventos mais caros por duração total. 
+  1. Número de eventos de carga de trabalho a serem ajustados: essa opção, especificada usando o argumento de linha de comando **-n**, permite ao usuário controlar quantos eventos do Repositório de Consultas são ajustados. Por padrão, o DTA usa um valor de 1000 para essa opção. Observe que o DTA sempre escolhe os eventos mais caros por duração total. 
   
   2. Janelas de tempo dos eventos a serem ajustados: como o Repositório de Consultas pode conter consultas que foram executadas há muito tempo, essa opção permite que o usuário especifique uma janela de tempo anterior (em horas) de quando uma consulta deve ter sido executado para que ela seja considerada pelo DTA para ajuste. Essa opção é especificada usando o argumento de linha de comando **-I**. 
 
@@ -55,10 +52,9 @@ Consulte [Utilitário dta](../../tools/dta/dta-utility.md) para obter mais infor
 --- 
 A diferença entre as opções de Repositório de Consultas e de Cache de Planos é que o primeiro contém um histórico maior de consultas que foram executadas no banco de dados, persistidas entre as reinicializações do servidor. Por outro lado, o Cache de Planos contém apenas um subconjunto de consultas recém-executadas cujos planos são armazenados em cache na memória. Quando o servidor for reiniciado, as entradas no Cache de Planos serão descartadas.
 
-<a name="see-also"></a>Consulte também 
+<a name="see-also"></a>Consulte Também 
 --- 
 [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Como o Repositório de Consultas coleta dados](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Práticas recomendadas do Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)
-

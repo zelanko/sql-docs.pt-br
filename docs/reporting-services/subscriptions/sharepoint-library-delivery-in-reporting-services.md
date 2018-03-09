@@ -2,12 +2,13 @@
 title: Entrega de biblioteca do SharePoint no Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea55ee6029eb4f8e75980baf4ee556fabe49c431
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
@@ -76,11 +76,11 @@ ms.lasthandoff: 08/09/2017
  Nome e extensão do arquivo  
  Especifique o nome de arquivo e extensão do relatório como deseja que apareça na biblioteca de destino. Se você não especificar uma extensão de arquivo, o servidor de relatório criará uma com base no formato de saída do relatório. Esse valor é necessário. O nome de arquivo não deve incluir os seguintes caracteres: : \ / * ? " < > | # { } %  
   
- Título  
+ Title  
  Especifica uma propriedade **Título** opcional para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
   
  Caminho  
- Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: `http://mySharePointWeb/MySite/MyDocLib`, onde `http://mySharePointWeb` indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint onde o relatório será entregue.  
+ Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: `http://mySharePointWeb/MySite/MyDocLib`, em que `http://mySharePointWeb` indica o aplicativo Web, “MySite” é o site do SharePoint e “MyDocLib” é a biblioteca do SharePoint na qual o relatório será entregue.  
   
  Você não pode especificar uma página, um site nem uma lista. O contêiner de destino deve ser uma biblioteca no mesmo site ou farm.  
   
@@ -90,10 +90,9 @@ ms.lasthandoff: 08/09/2017
  Autocopy  
  Se você estiver usando o recurso Autocopy para copiar automaticamente a última versão de um arquivo para vários locais, o arquivo será copiado se **Substituir** estiver habilitado. Se você tiver usado **Incrementação automática** ou **Nenhum**, a entrega falhará e ocorrerá o erro **rsDeliveryError** .  
   
-## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar assinaturas de servidores de relatório do modo do SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

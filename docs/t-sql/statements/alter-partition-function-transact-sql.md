@@ -28,17 +28,16 @@ helpviewer_keywords:
 - partition functions [SQL Server], modifying
 - partitioned tables [SQL Server], merging
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5969f9487a55437febfba9f6deec7fb1e0df5f02
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 66b921eb3bd6378d20de11a0197a20c957d14ac6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +119,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Dividindo uma partição de uma tabela ou índice particionado em duas partições  
  O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. `ALTER PARTITION FUNCTION` divide uma das partições em dois para criar um total de cinco partições.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -138,7 +137,7 @@ SPLIT RANGE (500);
 ### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Mesclando duas partições de uma tabela particionada em uma partição  
  O exemplo a seguir cria a mesma função de partição anterior e mescla duas partições em uma, para um total de três partições.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -153,7 +152,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
@@ -172,4 +171,3 @@ MERGE RANGE (100);
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

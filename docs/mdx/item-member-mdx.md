@@ -2,10 +2,13 @@
 title: Item (membro) (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ITEM
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6f35b9e90c01f55e66045ae54d6f8c3b8e2166e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: db417d352d7e2e30ebd81ba64afba24f1777c2ee
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="item-member-mdx"></a>Item (Membro) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna um membro de uma tupla especificada.  
   
@@ -42,7 +45,7 @@ Tuple_Expression.Item( Index )
  *Index*  
  Uma expressão numérica válida que especifica o membro específico através da posição dentro da tupla a ser retornada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Item** função retorna um membro da tupla especificada. A função retorna o membro encontrado na posição de base zero especificada por *índice*.  
   
 ## <a name="example"></a>Exemplo  
@@ -56,7 +59,7 @@ Tuple_Expression.Item( Index )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

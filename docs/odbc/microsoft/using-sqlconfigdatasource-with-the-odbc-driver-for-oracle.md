@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usando SQLConfigDatasource com o Driver ODBC para Oracle
 > [!IMPORTANT]  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 |NumberFloat|2|""|0 ou 1|Se for 0, FLOAT colunas são tratadas como SQL_FLOAT. Se for 1, FLOAT colunas são tratadas como SQL_DOUBLE.|  
 |PWD|30|""|N/A|Senha.|  
 |RDOSupport|2|""|0 ou 1|Permite RDO chamar procedimentos do Oracle.|  
-|Comentários|2|0|0 ou 1|Inclua comentários em funções de catálogo.|  
+|Remarks|2|0|0 ou 1|Inclua comentários em funções de catálogo.|  
 |RowLimit|4|""|0 a 99|Número máximo de linhas retornadas por uma instrução SELECT. Uma cadeia de caracteres de comprimento zero indica que nenhum limite é aplicado.|  
 |Servidor|128|""|N/A|Nome do servidor Oracle.|  
 |SynonymColumns|2|1|0 ou 1|Inclua SYNONYMs em SQLColumns.|  

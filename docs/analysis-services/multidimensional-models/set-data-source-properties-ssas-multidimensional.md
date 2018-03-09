@@ -2,16 +2,13 @@
 title: Definir propriedades de fonte de dados (SSAS Multidimensional) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
@@ -22,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Definir propriedades da fonte de dados (SSAS multidimensional)
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão com um data warehouse externo ou um banco de dados relacional que fornece dados a um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão para um data warehouse externo ou o banco de dados relacional que fornece dados para um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Definir propriedades de fonte de dados no SQL Server Data Tools  
   
@@ -57,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**Provedor Gerenciado**|Exibe o nome do provedor gerenciado, como System.Data.SqlClient ou System.Data.OracleClient, se a fonte de dados usar um provedor gerenciado.<br /><br /> Se a fonte de dados não usar um provedor gerenciado, essa propriedade exibirá uma cadeia de caracteres vazia.<br /><br /> Esta propriedade é somente leitura no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para alterar o provedor usado na conexão, edite a cadeia de conexão.|  
 |**Informações sobre Representação**|Especifica a identidade do Windows sob a qual o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado ao conectar-se a uma fonte de dados que usa a autenticação do Windows. As opções incluem usar um conjunto predefinido de credenciais do Windows, a conta de serviço, a identidade do usuário atual, ou uma opção herdada que pode ser útil se seu modelo contiver vários objetos de fonte de dados. Para obter mais informações, consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], a lista de valores válidos inclui estes valores:<br /><br /> **ImpersonateAccount** (use um nome de usuário e senha específicos do Windows para se conectar à fonte de dados).<br /><br /> **ImpersonateServiceAccount** (utilize a identidade de segurança da conta de serviço para se conectar à fonte de dados). Este é o valor padrão.<br /><br /> **ImpersonateCurrentUser** (utilize a identidade de segurança do usuário atual para se conectar à fonte de dados). Esta opção só é válida para consultas de mineração de dados que recuperam dados de um data warehouse ou banco de dados externo; não escolha-o para conexões de dados usadas para processamento, carregamento ou write-back em um banco de dados multidimensional.<br /><br /> **Herdar** ou **padrão** (use as configurações de representação do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém este objeto de fonte de dados). As propriedades de banco de dados incluem opções de representação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

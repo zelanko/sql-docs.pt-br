@@ -2,9 +2,12 @@
 title: "Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propriedades do Grupo de Disponibilidade: Novo Grupo de Disponibilidade (página geral)
-  Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade** .  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade**.  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
   
  **Para exibir as propriedades do grupo de disponibilidade**  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
  O nome do grupo de disponibilidade. Esse é um nome especificado pelo usuário que deve ser exclusivo no WSFC (Windows Server Failover Cluster).  
   
 ## <a name="availability-databases"></a>Bancos de dados de disponibilidade  
- **Nome do Banco de Dados**  
+ **Database Name**  
  O nome de um banco de dados que foi adicionado ao grupo de disponibilidade.  
   
  **Adicionar**  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
  **Modo de Failover**  
  O modo de failover da réplica, um dos seguintes:  
   
- **Automatic**  
+ **Automático**  
  Failover automático. A réplica é um destino para failovers automáticos. Essa opção terá suporte apenas se o modo de disponibilidade estiver definido como confirmação síncrona.  
   
  **Manual**  
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/09/2017
  **Remover**  
  Clique para remover uma réplica secundária especificada do grupo de disponibilidade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

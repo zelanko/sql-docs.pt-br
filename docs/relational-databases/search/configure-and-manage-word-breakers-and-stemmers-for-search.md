@@ -2,10 +2,14 @@
 title: Configurar e gerenciar separadores de palavras e lematizadores de pesquisa | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,19 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29c3477e0a53e78727eb95423158e550328cbfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Os separadores de palavras e os lematizadores executam a análise linguística em todos os dados indexados de texto completo. Análise linguística faz as duas coisas a seguir:
 
 -   **Localizar os limites de palavra (quebra de palavras)**. O *separador de palavras* identifica palavras individuais determinando onde existem limites de palavra com base nas regras lexicais do idioma. Cada palavra (também conhecida como *token*) é inserida no índice de texto completo usando uma representação compactada para reduzir seu tamanho.
@@ -51,7 +55,7 @@ Para usar os separadores de palavras e lematizadores fornecidos para todos os id
 
 Para ver a lista de idiomas aos quais a Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. A presença de um idioma nesta lista indica que o os separadores de palavras foram registrados para o idioma. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -61,7 +65,7 @@ Para que a Pesquisa de Texto Completo use os separadores de palavras de um idiom
 
 Para ver a lista de componentes do separador de palavras registrados, use a instrução a seguir.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -86,7 +90,7 @@ Se você adicionar, remover ou alterar um separador de palavras, precisará atua
   
 Para exibir o idioma do separador de palavras de colunas específicas, execute a seguinte instrução.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -97,7 +101,7 @@ Para obter opções adicionais e mais informações, consulte [sys.fulltext_inde
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informações sobre o erro MSSQLSERVER_30053
   
-|Propriedade|Value|
+|Propriedade|Valor|
 |-|-|
 |Nome do produto|SQL Server|  
 |ID do evento|30053|  
@@ -138,7 +142,7 @@ Para obter opções adicionais e mais informações, consulte [sys.fulltext_inde
 Isso é significativo se um catálogo de texto completo foi importado durante a atualização de um banco de dados para a versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Agora um ou mais dos idiomas usados pelos índices de texto completo no catálogo de texto completo podem ser associados aos novos separadores de palavras. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

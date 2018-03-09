@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAggregate method (geometry)
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f6bf9a42f6d41973f2abed3377c5a311271e106f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 16c46ec5f18dde104a66d4fcf405f81ce59b2d6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Exceções  
  Gera uma `FormatException` quando há valores de entrada que não são válidos. Consulte [STIsValid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Método ignora **nulo** entradas.  
@@ -77,8 +76,7 @@ FROM @Geom;
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

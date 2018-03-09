@@ -3,8 +3,9 @@ title: "Chaves de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,24 @@ apitype: COM
 f1_keywords:
 - Table::Keys
 - Keys
-helpviewer_keywords: Keys collection [ADOX]
+helpviewer_keywords:
+- Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d58a565fde1f4f1628d55293c401250529269a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>Coleção de chaves (ADOX)
 Contém todos os [chave](../../../ado/reference/adox-api/key-object-adox.md) objetos de um [tabela](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método para um [chaves coleção](../../../ado/reference/adox-api/keys-collection-adox.md) é exclusivo para ADOX. Você pode:  
   
 -   Adicione uma nova chave para a coleção com o [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método.  

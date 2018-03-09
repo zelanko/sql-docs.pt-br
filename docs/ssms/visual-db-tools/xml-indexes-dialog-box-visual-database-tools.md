@@ -3,8 +3,11 @@ title: "Caixa de diálogo Índices XML (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52f966e4e4ea42595fa93c83b608a18ae5a0b863
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices XML (Visual Database Tools)
-Use a caixa de diálogo **Índices XML** para criar índices para colunas do tipo de dados XML, que não podem ser indexadas utilizando a caixa de diálogo **Índice/Chaves** . Cada coluna XML pode ter mais de um índice XML, mas o primeiro a ser criado (primário) será a base para os demais (secundários). Se você excluir o índice XML primário, os índices secundários também serão excluídos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Índices XML** para criar índices para colunas do tipo de dados XML, que não podem ser indexadas utilizando a caixa de diálogo **Índice/Chaves**. Cada coluna XML pode ter mais de um índice XML, mas o primeiro a ser criado (primário) será a base para os demais (secundários). Se você excluir o índice XML primário, os índices secundários também serão excluídos.  
   
 ## <a name="options"></a>Opções  
 **Índice XML selecionado**  
@@ -89,6 +92,6 @@ Calcula estatísticas novas quando o índice é criado. Ao se recalcular estatí
 **Bloqueios de Linha Permitidos**  
 Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar índices XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
   

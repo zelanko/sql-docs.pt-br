@@ -24,17 +24,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: 53
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abf357840512c1447f0977a151ca742b148f45d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *padrão*  
+ *pattern*  
  É uma expressão de caractere que contém a sequência a ser localizada. Caracteres curinga podem ser usados; No entanto, o caractere % deve vir antes e seguir *padrão* (exceto quando você procura primeiro e último caracteres). *padrão de* é uma expressão da categoria de tipo de dados de cadeia de caracteres. *padrão de* é limitado a 8000 caracteres.  
   
  *expressão*  
@@ -59,13 +58,13 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint** se *expressão* é o **varchar (max)** ou **nvarchar (max)** tipos de dados; caso contrário, **int**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se qualquer um dos *padrão* ou *expressão* for NULL, PATINDEX retornará NULL.  
   
  PATINDEX executa comparações com base no agrupamento da entrada. Para executar uma comparação em um agrupamento especificado, é possível usar COLLATE para aplicar um agrupamento explícito à entrada.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos SC, o valor de retorno contará qualquer par de substituto UTF-16 *expressão* parâmetro como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar agrupamentos SC, o valor de retorno contará qualquer par de substituto UTF-16 *expressão* parâmetro como um único caractere. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em PATINDEX.  
   
@@ -150,6 +149,8 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>Consulte também  
+ [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; Curinga – caracteres &#40; s &#41; a correspondência &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
@@ -158,6 +159,5 @@ WHERE DocumentNode = 0x7B40;
  [Caractere de porcentagem &#40; Curinga – caracteres &#40; s &#41; a correspondência &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: sys.DM repl_schemas (Transact-SQL) | Microsoft Docs
+title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_schemas
 - sys.dm_repl_schemas_TSQL
 - sys.dm_repl_schemas
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_schemas dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fef5dd298e56cb1560562db1003e255244ca8fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary (8)**|Endereço na memória da estrutura de esquema em cache para o artigo de tabela publicado.|  
+|**artcache_schema_address**|**varbinary(8)**|Endereço na memória da estrutura de esquema em cache para o artigo de tabela publicado.|  
 |**tabid**|**bigint**|ID da tabela replicada.|  
 |**indexid**|**smallint**|ID de um índice clusterizado na tabela publicada.|  
 |**idSch**|**bigint**|ID do esquema da tabela.|  
@@ -48,13 +51,13 @@ ms.lasthandoff: 11/17/2017
 |**ccTabname**|**smallint**|Comprimento de caracteres do nome da tabela publicado.|  
 |**rowsetid_delete**|**bigint**|ID da linha excluída.|  
 |**rowsetid_insert**|**bigint**|ID da linha inserida.|  
-|**num_pk_cols**|**int**|Número de colunas de chave primária.|  
+|**num_pk_cols**|**Int**|Número de colunas de chave primária.|  
 |**pcitee**|**binary(8000)**|Pointeiro para a estrutura de expressão de consulta usada para avaliar uma coluna computada.|  
-|**re_numtextcols**|**int**|Número de colunas de objeto binário grande na tabela replicada.|  
+|**re_numtextcols**|**Int**|Número de colunas de objeto binário grande na tabela replicada.|  
 |**re_schema_lsn_begin**|**binary(8000)**|Número de sequência de log inicial (LSN) de logon da versão do esquema.|  
 |**re_schema_lsn_end**|**binary(8000)**|LSN final de logon na versão do esquema.|  
-|**re_numcols**|**int**|Número de colunas publicadas.|  
-|**re_colid**|**int**|Identificador de coluna no Publicador.|  
+|**re_numcols**|**Int**|Número de colunas publicadas.|  
+|**re_colid**|**Int**|Identificador de coluna no Publicador.|  
 |**re_awcName**|**nvarchar(510)**|Nome da coluna publicada.|  
 |**re_ccName**|**smallint**|Número de caracteres no nome da coluna.|  
 |**re_pk**|**tinyint**|Se a coluna publicada faz parte de uma chave primária ou não.|  
@@ -72,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |**se_rowsetid**|**bigint**|ID do conjunto de linhas.|  
 |**se_schema_lsn_begin**|**binary(8000)**|LSN inicial de logon na versão do esquema.|  
 |**se_schema_lsn_end**|**binary(8000)**|LSN final de logon na versão do esquema.|  
-|**se_numcols**|**int**|Número de colunas.|  
-|**se_colid**|**int**|ID da coluna no assinante.|  
+|**se_numcols**|**Int**|Número de colunas.|  
+|**se_colid**|**Int**|ID da coluna no assinante.|  
 |**se_maxlen**|**smallint**|Comprimento máximo da coluna.|  
 |**se_prec**|**tinyint**|Precisão da coluna.|  
 |**se_scale**|**tinyint**|Escala da coluna.|  
@@ -84,12 +87,12 @@ ms.lasthandoff: 11/17/2017
 |**se_fNullable**|**tinyint**|Especifica se a coluna suporta valores NULL.|  
 |**se_fAnsiTrim**|**tinyint**|Especifica se o fragmento ANSI é usado na coluna.|  
 |**se_computed**|**smallint**|Especifica se a coluna é uma coluna computada.|  
-|**se_nullBitInLeafRows**|**int**|Especifica se o valor da coluna é NULL.|  
+|**se_nullBitInLeafRows**|**Int**|Especifica se o valor da coluna é NULL.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão VIEW DATABASE STATE no banco de dados de publicação para chamar **dm_repl_schemas**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As informações só serão retornadas para objetos de banco de dados replicados atualmente armazenados no cache de artigo de replicação.  
   
 ## <a name="see-also"></a>Consulte também  

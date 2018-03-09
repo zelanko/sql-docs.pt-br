@@ -1,10 +1,13 @@
 ---
 title: Trabalhando com o SSMA para Access Console (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: e09d438a0e53eaba4f461cfdf14b7447b85cf4ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a53f3cb5f05cff896bc03245c20f68a9050f5d1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Trabalhando com o SSMA para Access Console (AccessToSQL)
 Microsoft SQL Server SSMA (Migration Assistant) para acesso agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -32,7 +35,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Description**|  
+|**Tópicos**|**Descrição**|  
 |[Guia de Introdução ao SSMA para Access Console &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; AccessToSQL &#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md)|Explica como criar um arquivo de script.|  

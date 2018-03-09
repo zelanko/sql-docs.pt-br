@@ -3,8 +3,9 @@ title: Resumo do modelo de objeto do RDS | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9423b2f6072f142336e1f36f02785b69f9efdae6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-object-model-summary"></a>Resumo do modelo de objeto de RDS
 > [!IMPORTANT]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/17/2017
   
 |Objeto|Description|  
 |------------|-----------------|  
-|[RDS. Espaço de dados](../../../ado/reference/rds-api/dataspace-object-rds.md)|Este objeto contém um método para obter um proxy do servidor. O proxy pode ser o padrão ou um programa de servidor personalizado (objeto comercial). O programa do servidor pode ser chamado na Internet, intranet, uma rede local, ou uma biblioteca de vínculo dinâmico local.<br /><br /> O **DataSpace** objeto é seguro para script.|  
+|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Este objeto contém um método para obter um proxy do servidor. O proxy pode ser o padrão ou um programa de servidor personalizado (objeto comercial). O programa do servidor pode ser chamado na Internet, intranet, uma rede local, ou uma biblioteca de vínculo dinâmico local.<br /><br /> O **DataSpace** objeto é seguro para script.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Esse objeto representa o programa de servidor padrão. Ele executa o comportamento de recuperação e atualização de dados do RDS padrão.<br /><br /> O **DataFactory** o objeto não é seguro para script.|  
-|[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Esse objeto automaticamente pode invocar o **RDS. DataSpace** e **RDSServer.DataFactory** objetos.<br /><br /> Use esse objeto para invocar o comportamento de recuperação ou a atualização de dados do RDS padrão.<br /><br /> Esse objeto também fornece os meios para controles visuais acessar retornado **registros** objeto.<br /><br /> O **DataControl** objeto é seguro para script.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Esse objeto automaticamente pode invocar o **RDS. DataSpace** e **RDSServer.DataFactory** objetos.<br /><br /> Use esse objeto para invocar o comportamento de recuperação ou a atualização de dados do RDS padrão.<br /><br /> Esse objeto também fornece os meios para controles visuais acessar retornado **registros** objeto.<br /><br /> O **DataControl** objeto é seguro para script.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

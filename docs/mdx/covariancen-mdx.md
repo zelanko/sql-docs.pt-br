@@ -2,34 +2,32 @@
 title: CovarianceN (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- COVARIANCEN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Covariancen function
+f1_keywords: COVARIANCEN
+dev_langs: kbMDX
+helpviewer_keywords: Covariancen function
 ms.assetid: 1cc621cd-ffa0-40aa-91f0-bc5cb57f692b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c6538083e34f8cee57ceaa4a7cb71a0748b0d00e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2eeee4c108965c00e847a8c3acdd60334e39000f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a covariância de exemplo dos pares x-y de valores avaliados em um conjunto, usando a fórmula de população não polarizada (dividindo pelo número de pares x-y).  
   
@@ -50,7 +48,7 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número que representa valores do eixo x.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **CovarianceN** função avalia o conjunto especificado em relação à primeira expressão numérica, para obter os valores para o eixo y. Em seguida, a função avalia o conjunto especificado em relação à segunda expressão numérica, se especificada, para obter o conjunto de valores para o eixo x. Se a segunda expressão numérica não for especificada, a função utilizará o contexto atual das células no conjunto especificado como valores para o eixo x.  
   
  O **CovarianceN** função usa a fórmula de população não polarizada. Isso é, em comparação com o [covariância](../mdx/covariance-mdx.md) função que usa a fórmula de população polarizada (dividindo pelo número de pares x-y).  
@@ -58,8 +56,7 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 > [!NOTE]  
 >  O **CovarianceN** função ignora células vazias ou células que contêm texto ou valores lógicos. Porém, a função contém células com valores zero.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

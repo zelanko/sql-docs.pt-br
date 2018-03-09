@@ -2,27 +2,30 @@
 title: "Propriedades da publicação, filtrar linhas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30b632ee39ae16233a66ef4985ce018e0ef8b9d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-filter-rows"></a>Propriedades de Publicação, Filtrar Linhas
-  A página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** permite adicionar, editar ou excluir e permite também:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** permite adicionar, editar ou excluir e permite também:  
   
 -   Aplicar filtros de linhas estáticos a artigos de tabela em publicações de instantâneo, transacional e de mesclagem.  
   
@@ -79,16 +82,16 @@ ms.lasthandoff: 11/09/2017
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela** . O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   
- **Filtro**  
+ **Filter**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

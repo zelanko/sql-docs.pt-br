@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLWritePrivateProfileString
-apilocation:
-- sqlsrv32.dll
+apiname: SQLWritePrivateProfileString
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLWritePrivateProfileString
-helpviewer_keywords:
-- SQLWritePrivateProfileString [ODBC]
+f1_keywords: SQLWritePrivateProfileString
+helpviewer_keywords: SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 081d91ac2c257fbaa60b93de24dd134ea698bcd9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3025fedee1c5528704c366fa04c5d7ff32e124ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Função SQLWritePrivateProfileString
 **Conformidade**  
@@ -87,4 +81,3 @@ BOOL SQLWritePrivateProfileString(
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Obter um valor das informações do sistema|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|
-

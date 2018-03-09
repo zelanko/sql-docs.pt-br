@@ -26,17 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
   O destino OLE DB carrega os dados em uma variedade de bancos de dados compatíveis com OLE DB usando uma tabela ou exibição de banco de dados ou um comando SQL. Por exemplo, a fonte OLE DB pode carregar dados em tabelas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  A instrução CREATE TABLE gerada pela caixa de diálogo **Editor de Destino de OLE DB** pode requerer modificação dependendo do tipo de destino. Por exemplo, alguns destinos não suportam os tipos de dados que a instrução CREATE TABLE usa.  
   
- Esse destino usa um gerenciador de conexões OLE DB para conectar-se a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Esse destino usa um gerenciador de conexões OLE DB para conectar-se a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece o objeto de fonte de dados do qual você pode criar um gerenciador de conexões OLE DB, disponibilizando as fontes de dados e exibições da fonte de dados para o destino OLE DB.  
   
@@ -99,9 +98,9 @@ ms.lasthandoff: 08/17/2017
   
 |Opção de carregamento rápido|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. A opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. Esta opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo**>**.|  
 |FIRE_TRIGGERS|Especifica se os gatilhos devem ser disparados na tabela de inserção. A opção tem o formato **FIRE_TRIGGERS**. A presença da opção indica que os gatilhos irão disparar.|  
-|ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ordem \<nome da coluna > ASC &#124; DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
+|ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ORDER \<nome da coluna> ASC&#124;DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
   
  As palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)] são normalmente digitadas em letras maiúsculas, mas não fazem distinção entre maiúsculas e minúsculas.  
   
@@ -135,7 +134,7 @@ ms.lasthandoff: 08/17/2017
 >  A propriedade **CommandTimeout** do destino OLE DB não está disponível no **Editor de Destino OLE DB**, mas pode ser definida usando o **Editor Avançado**. Além disso, determinadas opções de carregamento rápido só estarão disponíveis no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Destino OLE DB em [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="static-options"></a>Opções estáticas  
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Nova**  
@@ -252,7 +251,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  O destino OLE DB não aceita parâmetros. Se você precisar executar uma instrução parametrizada INSERT, considere a transformação Comando OLE DB. Para obter mais informações, consulte [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Construir consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
@@ -272,7 +271,7 @@ ms.lasthandoff: 08/17/2017
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando  **\<ignorar >** para excluir colunas de saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
   
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  
@@ -295,7 +294,7 @@ ms.lasthandoff: 08/17/2017
  **Truncation**  
  Não usado.  
   
- **Description**  
+ **Descrição**  
  Visualize a descrição da operação.  
   
  **Definir este valor para células selecionadas**  
@@ -312,4 +311,3 @@ ms.lasthandoff: 08/17/2017
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

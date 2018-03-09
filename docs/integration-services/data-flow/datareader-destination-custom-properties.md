@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44a9f26f1125f2c6b319653528aaa7eea04aa84f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e7f29a5c88b4cb4e8d090336a8d59072a25cfeb8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriedades personalizadas do destino DataReader
   O destino DataReader tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  
@@ -40,8 +39,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

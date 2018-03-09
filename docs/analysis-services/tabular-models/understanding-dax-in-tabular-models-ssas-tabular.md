@@ -1,34 +1,31 @@
 ---
-title: DAX em modelos de tabela (SSAS Tabular) | Microsoft Docs
+title: DAX em modelos de tabela | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX em modelos de tabela (SSAS Tabular)
-  Expressões DAX (Data Analysis) é uma linguagem de fórmula usada para criar cálculos personalizados no Analysis Services, Power BI Desktop e Power Pivot no Excel. As fórmulas DAX incluem funções, operadores e valores para executar cálculos avançados em dados em tabelas e colunas.  
+# <a name="dax-in-tabular-models"></a>DAX em modelos de tabela 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Expressões DAX (Data Analysis) é uma linguagem de fórmula usada para criar cálculos personalizados no Analysis Services, Power BI Desktop e Power Pivot no Excel. As fórmulas DAX incluem funções, operadores e valores para executar cálculos avançados em dados em tabelas e colunas.  
   
  Enquanto o DAX é usado no Analysis Services, Power BI Desktop e Power Pivot no Excel, este tópico se aplica mais aos projetos de modelo de tabela do Analysis Services criados no SQL Server Data Tools (SSDT).  
   
@@ -76,7 +73,7 @@ ms.lasthandoff: 10/23/2017
 |------------------------|----------------------|-----------------|  
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes) <sup>1, 2</sup>|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
-|Boolean|Boolean|Um valor True ou False.|  
+|Boolean|Booliano|Um valor True ou False.|  
 |Texto|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
 |Data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
 |Moeda|Moeda|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
@@ -370,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  O processamento e o recálculo não têm efeito nas fórmulas de filtro de linha, a menos que o resultado de um recálculo retorne um valor diferente, tornando a linha consultável ou não consultável pelos membros da função.  
   
- Para obter mais informações, consulte [Processar dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Para obter mais informações, consulte [processar dados](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Solucionando problemas de erros em fórmulas  
  Se você receber um erro ao definir uma fórmula, talvez a fórmula contenha um *erro sintático*, um *erro semântico*ou *erro de cálculo*.  
@@ -407,4 +404,3 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Fontes de dados com suporte](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

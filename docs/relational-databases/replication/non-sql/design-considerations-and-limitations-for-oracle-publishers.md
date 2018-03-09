@@ -2,27 +2,30 @@
 title: "Considerações de design e limitações para Publicadores Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ffa68158a1f19503fd2abbdff6d699a5f7d18fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a74eab2dd2d56ae2c223be1abf4b7407cc958d83
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
-  A publicação de um banco de dados Oracle é projetada para funcionar de forma praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Porém, deve-se estar atento às seguintes limitações e problemas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A publicação de um banco de dados Oracle é projetada para funcionar de forma praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, deve-se estar atento às seguintes limitações e problemas:  
   
 -   A opção Oracle Gateway fornece desempenho melhorado em relação à opção Oracle Complete; entretanto, essa opção não pode ser usada para publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo. Se você precisa publicar a mesma tabela em várias publicações transacionais, escolha a opção Oracle Complete.  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Tabelas aninhadas  
   
--   Exibições  
+-   exibições  
   
 -   Pacotes, corpos de pacote, procedimentos e gatilhos  
   
@@ -167,9 +170,9 @@ ms.lasthandoff: 11/09/2017
   
  Para mais informações sobre segurança de replicação, consulte [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações administrativas sobre Publicadores Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Visão geral da publicação do Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

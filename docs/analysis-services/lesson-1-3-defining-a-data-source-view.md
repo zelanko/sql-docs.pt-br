@@ -2,30 +2,33 @@
 title: "Definindo dados de um exibição da fonte | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lição 1-3-definir uma exibição da fonte de dados
-Depois de definir as fontes de dados que serão usadas em um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você normalmente define uma exibição da fonte de dados para o projeto. Uma exibição da fonte de dados é uma exibição unificada exclusiva dos metadados das tabelas e exibições especificadas que a fonte de dados define no projeto. Armazenar os metadados na exibição da fonte de dados permite que você trabalhe com os metadados durante o desenvolvimento sem ter uma conexão aberta com qualquer fonte de dados subjacente. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Depois de definir as fontes de dados que serão usadas em um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você normalmente define uma exibição da fonte de dados para o projeto. Uma exibição da fonte de dados é uma exibição unificada exclusiva dos metadados das tabelas e exibições especificadas que a fonte de dados define no projeto. Armazenar os metadados na exibição da fonte de dados permite que você trabalhe com os metadados durante o desenvolvimento sem ter uma conexão aberta com qualquer fonte de dados subjacente. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 Na tarefa a seguir, você define uma exibição da fonte de dados que inclui cinco tabelas da fonte de dados **AdventureWorksDW2012** .  
   
@@ -38,7 +41,7 @@ Na tarefa a seguir, você define uma exibição da fonte de dados que inclui cin
 3.  Em **Fontes de dados relacionais**, a fonte de dados **Adventure Works DW 2012** está selecionada. Clique em **Avançar**.  
   
     > [!NOTE]  
-    > Para criar uma exibição de fonte de dados com base em várias fontes de dados, primeiro defina uma exibição da fonte de dados com base em uma única fonte de dados. Essa fonte de dados é, então, chamada a fonte de dados primária. Depois, você poderá adicionar tabelas e exibições de uma fonte de dados secundária. Ao projetar dimensões que contêm atributos baseados em tabelas relacionadas em várias fontes de dados, talvez seja necessário definir uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como a fonte de dados primária para usar suas funcionalidades de mecanismo de consulta distribuída.  
+    > Para criar uma exibição de fonte de dados com base em várias fontes de dados, primeiro defina uma exibição da fonte de dados com base em uma única fonte de dados. Essa fonte de dados é, então, chamada a fonte de dados primária. Depois, você poderá adicionar tabelas e exibições de uma fonte de dados secundária. Ao projetar dimensões que contenham atributos com base em tabelas relacionadas em várias fontes de dados, talvez seja necessário definir um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonte de dados como fonte de dados primário para usar os recursos do mecanismo de consulta distribuída.  
   
 4.  Na página **Selecionar Tabelas e Exibições** , selecione tabelas e exibições na lista de objetos disponíveis da fonte de dados selecionada. Você pode filtrar essa lista para facilitar a seleção de tabelas e exibições.  
   
@@ -87,7 +90,7 @@ Na tarefa a seguir, você define uma exibição da fonte de dados que inclui cin
 [Modificando nomes de tabela padrão](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[Exibições da fonte de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
   

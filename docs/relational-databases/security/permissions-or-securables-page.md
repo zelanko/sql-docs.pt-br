@@ -2,9 +2,12 @@
 title: "Página Permissões ou Protegíveis | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>Página Permissões ou Protegíveis
-  Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para os protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
   
  Para entender as combinações possíveis de protegíveis e as entidades, confira os links de sintaxe específica de protegíveis no tópico [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Securables](../../relational-databases/security/securables.md).  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/09/2017
  **Coluna**  
  Os nomes de colunas que são afetadas pela permissão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

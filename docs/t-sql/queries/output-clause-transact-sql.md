@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
 - OUTPUT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying updated rows
 - INSERT statement [SQL Server], OUTPUT clause
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,14 +139,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- *nome da coluna*  
- É uma referência de coluna explícita. Qualquer referência à tabela que está sendo modificada deve ser corretamente qualificada pelo INSERTED ou o prefixo excluídos conforme apropriado, por exemplo: INSERTED**.** *column_name*.  
+ *column_name*  
+ É uma referência de coluna explícita. Qualquer referência à tabela que está sendo modificada deve ser corretamente qualificada pelo INSERTED ou o prefixo excluídos conforme apropriado, por exemplo: INSERTED **. * * * column_name*.  
   
  $action  
  Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar (10)** na cláusula OUTPUT em uma instrução MERGE que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada na linha.  
   
-## <a name="remarks"></a>Comentários  
- A saída \<dml_select_list > cláusula e a saída \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } podem ser definidas em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
+## <a name="remarks"></a>Remarks  
+ A saída \<dml_select_list > cláusula e a saída \<dml_select_list > INTO {**@ * table_variable* | *output_table* } podem ser definidas em uma única instrução de INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Salvo indicação em contrário, as referências à cláusula OUTPUT se referem tanto à cláusula OUTPUT, quanto à cláusula OUTPUT INTO.  
@@ -670,9 +672,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>Consulte também  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [tabela &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

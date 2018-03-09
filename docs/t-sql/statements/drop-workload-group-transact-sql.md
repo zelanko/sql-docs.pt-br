@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c68702eea03f7f0b2ab4b94614939c7587166f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b5211e91f9bd1e6dc8dd49676c024b3356163538
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ DROP WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_grupo*  
+ *group_name*  
  É o nome de um grupo de carga de trabalho definido pelo usuário existente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A instrução DROP WORKLOAD GROUP não é permitida nos grupos padrão ou internos do Administrador de Recursos.  
   
  Ao executar instruções DDL, é recomendável estar familiarizado com os estados do Administrador de Recursos. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
@@ -89,4 +88,3 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

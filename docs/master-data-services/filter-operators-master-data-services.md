@@ -5,23 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: "11"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6efc48764533527337be76e53fb940fc91cd525c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d398e710708cceea613fb5cbca0500bf5d3b8da
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
   Ao filtrar uma lista de membros, os seguintes operadores estão disponíveis.  

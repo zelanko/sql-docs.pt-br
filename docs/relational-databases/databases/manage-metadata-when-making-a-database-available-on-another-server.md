@@ -2,10 +2,14 @@
 title: Gerenciar metadados ao disponibilizar um banco de dados em outro servidor | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,19 +37,20 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 40cf09270cb121e7d88b2828aeb6bbc680839bf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
-  Este tópico é pertinente nas seguintes situações:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico é pertinente nas seguintes situações:  
   
 -   Configuração das réplicas de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
@@ -185,7 +190,7 @@ ms.lasthandoff: 11/09/2017
   
  Os procedimentos armazenados estendidos executam diretamente no espaço de endereço de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e podem produzir vazamentos de memória ou outros problemas que reduzem o desempenho e a confiabilidade do servidor. Você deve pensar em armazenar procedimentos armazenados estendidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja separada da instância que contém os dados referenciados. Você também deve considerar o uso de consultas distribuídas para acessar o banco de dados.  
   
-> **IMPORTANTE:** Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.  
+> **IMPORTANTE:** Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.   
   
  Para obter mais informações, veja [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -276,7 +281,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permissões GRANT, REVOKE e DENY em objetos do sistema  
  Permissões para objetos do sistema, como procedimentos armazenados, procedimentos armazenados estendidos, funções e exibições, são armazenadas no banco de dados **mestre** e devem ser configuradas na instância do servidor de destino.  
   
- Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script** , configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
+ Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script**, configurar a opção **Gerar Script de Permissões em Nível de Objeto** como **True**.  
   
 > **IMPORTANTE:** Se você gerar script de logons, as senhas não serão geradas no script. Se você tiver logons que usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário modificar o script no destino.  
   
@@ -331,7 +336,7 @@ ms.lasthandoff: 11/09/2017
  Para obter mais informações sobre esse recurso, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
  [Copiar bancos de dados em outros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

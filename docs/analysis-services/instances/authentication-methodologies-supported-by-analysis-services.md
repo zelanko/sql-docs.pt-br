@@ -2,33 +2,30 @@
 title: "Metodologias de autenticação com suporte no Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3e3895f402f1e96dc1ea3484b9fb07ddc84118d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologias de autenticação com suporte no Analysis Services
-  As conexões de um aplicativo cliente com uma instância do Analysis Services requerem a autenticação do Windows (integrada). Você pode fornecer uma identidade de usuário do Windows usando qualquer um dos seguintes métodos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As conexões de um aplicativo cliente com uma instância do Analysis Services requerem a autenticação do Windows (integrada). Você pode fornecer uma identidade de usuário do Windows usando qualquer um dos seguintes métodos:  
   
 -   NTLM  
   
@@ -96,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

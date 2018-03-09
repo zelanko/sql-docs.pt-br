@@ -24,17 +24,16 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18fb5825297754c59f2824b6f05150ddaed7bb9c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 74f591801b50df0bacf3c873f73d6cc9ee28f4d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguagem de modificação de dados XML (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 09/01/2017
   
  A XML DML acrescenta as seguintes palavras-chave que diferenciam maiúsculas e minúsculas à XQuery:  
   
--   **Inserir**  
+-   **insert**  
   
--   **Excluir**  
+-   **delete**  
   
 -   **Substituir o valor de**  
   
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [Métodos de Tipos de Dados XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

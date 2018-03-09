@@ -3,8 +3,9 @@ title: Propriedade CacheSize (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CacheSize
-helpviewer_keywords: CacheSize property [ADO]
+f1_keywords:
+- Recordset15::CacheSize
+helpviewer_keywords:
+- CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-ado"></a>Propriedade CacheSize (ADO)
 Indica o número de registros de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto são armazenadas localmente em cache.  
@@ -32,7 +35,7 @@ Indica o número de registros de um [registros](../../../ado/reference/ado-api/r
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor deve ser maior que 0. O padrão é 1.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CacheSize** propriedade para controlar quantos registros devem ser recuperados por vez na memória local do provedor. Por exemplo, se o **CacheSize** é 10, após abertura primeiro o **registros** do objeto, o provedor recupera os primeiros 10 registros na memória local. Quando você percorre o **registros** do objeto, o provedor retorna os dados do buffer de memória local. Assim que você passa o último registro no cache, o provedor recupera os 10 registros da fonte de dados no cache.  
   
 > [!NOTE]

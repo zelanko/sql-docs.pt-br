@@ -1,15 +1,14 @@
 ---
 title: "Propriedades de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.date: 01/23/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,24 +25,26 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memory-properties"></a>Propriedades de memória
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
+
+Para saber mais sobre memória máxima utilizada por instância do Analysis Services por edição, consulte [edições e os recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Aplica-se a:** modo de servidor multidimensional e de tabela, a menos que especificado o contrário.  
+ As configurações a seguir se aplicam a ambos os modo de servidor multidimensional e tabular, a menos que indicado em contrário.  
  
 ## <a name="default-memory-configuration"></a>Configuração de memória padrão
 
@@ -146,8 +147,5 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
-  
-

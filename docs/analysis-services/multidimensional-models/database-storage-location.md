@@ -2,16 +2,13 @@
 title: Local de armazenamento de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: databases [Analysis Services], storage location
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6e5e0399f0025b434ff2a972b47ca3a7608fb1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3fa3c8520d4927297ec56898a181502b0664de0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-storage-location"></a>Local de armazenamento do banco de dados
-  Existem situações frequentes em que um administrador de banco de dados (dba) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja que determinados bancos de dados estejam fora da pasta de dados do servidor. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como melhorar o desempenho ou expandir o armazenamento. Para tais situações, a propriedade **DbStorageLocation** do banco de dados permite que o dba [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especifique o local do banco de dados em um disco local ou dispositivo de rede.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Geralmente há situações quando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de banco de dados (dba) quer um determinado banco de dados resida fora da pasta de dados do servidor. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como melhorar o desempenho ou expandir o armazenamento. Para tais situações, a propriedade **DbStorageLocation** do banco de dados permite que o dba [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especifique o local do banco de dados em um disco local ou dispositivo de rede.  
   
 ## <a name="dbstoragelocation-database-property"></a>Propriedade DbStorageLocation do banco de dados  
  A propriedade **DbStorageLocation** do banco de dados especifica a pasta na qual o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria e gerencia todos os dados de banco de dados e arquivos de metadados. Todos os arquivos de metadados são armazenados na pasta **DbStorageLocation** , com exceção do arquivo de metadados do banco de dados, pois ele é armazenado na pasta de dados do servidor. Existem duas considerações importantes ao definir o valor da propriedade **DbStorageLocation** do banco de dados:  
@@ -49,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Você não deve alterar o local de armazenamento do banco de dados usando um comando **Alter** . Em vez disso, recomendamos usar uma sequência dos comandos de banco de dados **Detach**/**Attach** (consulte [Mover um Banco de Dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md), [Anexar e desanexar Bancos de Dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Mover um banco de dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

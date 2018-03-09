@@ -27,17 +27,16 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75d78069427891cfab6f7aaef7192d498912611a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*Trace #*  
+*trace#*  
 É o número do sinalizador de rastreamento para o qual o status é exibido. Se *trace #*e -1 não forem especificados, todos os sinalizadores de rastreamento estão habilitados para a sessão são exibidos.
   
 *n*  
@@ -71,14 +70,14 @@ A tabela a seguir descreve as informações do conjunto de resultados.
   
 |Nome da coluna|Description|  
 |---|---|
-|**Sinalizador de rastreamento**|Nome do sinalizador de rastreamento|  
+|**TraceFlag**|Nome do sinalizador de rastreamento|  
 |**Status**|Indica se o sinalizador de rastreamento está definido como ON ou OFF, globalmente ou para a sessão.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica se o sinalizador de rastreamento está definido globalmente<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Sessão**|Indica se o sinalizador de rastreamento está definido para a sessão<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS retorna uma coluna para o número de sinalizador de rastreamento e uma coluna para o status. Isso indica se o sinalizador de rastreamento é ON (1) ou OFF (0). O cabeçalho da coluna para o número do sinalizador de rastreamento é **sinalizador de rastreamento Global** ou **sinalizador de rastreamento de sessão**, dependendo se você está verificando o status global ou de um sinalizador de rastreamento de sessão.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor.
   
 ## <a name="permissions"></a>Permissões  
@@ -120,4 +119,3 @@ GO
 [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

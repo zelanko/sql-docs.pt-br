@@ -2,47 +2,47 @@
 title: "Usando uma versão modificada da análise de projeto do Tutorial de serviços | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lição 4-1-usando uma versão modificada do projeto Tutorial do Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 As demais lições neste tutorial tem como base uma versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
   
 Antes de continuar com o tutorial, você deve baixar, extrair, carregar e processar a versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Use as instruções nesta lição para verificar se você realizou todas as etapas.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Baixando e extraindo o Arquivo do Projeto  
   
-1.  [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
+1.  [Clique aqui](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos de tutorial são incluídos na **adventure-works-multidimensional-tutorial-projects.zip** baixar.  
   
-2.  Clique em **Tutorial do Analysis Services do SQL Server 2012** para baixar o pacote que contém os projetos para este tutorial.  
+2.  Clique em **adventure-works-multidimensional-tutorial-projects.zip** para baixar o pacote que contém os projetos para este tutorial.  
   
     Por padrão, um arquivo .zip é salvo na pasta de Downloads. Você deve mover o arquivo .zip para um local que tem um caminho mais curto (por exemplo, crie uma pasta C:\Tutoriais para armazenar os arquivos).  Você pode então extrair os arquivos contidos no arquivo .zip. Se você tentar descompactar os arquivos da pasta de Downloads, que tem um caminho mais longo, só obterá a Lição 1.  
   
 3.  Crie uma subpasta na unidade de raiz ou perto dela, por exemplo, C:\Tutorial.  
   
-4.  Mova o arquivo **Analysis Services Tutorial SQL Server 2012.zip** para a subpasta.  
+4.  Mover o **adventure-works-multidimensional-tutorial-projects.zip** arquivo para a subpasta.  
   
 5.  Clique com o botão direito do mouse no arquivo e selecione **Extrair Tudo**.  
   
@@ -52,7 +52,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Fechar Solução** para fechar os arquivos que não serão usados.  
   
-2.  No menu **Arquivo** , aponte para **Abrir**e clique em **Projeto/Solução**.  
+2.  No menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.  
   
 3.  Navegue até o local onde você extraiu os arquivos de projeto do tutorial.  
   
@@ -127,6 +127,5 @@ O cubo **Tutorial do Analysis Services** agora tem dois grupos de medidas: o gru
 [Definindo propriedades de atributo pai em uma hierarquia pai-filho](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Implantar um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

@@ -2,10 +2,14 @@
 title: "Controlar alterações de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +22,19 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b0846e43315062143d462a82e2c588db00b1169
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para obter as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à captura de dados de alterações e ao controle de alterações, veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Há suporte para o controle de alterações no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Benefícios do uso da captura de dados de alterações ou do controle de alterações  
@@ -59,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 |**Alterações controladas**|||  
 |Alterações de DML|Sim|Sim|  
 |**Informações controladas**|||  
-|Dados do histórico|Sim|Não|  
+|Dados do histórico|Sim|não|  
 |Se a coluna foi alterada|Sim|Sim|  
 |Tipo de DML|Sim|Sim|  
   
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |Tipo de coluna|Alterações capturadas em tabelas de alteração|Limitações|  
 |--------------------|---------------------------------------|-----------------|  
 |Colunas esparsas|Sim|Não dão suporte à captura de alterações durante o uso de columnset.|  
-|Colunas computadas|Não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
+|Colunas computadas|não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
 |XML|Sim|As alterações a elementos XML individuais não são rastreadas.|  
 |timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
 |Tipos de dados BLOB|Sim|A imagem anterior da coluna BLOB somente será armazenada se a própria coluna for alterada.|  
@@ -172,7 +177,7 @@ ms.lasthandoff: 11/09/2017
 |Descreve como gerenciar o controle de alterações, configurar a segurança e identificar os efeitos sobre o armazenamento e o desempenho quando você usa o controle de alterações.|[Gerenciar o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |Descreve como os aplicativos que usam o controle de alterações podem obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico também descreve a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.|[Trabalhar com o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções da captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   

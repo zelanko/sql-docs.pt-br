@@ -2,9 +2,12 @@
 title: Inserindo e atualizando dados em uma tabela (Tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ applies_to:
 helpviewer_keywords:
 - inserting and updating data
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-caps.latest.revision: 13
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 287e4e9b78b5c628dc94a21eea3ed26385c73649
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c64d3f2835e7c63b8c8e86946545641015188e29
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lição 1-3-inserir e atualizar dados em uma tabela
-Agora que você criou a tabela **Products** , está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Agora que você criou o **produtos** tabela, você estará pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
@@ -99,4 +101,3 @@ A sintaxe básica é: INSERT, nome da tabela, lista de colunas, VALUES e uma lis
   
   
   
-

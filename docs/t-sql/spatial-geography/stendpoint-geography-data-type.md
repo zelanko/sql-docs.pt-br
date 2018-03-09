@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STEndpoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22432c6493c343124f6a60d0238d10f6417b7431
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 910e11dc72d4bb0ec7a2d09a0217c4b9d7c12431
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stendpoint-geography-data-type"></a>STEpoint (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
  Abra o tipo Geospatial Consortium (OGC): **ponto**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  STEndPoint() é o equivalente de [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
  Esse método retornará nulo se chamado em vazio **geografia** instância.  
@@ -66,7 +65,6 @@ SELECT @g.STEndPoint().ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

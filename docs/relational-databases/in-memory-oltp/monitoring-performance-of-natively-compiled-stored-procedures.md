@@ -2,33 +2,38 @@
 title: Monitorando o desempenho de procedimentos armazenados compilados nativamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8db102af60a736dd0e971a1799508188a8332dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: de69f1adb23ab36c7f35819762dba1578f7015fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
-  Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
   
 ## <a name="using-extended-events"></a>Usando eventos estendidos  
  Use o evento estendido **sp_statement_completed** para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  
   
  **line_number**junto com **object_id** no evento estendido pode ser usado para investigar a consulta. A consulta a seguir pode ser usada para recuperar a definição de procedimento. O número da linha pode ser usado para identificar a consulta na definição:  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -52,7 +57,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  A seguinte consulta retorna os nomes de procedimento e as estatísticas de execução para procedimentos armazenados compilados de modo nativo no banco de dados atual, após a coleta de estatísticas:  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -74,7 +79,7 @@ order by total_worker_time desc
   
  A seguinte consulta retorna o texto da consulta, bem como as estatísticas de execução para todas as consultas em procedimentos armazenados compilados de modo nativo no banco de dados atual, para as quais as estatísticas foram coletadas, ordenadas pelo tempo de trabalho total, em ordem decrescente:  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -103,7 +108,7 @@ order by qs.total_worker_time desc
   
  O plano de execução XML é obtido executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   
@@ -116,7 +121,7 @@ GO
   
  O plano de execução estimado para procedimentos armazenados compilados de modo nativo mostra os operadores e as expressões para as consultas no procedimento. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não dá suporte a todos os atributos SHOWPLAN_XML para procedimentos armazenados compilados de modo nativo. Por exemplo, os atributos relacionados ao cálculo de custos do otimizador de consulta não fazem parte do SHOWPLAN_XML para o procedimento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

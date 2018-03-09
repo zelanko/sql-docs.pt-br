@@ -2,12 +2,13 @@
 title: "Itens protegíveis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7cd3e8b8d3e1a623a7bcc10022da6081dca330cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>Itens protegíveis
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a segurança baseada em função para controlar o acesso a itens armazenados em um servidor de relatório. Quando você concede acesso a um servidor de relatório para um usuário, normalmente faz isso criando um par de atribuições de função:  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/09/2017
 |Fontes de dados compartilhadas|As fontes de dados compartilhadas podem ser protegidas para limitar o acesso ao item e a suas páginas de propriedade. Para obter mais informações, consulte [Proteger itens de fonte de dados compartilhada](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Conjuntos de dados compartilhados|Os conjuntos de dados compartilhados podem ser protegidos para controlar as ações que podem ser executadas pelos usuários, como a exibição ou alteração da definição ou a alteração das propriedades de um conjunto de dados compartilhado específico.<br /><br /> Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

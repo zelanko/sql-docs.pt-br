@@ -1,10 +1,13 @@
 ---
-title: "Propriedades personalizadas da transformação | Microsoft Docs"
+title: "Propriedades personalizadas de transformação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -41,18 +44,18 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a69a7252045efacefccfa0847741e76309999ce9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="transformation-custom-properties"></a>Propriedades personalizadas de Transformação
+# <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  Este tópico lista e descreve as propriedades personalizadas de várias transformações de fluxo de dados. Para obter mais informações sobre as propriedades comuns à maioria dos objetos Data Flow, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
@@ -159,7 +162,7 @@ ms.lasthandoff: 08/03/2017
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|Um valor que especifica a posição de uma condição, associado a uma saída, na lista de condições avaliada pela transformação Divisão Condicional. As condições são avaliadas do valor mais baixo para o valor mais alto.|  
-|Expressão|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas por identificadores de linhagem.|  
+|Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas por identificadores de linhagem.|  
 |FriendlyExpression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pelos nomes.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
 |IsDefaultOut|Booliano|Um valor que indica se a saída é a saída padrão.|  
   
@@ -187,7 +190,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
+|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). para obter informações sobre a ferramenta de configuração e recursos adicionais.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
 |SourceInputColumnLineageId|Integer|O **LineageID** da coluna de entrada que é fonte da coluna de saída.|  
   
  A entrada, as colunas de entrada e a saída da transformação Conversão de Dados não têm nenhuma propriedade personalizada.  
@@ -220,7 +223,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|Expressão|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pela propriedade **LineageID** da coluna.|  
+|Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pela propriedade **LineageID** da coluna.|  
 |FriendlyExpression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pelos nomes.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A entrada e a saída da transformação Coluna Derivada não têm nenhuma propriedade personalizada.  
@@ -264,7 +267,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: () de espaço, vírgula (,), ponto (.),-e-vírgula (;), dois-pontos (:), hífen (-), aspas retas ("), a marca de aspas simples ('), e comercial (&), barra marca (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), abertura de parênteses ((), fechar parênteses ()), menor que (\<), maior que (>), colchete ([), colchete (]), de abertura ({), colchete (}), barra vertical (&#124;) de fechamento de fechamento de abertura sinal de número (#), asterisco (*), circunflexo (^) e porcentagem (%)).|  
+|Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), barra vertical ou pipe (&#124;), número (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de **True** destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é **False**.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação do Agrupamento Difuso**, mas pode ser definida usando o **Editor Avançado**.|  
 |MaxMemoryUsage|Integer|A quantidade máxima de memória para uso pela transformação. O valor padrão dessa propriedade é **0**, que ativa o uso de memória dinâmica.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação do Agrupamento Difuso**, mas pode ser definida usando o **Editor Avançado**.|  
 |MinSimilarity|Double|O limite de semelhança usado pela transformação para identificar duplicatas, expresso como um valor entre 0 e 1.  O valor padrão dessa propriedade é 0.8.|  
@@ -298,7 +301,7 @@ ms.lasthandoff: 08/03/2017
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booliano|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é **True**.|  
-|Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço (), vírgula (,), semicolon(;) de ponto (.), hífen (-) do dois-pontos (:), aspas retas ("), a marca de aspas simples ('), e comercial (&), barra marca (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), fechar parênteses ()), menor que (\<), maior que (>), colchete ([), colchete (]), de abertura ({), colchete (}), barra vertical (&#124;) de fechamento de fechamento de abertura. sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
+|Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
 |DropExistingMatchIndex|Booliano|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão para essa propriedade é **True**.|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de **True** destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é **False**.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Pesquisa Difusa**, mas pode ser definida usando o **Editor Avançado**.|  
 |MatchIndexName|Cadeia de caracteres|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
@@ -630,10 +633,10 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Propriedades de caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propriedades do caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
  [Propriedades de fluxo de dados que podem ser definidas usando expressões](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

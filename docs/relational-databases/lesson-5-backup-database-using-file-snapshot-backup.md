@@ -1,27 +1,33 @@
 ---
 title: "Lição 5: Fazer backup do banco de dados usando o backup de instantâneo de arquivo | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 075262fd0b079d8f4e9f2decab233f6f793dd2df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lição 5: Fazer backup do banco de dados usando o backup de instantâneo de arquivo
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a fazer backup do banco de dados AdventureWorks2014 na máquina virtual do Azure usando o backup de instantâneo de arquivo para executar um backup quase instantâneo usando instantâneos do Azure. Para obter mais informações sobre backups de instantâneo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Para fazer backup do banco de dados AdventureWorks2014 usando o backup de instantâneo de arquivo, siga estas etapas:  
@@ -75,7 +81,7 @@ Para fazer backup do banco de dados AdventureWorks2014 usando o backup de instan
   
 [Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
   

@@ -3,8 +3,11 @@ title: "Lição 1: navegação básica no SQL Server Management Studio | Microso
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 37f2b590f7e20990e1b2a70b88bca17bc6401f2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e06efb71bc6d888fbad143d73019525f9529e97e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lição 1: Navegação básica no SQL Server Management Studio
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) é uma ferramenta poderosa e flexível. Esta lição mostra a você como as janelas trabalham em conjunto para apresentar uma superfície de design que torna seu trabalho mais fácil. Ao final desta lição, você saberá como eliminar janelas não desejadas, como exibir janelas rapidamente com as informações necessárias e como configurar a superfície padrão para oferecer suporte a tarefas executadas com mais frequência.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) é uma ferramenta eficiente e flexível. Esta lição mostra a você como as janelas trabalham em conjunto para apresentar uma superfície de design que torna seu trabalho mais fácil. Ao final desta lição, você saberá como eliminar janelas não desejadas, como exibir janelas rapidamente com as informações necessárias e como configurar a superfície padrão para oferecer suporte a tarefas executadas com mais frequência.  
   
 Eis os tópicos desta lição:  
   

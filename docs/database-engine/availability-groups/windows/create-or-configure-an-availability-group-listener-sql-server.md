@@ -2,9 +2,12 @@
 title: Criar ou configurar um ouvinte do grupo de disponibilidade (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: dd3e88c98ebdcd07f0fd84031ccc1b4be4123319
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
-  Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
 >  Para criar o primeiro ouvinte de grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável ter o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  

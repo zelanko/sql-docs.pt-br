@@ -2,34 +2,30 @@
 title: "Estrutura de tarefas e instruções de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], how-to topics
+helpviewer_keywords: mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
-  A guia **Estrutura de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém ferramentas que você pode usar para criar, editar e processar uma estrutura de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O **estrutura de mineração** guia do Designer de mineração de dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém ferramentas que você pode usar para criar, editar e processar uma estrutura de mineração.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -45,13 +41,12 @@ ms.lasthandoff: 09/01/2017
   
 -   [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando e implementando tópicos de instruções (Analysis Services – Mineração de Dados)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   
-

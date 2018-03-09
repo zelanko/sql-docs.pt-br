@@ -22,17 +22,16 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: 38
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebdc328e49635af823cd64e8539ee5b7cfa95c76
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b49bdceb3d27af9c252739938ca9ec309f1510ec
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,12 +86,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ENCRYPTBYCERT & #40; Transact-SQL & #41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+ [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE & #40; Transact-SQL & #41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Remover certificado & #40; Transact-SQL & #41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [Remover certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3abcab5e233c45e1fda0bf5fb53499ac9ca21732
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04d101550bb7a1215c261419e42820af45ab5098
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Recommendations"></a> Anexar é a melhor opção?  
  Recomendamos que você mova os bancos de dados utilizando o procedimento de realocação planejada ALTER DATABASE, em vez de utilizar desanexação e anexação, ao mover arquivos de banco de dados dentro da mesma instância. Para obter mais informações, veja [Mover bancos de dados de usuário](../../relational-databases/databases/move-user-databases.md). 
  
-Não recomendamos o uso de ações de desanexar e anexar para Backup e Recuperação. Não há backups de log de transações, e é possível excluir acidentalmente arquivos.
+Não recomendamos o uso de ações de desanexar e anexar para Backup e Recuperação. Não há backups de log de transações e é possível excluir arquivos acidentalmente.
   
 ###  <a name="Security"></a> Segurança  
  As permissões de acesso ao arquivo são definidas durante algumas operações de banco de dados, inclusive desanexar ou anexar um banco de dados. Para obter informações sobre permissões de arquivo definidas sempre que um banco de dados é desanexado e anexado, veja [Protegendo dados e arquivos de log](http://technet.microsoft.com/library/ms189128.aspx) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (ainda é uma leitura válida!) 
@@ -91,11 +91,11 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |Ícone|Texto de status|Descrição|  
+    |Ícone|Texto de status|Description|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
-    |Sinal de verificação verde|Success|O objeto foi anexado com êxito.|  
+    |Sinal de verificação verde|Êxito|O objeto foi anexado com êxito.|  
     |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Stopped (parado)|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
@@ -127,7 +127,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-attach-a-database"></a>Para anexar um banco de dados  
   
@@ -162,7 +162,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md)  
   

@@ -3,8 +3,9 @@ title: "Excluindo registros usando o método Delete | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0a12e1d6d7e94d2f4feb69f51bb43b1e0edbb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Excluindo registros usando o método Delete
 Usando o **excluir** método marca o registro atual ou um grupo de registros em um **registros** objeto para exclusão. Se o **registros** objeto não permite a exclusão do registro, ocorrerá um erro. Se você estiver no modo de atualização imediata, exclusões ocorrerem no banco de dados imediatamente. Se um registro não pode ser excluído com êxito (devido a violações de integridade de banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada a **atualização.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de mover fora do registro atual (por exemplo, usando [fechar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

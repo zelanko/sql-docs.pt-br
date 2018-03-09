@@ -2,36 +2,31 @@
 title: Conjunto de linhas DISCOVER_OBJECT_MEMORY_USAGE | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_OBJECT_MEMORY_USAGE rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_OBJECT_MEMORY_USAGE rowset
 ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9be5091d26d264d71dad5e6892f7f8d7448d83c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6bfd0d6517f974b60b3d35f25e5836bcd6a7c8e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverobjectmemoryusage-rowset"></a>Conjunto de linhas DISCOVER_OBJECT_MEMORY_USAGE
-  Oferece informações sobre recursos de memória usados por objetos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações sobre os recursos de memória usada pelos objetos.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_OBJECT_MEMORY_USAGE** contém as colunas a seguir.  
@@ -57,8 +52,7 @@ ms.lasthandoff: 09/01/2017
 |**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|Opcional.|  
 |**OBJECT_ID**|**DBTYPE_WSTR**|Opcional|  
   
-## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

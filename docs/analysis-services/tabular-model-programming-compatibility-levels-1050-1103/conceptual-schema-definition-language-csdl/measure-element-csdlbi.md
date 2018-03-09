@@ -2,32 +2,32 @@
 title: Medir o elemento (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83dc8a37899d510205659b9a017dd6246c9ca695
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measure-element-csdlbi"></a>Elemento Measure (CSDLBI)
-  O elemento Measure é um tipo complexo que se baseia no elemento CSDL Property. As anotações da CSDLBI adicionam atributos que oferecem suporte à definição de fórmulas complexas para uso em modelos de dados de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento Measure é um tipo complexo que se baseia no elemento CSDL Property. As anotações da CSDLBI adicionam atributos que oferecem suporte à definição de fórmulas complexas para uso em modelos de dados de business intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento Measure, além de todos os atributos aplicáveis ao elemento Property.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |IsSimpleMeasure|Não|Um valor true/false que indica se a fórmula usada na medida é uma das agregações simples (SUM, COUNT, MIN, MAX, AVG, DistinctCount).<br /><br /> O padrão é true.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, mostra duas medidas do exemplo de modelo de tabela da AdventureWorks. A segunda medida foi convertida em um KPI, com a adição de elementos KPI.  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

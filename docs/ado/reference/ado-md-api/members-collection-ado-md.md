@@ -3,7 +3,7 @@ title: "A coleção de membros (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,22 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 087809ddb783b323a094a509aedd4c5b88005764
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d72b7b87507e13ae4aa103a6333e7e2caaf581ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-ado-md"></a>Coleção de membros (ADO MD)
 Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de um nível ou uma posição em um eixo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **membros** coleção é usada para conter os seguintes tipos de membros:  
   
 -   Os membros que constituem um nível em um cubo. Estão contidos no **membros** coleção de um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Por exemplo, usando o exemplo do [visão geral de esquemas multidimensionais e dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), os quatro membros do nível de países são Canadá, Estados Unidos, Reino Unido e Alemanha.  
@@ -59,4 +58,3 @@ Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) ob
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de membros (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
-

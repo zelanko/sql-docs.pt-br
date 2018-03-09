@@ -2,32 +2,28 @@
 title: "Recursos compatíveis com as edições do SQL Server 2016 do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 06/29/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: 4
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 064715ecd2a47b3c6034deefb5281f2745a601ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Analysis Services com suporte nas edições do SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Recursos do Analysis Services com suporte nas edições do SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Este tópico fornece detalhes de recursos com suporte nas diferentes edições do SQL Server 2016 Analysis Services. Para os recursos com suporte nas edições Evaluation e Developer, consulte Enterprise edition.
@@ -126,7 +122,6 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
   
  ## <a name="see-also"></a>Consulte também  
  [Especificações do produto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Instalação do SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
-
+ [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

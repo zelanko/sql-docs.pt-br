@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96d413bca20ec171d515ac6d0ad81b5b994bd854
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c3c5b7a6d9aa9eb87c80d5a5937b3d26d6c33d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="implementing-external-metadata"></a>Implementando metadados externos
   Quando um componente é desconectado de sua fonte de dados, você pode validar as colunas nas coleções de colunas de entrada e saída com base nas colunas da fonte de dados externa por meio da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Essa interface permite que você mantenha um instantâneo das colunas na fonte de dados externa e as mapeie para as colunas da coleção de colunas de entrada e saída do componente.  
@@ -85,12 +83,12 @@ End Sub
  A validação requer etapas adicionais para componentes que mantêm uma coleção de colunas de metadados externos, porque você deve validar com base em uma coleção adicional de colunas. A validação pode ser dividida em validação conectada ou desconectada.  
   
 ### <a name="connected-validation"></a>Validação conectada  
- Quando um componente é conectado a uma fonte de dados externa, as colunas nas coleções de entrada ou saída são verificadas diretamente na fonte de dados externa. Adicionalmente, as colunas na coleção de metadados externos devem ser validadas. Isso é necessário porque a coleção de metadados externos pode ser modificada usando o **Editor Avançado** em [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], e as alterações feitas à coleção não são detectáveis. Portanto, quando conectados, os componentes devem verificar se as colunas da coleção de colunas de metadados externos continuam refletindo as colunas da fonte de dados externa.  
+ Quando um componente é conectado a uma fonte de dados externa, as colunas nas coleções de entrada ou saída são verificadas diretamente na fonte de dados externa. Adicionalmente, as colunas na coleção de metadados externos devem ser validadas. Isso é necessário porque a coleção de metadados externos pode ser modificada por meio do **Editor Avançado** no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e as alterações feitas à coleção não são detectáveis. Portanto, quando conectados, os componentes devem verificar se as colunas da coleção de colunas de metadados externos continuam refletindo as colunas da fonte de dados externa.  
   
- Você pode optar por ocultar a coleção de metadados externos no **Editor Avançado** definindo o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> propriedade da coleção para **false**. No entanto esse procedimento também oculta a **mapeamento de coluna** guia do editor, que permite aos usuários mapear as colunas da coleção de entrada ou saída para as colunas na coleção de colunas de metadados externos. Definir essa propriedade como **false** não impede que os desenvolvedores modifiquem programaticamente a coleção, mas ela fornece um nível de proteção para a coleção de colunas de metadados externos de um componente que é usada exclusivamente no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Você pode optar por ocultar a coleção de metadados externos no **Editor Avançado**, configurando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> da coleção como **false**. Entretanto, esse procedimento também oculta a guia **Mapeamento de Coluna** do editor, a qual permite que os usuários mapeiem as colunas da coleção de entrada ou saída para as colunas da coleção de colunas de metadados externos. Configurar esta propriedade como **false** não impede que os desenvolvedores modifiquem programaticamente a coleção, mas fornece efetivamente um nível de proteção para a coleção de colunas de metadados externos de um componente que é utilizado exclusivamente no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Validação desconectada  
- Quando um componente é desconectado de uma fonte de dados externa, a validação é simplificada porque as colunas da coleção de entrada ou saída são verificadas diretamente com base nas colunas da coleção de metadados externos e não com base na fonte externa. Um componente deve executar a validação desconectada quando não tiver sido estabelecida a conexão à fonte de dados externa, ou quando o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> é de propriedade **false**.  
+ Quando um componente é desconectado de uma fonte de dados externa, a validação é simplificada porque as colunas da coleção de entrada ou saída são verificadas diretamente com base nas colunas da coleção de metadados externos e não com base na fonte externa. Um componente deverá executar a validação desconectada quando a conexão com sua fonte de dados externa não tiver sido estabelecida ou quando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> for **false**.  
   
  O exemplo de código a seguir demonstra uma implementação de um componente que executa validação com base em sua coleção de colunas de metadados externos.  
   
@@ -118,8 +116,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
   
   
-

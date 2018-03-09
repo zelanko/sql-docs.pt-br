@@ -1,5 +1,5 @@
 ---
-title: "Atualizar pacotes do Integration Services usando o Assistente de atualização de pacote SSIS | Microsoft Docs"
+title: Fazer upgrade de pacotes do Integration Services usando o Assistente para Upgrade de Pacote SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: fdb35bac3e7f302e74d2bb33aca870041c36bb31
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 27411b3f61efd0474313ce8de98b28fa3ebd51b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS
   Você pode atualizar pacotes criados nas versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o formato do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usado pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Assistente de Atualização de Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ajudar neste processo. Como é possível configurar o assistente para fazer backup dos pacotes originais, você poderá continuar usando esses pacotes caso tenha dificuldades com a atualização.  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/26/2017
 3.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], execute o Assistente de Atualização de Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
   
-

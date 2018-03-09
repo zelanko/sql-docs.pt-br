@@ -3,8 +3,11 @@ title: "Especificando predicados em uma etapa de expressão de caminho | Microso
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>Expressões de caminho - especificação de predicados
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Conforme descrito no tópico [expressões de caminho no XQuery](../xquery/path-expressions-xquery.md), uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
   
@@ -230,4 +232,3 @@ WHERE CatalogDescription.exist('
  Os predicados também podem afetar estaticamente o tipo inferido de uma expressão. Valores inteiros literais e **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para no máximo uma.  
   
   
-

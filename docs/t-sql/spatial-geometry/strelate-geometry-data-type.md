@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 68978595626be0dae1c81c5dbc1f1187dbed6d5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: beb2ce0ebcba2c290dbb56d6df62a820734871cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
  *intersection_pattern_matrix*  
  É uma cadeia de caracteres do tipo **nchar(9)** codifica os valores aceitáveis para o dispositivo de matriz de padrão DE-9IM entre as duas **geometria** instâncias.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. Esse método lançará um **ArgumentException** se a matriz não está bem formada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -71,7 +70,6 @@ SELECT @g.STRelate(@h, 'FF*FF****');
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

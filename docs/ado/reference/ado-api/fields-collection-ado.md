@@ -3,7 +3,7 @@ title: "Campos de coleção (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,22 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 167af555c9983598354faa1de4bc4603a9bac006
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22fa67aeac9f4296133af93562299e4f5160d996
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fields-collection-ado"></a>Coleção de campos (ADO)
 Contém todos os [campo](../../../ado/reference/ado-api/field-object.md) objetos de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **registros** objeto tem um **campos** coleção composta de **campo** objetos. Cada **campo** objeto corresponde a uma coluna de **registros**. Você pode preencher o **campos** coleção antes de abrir o **registros** chamando o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método na coleção.  
   
 > [!NOTE]
@@ -55,4 +54,3 @@ Contém todos os [campo](../../../ado/reference/ado-api/field-object.md) objetos
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)
-

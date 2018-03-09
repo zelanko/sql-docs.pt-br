@@ -3,7 +3,7 @@ title: Propriedade ParentURL (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eca04999eece256ef22503c4d227ffcec297c79a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7dd65bd2a025d7c51cf69dafd768d928f934c8d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parenturl-property-ado"></a>Propriedade ParentURL (ADO)
 Indica uma cadeia de caracteres de URL absoluta que aponte para o pai [registro](../../../ado/reference/ado-api/record-object-ado.md) do atual **registro** objeto.  
@@ -36,7 +35,7 @@ Indica uma cadeia de caracteres de URL absoluta que aponte para o pai [registro]
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **cadeia de caracteres** valor que indica a URL do pai **registro**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ParentURL** propriedade depende da fonte usada para abrir o **registro** objeto. Por exemplo, o **registro** pode ser aberto com uma fonte que contém um nome de caminho relativo do diretório referenciado pelo [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade.  
   
  Suponha que o "depois" uma pasta está contida em "first". Abra o **registro** objeto usando a seguinte sintaxe:  
@@ -69,4 +68,3 @@ record.Open "second"
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-

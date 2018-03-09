@@ -1,36 +1,36 @@
 ---
-title: "Biblioteca do Reporting Services extensão | Microsoft Docs"
+title: "Biblioteca de extensões do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - Reporting Services, extending
 - extensions [Reporting Services], library
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 071e05f4fcaa35960ee7938d26306ff7ec55ade9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 5984c00833185e3f4bcb7f81460829769f2abd7a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensões do Reporting Services
-  A biblioteca de extensões do Reporting Services é um conjunto de classes, interfaces e tipos de valores que são incluídos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta biblioteca fornece acesso à funcionalidade do sistema e é projetada para ser a base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] aplicativos podem ser usados para estender [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componentes.  
+  A biblioteca de extensões do Reporting Services é um conjunto de classes, interfaces e tipos de valores que são incluídos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa biblioteca fornece acesso à funcionalidade do sistema e foi projetada para ser a base na qual os aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem ser usados para estender os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="namespaces"></a>Namespaces  
  A biblioteca de extensão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece os namespaces a seguir.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/12/2017
  **Microsoft.ReportingServices.ReportRendering**  
  Contém classes e interfaces que permitem a extensão dos recursos de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Usando os membros desse namespace junto com os membros do namespace <xref:Microsoft.ReportingServices.Interfaces>, você pode criar suas próprias extensões de renderização personalizadas para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)  
   
   

@@ -1,30 +1,35 @@
 ---
 title: Renomear um banco de dados | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - databases [SQL Server], renaming
 - renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e1fcae408b1c5617e39b835d82f7895635bd07ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8f6377b37fc350caa110d46236b1329eeab9c3df
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
-  Este tópico descreve como renomear um banco de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O nome do banco de dados pode incluir qualquer caractere que segue as regras para identificadores.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico descreve como renomear um banco de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O nome do banco de dados pode incluir qualquer caractere que segue as regras para identificadores.  
   
  **Neste tópico**  
   
@@ -40,7 +45,10 @@ ms.lasthandoff: 11/09/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de renomear um banco de dados](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
+
+> [!NOTE]
+> Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md). Para renomear um banco de dados no SQL Data Warehouse do Azure ou Parallel Data Warehouse, use a instrução [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -65,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Digite o novo nome do banco de dados e, depois, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Para renomear um banco de dados  
   
@@ -75,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo altera o nome do banco de dados `AdventureWorks2012` para `Northwind`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -87,8 +95,8 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de renomear um banco de dados  
  Faça backup do banco de dados **mestre** e, em seguida, renomeie qualquer banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Identificadores de banco de dados](../../relational-databases/databases/database-identifiers.md)  
   
   

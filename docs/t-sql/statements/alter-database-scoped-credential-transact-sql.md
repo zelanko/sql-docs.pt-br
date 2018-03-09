@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b45b0d87b846c50abc678692021c427006b3152e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 0b64dc761f5af95ab913291d6aa488ced8fba8cf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   Credencial com escopo de alterações de propriedades de um banco de dados.  
   
@@ -52,12 +53,12 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Para importar um arquivo de armazenamento de BLOBs do Azure, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`.  Para obter mais informações sobre assinaturas de acesso compartilhado, consulte [assinaturas usando de acesso compartilhado (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SEGREDO **='***segredo***'**  
+ SECRET **='***secret***'**  
  Especifica o segredo necessário para a autenticação de saída. *segredo* é necessária para importar um arquivo de armazenamento de BLOBs do Azure. *segredo* pode ser opcional para outros fins.   
 >  [!WARNING]
 >  O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, você deve remover à esquerda '?'. Caso contrário, seus esforços podem estar bloqueados.    
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um banco de dados no escopo credencial é alterada, os valores de *identity_name* e *segredo* são redefinidos. Se o argumento SECRET opcional não for especificado, o valor do segredo armazenado será definido como NULL.  
   
  O segredo é criptografado com a chave mestra de serviço. Se a chave mestra de serviço for gerada novamente, o segredo será criptografado usando a nova chave mestra de serviço.  
@@ -88,9 +89,9 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

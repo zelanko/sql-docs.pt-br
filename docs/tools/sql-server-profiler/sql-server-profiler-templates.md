@@ -2,11 +2,13 @@
 title: Modelos do SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "35"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>Modelos do SQL Server Profiler
-  Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar modelos que definem as classes de evento e colunas de dados a serem incluídas em rastreamentos. Depois de definir e salvar o modelo, você pode executar um rastreamento que registre os dados de cada classe de evento selecionada. É possível usar um modelo em muitos rastreamentos; o modelo propriamente dito não é executado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar modelos que definem as colunas de dados e classes de evento para incluir em rastreamentos. Depois de definir e salvar o modelo, você pode executar um rastreamento que registre os dados de cada classe de evento selecionada. É possível usar um modelo em muitos rastreamentos; o modelo propriamente dito não é executado.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oferece modelos de rastreamento predefinidos que permitem configurar facilmente as classes de evento de que, muito provavelmente, você necessitará para rastreamentos específicos. O modelo Standard, por exemplo, ajuda a criar um rastreamento genérico para registrar logons, logoffs, lotes concluídos e informações de conexão. Esse modelo pode ser usado para executar rastreamentos sem modificação ou como ponto de partida para outros modelos com configurações de evento diferentes.  
   
@@ -71,4 +72,3 @@ ms.lasthandoff: 08/02/2017
  [Importar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

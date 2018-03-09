@@ -1,35 +1,34 @@
 ---
 title: Monitorando rastreamentos (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
   Você pode usar o [assinar](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **assinar** comando retorna os resultados de um rastreamento como um conjunto de linhas.  

@@ -31,17 +31,16 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 84ca8221700d3eabd443b84d97dea4f698e9f945
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a716ab7298d1ea678d6a23944849dccdebebd118
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -83,7 +82,7 @@ COMMIT [ TRAN | TRANSACTION ]
 
  Opção que solicita que esta transação seja confirmada com durabilidade atrasada. A solicitação será ignorada se o banco de dados for alterado com `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Consulte o tópico [controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  É responsabilidade do programador do [!INCLUDE[tsql](../../includes/tsql-md.md)] emitir COMMIT TRANSACTION apenas no ponto em que todos os dados referidos pela transação estejam logicamente corretos.  
   
  Se a transação confirmada for uma transação distribuída de [!INCLUDE[tsql](../../includes/tsql-md.md)], COMMIT TRANSACTION irá disparar MS DTC para usar um protocolo 2PC para confirmar todos os servidores envolvidos na transação. Se uma transação local atingir dois ou mais bancos de dados na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], essa instância usará um protocolo 2PC interno para confirmar todos os bancos de dados envolvidos na transação.  
@@ -173,11 +172,10 @@ PRINT N'Transaction count after COMMIT OuterTran = '
 ## <a name="see-also"></a>Consulte também  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [TRABALHO de confirmação &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

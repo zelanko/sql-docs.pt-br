@@ -3,8 +3,9 @@ title: "Personalização do arquivo UserList seção | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 882b50778567fd82367bcbac376363e9e93eaaed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>Seção do arquivo UserList de personalização
 O **userlist** seção se refere ao **conectar** seção com a mesma seção *identificador* parâmetro.  
@@ -37,12 +38,12 @@ O **userlist** seção se refere ao **conectar** seção com a mesma seção *id
 ## <a name="syntax"></a>Sintaxe  
  É uma entrada de acesso do usuário do formulário:  
   
- *nome de usuário***=**   
+ *userName* **=**   
  ***accessRights***  
   
 |Parte|Description|  
 |----------|-----------------|  
-|*nome de usuário*|O *nome de usuário* da pessoa que utilize essa conexão. Nomes de usuário válidos são estabelecidos com o IIS **do Service Manager** caixa de diálogo.|  
+|*userName*|O *nome de usuário* da pessoa que utilize essa conexão. Nomes de usuário válidos são estabelecidos com o IIS **do Service Manager** caixa de diálogo.|  
 |***accessRights***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** — usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** — o usuário pode ler a fonte de dados.<br />-   **ReadWrite** — usuário pode ler ou gravar para a fonte de dados.|  
   
 ## <a name="see-also"></a>Consulte também  

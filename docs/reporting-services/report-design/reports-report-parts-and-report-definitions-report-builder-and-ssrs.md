@@ -1,30 +1,30 @@
 ---
-title: "Relatórios, partes de relatório e definições (construtor de relatórios e SSRS) de relatório | Microsoft Docs"
+title: "Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9f0429e82811f1acc05d50f579f9b8d46e975246
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório paginado em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 09/27/2017
  Um relatório publicado é protegido por atribuições de função que usam o modelo de segurança baseada em funções do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Os relatórios publicados são acessados por meio de URLs, de Web Parts do SharePoint ou do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Outra opção é navegar até eles e abri-los no Construtor de Relatórios.  
   
 ### <a name="report-snapshots"></a>Instantâneos de relatório  
- Um relatório também pode ser publicado como um instantâneo que contém informações de layout e dados do momento em que foi executado inicialmente. Os instantâneos de relatório não são salvos em um formato de renderização específico. Em vez disso, os instantâneos de relatório são renderizados em um formato de exibição final (como HTML) somente quando solicitado por um usuário ou aplicativo. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41; ](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ Um relatório também pode ser publicado como um instantâneo que contém informações de layout e dados do momento em que foi executado inicialmente. Os instantâneos de relatório não são salvos em um formato de renderização específico. Em vez disso, os instantâneos de relatório são renderizados em um formato de exibição final (como HTML) somente quando solicitado por um usuário ou aplicativo. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>Relatórios renderizados  
  Um relatório renderizado é um relatório totalmente processado que contém dados e informações de layout em um formato adequado para exibição (como HTML). O relatório não pode ser exibido até ser renderizado em um formato de saída. Siga um destes procedimentos para renderizar um relatório:  
@@ -70,11 +70,10 @@ ms.lasthandoff: 09/27/2017
   
  Assine um relatório, que é entregue em uma caixa de entrada de email ou em um compartilhamento de arquivo em um formato de saída especificado por você. O formato de renderização padrão para relatórios é HTML 4.0. Além do HTML, os relatórios podem ser renderizados em diversos formatos de saída, incluindo Excel, Word, XML, PDF, TIFF e CSV. Assim como os relatórios publicados, os relatórios renderizados não podem ser editados nem salvos em um servidor de relatório. Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

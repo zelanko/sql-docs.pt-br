@@ -3,7 +3,7 @@ title: "Método (ADO) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db5dc5c8b6d40873ce333aa2987d04c046c222b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>(ADO) do método append
 Anexa um objeto para uma coleção. Se a coleção é [campos](../../../ado/reference/ado-api/fields-collection-ado.md), um novo [campo](../../../ado/reference/ado-api/field-object.md) objeto pode ser criado antes que ele é adicionado à coleção.  
@@ -42,10 +41,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *coleção*  
+ *collection*  
  Um objeto de coleção.  
   
- *campos*  
+ *fields*  
  Um **campos** coleção.  
   
  *objeto*  
@@ -66,7 +65,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Opcional. Um **Variant** que representa o valor para o novo campo. Se não for especificado, o campo é acrescentado com um valor nulo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Coleção Parâmetros  
  Você deve definir o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto antes de acrescentá-lo para o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. Se você selecionar um tipo de dados de comprimento variável, você também deve definir o [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriedade para um valor maior que zero.  
@@ -106,4 +105,3 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  [Excluir método (coleção de parâmetros do ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Excluir método (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Método Update](../../../ado/reference/ado-api/update-method.md)
-

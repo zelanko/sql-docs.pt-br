@@ -2,32 +2,29 @@
 title: "Configurar e exibir o log de diagnóstico e SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e94ef1aeee4d633353964a6398bd12b89ef86cf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar e exibir o log de diagnóstico e SharePoint
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Neste tópico:  
@@ -129,10 +126,10 @@ ms.lasthandoff: 09/01/2017
 |Processar|Área|Categoria|Nível|Mensagem|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|detalhado|Começando a localizar um servidor de aplicativos para fonte de dados =\<*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para fonte de dados =\<*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Localizando o servidor de aplicativos bem-sucedido.|A solicitação foi alocada para um aplicativo de serviço do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|detalhado|Solicitação de redirecionamento para o \< *origem do PowerPivotdata*> para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Processamento de solicitação|detalhado|Solicitação de redirecionamento para UserName\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Solicitação de redirecionamento para o \< *origem do PowerPivotdata*> para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Processamento de solicitação|Detalhado|Solicitação de redirecionamento para UserName\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleta de dados de uso do PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
@@ -140,4 +137,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

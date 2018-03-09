@@ -3,8 +3,9 @@ title: "Atualizar a ressincronização de propriedade dinâmica (ADO) | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Update Resync property [ADO]
+helpviewer_keywords:
+- Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 258e911253eec5bad0e201ee4ffe598945043539
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6084a0075508c8a9a3658b4a8c694957409376c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Atualização ressincronização propriedade dinâmica (ADO)
 Especifica se o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método é seguido por um implícita [Resync](../../../ado/reference/ado-api/resync-method.md) operação de método e nesse caso, o escopo dessa operação.  
@@ -31,7 +33,7 @@ Especifica se o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna uma ou mais do [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores de ADCPROP_UPDATERESYNC_ENUM podem ser combinados, exceto adResyncAll que já representa a combinação do restante dos valores.  
   
  A constante **adResyncConflicts** armazena os valores de ressincronização como valores subjacentes, mas não substitui as alterações pendentes.  

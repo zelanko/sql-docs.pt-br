@@ -2,9 +2,12 @@
 title: "Tarefa Recompilar Índice (plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bce95c76bdf7eb37469b33f800e9aa8bf574bed3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f077a5071cfb7f3da4114fde9453cfa2c331783f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarefa Recriar Índice (Plano de Manutenção)
-  Use a caixa de diálogo **Tarefa Recompilar Índice** para recriar os índices nas tabelas do banco de dados com um novo fator de preenchimento. O fator de preenchimento determina a quantidade de espaço vazio em cada página no índice, para acomodar futuras expansões. À medida que os dados são adicionados à tabela, o espaço livre é todo preenchido porque o fator de preenchimento não é mantido. Reorganizando dados e páginas de índice, é possível restabelecer o espaço livre.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa Recompilar Índice** para recriar os índices nas tabelas do banco de dados com um novo fator de preenchimento. O fator de preenchimento determina a quantidade de espaço vazio em cada página no índice, para acomodar futuras expansões. À medida que os dados são adicionados à tabela, o espaço livre é todo preenchido porque o fator de preenchimento não é mantido. Reorganizando dados e páginas de índice, é possível restabelecer o espaço livre.  
   
  A **Tarefa Recompilar Índice** usa a instrução ALTER INDEX. Para obter mais informações sobre as opções descritas nesta página, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

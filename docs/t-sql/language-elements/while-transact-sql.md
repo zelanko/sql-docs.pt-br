@@ -1,5 +1,5 @@
 ---
-title: Ao mesmo tempo (Transact-SQL) | Microsoft Docs
+title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 404365faed0bc7aa3a6d585565099f964cc915ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 62f346d7a32e6c1aa55e42666ad39f426e1ed8a5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +73,7 @@ WHILE Boolean_expression
  CONTINUE  
  Faz com que o loop WHILE seja reiniciado, ignorando todas as instruções depois da palavra-chave CONTINUE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se dois ou mais loops WHILE estiverem aninhados, o BREAK interno será encerrado para o próximo loop mais externo. Todas as instruções após o fim da primeira execução do loop interno e o loop mais externo seguinte serão reiniciadas.  
   
 ## <a name="examples"></a>Exemplos  
@@ -144,6 +143,5 @@ END
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-
 
 

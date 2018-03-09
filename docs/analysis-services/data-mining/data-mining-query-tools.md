@@ -2,15 +2,13 @@
 title: "Ferramentas de consulta de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-query-tools"></a>Ferramentas de Consulta de Mineração de Dados
-  Todas as consultas de mineração de dados são baseadas na linguagem DMX (Extensões DMX). A DMX é usada para criar modelos para todos os tipos de tarefa de aprendizado de máquina, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode gravar consultas DMX para obter informações sobre os padrões e as estatísticas que foram geradas após processar o modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Todas as consultas de mineração de dados são baseadas na linguagem DMX (Extensões DMX). A DMX é usada para criar modelos para todos os tipos de tarefa de aprendizado de máquina, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode gravar consultas DMX para obter informações sobre os padrões e as estatísticas que foram geradas após processar o modelo.  
   
  Você pode escrever sua própria DMX ou criar uma DMX básica usando uma ferramenta como o **Construtor de Consultas de Previsão** e depois modificá-la. Tanto o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quanto o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornecem ferramentas que o ajudam a criar consultas de previsão em DMX. Este tópico descreve como criar e executar consultas de mineração de dados usando essas ferramentas.  
   
@@ -85,12 +83,11 @@ ms.lasthandoff: 09/01/2017
 -   Para recuperar o **conteúdo modelo** e os **metadados modelo**, como o número de clusters, os atributos usados em árvores de decisão, a data de processamento do modelo e os parâmetros de algoritmo usados ao criar o modelo, você pode usar o método [Método Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) e especificar um dos conjuntos de linhas de esquema de mineração de dados no cabeçalho [Elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Para restringir o escopo da consulta, insira critérios como restrições dentro do elemento [Elemento RestrictionList &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensões de mineração de dados &#40; DMX &#41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Compreendendo a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Noções básicas sobre a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Estrutura e o uso de consultas de previsão DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Criar uma consulta de previsão usando o construtor de consultas de previsão](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Criar uma consulta DMX no SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

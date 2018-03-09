@@ -2,15 +2,13 @@
 title: "Conteúdo do modelo de regressão logística modelos de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a57348fa7e83daeb4c9df2bc8d17cd34689c4a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Conteúdo do modelo de mineração para modelos de regressão logística
-  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Entendendo a estrutura de um modelo de regressão logística  
  Um modelo de regressão logística é criado usando o algoritmo Rede Neural da Microsoft com parâmetros que restringem o modelo para eliminar o nó oculto. Portanto, a estrutura geral de um modelo de regressão logística é quase idêntica à de um modelo de rede neural: cada modelo tem um único nó pai que representa o modelo e seus metadados e um nó de estatísticas marginais especial (NODE_TYPE = 24) que fornece estatísticas descritivas sobre as entradas usadas no modelo.  
@@ -104,7 +102,7 @@ ms.lasthandoff: 09/01/2017
 |Estatísticas marginais|Sempre 0.|  
 |Camada de entrada|Indica o número de pares de atributo-valores de entrada usados pelo modelo.|  
 |Nó de entrada|Sempre 0.|  
-|Camada oculta|Em um modelo de regressão logística, sempre 0.|  
+|hidden layer|Em um modelo de regressão logística, sempre 0.|  
 |Camada de saída|Indica o número de valores de saída.|  
 |Nó de saída|Sempre 0.|  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 09/01/2017
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Um fragmento de XML contendo as mesmas informações que a coluna NODE_DESCRIPTION.|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Um fragmento de XML contendo as mesmas informações que a coluna NODE_DESCRIPTION.|  
   
@@ -194,9 +192,8 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de rede Neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   
-

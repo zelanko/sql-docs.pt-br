@@ -1,5 +1,5 @@
 ---
-title: "UPPER (expressão SSIS) | Microsoft Docs"
+title: "UPPER (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1764b39b0242ce7e23d56c9c74f7b953f45009b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5bd182b9ba88bd36cf24b7d0acbd7deb9bfd5c59
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upper-ssis-expression"></a>UPPER (Expressão SSIS)
   Retorna uma expressão de caractere depois de converter caracteres minúsculos em maiúsculos.  
@@ -47,7 +46,7 @@ UPPER(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  UPPER só funciona com o tipo de dados DT_WSTR. Um argumento *character_expression* que é um literal de cadeia de caracteres ou uma coluna de dados com o tipo de dados DT_STR é implicitamente convertido para o tipo de dados DT_WSTR antes de UPPER executar sua operação. Outros tipos de dados devem ser explicitamente convertidos para o tipo de dados DT_WSTR. Para obter mais informações, consulte [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md) e [Cast &#40;Expressão SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  UPPER retornará um resultado nulo se o argumento for nulo.  
@@ -71,9 +70,8 @@ UPPER(SUBSTRING(FirstName, 1, 1))
 UPPER(@PostalCode)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [INFERIOR &#40; Expressão do SSIS &#41;](../../integration-services/expressions/lower-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [LOWER &#40;Expressão SSIS&#41;](../../integration-services/expressions/lower-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

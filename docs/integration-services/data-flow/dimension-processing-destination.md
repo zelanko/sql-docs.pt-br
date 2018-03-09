@@ -1,5 +1,5 @@
 ---
-title: "Destino de processamento de dimensão | Microsoft Docs"
+title: "Destino de processamento de dimensões | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,20 +23,19 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 6cb11b490a2ec920d61f55bd403cbbd7c4a36e8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dimension-processing-destination"></a>Destino de processamento de dimensões
-  O Destino de Processamento de Dimensões carrega e processa uma dimensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre dimensões, consulte [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+  O Destino de Processamento de Dimensões carrega e processa uma dimensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre dimensões, consulte [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  O Destino de Processamento de Dimensões inclui os seguintes recursos:  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/17/2017
  **Connection manager**  
  Selecione um gerenciador de conexões existente na lista ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Lista de dimensões disponíveis**  
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/17/2017
  **Método de processamento**  
  Selecione o método de processamento a aplicar à dimensão selecionada na lista. O valor padrão desta opção é **Completo**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Adicionar (incremental)**|Execute um processamento com incremento da dimensão.|  
 |**Completo**|Execute um processamento completo da dimensão.|  
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/17/2017
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor **UnknownMember** .|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/17/2017
  **Ação se houver erro**  
  Caso tenha selecionado **Parar se houver erro**, especifique a ação a ser tomada quando o limite de erros for atingido.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/17/2017
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -143,7 +142,7 @@ ms.lasthandoff: 08/17/2017
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -152,7 +151,7 @@ ms.lasthandoff: 08/17/2017
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula foi convertida no valor **UnknownMember** . Por padrão, esse valor é **IgnoreError**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -161,7 +160,7 @@ ms.lasthandoff: 08/17/2017
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -173,9 +172,8 @@ ms.lasthandoff: 08/17/2017
  **Procurar (...)**  
  Selecione um caminho para o log de erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

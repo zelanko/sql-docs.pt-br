@@ -1,5 +1,5 @@
 ---
-title: Change Data Capture Service para Oracle da attunity | Microsoft Docs
+title: "Serviço Change Data Capture para Oracle da Attunity | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 1f1ce0a4f9e616f38f4b99ad220a7c7e8ba6a2fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e4aca9c1e62dbab4c1896c322c01fb6ec7253738
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Serviço Change Data Capture para Oracle da Attunity
   O Serviço CDC para Oracle é um Serviço do Windows que examina os logs de transação do Oracle e capturam alterações a tabelas de interesse do Oracle em tabelas de alteração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As tabelas de alteração do SQL onde as alterações capturadas do Oracle são armazenadas são do mesmo tipo das tabelas de alteração usadas no recurso Change Data Capture nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto faz o consumo destas alterações tão fácil quanto consumir alterações feitas a bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,8 +51,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>Banco de dados Oracle de origem  
   
--   Oracle Database 10g versão 2
--   Banco de dados Oracle 11g versão 1 e versão 2
+-   Banco de dados Oracle 10g Versão 2
+-   Banco de dados Oracle 11g Versão 1 e Versão 2
 -   Oracle Database 12c em instalação clássica. (Não há suporte para a instalação multilocatária.)  
   
 ### <a name="target-sql-server-database"></a>Banco de Dados do SQL Server de destino  
@@ -87,8 +86,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Guia de instruções do Serviço Change Data Capture para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com o Serviço Oracle CDC](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Trabalhando com o serviço Oracle CDC](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   
-

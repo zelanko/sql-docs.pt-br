@@ -1,29 +1,30 @@
 ---
 title: "Guia de Introdução com o SSMA para Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ad25369dc4a9d9cc7a26795320050dcb583e92b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Guia de Introdução com o SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Assistente de migração (SSMA) para Oracle permite a rápida converter esquemas de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, carregue os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -101,7 +102,7 @@ A tabela a seguir mostra os menus do SSMA.
   
 |Menu|Description|  
 |----|-----------|  
-|**Arquivo**|Contém comandos para trabalhar com projetos, conectando-se ao Oracle e para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**File**|Contém comandos para trabalhar com projetos, conectando-se ao Oracle e para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql_md.md)] do painel de detalhes do SQL. Também contém o **gerenciar indicadores** opção, onde você poderá ver uma lista de indicadores. Você pode usar os botões à direita da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados de pesquisadores** comando. Que sincroniza os objetos entre o Gerenciador de metadados do Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados. Também contém comandos para mostrar e ocultar o **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios e migrar objetos e dados. Também fornece acesso a **configurações globais** e **configurações de projeto** caixas de diálogo.|  
@@ -115,8 +116,7 @@ O **exibição** menu fornece comandos para alternar a visibilidade do painel de
   
 -   O painel de lista de erros mostra erro, aviso e mensagens informativas em uma lista classificável.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migração de dados Oracle no SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
 [Referência de Interface do usuário &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

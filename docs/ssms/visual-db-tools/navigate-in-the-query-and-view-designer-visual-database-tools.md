@@ -3,8 +3,11 @@ title: "Navegar no Designer de Consulta e Exibição (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36051cdc7eb95e2222f4af16dbf88536f4a263e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
-Você pode trabalhar no Designer de Consulta e Exibição usando o teclado ou o mouse. Consulte as seguintes tabelas para obter métodos específicos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode trabalhar no Designer de Exibição e Consulta usando o teclado ou o mouse. Consulte as seguintes tabelas para obter métodos específicos.  
   
 ## <a name="any-pane"></a>Qualquer painel  
   
@@ -45,7 +48,7 @@ Você pode trabalhar no Designer de Consulta e Exibição usando o teclado ou o 
 |Mover entre as colunas de uma tabela ou objeto estruturado por tabela|Teclas de direção|Na coluna para a qual ir|  
 |Escolher a coluna de dados selecionada para saída|BARRA DE ESPAÇOS ou tecla +|Na caixa de seleção próxima ao nome da coluna|  
 |Remover a coluna de dados selecionada da saída da consulta|BARRA DE ESPAÇOS ou tecla -|Na caixa de seleção próxima ao nome da coluna|  
-|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|DELETE|Clique com o botão direito do mouse e escolha **Remover**|  
+|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|Delete (excluir)|Clique com o botão direito do mouse e escolha **Remover**|  
   
 > [!NOTE]  
 > Se forem selecionados vários itens, pressionar esta tecla afetará todos os itens selecionados. Selecione vários itens mantendo a tecla CTRL pressionada enquanto clica neles.  
@@ -69,8 +72,8 @@ Para obter mais informações, consulte [Painel Diagrama &#40;Visual Database To
 |Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
 |Alternar a caixa de seleção na coluna Saída|BARRA DE ESPAÇOS|Na caixa de seleção|  
-|Desmarcar o conteúdo selecionado de uma célula|DELETE||  
-|Limpar todos os valores de uma coluna selecionada de grade|DELETE||  
+|Desmarcar o conteúdo selecionado de uma célula|Delete (excluir)||  
+|Limpar todos os valores de uma coluna selecionada de grade|Delete (excluir)||  
 |Inserir uma linha entre as linhas existentes|INS depois de selecionar uma linha de grade||  
 |Adicionar uma coluna Ou...|INS depois de selecionar qualquer coluna Ou...||  
   
@@ -79,7 +82,7 @@ Para obter mais informações, consulte [Painel Diagrama &#40;Visual Database To
   
 Para obter mais informações, consulte [Painel Critérios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
-## <a name="sql-pane"></a>Painel SQL  
+## <a name="sql-pane"></a>painel SQL  
 Você pode usar as teclas de edição padrão do Windows ao trabalhar no painel SQL, como CTRL+Seta para se mover entre palavras, e os comandos **Recortar**, **Copiar**e **Colar** no menu **Editar** .  
   
 > [!NOTE]  
@@ -100,7 +103,7 @@ Para obter mais informações, consulte [Painel SQL &#40;Visual Database Tools&#
 |Selecionar o último caractere em uma célula|SHIFT+END||  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
-|Excluir uma linha da tabela|DELETE||  
+|Excluir uma linha da tabela|Delete (excluir)||  
 |Desfazer alterações na célula atual|ESC em célula alterada||  
 |Desfazer alterações na linha atual|ESC em qualquer célula não alterada||  
 |Inserir null em uma célula|CTRL+0||  
@@ -114,6 +117,6 @@ Para obter mais informações, consulte [Painel SQL &#40;Visual Database Tools&#
   
 Para obter mais informações, consulte [Painel de Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

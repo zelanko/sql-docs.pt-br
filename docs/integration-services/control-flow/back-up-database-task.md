@@ -1,5 +1,5 @@
 ---
-title: Tarefa de banco de dados de backup | Microsoft Docs
+title: Tarefa Backup de Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a71821c8fc7710d86d819d65ef35878a2594f997
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados
   A tarefa Backup de Banco de Dados executa vários tipos de backups de bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -41,11 +40,11 @@ ms.lasthandoff: 08/03/2017
 ## <a name="supported-recover-models-and-backup-types"></a>Modelos de recuperação e tipos de backup com suporte  
  A tabela a seguir relaciona os modelos de recuperação e tipos de backup que a tarefa de Backup de Banco de Dados oferece suporte.  
   
-|Modelo de recuperação|Banco de dados|Diferenciais de bancos de dados|Log de transações|Arquivo ou diferencial de arquivo|  
+|modelo de recuperação|banco de dados|Diferenciais de bancos de dados|Log de transações|Arquivo ou diferencial de arquivo|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple (simples)|Required|Opcional|Sem suporte|Sem suporte|  
-|Full (cheio)|Required|Opcional|Required|Opcional|  
-|Bulk-logged|Required|Opcional|Required|Opcional|  
+|Simple (simples)|Obrigatório|Opcional|Sem suporte|Sem suporte|  
+|Completo|Obrigatório|Opcional|Obrigatório|Opcional|  
+|Bulk-logged|Obrigatório|Opcional|Obrigatório|Opcional|  
   
  A tarefa de Backup de Banco de Dados encapsula uma instrução BACKUP Transact-SQL. Para obter mais informações, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -61,4 +60,3 @@ ms.lasthandoff: 08/03/2017
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
-

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STSrid (geography Data Type)
 - STSrid_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STSrid method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STSrid method
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c8069515b1104f4989e717dff6ac30fb8441b12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2adbcda7fb699fc4690e0bf9d9b21e83a121508a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade pode ser modificada.  
   
 ## <a name="examples"></a>Exemplos  

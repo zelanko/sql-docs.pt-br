@@ -3,8 +3,11 @@ title: "Assistência ao usuário no SQL Server Management Studio | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 94bba147f35fe23d2276f4f32596c5a2890f56f1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
-A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] através do menu Ajuda e dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . O menu Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] oferece várias rotas diferentes para informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Ele também fornece acesso à comunidade [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e aos recursos do MSDN Online não disponíveis anteriormente no ambiente de Ajuda. Além disso, o ambiente de Ajuda agora pode ser configurado para ser executado dentro do ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou em uma janela externa associada a um ambiente próprio.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] por meio do menu Ajuda e dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. O menu Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] oferece várias rotas diferentes para informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Ele também fornece acesso à comunidade [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e aos recursos do MSDN Online não disponíveis anteriormente no ambiente de Ajuda. Além disso, o ambiente de Ajuda agora pode ser configurado para ser executado dentro do ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou em uma janela externa associada a um ambiente próprio.  
   
 ## <a name="the-help-interface"></a>A interface da Ajuda  
 O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já familiar aos usuários do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . As outras opções são:  
@@ -33,7 +36,7 @@ O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já fami
   
     Fornece um conjunto hierárquico de páginas vinculadas que contêm tópicos úteis relacionados a tarefas comuns do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . O conteúdo é organizado por componente e tarefa, por exemplo, tópicos de replicação etc.  
   
--   **Pesquisa**  
+-   **Pesquisar**  
   
     Pesquisa tópicos, com ou sem filtros predefinidos. A pesquisa no [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] é feita em uma página separada com guias. Os usuários podem refinar as pesquisas com um ou mais filtros predefinidos de tipo de tópico, linguagem ou tecnologia. Por padrão, a Pesquisa não usa nenhum dos filtros predefinidos, e só os tópicos são pesquisados nas coleções instaladas.  
   

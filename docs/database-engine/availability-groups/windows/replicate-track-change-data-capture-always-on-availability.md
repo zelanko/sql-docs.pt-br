@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +197,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
 ##  <a name="Prereqs"></a> Pré-requisitos, restrições e considerações para usar replicação  
  Esta seção descreve as considerações para implantar a replicação com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluindo pré-requisitos, restrições e recomendações.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   Ao usar a replicação transacional e o banco de dados de publicação estiver em um grupo de disponibilidade, o publicador e o distribuidor devem executar pelo menos o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O assinante pode usar um nível inferior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -210,16 +211,16 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   As instâncias do Publicador satisfazem todos os pré-requisitos necessários para participar de um grupo de disponibilidade AlwaysOn. Para obter mais informações consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrições  
+### <a name="restrictions"></a>Restrictions  
  Combinações de replicação com suporte no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
 ||**Publicador**|**Distribuidor***\*|**Assinante**|  
-|**Transacional.**|Sim<br /><br /> Observação: não inclui suporte para replicação transacional bidirecional e recíproca.|Não|Sim|  
-|**P2P**|Não|Não|Não|  
-|**Mesclagem**|Sim|Não|Sim*|  
-|**Instantâneo**|Sim|Não|Sim*|  
+|**Transacional.**|Sim<br /><br /> Observação: não inclui suporte para replicação transacional bidirecional e recíproca.|não|Sim|  
+|**P2P**|não|não|não|  
+|**Mesclagem**|Sim|não|Sim*|  
+|**Instantâneo**|Sim|não|Sim*|  
   
  *O failover no banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
   
@@ -258,7 +259,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   [Trabalhar com o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

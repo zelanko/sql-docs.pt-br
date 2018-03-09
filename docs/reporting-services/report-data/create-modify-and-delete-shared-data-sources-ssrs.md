@@ -2,12 +2,13 @@
 title: Criar, modificar e excluir fontes de dados compartilhadas (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 53
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fc63cde6f20cda1b6d302c881ca6bf5b8a294ba8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
@@ -47,9 +47,9 @@ ms.lasthandoff: 08/09/2017
 |----------|-----------------|  
 |Nome|Um nome que identifica o item dentro da hierarquia de pastas do servidor de relatórios.|  
 |Description|Uma descrição que aparece com o item no Gerenciador de Relatórios quando você exibe os conteúdos da pasta.|  
-|Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre extensões de processamento de dados incluídas com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [suporte de fontes de dados por meio do Reporting Services &#40; SSRS &#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Cadeia de conexão|A cadeia de conexão para o banco de dados. Para obter mais informações e exibir exemplos de cadeias de conexão para fontes de dados usadas com frequência, consulte [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
-|Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
+|Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Uma fonte de dados compartilhada não contém informações de consulta usadas para a recuperação de dados. A consulta sempre é mantida dentro de uma definição do relatório.  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Se a fonte de dados não usar credenciais (se a fonte de dados for um arquivo XML acessado pelo sistema de arquivos, por exemplo), clique em **Não são necessárias credenciais**. Você deve especificar esse tipo de credencial somente se ele for válido para a fonte de dados. Se você selecionar essa opção para uma fonte de dados que requer autenticação, a conexão falhará. Se essa opção for selecionada, certifique-se de configurar a conta de execução autônoma que permite que o servidor de relatório se conecte a outros computadores para recuperar dados ou arquivos quando as credenciais do usuário não estiverem disponíveis.  
   
-         Para obter mais informações sobre como configurar as credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obter mais informações sobre a conta de execução autônoma, consulte [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+         Para obter mais informações sobre como configurar as credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obter mais informações sobre a conta de execução autônoma, consulte [Configurar a conta de execução autônoma &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Clique no botão **Testar Conexão** para validar a configuração da fonte de dados.  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Selecione **Prompt para credenciais** se quiser que o usuário insira suas credenciais sempre que executar o relatório. Não selecione essa opção se desejar agendar a assinatura ou o processamento de dados para esse relatório.  
   
-    -   Selecione **Credenciais armazenadas** se quiser acessar os dados usando um único conjunto de credenciais. As credenciais são criptografadas antes de serem armazenadas. Você pode selecionar opções que determinam como as credenciais armazenadas são autenticadas. Selecione Usar como credenciais do Windows se as credenciais armazenadas pertencerem a uma conta de usuário do Windows. Selecione **Definir o contexto de execução para esta conta** se desejar definir o contexto de execução no servidor de banco de dados. No caso de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa opção define a função SETUSER. Para obter mais informações, consulte [SETUSER &#40; Transact-SQL &#41; ](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Selecione **Credenciais armazenadas** se quiser acessar os dados usando um único conjunto de credenciais. As credenciais são criptografadas antes de serem armazenadas. Você pode selecionar opções que determinam como as credenciais armazenadas são autenticadas. Selecione Usar como credenciais do Windows se as credenciais armazenadas pertencerem a uma conta de usuário do Windows. Selecione **Definir o contexto de execução para esta conta** se desejar definir o contexto de execução no servidor de banco de dados. No caso de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa opção define a função SETUSER. Para obter mais informações, consulte [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Selecione **Não são necessárias credenciais** se quiser especificar credenciais na cadeia de conexão ou se quiser executar o relatório usando uma conta de privilégios mínimos configurada no servidor de relatório. Se essa conta não estiver configurada no servidor de relatório, os usuários serão solicitados a fornecer suas credenciais, e as operações agendadas que você definir para o relatório não serão executadas.  
   
@@ -234,15 +234,14 @@ ms.lasthandoff: 08/09/2017
   
      No caso de modelos de relatórios, a lista de itens dependentes mostra os relatórios criados no Construtor de Relatórios. No caso de fontes de dados compartilhadas, a lista de itens dependentes pode incluir relatórios e modelos de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Página de propriedades de fontes de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Criar, excluir ou modificar uma fonte de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propriedades de fonte de dados para um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Página de propriedades Fontes de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

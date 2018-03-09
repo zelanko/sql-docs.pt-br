@@ -2,34 +2,32 @@
 title: Elemento PropertyRef (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e2b4e43294d4e5c48500560203e778a21b99724
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>Elemento PropertyRef (CSDLBI)
-  O elemento PropertyRef é um tipo simples que fornece uma referência a uma coluna que fornece um valor exigido por outra propriedade.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento PropertyRef é um tipo simples que fornece uma referência a uma coluna que fornece um valor exigido por outra propriedade.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento PropertyRef.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 |PropertyRef|Sim|Uma cadeia de caracteres que contém a referência da propriedade.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, mostra um elemento PropertyRef que especifica a origem de uma fórmula que é usada em uma medida, no exemplo de modelo de tabela da AdventureWorks.  
   
@@ -96,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

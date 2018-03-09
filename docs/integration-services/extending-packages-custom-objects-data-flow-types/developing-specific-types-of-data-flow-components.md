@@ -1,5 +1,5 @@
 ---
-title: "Desenvolvendo tipos específicos de componentes de fluxo de dados | Microsoft Docs"
+title: "Desenvolver tipos específicos de componentes de fluxo de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,22 +21,21 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d0d2fc6d14ee2c597957ba8c660d4e341ae1215
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31c2dafb94bc5f3755d607a3686637b6f8baa205
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>Desenvolvendo tipos específicos de componentes de fluxo de dados
   Esta seção aborda as especificações do desenvolvimento de componentes de origem, componentes de transformação com saídas síncronas, componentes de transformação com saídas assíncronas e componentes de destino.  
   
- Para obter informações sobre o desenvolvimento de componentes em geral, consulte [desenvolvendo um componente de fluxo de dados personalizada](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Para obter informações sobre desenvolvimento de componentes em geral, consulte [Desenvolver um componente de fluxo de dados personalizado](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Desenvolvendo um componente de origem personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
@@ -59,9 +57,8 @@ ms.lasthandoff: 09/26/2017
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>  
  Contém as classes não gerenciadas e as interfaces da tarefa de fluxo de dados. O desenvolvedor usa esses elementos e o namespace <xref:Microsoft.SqlServer.Dts.Pipeline> gerenciado quando cria um fluxo de dados programaticamente ou cria componentes de fluxo de dados personalizados.  
   
-## <a name="see-also"></a>Consulte também  
- [Comparando soluções de script e objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Comparar soluções de script e objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [Desenvolver tipos específicos de componentes de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Criar consultas Criar Tabela (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: acfdff6b986b32d36f8b81ce17e9962bf04a2883
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Criar consultas Criar Tabela (Visual Database Tools)
-Você pode copiar linhas em uma tabela nova utilizando uma consulta Criar Tabela, que é útil para criar subconjuntos de dados para trabalhar ou copiar o conteúdo de uma tabela de um banco de dados para outro. Uma consulta Criar Tabela é semelhante a uma consulta Inserir Resultados, porém cria uma nova tabela para copiar as linhas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode copiar linhas em uma tabela nova utilizando uma consulta Criar Tabela, que é útil para criar subconjuntos de dados para trabalhar ou copiar o conteúdo de uma tabela de um banco de dados para outro. Uma consulta Criar Tabela é semelhante a uma consulta Inserir Resultados, porém cria uma nova tabela para copiar as linhas.  
   
 Ao criar uma consulta Criar Tabela, você especifica:  
   
@@ -44,7 +46,7 @@ Ao criar uma consulta Criar Tabela, você especifica:
   
 -   As opções Agrupar por, se você quiser copiar somente resumos informativos.  
   
-Por exemplo, a consulta a seguir cria uma nova tabela chamada `uk`_`customers` e copia informações da tabela `customers` :  
+Por exemplo, a seguinte consulta cria uma nova tabela chamada `uk_customers` e copia informações da tabela `customers`:  
   
 ```  
 SELECT *   
@@ -86,8 +88,7 @@ Para usar uma consulta Criar Tabela com êxito:
   
 Quando você executa a consulta Criar Tabela, nenhum resultado é relatado no painel de [Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
-## <a name="see-also"></a>Consulte também  
-[Tópicos de instruções de como criar consultas e exibições (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+## <a name="see-also"></a>Consulte Também  
+[Tópicos de instruções de como criar consultas e exibições (Ferramentas de Banco de Dados Visual)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

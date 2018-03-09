@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02ef1e72683e83a1592caf83699188daf71a31cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38afc089178d7428e6f28f5639ed195ea9c561f5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Usar Parâmetros com valor de tabela (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 
   Este exemplo mostra como usar parâmetros com valor de tabela para inserir várias linhas, com várias colunas, com uma chamada para o servidor.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obter mais exemplos usando parâmetros com valor de tabela, consulte [exemplos de programação de parâmetros de ODBC Table-Valued](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obter mais exemplos que usem parâmetros com valor de tabela, consulte [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Exemplo  
  Você precisará de uma fonte de dados ODBC chamada TVPDemo. O banco de dados padrão para TVPDemo pode ser qualquer banco de dados de teste em seu computador. Essa fonte de dados deve ter como base o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

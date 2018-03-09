@@ -22,17 +22,16 @@ helpviewer_keywords:
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ed67afafb33faa22ececbea51c1ed502b1e5725
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0aff23be0cf324678cbe565c0f0c7a3c92d13a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  O corpo da mensagem deve conter XML que obedece a um esquema na coleção de esquema especificada. O *schema_collection_name* deve ser o nome de uma coleção de esquema XML existente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Alterar a validação de um tipo de mensagem não afeta as mensagens que já foram entregues a uma fila.  
   
  Para alterar a AUTHORIZATION para um tipo de mensagem, use a instrução ALTER AUTHORIZATION.  
@@ -93,10 +92,9 @@ ALTER MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Criar tipo de mensagem &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [REMOVER o tipo de mensagem &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

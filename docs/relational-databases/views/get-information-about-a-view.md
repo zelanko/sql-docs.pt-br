@@ -2,13 +2,18 @@
 title: "Obter informações sobre uma exibição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: views
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-views
+ms.suite: sql
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.viewproperties.general.f1
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
 helpviewer_keywords:
 - views [SQL Server], status information
 - metadata [SQL Server], views
@@ -19,19 +24,19 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70db6677328cfb978c7cdda663d56c8fa7332fea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
-  Você pode obter informações sobre a definição ou as propriedades de uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da exibição para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela exibição.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Você pode obter informações sobre a definição ou as propriedades de uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da exibição para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela exibição.  
   
 > [!IMPORTANT]  
 >  Se você alterar o nome de um objeto referenciado por uma exibição, deverá modificar a exibição, de modo que seu texto reflita o novo nome. Portanto, antes de renomear um objeto, exiba primeiramente as dependências do objeto para determinar se as exibições foram afetadas pela mudança proposta.  
@@ -111,7 +116,7 @@ ms.lasthandoff: 11/09/2017
      **(Nome)**  
      Nome da exibição atual.  
   
-     **Nome do Banco de Dados**  
+     **Database Name**  
      Nome do banco de dados que contém esta exibição.  
   
      **Descrição**  
@@ -177,7 +182,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Selecione **Objetos dos quais [nome da exibição] depende** para ver os objetos que são referenciados pela exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obter a definição e as propriedades de uma exibição  
   

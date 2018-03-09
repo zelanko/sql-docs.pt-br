@@ -1,5 +1,5 @@
 ---
-title: ^ = (Igual a OR exclusivo bit a bit) (Transact-SQL) | Microsoft Docs
+title: "^ = (Atribuição OR exclusivo bit a bit) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - ^= (bitwise exclusive OR equals)
 - compound operators, ^=
+- assignment operators, ^=
+- augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f7c69571c760fe828a6a731b348a12168b095cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4da8f3df7201794db31bfff09927c97c128f82b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-bitwise-exclusive-or-equals-transact-sql"></a>^= (OR EQUALS exclusivo bit a bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (Atribuição OR exclusivo bit a bit) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Executa uma operação OR exclusiva bit a bit entre dois valores inteiros e define um valor como resultado da operação.  
   
@@ -53,14 +54,13 @@ expression ^= expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações, consulte [^ &#40; Bit a bit exclusivo ou &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

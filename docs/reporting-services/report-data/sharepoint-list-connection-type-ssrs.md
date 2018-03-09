@@ -2,25 +2,26 @@
 title: "Tipo de conexão da lista do SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00525d6020ece647a6a7dbd7630e20422aa94223
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba9625e6d50c14ee47070b4980e6b376cc68e738
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 
@@ -49,9 +50,9 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|Não|  
-|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|não|  
+|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
   
  *A autenticação do Windows, a FBA (autenticação baseada em formulários), os tokens SAML (linguagem de marcação de aplicativos seguros), outros provedores de identidade ou uma combinação de mais de um dos provedores de autenticação citados anteriormente.  
   
@@ -60,9 +61,9 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 ||Credenciais com suporte|Modo clássico de Autenticação do Windows|* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Não|Não|  
-|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
-||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Não|Não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|não|não|  
+|Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
+||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|não|não<br /><br /> A autenticação baseada em formulários e a autenticação baseada em declarações não têm suporte para listas remotas do SharePoint.|  
   
  *A autenticação do Windows, a FBA (autenticação baseada em formulários), os tokens SAML (linguagem de marcação de aplicativos seguros), outros provedores de identidade ou uma combinação de mais de um dos provedores de autenticação citados anteriormente.  
   
@@ -188,7 +189,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Parâmetros de relatório](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtrar, agrupar e classificar dados](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

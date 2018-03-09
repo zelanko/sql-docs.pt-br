@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geography Data Type)
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 079121e8dda953a16bb5d262a0d1c1b2f45d19f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7346228c27e4de0c93349d45ff7537db399ecc8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se os identificadores de referência espaciais (SRIDs) do **geografia** instâncias não coincidem.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conjunto de resultados possíveis no servidor foi estendido para **FullGlobe** instâncias.  
@@ -82,7 +81,6 @@ SELECT @g.STSymDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

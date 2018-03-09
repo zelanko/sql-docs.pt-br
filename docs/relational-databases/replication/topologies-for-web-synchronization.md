@@ -2,9 +2,12 @@
 title: "Topologias para sincronização da Web | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e07116f374a844fd1bcea8e9fd0477fce548538f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d32bc4c278f1da65e63d13e1a6ed57a3bd1677f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologias para sincronização da Web
-  Você pode escolher entre uma variedade de topologias de replicação a sincronização da Web no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os modos comuns para configurar a sincronização da Web incluem:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode escolher entre uma variedade de topologias de replicação a sincronização da Web no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os modos comuns para configurar a sincronização da Web incluem:  
   
 -   Servidor único  
   
@@ -59,8 +62,8 @@ ms.lasthandoff: 11/09/2017
   
  ![Sincronização da Web com republicação](../../relational-databases/replication/media/web-sync05.gif "Sincronização da Web com republicação")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Sincronização da Web para replicação de mesclagem](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

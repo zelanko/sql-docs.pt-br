@@ -10,21 +10,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitações e problemas conhecidos do SSIS no Linux
 
-Este tópico descreve as limitações atuais e problemas conhecidos para o SQL Server Integration Services (SSIS) no Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Este artigo descreve as limitações atuais e problemas conhecidos para o SQL Server Integration Services (SSIS) no Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Problemas conhecidos e limitações gerais
 
@@ -41,7 +42,7 @@ Os recursos a seguir não têm suporte nesta versão do SSIS no Linux:
 
 Para outras limitações e problemas conhecidos com o SSIS no Linux, consulte o [notas de versão](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Componentes compatíveis e sem suportados
+## <a name="components"></a> Componentes compatíveis e sem suportados
 
 Os seguintes componentes internos do Integration Services têm suporte no Linux. Algumas delas têm limitações na plataforma Linux, conforme descrito nas tabelas a seguir.
 
@@ -85,13 +86,13 @@ Componentes internos que não estão listados aqui não têm suporte no Linux.
 | Destino e origem do ADO.NET | Suportam apenas o provedor de dados SQLClient. |
 | Fonte de arquivo simples e de destino | Somente dão suporte a caminhos de arquivo de estilo do Windows, aos quais a regra de mapeamento de caminho padrão é aplicada. Por exemplo `D:\home\ssis\travel.csv` torna-se `/home/ssis/travel.csv`. |
 | Fonte OData | Suporta apenas a autenticação básica. |
-| Origem ODBC e destino | Dá suporte a drivers de ODBC Unicode de 64 bits no Linux. Depende do Gerenciador de driver UnixODBC no Linux. |
+| Origem e destino ODBC | Dá suporte a drivers de ODBC Unicode de 64 bits no Linux. Depende do Gerenciador de driver UnixODBC no Linux. |
 | Origem de OLE DB e de destino | Apenas suporte do SQL Server Native Client 11.0 e o Microsoft OLE DB Provider para SQL Server. |
 | | |
 
 ### <a name="supported-data-flow-transformations"></a>Suporte para transformações de fluxo de dados
 - Agregado
-- Auditoria
+- Auditar o
 - Balanced Data Distributor
 - Mapa de Caracteres
 - Divisão Condicional
@@ -109,7 +110,7 @@ Componentes internos que não estão listados aqui não têm suporte no Linux.
 - Dinâmico
 - Contagem de Linhas
 - Dimensão de Alteração Lenta
-- Sort
+- Classificação
 - Pesquisa de Termos
 - Union All
 - Não Dinâmico
@@ -131,4 +132,8 @@ Os provedores de log do SSIS para arquivos de texto, arquivos XML e SQL Server P
 -   Se você não fornecer um caminho, o provedor de log grava no diretório atual do host. Se o usuário atual não tem permissão para gravar no diretório atual do host, o provedor de log gera um erro.
 -   Você não pode usar uma variável de ambiente em um caminho de arquivo. Se você especificar uma variável de ambiente, o texto literal que você especificar será exibida no caminho do arquivo. Por exemplo, se você especificar `%TMP%/log.txt`, o provedor de log anexa o texto literal `/%TMP%/log.txt` para o diretório de host atual.
 
-
+## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
+-   [Extrair, transformar e carregar dados em Linux com o SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar o SQL Server Integration Services no Linux com conf ssis](sql-server-linux-configure-ssis.md)
+-   [A execução no Linux com cron do pacote de agendamento SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

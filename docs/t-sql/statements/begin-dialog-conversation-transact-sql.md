@@ -33,17 +33,16 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e1f746ea0607759329b32499aed5887ee44b650
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@***dialog_handle*  
+ **@** *dialog_handle*  
  É uma variável usada para armazenar o identificador da caixa de diálogo gerada pelo sistema para a nova caixa de diálogo que é retornada pela instrução BEGIN DIALOG CONVERSATION. A variável deve ser do tipo **uniqueidentifier**.  
   
  DO serviço *initiator_service_name*  
@@ -99,13 +98,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Especifica o contrato que essa conversa segue. O contrato deve existir no banco de dados atual. Se o serviço de destino não aceitar novas conversas no contrato especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] retornará uma mensagem de erro na conversa. Quando esta cláusula é omitida, a conversa segue o contrato denominado **padrão**.  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo Novo pertence ao mesmo grupo de conversa como o diálogo especificado por *related_conversation_handle*. O *related_conversation_handle*devem ser do tipo implicitamente conversível para o tipo **uniqueidentifier**. A instrução falhará se o *related_conversation_handle* não faz referência a uma caixa de diálogo existente.  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **= * related_conversation_group_id*  
  Especifica o grupo de conversa existente ao qual a nova caixa de diálogo é adicionada. Quando esta cláusula estiver presente, a caixa de diálogo Novo será adicionada ao grupo de conversa especificado por *related_conversation_group_id*. O *related_conversation_group_id*devem ser do tipo implicitamente conversível para o tipo **uniqueidentifier**. Se *related_conversation_group_id*referência um grupo de conversa existente, o service broker cria um novo grupo de conversa com especificado *related_conversation_group_id* e se relaciona a caixa de diálogo Novo a esse grupo de conversa.  
   
- Tempo de vida  **=**  *dialog_lifetime*  
+ Tempo de vida **= * dialog_lifetime*  
  Especifica o limite máximo de tempo que a caixa de diálogo permanecerá aberta. Para a caixa de diálogo ser concluída com êxito, os pontos de extremidade devem finalizar explicitamente a caixa de diálogo antes que seu tempo de vida expire. O *dialog_lifetime* valor deve ser expresso em segundos. Tempo de vida é do tipo **int**. Quando nenhuma cláusula LIFETIME é especificada, o tempo de vida da caixa de diálogo é o valor máximo de **int** tipo de dados.  
   
  ENCRYPTION  
@@ -114,7 +113,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  As mensagens trocadas com serviços na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nunca são criptografadas. Entretanto, uma chave de banco de dados mestre e os certificados para a criptografia ainda serão necessários para as conversas que usam criptografia se os serviços para a conversa estiverem em bancos de dados diferentes. Isso permite que as conversas continuem caso um dos bancos de dados seja movido para uma instância enquanto a conversa estiver em andamento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as mensagens fazem parte de uma conversa. Portanto, um serviço iniciador deve começar uma conversa com o serviço de destino antes de enviar-lhe uma mensagem. As informações especificadas na instrução BEGIN DIALOG CONVERSATION são semelhantes ao endereço em uma carta; o [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa as informações para entregar as mensagens ao serviço correto. O serviço especificado na cláusula TO SERVICE é o endereço para o qual as mensagens são enviadas. O serviço especificado na cláusula FROM SERVICE é o endereço de retorno usado para mensagens de resposta.  
   
  O destino de uma conversa não precisa chamar BEGIN DIALOG CONVERSATION. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] cria uma conversa no banco de dados de destino quando a primeira mensagem da conversa chega do iniciador.  
@@ -219,10 +218,9 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [Instrução END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Mover para a CONVERSA &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   
-

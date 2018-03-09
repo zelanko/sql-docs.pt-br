@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea0f897f2445ba48649dd74d01b4fc67a1527280
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cross-database-queries"></a>Consultas de bancos de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ Este exemplo ilustra um método para transferir dados de um banco de dados para 
 
 1. Crie objetos de teste.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +88,7 @@ Este exemplo ilustra um método para transferir dados de um banco de dados para 
 
 2.  Tente realizar consultas entre bancos de dados. Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +99,7 @@ Este exemplo ilustra um método para transferir dados de um banco de dados para 
 
 3.  Crie uma tabela com otimização de memória.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +115,7 @@ Este exemplo ilustra um método para transferir dados de um banco de dados para 
     ```
 
 4.  Tente realizar novamente as consultas entre bancos de dados.  Desta vez, os dados de origem serão transferidos primeiro para uma variável de tabela com otimização de memória.  Em seguida, os dados da variável de tabela serão transferidos para a tabela com otimização de memória.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -126,7 +127,7 @@ Este exemplo ilustra um método para transferir dados de um banco de dados para 
     GO 
     ```
    
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -3,32 +3,38 @@ title: "Prólogo do XQuery | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, prolog
 - prolog
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b007a65129ad217dea6ccb1f099211618c309851
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bb14308461be8c13e8a683ae842a63647191c9e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos e Prólogos - prólogo do XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Uma consulta XQuery é composta de prólogo e corpo. O prólogo do XQuery é uma série de declarações e definições que juntas criam o ambiente exigido para o processamento de consulta. No SQL Server, o prólogo do Xquery pode incluir declarações de namespace. O corpo do XQuery é constituído de uma sequência de expressões que especificam o resultado da consulta desejada.  
   

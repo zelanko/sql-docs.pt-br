@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-data-warehouse
+ms.technology:
+- sql-data-warehouse
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b1c9e31e5a5d3d2e31bdecce6eafda1a22ee302
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +47,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  Determina se o mascaramento de dados de usuário transparente de dados criptografia log estão habilitados. *masking_mode* é **int**, e pode ser um dos seguintes valores:  
   
 -   0 = desabilitado, o usuário dados aparecem no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] logs de atividade.  
@@ -56,7 +58,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  Executar **sp_pdw_ log_user_data_masking** sem parâmetros reverte o estado atual do mascaramento de dados de usuário de log TDE no dispositivo como um conjunto de resultado escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Mascaramento de dados do usuário [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] permite a substituição de literais de logs de atividades com valores constantes predefinidos em **selecione** e instruções DML, pois eles podem conter dados de usuário. Configuração *masking_mode* como 1 não mascara metadados, como nomes de coluna ou nomes de tabela. Configuração *masking_mode* 2 remove instruções com metadados, como nomes de coluna ou nomes de tabela.  
   
  Dados de usuário de mascaramento no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de atividade é implementada da seguinte maneira:  
@@ -81,6 +83,6 @@ EXEC sp_pdw_log_user_data_masking 1;
   
 ## <a name="see-also"></a>Consulte também  
  [sp_pdw_database_encryption &#40; SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40; SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

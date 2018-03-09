@@ -1,13 +1,14 @@
 ---
-title: "Especificar conexões para extensões de processamento de dados | Microsoft Docs"
+title: "Especificar conexões para extensões de processamento de dados personalizadas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "20"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5d9cab28d5b6ebe7a9675cffaf6f594a1230c45d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexões para extensões de processamento de dados personalizadas
   Você pode criar ou usar extensões de processamento de dados personalizados de terceiros em um servidor de relatório para aprimorar o recurso de processamento das fontes de dados compatíveis ou para oferecer suporte a tipos adicionais de fontes de dados que não estão disponíveis em uma instalação padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As conexões são tratadas de modo diferente dependendo da implementação. As implementações a seguir estão disponíveis para extensões de processamento de dados:  
@@ -82,14 +82,13 @@ ms.lasthandoff: 08/09/2017
 |Credenciais de banco de dados|Você pode usar a autenticação de banco de dados para configurar conexões para extensões de processamento de dados personalizados que usam **IDbConnectionExtension**.|  
 |Nenhuma credencial|Se a conta de execução autônoma for especificada, a cadeia de conexão determinará as credenciais que são usadas.<br /><br /> Se a conta de execução autônoma não for definida, o servidor de relatório interromperá a conexão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Criar, excluir ou modificar uma fonte de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propriedades de fonte de dados para um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

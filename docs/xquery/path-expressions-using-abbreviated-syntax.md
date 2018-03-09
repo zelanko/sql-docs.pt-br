@@ -3,8 +3,11 @@ title: "Usando a sintaxe em uma expressão de caminho abreviação | Microsoft D
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - axis step [XQuery]
 - abbreviated syntax [XQuery]
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2882ee4082e29ce4d4ad41f3347feb7eca4a0a46
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd4ed101bc96fb8c5c417ec1c47063d747af29df
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expressões de caminho - usando a sintaxe abreviada
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Todos os exemplos [Noções básicas sobre expressões de caminho no XQuery](../xquery/path-expressions-xquery.md) usam sintaxe não abreviada para expressões de caminho. A sintaxe não abreviada para uma etapa de eixo em uma expressão de caminho inclui o nome de eixo e teste de nó, separados por dois-pontos duplos e seguidos por zero ou mais qualificadores de etapa.  
   
@@ -74,4 +76,3 @@ child::ProductDescription[attribute::ProductModelID=19]
 -   O **pai:: node ()** em uma etapa pode ser abreviado como um ponto duplo (.).  
   
   
-

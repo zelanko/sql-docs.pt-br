@@ -1,13 +1,14 @@
 ---
-title: "Servidor do Reporting Services relatórios (modo nativo) | Microsoft Docs"
+title: "Servidor de relatório do Reporting Services (modo nativo) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-caps.latest.revision: 24
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "24"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65acea8f2887a2c45553c69d8d53ecfeb65e96a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo refere-se ao gerenciamento de relatórios, modelos, pastas, recursos e fontes de dados compartilhadas. Todos esses itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  
   
 > [!NOTE]  
->  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [configuração e administração de um servidor de relatório &#40; Reporting Services no modo do SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [Configuração e administração de um servidor de relatório &#40;modo do SharePoint do Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  O gerenciamento de conteúdo inclui as seguintes tarefas:  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados a partir do cache.  
   
- A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre estas funções predefinidas, consulte [funções e permissões &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   
@@ -112,9 +112,8 @@ ms.lasthandoff: 08/09/2017
   
  Para usar um recurso de imagem em um relatório, adicione o arquivo de imagem ao projeto e publique-o juntamente com o relatório. Quando a imagem for publicada, será possível atualizar a referência da imagem no relatório de modo que aponte para o recurso no servidor de relatório. Sendo assim, somente publique novamente o relatório para salvar as alterações. Você poderá atualizar subsequentemente a imagem, independentemente do relatório, republicando o recurso. O relatório usa a versão mais atual da imagem disponível no servidor de relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Solucionar um problema da instalação do Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   
-

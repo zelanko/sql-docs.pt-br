@@ -1,31 +1,30 @@
 ---
-title: "Propriedades do servidor (página geral) | Microsoft Docs"
+title: "Propriedades do Servidor (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 974897a7498eb9032bbe43933b9e9931f5969449
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-server-properties-general-page"></a>Propriedades do servidor de relatório (página geral)
+# <a name="report-server-properties-general-page"></a>Propriedades do Servidor de Relatório (página Geral)
   Use essa página para exibir ou modificar o título usado no Gerenciador de Relatórios, habilitar ou desabilitar Meus Relatórios, selecionar uma definição de função para a segurança de Meus Relatórios e habilitar e desabilitar o controle de impressão do cliente.  
   
  **Para abrir esta página:**
@@ -58,13 +57,12 @@ ms.lasthandoff: 08/09/2017
  Especifique uma definição de função a ser usada na segurança de Meus Relatórios. A definição de função identifica o conjunto de tarefas que tem suporte em cada pasta Meus Relatórios.  
 
   
-## <a name="see-also"></a>Consulte também  
- [Definir propriedades do servidor de relatório &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Conectar a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Habilitar e desabilitar meus relatórios](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Servidor de relatório na Ajuda de F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Habilitar e desabilitar Meus Relatórios](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Proteger Meus Relatórios](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

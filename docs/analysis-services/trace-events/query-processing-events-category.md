@@ -2,29 +2,30 @@
 title: Categoria de eventos de processamento de consulta | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 462d9a67cf2a56aaf46fb4106ec786c1d003d8a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-category"></a>Categoria de eventos de processamento de consultas
-  A categoria de evento Processamento de Consulta tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria de evento Processamento de Consulta tem as classes de evento descritas na tabela a seguir.  
   
 |**Event Class**|**ID do evento**|**Description**|  
 |---------------------|------------------|---------------------|  

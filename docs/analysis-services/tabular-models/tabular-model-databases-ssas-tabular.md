@@ -1,34 +1,31 @@
 ---
-title: Bancos de dados de modelo tabular (SSAS Tabular) | Microsoft Docs
+title: Bancos de dados de modelo de tabela | Microsoft Docs
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cbfa3c258d784b3a591abd13c2eb90f333bf53a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>Gerenciar bancos de dados de modelo de tabela implantado
-  Um banco de dados modelo de tabela é um banco de dados do Analysis Services que você cria no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto modelo de tabela do Analysis Services, onde tabelas e relações são as estruturas primárias para representar dados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Um banco de dados modelo de tabela é um banco de dados do Analysis Services que você cria no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto modelo de tabela do Analysis Services, onde tabelas e relações são as estruturas primárias para representar dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Processar banco de dados, tabela ou partição &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  
@@ -37,16 +34,16 @@ ms.lasthandoff: 09/01/2017
   
  [Partições de modelo de tabela](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)  
   
- [Conecte-se a um banco de dados de modelo de tabela](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar-se a um modelo de banco de dados tabular](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurar do Power Pivot](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
   
 
     
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluções de modelo tabular](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
- [Acesso a dados de modelo de tabela](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Acesso de dados de modelo de tabela](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
 [Mover um banco de dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/01/2017
   
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

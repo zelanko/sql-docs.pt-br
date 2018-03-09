@@ -2,27 +2,33 @@
 title: Classe de evento Hash Warning | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Hash Warning event class
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8743fe8a2905eeff25a806d08e6dd7e076c3c60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="hash-warning-event-class"></a>Classe de evento Hash Warning
-  A classe de evento Hash Warning pode ser usada para monitorar quando uma recursão de hash ou cessação de hashing (esgotamento de hash) ocorreu durante a operação de hashing.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento Hash Warning pode ser usada para monitorar quando uma recursão de hash ou cessação de hashing (esgotamento de hash) ocorreu durante a operação de hashing.  
   
  A recursão de hash ocorre quando a entrada de criação não cabe na memória disponível, ocasionando a divisão da entrada em várias partições que são processadas separadamente. Se qualquer uma dessas partições ainda não couber na memória disponível, será dividida em subpartições, que serão processadas separadamente. Esse processo de divisão continuará até que cada partição caiba na memória disponível ou até que o nível máximo de recursão seja atingido (exibido na coluna de dados IntegerData).  
   
@@ -48,21 +54,21 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="hash-warning-event-class-data-columns"></a>Colunas de dados da classe de evento Hash Warning  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo em vez do nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|**int**|Tipo de evento = 55.|27|Não|  
-|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
+|EventClass|**int**|Tipo de evento = 55.|27|não|  
+|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
 |EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 0=Recursion<br /><br /> 1=Bailout|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData|**int**|Nível de recursão (somente recursão de hash).|25|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |LoginName|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows no formato *\<DOMAIN>\\<username\>*).|11|Sim|  
-|LoginSid|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|LoginSid|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |ObjectID|**int**|ID do nó da raiz da equipe hash envolvida na repartição. Corresponde à ID do nó nos Showplans.|22|Sim|  
@@ -74,7 +80,8 @@ ms.lasthandoff: 11/09/2017
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)    
+ [Junções](../../relational-databases/performance/joins.md)    
   
   

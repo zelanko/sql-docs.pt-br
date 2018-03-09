@@ -1,30 +1,30 @@
 ---
 title: "Práticas recomendadas de desempenho para o SQL Server no Linux | Microsoft Docs"
-description: "Este tópico fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux."
+description: "Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Práticas recomendadas e diretrizes de configuração para 2017 do SQL Server no Linux
 
-Este tópico fornece as práticas recomendadas e recomendações para maximizar o desempenho de aplicativos de banco de dados que se conectar ao SQL Server no Linux. Essas recomendações são específicas para execução na plataforma Linux. Todas as recomendações normais do SQL Server, como criação de índice, ainda se aplicam.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Este artigo fornece as práticas recomendadas e recomendações para maximizar o desempenho de aplicativos de banco de dados que se conectar ao SQL Server no Linux. Essas recomendações são específicas para execução na plataforma Linux. Todas as recomendações normais do SQL Server, como criação de índice, ainda se aplicam.
 
 As diretrizes a seguir contém recomendações sobre como configurar o SQL Server e o sistema operacional Linux.
 
@@ -36,7 +36,7 @@ As diretrizes a seguir contém recomendações sobre como configurar o SQL Serve
 
 - **Usar a AFINIDADE de processo para o nó e/ou CPUs**
 
-   É recomendável usar `ALTER SERVER CONFIGURATION` definir `PROCESS AFFINITY` para todos os **NUMANODEs** e/ou CPUs está usando para o SQL Server (que normalmente é para todos os nós e CPUs) em um sistema operacional Linux. Afinidade do processador ajuda a manter o comportamento eficiente do Linux e agendamento de SQL. Usando o **NUMANODE** opção é o método mais simples. Observe que você deve usar **a AFINIDADE do processo** mesmo se você tiver apenas um único nó em seu computador.  Consulte o [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentação para obter mais detalhes sobre como definir **a AFINIDADE do processo**.
+   É recomendável usar `ALTER SERVER CONFIGURATION` definir `PROCESS AFFINITY` para todos os **NUMANODEs** e/ou CPUs está usando para o SQL Server (que normalmente é para todos os nós e CPUs) em um sistema operacional Linux. Afinidade do processador ajuda a manter o comportamento eficiente do Linux e agendamento de SQL. Usando o **NUMANODE** opção é o método mais simples. Observe que você deve usar **a AFINIDADE do processo** mesmo se você tiver apenas um único nó em seu computador.  Consulte o [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentação para obter mais informações sobre como definir **a AFINIDADE do processo**.
 
 - **Configurar vários arquivos de dados tempdb**
 
@@ -57,7 +57,6 @@ As recomendações a seguir são parâmetros de configuração opcionais que voc
 Considere usar as seguintes configurações do sistema operacional Linux com o melhor desempenho para uma instalação do SQL Server.
 
 ### <a name="kernel-settings-for-high-performance"></a>Configurações de kernel de alto desempenho
-
 Esses são o desempenho relacionado ao alto de configurações de sistema operacional Linux recomendada e a taxa de transferência para uma instalação do SQL Server. Consulte a documentação do sistema operacional Linux para o processo definir essas configurações.
 
 
@@ -67,7 +66,7 @@ Esses são o desempenho relacionado ao alto de configurações de sistema operac
 
 A tabela a seguir fornece recomendações para configurações de CPU:
 
-| Configuração | Valor | Mais informações |
+| Configuração | Value | Mais informações |
 |---|---|---|
 | Administrador de frequência de CPU | desempenho | Consulte o **cpupower** comando |
 | ENERGY_PERF_BIAS | desempenho | Consulte o **x86_energy_perf_policy** comando |
@@ -76,10 +75,10 @@ A tabela a seguir fornece recomendações para configurações de CPU:
 
 A tabela a seguir fornece recomendações para configurações de disco:
 
-| Configuração | Valor | Mais informações |
+| Configuração | Value | Mais informações |
 |---|---|---|
 | leitura antecipada de disco | 4096 | Consulte o **blockdev** comando |
-| configurações de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Consulte o **sysctl** comando |
+| configurações de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consulte o **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel configuração automática numa balanceamento para sistemas com vários nós NUMA
 
@@ -94,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 A configuração padrão de **vm.max_map_count** (que é 65536) não pode ser alto o suficiente para uma instalação do SQL Server. Altere esse valor (que é um limite superior) para 256K.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Desabilitar acessado pela última vez data/hora em sistemas de arquivos para arquivos de log e de dados do SQL Server
@@ -118,4 +117,3 @@ Se você estiver executando o SQL Server no Linux em uma máquina virtual, certi
 Para saber mais sobre os recursos do SQL Server que melhoram o desempenho, consulte [começar com recursos de desempenho](sql-server-linux-performance-get-started.md).
 
 Para obter mais informações sobre o SQL Server no Linux, consulte [visão geral do SQL Server no Linux](sql-server-linux-overview.md).
-

@@ -2,25 +2,26 @@
 title: "Adicionar visualizações a relatórios móveis do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Adicionar visualizações a relatórios móveis do Reporting Services
 Os gráficos são uma parte essencial da visualização de dados. Saiba mais sobre os gráficos que você pode usar nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cobrir diversos cenários. 
@@ -67,13 +68,13 @@ O gráfico de tempo é o gráfico mais básico do [!INCLUDE[SS_MobileReptPub_Sho
 
 2. Por padrão, ele é um gráfico de barras empilhadas. É possível alterar isso em **Visualização da série**.
 
-3. Se o gráfico precisar de dados que ainda não estão no relatório, selecione a guia **Dados** > **Adicionar dados** para [obter dados do Excel ou um conjunto de dados compartilhados](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Se o gráfico precisar de dados que ainda não estão no relatório, selecione a guia **Dados** > **Adicionar dados** para [obter dados do Excel ou de um conjunto de dados compartilhado](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. No painel **Propriedades de dados**, a **Série Principal** é **SimulatedTable**. Clique a seta na caixa > selecione a tabela.
+3. No painel **Propriedades de dados** , a **Série Principal** é **SimulatedTable**. Clique a seta na caixa > selecione a tabela.
 
-5. Se você definir **Estrutura de dados** como **Por colunas** (na guia **Layout** > painel **Propriedades visuais**), aqui no painel **Propriedades de dados**, você poderá selecionar várias colunas de valores numéricos.
+5. Se você definir **Estrutura de dados** como **Por colunas** (na guia **Layout** > painel **Propriedades de visual**), no painel **Propriedades de dados**, poderá selecionar várias colunas de valores numéricos.
 
-   Se você definir **Estrutura de dados** como **Por linhas**, aqui no painel **Propriedades de dados**, você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
+   Se você definir **Estrutura de dados** como **Por linhas**, aqui no painel **Propriedades de dados** , você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
    
 Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
@@ -123,7 +124,7 @@ Em gráficos de comparação, você pode optar por ter as mesmas cores do gráfi
 ## <a name="pie-and-funnel-charts"></a>Gráficos de pizza e de funil  
   
 Gráficos de pizza e funil estão entre as visualizações mais simples. Você pode estruturar os dados por linhas ou colunas. 
-* Os**gráficos de pizza** nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total nos relatórios móveis do the center. Os gráficos de pizza são úteis para mostrar o tamanho relativo das diferentes partes de um todo. Um número excessivo de fatias dificulta a leitura.
+* Os **gráficos de pizza** nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ser pizza, rosca ou rosca com um total no centro. Os gráficos de pizza são úteis para mostrar o tamanho relativo das diferentes partes de um todo. Um número excessivo de fatias dificulta a leitura.
 * Em geral, os**gráficos de funil** são usados para mostrar os estágios de um processo, como vendas.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
@@ -200,5 +201,4 @@ Os gráficos de cascata são uma boa opção:
 * [Grades de dados nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Medidores nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

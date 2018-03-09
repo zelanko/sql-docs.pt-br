@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Estatística de SQL| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
-  O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
   
  Compilação é uma parte significativa do tempo de retorno de uma consulta. Para economizar no custo da compilação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] salva o plano de consulta compilado em um cache de consulta. O objetivo do cache é reduzir a compilação por meio do armazenamento das consultas compiladas para reutilização posterior encerrando, assim, a solicitação para recompilar consultas quando forem executadas mais tarde. Porém, cada consulta exclusiva deve ser compilada pelo menos uma vez. Recompilações de consultas podem ser causadas pelos seguintes fatores:  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
  Esses são os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics**.  
   
-|Contadores do SQL Server SQL Statistics|Descrição|  
+|Contadores do SQL Server SQL Statistics|Description|  
 |----------------------------------------|-----------------|  
 |**Tentativas de Param. Autom./s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
 |**Solicitações em Lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 |**Recompilações de SQL/s**|Número de recompilações de instruções por segundo. Conta o número de vezes que as recompilações de instrução são acionadas. Geralmente é preferível que as recompilações sejam baixas.|  
 |**Param. Autom. sem segurança/s**|Número de tentativas de parametrização automática não segura por segundo. Por exemplo, a consulta tem algumas características que impedem o plano armazenado em cache de ser compartilhado. Esses são designados como inseguros. Isso não conta o número de parametrizações forçadas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server, objeto Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

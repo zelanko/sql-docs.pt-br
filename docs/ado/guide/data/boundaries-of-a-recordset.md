@@ -3,7 +3,7 @@ title: Limites de um conjunto de registros | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 96473d512ed586ebdb155e3422f6559294c2616d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 **Conjunto de registros** oferece suporte a **BOF** e **EOF** propriedades para delimitar o início e término, respectivamente, do conjunto de dados. Você pode pensar **BOF** e **EOF** como "fantasmas" registros que são posicionados no início e fim do **registros**. Contagem de **BOF** e **EOF**, nosso exemplo **registros** agora ficaria assim:  
@@ -78,4 +77,3 @@ else
  Esse esquema funciona para todos os tipos de cursor e é independente dos provedores subjacentes. Se você tentar determinar o emptiness de um **registros** objeto verificando se seu **RecordCount** valor da propriedade é zero (0) ou não, você deve tomar precauções para usar um cursor apropriado e o provedor que suporte ao retorno do número de registros no resultado.  
   
  Se você excluir o último registro restante no **registros** do objeto, o cursor será deixado em um estado indeterminado. O **BOF** e **EOF** propriedades podem permanecer **False** até que você tente reposicionar o registro atual, de acordo com o provedor. Para obter mais informações, consulte [excluindo registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
-

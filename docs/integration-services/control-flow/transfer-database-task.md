@@ -1,5 +1,5 @@
 ---
-title: "Transferência de banco de dados tarefa | Microsoft Docs"
+title: Tarefa Transferir Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
   A tarefa Transferir Banco de Dados transfere um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao contrário das outras tarefas que transferem apenas objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de cópia, a tarefa Transferir Banco de Dados pode copiar ou mover um banco de dados. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor.  
@@ -104,7 +103,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Transferir Banco de Dados.  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
@@ -112,10 +111,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique o nome do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor de destino.  
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/11/2017
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Verdadeiro**|Substitui o banco de dados no servidor de destino.|  
 |**Falso**|Não substitui o banco de dados no servidor de destino.|  
@@ -168,7 +167,7 @@ ms.lasthandoff: 08/11/2017
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Verdadeiro**|Anexa novamente o banco de dados de origem.|  
 |**Falso**|Não anexa novamente o banco de dados de origem.|  
@@ -214,4 +213,3 @@ ms.lasthandoff: 08/11/2017
  Insira o local de compartilhamento de arquivos na rede ou clique em Procurar para localizá-lo.  
   
  Ao transferir um banco de dados em modo offline, os arquivos de banco de dados são copiados para o local **Compartilhamento de arquivo na rede** antes de serem transferidos para o local **Pasta de destino** .  
-

@@ -3,24 +3,29 @@ title: "Novidades na instalação do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0bcea823209741e5fb675ff770cd89d7ad44d194
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novidades na instalação do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  A instalação tem suporte apenas em processadores x64. Para obter mais informações, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
@@ -31,7 +36,7 @@ ms.lasthandoff: 11/09/2017
  A atualização do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tem suporte, mas lado a lado não. Para obter mais informações sobre o suporte de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Novidades no SQL Server](../../sql-server/what-s-new-in-sql-server-2017.md)
 
 [Especificações de capacidade máxima do SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)   

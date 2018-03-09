@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText (geometry Data Type)
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9df0e2b397a82a85c1ecdea87f6159c9b5c99905
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: eaae45e1621532d5687398a108b005860dbb14cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método lançará um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,8 +70,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

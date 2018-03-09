@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0552f93e5318e5a282b92c88fe12345e6883670d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
@@ -41,23 +38,22 @@ ms.lasthandoff: 09/09/2017
   
 |*Função*|Tem suporte|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|Não|  
-|SQL_API_SQLCOLUMNPRIVELEGES|Não|  
+|SQL_API_SQLBROWSECONNECT|não|  
+|SQL_API_SQLCOLUMNPRIVELEGES|não|  
 |SQL_API_SQLDATASOURCES|Sim|  
-|SQL_API_SQLDESCRIBEPARAM|Não|  
+|SQL_API_SQLDESCRIBEPARAM|não|  
 |SQL_API_SQLDRIVERS|Sim|  
 |SQL_API_SQLEXTENDEDFETCH|Sim|  
-|SQL_API_SQLFOREIGNKEYS|Não|  
+|SQL_API_SQLFOREIGNKEYS|não|  
 |SQL_API_SQLMORERESULTS|Sim|  
-|SQL_API_SQLNATIVESQL|Não|  
+|SQL_API_SQLNATIVESQL|não|  
 |SQL_API_SQLNUMPARAMS|Sim|  
 |SQL_API_SQLPARAMOPTIONS|Sim|  
 |SQL_API_SQLPRIMARYKEYS|Sim|  
-|SQL_API_SQLPROCEDURECOLUMNS|Não|  
-|SQL_API_SQLPROCEDURES|Não|  
+|SQL_API_SQLPROCEDURECOLUMNS|não|  
+|SQL_API_SQLPROCEDURES|não|  
 |SQL_API_SQLSETPOS|Sim|  
 |SQL_API_SQLSETSCROLLOPTIONS|Sim|  
-|SQL_API_SQLTABLEPRIVILEGES|Não|  
+|SQL_API_SQLTABLEPRIVILEGES|não|  
   
  Para obter mais informações, consulte [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) no *referência do programador de ODBC*.
-

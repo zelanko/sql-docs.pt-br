@@ -2,9 +2,12 @@
 title: Replicar colunas de identidade | Microsoft Docs
 ms.custom: 
 ms.date: 10/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a41807f24128f40c645f9f75993524eacbd6d042
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c69e39305a23fafee8c264db3fdb315b6595d01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
-  Quando se atribui uma propriedade IDENTITY a uma coluna, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gera automaticamente números sequenciais para novas linhas inseridas na tabela que contém a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Como as colunas de identidade podem ser incluídas como parte da chave primária, é importante evitar valores duplicados nas colunas de identidade. Para que colunas de identidade sejam usadas em uma topologia de replicação que tenha atualizações em mais de um nó, cada nó da topologia de replicação precisará usar um intervalo diferente de valores de identidade, de modo que não ocorram duplicatas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando se atribui uma propriedade IDENTITY a uma coluna, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gera automaticamente números sequenciais para novas linhas inseridas na tabela que contém a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Como as colunas de identidade podem ser incluídas como parte da chave primária, é importante evitar valores duplicados nas colunas de identidade. Para que colunas de identidade sejam usadas em uma topologia de replicação que tenha atualizações em mais de um nó, cada nó da topologia de replicação precisará usar um intervalo diferente de valores de identidade, de modo que não ocorram duplicatas.  
   
  Por exemplo, o intervalo de 1 a 100 poderia ser atribuído ao Publicador; o intervalo de 101 a 200 ao Assinante A e o intervalo de 201 a 300 ao Assinante B. Se uma linha for inserida no Publicador e o valor de identidade for, por exemplo, 65, esse valor será replicado para cada Assinante. Quando a replicação insere dados em cada Assinante, isso não incrementa o valor da coluna de identidade na tabela Assinante. Em vez disso, o valor literal 65 é inserido. Somente as inserções do usuário, não as inserções do agente de replicação, causam o incremento da coluna de identidade.  
   
@@ -125,7 +128,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Se o valor da coluna identidade estiver definido para redução em vez de incremento, registre o valor mais baixo encontrado, depois semeie novamente esse valor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   

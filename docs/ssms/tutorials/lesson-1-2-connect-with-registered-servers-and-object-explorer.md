@@ -2,27 +2,30 @@
 title: Conectar-se com os Servidores Registrados e com o Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0077010615a2859b1b76f79fd1302d0f0ec8e7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5514eccd9ccfe59362d9bbe752692433327e06e2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>Lição 1-2 – Conectar-se com os Servidores Registrados e com o Pesquisador de Objetos
-Este tutorial demonstra o uso de Servidores Registrados e do Pesquisador de Objetos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tutorial demonstra o uso de Servidores Registrados e do Pesquisador de Objetos.  
   
 Este tutorial usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os exemplos de bancos de dados não são instalados por padrão. Para obter mais informações, consulte [Instalando exemplos de SQL Server e bancos de dados de exemplo](http://sqlserversamples.codeplex.com).  
   

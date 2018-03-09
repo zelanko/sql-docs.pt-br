@@ -19,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ffe70ad712605222a66dc12ba7af4e330dc12c9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 614ecad2f669fed40ac5fd7ca30b994bedb0ac6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retornará a cadeia de caracteres "Nulo" quando chamado em instâncias nulas.  
   
  Em instâncias não nulas, esse método é equivalente a usar `AsTextZM().`  
@@ -64,8 +63,7 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>Consulte também  
  [STAsText &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
- [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

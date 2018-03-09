@@ -1,16 +1,14 @@
 ---
 title: Trabalhando com o modelo de objeto do ADOMD.NET | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - object model (client) [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5ab7348371437e79b52f16c98890aa2c93431b8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 81a9272284e662eb7f5f47e464e85e324b92a39d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>Recuperando metadados - trabalhando com o modelo de objeto do ADOMD.NET
   O ADOMD.NET oferece um modelo de objeto para a exibição dos cubos e dos objetos subordinados contidos em uma fonte de dados analíticos. No entanto, nem todos os metadados de uma determinada fonte de dados analíticos estarão disponíveis por meio do modelo de objeto. O modelo de objeto só fornece acesso às informações mais úteis para que um aplicativo cliente as exiba e permita que um usuário crie comandos de forma interativa. Por causa da complexidade reduzida dos metadados em apresentar, o modelo de objeto do ADOMD.NET é mais fácil usar.  
@@ -72,4 +69,3 @@ ms.lasthandoff: 10/24/2017
  [Recuperando metadados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

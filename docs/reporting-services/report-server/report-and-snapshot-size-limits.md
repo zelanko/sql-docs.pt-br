@@ -1,13 +1,14 @@
 ---
-title: "Limites de tamanho de relatório e o instantâneo | Microsoft Docs"
+title: "Limites de tamanho de relatório e instantâneo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "48"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9498eab0fb3117567aab18207f3a207fd0410c2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -85,10 +85,9 @@ EXEC sp_spaceused
   
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Banco de dados de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

@@ -2,10 +2,14 @@
 title: "Definir a serialização de dados XML| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc424a86cdbb1437c705de4a719ba863770d32ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02ae370490f638a0ad02d5539473c61c6c89b2b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
-  Ao converter tipos de dados xml explícita ou implicitamente em uma cadeia de caracteres SQL ou tipo binário, o conteúdo do tipo de dados xml será serializado de acordo com as regras descritas neste tópico.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ao converter tipos de dados xml explícita ou implicitamente em uma cadeia de caracteres SQL ou tipo binário, o conteúdo do tipo de dados xml será serializado de acordo com as regras descritas neste tópico.  
   
 ## <a name="serialization-encoding"></a>Codificação de serialização  
  Se o tipo de destino SQL for VARBINARY, o resultado será serializado em UTF-16 com uma marca de ordem de 16 bytes UTF na frente, mas sem uma declaração XML. Se o tipo de destino for muito pequeno, será retornado um erro.  
@@ -152,7 +157,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Isso retorna o valor da cadeia de caracteres 13.4.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de conversão de tipo em XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

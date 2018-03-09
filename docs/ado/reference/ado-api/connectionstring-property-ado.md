@@ -3,7 +3,7 @@ title: Propriedade ConnectionString (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34db69d25ff835de4f8c81d252c99017ae4acbb5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>Propriedade ConnectionString (ADO)
 Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.  
@@ -36,18 +35,18 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **ConnectionString** propriedade para especificar uma fonte de dados, passando uma cadeia de caracteres de conexão detalhadas que contém uma série de *argumento* *= valor* instruções separadas por ponto e vírgula.  
   
  ADO dá suporte a cinco argumentos para o **ConnectionString** propriedade; qualquer outro passo argumentos diretamente para o provedor sem nenhum processamento pelo ADO. O oferece suporte ao ADO de argumentos são da seguinte maneira.  
   
 |Argumento|Description|  
 |--------------|-----------------|  
-|*Provedor =*|Especifica o nome de um provedor a ser usado para a conexão.|  
+|*Provider=*|Especifica o nome de um provedor a ser usado para a conexão.|  
 |*Nome do arquivo =*|Especifica o nome de um arquivo específico do provedor (por exemplo, um objeto de fonte de dados persistentes) que contém informações de conexão predefinidos.|  
 |*Provedor remoto =*|Especifica o nome de um provedor a ser usada ao abrir uma conexão de cliente. (Apenas serviço de dados remotos.)|  
-|*Servidor remoto =*|Especifica o nome do caminho do servidor a ser usada ao abrir uma conexão de cliente. (Apenas serviço de dados remotos.)|  
-|*URL =*|Especifica a cadeia de caracteres de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
+|*Remote Server=*|Especifica o nome do caminho do servidor a ser usada ao abrir uma conexão de cliente. (Apenas serviço de dados remotos.)|  
+|*URL=*|Especifica a cadeia de caracteres de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
   
  Depois de definir o **ConnectionString** propriedade e abra o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto, o provedor pode alterar o conteúdo da propriedade, por exemplo, mapeando os nomes de argumento definido ADO para seu equivalentes para o provedor específico.  
   
@@ -76,4 +75,3 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
  [Exemplo de propriedades de estado (VB), ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Exemplo de propriedades de estado (VC + +), ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-

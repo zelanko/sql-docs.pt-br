@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>Origem CDC
   A origem CDC lê um intervalo de dados de alteração de tabelas de alteração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e entrega o downstream de alterações a outros SSIS componentes.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/17/2017
   
 -   O nome da variável de pacote do estado CDC com base no qual o intervalo de Processamento CDC é determinado. A origem CDC não modifica essa variável.  
   
- Os dados retornados pela origem CDC são o mesmo que o retornado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções CDC **fn_cdc_get_all_changes _\<nome da instância de captura >** ou **fn_cdc_get_net_changes _\<nome da instância de captura >** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Os dados retornados pela Origem CDC são iguais aos retornados pelas funções do CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  A origem CDC tem uma saída regular e uma saída de erro.  
   
@@ -86,20 +85,20 @@ use <cdc-enabled-database-name>
   
  onde:  
   
--   \<CDC-habilitado-database-name > é o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados que contém as tabelas de alteração.  
+-   \<cdc-enabled-database-name> é o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém as tabelas de alterações.  
   
--   \<valor-from-state-cs > é o valor que aparece na variável de estado de CDC, como em CS /\<valor-from-state-cs > / (CS significa Current-processamento--início do intervalo).  
+-   \<value-from-state-cs> é o valor que aparece na variável de estado CDC como CS/\<value-from-state-cs>/ (CS significa Current-processing-range-Start, início atual do intervalo de processamento).  
   
--   \<valor de estado ce > é o valor que aparece na variável de estado de CDC, como em CE /\<valor-from-state-cs > / (CE significa Current-processamento--fim do intervalo).  
+-   \<value-from-state-ce> é o valor que aparece na variável de estado CDC, como em CE/\<value-from-state-cs>/ (CE significa Current-processing-range-End).  
   
--   \<modo > são os modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
+-   \<mode> corresponde aos modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
   
  Este script ajuda a isolar problemas reproduzindo-os no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], onde é fácil reproduzir e identificar erros.  
   
 #### <a name="sql-server-error-message"></a>Mensagem de erro do SQL Server  
  A mensagem seguinte poderá ser retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Um número insuficiente de argumentos foi fornecido para o procedimento ou função CDC. fn_cdc_get_net_changes_\<... >.**  
+ **Um número insuficiente de argumentos foram fornecidos ao procedimento ou função cdc.fn_cdc_get_net_changes_\<..>.**  
   
  Esse erro não indica que um argumento está faltando. Significa que os valores de LSN de início ou fim na variável de estado CDC são inválidos.  
   
@@ -110,7 +109,7 @@ use <cdc-enabled-database-name>
   
 -   [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origem CDC &#40; Página colunas &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor de Origem CDC &#40;página Colunas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -146,7 +145,7 @@ use <cdc-enabled-database-name>
  **Gerenciador de conexões ADO.NET**  
  Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
   
- **Novo**  
+ **Nova**  
  Clique em **Nova**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
   
  **Tabela CDC**  
@@ -155,7 +154,7 @@ use <cdc-enabled-database-name>
  **Instância de captura**  
  Selecione ou digite o nome da instância de captura CDC com a tabela CDC que deve ser lida.  
   
- Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome de instância de captura padrão para uma tabela [esquema]. [table] é \<esquema > _\<tabela >, mas que os nomes de instância de captura real em uso podem ser diferentes. A tabela real que é lido da é a tabela CDC **cdc.\< instância de captura > CT**.  
+ Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome padrão da instância de captura para uma tabela [esquema].[tabela] é \<esquema>_\<tabela>, mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela da qual a leitura é realmente realizada é a tabela CDC **cdc.\<instância-de-captura>_CT**.  
   
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
@@ -166,7 +165,7 @@ use <cdc-enabled-database-name>
   
 -   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
--   **Líquido com máscara de atualização**: este modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\__Changed** que indica a linha de alteração de colunas alteradas na atual.  
+-   **Líquido com máscara atualizada**: este modo é semelhante ao modo Líquido normal, mas também adiciona colunas boolianas com o nome padrão **__$\<nome-da-coluna>\__Changed**, que indica as colunas alteradas na linha de alteração atual.  
   
 -   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
   
@@ -230,7 +229,7 @@ use <cdc-enabled-database-name>
  **Truncation**  
  Selecione como a origem CDC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Description**  
+ **Descrição**  
  Não usado.  
   
  **Definir este valor para células selecionadas**  
@@ -256,4 +255,3 @@ use <cdc-enabled-database-name>
 -   Entrada de blog, [Modos de processamento para a origem de CDC](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), em mattmasson.com.  
   
   
-

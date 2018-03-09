@@ -3,8 +3,9 @@ title: Propriedade EditMode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::EditMode
-helpviewer_keywords: EditMode property
+f1_keywords:
+- Recordset15::EditMode
+helpviewer_keywords:
+- EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078c1b9979339fc31f3b9e064094892caef0d6c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 759d8891929bf546d9dc81f66367c866b23c6e6c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="editmode-property"></a>Propriedade EditMode
 Indica o status de edição do registro atual.  
@@ -32,7 +35,7 @@ Indica o status de edição do registro atual.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ADO mantém um buffer de edição associado ao registro atual. Essa propriedade indica se foram feitas alterações a esse buffer, ou se um novo registro foi criado. Use o **EditMode** propriedade para determinar o status de edição do registro atual. Você pode testar alterações pendentes se um processo de edição foi interrompido e determinar se é necessário usar o [atualização](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
   
  Em *modo de atualização imediata* o **EditMode** propriedade é redefinida para **adEditNone** após uma chamada bem-sucedida para o **atualizar** é chamado de método . Quando uma chamada para [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md) com êxito exclui o registro ou os registros na fonte de dados (por exemplo, devido a violações de integridade referencial), o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) permanece no modo de edição (**EditMode** = **adEditInProgress**). Portanto, **CancelUpdate** deve ser chamado antes de mover fora do registro atual (por exemplo, com [mover](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), ou [fechar](../../../ado/reference/ado-api/close-method-ado.md) ).  

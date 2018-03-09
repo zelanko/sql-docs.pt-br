@@ -2,9 +2,12 @@
 title: "Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35a71754742484b4a1cdf35f5b28526e6e12309b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados)
-  O reparo automático de página tem suporte do espelhamento de banco de dados e de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O reparo automático de página é compatível com o espelhamento de banco de dados e com o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
   
  Em geral, o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tratam erros de E/S de formas equivalentes. As poucas diferenças são destacadas explicitamente aqui.  
   

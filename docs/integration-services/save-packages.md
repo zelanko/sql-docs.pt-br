@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ea8bfe361b01ebebbbdd3a794187f4d2983c55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-packages"></a>Salvar pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , você cria pacotes usando o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e salva os pacotes no sistema de arquivos como arquivos XML (arquivos .dtsx). Você também pode salvar cópias do arquivo XML de pacote no banco de dados msdb no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes. O repositório de pacotes representa as pastas no local do sistema de arquivos que o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/26/2017
     >  É possível verificar na janela Propriedades o caminho e o nome de arquivo onde o pacote foi salvo.  
 
 ## <a name="save-a-copy-of-a-package"></a>Salvar uma cópia de um pacote
-  Esta seção descreve como salvar uma cópia de um pacote para o sistema de arquivos, para o repositório de pacotes ou para o **msdb** banco de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ao especificar um local para salvar a cópia do pacote, também é possível atualizar o nome do pacote.  
+  Esta seção descreve como salvar uma cópia de um pacote no sistema de arquivos, no repositório de pacotes ou no banco de dados **msdb** no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ao especificar um local para salvar a cópia do pacote, também é possível atualizar o nome do pacote.  
   
  O repositório do pacote pode incluir o banco de dados **msdb** e as pastas no sistema de arquivos, somente **msdb**, ou somente pastas no sistema de arquivos. No **msdb**, os pacotes são salvos na tabela **sysssispackages** . Esta tabela inclui uma coluna **folderid** que identifica a pasta lógica a qual o pacote pertence. As pastas lógicas fornecem uma maneira útil de agrupar pacotes salvos em **msdb** da mesma forma que as pastas no sistema de arquivos fornecem uma maneira de agrupar pacotes salvos no sistema de arquivos. As linhas na tabela **sysssispackagefolders** em **msdb** definem as pastas.  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  No Gerenciador de Soluções, clique duas vezes no pacote do qual você quer salvar uma cópia.  
   
-2.  Sobre o **arquivo** menu, clique em **Salvar cópia do \<arquivo de pacote > como**.  
+2.  No menu **Arquivo**, clique em **Salvar Cópia do \<arquivo de pacote> Como**.  
   
 3.  Na caixa de diálogo **Salvar Cópia do Pacote** , selecione um local de pacote na lista **Local dos pacotes** . As seguintes opções estão disponíveis:  
     -   SQL Server
@@ -94,7 +93,7 @@ ms.lasthandoff: 09/26/2017
 9. Clique em **OK**.  
 
 ## <a name="save-a-package-as-a-package-template"></a>Salvar um pacote como um modelo de pacote
- Esta seção descreve como designar e usar pacotes personalizados como modelos ao criar novos pacotes do Integration Services em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Por padrão, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa um modelo de pacote que cria um pacote vazio quando você adiciona um novo pacote a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Você não pode substituir este modelo padrão, mas pode adicionar novos modelos.  
+ Esta seção descreve como designar e usar pacotes personalizados como modelos para criar novos pacotes do Integration Services no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Por padrão, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa um modelo de pacote que cria um pacote vazio quando você adiciona um novo pacote a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Você não pode substituir este modelo padrão, mas pode adicionar novos modelos.  
   
  Você pode designar vários pacotes para serem usados como modelos. Antes de implementar os pacotes personalizados como modelos, é preciso criá-los.  
   
@@ -114,9 +113,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e clique em **Novo Item**.  
   
-3.  No **Adicionar Novo Item -\<nome do projeto >** caixa de diálogo caixa, clique no pacote que você deseja usar como modelo.  
+3.  Na caixa de diálogo **Adicionar Novo Item – \<nome do projeto**, clique no pacote que deseja usar como modelo.  
   
      A lista de modelos inclui o modelo padrão do pacote chamado Novo Pacote SSIS. O ícone do pacote identifica os modelos que podem ser usados como modelos de pacote.  
   
 4.  Clique em **Adicionar**.  
-

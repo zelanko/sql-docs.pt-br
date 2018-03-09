@@ -2,10 +2,14 @@
 title: Habilitar e desabilitar o Change Data Capture (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 77002b107ffcd26066850394b5d713d020919bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
-  Este tópico descreve como habilitar e desabilitar o Change data Capture para um banco de dados e uma tabela.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como habilitar e desabilitar o Change data Capture para um banco de dados e uma tabela.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar o Change Data Capture para um banco de dados  
  Para que uma instância de captura possa ser criada para tabelas individuais, um membro da função fixa de servidor **sysadmin** deve primeiro habilitar o banco de dados para a captura de dados de alteração. Isso é feito usando o procedimento armazenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) no contexto de banco de dados. Para determinar se um banco de dados está habilitado, consulte a coluna **is_cdc_enabled** na exibição de catálogo **sys.databases**.  
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  Para localizar os modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vá para **Exibir**, clique em **Explorador de Modelos**e selecione **Modelos do SQL Server**. **Change Data Capture** é uma subpasta. Nesta pasta, você encontrará todos os modelos referenciados neste tópico. Também há um ícone do **Explorador de Modelos** na barra de ferramentas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -60,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  Para localizar os modelos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vá para **Exibir**, clique em **Explorador de Modelos**e em **Modelos do SQL Server**. **Change Data Capture** é uma subpasta na qual você encontrará todos os modelos referenciados neste tópico. Também há um ícone do **Explorador de Modelos** na barra de ferramentas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -83,7 +88,7 @@ GO
   
  Por padrão, a tabela de alteração está localizada no grupo de arquivos padrão do banco de dados. Proprietários de banco de dados que queiram controlar o posicionamento de tabelas de alterações individuais podem usar o parâmetro *@filegroup_name* para especificar determinado grupo de arquivos para a tabela de alterações associada à instância de captura. O grupo de arquivos nomeado já deve existir. Geralmente, é recomendável que tabelas de alterações sejam colocadas em um grupo de arquivos separado das tabelas de origem. Confira o modelo **Habilitar uma tabela especificando a opção de grupo de arquivos** para obter um exemplo que mostra o uso do parâmetro *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -105,7 +110,7 @@ GO
   
  Se você não quiser usar uma função associada, defina explicitamente o parâmetro *@role_name* como NULL. Confira o modelo **Habilitar uma tabela sem uma função associada** para obter um exemplo de como habilitar uma tabela sem uma função associada.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -130,7 +135,7 @@ GO
   
  Confira o modelo **Habilitar uma tabela para tudo e consultas de alterações líquidas** para obter um exemplo que demonstra a criação de uma instância de captura com ambas as funções de consulta.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -154,7 +159,7 @@ GO
   
  Consulte o modelo Desabilitar uma Instância de Captura para uma Tabela para obter um exemplo de como desabilitar uma tabela.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -167,7 +172,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -3,7 +3,7 @@
 # Visão geral
 ## [Novidades do Integration Services no SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [Novidades do Integration Services no SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [Artigos novos e atualizados recentemente](new-updated-integration-services.md)
+## [Artigos novos e atualizados](new-updated-integration-services.md)
 ## [Recursos do Integration Services compatíveis com as edições do SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilidade com versões anteriores do Integration Services](integration-services-backward-compatibility.md)
 
@@ -25,10 +25,11 @@
 
 # [Migrar pacotes do SSIS por lift-and-shift para o Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutorial – implantar, executar e monitorar um pacote no Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Conectar-se a fontes de dados com a autenticação do Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Conectar aos arquivos e compartilhamentos de arquivo](lift-shift/ssis-azure-files-file-shares.md)
+## [Validar pacotes implantados no Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Instalar ou atualizar](../integration-services/install-windows/install-integration-services.md)
 
@@ -72,6 +73,7 @@
 # [Implantar pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
+# [Catálogo e servidor](catalog/integration-services-ssis-server-and-catalog.md)
 # [Serviço (herdado)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Segurança](../integration-services/security/security-overview-integration-services.md)
 # [Desempenho](../integration-services/performance/monitor-running-packages-and-other-operations.md)
@@ -173,11 +175,8 @@
 #### [Lição 3-3 – testar os pacotes implantados](lesson-3-3-testing-the-deployed-packages.md)
 
 # Recursos
-## Siga o blog
-### [Blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
-## Obter ajuda
-### [Fórum do SSIS no MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
-### [Marca do SSIS no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Faça comentários
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Obter ajuda no fórum do SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Obter ajuda no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Seguir o blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Relatar problemas e solicitar recursos](https://feedback.azure.com/forums/908035-sql-server)
 ## [Obter os documentos em seu computador](../sql-server/sql-server-help-installation.md)

@@ -2,27 +2,30 @@
 title: "Práticas recomendadas para filtros de linha com base em hora | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f52f422d5804a14dc3fbac86ac40a2d3a143ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
-  Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função **GETDATE()** para realizar isso. Considere a seguinte instrução de filtro de linha:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função **GETDATE()** para realizar isso. Considere a seguinte instrução de filtro de linha:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
@@ -92,9 +95,9 @@ GO
   
  Os eventos para a próxima semana estão sinalizados agora como estando prontos para serem replicados. A próxima vez que o Merge Agent for executado para a assinatura que o coordenador de eventos 112 usa, as linhas 2,3 e 4 serão baixadas para o Assinante e a linha 1 será removida do Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

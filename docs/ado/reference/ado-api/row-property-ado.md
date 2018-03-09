@@ -3,7 +3,7 @@ title: Linha de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,22 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 093b4fdc13df9ae1bc62ace896ca2f0d9d3f9cda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19b935d43739d1a1ce19f414cae12b00c311b261
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="row-property-ado"></a>Propriedade de linha (ADO)
 Obtém ou define um banco de dados OLE **linha** objeto de ou em um [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objeto. Quando você usa **put_Row** para definir um **linha** do objeto, uma linha será transformada em ADO **registro** objeto.  
   
-## <a name="readwritesyntax"></a>Leitura/gravação. Sintaxe  
+## <a name="readwritesyntax"></a>Read/write.Syntax  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -56,4 +55,3 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Interface ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
-

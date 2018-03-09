@@ -2,9 +2,12 @@
 title: "Práticas recomendadas de segurança de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3a7593fc934487d0726128c22de4654cf036961
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85ab9523752bc1f72c1535cc00e51e50dbac946e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-security-best-practices"></a>Práticas recomendadas em relação à segurança de replicação
-  A replicação move dados em ambientes distribuídos variando deste intranets em um único domínio até aplicativos que acessam dados entre domínios não confiáveis e na internet. É importante para entender a melhor abordagem para proteger as conexões de replicação sob essas diversas circunstâncias.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação move dados em ambientes distribuídos variando desde intranets em um único domínio até aplicativos que acessam dados entre domínios não confiáveis e pela Internet. É importante para entender a melhor abordagem para proteger as conexões de replicação sob essas diversas circunstâncias.  
   
  As informações abaixo são relevantes para a replicação em todos os ambientes:  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
     -   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Execute cada agente de replicação em uma conta diferente do Windows e use a Autenticação do Windows para todas as conexões de agente de replicação. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Quando for necessária a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , normalmente o acesso ao compartilhamento de instantâneo UNC não estará disponível (por exemplo, o acesso poderá ser bloqueado por um firewall). Neste caso, você pode transferir o instantâneo aos Assinantes por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replicação na Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Proteger o Assinante](../../../relational-databases/replication/security/secure-the-subscriber.md)   

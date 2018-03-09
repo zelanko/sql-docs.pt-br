@@ -1,36 +1,33 @@
 ---
-title: "Caixa de diálogo páginas de propriedades do projeto | Microsoft Docs"
+title: "Caixa de diálogo Páginas de Propriedades do Projeto | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rpt.rptdesigner.projectpropertypages.general.f1
-helpviewer_keywords:
-- Project Property Pages dialog box
+f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
 
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, a partir de **projeto** menu, clique em  *\<nome do projeto de relatório >***propriedades**.  
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em *\<Report Project Name>***Propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
 
@@ -93,8 +90,7 @@ ms.lasthandoff: 08/09/2017
 
 [Publicar Relatórios](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [Publicar um relatório em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Definir propriedades de implantação &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

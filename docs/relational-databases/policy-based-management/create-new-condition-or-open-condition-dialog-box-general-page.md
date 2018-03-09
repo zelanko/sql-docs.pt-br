@@ -2,27 +2,30 @@
 title: "Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 462f69731988e6813c021ad62117879e80625ddd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 69116441118315b2fa9bcf92ab5b20fcc725b73e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral
-  Use esta caixa de diálogo para criar ou alterar uma condição de Gerenciamento Baseado em Políticas. A condição é uma expressão Booleana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação às facetas. As propriedades que podem ser selecionadas na caixa **Expressão/Campo** dependem da faceta usada. Para obter mais informações sobre como condições se relacionam às facetas e às políticas, veja [Administrar servidores usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para criar ou alterar uma condição de Gerenciamento Baseado em Políticas. A condição é uma expressão Booleana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação às facetas. As propriedades que podem ser selecionadas na caixa **Expressão/Campo** dependem da faceta usada. Para obter mais informações sobre como condições se relacionam às facetas e às políticas, veja [Administrar servidores usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
  **Operador**  
  Selecione um operador de comparação para esta expressão. Os operadores são os seguintes: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
- **Valor**  
+ **Value**  
  A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Os valores da cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'**. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
 ## <a name="group-clauses"></a>Agrupar Cláusulas  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Pressione a tecla SHIFT ou CTRL e clique em duas ou mais cláusulas para selecionar um intervalo. Clique com o botão direito do mouse na área selecionada e clique em **Agrupar Cláusulas**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

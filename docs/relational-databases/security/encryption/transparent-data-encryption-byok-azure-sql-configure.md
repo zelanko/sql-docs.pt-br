@@ -2,33 +2,34 @@
 title: "PowerShell: habilitar a TDE usando sua própria chave do Azure Key Vault | Microsoft Docs"
 description: "Saiba como configurar um Data Warehouse e um Banco de dados SQL do Azure para começar a usar a TDE (Transparent Data Encryption) para a criptografia em repouso usando o PowerShell."
 keywords: 
-services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.author: aliceku
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: habilitar a Transparent Data Encryption usando sua própria chave do Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell: Habilitar a Transparent Data Encryption usando sua própria chave no Azure Key Vault (versão prévia)
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Este guia de instruções explica como usar uma chave do Azure Key Vault para a TDE (Transparent Data Encryption) no Data Warehouse ou no Banco de Dados SQL. Para saber mais sobre a TDE com suporte a BYOK (Bring Your Own Key), visite [TDE com Bring Your Own Key para SQL do Azure](transparent-data-encryption-byok-azure-sql.md). 
+Este guia de instruções explica como usar uma chave no Azure Key Vault para a TDE (Transparent Data Encryption) (em versão prévia) em um Banco de Dados SQL ou Data Warehouse. Para saber mais sobre a TDE com suporte a BYOK (Bring Your Own Key) (em versão prévia), visite [TDE com Bring Your Own Key para o SQL do Azure](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Você deve ter uma assinatura do Azure e ser um administrador na assinatura.
 - [Recomendado, mas opcional] Ter um HSM (módulo de segurança de hardware) ou repositório de chaves local para criar uma cópia local do material da chave do Protetor de TDE.
@@ -66,7 +67,7 @@ Se você estiver criando um servidor, use o cmdlet [New-AzureRmSqlServer](/power
 
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Etapa 2. Conceder permissões do Key Vault para seu servidor
 
-Use o cmdlet [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) para conceder acesso ao seu servidor para o cofre de chaves antes de usar uma chave dele para a TDE.
+Use o cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) para conceder acesso ao servidor ao cofre de chaves antes de usar uma chave dele para a TDE.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -190,6 +191,5 @@ Verifique o seguinte se ocorrer um problema:
 
 - Saiba como girar o Protetor de TDE de um servidor para atender aos requisitos de segurança: [Girar o Protetor de Transparent Data Encryption usando o PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - No caso de um risco de segurança, saiba como remover um Protetor de TDE potencialmente comprometido: [Remover uma chave potencialmente comprometida](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
-
 
 

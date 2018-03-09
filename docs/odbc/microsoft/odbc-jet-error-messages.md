@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- error messages (ODBC driver for oracle)
+helpviewer_keywords: error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 206ebbdc1dd8a121f3c41f95cd305de6f4ef3d10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fad2aab1020cb7a56c00a2b78c1d2c46a41c422
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-jet-error-messages"></a>Mensagens de erro de Jet de ODBC
 Para erros que ocorrem na fonte de dados, o driver ODBC retorna uma mensagem de erro retornada a ele pela biblioteca de arquivo do ODBC. Para erros que ocorrem no driver ODBC ou o Gerenciador de Driver, retorna o driver que uma mensagem de erro com base no texto associado a SQLSTATE.  
@@ -44,4 +41,3 @@ Para erros que ocorrem na fonte de dados, o driver ODBC retorna uma mensagem de 
 |-------------------|--------------------|  
 |[Microsoft] [Gerenciador de Driver ODBC] *texto da mensagem*|Gerenciador de driver (Odbc32. dll)|  
 |[Microsoft] [ODBC *nome do driver*]*texto da mensagem*|O driver ISAM (consulte ISAMs Driver)|
-

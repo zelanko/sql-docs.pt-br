@@ -3,7 +3,7 @@ title: Usando o ADO com linguagens de script | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usando o ADO com linguagens de script
 Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do servidor. Nesse cenário, ADO, o provedor OLE DB subjacente que ele usa, e quaisquer outros componentes necessários para fazer referência a um repositório de dados são instalados em um servidor executando o Internet Information Services (IIS). Usando o Active Server Pages (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Este conteúdo HTML pode ser passado por meio de HTTP para um navegador da Web do cliente. Usando o script, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualizar, percorrer ou visualizar dados específicos.  
@@ -36,17 +35,17 @@ Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do
 |Objeto|É seguro para script?|  
 |------------|-------------------------|  
 |Conexão do ADO|Sim|  
-|Comando ADO|Não|  
-|Parâmetro de ADO|Não|  
-|Conjunto de registros ADO|Sim|  
-|Registro de ADO|Sim|  
-|Fluxo de ADO|Sim|  
-|Erro de ADO|Não|  
-|Catálogo ADOX|Não|  
-|Conjunto de células ADOX|Não|  
+|Comando ADO|não|  
+|Parâmetro de ADO|não|  
+|ADO Recordset|Sim|  
+|ADO Record|Sim|  
+|ADO Stream|Sim|  
+|Erro de ADO|não|  
+|Catálogo ADOX|não|  
+|ADOX CellSet|não|  
 |DataControl RDS|Sim|  
 |DataSpace RDS|Sim|  
-|DataFactory do RDS|Não|  
+|DataFactory do RDS|não|  
   
  A tabela a seguir lista os provedores incluídos com o Windows DAC/MDAC e indica se eles são seguros para script.  
   
@@ -55,8 +54,8 @@ Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do
 |Forma|Sim|  
 |Manter|Sim|  
 |Remote|Sim|  
-|Provedor OLE DB para SQL Server (SQLOLEDB)|Não|  
-|Provedor OLE DB para ODBC (MSDASQL)|Não|  
+|Provedor OLE DB para SQL Server (SQLOLEDB)|não|  
+|Provedor OLE DB para ODBC (MSDASQL)|não|  
   
 ## <a name="odbc-data-sources"></a>Fontes de dados ODBC  
  Uma diferença notável entre o código de ADO do script e scripts não é a fonte de dados ODBC, se usado. Para aplicativos não-script, você pode criar um DSN de usuário administrador da fonte de dados ODBC. Para scripts que são executados no IIS, você deve criar um DSN de sistema; Caso contrário, os scripts não reconhece a fonte de dados que você criou. Isso se aplica a qualquer aplicativo de script do ADO usando o Microsoft OLE DB Provider para ODBC por meio do Microsoft IIS.  
@@ -77,4 +76,3 @@ Em um ambiente de script, ADO permite expor dados por meio de scripts do lado do
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usando o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-

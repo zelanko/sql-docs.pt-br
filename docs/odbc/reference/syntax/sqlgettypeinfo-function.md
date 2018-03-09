@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>Função SQLGetTypeInfo
 **Conformidade**  
@@ -113,7 +113,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** podem não retornar todos os tipos de dados. Por exemplo, um driver pode não retornar tipos de dados definidos pelo usuário. Aplicativos podem usar qualquer tipo de dados válido, independentemente se ele é retornado por **SQLGetTypeInfo**. Os tipos de dados retornados por **SQLGetTypeInfo** são aquelas com suporte pela fonte de dados. Eles são destinados a uso em instruções de linguagem de definição de dados (DDL). Drivers podem retornar dados de conjunto de resultados usando tipos de dados que não sejam os tipos retornados pela **SQLGetTypeInfo**. Ao criar o conjunto de resultados de uma função de catálogo, o driver pode usar um tipo de dados que não é suportado pela fonte de dados.  
   
-|Nome da coluna|Coluna<br /><br /> number|Tipo de dados|Comentários|  
+|Nome da coluna|coluna<br /><br /> number|Tipo de dados|Comentários|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar não nulo|Nome do tipo de dados de origem dependente de dados; Por exemplo, "Char ()", "Varchar ()", "MONEY", "VARBINARY longo" ou "CHAR () para dados BIT". Aplicativos devem usar esse nome no **CREATE TABLE** e **ALTER TABLE** instruções.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint não NULL|Tipo de dados SQL. Isso pode ser um tipo de dados SQL ODBC ou um tipo de dados SQL específico do driver. Para tipos de dados datetime ou intervalo, esta coluna retorna o tipo de dados conciso (como SQL_TYPE_TIME ou SQL_INTERVAL_YEAR_TO_MONTH). Para obter uma lista de tipos de dados ODBC SQL válidos, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) no Apêndice d: os tipos de dados. Para obter informações sobre tipos de dados SQL específico do driver, consulte a documentação do driver.|  
@@ -148,6 +148,6 @@ SQLRETURN SQLGetTypeInfo(
 |Buscando uma única linha ou um bloco de dados em uma direção de somente avanço|[Função SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |Retornando informações sobre um driver ou fonte de dados|[Função SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

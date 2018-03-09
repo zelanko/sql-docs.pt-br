@@ -3,10 +3,10 @@ title: "Enviar comentários de telemetria à Microsoft (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
 caps.latest.revision: "18"
-ms.openlocfilehash: f2c928c8f61a98af3eb1e5f05881683dbcaedf1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Enviar comentários de telemetria à Microsoft
 Analytics Platform System tem um recurso de telemetria opcional que envia dados de Console de administração para a Microsoft. Recomendamos que você habilite esta opção para nos ajudar a melhorar o produto.  
@@ -116,7 +116,7 @@ Se você vir quaisquer erros ou informações que levam você acreditar que o co
   
 Não há nenhum problema em execução o `Disable-RemoteMonitoring` comando várias vezes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 [Monitorar o dispositivo por meio de exibições do sistema &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md)  
 [Monitorar o dispositivo usando o System Center Operations Manager &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

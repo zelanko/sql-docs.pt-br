@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8008f980f72c76ded7911329c2d86d5c67ab13c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operações de índice paralelo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 -   A opção de índice MAXDOP substitui a opção de configuração max degree of parallelism apenas para consultas que especificam essa opção. A tabela a seguir lista os valores inteiros válidos que podem ser especificados com a opção de configuração grau máximo de paralelismo e a opção de índice MAXDOP.  
   
-    |Valor|Descrição|  
+    |Valor|Description|  
     |-----------|-----------------|  
     |0|Especifica que o servidor determina o número de CPUs que são usadas, dependendo da carga de trabalho do sistema atual. Esse é o valor padrão e a configuração recomendada.|  
     |1|Suprime a geração de plano paralelo. A operação será executada em série.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Para definir o grau máximo de paralelismo de um índice existente  
   

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetStmtOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetStmtOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetStmtOption
-helpviewer_keywords:
-- SQLGetStmtOption function [ODBC]
+f1_keywords: SQLGetStmtOption
+helpviewer_keywords: SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fadcedf9134fbd7d71865145a469d374156a0c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ec96d3d6e48d3dfaddd19a57d912ed546c5a253
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtoption-function"></a>Função SQLGetStmtOption
 **Conformidade**  
@@ -44,7 +38,6 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3. *x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -1,32 +1,38 @@
 ---
 title: Novidades no SQL Server 2016
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: novo sql server
+keywords:
+- novo sql server
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: "224"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  Com o SQL Server 2016, você pode compilar aplicativos críticos inteligentes usando uma plataforma de banco de dados híbrido escalonável que contém tudo integrado, desde desempenho na memória e a segurança avançada até análise no banco de dados. A versão do SQL Server 2016 adiciona novos recursos de segurança, recursos de consulta, integração do Hadoop com a nuvem, análise R e muito mais, juntamente com vários aprimoramentos e melhorias. 
 
 Esta página fornece informações de resumo e links para informações mais detalhadas de novidades do SQL Server 2016 para cada componente do SQL Server. 
@@ -100,7 +106,7 @@ Confira [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-serv
 
 ## <a name="next-steps"></a>Próximas etapas   
 - [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
-- [Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+- [Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
 - [Folha de dados do SQL Server 2016](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [Recursos com suporte nas edições do SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)

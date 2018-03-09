@@ -1,13 +1,14 @@
 ---
-title: "Extensões de processamento de dados e provedores de dados do .NET Framework (SSRS) | Microsoft Docs"
+title: "Extensões de processamento de dados e provedores de dados .NET Framework (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb8a4c575fd2dd6eea33ca875f0b54a999791d26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensões de processamento de dados e provedores de dados do .NET Framework (SSRS)
   Uma extensão de processamento de dados [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um componente instalado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], projetado para recuperar dados de um tipo específico de fonte de dados e para fornecer funcionalidade adicional para oferecer suporte ao design de relatórios e processamento de relatórios. Uma extensão de processamento de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é um componente disponível do [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou de fontes de terceiros que dá suporte às interfaces <xref:System.Data> que permitem que você recupere e modifique dados de um tipo específico de fonte de dados.  
@@ -50,11 +50,10 @@ ms.lasthandoff: 08/09/2017
  Uma vez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tem uma arquitetura de provedor de dados extensível, você pode criar uma extensão de processamento de dados personalizada para incluir a funcionalidade extra fornecida pelas extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Para as extensões de processamento de dados de terceiros, consulte a documentação que acompanha a extensão de processamento de dados de terceiros.  
   
 > [!NOTE]  
->  Um provedor de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ou uma extensão de processamento de dados personalizada deve ser instalada e registrada antes de ser usada para acessar dados de uma fonte de dados. A extensão de processamento de dados deve ser instalada e registrada tanto no cliente de relatório para criá-lo quanto no servidor de relatórios para exibir o relatório publicado. Nem todos os provedores de dados se destinam a funcionar em um ambiente de servidor. Para obter mais informações, consulte [Registrar um provedor de dados padrão do .NET Framework &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) e [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
+>  Um provedor de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ou uma extensão de processamento de dados personalizada deve ser instalada e registrada antes de ser usada para acessar dados de uma fonte de dados. A extensão de processamento de dados deve ser instalada e registrada tanto no cliente de relatório para criá-lo quanto no servidor de relatórios para exibir o relatório publicado. Nem todos os provedores de dados se destinam a funcionar em um ambiente de servidor. Para obter mais informações, consulte [Registrar um provedor de dados .NET Framework padrão &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) e [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral das extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

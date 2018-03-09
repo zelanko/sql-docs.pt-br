@@ -3,8 +3,11 @@ title: Gerenciar objetos usando o Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gerenciar objetos usando o Pesquisador de Objetos
-Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Exibindo objetos no Pesquisador de Objetos  
 O Pesquisador de Objetos usa uma estrutura de árvore para agrupar informações em pastas. Para expandir pastas, clique no sinal de mais (+) ou clique duas vezes na pasta. Expanda pastas para mostrar informações mais detalhadas. Clique com o botão direito do mouse em pastas ou objetos para executar tarefas comuns. Clique duas vezes nos objetos para executar a tarefa mais comum.  
@@ -55,7 +58,7 @@ Quando o Pesquisador de Objetos estiver conectado a um servidor, você poderá a
 ### <a name="start-powershell"></a>Iniciar o PowerShell  
 Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do PowerShell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do PowerShell em um ambiente interativo do PowerShell. Para saber mais, confira [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
 [Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  

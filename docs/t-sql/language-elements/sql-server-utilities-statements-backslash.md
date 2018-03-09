@@ -1,10 +1,13 @@
 ---
-title: (Barra invertida) (Transact-SQL) | Microsoft Docs
+title: "Barra invertida (continuação de linha) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,24 +33,21 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 011025d20b6341b9fa43b25f6c14c91a135a6ffa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6cc27da58953985a2fa4910583bde2dd31d67405
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---backslash"></a>Instruções de utilitários do SQL Server - barra invertida
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="backslash-line-continuation-transact-sql"></a>Barra invertida (continuação de linha) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece comandos que não estão [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, mas são reconhecidos pelo **sqlcmd** e **osql** utilitários e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de códigos. Estes comandos podem ser usados para facilitar a legibilidade e a execução de lotes e scripts.  
-  
-\ divide uma cadeia de caracteres longa constante em duas ou mais linhas para facilitar a leitura.  
+`\`quebra uma constante de cadeia de caracteres longa, caractere ou binário, em duas ou mais linhas para facilitar a leitura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,17 +65,18 @@ ms.lasthandoff: 09/01/2017
  \<continuação de seção de cadeia de caracteres >  
  É a continuação de uma cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse comando retorna a primeira seção e as seções contínuas da cadeia de caracteres como uma cadeia de caracteres, sem a barra invertida.  
-  
- A barra invertida não é uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. É um comando reconhecido pelo **sqlcmd** e **osql** utilitários e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de códigos.  
-  
+
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa uma barra invertida e um retorno de carro para dividir a cadeia de caracteres em duas linhas.  
+
+### <a name="a-splitting-a-character-string"></a>A. Dividir uma cadeia de caracteres  
+
+O exemplo a seguir usa uma barra invertida e um retorno de carro para dividir uma cadeia de caracteres em duas linhas.  
   
 ```  
 SELECT 'abc\  
-def' AS ColumnResult;  
+def' AS [ColumnResult];  
   
 ```  
   
@@ -86,14 +87,31 @@ def' AS ColumnResult;
  ------------  
  abcdef
  ```    
+
+### <a name="b-splitting-a-binary-string"></a>B. Dividir uma cadeia de caracteres binária  
+
+O exemplo a seguir usa uma barra invertida e um retorno de carro para dividir uma cadeia de caracteres binária em duas linhas.  
+
+```  
+SELECT 0xabc\  
+def AS [ColumnResult];  
   
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ ColumnResult  
+ ------------  
+ 0xABCDEF
+ ```    
+
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [&#40; divisão &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; dividir EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
+ [&#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-

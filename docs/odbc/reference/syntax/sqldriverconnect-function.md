@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDriverConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDriverConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDriverConnect
-helpviewer_keywords:
-- SQLDriverConnect function [ODBC]
+f1_keywords: SQLDriverConnect
+helpviewer_keywords: SQLDriverConnect function [ODBC]
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b9576bf21c922c1e8d223710210a1703f1cbec3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade**  
@@ -234,7 +228,7 @@ SQLRETURN SQLDriverConnect(
   
     -   Na nova cadeia de conexão, o **FILEDSN** palavra-chave é eliminado.  
   
-4.  Carrega o driver examinando a entrada do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\\< nome do Driver\>\Driver onde \<nome do Driver > for especificado o **DRIVER** palavra-chave.  
+4.  Carrega o driver examinando a entrada do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\\< nome do Driver\>\Driver onde \<nome do Driver > for especificado o **DRIVER** palavra-chave.  
   
 5.  Passa o driver a nova cadeia de caracteres de conexões.  
   
@@ -374,7 +368,6 @@ int main() {
 |Liberando um identificador|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

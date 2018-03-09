@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_enlist_TSQL
 - sp_msx_enlist
-dev_langs: TSQL
-helpviewer_keywords: sp_msx_enlist
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7aaafbe078ffa9cedf87241bc61060fc3b61bdad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b7984972ac467403114b62e30390e86d007eb401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +38,6 @@ ms.lasthandoff: 11/17/2017
   
 > [!CAUTION]  
 >  O **sp_msx_enlist** procedimento armazenado edita o registro. A edição manual do registro não é recomendada, pois alterações incorretas ou não apropriadas podem causar sérios problemas de configuração para o sistema. Portanto, apenas usuários experientes deveriam usar o programa Editor do Registro para editar o registro. Para obter mais informações, consulte a documentação do Microsoft Windows.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +50,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@msx_server_name =**] **'***msx_server***'**  
+ [ **@msx_server_name =**] **'***msx_server***'**  
  O nome do servidor de administração multisservidor (mestre). *msx_server* é **sysname**, sem padrão.  
   
  [  **@location =**] **'***local***'**  
@@ -79,8 +78,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_msx_defect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

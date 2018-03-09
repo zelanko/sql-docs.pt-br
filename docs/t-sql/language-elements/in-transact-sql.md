@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IN_TSQL
 - IN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], matching
 - NOT IN keyword
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 86d03b96015869efb8ff2ab873b1c838c50387f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +55,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *subconsulta*  
+ *subquery*  
  É uma subconsulta que tem um conjunto de resultados de uma coluna. Essa coluna deve ter os mesmos dados de tipo como *test_expression*.  
   
  *expressão*[ **,**... *n* ]  
@@ -70,7 +72,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Qualquer valor nulo retornado por *subconsulta* ou *expressão* que são comparados aos *test_expression* usando IN ou NOT IN retornará UNKNOWN. Usar valores nulos junto com IN ou NOT IN pode produzir resultados inesperados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Incluir explicitamente um número muito grande de valores (muitos milhares de valores separados por vírgulas) dentro dos parênteses, em uma cláusula IN pode consumir recursos e retornar erros 8623 ou 8632. Para contornar esse problema, armazene os itens na lista em uma tabela e use uma subconsulta SELECT dentro de uma cláusula IN.  
   
  Erro 8623:  
@@ -210,14 +212,14 @@ WHERE FirstName IN ('Mike', 'Michael');
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [Todos os &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [Alguns &#124; QUALQUER &#40; Transact-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
 

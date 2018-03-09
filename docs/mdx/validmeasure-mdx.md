@@ -2,34 +2,32 @@
 title: ValidMeasure (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- VALIDMEASURE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ValidMeasure function
+f1_keywords: VALIDMEASURE
+dev_langs: kbMDX
+helpviewer_keywords: ValidMeasure function
 ms.assetid: ecf20a86-c45e-4521-84ce-3a466e0c1136
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 343ebe6da0613d273dc16bd1b76826910179db2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e79e41a1ed625351500ab45479736d990a14fb58
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o valor de uma medida em um cubo, forçando dimensões inaplicáveis para o nível Todos (ou o membro padrão, se não agregável) durante o retorno de resultados para uma tupla especificada.  
   
@@ -44,7 +42,7 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Uma linguagem MDX válida que retorna uma tupla.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ValidMeasure** função retorna o valor de uma tupla, ignorando atributos que não têm nenhuma relação com o grupo de medidas da medida cujo valor é retornado pela tupla. Um atributo pode não estar relacionado a uma medida por dois motivos:  
   
 -   A dimensão do atributo não tem relação com o grupo de medidas da medida na tupla.  
@@ -81,8 +79,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

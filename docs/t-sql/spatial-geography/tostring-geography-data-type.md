@@ -8,23 +8,27 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ToString (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: ToString method
+f1_keywords:
+- ToString (geography Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26affe3f63d15d92ed672ef2f9dd083ca658cb44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bcec246b4358b3d8b59467975bb836ea226463ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="tostring-geography-data-type"></a>ToString (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retorna a cadeia de caracteres "Null" quando chamado em instâncias nulas. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o conjunto de resultados possíveis no servidor foi estendido para **FullGlobe** instâncias. Esse método retornará o mesmo valor que `AsTextZM()`.  
   
  Esse método não é preciso.  

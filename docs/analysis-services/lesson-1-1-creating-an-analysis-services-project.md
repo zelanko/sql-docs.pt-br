@@ -2,29 +2,32 @@
 title: "Criar uma análise de projeto de serviços | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Lição 1-1-criar um projeto do Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Na tarefa a seguir, você usará o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar um novo projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] chamado **Tutorial do Analysis Services**, com base no modelo Projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Um *projeto* é uma coleção de objetos relacionados. Os projetos existem dentro de uma solução que inclui um ou mais projetos. Para obter mais informações, consulte [Criar um projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Para criar um novo projeto do Analysis Services  
@@ -45,7 +48,7 @@ Você criou o projeto **Tutorial do Analysis Services** com êxito, com base no 
   
 ## <a name="see-also"></a>Consulte também  
 [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Criar um projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Criar um projeto do Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

@@ -2,10 +2,13 @@
 title: "Tutorial: Relatório de mapa (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -13,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eff98b4bac895c945e48b19be9ef40131d829662
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -542,12 +545,12 @@ Se você salvá-lo em um servidor de relatório, poderá exibi-lo nele.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Isso conclui o passo a passo da adição de um mapa ao seu relatório.  
   
 Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

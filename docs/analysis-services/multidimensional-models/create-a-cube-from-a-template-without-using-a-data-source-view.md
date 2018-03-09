@@ -2,38 +2,35 @@
 title: "Criar um cubo a partir de um modelo sem usar uma exibição da fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
-  Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
  No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
- Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
+ Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 |Coluna|Description|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
-|**Name**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  
+|**Nome**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  
 |**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar estes quatro tipos de atributo em uma dimensão de modelo.|  
 |**Atributos**|Exibe os atributos que devem ser criados para a dimensão. Cada nome de atributo na lista é precedido pelo nome de dimensão. Esta lista é somente leitura. Você pode editar os atributos usando o Designer de Dimensão depois de concluir o assistente.|  
   
@@ -107,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  Na página **Concluindo o Assistente** , examine a estrutura do novo cubo e, na caixa **Nome do cubo** , digite um nome para ele. Como opção, marque a caixa de seleção **Gerar esquema agora** para iniciar o assistente de geração de esquema. Na maioria dos casos, você não deve marcar esta caixa de seleção se planejar criar outros objetos. Você também pode usar o Designer de Cubo para gerar o esquema posteriormente.  
   
   
-

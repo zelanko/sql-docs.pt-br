@@ -2,26 +2,31 @@
 title: "Protocolos para propriedades MSSQLSERVER (guia Avançado) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f006e161323a8f86147a63e2dde9ae4eebbcbb5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2a1cfb458983a017352384f4074be455ee4994c5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protocolos para propriedades de MSSQLSERVER (guia Avançado)
-  Use a guia **Avançado** na caixa de diálogo **Protocolos para Propriedades de MSSQLSERVER** para configurar a **Proteção Estendida para Autenticação** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A**Proteção Estendida** é um recurso dos componentes de rede implementado pelo sistema operacional. A**Proteção Estendida** está disponível no Windows 7 e no Windows Server 2008 R2 e está incluída em service packs de sistemas operacionais anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**. Alguns benefícios da **Proteção Estendida** exigem a seleção de **Forçar Criptografia** na guia **Sinalizadores** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Use a guia **Avançado** na caixa de diálogo **Protocolos para Propriedades de MSSQLSERVER** para configurar a **Proteção Estendida para Autenticação** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A**Proteção Estendida** é um recurso dos componentes de rede implementado pelo sistema operacional. A**Proteção Estendida** está disponível no Windows 7 e no Windows Server 2008 R2 e está incluída em service packs de sistemas operacionais anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**. Alguns benefícios da **Proteção Estendida** exigem a seleção de **Forçar Criptografia** na guia **Sinalizadores** .  
   
 > [!IMPORTANT]  
 >  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte o artigo [Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkId=178431)na Base de Dados de Conhecimento.  

@@ -2,10 +2,14 @@
 title: Executar o depurador Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +25,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>Executar o depurador Transact-SQL
-  Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] depois de abrir uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Em seguida, você pode executar seu código [!INCLUDE[tsql](../../includes/tsql-md.md)] em modo de depuração até parar o depurador. Você pode definir opções para personalizar como o depurador é executado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] depois de abrir uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Em seguida, você pode executar seu código [!INCLUDE[tsql](../../includes/tsql-md.md)] em modo de depuração até parar o depurador. Você pode definir opções para personalizar como o depurador é executado.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>Iniciando e parando o depurador  
  Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] são os seguintes:  
@@ -107,7 +111,7 @@ ms.lasthandoff: 11/09/2017
 |**Desabilitar Todos os Pontos de Interrupção**|Não disponível|Não disponível|Não disponível|Desabilitar todos os pontos de interrupção.|  
 |Não disponível|**Adicionar Inspeção**|Não disponível|Não disponível|Adicionar a expressão selecionada à janela **Inspeção** .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

@@ -1,16 +1,17 @@
 ---
 title: "Conceitos dos objetos de gerenciamento de replicação | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "61"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ad05dda9ba5ae8ac81416c87b6538525fa53352e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O RMO (Replication Management Objects) é um assembly de código gerenciado que encapsula funcionalidades de replicação para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O RMO é implementado pelo namespace <xref:Microsoft.SqlServer.Replication>.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/03/2017
  [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Os tópicos desta seção mostram como usar o RMO para criar, excluir e modificar publicações e artigos.  
   
- [Assinar Publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
  Os tópicos desta seção mostram como usar o RMO para criar, excluir e modificar assinaturas.  
   
  [Proteger uma topologia de replicação](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
@@ -187,14 +188,17 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  Embora a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ofereça suporte à declaração explícita de transações durante a configuração de propriedades, tais transações poderão interferir em transações internas de replicação, poderão gerar resultados inesperados e não deverão ser usadas com RMO.  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>Habilitando o suporte do TLS 1.2 em componentes RMO 
+ O suporte a TLS1.2 em componentes RMO no Windows 2012 e inferior pode ser habilitado com a instalação da atualização [KB 3140245](http://support.microsoft.com/help/3140245) e criação das chaves do Registro, conforme mencionado no artigo. No Windows 2012 R2 e versões posteriores, somente as chaves do Registro mencionadas no artigo acima precisam ser criadas.
+ 
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra o cache de alterações de propriedade. As alterações feitas nos atributos de uma publicação transacional são armazenadas em cache até serem explicitamente enviadas ao servidor.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Conceitos de programação da replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

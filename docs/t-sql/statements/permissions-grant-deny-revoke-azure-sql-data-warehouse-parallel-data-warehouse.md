@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,20 +83,20 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<permissão > [ **,**... *n* ]  
+ \<permission>[ **,**...*n* ]  
  Uma ou mais permissões para conceder, negar ou revogar.  
   
  ON [ \<class_type >::] *protegível* o **ON** cláusula descreve o parâmetro protegível na qual deseja conceder, negar ou revogar permissões.  
   
- \<class_type > o tipo de classe do protegível. Isso pode ser **LOGIN**, **banco de dados**, **objeto**, **esquema**, **função**, ou **usuário** . Também podem ser concedidas permissões para o **servidor***class_type*, mas **SERVER** não for especificado para essas permissões. **Banco de dados** não for especificado quando a permissão inclui a palavra **banco de dados** (por exemplo **ALTER ANY DATABASE**). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada como **objeto**.  
+ \<class_type > o tipo de classe do protegível. Isso pode ser **LOGIN**, **banco de dados**, **objeto**, **esquema**, **função**, ou **usuário** . Também podem ser concedidas permissões para o **SERVER * class_type*, mas **SERVER** não for especificado para essas permissões. **Banco de dados** não for especificado quando a permissão inclui a palavra **banco de dados** (por exemplo **ALTER ANY DATABASE**). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada como **objeto**.  
   
- *protegível*  
+ *securable*  
  O nome de logon, banco de dados, tabela, exibição, esquema, procedimento, função ou usuário no qual deseja conceder, negar ou revogar permissões. O nome do objeto pode ser especificado com as regras de nomenclatura de três partes que são descritas na [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- PARA *principal* [ **,**... *n* ]  
+ TO *principal* [ **,**...*n* ]  
  Uma ou mais entidades que estão sendo concedidas, negadas ou revogadas permissões. Entidade é o nome de logon, usuário de banco de dados ou função de banco de dados.  
   
- DE *principal* [ **,**... *n* ]  
+ FROM *principal* [ **,**...*n* ]  
  Uma ou mais entidades revogar as permissões.  Entidade é o nome de logon, usuário de banco de dados ou função de banco de dados. **DE** só pode ser usado com um **REVOGAR** instrução. **PARA** pode ser usado com **GRANT**, **DENY**, ou **REVOGAR**.  
   
  WITH GRANT OPTION  
@@ -230,7 +232,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   Execute  
   
 -   INSERT  
   

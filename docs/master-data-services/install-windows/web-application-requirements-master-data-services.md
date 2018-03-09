@@ -8,24 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: master data services
+keywords:
+- master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: "40"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1023bde4fdf7994b11b82f623e967ebfe489ab8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ac07d3f1214c151f44e10ffafcf09159403363f0
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo ISS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
 
 **Para obter instruções sobre como instalar e configurar o IIS**, consulte [Instalando e configurando o IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
  
  
 > [!IMPORTANT]  
->A**Compactação de Conteúdo Dinâmico** é habilitada por padrão. Isso reduz consideravelmente o tamanho da resposta xml e salva a E/S de rede, embora o uso da CPU aumente.  Para obter mais informações, veja **Melhoria do desempenho do [CTP] 2.0** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>A**Compactação de Conteúdo Dinâmico** é habilitada por padrão. Isso reduz consideravelmente o tamanho da resposta xml e salva a E/S de rede, embora o uso da CPU aumente.  Para obter mais informações, veja **Melhoria do desempenho do [CTP] 2.0** em [Novidades no MDS &#40;Master Data Services&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
@@ -74,12 +76,12 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Contas e permissões  
   
-|Tipo|Descrição|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Conta do Windows|Você deve fazer logon no computador do servidor Web com uma conta do Windows que tenha permissão para configurar funções, serviços de função e recursos do Windows e para criar e gerenciar pools de aplicativos, sites e aplicativos Web no IIS no computador local.|  
 |Conta de serviço|Quando você criar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] no [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], especifique uma identidade para o pool de aplicativos em que o aplicativo é executado. Esta conta pode ser diferente da conta de serviço especificada quando o banco de dados [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] foi criado.<br /><br /> Essa identidade deve ser uma conta de usuário de domínio e é acrescentada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Essa conta também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   

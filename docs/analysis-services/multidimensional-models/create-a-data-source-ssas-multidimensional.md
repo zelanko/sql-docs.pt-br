@@ -2,16 +2,13 @@
 title: Criar uma fonte de dados (SSAS Multidimensional) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,20 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 61
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
-  Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  Este tópico inclui as seguintes seções:  
   
@@ -183,7 +180,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados com suporte &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

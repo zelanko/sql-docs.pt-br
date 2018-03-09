@@ -1,5 +1,5 @@
 ---
-title: add_data_tap | Microsoft Docs
+title: catalog.add_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1c4130b66a7c9c2011aaf1e2af30f799d753162
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +41,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  A ID da execução que contém o pacote. O *execution_id* é um **bigint**.  
   
- [ @task_package_path =] *task_package_path*  
- O caminho do pacote da tarefa de fluxo de dados. O **PackagePath** propriedade para a tarefa de fluxo de dados especifica o caminho. O caminho diferencia maiúsculas de minúsculas. Para localizar o caminho de pacote, em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] clique a tarefa de fluxo de dados e, em seguida, clique em **propriedades**. O **PackagePath** propriedade aparece no **propriedades** janela.  
+ [ @task_package_path = ] *task_package_path*  
+ O caminho do pacote da tarefa de fluxo de dados. A propriedade **PackagePath** da tarefa de fluxo de dados especifica o caminho. O caminho diferencia maiúsculas de minúsculas. Para localizar o caminho do pacote, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique com o botão direito do mouse na tarefa Fluxo de Dados e, depois, clique em **Propriedades**. A propriedade **PackagePath** aparece na janela **Propriedades**.  
   
- O *task_package_path* é um **nvarchar (max)**.  
+ O *task_package_path* é um **nvarchar(max)**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- A cadeia de caracteres de identificação para o caminho de fluxo de dados. Um caminho conecta dois componentes de fluxos de dados. O **IdentificationString** propriedade para o caminho Especifica a cadeia de caracteres.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ A cadeia de caracteres de identificação para o caminho de fluxo de dados. Um caminho conecta dois componentes de fluxos de dados. A propriedade **IdentificationString** do caminho especifica a cadeia de caracteres.  
   
- Para localizar a cadeia de caracteres de identificação, em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] com o botão direito do caminho entre componentes de fluxo de dados e, em seguida, clique **propriedades**. O **IdentificationString** propriedade aparece no **propriedades** janela.  
+ Para localizar a cadeia de caracteres de identificação, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique com o botão direito do mouse no caminho entre dois componentes de fluxo de dados e, depois, clique em **Propriedades**. A propriedade **IdentificationString** aparece na janela **Propriedades**.  
   
- O *dataflow_path_id_string* é um **nvarchar (4000)**.  
+ O *dataflow_path_id_string* é um **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  O nome do arquivo de dados que armazena os dados tocados. Se a tarefa de fluxo de dados for executada dentro de um contêiner de Loop Foreach ou Loop For, arquivos separados armazenarão os dados tocados para cada iteração do loop. Cada arquivo é prefixado com um número que corresponde a uma iteração.  
   
- Por padrão, o arquivo é armazenado no \< *unidade*>: pasta \Program Files\Microsoft Server\130\DTS\DataDumps SQL.  
+ Por padrão, o arquivo é armazenado na pasta \<*unidade*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\DataDumps.  
   
- O *data_filename* é um **nvarchar (4000)**.  
+ O *data_filename* é um **nvarchar(4000)**.  
   
- [ @max_rows =] *max_rows*  
+ [ @max_rows = ] *max_rows*  
  O número de linhas capturadas durante o toque de dados. Se esse valor não for especificado, todas as linhas serão capturadas. O *max_rows* é um **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
+ [ @data_tap_id = ] *data_tap_id*  
  Retorna a ID do toque de dados. O *data_tap_id* é um **bigint**.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, um toque de dados é criado no caminho do fluxo de dados, `'Paths[OLE DB Source.OLE DB Source Output]`, na tarefa de fluxo de dados, `\Package\Data Flow Task`. Os dados tocados são armazenados no `output0.txt` arquivo na pasta DataDumps (\<*unidade*>: \Program Files\Microsoft Server\130\DTS\DataDumps SQL).  
+ No exemplo a seguir, um toque de dados é criado no caminho do fluxo de dados, `'Paths[OLE DB Source.OLE DB Source Output]`, na tarefa de fluxo de dados, `\Package\Data Flow Task`. Os dados coletados são armazenados no arquivo `output0.txt` na pasta DataDumps (\<*unidade*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -84,8 +83,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Comentários  
- Para adicionar toques de dados, a instância da execução deve estar no estado criado (um valor de 1 no **status** coluna o [Catalog. Operations &#40; Banco de dados SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)exibição). O valor de estado muda quando você realiza a execução. Você pode criar uma execução chamando [Catalog. create_execution &#40; Banco de dados SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+## <a name="remarks"></a>Remarks  
+ Para adicionar coletas de dados, a instância da execução deve estar no estado criado (um valor de 1 na coluna **status** da exibição [catalog.operations &#40;banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). O valor de estado muda quando você realiza a execução. Você pode criar uma execução chamando [catalog.create_execution &#40;banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  As seguintes são considerações a respeito do procedimento armazenado add_data_tap.  
   
@@ -93,7 +92,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   Se um pacote contiver mais de uma tarefa de fluxo de dados com o mesmo nome, o task_package_path identificará exclusivamente a tarefa de fluxo de dados que contém a saída do componente tocado.  
   
--   Quando você adiciona um toque de dados, ele não é validado antes do pacote é executado.  
+-   Quando você adiciona uma coleta de dados, ele não é validado antes de o pacote ser executado.  
   
 -   É recomendável limitar o número de linhas capturadas durante o toque de dados, para evitar gerar arquivos de dados grandes. Se a máquina na qual o procedimento armazenado é executado ficar sem espaço de armazenamento para os arquivos de dados, a execução do pacote será interrompida e uma mensagem de erro será gravada em um log.  
   
@@ -107,16 +106,16 @@ Exec SSISDB.Catalog.start_execution @execution_id
  Quando há falha no procedimento armazenado, ele gera um erro.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões MODIFY na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve as condições que podem provocar falha no procedimento armazenado.  
@@ -130,10 +129,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [SSIS 2012: A exibição de dados](http://go.microsoft.com/fwlink/?LinkId=239983), em rafael-salas.com.  
+ Entrada de blog, [SSIS 2012: um olhar sobre fontes de dados](http://go.microsoft.com/fwlink/?LinkId=239983), em rafael-salas.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

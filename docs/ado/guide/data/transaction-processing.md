@@ -3,8 +3,9 @@ title: "Processamento de transações | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c37bf04fd14bb2d5f276efd3321b044759cbe7ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Um *transação* delimita o início e término de uma série de operações de acesso de dados executado em uma conexão. Sujeitos aos recursos transacionais de sua fonte de dados, o **Conexão** objeto também permite criar e gerenciar transações. Por exemplo, usando o Microsoft OLE DB Provider para SQL Server para acessar um banco de dados do Microsoft SQL Server, você pode criar várias transações aninhadas para os comandos que você executar.  

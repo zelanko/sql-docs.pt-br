@@ -2,15 +2,13 @@
 title: "Tabelas aninhadas (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
-  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Fornece um método exclusivo para tratar desses casos, usando *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
   
  ![Duas tabelas combinadas com uma tabela aninhada](../../analysis-services/data-mining/media/nested-tables.gif "duas tabelas combinadas com uma tabela aninhada")  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  Por exemplo, se a tabela aninhada contiver as colunas **Product**, **ProductQuantity**e **ProductPrice**, você poderá escolher **Product** como chave da tabela aninhada, mas adicione **ProductQuantity** à estrutura de mineração para usar como entrada.  
   
 ## <a name="filtering-nested-table-data"></a>Filtrando os dados da tabela aninhada  
- No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar filtros para os dados que são usados para treinar ou testar um modelo de mineração de dados. É possível usar um filtro para afetar a composição do modelo ou testar o modelo em um subconjunto de casos. Filtros também podem ser se aplicados a tabelas aninhadas. Porém, há limitações na sintaxe que pode ser usada com tabelas aninhadas.  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar filtros para os dados que são usados para treinar ou testar um modelo de mineração de dados. Um filtro pode ser usado para afetar a composição do modelo, ou para testar o modelo em um subconjunto de casos. Filtros também podem ser se aplicados a tabelas aninhadas. Porém, há limitações na sintaxe que pode ser usada com tabelas aninhadas.  
   
  Frequentemente, ao aplicar um filtro a uma tabela aninhada, você está testando a existência ou não de um atributo. Por exemplo, você pode aplicar um filtro que restringe os casos usados no modelo somente aos casos que têm um valor especificado na tabela aninhada. Ou poderia restringir os casos usados no modelo a clientes que não compraram um determinado item.  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  Para obter mais informações sobre como criar e usar filtros de modelo, consulte [Filtros para modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

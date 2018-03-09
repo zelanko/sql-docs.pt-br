@@ -1,5 +1,5 @@
 ---
-title: FORMATO (Transact-SQL) | Microsoft Docs
+title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75f944ad28bc56300db7ca9dd7220036faaea711
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Expressão de um tipo de dados com suporte para formatação. Para obter uma lista de tipos válidos, consulte a tabela na seção Comentários.  
   
- *formato*  
+ *format*  
  **nvarchar** padrão de formato.  
   
  O *formato* argumento deve conter uma cadeia de formato válido do .NET Framework, como uma cadeia de caracteres de formato padrão (por exemplo, "C" ou "D") ou como um padrão de caracteres personalizados para datas e valores numéricos (por exemplo, "MMMM DD, yyyy (dddd)") . A formatação composta não tem suporte. Para obter uma explicação completa desses padrões de formatação, consulte a documentação do .NET Framework na cadeia de caracteres de formatação em geral, data e formatos de hora e formatos numéricos personalizados. Um bom ponto de partida é o tópico "[formatando tipos](http://go.microsoft.com/fwlink/?LinkId=211776)."  
   
- *cultura*  
+ *culture*  
  Opcional **nvarchar** argumento que especifica uma cultura.  
   
  Se o *cultura* argumento não for fornecido, será usado o idioma da sessão atual. Esse idioma é definido implícita ou explicitamente com o uso da instrução SET LANGUAGE. *cultura* aceita qualquer cultura com suporte do .NET Framework como um argumento; ele não está limitado aos idiomas com suporte explícito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o *cultura* argumento não é válido, FORMAT gerará um erro.  
@@ -64,7 +63,7 @@ FORMAT ( value, format [, culture ] )
   
  O comprimento do valor de retorno é determinado pelo *formato*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  FORMAT retorna NULL para erros diferentes de um *cultura* não *válido*. Por exemplo, NULL será retornado se o valor especificado em *formato* não é válido.  
  
  A função FORMAT é não determinística.   
@@ -85,8 +84,8 @@ FORMAT ( value, format [, culture ] )
 |Numérico|tinyint|Byte|  
 |Numérico|decimal|SqlDecimal|  
 |Numérico|numeric|SqlDecimal|  
-|Numérico|float|Duplo|  
-|Numérico|real|Solteiro|  
+|Numérico|float|Double|  
+|Numérico|real|Single|  
 |Numérico|smallmoney|Decimal|  
 |Numérico|money|Decimal|  
 |Data e hora|date|DateTime|  
@@ -216,6 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Consulte também  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-

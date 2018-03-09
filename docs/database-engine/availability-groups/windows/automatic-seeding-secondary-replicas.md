@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ No SQL Server 2012 e 2014, a única maneira de inicializar uma réplica secundá
 As considerações para o uso da propagação automática incluem:
 
 * [Impacto do log de transações e de desempenho sobre a réplica primária](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout de disco](#disk-layout)
+* [Layout de disco](#disklayout)
 * [Segurança](#security)
 
 
@@ -155,9 +157,6 @@ Se ela for bem-sucedida, os bancos de dados serão criados automaticamente na r�
 
 ![Log do SQL Server][2]
 
-
-
-
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combinar o backup e a restauração com a propagação automática
 
 É possível combinar o backup, a cópia e a restauração tradicionais com a propagação automática. Nesse caso, primeiro restaure o banco de dados em uma réplica secundária, incluindo todos os logs de transações disponíveis. Em seguida, habilite a propagação automática ao criar o grupo de disponibilidade para atualizar o banco de dados da réplica secundária, como se um backup da parte final do log fosse restaurado (consulte [Backups da parte final do log [SQL Server]](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
@@ -249,7 +248,7 @@ GO
 
 A tabela a seguir lista os eventos estendidos relacionados à propagação automática.
 
-|Nome|Descrição|
+|Nome|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Mensagem de solicitação de propagação.|
 |hadr_physical_seeding_backup_state_change|Alteração de estado lateral de backup da propagação física.|

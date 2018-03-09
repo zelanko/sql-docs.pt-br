@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool_TSQL
 - sys.sp_xtp_unbind_db_resource_pool
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6da5bc97801329871d6b433ecf8f049f4b0eb742
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c28c3fd5e535bfff09316c1f813760159f05d38
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +41,9 @@ ms.lasthandoff: 11/17/2017
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -68,7 +66,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## <a name="example"></a>Exemplo  
  O código de exemplo desassocia o banco de dados Hekaton_DB do pool de recursos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ao qual está associado.  Se Hekaton_DB não estiver associado no momento a um pool de recursos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)], uma mensagem será emitida. O banco de dados deve ser reiniciado para a desassociação entrar em vigor.  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   

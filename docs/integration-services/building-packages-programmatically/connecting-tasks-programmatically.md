@@ -1,5 +1,5 @@
 ---
-title: Conectando tarefas programaticamente | Microsoft Docs
+title: Conectar tarefas programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 27be63f22fda13f0959f28c4ee36cc2b12c66058
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17a0b11519fcf438847c34291ded9e1b43edb090
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>Conectando tarefas programaticamente
   Uma restrição de precedência, representada no modelo de objeto pela classe <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, estabelece a ordem na qual objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> são executados em um pacote. A restrição de precedência permite que a execução dos contêineres e tarefas de um pacote dependam do resultado da execução de uma tarefa ou contêiner anterior. Restrições de precedência são estabelecidas entre pares de objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> através da chamada ao método <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> da coleção <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> no objeto contêiner. Depois de criar uma restrição entre dois objetos executáveis, defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> para estabelecer os critérios para executar o segundo executável definido na restrição.  
@@ -43,8 +41,8 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Especifica que o resultado de execução determina se o contêiner ou tarefa restrita é executada. Defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> com o valor desejado da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Especifica que o valor de uma expressão determina se o contêiner ou tarefa restrita é executada. Defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Especifica que o resultado de restrição deve ocorrer e que a expressão deve ser avaliada para determinar se o contêiner ou tarefa restrita deve ser executada. Defina o <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> e o <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> propriedades do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>e defina seu <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> propriedade **true**.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Especifica que o resultado de restrição deve ocorrer, ou que a expressão deve ser avaliada, para determinar se o contêiner ou tarefa restrita deve ser executada. Defina o <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> e o <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> propriedades do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>e defina seu <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> propriedade **false**.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Especifica que o resultado de restrição deve ocorrer e que a expressão deve ser avaliada para determinar se o contêiner ou tarefa restrita deve ser executada. Defina ambas as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> e defina sua propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> como **true**.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Especifica que o resultado de restrição deve ocorrer, ou que a expressão deve ser avaliada, para determinar se o contêiner ou tarefa restrita deve ser executada. Defina ambas as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> e defina sua propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> como **false**.|  
   
  O exemplo de código a seguir demonstra a adição de duas tarefas a um pacote. Um <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> é criado entre elas, impedindo a execução da segunda tarefa antes do término da primeira.  
   
@@ -107,8 +105,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando a tarefa de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar a tarefa de Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   
-

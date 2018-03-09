@@ -2,35 +2,31 @@
 title: Verifique se um PowerPivot para SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verifique uma Instalação do Power Pivot para SharePoint
-  Uma instância do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Uma instância do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
+
   
 ##  <a name="verifyinstall"></a> Verificar a integração da Administração Central  
  Para verificar a integração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com a Administração Central, faça o seguinte:  
@@ -79,7 +75,7 @@ ms.lasthandoff: 09/01/2017
   
     1.  Selecione **Conteúdo do Site**.  
   
-    2.  Na lista de aplicativos, você deverá ver **Biblioteca de Feeds de Dados** e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Galeria do ****. Esses modelos de biblioteca são fornecidos pelo recurso do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , estando visíveis na lista Bibliotecas apenas se o recurso estiver integrado corretamente.  
+    2.  Na lista de aplicativos, você deverá ver **Biblioteca de Feeds de Dados** e **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Galeria** do. Esses modelos de biblioteca são fornecidos pelo recurso do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , estando visíveis na lista Bibliotecas apenas se o recurso estiver integrado corretamente.  
   
 ## <a name="verify-data-access-on-the-server"></a>Verificar acesso a dados no servidor  
  Para verificar o acesso a dados [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no servidor, faça o seguinte:  
@@ -109,4 +105,3 @@ ms.lasthandoff: 09/01/2017
 11. No sistema de arquivos do computador, verifique a pasta a seguir para determinar se os arquivos estão armazenados no cache em disco. A presença de arquivos armazenados em cache é a verificação adicional de que a implantação é operacional. Para exibir o cache de arquivos, vá para a pasta [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service Application. Cada banco de dados armazenado em cache é armazenado em sua própria pasta, usando uma convenção de nomenclatura baseada em GUID para assegurar um nome exclusivo.  
   
   
-

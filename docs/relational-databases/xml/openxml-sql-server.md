@@ -2,10 +2,14 @@
 title: OPENXML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e181c623bfaa6c19c2567c6a1e904b5314e327ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-  OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
   
  OPENXML pode ser usado em instruções SELECT e SELECT INTO sempre que provedores de conjunto de linhas, uma exibição ou OPENROWSET podem ser exibidos como a origem. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -140,7 +145,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  A tabela a seguir descreve a estrutura da tabela de borda.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
@@ -199,7 +204,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Para vários subelementos com o mesmo nome, o primeiro nó é retornado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

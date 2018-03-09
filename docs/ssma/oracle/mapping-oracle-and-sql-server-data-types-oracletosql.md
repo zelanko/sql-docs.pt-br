@@ -1,28 +1,28 @@
 ---
 title: Mapeamento de Oracle e tipos de dados do SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Type Mapping Inheritance
+helpviewer_keywords: Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 400ed2a28e622ffb9493af7462e06f551a214a51
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapeamento de Oracle e tipos de dados do SQL Server (OracleToSQL)
 Os tipos de banco de dados Oracle variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
@@ -92,10 +92,9 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa no processo de migração é como [criar um relatório de avaliação](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) ou [converter objetos de banco de dados Oracle em sintaxe de SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Se você criar um relatório de avaliação, objetos Oracle são automaticamente convertidos durante a avaliação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

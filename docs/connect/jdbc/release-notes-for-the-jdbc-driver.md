@@ -1,7 +1,7 @@
 ---
 title: "Notas de versão para o Driver JDBC | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,25 +13,78 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de versão do Driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Atualizações do Microsoft JDBC Driver 6.4 para SQL Server
+O Microsoft JDBC Driver 6.4 para o SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars contidos no pacote 6.4 são nomeados de acordo com a compatibilidade de versão do Java. Por exemplo, o arquivo mssql-jdbc-6.4.0.jre8.jar do pacote 6.4 é recomendado a ser usado com Java 8. 
+
+**Suporte para JDK 9**  
+  
+Suporte para Java Development Kit (JDK) versão 9.0, além de JDK 8.0 e 7.0.
+  
+**Conformidade do JDBC 4.3**  
+  
+Suporte para especificação de Java 4.3 de API de conectividade de banco de dados, além de 4.1 e 4.2. Os métodos da API do JDBC 4.3 são adicionados, mas ainda não implementados. Para obter detalhes, consulte [JDBC 4.3 conformidade para o Driver JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+ 
+**Adicionada nova propriedade de conexão: sslProtocol**
+
+Adicionar uma nova propriedade de conexão que permite aos usuários especificar a palavra-chave de protocolo TLS. Os valores possíveis são: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". Consulte [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) para obter detalhes.
+
+**Preterido a propriedade de conexão: fipsProvider**
+
+A propriedade de Conexão "fipsProvider" é removida da lista de propriedades de conexão aceitos. Consulte os detalhes [aqui](https://github.com/Microsoft/mssql-jdbc/pull/460).
+
+**Propriedades de conexão adicional para especificar TrustManager personalizado**
+
+Driver agora oferece suporte à especificação TrustManager personalizado com propriedades de conexão de "trustManagerConstructorArg" e "trustManagerClass" adicionado. Isso permite a especificação dinâmica de um conjunto de certificados confiáveis em uma base por conexão sem modificar as configurações globais para o ambiente da JVM.
+
+**Adicionado suporte para datetime/smallDatetime em parâmetros com valor de tabela (TVP)**
+
+Driver agora dá suporte a tipos de dados DATETIME e SMALLDATETIME ao usar parâmetros com valor de tabela (TVP).
+
+**Adicionado suporte para o tipo de dados sql_variant**
+
+O Driver JDBC agora dá suporte a tipos de dados sql_variant a ser usado com o SQL Server. Sql_variant também é compatível com recursos como parâmetros com valor de tabela (TVP) e BulkCopy com abaixo limitações:
+
+1. Para valores de data: ao usar TVP para popular uma tabela que contém os valores de data/datetime/smalldatetime armazenados na coluna sql_variant, chamar métodos getDateTime()/getSmallDateTime()/getDate() no conjunto de resultados não funciona e gera a seguinte exceção:
+    ```
+    java.lang.String cannot be cast to java.sql.Timestamp
+    ```
+    Solução alternativa: use métodos "getString ()" ou "GetObject ()".
+
+2. Usar TVP com SQL Variant para valores nulos
+
+Se você estiver usando um TVP para popular uma tabela e enviar o valor NULL para o tipo de coluna sql_variant, você encontrará uma exceção ao Inserir valor NULL com tipo de coluna sql_variant em TVP não é suportado atualmente.
+
+**Implementado preparadas cache de metadados**
+
+O Driver JDBC implementou o cache de metadados de instrução preparada para melhorar o desempenho. Driver agora dá suporte a cache de metadados de instrução preparada no driver com as propriedades de conexão "disableStatementPooling" e "statementPoolingCacheSize". Por padrão, esse recurso está desabilitado. Mais informações podem ser encontradas [aqui](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+
+**Adicionado suporte para autenticação integrada do AAD no Linux/Mac**
+
+O Driver JDBC agora também oferece suporte à autenticação integrada do Azure Active Directory em todos os sistemas operacionais (Linux/Windows/Mac) com o Kerberos. Como alternativa, em sistemas operacionais, os usuários podem autenticar com sqljdbc_auth.dll.
+
+**Versão atualizada do ADAL4J para 1.4.0**
+
+O Driver JDBC atualizou sua dependência maven ao azure Active Directory-biblioteca-para-java (ADAL4J) para a versão 1.4.0. Para obter mais informações sobre dependências, consulte [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Atualizações do Microsoft JDBC Driver 6.2 para SQL Server
 O Microsoft JDBC Driver 6.2 para o SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars contidos no pacote 6.0 são nomeados de acordo com a compatibilidade de versão do Java. Por exemplo, o arquivo mssql-jdbc-6.2.1.jre8.jar do pacote 6.2 é recomendado para ser usado com Java 8. 
 
-**Observação:** um problema com o aperfeiçoamento de cache de metadados foi encontrado no RTW de 6.2 JDBC lançadas em 29 de junho de 2017. A melhoria foi revertida e novo jars (versão 6.2.1) foram lançadas em 17 de julho de 2017 no [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), e [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.1 jars de versão. Consulte [notas de versão](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) para obter mais detalhes.
+> [!NOTE]  
+>  Um problema com o aperfeiçoamento de cache de metadados foi encontrado no RTW de 6.2 JDBC lançadas em 29 de junho de 2017. A melhoria foi revertida e novo jars (versão 6.2.1) foram lançadas em 17 de julho de 2017 no [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), e [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.1 jars de versão. Consulte [notas de versão](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) para obter mais detalhes.
 
 **Suporte do Azure Active Directory (AAD) para Linux**
 
@@ -79,7 +132,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Agora dá suporte para recuperar metadados de parâmetro com instruções preparadas para consultas complexas, como subconsultas e/ou junções. Observe que essa melhoria estará disponível somente ao usar o SQL Server 2012 e versões mais recentes.  
   
- **Active Directory do Azure (AAD)**  
+ **Azure Active Directory (AAD)**  
   
  Autenticação do AAD é um mecanismo para se conectar ao banco de dados SQL v12 usando identidades no AAD. Use autenticação do AAD para gerenciar centralmente as identidades de usuários de banco de dados e como uma alternativa para autenticação do SQL Server. O JDBC Driver 6.0 permite que você especifique suas credenciais do AAD na cadeia de caracteres de conexão JDBC para se conectar ao banco de dados de SQL do Azure.  Para obter detalhes, consulte a propriedade de autenticação no [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md) página.  
   
@@ -124,34 +177,9 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Suporte para JDK (Java Development Kit) versão 7.0, além de JDK 6.0 e 5.0.  
   
-## <a name="updates-in-microsoft-jdbc-driver-40-for-sql-server-and-later"></a>Atualizações do Microsoft JDBC Driver 4.0 e posterior para SQL Server  
- **Informações sobre como se conectar a um banco de dados SQL do Azure**  
+## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Itanium sem suporte para aplicativos do JDBC Driver 6.4, 6.0, 4.2 e 4.1  
   
- Agora há um tópico com informações sobre como se conectar a um banco de dados SQL do Azure. Consulte [se conectar a um banco de dados do SQL Azure](../../connect/jdbc/connecting-to-an-azure-sql-database.md) para obter mais informações.  
-  
- **Suporte para alta disponibilidade, recuperação de desastres**  
-  
- Suporte para conexões de recuperação de desastres de alta disponibilidade para grupos de disponibilidade do AlwaysOn no [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Consulte [suporte do Driver JDBC para alta disponibilidade, recuperação de desastres](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) para obter mais informações.  
-  
- **Usando a autenticação integrada do Kerberos para se conectar ao SQL Server**  
-  
- Suporte para autenticação integrada do Kerberos tipo 4 para aplicativos para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados. Para obter mais informações, consulte [usando a autenticação integrada Kerberos para se conectar ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Kerberos tipo 2 a autenticação integrada está disponível no [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versões anteriores à 4.0.)  
-  
- **Acessar informações de diagnóstico nos logs de eventos estendidos**  
-  
- Você pode acessar informações no log de eventos estendidos do servidor para entender as falhas de conexão. Para obter mais informações, consulte [acessando informações de diagnóstico no Log de eventos estendidos](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
-  
- **Suporte adicional para colunas esparsas**  
-  
- Se seu aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver um aumento no desempenho. Você pode obter informações sobre colunas (incluindo informações de coluna esparsa) com [getColumns método &#40; SQLServerDatabaseMetaData &#41; ](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] colunas esparsas, consulte [usando colunas esparsas](http://go.microsoft.com/fwlink/?LinkId=224244).  
-  
- **Xid.getFormatId**  
-  
- A partir do [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o driver JDBC passará o identificador de formato do aplicativo para o servidor de banco de dados. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para obter mais informações sobre como copiar uma versão atualizada do sqljdbc_xa.dll para o servidor, consulte [Noções básicas sobre as transações XA](../../connect/jdbc/understanding-xa-transactions.md).  
-  
-## <a name="itanium-not-supported-for-jdbc-driver-60-42-41-and-40-applications"></a>Itanium sem suporte para aplicativos do JDBC Driver 6.0, 4.2, 4.1 e 4.0  
-  
- Não há suporte para o Microsoft JDBC Drivers 6.0, 4.2, 4.1 e 4.0 para aplicativos do SQL Server para ser executado em um computador Itanium.  
+ Não há suporte para o Microsoft JDBC Drivers 6.4, 6.0, 4.2 e 4.1 para aplicativos do SQL Server para ser executado em um computador Itanium.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

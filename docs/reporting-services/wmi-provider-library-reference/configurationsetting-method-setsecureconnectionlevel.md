@@ -2,35 +2,32 @@
 title: "Método SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetSecureConnectionLevel method
+helpviewer_keywords: SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-caps.latest.revision: 21
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "21"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 219112996b6fd0c2fb1cb6eff5baca29b65e86d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3278c7f0ff788ca99fb10adcac0266545a3931d1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---setsecureconnectionlevel"></a>Método ConfigurationSetting - SetSecureConnectionLevel
+# <a name="configurationsetting-method---setsecureconnectionlevel"></a>Método de ConfigurationSetting – SetSecureConnectionLevel
   Define o nível de conexão segura do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +52,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método teve êxito. Um valor diferente de zero indica que ocorreu um erro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando chamada, a propriedade SecureConnectionLevel do servidor de relatório será definida como o valor especificado. Um valor de 0 indica que o SSL está desativado. Um valor maior que ou igual a 1indica que o SSL está ligado.  
   
 -   Quando o valor for definido, o elemento SecureConnectionLevel no arquivo de configuração do servidor de relatório será alterado e o elemento **URLRoot** no arquivo de configuração será definido para usar “https://” se *Level* especificado for maior, ou igual a 1 ou “http://” se *Level* especificado for 0.  
@@ -65,8 +62,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

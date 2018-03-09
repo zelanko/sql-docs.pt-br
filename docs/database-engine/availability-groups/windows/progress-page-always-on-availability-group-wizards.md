@@ -20,13 +20,13 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222e727dbfea11ecd334bd6d88f01ce7294359e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80fad41153c117a5b76c3e7023bb9eb40b268d4b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Página Progresso (Assistentes do Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/20/2017
  **Status**  
  Indica o resultado das etapas concluídas e o percentual de conclusão da etapa atual, da seguinte maneira:  
   
-|Resultado|Descrição|  
+|Resultado|Description|  
 |------------|-----------------|  
 |**Erro**|Indica que a operação desta etapa experimentou um erro. Clique no link para exibir uma caixa de diálogo de mensagem que descreve o erro.|  
 |**Em andamento (** *percentual concluído* **)**|Indica que a operação está ocorrendo agora e estima o percentual desta etapa que foi concluída.|  
-|**Success**|Indica que a operação desta etapa foi concluída com êxito.|  
+|**Êxito**|Indica que a operação desta etapa foi concluída com êxito.|  
   
  **Menos Detalhes**  
  Clique para ocultar a grade de progresso.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

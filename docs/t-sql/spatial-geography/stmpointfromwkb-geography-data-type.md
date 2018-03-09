@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMPointFromWKB (geography Data Type)
 - STMPointFromWKB_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STPointFromWKB method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPointFromWKB method
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55182b7bc6edd9ca4d3c867304df4e00825a5cc0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: db65958a3afd742ee9e8ae341468fe5fe7be685b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método lança um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

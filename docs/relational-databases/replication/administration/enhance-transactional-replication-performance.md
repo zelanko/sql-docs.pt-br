@@ -2,9 +2,12 @@
 title: "Aprimorar o desempenho da replicação transacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bbb3a620616514a91b96d96178dc969b2431ea9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
-  Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  
   
 ## <a name="database-design"></a>Design de banco de dados  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Configure o Distribuidor em um servidor dedicado.  
   
-     Você pode reduzir a sobrecarga de processamento no Publicador configurando um Distribuidor remoto. Para obter mais informações, consulte [Configurar distribuição](../../../relational-databases/replication/configure-distribution.md).  
+     Você pode reduzir a sobrecarga de processamento no Publicador configurando um Distribuidor remoto. Para obter mais informações, consulte [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Dimensione adequadamente o banco de dados de distribuição.  
   
@@ -103,6 +106,6 @@ ms.lasthandoff: 11/09/2017
   
 -   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

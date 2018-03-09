@@ -1,27 +1,33 @@
 ---
 title: Tutoriais do SQL Server R | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
-caps.latest.revision: "1"
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-r-tutorials"></a>Tutoriais do SQL Server R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo fornece uma lista de tutoriais e exemplos que demonstram o uso de R com o SQL Server 2016 ou 2017 do SQL Server. Por meio desses exemplos e demonstrações, você aprenderá:
 

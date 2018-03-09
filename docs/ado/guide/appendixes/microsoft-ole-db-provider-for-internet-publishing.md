@@ -3,7 +3,7 @@ title: "Provedor Microsoft OLE DB para publicação na Internet | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f86280c8c9b01e8482500fa174784d6d752b7d9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d466123e7330eb599847225d2b108ec7f80d9ea9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Provedor Microsoft OLE DB para visão geral de publicação na Internet
 O Microsoft OLE DB Provider para publicação de Internet permite que o ADO para acessar os recursos atendidos pelo Microsoft FrontPage ou o Microsoft Internet Information Server. Os recursos incluem arquivos de origem da web, como arquivos HTML ou pastas da web do Windows 2000.
@@ -73,4 +72,3 @@ MSDAIPP.DSO
 
 ## <a name="see-also"></a>Consulte também
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md) [o provedor OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
-

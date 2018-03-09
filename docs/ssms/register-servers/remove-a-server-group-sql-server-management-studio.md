@@ -2,10 +2,14 @@
 title: Remover um grupo de servidores (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0cb0a74caa92ed03822c8115096e8030e1e7b7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 75dea4d0132a8e810f34f170e0f17481e6224c3a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Remover um grupo de servidores (SQL Server Management Studio)
-  Este tópico descreve como remover um grupo de servidores de Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode excluir um grupo do servidor a qualquer hora. Se o grupo de servidores não estiver vazio, também serão excluídos quaisquer servidores ou grupos de servidores contidos no grupo excluído. Antes de excluir um grupo de servidores, mova para um grupo de servidores novo quaisquer servidores ou grupos de servidores que você queira reter.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Este tópico descreve como remover um grupo de servidores de Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode excluir um grupo do servidor a qualquer hora. Se o grupo de servidores não estiver vazio, também serão excluídos quaisquer servidores ou grupos de servidores contidos no grupo excluído. Antes de excluir um grupo de servidores, mova para um grupo de servidores novo quaisquer servidores ou grupos de servidores que você queira reter.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -37,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Na caixa de diálogo **Confirmação de Exclusão** , clique em **Sim**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mover um servidor registrado ou um grupo de Servidores Registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   

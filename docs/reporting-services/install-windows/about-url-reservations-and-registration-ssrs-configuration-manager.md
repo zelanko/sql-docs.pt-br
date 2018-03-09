@@ -1,12 +1,14 @@
 ---
-title: "Sobre reservas de URL e registro (Gerenciador de configuração do SSRS) | Microsoft Docs"
+title: "Sobre reservas e registro de URL (Gerenciador de Configurações do SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
-ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 94c0184320284272524932ce8d9b1bcda60f1d2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
   As URLs para aplicativos do Reporting Services são definidas como reservas de URL em HTTP.SYS. Uma reserva de URL define a sintaxe de um ponto de extremidade de URL para um aplicativo Web. As reservas de URL são definidas para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios quando você configura os aplicativos no servidor de relatório. As reservas de URL são criadas automaticamente quando você configura URLs através da instalação ou da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/07/2017
 |Reserva de URL em HTTP.SYS|URL|Explicação|  
 |---------------------------------|---------|-----------------|  
 |`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|A reserva de URL especifica um curinga (+) na porta 80. Esse procedimento coloca na fila do servidor de relatório qualquer solicitação de entrada que especifique um host que seja resolvido para o computador do servidor de relatório na porta 80. Observe que, com essa reserva de URL, pode ser usado qualquer número de URLs para acessar o servidor de relatório.<br /><br /> Essa é a reserva de URL padrão para um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na maioria dos sistemas operacionais.|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Essa reserva de URL especifica um endereço IP e é bem mais restritiva do que a reserva de URL curinga. Somente URLs que incluem o endereço IP podem ser usadas para conexão com o servidor de relatório. Devido a essa reserva de URL, uma solicitação para um servidor de relatório em `http://<computername>/reportserver` ou `http://localhost/reportserver` falharia.|  
+|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Essa reserva de URL especifica um endereço IP e é bem mais restritiva do que a reserva de URL curinga. Somente URLs que incluem o endereço IP podem ser usadas para conexão com o servidor de relatório. Devido a essa reserva de URL, uma solicitação a um servidor de relatório em `http://<computername>/reportserver` ou `http://localhost/reportserver` falhará.|  
   
 ##  <a name="DefaultURLs"></a> URLs padrão  
  Se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, a instalação reservará URLs para o serviço Web Servidor de Relatório e o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Você também pode aceitar esses valores padrão ao definir reservas de URL na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As URLs padrão incluirão um nome de instância se você instalar o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou se instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como uma instância nomeada.  
@@ -105,15 +106,14 @@ ms.lasthandoff: 11/07/2017
  O acesso anônimo é desabilitado porque a segurança padrão é **RSWindowsNegotiate**. Para acesso de intranet, as URLs do servidor de relatório usam nomes de computadores da rede. Para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conexões com a Internet, você deve usar configurações diferentes. Para obter mais informações sobre autenticação, veja [Autenticação com o Servidor de Relatório](../../reporting-services/security/authentication-with-the-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URLs para administração local  
- Você pode usar `http://localhost/reportserver` ou `http://localhost/reports` se você tiver especificado um curinga forte ou fraco para a reserva de URL.  
+ Use `http://localhost/reportserver` ou `http://localhost/reports` se tiver especificado um curinga forte ou fraco para a reserva de URL.  
   
- O `http://localhost` URL é interpretada como `http://127.0.0.1`. Se você tiver delimitado a reserva de URL para um nome de computador ou endereço IP único, não poderá usar localhost, a menos que crie uma reserva adicional para 127.0.0.1 no computador local. Da mesma forma, se localhost ou 127.0.0.1 for desabilitado no computador, você não poderá usar essa URL.  
+ A URL `http://localhost` é interpretada como `http://127.0.0.1`. Se você tiver delimitado a reserva de URL para um nome de computador ou endereço IP único, não poderá usar localhost, a menos que crie uma reserva adicional para 127.0.0.1 no computador local. Da mesma forma, se localhost ou 127.0.0.1 for desabilitado no computador, você não poderá usar essa URL.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] e posterior incluem novos recursos de segurança que minimizam o risco da execução acidental de programas com privilégios elevados. Etapas adicionais são necessárias para habilitar a administração local nesses sistemas operacionais. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Sintaxe de reserva de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
-

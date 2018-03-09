@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5edf423ce1c7e0323ae8d2dfca14a3bfae38ce0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-custom-properties"></a>Propriedades personalizadas de arquivo simples
   **Propriedades personalizadas de fontes**  
@@ -62,8 +61,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações, consulte [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

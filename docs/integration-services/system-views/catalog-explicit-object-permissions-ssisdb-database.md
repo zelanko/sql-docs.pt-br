@@ -1,5 +1,5 @@
 ---
-title: Catalog. explicit_object_permissions (banco de dados SSISDB) | Microsoft Docs
+title: catalog.explicit_object_permissions (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e941a6a1f460039964579b1c58fe7011502eda5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/26/2017
 |is_deny|**bit**|Indica se a permissão foi negada ou concedida. Quando o valor é `1`, a permissão foi negada. Quando o valor é `0`, a permissão não foi negada.|  
 |grantor_id|**int**|O ID da entidade de segurança que concedeu a permissão.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra os tipos de permissão listados na seguinte tabela:  
   
 |Valor de permission_type|Nome da permissão|Descrição da permissão|Tipos de objeto aplicáveis|  
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/26/2017
  Essa exibição não oferece uma visualização completa de permissões para a entidade de segurança atual. O usuário também tem que verificar se a entidade de segurança é um membro de funções e grupos que têm permissões atribuídas.  
   
   
-

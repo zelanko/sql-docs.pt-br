@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Criar um domínio vinculado
   Este tópico descreve como criar um domínio vinculado em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio vinculado é criado a partir de outro domínio já existente e herda todos os valores, regras e propriedades do domínio ao qual é vinculado, com a exceção do nome e da descrição. Você pode gerenciar um conjunto de domínios vinculados como um. Ao vincular um domínio ao outro, você cria um domínio que herda seu conteúdo de outro domínio.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Se necessário, você pode alterar o nome ou a descrição do domínio vinculado na guia Propriedades do Domínio.  
   
-7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

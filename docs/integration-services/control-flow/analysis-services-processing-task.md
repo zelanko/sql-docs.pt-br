@@ -1,5 +1,5 @@
 ---
-title: Tarefa de processamento do Analysis Services | Microsoft Docs
+title: Tarefa Processamento do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>Tarefa Processamento do Analysis Services
   A tarefa Processamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como modelos tabulares, cubos, dimensões e modelos de mineração.  
@@ -97,7 +96,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição da tarefa Processamento do Analysis Services.  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor da Tarefa Processamento do Analysis Services (página Analysis Services)
@@ -117,7 +116,7 @@ ms.lasthandoff: 08/11/2017
  **Gerenciador de conexões do Analysis Services**  
  Selecione na lista um gerenciador de conexões do Analysis Services existente ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Novo**  
+ **Nova**  
  Cria um novo gerenciador de conexões do Analysis Services  
   
  **Tópicos relacionados:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -155,4 +154,3 @@ ms.lasthandoff: 08/11/2017
   
  **Tópicos relacionados:** [Caixa de diálogo Alterar Configurações &#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-

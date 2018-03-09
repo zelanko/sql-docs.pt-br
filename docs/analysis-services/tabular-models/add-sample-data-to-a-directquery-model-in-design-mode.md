@@ -1,35 +1,31 @@
 ---
 title: Adicione dados de exemplo para um modelo DirectQuery no modo de Design | Microsoft Docs
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Adicionar dados de exemplo a um modelo DirectQuery no Modo de Design
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- No modo DirectQuery, as partições de tabela são usadas para criar subconjuntos de dados de exemplo usados durante a criação do modelo, ou para criar alternativas de uma exibição de dados completa.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+No modo DirectQuery, as partições de tabela são usadas para criar subconjuntos de dados de exemplo usados durante a criação do modelo, ou para criar alternativas de uma exibição de dados completa.
  
  Quando você implanta um modelo de tabela do DirectQuery, somente uma partição é permitida por tabela, e essa partição obrigatoriamente deve ser a exibição de dados completa. Qualquer partição adicional é um substituto da exibição de dados completa ou dados de exemplo. Neste tópico, vamos descrever como criar uma partição de exemplo, com um subconjunto de dados.
  
@@ -76,4 +72,3 @@ No entanto, você pode adicionar uma quantidade menor de dados de exemplo ao ban
 
   
   
-

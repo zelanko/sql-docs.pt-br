@@ -1,5 +1,5 @@
 ---
-title: Fluxo de dados | Microsoft Docs
+title: Fluxo de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>Fluxo de Dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir exibe um fluxo de dados que tem uma fonte, uma transformação com uma entrada e uma saída e um destino. O diagrama inclui as entradas, as saídas e as saídas de erro, além da entrada, da saída e das colunas externas.  
   
- ![Componentes e suas entradas e saídas de fluxo de dados](../../integration-services/data-flow/media/mw-dts-dataflow.gif "componentes e suas entradas e saídas de fluxo de dados")  
+ ![Componentes e suas entradas e saídas de fluxo de dados](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Componentes e suas entradas e saídas de fluxo de dados")  
   
 ## <a name="data-flow-implementation"></a>Implementação de fluxo de dados  
  Adicionar uma tarefa de Fluxo de Dados ao controle de fluxo de um pacote, é a primeira etapa na implementação de um fluxo de dados em um pacote. Um pacote pode incluir múltiplas tarefas de Fluxo de Dados, cada qual com seu próprio fluxo de dados. Por exemplo, se um pacote exige que os fluxos de dados sejam executados em uma sequência específica ou que outras tarefas sejam executadas entre os fluxos de dados, você deverá usar uma tarefa de Fluxo de Dados separada para cada fluxo de dados.  
@@ -217,11 +216,10 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades usando o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Adicionar ou excluir um componente em um fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Conectar componentes em um fluxo de dados](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369), em technet.microsoft.com.  
-

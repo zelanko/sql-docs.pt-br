@@ -1,5 +1,5 @@
 ---
-title: "Módulo (Transact-SQL) | Microsoft Docs"
+title: "% (Módulo) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -14,29 +14,32 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - modulo
+- modulus
 - '% (Modulo)'
+- '% (Modulus)'
 - MOD_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - '% (modulo operator)'
+- '% (modulus operator)'
 - remainder of division operation
 - modulo operator (%)
+- modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b417bbca6135db2f4ca6279bb9aac75d9d6f328
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 927b993e2b93ef670633ae1594c86178662ebabb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="modulo-transact-sql"></a>Módulo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-modulus-transact-sql"></a>% (Módulo) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o resto de um número dividido por outro.  
   
@@ -58,7 +61,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode usar o operador de módulo aritmético na lista de seleção da instrução SELECT com qualquer combinação de nomes de coluna, constantes numéricas ou qualquer expressão válida de inteiro de dados monetários digite categorias ou o **numérico** dados tipo.  
   
 ## <a name="examples"></a>Exemplos  
@@ -103,13 +106,12 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
   
 ## <a name="see-also"></a>Consulte também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Módulo EQUALS &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [%= &#40;Modulus Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

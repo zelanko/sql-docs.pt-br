@@ -1,5 +1,5 @@
 ---
-title: Destino arquivo bruto | Microsoft Docs
+title: Destino do Arquivo Bruto | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Propriedades personalizadas de arquivo bruto](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como definir as propriedades do componente, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
@@ -226,9 +225,8 @@ ms.lasthandoff: 08/17/2017
  **Alias de Saída**  
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Origem do arquivo bruto](../../integration-services/data-flow/raw-file-source.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

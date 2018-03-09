@@ -3,30 +3,36 @@ title: "Função Upper-case (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - upper-case
 - upper-case Function (XQuery)
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5297bbdf2cd1129142c2b33e633fafb0ca0bab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 885c66230a2a29b204e60b310bf50fd426db848c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funções em valores de cadeia de caracteres - letras maiusculas
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Esta função converte cada caractere em *$arg* para seu equivalente de letras maiusculas. No Microsoft Windows, a conversão binária de maiúsculas e minúsculas para pontos de código Unicode especifica como os caracteres são convertidos em letras maiúsculas. Esse padrão é diferente do mapeamento para o padrão de ponto de código padrão Unicode.  
   
@@ -44,7 +50,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Termo|Definição|  
 |*$arg*|O valor de cadeia de caracteres a ser convertido para letras maiúsculas.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o valor de *$arg* está vazia, uma cadeia de caracteres de comprimento zero será retornada.  
   
 ## <a name="examples"></a>Exemplos  

@@ -3,7 +3,7 @@ title: "Tabelas de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,22 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f19e4ae74c893062559d8cffbec8c6e8e375ce07
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1489bb1716cb29116e385158e6f05dcc3d028431
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tables-collection-adox"></a>Coleção de tabelas (ADOX)
 Contém todos os [tabela](../../../ado/reference/adox-api/table-object-adox.md) objetos de um catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) método para um **tabelas** coleção é exclusiva para ADOX. Você pode:  
   
 -   Adicionar uma nova tabela à coleção com o **Append** método.  
@@ -62,4 +61,3 @@ Contém todos os [tabela](../../../ado/reference/adox-api/table-object-adox.md) 
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

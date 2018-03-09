@@ -1,33 +1,32 @@
 ---
-title: "Métodos de histórico de relatório | Microsoft Docs"
+title: "Métodos de histórico de relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - report history [Reporting Services], methods
 - historical data [Reporting Services]
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7dc9b4a2dcda53da58431ccf9746b4986b61738
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: b20369d1e5064531c61bafa7c527a796becfed20
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-history-methods"></a>Métodos de histórico de relatório
   Você pode usar esses métodos para criar e gerenciar instantâneos de histórico de item.  
@@ -42,11 +41,10 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Especifica quantos instantâneos de um item o servidor de relatório retém.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Define opções de histórico de item que especificam quando um instantâneo de histórico de item é criado para um item de catálogo especificado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Criando aplicativos que usam o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web servidor de relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Métodos de Web do serviço do servidor de relatório](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Referência técnica &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Métodos do serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
+ [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

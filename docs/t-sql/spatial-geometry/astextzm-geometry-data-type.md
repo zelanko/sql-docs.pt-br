@@ -22,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM (geometry Data Type)
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 91f77bd684d79bbef2530307aa65fc0d92b91c5e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 88403972b53bbefecabde04606f9211c3160ab32
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ Retorna a representação de texto do Open Geospatial Consortium (OGC) conhecido
   
  Tipo de retorno CLR: **SqlChars**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um `Point` instância que contém **Z** (elevação) e **M** valores (medida). `STAsText()`Seleciona os valores WKT, (1, 2); `AsTextZM()` seleciona os mesmos valores WKT e também retorna os valores para **Z** e **M**, produzindo (1 2 3 4).  
@@ -69,5 +68,4 @@ SELECT @g.AsTextZM();
  [Z &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
-
 

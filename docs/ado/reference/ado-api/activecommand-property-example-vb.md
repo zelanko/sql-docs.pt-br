@@ -3,7 +3,7 @@ title: Exemplo de propriedade ActiveCommand (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dbb661e198d16696ad9074affefad977f878321b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd034cdbd1b8188cb76344c1fb74f1b1e3fc9ba5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activecommand-property-example-vb"></a>Exemplo de propriedade ActiveCommand (VB)
 Este exemplo demonstra o [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
@@ -132,4 +131,3 @@ End Sub
  [Propriedade ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

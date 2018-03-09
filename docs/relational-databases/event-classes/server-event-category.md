@@ -2,10 +2,14 @@
 title: Categoria de eventos do servidor | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Server event category
 - Server event category [SQL Server]
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8434042ec0da517fe10e7de6b9a30911b56e97d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a8d65265e5e316c76ece0cfad60c03a38a71c67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="server-event-category"></a>Categoria de evento Server
-  A categoria de evento **Server** contém eventos gerais de servidor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A categoria de evento **Server** contém eventos gerais de servidor.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Classe de evento Mount Tape](../../relational-databases/event-classes/mount-tape-event-class.md)|Indica que uma solicitação de montagem de fita foi recebida.|  
 |[Classe de evento Server Memory Change](../../relational-databases/event-classes/server-memory-change-event-class.md)|Indica que o uso de memória do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi alterado.|  

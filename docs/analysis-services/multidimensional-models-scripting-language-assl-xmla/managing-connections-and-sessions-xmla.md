@@ -1,16 +1,14 @@
 ---
 title: "Gerenciando conexões e sessões (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - XMLA, sessions
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc532f9097c8023fcdc160d597c2cd0830782891
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
   *Status do processo* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
@@ -120,4 +117,3 @@ ms.lasthandoff: 09/01/2017
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
 title: "Assistente de migração (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b8e039ef80efd41fabbaeeddbb9e3e1e9acc2ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e6b2024b8ba34bd4f71abc6030ae86dcc03faebd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migration-wizard-accesstosql"></a>Assistente de migração (AccessToSQL)
 O Assistente de migração orienta você por meio da migração de um ou mais bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Usando o assistente, você cria um projeto, adicionar bancos de dados para o projeto, selecione objetos para migrar e se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você também converter, carregar e migrar dados e esquemas de acesso. Opcionalmente, você pode vincular tabelas de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelas ou SQL Azure.  
@@ -60,7 +61,7 @@ A página Adicionar bancos de dados do Access é onde você adicionar um ou mais
   
 -   [Localizar o Assistente de bancos de dados (Selecione arquivos)](http://msdn.microsoft.com/en-us/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
   
--   [Localizar o Assistente de bancos de dados (Verifique se a seleção)](http://msdn.microsoft.com/en-us/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [Assistente Localizar Bancos de Dados (verifique a seleção)](http://msdn.microsoft.com/en-us/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
   
 ## <a name="select-objects-to-migrate-page"></a>Selecionar objetos para migrar de página  
 Nos objetos Selecione a página de migração, você seleciona objetos a converter. Você pode selecionar todos os objetos, grupos de objetos ou objetos individuais.  
@@ -106,9 +107,8 @@ A página de Status de migração mostra o progresso de converter os esquemas de
   
 Para obter mais informações sobre essa página, consulte [converter, carregar e migrar](http://msdn.microsoft.com/en-us/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Introdução ao Assistente de migração do SQL Server para Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

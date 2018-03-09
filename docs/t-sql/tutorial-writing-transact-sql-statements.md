@@ -2,9 +2,12 @@
 title: "Tutorial: Gravando instruções Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509334a16689e2aa8fda308fcb7ca20b24badb93
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
-Bem-vindo ao tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql-md.md)] . Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Bem-vindo à gravação [!INCLUDE[tsql](../includes/tsql-md.md)] tutorial de instruções. Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
   
 >**OBSERVAÇÃO:** se você for um iniciante, talvez seja mais fácil usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em vez de escrever instruções [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
@@ -62,5 +64,4 @@ O sistema deverá ter o seguinte instalado:
   
   
   
-
 

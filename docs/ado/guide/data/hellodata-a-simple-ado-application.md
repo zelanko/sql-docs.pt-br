@@ -3,7 +3,7 @@ title: 'HelloData: Um aplicativo ADO simples | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Um aplicativo ADO simples
 Este aplicativo simples percorre cada uma das quatro principais operações ADO: obtendo, examinando, editar e atualizar dados. Essas operações são executadas no banco de dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para focalizar os conceitos básicos do ADO e evitar desordem de código, no exemplo de tratamento de erro é mínimo.  
@@ -50,7 +49,7 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
   
  ![Mostra Form1 para o aplicativo HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo de controle|Propriedade|Valor|  
+|Tipo de controle|Propriedade|Value|  
 |------------------|--------------|-----------|  
 |formulário|Nome|Form1|  
 ||Altura|6500|  
@@ -66,4 +65,3 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
 ||Caption|Editar dados|  
 |Botão de comando|Nome|cmdUpdateData|  
 ||Caption|Atualizar dados|
-

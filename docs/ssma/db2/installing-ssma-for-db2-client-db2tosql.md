@@ -1,10 +1,13 @@
 ---
 title: Instalando o SSMA para cliente DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e78a577733066d3420777f33cb7ef05ff5e24a3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Instalando o SSMA para cliente DB2 (DB2ToSQL)
 O cliente do SSMA consiste em arquivos de programas, executam as seguintes tarefas:  
@@ -38,7 +41,7 @@ O cliente do SSMA consiste em arquivos de programas, executam as seguintes taref
   
 Este tópico fornece os pré-requisitos de instalação e instruções de instalação do SSMA.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 O SSMA é projetado para trabalhar com o DB2 em z/OS versão 9.0 e 10.0 ou DB2 em LUW versão 9,8 e 10.1 ou versões posteriores e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014.  
   
 Antes de instalar o SSMA, certifique-se de que o computador atende aos seguintes requisitos:  
@@ -81,7 +84,7 @@ Depois de baixar a versão mais recente, você deve extrair os arquivos de insta
   
 O local de instalação padrão é C:\Program Files\Microsoft SQL Server Migration Assistant para DB2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando componentes do SSMA do SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [Migrando bancos de dados do DB2 para SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

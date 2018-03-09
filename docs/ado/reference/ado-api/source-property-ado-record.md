@@ -3,7 +3,7 @@ title: Propriedade (registro de ADO) de origem | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -23,17 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>Propriedade Source (ADO registro)
 Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -41,7 +40,7 @@ Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/re
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** valor que indica a entidade representada pelo **registro**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **fonte** propriedade retorna o *fonte* argumento do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta que pode ser usada sem configuração o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade abrir diretamente o **registro** objeto. Implícita **Conexão** objeto é criado nesse caso.  
   
  O **fonte** propriedade também pode conter uma referência a uma já aberto **registros**, que abre um **registro** objeto que representa a linha atual o  **Conjunto de registros**.  
@@ -61,4 +60,3 @@ Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/re
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Source (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

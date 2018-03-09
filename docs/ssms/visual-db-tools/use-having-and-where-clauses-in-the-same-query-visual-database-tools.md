@@ -3,8 +3,11 @@ title: "Usar cláusulas HAVING e WHERE na mesma consulta | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Usar cláusulas HAVING e WHERE na mesma consulta (Visual Database Tools)
-Em algumas instâncias, talvez você deseje excluir linhas individuais de grupos (usando uma cláusula WHERE) antes de aplicar um critério aos grupos como um todo (usando uma cláusula HAVING).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em algumas instâncias, talvez você deseje excluir linhas individuais de grupos (usando uma cláusula WHERE) antes de aplicar um critério aos grupos como um todo (usando uma cláusula HAVING).  
   
 Uma cláusula HAVING é como uma cláusula WHERE, a diferença é que ela se aplica somente a grupos como um todo (ou seja, as linhas do conjunto de resultados que representam grupos), enquanto a cláusula WHERE se aplica a linhas individuais. Uma consulta pode conter uma cláusula WHERE e uma cláusula HAVING. Nesse caso:  
   
@@ -91,7 +94,7 @@ Você pode criar uma cláusula WHERE e uma cláusula HAVING envolvendo a mesma c
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classificar e agrupar resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Resumir resultados da consulta (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

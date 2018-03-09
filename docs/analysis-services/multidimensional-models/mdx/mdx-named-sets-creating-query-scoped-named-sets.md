@@ -2,35 +2,33 @@
 title: Criando no escopo da consulta conjuntos nomeados (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee0964b6db7b8443d22ba850b84d451e14972937
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Conjuntos nomeados de MDX denominado conjuntos - criando no escopo da consulta
-  Se um conjunto nomeado for necessário para uma única consulta MDX, é possível defini-lo usando a palavra-chave WITH. O conjunto nomeado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Se um conjunto nomeado for necessário para uma única consulta MDX, é possível defini-lo usando a palavra-chave WITH. O conjunto nomeado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
   
  Como discutido neste tópico, a sintaxe da palavra-chave WITH é bem flexível, comportando até o uso de funções para definir o conjunto nomeado.  
   
@@ -102,7 +100,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Instrução SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Criando no escopo da sessão nomeados conjuntos &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

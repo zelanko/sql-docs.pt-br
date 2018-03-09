@@ -2,27 +2,30 @@
 title: "Outros Assinantes não SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: non-SQL Server Subscribers, other types
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e74b0f805e69fd9608594af85646640776f0c2de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 035bddbc96126c98d48ac599db9307f565f1d38a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
-  Para uma lista de Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , suportados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para uma lista de Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], compatíveis com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Assinantes não SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Exigências do driver ODBC  
  O driver ODBC:  
@@ -115,7 +118,7 @@ ms.lasthandoff: 11/09/2017
   
  Para obter mais informações sobre o provedor OLE DB, consulte a documentação fornecida com seu provedor OLE DB.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

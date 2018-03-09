@@ -2,41 +2,35 @@
 title: Conjunto de linhas DMSCHEMA_MINING_MODELS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
+apiname: DMSCHEMA_MINING_MODELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f857cf206932ad8048768c2c65f047670ec9d1e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_MODELS
-  Enumera os modelos de mineração de dados no catálogo atual. O **DMSCHEMA_MINING_MODELS** conjunto de linhas inclui informações como nomes de modelo, data de processamento e o algoritmo de mineração associados a cada modelo de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera os modelos de mineração de dados no catálogo atual. O **DMSCHEMA_MINING_MODELS** conjunto de linhas inclui informações como nomes de modelo, data de processamento e o algoritmo de mineração associados a cada modelo de mineração.  
   
- . O **DMSCHEMA_MINING_MODELS** de linhas de esquema é muito semelhante do [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) de linhas de esquema e podem ser usados da mesma maneira.  
+ para obter informações sobre a ferramenta de configuração e recursos adicionais. O **DMSCHEMA_MINING_MODELS** de linhas de esquema é muito semelhante do [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) de linhas de esquema e podem ser usados da mesma maneira.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DMSCHEMA_MINING_MODELS** linhas contém as seguintes colunas.  
@@ -79,8 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  Para obter exemplos de como consultar esse conjunto de linhas, consulte [consultar os parâmetros usados para criar um modelo de mineração](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Linhas do esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjuntos de linhas de esquema de mineração de dados](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

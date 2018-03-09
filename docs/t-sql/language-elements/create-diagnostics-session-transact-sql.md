@@ -15,19 +15,18 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71f3463ad4d91bd117c322e9e63c0b331b07ca9f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>CRIAR sessão de diagnóstico (Transact-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Sessões de diagnóstico permitem que você salve as informações de diagnóstico detalhadas, definidas pelo usuário no desempenho do sistema ou de consulta.  
@@ -82,7 +81,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *comp_type*  
  O tipo de comparação. Possíveis valores são: igual a, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, RegEx  
   
- *Property_Name*  
+ *property_name*  
  Uma propriedade relacionada ao evento.  Nomes de propriedade podem fazer parte da marca de captura ou usado como parte dos critérios de filtragem.  
   
 |Nome da propriedade|Description|  
@@ -96,7 +95,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|A duração do evento.|  
 |SPID|A ID de processo do serviço.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Cada usuário é permitido um máximo de 10 sessões simultâneas de diagnóstico. Consulte [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) para obter uma lista de sessões atuais e soltar os desnecessários sessões usando `DROP DIAGNOSTICS SESSION`.  
   
  Sessões de diagnóstico continuará coletar metadados até descartado.  
@@ -211,4 +210,3 @@ DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;
 ```  
   
   
-

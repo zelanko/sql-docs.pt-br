@@ -2,26 +2,31 @@
 title: CurvePolygon | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65ca3c0fd622dd691424b555972dfde42903d07b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 328c0ce022ae7b432aaf63afded18fb789409a1e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  **CurvePolygon** é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**CurvePolygon** é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
 >  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CurvePolygon** , baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -129,7 +134,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Criando uma instância geométrica com um CurvePolygon vazio  
  Esse exemplo mostra como criar uma instância **CurvePolygon** vazia:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -137,21 +142,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarando e criando uma instância geométrica com um CurvePolygon na mesma instrução  
  Este trecho de código mostra como declarar e iniciar uma instância de geometry com um **CurvePolygon** na mesma instrução:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Criando uma instância geográfica com um CurvePolygon  
  Este trecho de código mostra como declarar e iniciar uma instância de **geography** com um **CurvePolygon**:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Armazenando um CurvePolygon com apenas um anel delimitador exterior  
  Este exemplo mostra como armazenar um círculo simples em uma instância **CurvePolygon** (apenas um anel delimitador exterior é usado para definir o círculo):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -160,7 +165,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Armazenando um CurvePolygon que contém anéis interiores  
  Este exemplo cria uma rosca em uma instância **CurvePolygon** (um anel delimitador exterior e um anel interior são usados para definir a rosca):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -168,7 +173,7 @@ SELECT @g.STArea() AS Area;
   
  Este exemplo mostra uma instância **CurvePolygon** válida e uma instância inválida ao usar anéis interiores:  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  
@@ -185,7 +190,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  Tanto o @g1 quanto o @g2 usam o mesmo anel delimitador exterior: um círculo com um raio de 5 e ambos usam um quadrado para um anel interior.  Entretanto, a instância @g1 é válida, mas a instância @g2 é inválida.  A razão pela qual @g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas.  O desenho a seguir mostra o que ocorreu:  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

@@ -2,10 +2,14 @@
 title: "Recuperar para um número de sequência de log (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +24,20 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 - database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf376afd18d33fc81d2a9866f97bfd5a1163ffd7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
-  Este tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou bulk-logged.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou bulk-logged.  
   
  Você pode usar um LSN (número de sequência de log) para definir o ponto de recuperação para uma operação de restauração. No entanto, esse é um recurso especializado destinado a fornecedores de ferramentas e provavelmente não é de uso geral.  
   
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
      O STOPATMARK efetua roll forward para o LSN e inclui o registro de log no roll forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma sequência que determina que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e exclui o registro de log do roll forward.  
   
@@ -99,7 +104,7 @@ GO
   
 -   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

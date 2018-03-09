@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDataSource
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC]
+f1_keywords: SQLConfigDataSource
+helpviewer_keywords: SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d1fddaf67cfbdb8f8c8df7e66b86a681ca2e23d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-function"></a>Função SQLConfigDataSource
 **Conformidade**  
@@ -121,4 +115,3 @@ BOOL SQLConfigDataSource(
 |Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (na configuração de DLL)|  
 |Remover um nome de fonte de dados das informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |Adicionar um nome de fonte de dados para as informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

@@ -5,23 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: "18"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cad58416d1177a421c710f00979a9153cb393cdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ae2cd76e15dc93c9ce7e3c88a0e89142141d219d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="discontinued-master-data-services-features"></a>Recursos do Master Data Services descontinuados
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  O modelo de metadados não está mais disponível. Você não pode mais exibir os metadados na área funcional do Gerenciador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos preteridos do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   

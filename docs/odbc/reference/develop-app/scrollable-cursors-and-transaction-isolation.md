@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que governam a visibilidade das alterações.  
@@ -46,17 +46,17 @@ A tabela a seguir lista os fatores que governam a visibilidade das alterações.
 |Type\action de cursor|Self|O proprietário<br /><br /> Txn|Outra<br /><br /> Txn<br /><br /> (RU[a])|Outra<br /><br /> Txn<br /><br /> (RC[a])|Outra<br /><br /> Txn<br /><br /> (RR[a])|Outra<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert (inserir)|Talvez [b]|Não|Não|Não|Não|Não|  
-|Update (atualizar)|Talvez [b]|Não|Não|Não|Não|Não|  
-|DELETE|Talvez [b]|Não|Não|Não|Não|Não|  
+|Insert|Talvez [b]|não|não|não|não|não|  
+|Update|Talvez [b]|não|não|não|não|não|  
+|DELETE|Talvez [b]|não|não|não|não|não|  
 |Controlado por conjunto de chaves|||||||  
-|Insert (inserir)|Talvez [b]|Não|Não|Não|Não|Não|  
-|Update (atualizar)|Sim|Sim|Sim|Sim|Não|Não|  
-|DELETE|Talvez [b]|Sim|Sim|Sim|Não|Não|  
+|Insert|Talvez [b]|não|não|não|não|não|  
+|Update|Sim|Sim|Sim|Sim|não|não|  
+|DELETE|Talvez [b]|Sim|Sim|Sim|não|não|  
 |Dinâmicos|||||||  
-|Insert (inserir)|Sim|Sim|Sim|Sim|Sim|Não|  
-|Update (atualizar)|Sim|Sim|Sim|Sim|Não|Não|  
-|DELETE|Sim|Sim|Sim|Sim|Não|Não|  
+|Insert|Sim|Sim|Sim|Sim|Sim|não|  
+|Update|Sim|Sim|Sim|Sim|não|não|  
+|DELETE|Sim|Sim|Sim|Sim|não|não|  
   
  [a] as letras entre parênteses indicam o nível de isolamento da transação que contém o cursor; o nível de isolamento da transação (no qual a alteração foi feita) é irrelevante.  
   

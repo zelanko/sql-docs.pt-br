@@ -2,32 +2,32 @@
 title: Ocultando e desabilitando as hierarquias de atributo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a880757dcdaa945cbe9fdb100bb1ded80e584227
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2ce558665422afad097ef1aa840f4d041dd8090e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lição 4-4-ocultando e desabilitando as hierarquias de atributo
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Por padrão, uma hierarquia de atributo é criada para cada atributo em uma dimensão e cada hierarquia é disponibilizada para o dimensionamento de dados de fatos. Essa hierarquia é composta por um nível "Todos" e um nível de detalhe que contém todos os membros da hierarquia. Como você já aprendeu, é possível organizar atributos em hierarquias definidas pelo usuário para fornecer caminhos de navegação em um cubo. Sob certas circunstâncias, talvez você queira desativar ou ocultar alguns atributos e suas hierarquias. Por exemplo, determinados atributos como um número de previdência social ou números de identificação nacional, taxas de pagamentos, datas de aniversário e informações de logon não são atributos pelos quais os usuários poderão dimensionar as informações do cubo. Em vez disso, geralmente essas informações são exibidas apenas como detalhes de um membro de atributo específico. É possível ocultar essas hierarquias de atributos, deixando os atributos visíveis apenas como propriedades de membro de um determinado atributo. Você também pode criar membros de outros atributos, como nomes de cliente ou CEPs, visíveis somente quando eles são exibidos através de uma hierarquia de usuário em vez de serem exibidos de forma independente através de uma hierarquia de atributo. Uma razão para seguir esse procedimento pode ser o número absoluto de membros distintos na hierarquia de atributo. Por fim, para melhorar o desempenho do processamento, será preciso desativar as hierarquias de atributo que não serão usadas pelos usuários na navegação.  
   
 O valor da propriedade **AttributeHierarchyEnabled** determina se uma hierarquia de atributo é criada. Se essa propriedade for definida como **False**, a hierarquia de atributo não será criada e o atributo não poderá ser usado como um nível em uma hierarquia de usuário; a hierarquia de atributo existe apenas como uma propriedade de membro. Entretanto, uma hierarquia de atributo desativada ainda pode ser usada para classificar os membros de outro atributo. Se o valor da propriedade **AttributeHierarchyEnabled** for definido como **True**, o valor da propriedade **AttributeHierarchyVisible** determinará se a hierarquia de atributo será visível, independentemente de seu uso em uma hierarquia definida pelo usuário.  
@@ -140,4 +140,3 @@ Nas tarefas deste tópico, você desativará o número de previdência social e 
   
   
   
-

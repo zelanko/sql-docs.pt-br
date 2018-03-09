@@ -2,35 +2,29 @@
 title: Conecte-se ao servidor de tabela do Analysis Services existente e o banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 061b37f5b0e8209f896ded915f0259c3253a1439
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Conecte-se ao banco de dados e servidor de tabela do Analysis Services existente
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-No SQL Server 2016, o Analysis Services Management Objects (AMO) inclui vários namespaces que pode ser usados para configurar uma conexão de servidor. Este artigo explica como estabelecer uma conexão de servidor usando o namespace AnalysisServices para modelos e bancos de dados criados em 1200 ou maior nível de compatibilidade. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]No SQL Server 2016, o Analysis Services Management Objects (AMO) inclui vários namespaces que pode ser usados para configurar uma conexão de servidor. Este artigo explica como estabelecer uma conexão de servidor usando o namespace AnalysisServices para modelos e bancos de dados criados em 1200 ou maior nível de compatibilidade. 
 
 Para se conectar a um servidor do Analysis Services, seu código deve instanciar um objeto de servidor e, em seguida, chamar o método Connect. Uma vez conectado, propriedades do objeto Server refletirão as configurações da instância do Analysis Services atual. 
 
@@ -122,4 +116,3 @@ Depois de estabelecer uma conexão, a próxima etapa lógica é para qualquer um
 
 - [Criar e implantar um banco de dados vazio](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 - [Lista de bancos de dados existentes](../../analysis-services/tabular-model-programming-compatibility-level-1200/list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
-

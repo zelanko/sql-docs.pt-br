@@ -3,7 +3,7 @@ title: Propriedade PageCount (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - PageCount property [ADO]
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0ce12f42693b58a57ecc4a08c186027a054bc80
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 44759f9316e46be72120febd022f9a47554eb6bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pagecount-property-ado"></a>Propriedade PageCount (ADO)
 Indica quantas páginas de dados a [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto contém.  
@@ -36,7 +35,7 @@ Indica quantas páginas de dados a [registros](../../../ado/reference/ado-api/re
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **longo** valor que indica o número de páginas no **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **PageCount** propriedade para determinar quantas páginas de dados estão no **registros** objeto. *Páginas* são grupos de registros cujo tamanho é igual a [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) configuração de propriedade. Mesmo que a última página está incompleta porque há menos registros que o **PageSize** valor, ela será considerada como uma página adicional no **PageCount** valor. Se o **registros** objeto não dá suporte a essa propriedade, o valor será -1 para indicar que o **PageCount** for indeterminável.  
   
  Consulte o **PageSize** e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriedades para a funcionalidade de página em mais.  
@@ -50,4 +49,3 @@ Indica quantas páginas de dados a [registros](../../../ado/reference/ado-api/re
  [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Propriedade PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)
-

@@ -2,29 +2,34 @@
 title: "Usar a função EVENTDATA | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ddl
+ms.suite: sql
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 049d6eb85ebd1fcbbfecb1d64ec507979a0026f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
-  As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor **xml** . O esquema XML contém informações sobre o seguinte:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor **xml** . O esquema XML contém informações sobre o seguinte:  
   
 -   A hora do evento.  
   
@@ -132,7 +137,7 @@ GO
   
  Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com o botão direito do mouse em **ddlDatabseTriggerLog** e selecione **Script de Gatilho de Banco de Dados como**. Por padrão, o gatilho DDL **ddlDatabseTriggerLog** está desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos DDL](../../relational-databases/triggers/ddl-events.md)   
  [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   

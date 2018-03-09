@@ -1,11 +1,11 @@
 ---
-title: "Etapa 1: Copiando o pacote da lição 1 | Microsoft Docs"
+title: "Etapa 1: copiar o pacote da Lição 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 258d3c72ce8207a55aa9587a1c2db9261b8b23dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lição 2-1: copiando o pacote da lição 1
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lição 2-1 – copiar o pacote da Lição 1
 Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para criar o pacote da lição 2  
@@ -54,7 +53,7 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição
   
 1.  Abra as Ferramentas de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e abra o projeto do Tutorial do SSIS.  
   
-2.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS**e clique em **Adicionar Pacote Existente**.  
+2.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS** e clique em **Adicionar Pacote Existente**.  
   
 3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
   
@@ -73,4 +72,3 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: adicionando e configurando o contêiner Loop Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

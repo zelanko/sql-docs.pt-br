@@ -2,26 +2,30 @@
 title: "Funções de RevoScaleR para trabalhar com dados do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 08d8d3e6a13066aa79c96ba161e1c9d8f230e60f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Funções de RevoScaleR para trabalhar com dados do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico fornece uma visão geral das funções principais fornecidas no RevoScaleR para trabalhar com dados do SQL Server.
 

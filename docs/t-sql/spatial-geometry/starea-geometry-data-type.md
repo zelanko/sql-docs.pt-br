@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STArea (geometry Data Type)
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ec0a874d0dc2dd8bb37ce7e04fe71cbea85f860
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87325f0124b52f6b77c9b62d67b1eec6915afbbb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="starea-geometry-data-type"></a>STArea (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STArea()`Retorna 0 se uma **geometria** instância contiver apenas figuras dimensionais 0 e 1-, ou se ela estiver vazia. `STArea()`Retorna **nulo** se o **geometria** instância não foi inicializada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -73,7 +72,6 @@ SELECT @g.STArea();
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

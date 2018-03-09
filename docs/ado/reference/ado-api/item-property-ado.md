@@ -3,8 +3,9 @@ title: Item de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -44,18 +45,19 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords: Item property [ADO]
+helpviewer_keywords:
+- Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48abf6f8e4b1e99d498130aedfee6d653f214579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-ado"></a>Propriedade item (ADO)
 Indica um membro específico de uma coleção, por nome ou número ordinal.  
@@ -73,7 +75,7 @@ Set object = collection.Item ( Index )
  *Index*  
  Um **Variant** expressão que é avaliada para o nome ou o número ordinal de um objeto em uma coleção.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **Item** propriedade para retornar um objeto específico em uma coleção. Se **Item** não é possível localizar um objeto na coleção correspondente para o *índice* argumento, um erro ocorre. Além disso, algumas coleções não oferecem suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
   
  O **Item** é a propriedade padrão para todas as coleções; portanto, são intercambiáveis formas de sintaxe a seguir:  

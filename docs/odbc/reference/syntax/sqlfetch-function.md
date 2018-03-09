@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFetch
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFetch
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFetch
-helpviewer_keywords:
-- SQLFetch function [ODBC]
+f1_keywords: SQLFetch
+helpviewer_keywords: SQLFetch function [ODBC]
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 135ee130d56801c5da3abb47447a1372d29656a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade**  
@@ -276,7 +270,6 @@ SQLRETURN SQLFetch(
 |Colunas do conjunto de retorno do número de resultados|[Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparar uma instrução para execução|[Função SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

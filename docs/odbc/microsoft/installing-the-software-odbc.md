@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], installing
 - installing ODBC driver for Oracle [ODBC]
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50cf78c338a0da90e7a253fe58addb5a77199ce1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c46b87a3d9ea3f30524a261bc81bd37aa03c9aca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-the-software-odbc"></a>Instalar o Software (ODBC)
 > [!IMPORTANT]  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!CAUTION]  
 >  Instalar o software Oracle MDAC/Windows DAC pode substituir as versões atuais do MDAC. Se houver problemas com componentes ODBC, reinstale o MDAC.
-

@@ -2,10 +2,13 @@
 title: "Escolher um idioma ao criar um índice de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +21,21 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Ao criar um índice de texto completo, você precisa especificar um idioma no nível de coluna para a coluna indexada. O [separador de palavras e os lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) do idioma especificado serão usados por consultas de texto completo na coluna. Há algumas coisas a considerar ao escolher o idioma da coluna ao criar um índice de texto completo. Essas considerações estão relacionadas a como seu texto é transformado em token e, depois, indexado pelo Mecanismo de Texto Completo.  
   
 > [!NOTE]  
@@ -62,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
      Os separadores de palavras foram reformulados, e testes mostraram que os novos separadores de palavras proporcionam melhor qualidade semântica do que os anteriores. Isso aumenta a precisão da recuperação.  
   
--   Cobertura de uma lista extensa de idiomas e separadores de palavras que estão são incluídos no SQL Server prontos para uso e habilitados por padrão.  
+-   Cobertura para obter uma lista extensa de idiomas. Separadores de palavras são incluídos no SQL Server prontos para uso e habilitados por padrão.  
   
  Para obter uma lista dos idiomas para os quais o SQL Server inclui um separador de palavras e lematizadores, veja [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
@@ -75,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
   
 ##  <a name="breaking"></a> Quebra de palavras  
- Um separador de palavras cria tokens do texto que está sendo indexado em limites de palavra, que são específicos de idioma. Por isso, o comportamento da separação de palavras é diferente entre diferentes idiomas. Se você usar o idioma x para indexar vários idiomas {x, y e ,z}, o comportamento de alguns deles poderá gerar resultados inesperados. Por exemplo, um traço (-) ou uma vírgula (,) pode ser um elemento de separação de palavras que será acionado em um idioma, mas não em outro. Além disso, pode ocorrer um comportamento de lematização raramente inesperado porque uma dada palavra pode ter um comportamento de lematização diferente em outro idioma. Por exemplo, no idioma inglês, os limites de palavras normalmente são espaços em branco ou alguma forma de pontuação. Em outros idiomas, como no alemão, palavras ou caracteres podem ser combinados. Portanto, o idioma no nível de coluna escolhido deve representar o idioma que você espera que será armazenado em linhas dessa coluna.  
+ Um separador de palavras transforma em token o texto que está sendo indexado nos limites de palavras, os quais são específicos a um idioma. Por isso, o comportamento da separação de palavras é diferente entre diferentes idiomas. Se você usar um idioma x para indexar um número de idiomas {x, y e z}, o comportamento de alguns deles pode causar resultados inesperados. Por exemplo, um traço (-) ou uma vírgula (,) pode ser um elemento de separação de palavras que será acionado em um idioma, mas não em outro. Além disso, pode ocorrer um comportamento de lematização raramente inesperado porque uma dada palavra pode ter um comportamento de lematização diferente em outro idioma. Por exemplo, no idioma inglês, os limites de palavras normalmente são espaços em branco ou alguma forma de pontuação. Em outros idiomas, como no alemão, palavras ou caracteres podem ser combinados. Portanto, o idioma no nível de coluna escolhido deve representar o idioma que você espera que será armazenado em linhas dessa coluna.  
   
 ### <a name="western-languages"></a>Idiomas ocidentais  
  No caso da família de idiomas ocidentais, se você não tiver certeza de quais idiomas serão armazenados em uma coluna ou se espera que mais de um seja armazenado, uma alternativa é usar um separador de palavras para o idioma mais complexo que poderá ser armazenado na coluna. Por exemplo, talvez você espere armazenar conteúdo em inglês, espanhol e alemão em uma única coluna. Esses três idiomas ocidentais têm padrões do separação de palavras muito parecidos, sendo que os padrões do alemão são os mais complexos. Por isso, uma boa opção nesse caso seria usar o separador de palavras do idioma alemão, que deverá poder processar os textos em inglês e espanhol corretamente. Por outro lado, o separador de palavras do inglês pode não processar textos em alemão perfeitamente por causa das palavras compostas do idioma.  
@@ -100,7 +106,7 @@ ms.lasthandoff: 11/09/2017
   
   
 ##  <a name="stemming"></a> Lematização  
- Outro aspecto que você deve levar em consideração quando escolher o idioma no nível de coluna é a lematização. Em consultas de texto completo,*lematização* é o processo de procurar todas as formas lematizadas (flexivas) de uma palavra em determinado idioma. Quando você usa um separador de palavras genérico para processar vários idiomas, o processo de lematização só funcionará para o idioma especificado para a coluna, e não para os outros idiomas da coluna. Por exemplo, os lematizados de alemão não funcionam para inglês ou espanhol (e assim por diante). Isso poderia afetar a recuperação, dependendo do idioma escolhido no momento da consulta.  
+ Outro aspecto que você deve levar em consideração quando escolher o idioma no nível de coluna é a lematização. Em consultas de texto completo,*lematização* é o processo de procurar todas as formas lematizadas (flexivas) de uma palavra em determinado idioma. Quando você usa um separador de palavras genérico para processar vários idiomas, o processo de lematização só funcionará para o idioma especificado para a coluna, e não para os outros idiomas da coluna. Por exemplo, os lematizados de alemão não funcionam para inglês ou espanhol (e assim por diante). Isso pode afetar seu recall dependendo de qual idioma for escolhido no momento da consulta.  
   
   
 ##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
@@ -116,7 +122,7 @@ ms.lasthandoff: 11/09/2017
  Por padrão, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a pesquisa de texto completo analisará os termos da consulta usando o idioma especificado para cada coluna incluída na cláusula de texto completo. Para ignorar esse comportamento, especifique um idioma não padrão no momento da consulta. Para os idiomas com suporte cujos recursos estão instalados, a cláusula *language_term* de LANGUAGE de uma consulta [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) pode ser usada para especificar o idioma utilizado para separação de palavras, lematização, dicionário de sinônimos e processamento de palavra irrelevante (stop word) dos termos da consulta.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

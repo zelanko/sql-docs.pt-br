@@ -19,17 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 05d4d7b905c0539a67120983a562ee6936791c97
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/11/2017
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Validar XML com a tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validar XML com a Tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -141,19 +140,19 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Use o **nó Geral** da caixa de diálogo **Editor da Tarefa XML** para especificar o tipo de operação e configurar a operação.  
   
- Para saber mais sobre essa tarefa, consulte [Validar XML com a tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). Para obter informações sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
+ Para saber mais sobre essa tarefa, consulte [Validar XML com a Tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). Para obter informações sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
   
 ### <a name="static-options"></a>Opções estáticas  
  **OperationType**  
  Selecione o tipo de operação na lista. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Validar**|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD). Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Validar**.|  
 |**XSLT**|Executa transformações de XSL em documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **XSLT**.|  
@@ -165,20 +164,20 @@ ms.lasthandoff: 08/11/2017
  **SourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **Origem**  
- Se a **Origem** for definida como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(...)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
+ Se a **Origem** for definida como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(...)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **fonte** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **Origem** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **fonte** é definido como **variável**, selecione uma variável existente ou clique em  **\<nova variável... >** para criar uma nova variável.  
+ Se a **Origem** for definida como **Variável**, selecione uma variável existente ou clique em **\<Nova variável...>** para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -194,14 +193,14 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Selecione um Gerenciador de conexão de arquivo existente ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -209,7 +208,7 @@ ms.lasthandoff: 08/11/2017
  **ValidationType**  
  Selecione o tipo de validação. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**DTD**|Use uma DTD.|  
 |**XSD**|Use um esquema XSD. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **ValidationType**.|  
@@ -226,20 +225,20 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **XPathStringSourceType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -253,18 +252,18 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DestinationType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -272,20 +271,20 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **XPathStringSourceType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -299,18 +298,18 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DestinationType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -318,20 +317,20 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **XPathStringSourceType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -341,7 +340,7 @@ ms.lasthandoff: 08/11/2017
  **XPathOperation**  
  Selecione o tipo de resultado XPath. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Evaluation**|Retorna os resultados de uma função XPath.|  
 |**Lista de nós**|Retorna os nós selecionados como um fragmento XML.|  
@@ -353,20 +352,20 @@ ms.lasthandoff: 08/11/2017
  **XPathStringSourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **XPathStringSource**  
- Se **XPathStringSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
+ Se **XPathStringSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **XPathStringSourceType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **XPathStringSourceType** for definido com **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **XPathStringSourceType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -379,18 +378,18 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DestinationType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -398,7 +397,7 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de destino do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -407,11 +406,11 @@ ms.lasthandoff: 08/11/2017
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **SecondOperandType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -421,7 +420,7 @@ ms.lasthandoff: 08/11/2017
  **DiffAlgorithm**  
  Selecione o algoritmo Diff para ser usado ao comparar documentos. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Auto**|Deixe a tarefa XML determinar se o algoritmo rápido ou preciso deve ser usado.|  
 |**Rápido**|Use um algoritmo Diff rápido, porém menos preciso.|  
@@ -430,7 +429,7 @@ ms.lasthandoff: 08/11/2017
  **Opções de Diff**  
  Defina as opções de Diff a serem aplicadas à operação Diff. As opções estão listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Especifique se a declaração XML deve ser comparada.|  
 |**IgnoreDTD**|Especifique se a DTD deve ser ignorada.|  
@@ -454,18 +453,18 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DestinationType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -473,7 +472,7 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -482,11 +481,11 @@ ms.lasthandoff: 08/11/2017
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **SecondOperandType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -500,18 +499,18 @@ ms.lasthandoff: 08/11/2017
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DestinationType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -519,7 +518,7 @@ ms.lasthandoff: 08/11/2017
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -528,11 +527,11 @@ ms.lasthandoff: 08/11/2017
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
   
- Se **SecondOperandType** é definido como **conexão de arquivo**, selecione um Gerenciador de conexão de arquivo ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **SecondOperandType** é definido como **variável**, selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -543,4 +542,3 @@ ms.lasthandoff: 08/11/2017
 -   Exemplo do CodePlex, [Process XML Data Package Sample](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), em www.codeplex.com  
   
   
-

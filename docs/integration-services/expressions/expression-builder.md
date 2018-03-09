@@ -1,5 +1,5 @@
 ---
-title: "Construtor de expressões | Microsoft Docs"
+title: "Construtor de Expressões | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-builder"></a>Construtor de Expressões
   Use a caixa de diálogo **Construtor de Expressões** para criar e editar uma expressão de propriedade ou para gravar a expressão que define o valor de uma variável usando uma interface gráfica do usuário que lista as variáveis e oferece uma referência interna às funções, às conversões de tipo e aos operadores que a linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui.  
@@ -48,17 +47,16 @@ ms.lasthandoff: 08/03/2017
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Variáveis**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
+|**Variables**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
 |**Funções Matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
-|**Expressão**|Edite ou digite uma expressão.'|  
+|**Expression**|Edite ou digite uma expressão.'|  
 |**Valor avaliado**|Lista o resultado da avaliação da expressão.|  
 |**Avaliar Expressão**|Clique em **Avaliar Expressão** para exibir o resultado de avaliação da expressão.|  
   
-## <a name="see-also"></a>Consulte também  
- [Página expressões](../../integration-services/expressions/expressions-page.md)   
- [Editor de expressões de propriedade](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40; SSIS &#41; Variáveis](../../integration-services/integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página Expressões](../../integration-services/expressions/expressions-page.md)   
+ [Editor de expressões de propriedades](../../integration-services/expressions/property-expressions-editor.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variáveis do sistema](../../integration-services/system-variables.md)  
   
   
-

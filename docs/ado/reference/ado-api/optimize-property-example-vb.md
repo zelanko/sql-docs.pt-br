@@ -3,7 +3,7 @@ title: Otimizar o exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vb"></a>Otimizar o exemplo da propriedade (VB)
 Este exemplo demonstra o [campo](../../../ado/reference/ado-api/field-object.md) dinâmico de objeto **otimizar** propriedade. O ***zip*** campo o ***autores*** tabela o ***Pubs*** banco de dados não está indexado. Definindo o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade **True** no ***zip*** campo autoriza ADO para criar um índice que melhora o desempenho do [localizar](../../../ado/reference/ado-api/find-method-ado.md)método.  
@@ -97,4 +96,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-

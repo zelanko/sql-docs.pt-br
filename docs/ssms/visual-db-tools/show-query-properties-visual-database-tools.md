@@ -3,8 +3,11 @@ title: Exibir propriedades de consulta (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4e0fc1013d807d6b0ab6c6c2f32867b86a9fb8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1751f94ef19db3e84aa710cddbd383062ab72562
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Mostrar propriedades de consulta (Visual Database Tools)
-Você pode exibir as propriedades de uma consulta na janela Propriedades do Designer de Consulta e Exibição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode exibir as propriedades de uma consulta na janela Propriedades do Designer de Exibição e Consulta.  
   
 ### <a name="to-display-properties-for-a-query"></a>Para exibir as propriedades de uma consulta  
   
@@ -34,6 +37,6 @@ Você pode exibir as propriedades de uma consulta na janela Propriedades do Desi
   
 As propriedades da consulta tornam-se agora visíveis na janela **Propriedades** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

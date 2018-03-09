@@ -2,16 +2,13 @@
 title: Hierarquias | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
@@ -20,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchies"></a>Hierarquias
-  Hierarquias, em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Hierarquias em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  
   
 ##  <a name="bkmk_benefits"></a> Benefícios  
  As tabelas podem incluir dúzias ou até mesmo centenas de colunas com nomes de coluna incomuns em nenhuma ordem aparente. Isto pode levar a uma aparência não ordenada ao reportar listas de campo de cliente, dificultando aos usuários localizarem e incluírem dados em um relatório. As hierarquias podem fornecer uma exibição simples e intuitiva de uma estrutura de dados que, de outra maneira, seria complexa.  
@@ -51,13 +48,13 @@ ms.lasthandoff: 11/17/2017
   
  Depois de criar hierarquias, você pode testar a sua eficácia usando o recurso Analisar no Excel. Para obter mais informações, consulte [analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |Tarefa|Description|  
 |----------|-----------------|  
 |[Criar e gerenciar hierarquias](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Descreve como criar e gerenciar hierarquias usando o designer de modelo em Exibição de Diagrama.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Designer de modelo de tabela](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  

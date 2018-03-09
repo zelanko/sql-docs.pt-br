@@ -3,8 +3,11 @@ title: "Criar consultas usando algo além de uma tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
-Sempre que você escreve uma consulta de recuperação, você articula as colunas e as linhas que você quer, e onde o processador de consulta deve procurar os dados originais. Tipicamente, esses dados originais consistem em uma tabela ou várias tabelas unidas. Mas os dados originais podem vir de fontes diferentes de tabelas. Na realidade, podem vir de exibições, consultas, sinônimos ou funções definidas pelo usuário que retornam uma tabela.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sempre que você escreve uma consulta de recuperação, você articula as colunas e as linhas desejadas e nas quais o processador de consulta deve procurar os dados originais. Tipicamente, esses dados originais consistem em uma tabela ou várias tabelas unidas. Mas os dados originais podem vir de fontes diferentes de tabelas. Na realidade, podem vir de exibições, consultas, sinônimos ou funções definidas pelo usuário que retornam uma tabela.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>Usando uma exibição no lugar de uma tabela  
 Você pode selecionar linhas de uma exibição. Por exemplo, suponha que o banco de dados inclui uma exibição chamada "ExpensiveBooks" na qual cada linha descreve um título cujo preço excede 19,99. A definição da exibição pode ter esta aparência:  

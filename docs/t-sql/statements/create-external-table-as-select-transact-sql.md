@@ -22,17 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -80,7 +79,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [[ *database_name* . [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
+ [[ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  Um a três - parte nome da tabela para criar o banco de dados. Para uma tabela externa, apenas os metadados de tabela são armazenados no banco de dados relacional.  
   
  LOCAL = '*hdfs_folder*'  
@@ -108,7 +107,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = valor, o banco de dados irá parar importação linhas depois de 5 linhas falharam importar.  
   
- Porcentagem  
+ percentage  
  REJECT_VALUE é uma porcentagem, não é um valor literal. O banco de dados irá parar importação de linhas de externo do arquivo de dados quando o *porcentagem* de linhas com falha excede *reject_value*. A porcentagem de linhas com falha é calculada em intervalos.  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
@@ -186,7 +185,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Movimentação de partição externo  
   
- **Aplica-se a:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]como um pré-requisito para a criação de uma tabela externa, o administrador de dispositivo precisa configurar a conectividade do hadoop.   Para obter mais informações, consulte Configurar conectividade a dados externos (Analytics Platform System) na documentação do APS que você pode baixar do [aqui](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **Aplica-se a:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]como um pré-requisito para a criação de uma tabela externa, o administrador de dispositivo precisa configurar a conectividade do hadoop. Para obter mais informações, consulte Configurar conectividade a dados externos (Analytics Platform System) na documentação do APS que você pode baixar do [aqui](http://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Como os dados de tabela externa residem fora do banco de dados, backup e restauram operações só funciona em dados armazenados no banco de dados. Isso significa que apenas os metadados de backup e restaurados.  
@@ -266,6 +265,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

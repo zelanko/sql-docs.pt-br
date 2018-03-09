@@ -1,5 +1,5 @@
 ---
-title: "ABS (expressão SSIS) | Microsoft Docs"
+title: "ABS (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf829866d0e55798b612af57a8d8c6cef6d3fcd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4c60f35c55872f302aa818d11e82ec7a708bdf4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="abs-ssis-expression"></a>ABS (Expressão SSIS)
   Retorna o valor positivo absoluto de uma expressão numérica.  
@@ -45,7 +44,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados da expressão numérica submetido à função.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ABS retornará um resultado nulo se o argumento for nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
@@ -62,8 +61,7 @@ ABS(1.23)
 ABS(@HighTemperature - @LowTemperature)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

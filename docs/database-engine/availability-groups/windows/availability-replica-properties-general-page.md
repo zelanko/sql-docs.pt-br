@@ -2,9 +2,12 @@
 title: "Propriedades da réplica de disponibilidade (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48bfcf284819b39dfd4db022933d232da04191b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 44df0c5a019f46b2a085dc1fbfeb85148439cd85
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriedades de réplica de disponibilidade (página Geral)
-  Use esta caixa de diálogo para exibir as propriedades de uma réplica de disponibilidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para exibir as propriedades de uma réplica de disponibilidade.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para exibir as propriedades da réplica de disponibilidade**  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
  **Failover mode**  
  O modo de failover da réplica, um dos seguintes:  
   
- **Automatic**  
+ **Automático**  
  Failover automático. A réplica é um destino para failovers automáticos. Essa opção terá suporte apenas se o modo de disponibilidade estiver definido como confirmação síncrona.  
   
  **Manual**  
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/09/2017
  **URL do Ponto de Extremidade**  
  Representação de cadeia de caracteres do ponto de extremidade de espelhamento de banco de dados especificado pelo usuário usado pelas conexões entre réplicas primária e secundária para sincronização de dados. Para obter informações sobre a sintaxe das URLs de ponto de extremidade, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

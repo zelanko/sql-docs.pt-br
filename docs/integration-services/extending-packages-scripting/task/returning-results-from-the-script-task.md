@@ -1,5 +1,5 @@
 ---
-title: Retornando resultados da tarefa Script | Microsoft Docs
+title: Retornar resultados da tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - TaskResult property
 - SSIS Script task, status information
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd3772ed20abbc594d171ea83a2f330d44a5be85
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ba7ae013e150045ba9782bba71a1be8cca4f7bee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="returning-results-from-the-script-task"></a>Retornando resultados da tarefa Script
   A tarefa Script usa a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> e as propriedades <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> opcionais para retornar informações de status para o tempo de execução do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], que poderá ser usado para determinar o caminho do fluxo de trabalho quando a tarefa Script for concluída.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 08/03/2017
  `rowsAffected = 1000`  
   
  `Dts.ExecutionValue = rowsAffected`  
-

@@ -1,5 +1,5 @@
 ---
-title: Catalog.delete_customized_logging_level | Microsoft Docs
+title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e0247caaf6a2a14fc2d3742edbc3c8bae5a3270c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdeletecustomizedlogginglevel"></a>Catalog.delete_customized_logging_level
+# <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Exclui um nível de log personalizado existente. Para obter mais informações sobre níveis de log personalizados, consulte [Integration Services &#40; SSIS &#41; Registro em log](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Exclui um nível de log personalizado existente. Para obter mais informações sobre níveis de registro em log personalizados, consulte [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,12 +37,12 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @level_name =] *level_name*  
- O nome do existente personalizado de nível de log para excluir.  
+ [ @level_name = ] *level_name*  
+ O nome do nível de log personalizado existente a ser excluído.  
   
- O *level_name* é **nvarchar (128)**.  
+ O *level_name* é **nvarchar(128)**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (êxito)  
@@ -51,7 +50,7 @@ delete_customized_logging_level [ @level_name = ] level_name
  Quando há falha no procedimento armazenado, ele gera um erro.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -66,4 +65,3 @@ delete_customized_logging_level [ @level_name = ] level_name
 -   O usuário não tem as permissões necessárias.  
   
   
-

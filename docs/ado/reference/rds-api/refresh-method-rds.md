@@ -1,12 +1,14 @@
 ---
 title: "Atualizar o método (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9710779f8ac92b4e9696ec56997c4eea43032206
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-rds"></a>Atualizar o método (RDS)
 Repete a consulta de fonte de dados especificada no [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade e atualizações os resultados da consulta.  
@@ -46,7 +47,7 @@ DataControl.Refresh
  *DataControl*  
  Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve definir o [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [servidor](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades antes de usar o **atualização** método. Todos os controles de associação de dados no formulário associado com um **RDS. DataControl** objeto refletirá o novo conjunto de registros. Qualquer pré-existente [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto é liberado, e as alterações não salvas serão descartadas. O **atualização** método automaticamente torna o primeiro registro o atual.  
   
  É uma boa ideia para chamar o **atualização** método periodicamente ao trabalhar com dados. Se você recupera dados e deixe-o em um computador cliente por um tempo, é provável que se tornem desatualizados. É possível que as alterações que você fizer falhará, porque outra pessoa pode ter alterado o registro e enviada alterações antes de você.  
@@ -61,6 +62,5 @@ DataControl.Refresh
  [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Atualizar o método (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

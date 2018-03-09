@@ -2,15 +2,13 @@
 title: Exemplos de consulta de modelo naive Bayes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 622eaa381d4507cb75d66a93916743af40e73932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemplos de consulta de modelo Naive Bayes
-  Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Você também pode recuperar metadados sobre o modelo usando uma consulta no conjunto de linhas do esquema de mineração de dados. Esta seção explica como criar essas consultas para modelos baseados no algoritmo Naive Bayes da Microsoft.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Você também pode recuperar metadados sobre o modelo usando uma consulta no conjunto de linhas do esquema de mineração de dados. Esta seção explica como criar essas consultas para modelos baseados no algoritmo Naive Bayes da Microsoft.  
   
  **Consultas de conteúdo**  
   
@@ -252,19 +251,19 @@ AS t
 |||  
 |-|-|  
 |Função de previsão|Uso|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Determina se um nó é um filho de outro nó no modelo.|  
-|[Prever &#40;DMX&#41;](../../dmx/predict-dmx.md)|Retorna um valor previsto ou conjunto de valores de uma coluna especificada.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ponderada.|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Prevê associação de membro em um conjunto de dados associativo.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Retorna Node_ID para cada caso.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para o valor previsto.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina se um nó é um filho de outro nó no modelo.|  
+|[Prever &#40; DMX &#41;](../../dmx/predict-dmx.md)|Retorna um valor previsto ou conjunto de valores de uma coluna especificada.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ponderada.|  
+|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|Prevê associação de membro em um conjunto de dados associativo.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Retorna Node_ID para cada caso.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para o valor previsto.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
   
  Para ver a sintaxe de funções específicas, consulte [Referência de função de extensões de Data Mining &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica do algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Referência técnica do algoritmo Naive Bayes da Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Algoritmo Microsoft Naïve Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos Naive Bayes &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

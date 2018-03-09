@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd5b459bfa271d98844d30455e4e1a9e03d0e2cd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 496934186af543eb5a7263245c90ce7309112d10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (Tipo de Dados de geometria)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
 ## <a name="exceptions"></a>Exceções  
  Se *curve_index* < 1, em seguida, um `ArgumentOutOfRangeException` é gerada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **NULO** é retornado quando ocorrer qualquer uma das seguintes opções:  
   
 -   o **geometria** instância é declarada, mas não criar uma instância  
@@ -120,8 +119,7 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
   
 ## <a name="see-also"></a>Consulte também  
  [STNumCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

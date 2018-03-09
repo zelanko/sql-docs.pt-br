@@ -3,7 +3,7 @@ title: "Método (usuários ADOX) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 00652a3051d817c779fd45f546228163c72656fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616000cfb53d9c3178aa6fa9adbd0ac7f8437efc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-users"></a>Acrescente o método (ADOX usuários)
 Adiciona um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) o objeto para o [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleção.  
@@ -48,7 +47,7 @@ Users.Append User[,Password]
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha do usuário. O *senha* parâmetro corresponde ao valor especificado pelo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método de um **usuário** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **usuários** coleção de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa usuários todos do catálogo. O **usuários** coleção para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) representa apenas os usuários que têm uma associação no grupo específico.  
   
  Se o provedor não oferece suporte para criar usuários, ocorrerá um erro.  
@@ -68,4 +67,3 @@ Users.Append User[,Password]
  [Acrescente o método (ADOX procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [(Tabelas ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Método Append (Exibições do ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-

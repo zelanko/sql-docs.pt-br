@@ -2,31 +2,32 @@
 title: Criar um modelo de R e salvar para o SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Criar um modelo de R e salvar para o SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Nesta etapa, você aprenderá como criar um modelo de aprendizado de máquina e salvar o modelo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -50,9 +51,7 @@ O modelo que você cria é um classificador binário que prevê se o driver táx
 
      *Resultados*
 
-     *Resultados de regressão logística para:-Oblíquo ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Dados: featureDataSource (RxSqlServerData de fonte de dados)*
+     *Resultados de regressão logística para:-Oblíquo ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Dados: featureDataSource (RxSqlServerData de fonte de dados)*
      <br/>*Dependent Variable(s): Oblíquo*
      <br/>*Total de variáveis independentes: 5*
      <br/>*Número de observações válidos: 17068*
@@ -60,11 +59,11 @@ O modelo que você cria é um classificador binário que prevê se o driver táx
      <br/>*-2\*LogLikelihood: 23540.0602 (desvio Residual em graus de 17063 liberdade)*
      <br/>*Coeficientes:*
      <br/>*Estimate Std. O valor de erro z Pr (> | z |)*
-     <br/>*(Interceptações) - 2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
      <br/>*Número de matriz de covariância de variação final de condição: 48.3933*
@@ -209,7 +208,7 @@ Nesta seção, você aprenderá como manter o modelo e como chamá-lo para fazer
     Salvar um modelo em uma tabela exige apenas uma instrução INSERT. No entanto, é mais fácil quando encapsulado em um procedimento armazenado, como _PersistModel_.
 
     > [!NOTE]
-    > Se você receber um erro como "a permissão EXECUTE foi negada no objeto PersistModel", certifique-se de que o logon tenha permissão. Você pode conceder permissões explícitas no procedimento armazenado executando uma instrução T-SQL como esta:`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Se você receber um erro como "a permissão EXECUTE foi negada no objeto PersistModel", certifique-se de que o logon tenha permissão. Você pode conceder permissões explícitas no procedimento armazenado executando uma instrução T-SQL como esta: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Depois que você criou um modelo e o salvou em um banco de dados, você pode chamá-lo diretamente do [!INCLUDE[tsql](../../includes/tsql-md.md)] de código, usando o procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
@@ -239,5 +238,4 @@ A próxima e final lição, você aprenderá a executar pontuação usando o mod
 ## <a name="previous-lesson"></a>Lição anterior
 
 [Criar recursos de dados usando R e SQL](walkthrough-create-data-features.md)
-
 

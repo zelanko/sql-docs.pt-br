@@ -36,17 +36,16 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e99240896bb1192a742ad2b614080e5325acc1f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DBCC UPDATEUSAGE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*Database_Name* | *database_id* | 0  
+*database_name* | *database_id* | 0  
 É o nome ou a ID do banco de dados na qual serão relatadas e corrigidas as estatísticas de uso de espaço. Se 0 for especificado, será usado o banco de dados atual. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
@@ -84,7 +83,7 @@ Suprime todas as mensagens informativas.
 COUNT_ROWS  
 Especifica que a coluna de contagem de linhas seja atualizada com a contagem atual do número de linhas na tabela ou na exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC UPDATEUSAGE corrige as contagens das linhas, páginas usadas, páginas reservadas, páginas de folha e páginas de dados de cada partição em uma tabela ou índice. Se não houver nenhuma inexatidão nas tabelas do sistema, DBCC UPDATEUSAGE não retornará dados. Se inexatidões forem encontradas e corrigidas, e WITH NO_INFOMSGS não for usado, DBCC UPDATEUSAGE retornará as linhas e as colunas que foram atualizadas nas tabelas do sistema.
   
 O DBCC CHECKDB foi aprimorado para detectar quando as contagens de páginas ou de linhas se tornam negativas. Quando detectada, a saída do DBCC CHECKDB contém um aviso e uma recomendação para executar DBCC UPDATEUSAGE para resolver o problema.
@@ -138,8 +137,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
   
   
-

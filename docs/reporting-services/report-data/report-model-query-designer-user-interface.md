@@ -1,13 +1,14 @@
 ---
-title: "Interface de usuário do Designer de consulta do modelo de relatório | Microsoft Docs"
+title: "Interface do usuário do Designer de Consultas do modelo de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "31"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
   O Designer de Relatórios fornece dois designers de consulta para ajudá-lo a especificar quais dados de uma fonte de dados do Modelo do Servidor de Relatórios você deseja usar em um relatório. Use o designer de consultas gráficas para explorar e escolher entidades de modelo e campos de entidade. Use o designer de consulta baseado em texto para trabalhar diretamente com uma especificação de linguagem SMDL em formato XML.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  A imagem a seguir define cada painel.  
   
- ![O Designer de consulta de modelo semântico da interface do usuário](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Designer de consulta de modelo semântico da interface do usuário")  
+ ![Interface do usuário do Designer de Consultas do modelo semântico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interface do usuário do Designer de Consultas do modelo semântico")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |Painel Explorer|Exibe representações gráficas das entidades e campos de entidade no modelo. Use este painel para explorar entidades, entidades relacionadas e campos.|  
 |Área de Design|Exibe uma lista de campos do modelo. Use esse painel para organizar o layout dos campos que você escolheu.|  
-|Results pane|Exibe os resultados da consulta. Para executar a consulta, clique em qualquer painel e, em seguida, clique em **executar**, ou clique no **executar** (![executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")) na barra de ferramentas.|  
+|Results pane|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e, em seguida, clique em **Executar** ou clique no botão **Executar** (![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")) na barra de ferramentas.|  
   
  Se você alterar as informações nos painéis Explorer ou Área de Design, o conteúdo do painel Resultado será afetado quando você clicar em **Executar**.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
 |![Desfazer ação](../../reporting-services/report-data/media/rsqdicon-undo.gif "Desfazer ação")|Desfaz a última ação.|  
 |![Refazer ação](../../reporting-services/report-data/media/rsqdicon-redo.gif "Refazer ação")|Refaz a última ação.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe as linhas resultantes no painel Resultado.|  
-|![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro ao lado da coluna de filtro selecionada")|Abre a caixa de diálogo **Filtrar Dados** , que permite especificar quais dados você gostaria de filtrar. Os filtros podem ser especificados independentemente dos dados atuais que constam na Área de Design.|  
+|![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro ao lado da coluna de filtro selecionada")|Abre a caixa de diálogo **Filtrar Dados** , que permite especificar quais dados você gostaria de filtrar. Os filtros podem ser especificados independentemente dos dados atuais que constam na Área de Design.|  
   
 ## <a name="text-based-query-designer"></a>Designer de Consulta baseado em texto  
  Ao criar uma consulta do conjunto de dados do Modelo do Servidor de Relatórios, a seleção padrão é o designer de consultas gráficas. Para mudar para o designer de consulta baseado em texto, clique no botão de alternância **Editar como Texto** na barra de ferramentas.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
  A imagem a seguir define cada painel.  
   
- ![Designer de consulta de linguagem de modelo semântico genérico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "Designer de consulta de linguagem de modelo semântico genérico")  
+ ![Designer de Consulta Genérico de Linguagem do Modelo Semântico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "Designer de Consulta Genérico de Linguagem do Modelo Semântico")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -92,11 +92,10 @@ ms.lasthandoff: 08/09/2017
 |**Importar**|Importa uma consulta de um relatório existente.|  
 |![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa o texto da consulta e exibe o conjunto de linhas resultante no painel Resultado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Conexão de modelo de relatório &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

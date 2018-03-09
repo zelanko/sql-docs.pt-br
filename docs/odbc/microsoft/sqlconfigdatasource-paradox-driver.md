@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c567bd1490c41822b3df89f04c0d907b0f1a92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|A senha.<br /><br /> Isso é uma palavra-chave opcional e nunca será gravado no arquivo pelo driver. Ele é usado em uma chamada para **SQLDriverConnect** em arquivos do Paradox protegido por senha. A senha usada serão válida sempre que uma tabela é aberta. Se nenhuma senha for transmitida na cadeia de conexão, nenhuma senha é estabelecida para essa tabela. Se tabelas tem senhas diferentes, mais de um não pode ser aberto na mesma sessão, nem as tabelas podem ser unidas.|  
 |READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não é somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|  
 |THREADS|O número de threads de plano de fundo para o mecanismo de usar. Esse valor é 3 e não pode ser alterado.<br /><br /> Isso define a mesma opção como **Threads** na caixa de diálogo de instalação.|
-

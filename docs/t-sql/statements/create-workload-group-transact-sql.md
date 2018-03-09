@@ -1,7 +1,7 @@
 ---
 title: Criar grupo de cargas de trabalho (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -22,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 46dce7ed81cdce215cfbff8f5fcce0900a9309a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -62,28 +60,26 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_grupo*  
+ *group_name*  
  É o nome definido pelo usuário do grupo de carga de trabalho. *group_name* é alfanumérico, pode ter até 128 caracteres, deve ser exclusivo dentro de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  IMPORTÂNCIA = {BAIXO | **MÉDIO** | ALTA}  
  Especifica a importância relativa de uma solicitação no grupo de carga de trabalho. A importância é uma das seguintes, com MEDIUM sendo o padrão:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (padrão)    
 -   HIGH  
   
 > [!NOTE]  
->  Internamente, cada configuração de importância é armazenada como um número usado para cálculos.  
+> Internamente, cada configuração de importância é armazenada como um número usado para cálculos.  
   
  IMPORTANCE é local para o pool de recursos; grupos de cargas de trabalho de importâncias diferentes no mesmo pool de recursos afetam uns aos outros, mas não afetam grupos de cargas de trabalho em outro pool de recursos.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valor*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Especifica o máximo de memória que uma única solicitação pode usar do pool. Essa porcentagem é relativa ao tamanho do pool de recursos especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  A quantidade especificada se refere apenas à memória de concessão de execução da consulta.  
+> A quantidade especificada se refere apenas à memória de concessão de execução da consulta.  
   
  *valor* deve ser 0 ou um número inteiro positivo. O intervalo permitido para *valor* é de 0 a 100. A configuração padrão para *valor* é 25.  
   
@@ -102,13 +98,16 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Esteja ciente de que ambos os casos estarão sujeitos ao erro de tempo limite 8645 se a memória física do servidor for insuficiente.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valor*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Especifica o tempo máximo de CPU, em segundos, que uma solicitação pode usar. *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor* é 0, o que significa ilimitado.  
   
 > [!NOTE]  
->  O Administrador de Recursos não impedirá a continuação de uma solicitação se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [limite de CPU excedido classe de evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Por padrão, o administrador de recursos não impedirá uma solicitação de continue se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [limite de CPU excedido classe de evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando [2422 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), administrador de recursos será anular uma solicitação quando o tempo máximo for excedido. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Especifica o tempo máximo, em segundos, que uma consulta pode esperar pela disponibilização de uma concessão de memória (memória do buffer do trabalho).  
   
 > [!NOTE]  
@@ -116,7 +115,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor*, 0, usa um cálculo interno baseado no custo da consulta para determinar o tempo máximo.  
   
- MAX_DOP =*valor*  
+ MAX_DOP =*value*  
  Especifica o DOP (grau máximo de paralelismo) para solicitações paralelas. *valor* deve ser 0 ou um número inteiro positivo. O intervalo permitido para *valor* é de 0 a 64. A configuração padrão para *valor*, 0, usa a configuração global. MAX_DOP é tratado como segue:  
   
 -   MAX_DOP como dica de consulta é válido, contanto que não exceda o grupo de carga de trabalho MAX_DOP. Se o valor de dica de consulta MAXDOP exceder o valor que está configurado usando o Administrador de Recursos, o Mecanismo de Banco de Dados usará o valor MAXDOP do Administrador de Recursos.  
@@ -129,7 +128,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Depois de ser configurado, o DOP só pode ser reduzido sob pressão de concessão de memória. A reconfiguração do grupo de carga de trabalho não é visível durante a espera na fila de concessão de memória.  
   
- GROUP_MAX_REQUESTS =*valor*  
+ GROUP_MAX_REQUESTS =*value*  
  Especifica o número máximo de solicitações simultâneas permitido para execução no grupo de carga de trabalho. *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor*, 0, permite solicitações ilimitadas. Quando as solicitações simultâneas máximas são alcançadas, um usuário nesse grupo pode fazer logon, mas é colocado em um estado de espera até que as solicitações simultâneas sejam ignoradas abaixo do valor especificado.  
   
  USANDO { *nome_do_pool* | **"padrão"** }  
@@ -149,7 +148,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Um pool de recursos externos para processos externos. Para obter mais informações, consulte [sp_execute_external_script &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  REQUEST_MEMORY_GRANT_PERCENT: a criação de índice pode usar mais memória de espaço de trabalho do que aquela inicialmente concedida a fim de melhorar o desempenho. Esse tratamento especial tem o suporte do Administrador de Recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Porém, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de carga de trabalho.  
   
  **Criação de índice em uma tabela particionada**  
@@ -177,5 +176,4 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-
 

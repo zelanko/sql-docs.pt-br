@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_file_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_file_space_usage_TSQL
 - sys.dm_db_file_space_usage
 - dm_db_file_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_file_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7c61f339c0d8d66c8c0bcd00514a6ecf58286f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e4e6cfa5fd274a9a3bc3e7a9e3a0f981be8e2b46
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,11 +53,11 @@ ms.lasthandoff: 11/17/2017
 |user_object_reserved_page_count|**bigint**|Número total de páginas alocadas de extensões uniformes para objetos de usuário no banco de dados. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Você pode usar a coluna total_pages no [allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) exibição para retornar a contagem de páginas reservadas de cada unidade de alocação no objeto de usuário do catálogo. No entanto, observe que a coluna total_pages inclui páginas IAM.|  
 |internal_object_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para objetos internos no arquivo. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Não há exibição do catálogo ou objeto de gerenciamento dinâmico que retorne a contagem de páginas de cada objeto interno.|  
 |mixed_extent_page_count|**bigint**|Número total de páginas alocadas e não alocadas nas extensões mistas alocadas no arquivo. As extensões mistas contêm páginas alocadas a objetos diferentes. Essa contagem inclui todas as páginas IAM no arquivo.|
-|modified_extent_page_count|**bigint**|**Começando com**:[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Número total de páginas modificadas em alocados extensões do arquivo desde o último backup de banco de dados completo. A contagem de páginas modificadas pode ser usada para rastrear alterações diferenciais do banco de dados desde o último backup completo para decidir se o backup diferencial é benéfico.|
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
-|distribution_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> A id numérica exclusiva associada com a distribuição.|  
+|modified_extent_page_count|**bigint**|**Começando com**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Número total de páginas modificadas em alocados extensões do arquivo desde o último backup de banco de dados completo. A contagem de páginas modificadas pode ser usada para rastrear alterações diferenciais do banco de dados desde o último backup completo para decidir se o backup diferencial é benéfico.|
+|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|distribution_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> A id numérica exclusiva associada com a distribuição.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As contagens de página estão sempre no nível de extensão. Portanto, os valores de contagem de página serão sempre um múltiplo de oito. As extensões que contêm páginas de alocação GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map) são extensões uniformes alocadas. Elas não são incluídas nas contagens de página previamente descritas.  
   
  O conteúdo do repositório de versão atual está no [tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). As páginas de repositório de versão são controladas no nível de arquivo, em vez de no nível de sessão e tarefa, porque são recursos globais. Uma sessão pode gerar versões, mas as versões não podem ser removidas quando a sessão terminar. A limpeza total do repositório de versão deve considerar a transação mais longa em execução que exige acesso à versão particular. A transação de execução mais longa relacionada à versão repositório de limpeza pode ser descoberta visualizando a coluna elapsed_time_seconds em [sys.DM tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
@@ -101,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>Determinando a quantidade de espaço livre em tempdb  
  A consulta a seguir retorna o número total de páginas livres e o espaço livre total em megabytes (MB) disponível em todos os arquivos em **tempdb**.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -112,7 +115,7 @@ FROM sys.dm_db_file_space_usage;
 ### <a name="determining-the-amount-of-space-used-by-user-objects"></a>Determinando o volume de espaço usado por objetos do usuário  
  A consulta a seguir retorna o número total de páginas usadas por objetos do usuário e o espaço total em MB usado por objetos internos em tempdb.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  
@@ -123,5 +126,5 @@ FROM sys.dm_db_file_space_usage;
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.DM db_task_space_usage &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

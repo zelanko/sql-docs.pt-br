@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STNumInteriorRing (geometry Data Type)
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c424d1804897062be3eefc6c8240c9973bb1d92d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5af0f25fbab350aa89605c456c573113230680e3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Retorna o número de anéis interiores de um **Polygongeometry** instância.
   
  Tipo de retorno CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retorna null se o **geometria** instância não é um polígono.  
   
 ## <a name="examples"></a>Exemplos  
@@ -62,8 +61,7 @@ SELECT @g.STNumInteriorRing();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>Cursores
 Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado do cursor piscando em um computador com terminal. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximas, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  
@@ -46,4 +44,3 @@ Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto
   
 > [!IMPORTANT]  
 >  Confirmar ou reverter uma transação, ou explicitamente chamando **SQLEndTran** ou ao operar no modo de confirmação automática, faz com que algumas fontes de dados fechar todos os cursores em todas as instruções em uma conexão. Para obter mais informações, consulte os atributos SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.
-

@@ -2,32 +2,31 @@
 title: "O elemento de configuração (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Configuration element
+dev_langs: XML
+helpviewer_keywords: Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "16"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e9e3fbf76ffab1eea6baf7ea5cc8d2f6972379a5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84a9a5596e7bf4fed05820f3cae387b52005e84e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuration-element-dta"></a>Elemento de configuração (DTA)
-  Determina uma configuração especificada pelo usuário, que consiste em estruturas existentes e hipotéticas de design físico do Orientador de Otimização do Mecanismo de Banco de Dados, para análise, quando uma carga de trabalho é analisada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica uma configuração especificada pelo usuário que consiste em estruturas de design físico existentes e hipotéticas para o orientador de otimização do mecanismo de banco de dados analisar ao ajustar uma carga de trabalho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de configuração|Descrição|  
+|Atributo de configuração|Description|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|Opcional. Especifica se o Orientador de Otimização do Mecanismo de Banco de Dados deve analisar a configuração especificada em relação à configuração existente atual ou como configuração totalmente nova e autônoma. Use um tipo de dados de **cadeia de caracteres** para especificar esse atributo com um dos seguintes valores permitidos:<br /><br /> **Relative**:<br />                  Avalia a configuração especificada em relação à configuração existente atual das estruturas de design físicas (índices, exibições indexadas, particionamento) do banco de dados que está sendo ajustado. Por exemplo:<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Avalia a configuração especificada como uma configuração autônoma. Quando Absolute é especificado, o Orientador de Otimização do Mecanismo de Banco de Dados não considera a configuração existente. Por exemplo:<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
@@ -71,4 +70,3 @@ ms.lasthandoff: 08/02/2017
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

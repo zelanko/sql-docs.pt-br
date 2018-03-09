@@ -1,26 +1,27 @@
 ---
-title: "Regiões de dados (construtor de relatórios e SSRS) aninhadas | Microsoft Docs"
+title: "Regiões de dados aninhadas (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 3333479da0d2989354242869c430712a3688e968
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível aninhar uma região de dados, como um gráfico, em outra, como uma matriz, normalmente para exibir resumos de dados de maneira concisa ou para fornecer uma exibição visual, bem como uma exibição de tabela ou de matriz.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="understanding-scope-for-a-nested-data-region"></a>Entendendo o escopo de uma região de dados aninhada  
- O escopo de dados em uma região de dados aninhada é definido automaticamente por seu posicionamento na região de dados pai. Por exemplo, o escopo de dados de um gráfico aninhado em uma célula de canto tablix são os dados do conjunto de dados associados à região de dados tablix após os filtros serem aplicados ao conjunto de dados, à região de dados tablix e à região de dados do gráfico. O escopo de um tablix aninhado em uma célula tablix é igual ao escopo da célula de canto, mas com escopo adicional das associações do grupo de linhas e colunas da célula na qual ele está aninhado, com os filtros de grupo correspondentes aplicados. Para obter mais informações sobre escopo, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ O escopo de dados em uma região de dados aninhada é definido automaticamente por seu posicionamento na região de dados pai. Por exemplo, o escopo de dados de um gráfico aninhado em uma célula de canto tablix são os dados do conjunto de dados associados à região de dados tablix após os filtros serem aplicados ao conjunto de dados, à região de dados tablix e à região de dados do gráfico. O escopo de um tablix aninhado em uma célula tablix é igual ao escopo da célula de canto, mas com escopo adicional das associações do grupo de linhas e colunas da célula na qual ele está aninhado, com os filtros de grupo correspondentes aplicados. Para obter mais informações sobre o escopo, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  A lista a seguir descreve o escopo de células nas seguintes áreas de tablix:  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
  Por padrão, as cores de legendas de gráfico são determinadas pela cor dos pontos de dados na série de gráfico. Para controlar cores para que todas as regiões de dados de gráfico usem a mesma cor para a mesma categoria de dados, você deve usar cores personalizadas e definir expressões de classificação nos dados. Para obter mais informações, consulte [Especificar cores consistentes em vários gráficos de forma &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) e [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Aninhando um indicador em um tablix  
- É possível aninhar um indicador dentro de uma tabela, matriz ou lista para mostrar um KPI (indicador chave de desempenho). Quando você colocar um indicador dentro de uma tabela, ele será renderizado para cada linha no tablix. Para obter mais informações sobre como adicionar indicadores a um tablix, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ É possível aninhar um indicador dentro de uma tabela, matriz ou lista para mostrar um KPI (indicador chave de desempenho). Quando você colocar um indicador dentro de uma tabela, ele será renderizado para cada linha no tablix. Para obter mais informações sobre como adicionar indicadores a um Tablix, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="adding-a-gauge-to-a-tablix"></a>Adicionando um medidor a um tablix  
  Há duas maneiras de adicionar um medidor a uma região de dados tablix:  
@@ -87,14 +88,14 @@ ms.lasthandoff: 08/09/2017
   
  Para obter mais informações, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) e [Adicionar, mover ou excluir uma tabela, matriz ou lista &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Medidores &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Formatando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Adicionando um KPI ao relatório &#40; Construtor de relatórios &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Formatando escalas em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionando um KPI ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

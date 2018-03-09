@@ -2,9 +2,12 @@
 title: "Restaurações por etapas (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: "74"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
-  Este tópico é relevante apenas para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos. No modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante apenas para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos. No modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
   
  Para obter informações sobre a restauração por etapas e as tabelas com otimização de memória, consulte [Restauração por etapas de bancos de dados com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
      Para obter informações sobre Restaurações por Etapas de bancos de dados OLTPin-memory, consulte [Backup e restauração por etapas de bancos de dados com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrições  
+## <a name="restrictions"></a>Restrictions  
  Se uma sequência de restauração parcial excluir qualquer grupo de arquivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , não haverá suporte para a restauração pontual. Você pode forçar a sequência de restauração a continuar. Contudo, os grupos de arquivos FILESTREAM omitidos de sua instrução RESTORE nunca poderão ser restaurados. Para forçar uma restauração pontual, especifique a opção CONTINUE_AFTER_ERROR juntamente com a opção STOPAT, STOPATMARK ou STOPBEFOREMARK, que você também deve especificar nas instruções RESTORE LOG subsequentes. Se você especificar CONTINUE_AFTER_ERROR, a sequência de restauração parcial terá êxito e o grupo de arquivos FILESTREAM se tornará irrecuperável.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauração por etapas no modelo de recuperação simples  
@@ -175,7 +178,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  O backup diferencial seguido por quaisquer outros backups que foram restaurados pela sequência de restauração por etapas original, para restaurar os dados até o ponto de recuperação original.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

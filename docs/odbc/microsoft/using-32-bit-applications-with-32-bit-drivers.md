@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso de aplicativos de 32 bits com Drivers de 32 bits
 Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativos de 32 bits e os drivers de 32 bits usam a API do Win32®.  
@@ -52,4 +50,3 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
 |Odbcad32.exe|programa de administrador ODBC de 32 bits|  
 |Odbcinst.hlp|Arquivo de Ajuda do instalador|  
 |Msvcrt40.|Biblioteca de tempo de execução do C|
-

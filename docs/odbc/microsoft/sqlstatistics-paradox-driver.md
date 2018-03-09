@@ -5,34 +5,32 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Paradox Driver
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2f158fd9d3fc1a7695e49bfa634f8cd064aac13
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d857190e0e98f80605da8568d131290ccb66634
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (Driver Paradox)
 > [!NOTE]  
 >  Este tópico fornece informações específicas de Driver Paradox. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Coluna|Comentários|  
+|coluna|Comentários|  
 |------------|--------------|  
 |TABLE_QUALIFIER|O caminho para um diretório.<br /><br /> Não há suporte para a correspondência de padrões no *szTableQualifier* argumento.|  
 |TABLE_OWNER|NULL será retornado nessa coluna porque não há suporte para o nome do proprietário.|  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |PAGES|Sempre será retornado NULL.|  
   
  A filtragem se baseia a exclusividade (a *fUnique* argumento). O *fAccuracy* parâmetro é ignorado.
-

@@ -2,15 +2,13 @@
 title: Tipo de dados ResultSet (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Resultset Data Type
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 70010fe50f92d74b653080654e0e5da3c8e79875
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6fd063f8a32fbd65ef806d624a7f82d9b154f3e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="resultset-data-type-xmla"></a>Tipo de dados Resultset (XMLA)
-  Define um tipo de dados primitivo abstrato que representa os dados retornados de uma [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Define um tipo de dados primitivo abstrato que representa os dados retornados de uma [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:resultset  
   
@@ -51,23 +49,23 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>Características do tipo de dados  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhuma|  
+|Tipos de dados base|Nenhum|  
 |Tipos de dados derivados|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md), [conjunto de linhas](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhuma|  
+|Elementos pai|Nenhum|  
 |Elementos filho|[Exceção](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md), [mensagens](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
-|Elementos derivados|Nenhuma|  
+|Elementos derivados|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo de dados **Resultset** é um conjunto de dados XML autoexplicativo que pode incluir o esquema e os dados, dependendo do tipo de informações retornadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

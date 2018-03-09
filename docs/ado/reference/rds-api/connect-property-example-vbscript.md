@@ -3,27 +3,30 @@ title: Conecte-se a propriedade de exemplo (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Connect property [ADO], VBScript example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b5fca2056ec558897a2df4462f793300787efb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08c87227e5184a438ee23079ba0297ef6df706c9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-property-example-vbscript"></a>Conecte-se a propriedade de exemplo (VBScript)
 > [!IMPORTANT]

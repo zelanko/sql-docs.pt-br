@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 426cbfe673bafe6e1770745ca16ba23fd068fb67
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 532df95a03b15d545c682d30b3b4d68e10ea5913
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,20 +44,20 @@ ms.lasthandoff: 09/01/2017
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_PADDING { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_PADDING ON;  
-```  
-  
+```
+-- Syntax for SQL Server
+
+SET ANSI_PADDING { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_PADDING ON
+```
+
 ## <a name="remarks"></a>Comentários  
  Colunas definidas com **char**, **varchar**, **binário**, e **varbinary** tipos de dados têm um tamanho definido.  
   
@@ -151,4 +150,3 @@ DROP TABLE t2;
  [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   
-

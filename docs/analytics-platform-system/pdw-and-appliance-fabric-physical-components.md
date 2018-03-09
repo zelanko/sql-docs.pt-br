@@ -3,10 +3,10 @@ title: "Malha de dispositivo e PDW componentes físicos (Analytics Platform Syst
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: "17"
-ms.openlocfilehash: 93e4b1521b213c9d29f3cae9bcc900cad6c6a674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Componentes físicos de malha de dispositivo e PDW
 Nomes e descrições para os componentes físicos de malha do PDW e dispositivo. A região PDW contém todos esses componentes.  
@@ -85,7 +85,7 @@ O cluster PDW é denominado WFOHST01. Ele gerencia todos os hosts físicos e má
 *appliance_domain*-DAS01 por meio de *appliance_domain*-DAS03  
 Este é o armazenamento com conexão direta que está conectado a nós de computação. HP tiver uma para todos os dois nós de computação. Dell e Quanta têm um para todos os três nós de computação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
 [Configuração de dispositivo &#40; Analytics Platform System &#41;](appliance-configuration.md)  
 [Tarefas de gerenciamento de dispositivo &#40; Analytics Platform System &#41;](appliance-management-tasks.md)  

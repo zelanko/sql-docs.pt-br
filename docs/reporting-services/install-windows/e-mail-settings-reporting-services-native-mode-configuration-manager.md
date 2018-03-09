@@ -1,29 +1,29 @@
 ---
-title: "Enviar por email relatórios de configurações - modo nativo de serviços (Configuration Manager) | Microsoft Docs"
+title: "Configurações de email – modo nativo do Reporting Services (Gerenciador de Configurações) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O Reporting Services inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.
@@ -134,9 +134,9 @@ Para solucionar esse erro, você pode modificar os parâmetros de configuração
 ## <a name="configuration-options-for-remote-smtp-service"></a>Opções de configuração para o serviço SMTP remoto
 A conexão entre o servidor de relatório e um encaminhador ou servidor SMTP é determinada pelos seguintes parâmetros de configuração:
 
-- `<SendUsing>`Especifica um método para enviar mensagens. Você pode escolher entre um serviço de rede SMTP ou um diretório local de retirada de serviço SMTP. Para usar um serviço SMTP remoto, este valor deve ser definido como **2** no arquivo RSReportServer.config.
-- `<SMTPServer>`Especifica o encaminhador ou servidor SMTP remoto. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.
-- `<From>`Define o valor que aparece no **de:** linha de uma mensagem de email. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.
+- `<SendUsing>` especifica um método para o envio de mensagens. Você pode escolher entre um serviço de rede SMTP ou um diretório local de retirada de serviço SMTP. Para usar um serviço SMTP remoto, este valor deve ser definido como **2** no arquivo RSReportServer.config.
+- `<SMTPServer>` especifica o encaminhador ou servidor SMTP remoto. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.
+- `<From>` define o valor que aparece na linha **De:** de uma mensagem de email. Esse valor será necessário se você estiver usando um encaminhador ou servidor SMTP remoto.
 
 Outros valores usados para o serviço SMTP remoto incluem os seguintes (observe que não é necessário especificar esses valores, a menos que deseje substituir os valores padrão).
 
@@ -226,10 +226,9 @@ A conexão entre o servidor de relatório e um encaminhador ou servidor SMTP loc
      
 17. Salve o arquivo.
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Configurações do Reporting Services (Modo Nativo).](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Arquivo de configuração rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

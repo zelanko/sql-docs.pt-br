@@ -3,29 +3,31 @@ title: "Exemplo de métodos de CancelBatch (VC + +) e UpdateBatch | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34da07a0def568b8e066d9f9f4f3ffbc8d03a776
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a3b4fd1290ee3e98dc8b4855d437e91938e5823
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch e exemplo dos métodos CancelBatch (VC + +)
 Este exemplo demonstra o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método junto com o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  

@@ -1,13 +1,14 @@
 ---
-title: "Formatando números e datas (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatando números e datas (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +21,16 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: de538e4d272355c1d694d4a79fa0a66424062360
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  
@@ -62,12 +62,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Se você selecionar **Moeda** em **Categoria** e marcar a opção **Mostrar valores em**, poderá selecionar **Milhares**, **Milhões**ou **Bilhões** para exibir números usando formatos financeiros. Por exemplo, se o valor do campo for 1.789.905.394 e você selecionar **Bilhões** e especificar 2 casas decimais, o valor exibido no relatório será 1,78.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatação de linhas, cores e imagens &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatar rótulos de eixo como datas ou moedas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatando escalas em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   
-

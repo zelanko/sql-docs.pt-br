@@ -1,0 +1,135 @@
+---
+title: sys. database_principals (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 10/27/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- database_principals
+- database_principals_TSQL
+- sys.database_principals
+- sys.database_principals_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sys.database_principals catalog view
+ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
+caps.latest.revision: "46"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Retorna uma linha para cada entidade de segurança em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Nome da coluna|Tipo de dados|Description|  
+|-----------------|---------------|-----------------|  
+|**name**|**sysname**|Nome da entidade de segurança, exclusivo no banco de dados.|  
+|**principal_id**|**int**|ID da entidade de segurança, exclusiva no banco de dados.|  
+|**tipo**|**char (1)**|Tipo do principal:<br /><br /> A = Função de aplicativo<br /><br /> C = Usuário mapeado para um certificado<br /><br /> E = usuário externo do Active Directory do Azure<br /><br /> G = Grupo do Windows<br /><br /> K = Usuário mapeado para uma chave assimétrica<br /><br /> R = Função de banco de dados<br /><br /> S = Usuário do SQL<br /><br /> U = Usuário do Windows<br /><br /> X = grupo externo de aplicativos ou de grupo do Active Directory do Azure|  
+|**type_desc**|**nvarchar (60)**|Descrição do tipo de principal.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
+|**default_schema_name**|**sysname**|Nome a ser usado quando o nome SQL não especificar um esquema. Nulo para principais que não sejam do tipo S, U ou A.|  
+|**create_date**|**datetime**|Hora em que o principal foi criado.|  
+|**modify_date**|**datetime**|Hora em que a entidade de segurança foi modificada pela última vez.|  
+|**owning_principal_id**|**int**|ID da entidade de segurança que é proprietária desta entidade de segurança. Todas as entidades, exceto as funções de banco de dados devem ser de propriedade de **dbo**.|  
+|**SID**|**varbinary(85)**|SID (ID de segurança) da entidade de segurança.  NULL for SYS e INFORMATION SCHEMAS.|  
+|**is_fixed_role**|**bit**|Se 1, essa linha representará uma entrada para uma das funções de banco de dados fixa: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
+|**authentication_type**|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa um tipo de autenticação. Estes são os valores possíveis e suas descrições.<br /><br /> 0: nenhuma autenticação<br />1: autenticação de instância<br />2: autenticação de banco de dados<br />3: autenticação do Windows|  
+|**authentication_type_desc**|**nvarchar (60)**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrição do tipo de autenticação. Estes são os valores possíveis e suas descrições.<br /><br /> NONE: Nenhuma autenticação.<br />INSTÂNCIA: Autenticação de instância<br />Banco de dados: Autenticação de banco de dados<br />WINDOWS: Autenticação|  
+|**default_language_name**|**sysname**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o idioma padrão para esta entidade de segurança.|  
+|**default_language_lcid**|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o LCID padrão para esta entidade de segurança.|  
+|**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copiar em massa dados criptografados usando sempre criptografado, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
+  
+## <a name="remarks"></a>Comentários  
+ O *PasswordLastSetTime* propriedades estão disponíveis em todas as configurações com suporte do SQL Server, mas as outras propriedades estão disponíveis somente quando o SQL Server está em execução no Windows Server 2003 ou posterior e CHECK_POLICY e CHECK_ EXPIRAÇÃO estão habilitados. Consulte [política de senha](../../relational-databases/security/password-policy.md) para obter mais informações.  
+  
+## <a name="permissions"></a>Permissões  
+ Qualquer usuário pode ver seu próprio nome de usuário, os usuários do sistema e as funções de banco de dados fixas. Ver outros usuários requer ALTER ANY USER ou uma permissão no usuário. Ver funções definidas pelo usuário requer ALTER ANY ROLE ou associação na função.  
+  
+## <a name="examples"></a>Exemplos  
+  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Listando todas as permissões de entidades de segurança do banco de dados  
+ A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do banco de dados.  
+  
+> [!IMPORTANT]  
+>  As permissões de funções de banco de dados fixas não aparecem em sys.database_permissions. Portanto, entidades de segurança do banco de dados podem ter permissões adicionais não listadas aqui.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc, pe.permission_name  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id;  
+```  
+  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Listando permissões a objetos de esquema em um banco de dados  
+ A consulta a seguir une sys.database_principals e sys.database_permissions com sys.objects e sys.schemas para listar permissões concedidas ou negadas a objetos de esquema específicos.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc,   
+    pe.permission_name, s.name + '.' + o.name AS ObjectName  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id  
+JOIN sys.objects AS o  
+    ON pe.major_id = o.object_id  
+JOIN sys.schemas AS s  
+    ON o.schema_id = s.schema_id;  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: listando todas as permissões de objetos de banco de dados  
+ A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do banco de dados.  
+  
+> [!IMPORTANT]  
+>  As permissões de funções de banco de dados fixas não aparecem no `sys.database_permissions`. Portanto, entidades de segurança do banco de dados podem ter permissões adicionais não listadas aqui.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc, pe.permission_name  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id;  
+```  
+  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>Unidade d: listando permissões em objetos de esquema de um banco de dados  
+ A consulta a seguir junções `sys.database_principals` e `sys.database_permissions` para `sys.objects` e `sys.schemas` à lista de permissões concedidas ou negadas a objetos de esquema específico.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc,   
+    pe.permission_name, s.name + '.' + o.name AS ObjectName  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id  
+JOIN sys.objects AS o  
+    ON pe.major_id = o.object_id  
+JOIN sys.schemas AS s  
+    ON o.schema_id = s.schema_id;  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Usuários de banco de dados independente - tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
+ [Conectar-se ao Banco de Dados SQL usando a autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+  
+  
+
+

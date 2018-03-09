@@ -5,33 +5,28 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
+f1_keywords: SHAPE
+dev_langs: DMX
 helpviewer_keywords:
 - SHAPE statement
 - multiple data sources
 ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dcd4940769fc52852b1d48feb453f1393c754084
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de fonte de dados&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +67,7 @@ APPEND ({ <child table query> }
  *nome da coluna de tabela*  
  Nome de coluna recentemente adicionada à tabela pai da tabela aninhada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  É preciso classificar as consultas pela coluna que relaciona a tabela pai à tabela filho.  
   
 ## <a name="examples"></a>Exemplos  
@@ -88,11 +83,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [&#60; consulta de fonte de dados &#62;](../dmx/source-data-query.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

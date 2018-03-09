@@ -2,26 +2,29 @@
 title: Criptografia de backup | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aef0a3ecd56079d7dd23e7501e0bca8d342c8842
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
-  Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
   
   
 ##  <a name="Overview"></a> Visão geral  
@@ -135,12 +138,12 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
-|Tópico/tarefa|Descrição|  
+|Tópico/tarefa|Description|  
 |-----------------|-----------------|  
 |[Criar um backup criptografado](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Descreve as etapas básicas necessárias para criar um backup criptografado|  
 |[Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornece um exemplo de como criar um backup criptografado protegido por chaves no Azure Key Vault.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

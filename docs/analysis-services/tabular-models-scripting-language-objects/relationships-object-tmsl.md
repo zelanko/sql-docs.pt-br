@@ -2,15 +2,13 @@
 title: "O objeto de relações (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c41594e9e4ef5776a4e170ba3d9895d5799e9bd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-object-tmsl"></a>Objeto de relações (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define uma relação entre uma tabela de origem e destino, com a capacidade de especificar a cardinalidade e a direção dos filtros de consulta e segurança.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define uma relação entre uma tabela de origem e destino, com a capacidade de especificar a cardinalidade e a direção dos filtros de consulta e segurança.  
   
 ## <a name="object-definition"></a>Definição do objeto  
  Todos os objetos têm um conjunto comum de propriedades, incluindo nome, tipo, descrição, uma coleção de propriedades e anotações. **Relação** objetos também têm as seguintes propriedades.  
@@ -173,7 +168,7 @@ ms.lasthandoff: 11/17/2017
         }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Criar Relações](../../integration-services/data-flow/transformations/create-relationships.md)  
   

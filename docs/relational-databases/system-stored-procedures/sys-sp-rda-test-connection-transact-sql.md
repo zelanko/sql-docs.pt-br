@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
 - sys.sp_rda_test_connection_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_test_connection stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9cd981a64ea452c64e24f6578e33d171fd51559
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +50,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @database_name= N'*db_name*'  
+ @database_name = N'*db_name*'  
  O nome do banco de dados do SQL Server habilitado para Stretch. Esse parâmetro é opcional.  
   
- @server_address= N'*azure_server_fully_qualified_address*'  
+ @server_address = N'*azure_server_fully_qualified_address*'  
  O endereço totalmente qualificado do servidor do Azure.  
   
 -   Se você fornecer um valor para  **@database_name** , mas o banco de dados especificado não está habilitado para Stretch, você precisa fornecer um valor para  **@server_address** .  
   
 -   Se você fornecer um valor para  **@database_name** e o banco de dados especificado é habilitado para Stretch, você não precisa fornecer um valor para  **@server_address** . Se você fornecer um valor para  **@server_address** , ignora o procedimento armazenado e usa existentes de servidor do Azure já associados ao banco de dados habilitado para Stretch.  
   
- @azure_username= N'*azure_username*  
+ @azure_username = N'*azure_username*  
  O nome de usuário para o servidor remoto do Azure.  
   
- @azure_password= N'*azure_password*'  
+ @azure_password = N'*azure_password*'  
  A senha para o servidor remoto do Azure.  
   
- @credential_name= N'*credential_name*'  
+ @credential_name = N'*credential_name*'  
  Em vez de fornecer um nome de usuário e senha, você pode fornecer o nome de uma credencial armazenada no banco de dados habilitado para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -76,9 +79,9 @@ EXECUTE sys.sp_rda_test_connection
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |link_state|int|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar (32)|Um dos valores a seguir, que correspondem à anterior valores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre o SQL Server e o Azure remoto server está íntegro.<br />-ERROR_AZURE_FIREWALL<br />     O firewall do Azure está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-ERROR_NO_CONNECTION<br />     SQL Server não pode fazer uma conexão ao servidor remoto do Azure.<br />-ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo que o link entre o servidor remoto do Azure e SQL Server.|  
+|link_state_desc|varchar(32)|Um dos valores a seguir, que correspondem à anterior valores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre o SQL Server e o Azure remoto server está íntegro.<br />-   ERROR_AZURE_FIREWALL<br />     O firewall do Azure está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-   ERROR_NO_CONNECTION<br />     SQL Server não pode fazer uma conexão ao servidor remoto do Azure.<br />-   ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-   ERROR<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo que o link entre o servidor remoto do Azure e SQL Server.|  
 |error_number|int|O número do erro. Se não houver nenhum erro, esse campo é NULL.|  
-|error_message|nvarchar (1024)|A mensagem de erro. Se não houver nenhum erro, esse campo é NULL.|  
+|error_message|nvarchar(1024)|A mensagem de erro. Se não houver nenhum erro, esse campo é NULL.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissões db_owner.  
@@ -87,7 +90,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>Verifique a conexão do SQL Server para o servidor remoto do Azure  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +104,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>Verifique o firewall do Azure  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -117,7 +120,7 @@ GO
   
 ### <a name="check-authentication-credentials"></a>Verificar as credenciais de autenticação.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +136,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Verificar o status do servidor remoto do Azure  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

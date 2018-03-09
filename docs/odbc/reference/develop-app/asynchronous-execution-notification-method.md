@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b39bfb096e980106ecaef4e12ef9871f1a32452a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
 ODBC permite que a execução assíncrona de conexão e as operações de instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes da operação for concluída, permitindo que o thread de aplicativo executar outras tarefas. No SDK do Windows 7, para operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona é concluída usando o método de notificação.  
@@ -424,4 +422,3 @@ Else
     // Call the corresponding Asynchronous ODBC API to complete all processing and retrieve the return code.  
 }  
 ```
-

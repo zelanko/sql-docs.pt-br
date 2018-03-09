@@ -2,15 +2,13 @@
 title: "Tipos (mineração de dados) de conteúdo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
   
  O *tipo de dados* determina como os algoritmos processarão os dados nessas colunas quando você criar modelos de mineração. A definição do tipo de dados de uma coluna dá ao algoritmo informações sobre o tipo de dados nas colunas e como processar os dados. Cada tipo de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a um ou mais tipos de conteúdo de mineração de dados.  
   
@@ -120,10 +119,10 @@ ms.lasthandoff: 11/17/2017
  Além dos tipos de conteúdo anteriores, usados normalmente com todos os modelos, você pode usar colunas classificadas para definir os tipos de conteúdo para alguns tipos de dados. Para obter mais informações sobre as colunas classificadas, consulte [Colunas classificadas &#40;Mineração de dados&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de conteúdo &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Conteúdo tipos &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
  [Tipos de dados &#40; mineração de dados &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Tipos de dados &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
- [Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colunas de estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

@@ -1,10 +1,13 @@
 ---
 title: UPDATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a1b053ddc09876717f0fbf34b2d7c294988162f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Atualiza estatísticas de otimização de consulta de uma tabela ou exibição indexada. Por padrão, o otimizador de consulta já atualiza estatísticas conforme necessário para melhorar o plano de consulta; em alguns casos você pode melhorar o desempenho da consulta usando UPDATE STATISTICS ou o procedimento armazenado [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) para atualizar estatísticas com mais frequência do que as atualizações padrão.  
   
@@ -65,7 +67,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -131,7 +134,7 @@ Quando **ON**, as estatísticas reterá o percentual de amostragem do conjunto d
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.DM db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expor o valor de porcentagem de amostra persistente para a estatística selecionada.
  
- **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 atualização cumulativa 4.  
+ **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  PARTIÇÕES ({ \<número_da_partição > | \<intervalo >} [,... n]) ] Força as estatísticas de nível folha que abrangem as partições especificadas na cláusula ON PARTITIONS a serem recomputadas e, em seguida, mescladas para criar estatísticas globais. WITH RESAMPLE é necessário porque as estatísticas de partições criadas com taxas de amostragem diferentes não podem ser mescladas em conjunto.  
   
@@ -156,32 +159,46 @@ Quando **ON**, as estatísticas reterá o percentual de amostragem do conjunto d
  Se as estatísticas por partição não tiverem suporte, um erro será gerado. As estatísticas incrementais não têm suporte para os seguintes tipos de estatísticas:  
   
 -   Estatísticas criadas com os índices que não estejam alinhados por partição com a tabela base.  
-  
 -   Estatísticas criadas em bancos de dados secundários legíveis AlwaysOn.  
-  
 -   Estatísticas criadas em bancos de dados somente leitura.  
-  
 -   Estatísticas criadas em índices filtrados.  
-  
 -   Estatísticas criadas em exibições.  
-  
 -   Estatísticas criadas em tabelas internas.  
-  
 -   Estatísticas criadas com índices espaciais ou índices XML.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Substitui o **grau máximo de paralelismo** opção de configuração para a duração da operação de estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
+  
+ *max_degree_of_parallelism* pode ser:  
+  
+ 1  
+ Suprime a geração de plano paralelo.  
+  
+ \>1  
+ Restringe o número máximo de processadores usados em uma operação de estatística paralela ao número especificado, ou menos, com base na carga de trabalho atual do sistema.  
+  
+ 0 (padrão)  
+ Usa o número real de processadores, ou menos, com base na carga de trabalho atual do sistema.  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
-## <a name="remarks"></a>Comentários  
+
+## <a name="remarks"></a>Remarks  
   
 ## <a name="when-to-use-update-statistics"></a>Quando usar UPDATE STATISTICS  
  Para obter mais informações sobre quando usar UPDATE STATISTICS, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
-  
+
+## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+* Não há suporte para a atualização de estatísticas em tabelas externas. Para atualizar as estatísticas em uma tabela externa, descartar e recriar as estatísticas.  
+* A opção MAXDOP não é compatível com opções STATS_STREAM, número de linhas e PAGECOUNT.
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Atualizando todas as estatísticas com sp_updatestats  
  Para obter informações sobre como atualizar estatísticas de todas as tabelas definidas pelo usuário e internas no banco de dados, veja o procedimento armazenado [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Por exemplo, o comando a seguir chama sp_updatestats para atualizar todas as estatísticas do banco de dados.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,23 +208,23 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  Não há suporte para a seguinte sintaxe por PDW / SQL Data Warehouse  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
@@ -219,7 +236,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. Atualizar todas as estatísticas de uma tabela  
  O exemplo a seguir atualiza as estatísticas para todos os índices no `SalesOrderDetail` tabela.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +246,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. Atualizar as estatísticas de um índice  
  O exemplo a seguir atualiza as estatísticas do índice `AK_SalesOrderDetail_rowguid` da tabela `SalesOrderDetail`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +256,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. Atualizar estatísticas com o uso de amostragem de 50 por cento  
  O exemplo a seguir cria e atualiza as estatísticas das colunas `Name` e `ProductNumber` na tabela `Product`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +270,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. Atualizar estatísticas com o uso de FULLSCAN e NORECOMPUTE  
  O exemplo a seguir atualiza as estatísticas `Products` na tabela `Product` força um exame completo de todas as linhas na tabela `Product` e desativa a atualização automática das estatísticas de `Products`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,25 +283,25 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. Atualizar estatísticas em uma tabela  
  A exemplo a seguir atualiza o `CustomerStats1` estatísticas sobre o `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. Atualizar estatísticas usando uma verificação completa  
  A exemplo a seguir atualiza o `CustomerStats1` estatísticas, com base na verificação de todas as linhas de `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. Atualizar todas as estatísticas de uma tabela  
  O exemplo a seguir atualiza todas as estatísticas sobre o `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estatísticas](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
@@ -293,10 +310,8 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.DM db_stats_properties &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
-  
-
 
 
 

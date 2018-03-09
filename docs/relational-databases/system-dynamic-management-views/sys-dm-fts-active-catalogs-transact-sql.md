@@ -1,5 +1,5 @@
 ---
-title: fts_active_catalogs (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,24 +44,24 @@ ms.lasthandoff: 11/17/2017
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
-|**catalog_id**|**int**|ID do catálogo de texto completo ativo.|  
-|**memory_address**|**varbinary (8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
-|**name**|**nvarchar (128)**|Nome do catálogo de texto completo ativo.|  
+|**database_id**|**Int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
+|**catalog_id**|**Int**|ID do catálogo de texto completo ativo.|  
+|**memory_address**|**varbinary(8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
+|**name**|**nvarchar(128)**|Nome do catálogo de texto completo ativo.|  
 |**is_paused**|**bit**|Indica se a população do catálogo de texto completo ativo está em pausa.|  
-|**status**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**status**|**Int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
 |**status_description**|**nvarchar(120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
-|**previous_status**|**int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**previous_status**|**Int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
 |**previous_status_description**|**nvarchar(120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
-|**worker_count**|**int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
-|**active_fts_index_count**|**int**|Número de índices de texto completo que estão sendo populados.|  
-|**auto_population_count**|**int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
-|**manual_population_count**|**int**|Número de tabelas com população manual em andamento para este catálogo de texto completo.|  
-|**full_incremental_population_count**|**int**|Número de tabelas com um população completa ou incremental em andamento para este catálogo de texto completo.|  
-|**row_count_in_thousands**|**int**|Número estimado de linhas (em milhares) em todos os índices de texto completo neste catálogo de texto completo.|  
+|**worker_count**|**Int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
+|**active_fts_index_count**|**Int**|Número de índices de texto completo que estão sendo populados.|  
+|**auto_population_count**|**Int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
+|**manual_population_count**|**Int**|Número de tabelas com população manual em andamento para este catálogo de texto completo.|  
+|**full_incremental_population_count**|**Int**|Número de tabelas com um população completa ou incremental em andamento para este catálogo de texto completo.|  
+|**row_count_in_thousands**|**Int**|Número estimado de linhas (em milhares) em todos os índices de texto completo neste catálogo de texto completo.|  
 |**is_importing**|**bit**|Indica se o catálogo de texto completo está sendo importado:<br /><br /> 1 = O catálogo está sendo importado.<br /><br /> 2 = O catálogo não está sendo importado.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A coluna is_importing era nova no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="permissions"></a>Permissões  

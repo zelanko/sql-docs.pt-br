@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STGeomCollFromText_TSQL
 - STGeomCollFromText (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STGeomCollFromText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c315862712379ef2e08d25803c5dce2c668b0158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 934e50a3cba2b291590d2247f4c5a9992add8d5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geometria** instância retornada por `STGeomCollFromText()` é definido como a entrada WKT correspondente.  
   
  Esse método lançará uma exceção se a entrada não for válida.  

@@ -1,5 +1,5 @@
 ---
-title: "Origem do repositório Azure Data Lake | Microsoft Docs"
+title: Origem do Azure Data Lake Store | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSSRC.F1
 - sql14.dts.designer.afpadlssrc.f1
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "10"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65b4526b4c83525f61d53807fd21c72de4ee087a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da63d0250bc374ab93d3c8df8375837aabac7223
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-data-lake-store-source"></a>Fonte do Azure Data Lake Store
   O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo com suporte são texto e Avro.
   
- O **fonte de armazenamento do Azure Data Lake** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ A **Origem do Azure Data Lake Store** é um componente do [SSIS (SQL Server Integration Services) Feature Pack para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 >   [!NOTE]
 > Para garantir que o Gerenciador de conexões do Azure Data Lake Store e os componentes que o utilizam, isto é, a Fonte do Azure Data Lake Store e o Destino do Azure Data Lake Store, possam se conectar aos serviços, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). 
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/26/2017
         Se o formato de arquivo for texto, você deverá especificar o valor do **Caractere delimitador de coluna** . Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.  
   
 3.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.   
-

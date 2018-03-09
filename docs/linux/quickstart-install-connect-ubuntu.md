@@ -1,38 +1,38 @@
 ---
 title: "Introdução ao SQL Server 2017 no Ubuntu | Microsoft Docs"
-description: "Este tutorial de início rápido mostra como instalar o SQL Server 2017 no Ubuntu e, em seguida, criar e consultar um banco de dados com sqlcmd."
+description: "Este guia de início rápido mostra como instalar o SQL Server 2017 no Ubuntu e, em seguida, criar e consultar um banco de dados com sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 3cf5b554da4a01fd52aa2ae0766b1379bab1acfb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Instalar o SQL Server e criar um banco de dados no Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Neste tutorial de início rápido, você deve primeiro instalar SQL Server 2017 no Ubuntu 16.04. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste guia de início rápido, você deve primeiro instalar SQL Server 2017 no Ubuntu 16.04. Em seguida, você se conectará à ferramenta **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado no [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline) procedimentos de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-Você deve ter uma máquina Ubuntu 16.04 com **pelo menos 3,25 GB** de memória.
+Você deve ter uma máquina Ubuntu 16.04 com **pelo menos 2 GB** de memória.
 
 Para instalar o Ubuntu em seu próprio computador, vá para [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). Você também pode criar máquinas virtuais de Ubuntu no Azure. Consulte [criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
@@ -51,17 +51,17 @@ Para configurar o SQL Server no Ubuntu, execute os seguintes comandos em um term
 1. Importe as chaves GPG repositório público:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Registre o repositório do Microsoft SQL Server Ubuntu:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
-   > Este é o repositório de atualização cumulativa (CU). Para obter mais informações sobre as opções de repositório e suas diferenças, consulte [alterar repositórios de origem](sql-server-linux-setup.md#repositories).
+   > Este é o repositório de atualização cumulativa (CU). Para obter mais informações sobre as opções de repositório e suas diferenças, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
 1. Execute os comandos a seguir para instalar o SQL Server:
 
@@ -99,13 +99,13 @@ Para criar um banco de dados, você precisa se conectar com uma ferramenta que p
 1. Importe as chaves GPG repositório público:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Registre o repositório Microsoft Ubuntu:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. Atualizar a lista de fontes e execute o comando de instalação com o pacote do desenvolvedor unixODBC:
@@ -124,6 +124,11 @@ Para criar um banco de dados, você precisa se conectar com uma ferramenta que p
    ```
 
 > [!TIP]
-> **Sqlcmd** é apenas uma ferramenta para se conectar ao SQL Server para executar consultas e executar tarefas de gerenciamento e desenvolvimento. Outras ferramentas incluem [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) e [código do Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** é apenas uma ferramenta para se conectar ao SQL Server para executar consultas e executar tarefas de gerenciamento e desenvolvimento. Outras ferramentas incluem:
+>
+> * [SQL Server Operations Studio (versão prévia)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Código do Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

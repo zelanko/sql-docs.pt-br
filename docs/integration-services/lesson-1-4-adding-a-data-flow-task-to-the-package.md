@@ -1,11 +1,11 @@
 ---
-title: 'Etapa 4: Adicionando uma tarefa de fluxo de dados para o pacote | Microsoft Docs'
+title: 'Etapa 4: adicionar uma tarefa de fluxo de dados ao pacote | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 870216159af6caf2bff04631d954cd4bb56cd7fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 64411ebcd5362748e61c7e211798365285fe9968
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lição 1-4-adicionar uma tarefa de fluxo de dados para o pacote
+# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lição 1-4 – adicionar uma tarefa de fluxo de dados ao pacote
 Depois de criar os gerenciadores de conexões para os dados de origem e destino, a próxima tarefa é adicionar a tarefa Fluxo de Dados ao seu pacote. Essa tarefa encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, além de fornecer funcionalidade para transformar, limpar e modificar os dados à medida que são movidos. A tarefa Fluxo de Dados é onde a maioria do trabalho de um processo de extração, transformação e carregamento (ETL) acontece.  
   
 > [!NOTE]  
@@ -51,9 +50,8 @@ Depois de criar os gerenciadores de conexões para os dados de origem e destino,
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 5: Adicionando e configurando a fonte de arquivo simples](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tarefa de Fluxo de Dados](../integration-services/control-flow/data-flow-task.md)  
   
   
   
-

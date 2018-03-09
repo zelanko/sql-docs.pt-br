@@ -21,17 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 537e3a05ad368be5278eef9dc9c3d29d19754322
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: dd3ca8cc7e9e61cec96075b367e1ad7407179e21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="filter-geography-data-type"></a>Filter (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método não é determinista e não é preciso.  
   
 ## <a name="examples"></a>Exemplos  
@@ -85,4 +84,3 @@ WHERE g.Filter(geography::Parse(
  [STIntersects &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   
-

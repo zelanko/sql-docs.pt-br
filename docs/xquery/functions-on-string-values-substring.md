@@ -3,30 +3,36 @@ title: "Função (XQuery) substring | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f5d1a3f115cbe728325927f4bf82695e650871
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ae71eb26e93c65f853c5d1c842a1835cf40d866
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---substring"></a>Funções em valores de cadeia de caracteres - subcadeia de caracteres
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna a parte do valor de *$sourceString*, começando na posição indicada pelo valor de *$startingLoc,* e continue para o número de caracteres indicado pelo valor de *$ comprimento*.  
   
@@ -52,7 +58,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [opcional] Número de caracteres a recuperar. Se não for especificado, ele retorna todos os caracteres do local especificado em *$startingLoc* até o fim da cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A versão de três argumentos da função retorna os caracteres em `$sourceString` cuja posição `$p` obedece:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  

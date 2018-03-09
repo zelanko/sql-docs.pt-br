@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b5fa5c5a4783c2573500932b7c5838aa6af96abd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar um pacote nas Ferramentas de Dados do SQL Server
   Este tópico descreve como criar um novo pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por meio da cópia de um pacote existente e como atualizar as propriedades **Name** e **GUID** do novo pacote.  
@@ -41,10 +40,10 @@ ms.lasthandoff: 08/03/2017
   
 3.  Verifique se o pacote que será copiado está selecionado no Gerenciador de Soluções ou a guia no Designer SSIS que contém o pacote é a guia ativa  
   
-4.  Sobre o **arquivo** menu, clique em **salvar \<nome do pacote > como**.  
+4.  No menu **Arquivo**, clique em **Salvar \<nome do pacote> Como**.  
   
     > [!NOTE]  
-    >  O pacote deve ser aberto no Designer do SSIS antes que a opção **Salvar Como** aparecer no menu **Arquivo**.  
+    >  O pacote deve ser aberto no Designer do SSIS antes que a opção **Salvar Como** aparecer no menu **Arquivo** .  
   
 5.  Como opção, navegue até uma pasta diferente.  
   
@@ -56,14 +55,13 @@ ms.lasthandoff: 08/03/2017
   
 9. Como opção, clique no plano de fundo da guia **Fluxo de Controle** e clique em **Propriedades**.  
   
-10. Na janela Propriedades, clique no valor da propriedade de ID e, em seguida, na lista suspensa, clique em  **\<gerar nova ID >**.  
+10. Na janela Propriedades, clique no valor da propriedade de ID e, na lista suspensa, clique em **\<Gerar Nova ID>**.  
   
 11. No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o novo pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar uma cópia de um pacote](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Criar pacotes no SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
- [Integration Services &#40; SSIS &#41; Pacotes](../integration-services/integration-services-ssis-packages.md)  
+ [Pacotes do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-packages.md)  
   
   
-

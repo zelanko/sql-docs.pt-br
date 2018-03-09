@@ -2,9 +2,12 @@
 title: "Monitorando a replicação com o Monitor do Sistema | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,22 +17,22 @@ helpviewer_keywords:
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc9b09e9e089f9282ab60eb6e727e65ed7988f93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce2cd6d57f3d8f5c2e08930a96f118341172fafc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitorando a replicação com o monitor do sistema
-  O Monitor do Sistema do Windows[!INCLUDE[msCoName](../../../includes/msconame-md.md)] permite o uso de gráficos e relatórios para medir a eficiência do seu computador, e a identificação e solução de possíveis problemas (como uso desbalanceado de recursos, hardware insuficiente ou design de programa inadequado), e o planejamento de requisitos adicionais de hardware. Para obter mais informações, veja [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Monitor do Sistema do Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] permite o uso de gráficos e relatórios para medir a eficiência do seu computador, além de permitir a identificação e solução de possíveis problemas (como uso desequilibrado de recursos, hardware insuficiente ou design de programa inadequado) e também o planejamento de requisitos adicionais de hardware. Para obter mais informações, veja [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  O Monitor do Sistema usa objetos e contadores de desempenho que fornecem informações sobre o desempenho de vários processos. É possível medir o desempenho de replicação por meio de contadores associados com os agentes de replicação:  
   
-|Agente|Objeto de desempenho|Contador|Descrição|  
+|Agente|Objeto de desempenho|Contador|Description|  
 |-----------|------------------------|-------------|-----------------|  
 |Todos os agentes|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Agentes de replicação|Executando|O número de agentes de replicação que estão sendo executados no momento.|  
 |Snapshot Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantâneo de Replicação|Snapshot: Delivered Cmds/sec|O número de comandos por segundo entregues ao Distribuidor.|  
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/09/2017
 |Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Cmds/sec|O número de comandos por segundo entregues ao Assinante.|  
 |Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Trans/sec|O número de transações por segundo entregues ao Assinante.|  
 |Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivery Latency|O período de tempo atual, em milissegundos, passado desde quando as transações foram entregues ao Distribuidor até sua aplicação no Assinante.|  
-|Agente de Mesclagem|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Conflitos/s|O número de conflitos por segundo que ocorrem durante o processo de mesclagem.|  
-|Agente de Mesclagem|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Alterações baixadas/s|O número de linhas por segundo replicadas do Publicador ao Assinante.|  
-|Agente de Mesclagem|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Alterações Carregadas/s|O número de linhas por segundo replicadas do Assinante ao Publicador.|  
+|Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Conflitos/s|O número de conflitos por segundo que ocorrem durante o processo de mesclagem.|  
+|Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Alterações baixadas/s|O número de linhas por segundo replicadas do Publicador ao Assinante.|  
+|Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem de Replicação|Alterações Carregadas/s|O número de linhas por segundo replicadas do Assinante ao Publicador.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitoramento &#40;replicação&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -1,30 +1,31 @@
 ---
 title: "Documentação do Wide World Importers | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: a2510ee889f57f7ab51c0f45574a8fa6e86abb47
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 00c70ac3c82cc5a2e21a687a21c51739b75909ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-documentation"></a>Documentação do Wide World Importers
-Wide World Importers é o novo banco de dados de exemplo para o SQL Server 2016 e banco de dados do SQL Azure. Ele ilustra os principais recursos do SQL Server 2016 e banco de dados SQL Azure, para processamento de transações (OLTP), data warehouse e cargas de trabalho de análise (OLAP), bem como transações híbrida e cargas de trabalho de processamento (HTAP) de análise.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers é o novo banco de dados de exemplo para o SQL Server 2016 e banco de dados do SQL Azure. Ele ilustra os principais recursos do SQL Server 2016 e banco de dados SQL Azure, para processamento de transações (OLTP), data warehouse e cargas de trabalho de análise (OLAP), bem como transações híbrida e cargas de trabalho de processamento (HTAP) de análise.
 
 ## <a name="about-this-sample"></a>Sobre este exemplo
 
@@ -69,4 +70,3 @@ Exemplos de consultas de análise aproveitar o banco de dados WideWorldImporters
 ## <a name="data-generation"></a>Geração de dados
 
 Descreve como adicionais dados podem ser gerados o banco de dados de exemplo, por exemplo, inserindo vendas e compra dados até a data atual.
-

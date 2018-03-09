@@ -3,8 +3,9 @@ title: Evento ExecuteComplete (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: ExecuteComplete event [ADO]
+helpviewer_keywords:
+- ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327eee8b19a0d1b9ad4d67c45c90ccd2c632622a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 O **ExecuteComplete** eventos é chamado depois que um comando tiver concluído a execução.  
@@ -59,7 +61,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  Um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. A conexão através da qual a operação foi executada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **ExecuteComplete** evento pode ocorrer devido ao **Conexão.** [Executar](../../../ado/reference/ado-api/execute-method-ado-connection.md), **comando.** [Executar](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Requery](../../../ado/reference/ado-api/requery-method.md), ou **Recordset.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) métodos.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -2,15 +2,13 @@
 title: "Conceitos de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,20 +26,20 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
-  A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.  
   
  Esses padrões e tendências podem ser coletados e definidos como um *modelo de mineração de dados*. Os modelos de mineração podem ser se aplicados a cenários específicos, como:  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 09/01/2017
   
  Você define as colunas de dados que você deseja usar ao criar uma estrutura de mineração. A estrutura de mineração é vinculada à origem dos dados, mas realmente não contém nenhum dado até que seja processada. Ao processar a estrutura de mineração, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera agregações e outras informações estatísticas que podem ser usadas para análise. Essas informações podem ser usadas por qualquer modelo de mineração com base na estrutura. Para obter mais informações sobre como as estruturas de mineração estão relacionadas aos modelos de mineração, veja [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
- Antes de a estrutura e o modelo serem processados, também o modelo de mineração de dados é apenas um contêiner que especifica as colunas usadas para entrada, o atributo que você está prevendo e os parâmetros que indicam ao algoritmo como os dados devem ser processados. O processamento de um modelo é geralmente chamado de *treinamento*. Treinamento refere-se ao processo de aplicação de um algoritmo matemático específico aos dados na estrutura com a finalidade de extrair padrões. Os padrões que você localiza no processo de treinamento dependem da seleção de dados de treinamento, o algoritmo que você escolheu e como você configurou o algoritmo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contém muitos algoritmos diferentes, cada um adequado a um tipo diferente de tarefa e cada um criando um tipo diferente de modelo. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Antes de a estrutura e o modelo serem processados, também o modelo de mineração de dados é apenas um contêiner que especifica as colunas usadas para entrada, o atributo que você está prevendo e os parâmetros que indicam ao algoritmo como os dados devem ser processados. O processamento de um modelo é geralmente chamado de *treinamento*. Treinamento refere-se ao processo de aplicação de um algoritmo matemático específico aos dados na estrutura com a finalidade de extrair padrões. Os padrões que você localiza no processo de treinamento dependem da seleção de dados de treinamento, o algoritmo que você escolheu e como você configurou o algoritmo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]contém muitos algoritmos diferentes, cada um adequado a um tipo diferente de tarefa e cada um criando um tipo diferente de modelo. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  Você também pode usar parâmetros para ajustar cada algoritmo e aplicar filtros aos dados de treinamento para usar apenas um subconjunto de dados, criando diferentes resultados. Depois de passar os dados pelo modelo, o objeto do modelo de mineração conterá resumos e padrões que poderão ser consultados ou usados para previsão.  
   
@@ -171,7 +169,7 @@ ms.lasthandoff: 09/01/2017
   
  Depois que os modelos de mineração existirem em um ambiente de produção, será possível realizar várias tarefas de acordo com suas necessidades. Estas são algumas tarefas que você poderá realizar:  
   
--   Use os modelos para criar previsões, que poderão ser usadas para tomar decisões comerciais. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a linguagem DMX, que pode ser usada para criar consultas de previsão, e o Construtor de Consultas de Previsão para ajudá-lo a criar as consultas. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+-   Use os modelos para criar previsões, que poderão ser usadas para tomar decisões comerciais. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece a linguagem DMX que você pode usar para criar consultas de previsão e o construtor de consultas de previsão para ajudá-lo a criar as consultas. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
 -   Crie consultas de conteúdo para recuperar estatísticas, regras ou fórmulas do modelo. Para obter mais informações, consulte [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
   
@@ -190,4 +188,3 @@ ms.lasthandoff: 09/01/2017
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

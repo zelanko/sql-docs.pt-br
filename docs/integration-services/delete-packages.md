@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70b39c648fc2d3ddd13db93d3923880edcf56675
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 168527d4e157ea7b4868ed82e1c88cb41d308915
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="delete-packages"></a>Excluir pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode excluir pacotes salvos no sistema de arquivos. Se você excluir um pacote, ele será excluído permanentemente e não poderá ser restaurado em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,4 +39,3 @@ ms.lasthandoff: 08/03/2017
 3.  Clique em **OK** para confirmar a exclusão ou clique em **Cancelar** para manter o pacote.  
   
   
-

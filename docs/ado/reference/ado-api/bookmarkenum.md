@@ -3,7 +3,7 @@ title: BookmarkEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,29 +18,28 @@ f1_keywords:
 helpviewer_keywords:
 - BookMarkEnum enumeration [ADO]
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7fa9157e8a18e807b8a6756bb4b4a94cfa6bf0ac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b88ea0a0e2e90d38498c0d5a9f3c1abb1c5eb293
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Especifica um indicador que indica onde a operação deve ser iniciada.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Começa com o registro atual.|  
 |**adBookmarkFirst**|1|Inicia no primeiro registro.|  
 |**adBookmarkLast**|2|Inicia o último registro.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -53,4 +52,3 @@ Especifica um indicador que indica onde a operação deve ser iniciada.
 |||  
 |-|-|  
 |[Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
-

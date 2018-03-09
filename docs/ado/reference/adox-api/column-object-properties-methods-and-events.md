@@ -3,26 +3,28 @@ title: "Propriedades do objeto de coluna, métodos e eventos | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Column object [ADOX], members
+helpviewer_keywords:
+- Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2742ce29bf11f501f65c7dc0a0954f1899214b3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac816520bd62856ddc00d7c065baeb9cc222670c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="column-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de coluna
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -47,10 +49,10 @@ ms.lasthandoff: 11/17/2017
  [Tipo de propriedade (coluna)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

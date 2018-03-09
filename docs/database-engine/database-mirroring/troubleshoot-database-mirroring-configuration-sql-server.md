@@ -2,10 +2,14 @@
 title: "Solução de problemas de configuração de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23f685d4e5a32dc99fdf41e9a8db7c0deb8063a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
-  Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
   
 > [!NOTE]  
 >  Verifique se você atende a todos os [pré-requisitos do espelhamento de banco de dados](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 |[Acesso de rede](#NetworkAccess)|Documenta o requisito de cada instância do servidor para acessar as portas de outra instância do servidor ou instâncias no TCP.|  
 |[Preparação do banco de dados espelho](#MirrorDbPrep)|Resume os requisitos para preparar o banco de dados espelho para habilitar o início do espelhamento.|  
 |[Falha na operação para criar arquivo](#FailedCreateFileOp)|Descreve como responder a uma falha na operação para criar arquivo.|  
-|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='***servidor_parceiro***'** .|  
+|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'**.|  
 |[Transações envolvendo todos os bancos de dados](#CrossDbTxns)|Um failover automático pode levar a uma resolução automática e possivelmente incorreta de transações duvidosas. Por esta razão, o espelhamento de banco de dados não dá suporte a transações envolvendo todos os bancos de dados.|  
   
 ##  <a name="Accounts"></a> Contas  
@@ -83,7 +88,7 @@ ms.lasthandoff: 11/09/2017
     GO  
     ```  
   
-     Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+     Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
 5.  Verifique se o ROLE está correto. Em cada instância do servidor, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -129,7 +134,7 @@ ms.lasthandoff: 11/09/2017
   
  Se o espelhamento de banco de dados foi interrompido, todos os backups de logs subsequentes do banco de dados principal devem ser aplicados ao banco de dados espelho antes que o espelhamento possa ser reinicializado.  
   
- Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Para que a inclusão de um arquivo não afete uma sessão de espelhamento, o caminho do arquivo deve existir nos dois servidores. Portanto, se você mover os arquivos de banco de dados quando estiver criando o banco de dados espelho, uma operação adicionar arquivo posterior pode não funcionar no banco de dados espelho e causar a suspensão do espelhamento.  
@@ -145,7 +150,7 @@ ms.lasthandoff: 11/09/2017
  Para obter mais informações, veja [Remover o espelhamento de banco de dados&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Iniciando o espelhamento usando Transact-SQL  
- A ordem na qual as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='***servidor_parceiro***'** são emitidas é muito importante.  
+ A ordem na qual as instruções ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** são emitidas é muito importante.  
   
 1.  A primeira instrução deve ser executada no servidor espelho. Quando essa instrução for emitida, o servidor espelho não tenta contatar qualquer outra instância do servidor. Em vez disso, o servidor espelho instrui seu banco de dados para esperar até que o servidor espelho seja contatado pelo servidor principal.  
   
@@ -163,11 +168,11 @@ ms.lasthandoff: 11/09/2017
   
 -   Uma transação que está atualizando vários bancos de dados na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
+-   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
  Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Segurança do transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   

@@ -3,26 +3,28 @@ title: "Fluxo de eventos, métodos e propriedades do objeto | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stream object [ADO], members
+helpviewer_keywords:
+- Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b16f5729754582e038b9e12f9e68014967006d2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1052a70c05641b41694c19ee399531bba1f41b00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de fluxo
 ## <a name="properties"></a>Propriedades  
@@ -72,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

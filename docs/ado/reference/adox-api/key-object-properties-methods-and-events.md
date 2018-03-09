@@ -3,7 +3,7 @@ title: "Propriedades do objeto, métodos e eventos de chave | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2acc8421dc62a0ce0b5d0f0cbc7534a6c619eb72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25d182cc90460580c02b4d44fa99c2a95153edbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="key-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de chave
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -42,11 +41,10 @@ ms.lasthandoff: 09/09/2017
  [Propriedade UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-

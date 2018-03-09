@@ -3,27 +3,27 @@ title: "Especificação de Backup VDI - SQL Server no Linux | Microsoft Docs"
 description: "Especificação de Interface de dispositivo Virtual de Backup do SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente do Linux VDI especificação do SDK
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento aborda as interfaces fornecidas pelo SQL Server no SDK de cliente de interface (VDI) de dispositivo virtual do Linux. Fornecedores de software independentes (ISVs) podem usar o Virtual Backup dispositivo aplicativo Interface de programação (API) para integrar o SQL Server em seus produtos. Em geral, VDI no Linux se comporta da mesma forma para VDI no Windows com as seguintes alterações:
 
@@ -70,7 +70,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 - Sintaxe de função
 - Lista de parâmetros
 - Valores de retorno
-- Comentários
+- Remarks
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -87,7 +87,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | | **name** | Isso identifica o conjunto de dispositivo virtual. As regras para nomes usados pelo CreateFileMapping () devem ser seguidas. Qualquer caractere, exceto a barra invertida (\) pode ser usado. Isso é uma cadeia de caracteres. É recomendável prefixando a cadeia de caracteres com o nome do produto ou da empresa e o nome do banco de dados do usuário. |
-| |**CFG** | Essa é a configuração para o conjunto de dispositivo virtual. Para obter mais informações, consulte "Configuração", posteriormente neste documento.
+| |**cfg** | Essa é a configuração para o conjunto de dispositivo virtual. Para obter mais informações, consulte "Configuração", posteriormente neste documento.
 
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -110,8 +110,8 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| | **tempo limite** | Este é o tempo limite em milissegundos. Use INFINITAS ou qualquer inteiro negativo para impedir que o tempo limite.
-| | **CFG** | Após a execução bem-sucedida, contém a configuração selecionada pelo servidor. Para obter mais informações, consulte "Configuração", posteriormente neste documento.
+| | **timeout** | Este é o tempo limite em milissegundos. Use INFINITAS ou qualquer inteiro negativo para impedir que o tempo limite.
+| | **cfg** | Após a execução bem-sucedida, contém a configuração selecionada pelo servidor. Para obter mais informações, consulte "Configuração", posteriormente neste documento.
 
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -146,7 +146,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 | |**VD_E_INVALID** |O nome do dispositivo é inválido. Não é um dos nomes de conhecido que compõem o conjunto.
 
 **Comentários** VD_E_OPEN podem ser retornados sem problema. O cliente pode chamar OpenDevice por meio de um loop até que este código é retornado.
-Se mais de um dispositivo estiver configurado, por exemplo  *n*  dispositivos, o conjunto de dispositivo virtual retornará  *n*  interfaces de dispositivo exclusivo.
+Se mais de um dispositivo estiver configurado, por exemplo * n * dispositivos, o conjunto de dispositivo virtual retornará * n * interfaces de dispositivo exclusivo.
 
 O `GetConfiguration` função pode ser usada para aguardar até que os dispositivos podem ser abertos.
 Se essa função não for bem-sucedida, um valor nulo é retornado por meio de ppVirtualDevice.
@@ -165,7 +165,7 @@ Se essa função não for bem-sucedida, um valor nulo é retornado por meio de p
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |**tempo limite** |Este é o tempo de espera em milissegundos. Use INFINTE para aguardar indefinidamente. Use 0 para sondar um comando. VD_E_TIMEOUT será retornado se nenhum comando está disponível no momento. Se o tempo limite ocorrer, o cliente decide a próxima ação.
+| |**timeout** |Este é o tempo de espera em milissegundos. Use INFINTE para aguardar indefinidamente. Use 0 para sondar um comando. VD_E_TIMEOUT será retornado se nenhum comando está disponível no momento. Se o tempo limite ocorrer, o cliente decide a próxima ação.
 | |**Tempo Limite** |Este é o tempo de espera em milissegundos. Use INFINTE ou um valor negativo para aguardar indefinidamente. Use 0 para sondar um comando. VD_E_TIMEOUT será retornado se nenhum comando está disponível antes do tempo limite expirar. Se o tempo limite ocorrer, o cliente decide a próxima ação.
 | |**ppCmd** |Quando um comando é retornado com êxito, o parâmetro retorna o endereço de um comando seja executado. A memória retornada é somente leitura. Quando o comando for concluído, esse ponteiro é passado para a rotina CompleteCommand. Para obter detalhes sobre cada comando, consulte "Comandos", posteriormente neste documento.
         
@@ -199,7 +199,7 @@ Quando esta rotina deve bloquear a esperar para um comando, o thread será deixa
 | |**pCmd** |Este é o endereço de um comando anteriormente retornado de ClientVirtualDevice::GetCommand.
 | |**completionCode** |Este é um código de status que indica o status de conclusão. Esse parâmetro deve ser retornado para todos os comandos. O código retornado deve ser apropriado para o comando que está sendo executado. ERROR_SUCCESS é usado em todos os casos para denotar um comando executado com êxito. Para obter uma lista de possíveis códigos, consulte o arquivo vdierror.h. Aparece uma lista de códigos de status típicos para cada comando em "Comandos" neste documento.
 | |**bytesTransferred** |Este é o número de bytes transferidos com êxito. Isso será retornado apenas para a transferência de dados, comandos de leitura e gravação.
-| |**posição** |Esta é uma resposta para o comando GetPosition somente.
+| |**position** |Esta é uma resposta para o comando GetPosition somente.
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |

@@ -2,29 +2,32 @@
 title: "Definindo uma relação de fatos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lição 5-2-definir uma relação de fatos
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
   
 No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode determinar se deseja duplicar os dados da dimensão de fatos em uma estrutura de dimensão MOLAP para aumentar o desempenho da consulta ou se deseja definir a dimensão de fatos como uma dimensão ROLAP para economizar mais espaço de armazenamento reduzindo o desempenho da consulta. Ao armazenar uma dimensão com o modo de armazenamento MOLAP, todos os membros da dimensão são armazenados na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma estrutura MOLAP altamente compactada, além de serem armazenados nas partições do grupo de medidas. Ao armazenar uma dimensão com o modo de armazenamento ROLAP, apenas a definição da dimensão está armazenada na estrutura MOLAP — os próprios membros da dimensão são consultados a partir da tabela de fatos relacional adjacente no momento da consulta. O modo de armazenamento apropriado pode ser definido com base na frequência em que a dimensão de fatos é consultada, no número de linhas retornada por uma consulta comum, no desempenho da consulta e no custo de processamento. A definição de uma dimensão como ROLAP não requer que todos os cubos que usam a dimensão também sejam armazenados no modo ROLAP. O modo de armazenamento de cada dimensão pode ser configurado independentemente.  
@@ -125,7 +128,7 @@ Nas tarefas deste tópico, você adiciona uma nova dimensão de cubo com base na
     ![Dimensionamento de volume de vendas pela Internet](../analysis-services/media/l5-factrelationship-3.gif "dimensionamento de volume de vendas pela Internet")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Definindo uma relação muitos para muitos](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+[Definindo uma relação muitos-para-muitos](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

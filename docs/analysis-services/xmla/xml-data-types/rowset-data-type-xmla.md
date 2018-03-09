@@ -2,15 +2,13 @@
 title: Tipo de dados RowSet (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Rowset Data Type
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf941f9e6231174bd0288bf71aa3055570d1c74a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 885910e506995f6aef382d95eb24320749b682eb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo de dados Rowset (XMLA)
-  Define um tipo de dados derivado que representa um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que retorna dados tabulares de um [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Define um tipo de dados derivado que representa um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que retorna dados tabulares de um [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   
  **Namespace** urn: schemas-microsoft-com: XML-análise: conjunto de linhas  
   
@@ -52,20 +50,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>Características do tipo de dados  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[Conjunto de resultados](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipos de dados derivados|Nenhuma|  
+|Tipos de dados derivados|Nenhum|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhuma|  
+|Elementos pai|Nenhum|  
 |Elementos filho|[linha](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |Elementos derivados|[raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  XML não permite certos caracteres como elemento e nomes de atributo. Para resolver essa restrição de nomeação, XML for Analysis (XMLA) dá suporte à codificação como definido por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para nomes de colunas que contêm caracteres de nome XML que não são válidos de acordo com a especificação XML 1.0, o XMLA usa os valores hexadecimais correspondentes para codificar caracteres Unicode que não são válidos. Os valores hexadecimais são substituídos por x*HHHH*\_, onde *HHHH* significa o código UCS-2 hexadecimal de quatro dígitos do caractere na ordem primeiro bit mais significativo. Por exemplo, XMLA codifica o nome, "Detalhes da Ordem", como Order_x0020_Details, que substitui o caractere de espaço com o código hexadecimal correspondente.  
   
  A codificação pode tornar difícil a transformação de XSL (Extensible Style Language). Para dar suporte a uma rápida pesquisa de real, sem codificação nomes de coluna, adicione o **SQL: Field**atributo no esquema de conjunto de linhas do XML para cada coluna, conforme mostrado no exemplo a seguir:  
@@ -230,7 +228,7 @@ ms.lasthandoff: 11/17/2017
 </root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

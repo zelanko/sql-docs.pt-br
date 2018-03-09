@@ -3,27 +3,30 @@ title: Exemplo da propriedade status (campo) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Status property [ADO Field], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7034c405798a8583abcf43a6b7830ccdf229cdf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ea3ebba271ebdc12802b31cc1f50cdd3befead0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-field-vb"></a>Exemplo da propriedade status (campo) (VB)
 O exemplo a seguir abre um documento de uma pasta de leitura/gravação usando o [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). O [Status](../../../ado/reference/ado-api/status-property-ado-field.md) propriedade de um [campo](../../../ado/reference/ado-api/field-object.md) objeto do [registro](../../../ado/reference/ado-api/record-object-ado.md) primeiro ser definida como **adFieldPendingInsert**, e ser atualizado para **adFieldOk**.  

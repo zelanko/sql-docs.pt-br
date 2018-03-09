@@ -1,14 +1,14 @@
 ---
 title: dbo. slo_assignment_history (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,24 +16,25 @@ f1_keywords:
 - slo_assignment_history
 - slo_assignment_history_TSQL
 - dbo.slo_assignment_history_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.slo_assignment_history
 - slo_assignment_history
 ms.assetid: 048a6fb5-2fc2-4d12-a436-4c53ecd413f3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61bab47646d1acff9edcfbf461588b3560916acd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/16/2018
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -52,14 +53,14 @@ ms.lasthandoff: 11/09/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Nome do banco de dados.|  
-|database_id|**int**|ID do banco de dados.|  
-|create_date|**DateTimeOffset(7)**|Data de criação do banco de dados.|  
+|database_id|**Int**|ID do banco de dados.|  
+|create_date|**datetimeoffset(7)**|Data de criação do banco de dados.|  
 |service_objective_name|**sysname**|Nome do SLO (objetivo de nível de serviço).|  
 |service_objective_id|**uniqueidentifier**|A ID do SLO.|  
 |operation_id|**uniqueidentifier**|Identificador da operação.|  
-|operation_start_time|**DateTimeOffset(7)**|Hora de início da solicitação de alteração do SLO do banco de dados.|  
-|operation_end_time|**DateTimeOffset(7)**|Hora de término da solicitação de alteração do SLO do banco de dados.|  
-|error_code|**int**|Código de erro da solicitação de alteração do SLO do banco de dados.|  
+|operation_start_time|**datetimeoffset(7)**|Hora de início da solicitação de alteração do SLO do banco de dados.|  
+|operation_end_time|**datetimeoffset(7)**|Hora de término da solicitação de alteração do SLO do banco de dados.|  
+|error_code|**Int**|Código de erro da solicitação de alteração do SLO do banco de dados.|  
 |error_desc|**nvarchar**|Descrição do erro na solicitação de alteração do SLO do banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  

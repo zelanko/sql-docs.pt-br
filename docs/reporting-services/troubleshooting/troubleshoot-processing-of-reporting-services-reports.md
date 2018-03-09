@@ -1,27 +1,27 @@
 ---
-title: "Solucionar problemas de processamento de relatórios do Reporting Services | Microsoft Docs"
+title: "Solução de problemas de processamento de relatórios do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "4"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8df3dd891b236ca295a4cc0deebdc5768d06dffa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b772d7a4a73e2aa37b35866f57064a0610c18de
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Processamento de solução de problemas dos relatórios do Reporting Services
 Após a recuperação dos dados do relatório, o processador de relatório combina esses dados e as informações de layout. Cada propriedade de item de relatório que tenha uma expressão é avaliada no contexto dos dados e do layout combinado. Use este tópico para ajudar a solucionar esses problemas.   
@@ -55,8 +55,7 @@ Para eliminar a mensagem  #Erro, escreva novamente a expressão que causa essa m
 Na visualização, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)], exiba a janela Saída. No servidor de relatório, exiba a pilha de chamadas. 
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

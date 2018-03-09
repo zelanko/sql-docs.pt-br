@@ -19,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Null (geometry Data Type)
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a7585bc509c4e19a08144109dee56ea30502005d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a036b1801284fa43e4bdf7b690037711e9970638
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-geometry-data-type"></a>Null (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ Null
   
  Tipo CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir recupera uma instância nula de `geometry`.  
@@ -62,8 +61,7 @@ SELECT @g
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

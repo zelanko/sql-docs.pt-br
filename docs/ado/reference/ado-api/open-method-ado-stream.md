@@ -3,7 +3,7 @@ title: "Abra o método (fluxo de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b104e04c81fce3fce5cb25d175602f1b339e9ac1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-stream"></a>Método Open (fluxo de ADO)
 Abre uma [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular fluxos de dados binários ou de texto.  
@@ -57,7 +56,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha, se necessário, acessa o **fluxo** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um **registro** objeto é passado como o parâmetro de origem, o *UserID* e *senha* parâmetros não são usados como acesso a **registro** o objeto já está disponível. Da mesma forma, o [modo](../../../ado/reference/ado-api/mode-property-ado.md) do **registro** objeto é transferido para o **fluxo** objeto. Quando *fonte* não for especificado, o **fluxo** aberto não contém dados e tem um [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) de zero (0). Para evitar a perda dos dados gravados isso **fluxo** quando o **fluxo** é fechado, salvar o **fluxo** com o [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ou [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) métodos, ou salvá-lo para outro local de memória.  
   
  Um *OpenOptions* valor **adOpenStreamFromRecord** identifica o conteúdo do *fonte* parâmetro seja já aberto **registro**objeto. O comportamento padrão é tratar *fonte* como uma URL que aponta diretamente para um nó em uma estrutura de árvore, como um arquivo. Fluxo padrão associado a esse nó é aberto.  
@@ -75,4 +74,3 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
-

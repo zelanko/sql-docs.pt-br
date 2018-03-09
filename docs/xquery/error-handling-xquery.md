@@ -3,8 +3,11 @@ title: Erro ao manipular (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 76839b7a31bc6468cc397c9d6255af5660bcfcd5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee629855e21382a8cee308c4ffd42b276f72d18
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-handling-xquery"></a>Tratamento de erros (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   A especificação de W3C permite que erros de tipo ocorram estática ou dinamicamente, e define erros de tipo, dinâmicos e estáticos.  
   
@@ -94,4 +96,3 @@ GO
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
   
   
-

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5440d7cb38dfeef678a9b665397b789bf506be72
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 432d311b1f55ff636e8c0b6fedb28509e3d9e6ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnóstico para Drivers de banco de dados de área de trabalho
 Todos os erros e avisos não verificadas ou parcialmente verificadas pelo Gerenciador de Driver são tratados pelo driver. O driver também mapeia nativo erros ou erros retornados pela fonte de dados, para SQLSTATEs. Cada função listada no *referência do programador de ODBC* contém uma seção de "Diagnóstico" que especifica as condições e mensagens.  
@@ -51,4 +49,3 @@ Todos os erros e avisos não verificadas ou parcialmente verificadas pelo Gerenc
 |SQL_DIAG_SERVER_NAME|Sem suporte|  
 |SQL_DIAG_SQLSTATE|Tem suporte|  
 |SQL_DIAG_SUBCLASS_ORIGIN|Tem suporte|
-

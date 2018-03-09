@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6b8bf58c2d8db8cf394e6017a9e817c1f20096e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dd67618a952e189a1ce7b3596f68dddd16977ae3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-position"></a>Posição de catálogo
 A posição de um nome de catálogo em um identificador e como ele é separado do resto do identificador varia de fonte de dados para a fonte de dados. Por exemplo, em uma fonte de dados Xbase, o nome do catálogo é um diretório e, no Microsoft® Windows®, é separado do nome de tabela (que é um nome de arquivo) por uma barra invertida (\\). A ilustração a seguir demonstra essa condição.  
@@ -57,4 +55,3 @@ SELECT * FROM "Corporate"."Parts"@"Sales"
 ```  
   
  Para obter informações sobre delimitar identificadores, consulte a próxima seção, [identificadores entre aspas](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

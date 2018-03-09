@@ -2,32 +2,30 @@
 title: "Consultas (mineração de dados) de conteúdo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
-  Uma consulta de conteúdo é um modo de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração propriamente dito. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma consulta de conteúdo é um modo de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração propriamente dito. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  
   
  Esta seção fornece informações gerais sobre os tipos de informações que podem ser recuperadas com uma consulta de conteúdo e a sintaxe DMX geral para consultas de conteúdo.  
   
@@ -205,8 +203,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Para obter mais informações sobre como trabalhar com conjuntos de linhas hierárquicas, consulte a especificação OLEDB no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Compreendendo a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Noções básicas sobre a instrução DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

@@ -3,7 +3,7 @@ title: A propriedade de status (campo ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cb695fae69ace4e65fea116ad125bb79f414a820
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-field"></a>Propriedade de status (campo ADO)
 Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -38,7 +37,7 @@ Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) ob
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valor. O valor padrão é **adFieldOK**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>Status de campo do registro  
  Altera para o valor de um **campo** objeto na coleção de campos de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto são armazenados em cache até que o objeto [atualização](../../../ado/reference/ado-api/update-method.md) método é chamado. Nesse ponto, se a alteração para o valor do campo causou um erro, o OLE DB gera o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade de Status de qualquer um do **campo** objetos no **campos** coleção que causou o erro conterá um valor da [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa do o problema.  
@@ -58,4 +57,3 @@ Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) ob
 ## <a name="see-also"></a>Consulte também  
  [Exemplo da propriedade status (campo) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Exemplo da propriedade Status (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-

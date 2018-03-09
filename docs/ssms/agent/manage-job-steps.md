@@ -3,8 +3,11 @@ title: Gerenciar etapas de trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,16 +29,16 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa9aa96e05bdc08fa8f981c25db544d3ae7e5a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d31e9cb313171a5364de00a97ff80a33d32d305
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
-Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
   
 -   Programas executáveis e comandos de sistema operacional.  
   
@@ -197,11 +200,11 @@ Observe que, se você implantar o pacote no Catálogo do SSIS e especificar o **
   
 Para obter mais informações sobre como criar etapas de trabalho que executam pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , consulte [Trabalhos do SQL Server Agent para pacotes](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |Descreve como criar uma etapa de trabalho com um programa executável.|[Criar uma etapa de trabalho CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Descreve como redefinir permissões no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Descreve como criar uma etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql_md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
@@ -212,7 +215,7 @@ Para obter mais informações sobre como criar etapas de trabalho que executam p
 |Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapas de trabalho](../../ssms/agent/view-job-step-information.md)|  
 |Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Criar trabalhos](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  

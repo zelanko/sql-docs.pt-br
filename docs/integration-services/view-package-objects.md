@@ -1,11 +1,11 @@
 ---
-title: Exibir objetos do pacote | Microsoft Docs
+title: Exibir objetos de pacote | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd8ac9e0e21ac4d0bc575cff199f827d4bef76ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="view-package-objects"></a>Exibir objetos do pacote
   No Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a guia **Explorador de Pacotes** fornece uma exibição de explorer do pacote. A exibição reflete a hierarquia de contêiner da arquitetura [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O contêiner de pacote está no topo da hierarquia e você expande o pacote para exibir as conexões, executáveis, manipuladores de eventos, provedores de log, restrições de precedência e variáveis no pacote.  
@@ -45,9 +44,9 @@ ms.lasthandoff: 09/26/2017
   
  O diagrama a seguir mostra uma exibição de árvore de um pacote simples.  
   
- ![Captura de tela da guia Explorador de pacotes](../integration-services/media/packageexplorer.gif "captura de tela da guia Explorador de pacotes")  
+ ![Captura de tela da guia Explorador de Pacotes](../integration-services/media/packageexplorer.gif "Captura de tela da guia Explorador de Pacotes")  
   
-## <a name="view-the-package-structure-and-content"></a>Exibir a estrutura do pacote e o conteúdo  
+## <a name="view-the-package-structure-and-content"></a>Exibir a estrutura e conteúdo do pacote  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote que deseja exibir no **Explorador de Pacotes**.  
   
@@ -65,13 +64,12 @@ ms.lasthandoff: 09/26/2017
   
 -   Clique com o botão direito do mouse em um objeto e clique em **Excluir**. 
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Restrições de precedência](../integration-services/control-flow/precedence-constraints.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; SSIS &#41; Registro em log](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Registro em Log do SSIS &#40;Integration Services&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

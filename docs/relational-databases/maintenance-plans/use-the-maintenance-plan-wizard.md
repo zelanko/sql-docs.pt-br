@@ -1,9 +1,13 @@
 ---
 title: "Usar o Assistente de Plano de Manutenção | Microsoft Docs"
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -33,18 +37,18 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
-  Este tópico descreve como criar um plano de manutenção de um único servidor ou de vários servidores usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um plano de manutenção de um único servidor ou de vários servidores usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
     
  
 ##  <a name="Restrictions"></a> Limitações e restrições  
@@ -55,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 
 Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Pré-requisitos 
+##  <a name="Prerequisite"></a> Prerequisites 
 Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -323,7 +327,7 @@ Caixa de seleção**Incluir índices**
   
 #### <a name="define-backup-tasks"></a>Definir tarefas de backup  
   
-1.  Na página **Definir Tarefa Backup de Banco de Dados (Completo)** , selecione os bancos de dados nos quais deve ser executado um backup completo. Esta tarefa usa a instrução `BACKUP DATABASE`. Para obter mais informações, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Ao concluir, clique em **Avançar**.  
+1.  Na página **Definir Tarefa Backup de Banco de Dados (Completo)** , selecione os bancos de dados nos quais deve ser executado um backup completo. Esta tarefa usa a instrução `BACKUP DATABASE`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Ao concluir, clique em **Avançar**.  
   
      As opções a seguir estão disponíveis nesta página.  
   
@@ -423,9 +427,9 @@ Caixa de seleção**Incluir índices**
     |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
-2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE … WITH DIFFERENTIAL`. Para obter mais informações, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Ao concluir, clique em **Avançar**.  
+2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE … WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Ao concluir, clique em **Avançar**.  
   
-3.  Na página **Definir Tarefa de Backup de Banco de Dados (Log de Transações)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup de um log de transações. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP LOG`. Para obter mais informações, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Ao concluir, clique em **Avançar**.  
+3.  Na página **Definir Tarefa de Backup de Banco de Dados (Log de Transações)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup de um log de transações. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP LOG`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Ao concluir, clique em **Avançar**.  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir tarefas de limpeza de manutenção  
   

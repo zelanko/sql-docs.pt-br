@@ -2,29 +2,30 @@
 title: Salvar e carregar objetos R do SQL Server usando o ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 6ac2e971-6b4f-4c73-ba57-29c716abd057
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: dd1b18bca724846c826d601e50b8749956f22678
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e0fb31629dc6fd691fdac257a65cccc3728cc403
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Salvar e carregar objetos R do SQL Server usando o ODBC
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Os serviços de R do SQL Server podem armazenar objetos de R serializados em uma tabela e, em seguida, carregar o objeto da tabela conforme necessário, sem a necessidade de executar novamente o código de R ou readaptar o modelo. Essa capacidade de salvar objetos de R em um banco de dados é essencial para cenários como treinar e salvar um modelo para depois usá-lo para análise ou pontuação.
 
@@ -122,4 +123,3 @@ Este procedimento demonstra como você pode usar as novas funções para carrega
    ```R
     infertLogit2 <- rxReadObject(ds, "logit.model")
    ```
-

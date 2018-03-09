@@ -2,36 +2,31 @@
 title: Conjunto de linhas DISCOVER_LOCKS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_LOCKS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d50a6cb0bdc6bfdb27fdbfff4c79b25c43e27e58
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>Conjunto de linhas DISCOVER_LOCKS
-  Oferece informações sobre os bloqueios atuais no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações sobre os bloqueios atuais no servidor.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_LOCKS** contém as colunas a seguir.  
@@ -61,11 +56,11 @@ ms.lasthandoff: 09/01/2017
 |LOCK_TYPE|DBTYPE_I4|Opcional.|  
 |LOCK_MIN_TOTAL_MS|DBTYPE_I8|Opcional.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="lock-types"></a>Tipos de bloqueio  
   
-|Nome do bloqueio|Valor|Descrição|  
+|Nome do bloqueio|Valor|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Nenhum bloqueio.|  
 |LOCK_SESSION_LOCK|0x0000001|Sessão inativa; não interfere em outros bloqueios.|  
@@ -77,8 +72,7 @@ ms.lasthandoff: 09/01/2017
 |LOCK_COMMIT_INPROGRESS|0x0000040|Confirmação em andamento.|  
 |LOCK_INVALID|0x0000080|Bloqueio inválido.|  
   
-## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

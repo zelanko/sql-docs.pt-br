@@ -1,5 +1,5 @@
 ---
-title: "Carregando a saída de um pacote Local | Microsoft Docs"
+title: "Carregando a saída de um pacote local | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,23 +20,22 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 66
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 41de742c987d9f043f3dd247ee84af6a3eaf365b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d7fe4ecd4b618f508dccc123b31611658fe5000c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
-  Aplicativos cliente podem ler a saída de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes quando a saída é salva em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinos usando [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quando a saída é salva em um destino de arquivo simples usando as classes de **System.IO** namespace. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A chave para essa solução é o **Microsoft.SqlServer.Dts.DtsClient** namespace, que contém implementações especializadas do **IDbConnection**, **IDbCommand**, e **IDbDataParameter** interfaces do **System. Data** namespace. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+  Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A resposta para essa solução é o namespace **Microsoft.SqlServer.Dts.DtsClient**, que contém implementações especializadas das interfaces **IDbConnection**, **IDbCommand** e **IDbDataParameter** do namespace **System.Data**. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 > [!NOTE]  
->  O procedimento descrito neste tópico requer que a propriedade DelayValidation da tarefa de fluxo de dados e de todos os objetos pai ser definido como seu valor padrão de **False**.  
+>  O procedimento descrito neste tópico exige que a propriedade DelayValidation da tarefa Fluxo de Dados e de qualquer objeto pai seja definida com seu valor padrão **False**.  
   
 ## <a name="description"></a>Description  
  Esse procedimento demonstra como desenvolver um aplicativo cliente em código gerenciado que carrega a saída de um pacote com um destino do DataReader diretamente da memória. As etapas resumidas aqui são demonstradas no código de exemplo que segue.  
@@ -46,40 +44,40 @@ ms.lasthandoff: 09/26/2017
   
 1.  No pacote, configure um destino do DataReader para receber a saída que você quer ler no aplicativo cliente. Dê ao destino do DataReader um nome descritivo, pois você usará esse nome em seu aplicativo cliente posteriormente. Anote o nome do destino do DataReader.  
   
-2.  No projeto de desenvolvimento, defina uma referência o **Microsoft.SqlServer.Dts.DtsClient** namespace pela localização do assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Por padrão, este assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace em seu código usando o c# **usando** ou [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** instrução.  
+2.  No projeto de desenvolvimento, defina uma referência ao namespace **Microsoft.SqlServer.Dts.DtsClient** localizando o assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Por padrão, esse assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace para o código usando a instrução **Using** do C# ou **Imports** do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-3.  Em seu código, crie um objeto do tipo **DtsClient.DtsConnection** com uma cadeia de caracteres de conexão que contém os parâmetros de linha de comando necessários para **dtexec.exe** para executar o pacote. Para saber mais, veja [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Em seguida, abra a conexão com essa cadeia de conexão. Você também pode usar o **dtexecui** utilitário para criar a cadeia de caracteres de conexão necessária visualmente.  
+3.  No código, crie um objeto do tipo **DtsClient.DtsConnection** com uma cadeia de conexão que contém os parâmetros de linha de comando necessários para que o **dtexec.exe** execute o pacote. Para saber mais, veja [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Em seguida, abra a conexão com essa cadeia de conexão. Também use o utilitário **dtexecui** para criar a cadeia de conexão necessária visualmente.  
   
     > [!NOTE]  
     >  O código de exemplo demonstra o carregamento do pacote do sistema de arquivos usando a sintaxe `/FILE <path and filename>`. Contudo, você também pode carregar o pacote do banco de dados MSDB usando a sintaxe `/SQL <package name>` ou do repositório de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando a sintaxe `/DTS \<folder name>\<package name>`.  
   
-4.  Criar um objeto do tipo **DtsClient.DtsCommand** que usa criado anteriormente **DtsConnection** e defina seu **CommandText** propriedade para o nome do DataReader destino do pacote. Em seguida, chame o **ExecuteReader** método do objeto de comando para carregar os resultados do pacote em um DataReader novo.  
+4.  Crie um objeto do tipo **DtsClient.DtsCommand** que usa a **DtsConnection** criada anteriormente e defina sua propriedade **CommandText** com o nome do destino DataReader no pacote. Em seguida, chame o método **ExecuteReader** do objeto de comando para carregar os resultados do pacote em um novo DataReader.  
   
-5.  Opcionalmente, você pode parametrizar indiretamente a saída do pacote usando a coleção de **DtsDataParameter** objetos o **DtsCommand** objeto para passar valores para variáveis definidas no pacote. No pacote, você pode usar essas variáveis como parâmetros de consulta ou em expressões para afetar os resultados retornados para o destino do DataReader. Você deve definir essas variáveis no pacote de **DtsClient** namespace antes que você pode usá-los com o **DtsDataParameter** objeto de um aplicativo cliente. (Talvez seja necessário clicar o **escolher colunas de variáveis** botão da barra de ferramentas no **variáveis** janela para exibir o **Namespace** coluna.) No código do cliente, quando você adiciona um **DtsDataParameter** para o **parâmetros** coleção do **DtsCommand**, omita a referência ao namespace DtsClient do nome de variável . Por exemplo:  
+5.  Opcionalmente, parametrize indiretamente a saída do pacote usando a coleção de objetos **DtsDataParameter** no objeto **DtsCommand** para passar valores para variáveis definidas no pacote. No pacote, você pode usar essas variáveis como parâmetros de consulta ou em expressões para afetar os resultados retornados para o destino do DataReader. Você deve definir essas variáveis no pacote no namespace **DtsClient** antes que possa usá-las com o objeto **DtsDataParameter** em um aplicativo cliente. (Talvez você precise clicar no botão de barra de ferramentas **Escolher Colunas de Variáveis** na janela **Variáveis** para exibir a coluna **Namespace**.) No código cliente, ao adicionar um **DtsDataParameter** à coleção **Parameters** do **DtsCommand**, omita a referência ao namespace DtsClient do nome da variável. Por exemplo:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
     ```  
   
-6.  Chamar o **leitura** método do DataReader repetidamente conforme necessário para executar um loop pelas linhas de dados de saída. Use os dados ou salve-os para serem usados posteriormente no aplicativo cliente.  
+6.  Chame repetidamente o método **Read** do DataReader, conforme necessário, para executar um loop pelas linhas dos dados de saída. Use os dados ou salve-os para serem usados posteriormente no aplicativo cliente.  
   
     > [!IMPORTANT]  
-    >  O **leitura** método dessa implementação do DataReader retorna **true** mais uma vez após a última linha de dados foi lido. Isso dificulta o uso do código usual que percorre o DataReader enquanto **leitura** retorna **true**. Se o seu código tentar fechar o DataReader ou a conexão depois de ler o número esperado de linhas, sem uma chamada adicional final para o **leitura** método, o código gerará uma exceção sem tratamento. No entanto, se o seu código tentar ler dados nessa iteração final através de um loop, quando **leitura** ainda retorna **true** , mas a última linha foi passada, o código gerará sem tratamento  **ApplicationException** com a mensagem "o IDataReader do SSIS é após o fim do conjunto de resultados". Esse comportamento é diferente de outras implementações do DataReader. Portanto, ao usar um loop para ler as linhas no DataReader enquanto **leitura** retorna **true**, necessárias para escrever código para pegar, testar e descartar essa previsto  **ApplicationException** na última chamada bem-sucedida para o **leitura** método. Ou, se você souber com antecedência o número de linhas esperado, você pode processar as linhas e, em seguida, chamar o **leitura** mais uma vez antes de fechar o DataReader e a conexão.  
+    >  O método **Read** dessa implementação do DataReader retorna **true** mais uma vez depois que a última linha de dados é lida. Isso dificulta o uso do código comum que executa um loop no DataReader enquanto **Read** retorna **true**. Se o código tentar fechar o DataReader ou a conexão depois de ler o número esperado de linhas, sem uma chamada adicional final ao método **Read**, o código acionará uma exceção sem tratamento. Entretanto, se o código tentar ler dados nessa iteração final por meio de um loop, quando **Read** ainda retorna **true**, mas a última linha tiver passado, o código gerará uma **ApplicationException** sem tratamento com a mensagem “O IDataReader do SSIS passou do final do conjunto de resultados”. Esse comportamento é diferente de outras implementações do DataReader. Entretanto, ao usar um loop para ler as linhas no DataReader enquanto **Read** retorna **true**, você precisa escrever o código para capturar, testar e descartar essa **ApplicationException** antecipada na última chamada bem-sucedida ao método **Read**. Se preferir, caso saiba com antecedência o número de linhas esperado, você poderá processar as linhas e, em seguida, chamar o método **Read** mais uma vez antes de fechar o DataReader e a conexão.  
   
-7.  Chamar o **Dispose** método o **DtsCommand** objeto. Isso é particularmente importante se você usou qualquer **DtsDataParameter** objetos.  
+7.  Chame o método **Dispose** do objeto **DtsCommand**. Isso é particularmente importante se você usou objetos **DtsDataParameter**.  
   
 8.  Feche o DataReader e os objetos de conexão.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir executa um pacote que calcula um único valor de agregação, salva esse valor em um destino do DataReader e o lê do DataReader e o exibe em uma caixa de texto em um formulário do Windows.  
   
- O uso de parâmetros não é necessário ao carregar a saída de um pacote em um aplicativo cliente. Se você não quiser usar um parâmetro, você pode omitir o uso da variável no **DtsClient** namespace e omitir o código que usa o **DtsDataParameter** objeto.  
+ O uso de parâmetros não é necessário ao carregar a saída de um pacote em um aplicativo cliente. Se não desejar usar um parâmetro, omita o uso da variável no namespace **DtsClient** e omita o código que usa o objeto **DtsDataParameter**.  
   
 #### <a name="to-create-the-test-package"></a>Para criar o pacote de teste  
   
 1.  Crie um novo pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. O código de exemplo usa "DtsClientWParamPkg.dtsx" como o nome do pacote.  
   
-2.  Adicione uma variável do tipo Cadeia de caracteres ao namespace DtsClient. O código de exemplo usa País como nome da variável. (Talvez seja necessário clicar o **escolher colunas de variáveis** botão da barra de ferramentas no **variáveis** janela para exibir o **Namespace** coluna.)  
+2.  Adicione uma variável do tipo Cadeia de caracteres ao namespace DtsClient. O código de exemplo usa País como nome da variável. (Talvez você precise clicar no botão de barra de ferramentas **Escolher Colunas de Variáveis** na janela **Variáveis** para exibir a coluna **Namespace**.)  
   
 3.  Adicione um gerenciador de conexões do OLE DB que se conecta ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 09/26/2017
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  Clique em **parâmetros** e, além de **definir parâmetros de consulta** caixa de diálogo caixa, mapeie o único parâmetro de entrada na consulta, Parameter0, para a variável dtsclient:: Country.  
+6.  Clique em **Parâmetros** e, na caixa de diálogo **Definir Parâmetros de Consulta**, mapeie o único parâmetro de entrada na consulta, Parameter0, para a variável DtsClient::Country.  
   
 7.  Acrescente uma transformação Agregação ao fluxo de dados e conecte a saída da origem de OLE DB à transformação. Abra o Editor de Transformação Agregação e configure-o para realizar uma operação “Contar todas” em todas as colunas de entrada (*) e gerar o valor agregado com o alias CustomerCount.  
   
@@ -103,13 +101,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  Crie um novo aplicativo Windows Forms.  
   
-2.  Adicione uma referência para o **Microsoft.SqlServer.Dts.DtsClient** namespace navegando até o assembly do mesmo nome em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+2.  Adicione uma referência ao namespace **Microsoft.SqlServer.Dts.DtsClient** procurando o assembly do mesmo nome em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 3.  Copie e cole o código de exemplo seguinte no módulo de código para o formulário.  
   
-4.  Modificar o valor da **dtexecArgs** variável conforme necessário para que ele contém os parâmetros de linha de comando necessários por **dtexec.exe** para executar o pacote. O código de exemplo carrega o pacote do sistema de arquivos.  
+4.  Modifique o valor da variável **dtexecArgs**, conforme necessário, de forma que ela contenha os parâmetros de linha de comando necessários para que **dtexec.exe** execute o pacote. O código de exemplo carrega o pacote do sistema de arquivos.  
   
-5.  Modificar o valor da **dataReaderName** variável conforme necessário para que ele contém o nome do destino DataReader no pacote.  
+5.  Modifique o valor da variável **dataReaderName**, conforme necessário, de forma que ela contenha o nome do destino DataReader no pacote.  
   
 6.  Coloque um botão e uma caixa de texto no formulário. O código de exemplo usa **btnRun** como o nome do botão e **txtResults** como o nome da caixa de texto.  
   
@@ -303,10 +301,9 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre as diferenças entre execução Local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Carregando e executando um pacote Local programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Compreender as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Carregando e executando um pacote local de forma programática](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Carregar e executar um pacote remoto programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
   
-

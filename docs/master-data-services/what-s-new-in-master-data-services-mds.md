@@ -5,26 +5,27 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: "85"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f566af7bab5a69c99a07c0f275cb44ddb79cc841
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Este tópico resume as alterações e atualizações na versão [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -232,7 +233,7 @@ ms.lasthandoff: 11/20/2017
   
  Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para saber mais, veja [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Recursos descontinuados do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Recursos descontinuados do Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  

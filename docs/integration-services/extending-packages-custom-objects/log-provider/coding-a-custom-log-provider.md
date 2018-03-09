@@ -1,5 +1,5 @@
 ---
-title: Codificando um provedor de Log personalizado | Microsoft Docs
+title: Codificar um provedor de logs personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1b3d9c3713bd9413d7dab486b598ef6ae8c0dff
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificando um provedor de log personalizado
   Depois de criar uma classe que herda da classe base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer sua funcionalidade personalizada.  
   
- Para exemplos de funcionamento de provedores de log personalizados, consulte [desenvolvendo uma Interface de usuário para um provedor de Log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Para amostras funcionais de provedores de logs personalizados, consulte [Desenvolver uma interface do usuário para um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## <a name="configuring-the-log-provider"></a>Configurando o provedor de log  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/03/2017
  Você substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> para armazenar em cache as referências à coleção de conexões e à interface de eventos. Você poderá usar essas referências armazenadas em cache posteriormente em outros métodos do provedor de log.  
   
 ### <a name="using-the-configstring-property"></a>Utilizando a propriedade ConfigString  
- Em tempo de design, um provedor de log recebe informações de configuração de **configuração** coluna. Essas informações de configuração correspondem à propriedade <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> do provedor de log. Por padrão, esta coluna contém uma caixa de texto da qual você pode recuperar informações de cadeia de caracteres. A maioria dos provedores de log fornecida com o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa essa propriedade para armazenar o nome do gerenciador de conexões que o provedor usa para se conectar com uma fonte de dados externa. Se seu provedor de log usa a <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> propriedade, use o <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> método para validar essa propriedade e certifique-se de que a propriedade está definida corretamente.  
+ Em tempo de design, um provedor de logs recebe informações de configuração da coluna **Configuração**. Essas informações de configuração correspondem à propriedade <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> do provedor de log. Por padrão, esta coluna contém uma caixa de texto da qual você pode recuperar informações de cadeia de caracteres. A maioria dos provedores de log fornecida com o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa essa propriedade para armazenar o nome do gerenciador de conexões que o provedor usa para se conectar com uma fonte de dados externa. Se o provedor de logs usar a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, use o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> para validar essa propriedade e verificar se ela está definida corretamente.  
   
 ### <a name="validating-the-log-provider"></a>Validando o provedor de log.  
  Substitua o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> para verificar se o provedor foi configurado corretamente e se está pronto para execução. Normalmente, um nível mínimo de validação é para verificar se a <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> está definida corretamente. A execução não pode continuar até que o provedor de log retorne <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> do método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>.  
@@ -87,7 +85,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>Persistência do provedor de log  
- Normalmente você não tem que implementar a persistência personalizada em um gerenciador de conexões. A persistência personalizada é necessária somente quando as propriedades de um objeto usam tipos de dados complexos. Para obter mais informações, consulte [desenvolver objetos de personalizado para o Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Normalmente você não tem que implementar a persistência personalizada em um gerenciador de conexões. A persistência personalizada é necessária somente quando as propriedades de um objeto usam tipos de dados complexos. Para obter mais informações, consulte [Desenvolvendo objetos personalizados para o Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="logging-with-the-log-provider"></a>Registrando em log com o provedor de log  
  Há três métodos de tempo de execução que devem ser substituídos por todos os provedores de log: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
@@ -142,7 +140,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Gravando entradas de log  
- O <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> método é chamado sempre que um objeto no pacote gera um evento chamando um incêndio\<evento > método em uma das interfaces de evento. Cada evento normalmente é gerado com informações sobre seu contexto e uma mensagem explicativa. Entretanto, nem toda chamada para o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> inclui informações de cada parâmetro do método. Por exemplo, alguns eventos padrão cujos nomes são autoexplicativos não fornecem MessageText e DataCode e DataBytes são destinados para informações suplementares opcionais.  
+ O método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> é chamado sempre que um objeto no pacote gera um evento chamando-se um método Fire\<evento> em uma das interfaces do evento. Cada evento normalmente é gerado com informações sobre seu contexto e uma mensagem explicativa. Entretanto, nem toda chamada para o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> inclui informações de cada parâmetro do método. Por exemplo, alguns eventos padrão cujos nomes são autoexplicativos não fornecem MessageText e DataCode e DataBytes são destinados para informações suplementares opcionais.  
   
  O exemplo de código seguinte implementa o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e grava os eventos no fluxo que foi aberto na seção anterior.  
   
@@ -198,9 +196,8 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
  
-## <a name="see-also"></a>Consulte também  
- [Criando um provedor de Log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Desenvolvendo uma Interface de usuário para um provedor de Log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
+ [Desenvolver uma interface do usuário para um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

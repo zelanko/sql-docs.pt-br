@@ -2,10 +2,14 @@
 title: "Configurar o backup em réplicas de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 888adf11733fcc00ed233cbb8f32cbe3b64c9e96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 51e23d647bd96cdb540223af2ef18cd6ba996c2c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar backup em réplicas de disponibilidade (SQL Server)
-  Este tópico descreve como configurar o backup em réplicas secundárias de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como configurar o backup em réplicas secundárias de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Para obter uma introdução ao backup em réplicas secundárias, veja [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
@@ -73,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária e clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Clique no grupo de disponibilidade cujas preferências de backup você deseja configurar e selecione o comando **Propriedades** .  
   
@@ -120,7 +125,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para configurar o backup em réplicas secundárias**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -134,7 +139,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Opcionalmente, configure a prioridade de backup de cada réplica de disponibilidade que você está adicionando ou modificando. Esta prioridade é usada pela instância de servidor que hospeda a réplica primária para decidir qual réplica deve atender uma solicitação de backup automatizado em um banco de dados no grupo de disponibilidade (a réplica com prioridade mais alta é escolhida). Essa prioridade pode ser qualquer número entre 0 e 100, inclusive. Uma prioridade de 0 indica que a réplica não deve ser considerada como candidata para atender solicitações de backup.  A configuração padrão é 50.  
   
-     Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityReplica** . Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityReplica** . Nos dois casos, especifique o parâmetro **BackupPriority***n* , onde *n* é um valor de 0 a 100.  
+     Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityReplica** . Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityReplica** . Nos dois casos, especifique o parâmetro **BackupPriority***n*, em que *n* é um valor de 0 a 100.  
   
      Por exemplo, o comando a seguir define a prioridade de backup da réplica de disponibilidade `MyReplica` como **60**.  
   
@@ -218,7 +223,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   

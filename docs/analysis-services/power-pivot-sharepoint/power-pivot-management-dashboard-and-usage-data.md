@@ -2,31 +2,29 @@
 title: Power Pivot Management Dashboard and Usage Data | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento Power Pivot e dados de uso
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] é uma coleção de Web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  
   
   

@@ -2,34 +2,30 @@
 title: Elemento SortPropertiesPosition (XML) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0492dae363abe5fb9acdb2c989297f808251302
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4579aa9873c23ad3490763ce5c5900dcc8158aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sortpropertiesposition-element-xml"></a>Elemento SortPropertiesPosition (XML)
-  Contém informações sobre a posição do elemento em uma coleção de elementos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém informações sobre a posição do elemento em uma coleção de elementos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Integer|  
 |Valor padrão|-1|  
@@ -55,10 +51,9 @@ ms.lasthandoff: 09/01/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para **RelationshipEndVisualizationProperties** elementos, o **SortPropertiesPosition** elemento contém a posição do elemento de propriedades de classificação em uma coleção de detalhes. O valor padrão indica que não há propriedades de classificação a serem usadas.  
   
   
-

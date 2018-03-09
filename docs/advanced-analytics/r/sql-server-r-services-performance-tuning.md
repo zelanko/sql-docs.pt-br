@@ -2,27 +2,28 @@
 title: Ajuste de desempenho do SQL Server R Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c4e77abfb68c30a1eac32b514c3987774bd5759d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ajuste de desempenho de R no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo é o primeiro em uma série de quatro artigos que descrevem a otimização de desempenho para serviços de R, com base em dois estudos de caso:
 
@@ -92,7 +93,7 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 
 + [Ajuste de desempenho de R no SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Fornece orientação para configurar o hardware que [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
+    Fornece orientação para configurar o hardware que [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
 
 + [Ajuste de desempenho de R no SQL Server - código e dados de otimização](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +105,3 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 + [Ajuste de desempenho de R no SQL Server - métodos e resultados](..\r\performance-case-study-r-services.md)
 
     Resume os dados que foram usado dois estudos de caso, como o desempenho foi testado e como as otimizações afetados resultados.
-

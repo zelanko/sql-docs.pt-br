@@ -3,27 +3,26 @@ title: "Configurar o armazenamento failover de instância de cluster NFS - SQL S
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cfdf9fd32226dd94c244c1523380de67c280a892
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover - NFS - SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo explica como configurar o armazenamento NFS para uma instância de cluster de failover (FCI) no Linux. 
 
@@ -34,8 +33,8 @@ NFS ou sistema de arquivos de rede, é um método comum de compartilhamento de d
 A fonte de hospedagem NFS (um servidor Linux ou alguma outra coisa) deve ser usando/compatível com a versão 4.2 ou posterior. Versões anteriores não funcionará com o SQL Server no Linux.
 
 Ao configurar as pastas a serem compartilhadas no servidor NFS, certifique-se de que sigam essas opções de diretrizes gerais:
-- `rw`para garantir que a pasta pode ser ler e gravados
-- `sync`para garantir a garantia de gravações para a pasta
+- `rw` para garantir que a pasta pode ser ler e gravados
+- `sync` para garantir a garantia de gravações para a pasta
 - Não use `no_root_squash` como uma opção; ele é considerado um risco de segurança
 - Verifique se que a pasta tem direitos totais (777) aplicados
 
@@ -125,7 +124,7 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
 
     \<IPAddressOfNFSServer > é o endereço IP do servidor NFS que você pretende usar 
 
-    \<FolderOnNFSServer > é o nome do compartilhamento NFS. A sintaxe de exemplo abaixo corresponde às informações de NFS da etapa 2.
+    \<FolderOnNFSServer > é o nome do compartilhamento NFS. A sintaxe de exemplo a seguir corresponde às informações de NFS da etapa 2.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -137,7 +136,7 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
     mount
     ```
 
-    ![10 mountnoswitches][2]
+    ![10-mountnoswitches][2]
 
    * Alterne para o usuário mssql. Você não receberá nenhuma confirmação se for bem-sucedido.
 
@@ -161,7 +160,7 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
     
    * Digite Sair para não ser raiz
 
-   * Inicie o SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
+   * Start SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
 
     ```bash
     sudo systemctl start mssql-server
@@ -205,7 +204,7 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
     mkdir <FolderName>
     ```
 
-    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta precisa ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
+    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta deve ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -231,7 +230,7 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
   
    * Tipo de saída não seja o superusuário.
 
-   * Para testar, crie um banco de dados nessa pasta. O exemplo abaixo usa o sqlcmd para criar um banco de dados, alterne o contexto para ele, verifique se os arquivos existem no nível do sistema operacional e, em seguida, exclui o local temporário. Você pode usar o SSMS.
+   * Para testar, crie um banco de dados nessa pasta. O exemplo a seguir usa o sqlcmd para criar um banco de dados, alterne o contexto para ele, verifique se os arquivos existem no nível do sistema operacional e, em seguida, exclui o local temporário. Você pode usar o SSMS.
 
     ![15-createtestdatabase][4]
  
@@ -259,4 +258,3 @@ Certifique-se de que seus padrões de segurança são aplicados para acessar. Ao
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png
 [3]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/20-createtestdatabase.png
 [4]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/15-createtestdatabase.png
-

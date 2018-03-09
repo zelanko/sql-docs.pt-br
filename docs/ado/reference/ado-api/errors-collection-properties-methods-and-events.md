@@ -3,26 +3,28 @@ title: "Propriedades de coleção de erros, métodos e eventos | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Errors collection [ADO], members
+helpviewer_keywords:
+- Errors collection [ADO], members
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b98786b581fe6e479bddd9048e4a299c0338b4c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b3edbe0ade198f84a93fd34da185f586764802e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Eventos, métodos e propriedades de coleção de erros
 ## <a name="properties"></a>Propriedades  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleção Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

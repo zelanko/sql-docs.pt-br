@@ -1,39 +1,39 @@
 ---
-title: "Exibir cabeçalhos e rodapés com um grupo (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exibir cabeçalhos e rodapés com um grupo (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Exibir cabeçalhos e rodapés com um grupo (Construtor de Relatórios e SSRS)
   Você pode ajudar a controlar se uma linha estática, como um cabeçalho ou rodapé de grupo, será renderizada com linhas dinâmicas associadas a um grupo de uma região de dados tablix.  
   
- Para repetir todos os títulos de linha ou coluna em várias páginas, você pode definir as propriedades da região de dados tablix. Para obter mais informações, consulte [exibir linhas e cabeçalhos de coluna em várias páginas (construtor de relatórios e SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+ Para repetir todos os títulos de linha ou coluna em várias páginas, você pode definir as propriedades da região de dados tablix. Para obter informações, consulte [Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
- Para controlar o comportamento de renderização de linhas e colunas dinâmicas associadas a grupos aninhados ou de linhas e colunas estáticas associadas a rótulos ou subtotais, você deve definir as propriedades do membro tablix. Um membro tablix representa uma linha ou coluna estática ou dinâmica. Um membro estático ocorre uma vez. Por exemplo, uma linha de total geral é uma linha estática. Um membro dinâmico ocorre uma vez para cada instância do grupo. Por exemplo, uma linha associada a um grupo com a expressão de grupo [Território] ocorre uma vez para cada valor exclusivo de território. Para obter mais informações sobre membros tablix, consulte [células da região de dados Tablix, linhas e colunas &#40; Construtor de relatórios &#41; e o SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Para controlar o comportamento de renderização de linhas e colunas dinâmicas associadas a grupos aninhados ou de linhas e colunas estáticas associadas a rótulos ou subtotais, você deve definir as propriedades do membro tablix. Um membro tablix representa uma linha ou coluna estática ou dinâmica. Um membro estático ocorre uma vez. Por exemplo, uma linha de total geral é uma linha estática. Um membro dinâmico ocorre uma vez para cada instância do grupo. Por exemplo, uma linha associada a um grupo com a expressão de grupo [Território] ocorre uma vez para cada valor exclusivo de território. Para obter mais informações sobre os membros do Tablix, consulte [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Você pode definir um membro tablix no painel Agrupamento e as propriedades **KeepWithGroup**, **KeepTogether**e **RepeatOnNewPage** no painel Propriedades. Use **KeepWithGroup** para ajudar a exibir cabeçalhos de grupo e rodapés na mesma página como o grupo. Use **KeepTogether** para ajudar a exibir os membros estáticos com as linhas ou colunas de um grupo. Use **RepeatOnNewPage** para repetir o cabeçalho de grupo ou rodapé em toda página que exibe uma instância completa do membro de grupo de linhas designado pelo valor **KeepWithGroup** . **RepeatOnNewPage** não tem suporte para membros de grupo de colunas.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether**, e **RepeatOnNewPage** são propriedades de membro de grupo que podem ser definidas usando o **modo avançado** do agrupamento painel. Para obter mais informações, consulte [painel de agrupamento &#40; Construtor de relatórios &#41; ](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**, **KeepTogether**e **RepeatOnNewPage** são propriedades do membro de grupo que podem ser definidas usando o **Modo Avançado** do painel Agrupamento. Para obter mais informações, consulte [Painel Agrupamento &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -74,9 +74,8 @@ ms.lasthandoff: 09/27/2017
   
 5.  (Opcional) Visualize o relatório. Sempre que possível, o processador de relatório manterá esse membro com os membros de grupo de colunas especificados.  
   
-## <a name="see-also"></a>Consulte também  
- [Células da região de dados Tablix, linhas e colunas (construtor de relatórios) e SSRS](tablix-data-region-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   
-

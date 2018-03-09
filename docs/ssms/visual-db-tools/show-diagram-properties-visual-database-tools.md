@@ -3,8 +3,11 @@ title: Exibir propriedades do diagrama (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f3df56783bcc13247c30a267abecda356337c1a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 591c7f95401b89a8584d67ead8f3ecccca836593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Exibir propriedades do diagrama (Visual Database Tools)
-Você pode exibir as propriedades de um diagrama de banco de dados na janela Propriedades.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode exibir as propriedades de um diagrama de banco de dados na janela Propriedades.  
   
 ### <a name="to-show-database-diagram-properties-in-the-properties-window"></a>Para mostrar as propriedades do diagrama de banco de dados na janela Propriedades  
   
@@ -36,6 +39,6 @@ Você pode exibir as propriedades de um diagrama de banco de dados na janela Pro
   
 Agora as propriedades do diagrama estão visíveis na janela **Propriedades** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

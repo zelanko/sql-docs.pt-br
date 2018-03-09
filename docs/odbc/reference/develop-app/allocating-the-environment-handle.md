@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Alocar o identificador de ambiente
 A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de Driver. como isso é feito depende do sistema operacional. Por exemplo, em um computador executando o Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, o aplicativo ou links para a biblioteca de Gerenciador de Driver ou chamadas  **LoadLibrary** ao carregar a DLL do Gerenciador de Driver.  
@@ -55,4 +53,3 @@ A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de Dri
  Quando **SQLFreeHandle** é chamado, as versões de driver a estrutura usada para armazenar informações sobre o ambiente. Observe que **SQLFreeHandle** não pode ser chamado para um identificador de ambiente até depois que todos os identificadores de conexão esse identificador de ambiente foram liberados.  
   
  Para obter mais informações sobre o identificador de ambiente, consulte [trata do ambiente](../../../odbc/reference/develop-app/environment-handles.md).
-

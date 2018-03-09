@@ -3,7 +3,7 @@ title: Marcar objetos comerciais como seguros para script | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2e9e400052e9c3cb794089d1731d42abd6feca37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a2131b594d20c4215a2c52422d930c0ac2edfb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcar objetos comerciais como seguros para script
 > [!IMPORTANT]
@@ -52,6 +51,5 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  Na última etapa, o Assistente de instalação do aplicativo cria um arquivo. htm e um arquivo. cab. Você pode copiar esses dois arquivos para o computador de destino e duas vezes no arquivo. htm para carregar a página e registrar corretamente o servidor.  
   
  Porque o objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para a pasta Windows\System32 e altere o **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** chave do registro para coincidir com o caminho correto.
-
 
 

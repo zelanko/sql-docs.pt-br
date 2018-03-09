@@ -2,16 +2,13 @@
 title: "Entendendo a ordem de passagem e resolução Order (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulação de dados MDX - Noções básicas sobre a fase de ordem e a ordem de resolução
-  Quando um cubo é calculado como resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Quando um cubo é calculado como resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  
   
  Uma fase de cálculo pode ser denominada por uma posição ordinal, chamada número de fase de cálculo. A quantidade de fases de cálculo necessária para computar por completo todas as células de um cubo é conhecida como profundidade de fase de cálculo do cubo.  
   
@@ -159,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- Neste exemplo de consulta MDX combinada, `Profit Margin` tem a ordem de resolução mais alta, portanto terá precedência quando as duas expressões interagirem. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avalia a célula em questão usando a fórmula `Profit Margin` . Os resultados desse cálculo aninhado são mostrados na tabela a seguir.  
+ Neste exemplo de consulta MDX combinada, `Profit Margin` tem a ordem de resolução mais alta, portanto terá precedência quando as duas expressões interagirem. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avalia a célula em questão usando a fórmula `Profit Margin`. Os resultados desse cálculo aninhado são mostrados na tabela a seguir.  
   
 ||Valor das Vendas pela Internet|Custo Total do Produto da Internet|Margem de Lucro|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -223,10 +220,9 @@ FROM [Adventure Works]
  A ordem de resolução pode ser uma questão bastante complexa com que lidar, especialmente em cubos com um grande número de dimensões envolvendo membro calculado, fórmulas de rollup personalizado ou células calculadas. Quando o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avalia uma consulta MDX, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] leva em consideração os valores da ordem de resolução de tudo que esteja envolvido em uma determinada passagem, incluindo as dimensões do cubo especificadas na consulta MDX.  
   
 ## <a name="see-also"></a>Consulte também  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40; MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Instrução CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Manipulando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Criar declaração de membro &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Manipulação de dados &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

@@ -2,12 +2,13 @@
 title: "Tarefas e permissões | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "40"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 242fbc404f49f41c1051a900144a7a61e46d3714
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions"></a>Tarefas e permissões
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *tarefas* são ações que um usuário ou administrador podem executar. Tarefas são predefinidas. Não é possível criar tarefas personalizadas ou modificar aquelas fornecidas de programaticamente ou através de uma ferramenta. Há vinte e cinco tarefas no total. Essas tarefas incluem o conjunto inteiro de operações disponível em segurança com base em função. Alguns exemplos de tarefas são "Exibir relatórios", "Administrar relatórios", e "Administrar propriedades de servidor de relatório".  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  Tarefas podem ser realizadas somente se fizerem parte de uma função incluída em uma atribuição de função. Portanto, se a tarefa Exibir Modelos não estiver incluída em uma função, ou se essa função não estiver incluída em uma atribuição de função, os usuários não poderão exibir modelos de relatório. O diagrama a seguir ilustra como as permissões são combinadas em tarefas e como tarefas são combinadas em funções que podem ser usadas para atribuições de função específicas.  
   
- ![Diagrama de tarefas e permissões](../../reporting-services/security/media/report-securityobjects.gif "diagrama de tarefas e permissões")  
+ ![Diagrama de tarefas e permissões](../../reporting-services/security/media/report-securityobjects.gif "Diagrama de tarefas e permissões")  
 Diagrama de permissões e tarefas  
   
 ## <a name="system-and-item-level-tasks"></a>Tarefas de nível de item e sistema  
@@ -46,13 +46,12 @@ Diagrama de permissões e tarefas
   
 |Categoria|Description|  
 |--------------|-----------------|  
-|[Tarefas de nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Ações executadas em itens gerenciados por um servidor de relatório, como pastas, relatórios, modelos de relatório e recursos.<br /><br /> Tarefas de nível de item entram no escopo do namespace da pasta de servidor de relatório. Todos os itens acessados pelas pastas em um servidor de relatório ou através de URL protegidos por atribuições de função que incluem tarefas de nível de item.|  
+|[Tarefas em nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Ações executadas em itens gerenciados por um servidor de relatório, como pastas, relatórios, modelos de relatório e recursos.<br /><br /> Tarefas de nível de item entram no escopo do namespace da pasta de servidor de relatório. Todos os itens acessados pelas pastas em um servidor de relatório ou através de URL protegidos por atribuições de função que incluem tarefas de nível de item.|  
 |[Tarefas de nível de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Ações executadas no nível de sistema, como tarefas de gerenciamento ou agendas compartilhadas que podem ser usadas com vários itens. Tarefas de nível de Sistema entram no escopo fora do namespace de pasta de servidor de relatório.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definições de função](../../reporting-services/security/role-definitions.md)   
- [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

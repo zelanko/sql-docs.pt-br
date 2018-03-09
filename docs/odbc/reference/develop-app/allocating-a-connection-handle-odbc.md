@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd1f07d35356efda77edeaf08d851ad4d7d9bcb0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Alocando um identificador de Conexão ODBC
 Antes do aplicativo pode se conectar a uma fonte de dados ou driver, ele deve alocar um identificador de conexão, da seguinte maneira:  
@@ -51,4 +49,3 @@ Antes do aplicativo pode se conectar a uma fonte de dados ou driver, ele deve al
  É importante observar que alocar um identificador de conexão não é igual a carregar um driver. O driver não será carregado até que uma função de conexão é chamada. Assim, depois de alocar um identificador de conexão e antes da conexão com o driver ou fonte de dados, as funções apenas o aplicativo pode chamar com o identificador de conexão são **SQLSetConnectAttr**, **SQLGetConnectAttr**, ou **SQLGetInfo** com a opção SQL_ODBC_VER. Chamar outras funções com o identificador de conexão, como **SQLEndTran**, retorna um SQLSTATE 08003 (Conexão não aberta). Para obter detalhes completos, consulte [tabelas de transição de estado do apêndice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obter mais informações sobre identificadores de conexão, consulte [identificadores de Conexão](../../../odbc/reference/develop-app/connection-handles.md).
-

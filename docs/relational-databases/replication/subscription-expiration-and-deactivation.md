@@ -2,9 +2,12 @@
 title: "Expiração e desativação de assinatura | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24341df9b17ed7e98b9a9c095e4874b05df4376b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Validade e desativação de assinatura
-  As assinaturas podem ser desativadas ou podem expirar se não forem sincronizadas dentro de um *período de retenção*especificado. A ação que ocorre depende do tipo de replicação e do período de retenção excedido.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] As assinaturas podem ser desativadas ou podem expirar se não forem sincronizadas dentro de um *período de retenção* especificado. A ação que ocorre depende do tipo de replicação e do período de retenção excedido.  
   
  Para definir os períodos de retenção, consulte [Definir o período de validade para assinaturas](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Definir o período de retenção de distribuição para publicações transacionais &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) e [Configurar publicação e distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
@@ -70,9 +73,9 @@ ms.lasthandoff: 11/09/2017
   
 -   Se, após a limpeza, o período de retenção da publicação aumentar e uma assinatura tentar a mesclagem com o Publicador (que já excluiu os metadados), a assinatura não expirará devido ao aumento no valor da retenção. Porém, o Publicador não tem metadados suficientes para baixar as mudanças para o Assinante, o que resulta em uma não convergência.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Administração do agente de replicação](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

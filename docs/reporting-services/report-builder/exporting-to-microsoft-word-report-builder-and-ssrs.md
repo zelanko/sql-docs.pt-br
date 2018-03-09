@@ -1,35 +1,35 @@
 ---
-title: "Exportando para o Microsoft Word (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exportando para o Microsoft Word (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
   A extensão de renderização do Word renderiza relatórios paginados para o formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). O formato é o Office Open XML.  
   
  O tipo de conteúdo dos arquivos gerados por este renderizador é **application/vnd.openxmlformats-officedocument.wordprocessingml.document** e a extensão de arquivo é .docx.  
   
- Consulte [exportar relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para o Word.  
+ Consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para o Word.  
   
  Depois que o relatório é exportado para um documento do Word, você pode alterar seu conteúdo e criar relatórios com estilo de documento, como etiquetas de endereçamento, ordens de compra ou cartas-modelo.  
   
@@ -161,13 +161,13 @@ ms.lasthandoff: 08/09/2017
   
  A versão anterior da extensão de renderização do Word, compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é renomeada como Word 2003. Apenas a extensão de renderização do Word está disponível por padrão. Você deve atualizar os arquivos de configuração do Reporting Services para disponibilizar a extensão de renderização do Word 2003. O tipo de conteúdo dos arquivos gerados pelo renderizador do Word 2003 é **application/vnd.ms-word** e a extensão de nome de arquivo dos arquivos é .doc.  
   
- No SQL Server Reporting Services, o renderizador padrão do Word é a versão que renderiza para o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] formato (. docx). Esta é a opção do **Word** listada pelos menus **Exportar** em um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e no SharePoint. A versão anterior, compatível somente com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é nomeado Word 2003 e listada em menus usando esse nome. A opção de menu **Word 2003** não é visível por padrão, mas um administrador pode torná-la visível atualizando o arquivo de configuração RSReportServer. Para exportar relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o renderizador do Word 2003, atualize o arquivo de configuração RSReportDesigner. Porém, tornar o renderizador do Word 2003 visível não significa disponibilizá-lo em todos os cenários. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração. Se você usar ferramentas ou produtos em modo desconectado ou local, tornar o renderizador do Word 2003 visível não terá efeito. A opção de menu **Word 2003** permanece indisponível. Se você tornar o renderizador do Word 2003 visível no arquivo de configuração RSReportDesigner, a opção de menu **Word 2003** sempre estará disponível na visualização de relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ No SQL Server Reporting Services, o renderizador padrão do Word é a versão que renderiza para o formato [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Esta é a opção do **Word** listada pelos menus **Exportar** em um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e no SharePoint. A versão anterior, compatível somente com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é nomeado Word 2003 e listada em menus usando esse nome. A opção de menu **Word 2003** não é visível por padrão, mas um administrador pode torná-la visível atualizando o arquivo de configuração RSReportServer. Para exportar relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o renderizador do Word 2003, atualize o arquivo de configuração RSReportDesigner. Porém, tornar o renderizador do Word 2003 visível não significa disponibilizá-lo em todos os cenários. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração. Se você usar ferramentas ou produtos em modo desconectado ou local, tornar o renderizador do Word 2003 visível não terá efeito. A opção de menu **Word 2003** permanece indisponível. Se você tornar o renderizador do Word 2003 visível no arquivo de configuração RSReportDesigner, a opção de menu **Word 2003** sempre estará disponível na visualização de relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  A opção de menu do **Word 2003** nunca fica visível nos seguintes cenários:  
   
 -   Construtor de Relatórios em modo desconectado e você visualiza um relatório no Construtor de Relatórios.  
   
--   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [modo Local vs. em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Relatórios no modo Local versus em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se o renderizador do **Word 2003** estiver configurado para ficar visível, as opções de menu do **Word** e do **Word 2003** estarão disponíveis nos seguintes cenários:  
   
@@ -199,8 +199,8 @@ ms.lasthandoff: 08/09/2017
 
 [Paginação no Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
 [Comportamentos de renderização](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
-[Funcionalidade interativa para extensões de renderização de relatório diferentes](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+[Funcionalidade interativa para diferentes extensões de renderização de relatório](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
 [Renderizando itens de relatório](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tabelas, matrizes e listas](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

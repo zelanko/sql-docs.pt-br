@@ -3,8 +3,11 @@ title: Criar e atualizar tabelas (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47869f706f615cf32b3a80bcfc872c2aebe7964f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>Criar e atualizar tabelas de banco de dados
-
-O Designer de Tabela é uma ferramenta visual na qual é possível projetar e visualizar [tabelas de banco de dados](../../relational-databases/tables/tables.md). Você pode usar o Designer de Tabela do SSMS (SQL Server Management Studio) para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Designer de Tabela é uma ferramenta visual na qual é possível projetar e visualizar [tabelas de banco de dados](../../relational-databases/tables/tables.md). Você pode usar o Designer de Tabela do SSMS (SQL Server Management Studio) para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições.  
 
   
 ## <a name="create-a-table"></a>Criar uma tabela  
@@ -56,7 +58,7 @@ O Designer de Tabela é uma ferramenta visual na qual é possível projetar e vi
 
 1. Feche o Designer e salve as alterações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Tabelas](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
 [Propriedades da tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  

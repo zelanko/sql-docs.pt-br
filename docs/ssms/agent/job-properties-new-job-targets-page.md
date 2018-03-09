@@ -3,8 +3,11 @@ title: "Propriedades do trabalho – Novo trabalho (página Destinos) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9da28ac141cf9295bcbe92709e9b5c9846f2821e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c0c7fec12ff0c2a41c53bb76f32131989fb59750
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propriedades do trabalho – Novo trabalho (página Destinos)
-Use essa página para gerenciar os servidores de destino para o trabalho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para gerenciar os servidores de destino para o trabalho.  
   
 ## <a name="options"></a>Opções  
 **Servidor local de destino**  
@@ -31,6 +34,6 @@ Execute o trabalho no servidor local. Se não houver nenhum servidor de destino 
 **Servidores múltiplos de destino**  
 Execute o trabalho em um ou mais servidores de destino. Depois de selecionar essa opção, escolha os servidores que executarão o trabalho. São listados servidores de destino disponíveis. Clique em um servidor de destino para selecioná-lo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Implementar trabalhos](../../ssms/agent/implement-jobs.md)  
   

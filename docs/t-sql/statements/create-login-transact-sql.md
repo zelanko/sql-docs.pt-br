@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +179,7 @@ CHAVE ASSIMÉTRICA *asym_key_name*
   
  Especifica o nome de uma chave assimétrica a ser associada a este logon. Esta chave já deve ocorrer no banco de dados mestre.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As senhas diferenciam maiúsculas de minúsculas.  
   
  O hash prévio de senhas tem suporte somente durante a criação de logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -196,6 +198,8 @@ CHAVE ASSIMÉTRICA *asym_key_name*
  Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Criar um logon automaticamente habilita o novo logon e concede a ele a permissão **CONNECT SQL** de nível de servidor.  
+ 
+ O servidor [modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md) deve corresponder ao tipo de logon para permitir o acesso.
   
  Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -219,7 +223,7 @@ CHAVE ASSIMÉTRICA *asym_key_name*
   
  Se a opção **CREDENTIAL** for usada, também será necessária a permissão **ALTER ANY CREDENTIAL** no servidor.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Depois de criar um logon, o logon pode se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mas só tem as permissões concedidas para o **pública** função. Execute algumas das atividades a seguir.  
   
 -   Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Criando um logon de autenticação do SQL Server com uma senha  
  O exemplo a seguir cria o logon `Mary7` com senha `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -335,13 +339,13 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guia de Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Política de senha](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Remover logon &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

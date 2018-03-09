@@ -3,8 +3,11 @@ title: Tipos de consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19546151155392376a2c86195e3c77e9a0832f73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 71a0f7fbd4edf00b9f2eb8f84807f0fb2baa6318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
-O Designer de Consulta e Exibição fornece recursos internos para alguns tipos de consulta - Selecionar, Inserir Resultados, Inserir Valores, Atualizar, Excluir e Criar Tabela - e também oferece suporte a expressões de consultas UNION, pesquisa de texto completo e CASE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Designer de Exibição e Consulta fornece recursos internos para alguns tipos de consulta – Selecionar, Inserir Resultados, Inserir Valores, Atualizar, Excluir e Criar Tabela – e também é compatível com expressões de consultas UNION, pesquisa de texto completo e CASE.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Tipos de consulta com suporte &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  

@@ -2,31 +2,31 @@
 title: "Configurar o PowerPivot e implantar soluções (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
-  Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluindo a Galeria [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para configuração do SharePoint 2013** para concluir o seguinte:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluindo a Galeria [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para configuração do SharePoint 2013** para concluir o seguinte:  
   
 -   Implantar os arquivos de solução do SharePoint.  
   
@@ -36,22 +36,10 @@ ms.lasthandoff: 09/01/2017
   
  Para obter informações sobre como instalar a ferramenta de Configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013, consulte [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
- Este tópico contém as seguintes seções:  
-  
- [Executar a configuração do Power Pivot para SharePoint 2013](#bkmk_run_configuration_tool)  
-  
- [Verificar a configuração do Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Solucionar problemas](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Executar a configuração do Power Pivot para SharePoint 2013  
  **Observação:** o assistente para instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instala duas ferramentas de configuração diferentes para [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Cada um deles oferece suporte a uma versão diferente do SharePoint.  
   
-|Nome|Descrição|  
+|Nome|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para configuração do SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Ferramenta de Configuração|SharePoint 2010 com SharePoint 2010 Service Pack 1 (SP1)|  
@@ -151,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  Para obter mais informações sobre a ferramenta de configuração, consulte [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

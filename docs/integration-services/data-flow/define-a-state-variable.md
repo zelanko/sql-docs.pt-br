@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 292a24071ea7d6247972353a0dbe7d5bdb689f69
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -36,18 +35,18 @@ ms.lasthandoff: 08/03/2017
   
 |Componente|Description|  
 |---------------|-----------------|  
-|**\<nome do estado >**|Este é o nome do estado CDC atual.|  
+|**\<nome- do-estado>**|Este é o nome do estado CDC atual.|  
 |**CS**|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
-|**\<CS-lsn >**|Este é último LSN (número de sequência de log) processado na execução CDC anterior.|  
+|**\<cs-lsn>**|Este é último LSN (número de sequência de log) processado na execução CDC anterior.|  
 |**CE**|Isso marca o ponto final do intervalo de processamento atual (Término atual). A presença do componente de término atual no estado CDC é uma indicação de que ou um pacote CDC está atualmente em processamento ou um pacote de CDC falhou antes de processar completamente seu intervalo de processamento CDC.|  
-|**\<lsn de CE >**|Este é o último LSN a ser processado na execução CDC atual. Sempre presumimos que o último número de sequência a ser processado é o máximo (0xFFF…).|  
+|**\<ce-lsn>**|Este é o último LSN a ser processado na execução CDC atual. Sempre presumimos que o último número de sequência a ser processado é o máximo (0xFFF…).|  
 |**IR**|Isso marca o intervalo de processamento inicial.|  
-|**\<início de infravermelho >**|Este é o LSN de uma alteração imediatamente antes de a carga inicial ter sido iniciada.|  
-|**\<Ir-end >**|Este é o LSN de uma alteração imediatamente depois de a carga inicial ter sido terminada.|  
+|**\<início-do-ir>**|Este é o LSN de uma alteração imediatamente antes de a carga inicial ter sido iniciada.|  
+|**\<término-do-ir>**|Este é o LSN de uma alteração imediatamente depois de a carga inicial ter sido terminada.|  
 |**TS**|Isso marca o carimbo de data/hora para a última atualização do estado CDC.|  
-|**\<carimbo de hora >**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
+|**\<carimbo de data/hora>**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
 |**ER**|Isso aparece quando a última operação falhou e inclui uma descrição breve da causa do erro. Se esse componente estiver presente, ela será sempre o último.|  
-|**\<texto de erro curto >**|Essa é a descrição curta do erro.|  
+|**\<texto-de-erro-curto>**|Essa é a descrição curta do erro.|  
   
  Os LSNs e os números de sequência são codificados como uma cadeia de caracteres hexadecimal de até 20 dígitos que representam o valor LSN do binário (10).  
   
@@ -92,9 +91,8 @@ ms.lasthandoff: 08/03/2017
   
  Se você não estiver usando a tarefa de Controle CDC com a Persistência de Estado Automática, deverá carregar o valor da variável a partir do repositório persistente em que seu valor foi salvo da última vez que o pacote foi executado e gravá-la no repositório persistente quando o processamento do intervalo atual for concluído.  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefa controle CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor da tarefa controle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)   
+ [Editor da Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

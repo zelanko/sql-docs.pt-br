@@ -1,26 +1,27 @@
 ---
-title: "Conceitos de relatórios parâmetros (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Conceitos de parâmetros de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: da71167a095c0be75cb172e15fe856818163dc44
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb4044deed8935af354e1c6f15ace89f0b3e5010
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Conceitos de parâmetros de relatório (Construtor de Relatórios e SSRS)
   Você pode adicionar parâmetros a um relatório para vincular relatórios relacionados, controlar a aparência do relatório, filtrar dados de relatórios ou restringir o escopo de um relatório a usuários ou locais específicos.  
@@ -48,9 +49,9 @@ ms.lasthandoff: 08/09/2017
   
  Se você pretende criar instantâneos de relatório, históricos ou assinaturas para um relatório publicado, precisa compreender como os parâmetros de relatório afetam os requisitos de design para o relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Relatório de criação conceitos &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Relatório de conjuntos de dados inseridos e compartilhados de conjuntos de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um parâmetro ao seu relatório &#40; Construtor de relatórios &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

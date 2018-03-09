@@ -2,26 +2,30 @@
 title: Desabilitar o backup gerenciado do SQL Server no Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f446cc29eb3ec4da06b9cc3a5924a574b44e5fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f462b0563e37d528808f43b180435fa75a15dc3
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Desabilitar o backup gerenciado do SQL Server no Microsoft Azure
-  Este tópico descreve como desabilitar ou pausar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nos níveis de instância e do banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como desabilitar ou pausar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nos níveis de instância e do banco de dados.  
   
 ##  <a name="DatabaseDisable"></a> Desabilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados  
  Você pode desabilitar as configurações do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usando o procedimento armazenado do sistema, [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). O *@enable_backup* é usada para habilitar e desabilitar configurações do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados específico, em que 1 habilita e 0 desabilita os parâmetros de configuração.  
@@ -74,7 +78,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -163,7 +168,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   

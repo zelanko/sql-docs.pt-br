@@ -1,5 +1,5 @@
 ---
-title: Carregar dados usando o destino OLE DB | Microsoft Docs
+title: Carregar dados por meio do destino OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 692bc6f90cee09f2bff680fe3e19ed3c433f8707
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
   Para adicionar e configurar um destino OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Clique duas vezes sobre o destino OLE DB.  
   
-6.  Na caixa de diálogo **Editor de Destino OLE DB** , na página **Gerenciador de Conexões** , selecione um gerenciador de conexões OLE DB existente ou clique em **Novo** para criar um gerenciador de conexões novo. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  Na caixa de diálogo **Editor de Destino OLE DB** , na página **Gerenciador de Conexões** , selecione um gerenciador de conexões OLE DB existente ou clique em **Novo** para criar um gerenciador de conexões novo. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Selecione o método de acesso de dados:  
   
@@ -69,11 +68,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -2,10 +2,14 @@
 title: "Coleções de esquema XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +24,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90af09f6d1ce768405c824e76e9ad746624b2245
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c8c7a11c64d487aa6f08d616d6bae70b24a742dc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
-  Como descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Como descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
   
 -   Validar instâncias XML  
   
@@ -208,9 +213,9 @@ N'http://www.microsoft.com/books')
   
 -   Crie uma tabela que contém uma coluna de tipo de dados **xml** para armazenar seus esquemas XML e também para carregá-los no sistema de tipo XML. É possível consultar a coluna XML usando os métodos de tipo de dados **xml** . Além disso, é possível construir um índice XML nessa coluna. No entanto, com essa abordagem, o aplicativo deve manter consistência entre os esquemas XML armazenados na coluna XML e no sistema de tipo XML. Por exemplo, se você descartar o namespace do esquema XML do sistema de tipo XML, também deverá descartá-lo da tabela para preservar a consistência.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir uma coleção de esquemas XML armazenados](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Pré-processar um esquema para mesclar esquemas incluídos](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

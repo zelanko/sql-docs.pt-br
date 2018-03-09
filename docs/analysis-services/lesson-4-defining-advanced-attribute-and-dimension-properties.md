@@ -2,32 +2,32 @@
 title: "Lição 4: Definindo avançado propriedades de dimensão e atributo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b7051c7279cebb104cbf78ef4a224235c197b0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Definindo propriedades de dimensão e atributo avançadas
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Nesta lição, você aprenderá como usar algumas propriedades avançadas de atributos, hierarquias de atributo e propriedades de dimensão.  
   
 > [!NOTE]  
@@ -61,9 +61,8 @@ Nesta tarefa, você configura as propriedades UnknownMember e UnknownMemberName 
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
   
-

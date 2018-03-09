@@ -2,32 +2,30 @@
 title: Tuplas | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00353a4a955b631fda3e0fb6521ecad764f1328c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tuples"></a>Tuplas
-  Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Membros de atributo implícitos ou padrão em uma tupla  
  Ao definir uma tupla em uma consulta ou expressão MDX, você não precisa explicitamente incluir o membro de atributo de cada hierarquia de atributo. Se um membro de uma hierarquia de atributo não for explicitamente incluído em uma consulta ou em uma expressão, o membro padrão para aquela hierarquia de atributo será o membro de atributo implicitamente incluso na tupla. Salvo indicação contrária explicitamente definida em um cubo, o membro padrão para cada hierarquia de atributo é o membro (All), se houver um membro (All). Se não houver um membro (All) em uma hierarquia de atributo, o membro padrão será um membro do nível superior da hierarquia de atributo. A medida padrão é a primeira medida especificada no cubo, salvo se uma medida padrão estiver explicitamente definida. Para obter mais informações, consulte [Definir um membro padrão](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) e [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  
@@ -75,8 +73,8 @@ FROM [Adventure Works]
 >  Um membro de atributo pode ser referido por seu nome de membro ou sua chave de membro. No exemplo anterior, você poderia substituir a referência [CY 2004] por &[2004].  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Principais conceitos em MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Espaço de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [Trabalhando com membros, tuplas e conjuntos de &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   

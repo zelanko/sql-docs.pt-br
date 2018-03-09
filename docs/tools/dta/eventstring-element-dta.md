@@ -2,9 +2,12 @@
 title: Elemento EventString (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e76b650d9f7cf59d58cc32ff124c41091c64fbc2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
-  Especifica uma carga de trabalho de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] diretamente no arquivo de entrada XML.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica um [!INCLUDE[tsql](../../includes/tsql-md.md)] cargas de trabalho de script diretamente no arquivo de entrada XML.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|Descrição|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |**Weight**|Opcional. Especifica o fator de peso da consulta (um fator de importância) para o evento especificado. Use um tipo de dados **float** para especificar o peso. Por exemplo, **Peso**= "100,01". O valor mínimo que você pode especificar para **Weight** é "0."|  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento Workload &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elemento pai**|[Elemento Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**Elementos filho**|Nenhuma.|  
   
 ## <a name="example"></a>Exemplo  

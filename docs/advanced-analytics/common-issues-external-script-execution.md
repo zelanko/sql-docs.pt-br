@@ -3,26 +3,28 @@ title: "Problemas comuns com a execução do script externo no SQL Server | Micr
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comuns com a execução do script externo no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo contém uma lista de problemas conhecidos e os problemas comuns com a execução de código de R ou Python no SQL Server.
 
@@ -191,9 +193,9 @@ Se você tiver instalado e, então, aprendizado de máquina, mas você receberá
 
 4. Reiniciar o serviço geralmente corrige o problema para que podem executar scripts de aprendizado de máquina. Se a reinicialização não resolver o problema, observe o caminho e argumentos no **caminho binário** propriedade e faça o seguinte:
 
-    a. Examine o arquivo. config do iniciador e verifique se o diretório de trabalho é válido.
+    A. Examine o arquivo. config do iniciador e verifique se o diretório de trabalho é válido.
 
-    b. Certifique-se de que o grupo do Windows que é usado pela barra inicial pode se conectar à instância do SQL Server, conforme descrito no [seção anterior](#bkmk_LaunchpadTS).
+    B. Certifique-se de que o grupo do Windows que é usado pela barra inicial pode se conectar à instância do SQL Server, conforme descrito no [seção anterior](#bkmk_LaunchpadTS).
 
     c. Se você alterar qualquer uma das propriedades do serviço, reinicie o serviço Launchpad.
 
@@ -317,7 +319,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *Mensagem(ns) STDOUT do script externo:*
 
-*[1] "c:\\arquivos de programa\\do Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
 *[1] "SQL de arquivos/Microsoft Server/MSSQL13 da unidade c: / programa. R_SERVICES/SQL2016/biblioteca"*
 
@@ -335,4 +337,3 @@ Para resolver o problema, você deverá reinstalar o pacote para a biblioteca de
 [Perguntas frequentes sobre atualização e instalação](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Solucionar problemas de conexões do mecanismo de banco de dados](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
-

@@ -1,13 +1,14 @@
 ---
-title: "Cache de relatórios (SSRS) | Microsoft Docs"
+title: "Armazenando relatórios em cache (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +24,16 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be5dfff54e54b9e5fd768f3b438f9e378bf34c9a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. Para o usuário, a única evidência disponível indicativa de que o relatório é uma cópia armazenada em cache são os dados de data e hora de processamento do relatório. Se a data ou a hora não for atual e o relatório não for um instantâneo, ele terá sido recuperado do cache.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
  O armazenamento em cache é uma técnica de aprimoramento de desempenho. O conteúdo do cache é volátil e pode mudar à medida que relatórios são adicionados, substituídos ou removidos. Se for necessária uma estratégia mais previsível de armazenamento em cache, você deverá criar um instantâneo de relatório. Para obter mais informações, consulte [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]armazena arquivos temporários em um banco de dados para dar suporte a sessões de usuário e processamento de relatório. Esses arquivos são armazenados em cache para uso interno e para oferecer suporte a uma experiência de visualização consistente durante uma única sessão de navegador. Para obter mais informações sobre como os arquivos temporários de uso interno são armazenados em cache, consulte [Banco de dados do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena arquivos temporários em um banco de dados para dar suporte a sessões de usuário e processamento de relatório. Esses arquivos são armazenados em cache para uso interno e para oferecer suporte a uma experiência de visualização consistente durante uma única sessão de navegador. Para obter mais informações sobre como os arquivos temporários de uso interno são armazenados em cache, consulte [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Instâncias armazenadas em cache  
  Uma instância armazenada em cache de um relatório baseia-se no formato intermediário de um relatório. O servidor de relatório geralmente armazena em cache uma instância de um relatório com base no nome de relatório. No entanto, se um relatório puder conter dados diferentes com base nos parâmetros de consulta, várias versões do relatório poderão ser armazenadas em cache em um determinado momento. Por exemplo, suponha que você tem um relatório com parâmetros que assume um código de região como um valor de parâmetro. Se quatro usuários diferentes especificarem quatro códigos de região exclusivos, serão criadas quatro cópias armazenadas em cache.  
@@ -75,14 +75,13 @@ ms.lasthandoff: 08/09/2017
   
  Se um relatório não puder ser processado a partir de uma instância armazenada em cache por qualquer motivo (por exemplo, se os valores de parâmetro que um usuário especifica forem diferentes daqueles usados para produzir o relatório armazenado em cache), o servidor de relatório executará novamente o relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services conceitos &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Pré-carregar o Cache de &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Conceitos do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Agendas](../../reporting-services/subscriptions/schedules.md)   
- [Conjuntos de dados &#40; compartilhado em cache SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Opções &#40; a atualização do cache Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Armazenar conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
-

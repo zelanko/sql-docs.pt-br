@@ -1,5 +1,5 @@
 ---
-title: "AGREGAÇÃO de DROP (Transact-SQL) | Microsoft Docs"
+title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_AGGREGATE_TSQL
 - DROP AGGREGATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - aggregate functions [SQL Server], removing
 - removing user-defined functions
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - deleting user-defined functions
 - DROP AGGREGATE statement
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95143f8c2f715150146f447d6c1f185dc1908f8e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 8f01299f0a5db2ed47975a964104e720cb7c8c52
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +61,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  É o nome da função de agregação definida pelo usuário que você deseja descartar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DROP AGGREGATE não será executado se houver alguma exibição, função ou procedimento armazenado criado com uma ligação de esquema que faça referência à função de agregação definida pelo usuário que você deseja descartar.  
   
 ## <a name="permissions"></a>Permissões  
@@ -73,7 +75,7 @@ DROP AGGREGATE dbo.Concatenate;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar agregação &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [Criar agregações definidas pelo usuário](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   

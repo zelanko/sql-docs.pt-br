@@ -2,15 +2,13 @@
 title: Perspectivas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,20 +22,20 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 798a8d872b52c21d794e3d1f21cf52e133d56277
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspectives"></a>Perspectivas
-  Uma perspectiva é uma definição que permite os usuários visualizem um cubo de um modo mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma perspectiva é uma definição que permite os usuários visualizem um cubo de um modo mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Perspective> está composto de: informações básicas, dimensões, grupos de medidas, cálculos, KPIs e ações. As informações básicas incluem o nome e a medida padrão da perspectiva. As dimensões são um subconjunto das dimensões do cubo. Os grupos de medidas são um subconjunto dos grupos de medidas do cubo. Os cálculos são um subconjunto dos cálculos do cubo. Os KPIs são um subconjunto dos KPIs do cubo. As ações são um subconjunto das ações do cubo.  
   
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  As perspectivas não se destinam a serem usadas como um mecanismo de segurança, mas como uma ferramenta para fornecer uma melhor experiência ao usuário com os aplicativos de business intelligence. Toda a segurança de uma determinada perspectiva é herdada do cubo subjacente. Por exemplo, as perspectivas não podem fornecer acesso a objetos em um cubo ao qual o usuário ainda não tem acesso. A segurança do cubo deve ser resolvida antes que o acesso a objetos no cubo possa ser fornecido por meio de uma perspectiva.  
   
   
-

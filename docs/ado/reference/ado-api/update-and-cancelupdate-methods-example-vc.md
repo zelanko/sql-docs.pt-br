@@ -3,7 +3,7 @@ title: "Atualização e exemplo dos métodos CancelUpdate (VC + +) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d10d112d6c8ed067959e949adf1480f38bcabae1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45014b906f25bdc34646bf3cdb07d7945ee2c3d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Exemplo dos métodos CancelUpdate (VC + +) e atualização
 Este exemplo demonstra o [atualização](../../../ado/reference/ado-api/update-method.md) método junto com o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
@@ -320,4 +319,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Consulte também  
  [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Método Update](../../../ado/reference/ado-api/update-method.md)
-

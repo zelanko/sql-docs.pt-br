@@ -3,8 +3,9 @@ title: "Operação de comandos sem parâmetros | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a025cf381bdf5a51cb825294bf5a5399fc033b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Operação de comandos sem parâmetros
 Para comandos sem parâmetros, todos os comandos do provedor são executados e o **conjuntos de registros** são criados durante a execução do comando. Se o comando é executado de forma síncrona, todos os **conjuntos de registros** será totalmente preenchida. Se um modo de população assíncrona foi selecionado, o estado preenchido do **conjuntos de registros** dependerá do modo de preenchimento e o tamanho do **conjuntos de registros**.  

@@ -3,10 +3,10 @@ title: "Determinar qual nó de Cluster falhou (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
 caps.latest.revision: "21"
-ms.openlocfilehash: 59f188526cff2d605c5bffcf2187b3c765276c81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14b68f56a89d5fec57ede1a49be4dedc435353b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determine-which-cluster-node-failed"></a>Determinar qual nó de Cluster falhou
 Este tópico descreve como determinar o nome do nó do SQL Server PDW que apresentou falha após um failover de cluster ocorreu e um alerta de failover de cluster foi ativado. Como parte de um cluster de failover de solução de problemas, você deve determinar o nome do nó com falha antes de entrar em contato com a Microsoft para ajudar a resolver o problema.  

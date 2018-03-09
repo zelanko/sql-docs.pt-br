@@ -26,17 +26,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ DBCC INDEXDEFRAG
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  É o banco de dados que contém o índice a desfragmentar. Se 0 for especificado, será usado o banco de dados atual. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
@@ -78,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG desfragmenta o nível folha de um índice de forma que a ordem física das páginas corresponda à ordem lógica da esquerda para a direita dos nós folha, melhorando assim o desempenho do exame do índice.
   
 > [!NOTE]  
@@ -243,5 +242,4 @@ GO
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
   
   
-
 

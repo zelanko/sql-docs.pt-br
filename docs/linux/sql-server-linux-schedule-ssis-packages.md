@@ -10,25 +10,26 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 84ee0eaf4743cc4a3b188dd700b1ccbdc4ca42cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>A execução no Linux com cron do pacote de agendamento SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Quando você executa o SQL Server Integration Services (SSIS) e o SQL Server no Windows, você pode automatizar a execução de pacotes SSIS usando o SQL Server Agent. Quando você executa o SQL Server e do SSIS no Linux, no entanto, o utilitário do SQL Server Agent não está disponível para agendar trabalhos no Linux. Em vez disso, você pode usar o serviço de cron, que é amplamente usado em plataformas Linux para automatizar a execução do pacote.
 
 Este artigo fornece exemplos que mostram como automatizar a execução de pacotes do SSIS. Os exemplos são criados para serem executados no Red Hat Enterprise. O código é semelhante para outras distribuições do Linux, como Ubuntu.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de usar o serviço de cron para executar trabalhos, verifique se ele está em execução no seu computador.
 
@@ -80,3 +81,8 @@ Aqui está um exemplo parcial da saída que ajuda a explicar o exemplo neste art
 
 ![Descrição detalhada de parcial do formato crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
+## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
+-   [Extrair, transformar e carregar dados em Linux com o SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar o SQL Server Integration Services no Linux com conf ssis](sql-server-linux-configure-ssis.md)
+-   [Limitações e problemas conhecidos do SSIS no Linux](sql-server-linux-ssis-known-issues.md)

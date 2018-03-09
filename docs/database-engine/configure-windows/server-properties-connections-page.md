@@ -2,27 +2,30 @@
 title: "Propriedades do servidor (página Conexões) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906e8e7e92d847e8e440303188197dfcf3942d31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---connections-page"></a>Propriedades do servidor – página Conexões
-  Use esta página para exibir ou modificar suas opções de conexão.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir ou modificar suas opções de conexão.  
   
 ## <a name="connections"></a>Conexões  
  **Número máximo de conexões simultâneas (0 = ilimitado)**  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
  **Default connection options**  
  Especifica as opções de conexão padrão, como descrito na tabela a seguir.  
   
-|Opções de configuração|Descrição|  
+|Opções de configuração|Description|  
 |--------------------------|-----------------|  
 |**desabilite verificação de restrição adiada**|Controla a verificação provisória ou adiada de restrições.|  
 |**transações implícitas**|Controla se uma transação é iniciada implicitamente ou não, quando uma instrução é executada.|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções &#40;Execução da consulta: SQL Server: página Avançado&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

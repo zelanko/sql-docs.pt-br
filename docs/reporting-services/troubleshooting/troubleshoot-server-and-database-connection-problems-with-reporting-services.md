@@ -1,29 +1,29 @@
 ---
-title: "Solucionar problemas de Conexão de banco de dados com o Reporting Services e de servidor | Microsoft Docs"
+title: "Solução de problemas de conexão de banco de dados e de servidor com o Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de Conexão de banco de dados com o Reporting Services e de servidor
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e servidor com o Reporting Services
 Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Não é possível criar uma conexão com uma fonte de dados 'datasourcename'. (rsErrorOpeningConnection)  
@@ -63,7 +63,7 @@ Para resolver este erro, modifique a cadeia de conexão para usar o nome do serv
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Erro de WMI ao conectar-se a um servidor de relatório no Management Studio  
 Por padrão, o Management Studio usa o provedor de WMI (Instrumentação de Gerenciamento do Windows) do Reporting Services para estabelecer uma conexão com o servidor de relatório. Se o provedor WMI não estiver instalado corretamente, o seguinte erro ocorrerá quando você tentar se conectar ao servidor de relatório:  
   
-Não é possível se conectar ao \<o nome do servidor >. O provedor WMI do Reporting Services não está instalado ou está instalado incorretamente (Microsoft.SqlServer.Management.UI.RSClient).  
+Não é possível se conectar ao \<your server name>. O provedor WMI do Reporting Services não está instalado ou está instalado incorretamente (Microsoft.SqlServer.Management.UI.RSClient).  
   
 Para resolver esse erro, reinstale o software. Em todos os outros casos, como solução temporária, você pode se conectar ao servidor de relatório pelo ponto de extremidade SOAP:  
   
@@ -117,7 +117,7 @@ Há duas soluções alternativas para esse problema.
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Não é possível se conectar aos diretórios /reports e /reportserver quando os bancos de dados do servidor de relatório são criados em um SQL Server executando em um cluster MSCS (Serviços de Cluster da Microsoft)  
 Quando você cria os bancos de dados do servidor de relatório, **ReportServer** e **ReportServerTempDB**, em um SQL Server virtual executado em um cluster MSCS, o nome remoto no formato `<domain>\<computer_name>$` não pode ser registrado como logon no SQL Server. Se tiver configurado a conta de serviço do Servidor de Relatório de modo a exigir esse nome remoto para as conexões, os usuários não poderão se conectar aos diretórios /reports e /reportserver no Reporting Services. Por exemplo, a conta NetworkService interna do Windows requer tal nome remoto. Para evitar esse problema, use uma conta de domínio explícita ou um logon do SQL Server para se conectar aos bancos de dados do servidor de relatório.  
     
-  ## <a name="see-also"></a>Consulte também  
+  ## <a name="see-also"></a>Consulte Também  
 [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Solucionar problemas de recuperação de dados com relatórios do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -127,5 +127,4 @@ Quando você cria os bancos de dados do servidor de relatório, **ReportServer**
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

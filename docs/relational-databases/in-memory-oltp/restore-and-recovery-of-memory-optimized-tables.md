@@ -1,70 +1,77 @@
 ---
 title: "Restauração e recuperação de tabelas com otimização de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: add6844ed550417478cc44090fd40a4a5b4cf62b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 943c310fdcf8a38a9c0c51d8d97618497537caba
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  O mecanismo básico para recuperar ou restaurar um banco de dados com tabelas com otimização de memória é semelhante a bancos de dados com apenas tabelas baseadas em disco. Mas, de modo diferente das tabelas baseadas em disco, as tabelas com otimização de memória devem ser carregadas na memória antes que o banco de dados seja disponibilizado para o acesso de usuários. Isso adiciona uma nova etapa na recuperação do banco de dados.  
+O mecanismo básico para recuperar ou restaurar um banco de dados que usa tabelas com otimização de memória é semelhante ao mecanismo de um banco de dados que usa apenas tabelas baseadas em disco. Mas, ao contrário das tabelas baseadas em disco, as tabelas com otimização de memória devem ser carregadas na memória antes que o banco de dados esteja disponível para o acesso do usuário. Esse requisito adiciona uma nova etapa na recuperação de banco de dados.  
   
- Durante as operações de recuperação ou restauração, o mecanismo OLTP na memória lê os arquivos delta e de dados para carregamento na memória física. O tempo de carregamento é determinado pelos seguintes fatores:  
+Se o servidor não tiver memória suficiente disponível, haverá falha na recuperação de banco de dados e o banco de dados será marcado como suspeito. Para resolver esse problema, consulte [Resolver problemas de memória insuficiente](resolve-out-of-memory-issues.md). 
+  
+## <a name="factors-that-affect-load-time"></a>Fatores que afetam o tempo de carregamento
+Durante as operações de recuperação ou restauração, o mecanismo OLTP na memória lê os arquivos delta e de dados para carregamento na memória física. O tempo de carregamento é determinado pelos seguintes fatores:  
   
 -   A quantidade de dados a serem carregados.  
   
 -   Largura de banda de E/S sequencial.  
   
--   Grau de paralelismo, determinado pelo número de contêineres de arquivo e núcleos de processador.  
+-   O grau de paralelismo, determinado pelo número de contêineres de arquivo e núcleos de processador.  
   
--   A quantidade de registros de log na parte ativa do log que precisam ser refeitos.  
+-   O número de registros de log na parte ativa do log que precisam ser refeitos.  
+
+## <a name="phases-of-recovery"></a>Fases de recuperação
+Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado, cada banco de dados passa por um processo de recuperação que consiste em três fases:  
   
- Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado, cada banco de dados passa por uma fase de recuperação que consiste em três fases:  
+1.  **Análise**. Nessa fase, os logs de transações ativas são verificados para detectar transações confirmadas e não confirmadas. O mecanismo de OLTP na memória identifica o ponto de verificação para carregamento e pré-carrega suas entradas de log da tabela do sistema. Ele também processa alguns registros de log de alocação de arquivo.  
   
-1.  A fase de análise. Durante essa fase, verificam-se os logs de transações ativas para detectar transações confirmadas e não confirmadas. O mecanismo de OLTP na memória identifica o ponto de verificação para carregamento e pré-carrega suas entradas de log da tabela do sistema. Ele também processa alguns registros de log de alocação de arquivo.  
+2.  **Refazer**. Essa fase é executada simultaneamente em tabelas baseadas em disco e com otimização de memória.  
   
-2.  A fase refazer. Essa fase é executada simultaneamente em tabelas baseadas em disco e com otimização de memória.  
+    - Para tabelas baseadas em disco, o banco de dados é movido para o momento atual e adquire bloqueios usados por transações não confirmadas.  
   
-     Para tabelas baseadas em disco, o banco de dados é movido para o momento atual e adquire bloqueios usados por transações não confirmadas.  
+    - Para tabelas com otimização de memória, os dados dos pares de arquivos de dados e delta são carregados na memória. Em seguida, os dados são atualizados com o log de transações ativas com base no último ponto de verificação durável.  
   
-     Para tabelas com otimização de memória, os dados dos pares de arquivos de dados e delta são carregados na memória. Depois, eles atualizam os dados com o log de transações ativas baseado no último ponto de verificação durável.  
+    Quando as operações anteriores em tabelas baseadas em disco e tabelas com otimização de memória são concluídas, o banco de dados fica disponível para acesso.  
   
-     Quando as operações acima em tabelas baseadas em disco e com otimização de memória são concluídas, o banco de dados está disponível para acesso.  
+3.  **Desfazer**. Nessa fase, as transações não confirmadas são revertidas.  
   
-3.  A fase desfazer. Nessa fase, as transações não confirmadas são revertidas.  
+## <a name="process-for-improving-load-time"></a>Processo para melhorar o tempo de carregamento
+Carregar tabelas com otimização de memória na memória pode afetar o desempenho do RTO (objetivo de tempo de recuperação). Para melhorar o tempo de carregamento dos dados com otimização de memória em arquivos de dados e delta, o mecanismo OLTP na memória carrega os arquivos de dados/delta em paralelo desta forma:  
   
- Carregar tabelas com otimização de memória na memória pode afetar o desempenho do RTO (objetivo de tempo de recuperação). Para melhorar o tempo de carregamento dos dados com otimização de memória em arquivos de dados e delta, o mecanismo OLTP na memória carrega os arquivos de dados/delta em paralelo desta forma:  
+-   **Criando um filtro de mapa delta**. Referências de repositórios de arquivos delta para as linhas excluídas. Um thread por contêiner lê os arquivos delta e cria um filtro de mapa delta. (Um grupo de arquivo de dados com otimização de memória pode ter um ou mais contêineres.)  
   
--   Criando um filtro de mapa delta. Referências de repositórios de arquivos delta para as linhas excluídas. Um thread por contêiner lê os arquivos delta e cria um filtro de mapa delta. (Um grupo de arquivos de dados com otimização de memória pode ter um ou mais contêineres.)  
+-   **Transmitindo os arquivos de dados**. Após a criação do filtro de mapa delta, os arquivos de dados são lidos pelo número de threads que corresponde às CPUs lógicas existentes. Cada thread que lê as linhas de dados, verifica o mapa delta associado e insere a linha na tabela apenas se a linha não foi marcada como excluída. Esta parte da recuperação pode estar associada à CPU em alguns casos, conforme observado neste diagrama:  
   
--   Transmitindo os arquivos de dados.  Após a criação do filtro de mapa de delta, os arquivos de dados são lidos usando o número de threads que corresponde às CPUs lógicas existentes. Cada thread que lê o arquivo de dados lê as linhas de dados, verifica o mapa delta associado, e só insere a linha na tabela se essa linha não foi marcada como excluída. Esta parte da recuperação pode estar associada à CPU em alguns casos, conforme observado a seguir.  
+    ![Transmissão de dados para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Data streaming to memory-optimized tables")  
   
- ![Tabelas com otimização de memória. ](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Tabelas com otimização de memória.")  
+## <a name="specific-cases-of-slow-load-times"></a>Casos específicos de tempos de carregamento lentos
+As tabelas com otimização de memória normalmente podem ser carregadas na memória na velocidade de E/S, mas, às vezes, o carregamento de linhas de dados na memória é mais lento. Os casos específicos são:  
   
- As tabelas com otimização de memória normalmente podem ser carregadas na memória na velocidade de E/S, mas, em alguns casos, o carregamento de linhas de dados será mais lento. Os casos específicos são:  
+-   O baixo número de buckets para um índice de hash pode levar à colisão excessiva, o que causa lentidão nas inserções de linhas de dados. Em geral, isso resulta na alta utilização da CPU como um todo, especialmente no final da recuperação. Se você configurou o índice de hash corretamente, ele não deve afetar o tempo de recuperação.  
   
--   O baixo número de buckets para o índice de hash pode levar à colisão excessiva, causando lentidão nas inserções de linhas de dados. Em geral, isso resulta na alta utilização da CPU como um todo, especialmente no final da recuperação. Se você configurou o índice de hash corretamente, ele não deve afetar o tempo de recuperação.  
-  
--   Tabelas grandes com otimização de memória, com um ou mais índices não clusterizados, são diferentes de um índice de hash cujo número de buckets é dimensionado no momento de criação. Os índices não clusterizados crescem dinamicamente, resultando na alta utilização da CPU.  
+-   Tabelas grandes com otimização de memória com um ou mais índices não clusterizados podem causar uma alta utilização da CPU. Ao contrário de um índice de hash cujo número de buckets é dimensionado no momento da criação, índices não clusterizados aumentam dinamicamente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  

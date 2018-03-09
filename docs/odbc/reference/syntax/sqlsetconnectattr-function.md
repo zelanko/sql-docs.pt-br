@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConnectAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConnectAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConnectAttr
-helpviewer_keywords:
-- SQLSetConnectAttr function [ODBC]
+f1_keywords: SQLSetConnectAttr
+helpviewer_keywords: SQLSetConnectAttr function [ODBC]
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4006d05403781ada24cf43903cd14a971366e12a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>Função SQLSetConnectAttr
 **Conformidade**  
@@ -135,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Alguns atributos de conexão podem ser definidos apenas antes de uma conexão foi feita; outras podem ser definidas somente depois que uma conexão é estabelecida. A tabela a seguir indica os atributos de conexão devem ser definidos antes ou depois que uma conexão é estabelecida. *Qualquer* indica que o atributo pode ser definido antes ou depois da conexão.  
   
-|Atributo|Defina antes ou após a conexão?|  
+|attribute|Defina antes ou após a conexão?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Qualquer|  
@@ -213,7 +207,6 @@ SQLRETURN SQLSetConnectAttr(
 |Alocando um identificador|[Função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Retornando a configuração de um atributo de conexão|[Função SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

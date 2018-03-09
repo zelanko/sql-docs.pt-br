@@ -2,30 +2,35 @@
 title: "Especificar uma ação de ponto de interrupção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpt.action
+f1_keywords:
+- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05021a400801a1cae9edbd5e5f9443ff3bd89a63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
-  Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre a ação  
  A ação padrão de um ponto de interrupção é interromper a execução quando a contagem de ocorrências e a condição de ponto de interrupção são atendidas. O principal uso de uma ação **Quando Atingido** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] é imprimir informações na janela **Saída** do depurador especificando uma mensagem de impressão.  
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar uma condição de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Especificar uma contagem de ocorrências](../../relational-databases/scripting/specify-a-hit-count.md)  
   

@@ -2,30 +2,36 @@
 title: "Criar um alias de tipo de dados definido pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
-helpviewer_keywords: alias data types [SQL Server], creating
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a51db116a1ca0ffe5d408e79dcd3dc16ed4c1e58
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
-  Este tópico descreve como criar um novo alias de tipo de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico descreve como criar um novo alias de tipo de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -61,10 +67,10 @@ ms.lasthandoff: 11/09/2017
      **Permitir Nulos**  
      Especifique se o tipo de dados definido pelo usuário pode aceitar valores NULL. A nulidade de um tipo de dados definido pelo usuário existente não é editável.  
   
-     **Tipo de dados**  
+     **Data type**  
      Selecione o tipo de dados base na caixa de listagem. A caixa de listagem exibe todos os tipos de dados, com exceção do tipo de dados **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** e **xml** . O tipo de dados definido pelo usuário existente não é editável.  
   
-     **Padrão**  
+     **Default**  
      Opcionalmente, selecione um padrão para associar ao alias do tipo de dados definido pelo usuário.  
   
      **Comprimento/Precisão**  
@@ -110,7 +116,7 @@ ms.lasthandoff: 11/09/2017
   
 7.  Na área **Associação** , preencha a caixa **Padrão** ou **Regra** caso queira associar um padrão ou uma regra ao novo alias de tipo de dados. Padrões e regras não podem ser criados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Código de exemplo para criação de padrões e regras disponíveis no Explorador de Modelos.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Para criar um alias de tipo de dados definido pelo usuário  
   
@@ -120,12 +126,12 @@ ms.lasthandoff: 11/09/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria um alias de tipo de dados com base no tipo de dados `varchar` fornecido pelo sistema. O alias de tipo de dados `ssn` é usado para colunas contendo números de previdência social de 11 dígitos (999-99-9999). A coluna não pode ser NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Identificadores de banco de dados](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

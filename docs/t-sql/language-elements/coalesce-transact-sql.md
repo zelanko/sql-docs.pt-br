@@ -1,10 +1,13 @@
 ---
-title: "UNIÃO (Transact-SQL) | Microsoft Docs"
+title: COALESCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fddb9a8535472c153adf036b5afed9584cfbd3d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Avalia os argumentos na ordem e retorna o valor atual da primeira expressão que inicialmente não é avaliada como `NULL`. Por exemplo, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` retorna o terceiro valor como o terceiro valor é o primeiro valor que não seja nulo. 
   
@@ -52,7 +54,7 @@ COALESCE ( expression [ ,...n ] )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o tipo de dados de *expressão* com maior precedência de tipo de dados. Se todas as expressões forem não anuláveis (nonnullable), o resultado será digitado como nonnullable.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se todos os argumentos forem `NULL`, `COALESCE` retorna `NULL`. Pelo menos um dos valores nulos deve ser um tipo `NULL`.  
   
 ## <a name="comparing-coalesce-and-case"></a>Comparando COALESCE e CASE  
@@ -69,7 +71,7 @@ COALESCE ( expression [ ,...n ] )
   
  Isso significa que os valores de entrada (*expression1*, *expression2*, *expressão*, etc.) são avaliados várias vezes. Além disso, em conformidade com o padrão do SQL, uma expressão de valor que contém uma subconsulta é considerada não determinística e a subconsulta é avaliada duas vezes. Em ambos os casos, resultados diferentes podem ser retornados entre a primeira avaliação e as avaliações subsequentes.  
   
- Por exemplo, quando o código `COALESCE((subquery), 1)` é executado, a subconsulta é avaliada duas vezes. Como resultado, você pode obter resultados diferentes dependendo do nível de isolamento da consulta. Por exemplo, o código pode retornar `NULL` sob o `READ COMMITTED` nível de isolamento em um ambiente multiusuário. Para assegurar resultados estáveis sejam retornados, use o `SNAPSHOT ISOLATION` nível de isolamento ou substitua `COALESE` com o `ISNULL` função. Como alternativa, você pode reescrever a consulta para inserir a subconsulta em uma Subseleção, conforme mostrado no exemplo a seguir:  
+ Por exemplo, quando o código `COALESCE((subquery), 1)` é executado, a subconsulta é avaliada duas vezes. Como resultado, você pode obter resultados diferentes dependendo do nível de isolamento da consulta. Por exemplo, o código pode retornar `NULL` sob o `READ COMMITTED` nível de isolamento em um ambiente multiusuário. Para assegurar resultados estáveis sejam retornados, use o `SNAPSHOT ISOLATION` nível de isolamento ou substitua `COALESCE` com o `ISNULL` função. Como alternativa, você pode reescrever a consulta para inserir a subconsulta em uma Subseleção, conforme mostrado no exemplo a seguir:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -298,8 +300,7 @@ ORDER BY TotalSalary;
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ISNULL &#40; Transact-SQL &#41;](../../t-sql/functions/isnull-transact-sql.md)   
+ [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

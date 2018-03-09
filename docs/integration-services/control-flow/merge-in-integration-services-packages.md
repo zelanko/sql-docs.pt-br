@@ -1,5 +1,5 @@
 ---
-title: Pacotes de mesclagem no Integration Services | Microsoft Docs
+title: MERGE em pacotes do Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: abce78012965130235001f74f541940a7ae0b218
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 08/03/2017
  O banco de dados Inventory tem uma tabela ProductsInventory que tem as colunas ProductID e StockOnHand. Uma tabela Shipments com as colunas ProductID, CustomerID e Quantity rastreia o envio de produtos para os clientes. A tabela ProductInventory deve ser atualizada diariamente com base nas informações da tabela Shipments. Uma única instrução MERGE pode reduzir o inventário na tabela ProductInventory com base nas remessas feitas. Se o inventário de um produto for reduzido a 0, a instrução MERGE também poderá excluir a linha desse produto da tabela ProductInventory.  
   
   
-

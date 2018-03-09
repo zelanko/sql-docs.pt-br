@@ -3,8 +3,11 @@ title: "Executar operações básicas com consultas (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cacb4d0c0425b022f14ab90702fa5508679fd2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e61d1ac966ed5c5829e6c03c463fc5fa4b1e38bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Executar operações básicas com consultas (Visual Database Tools)
-As seguintes operações fundamentais se aplicam à maioria ou a todas as consultas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As seguintes operações fundamentais aplicam-se à maioria ou a todas as consultas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Criar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

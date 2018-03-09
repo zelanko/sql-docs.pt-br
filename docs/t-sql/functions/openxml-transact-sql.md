@@ -22,17 +22,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff4578d88cdb76468d261843c36043ef4696d92c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IDOC*  
+ *idoc*  
  É o indentificador de documento da representação interna de um documento XML. A representação interna de um documento XML é criada chamando **sp_xml_preparedocument**.  
   
  *rowpattern*  
  É o padrão XPath usado para identificar os nós (no documento XML cujo identificador é passado a *idoc* parâmetro) a ser processado como linhas.  
   
- *sinalizadores*  
+ *flags*  
  Indica o mapeamento que deve ser usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento deve ser preenchida. *sinalizadores de* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
   
 |Valor do byte|Description|  
@@ -67,7 +66,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não devem ser copiados para a propriedade de estouro  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- É a definição de esquema do formulário: *ColName**ColType* [*ColPattern* | *metapropriedade*] [**** *ColNameColType* [*ColPattern* | *metapropriedade*]...]  
+ É a definição de esquema do formulário: *ColName * * ColType* [*ColPattern* | *metapropriedade*] [**, * * * ColNameColType* [*ColPattern * | *Metapropriedade*]...]  
   
  *ColName*  
  É o nome de coluna no conjunto de linhas.  
@@ -82,22 +81,22 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  O padrão geral XPath especificado como *ColPattern* também oferece suporte a metapropriedades.  
   
- *Metapropriedade*  
+ *MetaProperty*  
  É uma das metapropriedades fornecidas por OPENXML. Se *metapropriedade* for especificado, a coluna contém as informações fornecidas pela metapropriedade. As metapropriedades permitem extrair informações (como a posição relativa e informações de namespace) sobre nós XML. Isso fornece mais informações que as visíveis na representação textual.  
   
- *Nome de tabela*  
+ *TableName*  
  É o nome da tabela que pode ser fornecido (em vez de *SchemaDeclaration*) se já existe uma tabela com o esquema desejado e nenhum padrão de coluna é necessário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A cláusula WITH fornece um formato de conjunto de linhas (e as informações de mapeamento adicionais conforme necessário) usando o *SchemaDeclaration* ou especificando um existente *TableName*. Se a cláusula WITH opcional não for especificado, os resultados são retornados em uma **borda** formato de tabela. As tabelas de borda representam a estrutura de documento XML refinada (como nomes de elemento/atributo, a hierarquia de documento, os namespaces e PIS e assim por diante) em uma única tabela.  
   
  A tabela a seguir descreve a estrutura do **borda** tabela.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por essa ID não é necessariamente o elemento pai, mas depende do NodeType do nó cujo pai é identificado por essa ID. Por exemplo, se o nó for um nó de texto, o pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
-|**NodeType**|**int**|Identifica o tipo de nó. É um inteiro que corresponde à numeração de tipo de nó XML DOM.<br /><br /> Os tipos de nó são:<br /><br /> 1 = Nó de elemento<br /><br /> 2 = Nó de atributo<br /><br /> 3 = Nó de texto|  
+|**nodetype**|**Int**|Identifica o tipo de nó. É um inteiro que corresponde à numeração de tipo de nó XML DOM.<br /><br /> Os tipos de nó são:<br /><br /> 1 = Nó de elemento<br /><br /> 2 = Nó de atributo<br /><br /> 3 = Nó de texto|  
 |**localname**|**nvarchar**|Fornece o nome local do elemento ou do atributo. Será NULL se o objeto DOM não tiver um nome.|  
 |**prefixo**|**nvarchar**|É o prefixo do namespace do nome do nó.|  
 |**namespaceuri**|**nvarchar**|É o URI do namespace do nó. Se o valor for NULL, nenhum namespace estará presente.|  
@@ -256,4 +255,3 @@ EXEC sp_xml_removedocument @idoc;
  [Exemplos: usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   
-

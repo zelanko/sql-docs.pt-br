@@ -2,37 +2,34 @@
 title: Usar Feeds de dados (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5bc547eead5e8dc2d765f56861dacbd8af64e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Use feeds de dados (Power Pivot para SharePoint)
-  Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
   
  A maneira como você usa um feed de dados depende de você estar usando recursos de exportação internos em aplicativos que dão suporte a feeds de dados Atom ou estar criando e usando serviços de dados personalizados. Aplicativos que podem publicar e ler dados XML do Atom fornecem transferência de dados transparente que oculta as mecânicas dos feeds de dados e serviços de dados de usuários. Para um usuário, os dados são simplesmente movidos de um aplicativo para outro.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint Server 2010 fornecem feeds de dados que podem ser usados em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint Server 2010 fornecem dados feeds que podem ser usados em [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho. Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
   
  Este tópico contém as seguintes seções:  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
     1.  A**URL base** é opcional. Você deve especificar isto se um documento de serviço de dados fornecer vários feeds. A URL base deve especificar a parte da URL que é comum a todos os feeds (por exemplo, o nome do servidor e o site). Se você estiver criando um documento de serviço de dados para um relatório do Reporting Services, a URL de base será a URL do servidor de relatório e o relatório.  
   
-    2.  A**URL do Serviço Web** é obrigatória. Sem a URL Base, esse valor deve incluir `http://` ou `https://` no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa é `http://adventure-works/inventory/today.aspx`, a URL Base seria `http://adventure-works/inventory`, e a URL do serviço Web seria /Today.aspx..  
+    2.  A**URL do Serviço Web** é obrigatória. Sem a URL Base, esse valor deve incluir `http://` ou `https://` no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa é `http://adventure-works/inventory/today.aspx`, a URL Base seria `http://adventure-works/inventory`, e a URL do serviço Web seria /Today.aspx.  
   
          A URL de serviço Web pode incluir parâmetros que filtram ou selecionam um subconjunto de dados. O aplicativo ou serviço que fornecem o feed devem oferecer suporte a parâmetros que você especifica na URL.  
   
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Compartilhar feeds de dados usando uma biblioteca de feed de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

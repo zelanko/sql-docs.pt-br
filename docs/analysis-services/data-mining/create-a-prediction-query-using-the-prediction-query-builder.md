@@ -2,35 +2,33 @@
 title: "Criar uma consulta de previsão usando o construtor de consultas de previsão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Criar uma consulta de previsão usando o construtor de consultas de previsão
-  Você pode criar consultas de previsão enquanto estiver criando uma solução de mineração de dados no BI Development Studio, ou clicar com o botão direito em um modelo de mineração existente no SQL Server Management Studio e, em seguida, escolher a opção **Criar Consulta de Previsão**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode criar consultas de previsão enquanto estiver criando uma solução de mineração de dados no BI Development Studio, ou clicar com o botão direito em um modelo de mineração existente no SQL Server Management Studio e, em seguida, escolher a opção **Criar Consulta de Previsão**.  
   
  O **Construtor de Consultas de Previsão** tem os três modos de design a seguir, os quais você pode alternar clicando nos ícones no canto superior esquerdo.  
   
@@ -100,8 +98,7 @@ ms.lasthandoff: 09/01/2017
 8.  Execute a consulta clicando no primeiro botão da barra de ferramentas da guia **Previsão do Modelo de Mineração** e selecione **Resultado**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar uma consulta Singleton no Designer de Mineração de Dados](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Criar uma consulta Singleton no Designer de mineração de dados](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

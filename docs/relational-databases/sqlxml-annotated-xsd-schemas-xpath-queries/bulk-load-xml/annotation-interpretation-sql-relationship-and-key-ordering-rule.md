@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d36ae25139287c52076310e91d0a8bdabcdaf03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebc4669adf3d2bb468d653fbc0ccefd743bcf334
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretação de anotação - SQL: Relationship e a regra de ordenação de chave
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Como o XML Bulk Load gera registro à medida que seus nós entram no escopo e envia esses registros para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conforme seus nós saem do escopo, os dados para o registro devem estar presentes no escopo do nó.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Como o XML Bulk Load gera registro à medida que seus nós entram no escopo e envia esses registros para o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à medida que seus nós saem do escopo, os dados do registro devem estar presentes no escopo do nó.  
   
  Considere o seguinte esquema XSD, no qual a relação um-para-muitos entre  **\<cliente >** e  **\<ordem >** elementos (um cliente pode fazer muitos pedidos) é especificado usando o  **\<SQL: Relationship >** elemento:  
   

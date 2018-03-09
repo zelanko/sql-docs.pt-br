@@ -1,36 +1,33 @@
 ---
-title: Interface IMDEmbeddedData | Microsoft Docs
+title: IMDEmbeddedData Interface | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 584e13737a74d02239a9b9ff8d517ef58f53c1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="imdembeddeddata-interface"></a>Interface IMDEmbeddedData
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  O IMDEmbeddedData é uma interface pública usada para gerenciar inserida [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um modelo de tabela. A interface herda o **IPersistStream** interface. A interface permite as seguintes operações:  
+# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O IMDEmbeddedData é uma interface pública usada para gerenciar inserida [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um modelo de tabela. A interface herda o **IPersistStream** interface. A interface permite as seguintes operações:  
   
 -   Obter um identificador do fluxo inserido no documento contêiner.  
   
@@ -115,7 +112,7 @@ HRESULT GetStreamIdentifier (
   
  Os valores possíveis para DBPROP_MSMD_EMBEDDED_DATA são:  
   
-|Nome|Valor|Definição|  
+|Nome|Value|Definição|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Nenhum banco de dados inserido disponível|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|O aplicativo atual contém o banco de dados inserido|  
@@ -235,7 +232,7 @@ HRESULT Cancel ( void )
  **S_OK**  
  A operação foi cancelada com êxito.  
   
- **DB_E_CANTCANCEL EM**  
+ **DB_E_CANTCANCEL**  
  Nenhuma operação cancelável está em andamento atualmente.  
   
  **E_FAIL**  

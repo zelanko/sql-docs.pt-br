@@ -2,28 +2,31 @@
 title: "R e SQL dados e tipos de objetos de dados (R no início rápido do SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 4207d26b2f38e3f13a45c21ab40293cf0dc95219
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R e SQL dados e tipos de objetos de dados (R no início rápido do SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Nesta etapa, você aprenderá sobre alguns problemas comuns que podem surgir ao mover dados entre R e SQL Server:
 
@@ -73,6 +76,7 @@ Para descobrir por que os exemplos 1 e 2 demonstram resultados tão diferentes, 
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -84,7 +88,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - JSON, extracting
 - JSON, querying
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebb940035e4cad1ef898cfe83e1932db573848ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -109,10 +108,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="example-1"></a>Exemplo 1  
- O exemplo a seguir usa os valores das propriedades JSON `town` e `state` nos resultados da consulta. Como **JSON_VALUE** preserva o agrupamento de origem, a ordem de classificação dos resultados depende do agrupamento do `jsonInfo` coluna.  
+ O exemplo a seguir usa os valores das propriedades JSON `town` e `state` nos resultados da consulta. Como **JSON_VALUE** preserva o agrupamento de origem, a ordem de classificação dos resultados depende do agrupamento do `jsonInfo` coluna. 
+
+> [!NOTE]
+> (Este exemplo assume que uma tabela denominada `Person.Person` contém um `jsonInfo` colunas de texto JSON, e esta coluna tem a estrutura mostrada anteriormente na discussão de modo incerto e modo estrito. O banco de dados de exemplo AdventureWorks, o `Person` a tabela de fato não contém um `jsonInfo` coluna.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
@@ -150,4 +152,3 @@ CREATE TABLE dbo.Store
  [Dados JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   
-

@@ -3,8 +3,9 @@ title: "Método LoadFromFile (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::raw_LoadFromFile
-helpviewer_keywords: LoadFromFile method [ADO]
+f1_keywords:
+- _Stream::raw_LoadFromFile
+helpviewer_keywords:
+- LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 071ba2d6a2aa5af96af07274455a7495a9650dea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadfromfile-method-ado"></a>Método LoadFromFile (ADO)
 Carrega o conteúdo de um arquivo existente em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -40,7 +43,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  Um **cadeia de caracteres** valor que contém o nome de um arquivo a ser carregado para o **fluxo**. *Nome de arquivo* pode conter qualquer caminho válido e um nome no formato UNC. Se o arquivo especificado não existir, ocorrerá um erro de tempo de execução.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método pode ser usado para carregar o conteúdo de um arquivo local em um **fluxo** objeto. Isso pode ser usado para carregar o conteúdo de um arquivo local para um servidor.  
   
  O **fluxo** objeto já deve estar aberto antes de chamar **LoadFromFile**. Este método não altera a associação do **fluxo** objeto; ainda será associado ao objeto especificado pela URL ou **registro** com a qual o **fluxo** originalmente aberto.  

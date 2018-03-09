@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPCOUNT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b5d0020ea38edda21d5aec96b0b5a469d2f5f963
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor que é fornecido pelo \<expressão de classificação > argumento determina a ordem decrescente de classificação para as linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas superiores especificado no \<contagem > argumento será retornado.  
   
  A função TopCount foi apresentada originalmente para habilitar previsões associativas e, em geral, produz os mesmos resultados que uma instrução que inclui **SELECT TOP** e **ORDER BY** cláusulas. Você obterá melhor desempenho para previsões associativas se você usar o **prever (DMX)** função, que oferece suporte à especificação de um número de previsões a serem retornadas.  
@@ -123,7 +121,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  Os resultados contêm as três principais previsões classificadas pelo valor de suporte. Você pode substituir $SUPPORT por $PROBABILITY ou $ADJUSTED_PROBABILITY para retornar previsões classificadas por probabilidade ou probabilidade ajustada. Para obter mais informações, consulte **prever (DMX)**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)   

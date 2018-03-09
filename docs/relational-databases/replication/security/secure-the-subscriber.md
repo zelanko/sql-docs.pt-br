@@ -2,10 +2,14 @@
 title: Proteger o assinante | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a589852adf45de4200a87fe99c3fbc087f74479c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
-  Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="distribution-agent"></a>Agente de Distribuição  
  Há um Agente de Distribuição por assinatura (um agente independente, o padrão para publicações criadas no Assistente para Nova Publicação) ou um Agente de Distribuição por par composto por banco de dados de publicação e banco de dados de assinatura (um agente compartilhado). T  
@@ -34,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
  Para especificar informações de conexão para assinaturas pull, consulte [Criar uma assinatura pull](../../../relational-databases/replication/create-a-pull-subscription.md)  
   
-## <a name="merge-agent"></a>Agente de Mesclagem  
+## <a name="merge-agent"></a>Merge Agent  
  Cada assinatura de mesclagem possui seu próprio Agente de Mesclagem que se conecta e atualiza ambos, o Publicador e o Assinante.  
   
  Para especificar informações de conexão para assinaturas push, consulte [Criar uma assinatura push](../../../relational-databases/replication/create-a-push-subscription.md).  
@@ -76,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
      Para obter mais informações, consulte Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  

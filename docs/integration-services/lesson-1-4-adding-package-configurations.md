@@ -1,11 +1,11 @@
 ---
-title: "Etapa 4: Adicionando configurações de pacote | Microsoft Docs"
+title: "Etapa 4: adicionar configurações de pacote | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,22 +15,21 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5dc54fff85b068f6ef494bb242949abcc598cfb3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>Lição 1-4 - adicionar configurações de pacote
+# <a name="lesson-1-4---adding-package-configurations"></a>Lição 1-4 – adicionar configurações de pacote
 Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
   
-O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece uma variedade de tipos de configuração. Você pode armazenar configurações em variáveis de ambiente, entradas de Registro, variáveis definidas pelo usuário, tabelas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos XML. Para fornecer flexibilidade adicional, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte ao uso de configurações indiretas. Isso significa que você usa uma variável de ambiente para especificar o local da configuração, que por sua vez especifica os valores reais. Os pacotes no projeto Tutorial de Implantação usam uma combinação de arquivos de configuração XML e configurações indiretas. Um arquivo de configuração XML pode incluir configurações para várias propriedades e, quando apropriado, pode ser mencionado por vários pacotes. Neste tutorial, você usará um arquivo de configuração separado para cada pacote.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece uma variedade de tipos de configuração. Você pode armazenar configurações em variáveis de ambiente, entradas de Registro, variáveis definidas pelo usuário, tabelas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos XML. Para fornecer flexibilidade adicional, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte ao uso de configurações indiretas. Isso significa que você usa uma variável de ambiente para especificar o local da configuração, que por sua vez especifica os valores reais. Os pacotes no projeto Tutorial de Implantação usam uma combinação de arquivos de configuração XML e configurações indiretas. Um arquivo de configuração XML pode incluir configurações para várias propriedades e, quando apropriado, pode ser mencionado por vários pacotes. Neste tutorial, você usará um arquivo de configuração separado para cada pacote.  
   
 Os arquivos de configuração normalmente contêm informações confidenciais, como cadeia de caracteres de conexão. Portanto, você deverá usar uma lista de controle de acesso (ACL) para restringir o acesso ao local ou à pasta em que você armazena os arquivos, e fornecer acesso apenas aos usuários ou contas com permissão para executar pacotes. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../integration-services/security/security-overview-integration-services.md#files).  
   
@@ -38,7 +37,7 @@ Os pacotes (DataTransfer e LoadXMLData) adicionados ao projeto Tutorial de Impla
   
 Serão criados dois arquivos de configuração, DataTransferConfig.dtsConfig e LoadXMLData.dtsConfig. Esses arquivos contêm os pares nome-valor que atualizam as propriedades nos pacotes que especificam o local dos arquivos de dados e de log usados pelo pacote. Depois, como uma etapa no processo de implantação, você atualizará os valores nos arquivos de configuração para refletir o novo local dos arquivos no computador de destino.  
   
-O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconhece que Datatransferconfig.dtsconfig e LoadXMLData.dtsConfig são dependências dos pacotes DataTransfer e LoadXMLData, e automaticamente incluirá os arquivos de configuração quando você criar o pacote de implantação na próxima lição.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconhece que Datatransferconfig.dtsconfig e LoadXMLData.dtsConfig são dependências dos pacotes DataTransfer e LoadXMLData, e automaticamente incluirá os arquivos de configuração quando você criar o pacote de implantação na próxima lição.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Para criar configuração indireta para o pacote DataTransfer  
   
@@ -141,8 +140,7 @@ O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconhece que Datat
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configurações do Pacote](../integration-services/packages/package-configurations.md)  
 [Criar configurações de pacote](../integration-services/packages/create-package-configurations.md)  
 [Acesso aos arquivos usados por pacotes](../integration-services/security/security-overview-integration-services.md#files)  
-

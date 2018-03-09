@@ -1,34 +1,33 @@
 ---
-title: "Configurar propriedades de comportamento de tabela para relatórios do Power View (SSAS Tabular) | Microsoft Docs"
+title: "Configurar propriedades de comportamento de tabela para relatórios do Power View | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurar propriedades de comportamento de tabela para relatórios
-  Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design do relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Remover subtotais indesejáveis de um relatório de matriz. O agrupamento padrão no nível do campo cria um subtotal para cada campo. Se você desejar somente um único subtotal que seja calculado no nível de linha, definir o Identificador de Linha gerará este resultado.  
   
- Você não pode definir um Identificador de Linha para tabelas marcadas como tabelas de data. Para tabelas de data, o identificador de linha é especificado quando você marca a tabela. Para obter mais informações, consulte [Caixa de diálogo Marcar Como Tabela de Data &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Você não pode definir um Identificador de Linha para tabelas marcadas como tabelas de data. Para tabelas de data, o identificador de linha é especificado quando você marca a tabela. Para obter mais informações, consulte [marcar como caixa de diálogo tabela de data ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Definindo a propriedade Manter Linhas Exclusivas  
  Esta propriedade permite especificar quais colunas transmitem informações de identidade (como um nome de funcionário ou um código de produto) de modo que possa distinguir uma linha da outra. Nos casos em que as linhas parecem idênticas (como dois clientes com o mesmo nome), as colunas que você especificar para esta propriedade serão repetidas na tabela de relatório.  

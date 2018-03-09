@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 84f3081d1f5737c9b324c0ffe51b94a1c5a7183c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cd2202d31fdb2b68b25bbe2214df156e38b9ce7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   A tabela a seguir lista e descreve os valores de configuração para **user options**. Nem todos os valores de configuração são compatíveis entre si. Por exemplo, ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF não podem ser definidas ao mesmo tempo.  
   
-    |Valor|Configuração|Descrição|  
+    |Valor|Configuração|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Controla a verificação provisória ou adiada de restrições.|  
     |2|IMPLICIT_TRANSACTIONS|Para conexões de biblioteca em rede dblib, controla se uma transação é iniciada implicitamente quando uma instrução é executada. A configuração IMPLICIT_TRANSACTIONS não tem nenhum efeito sobre conexões ODBC ou OLEDB.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
      Por padrão, nenhuma opção de usuário está configurada.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar a opção de configuração user options:  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para configurar `user options` para alterar as configurações para a opção de servidor ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -116,7 +116,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção de configuração user options  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

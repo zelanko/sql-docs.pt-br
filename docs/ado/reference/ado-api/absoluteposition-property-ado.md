@@ -3,8 +3,9 @@ title: Propriedade AbsolutePosition (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::AbsolutePosition
-helpviewer_keywords: AbsolutePosition property [ADO]
+f1_keywords:
+- Recordset15::AbsolutePosition
+helpviewer_keywords:
+- AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 491ed39340dd066955db2fd73ed986614744cff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absoluteposition-property-ado"></a>Propriedade AbsolutePosition (ADO)
 Indica a posição ordinal de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) registro atual do objeto.  
@@ -34,7 +37,7 @@ Indica a posição ordinal de um [registros](../../../ado/reference/ado-api/reco
   
  Para o código de 64 bits, use um tipo de dados que fornece armazenamento de um valor de 64 bits. Por exemplo, você pode usar longa ou outro valor que é o comprimento de 64 bits como DBORDINAL. Não use **PositionEnum** valores como eles estão limitados a 32 bits de comprimento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para definir o **AbsolutePosition** propriedade, o ADO requer que implementa o provedor OLE DB que você estiver usando o [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interface.  
   
  Acessando o **AbsolutePosition** propriedade de um **registros** que foi aberto com um um somente de encaminhamento ou cursor dinâmico gera o erro **adErrFeatureNotAvailable**. Com outros tipos de cursor, a posição correta será retornada como o provedor OLE DB oferece suporte a **IRowsetScroll:IRowsetLocate** interface. Se o provedor não oferece suporte a **IRowsetScroll** interface, a propriedade é definida como **adPosUnknown**. Consulte a documentação do provedor determinar se ele dá suporte a **IRowsetScroll**.  

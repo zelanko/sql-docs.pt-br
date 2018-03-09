@@ -2,18 +2,17 @@
 title: "Hierarquias de usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
 - dimensions [Analysis Services], hierarchies
@@ -30,19 +29,20 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 069f68e31f516a7f90a07cd462b70e0b455ab800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
-  Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  

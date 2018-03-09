@@ -1,5 +1,5 @@
 ---
-title: "+ = (Concatenação de cadeia de caracteres) (Transact-SQL) | Microsoft Docs"
+title: "+ = (Concatenação de cadeia de caracteres e atribuição) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c557bcc1d3c2f314ce57e93701b11833f5a6fc6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a1e42125e49b0191b4ccdcc3628b75d025cccb6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="string-concatenation---equal-transact-sql"></a>Concatenação de cadeia de caracteres - igual (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-string-concatenation-assignment-transact-sql"></a>+= (String Concatenation Assignment) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatena duas cadeias de caracteres e define a cadeia de caracteres como o resultado da operação. Por exemplo, se uma variável @x é igual a 'Adventure', em seguida, @x + = 'Works' assumirá o valor original de @x, adiciona 'Works' à cadeia de caracteres e define @x para esse novo valor 'AdventureWorks'.  
   
@@ -52,7 +51,7 @@ expression += expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados definido para a variável.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DEFINIR @v1 + = 'expression' é equivalente ao conjunto @v1 = @v1 + ('expression'). Além disso, defina @v1 = @v2 + @v3 + @v4 é equivalente ao conjunto @v1 = (@v2 + @v3) + @v4.  
   
  O operador + = não pode ser usado sem uma variável. Por exemplo, o código a seguir provoca um erro:  
@@ -131,9 +130,8 @@ GO
   ```   
    
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40; Adicionar EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [+ &#40; Concatenação de cadeia de caracteres &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   
-

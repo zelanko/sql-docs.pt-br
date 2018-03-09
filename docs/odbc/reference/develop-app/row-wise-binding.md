@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5caaab8154951fe771767206ce3755d84314855
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-wise-binding"></a>A associação
 Ao usar a associação, um aplicativo define uma estrutura que contém um ou dois, ou em alguns casos, três elementos para cada coluna para o qual os dados são a ser retornado. O primeiro elemento contém o valor dos dados, e o segundo elemento contém o buffer de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, a estrutura contém um elemento de terceiro. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém elementos existem linhas no conjunto de linhas.  

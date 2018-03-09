@@ -1,24 +1,27 @@
 ---
 title: Portal da Web (Modo Nativo do SSRS) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 803aa964bd9bd8e982075fe5dd9a7c359236440e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e134b496c8e7e9a3cf39c2fa8fb0f8f6cf31dafb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portal da Web (Modo Nativo do SSRS)
 
@@ -94,7 +97,7 @@ O portal da Web agrupará os itens em diferentes categorias. As categorias dispo
 - Relatórios do Power BI Desktop
 - Pastas de trabalho do Excel
 - Conjuntos de dados
-- Fontes de Dados
+- Fontes de dados
 - Recursos
 
 Você pode controlar o que é exibido selecionando **Exibir** no canto superior direito. Se você selecionar Mostrar Ocultos, esses itens serão exibidos em uma cor mais clara.

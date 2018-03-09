@@ -2,32 +2,31 @@
 title: Elemento TuningTimeInMin (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- TuningTimeInMin element
+dev_langs: XML
+helpviewer_keywords: TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "13"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bba801b3dbeee9c21c371187b4a82b9d9a77f617
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 534f7868de00a0e102ba6f80c8663f0aaa7bf279
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
-  Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,4 +74,3 @@ ms.lasthandoff: 08/02/2017
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

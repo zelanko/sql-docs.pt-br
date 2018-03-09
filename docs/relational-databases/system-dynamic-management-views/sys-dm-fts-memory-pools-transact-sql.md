@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_memory_pools (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_fts_memory_pools_TSQL
 - sys.dm_fts_memory_pools
 - dm_fts_memory_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_memory_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_memory_pools dynamic management view
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4200878f1147ba2ec91e7ab4e86b3bca3a5b0b4d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 02b742ae19835ef9167351bac9db6f53cfb5b08d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/17/2017
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|**int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
-|**buffer_size**|**int**|Tamanho de cada buffer alocado no pool de memória.|  
-|**min_buffer_limit**|**int**|Número mínimo de buffers permitido no pool de memória.|  
-|**max_buffer_limit**|**int**|Número máximo de buffers permitido no pool de memória.|  
-|**buffer_count**|**int**|Número atual de buffers de memória compartilhada no pool de memória.|  
+|**pool_id**|**Int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
+|**buffer_size**|**Int**|Tamanho de cada buffer alocado no pool de memória.|  
+|**min_buffer_limit**|**Int**|Número mínimo de buffers permitido no pool de memória.|  
+|**max_buffer_limit**|**Int**|Número máximo de buffers permitido no pool de memória.|  
+|**buffer_count**|**Int**|Número atual de buffers de memória compartilhada no pool de memória.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   

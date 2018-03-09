@@ -2,10 +2,14 @@
 title: Registrar um banco de dados como um DAC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-data-tier-apps
+ms.suite: sql
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,21 +23,22 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
-  Use o **Assistente para Registrar o Aplicativo da Camada de Dados** ou um script do Windows PowerShell para compilar uma definição do DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dados existente e registre a definição do DAC no banco de dados do sistema **msdb** (**master** no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use o **Assistente para Registrar o Aplicativo da Camada de Dados** ou um script do Windows PowerShell para compilar uma definição do DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dados existente e registre a definição do DAC no banco de dados do sistema **msdb** (**master** no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
@@ -179,7 +184,7 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

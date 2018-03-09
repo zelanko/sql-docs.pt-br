@@ -2,35 +2,30 @@
 title: "Introdução ao modelo de objeto de tabela (TOM) do Analysis Services AMO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introdução ao modelo de objeto de tabela (TOM) no Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  O modelo de objeto de tabela (TOM) é uma extensão da biblioteca do cliente de gerenciamento objeto AMO (Analysis Services), criada para dar suporte a cenários de programação para modelos de tabela criados no nível de compatibilidade 1200 e superior. Como com o AMO, TOM fornece uma maneira de lidar com as funções administrativas como criar modelos, importação e atualização de dados e atribuir funções e permissões.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+O modelo de objeto de tabela (TOM) é uma extensão da biblioteca do cliente de gerenciamento objeto AMO (Analysis Services), criada para dar suporte a cenários de programação para modelos de tabela criados no nível de compatibilidade 1200 e superior. Como com o AMO, TOM fornece uma maneira de lidar com as funções administrativas como criar modelos, importação e atualização de dados e atribuir funções e permissões.  
   
 TOM expõe metadados de tabela nativo, como **modelo**, **tabelas**, **colunas**, e **relações** objetos.  Uma exibição de alto nível da árvore de modelo de objeto, fornecida abaixo, ilustra como as partes do componente estão relacionadas.  
   
@@ -59,7 +54,7 @@ Por outro lado, quando você gerencia objetos que fazem parte de metadados de ta
 
 ### <a name="tom-and-xmla"></a>TOM e XMLA
 
-Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela do SSAS, também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
+Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela de MS-SSAS, é também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
 
 ### <a name="tom-and-json"></a>TOM e JSON
 
@@ -76,4 +71,3 @@ A decisão de usar um ou outro ficará às especificações de seus requisitos. 
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [O Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
-

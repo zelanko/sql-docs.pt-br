@@ -1,13 +1,14 @@
 ---
-title: "Usar uma Conexão de dados do Office (. odc) com relatórios | Microsoft Docs"
+title: "Usar uma conexão de dados do Office (.odc) com relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar uma conexão de dados do Office (.odc) com relatórios
   Em cenários limitados, você pode usar um arquivo de conexão de dados do Office (.odc) para fornecer informações sobre conexão com um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um arquivo .odc pode ser usado no lugar de um arquivo .rsds quando você cria uma fonte de dados compartilhados. O servidor de relatório usa um arquivo .odc do mesmo modo que usa um arquivo .rsds; ele lê o arquivo para detectar informações sobre tipo de fonte de dados, cadeia de caracteres de conexão e credenciais.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
  Se você não estiver familiarizado com arquivos .odc, pode usar as instruções a seguir para criá-los e exportá-los. Um modo simples para criar um arquivo .odc para uma fonte de dados OLE DB é usar o Excel 2007 e o Assistente para Conexão de Dados. Observe que o assistente não cria uma fonte de dados; você deverá ter uma fonte de dados externa já definida.  
   
- Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo. rsds, consulte [&#40; de criar e gerenciar fontes de dados compartilhadas O Reporting Services no SharePoint integrado modo &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo .rsds, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Para criar e exportar um arquivo .odc  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
      Se você estiver experimentando essas etapas com o banco de dados e os relatórios de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , considere que somente o relatório Vendas da Empresa funcionará prontamente com um arquivo .odc. Os outros relatórios de amostra contêm parâmetros de consulta e recursos que não funcionam com o provedor do OLE DB. Entretanto, você pode fazer com que os relatórios funcionem com o provedor do OLE DB, se os modificar primeiramente no Designer de Relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

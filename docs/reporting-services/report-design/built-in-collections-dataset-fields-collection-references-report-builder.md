@@ -1,32 +1,32 @@
 ---
-title: "Referências de coleção (construtor de relatórios e SSRS) de campos do conjunto de dados | Microsoft Docs"
+title: "Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c1a266bf27c1d31d3cb662c19903da50fb7e2b8f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Coleções internas - referências de coleção de campos do conjunto de dados (construtor de relatórios)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Coleções internas – referências de coleções de campos de conjuntos de dados (Construtor de Relatórios)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
   
- Uma referência de campo simples em uma expressão é exibida na superfície de design como uma expressão simples. Por exemplo, quando você arrasta o campo `Sales` do painel de dados do relatório para uma célula de tabela na superfície de design, o `[Sales]` é exibido. Isso representa a expressão subjacente `=Fields!Sales.Value` definida na propriedade Value da caixa de texto. Quando o relatório for executado, o processador de relatório avaliará essa expressão e exibirá os dados reais a partir da fonte de dados na caixa de texto da célula de tabela. Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) e [Coleção Fields de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ Uma referência de campo simples em uma expressão é exibida na superfície de design como uma expressão simples. Por exemplo, quando você arrasta o campo `Sales` do painel de dados do relatório para uma célula de tabela na superfície de design, o `[Sales]` é exibido. Isso representa a expressão subjacente `=Fields!Sales.Value` definida na propriedade Value da caixa de texto. Quando o relatório for executado, o processador de relatório avaliará essa expressão e exibirá os dados reais a partir da fonte de dados na caixa de texto da célula de tabela. Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) e [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Detectando campos ausentes em consultas dinâmicas em tempo de execução  
- Por padrão, os itens na coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado no qual o conjunto de resultados varia de acordo com um parâmetro de entrada, ou a consulta pode ser `SELECT * FROM`  *\<tabela >* em que a definição da tabela alterada.  
+ Por padrão, os itens na coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<table>*, em que a definição da tabela foi alterada.  
   
 > [!NOTE]  
 >  IsMissing detecta alterações no esquema do conjunto de dados entre o tempo de design e o tempo de execução de qualquer tipo de fonte de dados. IsMissing não pode ser usado para detectar membros vazios em um cubo multidimensional e não está relacionado aos conceitos da linguagem de consulta MDX de **EMPTY** e **NON EMPTY**.  
@@ -96,9 +96,8 @@ End Function
   
  Se você especificar uma propriedade que não tem suporte no campo, a avaliação da expressão será **null** (**Nothing** em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se um provedor de dados não der suporte a propriedades de campo estendidas, ou se o campo não for encontrado quando a consulta for executada, o valor da propriedade será **null** (**Nothing** em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para propriedades do tipo **String** e **Object**e zero (0) para propriedades do tipo **Integer**. Uma extensão de processamento de dados pode fazer bom uso das propriedades predefinidas ao otimizar consultas que incluem essa sintaxe.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

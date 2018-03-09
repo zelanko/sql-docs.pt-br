@@ -3,29 +3,31 @@ title: "Modos de exibição e campos de exemplo de coleções (VB) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Views collection [ADOX], Visual Basic example
 - Fields collection [ADOX]
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a031d9502ab0158f175b4f329f3e631a3bfe04b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 906b63d5182d316c7f0c82e75645002459644bc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Exemplo de coleções de campos (VB) e modos de exibição
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade e o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para recuperar informações de campo para o modo de exibição.  

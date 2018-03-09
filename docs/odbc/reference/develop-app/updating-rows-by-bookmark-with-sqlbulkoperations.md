@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Atualizando linhas por indicador com SQLBulkOperations
 Ao atualizar uma linha pelo indicador, **SQLBulkOperations** faz com que a fonte de dados atualizar uma ou mais linhas da tabela. As linhas são identificadas pelo indicador em uma coluna de indicador associado. A linha é atualizada usando dados em buffers do aplicativo para cada coluna associada (exceto quando o valor no buffer de comprimento/indicador para uma coluna é SQL_COLUMN_IGNORE). Colunas não associadas não serão atualizadas.  
@@ -50,4 +48,3 @@ Ao atualizar uma linha pelo indicador, **SQLBulkOperations** faz com que a fonte
 6.  Chamadas **SQLBulkOperations** com o *operação* argumento definido como SQL_UPDATE_BY_BOOKMARK.  
   
  Para cada linha que é enviada para a fonte de dados como uma atualização, os buffers do aplicativo devem ter dados de linha válido. Se os buffers do aplicativo foram preenchidos pela busca, se uma matriz de status de linha foi mantida, e se o valor de status de uma linha for SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW, os dados inválidos inadvertidamente foi enviados para a fonte de dados.
-

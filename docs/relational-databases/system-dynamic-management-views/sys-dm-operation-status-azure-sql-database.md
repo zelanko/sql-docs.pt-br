@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_operation_status
 - sys.dm_operation_status
 - sys.dm_operation_status_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d6096c5a32f4c7cbcd2ddd99a8990545c552c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59e6d4c26fe241cc9137b55a75854396a224064f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -40,25 +42,25 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|Identificador da operação. Não nulo.|  
-|resource_type|**int**|Indica o tipo de recurso no qual a operação é executada. Não nulo. Na versão atual, essa exibição controla as operações executadas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] somente, e o valor inteiro correspondente é 0.|  
-|resource_type_desc|**nvarchar (2048)**|Descrição do tipo de recurso no qual a operação é executada. Na versão atual, essa exibição controla as operações executadas somente no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|resource_type|**Int**|Indica o tipo de recurso no qual a operação é executada. Não nulo. Na versão atual, essa exibição controla as operações executadas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] somente, e o valor inteiro correspondente é 0.|  
+|resource_type_desc|**nvarchar(2048)**|Descrição do tipo de recurso no qual a operação é executada. Na versão atual, essa exibição controla as operações executadas somente no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nome do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no qual a operação é realizada. Não nulo.|  
 |minor_resource_id|**sql_variant**|Somente para uso interno. Não nulo.|  
-|operação|**nvarchar (60)**|Operação executada em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tal como CREATE ou ALTER.|  
+|operação|**nvarchar(60)**|Operação executada em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tal como CREATE ou ALTER.|  
 |state|**tinyint**|O estado da operação.<br /><br /> 0 = Pendente<br />1 = em andamento<br />2 = Concluído<br />3 = Falha<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = a operação está esperando a disponibilidade do recurso ou da cota.<br /><br /> IN_PROGRESS = a operação foi iniciada e está em andamento.<br /><br /> COMPLETED = a operação foi concluída com êxito.<br /><br /> FAILED = falha na operação. Consulte o **error_desc** coluna para obter detalhes.<br /><br /> CANCELLED = operação interrompida na solicitação do usuário.|  
-|percent_complete|**int**|O percentual da operação que foi concluído. Valores não são contínuos e os valores válidos estão listados abaixo. Não nulo.<br/><br/>0 = a operação não foi iniciada<br/>50 = operação em andamento<br/>100 = operação concluída|  
-|error_code|**int**|Código indicando o erro que ocorreu durante uma operação com falha. Se o valor for 0, indica que a operação foi concluída com êxito.|  
-|error_desc|**nvarchar (2048)**|Descrição do erro que ocorreu durante uma operação com falha.|  
-|error_severity|**int**|Nível de severidade do erro que ocorreu durante uma operação com falha. Para obter mais informações sobre severidades de erro, consulte [severidade de erro do mecanismo de banco de dados](http://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Reservado para uso futuro. A compatibilidade futura não está garantida.|  
+|percent_complete|**Int**|O percentual da operação que foi concluído. Valores não são contínuos e os valores válidos estão listados abaixo. Não nulo.<br/><br/>0 = a operação não foi iniciada<br/>50 = operação em andamento<br/>100 = operação concluída|  
+|error_code|**Int**|Código indicando o erro que ocorreu durante uma operação com falha. Se o valor for 0, indica que a operação foi concluída com êxito.|  
+|error_desc|**nvarchar(2048)**|Descrição do erro que ocorreu durante uma operação com falha.|  
+|error_severity|**Int**|Nível de severidade do erro que ocorreu durante uma operação com falha. Para obter mais informações sobre severidades de erro, consulte [severidade de erro do mecanismo de banco de dados](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_state|**Int**|Reservado para uso futuro. A compatibilidade futura não está garantida.|  
 |start_time|**datetime**|O carimbo de data/hora do início da operação.|  
 |last_modify_time|**datetime**|Carimbo de data/hora quando o registro foi modificado pela última vez para uma operação demorada. No caso de operações concluídas bem-sucedidas, este campo exibe o carimbo de data/hora quando a operação foi concluída.|  
   
 ## <a name="permissions"></a>Permissões  
  Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para usar esse modo de exibição, você deve estar conectado para o **mestre** banco de dados. Use o `sys.dm_operation_status` exibir no **mestre** banco de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para acompanhar o status das seguintes operações executadas em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Criar banco de dados  

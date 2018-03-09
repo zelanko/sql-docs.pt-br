@@ -25,17 +25,16 @@ helpviewer_keywords:
 - bitwise OR (|)
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 932b8cc8997a2faec55e56786a80e511fa9c273a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bb22a18a1d61857afbbc17cc82f444d6551083be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,15 +59,15 @@ expression | expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna um **int** se os valores de entrada são **int**, um **smallint** se os valores de entrada são **smallint**, ou um **tinyint** se os valores de entrada são **tinyint**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O operador bit a bit | executa um OR lógico bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado serão definidos como 1 se um ou os dois bits (para o bit atual a ser resolvido) nas expressões de entrada tiverem o valor 1; se nenhum bit nas expressões de entrada for 1, o bit no resultado será definido como 0.  
   
- Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Neste exemplo, o **smallint***expressão* é convertido em um **int**.  
+ Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Neste exemplo, o **smallint * expressão* é convertido em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma tabela com **int** dados tipos para mostrar os valores originais e coloca a tabela em uma linha.  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  
@@ -107,12 +106,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40; OR bit a bit é igual a &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

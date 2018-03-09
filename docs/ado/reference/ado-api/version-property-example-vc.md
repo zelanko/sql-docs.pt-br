@@ -3,27 +3,30 @@ title: Exemplo da propriedade Version (VC + +) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Version property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96ec6f8b7a30831b9150cdc63d7a21fb9eac8b8b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86d3b981271498ee8366ac2d8dea1f22d9e1ed61
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-example-vc"></a>Exemplo da propriedade Version (VC + +)
 Este exemplo usa o [versão](../../../ado/reference/ado-api/version-property-ado.md) propriedade de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  

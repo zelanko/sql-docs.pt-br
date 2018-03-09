@@ -1,27 +1,28 @@
 ---
 title: Trabalhando com KPIs no Reporting Services | Microsoft Docs
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -60,7 +61,7 @@ Você pode atribuir valores estáticos ou usar dados de um conjunto de dados com
 |Campo|Description|  
 |---|---|  
 |Formato do valor|  Usado para alterar o formato do valor que está em exibição.|   
-|Value|O valor a ser exibido para o KPI.|  
+|Valor|O valor a ser exibido para o KPI.|  
 |Meta|Usado como uma comparação para um valor numérico e mostrado como uma diferença percentual.|  
 |Status|Valor numérico usado para determinar a cor do bloco do KPI. Os valores válidos são 1 (verde), 0 (âmbar) e -1 (vermelho).|  
 |Conjunto de tendências|Valores numéricos separados por vírgula usados para visualizações de gráfico. Pode ser definido também como a coluna de um conjunto de dados com valores que representam a tendência.|  
@@ -75,7 +76,7 @@ Para usar os dados de conjunto de dados compartilhado, faça o seguinte:
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Selecione o **reticências (...)**  na caixa de dados. A tela **Escolher um Conjunto de Dados** será exibida.  
+2.  Selecione as **reticências (...)** na caixa de dados. A tela **Escolher um Conjunto de Dados** será exibida.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +98,7 @@ Para usar os dados de conjunto de dados compartilhado, faça o seguinte:
   
 Para remover um KPI, você pode fazer o seguinte:  
   
-1.  Selecione o **reticências (...)**  do KPI que deseja remover. Escolha **Gerenciar**.  
+1.  Selecione as **reticências (...)** do KPI que deseja remover. Escolha **Gerenciar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +108,11 @@ Para remover um KPI, você pode fazer o seguinte:
   
 ## <a name="refreshing-a-kpi"></a>Atualizando um KPI  
   
-Para atualizar o KPI, você precisará configurar um cache para o conjunto de dados compartilhado. Para obter mais informações sobre cache de planos de atualização, consulte [trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Para atualizar o KPI, você precisará configurar um cache para o conjunto de dados compartilhado. Para obter mais informações sobre planos de atualização do cache, consulte [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
   
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

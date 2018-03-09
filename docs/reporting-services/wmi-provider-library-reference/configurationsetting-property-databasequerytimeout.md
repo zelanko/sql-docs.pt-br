@@ -2,35 +2,32 @@
 title: Propriedade DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseQueryTimeout Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseQueryTimeout Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseQueryTimeout property
+helpviewer_keywords: DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 67505da58ea80c15c6029d849af594e63340e863
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7d581a0b435bfca1bd376d9eacb9256a7fca13c1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---databasequerytimeout"></a>Propriedade ConfigurationSetting - DatabaseQueryTimeout
+# <a name="configurationsetting-property---databasequerytimeout"></a>Propriedade de ConfigurationSetting – DatabaseQueryTimeout
   Especifica o número de segundos que devem decorrer antes de o servidor de relatório assumir que o comando falhou ou demorou demais para executar. O servidor de relatório está cronometrando a consulta no catálogo de SQL, não uma fonte de dados para o relatório. Leitura/gravação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -52,8 +49,7 @@ public UInt32 DatabaseQueryTimeout;
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

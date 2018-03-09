@@ -2,27 +2,30 @@
 title: "Assistente para nova assinatura (referência da interface do usuário) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce75e568b50f4d45684664897de0d4351b51d808
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistente para Nova Assinatura (referência de interface do usuário)
-  Esta seção fornece informações sobre as páginas seguintes do Assistente para Nova Assinatura:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esta seção fornece informações sobre as páginas seguintes do Assistente para Nova Assinatura:  
   
 -   [&#60;AgentName&#62; Agent Location (Local do agente &#60;AgentName&#62;)](../../relational-databases/replication/agentname-agent-location.md)  
   
@@ -44,10 +47,10 @@ ms.lasthandoff: 11/09/2017
   
 -   [Valores HOST_NAME](../../relational-databases/replication/host-name-values.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Referência de propriedades &#40;Replicação&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

@@ -2,10 +2,14 @@
 title: "Solução de problemas do IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e71773ba2cb7e49c9d76a52dbdfc96d671e9cf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3af61af6c19439e59ff055a5a0de325c8f278b61
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="troubleshooting-intellisense"></a>Solução de problemas do IntelliSense
-  Em certos casos, o funcionamento das opções do IntelliSense podem não ser o esperado:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em certos casos, o funcionamento das opções do IntelliSense podem não ser o esperado.  
   
 ## <a name="conditions-that-affect-intellisense"></a>Condições que afetam o IntelliSense  
  As seguintes condições podem afetar o comportamento do IntelliSense:  

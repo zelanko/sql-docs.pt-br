@@ -36,17 +36,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 5a67eb7c7f3686dcb0735f6e1c4a1255ab8b59bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: a96601a65e413d4990e9acb77f49c4724bf7b85c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +93,7 @@ JOIN sys.dm_exec_connections AS conn
  WITH STATUSONLY  
  Gera um relatório de progresso sobre uma especificado *ID de sessão* ou *UOW* que está sendo revertida devido a uma instrução KILL anterior. KILL WITH STATUSONLY não finaliza ou reverte o *ID de sessão* ou *UOW*; o comando somente exibe o progresso atual da reversão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  KILL normalmente é usado para finalizar um processo que esteja bloqueando outros processos importantes com bloqueios ou um processo que esteja executando uma consulta que use recursos necessários do sistema. Os processos do sistema e os processos que estejam executando um procedimento armazenado estendido não podem ser finalizados.  
   
  Use KILL com cuidado, especialmente quando processos críticos estiverem em execução. Você não pode eliminar seu próprio processo. Outros processos que você não deve eliminar incluem:  
@@ -163,16 +162,15 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 
   
 ## <a name="see-also"></a>Consulte também  
- [KILL STATS JOB &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
- [ELIMINAR assinatura de notificação de consulta &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [DESLIGAMENTO &#40; Transact-SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   
- [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.DM exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.DM tran_locks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-

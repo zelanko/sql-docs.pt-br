@@ -2,33 +2,30 @@
 title: "Power Pivot a atualização de dados com o SharePoint 2013 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 30482b2c269a3d73bd6ef4852d295ae37e52c5e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Atualização de dados do Power Pivot com o SharePoint 2013
-  O design para atualização de modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint 2013 utiliza Serviços do Excel como o principal componente para carregar e atualizar modelos de dados em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada no modo SharePoint. O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado externamente ao farm do SharePoint. A arquitetura dos Serviços do Excel do SharePoint 2013 oferece suporte para a **atualização de dados interativa** e para a **atualização de dados agendada**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O design para atualização de modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint 2013 utiliza Serviços do Excel como o principal componente para carregar e atualizar modelos de dados em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada no modo SharePoint. O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado externamente ao farm do SharePoint. A arquitetura dos Serviços do Excel do SharePoint 2013 oferece suporte para a **atualização de dados interativa** e para a **atualização de dados agendada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 ||||  
 |-|-|-|  
 ||Pastas de Trabalho do Excel 2013|Pastas de Trabalho do Excel 2010|  
-|Disparam a atualização de dados|**Interativo:** Usuário Autenticado<br /><br /> **Agendado:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serviço do sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serviço do sistema|  
+|Disparam a atualização de dados|**Interativo:** Usuário Autenticado<br /><br /> **Agendado:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serviço do sistema|  
 |Carregam a pasta de trabalho com base em bancos de dados de conteúdo|Serviços do Excel do SharePoint 2013|Serviços do Excel do SharePoint 2013|  
 |Carregam o modelo de dados na instância do Analysis Services|Serviços do Excel do SharePoint 2013|Serviços do Excel do SharePoint 2013|  
 |Enviam comandos de processamento à instância do Analysis Services|Serviços do Excel do SharePoint 2013|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serviço do sistema|  
@@ -139,7 +136,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Pontos de interesse principais da atualização de dados agendada:**  
   
--   Exige a implantação do suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para obter mais informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Exige a implantação do suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para obter mais informações, consulte [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Um usuário configura um agendamento de atualização para uma pasta de trabalho. No momento agendado, o Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] envia uma solicitação aos Serviços do Excel para:  
   
@@ -245,10 +242,9 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_moreinformation"></a> Mais informações  
  [Solucionando problemas de atualização de dados do PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Serviços do Excel no SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
+ [Serviços do Excel no SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076 (v=office.15).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instale o Analysis Services no modo do Power Pivot.](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: sys.DM clr_tasks (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_tasks_TSQL
 - dm_clr_tasks
 - dm_clr_tasks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aad56182dd79b9b5787e78964b23d7469344d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a3c99ffd172c97c5738ed2dd19bc8b07f303470
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary (8)**|Endereço da tarefa de CLR.|  
-|**sos_task_address**|**varbinary (8)**|Endereço da tarefa de lote [!INCLUDE[tsql](../../includes/tsql-md.md)] subjacente.|  
-|**appdomain_address**|**varbinary (8)**|Endereço do domínio de aplicativo no qual esta tarefa está em execução.|  
-|**estado**|**nvarchar (128)**|O estado atual da tarefa.|  
-|**abort_state**|**nvarchar (128)**|Define se a anulação está atualmente ativada (se a tarefa tiver sido cancelada). Há vários estados envolvidos ao anular tarefas.|  
-|**tipo**|**nvarchar (128)**|Tipo de tarefa.|  
-|**affinity_count**|**int**|Afinidade da tarefa.|  
-|**forced_yield_count**|**int**|Número de horas que a tarefa foi forçada a produzir.|  
+|**task_address**|**varbinary(8)**|Endereço da tarefa de CLR.|  
+|**sos_task_address**|**varbinary(8)**|Endereço da tarefa de lote [!INCLUDE[tsql](../../includes/tsql-md.md)] subjacente.|  
+|**appdomain_address**|**varbinary(8)**|Endereço do domínio de aplicativo no qual esta tarefa está em execução.|  
+|**state**|**nvarchar(128)**|O estado atual da tarefa.|  
+|**abort_state**|**nvarchar(128)**|Define se a anulação está atualmente ativada (se a tarefa tiver sido cancelada). Há vários estados envolvidos ao anular tarefas.|  
+|**type**|**nvarchar(128)**|Tipo de tarefa.|  
+|**affinity_count**|**Int**|Afinidade da tarefa.|  
+|**forced_yield_count**|**Int**|Número de horas que a tarefa foi forçada a produzir.|  
   
 ## <a name="permissions"></a>Permissões  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  

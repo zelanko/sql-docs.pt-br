@@ -1,10 +1,13 @@
 ---
 title: Monitorar e ajustar o desempenho | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,18 +31,18 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28e89f06241fe44250b058e03717a30da62f308e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
-  A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  
   
  A avaliação contínua do desempenho de banco de dados ajuda a minimizar tempos de resposta e a maximizar a taxa de transferência, permitindo alcançar desempenho ótimo. Tráfego de rede, E/S de disco e uso de CPU eficientes são fundamentais para um desempenho ótimo. É preciso analisar minuciosamente os requisitos de aplicativos, compreender a estrutura lógica e física dos dados, avaliar o uso de banco de dados e negociar compensações entre usos conflitantes, tais como a do processamento de transações online (OLTP) versus o apoio à decisão.  
   
@@ -73,7 +76,7 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
 |[Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e ajuste disponíveis no SQL Server.|  
 |[Estabelecer uma linha de base de desempenho](../../relational-databases/performance/establish-a-performance-baseline.md)|Como estabelecer uma linha de base de desempenho.|  
 |[Isolar problemas de desempenho](../../relational-databases/performance/isolate-performance-problems.md)|Isole problemas de desempenho do banco de dados.|  
-|[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar afunilamentos.|  
+|[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  
 |[Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as ferramentas de monitoramento de desempenho e atividades do Windows.|  
 |[Exibir e salvar planos de execução](../../relational-databases/performance/display-and-save-execution-plans.md)|Exiba e salve os planos de execução em um arquivo em formato XML.|  
 |[Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)|Exiba estatísticas em tempo real sobre as etapas de execução da consulta.|  

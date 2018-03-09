@@ -2,32 +2,32 @@
 title: "Revisando as propriedades de dimensão e cubo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ab4985f9faa512b77b1bccc4ea043403ddcdf3c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Lição 2-4 - propriedades de dimensão e revisando o cubo
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Depois que você definir um cubo, você pode revisar os resultados usando o Designer de Cubos. Na tarefa a seguir, você revisará a estrutura do cubo no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>Para revisar as propriedades de cubo e dimensão no Designer de Cubo  
@@ -67,11 +67,10 @@ Depois que você definir um cubo, você pode revisar os resultados usando o Desi
 10. Feche a guia do código XML.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Implantar um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Consulte também  
 [Procurar dados de dimensão no Designer de Dimensão](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   
   
-

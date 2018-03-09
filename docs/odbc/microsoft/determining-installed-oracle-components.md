@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], determining installed components
+helpviewer_keywords: ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce199d68eacb812958d2124e0230d635345e5908
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af75c56a6dd1ad4874e44d84db59babd026728fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-installed-oracle-components"></a>Determinando os componentes do Oracle instalados
 > [!IMPORTANT]  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 ```  
   
  Os arquivos do. rgs também incluem informações sobre a instalação e as descrições de cada componente.
-

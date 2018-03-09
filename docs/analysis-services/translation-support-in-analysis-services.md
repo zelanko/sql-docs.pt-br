@@ -2,13 +2,13 @@
 title: "Suporte a tradução no Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,13 +24,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Suporte a tradução no Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   Em um modelo de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode inserir várias traduções de uma legenda ou uma descrição para fornecer cadeias de caracteres específicas da cultura baseadas no LCID. Para modelos multidimensionais, as traduções podem ser adicionadas para o nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados. Para modelos de tabela, você pode traduzir descrições e legendas de tabela e coluna.  
   
  A definição de uma tradução cria os metadados e legenda traduzida dentro do modelo, mas para renderizar cadeias de caracteres localizadas em um aplicativo cliente, você deverá definir a propriedade **Language** no objeto ou passar um parâmetro **Culture** ou **Locale Identifier** na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar cadeias de caracteres em francês).  

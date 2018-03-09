@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Para definir ou alterar o nível de proteção de pacotes no prompt de comando  
   
-1.  Examine os valores disponíveis para o **ProtectionLevel** propriedade na seção, [definindo o nível de proteção de pacotes](#set_protection)e determinar o valor apropriado para seu pacote.  
+1.  Examine os valores disponíveis para a propriedade **ProtectionLevel** na seção [Configurando o nível de proteção de pacotes](#set_protection) e determine o valor apropriado do pacote.  
   
 2.  Examine os mapeamentos para a opção **Encrypt** no tópico [dtutil Utility](../../integration-services/dtutil-utility.md)e determine o inteiro apropriado a ser usado como o valor da propriedade **ProtectionLevel** selecionada.  
   
@@ -140,10 +139,10 @@ ms.lasthandoff: 08/03/2017
   
          Se você usar um comando semelhante em um arquivo em lotes, digite o espaço reservado do arquivo, "%f", como "%%f" no arquivo em lotes.  
 
-## <a name="protection_dialog"></a>Caixa de diálogo nível de proteção de projeto de pacote
+## <a name="protection_dialog"></a> Caixa de diálogo Nível de Proteção do Projeto de Pacote
   Use a caixa de diálogo **Nível de Proteção do Pacote** para atualizar o nível de proteção de um pacote. O nível de proteção determina o método de proteção, a senha ou a chave de usuário, bem como o escopo de proteção do pacote. A proteção pode incluir todos os dados ou apenas os dados confidenciais.  
   
- Para entender os requisitos e opções de segurança de pacotes, você pode achar útil ver [visão geral de segurança &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Para entender os requisitos e as opções de segurança de pacote, pode ser útil consultar [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Opções  
  **Package protection level**  
@@ -155,16 +154,15 @@ ms.lasthandoff: 08/03/2017
  **Digite a senha novamente**  
  Digite a senha novamente.  
 
-## <a name="password_dialog"></a>Caixa de diálogo de senha do pacote
+## <a name="password_dialog"></a> Caixa de diálogo Senha do Pacote
   Use a caixa de diálogo **Senha do Pacote** para digitar a senha de um pacote criptografado com uma senha. É necessário digitar uma senha se o pacote usar o nível de proteção **Criptografar dados confidenciais com senha**ou **Criptografar tudo com senha** .  
   
 ### <a name="options"></a>Opções  
  **Senha**  
  Digite a senha.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Visão geral de segurança &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [Utilitário dtutil](../../integration-services/dtutil-utility.md)  
   
-

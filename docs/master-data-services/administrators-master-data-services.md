@@ -5,10 +5,11 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: "14"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad9b72ba9a7a26b51727fa502fb2c38ec4dd6b7f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 11e0c1225adf86349c2d049e231463e1c7c1bea6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   Este artigo descreve os tipos de administradores no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administradores de modelo, administradores de entidade e superusuário.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Aprimoramentos de Segurança](http://go.microsoft.com/fwlink/p/?LinkId=615376), em msdn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Criar um banco de dados do Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  

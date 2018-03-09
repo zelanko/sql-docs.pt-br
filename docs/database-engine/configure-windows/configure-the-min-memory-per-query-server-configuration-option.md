@@ -1,14 +1,15 @@
 ---
 title: "Configurar a opção de configuração de servidor min memory per query | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - queries [SQL Server], memory
 - min memory per query option
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18458fbe7a7008c23516d372e15979e9dfc7decc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e08de3f540bfd685522c8faa70773a18798200c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
+  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
   
  **Neste tópico**  
   
@@ -55,13 +56,15 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   A opção amount of min memory per query tem precedência sobre a [Opção index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Quando ambas as opções são modificadas, e a index create memory é inferior à min memory per query, você recebe uma mensagem de aviso, mas o valor é definido. Durante a execução da consulta, você receberá um outro aviso semelhante.  
+-   A quantidade mínima de memória por consulta tem precedência sobre a opção [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Quando ambas as opções são modificadas, e a index create memory é inferior à min memory per query, você recebe uma mensagem de aviso, mas o valor é definido. Durante a execução da consulta, você receberá um outro aviso semelhante.  
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou por um profissional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificado.  
   
--   O processador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta determinar a quantidade ideal de memória a ser alocada para uma consulta. A opção min memory per query deixa o administrador especificar a quantia mínima de memória que qualquer consulta única recebe. As consultas geralmente receberão mais memória que isso, se tiverem operações hash e de classificação em um grande volume de dados. Aumentar o valor de min memory per query pode melhorar o desempenho para algumas consultas de tamanho pequeno a médio, mas fazer isso poderia conduzir a uma maior competição por recursos de memória. A opção min memory per query inclui a memória alocada para classificação.  
+-   O processador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta determinar a quantidade ideal de memória a ser alocada para uma consulta. A opção min memory per query deixa o administrador especificar a quantia mínima de memória que qualquer consulta única recebe. As consultas geralmente receberão mais memória que isso, se tiverem operações hash e de classificação em um grande volume de dados. Aumentar o valor de min memory per query pode melhorar o desempenho para algumas consultas de tamanho pequeno a médio, mas fazer isso poderia conduzir a uma maior competição por recursos de memória. A opção min memory per query inclui a memória alocada para as operações de classificação.  
+
+-    Não defina a opção de configuração do servidor min memory per query com um valor alto demais, especialmente em sistemas muito ativos, pois, nesse caso, a consulta teria que esperar até que possa assegurar a memória mínima solicitada ou até que o valor especificado na opção de configuração do servidor de espera da consulta seja excedido. Se houver mais memória disponível do que o valor mínimo necessário especificado para executar a consulta, será permitido que a consulta use a memória adicional, desde que essa memória possa ser usada com eficiência pela consulta. 
   
 ###  <a name="Security"></a> Segurança  
   
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Na caixa **Memória mínima por consulta** , insira a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como usar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para definir o valor da opção `min memory per query` como `3500` KB.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -98,14 +101,13 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção min memory per query  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

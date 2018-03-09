@@ -2,29 +2,31 @@
 title: Restaurar bancos de dados habilitados para Stretch (Stretch Database) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6f86b3d181ee105d3b7aaab7967ac9bada448b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ffd0968e84119b266c987361847ebcd7e1f8e3ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Restaure um banco de dados de backup, quando necessário, para se recuperar de muitos tipos de falhas, erros e desastres.
   
@@ -84,7 +86,7 @@ Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excl
     GO  
     ```  
     
-  ## <a name="see-also"></a>Consulte também  
+  ## <a name="see-also"></a>Consulte Também  
  [Fazer backup de bancos de dados habilitados para Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
  [Gerenciar e solucionar problemas no Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 

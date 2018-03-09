@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSdatatype_mappings
 - MSdatatype_mappings_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSdatatype_mappings view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSdatatype_mappings view
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ad922397a8c2ed6e0b4faf0f92b84ee8d3408af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0acbcbf2c70b08b44e0147989fb1f9dcd3e2301
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +40,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar (128)**|É o nome do DBMS. Abaixo estão os valores possíveis e suas descrições.<br /><br /> **MSSQLSERVER**: O destino é um banco de dados do SQL Server.<br />**ORACLE**: O destino é um banco de dados Oracle.<br />**DB2**: O destino é um banco de dados IBM DB2.<br />**SYBASE**: O destino é um banco de dados Sybase.|  
-|**sql_type**|**nvarchar (128)**|É o tipo de dados do SQL Server.|  
-|**dest_type**|**nvarchar (128)**|É o nome do tipo de dados do SQL Server.|  
+|**dbms_name**|**nvarchar(128)**|É o nome do DBMS. Abaixo estão os valores possíveis e suas descrições.<br /><br /> **MSSQLSERVER**: O destino é um banco de dados do SQL Server.<br />**ORACLE**: O destino é um banco de dados Oracle.<br />**DB2**: O destino é um banco de dados IBM DB2.<br />**SYBASE**: O destino é um banco de dados Sybase.|  
+|**sql_type**|**nvarchar(128)**|É o tipo de dados do SQL Server.|  
+|**dest_type**|**nvarchar(128)**|É o nome do tipo de dados do SQL Server.|  
 |**dest_prec**|**bigint**|É a precisão do tipo de dados do SQL Server.|  
-|**dest_create_params**|**int**|Somente para uso interno.|  
+|**dest_create_params**|**Int**|Somente para uso interno.|  
 |**dest_nullable**|**bit**|É se o tipo de dados do SQL Server oferece suporte a um valor nulo.|  
   
 ## <a name="see-also"></a>Consulte também  

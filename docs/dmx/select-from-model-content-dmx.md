@@ -5,35 +5,31 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4a5f64e297e59d612be82f99e14f89df081be12
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  The **SELECT FROM** *\<model>***. CONTEÚDO** instrução retorna o conteúdo que é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
@@ -81,7 +77,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|O nome do atributo que corresponde ao nó.|  
 |NODE_NAME|O nome do nó.|  
 |NODE_UNIQUE_NAME|O nome exclusivo do nó no modelo.|  
-|NODE_TYPE|Um número inteiro que representa o tipo do nó. .|  
+|NODE_TYPE|Um número inteiro que representa o tipo do nó. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |NODE_GUID|Nó GUID. NULL se não houver GUID.|  
 |NODE_CAPTION|Rótulo ou legenda associada ao nó. Usado principalmente para fins de exibição. Se não houver legenda, NODE_NAME é retornado.|  
 |CHILDREN_CARDINALITY|Número de filhos do nó.|  
@@ -162,10 +158,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

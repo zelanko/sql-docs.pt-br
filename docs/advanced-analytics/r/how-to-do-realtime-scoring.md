@@ -2,23 +2,26 @@
 title: "Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico fornece instruções e código de exemplo de como executar a pontuação em tempo real e recursos nativos de pontuação em 2017 do SQL Server e SQL Server 2016. O objetivo de pontuação em tempo real e pontuação nativo é melhorar o desempenho das operações de pontuação em lotes pequenos.
 

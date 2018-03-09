@@ -1,27 +1,27 @@
 ---
-title: "Exportando para XML (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exportando para XML (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório paginado no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 |**Float** (ou **Decimal** e qualquer tipo de dados inteiro ou byte)|**xsd:float**|  
 |**Double** (ou **Decimal** e qualquer tipo de dados inteiro ou byte)|**xsd:double**|  
 |**DateTime ou DataTime Offset**|**xsd:dateTime**|  
-|**Hora**|**xsd:string**|  
+|**Time**|**xsd:string**|  
 |**Booliano**|**xsd:boolean**|  
 |**String**, **Char**|**xsd:string**|  
 |Outro|**xsd:string**|  
@@ -84,11 +84,11 @@ ms.lasthandoff: 08/09/2017
   
  As definições do namespace XML e os atributos de referência do esquema também estão incluídos no elemento do relatório. As variáveis estão destacadas em negrito:  
   
- <**Relatório** xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc % 3aSchema = true" Name = "ReportName" >  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Os valores das variáveis são os seguintes:  
   
-|Nome|Value|  
+|Nome|Valor|  
 |----------|-----------|  
 |Relatório|Report.DataElementName|  
 |ReportURL|URLEncoded URL absoluto para o relatório no servidor.|  
@@ -194,12 +194,11 @@ ms.lasthandoff: 08/09/2017
  Para obter mais informações, consulte [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Consulte também  
- [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

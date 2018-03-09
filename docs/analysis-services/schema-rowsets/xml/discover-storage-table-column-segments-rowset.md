@@ -2,46 +2,44 @@
 title: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8fd3bd96766ad26c21813f137f8f12452932dea7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
-  Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução tabela ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução tabela ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
   
  **Aplica-se a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** contém as colunas a seguir.  
   
-|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Description**|  
+|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Descrição**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sim|Especifica o banco de dados tabular.<br /><br /> É possível restringir o conjunto de linhas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** usando esta coluna. Se ele for omitido, o banco de dados atual será usado.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Sim|O nome do modelo.<br /><br /> É possível restringir o conjunto de linhas **DISCOVER_STORAGE_TABLES** usando esta coluna.|  
-|**NOME_GRUPO_MEDIDAS**|**DBTYPE_WSTR**|Sim|O nome do grupo de medidas.|  
-|**NOME DA PARTIÇÃO**|**DBTYPE_WSTR**|Sim|O nome da partição.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Sim|O nome do grupo de medidas.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Sim|O nome da partição.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||O nome da dimensão.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||A ID interna do segmento de tabela.|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||A ID interna da coluna.|  
@@ -80,4 +78,3 @@ ORDER BY TABLE_ID
  [Conjuntos de linhas do esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

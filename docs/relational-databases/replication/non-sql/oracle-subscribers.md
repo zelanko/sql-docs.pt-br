@@ -2,9 +2,12 @@
 title: Assinantes Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,25 +19,25 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
-  Iniciando como o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem suporte para as assinaturas push do Oracle por meio do provedor Oracle OLE DB fornecido pela Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Iniciando como o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a assinaturas push do Oracle por meio do provedor Oracle OLE DB fornecido pela Oracle.  
   
 ## <a name="configuring-an-oracle-subscriber"></a>Configurando um Assinante Oracle  
  Para configurar um Assinante Oracle, siga estas etapas:  
   
 1.  Instale e configure o software de rede cliente Oracle e o provedor Oracle OLE DB no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o Distribuidor possa realizar as conexões ao Assinante Oracle. O software de rede cliente Oracle deve ter a versão mais recente disponível. A Oracle recomenda que os usuários instalem as mais recentes versões do software cliente. O software cliente é, portanto, muitas vezes uma versão mais recente do que o software do banco de dados. A maneira mais prática para instalar o software é usar o Instalador Universal Oracle no disco do Oracle Cliente. No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-    |Informações|Descrição|  
+    |Informações|Description|  
     |-----------------|-----------------|  
     |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
     |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
      Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-    |Ação|Descrição|  
+    |Ação|Description|  
     |------------|-----------------|  
     |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
     |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
 |**geografia**|BLOB|  
 |**geometria**|BLOB|  
 |**hierarchyid**|BLOB|  
-|**image**|BLOB|  
+|**imagem**|BLOB|  
 |**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/09/2017
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|REAL|  
+|**real**|real|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
@@ -145,8 +148,8 @@ ms.lasthandoff: 11/09/2017
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Assinar Publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -2,26 +2,31 @@
 title: "Instalando atualizações por meio do prompt de comando | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1fe67da5b3be2804b802e68927a6e7b48090de7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: ba512e9f78ab42ddcfd46d0945c4763e02e1f39e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalando atualizações no prompt de comando
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Teste e modifique os scripts de instalação para atender às necessidades da sua organização. 
  
 ## <a name="sample-syntax-for-installation"></a>Sintaxe de exemplo da instalação 
@@ -32,7 +37,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    ou 
+    ou em 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -40,7 +45,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
 - A instalação pode integrar as últimas atualizações de produto com a instalação principal, para que ela e as atualizações aplicáveis sejam instaladas ao mesmo tempo. Prepare uma instalação da instância do mecanismo de banco de dados para incluir a atualização de produto: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
     ```
 
 - Atualize somente os componentes compartilhados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as Ferramentas de Gerenciamento: 
@@ -75,7 +80,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
 > [!IMPORTANT] 
 > Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado. 
  
-|Opção|Descrição| 
+|Opção|Description| 
 |------------|-----------------| 
 |**/?**|Exibe a ajuda do prompt de comando da instalação autônoma| 
 |**/action=Patch ou /action=RemovePatch**|Especifica a ação da instalação: Patch ou RemovePatch.| 

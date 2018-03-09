@@ -3,8 +3,9 @@ title: "Método OpenSchema | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
 - Connection15::raw_OpenSchema
-helpviewer_keywords: OpenSchema method [ADO]
+helpviewer_keywords:
+- OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf2b79bc39ff1f376801b5df6c24a768067a53b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtém informações de esquema de banco de dados do provedor.  
@@ -51,7 +53,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  O GUID de uma consulta de esquema do provedor não é definida pela especificação do OLE DB. Esse parâmetro é necessário se *QueryType* é definido como **adSchemaProviderSpecific**; caso contrário, ele não é usado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **OpenSchema** método retorna uma informações sobre a fonte de dados, como o que são tabelas na fonte de dados, as colunas nas tabelas, e os tipos de dados com suporte.  
   
  O *QueryType* argumento é um GUID que indica as colunas (esquemas) é retornado. A especificação OLE DB tem uma lista completa de esquemas.  

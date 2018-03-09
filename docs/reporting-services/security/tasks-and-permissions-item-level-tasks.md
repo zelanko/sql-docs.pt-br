@@ -1,31 +1,30 @@
 ---
-title: "Tarefas de nível de item | Microsoft Docs"
+title: "Tarefas em nível de item | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- item-level tasks [Reporting Services]
+helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 067a0b9d4f33e20625fb796fa98f7b4ec6184f3e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="tasks-and-permissions---item-level-tasks"></a>Tarefas e permissões - tarefas de nível de Item
+# <a name="tasks-and-permissions---item-level-tasks"></a>Tarefas e permissões – tarefas em nível de item
   Uma tarefa em nível de item é uma coleção de permissões relacionadas a um relatório, pasta, modelo de relatório, recurso ou fonte de dados compartilhada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também inclui tarefas em nível do sistema que se aplicam ao site do servidor de relatório como um todo. Para obter mais informações, consulte [Tarefas de nível de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Para obter mais informações sobre tarefas e permissões em geral, consulte [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
 |Criar relatórios vinculados|Relatórios|Criar Link<br /><br /> Ler Propriedades|  
 |Gerenciar todas as assinaturas|Relatórios|Ler Propriedades<br /><br /> Ler Qualquer Assinatura<br /><br /> Criar Qualquer Assinatura<br /><br /> Excluir Qualquer Assinatura<br /><br /> Atualizar Qualquer Assinatura|  
 |Gerenciar fontes de dados|Pastas|Criar Fonte de Dados|  
-|Gerenciar fontes de dados|Fontes de Dados|Atualizar Propriedades<br /><br /> Excluir Atualizar Conteúdo<br /><br /> Ler Propriedades|  
+|Gerenciar fontes de dados|Fontes de dados|Atualizar Propriedades<br /><br /> Excluir Atualizar Conteúdo<br /><br /> Ler Propriedades|  
 |Gerenciar pastas|Pastas|Criar Pasta<br /><br /> Excluir Atualizar Propriedades<br /><br /> Ler Propriedades|  
 |Administrar assinaturas individuais|Relatórios|Ler Propriedades<br /><br /> Criar Assinatura<br /><br /> Excluir Assinatura<br /><br /> Ler Assinatura<br /><br /> Atualizar Assinatura|  
 |Gerenciar modelos|Pastas|Criar Modelo|  
@@ -64,8 +63,7 @@ ms.lasthandoff: 08/09/2017
 |Exibir recursos|Recursos|Ler Conteúdo<br /><br /> Ler Propriedades|  
 |Exibir recursos|Partes de relatório|Ler Conteúdo<br /><br /> Ler Propriedades|  
   
-## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

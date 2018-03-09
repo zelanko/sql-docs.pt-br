@@ -3,7 +3,7 @@ title: "Método GetObjectOwner (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 51092c3cf38f9b8ae9d5d81bbbea0177df097f1d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3c6f6aa4401646f43dd303988cc151d1ed43d21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getobjectowner-method-adox"></a>Método GetObjectOwner (ADOX)
 Retorna o proprietário de um objeto em um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -54,7 +53,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *ObjectTypeId*  
  Opcional. Um **Variant** valor que especifica o GUID de um tipo de objeto de provedor não definido pela especificação do OLE DB. Esse parâmetro é necessário se *ObjectType* é definido como **adPermObjProviderSpecific**; caso contrário, ele não é usado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o provedor não dá suporte a retorno proprietários de objeto, ocorrerá um erro.  
   
 ## <a name="applies-to"></a>Aplica-se a  
@@ -63,4 +62,3 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de métodos de SetObjectOwner (VB) e GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)
-

@@ -2,27 +2,30 @@
 title: Migrar para um banco de dados parcialmente independente | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb9e9e7b1e5fc3dd47259f92314fb10c9f5fb262
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c2bad59ca0fb052d9adcfd15f41efc7c995db08
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrar para um banco de dados independente parcialmente
-  Este tópico discute como preparar para alterar para o modelo de banco de dados independente parcialmente e, em seguida, fornece as etapas de migração.  
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico discute como preparar para alterar para o modelo de banco de dados independente parcialmente e, em seguida, fornece as etapas de migração.  
   
  **Neste tópico:**  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Você deve entender o modelo de banco de dados independente parcialmente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
   
--   Você deve entender os riscos que são exclusivos para bancos de dados independentes parcialmente. Para saber mais, veja [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+-   Você deve entender os riscos que são exclusivos para bancos de dados independentes parcialmente. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 -   Bancos de dados independentes não oferecem suporte à replicação, Change Data Capture ou controle de alterações. Confirme que o banco de dados não usa estes recursos.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitando bancos de dados independentes usando Transact-SQL  
  O exemplo a seguir habilita bancos de dados independentes na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -77,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertendo um banco de dados para independente parcialmente usando Transact-SQL  
  O exemplo a seguir converte um banco de dados chamado `Accounting` para um banco de dados independente parcialmente.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -96,7 +99,7 @@ GO
 ##  <a name="users"></a> Migrando usuários para usuários de bancos de dados independentes  
  O exemplo a seguir migra todos os usuários baseados em logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuários de bancos de dados independentes com senhas. O exemplo exclui os logons que não estão habilitados. O exemplo deve ser executado no banco de dados independente.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -119,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

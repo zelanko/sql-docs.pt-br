@@ -3,8 +3,11 @@ title: "Caixa de diálogo Abrir Arquivo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
-Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
   
 Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  
   
@@ -32,7 +35,7 @@ Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e e
 > Antes de abrir um projeto ou componente no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], determine a integridade de seu código. O ato de abrir o projeto ou componente em um [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] pode executar seu código em um processo de confiança em sua máquina local.  
   
 ## <a name="option"></a>Opção  
-**Examinar**  
+**Look in**  
 Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pasta nessa lista exibe o conteúdo da pasta no painel principal.  
   
 ## <a name="my-places-bar"></a>Barra Meus Locais  
@@ -65,13 +68,13 @@ Navega na árvore até a próxima pasta mais alta na exibição em árvore.
 **Pesquisar na Web**  
 Esse botão não está disponível.  
   
-**Delete (excluir)**  
+**Delete (excluir) (excluir)**  
 Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
 **Nova Pasta**  
 Exibe a caixa de diálogo **Nova Pasta** . Use esta opção para criar uma nova pasta filho abaixo da pasta selecionada na caixa de listagem suspensa **Examinar** .  
   
-## <a name="views"></a>Exibições  
+## <a name="views"></a>exibições  
 Fornece opções para organizar e exibir o conteúdo do item selecionado na caixa de listagem suspensa **Exibições** .  
   
 **Miniaturas**  

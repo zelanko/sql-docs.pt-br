@@ -1,5 +1,5 @@
 ---
-title: Analysis Services tarefa executar DDL | Microsoft Docs
+title: Tarefa Executar DDL do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: aba320cac8593357039ed9ab4977dbb5fda091cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services
   A tarefa Executar DLL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa instruções DDL (linguagem de definição de dados) que podem criar, descartar ou alterar modelos de mineração e objetos multidimensionais, como cubos e dimensões. Por exemplo, uma instrução DDL pode criar uma partição no cubo **Adventure Works** ou excluir uma dimensão do [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], o exemplo de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluído no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -249,7 +248,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor da Tarefa Executar DDL do Analysis Services (Página DDL)
@@ -257,14 +256,14 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Opções estáticas  
  **Conexão**  
- Selecione um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto ou um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gerenciador de conexão na lista ou clique em \< **nova conexão...** > e use o **adicionar Gerenciador de Conexão do Analysis Services** caixa de diálogo para criar uma nova conexão.  
+ Selecione um projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou um gerenciador de conexões [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Especifique a origem da instrução DDL. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Direct Input**|Define a origem da instrução DDL armazenada na caixa de texto **SourceDirect** . A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
 |**File Connection**|Define a origem para um arquivo que contém a instrução DDL. A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
@@ -278,14 +277,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Origem**  
- Selecione uma conexão de arquivo na lista ou clique em \< **nova conexão...** > e use o **Gerenciador de Conexão de arquivo** caixa de diálogo para criar uma nova conexão.  
+ Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Origem**  
- Selecione uma variável na lista ou clique em \< **nova variável...** > e use o **Adicionar variável** caixa de diálogo para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...**> e use a caixa de diálogo **Adicionar Variável** para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
-

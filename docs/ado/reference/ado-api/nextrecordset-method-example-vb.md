@@ -3,27 +3,30 @@ title: "Exemplo do método NextRecordset (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: NextRecordset method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4ad28e324126f0dc7374b6882e727f1052e41d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bf08a82d23f4fc89539ef87bc52b612a578915e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-example-vb"></a>Exemplo do método NextRecordset (VB)
 Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução de comando composta composta de três separado **selecione** instruções.  

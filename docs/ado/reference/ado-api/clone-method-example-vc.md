@@ -3,7 +3,7 @@ title: "Exemplo do método (VC + +) clone | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VC++ example
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7a9e5078fc0f97f17d38b18afdfe5809bf94a6ca
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c04c76709c61596e87e704a4ea6ce58df8b96c79
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-example-vc"></a>Exemplo do método clone (VC + +)
 Este exemplo usa o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar cópias de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicionar o ponteiro de registro de cada cópia independentemente.  
@@ -229,4 +228,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

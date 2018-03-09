@@ -8,21 +8,22 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfa7e8c3bf37e06f32d408f977b258110e907c17
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ae71d17925d069a8bf7211b0692b6787467dbea
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operações de serviço Web categorizadas (Master Data Services)
   O serviço Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] contém um conjunto completo de operações que permitem a você escrever código para controlar todos os recursos que o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] usa por meio de sua interface do usuário. As operações de serviço Web são definidas pela interface <xref:Microsoft.MasterDataServices.IService> e são implementadas como métodos na classe <xref:Microsoft.MasterDataServices.ServiceClient>. Este tópico agrupa as operações do serviço Web em categorias conceituais para ajudá-lo a entender como usar a API do serviço Web.  

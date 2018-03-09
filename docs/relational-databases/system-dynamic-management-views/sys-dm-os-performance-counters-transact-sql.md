@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_performance_counters (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_performance_counters_TSQL
 - dm_os_performance_counters_TSQL
 - sys.dm_os_performance_counters
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_performance_counters dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_performance_counters dynamic management view
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0251869bd6dc3fb3ef39b5aebb31af346648b2d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32640c1c4bbc1a40927bece5663401cfcad3ac05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -42,12 +45,12 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Categoria para a qual este contador pertence.|  
 |**counter_name**|**nchar(128)**|Nome do contador. Para obter mais informações sobre um contador, esse é o nome do tópico para selecionar na lista de contadores no [usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**nome_da_instância**|**nchar(128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
+|**instance_name**|**nchar(128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
 |**cntr_value**|**bigint**|Valor atual do contador.<br /><br /> **Observação:** para contadores por segundo, esse valor é cumulativo. O valor de taxa deve ser calculado pela amostragem do valor a intervalos de tempo curtos. A diferença entre qualquer dois valores de amostra sucessivos é igual à taxa para o intervalo de tempo usado.|  
-|**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Consulte [tipos de contador de desempenho WMI](http://msdn2.microsoft.com/library/aa394569.aspx) no MSDN ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**cntr_type**|**Int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Consulte [tipos de contador de desempenho WMI](http://msdn2.microsoft.com/library/aa394569.aspx) no MSDN ou a documentação do Windows Server para obter mais informações sobre tipos de contador de desempenho.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a instância da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não conseguir exibir os contadores de desempenho do sistema operacional Windows, use a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para confirmar se os contadores de desempenho foram desabilitados.  
   
 ```  

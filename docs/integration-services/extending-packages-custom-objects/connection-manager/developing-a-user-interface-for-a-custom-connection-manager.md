@@ -1,5 +1,5 @@
 ---
-title: "Desenvolvendo uma Interface de usuário para um Gerenciador de Conexão personalizado | Microsoft Docs"
+title: "Desenvolver uma interface do usuário para um gerenciador de conexões personalizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9d48e70032b2022e8dc0359b5cf23bd42440f54f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
   Depois de ter substituído a implementação das propriedades e dos métodos da classe de base para fornecer sua funcionalidade personalizada, talvez você queira criar uma interface do usuário personalizada para seu gerenciador de conexões. Se você não criar uma interface de usuário personalizada, os usuários poderão configurar seu gerenciador de conexões somente utilizando a janela Propriedades.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
  Em um projeto ou assembly de interface de usuário personalizado, você normalmente tem duas classes – uma classe que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> e o formulário do Windows exibido para reunir informações do usuário.  
   
 > [!IMPORTANT]  
->  Depois de assinar e criar sua interface de usuário personalizada e instalá-la no cache de assembly global, conforme descrito em [codificando um Gerenciador de Conexão personalizado](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), lembre-se de fornecer o nome totalmente qualificado desta classe no <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> propriedade o <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
+>  Depois de assinar e criar sua interface do usuário personalizada e instalá-la no cache de assembly global, conforme descrito em [Codificar um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), lembre-se de fornecer o nome totalmente qualificado desta classe na propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
   
 > [!NOTE]  
 >  A maioria das tarefas, fontes e destinos incluídos no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] funcionam somente com tipos específicos de gerenciadores de conexões internos. Portanto, esses exemplos não podem ser testados com as tarefas e componentes internos.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 >  Talvez não seja necessário gravar nenhum código para o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>, se nenhuma limpeza for exigida quando o usuário excluir uma instância do gerenciador de conexões.  
   
 ### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário   
- No método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, o designer fornece uma referência para o gerenciador de conexões que está sendo configurado, dessa forma a classe de interface do usuário pode modificar as propriedades do gerenciador de conexões. Conforme mostrado no código a seguir, seu código precisa armazenar em cache a referência para o Manager de conexão para usar mais tarde.  
+ No método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, o designer fornece uma referência para o gerenciador de conexões que está sendo configurado, dessa forma a classe de interface do usuário pode modificar as propriedades do gerenciador de conexões. Conforme mostrado no código a seguir, seu código precisa armazenar em cache a referência ao gerenciador de conexões para uso futuro.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +168,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  Depois de criar a classe de interface do usuário que implementa os métodos da interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, você deverá criar um formulário do Windows onde o usuário possa configurar as propriedades do gerenciador de conexões.  
   
 ### <a name="initializing-the-user-interface-form"></a>Inicializando o formulário de interface do usuário   
- Quando você exibir seu formulário personalizado para editar, poderá transmitir uma referência ao gerenciador de conexões que está sendo editado. Você pode passar essa referência utilizando um construtor personalizado para a classe de formulário ou criando seu próprio **inicializar** método conforme mostrado aqui.  
+ Quando você exibir seu formulário personalizado para editar, poderá transmitir uma referência ao gerenciador de conexões que está sendo editado. Você pode transmitir essa referência utilizando um construtor personalizado para a classe de formulário ou criando seu próprio método **Initialize**, conforme mostrado aqui.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -294,9 +292,8 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```
   
-## <a name="see-also"></a>Consulte também  
- [Criar um Gerenciador de Conexão personalizada](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Codificando um Gerenciador de Conexão personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
+ [Codificar um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

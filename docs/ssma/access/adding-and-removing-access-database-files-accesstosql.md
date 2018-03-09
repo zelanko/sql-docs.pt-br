@@ -1,10 +1,13 @@
 ---
 title: Adicionando e removendo o acesso a arquivos (AccessToSQL) do banco de dados | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,11 +39,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
 Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto SSMA. Esses bancos de dados devem ser Access 97 ou posterior. Se você tiver bancos de dados de uma versão anterior do Access, você deve converter os bancos de dados em uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados do Access 97 ou posterior antes de adicioná-los para o SSMA.  
@@ -137,7 +140,7 @@ Você pode remover um banco de dados de um projeto seguindo estas etapas.
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [conectar ao SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Criando e gerenciando projetos](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   

@@ -2,9 +2,12 @@
 title: "Inicializar uma assinatura transacional sem um instantâneo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 471ff7f62145dd3e6593ab449545f5ddb49612eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
-  Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  
   
 -   Especificando um backup. Restaure o backup no Assinante e, então, o Agente de Distribuição copia os metadados de replicação e procedimentos do sistema necessários. Inicializando com um backup é a forma mais fácil de entregar os dados ao Assinante e é conveniente, porque qualquer backup recente pode ser usado se for feito após a publicação ter sido habilitada para inicialização com um backup.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
  Para inicializar uma assinatura com um método alternativo, consulte [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inicializar uma assinatura](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

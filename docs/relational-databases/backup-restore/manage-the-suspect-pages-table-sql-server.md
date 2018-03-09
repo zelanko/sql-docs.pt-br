@@ -2,9 +2,12 @@
 title: Gerenciar a tabela suspect_pages (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 726a96b1ca958cf7ecb3254a6d038972d3e6e4b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8860ca10da3f28750d62f2fb1a926069cec496c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gerenciar a tabela suspect_pages (SQL Server)
-  Este tópico descreve como gerenciar a tabela **suspect_pages** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A tabela **suspect_pages** é usada para manter informações sobre páginas suspeitas e é relevante para ajudar a decidir se a restauração é necessária. A tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) reside no [banco de dados msdb](../../relational-databases/databases/msdb-database.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como gerenciar a tabela **suspect_pages** em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A tabela **suspect_pages** é usada para manter informações sobre páginas suspeitas e é relevante para ajudar a decidir se a restauração é necessária. A tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) reside no [banco de dados msdb](../../relational-databases/databases/msdb-database.md).  
   
  Uma página é considerada "suspeita" quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] encontra um dos seguintes erros ao tentar ler uma página de dados:  
   
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Na janela de consulta, edite, atualize ou exclua as linhas desejadas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Para gerenciar a tabela suspect_pages  
   
@@ -163,7 +166,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

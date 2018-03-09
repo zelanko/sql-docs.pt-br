@@ -1,13 +1,14 @@
 ---
-title: "Caixa de diálogo de propriedades do conjunto de dados, parâmetros | Microsoft Docs"
+title: "Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.parameters.f1
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-caps.latest.revision: 40
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "40"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e4a62f8a01d973063370df81bfef5af1fc929c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 07882659f3ead59efe15d02ede109b6cae11ba29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros
   Selecione **Parâmetros** na caixa de diálogo **Propriedades do Conjunto de Dados** para adicionar, alterar e excluir os parâmetros de consulta, incluindo os parâmetros de consulta que estabelecem vínculo com os parâmetros de relatório.  
@@ -53,10 +53,9 @@ ms.lasthandoff: 08/09/2017
  **Seta para baixo**  
  Mova o parâmetro selecionado para baixo na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

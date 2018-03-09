@@ -2,26 +2,31 @@
 title: "Criar, alterar e remover índices XML seletivos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e953e9ad5062a246ed4adc40f4f9ccae7337abff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2c29c9667b290d438bb37ebe3084a3807740c875
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Criar, alterar e remover índices XML seletivos
-  Descreve como criar um novo índice XML seletivo ou alterar ou remover um índice XML seletivo existente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Descreve como criar um novo índice XML seletivo ou alterar ou remover um índice XML seletivo existente.  
   
  Para obter mais informações sobre índices XML seletivos, veja [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -35,7 +40,7 @@ ms.lasthandoff: 11/09/2017
   
  O exemplo a seguir mostra a sintaxe para criar um índice XML seletivo. Ele também mostra variações da sintaxe para descrever os caminhos a serem indexados, com dicas de otimização opcionais.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX sxi_index  
 ON Tbl(xmlcol)  
   
@@ -58,7 +63,7 @@ FOR(
   
  O exemplo a seguir mostra uma instrução ALTER INDEX. Essa instrução adiciona o caminho `'/a/b/m'` à parte XQuery do índice e exclui o caminho `'/a/b/e'` da parte SQL do índice criado no exemplo no tópico [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md). O caminho a ser excluído é identificado pelo nome atribuído a ele quando foi criado.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -79,7 +84,7 @@ FOR
   
  O exemplo a seguir mostra uma instrução DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX sxi_index ON tbl  
 ```  
   

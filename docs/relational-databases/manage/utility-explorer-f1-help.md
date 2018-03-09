@@ -2,11 +2,13 @@
 title: "Ajuda F1 do Gerenciador do Utilitário | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
-  As seções a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As seções a seguir documentam a funcionalidade e as operações associadas do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
  Para consultar dados no painel do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione o nó superior na árvore do Gerenciador do Utilitário, identificado como “Utility<UCP_Name>\\(ComputerName\UCP).” O painel inclui dados resumidos e dados detalhados de todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os aplicativos da camada de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para atualizar dados no painel, clique com o botão direito do mouse no nó superior da árvore do Gerenciador do Utilitário e selecione **Atualizar**.  
@@ -129,9 +130,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de aplicativos da camada de dados que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
   
--   Seta para cima vermelha - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -269,11 +270,11 @@ ms.lasthandoff: 08/03/2017
   
  Os ícones do estado de integridade fornecem o status resumido de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoria de utilização:  
   
--   Verificação verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
   
--   Seta para cima vermelha - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -513,9 +514,8 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
   
  [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

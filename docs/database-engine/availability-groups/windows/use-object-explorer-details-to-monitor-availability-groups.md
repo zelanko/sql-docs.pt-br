@@ -2,9 +2,12 @@
 title: Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
-  Este tópico descreve como usar o painel **Detalhes do Pesquisador de Objetos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para monitorar e gerenciar grupos de disponibilidade AlwaysOn, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar o painel **Detalhes do Pesquisador de Objetos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para monitorar e gerenciar grupos de disponibilidade Always On, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.  
   
 > [!NOTE]  
 >  Para obter informações sobre como usar o painel de detalhes do Pesquisador de objetos, veja [Painel de detalhes do Pesquisador de Objetos](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  No Pesquisador de Objetos, conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja monitorar um grupo de disponibilidade e clique no nome do servidor para expandir a árvore de servidores.  
   
-3.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+3.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 4.  O painel **Detalhes do Pesquisador de Objetos** exibe todos os grupos de disponibilidade para os quais a instância do servidor hospeda uma réplica. Para cada grupo de disponibilidade, a coluna **Instância do Servidor (Primária)** exibe o nome da instância do servidor que está hospedando a réplica primária.  Para exibir mais informações sobre um determinado grupo de disponibilidade, selecione-o no Pesquisador de Objetos.  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
  Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Não Permitir Conexões**|Nenhuma conexão direta é permitida para os bancos de dados de disponibilidade quando essa réplica de disponibilidade está agindo como uma réplica secundária. Os bancos de dados secundários não estão disponíveis para acesso de leitura.|  
 |**Permitir Somente Conexões de Intenção de Leitura**|Apenas conexões diretas somente leitura são permitidas quando essa réplica está agindo como uma réplica secundária. Todos os bancos de dados na réplica estão disponíveis para acesso de leitura.|  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
  **Estado da Conexão**  
  Indica se uma réplica secundária está conectada atualmente à réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Desconectado**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
 |**Conectado**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
  **Estado da Sincronização**  
  Indica se uma réplica secundária está sincronizada no momento com a réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Não Sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
 |**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
@@ -127,7 +130,7 @@ ms.lasthandoff: 11/09/2017
   
  Os estados de sincronização possíveis são:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: no modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
 |||  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/09/2017
  **Suspenso**  
  Indica se o banco de dados de disponibilidade está online no momento. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Suspenso**|Esse estado indica que o banco de dados está suspenso localmente e precisa ser retomado manualmente.<br /><br /> Na réplica primária, o valor não é confiável para um banco de dados secundário. Para determinar com confiança se um banco de dados secundário está suspenso, consulte-o na réplica secundária que hospeda o banco de dados.|  
 |**Não Unido**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  
@@ -145,7 +148,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para bancos de dados de disponibilidade, veja [SQL Server, Réplica de banco de dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Exibir propriedades do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   

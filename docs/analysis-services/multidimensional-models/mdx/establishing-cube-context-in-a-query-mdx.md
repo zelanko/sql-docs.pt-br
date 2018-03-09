@@ -2,16 +2,13 @@
 title: Estabelecendo o contexto de cubo em uma consulta (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cube context
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08eee9eb06b6e69e5681f5d88ac3f9c7f7a29d27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 570d327b099508fc98f0e247b919fb222db54509
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Estabelecendo o contexto de cubo em uma consulta (MDX)
-  Toda consulta MDX é executada em um contexto de cubo especificado. Esse contexto define os membros que são avaliados pelas expressões da consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Toda consulta MDX é executada em um contexto de cubo especificado. Esse contexto define os membros que são avaliados pelas expressões da consulta.  
   
  Na instrução SELECT, a cláusula FROM determina o contexto de cubo. Esse contexto pode ser o cubo inteiro ou apenas um subcubo dele. Ao especificar o contexto de cubo usando a cláusula FROM, você pode usar funções adicionais para expandir ou restringir esse contexto.  
   
@@ -68,6 +66,6 @@ FROM [Adventure Works]
  Você pode usar a função MDX [LookupCube](../../../mdx/lookupcube-mdx.md) para recuperar dados de cubos fora do contexto de cubo. Além disso, funções, como a função [Filter](../../../mdx/filter-mdx.md) , estão disponíveis para permitir a restrição temporária do contexto durante a avaliação da consulta.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Conceitos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

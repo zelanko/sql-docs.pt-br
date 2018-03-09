@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 1bda5a320e399888ed05331b3adbc2d29cf28022
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>Tela de Assistente de fonte de dados 3
 
@@ -85,6 +84,10 @@ Altera o comportamento da **failover de várias sub-redes** para permitir a reco
 
 Permite que a descriptografia automática e a criptografia de transferências de dados para e de colunas criptografadas com a [sempre criptografado](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) recurso disponível no SQL Server 2016 e posterior.
 
+### <a name="use-fmtonly-metadata-discovery"></a>Use a descoberta de metadados FMTONLY:
+
+Use o método de descoberta de metadados de SET FMTONLY herdado ao conectar-se ao SQL Server 2012 ou mais recente. Habilitar essa opção apenas ao usar consultas não oferece suporte para [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como aqueles que contêm tabelas temporárias. 
+
 ### <a name="next"></a>Próximo
 
 Vai para a próxima tela do assistente.
@@ -98,4 +101,3 @@ Retorna para a tela anterior do assistente.
 [Tela 2 do Assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-2.md)
 
 [Tela de Assistente de fonte de dados 4](../../../connect/odbc/windows/dsn-wizard-4.md)
-

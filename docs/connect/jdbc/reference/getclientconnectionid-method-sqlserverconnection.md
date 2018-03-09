@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18d69f31546870b951511dcc34a62ef00bbd65b5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b422c085307db5630cb1b70a47cafd935877dcd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Método getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```vb  
+``` 
 public Java.util.UUID SQLServerConnection.getClientConnectionID();  
 ```  
   
@@ -42,7 +41,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações sobre como acessar informações de diagnóstico no log de eventos estendidos, consulte [acessando informações de diagnóstico no Log de eventos estendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  O exemplo a seguir mostra como obter a ID de conexão:  
@@ -73,4 +72,3 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

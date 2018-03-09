@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 705a2600f0012716a529925f2ec97b2685e2195f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +82,7 @@ sp_help_log_shipping_secondary_database
 |**buffer_count**|Número total de buffers usado pela operação de backup ou restauração.|  
 |**max_transfer_size**|O tamanho, em bytes, da solicitação máxima de entrada ou de saída emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup.|  
 |**restore_threshold**|Número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado.|  
-|**alerta de limite**|Alerta a ser emitido quando o limite da restauração for excedido.|  
+|**threshold_alert**|Alerta a ser emitido quando o limite da restauração for excedido.|  
 |**threshold_alert_enabled**|Determina se os alertas de limite de restauração estão habilitados.<br /><br /> 1 = Habilitado.<br /><br /> 0 = Desabilitado.|  
 |**last_copied_file**|O nome do último arquivo de backup copiado para o servidor secundário.|  
 |**last_copied_date**|A hora e a data da última operação de cópia para o servidor secundário.|  
@@ -90,7 +93,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|O período em minutos em que os registros de histórico de envio de logs são retidos em um determinado banco de dados secundário antes de serem excluídos.|  
 |**last_restored_latency**|Período em minutos decorrido entre o momento de criação do backup de log no primário e o momento em que ele foi restaurado no secundário.<br /><br /> O valor inicial é NULL.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você incluir o *secondary_database* parâmetro, o conjunto de resultados conterá informações sobre o banco de dados secundário; se você incluir o *secondary_id* parâmetro, o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados àquela identificação secundária.  
   
  **sp_help_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário.  
@@ -99,8 +102,8 @@ sp_help_log_shipping_secondary_database
  Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_help_log_shipping_secondary_primary &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

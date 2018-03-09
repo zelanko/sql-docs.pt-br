@@ -2,9 +2,12 @@
 title: "Remover um banco de dados secundário de um grupo de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 45e1d62e7b521289802e9a2075e7891c46094ef6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 08c871eacad62e1815e709cb12dc94fa43f5fcf6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Remover um banco de dados primário de um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como remover um banco de dados secundário de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como remover um banco de dados secundário de um grupo de disponibilidade Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de começar:**  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Em Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica secundária da qual você deseja remover um ou mais bancos de dados secundários e expanda a árvore de servidor.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Selecione o grupo de disponibilidade e expanda o nó **Bancos de Dados de Disponibilidade** .  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Na caixa de diálogo **Remover Banco de Dados do Grupo de Disponibilidade** , para remover todos os bancos de dados listados, clique em **OK**. Se você não desejar remover todos os bancos de dados listados, clique em **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para remover um banco de dados secundário de um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/09/2017
  Quando um banco de dados secundário é removido, ele não é mais unido ao grupo de disponibilidade, e todas as informações sobre o banco de dados secundário removido são descartadas pelo grupo de disponibilidade. O banco de dados secundário removido é colocado no estado RESTORING.  
   
 > [!TIP]  
->  Pouco tempo depois de remover um banco de dados secundário, você poderá reiniciar a sincronização de dados AlwaysOn no banco de dados reassociando-o ao grupo de disponibilidade. Para obter mais informações, veja [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+>  Pouco tempo depois de remover um banco de dados secundário, você poderá reiniciar a sincronização de dados AlwaysOn no banco de dados reassociando-o ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  Neste ponto, há maneiras alternativas de lidar com um banco de dados secundário removido:  
   
@@ -130,7 +133,7 @@ ms.lasthandoff: 11/09/2017
   
      Para obter mais informações, veja [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Remover um banco de dados primário de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   

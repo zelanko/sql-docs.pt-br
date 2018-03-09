@@ -3,27 +3,30 @@ title: Exemplo (VC + +) de modelo de eventos de ADO | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Visual C++ code examples [ADO], event model
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e984459ddf5e45cbcf25d9109a7e50cbd43abbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e141eadd6f641608ccef1fb6b1b48b4138bf2728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo de modelo de eventos do ADO (VC + +)
 A seção de Visual C++ de [ADO evento instanciação pela linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento do ADO. A seguir está um exemplo específico de instanciação de modelo de evento dentro do ambiente criado pelo **#import** diretiva.  

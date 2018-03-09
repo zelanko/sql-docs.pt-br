@@ -14,17 +14,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d1a4659deeab00589a09e66d885d7f7005f7a43
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ *database_name* . [ *schema_name* ]. | *schema_name* . ] *table_name*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  A uma, duas ou três partes de nome da tabela a ser exibida.  Para duas ou nomes de tabela de três partes, o nome devem ser colocados entre aspas duplas (""). O uso de aspas ao redor de um nome de parte de uma tabela é opcional.  
   
 ## <a name="permissions"></a>Permissões
@@ -70,7 +69,6 @@ DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
 ## <a name="see-also"></a>Consulte também
-[DBCC PDW_SHOWEXECUTIONPLAN &#40; Transact-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
   
-

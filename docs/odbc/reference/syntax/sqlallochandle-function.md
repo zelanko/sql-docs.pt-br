@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLAllocHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLAllocHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLAllocHandle
-helpviewer_keywords:
-- SQLAllocHandle function [ODBC]
+f1_keywords: SQLAllocHandle
+helpviewer_keywords: SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434b3b42c4e48724b42bdb1ed517b11b25e10db7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>Função SQLAllocHandle
 **Conformidade**  
@@ -196,7 +190,6 @@ SQLRETURN SQLAllocHandle(
 |Definindo um atributo de ambiente|[Função SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

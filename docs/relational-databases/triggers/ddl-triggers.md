@@ -2,27 +2,33 @@
 title: Gatilhos DDL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ddl
+ms.suite: sql
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DDL triggers, about DDL triggers
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ebc22f2c34fbfa6e45874ee90cfb1fd8344e5c31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-triggers"></a>Gatilhos DDL
-  Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
  Use gatilhos DDL quando quiser fazer o seguinte:  
   
@@ -110,7 +116,7 @@ GO
   
  Para obter uma lista de grupos predefinidos de instruções DDL disponíveis para gatilhos DDL, as instruções abarcadas pelos grupos de eventos e os escopos nos quais esses grupos de eventos podem ser programados, consulte [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -120,7 +126,7 @@ GO
 |Descreve como retornar informações sobre um evento que dispara um gatilho DDL por meio da função EVENTDATA.|[Usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Descreve como gerenciar a segurança do gatilho.|[Gerenciar a segurança dos gatilhos](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos de logon](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

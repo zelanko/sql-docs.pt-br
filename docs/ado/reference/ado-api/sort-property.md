@@ -3,7 +3,7 @@ title: "Propriedade de classificação | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16bba12bdcf95e8e71cab6dcb8404b7b3b1916e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sort-property"></a>Propriedade de classificação
 Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é classificada, e se cada campo é classificado em ordem crescente ou decrescente.  
@@ -42,7 +41,7 @@ Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ad
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor que indica o campo de nomes no **registros** na qual classificar. Cada nome é separado por uma vírgula e, opcionalmente, é seguido por um espaço em branco e a palavra-chave **ASC**, que classifica o campo em ordem crescente, ou **DESC**, que classifica o campo em ordem decrescente. Por padrão, se nenhuma palavra-chave for especificado, o campo é classificado em ordem crescente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta propriedade requer o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade a ser definida **adUseClient**. Um índice temporário será criado para cada campo especificado no **classificação** propriedade se um índice já não existe.  
   
  A operação de classificação é eficiente, porque os dados não é fisicamente reorganizados, mas simplesmente são acessados na ordem especificada pelo índice.  
@@ -66,4 +65,3 @@ Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ad
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Propriedade SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [Propriedade SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-

@@ -1,10 +1,13 @@
 ---
 title: "SQL Server, objeto Estatísticas de grupo de cargas de trabalho | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 12/04/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaafe11ea177ec75500effa1860e712345378cab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 80da02219c14d213d758af746eb13acb35d2f433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
-  O objeto SQLServer:Estatísticas de Grupo de Cargas de Trabalho contém contadores de desempenho que dão informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto SQLServer:Workload Group Stats contém contadores de desempenho que dão informações sobre estatísticas de grupo de cargas de trabalho do Resource Governor.  
   
  Cada grupo de cargas de trabalho ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Grupo de Cargas de Trabalho que tem o mesmo nome de instância do grupo de cargas de trabalho do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|Description|  
 |------------------|-----------------|  
 |**Threads paralelos ativos**|A contagem atual de uso de threads paralelos.|  
 |**Solicitações ativas**|O número de solicitações que estão sendo executadas neste grupo de cargas de trabalho. Deverá ser equivalente à contagem de linhas de sys.dm_exec_requests filtradas pela ID de grupo.|  
@@ -48,9 +51,9 @@ ms.lasthandoff: 11/09/2017
 |**Solicitações concluídas/s**|O número de solicitações que foram concluídas neste grupo de cargas de trabalho. Este número é cumulativo.|  
 |**Planos de qualidade inferior/s**|O número de planos de qualidade inferior que são gerados por segundo neste grupo de cargas de trabalho.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, objeto de estatísticas do pool de recursos](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
- [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

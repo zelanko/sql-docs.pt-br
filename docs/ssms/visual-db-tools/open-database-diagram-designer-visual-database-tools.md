@@ -3,8 +3,11 @@ title: Abrir o Designer de Diagramas de Banco de Dados (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be41a077b7c0f0e484adc67642b31c4c005ca38d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f80f91be3c5ad55103011beb0f56c8a9e0595968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Abrir Designer do Diagrama de Banco de Dados (Visual Database Tools)
-O Designer do Diagrama de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Designer do Diagramas de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual você está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
   
 Você pode abrir o Designer do Diagrama de Banco de Dados abrindo um diagrama novo ou existente.  
   
@@ -51,6 +54,6 @@ Você pode abrir o Designer do Diagrama de Banco de Dados abrindo um diagrama no
   
 3.  O menu **Diagrama de Banco de Dados** será adicionado ao menu principal e o diagrama será aberto no painel do designer.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

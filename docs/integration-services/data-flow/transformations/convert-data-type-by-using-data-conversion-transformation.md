@@ -1,5 +1,5 @@
 ---
-title: "Converter o tipo de dados usando a transformação de conversão de dados | Microsoft Docs"
+title: "Converter tipo de dados usando a transformação Conversão de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Converter o tipo de dados usando a transformação de conversão de dados
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Converter tipo de dados usando a transformação Conversão de Dados
   Para adicionar e configurar uma transformação Conversão de Dados, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>Para converte dados em um tipo de dados diferente  
@@ -61,12 +60,11 @@ ms.lasthandoff: 08/03/2017
   
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação de conversão de dados](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipos de dados do Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

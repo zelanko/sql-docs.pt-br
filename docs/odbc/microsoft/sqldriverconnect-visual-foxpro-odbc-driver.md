@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 95587af8044ec6485729233ebff378ceac064c40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 363a727cd209f7ed3a5994f353f1e21922fe00ca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
@@ -57,4 +54,3 @@ ms.lasthandoff: 09/09/2017
  Se o nome da fonte de dados não for especificado, o Gerenciador de Driver solicitará ao usuário para obter as informações (dependendo da configuração do *fDriverCompletion* argumento) e, em seguida, continua. Se mais informações são necessárias, o Driver de ODBC do Visual FoxPro exibe a caixa de diálogo de aviso.  
   
  Para obter mais informações, consulte [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) no *referência do programador de ODBC*.
-

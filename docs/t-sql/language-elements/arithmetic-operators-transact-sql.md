@@ -19,17 +19,16 @@ helpviewer_keywords:
 - arithmetic operators
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d7ab96d4a566a34a4045b53a6b8a8ba054408df9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ce9ae44451b4307b2fa3e0668467ebe1358f7eaf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Operadores aritméticos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 |Operador|Significado|  
 |--------------|-------------|  
-|[+ (Somar)](../../t-sql/language-elements/add-transact-sql.md)|Adição|  
+|[+ (Somar)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
 |[- (Subtrair)](../../t-sql/language-elements/subtract-transact-sql.md)|Subtração|  
 |[* (Multiplicar)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplicação|  
 |[/ (Divisão)](../../t-sql/language-elements/divide-transact-sql.md)|Divisão|  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   
-

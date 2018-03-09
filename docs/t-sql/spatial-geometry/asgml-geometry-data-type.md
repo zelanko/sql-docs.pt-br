@@ -22,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - AsGml (geometry Data Type)
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a4ca0fcd5b8b7b4ffdb39d3201f7060efe18a74
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6e95bef8ad53d9393467843fe05c67304ad4d86a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Para obter mais informações sobre Geography Markup Language, consulte a seguin
   
  Tipo de retorno CLR: **SqlXml**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `LineString` e usa `AsGML()` para retornar uma descrição GML da instância.  
@@ -72,8 +71,7 @@ SELECT @g.AsGml();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

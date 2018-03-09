@@ -2,27 +2,32 @@
 title: Preparar os dados usando o PowerShell (passo a passo) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar os dados usando o PowerShell (passo a passo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste momento, você deve ter o seguinte instalado:
 

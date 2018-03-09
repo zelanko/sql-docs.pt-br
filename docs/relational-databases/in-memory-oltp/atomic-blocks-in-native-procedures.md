@@ -1,28 +1,32 @@
 ---
 title: "Blocos atômicos | Microsoft Docs"
 ms.custom: 
-ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocos atômicos nos procedimentos nativos
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** não faz parte do padrão ANSI SQL. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a blocos atômicos no nível superior de procedimentos armazenados compilados nativamente, bem como para funções definidas pelo usuário escalares compiladas nativamente. Para obter mais informações sobre essas funções, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 -   Cada procedimento armazenado compilado nativamente contém exatamente um bloco de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse é um bloco ATOMIC.  
@@ -40,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
  O exemplo a seguir ilustra o comportamento de tratamento de erros com blocos atômicos e procedimentos armazenados compilados nativamente:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -128,7 +132,7 @@ ORDER BY c1
 GO  
 ```  
   
- As mensagens de erro a seguir específicas de tabelas com otimização de memória são decretadas por transação. Se elas ocorrerem no escopo de um bloco atômico, a transação será anulada: 10772, 41301, 41302, 41305, 41325, 41332 e 41333.  
+ As mensagens de erro a seguir específicas de tabelas com otimização de memória são decretadas por transação. Se elas ocorrerem no escopo de um bloco atômico, a transação será anulada: 10772, 41301, 41302, 41305, 41325, 41332, 41333 e 41839.  
   
 ## <a name="session-settings"></a>Configurações da sessão  
  As configurações da sessão nos blocos atômicos são corrigidas quando o procedimento armazenado é compilado. Algumas configurações podem ser especificadas com **BEGIN ATOMIC** , enquanto outras configurações sempre são corrigidas para o mesmo valor.  
@@ -146,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, **DATEFORMAT** substitui o formato de data padrão associado a **LANGUAGE**.|  
 |**DATEFIRST**|Quando especificado, **DATEFIRST** substitui o padrão associado a **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Os valores com suporte são **OFF** e **ON**.<br /><br /> Confirmações de transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser completamente duráveis, o padrão ou duráveis atrasadas. Para obter mais informações, consulte [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Os valores com suporte são **OFF** e **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Confirmações de transação podem ser completamente duráveis, o padrão, ou duráveis atrasadas. Para obter mais informações, consulte [Controlar Durabilidade de Transação](../../relational-databases/logs/control-transaction-durability.md).|  
   
  As opções SET a seguir têm o mesmo valor padrão de sistema para todos os blocos atômicos em todos os procedimentos armazenados compilados nativamente:  
   
@@ -166,8 +170,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> As exceções não capturadas fazem com que o bloco atômico seja revertido, mas não fazem com que a transação seja anulada, a menos que o erro seja decretado por transação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

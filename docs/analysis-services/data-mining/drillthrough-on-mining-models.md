@@ -2,30 +2,29 @@
 title: "Detalhamento em modelos de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5b732f8e0fbb955c190c20f32ff0866b2c4c2286
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>Detalhamento em modelos de mineração
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar os casos que foram utilizados para criar dados ou os casos na estrutura de mineração.  
@@ -64,13 +63,13 @@ ms.lasthandoff: 11/17/2017
   
 |Tarefas|Links|  
 |-----------|-----------|  
-|Usar detalhamento nos visualizadores do modelo de mineração|[Usar detalhamento dos visualizadores do modelo](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|Recuperar dados de caso para um modelo usando detalhamento|[Detalhar dados do caso a partir do modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Usar detalhamento nos visualizadores do modelo de mineração|[Usar o detalhamento dos visualizadores do modelo](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|Recuperar dados de caso para um modelo usando detalhamento|[Detalhar dados do caso de um modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Habilitar o detalhamento em um modelo de mineração existente|[Habilitar o detalhamento para um modelo de mineração](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Habilitar detalhamento no assistente do modelo de mineração|[Concluindo o assistente &#40;Assistente de Data Mining&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Drillthrough em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [Detalhamento em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

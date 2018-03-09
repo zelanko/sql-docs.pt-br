@@ -2,28 +2,31 @@
 title: "Propriedades (guia fazer logon) do servidor de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f0e9a3e76e2ac271926170afc2bd359864d679a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd29086f697f18be8bceb4c30a4bbf8e70e1fa09
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriedades do servidor de relatório (guia Fazer Logon)
-  Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Servidor de Relatório** para especificar a conta usada pelo serviço Servidor de Relatório e para iniciar e parar o serviço.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Servidor de Relatório** para especificar a conta usada pelo serviço Servidor de Relatório e para iniciar e parar o serviço.  
   
 ## <a name="options"></a>Opções  
  **Conta Sistema Local**  
@@ -54,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  Retomar um serviço pausado.  
   
   
-

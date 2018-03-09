@@ -2,14 +2,13 @@
 title: "SystemGetAccuracyResults (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
-  Retorna métricas de precisão de validação cruzada para uma estrutura de mineração e todos os modelos relacionados, excluindo modelos de clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retorna métricas de precisão de validação cruzada para uma estrutura de mineração e todos os modelos relacionados, excluindo modelos de clustering.  
   
  Esse procedimento armazenado retorna métrica para todo o conjunto de dados como uma única partição. Para dividir o conjunto de dados em seções cruzadas e retornar métricas para cada partição, use [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -74,12 +73,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Para obter uma lista completa de valores possíveis, consulte a seção Comentários mais adiante neste tópico.  
   
- (Obrigatória)  
+ (obrigatório)  
   
  *atributo de destino*  
  Cadeia de caracteres que contém o nome de um objeto previsível. Um objeto previsível pode ser uma coluna, coluna de tabela aninhada ou coluna de chave de tabela aninhada de um modelo de mineração.  
   
- (Obrigatória)  
+ (obrigatório)  
   
  *estado de destino*  
  Cadeia de caracteres que contém um valor específico para prever.  
@@ -120,7 +119,7 @@ SystemGetAccuracyResults(<mining structure>,
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo modelo e do tipo do valor previsível.<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Value|O valor para a medida especificada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir fornece exemplos dos valores que você pode usar para especificar os dados na estrutura de mineração usados para validação cruzada. Se você desejar usar casos de teste para validação cruzada, a estrutura de mineração já deverá conter um conjunto de dados para teste. Para obter informações sobre como definir um conjunto de dados de teste ao criar uma estrutura de mineração, consulte [Conjuntos de dados de treinamento e teste](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Valor inteiro|Description|  
@@ -153,7 +152,7 @@ CALL SystemGetAccuracyResults (
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|True Positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|False Positivo|177|  
@@ -170,7 +169,6 @@ CALL SystemGetAccuracyResults (
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

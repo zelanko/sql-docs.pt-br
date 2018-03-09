@@ -3,27 +3,30 @@ title: Clusterizado exemplo da propriedade (VC + +) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Clustered property [ADOX], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d758932fa2686c5428e1f15917a7d1e33d59883b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f275eacb9b0e7012ef70d5e0c6e9aaade675ae3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-example-vc"></a>Exemplo de propriedade Clustered (VC + +)
 Este exemplo demonstra o [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). Observe que bancos de dados Microsoft Jet não dá suporte a índices clusterizados, portanto, este exemplo retornará **False** para o **Clustered** propriedade de todos os índices no *Northwind* banco de dados.  

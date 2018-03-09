@@ -1,30 +1,30 @@
 ---
-title: "Pré-carregar o Cache (Gerenciador de relatórios) | Microsoft Docs"
+title: "Pré-carregar o cache (Gerenciador de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f1198cddebd82cbabaccd635dc10182236bcc33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/09/2017
      Ou, para criar uma agenda personalizada, clique em **Em um agendamento criado para esta assinatura** e clique em **Avançar**. Configure a agenda e clique em **Concluir**.  
   
     > [!NOTE]  
-    >  Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para obter mais informações, consulte [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para obter mais informações, consulte [Gerenciador de Relatórios &#40;modo nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configure as opções de Execução para o relatório como pode ser visto a seguir. Na página de relatório, clique na guia **Propriedades** .  
   
@@ -119,18 +119,17 @@ ms.lasthandoff: 08/09/2017
   
 17. Escolha um das duas opções de cache a seguir e configure a validade do seguinte modo:  
   
-    -   Para fazer com que uma cópia armazenada em cache expire depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expire cópia de relatório após um número de minutos.** Digite o número de minutos para a validade do relatório.  
+    -   Para fazer com que uma cópia armazenada em cache expire depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos.** Digite o número de minutos para a validade do relatório.  
   
-    -   Para fazer a cópia armazenada em cache expire em uma agenda, clique em **armazenar uma cópia temporária do relatório. Expire cópia de relatório na seguinte agenda.** Clique em **Configurar**ou selecione um agendamento compartilhado para definir um agendamento para a expiração do relatório.  
+    -   Para fazer com que a cópia armazenada em cache expire de acordo com um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no próximo agendamento.** Clique em **Configurar**ou selecione um agendamento compartilhado para definir um agendamento para a expiração do relatório.  
   
 18. Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Desempenho, instantâneos, cache &#40; Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Desempenho, instantâneos, cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

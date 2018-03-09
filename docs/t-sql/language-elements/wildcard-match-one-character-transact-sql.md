@@ -27,17 +27,16 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 01bc0c4c006ae55395d752a0377575fa680dffaa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Curinga – corresponde a um caractere) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ Use o caractere de sublinhado _ para corresponder qualquer caractere único em u
 
 O exemplo a seguir retorna todos os nomes que começam com a letra de banco de dados `m` e ter a letra `d` como a terceira letra. O caractere de sublinhado Especifica que o segundo caractere do nome pode ser qualquer letra. O `model` e `msdb` bancos de dados atendem esse critério. O `master` não banco de dados.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -68,7 +67,7 @@ Você pode usar vários sublinhados para representar vários caracteres. Alteran
 ### <a name="b-more-complex-example"></a>B: exemplo mais complexo
  O exemplo a seguir usa o operador de _ para localizar todas as pessoas a `Person` tabela, que têm um nome três letras que termina em `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -79,14 +78,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C: escapar o caractere de sublinhado   
 O exemplo a seguir retorna os nomes das funções fixas de banco de dados como `db_owner` e `db_ddladmin`, mas ele também retorna o `dbo` usuário. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 O sublinhado na terceira posição de caractere será interpretado como um caractere curinga e não está filtrando para somente entidades começando com as letras `db_`. Para escapar o caractere de sublinhado coloque-o entre colchetes `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -103,10 +102,9 @@ db_securityadmin
 
   
 ## <a name="see-also"></a>Consulte também  
- [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Curinga - caracteres não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   
-

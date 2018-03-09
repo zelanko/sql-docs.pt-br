@@ -3,26 +3,28 @@ title: "Noções básicas sobre o arquivo de personalização | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador de usuário especificado ou nada.  
@@ -48,18 +50,18 @@ identifier
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Conecte-se**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de conexão.|  
-|**SQL**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
+|**connect**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de conexão.|  
+|**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**userlist**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log operacionais erros de gravação.|  
-|**padrão**|Uma cadeia de caracteres literal que será usada se nenhum identificador é especificada ou encontrada.|  
-|*Identificador*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres de **conectar** ou **comando** cadeia de caracteres.<br /><br /> -Use esta seção se o cabeçalho de seção contém **conectar** e a cadeia de caracteres do identificador foi encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho de seção contém **sql** e a cadeia de caracteres do identificador foi encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho de seção contém **userlist** e a cadeia de caracteres do identificador corresponde uma **conectar** identificador de seção.|  
+|**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador é especificada ou encontrada.|  
+|*identifier*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres de **conectar** ou **comando** cadeia de caracteres.<br /><br /> -Use esta seção se o cabeçalho de seção contém **conectar** e a cadeia de caracteres do identificador foi encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho de seção contém **sql** e a cadeia de caracteres do identificador foi encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho de seção contém **userlist** e a cadeia de caracteres do identificador corresponde uma **conectar** identificador de seção.|  
   
  O **DataFactory** chama o manipulador, passando parâmetros de cliente. O manipulador de pesquisa para cadeias de caracteres inteiras nos parâmetros do cliente que correspondem a identificadores nos cabeçalhos de seção apropriada. Se uma correspondência for encontrada, o conteúdo dessa seção é aplicado para o parâmetro do cliente.  
   
  Uma seção específica é usada nas seguintes circunstâncias:  
   
--   Um **conectar** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados =***valor*", corresponde a um **conectar** Identificador de seção*.*  
+-   Um **conectar-se** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados = * valor*", corresponde a um **conectar** identificador de seção*.*  
   
 -   Um **sql** seção será usada se a cadeia de caracteres de comando do cliente contém uma cadeia de caracteres que corresponde a um **sql** identificador de seção.  
   

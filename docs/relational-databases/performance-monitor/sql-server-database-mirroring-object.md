@@ -2,9 +2,12 @@
 title: SQL Server, objeto Espelhamento de Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4c253139df09955ffd9e191bd7d4c8f3b5b6418
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objeto Database Mirroring
-  O objeto de desempenho **SQLServer:Database Mirroring** contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tabela a seguir lista os contadores contidos nesse objeto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:Database Mirroring** contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela a seguir lista os contadores contidos nesse objeto.  
   
-|Nome|Descrição|  
+|Nome|Description|  
 |----------|-----------------|  
 |**Bytes Recebidos/s**|Número de bytes recebidos por segundo.|  
 |**Bytes Enviados/s**|Número de bytes enviados por segundo.|  
@@ -55,10 +58,10 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Em cada parceiro, alguns dos contadores mostram um valor zero dependendo de qual função o parceiro desempenha atualmente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os contadores de desempenho permitem que você monitore o desempenho de espelhamento de banco de dados. Por exemplo, você pode examinar o contador **Atraso na Transação** para verificar se o espelhamento de banco de dados está afetando o desempenho do servidor principal, você pode examinar os contadores **Fila de Restauração** e **Fila de Envio de Log** para verificar como o banco de dados espelho está se comportando em relação ao banco de dados principal. Você pode examinar o contador **Bytes de Log Enviados/s** para monitorar a quantidade de logs enviados por segundo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

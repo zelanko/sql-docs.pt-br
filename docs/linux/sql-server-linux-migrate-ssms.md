@@ -1,31 +1,31 @@
 ---
 title: Exportar e importar um banco de dados no Linux | Microsoft Docs
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 41d3647796306cb1a9b89f5af47c75416de79c01
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 817fc0ae018ebb7999ad572c0f18ede943ff7090
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportar e importar um banco de dados no Linux com o SSMS ou SqlPackage.exe no Windows
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tópico mostra como usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) para exportar e importar um banco de dados SQL Server 2017 no Linux. SSMS e SqlPackage.exe são aplicativos do Windows, então use essa técnica, quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
+Este artigo mostra como usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) para exportar e importar um banco de dados SQL Server 2017 no Linux. SSMS e SqlPackage.exe são aplicativos do Windows, então use essa técnica, quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
 
 Você sempre deve instalar e usar a versão mais recente do SQL Server Management Studio (SSMS), conforme descrito em [usar SSMS no Windows para se conectar ao SQL Server no Linux](sql-server-linux-develop-use-ssms.md)
 
@@ -68,7 +68,7 @@ O *. Arquivo BACPAC é criado com êxito no local que você escolheu e você est
 
 O *. Arquivo BACPAC é importado para criar um novo banco de dados no servidor de destino especificado.
 
-## <a id="sqlpackage"></a>Opção de linha de comando SqlPackage
+## <a id="sqlpackage"></a> Opção de linha de comando SqlPackage
 
 Também é possível usar a ferramenta de linha de comando do SQL Server Data Tools (SSDT), [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), para exportar e importar arquivos BACPAC.
 

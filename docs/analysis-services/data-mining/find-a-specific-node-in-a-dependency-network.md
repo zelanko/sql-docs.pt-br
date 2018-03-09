@@ -2,15 +2,13 @@
 title: "Localizar um nó específico em uma rede de dependência | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Localizar um nó específico em uma rede de dependência
-  Uma rede de dependência em um modelo de mineração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode conter muitos nós, dificultando a localização dos dados de seu interesse. Para resolver esse problema, você pode usar a caixa de diálogo **Localizar Nó** na guia **Rede de Dependências** do Designer de Mineração de Dados para procurar um nó específico.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma rede de dependência em um modelo de mineração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode conter muitos nós, dificultando a localização dos dados de seu interesse. Para resolver esse problema, você pode usar a caixa de diálogo **Localizar Nó** na guia **Rede de Dependências** do Designer de Mineração de Dados para procurar um nó específico.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Para localizar um nó específico em uma rede de dependências  
   
@@ -46,7 +44,6 @@ ms.lasthandoff: 09/01/2017
 3.  Selecione o nó correto da lista e clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

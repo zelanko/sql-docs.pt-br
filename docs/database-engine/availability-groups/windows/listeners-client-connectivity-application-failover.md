@@ -2,10 +2,14 @@
 title: Ouvintes, conectividade de cliente e failover de aplicativo | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Ouvintes, conectividade de cliente e failover de aplicativo
-  Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
   
 > [!NOTE]  
 >  Para a maioria das configurações comuns de ouvinte, você pode criar o primeiro ouvinte de grupo de disponibilidade simplesmente usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou cmdlets PowerShell. Para obter mais informações, consulte [Tarefas relacionadas](#RelatedTasks), mais adiante neste tópico.  
@@ -118,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *Roteamento somente leitura* refere-se à capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de rotear conexões de entrada a um ouvinte de grupo de disponibilidade para uma réplica secundária que é configurada para permitir cargas de trabalho somente leitura. Uma conexão de entrada que faz referência a um nome de ouvinte de grupo de disponibilidade poderá ser roteada automaticamente para uma réplica somente leitura se o seguinte for verdadeiro:  
   
 -   Pelo menos uma réplica secundária é definida como acesso somente leitura e cada réplica secundária somente leitura e a réplica primária são configuradas para oferecer suporte ao roteamento somente leitura. Para obter mais informações, veja [Para configurar réplicas de disponibilidade para roteamento somente leitura](#ConfigureARsForROR), mais adiante nesta seção.  
-  
+
+-   A cadeia de conexão faz referência a um banco de dados envolvido no grupo de disponibilidade. Uma alternativa para isso seria o logon usado na conexão ter o banco de dados configurado como seu banco de dados padrão. Para obter mais informações, consulte [este artigo sobre como o algoritmo funciona com o roteamento somente leitura](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+
 -   A cadeia de conexão faz referência a um ouvinte de grupo de disponibilidade, e a tentativa do aplicativo da conexão de entrada está definida como somente leitura (por exemplo, usando a palavra-chave **Application Intent=ReadOnly** nas cadeias de conexão ODBC ou OLEDB ou nos atributos ou propriedades da conexão). Para obter informações, veja [Tentativa do aplicativo somente leitura e roteamento somente leitura](#ReadOnlyAppIntent), mais adiante nesta seção.  
   
 ###  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidade para roteamento somente leitura  
@@ -149,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se a um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também poderá omitir a porta se o ouvinte do grupo de disponibilidade estiver escutando na 1433).  A cadeia de conexão tem a propriedade **ApplicationIntent** definida como **ReadOnly**, fazendo dela uma *cadeia de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
+ Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se ao banco de dados AdventureWorks por meio de um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também pode omitir a porta se o ouvinte do grupo de disponibilidade está escutando na 1433).  A cadeia de conexão tem a propriedade **ApplicationIntent** definida como **ReadOnly**, fazendo dela uma *cadeia de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
   
  O banco de dados primário do grupo de disponibilidade processa a solicitação de roteamento somente leitura de entrada e tenta localizar uma réplica somente leitura online que esteja unida à réplica primária e configurada para roteamento somente leitura.  O cliente recebe informações de conexão do servidor de réplica primária e conecta-se à réplica somente leitura identificada.  
   
@@ -243,7 +250,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

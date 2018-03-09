@@ -25,20 +25,19 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a1044fb78ebf3852a963d11607433fdb93d48007
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 9f78f85fc8697062c628a22736a7ae0d31d53792
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="print-transact-sql"></a>IMPRESSÃO-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="print-transact-sql"></a>PRINT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna uma mensagem definida pelo usuário ao cliente.  
   
@@ -54,13 +53,13 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  É uma cadeia de caracteres ou uma constante de cadeia de caracteres Unicode. Para obter mais informações, consulte [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- É uma variável de qualquer tipo de dados de caractere válido. **@***local_variable* devem ser **char**, **nchar**, **varchar**, ou **nvarchar**, ou deve ser capaz de ser implicitamente convertido para esses tipos de dados.  
+ **@** *local_variable*  
+ É uma variável de qualquer tipo de dados de caractere válido. **@ * local_variable* devem ser **char**, **nchar**, **varchar**, ou **nvarchar**, ou deve ser capaz de ser implicitamente convertido para esses tipos de dados.  
   
  *string_expr*  
  É uma expressão que retorna uma cadeia de caracteres. Pode incluir valores literais, funções e variáveis concatenadas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma cadeia de caracteres de mensagem pode ter até 8.000 caracteres se for uma cadeia de caracteres não Unicode e 4.000 caracteres se for uma cadeia de caracteres Unicode. Cadeias de caracteres mais longas são truncadas. O **varchar (max)** e **nvarchar (max)** tipos de dados são truncados para tipos de dados que são maiores do que **varchar(8000)** e **nvarchar (4000)**.  
   
  RAISERROR também pode ser usado para retornar mensagens. RAISERROR tem estas vantagens sobre PRINT:  
@@ -124,5 +123,4 @@ GO
  [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-
 

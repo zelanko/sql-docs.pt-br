@@ -3,8 +3,9 @@ title: "Alterar o nome de propriedade dinâmica (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Reshape Name property [ADO]
+helpviewer_keywords:
+- Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d57a7d1bd99c445451e63ec630962ad652fa1a53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Alterar o nome de propriedade dinâmica (ADO)
 Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -31,7 +33,7 @@ Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-o
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **cadeia de caracteres** valor que é o nome do **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nomes de persistirem durante a conexão ou até que o **registros** está fechado.  
   
  O **nome remodelar** propriedade é usado principalmente para uso com o recurso de formatação novamente do [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provedor de serviços. Nomes devem ser exclusivos para participar de formatação novamente.  

@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_message_context | Microsoft Docs
+title: catalog.event_message_context | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +31,17 @@ ms.lasthandoff: 09/26/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|ID exclusiva do contexto de erro.|  
-|Event_message_id|bigint|ID exclusiva da mensagem à qual o contexto está relacionado.|  
-|Context_depth|int|À medida que a profundidade aumenta, o contexto do erro é mais detalhado. Quando um erro ocorre, a profundidade de contexto começa em 1. O valor de 0 indica o estado do pacote antes do início da execução.|  
+|Context_id|BIGINT|ID exclusiva do contexto de erro.|  
+|Event_message_id|BIGINT|ID exclusiva da mensagem à qual o contexto está relacionado.|  
+|Context_depth|INT|À medida que a profundidade aumenta, o contexto do erro é mais detalhado. Quando um erro ocorre, a profundidade de contexto começa em 1. O valor de 0 indica o estado do pacote antes do início da execução.|  
 |Package_path|Nvarchar(max)|O caminho do pacote para a origem de contexto.|  
-|Context_type|smallint|O tipo do objeto que é a origem do contexto. Consulte o **comentários** seção para obter uma lista de tipos de contexto.|  
+|Context_type|SMALLINT|O tipo do objeto que é a origem do contexto. Consulte a seção **Comentários** para obter uma lista de tipos de contexto.|  
 |Context_source_name|Nvarchar(4000)|O nome do objeto que é a origem do contexto.|  
 |Context_source_id|Nvarchar(38)|A ID exclusiva do objeto que é a origem do contexto.|  
 |Property_name|Nvarchar(4000)|O nome da propriedade associada à origem do contexto.|  
 |Property_value|Sql_variant|O valor da propriedade associada à origem do contexto.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista os tipos de contexto.  
   
 ||||  
@@ -62,9 +61,8 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ na operação  
   
--   Associação de **ssis_admin** função de banco de dados.  
+-   Associação à função de banco de dados **ssis_admin**.  
   
--   Associação de **sysadmin** função de servidor.  
+-   Associação à função de servidor **sysadmin**.  
   
   
-

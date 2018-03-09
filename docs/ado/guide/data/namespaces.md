@@ -3,7 +3,7 @@ title: Namespaces | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,22 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c34bb680f7a066eeb694cf62fba39cabb0d4cbea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d9dd5aab887a7df42fd1f6661c276be6cc73d6a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os seguintes quatro namespaces.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O formato de persistência XML no ADO usa os seguintes quatro namespaces.  
   
 |Prefixo|Description|  
@@ -55,4 +54,3 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

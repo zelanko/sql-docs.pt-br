@@ -5,16 +5,13 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fca2ff8ef1e6fbe496d412a82c1d2694005ffe6b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estrutura e uso de consultas de previsão DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,13 +60,13 @@ ms.lasthandoff: 08/02/2017
   
 -   **SELECIONE [SIMPLIFICADOS]**  
   
--   **INÍCIO**  
+-   **TOP**  
   
 -   **DE***\<modelo >***PREDICTION JOIN**   
   
 -   **ON**  
   
--   **ONDE**  
+-   **WHERE**  
   
 -   **ORDENAR POR**  
   
@@ -90,7 +86,7 @@ ms.lasthandoff: 08/02/2017
   
  Para obter mais informações sobre a sintaxe de uma instrução de previsão, consulte [SELECT FROM &#60; modelo de &#62; JUNÇÃO de previsão &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md) e [SELECT FROM &#60; modelo de &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -98,7 +94,6 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -2,16 +2,13 @@
 title: Vincular grupos de medidas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
-  Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
   
  A Microsoft recomenda que os grupos de medidas vinculados e originais residam em soluções executadas no mesmo servidor. Vincular a um grupo de medidas em um servidor remoto está agendada para substituição em uma versão futura (consulte [Recursos do Analysis Services preteridos no SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   

@@ -3,7 +3,7 @@ title: "Mover o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 098ef46d9d0e336cb142b29b9b899ec0bcaf2eba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 69f3ce38f87be4670bcb08f80db076ce88d37212
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-ado"></a>Método Move (ADO)
 Move a posição do registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -48,7 +47,7 @@ recordset.Move NumRecords, Start
  *Iniciar*  
  Opcional. Um **cadeia de caracteres** valor ou **Variant** que é avaliada como um indicador. Você também pode usar um [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **mover** método tem suporte em todos os **registros** objetos.  
   
  Se o *NumRecords* argumento for maior que zero, a posição do registro atual avança (até o fim do **registros**). Se *NumRecords* é menor que zero, a posição atual do registro recua (no início do **registros**).  
@@ -78,4 +77,3 @@ recordset.Move NumRecords, Start
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

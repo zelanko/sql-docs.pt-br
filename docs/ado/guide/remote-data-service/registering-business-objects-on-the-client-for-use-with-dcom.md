@@ -3,7 +3,7 @@ title: "Registro de objetos de negócios no cliente para uso com DCOM | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e293eb58053259dd229656152094763ac31b48a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registro de objetos de negócios no cliente para uso com DCOM
 Objetos de negócios personalizada precisam garantir que o do lado do cliente pode mapear seu nome de programa (ProgId) para um identificador (CLSID) que pode ser usado ao DCOM. Por esse motivo, o ProgID do objeto DCOM deve estar no registro do cliente e mapear para a ID de classe do objeto comercial do lado do servidor. Para outros protocolos suportados (HTTP, HTTPS e em processo), isso não é necessário.  
@@ -39,6 +38,5 @@ Objetos de negócios personalizada precisam garantir que o do lado do cliente po
 [HKEY_CLASSES_ROOT]  
 \MyBObj\Clsid\(Default) "{00112233-4455-6677-8899-00AABBCCDDEE}"  
 ```
-
 
 

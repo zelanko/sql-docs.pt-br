@@ -8,34 +8,33 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_primary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 215145e97d86b41a348d9fa660868e4e621cc6ab
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Configura as informações primárias, adiciona links de monitor local e remoto e cria trabalhos de cópia e restauração no servidor secundário para o banco de dados primário especificado.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,31 +60,31 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser NULL.  
   
  [  **@primary_database**  =] '*primary_database*'  
  É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*'  
+ [ **@backup_source_directory** = ] '*backup_source_directory*'  
  O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
   
- [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
  O diretório no servidor secundário onde arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
   
- [  **@copy_job_name**  =] '*copy_job_name*'  
+ [ **@copy_job_name** = ] '*copy_job_name*'  
  O nome a ser usado para o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo criado para copiar backups do log de transações no servidor secundário. *copy_job_name* é **sysname** e não pode ser NULL.  
   
- [  **@restore_job_name**  =] '*restore_job_name*'  
+ [ **@restore_job_name** = ] '*restore_job_name*'  
  É o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no servidor secundário que restaura os backups de banco de dados secundário. *restore_job_name* é **sysname** e não pode ser NULL.  
   
  [  **@file_retention_period**  =] '*file_retention_period*'  
  O período de tempo, em minutos, em que um arquivo de backup é mantido no servidor secundário no caminho especificado pelo @backup_destination_directory parâmetro antes de serem excluídos. *history_retention_period* é **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
- [  **@monitor_server**  =] '*monitor_server*'  
+ [ **@monitor_server** = ] '*monitor_server*'  
  É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser NULL.  
   
- [  **@monitor_server_security_mode**  =] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
  O modo de segurança usado para conexão ao servidor monitor.  
   
  1 = Autenticação do Windows.  
@@ -94,10 +93,10 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* é **bit** e não pode ser NULL.  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*'  
+ [ **@monitor_server_login** = ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*'  
+ [ **@monitor_server_password** = ] '*monitor_server_password*'  
  Senha da conta usada para acessar o servidor monitor.  
   
  [  **@copy_job_id**  =] '*copy_job_id*' saída  
@@ -115,7 +114,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_primary** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Gera uma ID secundária para o servidor primário especificado e o banco de dados primário.  
@@ -156,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

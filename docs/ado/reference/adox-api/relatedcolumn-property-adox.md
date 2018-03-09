@@ -3,7 +3,7 @@ title: Propriedade RelatedColumn (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f06a8d57b78d86708b46a8e830cb13eeac8fc5c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb09cdefcb35afdc86f7e296d4a809329a7e4e4b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="relatedcolumn-property-adox"></a>Propriedade RelatedColumn (ADOX)
 Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) na tabela relacionada (somente colunas de chave).  
@@ -40,7 +39,7 @@ Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **cadeia de caracteres** valor que é o nome da coluna relacionada na tabela relacionada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é uma cadeia de caracteres vazia ("").  
   
  Essa propriedade é somente leitura para [coluna](../../../ado/reference/adox-api/column-object-adox.md) já está anexados a uma coleção de objetos.  
@@ -51,4 +50,3 @@ Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/
 ## <a name="see-also"></a>Consulte também  
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-

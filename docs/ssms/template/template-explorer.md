@@ -3,8 +3,11 @@ title: Gerenciador de modelos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,16 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfeeaf35898135099c1fb92553bf20f83fd587f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 567be902918060203407ec70229aa66c01ae6baa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] fornece uma variedade de modelos. Modelos são arquivos boilerplate que contêm scripts SQL que ajudam você a criar objetos em um banco de dados. Na primeira vez em que o gerenciador de modelos é aberto, uma cópia dos modelos é colocada na pasta do usuário C:\Users, em AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 Você pode procurar os modelos disponíveis no Gerenciador de Modelos e, depois, abrir um modelo para incorporar o código em uma janela de editor de códigos. Você também pode criar modelos personalizados.  
@@ -43,7 +47,7 @@ Crie modelos personalizados para tarefas executadas com frequência. Organize se
   
 O editor de consultas do [!INCLUDE[ssDE](../../includes/ssde_md.md)] também oferece suporte a trechos de códigos que podem ser inseridos em locais específicos em um script clicando com o botão direito do mouse nesse local.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Use os tópicos a seguir como introdução rápida a modelos  
   
 |**Description**|**Tópico**|  

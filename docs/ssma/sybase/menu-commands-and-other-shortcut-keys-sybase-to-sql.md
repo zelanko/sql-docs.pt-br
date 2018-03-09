@@ -3,8 +3,11 @@ title: Comandos de menu e outras teclas de atalho (Sybase para SQL) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c2f7c3fb2ca9aecd8550dd4dcc45f0d2d5922c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (Sybase para SQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para Sybase aplicativo.  
@@ -203,6 +206,6 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
 |Vá para a declaração.|F12|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Teclas de atalho &#40; Sybase SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

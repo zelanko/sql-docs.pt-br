@@ -2,9 +2,12 @@
 title: "Tutoriais de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 84c864082da2c0a224b8ef42cea768c677534d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e081c0e361ac7c52a4afc52adcdd2207f3465781
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
-A replicação engloba tutoriais que são utilizados para ensinar a configurar e a executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação engloba tutoriais que são utilizados para ensinar a configurar e a executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Nos tutoriais de replicação, "Publicador" refere-se ao servidor que contém os dados de origem sendo replicados, e "Assinante" refere-se ao servidor de destino. O Publicador e o Assinante podem compartilhar a mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas isso não é um requisito. Para obter mais informações, consulte [Visão geral do modelo de publicação do Replication](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
   
@@ -43,7 +46,7 @@ Aprenda a usar a replicação transacional para replicar dados entre servidores 
 [Replicando dados com clientes móveis](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Aprenda a usar a replicação de mesclagem para permutar dados entre um servidor e um ou mais clientes conectados apenas ocasionalmente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Segurança e proteção &#40;Replicação&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

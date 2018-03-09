@@ -2,16 +2,13 @@
 title: "Monitorar uma instância do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c583616f8ba9a7ae1f4104e22cf5dd3a4ec5d87
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorar uma instância do Analysis Services
-  Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]permite criar e gerenciar rastreamentos e analisar e reproduzir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre monitoramento, consulte o [Guia de operações do SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -42,12 +40,12 @@ ms.lasthandoff: 11/17/2017
   
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
- [Usar o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
+ [Use o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar dinâmico exibições de gerenciamento &#40; DMVs &#41; para monitorar o Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Contadores de desempenho &#40;SSAS&#41;](../../analysis-services/instances/performance-counters-ssas.md)  
+ [Contadores de desempenho ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   

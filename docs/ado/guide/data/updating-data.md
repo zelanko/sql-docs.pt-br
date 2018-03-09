@@ -3,8 +3,9 @@ title: Atualizando dados | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85a34b6343f5f6251ab6f43f6802acd27bee4a3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d353f4305c91d7c7e84a0ccf9b22c3891e8c579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-data"></a>Atualizando dados
 Comportamento de atualização e a funcionalidade depende em grande parte atualizar modo (tipo de bloqueio), o tipo de cursor e o local do cursor.  

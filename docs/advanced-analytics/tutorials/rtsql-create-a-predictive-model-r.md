@@ -2,28 +2,31 @@
 title: "Criar um modelo de previsão (R no início rápido do SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bf9c1aec8ef4f065ac56e4439cbfbf0c2248727a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Criar um modelo de previsão (R no início rápido do SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Nesta etapa, você aprenderá a treinar um modelo usando o R e, em seguida, salvar o modelo em uma tabela no SQL Server. O modelo é um modelo de regressão simples que prevê a distância de parada de um carro com base na velocidade. Você usará o `cars` conjunto de dados incluído com R, porque ele é pequeno e fáceis de entender.
 

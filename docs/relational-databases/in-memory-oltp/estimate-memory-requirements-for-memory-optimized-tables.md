@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c1553db5a161b8ca4fb69694340f55d8d818ff5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ Quando houver uma carga de trabalho ativa, é necessária memória adicional par
 
 Considere o esquema de tabela com otimização de memória a seguir:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -116,21 +117,21 @@ Cada índice de hash é uma matriz de hash de ponteiros de endereço de 8 bytes.
   
 Os índices de hash atingem muito rápido pesquisas de igualdade como:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Os índices não clusterizados são mais rápidos para pesquisas de intervalo como:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 Se você estiver migrando uma tabela com base em disco, poderá usar o seguinte para determinar o número de valores exclusivos para o índice t1c2_index.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -166,7 +167,7 @@ A memória necessária pelos índices não clusterizados pode ser computada da s
   
  Os índices não clusterizados são os melhores quando usado para pesquisas de intervalo, como exemplificadas pela seguinte consulta:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -197,7 +198,7 @@ As variáveis de tabela definidas em um lote SQL grande, e não em um escopo do 
 
 Os cálculos acima estima suas necessidades de memória para a tabela como existe atualmente. Além dessa memória, você precisa estimar o aumento da tabela e fornecimento de memória suficiente para acomodar esse crescimento.  Por exemplo, se você antecipar o crescimento de 10% no múltiplo da necessidade dos resultados acima por 1,1 para obter a memória total necessária para a tabela.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

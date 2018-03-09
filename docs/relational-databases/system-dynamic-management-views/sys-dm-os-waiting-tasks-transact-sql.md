@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_waiting_tasks_TSQL
 - dm_os_waiting_tasks_TSQL
 - sys.dm_os_waiting_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_waiting_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8df7b1a31a649962f4074c936ff4310cf16a942
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,17 +43,17 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary (8)**|Endereço da tarefa de espera.|  
+|**waiting_task_address**|**varbinary(8)**|Endereço da tarefa de espera.|  
 |**session_id**|**smallint**|ID da sessão associada à tarefa.|  
-|**exec_context_id**|**int**|ID do contexto de execução associado à tarefa.|  
+|**exec_context_id**|**Int**|ID do contexto de execução associado à tarefa.|  
 |**wait_duration_ms**|**bigint**|Tempo de espera total para esse tipo, em milissegundos. Esse tempo é inclusivo do **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Nome do tipo de espera.|  
-|**resource_address**|**varbinary (8)**|Endereço do recurso pelo qual a tarefa está esperando.|  
-|**blocking_task_address**|**varbinary (8)**|Tarefa que está mantendo esse recurso atualmente|  
+|**wait_type**|**nvarchar(60)**|Nome do tipo de espera.|  
+|**resource_address**|**varbinary(8)**|Endereço do recurso pelo qual a tarefa está esperando.|  
+|**blocking_task_address**|**varbinary(8)**|Tarefa que está mantendo esse recurso atualmente|  
 |**blocking_session_id**|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada devido a transições internas de estado da trava.|  
-|**blocking_exec_context_id**|**int**|ID do contexto de execução da tarefa de bloqueio.|  
+|**blocking_exec_context_id**|**Int**|ID do contexto de execução da tarefa de bloqueio.|  
 |**resource_description**|**nvarchar(3072)**|Descrição do recurso que está sendo consumido. Para obter mais informações, consulte a lista a seguir.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="resourcedescription-column"></a>Coluna resource_description  
  A coluna resource_description tem os seguintes valores possíveis.  
@@ -117,7 +120,7 @@ ms.lasthandoff: 11/17/2017
   
  **Proprietário do recurso genérico:**  
   
--   O espaço de trabalho do TransactionMutex TransactionInfo =\<espaço de trabalho-id >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -131,11 +134,11 @@ ms.lasthandoff: 11/17/2017
   
  **Proprietário do recurso de trava:**  
   
--   \<DB-id >:\<id do arquivo >:\<página no arquivo >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID >  
+-   \<GUID>  
   
--   \<classe de trava > (\<trava-address >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
@@ -143,7 +146,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
  
 ## <a name="example"></a>Exemplo
 Este exemplo identificará as sessões bloqueadas.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] de consulta em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 

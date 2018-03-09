@@ -1,5 +1,5 @@
 ---
-title: sys.DM xe_session_event_actions (Transact-SQL) | Microsoft Docs
+title: sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,37 +17,34 @@ f1_keywords:
 - sys.dm_xe_session_event_actions_TSQL
 - dm_xe_session_event_actions
 - sys.dm_xe_session_event_actions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f9c3e5f37d4a515d4a413002c09e13c0c4eb76d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5e342265fe96a892983af51e6efc119a5bac914
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre ações da sessão de evento. Quando eventos são disparados, são executadas ações. Esta exibição de gerenciamento agrega estatísticas sobre o número de vezes que uma ação foi executada e o tempo total de execução da ação.  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
-|action_name|**nvarchar (60)**|O nome da ação. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
+|action_name|**nvarchar(60)**|O nome da ação. Não permite valor nulo.|  
 |action_package_guid|**uniqueidentifier**|A GUID para o pacote que contém esta ação. Não permite valor nulo.|  
-|event_name|**nvarchar (60)**|O nome do evento ao qual a ação está associada. Não permite valor nulo.|  
+|event_name|**nvarchar(60)**|O nome do evento ao qual a ação está associada. Não permite valor nulo.|  
 |event_package_guid|**uniqueidentifier**|O GUID do pacote que contém o evento. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -5,31 +5,32 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 708c9aaa3b0d5550104b23d08dec5339e8639e6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf1c83be1205f7114cfa68c03c5b86187ca42bab
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
   Adicione um usuário à lista **Usuários** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para iniciar o processo de atribuição de permissão ao aplicativo Web. Antes de um usuário da lista poder acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], é preciso atribuir a permissão de usuário a uma ou mais áreas funcionais e objetos de modelo.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  
@@ -46,11 +47,11 @@ ms.lasthandoff: 11/20/2017
   
 5.  Clique em **OK**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Atribuir permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

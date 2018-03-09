@@ -1,10 +1,13 @@
 ---
 title: "Novos recursos de interface gráfica do usuário do SSMA para DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f554b4d330054076042e94948ee8851ae1ecc90b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4735320bb802c86cf0e3eaa563e49fa0542b294b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Novos recursos de interface gráfica do usuário do SSMA para DB2 (DB2ToSQL)
 Este capítulo descreve novos recursos da Interface de usuário do SSMA.  

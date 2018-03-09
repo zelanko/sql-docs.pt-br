@@ -2,10 +2,14 @@
 title: "Arquivos de formato não XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41b6275ea6a6b19b608104a898e2aff363ee9cc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5248b62f5b027dcfa99a9bc5028cc88b3f6ef633
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>Arquivos de formato não XML (SQL Server)
-  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para dois tipos de arquivos de formato de exportação e importação em massa: *arquivos de formato não XML* e *arquivos de formato XML*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para dois tipos de arquivos de formato de exportação e importação em massa: *arquivos de formato não XML* e *arquivos de formato XML*.  
   
  **Neste tópico:**  
   
@@ -59,14 +64,14 @@ ms.lasthandoff: 11/09/2017
   
  Os campos **Versão** e **Número de Colunas** só ocorrem uma vez. Seus significados são descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Descrição|  
+|Campo de arquivo de formato|Description|  
 |------------------------|-----------------|  
 |Versão|Número de versão do utilitário **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> O número de versão é reconhecido somente pelo **bcp**, não pelo [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Observação: a versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 12.0, que é gerado pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Número de Colunas|Número de campos no arquivo de dados. Esse número deve ser o mesmo em todas as linhas.|  
   
  Os outros campos de arquivo de formato descrevem os campos de dados que devem ser importados ou exportados em massa. Cada campo de dados requer uma linha separada no arquivo de formato. Cada linha do arquivo de formato contém valores para os campos de arquivo de formato descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Descrição|  
+|Campo de arquivo de formato|Description|  
 |------------------------|-----------------|  
 |**Ordem de campo do arquivo host**|Um número que indica a posição de cada campo no arquivo de dados. O primeiro campo na linha é 1, e assim por diante.|  
 |**Tipo de dados do arquivo host**|Indica o tipo de dados que é armazenado em um determinado campo do arquivo de dados. Com arquivos de dados ASCII, use SQLCHAR; para arquivos de dados de formato nativo, use tipos de dados padrão. Para obter mais informações, veja [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -109,7 +114,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Criar um arquivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

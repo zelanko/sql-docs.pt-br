@@ -3,8 +3,9 @@ title: "Célula do objeto (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Cell
-helpviewer_keywords: Cell object [ADO MD]
+f1_keywords:
+- Cell
+helpviewer_keywords:
+- Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a8b634548700a92a2524a50cbac7548eea871d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cell-object-ado-md"></a>Objeto de célula (ADO MD)
 Representa os dados na interseção de coordenadas de eixo contidos em um conjunto de células.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **célula** retornado pelo objeto de [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto.  
   
  Com as coleções e propriedades de um **célula** do objeto, você pode fazer o seguinte:  

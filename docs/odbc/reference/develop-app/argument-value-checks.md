@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c5980573d67eff7b791af6f01d3881524312474
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-value-checks"></a>Verificações de valor de argumento
 O Gerenciador de Driver verifica os seguintes tipos de argumentos. Salvo indicação em contrário, o Gerenciador de Driver retornará SQL_ERROR para erros em valores de argumento.  
@@ -43,4 +41,3 @@ O Gerenciador de Driver verifica os seguintes tipos de argumentos. Salvo indica�
 -   Números de coluna e o parâmetro devem ser maior que 0 ou maior que ou igual a 0, dependendo da função. O driver deve verificar o limite superior desses valores de argumento com base no conjunto de resultados atual ou instrução SQL.  
   
 -   Argumentos de comprimento/indicador e argumentos de comprimento de buffer de dados devem conter valores apropriados. Por exemplo, o argumento que especifica o comprimento de um nome de tabela em **SQLColumns** (*NameLength3*) deve ser SQL_NTS ou um valor maior que 0; *BufferLength* na **SQLDescribeCol** deve ser maior que ou igual a 0. O driver também precisará verificar esses argumentos. Por exemplo, ele pode verificar que *NameLength3* é menor ou igual ao comprimento máximo de um nome de tabela na fonte de dados.
-

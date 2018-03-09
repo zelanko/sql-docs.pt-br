@@ -21,17 +21,16 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - GRANT statement, full-text permissions
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 624b779b088008076360e12ed96c450fc3e91b50
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 673092fc5f3523d0448e477ceda10ea491224982
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>Permissões de texto completo GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ GRANT permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- NO catálogo de texto completo **::***text_catalog_name completo*  
+ NO catálogo de texto completo **:: * text_catalog_name completo*  
  Especifica o catálogo de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é necessária.  
   
- EM FULLTEXT STOPLIST **::***text_stoplist_name completo*  
+ EM FULLTEXT STOPLIST **:: * text_stoplist_name completo*  
  Especifica a lista de palavras irrelevantes de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é necessária.  
   
  *database_principal*  
@@ -94,7 +93,7 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>Permissões FULLTEXT CATALOG  
  Um catálogo de texto completo é um protegível em nível de banco de dados contido no banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um catálogo de texto completo estão listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -159,20 +158,19 @@ GRANT VIEW DEFINITION
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CRIAR o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   
-

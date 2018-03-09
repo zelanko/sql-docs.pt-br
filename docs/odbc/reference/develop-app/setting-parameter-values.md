@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 726af8b2a7b4e9f0b630c95c45f512201fa1cf3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-parameter-values"></a>Definir valores de parâmetro
 Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor da variável associada ao parâmetro. Não é importante quando esse valor for definido, desde que ele está definido antes da instrução é executada. O aplicativo pode definir o valor antes ou depois de associação da variável, e ele pode alterar o valor de quantas vezes desejar. Quando a instrução é executada, o driver simplesmente recupera o valor atual da variável. Isso é particularmente útil quando uma instrução preparada é executada mais de uma vez; o aplicativo define novos valores para algumas ou todas as variáveis de cada vez que a instrução é executada. Para obter um exemplo disso, consulte [execução preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md)anteriormente nesta seção.  
@@ -60,4 +57,3 @@ Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor 
  [d] drivers sempre devem verificar esse valor para ver se ele é um valor especial, como SQL_NULL_DATA.  
   
  O que faz um driver com um valor de parâmetro em tempo de execução é dependente do driver. Se necessário, o driver converte o valor do comprimento C de byte e tipo de dados da variável de associado para o tipo de dados SQL, precisão e escala do parâmetro. Na maioria dos casos, o driver envia o valor para a fonte de dados. Em alguns casos, ele formata o valor como texto e o insere na instrução SQL antes de enviar a instrução para a fonte de dados.
-

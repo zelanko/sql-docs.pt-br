@@ -1,56 +1,54 @@
 ---
-title: Usando o controle ReportViewer do WebForms | Microsoft Docs
+title: Usando o controle WebForms ReportViewer | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "25"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7ba5ace49e8990322e119cce01426578a017cd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
   Para exibir relatórios implantados para um servidor de relatório ou relatórios que existem no sistema de arquivos local, você poderá usar o controle ReportViewer do WebForms para renderizá-los em um aplicativo Web.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Para usar o controle ReportViewer em um aplicativo Web  
   
-1.  Criar um novo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web Site usando um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Crie um novo site [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-Ou -  
+     \- Ou –  
   
      Abra um site ASP.NET existente e adicione um novo Web Form.  
   
-2.  Localize o **ScriptManager** controlar o **extensões AJAX** grupo o **caixa de ferramentas** janela e arraste-o para a superfície de design do formulário da Web.  
+2.  Localize o controle **ScriptManager** no grupo **Extensões AJAX** na janela **Caixa de Ferramentas** e arraste-o para a área de design do formulário da Web.  
   
-     Se o **caixa de ferramentas** é não visível, você pode acessá-lo do **exibição** menu selecionando **caixa de ferramentas**.  
+     Se a **Caixa de Ferramentas** não estiver visível, você poderá acessá-la no menu **Exibir** selecionando **Caixa de Ferramentas**.  
   
-3.  Localize o **ReportViewer** controlar o **caixa de ferramentas** e arraste-o para a superfície de design abaixo o **ScriptManager** controle.  
+3.  Localize o controle **ReportViewer** na **Caixa de Ferramentas** e arraste-o para a área de design abaixo do controle **ScriptManager**.  
   
-     O **ReportViewer** controle chamado reportViewer1 é adicionado ao formulário.  
+     O controle **ReportViewer** chamado reportViewer1 é adicionado ao formulário.  
   
- Depois que o controle é adicionado ao formulário de **tarefas do ReportViewer** marca inteligente será exibida solicitando que você selecione um relatório. Se o relatório que você deseja exibir tiver sido implantado para um servidor de relatório, selecione o  **\<relatório do servidor >** opção o **escolher relatório** lista suspensa. Uma vez o  **\<relatório do servidor >** opção é selecionadas duas propriedades adicionais serão exibidas, **Url do servidor de relatório** e **caminho do relatório**. O **Url do servidor de relatório** é o endereço para o servidor de relatório e o **caminho do relatório** é o caminho completo para o relatório que você deseja processar.  
+ Depois que o controle for adicionado ao formulário, marcação inteligente **Tarefas do ReportViewer**, será exibida solicitando que você selecione um relatório. Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Depois que a opção **\<Server Report>** for selecionada, serão exibidas duas propriedades adicionais, **URL do Servidor de Relatório** e **Caminho do Relatório**. A **URL do Servidor de Relatório** é o endereço do servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório que você deseja renderizar.  
   
- Selecione se deseja exibir um relatório em modo local a **criar um novo relatório** para iniciar o designer de relatórios ou selecione um relatório que já faça parte de um projeto existente. Depois de selecionar um relatório, certifique-se de inserir o nome do arquivo relatório RDLC no **ReportPath** propriedade do controle ReportViewer. Esta propriedade aparece sob o **LocalReport** nó o **propriedades** painel.  
+ Se desejar exibir um relatório no modo local, selecione a opção **Criar um novo relatório** para iniciar o designer de relatórios ou selecione um relatório que já faz parte do projeto existente. Depois de selecionar um relatório, insira o nome do arquivo de relatório RDLC na propriedade **ReportPath** do controle ReportViewer. Essa propriedade é exibida no nó **LocalReport** do painel **Propriedades**.  
   
- É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as seguintes propriedades do ReportViewer **False** no **propriedades** painel.  
+ É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as propriedades ReportViewer a seguir como **False** no painel **Propriedades**.  
   
 -   **ShowBackButton**  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Exibindo relatórios em modo de processamento remoto  
  O exemplo a seguir demonstra como renderizar um relatório implantado em um servidor de relatório. Este exemplo usa o relatório Detalhes do Pedido de Vendas incluído no projeto de relatórios de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para fazer isso, insira a linha a seguir para o **Web. config** arquivo:  
+ O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para fazer isso, insira a seguinte linha no arquivo **web.config**:  
   
 ```  
 <!-- Web.config file. -->  
@@ -155,19 +153,19 @@ End Class
   
 1.  Abra o site ao qual o relatório será adicionado.  
   
-2.  Do **site** menu, selecione **Add Existing Item**.  
+2.  No menu **Site**, selecione **Adicionar Item Existente**.  
   
 3.  Navegue até o local onde o projeto com exemplos de relatório da AdventureWorks foi instalado.  
   
      O local padrão é C:Arquivos de programas\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports.  
   
-4.  Selecione o arquivo Sales Order Detail.rdl e clique no **adicionar** botão.  
+4.  Selecione o arquivo Sales Order Detail.rdl e clique no botão **Adicionar**.  
   
      O arquivo Sales Order Detail.rdl agora deve fazer parte do projeto.  
   
-5.  Clique no arquivo Sales Order Detail.rdl no Gerenciador de soluções e selecione **Renomear**. Renomeie o relatório para **rdlc de ordem de vendas** e pressione ENTER.  
+5.  Clique com o botão direito do mouse no arquivo Sales Order Detail.rdl no Gerenciador de Soluções e selecione **Renomear**. Renomeie o relatório como **Sales Order Detail.rdlc** pressione a ENTER.  
   
-     Se o Gerenciador de soluções não estiver visível, você pode abri-lo no **exibição** menu selecionando o Gerenciador de soluções.  
+     Se o Gerenciador de Soluções não estiver visível, abra-o no menu **Exibir** selecionando Gerenciador de Soluções.  
   
  O exemplo de código a seguir criará um conjunto de dados para os dados do pedido de vendas e, depois, renderizará o relatório de detalhes do pedido de vendas em modo local.  
 
@@ -489,9 +487,8 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integrando o Reporting Services usando os controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [Coleta de dados 2016 de controle do ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [Coleta de dados no controle ReportViewer de 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

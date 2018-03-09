@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - year-month intervals [ODBC]
 - data conversions from C to SQL types [ODBC], year-month intervals
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 880564e5883299b5f79df4f0480ab81ae8c9de1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C para SQL: intervalos de mês do ano
 Os identificadores para os tipos de dados ODBC C ano-mês intervalo são:  
@@ -51,4 +49,3 @@ Os identificadores para os tipos de dados ODBC C ano-mês intervalo são:
  A conversão padrão de um intervalo de tipo C é o intervalo de ano-mês tipo SQL correspondente.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados do tipo de dados de intervalo C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados C de intervalo. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
-

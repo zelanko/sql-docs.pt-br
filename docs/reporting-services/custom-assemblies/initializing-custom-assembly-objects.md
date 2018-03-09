@@ -1,38 +1,38 @@
 ---
-title: Inicializando objetos Assembly personalizados | Microsoft Docs
+title: Inicializando objetos de assembly personalizados | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: a68f5a72debf44282660d20ca2d092615f83c234
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ab05efc7baba58a34180faa038cb58c7f57f4af2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inicializando objetos assembly personalizados
-  Em alguns casos, talvez você precise inicializar valores de propriedade e de campo em suas classes assembly personalizadas ao instanciá-las. É mais provável que você tenha de inicializar as suas classes personalizadas com valores disponíveis a partir de coleções de objetos globais do relatório. Para fazer isso, substituindo o **OnInit** método o **código** objeto de um relatório. Para acessar **OnInit**, use o **código** elemento da definição de relatório. Existem duas técnicas para inicializar valores de propriedade ou campo das classes em um assembly personalizado que você planeja usar em seu relatório: você pode declarar e criar uma nova instância da sua classe usando **OnInit**, ou você pode chamar um método disponível publicamente usando **OnInit**.  
+  Em alguns casos, talvez você precise inicializar valores de propriedade e de campo em suas classes assembly personalizadas ao instanciá-las. É mais provável que você tenha de inicializar as suas classes personalizadas com valores disponíveis a partir de coleções de objetos globais do relatório. Faça isso substituindo o método **OnInit** do objeto **Code** de um relatório. Para acessar **OnInit**, use o elemento **Code** da definição de relatório. Existem duas técnicas para a inicialização de valores de propriedade e de campo das classes em um assembly personalizado que você pretende usar em seu relatório: você pode declarar e criar uma nova instância da classe usando **OnInit** ou chamar um método disponível publicamente usando **OnInit**.  
   
 ## <a name="global-object-collections-and-initialization"></a>Coleções e inicialização de objetos globais  
- Várias coleções estão disponíveis para que você inicialize suas variáveis de classe personalizadas. Você pode usar o **globais** e **usuário** coleções. O **parâmetros**, **campos** e **ReportItems** coleções não estão disponíveis para você no ponto do ciclo de vida do relatório quando o **OnInit** método é invocado. Para usar as coleções compartilhadas, **globais** ou **usuário**, você precisa incluir o **relatório** referência de objeto. Por exemplo, para inicializar sua classe personalizada com base no idioma atual do usuário que está acessando o relatório, seu **código** elemento pode parecer com o seguinte:  
+ Várias coleções estão disponíveis para que você inicialize suas variáveis de classe personalizadas. Use as coleções **Globals** e **User**. As coleções **Parameters**, **Fields** e **ReportItems** não estão disponíveis no ponto do ciclo de vida do relatório quando o método **OnInit** é invocado. Para usar as coleções compartilhadas, **Globals** ou **User**, você precisa incluir a referência de objeto **Report**. Por exemplo, para inicializar a classe personalizada com base no idioma atual do usuário que está acessando o relatório, o elemento **Code** poderá ter esta aparência:  
   
 ```  
 <Code>  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/12/2017
   
  Uma forma de inicializar os valores de propriedade e de campo de uma classe como mostrado anteriormente é declarar a sua classe e criar uma nova instância dela chamando um construtor substituído.  
   
- Outra maneira de inicializar os valores de propriedade e o campo das classes em seus assemblies personalizados é chamar um método disponível publicamente definido a partir de **OnInit** método. Primeiro, você precisa adicionar um nome de instância para a sua classe ao arquivo de definição de relatório. Depois de adicionar a referência de assembly apropriada e o nome de instância, você poderá chamar o seu método de inicialização para inicializar valores de propriedade e de campo para a sua classe. O **OnInit** método pode parecer com o seguinte:  
+ Outra forma de inicializar os valores de propriedade e de campo das classes em assemblies personalizados é chamar um método disponível publicamente definido com base no método **OnInit**. Primeiro, você precisa adicionar um nome de instância para a sua classe ao arquivo de definição de relatório. Depois de adicionar a referência de assembly apropriada e o nome de instância, você poderá chamar o seu método de inicialização para inicializar valores de propriedade e de campo para a sua classe. O método **OnInit** poderá ser parecido com o seguinte:  
   
 ```  
 <Code>  
@@ -58,11 +58,11 @@ ms.lasthandoff: 08/12/2017
 </Code>  
 ```  
   
- Para obter mais informações sobre como adicionar um nome de instância e de referência de assembly para sua classe personalizada, consulte [adicionar uma referência de Assembly para um relatório &#40; SSRS &#41; ](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
+ Para obter mais informações sobre como adicionar um nome de instância e uma referência de assembly à classe personalizada, consulte [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Para obter mais informações sobre as coleções de objetos globais, consulte [coleções internas em expressões &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Para obter mais informações sobre coleções de objetos globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

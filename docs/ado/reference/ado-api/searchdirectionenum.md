@@ -3,8 +3,9 @@ title: SearchDirectionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,30 +13,32 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SearchDirectionEnum
-helpviewer_keywords: SearchDirectionEnum enumeration [ADO]
+f1_keywords:
+- SearchDirectionEnum
+helpviewer_keywords:
+- SearchDirectionEnum enumeration [ADO]
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4d5e78b7f636c4fb6094a217a0b1249babe9b2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 46b8e127ed67c71a733cf232e92e967a031b4314
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Especifica a direção de uma pesquisa de registro em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|Parando no início de pesquisas com versões anteriores, o **registros**. Se uma correspondência não for encontrada, o ponteiro do registro é posicionado na [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
 |**adSearchForward**|1|Procura de mensagens, parando no final de **registros**. Se uma correspondência não for encontrada, o ponteiro do registro é posicionado na [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

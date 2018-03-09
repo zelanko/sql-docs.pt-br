@@ -19,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ef8a6ae40be42412c580e3573aa51fb7a5a83d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dc0837867969c86e578d1c87189d1803f8a5594
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurar um backup de banco de dados no modelo de recuperação simples (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>Description  
  Este exemplo restaura o backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir da fita.  
   
 ### <a name="example"></a>Exemplo  
@@ -88,12 +88,12 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Backups de bancos de dados completos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
- [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
+ [Recompilar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
   
   

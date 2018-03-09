@@ -13,19 +13,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 99f561213fafe5b70c3d0f95af247780c9247137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-source-custom-properties"></a>Propriedades personalizadas da origem ODBC
+# <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   A tabela a seguir descreve as propriedades personalizadas da origem ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
   
 |Nome da propriedade|Tipo de Dados|Description|  
@@ -44,9 +43,8 @@ ms.lasthandoff: 08/03/2017
 |LobChunckSize|Integer|A alocação de tamanho de parte para colunas LOB.|  
 ||||  
   
-## <a name="see-also"></a>Consulte também  
- [Origem ODBC](../../integration-services/data-flow/odbc-source.md)   
- [Editor de origem ODBC &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Fonte ODBC](../../integration-services/data-flow/odbc-source.md)   
+ [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   
-

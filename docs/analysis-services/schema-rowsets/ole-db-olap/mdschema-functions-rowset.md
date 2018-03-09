@@ -2,15 +2,13 @@
 title: Conjunto de linhas MDSCHEMA_FUNCTIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_FUNCTIONS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 446f89e34824cbb4ebde3d49bb3ceb686b4adafd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Conjunto de linhas MDSCHEMA_FUNCTIONS
-  Descreve as funções disponíveis para aplicativos cliente conectados ao banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as funções disponíveis para aplicativos cliente conectados ao banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_FUNCTIONS** linhas contém as seguintes colunas.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**NOME_DA_FUNÇÃO**|**DBTYPE_WSTR**|Opcional.|  
 |**ORIGEM**|**DBTYPE_I4**|Opcional.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

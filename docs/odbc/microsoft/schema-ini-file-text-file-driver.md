@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Arquivo Schema (Driver de arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema e sempre é mantido no mesmo diretório como a fonte de dados de texto. O arquivo de informações de esquema fornece IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema.ini é sempre necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados decimais ou sempre que quiser mais controle sobre a manipulação de dados na tabela.  
@@ -101,14 +99,14 @@ Col2=CustomerName Text Width 30
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir descreve cada parte do **Col**  *n*  entrada.  
   
 |Parâmetro|Description|  
 |---------------|-----------------|  
 |*ColumnName*|O nome do texto da coluna. Se o nome de coluna contiver espaços, você deve colocá-la entre aspas duplas.|  
-|*tipo*|Tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> Moeda<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (o mesmo como texto)<br /><br /> Float (o mesmo que Double)<br /><br /> Inteiro (o mesmo que Short)<br /><br /> LongChar (mesmo memorando)<br /><br /> Data *formato de data*|  
-|**Largura**|O valor de cadeia de caracteres literal `Width`. Indica que o seguinte número designa a largura da coluna (opcional para arquivos delimitados por caracteres; necessário para arquivos de comprimento fixo).|  
+|*tipo*|Tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (o mesmo como texto)<br /><br /> Float (o mesmo que Double)<br /><br /> Inteiro (o mesmo que Short)<br /><br /> LongChar (mesmo memorando)<br /><br /> Data *formato de data*|  
+|**Width**|O valor de cadeia de caracteres literal `Width`. Indica que o seguinte número designa a largura da coluna (opcional para arquivos delimitados por caracteres; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor inteiro que designa a largura da coluna (obrigatório se **largura** for especificado).|  
   
 ## <a name="selecting-a-character-set"></a>Selecionar um conjunto de caracteres  
@@ -136,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Se você omitir uma entrada, o valor padrão no painel de controle do Windows será usado.
-

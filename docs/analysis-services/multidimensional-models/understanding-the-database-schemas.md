@@ -2,16 +2,13 @@
 title: Entendendo os esquemas de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
-  O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
   
 ## <a name="validation"></a>Validação  
  Antes de começar a gerar o esquema relacional subjacente, o Assistente de Geração de Esquema valida os cubos e dimensões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se detectar erros, o assistente parará e os reportará na janela Lista de Tarefas do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. São exemplos de erros que impedem a geração:  
@@ -104,7 +102,7 @@ ms.lasthandoff: 11/17/2017
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Consulte também  
- [Entendendo a geração com incremento](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Noções básicas sobre geração Incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
+ [Gerenciar alterações em exibições da fonte de dados e fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

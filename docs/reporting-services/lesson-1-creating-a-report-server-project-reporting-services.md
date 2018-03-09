@@ -2,29 +2,30 @@
 title: "Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ce02663b3fd39c18e692b56473afb302788c5605
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [lição 1: Criando um projeto do servidor de relatório (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: Criando um projeto do servidor de relatório (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
 
 Nesta lição, você criará um *projeto do servidor de relatórios* e um *arquivo de definição de relatório (.rdl)* [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] no Visual Studio. 
 
@@ -38,7 +39,7 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
   
 1.  Abra o [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  Sobre o **arquivo** menu > **novo** > **projeto**.  
+2.  No menu **Arquivo** > **Novo** > **Projeto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +49,7 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
 
 5. Clique em **Projeto do Servidor de Relatório** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Observação**: se você não vir o **Business Intelligence** ou **Report Server Project** opções, você precisa atualizar o SSDT com os modelos de Business Intelligence. Consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+   >**Observação**: se as opções **Business Intelligence** ou **Projeto do Servidor de Relatório** não estiverem visíveis, será necessário atualizar o SSDT com os modelos de Business Intelligence. Consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  Em **Nome**, digite **Tutorial**.  
 
@@ -81,10 +82,9 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
     Você define os dados no painel **Dados do Relatório** . Você define o layout do relatório no modo **Design** . É possível executar o relatório e ver sua aparência na exibição **Visualização** .  
   
 ## <a name="next-lesson"></a>Próxima lição  
-Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Consulte [lição 2: especificando informações de Conexão &#40; Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo de definição de relatório (.rdl) ao projeto de relatório com êxito. Em seguida, você especificará uma fonte de dados para usar para o relatório. Consulte [Lição 2: Especificando informações de conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: Catalog. move_environment (banco de dados SSISDB) | Microsoft Docs
+title: catalog.move_environment (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd8598e526761f51e361fcc7c3330bbe3c9a470f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,29 +38,29 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @source_folder =] *source_folder*  
- O nome da pasta de origem onde o ambiente reside antes da movimentação. O *source_folder* é **nvarchar (128)**.  
+ [ @source_folder = ] *source_folder*  
+ O nome da pasta de origem onde o ambiente reside antes da movimentação. O *source_folder* é **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- O nome do ambiente que deve ser movido. O *environment_name* é **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ O nome do ambiente que deve ser movido. O *environment_name* é **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- O nome da pasta de destino onde o ambiente reside após a movimentação. O *destination_folder* é **nvarchar (128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ O nome da pasta de destino onde o ambiente reside após a movimentação. O *destination_folder* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -72,11 +71,10 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As referências de ambiente de projetos não seguem o ambiente durante a movimentação. As referências de ambiente devem ser atualizadas de forma correspondente. Esse procedimento armazenado terá êxito mesmo que as referências de ambiente sejam desfeitas pela movimentação de um ambiente. As referências de ambiente devem ser atualizadas depois da conclusão desse procedimento armazenado.  
   
 > [!NOTE]  
 >  Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome. Essas referências requerem que o ambiente resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Essas referências fazem referência a ambientes que residam em uma pasta diferente da pasta do projeto.  
   
   
-

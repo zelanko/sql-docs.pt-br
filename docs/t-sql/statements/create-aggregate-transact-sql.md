@@ -1,5 +1,5 @@
 ---
-title: "Criar agregação (Transact-SQL) | Microsoft Docs"
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - CREATE AGGREGATE
 - AGGREGATE_TSQL
 - AGGREGATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE AGGREGATE statement
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  É o nome da função de agregação que você deseja criar.  
   
- **@***param_name*  
+ **@** *param_name*  
  Um ou mais parâmetros na agregação definida pelo usuário. O valor de um parâmetro deve ser fornecido pelo usuário quando a função de agregação é executada. Especifique um nome de parâmetro usando um sinal de "arroba" (**@**) como o primeiro caractere. O nome do parâmetro deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os parâmetros são locais à função.  
   
  *system_scalar_type*  
@@ -83,10 +85,10 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  É o nome de um tipo de dado CLR definido pelo usuário já criado no banco de dados atual. Se *udt_schema_name* não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supõe que o tipo pertence ao esquema do usuário atual.  
   
- *nome_do_assembly* [ **.** *class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  Especifica o assembly a ser associado à função de agregação definida pelo usuário e, opcionalmente, o nome do esquema ao qual pertence o assembly e o nome da classe no assembly que implementa a agregação definida pelo usuário. O assembly já deve ter sido criado no banco de dados usando uma instrução CREATE ASSEMBLY. *class_name* deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador e corresponder ao nome de uma classe que existe no assembly. *class_name* pode ser um nome qualificado de namespace se a linguagem de programação usada para gravar a classe usar namespaces, tal como c#. Se *class_name* não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assume que é o mesmo que *aggregate_name*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Por padrão, a capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em executar código CLR está desligada. Você pode criar, modificar e descartar objetos de banco de dados que referenciam módulos de código gerenciado, mas o código nesses módulos não será executado em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que o [opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) é habilitada usando [SP _ configurar](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  A classe do assembly referenciado no *nome_do_assembly* e seus métodos devem satisfazer todos os requisitos para implementar uma função de agregação definida pelo usuário em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [agregações CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
@@ -121,6 +123,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Remover agregação &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

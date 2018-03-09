@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,10 +116,10 @@ ms.lasthandoff: 11/20/2017
   
 2.  Quando você tiver certeza de que a operação assíncrona está atendendo a suas necessidades empresariais, tente a operação síncrona para aumentar a proteção dos dados. Quando você testar o funcionamento do espelhamento síncrono em seu ambiente, recomendamos que tente primeiro o modo de alta segurança sem failover automático. O principal objetivo desse teste é verificar como a operação síncrona afeta o desempenho do banco de dados. Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-3.  Aguarde para habilitar o failover automático até que esteja confiante de que o modo de alta segurança sem failover automático esteja atendendo às necessidades comerciais e que os erros de rede não estejam provocando falhas. Para obter mais informações, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+3.  Aguarde para habilitar o failover automático até que esteja confiante de que o modo de alta segurança sem failover automático esteja atendendo às necessidades comerciais e que os erros de rede não estejam provocando falhas. Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

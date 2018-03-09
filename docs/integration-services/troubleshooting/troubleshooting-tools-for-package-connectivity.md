@@ -1,5 +1,5 @@
 ---
-title: "Ferramentas de solução de problemas de conectividade do pacote | Microsoft Docs"
+title: "Ferramentas de solução de problemas para conectividade de pacote | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 223023cae5ba0ca6ac2fab8298334547875ab4d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Solucionando problemas de ferramentas para conectividade de pacote
 O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos e ferramentas que você pode usar para solucionar problemas de conectividade entre pacotes e fontes de dados das quais os pacotes extraem e carregam dados.  
@@ -42,7 +41,7 @@ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos
   
     -   Gerenciador de conexões do OLE DB, origem e destino do OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Gerenciador de conexão e a origem do ADO NET  
+    -   Gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e origem do ADO NET  
   
     -   Tarefa Executar SQL  
   
@@ -76,9 +75,8 @@ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Ferramentas de solução de problemas para execução do pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

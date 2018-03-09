@@ -3,7 +3,7 @@ title: "Abra o método (Conexão ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c61284bb59c01e22ef4f2cb46664fe7d7f7bbd2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Método Open (Conexão ADO)
 Abre uma conexão a uma fonte de dados.  
@@ -46,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Opcional. Um **cadeia de caracteres** valor que contém informações de conexão. Consulte o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para obter detalhes sobre as configurações válidas.  
   
- *ID de usuário*  
+ *UserID*  
  Opcional. Um **cadeia de caracteres** valor que contém um nome de usuário a ser usado ao estabelecer a conexão.  
   
  *Senha*  
@@ -55,7 +54,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *Opções*  
  Opcional. Um [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valor que determina se esse método deve retornar depois (de forma síncrona) ou antes (de forma assíncrona) a conexão é estabelecida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Usando o **abrir** método em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto estabelece a conexão física com uma fonte de dados. Depois que esse método é concluído com êxito, a conexão está ativa e você pode executar comandos em relação a ela e processar os resultados.  
   
  Use opcional *ConnectionString* argumento para especificar uma cadeia de conexão que contém uma série de *argumento* *= valor* instruções separadas por ponto e vírgula, ou um recursos de arquivo ou diretório identificado por uma URL. O **ConnectionString** propriedade herda automaticamente o valor usado para o *ConnectionString* argumento. Portanto, você pode definir o **ConnectionString** propriedade o **Conexão** objeto antes de abri-lo ou usar o *ConnectionString* argumento para definir ou substituir os parâmetros de conexão atual durante a **abrir** chamada de método.  
@@ -81,4 +80,3 @@ connection.Open ConnectionString, UserID, Password, Options
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

@@ -5,26 +5,27 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a6ffdda65981ec455cd2ef0dda29b32cdda2e82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f4709e5044fe7f4a6b9a4c91045e661483481903
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Excluir uma hierarquia derivada (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma hierarquia derivada quando você tiver certeza de que não precisa mais dela.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  A exclusão de uma hierarquia derivada não tem qualquer efeito sobre as relações de atributo em que essa hierarquia é fundamentada.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

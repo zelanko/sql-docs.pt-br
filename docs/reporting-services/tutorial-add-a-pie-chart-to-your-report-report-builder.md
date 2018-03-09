@@ -1,27 +1,28 @@
 ---
-title: "Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um gráfico de pizza em um relatório paginado do Reporting Services. Você adiciona percentuais e combina fatias pequenas em uma única fatia.
@@ -35,7 +36,7 @@ A ilustração a seguir mostra o gráfico de pizza que será criado.
 Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, considere a combinação de um número de fatias pequenas em uma fatia maior. Gráficos de pizza são mais fáceis de ler quando você agrega os dados em poucos pontos de dados.  
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para instruções passo a passo sobre como navegar até um servidor de relatório, adicione uma fonte de dados e adicione um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para obter instruções passo a passo sobre como procurar um servidor de relatório, adicionar uma fonte de dados e um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 10 minutos  
   
@@ -143,7 +144,7 @@ Três das fatias do gráfico são bastante pequenas. Você pode combinar várias
 
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Se o painel Propriedades não estiver visível, no **exibição** guia > **Mostrar/ocultar** grupo > selecione **propriedades**.  
+2.  Se o painel Propriedades não estiver visível, na guia **Exibir** > grupo **Mostrar/Ocultar** > selecione **Propriedades**.  
   
 3.  Na superfície de design, clique em qualquer fatia do gráfico de pizza. As propriedades da série são exibidas no painel Propriedades.  
   
@@ -197,7 +198,7 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 3.  Selecione **Vendas de Câmeras e Filmadoras**, na guia **Início** > seção **Fonte** > clique em **Negrito**.  
   
-4.  Selecione **como uma porcentagem do Total de vendas**e na **início** guia > **fonte** seção > definir o tamanho da fonte **10**.  
+4.  Selecione **Como um Percentual do Total de Vendas** e, na guia **Início** > seção **Fonte**, defina o tamanho da fonte como **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título para acomodar as duas linhas de texto.  
   
@@ -219,12 +220,11 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 O relatório é salvo no servidor de relatório.  
   
-## <a name="next-steps"></a>Próximas etapas  
-Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [gráficos &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## <a name="next-steps"></a>Next Steps  
+Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

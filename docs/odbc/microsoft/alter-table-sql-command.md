@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alter table [ODBC]
+helpviewer_keywords: alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - comando SQL
 Modifica programaticamente a estrutura de uma tabela.  
@@ -188,7 +185,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Especifica que o Visual FoxPro permite que as alterações sejam feitas para a estrutura da tabela; Essas alterações podem violar a integridade dos dados na tabela. Por padrão, Visual FoxPro impede ALTER TABLE fazendo alterações que violam a integridade dos dados na tabela. Inclua NOVALIDATE para substituir esse comportamento padrão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE pode ser usado para modificar a estrutura de uma tabela que não foi adicionada ao banco de dados. No entanto, o Visual FoxPro gerará um erro se você incluir o padrão, a chave estrangeira, a chave primária, a referências ou definir cláusulas ao modificar uma tabela livre.  
   
  ALTER TABLE pode recriar a tabela de criação de um novo cabeçalho de tabela e anexando registros para o cabeçalho da tabela. Por exemplo, alterar o tipo ou a largura de um campo pode causar a tabela devem ser recriados.  
@@ -199,7 +196,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Se a tabela que você modificar um banco de dados, ALTER TABLE - SQL requer o uso exclusivo do banco de dados. Para abrir um banco de dados para uso exclusivo, incluem exclusivo no banco de dados aberto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar tabela - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando INDEX](../../odbc/microsoft/index-command.md)
-

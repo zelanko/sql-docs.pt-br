@@ -2,18 +2,17 @@
 title: "Funções de segurança (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], roles
 - Analysis Services objects, roles
@@ -25,19 +24,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Funções de Segurança (Analysis Services - Dados Multidimensionais)
-  Funções são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para gerenciar a segurança de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos e dados. Em termos básicos, uma função associa os identificadores de segurança (SIDs) de usuários e grupos que têm direitos de acesso específicos e as permissões definidas para objetos gerenciados por uma instância do Windows do Microsoft [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dois tipos de funções são fornecidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Funções são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para gerenciar a segurança de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos e dados. Em termos básicos, uma função associa os identificadores de segurança (SIDs) de usuários e grupos que têm direitos de acesso específicos e as permissões definidas para objetos gerenciados por uma instância do Windows do Microsoft [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dois tipos de funções são fornecidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   A função do servidor, uma função fixa que fornece acesso de administrador a uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
 |Ação|Valores|Explicação|  
 |------------|------------|-----------------|  
-|Processar|{**true**, **false**}<br /><br /> Padrão=**false**|Se **true**, os membros podem processar o objeto e qualquer objeto contido no objeto.<br /><br /> As permissões de processo não se aplicam aos modelos de mineração. <xref:Microsoft.AnalysisServices.MiningModel>permissões são herdadas sempre <xref:Microsoft.AnalysisServices.MiningStructure>.|  
+|Processar|{**true**, **false**}<br /><br /> Padrão=**false**|Se **true**, os membros podem processar o objeto e qualquer objeto contido no objeto.<br /><br /> As permissões de processo não se aplicam aos modelos de mineração. <xref:Microsoft.AnalysisServices.MiningModel> permissões são herdadas sempre <xref:Microsoft.AnalysisServices.MiningStructure>.|  
 |ReadDefinition|{**None**, **Basic**, **Allowed**}<br /><br /> Padrão=**None**|Especifica se membros podem ler a definição de dados (ASSL) associada ao objeto.<br /><br /> Se **Allowed**, os membros podem ler o ASSL associado ao objeto.<br /><br /> **Basic** e **Allowed** são herdados por objetos contidos no objeto. **Allowed** substitui **Basic** e **None**.<br /><br /> **Allowed** é necessário para DISCOVER_XML_METADATA em um objeto. **Basic** é necessário para criar objetos vinculados e cubos locais.|  
 |Leitura|{**None**, **Allowed**}<br /><br /> Padrão =**None** (exceto para DimensionPermission, onde padrão=**Allowed**)|Especifica se membros têm acesso de leitura a conjuntos de linhas do esquema e conteúdo de dados.<br /><br /> **Allowed** concede acesso de leitura em um banco de dados, o qual é possível descobrir um banco de dados.<br /><br /> **Permitido** em um cubo concede acesso de leitura em conjuntos de linhas de esquema e acesso ao conteúdo do cubo (a menos que restringido por <xref:Microsoft.AnalysisServices.CellPermission> e <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **Permitido** em uma dimensão concede permissão de leitura em todos os atributos da dimensão (a menos que restringido por <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). A permissão de leitura é usada para herança estática para o <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. **None** em uma dimensão oculta a dimensão e concede acesso ao membro padrão apenas para atributos agregáveis; ocorrerá um erro se a dimensão contiver um atributo não agregável.<br /><br /> **Permitido** em um <xref:Microsoft.AnalysisServices.MiningModelPermission> concede permissões para ver objetos em conjuntos de linhas de esquema e executar junções de previsão.<br /><br /> **NoteAllowed** é necessário para ler ou gravar em qualquer objeto no banco de dados.|  
 |Gravação|{**None**, **Allowed**}<br /><br /> Padrão=**None**|Especifica se membros têm acesso de gravação aos dados do objeto pai.<br /><br /> O acesso aplica-se às subclasses <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.MiningModel>. Não se aplica ao banco de dados <xref:Microsoft.AnalysisServices.MiningStructure> subclasses, que gera um erro de validação.<br /><br /> **Permitido** em um <xref:Microsoft.AnalysisServices.Dimension> concede permissão de gravação em todos os atributos na dimensão.<br /><br /> **Permitido** em um <xref:Microsoft.AnalysisServices.Cube> concede permissão de gravação nas células do cubo para partições definidas como tipo = write-back.<br /><br /> **Permitido** em um <xref:Microsoft.AnalysisServices.MiningModel> concede permissão para modificar o conteúdo do modelo.<br /><br /> **Permitido** em uma <xref:Microsoft.AnalysisServices.MiningStructure> não tem nenhum significado específico [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].<br /><br /> Observação: A gravação não pode ser definida como **permitidos** a menos que a leitura também é definida como **permitidos**|  

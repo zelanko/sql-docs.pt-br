@@ -2,9 +2,12 @@
 title: "Visão geral de segurança (Replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8961944101604f399291a84f6966167c8a1ac8aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9e0bcbe317e86f9562f28a339bb4e5ce4c81dfe5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-overview-replication"></a>Visão geral de segurança (Replicação)
-  Essencialmente, como ajudar a proteger seu ambiente de replicação é uma questão de compreender as opções de autorização e autenticação, compreender o uso apropriado dos recursos de filtragem de replicação e aprender medidas específicas de como ajudar a proteger cada parte do ambiente de replicação. O ambiente de replicação inclui o Distribuidor, o Publicador, os Assinantes e a pasta de instantâneos. Este capítulo aborda a segurança de replicação, mas a segurança de replicação é criada na segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e segurança do Windows. Portanto, você deve compreender esta base e as particularidades da segurança de replicação. Para obter mais informações, consulte [Considerações de segurança para uma instalação do SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Para obter mais informações sobre considerações de segurança para publicações Oracle, consulte a seção "Modelo de segurança de replicação" no tópico [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Essencialmente, como ajudar a proteger seu ambiente de replicação é uma questão de compreender as opções de autorização e autenticação, compreender o uso apropriado dos recursos de filtragem de replicação e aprender medidas específicas de como ajudar a proteger cada parte do ambiente de replicação. O ambiente de replicação inclui o Distribuidor, o Publicador, os Assinantes e a pasta de instantâneos. Este capítulo aborda a segurança de replicação, mas a segurança de replicação é criada na segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e segurança do Windows. Portanto, você deve compreender esta base e as particularidades da segurança de replicação. Para obter mais informações, consulte [Considerações de segurança para uma instalação do SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Para obter mais informações sobre considerações de segurança para publicações Oracle, consulte a seção "Modelo de segurança de replicação" no tópico [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Ameaça e mitigação de vulnerabilidade &#40;Replicação&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
  [Implantação segura &#40;Replicação&#41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
  Descreve como proteger melhor todos os componentes de uma topologia de replicação  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

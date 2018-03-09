@@ -2,32 +2,33 @@
 title: "Lição 3: Explorar e visualizar os dados | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 7d0d272c2623d2a23a8e486f15c320d40cba6bf5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0b4def85eb08c193ece45b89e3773419b4feda
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
 
@@ -131,7 +132,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
   
     **Resultados**
     
-    *plotagem*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome do banco de dados, o nome de usuário e as credenciais como argumentos:
@@ -295,4 +296,3 @@ Para gerar gráficos para os usuários, você pode usar um procedimento armazena
 ## <a name="previous-lesson"></a>Lição anterior
 
 [Lição 2: Importar dados para o SQL Server usando o PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
-

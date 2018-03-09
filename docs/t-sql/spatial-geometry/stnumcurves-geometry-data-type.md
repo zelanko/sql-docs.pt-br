@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: STNumCurves method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26d949643c6af926b96ea1239f75226c470d5a08
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 92cf7af65b64c412aff37311ccf1e9b44484968b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ Esse método retorna o número de curvas em uma **geometria** instância quando 
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Vazio unidimensional **geometria** instância retorna 0. **NULO** é retornado quando o **geometria** instância não é uma instância unidimensional ou é uma instância não inicializada.  
   
 ## <a name="examples"></a>Exemplos  

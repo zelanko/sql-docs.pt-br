@@ -2,28 +2,35 @@
 title: "Visão geral do Monitor de Espelhamento de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.main.f1
-helpviewer_keywords: Database Mirroring Monitor [SQL Server], interface
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbf4b3f8cec8528fc7a19acd683b5cc05ac98ba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
-  Se tiver as permissões corretas, você pode usar o Monitor de Espelhamento de Banco de Dados para monitorar qualquer subconjunto de bancos de dados espelhado em uma instância de servidor. O monitoramento permite verificar como e se os dados estão fluindo satisfatoriamente na sessão de espelhamento de banco de dados. O Monitor de Espelhamento de Banco de Dados é também útil para solucionar problemas da causa da redução do fluxo de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se tiver as permissões corretas, você pode usar o Monitor de Espelhamento de Banco de Dados para monitorar qualquer subconjunto de bancos de dados espelhado em uma instância de servidor. O monitoramento permite verificar como e se os dados estão fluindo satisfatoriamente na sessão de espelhamento de banco de dados. O Monitor de Espelhamento de Banco de Dados é também útil para solucionar problemas da causa da redução do fluxo de dados.  
   
  Você pode registrar qualquer um dos bancos de dados espelhados para monitoramento em cada um dos parceiros de failover individualmente. Quando você registra um banco de dados, o Monitor de Espelhamento de Banco de Dados armazenará em cache as seguintes informações do banco de dados.  
   
@@ -54,7 +61,7 @@ ms.lasthandoff: 11/09/2017
  *\<Status>*  
  Os possíveis status e seus ícones associados são os seguintes:  
   
-|Ícone|Status|Descrição|  
+|Ícone|Status|Description|  
 |----------|------------|-----------------|  
 |Ícone de aviso:|**Desconhecido**|O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.|  
 |Ícone de aviso:|**Sincronizando**|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.|  
@@ -87,14 +94,14 @@ ms.lasthandoff: 11/09/2017
 ## <a name="action-menu"></a>Menu Ação  
  O menu **Ação** contém sempre os seguintes comandos:  
   
-|Comando|Descrição|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**Registrar um Banco de Dados Espelho**|Abre a caixa de diálogo **Registrar Banco de Dados Espelho** . Use esta caixa de diálogo para registrar um ou mais bancos de dado espelhados em uma determinada instância do servidor, adicionando o banco de dados, ou bancos de dados, ao Monitor de Espelhamento de Banco de Dados. Quando um banco de dados é adicionado, o Monitor de Espelhamento de Banco de Dados armazena localmente em cache as informações do banco de dados, seus parceiros e como se conectar aos parceiros.|  
 |**Gerenciar Conexões das Instâncias do Servidor…**|Quando você seleciona este comando, a caixa de diálogo **Gerenciar Conexões do Servidor** é exibida. Nela, você pode escolher uma instância de servidor para a qual deseja especificar as credencias a serem usadas pelo monitor quando se conectar a um determinado parceiro de failover.<br /><br /> Para editar as credenciais para o parceiro, localize sua entrada na grade **Instância de servidor** , e clique em **Editar** naquela linha. Isto exibe a caixa de diálogo **Conectar ao Servidor** com o nome de instância de servidor e com os controles de credenciais inicializados com o valor atual em cache. Altere as informações de autenticação conforme necessário e clique em **Conectar**. Se as credenciais tiverem privilégios suficientes, a coluna **Conectar Usando** é atualizada com as novas credenciais.|  
   
  Se você selecionar o banco de dados, o menu **Ação** também conterá os seguintes comandos:  
   
-|Comando|Descrição|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**Cancelar o Registro deste Banco de Dados.**|Remove o banco de dados selecionado do Monitor de Espelhamento de Banco de Dados.|  
 |**Definir Limites de Aviso…**|Abre a caixa de diálogo **Definir Limites de Aviso** . A partir deste ponto, o administrador pode habilitar ou desabilitar os avisos para o banco de dados em cada um dos parceiros e alterar o limite de cada aviso. Recomendamos definir o limite de um determinado aviso em ambos os parceiros a fim de garantir que o aviso continue se houver um failover no banco de dados. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.<br /><br /> Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado|  
@@ -103,7 +110,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   

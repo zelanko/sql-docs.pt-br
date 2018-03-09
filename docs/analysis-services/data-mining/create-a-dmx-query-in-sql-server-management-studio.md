@@ -2,15 +2,13 @@
 title: Criar uma consulta DMX no SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +20,19 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Criar uma consulta DMX no SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de recursos para ajudar a criar consultas de previsão, consultas de conteúdo e consultas de definição de dados em modelos de mineração e estruturas de mineração.  
   
 -   O Construtor de consulta de previsão gráfico está disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para simplificar o processo de escrever consultas de previsão e conjuntos de dados de mapeamento em um modelo.  
@@ -89,13 +87,12 @@ ms.lasthandoff: 09/01/2017
   
  Para obter exemplos de como criar tipos específicos de consultas de modelos, consulte os seguintes tópicos:  
   
- [Criar uma consulta de previsão singleton a partir de um modelo](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Criar uma consulta de previsão Singleton a partir de um modelo](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
  [Criar uma consulta de conteúdo em um modelo de mineração](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Extensões de mineração de dados &#40; DMX &#41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

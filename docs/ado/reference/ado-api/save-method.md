@@ -3,7 +3,7 @@ title: "Método Save | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edefe1c8d25abd84d5a5f82d7dde8035d82022ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Método Save
 Salva o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -48,7 +47,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  Opcional. Um [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valor que especifica o formato no qual o **registros** deve ser salvo (XML ou ADTG). O valor padrão é **adPersistADTG**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [método Save](../../../ado/reference/ado-api/save-method.md) método só pode ser chamado em um aberto **registros**. Use o [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para restauração posterior a **registros** de *destino*.  
   
  Se o [propriedade filtro](../../../ado/reference/ado-api/filter-property.md) propriedade está em vigor para o **Recordset**, em seguida, somente as linhas acessíveis com o filtro serão salvas. Se o **Recordset** é hierárquico, em seguida, o filho atual **Recordset** e seus filhos são salvos, incluindo o pai **Recordset**. Se o método de gravação de um filho **registros** é chamado, o filho e todos os seus filhos são salvas, mas o pai não é.  
@@ -107,4 +106,3 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
-

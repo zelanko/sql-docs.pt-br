@@ -1,29 +1,29 @@
 ---
 title: Novidades do SQL Server de 2017 no Linux | Microsoft Docs
-description: "Este tópico destaca o que há de novo para 2017 do SQL Server no Linux."
+description: "Este artigo destaca o que há de novo para 2017 do SQL Server no Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/24/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 49381b5980d5114f7d22e53ef70542bd03ecf289
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve os principais recursos e serviços disponíveis para 2017 do SQL Server em execução no Linux.
 
@@ -70,8 +70,9 @@ Para instalar o SQL Server no Linux, use um dos seguintes tutoriais:
 - [Executar no Docker](quickstart-install-connect-docker.md)
 - [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Para obter outras informações sobre o SQL Server no Linux, consulte o [visão geral](sql-server-linux-overview.md). Para baixar os pacotes e uma lista de recursos sem suporte e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
-
 Para ver outros aprimoramentos introduzidos no SQL Server 2017, consulte [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+
+> [!TIP]
+> Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](sql-server-linux-faq.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

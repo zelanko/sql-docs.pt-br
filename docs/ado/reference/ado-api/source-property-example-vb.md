@@ -3,27 +3,30 @@ title: Fonte de exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Source property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 953cd75d0924ef2dafdcfda11e8e111411a533f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d26368119e985202b74986215cf8df4307fd4ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-example-vb"></a>Exemplo da propriedade Source (VB)
 Este exemplo demonstra o [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade abrindo três [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos com base em diferentes fontes de dados.  

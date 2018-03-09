@@ -1,26 +1,30 @@
 ---
 title: "Método Synchronize21 (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize21 method [ADO]
+helpviewer_keywords:
+- Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 996510799ad3222a40910af3a1d04c9cbb9b30fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
 Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão para uso com o ADO 2.1.  
@@ -59,7 +63,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Uma variante usada para retornar uma matriz segura do status de linha para as linhas afetadas por sincronizar. Não defina se nenhuma das seguintes opções de sincronização são definidas: *RefreshWithUpdate*, *atualizar* e *RefreshConflicts*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *HandlerString* parâmetro pode ser nulo. O que acontece nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. Msdfmap.dll interpretará, em seguida, o argumento como uma direção para usar o sample.ini para verificar se as cadeias de caracteres de conexão e consulta.  
   
 > [!NOTE]

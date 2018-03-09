@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL statements [ODBC], executing
+helpviewer_keywords: SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddb265060dc0714ce4eafaa09ce336d289697309
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e3fdaf1a063951dcb06018858a905c5ee8651e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-a-statement"></a>Executar uma instrução
 Há quatro maneiras de executar uma instrução, dependendo de quando são compiladas (preparada), o mecanismo de banco de dados e que defini-los:  
@@ -99,4 +96,3 @@ while ((OrderID = GetOrderID()) != 0) {
 -   [Lotes de instruções SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md)  
   
 -   [Executando funções de catálogo](../../../odbc/reference/develop-app/executing-catalog-functions.md)
-

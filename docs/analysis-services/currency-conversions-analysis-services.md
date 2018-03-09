@@ -2,14 +2,13 @@
 title: "Conversões de moeda (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - many-to-many currency conversions [Analysis Services]
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[applies](../includes/applies-md.md)] Somente multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa uma combinação de recursos, orientada por scripts de linguagem Multidimensional Expressions (MDX), para dar suporte em conversão de moedas, em cubos, com suporte para várias moedas.  
@@ -196,4 +196,3 @@ ms.lasthandoff: 09/01/2017
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   
-

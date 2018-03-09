@@ -2,26 +2,31 @@
 title: "Passo a passo de ciência de dados de ponta a ponta para R e SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Passo a passo de ciência de dados de ponta a ponta para R e SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Neste passo a passo, você deve desenvolver uma solução de ponta a ponta para modelagem de previsão com base no Microsoft R com o SQL Server 2016 ou 2017 do SQL Server.
 
@@ -55,7 +60,7 @@ Este passo a passo é destinado a desenvolvedores do R ou do SQL. Ele fornece um
 + Todos os scripts SQL e R são incluídos.
 + Você precisará modificar cadeias de caracteres em scripts, para ser executado em seu ambiente. Você pode fazer isso com um editor de código, como [código do Visual Studio](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 + Você deve ter acesso a uma instância do SQL Server 2016 ou uma versão de avaliação do SQL Server 2017.
 + Pelo menos uma instância no computador do SQL Server deve ter o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] instalado.

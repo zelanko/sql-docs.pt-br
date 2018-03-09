@@ -5,36 +5,32 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DISTINCT
 - SELECT
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - discrete columns [DMX]
 - discretized columns [DMX]
 - SELECT DISTINCT FROM <model> statement
 - continuous columns
 ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aa916d15654b1fb4f806291d7d05ca7a683709f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +61,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **SELECT DISTINCT FROM** instrução só funciona com uma única coluna ou com um conjunto de colunas relacionadas. Essa cláusula não funciona com um conjunto de colunas não relacionadas.  
   
  O **SELECT DISTINCT FROM** permite que você faça referência direta a uma coluna dentro de uma tabela aninhada. Por exemplo:  
@@ -154,10 +150,9 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  O valor mínimo do bucket mínimo e o valor máximo do bucket máximo são apenas os valores mais alto e mais baixo observados. Os valores dentro desse intervalo observado são considerados como pertencentes aos buckets mínimo e máximo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

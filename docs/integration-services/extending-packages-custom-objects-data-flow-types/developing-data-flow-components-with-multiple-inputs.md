@@ -8,41 +8,39 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2cafe3a18fbe930088347304ed758afe505771d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4fae151d8feb9753eca9704b1b58f6ab7c609cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desenvolvendo componentes de fluxo de dados com várias entradas
-  Um componente de fluxo de dados com várias entradas poderá consumir memória excessiva se suas várias entradas gerarem dados em taxas desiguais. Ao desenvolver um componente de fluxo de dados personalizado que dá suporte a duas ou mais entradas, você pode gerenciar essa pressão de memória usando os seguintes membros do namespace Microsoft.SqlServer.Dts.Pipeline:  
+  Um componente de fluxo de dados com várias entradas poderá consumir memória excessiva se suas várias entradas gerarem dados em taxas desiguais. Ao desenvolver um componente de fluxo de dados personalizado que dá suporte a duas ou mais entradas, você pode gerenciar essa pressão de memória com o uso dos seguintes membros no namespace Microsoft.SqlServer.Dts.Pipeline:  
   
 -   A propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Defina o valor dessa propriedade como **true** se desejar implementar o código necessário para seu componente de fluxo de dados personalizado para gerenciar dados que fluem em taxas desiguais.  
   
--   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>. Você deve fornecer uma implementação deste método, se você definir o <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> propriedade **true**. Se você não fornecer uma implementação, o mecanismo de fluxo de dados gerará uma exceção em tempo de execução.  
+-   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>. Você deverá fornecer uma implementação desse método, se definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> como **true**. Se você não fornecer uma implementação, o mecanismo de fluxo de dados gerará uma exceção em tempo de execução.  
   
--   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>. Você também deve fornecer uma implementação desse método se você definir o <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> propriedade **true** e seu componente personalizado oferece suporte a mais de duas entradas. Se você não fornecer uma implementação, o mecanismo de fluxo de dados gerará uma exceção em tempo de execução se o usuário anexar mais de duas entradas.  
+-   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>. Você também deverá fornecer uma implementação desse método, se definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> como **true** e seu componente personalizado der suporte a mais de duas entradas. Se você não fornecer uma implementação, o mecanismo de fluxo de dados gerará uma exceção em tempo de execução se o usuário anexar mais de duas entradas.  
   
  Juntos, esses membros permitem desenvolver uma solução para pressão de memória que é semelhante à solução que a Microsoft desenvolveu para as transformações de Mesclagem e Junção de Mesclagem.  
   
 ## <a name="setting-the-supportsbackpressure-property"></a>Definindo a propriedade SupportsBackPressure  
- A primeira etapa na implementação de um melhor gerenciamento de memória para um componente de fluxo de dados personalizado que dá suporte a várias entradas é definir o valor da <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> propriedade **true** no <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Quando o valor de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> é **true**, chamadas de mecanismo de fluxo de dados de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> método e, quando há mais de duas entradas, também chama o <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> método em tempo de execução.  
+ A primeira etapa ao implementar um gerenciamento melhor de memória para um componente de fluxo de dados personalizado que dá suporte a várias entradas é definir o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> como **true** no <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Quando o valor de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> for **true**, o mecanismo de fluxo de dados chamará o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> e, quando houver mais de duas entradas, também chamará o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> em tempo de execução.  
   
 ### <a name="example"></a>Exemplo  
- No exemplo a seguir, a implementação do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> define o valor de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> para **true**.  
+ No exemplo a seguir, a implementação do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> define o valor de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> como **true**.  
   
 ```csharp  
 [DtsPipelineComponent(ComponentType = ComponentType.Transform,  
@@ -59,12 +57,12 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 ```  
   
 ## <a name="implementing-the-isinputready-method"></a>Implementando o método IsInputReady  
- Quando você define o valor da <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> propriedade **true** no <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> do objeto, você também deve fornecer uma implementação para o <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> método do <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> classe.  
+ Ao definir o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> como **true** no objeto <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>, você também deve fornecer uma implementação para o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
 > [!NOTE]  
 >  Sua implementação do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> não deve chamar as implementações na classe base. A implementação padrão desse método na classe base simplesmente gera uma **NotImplementedException**.  
   
- Ao implementar esse método, você define o status de um elemento na matriz Booliana *canProcess* para cada uma das entradas do componente. (As entradas são identificadas por seus valores de ID de *inputIDs* array.) Quando você define o valor de um elemento no *canProcess* de matriz para **true** para uma entrada, o mecanismo de fluxo de dados chama o componente <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> método e fornece mais dados para a entrada especificada.  
+ Ao implementar esse método, você define o status de um elemento na matriz Booliana *canProcess* para cada uma das entradas do componente. (As entradas são identificadas pelos valores de suas IDs na matriz *inputIDs*.) Quando você define o valor de um elemento na matriz *canProcess* como **true** para uma entrada, o mecanismo de fluxo de dados chama o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> do componente e fornece mais dados para a entrada especificada.  
   
  Embora mais dados de upstream estejam disponíveis, o valor do elemento da matriz *canProcess* de pelo menos uma entrada deve sempre ser **true**ou o processamento será interrompido.  
   
@@ -97,7 +95,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- O exemplo anterior usa a matriz booliana `inputEOR` para indicar se dados upstream estão disponíveis para cada entrada. `EOR` no nome da matriz representa "término de conjunto de linhas" e faz referência à propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de buffers de fluxo de dados. Em uma parte do exemplo que não é incluída aqui, o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> verifica o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de cada buffer de dados que recebe. Quando um valor de **true** indica que não há mais dados upstream disponíveis para uma entrada, o exemplo define o valor do elemento da matriz `inputEOR` daquela entrada como **true**. Este exemplo da <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> método define o valor do elemento correspondente no *canProcess* de matriz para **false** para uma entrada quando o valor da `inputEOR` elemento da matriz indica que Não há não mais dados upstream disponíveis para a entrada.  
+ O exemplo anterior usa a matriz booliana `inputEOR` para indicar se dados upstream estão disponíveis para cada entrada. `EOR` no nome da matriz representa "término de conjunto de linhas" e faz referência à propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de buffers de fluxo de dados. Em uma parte do exemplo que não é incluída aqui, o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> verifica o valor da propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> de cada buffer de dados que recebe. Quando um valor de **true** indica que não há mais dados upstream disponíveis para uma entrada, o exemplo define o valor do elemento da matriz `inputEOR` daquela entrada como **true**. Esse exemplo do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> define o valor do elemento correspondente na matriz *canProcess* como **false** para uma entrada quando o valor do elemento da matriz `inputEOR` indica que não há mais dados upstream disponíveis para a entrada.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Implementando o método GetDependentInputs  
  Quando o componente de fluxo de dados personalizado der suporte a mais de duas entradas, você também deve fornecer uma implementação do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> da classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
@@ -105,7 +103,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  Sua implementação do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> não deve chamar as implementações na classe base. A implementação padrão desse método na classe base simplesmente gera uma **NotImplementedException**.  
   
- O mecanismo de fluxo de dados chamará o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> apenas quando o usuário anexar mais de duas entradas ao componente. Quando um componente tem apenas duas entradas e o <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> método indica que uma entrada está bloqueada (*canProcess* = **false**), o mecanismo de fluxo de dados sabe que a outra entrada é esperando receber mais dados. No entanto, quando houver mais de duas entradas, e o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indicar que uma entrada está bloqueada, o código adicional no <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> identificará quais entradas estão esperando o recebimento de mais dados.  
+ O mecanismo de fluxo de dados chamará o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> apenas quando o usuário anexar mais de duas entradas ao componente. Quando um componente tiver apenas duas entradas e o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indicar que uma entrada está bloqueada (*canProcess* = **false**), o mecanismo de fluxo de dados saberá que a outra entrada está esperando o recebimento de mais dados. No entanto, quando houver mais de duas entradas, e o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indicar que uma entrada está bloqueada, o código adicional no <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> identificará quais entradas estão esperando o recebimento de mais dados.  
   
 > [!NOTE]  
 >  Você não chama os métodos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> em seu próprio código. O mecanismo de fluxo de dados chama esses métodos e os outros métodos da classe **PipelineComponent** que você substitui, quando o mecanismo de fluxo de dados executa seu componente.  
@@ -131,4 +129,3 @@ public override Collection<int> GetDependentInputs(int blockedInputID)
 ```  
   
   
-

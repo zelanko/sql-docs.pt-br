@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText method
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f20e9259aad1f2a4ca87c8a684157b93c44b8b59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e23fc9629d1b250e886600253fcfc3a03923c44d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geografia** instância retornada por STGeomCollFromText() é definida como a entrada WKT correspondente.  
   
  Este método lança um **ArgumentException** se a entrada não é válida.  
@@ -72,7 +71,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

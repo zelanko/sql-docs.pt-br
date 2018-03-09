@@ -9,24 +9,26 @@ ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8089e82d6e6bb04c8e25af3603c4522a820a7a83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -120,7 +122,7 @@ INSERT
  Os usuários devem fornecer valores para `$from_id` e `$to_id` ao inserir em uma borda. Um erro será retornado se não for fornecido um valor ou valores nulos são inseridos nessas colunas. 
   
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Inserindo um nó é igual ao inserir em qualquer tabela relacional. Valores da coluna $node_id são gerados automaticamente.
 
 Ao inserir em uma tabela de borda, os usuários devem fornecer valores para `$from_id` e `$to_id` colunas.   
@@ -166,7 +168,7 @@ Antes de inserção em uma tabela de borda em massa, as tabelas de nó devem ser
 
   
 ## <a name="see-also"></a>Consulte também  
- [Inserir tabela &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Gráfico de processamento com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

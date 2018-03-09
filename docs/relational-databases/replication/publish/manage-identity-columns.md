@@ -2,9 +2,12 @@
 title: Gerenciar colunas de identidade | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25ddfbedda3781d3ac92d91e234a0172d34d044b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46d22fff51904ae27e64def3aaebacfe39bab40f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-identity-columns"></a>Gerenciar colunas de identidade
-  Este tópico descreve como gerenciar colunas de identidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando as inserções de Assinante são replicadas de volta ao Publicador, as colunas de identidade devem ser gerenciadas para evitar a atribuição do mesmo valor de identidade para o Assinante e o Publicador. A Replicação pode gerenciar intervalos de identidade automaticamente ou você pode escolher controlar o gerenciamento de intervalo de identidade manualmente.  Para obter informações sobre as opções de gerenciamento de intervalos de identidade fornecidas pela replicação, consulte [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como gerenciar colunas de identidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando as inserções de Assinante são replicadas de volta ao Publicador, as colunas de identidade devem ser gerenciadas para evitar a atribuição do mesmo valor de identidade para o Assinante e o Publicador. A Replicação pode gerenciar intervalos de identidade automaticamente ou você pode escolher controlar o gerenciamento de intervalo de identidade manualmente.  Para obter informações sobre as opções de gerenciamento de intervalos de identidade fornecidas pela replicação, consulte [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **Neste tópico**  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Se você selecionou **Automático** ou **Verdadeiro** na etapa 4, digite valores para as opções na tabela a seguir. Para obter mais informações sobre como essas configurações são usadas, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    |Opção|Valor|Descrição|  
+    |Opção|Valor|Description|  
     |------------|-----------|-----------------|  
     |**Tamanho do intervalo do Publicador**|Valor inteiro para o tamanho do intervalo (por exemplo, 20000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Tamanho do intervalo do assinante**|Valor inteiro para tamanho de intervalo (por exemplo, 10000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publicação >**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode usar os procedimentos armazenados de replicação para especificar as opções de gerenciamento de intervalo da identidade, quando um artigo é criado.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para habilitar o gerenciamento automático de intervalo de identidade ao definir artigos para uma publicação transacional  
@@ -150,8 +153,8 @@ ms.lasthandoff: 11/09/2017
   
     -   Para desabilitar o gerenciamento automático de intervalo de identidade, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de **identityrangemanagementoption** para **@property** e de **manual** ou o **none** para **@value**.  
   
-## <a name="see-also"></a>Consulte também  
- [Replicação transacional ponto a ponto](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

@@ -1,29 +1,31 @@
 ---
 title: "Recursos com suporte para módulos T-SQL compilados nativamente | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Recursos com suporte para módulos T-SQL compilados nativamente
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   Este tópico contém uma lista da área da superfície do T-SQL e os recursos com suporte no corpo de módulos T-SQL compilados nativamente, como procedimentos armazenados ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), gatilhos, funções escalares definidas pelo usuário e funções embutidas com valor de tabela.  
@@ -136,7 +138,7 @@ Cláusula HAVING:
   - Esse limite poderá ser diminuído caso a consulta contenha junções ou funções de agregação. (Por exemplo, com uma junção (duas tabelas), o limite é 4.096 linhas. Com duas junções (três tabelas), o limite é 2.730 linhas.)  
   - Você pode obter resultados maiores que 8.192 armazenando o número de linhas em uma variável:  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -154,7 +156,7 @@ Há suporte para as instruções DML a seguir.
 
 -   UPDATE  
 
--   DELETE  
+-   Delete (excluir)  
 
 -   WHERE tem suporte com instruções UPDATE e DELETE.  
 
@@ -195,8 +197,8 @@ Há suporte para as instruções DML a seguir.
 -   Operadores bit a bit ~, &, |, e ^  
 
 -   operador APPLY
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.
+    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para o operador APPLY em módulos compilados nativamente.
 
 ##  <a name="bfncsp"></a> Funções internas em módulos compilados nativamente  
  As funções a seguir têm suporte em restrições nas tabelas com otimização de memória e em módulos T-SQL compilados nativamente.  
@@ -206,8 +208,8 @@ Há suporte para as instruções DML a seguir.
 -   Funções de data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
 -   Funções de cadeia de caracteres: LEN, LTRIM, RTRIM e SUBSTRING.  
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, também há suporte para as seguintes funções internas: TRIM, TRANSLATE e CONCAT_WS.  
+    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], também há suporte para as seguintes funções internas: TRIM, TRANSLATE e CONCAT_WS.  
 
 -   Funções de identidade: SCOPE_IDENTITY  
 
@@ -216,12 +218,12 @@ Há suporte para as instruções DML a seguir.
 -   Funções Uniqueidentifier: NEWID e NEWSEQUENTIALID  
 
 -   Funções JSON  
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para as funções JSON em módulos compilados nativamente.
+    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para as funções JSON em módulos compilados nativamente.
 
 -   Funções de erro: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
 
--   Funções do sistema: @@rowcount.  As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
+-   Funções do sistema: @@rowcount. As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
 
 -   Funções de segurança: IS_MEMBER({'grupo' | 'função'}), IS_ROLEMEMBER ('função' [, 'entidade_do_banco_de_dados']), IS_SRVROLEMEMBER ('função' [, 'logon']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['logon']), SUSER_SID(['logon'] [, Param2]), SUSER_SNAME([sid_de_usuário_do_servidor]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['usuário']), USER_NAME([id]), CONTEXT_INFO().
 
@@ -248,7 +250,7 @@ Há suporte para as instruções DML a seguir.
 ##  <a name="los"></a> Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) pode classificar até 8.000 linhas (menos linhas se houver junções).  
 
- Se a sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>*, Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
+ Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>*, Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
 
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
 
@@ -256,7 +258,7 @@ Há suporte para as instruções DML a seguir.
 
  Exemplo com TOP N = 8192: compila  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -269,7 +271,7 @@ GO
 
  Exemplo com TOP N > 8192: não compila.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -284,7 +286,7 @@ GO
 
  Exemplo que usa uma variável: compila  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -304,9 +306,8 @@ GO
 
  A fórmula para calcular o pior caso de N com suporte em TOP N é: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problemas de migração para procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

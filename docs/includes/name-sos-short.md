@@ -1,0 +1,1 @@
+<Token>Operações do SQL Studio (visualização)</Token>

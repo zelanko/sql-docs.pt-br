@@ -2,34 +2,30 @@
 title: "Selecione um modelo de mineração e um visualizador de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Viewer [Analysis Services], types
+helpviewer_keywords: Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13296651eb2fd572106c52014ce0a42ac81c9781
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Selecione um Modelo de Mineração e um Visualizador do Modelo de Mineração de Dados
-  Você pode explorar um modelo de mineração usando um dos visualizadores na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados. Você pode alternar facilmente entre modelos ou alterar o visualizador que é usado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode explorar um modelo de mineração usando um dos visualizadores no **Visualizador do modelo de mineração** guia do Designer de mineração de dados. Você pode alternar facilmente entre modelos ou alterar o visualizador que é usado.  
   
 -   A caixa de listagem suspensa **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém uma lista de todos os modelos de mineração que estão na estrutura de mineração atual.  
   
@@ -49,8 +45,7 @@ ms.lasthandoff: 09/01/2017
   
  O modelo de mineração selecionado abre no visualizador que é fornecido para aquele tipo de modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

@@ -2,27 +2,30 @@
 title: Problemas do artigo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7840d17929da4b25bdab26ba98cba4fc92f1c60c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4935f6e607270401c095f78bd6142828e8581071
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-issues"></a>Problemas do Artigo
-  A página **Problemas do Artigo** lista condições que foram localizadas para artigos e qualquer alteração requerida como resultado dessa alteração. A tabela seguinte lista os possíveis problemas e as ações requeridas para garantir que a replicação e os aplicativos existentes funcionem corretamente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Problemas do Artigo** lista condições que foram localizadas para artigos e qualquer alteração requerida como resultado dessa alteração. A tabela seguinte lista os possíveis problemas e as ações requeridas para garantir que a replicação e os aplicativos existentes funcionem corretamente.  
   
 |Problema do artigo|Detalhes|Ação requerida|  
 |-------------------|-------------|---------------------|  
@@ -32,8 +35,8 @@ ms.lasthandoff: 11/09/2017
 |Tabelas referenciadas por exibições são requeridas.|O[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que todas a tabelas referenciadas por exibições e exibições indexadas publicadas estejam disponíveis no Assinante. Se as tabelas referenciadas não forem publicadas como artigos nesta publicação, elas deverão ser criadas no Assinante manualmente.|Use o botão **Voltar** para navegar até página **Artigos** . Adicione qualquer objeto requerido.|  
 |Objetos referenciados por procedimentos armazenados são requeridos.|O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que todos os objetos referenciados por procedimentos armazenados publicados, como tabelas e funções definidas pelo usuário, estejam disponíveis no Assinante. Se os objetos referenciados não forem publicados como artigos nesta publicação, eles deverão ser criados no Assinante manualmente.|Use o botão **Voltar** para navegar até página **Artigos** . Adicione qualquer objeto requerido.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

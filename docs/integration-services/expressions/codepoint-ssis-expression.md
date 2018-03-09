@@ -1,5 +1,5 @@
 ---
-title: "CODEPOINT (expressão SSIS) | Microsoft Docs"
+title: "CODEPOINT (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af56c3de2d4e285960b9e6631084b20440396eb3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43a96940ba28fc76ae271ff0f10b2b3177635346
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (Expressão SSIS)
   Retorna o ponto de código Unicode do caractere da extrema esquerda de uma expressão de caracteres.  
@@ -45,7 +44,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_UI2  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  *character_expression* deve ter o tipo de dados DT_WSTR.  
   
  CODEPOINT retornará um resultado nulo se *character_expression* for nulo ou uma cadeia de caracteres vazia.  
@@ -63,8 +62,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

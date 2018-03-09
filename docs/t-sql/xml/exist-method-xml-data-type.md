@@ -18,17 +18,16 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e152abc34c459d82f451c5ded02d30f5fb76b23
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exist-method-xml-data-type"></a>Método exista() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ exist (XQuery)
  XQuery  
  É uma expressão XQuery, uma cadeia de caracteres literal.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  O **exist ()** método retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar o **verdadeiro ()** ou **False ()** funções dentro de **exist ()** método, o **exist ()** método retornará 1, porque o funções **verdadeiro ()** e **False ()** retornar booliano True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist ()** retornará 1 (verdadeiro), conforme mostrado no exemplo a seguir:  
@@ -165,8 +164,7 @@ WHERE CatalogDescription.exist('
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

@@ -1,26 +1,27 @@
 ---
 title: "Atualização do banco de dados (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 536fa920910c56698be8b161f59294f555747917
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-oracletosql"></a>Atualização do banco de dados (OracleToSQL)
 O **de atualização do banco de dados** caixa de diálogo permite que você selecione quais objetos para atualização do banco de dados Oracle. Linhas na caixa de diálogo estão codificados por cores com base no estado de metadados:  
@@ -58,4 +59,3 @@ Exibe um **legenda** caixa de diálogo. A legenda contém o mapeamento entre as 
   
 Para manter o **legenda** caixa de diálogo sobre o **de atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.  
   
-

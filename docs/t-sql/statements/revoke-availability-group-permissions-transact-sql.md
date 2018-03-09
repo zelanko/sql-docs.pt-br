@@ -20,17 +20,16 @@ helpviewer_keywords:
 - revoking permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 10
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1573f866cec3105cde4eeab59c230ede46144ac3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f7bd88af97183e7cb5f3bd36a4bc5194be62a4d6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -154,5 +153,4 @@ GO
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

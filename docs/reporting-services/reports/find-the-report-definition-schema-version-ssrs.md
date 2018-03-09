@@ -1,13 +1,14 @@
 ---
-title: "Localizar a versão de esquema de definição de relatório (SSRS) | Microsoft Docs"
+title: "Localizar a versão do esquema de definição de relatório (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +16,17 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b61c09e7c5fb4bd0a894247ed77878e80cc91285
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Localizar a versão do esquema de definição de relatório (SSRS)
 
 Um arquivo de definição de relatório especifica o namespace do RDL para a versão do esquema de definição de relatório usado para validar o arquivo .rdl. Ao abrir um arquivo .rdl no ambiente de criação de relatório como o Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou Construtor de Relatórios, se o relatório tiver sido criado para um namespace anterior, um arquivo de backup será criado automaticamente e o relatório será atualizado para o namespace atual. Se você salvar a definição de relatório atualizada, terá salvo o arquivo .rdl convertido. Esse é o único modo para atualizar uma definição de relatório. A própria definição de relatório não é atualizada em um servidor de relatório. O relatório compilado é atualizado em um servidor de relatório. Para obter mais informações, consulte [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
@@ -47,7 +46,7 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como identificar a versão do esquema RDL de um Designer de Relatórios  
   
-1.  Abrir um novo projeto. A versão do projeto que você escolhe determina a versão do esquema RDL. No SQL Server, há suporte para mais de uma versão de esquema. Para obter mais informações, consulte [implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Abrir um novo projeto. A versão do projeto que você escolhe determina a versão do esquema RDL. No SQL Server, há suporte para mais de uma versão de esquema. Para obter mais informações, consulte [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  No menu **Projeto** , clique em **Adicionar Novo Item**. A caixa de diálogo **Adicionar Novo Item** é aberta.  
   
@@ -91,7 +90,6 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
 ## <a name="next-steps"></a>Próximas etapas
 
 [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md)   
-[Linguagem de definição de relatório](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[Linguagem RDL](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

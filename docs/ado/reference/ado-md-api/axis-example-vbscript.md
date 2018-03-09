@@ -3,27 +3,30 @@ title: Exemplo de eixo (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: ADO MD code examples, VBScript
+dev_langs:
+- VB
+helpviewer_keywords:
+- ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c523217edd51165a4d0c75d39add46cfcf0d812e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b986eb2f2114f8740a33d139bc8a6ac4d13571c5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axis-example-vbscript"></a>Exemplo de eixo (VBScript)
 Este Active Server Page exibe dados OLAP de uma cadeia de caracteres de consulta MDX e grava o conjunto de células resultante para uma estrutura de tabela HTML.  

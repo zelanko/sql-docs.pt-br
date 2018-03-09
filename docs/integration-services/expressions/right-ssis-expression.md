@@ -1,5 +1,5 @@
 ---
-title: "RIGHT (expressão SSIS) | Microsoft Docs"
+title: "RIGHT (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8927e53f0cb8bf082211a7f35a112c7ca626d83c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="right-ssis-expression"></a>RIGHT (Expressão SSIS)
   Retorna o número especificado de caracteres da parte mais à direita da expressão character especificada.  
@@ -47,7 +46,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *integer_expression* for maior que o comprimento de *character_expression*, a função retornará *character_expression*.  
   
  Se *integer_expression* for zero, a função retornará uma cadeia de comprimento zero.  
@@ -79,9 +78,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ESQUERDA &#40; Expressão do SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [LEFT &#40;Expressão SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

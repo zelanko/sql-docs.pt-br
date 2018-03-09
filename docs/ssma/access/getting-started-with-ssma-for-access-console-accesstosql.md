@@ -1,10 +1,13 @@
 ---
 title: "Guia de Introdução ao SSMA para Access Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef699835a26775c42b20e5a439cec06a1ff133ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc7b11e4317eb6f982a31bdd1fee17b9c54cbe04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Guia de Introdução ao SSMA para Access Console (AccessToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console de acesso. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  
@@ -68,6 +71,6 @@ Interpretação de cor da saída do console na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Ciano|Início, término e o resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o Assistente de migração do SQL Server para Access](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
   

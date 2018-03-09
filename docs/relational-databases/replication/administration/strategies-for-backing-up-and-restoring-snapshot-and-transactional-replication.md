@@ -2,9 +2,12 @@
 title: "Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 215580bbf9feec36fbbdb972ecb2aad6a422a196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
-  Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
   
 -   Quais bancos de dados para fazer o backup.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Tenha certeza de que o banco de dados é consistente com o banco de dados de publicação com respeito a configuração de replicação e configurações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup e Restauração de bancos de dados do SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurar Distribuição](../../../relational-databases/replication/configure-distribution.md)   

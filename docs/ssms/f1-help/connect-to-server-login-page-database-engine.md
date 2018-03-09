@@ -1,10 +1,13 @@
 ---
 title: "Conectar ao Mecanismo de Banco de Dados do Servidor (página Logon) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f3824ace141704fb08b29ddbf08890d5299f494
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
-Use essa guia para exibir ou especificar opções ao se conectar ao [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Na maioria das vezes, é possível conectar-se informando o nome do computador do servidor de banco de dados na caixa **Nome do servidor** e clicando em **Conectar**. Se você estiver se conectando a uma instância nomeada, use o nome do computador seguido por uma barra invertida e o nome da instância. Por exemplo, `mycomputer\myinstance`. Se você estiver se conectando ao [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use o nome do computador seguido por **\sqlexpress**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use essa guia para exibir ou especificar opções ao se conectar ao [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Na maioria das vezes, é possível conectar-se informando o nome do computador do servidor de banco de dados na caixa **Nome do servidor** e clicando em **Conectar**. Se você estiver se conectando a uma instância nomeada, use o nome do computador seguido por uma barra invertida e o nome da instância. Por exemplo, `mycomputer\myinstance`. Se você estiver se conectando ao [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use o nome do computador seguido por **\sqlexpress**.  
   
 Muitos fatores podem afetar sua possibilidade de conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter ajuda, consulte os seguintes recursos:  
 - [Lição 1 do tutorial: Conectar-se ao mecanismo de banco de dados](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
@@ -65,7 +68,7 @@ A Autenticação do Azure Active Directory é um mecanismo para se conectar ao [
   > **Active Directory – Integrado**  
 A Autenticação do Azure Active Directory é um mecanismo para se conectar ao [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] usando identidades no Azure AD (Azure Active Directory). Use esse método para conectar-se ao [!INCLUDE[ssSDS](../../includes/sssds_md.md)] se você tiver feito logon no Windows usando suas credenciais do Azure Active Directory de um domínio federado. Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
-**Nome de usuário**  
+**User name**  
 O nome de usuário Windows com o qual se conectar. Essa opção estará disponível somente se você decidiu se conectar usando a **Autenticação da Senha do Active Directory**. Ele é somente leitura quando você seleciona a **Autenticação do Windows** ou a autenticação do **Active Directory – Integrado**.  
   
 **Logon**  
@@ -77,7 +80,7 @@ Digite a senha do logon. Essa opção estará editável somente se você tiver d
 **Lembrar senha**  
 Clique para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] armazene a senha que você digitou. Essa opção só será exibida se você tiver optado por conectar-se usando a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-**Conectar**  
+**Connect**  
 Clique para conectar-se ao servidor.  
   
 **Opções**  

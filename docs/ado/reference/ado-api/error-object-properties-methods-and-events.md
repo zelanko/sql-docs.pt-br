@@ -3,26 +3,28 @@ title: "Eventos, métodos e propriedades do objeto de erro | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: error object [ADO], members
+helpviewer_keywords:
+- error object [ADO], members
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f21387e40b1d4911b16bd92bb56a20a0732cbf1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 359dcea962dcca7df063bb9dfa147eaee27b478f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de erro
 ## <a name="properties"></a>Propriedades  
@@ -39,10 +41,10 @@ ms.lasthandoff: 11/17/2017
  [Propriedade SQLState](../../../ado/reference/ado-api/sqlstate-property.md)  
   
 ## <a name="methods"></a>Métodos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)

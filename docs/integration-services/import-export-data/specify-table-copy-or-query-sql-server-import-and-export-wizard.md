@@ -1,5 +1,5 @@
 ---
-title: "Especifique a cópia da tabela ou consulta (Assistente de exportação e importação do SQL Server) | Microsoft Docs"
+title: "Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server)
   Depois de fornecer informações sobre o destino dos dados e sobre como se conectar a eles, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Especificar cópia ou consulta de tabela**. Nesta página, escolha uma das opções a seguir.
--   **Copiar dados de uma ou mais tabelas ou exibições**. Você deseja selecionar uma tabela ou tabelas em uma lista.
--   **Gravar uma consulta para especificar os dados a serem transferidos**. Você deseja digitar ou colar o texto de uma consulta SQL.
+-   **Copiar dados de uma ou mais tabelas ou exibições**. Você deseja selecionar uma tabela ou tabelas de uma lista.
+-   **Gravar uma consulta para especificar os dados a serem transferidos**. Você deseja inserir ou colar o texto de uma consulta SQL.
     
 > [!TIP]
 > Se você precisar copiar mais de um banco de dados ou objetos de banco de dados diferentes de tabelas e exibições, use o Assistente para Copiar Banco de Dados em vez do Assistente de Importação e Exportação. Para obter mais informações, consulte [Usar o Assistente para Copiar Banco de Dados](../../relational-databases/databases/use-the-copy-database-wizard.md).     
@@ -38,11 +37,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Captura de tela da página Especificar Cópia ou Consulta de Tabela    
  A captura de tela a seguir mostra a página **Especificar Cópia ou Consulta de Tabela** do assistente.    
     
- ![Página de cópia ou consulta de tabela do Assistente de importação e exportação](../../integration-services/import-export-data/media/table-copy-or-query.png "página de cópia ou consulta de tabela do Assistente de importação e exportação")    
+ ![Página Copiar ou consultar tabelas do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/table-copy-or-query.png "Página Copiar ou consultar tabelas do Assistente de Importação e Exportação")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Especificar se deseja copiar uma tabela inteira ou gravar uma consulta 
  **Copiar dados de uma ou mais tabelas ou exibições**    
- Selecione esta opção se você deseja copiar dados da fonte sem filtrar ou classificar os registros.   
+ Selecione esta opção se você desejar copiar os dados na origem sem filtrar nem ordenar registros.   
 
 Quando você seleciona **Copiar dados de uma ou mais tabelas ou exibições**, você pode copiar de uma tabela ou exibição para a tabela de destino ou de várias tabelas ou exibições para várias tabelas de destino.
 
@@ -58,10 +57,10 @@ Depois de clicar em **Avançar**, forneça uma instrução SQL para especificar 
 ## <a name="why-isnt-the-copy-option-available"></a>Por que a opção Copiar não está disponível?    
  A opção **Copiar dados de uma ou mais tabelas ou exibições** pode não estar disponível quando o assistente usa um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para se conectar à sua fonte de dados. Isso acontece quando o assistente não tem informações suficientes sobre o provedor de dados para solicitar uma lista de tabelas e exibições da fonte de dados. 
  
-Você ainda pode usar o **escrever uma consulta** opção, mesmo se você normalmente não escrever consultas SQL, desde que você souber o nome da tabela que você deseja exportar. No **fornecer uma consulta de origem** caixa de diálogo que você vê depois que você clique em **próximo**, digite a consulta como `SELECT * FROM <name of table>`. Se o nome da tabela contiver espaços ou outros caracteres especiais, coloque o nome entre colchetes - `SELECT * FROM [<name of table>]`.
+Você ainda pode usar a opção **Gravar uma consulta** mesmo que você normalmente não grave consultas SQL, desde que você saiba o nome da tabela que você deseja exportar. Na caixa de diálogo **Fornecer uma Consulta de Origem** que você vê após clicar em **Próximo**, insira a consulta como `SELECT * FROM <name of table>`. Se o nome da tabela contiver espaços ou outros caracteres especiais, coloque o nome entre colchetes – `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Obter mais informações
- A opção **Copiar dados de uma ou mais tabelas ou exibições** só está disponível para os provedores que têm uma seção ProviderDescription no arquivo ProviderDescriptors.xml. (Por padrão, esse arquivo está em \< *unidade*>: \Program Files\Microsoft Server\130\DTS\ProviderDescriptors SQL.) Cada seção ProviderDescription deste arquivo contém informações necessárias para recuperar metadados do provedor correspondente.    
+ A opção **Copiar dados de uma ou mais tabelas ou exibições** só está disponível para os provedores que têm uma seção ProviderDescription no arquivo ProviderDescriptors.xml. (Por padrão, esse arquivo está em \<*unidade*>:\Arquivos de programas\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Cada seção ProviderDescription deste arquivo contém informações necessárias para recuperar metadados do provedor correspondente.    
     
  Por padrão, o arquivo ProviderDescriptors.xml contém uma seção ProviderDescription só para os provedores da lista a seguir.    
     
@@ -88,6 +87,5 @@ Você ainda pode usar o **escrever uma consulta** opção, mesmo se você normal
 
 ## <a name="see-also"></a>Consulte também
 [Começar com esse exemplo simples de Assistente de Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

@@ -1,32 +1,31 @@
 ---
-title: "Caixa de diálogo seções (construtor de relatórios) relatório | Microsoft Docs"
+title: "Caixa de diálogo Seções do Relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- "10009"
+f1_keywords: "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ca9b9e53d2324d52344a8f915fc115bbed1a9bc1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Caixa de diálogo Seções do Relatório (Construtor de Relatórios)
-  Quando você abre um relatório, o construtor de relatórios verifica se o relatório contém apenas uma linguagem RDL (Report Definition)  **\<seção >** elemento. Abrindo um relatório com várias  **\<seção >** elementos não tem suporte.  
+  Quando você abre um relatório, o Construtor de Relatórios verifica se o relatório contém apenas um elemento **\<Section>** de linguagem RDL. Não há suporte para a abertura de um relatório com vários elementos **\<Section>**.  
   
  Embora uma definição de relatório com várias seções possa ser gerada programaticamente, não há suporte para a edição do relatório em um ambiente de criação de relatórios.  
   
@@ -34,8 +33,7 @@ ms.lasthandoff: 08/09/2017
   
  Clique em **OK** para continuar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
-

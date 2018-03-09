@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>Gerenciar uma instância CDC
   Você pode usar o CDC Designer Console para exibir informações sobre as instâncias que você cria e gerenciar a operação das instâncias.  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/03/2017
     |||  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. A Instância Oracle CDC não está sendo executada devido a um erro não reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Misconfigured**: um erro de configuração ocorrido que exige intervenção manual.<br /><br /> **Password Required**: nenhuma senha foi definida para a Instância Oracle CDC ou a senha não é válida.<br /><br /> **Unexpected**. Todos os outros erros não recuperáveis.|  
-    |![Okey](../../integration-services/change-data-capture/media/okay.gif "Okey")|**Running**: a instância CDC está sendo executada e está processando registros de alteração. Os seguintes substatus estão disponíveis:<br /><br /> **Idle**: Todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processing**: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**Running**: a instância CDC está sendo executada e está processando registros de alteração. Os seguintes substatus estão disponíveis:<br /><br /> **Idle**: Todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processing**: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  
     |![Parar](../../integration-services/change-data-capture/media/stop.gif "Parar")|**Stopped**: a instância CDC não está em execução. O status Stopped indica que a instância CDC foi parada de uma maneira normal.|  
     |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**Paused**: a instância de CDC está sendo executada, mas o processamento está suspenso devido a um erro reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Disconnected**: a conexão ao banco de dados Oracle de origem não pode ser estabelecida. O processamento será retomado quando a conexão for restaurada.<br /><br /> **Storage**: o armazenamento está completo. O processamento será retomado quando um armazenamento adicional estiver disponível.<br /><br /> **Agente**: o agente está conectado ao Oracle, mas não pode ler os logs de transação do Oracle devido a um problema temporário, por exemplo, um log de transação necessário não está disponível.|  
   
@@ -111,25 +110,24 @@ ms.lasthandoff: 08/03/2017
     -   **Written changes**: o número de alterações gravadas nas tabelas de alteração do SQL Server.  
   
  **Oracle**  
- Exibe informações sobre a instância CDC e sua conexão com o banco de dados Oracle. Esta guia é somente leitura. Para editar essas propriedades, a instância no painel esquerdo e selecione **propriedades** ou clique em **propriedades** no painel direito para abrir o \<instância > caixa de diálogo de propriedades.  
+ Exibe informações sobre a instância CDC e sua conexão com o banco de dados Oracle. Esta guia é somente leitura. Para editar essas propriedades, clique com o botão direito do mouse na instância do painel esquerdo e selecione **Propriedades** ou clique em **Propriedades** no painel direito para abrir a caixa de diálogo Propriedades de \<instância>.  
   
  Para obter mais informações sobre essas propriedades e como editá-las, consulte [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabelas**  
- Exibe informações sobre as tabelas incluídas na instância CDC. As informações sobre colunas também estão disponíveis aqui. Esta guia é somente leitura. Para editar essas propriedades, a instância no painel esquerdo e selecione **propriedades** ou clique em **propriedades** no painel direito para abrir o \<instância > caixa de diálogo de propriedades.  
+ Exibe informações sobre as tabelas incluídas na instância CDC. As informações sobre colunas também estão disponíveis aqui. Esta guia é somente leitura. Para editar essas propriedades, clique com o botão direito do mouse na instância do painel esquerdo e selecione **Propriedades** ou clique em **Propriedades** no painel direito para abrir a caixa de diálogo Propriedades de \<instância>.  
   
  Para obter mais informações sobre essas propriedades e como editá-las, consulte [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avançado**  
- Exibe as propriedades avançadas para a instância CDC e os valores de propriedade. Esta guia é somente leitura. Para editar essas propriedades, a instância no painel esquerdo e selecione **propriedades** ou clique em **propriedades** no painel direito para abrir o \<instância > caixa de diálogo de propriedades.  
+ Exibe as propriedades avançadas para a instância CDC e os valores de propriedade. Esta guia é somente leitura. Para editar essas propriedades, clique com o botão direito do mouse na instância do painel esquerdo e selecione **Propriedades** ou clique em **Propriedades** no painel direito para abrir a caixa de diálogo Propriedades de \<instância>.  
   
  Para obter mais informações sobre essas propriedades e como editá-las, consulte [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Como exibir as propriedades de instância CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [Como editar as propriedades de instância CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Use o Assistente de nova instância](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Usar o assistente para nova instância](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

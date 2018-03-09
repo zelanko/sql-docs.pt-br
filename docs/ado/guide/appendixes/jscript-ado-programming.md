@@ -3,29 +3,31 @@ title: "Programação de ADO JScript | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
+dev_langs:
+- JScript
 helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ab7656f8fae507908e6053cac8a48037690ab3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31de26947002fc69aab40dd5d83e0227b36a439e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="jscript-ado-programming"></a>Programação de ADO do JScript
 ## <a name="creating-an-ado-project"></a>Criando um projeto de ADO  

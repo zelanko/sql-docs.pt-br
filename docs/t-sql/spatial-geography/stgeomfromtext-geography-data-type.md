@@ -21,17 +21,16 @@ helpviewer_keywords:
 - full globe
 - STGeomFromText method
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdd52d6a9dc928d47db871ec9a84648797e64fe8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 43e9f3cf895645fade0ab5147972e1f0f773e1e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geografia** instância retornada por stgeomfromtext () é definida como a entrada WKT correspondente.  
   
  Esse método lançará um **ArgumentException** se a entrada contém uma borda oposta.  
@@ -74,7 +73,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

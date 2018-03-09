@@ -2,10 +2,13 @@
 title: "Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -13,13 +16,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4f040a1c915a03b95d57aa7f77b0d5cf611025ec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -359,7 +362,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 4.  Clique em **Salvar**.  
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Next Steps
 
 Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criação de um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
 

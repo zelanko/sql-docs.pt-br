@@ -2,10 +2,13 @@
 title: MEDIAN (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: MEDIAN
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 44e92801c99d7ca2990d656fda13b395a9b0229b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3cfa0b03deae60d9354e2e7056e0725125355ff4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="median-mdx"></a>Median (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o valor mediano de uma expressão numérica que é avaliada sobre um conjunto.  
   
@@ -42,7 +45,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma expressão numérica for especificada, essa expressão será avaliada pelo conjunto e, depois, retornará o valor mediano da avaliação em questão. Se uma expressão numérica não for especificada, o conjunto especificado será avaliado no contexto atual dos membros do conjunto e retornará o valor mediano daquela avaliação.  
   
  O valor mediano é o valor médio em um conjunto de números ordenados. (O valor mediano é diferente do valor médio, que é a soma de um conjunto de números dividida pela contagem de números no conjunto). O valor mediano é determinado escolhendo-se o valor menor de maneira que pelo menos a metade dos valores no conjunto não sejam maiores do que o valor escolhido. Se o número de valores dentro do conjunto for ímpar, o valor mediano corresponderá a um valor único. Se o número de valores dentro do conjunto for par, o valor mediano corresponderá à soma dos dois valores do meio dividido por dois.  
@@ -67,7 +70,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -2,29 +2,30 @@
 title: Instalar o Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar o SQL Server Analysis Services
-  SQL Server Analysis Services é um servidor de banco de dados analítico que hospeda modelos de tabela, cubos multidimensionais e modelos de mineração de dados que você pode acessar de relatórios, planilhas e painéis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services é um servidor de banco de dados analítico que hospeda modelos de tabela, cubos multidimensionais e modelos de mineração de dados que você pode acessar de relatórios, planilhas e painéis.  
   
  Analysis Services é várias instâncias, o que significa que você pode instalar mais de uma cópia em um único computador ou executar versões novas e antigas lado a lado. Qualquer instância de instalação é executada em um dos três modos, conforme determinado durante a instalação: Multidimensional e Mineração de Dados, Tabular ou SharePoint. Se você quiser usar vários modos, você precisará de uma instância separada para cada um.  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** diferencia maiúsculas de minúsculas.  Todos os valores devem ser expressos em maiúsculas. A tabela a seguir descreve os valores válidos para **ASSERVERMODE**.  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
 |TABULAR|Este é o valor padrão. Se você não definir **ASSERVERMODE**, o servidor está instalado no modo de tabela.|
 |MULTIDIMENSIONAL|Esse valor é opcional.|  
@@ -81,6 +82,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>Consulte também  
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Modelagem tabular (SSAS Tabular)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Modelagem de tabela](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

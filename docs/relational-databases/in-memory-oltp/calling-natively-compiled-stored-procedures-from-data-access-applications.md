@@ -2,26 +2,31 @@
 title: Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9edea4b9fa85c59f41a48b299e2693fcfc00c9e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9965ea8ab6c5b1492a57cfd20b03bd17167bd6d2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
-  Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
   
  Os cursores não podem iterar por um procedimento armazenado compilado nativamente.  
   
@@ -395,7 +400,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

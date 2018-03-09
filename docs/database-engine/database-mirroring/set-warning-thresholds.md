@@ -2,27 +2,33 @@
 title: Definir limites de aviso | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
-  Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
   
  A caixa de diálogo tenta se conectar a ambas as instâncias do servidor. Essas conexões são assincronamente estabelecidas. A caixa de diálogo mostra o status da conexão de cada parceiro. Se o parceiro não estiver conectado, você poderá clicar em **Conectar**.  
   
@@ -67,7 +73,7 @@ ms.lasthandoff: 11/09/2017
  **Warnings**  
  Relaciona os avisos que têm suporte:  
   
-|Aviso|Descrição|  
+|Aviso|Description|  
 |-------------|-----------------|  
 |**Avisar se o log não enviado exceder o limite**|O limite indica o número de quilobytes (KB) do log não enviado na fila principal de envios de log.|  
 |**Avisar se o log não restaurado exceder o limite**|O limite indica o número de KBs da fila de restauração na instância de servidor espelho.|  
@@ -85,12 +91,12 @@ ms.lasthandoff: 11/09/2017
  **OK**  
  Clicar em **OK** fecha essa caixa de diálogo e exibe os valores dos limites de aviso especificados atualmente na grade **Limites** na página com guias **Avisos**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um limite só se aplica a um parceiro por vez, mas é recomendado definir um limite para um determinado evento em ambos os parceiros, para assegurar que o aviso persista caso o banco de dados apresente failover. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.  
   
  Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

@@ -2,30 +2,27 @@
 title: "Lição 6: Criar colunas calculadas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 58d361452f134976b7f90ce983b3bc5b7ba28d46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c59e137942d45cbe6c20a71b9fa785988b9876fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lição 5: Criar colunas calculadas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -36,7 +33,7 @@ Você criará cinco novas colunas calculadas em três tabelas diferentes. As eta
   
 Tempo estimado para concluir esta lição: **15 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 4: criar relações](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Criar colunas calculadas  
@@ -142,4 +139,3 @@ Vá para a próxima lição: [lição 6: criar medidas](../analysis-services/les
   
   
   
-

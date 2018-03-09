@@ -3,7 +3,7 @@ title: "Método CreateParameter (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7fc09313bffacefd2d9eff86c9176222c094ebe
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Cria um novo [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto com as propriedades especificadas.  
@@ -60,7 +59,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  Opcional. Um **Variant** que especifica o valor para o **parâmetro** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CreateParameter** método para criar um novo **parâmetro** objeto com um nome especificado, o tipo, a direção, o tamanho e o valor. Quaisquer valores que você passa os argumentos são gravados para o correspondente **parâmetro** propriedades.  
   
  Esse método não anexa automaticamente o **parâmetro** o objeto para o **parâmetros** coleção de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Isso permite que você defina propriedades adicionais, cujo valores ADO será validado quando você acrescentar o **parâmetro** objeto à coleção.  
@@ -78,4 +77,3 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
  [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-object.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-

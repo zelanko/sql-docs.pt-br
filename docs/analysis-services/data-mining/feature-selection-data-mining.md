@@ -2,15 +2,13 @@
 title: "Seleção (mineração de dados) de recursos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
-  A*seleção de recursos* é uma parte importante do aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  A *seleção de recursos* é uma parte importante do aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
   
 ## <a name="why-do-feature-selection"></a>O que significa a seleção de recursos?  
  A seleção de recursos é essencial para a criação de um bom modelo por vários motivos. Um deles é que a seleção de recursos implica um certo grau de *redução de cardinalidade*para impor um corte no número de atributos que podem ser considerados ao criar um modelo. Os dados quase sempre contém mais informações do que o necessário para criar o modelo ou o tipo errado de informações. Por exemplo, você pode ter um conjunto de dados com 500 colunas que descrevem as características dos clientes; no entanto, se os dados de algumas das colunas forem muito esparsos, não será muito benéfico adicioná-los ao modelo, e se algumas das colunas forem duplicatas de outras, usar as duas colunas poderá afetar o modelo.  
@@ -144,4 +142,3 @@ ms.lasthandoff: 09/01/2017
  [Personalizar os modelos de mineração e a estrutura](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

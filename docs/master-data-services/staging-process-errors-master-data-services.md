@@ -5,24 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: staging process [Master Data Services], error messages
+helpviewer_keywords:
+- staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0560f760a619630bb0ccc9183b30674da89d5f8
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |210047|O membro não pode ser um irmão de Unused.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Unused**. Os membros podem ser filhos apenas do nó Unused.|Relação|  
 |210048|**ParentCode** e **ChildCode** não podem ser iguais.|O valor de **ParentCode** é igual ao valor de **ChildCode** . Esses valores devem ser diferentes.|Relação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir erros que ocorrem durante o preparo &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

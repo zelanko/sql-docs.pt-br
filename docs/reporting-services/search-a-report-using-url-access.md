@@ -1,13 +1,14 @@
 ---
-title: "Pesquisar um relatório com acesso à URL | Microsoft Docs"
+title: "Pesquisar um relatório usando o acesso à URL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - text searches [Reporting Services]
 - URL access [Reporting Services], report searches
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 39ec7f9885cff6bcfcbf65e0448f3e8e837bc8a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b6af560204b06c2950cd10e8c304f8b2147cef4d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="search-a-report-using-url-access"></a>Pesquisar um relatório com acesso à URL
   Você pode pesquisar um relatório para obter um conjunto específico de texto usando o acesso de URL. Para pesquisar um relatório, defina o valor do parâmetro *rc:FindString* na URL igual ao texto para o qual você deseja pesquisar. Além disso, use os parâmetros *rc:StartFind* e *rc:EndFind* para estreitar sua pesquisa a páginas específicas dentro do relatório.  
@@ -37,9 +37,8 @@ ms.lasthandoff: 08/09/2017
 http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Acesso de URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Acesso à URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)  
   
   
-

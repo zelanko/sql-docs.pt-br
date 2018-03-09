@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STTouches (geometry Data Type)
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c29c232e585a083b0b4e97b081b66fcf7e03d5fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5be445ecd219fa681a8c2fcc97ab80c4bb12c2f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Retornará 1 se uma **geometria** instância toca espacialmente outra **geometri
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dois **geometria** instâncias touch se interseção de seus conjuntos de pontos, mas não se cruzam seus interiores.  
   
  Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
@@ -71,8 +70,7 @@ SELECT @g.STTouches(@h);
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

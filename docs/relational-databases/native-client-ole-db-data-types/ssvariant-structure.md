@@ -15,15 +15,15 @@ f1_keywords: SSVARIANT
 helpviewer_keywords: SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c1bc781701f4991db80ac68a99dc6940ec7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0f5df988e6f0a12fa5b5c2cebd9f5ce7b937104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  **SSVARIANT** é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. os valores VT correspondem aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados. Portanto, o **SSVARIANT** estrutura pode conter qualquer tipo de SQL Server. Para obter mais informações sobre a estrutura de dados para tipos de OLE DB padrão, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando DataTypeCompat = = 80, vários **SSVARIANT** subtipos se tornam cadeias de caracteres. Por exemplo, os valores vt seguintes aparecerão em **SSVARIANT** como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -62,9 +62,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Membro|Indicador de tipo OLE DB|Tipo de dados OLE DB C|valor vt|Comentários|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |VT|SSVARTYPE|||Especifica o tipo de valor contido no **SSVARIANT** struct.|  
-|bTinyIntVal|DBTYPE_UI1|**BYTES**|**VT_SS_UI1**|Oferece suporte a **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Oferece suporte a **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |sShortIntVal|DBTYPE_I2|**CURTO**|**VT_SS_I2**|Oferece suporte a **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
-|lIntVal|DBTYPE_I4|**LONGAS**|**VT_SS_I4**|Oferece suporte a **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
+|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Oferece suporte a **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Oferece suporte a **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Oferece suporte a **real** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Oferece suporte a **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
@@ -77,9 +77,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Oferece suporte a **tempo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**bytes**) Especifica a escala de *tTime2Val* valor.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Oferece suporte a **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**bytes**) Especifica a escala de *tsDataTimeVal* valor.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Oferece suporte a **datetimeoffset** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**bytes**) Especifica a escala de *tsoDateTimeOffsetVal* valor.|  
-|NCharVal|Não existe um indicador de tipo OLE DB correspondente.|**estrutura _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Oferece suporte a **nchar** e **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real para a cadeia de caracteres para o qual *pwchNCharVal* pontos. Não inclui o zero final.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para a cadeia de caracteres para o qual *pwchNCharVal* pontos.<br /><br /> *pwchNCharVal* (**WCHAR** \*) ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados: *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
-|CharVal|Não existe um indicador de tipo OLE DB correspondente.|**estrutura _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Oferece suporte a **char** e **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real para a cadeia de caracteres para o qual *pchCharVal* pontos. Não inclui o zero final.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para a cadeia de caracteres para o qual *pchCharVal* pontos.<br /><br /> *pchCharVal* (**CHAR** \*) ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados:<br /><br /> *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
-|BinaryVal|Não existe um indicador de tipo OLE DB correspondente.|**estrutura _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Oferece suporte a **binário** e **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real dos dados para o qual *prgbBinaryVal* pontos.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para os dados para o qual *prgbBinaryVal* pontos.<br /><br /> *prgbBinaryVal* (**bytes** \*) ponteiro para os dados binários.<br /><br /> Membro não usado: *dwReserved*.|  
+|NCharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Oferece suporte a **nchar** e **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real para a cadeia de caracteres para o qual *pwchNCharVal* pontos. Não inclui o zero final.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para a cadeia de caracteres para o qual *pwchNCharVal* pontos.<br /><br /> *pwchNCharVal* (**WCHAR** \*) ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados: *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
+|CharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Oferece suporte a **char** e **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real para a cadeia de caracteres para o qual *pchCharVal* pontos. Não inclui o zero final.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para a cadeia de caracteres para o qual *pchCharVal* pontos.<br /><br /> *pchCharVal* (**CHAR** \*) ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados:<br /><br /> *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
+|BinaryVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Oferece suporte a **binário** e **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**CURTO**) Especifica o comprimento real dos dados para o qual *prgbBinaryVal* pontos.<br /><br /> *sMaxLength* (**CURTO**) Especifica o comprimento máximo para os dados para o qual *prgbBinaryVal* pontos.<br /><br /> *prgbBinaryVal* (**bytes** \*) ponteiro para os dados binários.<br /><br /> Membro não usado: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   

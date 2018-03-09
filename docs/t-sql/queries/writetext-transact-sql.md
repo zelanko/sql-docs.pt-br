@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
 - WRITETEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - replacing data
 - WRITETEXT statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +63,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Nós recomendamos que a opção de BULK não seja usada em aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser alterada ou removida em uma futura versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *tabela* **.column**  
+ *table* **.column**  
  É o nome da tabela e **texto**, **ntext**, ou **imagem** coluna para atualizar. Nomes de tabela e coluna devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *text_ptr*  
@@ -70,10 +72,10 @@ WRITETEXT [BULK]
  WITH LOG  
  Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  
   
- *dados*  
+ *data*  
  É o valor real **texto**, **ntext** ou **imagem** dados serão armazenados. *dados* pode ser um literal ou um parâmetro. O comprimento máximo do texto que pode ser inserido interativamente com WRITETEXT é aproximadamente 120 KB para **texto**, **ntext**, e **imagem** dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use WRITETEXT para substituir **texto**, **ntext**, e **imagem** dados e UPDATETEXT para modificar **texto**, **ntext**, e **imagem** dados. UPDATETEXT é mais flexível porque altera somente uma parte de um **texto**, **ntext**, ou **imagem** coluna em vez da coluna inteira.  
   
  Para melhor desempenho, recomendamos que **texto**, **ntext**, e **imagem** dados sejam inseridos ou atualizados em tamanhos de bloco que sejam múltiplos de 8040 bytes.  

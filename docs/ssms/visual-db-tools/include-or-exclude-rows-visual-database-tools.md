@@ -3,8 +3,11 @@ title: Incluir ou excluir linhas (Ferramentas de Banco de Dados Visual) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a989f2ed661ecf6528b1ede1993522d3014255f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Incluir ou excluir linhas (Visual Database Tools)
-Para restringir o número de linhas que uma consulta SELECT deve retornar, crie critérios de pesquisa ou de filtro. No SQL, os critérios de pesquisa aparecem na cláusula WHERE da instrução, ou quando se está criando uma consulta de agregação na cláusula HAVING.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para restringir o número de linhas que uma consulta SELECT deve retornar, crie critérios de pesquisa ou de filtro. No SQL, os critérios de pesquisa aparecem na cláusula WHERE da instrução, ou quando se está criando uma consulta de agregação na cláusula HAVING.  
   
 > [!NOTE]  
 > É igualmente possível usar critérios de pesquisa para indicar quais linhas são afetadas por consultas Atualizar, Inserir Resultados, Inserir Valores, Excluir ou Criar Tabela.  
@@ -106,7 +109,7 @@ A seguir, alguns exemplos de consultas que usam vários operadores e critérios 
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Consultar com parâmetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

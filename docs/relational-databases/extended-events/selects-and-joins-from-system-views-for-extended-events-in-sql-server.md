@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e257fc470b6988141b5581650285d69c09b1f2a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,26 +126,26 @@ Na caixa de diálogo grande **Nova Sessão** , em sua primeira seção chamada *
 ![Nova Sessão > Geral, Iniciar a sessão de evento na inicialização do servidor.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Em seguida, na seção **Eventos** , vemos que o evento **lock_deadlock** foi selecionado. Para esse evento, vemos que três **Ações** foram selecionadas. Isso significa que o botão **Configurar** foi clicado, que fica cinza após ser clicado.
+Em seguida, na seção **Eventos**, vemos que o evento **lock_deadlock** foi selecionado. Para esse evento, vemos que três **Ações** foram selecionadas. Isso significa que o botão **Configurar** foi clicado, que fica cinza após ser clicado.
 
 ![Nova Sessão > Eventos, Campos Globais (Ações)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Em seguida, ainda na seção **Eventos** > **Configurar** , vemos que [**resource_type** foi definido como **PAGE**](#resource_type_dmv_actual_row). Isso significa que os dados de eventos não serão enviados do mecanismo de evento para a página de destino se o valor de **resource_type** for algo diferente de **PAGE**.
+Em seguida, ainda na seção **Eventos** > **Configurar**, vemos que [**resource_type** foi definido como **PAGE**](#resource_type_dmv_actual_row). Isso significa que os dados de eventos não serão enviados do mecanismo de evento para a página de destino se o valor de **resource_type** for algo diferente de **PAGE**.
 
 Vemos filtros de predicado adicionais para o nome do banco de dados e para um contador.
 
 ![Nova Sessão > Eventos > Configurar > Campos de Predicado de Filtro (Ações)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Em seguida, na seção **Armazenamento de Dados** , vemos que **event_file** foi selecionado como destino. Além disso, vemos que a opção **Habilitar substituição de arquivo** foi selecionada.
+Em seguida, na seção **Armazenamento de Dados**, vemos que **event_file** foi selecionado como destino. Além disso, vemos que a opção **Habilitar substituição de arquivo** foi selecionada.
 
 ![Nova Sessão > Armazenamento de Dados, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-Por fim, na seção **Avançado** , vemos que o valor de **Latência Máxima de Expedição** foi reduzido para 4 segundos.
+Por fim, na seção **Avançado**, vemos que o valor de **Latência Máxima de Expedição** foi reduzido para 4 segundos.
 
 ![Nova Sessão > Avançado, Latência máxima de expedição](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -165,7 +165,7 @@ Para realizar a engenharia reversa de uma sessão, você pode clicar com o botã
 O script do T-SQL a seguir foi criado pela engenharia reversa com o SSMS. Em seguida, o script foi manualmente “embelezado” pela manipulação estratégica somente do espaço em branco.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ Isso conclui a perspectiva do T-SQL.
 Não tenha medo! A instrução T-SQL SELECT é longa apenas porque une, com UNION, vários SELECTs pequenos. Qualquer um dos SELECTs pequenos pode ser executado sozinho. Os pequenos SELECT mostram como as várias exibições de catalogação do sistema devem ser unidas, utilizando JOIN.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ Aqui está a lista de SELECTs nesta seção C de DMV:
 Todos os objetos que você pode usar na área de eventos estendidos são provenientes de pacotes que são carregados no sistema. Esta seção lista todos os pacotes e suas descrições.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 Esta seção informa sobre os tipos de objetos que contêm pacotes de eventos. É exibida uma lista completa de todos os tipos de objeto que estão em *sys.dm\_xe\_objects*, juntamente com a contagem para cada tipo.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ O SELECT a seguir retorna aproximadamente 1915 linhas, uma para cada objeto.
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ A instrução SELECT a seguir retorna todos os campos de dados que são específ
 - Além disso, você precisa editar o valor da cláusula WHERE *o.name =*.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ A finalidade do SELECT é mostrar os vários campos que podem ser selecionados p
 - Para filtrar quais ocorrências do evento serão enviadas para versus mantidas fora de seu destino.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ A instrução SELECT a seguir retorna todos os parâmetros para o seu destino. C
 - Além disso, você precisa editar o valor da cláusula WHERE *o.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ Esse SELECT de DMV retorna linhas de dados do destino de sua sessão de eventos 
 - Você precisa editar o valor da cláusula WHERE para *s.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ Suponha que sua sessão de eventos coletou alguns dados e foi parada posteriorme
     - Não dê atenção aos dígitos extra que o sistema SQL integra nos nomes de arquivo .XEL reais sempre que você reinicia a sessão. Apenas dê o nome raiz e a extensão normais.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

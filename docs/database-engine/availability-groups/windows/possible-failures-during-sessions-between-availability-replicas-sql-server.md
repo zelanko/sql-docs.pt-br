@@ -2,9 +2,12 @@
 title: "Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server)
-Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  
   
 > [!IMPORTANT]  
 >  Falhas em bancos de dados diferentes do banco de dados primário não são detectáveis. Além disso, é improvável que uma falha no disco de dados seja detectada, a menos que o banco de dados seja reiniciado por causa de uma falha no disco de dados.  
@@ -94,7 +97,7 @@ Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../..
 ## <a name="responding-to-an-error"></a>Respondendo a um erro  
  Independentemente do tipo de erro, uma instância do servidor que detecta um erro responde adequadamente com base na função da instância, no modo de disponibilidade da sessão e no estado de qualquer outra conexão na sessão. Para obter informações sobre o que ocorre na perda de um parceiro, veja [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  **Para alterar o valor de tempo limite (apenas no modo de disponibilidade de confirmação síncrona)**  
   
 -   [Alterar o período de tempo limite da sessão de uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -103,7 +106,7 @@ Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../..
   
 -   Consulte **session_timeout** em [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

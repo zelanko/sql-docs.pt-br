@@ -2,15 +2,13 @@
 title: Elemento IsDefaultMeasure (XML) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1246b698fc9f7943ef4e1fbe5b41307d12a72813
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 735e2245f44dc627035d99eb6c898259300cc4d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isdefaultmeasure-element-xml"></a>Elemento IsDefaultMeasure (XML)
-  Indica que é possível obter a medida padrão para esta entidade navegando esta relação para a outra tabela e buscando o membro que tem o atributo, DefaultMeasure.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indica que é possível obter a medida padrão para esta entidade navegando esta relação para a outra tabela e buscando o membro que tem o atributo, DefaultMeasure.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,9 +40,9 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Boolean|  
+|Comprimento e tipo de dados|Booliano|  
 |Valor padrão|false|  
 |Cardinalidade|0-1: elemento opcional que ocorre apenas uma única vez.|  
   
@@ -53,9 +51,9 @@ ms.lasthandoff: 11/17/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para **RelationshipEndVisualizationProperties** elementos, o **IsDefaultMeasure** elemento indica que é possível obter a medida padrão para esta entidade navegando até o final do Essa relação. O valor padrão de **false** indica que não há nenhuma medida padrão a ser obtida.  
   
   

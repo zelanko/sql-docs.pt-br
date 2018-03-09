@@ -2,16 +2,13 @@
 title: "Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: many-to-many relationships [Analysis Services]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos
-  Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-las.  
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-los.  
   
 ## <a name="introduction"></a>Introdução  
  O Analysis Services dá suporte a dimensões muitos-para-muitos, permitindo uma análise mais complexa do que pode ser descrito em um esquema em estrela clássico. Em um esquema em estrela clássico, todas as dimensões têm uma relação um para muitos com uma tabela de fatos. Cada fato é associado a um membro de dimensão e um simples membro de dimensão é associado a muitos fatos.  
@@ -191,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
  [Tutorial: Exemplo de dimensão muitos-para-muitos para o SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relações de dimensão](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Instalar dados de exemplo e projetos do Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md)   
  [Implantar projetos do Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   

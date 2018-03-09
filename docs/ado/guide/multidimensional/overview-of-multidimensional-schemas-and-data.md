@@ -3,26 +3,28 @@ title: "Visão geral dos dados e esquemas multidimensionais | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: multidimensional schemas and data
+helpviewer_keywords:
+- multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49c9f724fcd82de499ecb88a464c4c5ea3980b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Visão geral de esquemas Multidimensional e de dados
 ## <a name="understanding-multidimensional-schemas"></a>Noções básicas sobre esquemas Multidimensional  

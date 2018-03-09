@@ -3,8 +3,11 @@ title: Propriedades de objeto com valor de tabela (Visual Database Tools) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriedades de objeto com valor de tabela (Visual Database Tools)
-Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Consulta e Exibição**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Exibição e Consulta**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
   
 > [!NOTE]  
 > As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  

@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8ae9c279e40bcfa3728969f39a1db1f97d7e26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Atualizando a versão de um componente de fluxo de dados
   Pacotes criados com uma versão mais antiga do seu componente podem conter metadados que não são mais válidos, como propriedades personalizadas cujo uso foi modificado em versões mais recentes do componente. É possível substituir o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para atualizar os metadados salvos anteriormente em pacotes mais antigos, a fim de refletir as propriedades atuais do seu componente.  
@@ -54,9 +52,9 @@ ms.lasthandoff: 08/03/2017
 -   Define os metadados da versão para a versão atual do componente.  
   
 > [!NOTE]  
->  O mecanismo de fluxo de dados passa seu próprio número de versão para o <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> método o *pipelineVersion* parâmetro. Esse parâmetro não é útil na versão 1.0 do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], mas pode se tornar útil em versões subsequentes.  
+>  O mecanismo de fluxo de dados passa seu próprio número de versão para o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> no parâmetro *pipelineVersion*. Esse parâmetro não é útil na versão 1.0 do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], mas pode se tornar útil em versões subsequentes.  
   
- O código de exemplo usa somente os dois valores de enumeração, que mapeiam diretamente para os valores Booleanos anteriores para a propriedade personalizada. Os usuários podem selecionar os outros valores de enumeração disponíveis pela interface do usuário personalizada do componente, no Editor Avançado, ou programaticamente. Para obter informações sobre como exibir valores de enumeração para uma propriedade personalizada no Editor Avançado, consulte "Criando propriedades personalizadas" em [métodos de tempo de Design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ O código de exemplo usa somente os dois valores de enumeração, que mapeiam diretamente para os valores Booleanos anteriores para a propriedade personalizada. Os usuários podem selecionar os outros valores de enumeração disponíveis pela interface do usuário personalizada do componente, no Editor Avançado, ou programaticamente. Para obter informações sobre como exibir valores de enumeração para uma propriedade personalizada no Editor Avançado, consulte "Criando propriedades personalizadas" em [Métodos de tempo de design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +186,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

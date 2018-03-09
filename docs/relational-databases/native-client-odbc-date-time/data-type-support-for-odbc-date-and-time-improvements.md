@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dfb3bd0b1d1790b1ab578e4ad29c426437839cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17acf73e2a190b1a9f55c07dc24d7ce391056aee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte de tipo de dados para aprimoramentos de hora e data ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,12 +41,12 @@ ms.lasthandoff: 11/17/2017
   
  A tabela seguinte mostra o mapeamento completo de tipo do servidor. Observe que algumas células da tabela contêm duas entradas; nestes casos, a primeira é o valor ODBC 3.0 e a segunda é o valor ODBC 2.0.  
   
-|Tipo de dados do SQL Server|Tipo de dados SQL|Valor|  
+|Tipo de dados do SQL Server|Tipo de dados SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Data|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL)<br /><br /> 9 (sqlext. h)|  
-|Hora|SQL_SS_TIME2|-154 (sqlncli. h)|  
+|Data|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext. h)|  
+|Hora|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   

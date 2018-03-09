@@ -8,29 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - GO
 - GO_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - batches [SQL Server], ending
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 60c121767ffbf4e4ab222968eb27e4e170fa7fdd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 63fe775455df2b9b25ec3abc8bb0208aa6b5dd0e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ GO [count]
  *contagem*  
  É um número inteiro positivo. O lote que precede GO será executado pelo número de vezes especificado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  GO não é um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução; ele é um comando reconhecido pelo **sqlcmd** e **osql** utilitários e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de códigos.  
   
  Os utilitários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretam GO como um sinal de que eles devem enviar o lote atual de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O lote atual de instruções é composto de todas as instruções digitadas desde o último GO, ou desde o início da sessão ad hoc ou script, se esse for o primeiro GO.  

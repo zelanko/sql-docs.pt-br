@@ -21,17 +21,16 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec0d21afb92b000f29fb91c4e3b848b4881b99c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b71e3d10dd2e6aaaca091a7f37eed48392261f5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ GeomFromGml ( GML_input, SRID )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método lança um **FormatException** se a entrada não for bem formatada.  
   
  Este método gerará **ArgumentException** se a entrada contiver uma borda oposta.  
@@ -88,7 +87,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

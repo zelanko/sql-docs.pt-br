@@ -2,39 +2,33 @@
 title: Conjunto de linhas DISCOVER_DATASOURCES | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
+apiname: DISCOVER_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9c91d5b1d3e0fb7ec972e47079a1bf36d8f9b87
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de linhas DISCOVER_DATASOURCES
-  Retorna uma lista das fontes de dados de provedor de XMLA (XML for Analysis) disponível no servidor ou no serviço Web. As fontes dos dados publicados são retornadas de uma URL do servidor da Web de aplicativo. O cliente pode conectar a uma das fontes de dados desta lista.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna uma lista de XML para fontes de dados do provedor Analysis (XMLA) que estão disponíveis no servidor ou serviço da Web. As fontes dos dados publicados são retornadas de uma URL do servidor da Web de aplicativo. O cliente pode conectar a uma das fontes de dados desta lista.  
   
  Se você chamar o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método com o **DISCOVER_DATASOURCES** valor de enumeração no [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, o **Discover** método retorna o **DISCOVER_DATASOURCES** conjunto de linhas.  
   
@@ -51,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||A descrição da fonte de dados inserida pelo editor.<br /><br /> Pode retornar **NULL**.|  
 |**URL**|**DBTYPE_WSTR**|Sim|O caminho exclusivo que mostra onde invocar os métodos XMLA (XML for Analysis para a fonte de dados.<br /><br /> Pode retornar **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Uma cadeia de caracteres que contém informações adicionais necessárias para a conexão à fonte de dados.<br /><br /> Pode retornar **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Sim|O o nome do provedor para a fonte de dados.<br /><br /> Exemplo:`"MSOLAP"`<br /><br /> Pode retornar **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Sim|O o nome do provedor para a fonte de dados.<br /><br /> Exemplo: `"MSOLAP"`<br /><br /> Pode retornar **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Sim|Os tipos de dados suportados pelo provedor. Esta matriz pode incluir um ou mais dos seguintes tipos:<br /><br /> **MDP**: provedor de dados multidimensional.<br /><br /> **TDP**: provedor de dados tabular.<br /><br /> **DMP**: provedor de mineração de dados (implementa a especificação OLE DB para mineração de dados).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Sim|Uma especificação do tipo de modo de segurança usado pela fonte de dados. Pode conter um dos seguintes valores:<br /><br /> **Unauthenticated**: nenhuma ID de usuário ou senha deve ser enviada.<br /><br /> **Authenticated**: a ID de usuário e a senha devem ser incluídas nas informações necessárias para a conexão à fonte de dados.<br /><br /> **Integrado**: A fonte de dados usa a segurança subjacente para determinar a autorização, como segurança integrada fornecida pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] serviços de informações da Internet (IIS).|  
   
@@ -70,8 +64,7 @@ ms.lasthandoff: 09/01/2017
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  
   
-## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

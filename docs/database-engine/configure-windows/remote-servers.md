@@ -2,10 +2,14 @@
 title: Servidores remotos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>Servidores remotos
-  Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Uma configuração de servidor remoto permite que um cliente conectado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute um procedimento armazenado em outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem estabelecer uma conexão separada. Em vez disso, o servidor ao qual o cliente está conectado aceita a solicitação do cliente e envia a solicitação para o servidor remoto em nome do cliente. O servidor remoto processa a solicitação e retorna todos os resultados ao servidor original. Esse servidor, por sua vez, passa esses resultados para o cliente. Quando você define uma configuração de servidor remoto, deve considerar também como estabelecer a segurança.  
   
@@ -98,7 +103,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Exibindo propriedades do servidor local ou remoto  
  Você pode usar o procedimento armazenado estendido **xp_msver** para examinar atributos de servidores locais ou remotos. Entre esses atributos estão o número da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o tipo e o número de processadores no computador e a versão do sistema operacional. No servidor local, você pode exibir bancos de dados, arquivos, logons e ferramentas para um servidor remoto. Para obter mais informações, veja [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

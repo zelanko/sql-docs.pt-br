@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil para distribuição de valor coluna (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções de solicitação de perfil de distribuição de valor de coluna (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opções de solicitação do perfil Distribuição de Valor de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Distribuição de Valor de Coluna** selecionada no painel de solicitações. Um Perfil de Distribuição de Valor de Coluna reporta todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. O perfil também pode informar valores que representam mais que uma porcentagem especificada de linhas na tabela. O perfil também pode ajudar a identificar problemas em seus dados, como um número incorreto de valores distintos em uma coluna. Por exemplo, você cria um perfil para uma coluna Estado dos Estados Unidos da América e descobre mais de 50 valores distintos.  
@@ -78,15 +77,15 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Se o curinga **(\*)** for usado para **ColumnName**, **CompareOptions** será somente leitura e será definido como **Padrão**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Padrão**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/03/2017
  **ValueDistributionOption**  
  Especifique se deseja computar a distribuição para todos os valores de coluna. O valor padrão desta opção é **FrequentValues**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**AllValues**|A distribuição é computada para todos os valores de coluna.|  
 |**FrequentValues**|A distribuição é computada somente para valores cuja frequência excede o valor mínimo especificado em **FrequentValueThreshold**. Os valores que não estiverem dentro do **FrequentValueThreshold** serão excluídos do relatório de saída.|  
@@ -109,9 +108,8 @@ ms.lasthandoff: 08/03/2017
  **FrequentValueThreshold**  
  Especifique o limite (um valor entre 0 e 1) a partir do qual o valor de coluna deve ser informado. Esta opção é desabilitada se **AllValues** for selecionado como **ValueDistributionOption**. O valor padrão desta opção é 0.001.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

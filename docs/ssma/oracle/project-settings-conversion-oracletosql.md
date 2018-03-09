@@ -1,10 +1,13 @@
 ---
 title: "Configurações (conversão) (OracleToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: e603c7126e4f8e94d040e2ba34fb4180b01c4287
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 62451526ad29a0aaf2d2cc92e3e439223e6c32d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Configurações de projeto (conversão) (OracleToSQL)
 A página de conversão do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte a sintaxe do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe.  
@@ -87,6 +90,6 @@ O painel de conversão está disponível na **configurações de projeto** e **c
 |**Converter o gerador de sequência**|No Oracle, você pode usar uma sequência para gerar identificadores exclusivos.<br /><br />O SSMA pode converter sequências para o seguinte.<br /><br />Usando o gerador de sequência do SQL Server (essa opção só está disponível durante a conversão em SQL Server 2012 e SQL Server 2014).<br /><br />Usando o gerador de sequência do SSMA.<br /><br />Usando a identidade de coluna.<br /><br />A opção padrão ao converter para o SQL Server 2012 ou SQL Server 2014 é usar o gerador de sequência do SQL Server. No entanto, o SQL Server 2012 e SQL Server 2014 não suporta obtendo o valor de sequência atual (como método de currval de sequência do Oracle). Consulte o site de blog de equipe do SSMA para obter orientação sobre o método currval de sequência de Oracle migrando.<br /><br />O SSMA também fornece uma opção para converter a sequência de Oracle ao emulador do SSMA sequência. Essa é a opção padrão quando você converter para o SQL Server antes de 2012<br /><br />Por fim, você também pode converter sequência atribuída a uma coluna na tabela de valores de identidade do SQL Server. Você deve especificar o mapeamento entre as sequências para uma coluna de identidade no Oracle **tabela** guia|  
 |**Converter CURRVAL fora gatilhos**|Visível somente quando o gerador de sequência converter é definido como **usando a identidade de coluna**. Como as sequências da Oracle são objetos separados das tabelas, muitas tabelas do que usam sequências de usam um gatilho para gerar e inserir um novo valor de sequência. O SSMA comentários out essas instruções ou marca-os como erros quando o fora de comentário gerarem erros.<br /><br />Se você selecionar **Sim**, SSMA marcará todas as referências para fora de gatilhos em que o objeto de sequência CURRVAL com um aviso.<br /><br />Se você selecionar **não**, SSMA marcará todas as referências para fora de gatilhos em que o objeto de sequência CURRVAL com um erro.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência de Interface do usuário &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

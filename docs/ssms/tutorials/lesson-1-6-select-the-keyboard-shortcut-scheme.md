@@ -2,27 +2,30 @@
 title: Selecionar o esquema de atalhos de teclado | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ccdd4b9f6b850d4cb88232e52fe00a84241c2db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3b3a5045ed02175591b1e0d6272a88b3cfd3d152
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Lição 1-6 – Selecionar o esquema de atalhos de teclado
-Em vez do esquema de teclado padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode configurar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar um esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em vez do esquema de teclado padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode configurar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar um esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
 ## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Alterando para o esquema de teclado do [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
@@ -39,7 +42,7 @@ Em vez do esquema de teclado padrão do [!INCLUDE[ssManStudioFull](../../include
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Definir as opções de inicialização](../../tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
 [Personalizar menus e teclas de atalho](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   

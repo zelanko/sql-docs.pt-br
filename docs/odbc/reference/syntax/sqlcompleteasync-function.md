@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQLCompleteAsync
-helpviewer_keywords:
-- SQLCompleteAsync function [ODBC]
+f1_keywords: SQLCompleteAsync
+helpviewer_keywords: SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83f44395e0c7ed8d102bee046b19aefe96c156b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcompleteasync-function"></a>Função SQLCompleteAsync
 **Conformidade**  
@@ -83,6 +79,5 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="comments"></a>Comentários  
  No modo de processamento assíncrono de pesquisa com base em *AsyncRetCodePtr* pode ser SQL_STILL_EXECUTING quando **SQLCompleteAsync** retorna SQL_SUCCESS. Aplicativo deve manter sondagem até *AsyncRetCodePtr* não é SQL_STILL_EXECUTING. No modo de processamento assíncrono de notificação com base em *AsyncRetCodePtr* nunca serão SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

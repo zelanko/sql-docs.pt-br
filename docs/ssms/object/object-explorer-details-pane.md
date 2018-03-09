@@ -3,8 +3,11 @@ title: Painel de detalhes do Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
-Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface de usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface do usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
   
 Por padrão, o painel Detalhes do Pesquisador de Objetos está visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Se não for possível ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos** ou pressione **F7**.  
   
@@ -47,7 +50,7 @@ Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém o
 |**Avançar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
 |**Para cima**|Move para o objeto ou a pasta pai.|  
 |**Sincronizar**|Define o foco de Pesquisador de Objetos para o objeto selecionado em Detalhes do Pesquisador de Objetos.|  
-|**Filtro**|Quando disponível, mostra um subconjunto configurável de objetos.|  
+|**Filter**|Quando disponível, mostra um subconjunto configurável de objetos.|  
 |**Atualizar**|Atualiza a exibição em Detalhes do Pesquisador de Objetos.|  
 |**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
@@ -100,6 +103,6 @@ Conjuntos grandes
   
 -   A pesquisa de conjuntos de objetos grandes pode levar muito tempo e reduzir o desempenho do servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
   

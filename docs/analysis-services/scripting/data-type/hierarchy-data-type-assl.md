@@ -2,15 +2,13 @@
 title: Tipo de dados Hierarchy (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Hierarchy Data Type
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f1c0cf7c3a9048cdaeae72482e1f3c693764f48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d11b630027d0109f6fbaeacb4847065151b1d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchy-data-type-assl"></a>Tipo de dados Hierarchy (ASSL)
-  Define um tipo de dados primitivo que representa uma hierarquia em uma dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um tipo de dados primitivo que representa uma hierarquia em uma dimensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,20 +52,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>Características do tipo de dados  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhuma|  
-|Tipos de dados derivados|Nenhuma|  
+|Tipos de dados base|Nenhum|  
+|Tipos de dados derivados|Nenhum|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhuma|  
+|Elementos pai|Nenhum|  
 |Elementos filho|[AllMemberName](../../../analysis-services/scripting/properties/allmembername-element-assl.md), [AllMemberTranslations](../../../analysis-services/scripting/collections/allmembertranslations-element-assl.md), [AllowDuplicateNames](../../../analysis-services/scripting/properties/allowduplicatenames-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Levels](../../../analysis-services/scripting/collections/levels-element-assl.md), [MemberNamesUnique](../../../analysis-services/scripting/properties/membernamesunique-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
 |Elementos derivados|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O elemento *MemberNamesUnique* não tem suporte no DevelopmentMode 1 ou 2 para modos de servidor SharePoint ou Tabular, respectivamente.  
   
  O elemento *MemberKeysUnique* não tem suporte no DevelopmentMode 1 ou 2 para modos de servidor SharePoint ou Tabular, respectivamente.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

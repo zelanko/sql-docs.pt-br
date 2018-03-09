@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +18,7 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -30,17 +27,16 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7caf239374a174cc26c2bee349c1a52c805f4de4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +79,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. Colunas no \< *lista de mapeamentos de junção*> são relacionadas por meio de um sinal de igual (=), conforme mostrado no exemplo a seguir:  
   
 ```  
@@ -212,11 +208,10 @@ NATURAL PREDICTION JOIN
   
  Como a coluna que contém o atributo previsível `[v Assoc Seq Line Items]` é uma coluna de tabela, a consulta retorna uma única coluna que contém uma tabela aninhada. Por padrão a coluna de tabela aninhada é denominada `Expression`. Se seu provedor não oferece suporte a conjuntos de linhas hierárquicos, você pode usar o **FLATTENED** palavra-chave, conforme mostrado neste exemplo para facilitar os resultados exibir.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECIONAR &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

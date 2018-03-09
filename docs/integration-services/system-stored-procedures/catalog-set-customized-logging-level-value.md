@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_customized_logging_level_value | Microsoft Docs
+title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75ef405fe4550e81ec2d5178a1d3242d405755af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5f5cbc65822e3f105db0e210aa5bbda1e22cc332
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>Catalog.set_customized_logging_level_value
+# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Altera as estatísticas ou os eventos registrados por um nível de log personalizado existente. Para obter mais informações sobre níveis de log personalizados, consulte [Integration Services &#40; SSIS &#41; Registro em log](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Altera as estatísticas ou os eventos registrados em log por um nível de log personalizado existente. Para obter mais informações sobre níveis de registro em log personalizados, consulte [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,24 +38,24 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @level_name =] *level_name*  
- O nome de um objeto existente de nível de log personalizado.  
+ [ @level_name = ] *level_name*  
+ O nome de um nível de log personalizado existente.  
   
- O *level_name* é **nvarchar (128)**.  
+ O *level_name* é **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- O nome da propriedade a ser alterada. Os valores válidos são **perfil** e **eventos**.  
+ [ @property_name = ] *property_name*  
+ O nome da propriedade a ser alterada. Os valores válidos são **PROFILE** e **EVENTS**.  
   
- O *property_name* é **nvarchar (128)**.  
+ O *property_name* é **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- O novo valor para a propriedade especificada do nível de log personalizado.  
+ [ @property_value = ] *property_value*  
+ O novo valor para a propriedade especificada do nível de log personalizado especificado.  
   
- Para obter uma lista de valores válidos para o perfil e eventos, consulte [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
+ Para obter uma lista de valores válidos para perfil e eventos, consulte [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
   
  O *property_value* é um **bigint**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (êxito)  
@@ -64,7 +63,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  Quando há falha no procedimento armazenado, ele gera um erro.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -79,4 +78,3 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 -   O usuário não tem as permissões necessárias.  
   
   
-

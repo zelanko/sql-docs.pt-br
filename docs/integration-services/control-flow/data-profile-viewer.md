@@ -1,5 +1,5 @@
 ---
-title: Visualizador de perfil de dados | Microsoft Docs
+title: Visualizador de Perfil de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Clique com o botão direito do mouse na tarefa **Criação de Perfil de Dados** no Designer de [!INCLUDE[ssIS](../../includes/ssis-md.md)] e clique em **Editar**. Clique em **Abrir o Visualizador de Perfil** na página **Geral** de **Editor da Tarefa Criação de Perfil de Dados**.  
   
--   Na pasta,  *\<drive >*: \Program Files (x86) | Programa de Programas\Microsoft SQL Server\110\DTS\Binn, execute DataProfileViewer.exe.  
+-   Na pasta *\<unidade>*:\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute o DataProfileViewer.exe.  
   
  O visualizador usa vários painéis para exibir os perfis solicitados e os resultados computados, com detalhes e capacidade de busca opcionais:  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Comprimento de Coluna  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribuição de comprimento de coluna - \<coluna > Painel  
+##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de Distribuição de Tamanho de Coluna – painel \<coluna>  
  **Comprimento Mínimo**  
  Exibe o comprimento mínimo de valores nesta coluna.  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo de Perfil = Perfil de Razão Nula de Coluna  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de razão nula coluna - \<coluna > Painel  
+##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de Razão Nula de Coluna – painel \<coluna>  
  **Contagem Nula**  
  Exibe o número de linhas nas quais a coluna perfilada tem um valor nulo.  
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>Tipo de Perfil = Perfil Padrão de Coluna  
   
-##### <a name="column-pattern-profile---column-pane"></a>Perfil de padrão de coluna - \<coluna > Painel  
+##### <a name="column-pattern-profile---column-pane"></a>Perfil de Padrão de Coluna – painel \<coluna>  
  **Contagem de Linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
@@ -151,7 +150,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo de Perfil = Perfil de Estatísticas da Coluna  
   
-##### <a name="column-statistics-profile---column-pane"></a>Perfil de estatísticas de coluna - \<coluna > Painel  
+##### <a name="column-statistics-profile---column-pane"></a>Perfil de Estatísticas da Coluna – painel \<coluna>  
  **Mínimo**  
  Exibe o valor mínimo localizado na coluna cujo perfil está sendo criado.  
   
@@ -166,7 +165,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Valor da Coluna  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribuição de valor de coluna - \<coluna > Painel  
+##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de Distribuição de Valor da Coluna – painel \<coluna>  
  **Número de Valores Distintos**  
  Exibe a contagem de valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/11/2017
  **Value**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
  **Porcentagem**  
@@ -185,7 +184,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo de Perfil = Perfil-Chave de Candidato  
   
-##### <a name="candidate-key-profile---table-pane"></a>Perfil de chave de candidato - \<tabela > Painel  
+##### <a name="candidate-key-profile---table-pane"></a>Perfil-Chave de Candidato – painel \<tabela>  
  **Colunas de Chave**  
  Exibe as colunas que foram selecionadas para criação de perfil como chave candidata.  
   
@@ -193,10 +192,10 @@ ms.lasthandoff: 08/11/2017
  Exibe a intensidade (em porcentagem) da coluna da chave candidata ou da combinação de colunas. Uma intensidade de chave inferior a 100% indica que existem valores em duplicata.  
   
 ##### <a name="key-violations-pane"></a>Painel Violações de Chave  
- **\<Column1 >, \<column2 > etc.**  
+ **\<column1>, \<column2>, etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Tipo de Perfil = Perfil de Dependência Funcional  
@@ -216,17 +215,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Uma porcentagem alta de valores errôneos nos dados poderia conduzir a resultados inesperados de um perfil Dependência Funcional. Por exemplo, 90% das linhas têm um valor de “WI” em Estado para um valor de Código Postal de "98052". O perfil informa linhas que contêm o valor de estado correto de "WA" como violações.  
   
- **\<nome de coluna determinante >**  
+ **\<nome de coluna determinante>**  
  Exibe o valor da coluna determinante ou combinação de colunas na instância de uma violação de dependência funcional.  
   
- **\<nome de coluna dependente >**  
+ **\<nome de coluna dependente>**  
  Exibe o valor da coluna dependente na instância de uma violação de dependência funcional.  
   
  **Contagem de Suporte**  
  Exibe o número de linhas nas quais o valor de coluna determinante determina a coluna dependente.  
   
  **Contagem de Violação**  
- Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas onde o valor dependente é o valor mostrado no  **\<nome de coluna dependente >** coluna.)  
+ Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas nas quais o valor dependente é o valor exibido na coluna **\<dependent column name>**.)  
   
  **Percentual de Suporte**  
  Exibe a porcentagem de linhas nas quais a coluna determinante determina a coluna dependente.  
@@ -244,10 +243,9 @@ ms.lasthandoff: 08/11/2017
  Exibe a intensidade (em porcentagem) da sobreposição entre colunas. Uma intensidade de chave inferior a 100% indica que há casos nos quais o valor do subconjunto não está localizado entre os valores do superconjunto.  
   
 ##### <a name="inclusion-violations-pane"></a>Painel Violações de Inclusão  
- **\<Column1 >, \<column2 > etc.**  
+ **\<column1>, \<column2>, etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
-

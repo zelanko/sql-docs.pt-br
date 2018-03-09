@@ -2,25 +2,26 @@
 title: "Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 27f8b92c77a5251e2d52e8af85e4aeb759a5ce8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs
 Você pode adicionar o detalhamento de qualquer grade de dados, gráfico ou medidor em um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para outro ou URL personalizada. 
@@ -87,6 +88,5 @@ Itens ocultos são exibidos em uma cor mais clara.
  
 * [Adicionar parâmetros a um relatório móvel do Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Portal da Web (Modo Nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [Portal da Web (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
 

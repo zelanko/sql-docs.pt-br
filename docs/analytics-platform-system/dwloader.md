@@ -3,23 +3,23 @@ title: Carregador de linha de comando para Parallel Data Warehouse de dwloader
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente."
+description: "**dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Carregador de linha de comando de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos os linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -161,7 +161,7 @@ Se omitido, dwloader padrão é o valor que foi especificado quando dwloader foi
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*esquema*]. *table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 O nome de três partes da tabela de destino.  
   
 **-I***source_data_location*  
@@ -201,7 +201,7 @@ Exemplos:
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\\loadserver\loads\daily\\*.txt  
   
 -   -i \\\loadserver\loads\daily\monday.*  
   
@@ -215,7 +215,7 @@ Se houver falhas de carregamento, **dwloader** armazena a linha que falhou para 
 **-fh** *number_header_rows*  
 O número de linhas (linhas) para ignorar no início do *source_data_file_name*. O padrão é 0.  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 As opções para um *source_data_file_name* que tem colunas delimitada por caracteres de comprimento variável. Por padrão, *source_data_file_name* contém caracteres ASCII em colunas de comprimento variável.  
   
 Para arquivos ASCII, valores nulos são representados colocando delimitadores consecutivamente. Por exemplo, em um arquivo delimitado por pipe ("|"), um valor nulo é indicado por "| |". Em um arquivo delimitado por vírgula, um valor nulo é indicado por ",". Além disso, o **-E** (-emptyStringAsNull) a opção deve ser especificada. Para obter mais informações sobre -E, consulte abaixo.  
@@ -229,10 +229,10 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
 |Nome|Caractere de escape|Caractere hexadecimal|  
 |--------|--------------------|-----------------|  
 |Tab|\t|0x09|  
-|Retorno de carro (CR)|\r|0x0D|  
-|Alimentação de linha (LF)|\n|0x0A|  
+|Retorno de carro (CR)|\r|0x0d|  
+|Alimentação de linha (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
-|Vírgula|','|0x2c|  
+|Comma|','|0x2c|  
 |Aspas duplas|\\"|0x22|  
 |Aspas simples|\\'|0x27|  
   
@@ -294,15 +294,15 @@ Caminho e nome do arquivo de configuração que especifica o número de caracter
   
 Esse arquivo deve residir no servidor de carregamento. O caminho pode ser um caminho UNC, relativo ou absoluto. Cada linha no *fixed_width_config_file* contém o nome de uma coluna e o número de caracteres para a coluna. Há uma linha por coluna, da seguinte maneira e a ordem em que o arquivo deve corresponder à ordem na tabela de destino:  
   
-*nome da coluna*=*num_chars*  
+*column_name*=*num_chars*  
   
-*nome da coluna*=*num_chars*  
+*column_name*=*num_chars*  
   
 Exemplo de arquivo de configuração de largura foram corrigidos:  
   
-SalesCode = 3  
+SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 Exemplo de linhas no *source_data_file_name*:  
   
@@ -402,7 +402,7 @@ O carregador insere linhas ao final de linhas existentes na tabela de destino.
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, ao final de linhas existentes na tabela de destino. fastappend requer que a transação de vários (– m) opção. Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma falha ou anulada carga deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K***merge_column* [,... *n* ]    
+upsert **-K***merge_column* [,... *n* ]  
 O carregador usa a instrução de mesclagem do SQL Server para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção -K Especifica a coluna ou colunas a base de dados de mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha é atualizada. Se a chave de mesclagem não existe na tabela de destino, a linha será acrescentada.  
@@ -427,7 +427,7 @@ Por exemplo, se o modo de carga é FASTAPPEND e a tabela tem um índice columnst
   
 Se o tipo de carga for FASTAPPEND, o *batchsize* se aplica a carregar dados para a tabela, caso contrário, *batchsize* se aplica a carregar dados para a tabela de preparo.  
   
-< reject_options >  
+<reject_options>  
 Especifica opções para determinar o número de falhas de carregamento que permitirá que o carregador. Se as falhas de carga excederem o limite, o carregador será interrompida e não confirmar todas as linhas.  
   
 **-rt** { **valor** | porcentagem}  
@@ -557,12 +557,12 @@ O modo de acréscimo carrega dados em duas fases. A fase um carrega dados do arq
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Pilha|Sim|Sim|Sim|mínimo|  
 |Pilha|Sim|Não|Sim|mínimo|  
-|Pilha|Não|Sim|Não|mínimo|  
-|Pilha|Não|Não|Não|mínimo|  
-|Cl|Sim|Sim|Não|mínimo|  
+|Pilha|não|Sim|não|mínimo|  
+|Pilha|não|Não|não|mínimo|  
+|Cl|Sim|Sim|não|mínimo|  
 |Cl|Sim|Não|Sim|Completo|  
-|Cl|Não|Sim|Não|mínimo|  
-|Cl|Não|Não|Sim|Completo|  
+|Cl|não|Sim|não|mínimo|  
+|Cl|não|Não|Sim|Completo|  
   
 Mostra a tabela acima **dwloader** usando o modo de acréscimo carregar em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador várias transacional e carregar em uma tabela vazia ou uma tabela não vazia. O bloqueio e registro em log o comportamento de cada essa combinação de carga é exibido na tabela. Por exemplo, carregando fase (2) com o modo de acréscimo em um índice clusterizado sem modo multi transacional e em vazio tabela terão PDW criar um bloqueio exclusivo na tabela e registro em log é mínimo. Isso significa que um cliente não poderá carregar (2º) fase e consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, PDW não emitirá um bloqueio exclusivo na tabela e simultaneidade é possível. Infelizmente, registro em log completo ocorre, diminuindo o processo.  
   

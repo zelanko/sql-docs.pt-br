@@ -3,8 +3,9 @@ title: Atributos de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Attributes
 - Field20::Attributes
 - _Parameter::Attributes
-helpviewer_keywords: Attributes property [ADO]
+helpviewer_keywords:
+- Attributes property [ADO]
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a245de28b8224a9265544d2850f6fdb12dbb1c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c2b63ff111ddf295784a6e8d3d574f0c36267f19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-ado"></a>Propriedade Attributes (ADO)
 Indica uma ou mais características de um objeto.  
@@ -43,7 +45,7 @@ Indica uma ou mais características de um objeto.
   
  Para uma [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto, o **atributos** propriedade é somente leitura e seu valor pode ser a soma de uma ou mais [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **atributos** propriedade para definir ou retornar as características de **Conexão** objetos, **parâmetro** objetos, **campo** objetos, ou **Propriedade** objetos.  
   
  Quando você definir vários atributos, você pode somar as constantes apropriadas. Se você definir o valor da propriedade como uma soma incluindo constantes incompatíveis, ocorrerá um erro.  

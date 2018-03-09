@@ -2,33 +2,30 @@
 title: Power Pivot Data Access | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Acesso a dados do Power Pivot
-  Este tópico descreve os modos nos quais os dados são recuperados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma biblioteca do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve os modos nos quais os dados são recuperados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma biblioteca do SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são armazenados dentro de uma pasta de trabalho do Excel. A cadeia de conexão é uma URL para uma pasta de trabalho em um site do SharePoint.  
   
@@ -50,8 +47,7 @@ ms.lasthandoff: 09/01/2017
  Nem todos os dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são tratados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Os Serviços do Excel processam tabelas e dados de células de uma planilha. Apenas Tabelas Dinâmicas, Gráficos Dinâmicos e segmentações de dados que vão de encontro aos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são tratados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Acesso a dados de modelo de tabela](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Conecte-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Acesso de dados de modelo de tabela](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

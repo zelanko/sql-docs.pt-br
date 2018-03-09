@@ -2,34 +2,32 @@
 title: "Calculado a representação de coluna (tabela) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77fa541451cc69fa63baf362f0391f890219f36e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tabelas - representação de coluna calculada
-  Uma coluna calculada é uma expressão DAX que cria uma nova coluna em uma tabela e os valores obtidos são armazenados na tabela. A expressão de coluna calculada é avaliada toda vez que a tabela é processada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Uma coluna calculada é uma expressão DAX que cria uma nova coluna em uma tabela e os valores obtidos são armazenados na tabela. A expressão de coluna calculada é avaliada toda vez que a tabela é processada.  
   
 ## <a name="calculated-column-representation"></a>Representação de coluna calculada  
   
@@ -116,4 +114,3 @@ private void addCalculatedColumn(
 ```  
   
   
-

@@ -1,33 +1,31 @@
 ---
-title: "Banco de dados do espaço de trabalho (SSAS Tabular) | Microsoft Docs"
+title: "Banco de dados do espaço de trabalho | Microsoft Docs"
 ms.custom: 
-ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>Banco de dados do espaço de trabalho (SSAS tabular)
-  O banco de dados de espaço de trabalho modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+# <a name="workspace-database"></a>Banco de Dados do Espaço de Trabalho 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+O banco de dados de espaço de trabalho modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Especificar uma instância do espaço de trabalho  
   Quando você cria um novo projeto de modelo de tabela no SSDT, você pode especificar uma instância do Analysis Services para usar ao criar seu projeto. Começando com a versão de setembro de 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], introduz dois modos para especificar uma instância do espaço de trabalho quando você cria um novo projeto de modelo de tabela. 
@@ -35,8 +33,6 @@ ms.lasthandoff: 11/17/2017
 **Espaço de trabalho integrado** – utiliza a própria instância interna do Analysis Services do SSDT.
 
 **Servidor de espaço de trabalho** -um banco de dados do espaço de trabalho é criado em uma instância explícita do Analysis Services, normalmente no mesmo computador que o SSDT ou em outro computador na mesma rede.
-
-
   
 ### <a name="integrated-workspace"></a>Espaço de trabalho integrado
 Com o espaço de trabalho integrado, um banco de dados de trabalho é criado na memória usando a própria instância implícita de Analysis Services do SSDT. Modo de espaço de trabalho integrado reduz significativamente a complexidade da criação de projetos de tabela no SSDT, pois uma instalação separada explícita do SQL Server Analysis Services não é necessária.
@@ -59,7 +55,7 @@ Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espa�
   
  Depois que você adicionou dados a seu projeto de modelo usando o Assistente de Importação de Tabela ou usando copiar/colar, ao exibir as tabelas, colunas e dados no designer de modelo, você estará exibindo o banco de dados de espaço de trabalho. Se você adicionar mais tabelas, colunas, relacionamentos, etc., estará alterando o banco de dados do espaço de trabalho.  
   
- Quando você implantar um projeto de modelo tabular, o banco de dados modelo implantado, que é essencialmente uma cópia do banco de dados de espaço de trabalho, é criado na instância de servidor do Analysis Services especificada na propriedade de Servidor de Implantação. Para obter mais informações sobre a propriedade Servidor de Implantação, consulte [Propriedades de projeto &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
+ Quando você implantar um projeto de modelo tabular, o banco de dados modelo implantado, que é essencialmente uma cópia do banco de dados de espaço de trabalho, é criado na instância de servidor do Analysis Services especificada na propriedade de Servidor de Implantação. Para obter mais informações sobre a propriedade de servidor de implantação, consulte [propriedades do projeto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
   
  O banco de dados de espaço de trabalho modelo geralmente reside no host local ou uma instância nomeada local de um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você pode usar uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para hospedar o banco de dados de espaço de trabalho, no entanto, esta configuração não é recomendada devido à latência durante consulta de dados e outras restrições. Idealmente, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospedará os bancos de dados de espaço de trabalho está no mesmo computador que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Criar projetos de modelo no mesmo computador que a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda o banco de dados de espaço de trabalho pode melhorar o desempenho.  
   
@@ -85,7 +81,7 @@ Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espa�
  As propriedades de banco de dados de espaço de trabalho são incluídas nas propriedades modelo. Para exibir propriedades de modelo, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no **Gerenciador de Soluções**, clique no arquivo **Model.bim** . As propriedades do modelo podem ser configuradas usando a janela **Propriedades** . As propriedades específicas do banco de dados de espaço de trabalho incluem:  
   
 > [!NOTE]  
->  As propriedades **Modo de Espaço de Trabalho Integrado**, **Servidor do Espaço de Trabalho**, **Retenção do Espaço de Trabalho**, e **Backup de Dados** têm configurações padrão aplicadas quando você cria um novo projeto de modelo. Você pode alterar as configurações padrão para novos projetos de modelos na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções. Estas propriedades, assim como outras, também podem ser definidas para cada projeto de modelo na janela **Propriedades** . Alterar as configurações padrão não se aplicará a projetos de modelo já criados. Para obter mais informações, consulte [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  As propriedades **Modo de Espaço de Trabalho Integrado**, **Servidor do Espaço de Trabalho**, **Retenção do Espaço de Trabalho**, e **Backup de Dados** têm configurações padrão aplicadas quando você cria um novo projeto de modelo. Você pode alterar as configurações padrão para novos projetos de modelos na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções. Estas propriedades, assim como outras, também podem ser definidas para cada projeto de modelo na janela **Propriedades** . Alterar as configurações padrão não se aplicará a projetos de modelo já criados. Para obter mais informações, consulte [configurar propriedades de implantação e modelagem de dados padrão](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  
@@ -98,6 +94,6 @@ Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espa�
  Você pode usar o SQL Server Management Studio (SSMS) para se conectar a um servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda um banco de dados do espaço de trabalho. Normalmente, não há gerenciamento do banco de dados de espaço de trabalho necessário; a exceção é desanexar ou excluir um banco de dados de espaço de trabalho, o que deve ser feito no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Não use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar o banco de dados de espaço de trabalho enquanto o projeto estiver aberto no designer de modelo. Fazer isso poderia causar a perda de dados.
    
 ## <a name="see-also"></a>Consulte também  
-[Propriedades de modelo &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Propriedades do modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

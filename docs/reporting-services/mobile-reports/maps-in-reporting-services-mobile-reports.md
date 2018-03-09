@@ -1,26 +1,27 @@
 ---
-title: "Mapas nos relatórios móveis do Reporting Services | Microsoft Docs"
+title: "Mapas em relatórios móveis do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 028a5103175b31e4928c474617f9c8199df0facc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas nos relatórios móveis do Reporting Services
 Os mapas são uma ótima maneira de visualizar dados geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] fornece três tipos diferentes de visualização do mapa e mapas internos para continentes e uma série de países individuais. Você também pode [carregar e usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -63,7 +64,7 @@ Para exibir os dados reais no seu mapa, você precisa definir valores para pelo 
   
 1. Selecione a guia **Dados** no canto superior esquerdo.  
   
-2. Selecione **adicionar dados**, então **Excel Local** ou **servidor SSRS**.  
+2. Selecione **Adicionar Dados**e, em seguida, **Excel Local** ou **Servidor SSRS**.  
   
    > **Dica**: verifique se os [dados estão em um formato que funciona para relatórios móveis](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -89,4 +90,3 @@ Para exibir os dados reais no seu mapa, você precisa definir valores para pelo 
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

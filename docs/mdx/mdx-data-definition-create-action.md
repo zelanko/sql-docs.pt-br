@@ -2,11 +2,13 @@
 title: "Instrução CREATE ACTION (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - Action
 - CREATE
 - CREATE_ACTION
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - invocation types [MDX]
 - dimensions [Analysis Services], actions
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - actions [MDX]
 - hierarchies [Analysis Services], actions
 ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 22c4cb48c762f2686f4cad86499b64cad0cc7e8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 195d9b9d166838a98f9e5c11e10aa9557c8ad0c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-action"></a>Definição de dados MDX - Criar ação
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Cria uma ação que pode ser associada a um cubo, uma dimensão, uma hierarquia ou um objeto subordinado.  
   
@@ -92,7 +92,7 @@ FOR
  *String_Expression*  
  Uma expressão de cadeia de caracteres válida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os aplicativos cliente podem criar e executar ações que não são seguras, além de usar funções que não são seguras. Para evitar essas situações, use o **Safety Options** propriedade. Para obter mais informações, consulte as Propriedade de Opções de Segurança.  
   
 > [!NOTE]  
@@ -141,8 +141,7 @@ FOR
  Escopo de conjunto  
  A ação se aplica somente a um conjunto. O nome, **ActionParameterSet**, é reservado para uso pelo aplicativo dentro da expressão da ação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

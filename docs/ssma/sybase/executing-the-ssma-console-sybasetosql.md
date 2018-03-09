@@ -3,10 +3,12 @@ title: Executar o Console do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 998a42b80fa415537051693467b337f07c9ba381
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o Console do SSMA (SybaseToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  
@@ -239,7 +240,7 @@ Falha ao se conectar ao servidor de banco de dados de origem durante a execuçã
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -304,7 +305,7 @@ Se a conexão de banco de dados de origem ou de destino não é executada antes 
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -360,7 +361,7 @@ Esse comando migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -439,7 +440,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -448,7 +449,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -500,7 +501,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -509,7 +510,7 @@ ou
   
   object-type="<object-category>" />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -554,7 +555,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -628,7 +629,7 @@ Este comando requer um ou vários nós de metabase como parâmetro de linha de c
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -653,7 +654,7 @@ ou
   
 />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -682,4 +683,3 @@ A próxima etapa depende de seus requisitos de projeto:
   
 -   Para solucionar problemas no console, consulte [solução de problemas &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   
-

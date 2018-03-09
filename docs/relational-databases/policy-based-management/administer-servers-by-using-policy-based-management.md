@@ -2,9 +2,12 @@
 title: "Administrar servidores com Gerenciamento Baseado em Políticas | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f980a3c0022592582d9df62fd81b179a7f1dc7a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
-   O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
 
 Por exemplo, como o administrador de banco de dados, é recomendável garantir que alguns servidores não tenham o Database Mail habilitado, para que você possa criar uma condição e uma política que define essa opção do servidor. 
    

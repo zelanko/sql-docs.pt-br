@@ -2,10 +2,14 @@
 title: "Usar as tabelas inseridas e excluídas | Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-dml
+ms.suite: sql
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
-  As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
   
  Nos gatilhos DML, as tabelas inseridas e excluídas são usadas principalmente para executar o seguinte:  
   

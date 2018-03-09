@@ -2,16 +2,13 @@
 title: "Processando opções e configurações (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,20 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
-  Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
   
  As configurações de processamento permitem controlar os objetos que são processados e os métodos usados para processar esses objetos. Algumas configurações de processamento são usadas principalmente para trabalhos de processamento em lotes. Para obter mais informações sobre processamento em lote, consulte [Processamento em lote &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -76,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 ||As seguintes condições de erro. Você pode definir o valor da opção para controlar o comportamento específico de tratamento de erros.<br /><br /> Quando você seleciona **Usar configuração de erro padrão**, o Analysis Services usa a configuração de erro definida para cada objeto que está sendo processado. Se um objeto for configurado para usar a configuração padrão, o Analysis Services utilizará as configurações padrão listadas para cada opção.|**Chave não encontrada**. Ocorre quando um valor de chave existe em uma partição, mas não existe na dimensão correspondente. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.<br /><br /> **Chave duplicada**. Ocorre quando mais de um valor de chave existe em uma dimensão. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula convertida em desconhecida**. Ocorre quando um valor de chave é nulo e a opção **Ação do erro de chave** é definida como **Converter em desconhecido**. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula não permitida**. Ocorre quando **Ação do erro de chave** é definido como **Descartar registro**. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

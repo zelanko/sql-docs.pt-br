@@ -3,7 +3,7 @@ title: ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ef67068f1c2451fa5f8e2d314ae49f08f7be181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c25ab6802b6a99902c9e52990be80ff14ed6d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 Especifica se o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método é seguido por um implícita [Resync](../../../ado/reference/ado-api/resync-method.md) operação de método e nesse caso, o escopo dessa operação.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|Invoca **Resync** com o valor combinado de todos os outros membros ADCPROP_UPDATERESYNC_ENUM.|  
 |**adResyncAutoIncrement**|1|Padrão. Tenta recuperar o novo valor de identidade para colunas que são automaticamente incrementados ou gerados pela fonte de dados, como campos de numeração automática do Microsoft Jet ou colunas de identidade do Microsoft SQL Server.|  
@@ -44,4 +43,3 @@ Especifica se o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Atualizar propriedade dinâmica de ressincronização (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
-

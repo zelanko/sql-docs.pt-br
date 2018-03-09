@@ -1,44 +1,45 @@
 ---
-title: "Manter os cabeçalhos visíveis ao rolar por um relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: b3e96ac7fb60f00d87e5a596895e1422c9502869
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios e SSRS)
   Para impedir que os rótulos de linha e coluna rolem para fora da exibição depois da renderização de um relatório, você pode congelar os títulos de linha ou coluna.  
   
  O modo de controlar as linhas e colunas depende se você tem uma tabela ou matriz. Se você tiver uma tabela, configure os membros estáticos (linhas e cabeçalhos de coluna) para permanecerem visíveis. Se você tiver uma matriz, configure as linhas e cabeçalhos de grupos de coluna para permanecerem visíveis.  
   
- Se você exportar o relatório para Excel, o cabeçalho não será congelado automaticamente. Você pode congelar o painel no Excel. Para obter mais informações, consulte o **cabeçalhos e rodapés** seção [exportando para o Microsoft Excel &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Se você exportar o relatório para Excel, o cabeçalho não será congelado automaticamente. Você pode congelar o painel no Excel. Para obter mais informações, consulte a seção **Cabeçalhos e rodapés de página** de [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Mesmo se uma tabela tiver grupos de linhas e de coluna, você não conseguirá manter esses cabeçalhos de grupo visíveis durante a rolagem  
   
  A imagem a seguir mostra uma tabela.  
   
- ![Tabela](../../reporting-services/report-design/media/table.png "tabela")  
+ ![Tabela](../../reporting-services/report-design/media/table.png "Tabela")  
   
  A imagem a seguir mostra uma matriz.  
   
- ![Matriz](../../reporting-services/report-design/media/matrix.png "matriz")  
+ ![Matriz](../../reporting-services/report-design/media/matrix.png "Matriz")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Na superfície de design, clique em qualquer lugar na tabela para exibir membros estáticos, bem como grupos, no painel de agrupamento.  
   
-     ![Painel agrupamento](../../reporting-services/report-design/media/grouppane-updated.png "painel agrupamento")  
+     ![Painel Agrupamento](../../reporting-services/report-design/media/grouppane-updated.png "Painel Agrupamento")  
   
      O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas, e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Clique no membro estático (linha ou coluna) que deverá permanecer visível durante a rolagem. O painel Propriedades exibe as propriedades de **Membro de Tablix** .  
   
-     ![Propriedades do membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "propriedades do membro Tablix")  
+     ![Propriedades de membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propriedades de membro Tablix")  
   
 4.  No painel Propriedades, defina **FixedData** como **True**.  
   
@@ -73,12 +74,12 @@ ms.lasthandoff: 08/09/2017
   
  À medida que você pagina para baixo ou pelo relatório, os membros tablix estáticos permanecem na exibição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Exibir cabeçalhos e rodapés com um grupo de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Exibir linhas e cabeçalhos de coluna em várias páginas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [Painel de agrupamento &#40; Construtor de relatórios &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Exibir cabeçalhos de linhas e colunas em várias páginas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Painel Agrupamento &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

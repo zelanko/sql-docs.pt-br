@@ -2,10 +2,13 @@
 title: "Convenções de sintaxe MDX (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -18,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6c7ecf3ecebf9fcb29e11ef89e554b2a343f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c82d4e7bc8f39168a963cc5b11cbafe410eb6f2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenções de sintaxe de MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Os diagramas para a sintaxe MDX na referência de linguagem MDX usam estas convenções.  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 |[,] ...n|Indica que o item anterior pode ser repetido n vezes. Às vezes, os itens são separados por vírgulas.|  
 |\<Rótulo >:: =|Indica o nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular partes de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre colchetes angulares: \<rótulo >.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

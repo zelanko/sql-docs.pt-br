@@ -2,31 +2,29 @@
 title: "Configurar o tamanho de carregamento máximo do arquivo (PowerPivot para SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c52d3ad3556021c7f4d37c08dc0456733457cb87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurar o tamanho máximo de upload de arquivo (Power Pivot para SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] As pastas de trabalho geralmente contêm grandes quantidades de dados que resultam em arquivos que excedem o tamanho máximo do arquivo permitido para carregamentos do SharePoint. Ao tentar carregar um arquivo que excede o limite superior, você receberá o seguinte erro no SharePoint:  
   
 -   "O arquivo especificado é maior que o tamanho máximo de arquivo permitido".  

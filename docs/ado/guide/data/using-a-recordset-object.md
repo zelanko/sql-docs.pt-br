@@ -3,7 +3,7 @@ title: Usando um objeto Recordset | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 737b0b01da5f339c1fbda1cf234301dfafad4d19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-a-recordset-object"></a>Usando um objeto de conjunto de registros
 Como alternativa, você pode usar **Recordset.Open** para estabelecer uma conexão implicitamente e emitir um comando através dessa conexão em uma única operação. Por exemplo, no Visual Basic:  
@@ -56,4 +55,3 @@ Set oRs = Nothing
 ```  
   
  Observe que **oRs.Open** usa uma cadeia de caracteres de conexão (*sConn*), em vez de um **Conexão** objeto (*oConn*), como o valor do seu  **ActiveConnection** parâmetro. Também o tipo de cursor do lado do cliente é imposto, definindo o **CursorLocation** propriedade o **registros** objeto. Novamente, compare isso com o **HelloData** exemplo.
-

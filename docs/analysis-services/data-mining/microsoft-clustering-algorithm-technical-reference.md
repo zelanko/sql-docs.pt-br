@@ -2,15 +2,13 @@
 title: "Referência técnica do algoritmo de cluster da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,23 +25,24 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf3b08a21782434702dad4383a797293156593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
-  Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)], inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
   
  Para obter informações adicionais sobre como usar modelos de clustering, consulte os seguintes tópicos:  
   
--   [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Conteúdo do modelo de mineração para Clustering modelos &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -187,8 +186,8 @@ ms.lasthandoff: 11/17/2017
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Algoritmo de Clustering da Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para Clustering modelos &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

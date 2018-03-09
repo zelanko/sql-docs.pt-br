@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ad6ea01e471cf1ec407f0b8372300d07f0118f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um valor do tipo **float** (**duplo** no .NET Framework) Especifica a distância da instância geometry ao redor do qual o buffer será calculado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -53,7 +52,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STBuffer()`calcula um buffer, como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerância* = distância \* .001 e *relativo*  =   **False**.  
   
  Quando *distância* > 0, uma um **polígono** ou **MultiPolygon** instância será retornada.  
@@ -172,8 +171,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
 ## <a name="see-also"></a>Consulte também  
  [BufferWithTolerance &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

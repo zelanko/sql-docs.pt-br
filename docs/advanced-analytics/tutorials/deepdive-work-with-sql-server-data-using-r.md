@@ -1,30 +1,37 @@
 ---
-title: Trabalhar com dados do SQL Server usando o R | Microsoft Docs
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+title: Trabalhar com dados do SQL Server usando o R (SQL e R mergulho profundo) | Microsoft Docs
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 12dfdfd70de5908277718677194e2ec9b0775531
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cf492948ad5e5e0f933deb6f3e758d0f31c5db70
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="work-with-sql-server-data-using-r"></a>Trabalhar com dados do SQL Server usando o R
+# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>Trabalhar com dados do SQL Server usando o R (SQL e R mergulho profundo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Nesta lição, você aprenderá a configurar o ambiente e adicionar os dados necessários para treinar seus modelos e executar alguns resumos rápidos dos dados. Como parte do processo, você concluirá estas tarefas:
+Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+
+Nesta lição, configurar o ambiente e adicionar os dados que necessários para treinar os modelos e executar alguns resumos rápidos de dados. Como parte do processo, você deve concluir estas tarefas:
   
 - Criar um novo banco de dados para armazenar os dados de treinamento e pontuação dos dois modelos do R.
   
@@ -38,16 +45,16 @@ Nesta lição, você aprenderá a configurar o ambiente e adicionar os dados nec
   
 - Criar um contexto de computação para permitir a execução remota de código do R.
   
-- Saiba como habilitar o rastreamento no contexto de computação remota.
+- (Opcional) Habilite o rastreamento no contexto de computação remota.
   
 ## <a name="create-the-database-and-user"></a>Criar o banco de dados e o usuário
 
-Neste passo a passo, você criará um novo banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e adicionará um logon SQL com permissões para gravar e ler dados, bem como para executar scripts do R.
+Para este passo a passo, crie um novo banco de dados em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e adicionar um logon SQL com permissões para gravar e ler dados e executar scripts R.
 
 > [!NOTE]
-> Se você é somente leitura de dados, a conta que executa os scripts de R requer somente as permissões SELECT (**db_datareader** função) no banco de dados especificado. No entanto, neste tutorial, você precisará de privilégios de administrador DDL para preparar o banco de dados e criar tabelas para salvar os resultados da pontuação.
+> Se você é somente leitura de dados, a conta que executa os scripts de R requer permissões SELECT (**db_datareader** função) no banco de dados especificado. No entanto, neste tutorial, você deve ter privilégios de administrador DDL para preparar o banco de dados e para criar tabelas para salvar os resultados de pontuação.
 > 
-> Além disso, se você não for o proprietário do banco de dados, você precisará de permissão, EXECUTE ANY EXTERNAL SCRIPT, para poder executar scripts R.
+> Além disso, se você não for o proprietário do banco de dados, você precisa de permissão EXECUTE ANY EXTERNAL SCRIPT, para executar scripts R.
 
 1. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione a instância em que o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] está habilitado, clique com o botão direito do mouse em **Bancos de dados**e selecione **Novo banco de dados**.
   
@@ -100,29 +107,29 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
   
     Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](https://msdn.microsoft.com/library/ms714024.aspx) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
   
-    Se você não conseguir se conectar ao banco de dados, verifique se as conexões remotas estão habilitadas para o servidor e se o protocolo Pipes Nomeados foi habilitado. Outras dicas de solução de problemas são fornecidas [neste artigo](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx).
+    Se você não conseguir se conectar ao banco de dados, verifique se as conexões remotas estão habilitadas para o servidor e se o protocolo Pipes Nomeados foi habilitado. Dicas de solução de problemas adicionais são fornecidas neste artigo: [solucionar problemas de conexão com o mecanismo de banco de dados do SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **O nome de minha tabela tem datareader como prefixo. Por quê?**
   
-    Quando você especificar o esquema padrão para esse usuário como **db_datareader**, todas as tabelas e outros novos objetos criados por esse usuário terão esse *esquema*como prefixo. Um esquema é como uma pasta que você pode adicionar a um banco de dados para organizar objetos. O esquema também define os privilégios de um usuário no banco de dados.
+    Quando você especifica o esquema padrão para esse usuário como **db_datareader**, todas as tabelas e outros novos objetos criados por esse usuário são prefixados com o *esquema* nome. Um esquema é como uma pasta que você pode adicionar a um banco de dados para organizar objetos. O esquema também define os privilégios de um usuário no banco de dados.
   
-    Quando o esquema estiver associado a determinado nome de usuário, o usuário será chamado o proprietário do esquema. Quando você cria um objeto, você sempre o cria em seu próprio esquema, a menos que você solicite especificamente que ele seja criado em outro esquema.
+    Quando o esquema está associado um determinado nome de usuário, o usuário é o _proprietário do esquema_. Quando você cria um objeto, você sempre o cria em seu próprio esquema, a menos que você solicite especificamente que ele seja criado em outro esquema.
   
-    Por exemplo, se você criar uma tabela com o nome *TestData* e o esquema padrão for **db_datareader**, a tabela será criada com o nome *<database_name>.db_datareader.TestData*.
+    Por exemplo, se você criar uma tabela com o nome `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < database_name >. TestData'.
   
     Por esse motivo, um banco de dados pode conter várias tabelas com o mesmo nome, desde que as tabelas pertençam a esquemas diferentes.
    
-    Se você estiver procurando uma tabela e não especificar um esquema, o servidor de banco de dados procurará um esquema seu. Portanto, não é necessário especificar o nome do esquema ao acessar tabelas em um esquema associado ao seu logon.
+    Se você está procurando uma tabela e não especificar um esquema, o servidor de banco de dados procura um esquema que você possui. Portanto, não é necessário especificar o nome do esquema ao acessar tabelas em um esquema associado ao seu logon.
   
 - **Não tenho privilégios DDL. Ainda posso executar o tutorial**?
   
-    Sim. No entanto, você precisará pedir que alguém pré-carregue os dados nas tabelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ignorar as seções que solicitam a criação de novas tabelas. As funções que exigem privilégios DDL geralmente são destacadas no tutorial.
+    Sim. No entanto, você precisará pedir que alguém pré-carregue os dados nas tabelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ignorar as seções que solicitam a criação de novas tabelas. As funções que exigem privilégios DDL são destacadas no tutorial sempre que possível.
 
     Além disso, peça ao administrador para conceder a permissão EXECUTE ANY EXTERNAL SCRIPT. É necessário para a execução de script R, se for remoto, ou usando `sp_execute_external_script`.
 
 ## <a name="next-step"></a>Próxima etapa
 
-[Criar Objetos de Dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+[Criar objetos de dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
 
 ## <a name="overview"></a>Visão geral
 

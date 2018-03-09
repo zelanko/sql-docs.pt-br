@@ -1,5 +1,5 @@
 ---
-title: "Transformação mapa de caracteres | Microsoft Docs"
+title: "Transformação Mapa de Caracteres | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
   A transformação Mapa de Caracteres aplica funções de cadeia de caracteres, como a conversão de letra minúscula em maiúscula, em dados de caracteres. Essa transformação funciona apenas em dados de coluna com um tipo de dados de cadeia de caracteres.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>Editor de Transformação Mapas de Caracteres
   Use a caixa de diálogo **Editor de Transformação Mapas de Caracteres** para selecionar as funções de cadeia de caracteres a serem aplicadas aos dados de coluna, bem como para especificar se o mapeamento é uma alteração in-loco ou se deve ser adicionado como uma nova coluna.  
@@ -104,7 +103,7 @@ ms.lasthandoff: 08/19/2017
  **Destino**  
  Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
 |Alteração no local|Salve os dados modificados na coluna existente.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 08/19/2017
  **Operação**  
  Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Minúscula|Converter para letras minúsculas.|  
 |Letras Maiúsculas|Converter para letras maiúsculas.|  
@@ -132,4 +131,3 @@ ms.lasthandoff: 08/19/2017
  Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar opções de tratamento de erro para esta transformação.  
   
   
-

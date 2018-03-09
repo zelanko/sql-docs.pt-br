@@ -1,5 +1,5 @@
 ---
-title: Origem de OLE DB | Microsoft Docs
+title: Origem OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/17/2017
   
  Se você usar uma consulta parametrizada, poderá mapear variáveis para parâmetros para especificar os valores de parâmetros individuais nas instruções SQL.  
   
- Essa origem usa um gerenciador de conexões OLE DB para se conectar a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Essa origem usa um gerenciador de conexões OLE DB para se conectar a uma fonte de dados e o gerenciador de conexões especifica o provedor OLE DB a ser usado. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece o objeto de fonte de dados do qual você pode criar um gerenciador de conexões OLE DB, disponibilizando as fontes de dados para a origem de OLE DB.  
   
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Propriedades personalizadas OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Extrair dados por meio da origem OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -132,7 +131,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  A propriedade **CommandTimeout** da origem OLE DB não está disponível no **Editor de Origem OLE DB**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abra o Editor de origem OLE DB (página Gerenciador de Conexão)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abrir o Editor de Origem OLE DB (Página do Gerenciador de Conexões)  
   
 1.  Adicione a origem OLE DB ao pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/17/2017
 3.  Clique em **Gerenciador de Conexões**.  
   
 ### <a name="static-options"></a>Opções estáticas  
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Nova**  
@@ -161,7 +160,7 @@ ms.lasthandoff: 08/17/2017
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
->  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, os valores de \<valor muito grande para ser exibida > ou System. Byte []. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+>  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
@@ -224,7 +223,7 @@ ms.lasthandoff: 08/17/2017
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição do erro.  
   
  **Definir este valor para células selecionadas**  
@@ -233,10 +232,9 @@ ms.lasthandoff: 08/17/2017
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40; SSIS &#41; Variáveis](../../integration-services/integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

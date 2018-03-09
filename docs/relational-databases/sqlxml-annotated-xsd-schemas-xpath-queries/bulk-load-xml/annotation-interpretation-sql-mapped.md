@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mapped (SQLXML 4.0) | Microsoft Docs'
+title: sql:mapped (SQLXML 4.0) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff3fc4b275e60bd2a209589ddb9601e668cf3345
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db9c73f8e4c26927904d1a5f9e65adc8c268e2b0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação - sql: mapeado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML Bulk Load processa o **sql: mapeado** anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
+# <a name="annotation-interpretation---sqlmapped"></a>Annotation Interpretation - sql:mapped
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML Bulk Load processa o **sql: mapeado** anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"**). Todos os dados não mapeados vai para a coluna de estouro, se essa coluna é especificada usando **SQL: overflow-campo**.  
   

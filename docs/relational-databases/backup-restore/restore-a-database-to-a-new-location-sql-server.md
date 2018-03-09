@@ -2,10 +2,14 @@
 title: Restaurar um banco de dados em um novo local (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d66683d848709cb100454909ee2e99e755315f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
-  Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
     
 ##  <a name="BeforeYouBegin"></a> Antes de começar.  
   
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   No modelo de recuperação completa ou bulk-logged, para que você possa restaurar um banco de dados, faça backup do log de transações ativas. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   No modelo de recuperação completa ou bulk-logged, para que você possa restaurar um banco de dados, faça backup do log de transações ativas. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
 
 -   Para restaurar um banco de dados criptografado, **você deve ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados**. Sem esse certificado ou essa chave assimétrica, não é possível restaurar o banco de dados. Você deverá manter o certificado usado para criptografar a chave de criptografia do banco de dados durante o tempo em que você precisar do backup! Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
-    -   **Banco de dados**  
+    -   **Backup de banco de dados**  
   
          Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .  
   
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Na grade **Conjuntos de backup a serem restaurados** , selecione os backups a serem restaurados. Essa grade exibe os backups disponíveis para o local especificado. Por padrão, um plano de recuperação é sugerido. Para substituir o plano de recuperação sugerido, você pode alterar as seleções na grade. Backups que dependem da restauração de um backup anterior têm a seleção automaticamente cancelada quando a seleção do backup anterior é cancelada.  
   
-     Para obter informações sobre as colunas da grade **Selecionar os conjuntos de backup a serem restaurados**, veja [Restaurar banco de dados &#40;Página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Para obter informações sobre as colunas da grade **Conjuntos de backup a serem restaurados** , veja [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)).  
   
 7.  Para especificar o novo local dos arquivos de banco de dados, selecione a página **Arquivos** e clique em **Realoque todos os arquivos para pasta**. Forneça um novo local para a **Pasta do arquivo de dados** e **Pasta do arquivo de log**. Para obter mais informações sobre essa grade, veja [Restaurar banco de dados &#40;Página Arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).  
   
@@ -160,7 +165,7 @@ ms.lasthandoff: 11/09/2017
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Especifica que o arquivo de log ou de dados especificado pelo *logical_file_name_in_backup* deve ser restaurado no local especificado pelo *operating_system_file_name*. Especifique uma instrução MOVE para cada arquivo lógico que você deseja restaurar do conjunto de backup para um novo local.  
   
-    |Opção|Descrição|  
+    |Opção|Description|  
     |------------|-----------------|  
     |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> <br /><br /> Observação: para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
     |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
@@ -171,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
 > **OBSERVAÇÃO:** os exemplos de como fazer backup e restaurar o log de transações, incluindo restaurações pontuais, usam o banco de dados `MyAdvWorks_FullRM` que é criado no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] exatamente como no exemplo `MyAdvWorks` a seguir. No entanto, o banco de dados `MyAdvWorks_FullRM` resultante deve ser alterado para usar o modelo de recuperação completa por meio da seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

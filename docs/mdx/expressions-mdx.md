@@ -2,10 +2,13 @@
 title: "Expressões (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -21,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 8474c90f0cfbcd8ae0aabce14623c427106298a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Uma expressão é uma combinação de identificadores, valores e operadores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode avaliar para obter um resultado. Os dados podem ser usados em diversos locais diferentes ao acessar ou alterar dados. Por exemplo, você pode usar uma expressão como parte dos dados a serem recuperados em uma consulta ou como um critério de pesquisa ao procurar dados que atendam a um conjunto de critérios.  
   
@@ -95,7 +98,7 @@ WHERE [Product].[Category].[Bikes]
 |[Usando expressões escalares](../mdx/using-scalar-expressions.md)|Define as expressões de valor escalar.|  
 |[Trabalhando com valores vazios](../mdx/working-with-empty-values.md)|Descreve o que é um valor vazio e como tais valores são controlados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   

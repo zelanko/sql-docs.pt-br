@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 981992d073bb7ae65ce4dcb2ac8b0989b9b371e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  
@@ -111,8 +110,7 @@ ms.lasthandoff: 08/03/2017
   
  Essa regra se aplica também a variáveis definidas pelo usuário. Mas, enquanto os tipos de dados de variáveis do sistema não podem ser alterados e você precisa moldar o uso dessas variáveis para se ajustar aos tipos de dados, aqueles definidos pelo usuário são mais flexíveis. As variáveis definidas pelo usuário e usadas em associações de parâmetro são geralmente definidas com tipos de dados compatíveis aos tipos de dados dos parâmetros para os quais são mapeados.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   
-

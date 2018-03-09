@@ -2,26 +2,30 @@
 title: Adicionar trechos de Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be592feef35a8cf875d9dce783f5843979d4f835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d9bd8c5a0b370191fd823f2ca815ebf9080d1838
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar trechos de Transact-SQL
-  Você pode adicionar seus próprios trechos de código Transact-SQL ao conjunto de trechos predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode adicionar seus próprios trechos de código Transact-SQL ao conjunto de trechos predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Criando um arquivo de trecho Transact-SQL  
  A primeira parte da criação de um trecho de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu trecho de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](http://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do trecho como SQL.  
@@ -113,7 +117,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um trecho TryCatch na pasta **Meus Trechos de Código** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir trechos Transact-SQL com Surround](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

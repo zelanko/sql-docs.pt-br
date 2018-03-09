@@ -2,10 +2,14 @@
 title: "Criar funções definidas pelo usuário (Mecanismo de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-udf
+ms.suite: sql
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - CREATE FUNCTION statement
 - valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 27986a4c2f9533574bbd38d925973b0f4f47aa6e
-ms.sourcegitcommit: 44c106616462f50ce3f4df1a2371d181eff8f405
-ms.translationtype: MT
+ms.openlocfilehash: d24e55ebdadf50271178462c8520eaacaf79360a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
-  Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -73,7 +78,7 @@ Requer a permissão CREATE FUNCTION no banco de dados e a permissão ALTER no es
 ##  <a name="Scalar"></a> Funções escalares  
  O exemplo a seguir cria uma função escalar de várias instruções no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . A função pega um valor de entrada, um `ProductID`, e retorna um único valor de dados, a quantidade agregada do produto especificado no estoque.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -95,7 +100,7 @@ END;
   
  O exemplo a seguir usa a função `ufnGetInventoryStock` , para retornar a quantidade atual do estoque dos produtos que têm um `ProductModelID` entre 75 e 80.  
   
-```t-sql  
+```sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
@@ -104,7 +109,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ##  <a name="TVF"></a> Funções com valor de tabela  
  O exemplo a seguir cria uma função com valor de tabela embutida no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . A função pega um parâmetro de entrada, um ID cliente (loja), e retorna as colunas `ProductID`, `Name`e a agregação das vendas do ano, até a data atual, como `YTD Total` para cada produto vendido para a loja.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -125,13 +130,13 @@ RETURN
   
  O exemplo a seguir invoca a função e especifica a ID do cliente 602.  
   
-```t-sql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
  O exemplo a seguir cria uma função com valor de tabela no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . A função usa um único parâmetro de entrada, um `EmployeeID` , e retorna uma lista de todos os funcionários que reportam direta ou indiretamente ao funcionário especificado. A função que especifica a ID do funcionário 109 é invocada em seguida.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  

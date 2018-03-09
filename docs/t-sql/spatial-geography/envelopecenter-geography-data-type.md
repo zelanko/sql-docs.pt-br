@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0638e8793c75ad78aafa12bec1d1f8a3061022c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cb0e6dbe7e93aa0ee4b6f124621b97d255d185cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter (Tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ EnvelopeCenter( )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método retorna um **ponto**. Quando usado com `EnvelopeAngle()`, `EnvelopeCenter()` retorna um círculo delimitador de um **geografia** instância.  
   
 > [!NOTE]  
@@ -75,4 +74,3 @@ SELECT @g.EnvelopeCenter().ToString();
  [EnvelopeAngle &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   
-

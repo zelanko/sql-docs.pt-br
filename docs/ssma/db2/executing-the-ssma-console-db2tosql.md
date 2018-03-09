@@ -1,29 +1,30 @@
 ---
 title: Executar o Console do SSMA (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431b1906dcb647bfea80249a4019246f56910f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executar o Console do SSMA (DB2ToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos. O aplicativo de console usa alguns comandos do arquivo de script padrão como enumerada nesta seção.  
@@ -167,7 +168,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <force-load>  
@@ -280,7 +281,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -352,7 +353,7 @@ Converter esquema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -418,7 +419,7 @@ migrar dados: migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -528,7 +529,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -537,7 +538,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -593,7 +594,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -602,7 +603,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -652,7 +653,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -728,7 +729,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -751,7 +752,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -778,4 +779,3 @@ A próxima etapa depende de seus requisitos de projeto:
   
 -   Para solucionar problemas no console, consulte [solução de problemas &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
-

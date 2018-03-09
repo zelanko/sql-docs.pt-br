@@ -2,36 +2,36 @@
 title: "Propriedades de hierarquia de usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services], multilevel hierarchy
 - hierarchies [Analysis Services], multilevel
 - multilevel hierarchies [Analysis Services]
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c55202d77f9f4f1440b3346783674ab9f3d615c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies---properties"></a>Hierarquias de usuário - propriedades
-  A tabela seguinte descreve as propriedades de uma hierarquia definida pelo usuário.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A tabela seguinte descreve as propriedades de uma hierarquia definida pelo usuário.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  

@@ -3,27 +3,30 @@ title: Exemplo de propriedade StayInSync (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: StayInSync property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb86df1ead79a5a25e8d79c706f1af22604132eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d67fd1c7399e79575f76da16e91cf972bf954b57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stayinsync-property-example-vb"></a>Exemplo de propriedade StayInSync (VB)
 Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita acessar linhas em hierárquico [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

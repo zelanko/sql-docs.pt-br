@@ -1,13 +1,14 @@
 ---
-title: "Tabelas, matrizes e listas (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Tabelas, matrizes e listas (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,22 +37,21 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)
  No [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelas, matrizes e listas são *regiões de dados* que exibem dados de relatório paginado em células organizadas em linhas e colunas. As células geralmente contêm dados de texto como texto, datas e números, mas também podem conter medidores, gráficos ou itens de relatório como imagens. Coletivamente, tabelas, matrizes e listas são geralmente chamadas de regiões de dados do *tablix* .  
   
- Os modelos de tabela, matriz e lista são criados na região de dados do tablix, que é uma grade flexível que pode exibir dados em células. Nos modelos de tabela e matriz, as células são organizadas em linhas e colunas. Como modelos são variações da região de dados tablix genérica subjacente, você pode exibir dados na combinação de formatos de modelo e alterar a tabela, matriz ou lista para incluir os recursos de outra região de dados à medida que desenvolve seu relatório. Por exemplo, se você adicionar uma tabela e achar que ela não atende às suas necessidades, você poderá adicionar grupos de colunas para transformar a tabela em uma matriz.  
+ Os modelos de tabela, matriz e lista são criados na região de dados do tablix, que é uma grade flexível que pode exibir dados em células. Nos modelos de tabela e matriz, as células são organizadas em linhas e colunas. Como os modelos são variações da região de dados Tablix genérica subjacente, você pode exibir dados em uma combinação de formatos de modelo e alterar a tabela, matriz ou lista para incluir os recursos de outra região de dados à medida que desenvolve seu relatório. Por exemplo, se você adicionar uma tabela e achar que ela não atende às suas necessidades, você poderá adicionar grupos de colunas para transformar a tabela em uma matriz.  
   
  As regiões de dados de tabela e matriz podem exibir relações de dados complexas ao incluir tabelas aninhadas, matrizes, listas, gráficos e medidores. Tabelas e matrizes têm um layout tabular e seus dados vêm de um único conjunto de dados, criado em uma única fonte de dados. A principal diferença entre tabelas e matrizes é que tabelas podem incluir somente grupos de linhas, enquanto que as matrizes têm grupos de linhas e grupos de colunas.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Table"></a> Table  
  Use uma tabela para exibir dados de detalhes, organizar os dados em grupos de linhas ou ambos. O modelo Tabela contém três colunas com uma linha de cabeçalho de tabela e uma linha de detalhes para dados. A figura a seguir mostra o modelo de tabela inicial, selecionado na superfície de design:  
   
- ![Modelo de tabela na superfície de design, selecionado](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "modelo de tabela na superfície de design, selecionado")  
+ ![Modelo de tabela na área de design, selecionado](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modelo de tabela na área de design, selecionado")  
   
  É possível agrupar dados por um campo único, vários campos ou escrevendo uma expressão própria. Você pode criar grupos aninhados ou independentes, grupos adjacentes e exibir valores agregados para dados agrupados ou acrescentar totais a grupos. Por exemplo, se sua tabela tiver um grupo de linhas chamado [Categoria], você poderá adicionar um subtotal para cada grupo e também um total principal para o relatório. Para melhorar a aparência da tabela e realçar os dados que você deseja enfatizar, você pode mesclar células e aplicar formatação a dados e títulos da tabela.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Matrix"></a> Matriz  
  Use uma matriz para exibir resumos de dados agregados, agrupados em linhas e colunas, de maneira semelhante a uma Tabela Dinâmica ou tabela de referência cruzada. O número de linhas e colunas para grupos é determinado pelo número de valores exclusivos de cada linha e grupo de colunas. A figura a seguir mostra o modelo de matriz inicial, selecionado na superfície de design:  
   
- ![Nova matriz adicionada da caixa de ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nova matriz adicionada da caixa de ferramentas, selecionada")  
+ ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
   
  É possível agrupar dados por vários campos ou expressões em grupos de linhas e de colunas. Em tempo de execução, quando são combinados os dados de relatório e as regiões de dados, uma matriz cresce horizontalmente e verticalmente na página à medida que são adicionadas colunas para grupos de colunas e linhas para grupos de linhas. As células da matriz exibem valores de agregação com escopo para a interseção dos grupos de linhas e de colunas aos quais a célula pertence. Por exemplo, se sua matriz tiver um grupo de linhas (Categoria) e dois grupos de colunas (Território e Ano) que exibem a soma de vendas, o relatório exibirá duas células com somas de vendas para cada valor no grupo Categorias. O escopo das células são as duas interseções: Categoria e Território, e Categoria e Ano. A matriz pode incluir grupos aninhados e grupos adjacentes. Os grupos aninhados possuem uma relação pai-filho e os grupos adjacentes possuem uma relação de mesmo nível. Você pode adicionar subtotais para todos os níveis de linha aninhada e grupos de colunas dentro da matriz.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="List"></a> Lista  
  Use uma lista para criar um layout de forma livre. Você não está limitado a um layout de grade, mas pode colocar campos livremente dentro da lista. É possível usar uma lista para criar um formulário para exibir muitos campos do conjunto de dados ou como um contêiner para exibir várias regiões de dados lado a lado para dados agrupados. Por exemplo, é possível definir um grupo para uma lista, adicionar uma tabela, gráfico e imagem, e exibir valores em forma de tabela e gráfico para cada valor do grupo, como para um registro de funcionário ou de paciente.  
   
- ![Nova lista adicionada da caixa de ferramentas, selecionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "nova lista adicionada da caixa de ferramentas, selecionada")  
+ ![Nova Lista adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nova Lista adicionada por meio da Caixa de Ferramentas, selecionada")  
   
  Para obter mais informações, consulte [Criar faturas e formulários com listas].  
   
@@ -166,15 +166,14 @@ ms.lasthandoff: 08/09/2017
  [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Explica o que são grupos e quando devem ser usados, e descreve os grupos disponíveis para as diferentes regiões de dados do tablix.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Medidores &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

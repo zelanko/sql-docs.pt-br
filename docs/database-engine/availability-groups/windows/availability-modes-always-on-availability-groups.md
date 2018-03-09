@@ -1,12 +1,14 @@
 ---
 title: Modos de disponibilidade (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +19,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para modo de confirmação síncrona ou modo de confirmação assíncrona.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela).  
+  No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para o modo de confirmação síncrona, modo de confirmação assíncrona ou modo somente configuração.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela). 
   
+
 > [!NOTE]  
 >  Se período do tempo limite de sessão primário for excedido por uma réplica secundária, a réplica primária deslocará temporariamente em modo de confirmação assíncrona para a réplica secundária. Quando a réplica secundária se reconecta com a réplica primária, elas retomam o modo de confirmação síncrona.  
   
@@ -58,6 +61,8 @@ ms.lasthandoff: 08/02/2017
 -   O*Modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho, à custa do aumento da latência da transação. No modo de confirmação síncrona, as transações aguardam para enviar a confirmação de transação para o cliente até que a réplica secundária proteja o log no disco. Quando sincronização de dados começar em um banco de dados secundário, a réplica secundária começará a aplicar registros de log de entrada do banco de dados primário correspondente. Assim que todo registro de log for protegido, o banco de dados secundário entrará no estado SYNCHRONIZED. Portanto, cada nova transação é protegida pela réplica secundária antes de o registro de log ser gravado no arquivo de log local. Quando todos os bancos de dados secundários de uma determinada réplica secundária são sincronizados, o modo de confirmação síncrona oferece suporte ao failover manual e, opcionalmente, ao failover automático.  
   
      Para obter mais informações, consulte [Modo de disponibilidade de confirmação síncrona](#SyncCommitAvMode), posteriormente neste tópico.  
+
+-   O *modo somente configuração* se aplica a grupos de disponibilidade que não estão em um Cluster de Failover do Windows Server. Uma réplica no modo somente configuração não contém dados do usuário. No modo somente configuração, o banco de dados mestre de réplica armazena metadados de configuração do grupo de disponibilidade. Para obter mais informações, consulte [Grupo de disponibilidade com réplica somente configuração](../../../linux/sql-server-linux-availability-group-ha.md).
   
  A ilustração a seguir mostra um grupo de disponibilidade com cinco réplicas de disponibilidade. A réplica primária e a réplica secundária estão configuradas para modo de confirmação síncrona com failover automático. Outra réplica secundária está configurada para o modo de confirmação síncrona apenas com failover manual planejado e duas réplicas secundárias estão configuradas para o modo de confirmação assíncrona, que dá suporte somente a failover manual forçado (geralmente denominado *failover forçado*).  
   
@@ -69,8 +74,8 @@ ms.lasthandoff: 08/02/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Sim|  
 |02|01|01 e 03|04|Sim|  
-|03||01 e 02|04|Não|  
-|04|||01, 02 e 03|Não|  
+|03||01 e 02|04|não|  
+|04|||01, 02 e 03|não|  
   
  Normalmente, o Nó 04 como uma réplica de confirmação assíncrona é implantado em um site de recuperação de desastre. A permanência dos Nós 01, 02 e 03 no modo de confirmação assíncrona depois do failover no Nó 04 impede a degradação de desempenho potencial em seu grupo de disponibilidade devido à alta latência da rede entre os dois sites.  
   
@@ -151,9 +156,9 @@ ms.lasthandoff: 08/02/2017
   
  **Para ajustar votos de quorum**  
   
--   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Exibir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forçar um cluster WSFC para iniciar sem um quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -179,10 +184,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

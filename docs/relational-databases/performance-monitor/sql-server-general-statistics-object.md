@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Estatísticas Gerais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd44f59d6fe693dbf8695830240ba1a16453d123
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9d3c24bb7875975221d3af721fe29d6dd3b0433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objeto General Statistics
-  O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
   
-|Contadores de Estatísticas Gerais do SQL Server|Descrição|  
+|Contadores de Estatísticas Gerais do SQL Server|Description|  
 |--------------------------------------------|-----------------|  
 |**Tabelas Temporárias Ativas**|Número de tabelas temporárias/variáveis de tabela em uso.|  
 |**Redefinições de conexão/s**|O número total de logons iniciados do pool de conexão.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 |**Transações**|Número de inscrições de transações (combinações de locais, DTC e acopladas).|  
 |**Conexões de Usuário**|Conta o número de usuários atualmente conectados ao SQL Server.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -2,10 +2,14 @@
 title: "Modificar exibições | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: views
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-views
+ms.suite: sql
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,19 @@ helpviewer_keywords:
 - modifying views
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbe74fdc01854ccdac412e99901632836328d36d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b389a635dceb2af0e8457f72ae56013edb1065c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="modify-views"></a>Modificar exibições
-  Depois de definir uma exibição, é possível alterar sua definição [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem descartar e recriar a exibição usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Depois de definir uma exibição, é possível alterar sua definição [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem descartar e recriar a exibição usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   
@@ -73,9 +77,9 @@ ms.lasthandoff: 11/09/2017
   
     3.  Clique com o botão direito do mouse na barra de título da tabela que deseja remover e selecione **Remove**.  
   
-4.  No menu **Arquivo** , clique em **Salvar***view name*.  
+4.  No menu **Arquivo**, clique em **Salvar***nome da exibição*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-view"></a>Para modificar uma exibição  
   

@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0920797887e8fa1d156401a2b91255396f6e24d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-is-metadata-used"></a>Como é usada de metadados?
 Os aplicativos exigem metadados para a maioria das operações de conjunto de resultados. Por exemplo, o aplicativo usa o tipo de dados de uma coluna para determinar que tipo de variável associar a essa coluna. Ele usa o comprimento em bytes de uma coluna de caracteres para determinar quanto espaço ele precisa para exibir dados da coluna. Como um aplicativo determina os metadados para uma coluna depende do tipo do aplicativo.  
@@ -38,4 +36,3 @@ Os aplicativos exigem metadados para a maioria das operações de conjunto de re
  Aplicativos genéricos, especialmente aqueles que oferecem suporte a consultas ad hoc, quase nunca saber os metadados dos conjuntos de resultados que eles criam. Portanto, eles devem descobrir os metadados em tempo de execução usando as funções **SQLNumResultCols**, **SQLDescribeCol**, e **SQLColAttribute**, que estão descritas as próxima seção, [SQLDescribeCol e SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Todos os aplicativos, independentemente de seu tipo, podem embutir metadados para os conjuntos de resultados retornados pelas funções de catálogo. Esses conjuntos de resultados são definidos na seção de referência deste manual.
-

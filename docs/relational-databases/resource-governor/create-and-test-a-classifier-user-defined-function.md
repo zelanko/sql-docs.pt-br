@@ -2,9 +2,12 @@
 title: "Criar e testar uma função de classificador definida pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1893ae84212656ac8b8eac1ca592b5cd5193e69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5135bcfab53fafb3ec2564f2607a64f46a61c53
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
-  Este tópico mostra como criar e testar uma função de classificador definida pelo usuário (UDF). As etapas envolvem a execução das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico mostra como criar e testar uma UDF (função definida pelo usuário) de classificação. As etapas envolvem a execução das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  O exemplo mostrado no procedimento a seguir ilustra as possibilidades para criar uma função de classificador definida pelo usuário bastante complexa.  
   
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/09/2017
         > [!WARNING]  
         >  É altamente recomendável seguir essas práticas recomendadas. Se houver problemas que o impeçam de seguir as práticas recomendadas, sugerimos que você contate o Suporte da Microsoft para evitar proativamente qualquer problema futuro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

@@ -3,7 +3,7 @@ title: Propriedade ActiveCommand (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,25 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eee93cce3f7868ff9c71a83a462e5073d3e2d722
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4b1580dbedaa9c7667cd7b320817fdaea6ad48d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
+# <a name="activecommand-property-ado"></a>ActiveCommand Property (ADO)
 Indica o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto criado associado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **Variant** que contém um **comando** objeto. Padrão é uma referência de objeto nulo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ActiveCommand** propriedade é somente leitura.  
   
  Se um **comando** objeto não foi usado para criar atual **registros**, em seguida, um **nulo** referência de objeto é retornada.  
@@ -51,4 +50,3 @@ Indica o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto 
  [Exemplo de propriedade ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [Exemplo de propriedade ActiveCommand (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-

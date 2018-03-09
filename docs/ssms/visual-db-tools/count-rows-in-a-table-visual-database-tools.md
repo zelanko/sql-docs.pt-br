@@ -3,8 +3,11 @@ title: Contar linhas em uma tabela (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55df5dc5a7cf65aa2045ae3e48d7e3b14220ec15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c2174809cafd6fd8b1b7bfad5ee8861d2d91cc09
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar linhas em uma tabela (Visual Database Tools)
-Você pode contar linhas em uma tabela para determinar:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode contar linhas em uma tabela para determinar:  
   
 -   O número total de linhas em uma tabela, por exemplo, uma conta de todos os livros em uma tabela `titles` .  
   
@@ -89,7 +92,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
   
 5.  Executa a consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Resumir resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

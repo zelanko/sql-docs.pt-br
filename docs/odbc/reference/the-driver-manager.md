@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-driver-manager"></a>O Gerenciador de Driver
 O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre aplicativos e drivers. Por exemplo, em plataformas Microsoft® Windows®, o Gerenciador de Driver é uma biblioteca de vínculo dinâmico (DLL) que foi criada pela Microsoft e pode ser redistribuída por usuários do SDK do SP1 redistributable MDAC 2.8.  
@@ -44,4 +42,3 @@ O *Gerenciador de Driver* é uma biblioteca que gerencia a comunicação entre a
  A função principal final do Gerenciador de Driver é carregar e descarregar drivers. O aplicativo carrega e descarrega o Gerenciador de Driver. Quando desejar usar um driver específico, ele chama uma função de conexão (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) no Gerenciador de Driver e especifica o nome de uma determinada fonte de dados ou driver, como "Contabilidade" ou "SQL Server". Usando esse nome, o Gerenciador de Driver pesquisas de informações de fonte de dados para o nome do arquivo do driver, como Sqlsrvr.dll. Em seguida, carrega o driver (supondo que ainda não foi carregado), armazena o endereço de cada função no driver e chama a função de conexão no driver que inicializa a próprio e conecta-se à fonte de dados.  
   
  Quando o aplicativo é feito usando o driver, ele chama **SQLDisconnect** no Gerenciador de Driver. O Gerenciador de Driver chamará essa função no driver, desconecta da fonte de dados. No entanto, o Gerenciador de Driver mantém o driver na memória, no caso do aplicativo se reconecta a ele. Ele descarrega o driver somente quando o aplicativo libera a conexão usada pelo driver ou usa a conexão para um driver diferente, e nenhuma outra conexão usa o driver. Para obter uma descrição completa da função do Gerenciador de Driver em carregar e descarregar drivers, consulte [do Gerenciador de Driver de função no processo de Conexão](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
-

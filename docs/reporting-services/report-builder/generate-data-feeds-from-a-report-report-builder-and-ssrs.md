@@ -1,32 +1,31 @@
 ---
-title: "Gerar Feeds de dados de um relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Gerar feeds de dados com base em um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 15f5432325f202dde2136643eb0cdeca22cae100
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Gerar feeds de dados de um relatório (Construtor de Relatórios e SSRS)
 
-Você pode gerar feeds de dados compatíveis com Atom de relatórios paginados e, em seguida, usar os feeds de dados em aplicativos, como o Power Pivot ou feeds do Power BI, que pode consumir dados.  
+Você pode gerar feeds de dados em conformidade com Atom com base em relatórios paginados e, depois, usar os feeds de dados em aplicativos, como o Power Pivot ou o Power BI, que pode consumir feeds de dados.  
   
  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis a partir de um relatório. O documento lista pelo menos um feed de dados para cada região no relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode gerar vários feeds de dados de uma região de dados.  
   
@@ -93,5 +92,4 @@ Você pode gerar feeds de dados compatíveis com Atom de relatórios paginados e
 
 [Exportar relatórios](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

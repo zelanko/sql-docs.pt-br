@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetStmtOption function [ODBC], Desktop Database Drivers
+helpviewer_keywords: SQLSetStmtOption function [ODBC], Desktop Database Drivers
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7257763af32ba14cfe68222467bcacc73c959e2f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d1f51805413056a06c6cee769920e1ad878abe5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (Drivers do banco de dados de área de trabalho)
 |*fOption*|Comentários|  
@@ -36,4 +33,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_QUERY_TIMEOUT|Sem suporte.|  
 |SQL_ROW_NUMBER|Sem suporte.|  
 |SQL_SIMULATE_CURSOR|Sem suporte.|
-

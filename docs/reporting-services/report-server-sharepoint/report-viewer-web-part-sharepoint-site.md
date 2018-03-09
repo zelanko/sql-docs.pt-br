@@ -1,60 +1,59 @@
 ---
-title: "Relatório de web part do visualizador em um site do SharePoint | Microsoft Docs"
+title: "Web part do Visualizador de Relatórios em um site do SharePoint – SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: b2555721c4ef08eee3108b06af1a919d2dfaa414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Relatório de web part do visualizador em um site do SharePoint
+# <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Web part do Visualizador de Relatórios em um site do SharePoint – Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-A web part do Visualizador de relatórios é uma parte da web personalizado. Você pode usar a web part para exibir, navegar, imprimir e exportar relatórios em um servidor de relatório em um site do SharePoint. A web part do Visualizador de relatórios está associada a arquivos de definição (. RDL) de relatório que são processados por um servidor de relatório do Microsoft SQL Server Reporting Services. 
+A web part do Visualizador de Relatórios é uma web part personalizada. Use a web part para exibir, navegar, imprimir e exportar relatórios de um servidor de relatório em um site do SharePoint. A web part do Visualizador de Relatórios está associada a arquivos de definição de relatório (.rdl) processados por um servidor de relatório do Microsoft SQL Server Reporting Services. 
 
-A web part do Visualizador de relatórios mais recente também pode relatórios paginado do serviço implantados em um servidor de relatório do Power BI. A web part não funciona com relatórios do Power BI.
+A última web part do Visualizador de relatórios também pode entregar relatórios paginados implantados em um Servidor de Relatórios do Power BI. A web part não funciona com relatórios do Power BI.
 
-## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>Por que a web part do Visualizador de relatórios é lançada novamente
+## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>Por que a web part do Visualizador de Relatórios foi lançada novamente
 
-A web part do Visualizador de relatórios estava disponível como parte do suplemento Reporting Services para produtos do SharePoint. A web part foi específica para servidores de relatório no modo integrado do SharePoint. Modo integrado do SharePoint foi preterido após o SQL Server 2016.
+A web part do Visualizador de Relatórios estava disponível como parte do Suplemento Reporting Services para produtos do SharePoint. A web part era específica a servidores de relatório no modo integrado do SharePoint. O modo integrado do SharePoint foi preterido após o SQL Server 2016.
 
-Começando com o SQL Server 2017, há apenas um modo de instalação do Reporting Services: **modo nativo**. Você pode incorporar todos os tipos de relatórios usando um visualizador de páginas da web part usando a *rs: Inserir = true* parâmetro de URL. Inserir relatórios em páginas do SharePoint é uma história de integração solicitada por clientes e a web part do Visualizador de relatórios atualizada habilita este cenário para relatórios paginados.
+A partir do SQL Server 2017, há apenas um modo de instalação do Reporting Services: **modo Nativo**. Você pode inserir todos os tipos de relatórios usando uma web part do Visualizador de Páginas usando o parâmetro de URL *rs:Embed=true*. A inserção de relatórios em páginas do SharePoint é uma história de integração solicitada por clientes e a web part do Visualizador de Relatórios atualizada possibilita esse cenário para relatórios paginados.
 
-Enquanto a web part do Visualizador de páginas é suficiente para inserir um relatório paginado em uma página do SharePoint, a web part do Visualizador de relatórios atualizada oferece recursos adicionais.
+Embora a web part do Visualizador de Páginas seja suficiente para inserir um relatório paginado em uma página do SharePoint, a web part do Visualizador de Relatórios atualizada oferece recursos adicionais.
 
-* Mostrar/ocultar botões da barra de ferramentas específica
+* Mostrar/ocultar botões específicos da barra de ferramentas
 * Substituir valores de parâmetro de relatório
-* Conectar web parts de filtro para os parâmetros de relatório
+* Conectar web parts de Filtro a parâmetros de relatório
 
-## <a name="download-the-report-viewer-web-part-solution-package"></a>Baixe o pacote de solução do Visualizador de relatórios da web part
+## <a name="download-the-report-viewer-web-part-solution-package"></a>Baixar o pacote de solução da web part do Visualizador de Relatórios
 
-A web part do Visualizador de relatórios está disponível no Microsoft Download Center.
+A web part do Visualizador de Relatórios está disponível no Centro de Download da Microsoft.
 
-[Baixe o pacote de solução web part Visualizador de relatórios](https://www.microsoft.com/download/details.aspx?id=55949)
+[Baixar o pacote de solução da web part do Visualizador de Relatórios](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="considerations-and-limitations"></a>Considerações e limitações
 
-Os itens listados são específicos para a web part do Visualizador de relatórios atualizada.
+Os itens listados são específicos à web part do Visualizador de Relatórios atualizada.
 
-* A web part só pode ser usada em *clássico* páginas do SharePoint.
-* Somente os relatórios paginados (RDL) têm suporte para inserção na web part do Visualizador de relatórios. Se você estiver procurando para inserir relatórios do Power BI ou relatórios móveis, você pode usar o *rs: Inserir = true* parâmetro de URL.
+* A web part só pode ser usada em páginas *clássicas* do SharePoint.
+* Há suporte apenas para relatórios paginados (RDL) na inserção na web part do Visualizador de Relatórios. Se desejar inserir relatórios ou relatórios móveis do Power BI, use o parâmetro de URL *rs:Embed=true*.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para começar a usar a web part do Visualizador de relatórios atualizada, consulte [implantar a web part do Visualizador de relatórios em um site do SharePoint](deploy-report-viewer-web-part.md).
-
+Para começar a usar a web part do Visualizador de Relatórios atualizada, consulte [Implantar a web part do Visualizador de Relatórios em um site do SharePoint](deploy-report-viewer-web-part.md).

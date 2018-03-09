@@ -3,8 +3,11 @@ title: "Usar relatórios personalizados com propriedades de nó do Pesquisador d
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,27 +16,27 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd56bfad6a216bd631cdd5c532d86913607dc156
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
-Os relatórios personalizados podem ser executados no contexto de um nó selecionado do Pesquisador de objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os relatórios personalizados poderão ser executados no contexto de um nó selecionado do Pesquisador de Objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parâmetros de relatório do nó do Pesquisador de Objetos  
   
 |Nome do parâmetro|Tipo de dados|  
 |------------------|-------------|  
 |**ObjectName**|**Cadeia de caracteres**|  
-|**ObjectTypeName**|**Cadeia de caracteres**|  
+|**ObjectTypeName**|**String**|  
 |**Filtrado**|**Boolean**|  
-|**ServerName**|**Cadeia de caracteres**|  
-|**FontName**|**Cadeia de caracteres**|  
-|**DatabaseName**|**Cadeia de caracteres**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>Exemplo de parâmetros de relatório do nó do Pesquisador de Objetos  
 Para executar o exemplo, use o procedimento a seguir.  
@@ -530,7 +533,7 @@ O relatório criado com o código a seguir usará os parâmetros associados a um
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [adicionar um relatório personalizado ao Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Cancelar supressão da execução de avisos de relatório personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

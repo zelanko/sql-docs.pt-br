@@ -2,32 +2,30 @@
 title: Cmdlet New-RestoreFolder | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6bf2b5e2d63c5ad3e63c6a5393f83d438192ed6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>Cmdlet New-RestoreFolder
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Restaura uma pasta original em uma nova pasta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Restaura uma pasta original em uma nova pasta.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -44,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<cadeia de caracteres >  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
  Obtém o local da pasta original.  
   
 |||  

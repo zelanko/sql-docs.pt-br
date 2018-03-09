@@ -3,10 +3,10 @@ title: Carregando a planilha de planejamento capacidade do servidor (SQL Server 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
 caps.latest.revision: "9"
-ms.openlocfilehash: e14d4baca91e0b892b84620330655271fa67badb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c5edef2b15b4e8412022e14853ad833cd9bbee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-server-capacity-planning-worksheet"></a>Carregando a planilha de planejamento de capacidade do servidor
 Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW. Use isso para criar seu plano para compra ou provisionamento existentes ao carregar servidores.  
@@ -45,7 +45,7 @@ Esta planilha de impressão e preenchê-lo com seus próprios requisitos.
 |CPU|Número de soquetes.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Para carregar os dados não compactados, dwloader não é um aplicativo de uso intensivo de CPU.  Como um requisito mínimo, é recomendável usar um servidor de soquete 2 fabricados recentemente.<br /><br />Para carregar dados compactados, você precisa suficientes de CPU para descompactar os dados antes de enviá-lo ao PDW. dwloader pode executar 10 threads ativos ao mesmo tempo. Se você planeja carregar 10 arquivos compactados simultaneamente, é recomendável que o servidor tem pelo menos uma CPU de núcleo de 10 ou duas CPUs de 6 núcleos.|  
 |RAM|GB de memória que permite que o Windows em cache os arquivos durante o carrega.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|dwloader usa muito pouco de RAM no servidor de carregamento. Para desempenho, o Windows usa memória para armazenar em cache os arquivos de carregamento depois de lê-los do disco.<br /><br />Para determinar os requisitos de RAM, consulte a sua instalação do Windows Server e os requisitos de aplicativo de parte 3. Se você não tem requisitos de outras fontes, é recomendável um mínimo de 32 GB.<br /><br />Para dados compactados, RAM mais rápido é útil porque isso acelerará a descompactação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Adquirir e configurar um servidor de carregamento](acquire-and-configure-loading-server.md)  
 [Carregador de linha de comando de dwloader](dwloader.md)  
   

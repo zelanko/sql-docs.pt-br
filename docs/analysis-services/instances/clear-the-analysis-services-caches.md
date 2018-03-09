@@ -2,33 +2,30 @@
 title: Limpar os Caches do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 19055dc68ebd1e9baa2fa1b1330370d01f7d864a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
-  O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
   
  **Quando limpar o cache de modelos multidimensionais**  
   
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

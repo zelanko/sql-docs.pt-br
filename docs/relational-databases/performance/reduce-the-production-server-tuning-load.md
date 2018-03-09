@@ -2,9 +2,12 @@
 title: "Reduzir a carga de ajuste do servidor de produção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Como o Orientador de Otimização de Mecanismo de Banco de Dados usa um servidor de teste  
  O modo tradicional de uso de um servidor de teste é copiar todos os dados de seu servidor de produção no servidor de teste, ajustar o servidor de teste e depois implementar a recomendação no seu servidor de produção. Esse processo elimina o impacto de desempenho em seu servidor de produção, mas, mesmo assim, não é a melhor solução. Por exemplo, copiar grandes volumes de dados da produção no servidor de teste pode consumir tempo e recursos significativos. Além disso, o hardware do servidor de teste raramente é tão eficiente quanto o hardware implantado nos servidores de produção. O processo de ajuste depende do otimizador de consulta, e as recomendações geradas são, em parte, baseadas no hardware subjacente. Se o hardware dos servidores de teste e de produção não for idêntico, a qualidade da recomendação do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] será menor.  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/09/2017
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações para usar servidores de teste](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

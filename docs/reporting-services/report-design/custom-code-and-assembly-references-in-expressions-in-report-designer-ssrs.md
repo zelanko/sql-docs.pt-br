@@ -1,13 +1,14 @@
 ---
-title: "Código personalizado e referências de Assembly em expressões no relatam Designer (SSRS) | Microsoft Docs"
+title: "Referências de código personalizado e assemblies em expressões no Designer de Relatórios (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +21,16 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "77"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
   É possível adicionar referências ao código personalizado inserido em um relatório ou aos assemblies personalizados criados e salvos em seu computador e implantá-los no servidor de relatório. Use o código inserido para constantes personalizadas, funções complexas ou funções usadas várias vezes em um mesmo relatório. Use assemblies de código personalizado para manter o código em um único local e compartilhá-lo para uso em vários relatórios. O código personalizado pode incluir novas constantes, variáveis, funções ou sub-rotinas personalizadas. É possível incluir referências somente leitura em coleções internas, como a coleção de Parâmetros. No entanto, não é possível passar conjuntos de valores de dados do relatório para funções personalizadas. Especificamente, não há suporte para agregações personalizadas.  
@@ -196,13 +196,12 @@ End Function
   
  Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em tempo de execução, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicione código para um relatório &#40; SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [Usando Assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Adicionar uma referência de Assembly para um relatório &#40; SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services tutoriais &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar código a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Usando assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Exemplos de relatório (Construtor de Relatórios e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

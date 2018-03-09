@@ -2,12 +2,13 @@
 title: Fazer upgrade do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +22,20 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   As instâncias do Analysis Services podem ser atualizadas para uma versão do SQL Server do mesmo modo de servidor para aproveitar os recursos introduzidos na versão atual, conforme descrito em [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Você pode fazer uma atualização in-loco de cada instância, mesmo se houver outras instâncias em execução no mesmo hardware. No entanto, a maioria dos administradores opta por instalar uma nova instância da nova versão para teste de aplicativos, antes de transferir cargas de trabalho de produção para o novo servidor. Mas, para servidores de desenvolvimento ou de teste, pode ser mais prático fazer uma atualização in-loco.  
@@ -75,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
  Os bancos de dados multidimensionais e de tabela seguem caminhos de versão diferentes. Coincidentemente, os modelos multidimensionais e de tabela têm níveis de compatibilidade numerados semelhantes.  Os modos se desenvolverão em diferentes proporções, caso as alterações do recurso afetem apenas um deles.  
   
- Para fins de conhecimento, a tabela a seguir resume os níveis de compatibilidade, mas não deixe de analisar os tópicos detalhadamente para entender o que cada nível fornece.  
+ Para fins de conhecimento, a tabela a seguir resume os níveis de compatibilidade, mas analise os artigos detalhadamente para entender o que cada nível fornece.  
   
 ||||  
 |-|-|-|  

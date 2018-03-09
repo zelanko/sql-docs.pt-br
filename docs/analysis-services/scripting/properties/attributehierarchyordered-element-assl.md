@@ -2,43 +2,35 @@
 title: Elemento AttributeHierarchyOrdered (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyOrdered Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyOrdered Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyOrdered
-helpviewer_keywords:
-- AttributeHierarchyOrdered element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyOrdered
+helpviewer_keywords: AttributeHierarchyOrdered element
 ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b9a2a930435e648e566959024cdbb17ad5a8bd9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dbace56b31eebf4757d20483b0086af3f62a3da2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributehierarchyordered-element-assl"></a>Elemento AttributeHierarchyOrdered (ASSL)
-  Determina se a hierarquia de atributo associada está ordenada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina se a hierarquia de atributo associada está ordenada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,24 +45,23 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Boolean|  
+|Comprimento e tipo de dados|Booliano|  
 |Valor padrão|**Verdadeiro**|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O elemento que corresponde ao pai do **AttributeHierarchyOrdered** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

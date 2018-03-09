@@ -2,32 +2,30 @@
 title: Cmdlet New-PowerPivotSystemServiceInstance | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeaa2b9b696f70a9a72e439e0a6a5a66ae132905
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2e412047e4d859de637da933d2335232961ee13
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet New-PowerPivotSystemServiceInstance
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Adiciona uma nova instância do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a um servidor de aplicativos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Adiciona uma nova instância do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a um servidor de aplicativos.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -45,7 +43,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind >  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind>  
  Especifica o GUID do objeto pai do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Nesta versão, apenas um objeto pai é permitido. Você pode usar Get-PowerPivotSystemService para retornar o objeto de serviço ou seu GUID.  
   
 |||  
@@ -56,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Aceitar entrada de pipeline?|true|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<cadeia de caracteres >  
+### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<string>  
  Especifica um nome que identifica esse objeto.  
   
 |||  
@@ -78,7 +76,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -86,8 +84,8 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   

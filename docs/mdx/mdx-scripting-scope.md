@@ -2,10 +2,13 @@
 title: "Instrução SCOPE (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SCOPE
@@ -19,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: db7bf473a47753c64e050311d97c04e91c23cb39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---scope"></a>Script MDX - escopo
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Limita o escopo de instruções MDX especificadas a um subcubo especificado.  
   
@@ -82,7 +85,7 @@ Limited_Set ::=
  *single_tuple*  
  Uma única tupla.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A instrução SCOPE determina o subcubo que será afetado pela execução de uma ou mais instruções MDX. A menos que uma instrução MDX seja incluída em uma instrução SCOPE, o escopo implícito de uma instrução MDX é o cubo inteiro.  
   
 > [!NOTE]  
@@ -123,7 +126,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6886fedeb7940ca56b23ea47333e0a87835383a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>Usando tipos de dados XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,13 +91,13 @@ ms.lasthandoff: 11/17/2017
 |Tipo de dados|Para servidor<br /><br /> **XML**|Para servidor<br /><br /> **Não XML**|Do servidor<br /><br /> **XML**|Do servidor<br /><br /> **Não XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Passar<sup>6,7</sup>|Erro<sup>1</sup>|OKEY<sup>11, 6</sup>|Erro<sup>8</sup>|  
-|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/D<sup>2</sup>|OKEY <sup>11, 6</sup>|N/D <sup>2</sup>|  
-|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
-|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY <sup>3</sup>|N/D <sup>2</sup>|  
-|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/D <sup>2</sup>|N/A|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/D <sup>2</sup>|OKEY<sup>3</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BYTES|Passar<sup>6,7</sup>|N/A<sup>2</sup>|OKEY <sup>11, 6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OKEY<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|OKEY<sup>6, 9, 10</sup>|N/A <sup>2</sup>|OKEY<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Fluxo de bytes via **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Fluxo de bytes via **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Passar<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Passar<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_XML for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_XML, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR); caso contrário, os dados são enviados ao servidor, mas o servidor retornará um erro indicando que não há nenhuma conversão implícita de XML para o tipo de dados do parâmetro.  
   

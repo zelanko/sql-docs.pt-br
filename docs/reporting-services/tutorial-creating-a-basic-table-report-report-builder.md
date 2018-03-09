@@ -2,10 +2,13 @@
 title: "Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -13,13 +16,13 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2e4cb3264e001fb07119e4c16a274dd38d80887c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a94fabf2c89005a3125cc73c54b55d537dc2458b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
@@ -356,10 +359,10 @@ Neste tutorial, você exportará o relatório para o Excel e definirá uma propr
   
 2.  Verifique se o nome da guia de pasta de trabalho é **Vendas de Produtos em Excel**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Isso conclui o passo a passo sobre como criar um relatório de tabela básico. Para obter mais informações sobre tabelas, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

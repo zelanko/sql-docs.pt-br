@@ -3,8 +3,9 @@ title: Propriedade ActiveConnection (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Command15::ActiveConnection
 - Recordset15::get_ActiveConnection
 - _Record::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO]
+helpviewer_keywords:
+- ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9722834bb3a5edb7abdb1ecf7b0235a069d60f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
 Indica para qual [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto especificado [comando](../../../ado/reference/ado-api/command-object-ado.md), [registros](../../../ado/reference/ado-api/recordset-object-ado.md), ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto pertence no momento.  
@@ -35,7 +37,7 @@ Indica para qual [Conexão](../../../ado/reference/ado-api/connection-object-ado
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor que contém uma definição para uma conexão se a conexão é fechada, ou um **Variant** contendo atual **Conexão** objeto se a conexão está aberta. Padrão é uma referência de objeto nulo. Consulte o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **ActiveConnection** propriedade para determinar a **Conexão** objeto sobre o qual especificado **comando** objeto será executado ou especificado  **Conjunto de registros** será aberta.  
   
 ## <a name="command"></a>Comando  

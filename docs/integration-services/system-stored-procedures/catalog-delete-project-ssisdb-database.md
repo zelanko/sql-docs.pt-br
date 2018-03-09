@@ -1,5 +1,5 @@
 ---
-title: Catalog. delete_project (banco de dados SSISDB) | Microsoft Docs
+title: catalog.delete_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 471ebd1a5aef05ac3e45f56bdaf3b32a24ce8800
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,29 +36,29 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o projeto. *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- O nome do projeto a ser excluído. *project_name* é **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ O nome do projeto a ser excluído. *project_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no projeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
- A lista a seguir descreve algumas condições que podem fazer com que o procedimento armazenado de delete_project gerar um erro:  
+ A lista a seguir descreve algumas condições que podem fazer com que o procedimento armazenado delete_project gere um erro:  
   
 -   O projeto não existe  
   
@@ -67,8 +66,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as referências de ambiente e objetos do projeto correspondente são excluídas juntamente com o projeto. No entanto, as versões do projeto e os registros das operações relevantes são retidos até a próxima execução do trabalho de limpeza da operação.  
   
   
-

@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,35 +19,21 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1deb5bcddde514334b0f8318c0dab221fb91d018
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa2f52d326ae38533c2c493db91e4b6a1597f491
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Você pode criar índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice não clusterizado é uma estrutura de índice separada dos dados armazenados em uma tabela que reorganiza um ou mais colunas selecionadas. Índices não clusterizados costumam ser uma forma mais rápida de localizar dados do que a busca na tabela subjacente; as consultas às vezes podem ser totalmente respondidas pelos dados no índice não clusterizado, ou o índice não clusterizado pode apontar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para as linhas na tabela subjacente. Geralmente, os índices não clusterizados são criados para aprimorar o desempenho de consultas utilizadas com frequência, não cobertas pelo índice clusterizado, ou para localizar linhas em uma tabela sem um índice clusterizado (denominado heap). Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada.  
-  
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Implementações comuns](#Implementations)  
-  
-     [Segurança](#Security)  
-  
--   **Para criar um índice não clusterizado, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -90,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Clique em **Fechar**.  
   
-9. No menu **Arquivo** , clique em **Salvar***table_name*.  
+9. No menu **Arquivo**, clique em **Salvar***table_name*.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para criar um índice não clusterizado usando o Pesquisador de Objetos  
   
@@ -106,13 +93,13 @@ ms.lasthandoff: 11/17/2017
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
+7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
   
 8.  Clique em **OK**.  
   
 9. Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Para criar um índice não clusterizado em uma tabela  
   
@@ -122,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
@@ -137,6 +124,6 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
- Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+## <a name="related-content"></a>Conteúdo relacionado  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
+[Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md) 

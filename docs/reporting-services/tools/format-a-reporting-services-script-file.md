@@ -1,30 +1,30 @@
 ---
-title: Formatar um arquivo de Script do Reporting Services | Microsoft Docs
+title: Formatar um arquivo de script do Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 00a0b35fa6830a573c823e89830e469f09674b4d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatar um arquivo de script do Reporting Services
   Um script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um arquivo de código [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, escrito em um proxy criado em WSDL, que define a API SOAP do Reporting Services. Um arquivo de script é armazenado como arquivo de texto Unicode ou UTF-8 com extensão .rss.  
@@ -58,10 +58,9 @@ End Sub
   
  Para obter exemplos de script, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilitário RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

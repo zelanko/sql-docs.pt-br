@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80f16777999a029e1063305a0d1b8501af7e05d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um **float** que indica a distância máxima em que os pontos que formam o buffer podem estar da instância de geography.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -62,7 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **NULO** é transmitido ao método, como`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra os resultados retornados para obter valores de distância diferentes.  
   
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [BufferWithCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
-

@@ -2,16 +2,13 @@
 title: Bancos de dados de modelo multidimensional (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +20,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
-  Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
   
  Os cubos são os objetos de consulta fundamentais no Analysis Services. Ao se conectar a um banco de dados do Analysis Services, via um aplicativo cliente, você se conecta a um cubo dentro desse banco de dados. Um banco de dados poderá conter vários cubos se você estiver reutilizando dimensões, assemblies, funções ou estruturas de mineração em vários contextos.  
   
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Consultando dados multidimensionais com MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
   
-

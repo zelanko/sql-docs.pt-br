@@ -3,8 +3,9 @@ title: "Atualização e persistir dados | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9220fd7448c5c2b7ba9e2600ca129f61e917723
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fd0fc64e1727b5e4ba9d2830218f3ddb6e004be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-and-persisting-data"></a>Atualizar e manter dados
 Os capítulos anteriores discutimos como usar o ADO para acessar dados em uma fonte de dados, como mover-se nos dados e até mesmo como editar os dados. É claro que, se for o objetivo do seu aplicativo permitir que os usuários façam alterações aos dados, você precisará entender como salvar as alterações. Ou você pode persistir o **registros** muda para um arquivo usando o **salvar** método, ou você pode enviar as alterações de volta para a fonte de dados para armazenamento usando o **atualização** ou  **UpdateBatch** métodos.  

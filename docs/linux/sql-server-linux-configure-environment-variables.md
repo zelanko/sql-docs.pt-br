@@ -1,29 +1,29 @@
 ---
 title: "Configurar o SQL Server com variáveis de ambiente | Microsoft Docs"
-description: "Este tópico descreve como usar variáveis de ambiente para configurar as configurações específicas de 2017 do SQL Server no Linux."
+description: "Este artigo descreve como usar variáveis de ambiente para configurar as configurações específicas de 2017 do SQL Server no Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: a599b0857ecad6d68aad77861e5ad29a71d8162c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar o SQL Server com variáveis de ambiente no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL Server 2017 no Linux. Essas variáveis são usadas em dois cenários:
 
@@ -49,7 +49,11 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 | **MSSQL_DATA_DIR** | Altere o diretório onde os arquivos de dados de banco de dados do SQL Server de novo (. mdf) são criados. |
 | **MSSQL_LOG_DIR** | Altere o diretório em que os novos arquivos de log (. ldf) do banco de dados do SQL Server são criados. |
 | **MSSQL_DUMP_DIR** | Altere o diretório em que a do SQL Server será colocar os despejos de memória e outros arquivos de solução de problemas por padrão. |
-| **MSSQL_ENABLE_HADR** | Habilite grupos de disponibilidade. |
+| **MSSQL_ENABLE_HADR** | Habilitar o grupo de disponibilidade. Por exemplo, '1' está habilitada e '0' está desabilitado |
+| **MSSQL_AGENT_ENABLED** | Habilite o SQL Server Agent. Por exemplo, 'true' está habilitada e 'false' está desabilitado. Por padrão, o agente está desabilitado.  |
+| **MSSQL_MASTER_DATA_FILE** | Define o local do arquivo de dados do banco de dados mestre. |
+| **MSSQL_MASTER_LOG_FILE** | Define o local do arquivo de log do banco de dados mestre. |
+
 
 ## <a name="example-initial-setup"></a>Exemplo: instalação inicial
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> O processo de execução de edições de produção em contêineres é ligeiramente diferente. Para obter mais informações, consulte [executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
+> O processo para executar edições de produção em contêineres é um pouco diferente. Para obter mais informações, veja [Executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Próximas etapas
 

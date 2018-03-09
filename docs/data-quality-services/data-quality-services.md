@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1cd79492a145f17a4602c96159d2e64a4fc28f2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a437f93e76b78a9d335ab846c83a9765eb1b4d5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   O DQS ([!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)]) é um produto de qualidade de dados orientado por conhecimento. O DQS permite criar uma base de dados de conhecimento e usá-la para executar uma variedade de tarefas críticas de qualidade de dados, inclusive correção, enriquecimento, padronização e eliminação de duplicação de seus dados. O DQS permite executar limpeza de dados usando serviços de dados de referência baseados em nuvem fornecidos por provedores de dados de referência. O DQS também proporciona a análise integrada a suas tarefas de qualidade de dados, permitindo analisar a integridade de seus dados.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Ícone de pasta de arquivos pequena](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [Segurança do DQS](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Conceitos do Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Recursos do DQS](http://technet.microsoft.com/sqlserver/hh780961)   

@@ -2,32 +2,32 @@
 title: "Definindo uma dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6969c73bc6f466eb1a2acfd9d41ff21e80d727c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Lição 2-1-definir uma dimensão
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dimensão Data.  
   
 > [!NOTE]  
@@ -91,4 +91,3 @@ Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dim
   
   
   
-

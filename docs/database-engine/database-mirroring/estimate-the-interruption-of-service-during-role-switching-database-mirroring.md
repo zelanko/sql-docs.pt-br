@@ -2,9 +2,12 @@
 title: "Estimar a interrupção do serviço para a troca de função (Espelhamento de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
-  Durante uma troca de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo de função trocada e da causa da troca de função.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante uma mudança de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo da função modificada e da causa da mudança de função.  
   
 -   Para failover automático, dois fatores contribuem para a interrupção do serviço de tempo: o tempo necessário para o servidor espelho reconhecer que a instância de servidor principal falhou, ou seja, detecção de erros, mais o tempo necessário para o failover do banco de dados, isto é, tempo de failover.  
   
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
  ![Detecção de erro e tempo de failover](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  

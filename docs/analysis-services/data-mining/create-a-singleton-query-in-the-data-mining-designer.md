@@ -2,35 +2,33 @@
 title: "Criar uma consulta Singleton no Designer de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 88119afa32933b6c35d8e404de13bc1c5acfefb1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
-  Uma consulta singleton será útil se você quiser criar uma previsão para um único caso. Para obter mais informações sobre as consultas singleton, veja [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma consulta singleton será útil se você quiser criar uma previsão para um único caso. Para obter mais informações sobre as consultas singleton, veja [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Na guia **Previsão do Modelo de Mineração** do Designer de Mineração de Dados, você pode criar vários tipos diferentes de consultas. Você pode criar uma consulta usando o designer ou digitando instruções DMX  (Extensões de Mineração de Dados). Você também pode começar com o designer e modificar a consulta que ele cria alterando as instruções DMX ou adicionando uma cláusula WHERE ou ORDER BY.  
   
@@ -89,7 +87,6 @@ AS [t]
      Uma tela nova se abre para mostrar o resultado da consulta. Para exibir a instrução DMX que você acabou de criar, clique em **SQL**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de previsão &#40;Mineração de dados&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Consultas de previsão &#40; mineração de dados &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
-

@@ -2,27 +2,30 @@
 title: "Propriedades do servidor (página Segurança) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 908e7cd39bb8a415daef33e9e633dfbf0f6e3984
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba93d13e40d98ff36933bb18353b249c7b0e32ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---security-page"></a>Propriedades do servidor – página Segurança
-  Use esta página para exibir ou modificar as opções de segurança do servidor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir ou modificar as opções de segurança do servidor.  
   
 ## <a name="server-authentication"></a>Autenticação do servidor  
  **Modo de Autenticação do Windows**  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/09/2017
  **Encadeamento de propriedades de bancos de dados**  
  Selecione para permitir que o banco de dados seja a origem ou o destino de um encadeamento de propriedades de bancos de dados. Para obter mais informações, veja [Opção cross db ownership chaining de configuração de servidor](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

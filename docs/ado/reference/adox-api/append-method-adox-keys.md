@@ -3,8 +3,9 @@ title: "Método (ADOX chaves) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Keys::Append
 - Keys::raw_Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eead7a8702c927e13b11cb75f2a5a3881a2065fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d1f8938adf51ee1f38de29b85753095d55d7703
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-keys"></a>(ADOX chaves) do método append
 Adiciona um novo [chave](../../../ado/reference/adox-api/key-object-adox.md) o objeto para o [chaves](../../../ado/reference/adox-api/keys-collection-adox.md) coleção.  
@@ -54,7 +56,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *RelatedColumn*  
  Opcional. Um **cadeia de caracteres** valor que especifica o nome da coluna relacionada para uma chave estrangeira. O *RelatedColumn* parâmetro corresponde ao valor da **nome** propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *colunas* parâmetro pode ser o nome de uma coluna ou uma matriz de nomes de coluna.  
   
 ## <a name="applies-to"></a>Aplica-se a  

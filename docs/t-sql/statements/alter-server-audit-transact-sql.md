@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
 - ALTER SERVER AUDIT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23952b00480291dc5e73b1e729af36ebb2912747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +138,7 @@ Força a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
  Uma cadeia de caracteres ANSI ou Unicode, conforme requerido pela comparação de predicado. Nenhuma conversão de tipo de cadeia de caracteres implícita é executada para as funções de comparação de predicado. A transferência do tipo incorreto resulta em um erro.  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve especificar pelo menos uma das cláusulas TO, WITH ou MODIFY NAME ao chamar ALTER AUDIT.  
   
  Você deve definir o estado de uma auditoria para a opção OFF para fazer alterações em uma auditoria. Se ALTER AUDIT for executada quando uma auditoria estiver habilitada com qualquer opção diferente de STATE = OFF, você recebe uma erro msg_need_audit_disabled.  
@@ -191,7 +193,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Alterando uma cláusula WHERE de auditoria de servidor  
  O exemplo a seguir modifica o onde cláusula criada no exemplo de [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). A nova cláusula WHERE filtra o evento definido pelo usuário se de 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +206,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. Removendo uma cláusula WHERE  
  O exemplo a seguir remove uma expressão de predicado de cláusula WHERE.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +219,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. Renomeando uma auditoria de servidor  
  O exemplo a seguir altera o nome da auditoria de servidor de `FilterForSensitiveData` para `AuditDataAccess`.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -227,7 +229,7 @@ ALTER SERVER AUDIT [AuditDataAccess] WITH (STATE = ON);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   

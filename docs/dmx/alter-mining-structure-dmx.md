@@ -5,19 +5,16 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +81,7 @@ USING <algorithm> [(<parameter list>)]
  *critérios de filtro*  
  Uma expressão de filtro que é aplicada às colunas na tabela de casos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a estrutura de mineração contiver chaves compostas, o modelo de mineração deve incluir todas as colunas de chave definidas na estrutura.  
   
  Se o modelo não precisar de uma coluna previsível, por exemplo, os modelos criados com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e com algoritmos MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering), não será necessário incluir uma definição de coluna na instrução. Todos os atributos no modelo resultante serão tratados como entradas.  
@@ -143,7 +139,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREVER**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
+|**PREDICT**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
   
 ## <a name="filter-criteria-expressions"></a>Expressões de critérios de filtro  
@@ -222,10 +218,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

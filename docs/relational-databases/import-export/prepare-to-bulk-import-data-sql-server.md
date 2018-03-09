@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5df9200f0101300d7e17d7e6b033882a4da5354d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a9c86d93f4ebf32114fabbbe89011004f7d9e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
      Muitos utilitários e editores de textos exibem caracteres ocultos que normalmente estão no final do arquivo de dados. Durante uma operação de importação em massa, os caracteres ocultos em um arquivo de dados ASCII podem causar problemas que provocam erro de "unexpected null found" Encontrar e remover todos os caracteres ocultos deve ajudar a evitar este problema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   

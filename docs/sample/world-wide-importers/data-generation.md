@@ -3,28 +3,29 @@ title: "Geração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>Geração de dados de WideWorldImporters
-As versões lançadas de bancos de dados WideWorldImporters e WideWorldImportersDW contém dados iniciando de 2013 1º de janeiro, até o dia em que esses bancos de dados foram gerados.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]As versões lançadas de bancos de dados WideWorldImporters e WideWorldImportersDW contém dados iniciando de 2013 1º de janeiro, até o dia em que esses bancos de dados foram gerados.
 
 Se os bancos de dados de exemplo são usados em uma data posterior, para fins de demonstração ou ilustração, pode ser benéfico incluir dados de amostra mais recentes no banco de dados.
 
@@ -85,4 +86,3 @@ O procedimento `Application.Configuration_PopulateLargeSaleTable` pode ser usado
 Aproximadamente o número necessário de linhas é inserido no `Fact.Sale` tabela no ano de 2012. O procedimento limita artificialmente o número de linhas por dia para 50000. Isso pode ser alterado, mas há evitar overinflations accidential da tabela.
 
 Além disso, o procedimento se aplica a indexação de columnstore clusterizado, se não tiver sido aplicada já.
-

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLForeignKeys
-apilocation:
-- sqlsrv32.dll
+apiname: SQLForeignKeys
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLForeignKeys
-helpviewer_keywords:
-- SQLForeignKeys function [ODBC]
+f1_keywords: SQLForeignKeys
+helpviewer_keywords: SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0d56fd87c4c9612fb520b1a54b9d0c2cab645223
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlforeignkeys-function"></a>Função SQLForeignKeys
 **Conformidade**  
@@ -337,7 +331,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |Retornando as colunas de uma chave primária|[Função SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |Retornando estatísticas de tabela e índices|[Função SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

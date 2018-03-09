@@ -1,31 +1,29 @@
 ---
-title: "Partes no Designer de relatórios (SSRS) | Microsoft Docs"
+title: "Partes de relatório no Designer de Relatórios (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8b47556b43940c363d8eac0a53d63db601bcd8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>Partes de relatório no Designer de Relatórios (SSRS)
 
   No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório paginado em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Implante o relatório.  
   
- Quando você implanta o relatório, a parte de relatório é publicada em um site do SharePoint ou servidor de relatório e outros usuários podem reutilizá-la. Para publicar uma parte de relatório, você deve ter uma conexão para e permissões suficientes no servidor de relatório quando você implanta o relatório.  
+ Quando você implanta o relatório, a parte de relatório é publicada em um site do SharePoint ou servidor de relatório e outros usuários podem reutilizá-la. Para publicar uma parte de relatório, você deve ter uma conexão com um servidor de relatório e permissões suficientes nesse servidor ao implantar o relatório.  
   
   
 ##  <a name="SearchReuseComponents"></a> Reutilizando partes de relatório  
@@ -99,7 +97,6 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Gerenciando partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
+[Gerenciar partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,7 +3,7 @@ title: "Propriedades do objeto de espaço de dados (RDS), métodos e eventos | M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS], members
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0eaa3d6d8695d2c8454a324513fea458e6f72a1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0eba57bc98384e3b8d61c95cf69d633cb1ad44a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de espaço de dados (RDS)
 > [!IMPORTANT]
@@ -39,10 +38,9 @@ ms.lasthandoff: 09/09/2017
  [Método CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
-
 
 

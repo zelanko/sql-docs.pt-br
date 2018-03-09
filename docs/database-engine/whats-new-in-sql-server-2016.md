@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: "431"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 - Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
 
-- Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
+- Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
 > [!NOTE]
 > Para obter as notas de versão atuais, veja [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
@@ -271,7 +271,7 @@ A atualização automática de estatísticas agora é mais agressiva em tabelas 
 O Insert em uma instrução Insert-select tem vários threads ou pode ter um plano paralelo (no nível de compatibilidade 130). Para obter um plano paralelo, INSIRA… A instrução SELECT deve usar a dica TABLOCK. Para obter mais informações, consulte [Selecionar inserção paralela](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
 ####  <a name="LiveStats"></a> Estatísticas de consulta dinâmica
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. Para obter mais informações, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. Para obter mais informações, consulte [Estatísticas de consulta em tempo real](../relational-databases/performance/live-query-statistics.md).
 
 ####  <a name="QueryStore"></a> Repositório de Consultas
 O repositório de consultas é um novo recurso que fornece aos DBAs informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas apresenta informações usando uma caixa de diálogo [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , e permite que você force a consulta para um dos planos de consulta selecionados. Para saber mais, consulte [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
@@ -452,10 +452,10 @@ O Supervisor de Atualização do SQL Server 2016 Preview é uma ferramenta autô
 
  Você pode baixar o Supervisor de Atualização Preview [aqui](https://www.microsoft.com/en-us/download/details.aspx?id=48119) ou instalá-lo usando o Web Platform Installer.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+[Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
  
 [Instalar as Ferramentas de Gerenciamento do SQL Server com SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
 

@@ -1,29 +1,29 @@
 ---
-title: "Função RunningValue (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Função RunningValue (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f6a4dbc99e73afca24ede68d160c2c48a7422ef1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ad5d4f5c7d28dda4191a3e45bbf991bfbdc4644d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-builder-functions---runningvalue-function"></a>Relatório de funções de construtor - função RunningValue
+# <a name="report-builder-functions---runningvalue-function"></a>Funções do Construtor de Relatórios – Função RunningValue
   Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pela função de agregação especificada no parâmetro *function* .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor de **RunningValue** é redefinido como 0 para cada nova instância do escopo. Se um grupo for especificado, o valor em uso será redefinido quando a expressão de grupo for alterada. Se uma região de dados for especificada, o valor em uso será redefinido para cada nova instância da região de dados. Se um conjunto de dados for especificado, o valor em uso não será redefinido em todo o conjunto de dados.  
   
  **RunningValue** não pode ser usado em um filtro ou expressão de classificação.  
@@ -70,7 +70,7 @@ RunningValue(expression, function, scope)
   
  Para calcular o valor em uso do número de linhas, use **RowNumber**. Para obter mais informações, consulte [Função RowNumber &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-rownumber-function.md).  
   
- Para obter mais informações, consulte [Referência de funções agregadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Para obter mais informações sobre agregações recursivas, consulte [Criando grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
@@ -93,11 +93,10 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tipos de dados em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

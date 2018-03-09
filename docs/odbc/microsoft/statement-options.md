@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - statement options [ODBC]
 - ODBC driver for Oracle [ODBC], statement options
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac14e06bc71aac307fdba1d87110610ac5bae4b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-options"></a>Opções de instrução
 > [!IMPORTANT]  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Retorna um inteiro de 32 bits que especifica a posição da linha atual no conjunto de resultados. Obter. não é possível definir.|  
 |SQL_ROWSET_SIZE|Não pode ter mais de 4.294.967.296 linhas; No entanto, você deve ter memória virtual insuficiente no seu computador a sua solicitação.|  
 |SQL_USE_BOOKMARKS|Oferece suporte à configuração SQL_USE_BOOKMARKS para SQL_UB_ON e expõe os indicadores de comprimento fixo.|
-

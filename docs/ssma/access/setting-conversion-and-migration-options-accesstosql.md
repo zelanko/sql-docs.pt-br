@@ -1,12 +1,14 @@
 ---
 title: "Definindo opções de migração (AccessToSQL) e conversão | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40be8e3f52464e7c6ae6f024d8c29f3d0acd04b9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a060c0c1890a007ad14e21f526f436d03bb6c481
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversão de configuração e opções de migração (AccessToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure ou migrar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure, verifique se as opções de configuração são adequadas para o projeto.  
@@ -40,13 +41,13 @@ O SSMA tem quatro conjuntos de configurações e quatro modos para definir essas
   
 As configurações são descritas na seção "Referência de Interface de usuário" desta documentação. Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
   
--   [Configurações de projeto (conversão)](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Configurações do projeto (conversão)](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [Configurações de projeto (migração)](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Configurações do projeto (migração)](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [Configurações de projeto (GUI)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Configurações do projeto (GUI)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Configurações de projeto (mapeamento de tipo)](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Configurações do projeto (mapeamento de tipo)](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655)  
   
 -   [Configurações de projeto (SQL Azure)](http://msdn.microsoft.com/en-us/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
@@ -84,7 +85,7 @@ Você também pode personalizar configurações para o projeto atual. Essas conf
   
 3.  Clique em **Okey** para salvar as configurações.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
 -   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
@@ -93,7 +94,6 @@ A próxima etapa da migração depende de suas necessidades de projeto:
   
 -   Caso contrário, você pode converter as definições de objeto de banco de dados do Access em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou definições de objeto do SQL Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

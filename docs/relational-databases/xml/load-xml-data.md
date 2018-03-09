@@ -2,29 +2,34 @@
 title: Carregar dados XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8df65cb6701c6f05e86cc9f3e16dfd834ddd35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="load-xml-data"></a>Carregar dados XML
-  É possível transferir dados XML para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de várias maneiras. Por exemplo:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+É possível transferir dados XML para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de várias maneiras. Por exemplo:  
   
 -   Se você tiver dados em uma coluna de imagem ou [n]text em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poderá importar a tabela usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Altere o tipo da coluna para XML usando a instrução ALTER TABLE.  
   
@@ -84,7 +89,7 @@ INSERT INTO T VALUES (N'…')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

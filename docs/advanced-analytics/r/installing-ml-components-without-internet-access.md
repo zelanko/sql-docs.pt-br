@@ -1,28 +1,29 @@
 ---
 title: "Instalação de componentes de aprendizado de máquina sem acesso à internet | Microsoft Docs"
 ms.custom: 
-ms.date: 11/30/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 03/05/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Instalação de componentes de aprendizado de máquina sem acesso à internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Como os componentes de R e Python fornecidos com o SQL Server 2016 e o SQL Server 2017 são código-fonte aberto, Microsoft não instala componentes de R ou Python por padrão. Em vez disso, podemos fornecer os instaladores relacionados e vem pacotes como uma conveniência no Microsoft Download Center e outros sites confiáveis. Você deve concordar com a licença apropriada e, em seguida, o programa de instalação do SQL Server instala os componentes de R ou Python para você.
 
@@ -46,16 +47,18 @@ Normalmente, a instalação dos componentes de máquina usada no SQL Server 2016
 
 ### <a name="step-1-obtain-additional-installers"></a>Etapa 1. Obter instaladores adicionais
 
+Em geral, instaladores separadas são fornecidas para código-fonte aberto e componentes proprietárias. O Assistente de instalação do SQL Server garante que eles estão instalados na ordem correta. No entanto, algumas versões, poderá atualizar apenas um conjunto de componentes. Consulte o [tabela instaladores de](#bkmk_2017Installers) por versão para obter detalhes.
+
 **Para R**
 
-Há suporte para a linguagem R SQL Server 2016 e 2017 do SQL Server. Dois instaladores diferentes são necessárias, para código-fonte aberto e componentes proprietárias. O Assistente de instalação do SQL Server garante que eles estão instalados na ordem correta.
+A linguagem R tem suporte no SQL Server 2016 e posterior. 
 
 + Instaladores com **SRO** no nome do fornecem os componentes de software livre.
 + Instaladores com **SRS** no nome contém componentes fornecidos pela Microsoft, incluindo aqueles para integração com o banco de dados.
 
 **Para Python**
 
-O idioma do Python é suportado apenas no SQL Server 2017. Novamente, há dois instaladores separadas que você deve fazer o download.
+A linguagem Python requer o SQL Server 2017 ou posterior. 
 
 + Instaladores com **SPO** no nome são para abrir o Microsoft Python e fornecer os componentes de software livre.
 + Instaladores com **SPS** no nome são para o servidor do Microsoft Python e contêm componentes fornecidos pela Microsoft, incluindo aqueles para integração com o banco de dados.
@@ -78,63 +81,72 @@ Para obter instruções passo a passo do processo de instalação offline de ser
 3. Uma caixa de diálogo abre que solicita o **caminho instalar** os pacotes necessários.
 4. Clique em **procurar** para localizar a pasta que contém os arquivos de instalação que você copiou anteriormente.
 5. Se os arquivos corretos forem encontrados, você poderá clicar em **Avançar** para indicar que os componentes estão disponíveis.
-10. Conclua o Assistente de instalação do SQL Server.
-11. Execute as etapas de pós-instalação necessárias para se certificar de que o serviço está habilitado.
+6. Conclua o Assistente de instalação do SQL Server.
+7. Execute as etapas de pós-instalação necessárias para se certificar de que o serviço está habilitado.
 
 ## <a name="installerlocs"></a>Onde baixar componentes de aprendizado de máquina
 
-> [!NOTE]
-> Certifique-se de obter os arquivos que correspondem à versão do SQL Server que você está instalando.
-> 
-> É fornecido suporte para Python começando com o SQL Server de 2017 CTP 2.0. Em versões anteriores, incluindo o SQL Server 2016, não dão suporte a Python.
+Certifique-se de obter os arquivos que correspondem à versão do SQL Server que você está instalando.
 
 + [Para obter componentes de R para o SQL Server 2016](#bkmk_2016Installers)
 
 + [Para obter componentes de R ou Python para o SQL Server 2017](#bkmk_2017Installers)
 
+É fornecido suporte para Python começando com o SQL Server de 2017 CTP 2.0. Em versões anteriores, incluindo o SQL Server 2016, não dão suporte a Python.
+
 ### <a name="bkmk_2017Installers"></a>Downloads do SQL Server de 2017
 
 Versão  |Link de download  |
 ---------|---------|
-**2017 CTP 1 do SQL Server**     |
+**SQL Server 2017 CTP 1**     |
 Microsoft R Open     |[SRO_3.3.0.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)
 Microsoft R Server     |[SRS_9.0.0.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)
-**CTP do SQL Server de 2017 1.1** |
+**SQL Server 2017 CTP 1.1** |
 Microsoft R Open     |[SRO_3.3.2.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=834568)
 Microsoft R Server     |[SRS_9.0.1.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=834567)
-**O SQL Server de 2017 CTP 1.4** |
+**SQL Server 2017 CTP 1.4** |
 Microsoft R Open     |[SRO_3.3.2.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842483)
 Microsoft R Server     |[SRS_9.0.2.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842482)
-**O SQL Server de 2017 CTP 2.0** |
+**SQL Server 2017 CTP 2.0** |
 Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842800)
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Abrir Microsoft Python     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
-Servidor Microsoft Python    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
+Microsoft Python Server    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
 **SQL Server 2017 RC1** |
 Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
 Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
 Abrir Microsoft Python     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
-Servidor Microsoft Python    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+Microsoft Python Server    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
 **SQL Server 2017 RC 2** |
 Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 Abrir Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
-Servidor Microsoft Python    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
+Microsoft Python Server    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 **SQL Server 2017 RTM** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Abrir Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Servidor Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |uso anterior|
+Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Abrir Microsoft Python     |uso anterior |
-Servidor Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+Abrir Microsoft Python     |Nenhuma alteração; uso anterior |
+Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |uso anterior|
-Microsoft R Server      |uso anterior|
-Abrir Microsoft Python     |uso anterior |
-Servidor Microsoft Python    |uso anterior|
+Microsoft R Open     |Nenhuma alteração; uso anterior|
+Microsoft R Server      |Nenhuma alteração; uso anterior|
+Abrir Microsoft Python     |Nenhuma alteração; uso anterior|
+Microsoft Python Server    |Nenhuma alteração; uso anterior|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Abrir Microsoft Python     |Nenhuma alteração; uso anterior|
+Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |Nenhuma alteração; uso anterior|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Abrir Microsoft Python     |Nenhuma alteração; uso anterior|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>Downloads do SQL Server 2016
 
@@ -156,13 +168,13 @@ Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server 2016 CU 3**     |
 Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server     | Nenhuma alteração; uso anterior |
-**Atualização Cumulativa do SQL Server 2016 4**     |
+**SQL Server 2016 CU 4**     |
 Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
 Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 **SQL Server 2016 CU 5**     |
 Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server     |Nenhuma alteração; uso anterior|
-**Atualização Cumulativa do SQL Server 2016 6**     |
+**SQL Server 2016 CU 6**     |
 Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
 **SQL Server 2016 CU 7**     |
@@ -187,7 +199,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |Nenhuma alteração; uso anterior|
 Microsoft R Server    |Nenhuma alteração; uso anterior |
 
-Se você deseja exibir o código-fonte para o Microsoft R, ele está disponível para download como um arquivo no formato. tar: [instaladores baixar R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+Se você deseja exibir o código-fonte para o Microsoft R, ele está disponível para download como um arquivo no formato. tar: [instaladores baixar R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>Pré-requisitos adicionais
 
@@ -207,7 +219,7 @@ Se você baixar o. Arquivos CAB como parte da instalação do SQL Server em um c
 
 No entanto, dependendo de sua versão do SQL Server, você precisará executar etapas adicionais para instalar os componentes de R localizados em um computador sem acesso à internet.
 
-+ **Para o SQL Server 2016**
++ **For SQL Server 2016**
 
    Depois de baixar os instaladores de R para um compartilhamento local, você precisará editar manualmente o nome dos arquivos de download para inserir o identificador de idioma correto para o idioma que você está instalando.
 
@@ -217,7 +229,7 @@ No entanto, dependendo de sua versão do SQL Server, você precisará executar e
     > Esse problema aplica-se somente a versões anteriores e foi corrigido em versões posteriores.
     > **Só use essa solução alternativa se o instalador retornará uma mensagem de que ele não é possível instalar o idioma correto.**
 
-+ **Para o SQL Server de 2017**
++ **For SQL Server 2017**
 
     Baixar o. Arquivo CAB para os componentes de R ou Python.
     
@@ -229,7 +241,7 @@ A instalação integrada refere-se à capacidade de aplicar um patch ou atualiza
 
 + Se o servidor não tiver acesso à Internet, você deverá baixar o instalador do SQL Server e então baixar versões correspondentes dos instaladores de componentes do R **antes** de começar o processo de atualização.  Os componentes do R não são incluídos por padrão com o SQL Server.
 
-+ Se você estiver *adicionando* esses componentes para uma *existente* instalação, use a versão atualizada do instalador do SQL Server e correspondente versão atualizada dos componentes adicionais. Quando você especificar que o recurso de R está instalado, o instalador procura a versão correspondente dos instaladores para o componentes de aprendizado de máquina.
++ Se você está adicionando esses componentes a uma instalação existente, use a versão atualizada do instalador do SQL Server e a versão atualizada correspondente dos componentes adicionais. Quando você especificar que o recurso de R está instalado, o instalador procura a versão correspondente dos instaladores para o componentes de aprendizado de máquina.
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>Argumentos de linha de comando para especificar a localização dos componentes
 
@@ -237,27 +249,26 @@ Ao executar uma instalação offline da linha de comando, você deve fornecer os
 
 **Local de instaladores**
 
-- `/UPDATESOURCE`para especificar o local do arquivo local que contém o instalador de atualização do SQL Server
-- `/MRCACHEDIRECTORY`para especificar a pasta que contém os arquivos de CAB do componente de R
-- `/MPYCACHEDIRECTORY`para especificar a pasta que contém os arquivos de CAB do componente de Python
+- `/UPDATESOURCE` para especificar o local do arquivo local que contém o instalador de atualização do SQL Server
+- `/MRCACHEDIRECTORY` para especificar a pasta que contém os arquivos de CAB do componente de R
+- `/MPYCACHEDIRECTORY` para especificar a pasta que contém os arquivos de CAB do componente de Python
 
 **Componentes de R no SQL Server 2016**
 
-- `/ADVANCEDANALYTICS`Para obter suporte do mecanismo de scripts externos
-- `/IACCEPTROPENLICENSETERMS="True"`para aceitar o contrato de licenciamento do R separado
+- `/ADVANCEDANALYTICS` Para obter suporte do mecanismo de scripts externos
+- `/IACCEPTROPENLICENSETERMS="True"` para aceitar o contrato de licenciamento do R separado
 
 **Componentes de R no SQL Server 2017**
 
-- `/ADVANCEDANALYTICS`Para obter suporte do mecanismo de scripts externos
-- `/SQL_INST_MR`Para usar o R
-- `/IACCEPTROPENLICENSETERMS="True"`para aceitar o contrato de licenciamento do R separado
+- `/ADVANCEDANALYTICS` Para obter suporte do mecanismo de scripts externos
+- `/SQL_INST_MR` Para usar o R
+- `/IACCEPTROPENLICENSETERMS="True"` para aceitar o contrato de licenciamento do R separado
 
 **Componentes de Python no SQL Server 2017**
 
-- `/ADVANCEDANALYTICS`Para obter suporte do mecanismo de scripts externos
-- `/SQL_INST_MPY`Para usar o Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`para aceitar o Python separado contrato de licenciamento
-
+- `/ADVANCEDANALYTICS` Para obter suporte do mecanismo de scripts externos
+- `/SQL_INST_MPY` Para usar o Python
+- `/IACCEPTPYTHONLICENSETERMS="True"` para aceitar o Python separado contrato de licenciamento
 
 > [!NOTE]
 > Você não pode alterar a conta de serviço para a barra inicial usando parâmetros de instalação do SQL Server. É recomendável que você instale usando as contas de serviço padrão e, em seguida, modificar a conta de serviço usando o SQL Server Configuration Manager. Depois de fazer isso, certifique-se de reiniciar o serviço Launchpad.

@@ -2,10 +2,14 @@
 title: Especificar terminadores de campo e linha (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63039f63f52131c942f76e069514fa90d46a1701
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
-  Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
   
 > [!IMPORTANT]  
 >  Quando você usa formato nativo ou nativo Unicode, usa prefixos de comprimento em vez de terminadores de campo. Dados de formato nativo podem conflituar com terminadores, pois um arquivo de dados de formato nativo é armazenado no formato de dados binário interno do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -100,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
  O comando **bcp** contém as opções a seguir.  
   
-|Opção|Descrição|  
+|Opção|Description|  
 |------------|-----------------|  
 |**-c**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |**-t** `,`|Especifica uma vírgula (,) como terminador de campo.|  
@@ -128,7 +133,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Os terminadores podem ser especificados para campos individuais em um arquivo de formato ou para o arquivo de dados inteiro usando os qualificadores mostrados na tabela a seguir.  
   
-    |Qualificador|Descrição|  
+    |Qualificador|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
     |ROWTERMINATOR **='***row_terminator***'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
@@ -169,7 +174,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usando BULK INSERT para especificar terminadores interativamente  
  O exemplo a seguir importa em massa o arquivo de dados `Department-c-t.txt` usando uma instrução `BULK INSERT` que usa os qualificadores mostrados na tabela a seguir.  
   
-|Opção|Atributo|  
+|Opção|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |FIELDTERMINATOR **='**`,`**'**|Especifica uma vírgula (`,`) como terminador de campo.|  
@@ -189,7 +194,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

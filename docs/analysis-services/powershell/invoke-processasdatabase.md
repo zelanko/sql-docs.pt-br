@@ -2,34 +2,29 @@
 title: Chamar ProcessASDatabase | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8e83493ed934a3f9bf32a1cef35969f04996223
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processasdatabase"></a>ProcessASDatabase Invoke
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Conduz a operação **Processo** em um **banco de dados** especificado com um **ProcessType** ou **RefreshType** específico dependendo do tipo de metadados subjacentes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Conduz a **processo** operação em um site FTP **banco de dados** com um determinado **ProcessType** ou **RefreshType** dependendo da tipo subjacente de metadados.  
   
  Use **ProcessType** para banco de dados com os metadados multidimensionais (isso inclui bancos de dados tabulares com compatibilidade nível 1050, 1100 ou 1103).  
   
@@ -164,4 +159,3 @@ PS  SQL Server >  Invoke-ProcessASDatabase -databasename "AdventureWorks" -serve
   
   
   
-

@@ -2,27 +2,33 @@
 title: Compatibilidade de FileTable com outros recursos do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], using with other features
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86f6d9c9792edd42d1ad5ea9513c6bc790e5df0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ba1eeb760eda46825448d3ba56bae1777c533ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidade do FileTable com outros recursos do SQL Server
-  Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Grupos de disponibilidade AlwaysOn e FileTables  
  Quando o banco de dados que contém dados FILESTREAM ou FileTable pertence a um grupo de disponibilidade AlwaysOn:  
@@ -120,7 +126,7 @@ ms.lasthandoff: 11/09/2017
   
  Você poderá definir a retenção de banco de dados como PARTIAL se desejar usar determinados recursos de bancos de dados contidos, como usuários contidos. Neste caso, no entanto, você deve estar atento que algumas das configurações de banco de dados não estão contidas no banco de dados e não são movidos automaticamente quando o banco de dados é movido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

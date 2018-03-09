@@ -2,39 +2,33 @@
 title: Conjunto de linhas mdschema_measuresgroups | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASUREGROUPS
+apiname: MDSCHEMA_MEASUREGROUPS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASUREGROUPS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aebac1aafd7d49e6b5b5c21343161184ba19da34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d39a7ce85ec5c4781d69d5a0bcd2fb468dd701bc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasuregroups-rowset"></a>Conjunto de linhas MDSCHEMA_MEASURESGROUPS
-  Descreve os grupos de medidas dentro de um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve os grupos de medidas em um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **MDSCHEMA_MEASUREGROUPS** contém as colunas a seguir.  
@@ -61,8 +55,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Opcional.|  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

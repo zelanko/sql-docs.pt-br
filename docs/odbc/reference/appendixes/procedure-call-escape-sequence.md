@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 080c74baca0cd641b14de3746657b4bfb09bc6dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ba89ae47d223ea17f02cb07976510d78ff3660e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequência de Escape de chamada de procedimento
 ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa sequência de escape é da seguinte maneira:  
@@ -77,4 +75,3 @@ ODBC usa sequências de escape para chamadas de procedimento. A sintaxe dessa se
  (Se um parâmetro de procedimento é uma cadeia de caracteres vazia, o procedimento usa o valor padrão para esse parâmetro.)  
   
  Para determinar se a fonte de dados oferece suporte a procedimentos e o driver oferece suporte à sintaxe de invocação de procedimento ODBC, um aplicativo pode chamar **SQLGetInfo** com o tipo de informação SQL_PROCEDURES.
-

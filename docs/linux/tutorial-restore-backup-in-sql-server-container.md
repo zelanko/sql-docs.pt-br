@@ -3,27 +3,26 @@ title: Restaurar um banco de dados do SQL Server no Docker | Microsoft Docs
 description: "Este tutorial mostra como restaura um backup de banco de dados do SQL Server em um novo contêiner de Docker do Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server em uma imagem de contêiner do SQL Server de 2017 Linux em execução no Docker.
 
@@ -34,15 +33,12 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 > * Execute instruções Transact-SQL para exibir e modificar o banco de dados.
 > * Fazer backup do banco de dados modificado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * Mecanismo do docker 1.8 + em qualquer suporte para a distribuição de Linux ou o Docker para Mac/Windows. Para obter mais informações, consulte [instalar o Docker](https://docs.docker.com/engine/installation/).
-* Mínimo de 4 GB de espaço em disco
-* Mínimo de 4 GB de RAM
+* Mínimo de 2 GB de espaço em disco
+* Mínimo de 2 GB de RAM
 * [Requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> O padrão no Docker para Mac e o Docker para Windows é 2 GB para a VM Moby, portanto você deve alterá-lo a 4 GB. Se você estiver executando em Mac ou Windows, aumente as configurações de memória usando o [instruções no início rápido Docker](quickstart-install-connect-docker.md).
 
 ## <a name="pull-and-run-the-container-image"></a>Pull e executar a imagem de contêiner
 
@@ -411,4 +407,3 @@ Em seguida, examine a outra configuração do Docker e cenários de solução de
 
 > [!div class="nextstepaction"]
 >[Guia de configuração para o SQL Server 2017 no Docker](sql-server-linux-configure-docker.md)
-

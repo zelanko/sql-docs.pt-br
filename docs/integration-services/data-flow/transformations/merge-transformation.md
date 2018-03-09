@@ -1,5 +1,5 @@
 ---
-title: "Transformação mesclagem | Microsoft Docs"
+title: "Transformação Mesclar | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: fb8e3884d531a2e5ebac5444e27aaade5495366d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-transformation"></a>Transformação Mesclar
   A Transformação Mesclagem combina dois conjuntos de dados classificados em um único conjunto de dados. As linhas de cada conjunto de dados estão inseridas na saída com base em valores de suas colunas-chave.  
@@ -71,12 +70,12 @@ ms.lasthandoff: 08/19/2017
   
 -   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir propriedades, consulte os tópicos a seguir:  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-transformation-editor"></a>Editor de Transformação Mesclagem
   Use o **Editor de Transformação Mesclagem** para especificar colunas de dois conjuntos de dados classificados a serem mescladas.  
@@ -94,11 +93,10 @@ ms.lasthandoff: 08/19/2017
  **Mesclar Entrada 2**  
  Selecione a coluna a mesclar como Mesclar Entrada 2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
- [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
+ [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

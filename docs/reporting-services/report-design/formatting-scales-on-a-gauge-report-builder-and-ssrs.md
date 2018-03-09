@@ -1,31 +1,32 @@
 ---
-title: "Formatando escalas em um medidor (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatando escalas em um medidor (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 77b2487bf741c7be1a232aaefa4396b17a1ba897
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , a escala do medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrado em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
   
- ![Visão geral dos elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "visão geral dos elementos em uma escala de medidor")  
+ ![Visão geral dos elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Visão geral dos elementos em uma escala de medidor")  
   
  Diferente de gráficos, nos quais vários grupos são definidos, o medidor mostra apenas um valor. Você deve definir os valores mínimo e máximo da escala. Os números do intervalo são calculados automaticamente com base nos valores especificados para o mínimo e máximo.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
  O raio da escala é a distância do centro do medidor até o meio da barra da escala. O valor do raio da escala é medido como uma porcentagem do diâmetro do medidor. É uma prática recomendada manter o raio da escala abaixo de um valor de 35. Se você especificar um valor maior que 35, a escala será provavelmente desenhada fora dos limites do medidor. A ilustração a seguir mostra como o raio da escala é medido em relação ao diâmetro do medidor na barra da escala.  
   
- ![Raio da escala em relação ao diâmetro do medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "raio da escala em relação ao diâmetro do medidor")  
+ ![Raio da escala em relação ao diâmetro do medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Raio da escala em relação ao diâmetro do medidor")  
   
  O ângulo inicial é o ângulo de rotação, entre 0 e 360, no qual a escala começará. A posição zero (0) está localizada na parte inferior do medidor, e o ângulo inicial gira no sentido horário. Por exemplo, um ângulo inicial de 90 graus inicia a escala na posição de 9 horas.  
   
@@ -83,11 +84,11 @@ ms.lasthandoff: 08/09/2017
   
 -   1% do valor menor da altura ou da largura do medidor em um medidor linear.  
   
-## <a name="see-also"></a>Consulte também  
- [Intervalos de formatação em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatando ponteiros em um medidor &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatar rótulos de eixo como datas ou moedas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatando rótulos dos eixos de um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Medidores &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

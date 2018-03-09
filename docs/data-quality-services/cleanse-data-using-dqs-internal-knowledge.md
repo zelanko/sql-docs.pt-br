@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md).  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  Com base no nível de confiança, os valores são exibidos nas cinco guias a seguir:  
   
-|Tab|Descrição|  
+|Tab|Description|  
 |---------|-----------------|  
 |**Sugerido**|Exibe os valores de domínio para os quais o DQS encontrou os valores sugeridos que têm um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* .<br /><br /> Os valores sugeridos são exibidos na coluna **Corrigir para** em relação ao valor original. Você pode clicar no botão de opção na coluna **Aprovar** ou **Rejeitar** em relação a um valor na grade superior para aceitar ou rejeitar a sugestão para todas as instâncias do valor. Nesse caso, o valor aceito passa para a guia **Corrigido** e o valor rejeitado passa para a guia **Inválido** .|  
 |**Nova**|Exibe o domínio válido para o qual o DQS não tem informações suficientes e, portanto, não pode ser mapeado para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.<br /><br /> Se você considerar o valor correto, clique no botão de opção na coluna **Aprovar** . Ou clique no botão de opção na coluna **Rejeitar** . O valor aceito passa para a guia **Corrigir** e o valor rejeitado passa para a guia **Inválido** . Também é possível digitar manualmente o valor correto como uma substituição do valor original na coluna **Corrigir Para** do valor e, depois, clicar no botão de opção na coluna **Aprovar** para aceitar a alteração. Nesse caso, o valor passa para a guia **Corrigido** .|  

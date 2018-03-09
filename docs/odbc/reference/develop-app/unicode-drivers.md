@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-drivers"></a>Drivers de Unicode
 Se um driver deve ser um driver de Unicode ou um driver de ANSI depende completamente a natureza da fonte de dados. Se a fonte de dados oferece suporte a dados Unicode, o driver deve ser um driver de Unicode. Se a fonte de dados suporta apenas dados ANSI, o driver deve permanecer um driver de ANSI.  
@@ -40,4 +38,3 @@ Se um driver deve ser um driver de Unicode ou um driver de ANSI depende completa
   
 > [!NOTE]  
 >  Ao determinar o tipo de driver, o Gerenciador de Driver chamará **SQLSetConnectAttr** e definir o atributo SQL_ATTR_ANSI_APP em tempo de conexão. Se o aplicativo está usando APIs ANSI, SQL_ATTR_ANSI_APP será definido como SQL_AA_TRUE e se ele estiver usando o Unicode, ele será definido como um valor de SQL_AA_FALSE. Este atributo é usado para que o driver pode apresentar um comportamento diferente com base no tipo de aplicativo. O atributo não pode ser definido diretamente pelo aplicativo e não é suportado por **SQLGetConnectAttr**. Se um driver apresentar o mesmo comportamento para aplicativos ANSI e Unicode, ele deverá retornar SQL_ERROR para este atributo. Se o driver retornará SQL_SUCCESS, o Gerenciador de Driver separará ANSI e Unicode conexões quando o Pooling de Conexão é usado.
-

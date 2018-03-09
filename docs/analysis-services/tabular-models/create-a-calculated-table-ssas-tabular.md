@@ -1,30 +1,31 @@
 ---
-title: Criar uma tabela calculada (SSAS Tabular) | Microsoft Docs
+title: Criar uma tabela calculada | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-calculated-table-ssas-tabular"></a>Criar uma tabela calculada (SSAS tabular)
-  Um *tabela calculada* é um objeto computado baseado em uma expressão ou consulta DAX, derivado do todo ou de parte de outras tabelas no mesmo modelo.  
+# <a name="create-a-calculated-table"></a>Criar uma tabela calculada 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Um *tabela calculada* é um objeto computado baseado em uma expressão ou consulta DAX, derivado do todo ou de parte de outras tabelas no mesmo modelo.  
   
  Um problema de design comum que as tabelas calculadas podem resolver é ter uma interface com uma dimensão com função múltipla em um contexto específico para que você possa expô-la como uma estrutura de consulta em aplicativos cliente.  Você deve se lembrar que uma dimensão com função múltipla é simplesmente uma tabela com interface em vários contextos — um exemplo clássico é a tabela Data, incluída no manifesto como OrderDate, ShipDate ou DueDate, dependendo da relação de chave estrangeira. Ao criar uma tabela calculada para ShipDate explicitamente, você obtém uma tabela autônoma que é disponibilizada para consultas, tão completamente operável quanto qualquer outra tabela.  
   
@@ -45,7 +46,7 @@ Há uma CalculatedTableColumn para cada coluna retornada pela expressão, em que
   
 5.  Dê um nome para a tabela.  
   
-6.  Crie relações com outras tabelas no modelo. Consulte [Criar uma relação entre duas tabelas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) se você precisar de ajuda com esta etapa.  
+6.  Crie relações com outras tabelas no modelo. Consulte [criar uma relação entre duas tabelas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) se precisar de ajuda com essa etapa.  
   
 7.  Faça referência à tabela em cálculos ou expressões no seu modelo ou use **Analisar no Excel** para exploração de dados ad hoc.  
   
@@ -74,8 +75,8 @@ Há uma CalculatedTableColumn para cada coluna retornada pela expressão, em que
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Nível de compatibilidade](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Expressões de análise de dados &#40; DAX &#41; no Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [Noções básicas sobre DAX em modelos de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Entendendo DAX em modelos de tabela](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

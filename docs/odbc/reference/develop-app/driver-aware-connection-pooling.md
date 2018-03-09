@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 390d9801346f904e77647c1784d810672b45b6cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 337ce5bca53a3b9099cbe9cd91774b748930d7ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver
 Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciador de Driver no Windows 8. Pooling de conexão com reconhecimento de driver permite que os autores de driver personalizar o comportamento no seu driver ODBC de pooling de conexão.  
@@ -43,5 +43,5 @@ Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciad
 ## <a name="how-to-enable-driver-aware-connection-pooling"></a>Como habilitar o pool de Conexão com reconhecimento de Driver  
  Um aplicativo pode usar o reconhecimento de pool de conexão do driver, definindo o atributo SQL_ATTR_CONNECTION_POOLING para SQL_CP_DRIVER_AWARE com [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Se um driver não dá suporte a reconhecimento de pool de conexão, o pool de conexão do Gerenciador de Driver será usado (o mesmo como se tivesse sido especificado SQL_CP_ONE_PER_HENV em vez de SQL_CP_DRIVER_AWARE). Os aplicativos ODBC 2. x e 3. x podem habilitar esse recurso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

@@ -2,32 +2,32 @@
 title: "Modificando a dimensão de produto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 565f45602b28ea9f5de87ae2f27fc026c590e9e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lição 3-3-modificando a dimensão produto
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Nas tarefas deste tópico, você usará um cálculo nomeado para fornecer nomes mais descritivos às linhas de produto, definir uma hierarquia na dimensão Produto e especificar o nome do membro (Todos) para a hierarquia. Você também agrupará atributos nas pastas de exibição.  
   
 ## <a name="adding-a-named-calculation"></a>Adicionando um cálculo nomeado  
@@ -168,7 +168,7 @@ Se os dados subjacentes permitirem, você também deve definir relações de atr
   
 2.  No diagrama, clique com o botão direito do mouse no atributo **Nome do Modelo** e clique em **Nova Relação de Atributo**.  
   
-3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**.  
+3.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**.  
   
     Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo. Por exemplo, um modelo de produto pode ser movido para uma linha de produto diferente.  
   
@@ -192,8 +192,7 @@ Se os dados subjacentes permitirem, você também deve definir relações de atr
 [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definir cálculos nomeados em uma exibição da fonte de dados &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Criar hierarquias definidas pelo usuário](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurar o nível &#40;All&#41; para hierarquias de atributo](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
-

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,10 +185,10 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
   
 |Intenção do usuário|Replicar esquema de partição para uma tabela ou um índice|Replicar configurações de compactação|Comportamento do script|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
-|Para replicar o esquema de partição e habilitar a compactação no Assinante da partição.|Verdadeiro|Verdadeiro|Gera scripts para o esquema da partição e as configurações de compactação.|  
-|Para replicar o esquema da partição, mas não compactar os dados no Assinante.|Verdadeiro|Falso|Gera script para o esquema da partição, mas não para as configurações de compactação da partição.|  
+|Para replicar o esquema de partição e habilitar a compactação no Assinante da partição.|True|True|Gera scripts para o esquema da partição e as configurações de compactação.|  
+|Para replicar o esquema da partição, mas não compactar os dados no Assinante.|True|Falso|Gera script para o esquema da partição, mas não para as configurações de compactação da partição.|  
 |Para não replicar o esquema da partição e não compactar os dados no Assinante.|Falso|Falso|Não gera scripts para a partição nem para as configurações de compactação.|  
-|Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|Verdadeiro|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
+|Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|True|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Como a compactação afeta outros componentes do SQL Server 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
@@ -203,7 +203,7 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
 -   A compactação de dados é incompatível com colunas esparsas. Portanto, as tabelas que contêm colunas esparsas não podem ser compactadas, assim como as colunas esparsas não podem ser adicionadas a uma tabela compactada.  
 -   A habilitação da compactação pode fazer com que os planos de consulta sejam alterados, porque os dados são armazenados usando um número diferente de páginas e um número de linhas por página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementação da compactação de linha](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementação da compactação de página](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementação da compactação Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   

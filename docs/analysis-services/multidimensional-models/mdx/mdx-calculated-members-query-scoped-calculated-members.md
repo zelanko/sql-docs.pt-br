@@ -2,35 +2,33 @@
 title: Criando no escopo da consulta calculados membros (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8a621061e7b9b04dfea37443c631ae611ee031ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ba34cb6af554bb958c8754a9971f3ff4ba5b9a6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX calculadas membros - membros calculados no escopo da consulta
-  Se um membro calculado for necessário para uma única consulta de expressões multidimensionais (MDX), é possível defini-lo usando a palavra-chave WITH. O membro calculado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Se um membro calculado for necessário para uma única consulta de expressões multidimensionais (MDX), é possível defini-lo usando a palavra-chave WITH. O membro calculado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
   
  Como discutido neste tópico, a sintaxe da palavra-chave WITH é bem flexível, permitindo até que um membro calculado baseie-se em outro membro calculado.  
   
@@ -100,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Referência de função MDX &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instrução SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Criando no escopo da sessão calculados membros &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

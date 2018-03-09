@@ -1,27 +1,27 @@
 ---
-title: "Layout de página e renderização (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Layout da página e renderização (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8d85d4f4fcf4a62ff152268c01a9fe3686278653
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
 Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para relatórios paginados se tiver certeza de que seu relatório tem a aparência desejada, incluindo o layout da página, quebras de página e tamanho do papel. 
@@ -119,9 +119,8 @@ Um relatório também pode conter sub-relatórios.
  [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Fornece informações sobre como usar quebras de página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

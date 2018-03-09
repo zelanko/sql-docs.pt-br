@@ -2,32 +2,30 @@
 title: Cmdlet Remove-PowerPivotSystemServiceInstance | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91075034a552805dd9540a87597d5956c457ada5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc93af457830a9efe0c57707a37ec946597887fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet Remove-PowerPivotSystemServiceInstance
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Remove uma instância do Serviço de Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Remove uma instância do Serviço de Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do farm.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -49,7 +47,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  Especifica o GUID da instância do Serviço de Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você deseja remover. Há uma instância de serviço em cada servidor de aplicativo que tem uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
 |||  
@@ -60,7 +58,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |Aceitar entrada de pipeline?|true|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-deletelocal-switch"></a>-DeleteLocal \<alternar >  
+### <a name="-deletelocal-switch"></a>-DeleteLocal \<switch>  
  Exclui a instância do Serviço de Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instalada no computador local, permitindo a você remover a instância sem ter que especificar uma identidade de objeto.  
   
 |||  
@@ -82,7 +80,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -90,8 +88,8 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   

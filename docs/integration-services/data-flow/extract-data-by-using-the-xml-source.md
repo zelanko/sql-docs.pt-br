@@ -17,17 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6bad96e7d130fe0caaa935a5e16d7d6c380cbb83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrair dados por meio da origem XML
   Para adicionar e configurar uma origem XML, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -69,11 +68,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Origem XML](../../integration-services/data-flow/xml-source.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,35 +1,33 @@
 ---
-title: Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO | Microsoft Docs
+title: DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2dc1525abfdef6b54311f1a2eb470b8350a04cc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 76de6c69ebfa480c3ed401b1be1fb203bfe34bd0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO
-  Retorna informações básicas sobre o provedor de rastreamento, como seu nome e descrição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna informações básicas sobre o provedor de rastreamento, como seu nome e descrição.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

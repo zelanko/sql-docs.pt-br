@@ -1,7 +1,7 @@
 ---
 title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,20 +27,19 @@ helpviewer_keywords:
 - verifying syntax
 - SET PARSEONLY statement
 ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a117e81d9645edd9f24702ac01d8eeea3765726
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: eb009b23f9d4a751f6850218f4845c6c70c3bbd3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Examina a sintaxe de cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] e retorna quaisquer mensagens de erro sem compilar ou executar a instrução.  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET PARSEONLY for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] somente analisará a instrução. Quando SET PARSEONLY for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila e executa a instrução.  
   
  A configuração de SET PARSEONLY é definida no momento da análise e não no momento da execução.  
@@ -63,9 +62,8 @@ SET PARSEONLY { ON | OFF }
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [DEFINIR os DESLOCAMENTOS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   
-

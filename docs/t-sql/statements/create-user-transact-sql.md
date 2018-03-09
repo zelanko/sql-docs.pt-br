@@ -31,17 +31,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47004dfe9ec810fec68a63849755021690f98fdb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -464,6 +463,5 @@ Você talvez também queira [CONCEDER permissões de objeto](../../t-sql/stateme
  [Guia de Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
-
 
 

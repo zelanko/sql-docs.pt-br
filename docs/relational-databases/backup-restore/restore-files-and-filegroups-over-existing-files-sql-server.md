@@ -21,15 +21,15 @@ helpviewer_keywords:
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 072a1ce53f58de81e6cc212438525f340ba61bf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e40849025b140cdd4cb162ca066723c67a35c81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   RESTORE não é permitido em uma transação explícita ou implícita.  
   
--   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 -   Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
     |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
     |**Nome Lógico do Arquivo**|O nome lógico do arquivo.|  
-    |**Banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
+    |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora de início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Para restaurar arquivos e grupos de arquivos sobre arquivos existentes  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo seguinte restaura os arquivos e grupos de arquivos para o banco de dados `MyNwind` e substitui qualquer arquivo existente do mesmo nome. Também serão aplicados dois logs de transações para restaurar o banco de dados a hora atual.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  
@@ -172,7 +172,7 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   

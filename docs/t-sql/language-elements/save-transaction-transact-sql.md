@@ -1,5 +1,5 @@
 ---
-title: "SALVE a transação (Transact-SQL) | Microsoft Docs"
+title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SAVE_TSQL
 - SAVE_TRANSACTION_TSQL
 - SAVE TRANSACTION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rolling back transactions, SAVE TRANSACTION
 - SAVE TRANSACTION statement
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4acf3a47b6c023320caad72764dae20f3e16d460
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,12 +56,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Argumentos  
  *savepoint_name*  
- É o nome atribuído ao ponto de salvamento. Os nomes de ponto de salvamento devem estar de acordo com as regras para identificadores, mas são limitados a 32 caracteres. *transaction_name* é sempre maiusculas e minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
+ É o nome atribuído ao ponto de salvamento. Os nomes de ponto de salvamento devem estar de acordo com as regras para identificadores, mas são limitados a 32 caracteres. *savepoint_name* é sempre maiusculas e minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
   
  @*savepoint_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de ponto de salvamento válido. A variável deve ser declarada com uma **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados. Podem ser passados mais de 32 caracteres para a variável; porém, apenas os primeiros 32 caracteres são usados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um usuário pode definir um ponto de salvamento, ou marcador, em uma transação. O ponto de salvamento define um local para o qual a transação poderá retornar se parte da transação for cancelada condicionalmente. Se uma transação for revertida a um ponto de salvamento, ela deverá prosseguir para a conclusão com mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], se necessário, e uma instrução COMMIT TRANSACTION, ou deverá ser totalmente cancelada pela reversão da transação ao seu início. Para cancelar uma transação inteira, use o formulário ROLLBACK TRANSACTION *transaction_name*. Todas as instruções ou procedimentos da transação são desfeitos.  
   
  Nomes de pontos de salvamento duplicados são permitidos em uma transação; porém, uma instrução ROLLBACK TRANSACTION que especifica o nome do ponto de salvamento só reverterá a transação para a SAVE TRANSACTION mais recente, usando esse nome.  
@@ -168,7 +170,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [TRABALHO de confirmação &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
@@ -177,8 +179,8 @@ GO
  [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)  
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)  
   
   

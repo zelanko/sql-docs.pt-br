@@ -2,29 +2,32 @@
 title: Objetos criados no Publicador Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 308ed6419bdda59b9b97ae0093634646d5972a7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 18040967f55457a2c5d1f43dd9e84a56720daf74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
-  A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Editor Oracle para habilitar controle e encaminhamento de alterações (o[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Editor Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Publicador Oracle para habilitar controle e encaminhamento de alterações (o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Publicador Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
   
-|Nome do Objeto|Tipo de objeto|Descrição|  
+|Object Name|Tipo de objeto|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|Tabela de controle de alterações usada para armazenar informações à medida que são feitas alterações à tabela publicada. É criada uma tabela de controle de alterações para cada tabela publicada.|  
 |HREPL_Changes|Table|Tabela usada internamente pelo trabalho Xactset para determinar o número de alterações que aguardam ser atribuídas a um conjunto de transações. Para obter mais informações sobre esse trabalho, consulte [Ajuste de desempenho para Publicadores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
@@ -50,9 +53,9 @@ ms.lasthandoff: 11/09/2017
 |HREPL_Article_I_J|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela publicada.|  
 |HREPL_Log_I_J_K|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela de controle de alterações.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossário de termos para publicações Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Visão geral da publicação do Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

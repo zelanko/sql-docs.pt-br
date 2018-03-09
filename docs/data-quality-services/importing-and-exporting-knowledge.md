@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ca99cdb38d8fced0eae2b655f1d1b2df7b9b03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0443061d55f18dca07cf6f7c193995bda271419
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importando e exportando conhecimento
   Você pode criar bases de dados de conhecimento e domínios diretamente no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ou exportar/importar o conhecimento da/para a base de dados de conhecimento. No aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , você pode usar um arquivo de dados nas operações de importação e exportação ou um arquivo do Excel nas operações de importação. O arquivo de dados usado é um arquivo criptografado criado através do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) com uma extensão .dqs. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Essas operações lhe dão mais flexibilidade na compilação e no compartilhamento do conhecimento usado para executar a limpeza e a correspondência de dados.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |Importar domínios de um arquivo do Excel para uma base de dados de conhecimento|[Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importar o conhecimento coletado durante a limpeza para uma base de dados de conhecimento|[Importar valores de projeto de limpeza para um domínio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

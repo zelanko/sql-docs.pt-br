@@ -5,26 +5,27 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: "15"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 554ba7e734e15ca6a0b2babcfcf95796762ad7c4
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
 
@@ -80,7 +81,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Configurações do sistema  
- Há uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afeta se as transações são ou não registradas quando os registros são preparados. É possível ajustar essa configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ Há uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afeta se as transações são ou não registradas quando os registros são preparados. É possível ajustar essa configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  Ao importar dados nesta versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você poderá especificar se deseja ou não registrar em log as transações ao iniciar o procedimento armazenado. Para obter mais informações, consulte [Preparando um procedimento armazenado &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -89,7 +90,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Mais de um usuário pode atualizar os mesmos valores de entidade sem erro apesar das transações habilitadas. Normalmente, a última edição do valor em determinado período terá precedência. O conflito de edição duplicada pode ser observado manualmente no histórico de transação e pode ser revertido manualmente pelo administrador. O histórico de transações mostrará as transações individuais para o **Valor anterior** e o **Novo valor** do atributo em questão de cada sessão, mas não resolverá o conflito automaticamente quando vários **Novos Valores** existirem para o mesmo valor antigo.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

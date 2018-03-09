@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba2f1cd25465967d59511670ebbbea10932cfa86
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b30ab2fe38fce6bb53b171d36a1009dea4b44e9f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>Guia para o Driver SQL JDBC de programação
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 * [Usando parâmetros com valor de tabela](../../connect/jdbc/using-table-valued-parameters.md)
 * [Recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md)
 * [Referência da API do Driver JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
-

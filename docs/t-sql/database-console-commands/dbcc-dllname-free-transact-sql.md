@@ -3,8 +3,11 @@ title: Nomedadll DBCC (FREE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - freeing DLLs
 - unloading DLLs
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e6d70bdab3515c883ea6f541ece6857f8ecda914
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0ad6b900d45ef1c87c0aca0d961685c68a72a33d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Descarrega especificado procedimento armazenado estendido DLL da memória.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Descarrega especificado procedimento armazenado estendido DLL da memória.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,13 +51,13 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<*nomedadll*>  
+ \<*dllname*>  
  É o nome do DLL para libertar da memória.  
   
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 Quando um procedimento armazenado estendido é executado, o DLL permanece carregado pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até que o servidor seja desativado. Esta instrução permite a um DLL ser descarregado da memória sem desativar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para exibir os arquivos DLL carregados no momento pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -78,10 +80,9 @@ DBCC xp_sample (FREE);
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Características de execução de procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-[sp_addextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
-[sp_dropextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
-[sp_helpextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
-[Descarregar um DLL de procedimento armazenado](../../relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md)
+[sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
+[sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
+[sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
+[Descarregamento de uma DLL de procedimento armazenado estendido](../../relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md)
   
   
-

@@ -2,27 +2,32 @@
 title: Fazer upgrade do Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: d18fdc2c65408898ed5faacc255e74b7a6261d57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
-Este tópico fornece informações sobre como fazer upgrade da instalação existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS (Data Quality Services). Como parte do upgrade do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, você também deverá fazer upgrade do esquema de bancos de dados do DQS.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Este artigo fornece informações sobre como fazer upgrade da instalação existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS (Data Quality Services). Como parte do upgrade do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, você também deverá fazer upgrade do esquema de bancos de dados do DQS.  
   
 > [!IMPORTANT]  
 >  -   Você deve fazer backup de seus bancos de dados do DQS antes de atualizar o DQS para impedir qualquer perda de dados acidental durante a atualização do esquema. Para obter informações sobre como fazer backup de bancos de dados DQS, veja [Fazendo backup e restaurando banco de dados do DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -92,12 +97,12 @@ Este tópico fornece informações sobre como fazer upgrade da instalação exis
   
 3.  A saída exibirá uma entrada para cada atualização junto com a data da atualização. O VERSION_ID e ASSEMBLY_VERSION máximo na última data é a versão atual. Um valor de 2 na coluna STATUS indica êxito. Se um erro ocorreu, o erro será listado na coluna ERROR. Uma saída de exemplo:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|erro|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1.000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Remover objetos do Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

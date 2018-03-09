@@ -2,29 +2,30 @@
 title: Colunas de dados de eventos de bloqueio | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a48fc9d15009184436ec835915c4f5cec4f9fe7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71b4a1d084d56cdb260ac6ed4dd9688a7e388df3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lock-events-data-columns"></a>Colunas de dados de eventos Lock
-  A categoria de evento Lock tem a seguinte classe de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria de evento Lock tem a seguinte classe de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  

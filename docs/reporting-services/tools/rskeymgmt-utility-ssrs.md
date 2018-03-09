@@ -2,12 +2,13 @@
 title: "Utilitário rskeymgmt (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "56"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -136,7 +136,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Excluindo chaves de criptografia e conteúdo criptografado  
- Este exemplo mostra como excluir todas as chaves de criptografia armazenadas em um servidor de relatório. Se a sua instalação for uma implantação em expansão do servidor de relatório, as chaves de criptografia de todas as instâncias do servidor de relatório incluídas na implantação serão excluídas. A exclusão de uma chave de criptografia exclui também qualquer valor criptografado existente no banco de dados do servidor de relatório. Para obter mais informações sobre conteúdo criptografado, consulte [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ Este exemplo mostra como excluir todas as chaves de criptografia armazenadas em um servidor de relatório. Se a sua instalação for uma implantação em expansão do servidor de relatório, as chaves de criptografia de todas as instâncias do servidor de relatório incluídas na implantação serão excluídas. A exclusão de uma chave de criptografia exclui também qualquer valor criptografado existente no banco de dados do servidor de relatório. Para obter mais informações sobre conteúdo criptografado, consulte [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -155,7 +155,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
  Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos **-u** e **-v** se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos **-u** e **-v** só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
   
- O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, \< **initializedinstance**> é o nome de uma instância que já esteja inicializado para usar o banco de dados de servidor de relatório e \< **newinstance**> é o nome da instância que você deseja adicionar à implantação:  
+ O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, \<**initializedinstance**> é o nome de uma instância já iniciada para usar o banco de dados do servidor de relatório e \<**newinstance**> é o nome da instância que você deseja adicionar à implantação:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,20 +171,19 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Local do arquivo  
- Rskeymgmt.exe está localizado em  **\<* unidade*>: \Program Files\Microsoft SQL Server\110\Tools\Binn * * ou em  **\<* unidade*>: \Program arquivos (x86) \Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
+ Rskeymgmt.exe está localizado em **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** ou em **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um servidor de relatório criptografa credenciais armazenadas e informações de conexão. Uma chave pública e uma chave simétrica são usadas para criptografar dados. Um banco de dados do servidor de relatório deve ter chaves válidas para que o servidor de relatório seja executado. Você pode usar **rskeymgmt** para fazer backup, excluir ou restaurar as chaves. Se as chaves não puderem ser restauradas, essa ferramenta fornecerá um modo de excluir conteúdo criptografado que não pode mais ser usado.  
   
  O utilitário **rskeymgmt** é usado para gerenciar o conjunto de chaves definido durante a instalação ou durante a inicialização. Ele se conecta ao serviço Servidor de Relatório do Windows através de um ponto de extremidade RPC (Chamada de Procedimento Remoto). O serviço Servidor de Relatório do Windows deve estar em execução para que esse utilitário funcione.  
   
- Para obter mais informações sobre as chaves de criptografia, veja [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para obter mais informações sobre as chaves de criptografia, consulte [Configurar e gerenciar chaves de criptografia &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantação escalável: modo Nativo do Reporting Services &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilitários de Prompt de comando do servidor de relatório &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

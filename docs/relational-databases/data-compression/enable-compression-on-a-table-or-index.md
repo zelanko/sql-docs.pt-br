@@ -2,9 +2,11 @@
 title: "Habilitar a compactação em uma tabela ou índice | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,17 +24,20 @@ helpviewer_keywords:
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0cc152b0b21bcb2d3be79c86e3bf90f84b780578
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: affe8cf85b5a4d3d9b692273bdf569a80287f305
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   Este tópico descreve como habilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -200,7 +205,7 @@ ms.lasthandoff: 11/09/2017
   
      Quando terminar, clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enable-compression-on-a-table"></a>Para permitir a compactação em uma tabela  
   
@@ -248,7 +253,7 @@ ms.lasthandoff: 11/09/2017
   
  Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compactação de dados](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

@@ -3,8 +3,9 @@ title: "Método UpdateBatch | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
 - Recordset15::raw_UpdateBatch
-helpviewer_keywords: UpdateBatch method [ADO]
+helpviewer_keywords:
+- UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1522f6165e08a2a45cbd35e0b66d996ad93c1c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Grava todas as atualizações em lotes pendentes no disco.  
@@ -45,7 +47,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Opcional. Um **booliano** valor que especifica se as alterações locais, conforme indicado pelo [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade devem ser confirmadas. Se esse valor é definido como **True**, o **Status** propriedade de cada registro permanecerá inalterada depois que a atualização seja concluída.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **UpdateBatch** método ao modificar um **registros** objeto no modo de atualização em lotes para transmitir todas as alterações feitas em um **Recordset** objeto no banco de dados subjacente.  
   
  Se o **registros** objeto oferece suporte a atualização em lotes, você pode armazenar em cache várias alterações para um ou mais registros localmente até que você chame o **UpdateBatch** método. Se você estiver editando o registro atual ou adicionar um novo registro, quando você chama o **UpdateBatch** método ADO automaticamente chamará o [atualização](../../../ado/reference/ado-api/update-method.md) método para salvar as alterações pendentes para o registro atual antes de transmitir as alterações em lotes para o provedor. Você deve usar o lote com um conjunto de chaves ou um cursor estático somente a atualização.  

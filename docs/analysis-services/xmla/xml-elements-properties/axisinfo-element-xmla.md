@@ -2,45 +2,38 @@
 title: Elemento AxisInfo (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AxisInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AxisInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#AxisInfo
 - microsoft.xml.analysis.axisinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#AxisInfo
-helpviewer_keywords:
-- AxisInfo element
+helpviewer_keywords: AxisInfo element
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad12131fe961f279bf0d670d91ab03900a8a6ad1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa8b5554573ebb3f34212fd7ba48b6583fb926af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axisinfo-element-xmla"></a>Elemento AxisInfo (XMLA)
-  Representa os metadados de um único eixo contido pelo pai [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Representa os metadados de um único eixo contido pelo pai [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,10 +50,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-n: elemento obrigatório que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -72,15 +65,14 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Nome|Atributo **String** obrigatório. O nome do eixo.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em um **raiz** elemento que usa o **MDDataSet** objeto, um **AxisInfo** elemento contém uma coleção de **HierarchyInfo** elementos que , combinado com o valor da **nome** atributo, representa a definição de um único eixo retornada no conjunto de dados multidimensional.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

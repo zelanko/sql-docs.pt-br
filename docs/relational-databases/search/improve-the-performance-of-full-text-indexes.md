@@ -2,10 +2,14 @@
 title: "Melhorar o desempenho de índices de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +20,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Este tópico descreve algumas das causas comuns de baixo desempenho para consultas e índices de texto completo. Ele também fornece algumas sugestões para atenuar esses problemas e melhorar o desempenho.
   
 ##  <a name="causes"></a> Common causes of performance issues
@@ -36,7 +41,7 @@ O desempenho da indexação de texto completo e das consultas de texto completo 
 
 A principal causa da diminuição do desempenho da indexação de texto completo são os limites em termos de recursos de hardware.  
   
--   **CPU**. Se o uso da CPU pelo processo de host do daemon de filtro (fdhost.exe) ou o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está próximo de 100%, a CPU é o afunilamento.  
+-   **CPU**. Se o uso da CPU pelo processo de host do daemon de filtro (fdhost.exe) ou o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está próximo de 100%, a CPU é o gargalo.  
   
 -   **Memória**. Se houver uma escassez de memória física, a memória poderá ser o gargalo.  
 
@@ -138,7 +143,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
 |x64|*F* = *Número de intervalos de rastreamento* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **Observações sobre as fórmulas**
-1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como *T***–** sigma**(***F***)**.  
+1.  Se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2* e assim por diante. Em seguida, calcule *M* como *T***–** sigma**(***F*i**)**.  
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
@@ -148,7 +153,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `F = 8*10*8=640`  
   
- O próximo cálculo obtém o valor ideal para **memória máxima do servidor**—*M*. *O*total de memória física disponível no sistema em MB –*T*– é `8192`.  
+ O próximo cálculo obtém o valor ideal para **memória máxima do servidor**—*M*. A memória física total disponível no sistema em MB —*T*—é `8192`.  
   
  `M = 8192-640-500=7052`  
   
@@ -180,7 +185,7 @@ O desempenho das populações completas não é ideal quando o consumo de CPU m�
   
      A tabela a seguir descreve os tipos de espera de interesse aqui mencionados.  
   
-    |Tipo de espera|Descrição|Solução possível|  
+    |Tipo de espera|Description|Solução possível|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX ou _UP)|Isso pode indicar um gargalo de E/S, caso em que normalmente você também observa um comprimento médio da fila de disco alto.|Mover o índice de texto completo para outro grupo de arquivos em outro disco pode ajudar a reduzir o gargalo de E/S.|  
     |PAGELATCH_EX (ou _UP)|Isso pode indicar muita contenção entre os threads que estão tentando para gravar no mesmo arquivo de banco de dados.|Adicionar arquivos ao grupo de arquivos em que reside o índice de texto completo pode ajudar a aliviar essa contenção.|  
@@ -210,7 +215,7 @@ O mecanismo de texto completo usa dois tipos de filtros ao popular um índice de
   
 Para solucionar esse problema, marque o filtro para o documento de contêiner (neste caso, o Word) como filtro de thread único. Para marcar um filtro como filtro de thread único, defina o valor de Registro **ThreadingModel** para o filtro como **Apartment Threaded**. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)   

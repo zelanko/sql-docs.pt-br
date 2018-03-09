@@ -2,25 +2,31 @@
 title: Remover objetos do Data Quality Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3521e36d5001823c0700e2b13a17d20898f2049
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f766a6eaf4039117104fac8e3ad10124697cbb00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="remove-data-quality-server-objects"></a>Remover objetos do Data Quality Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou a total remoção de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] não exclui alguns objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , incluindo bancos de dados DQS. Isso implica que você não perca seus dados DQS se desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a instalação do SQL Server. Exclua manualmente esses objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] quando o processo de desinstalação estiver concluído.  
   
 > [!NOTE]  
@@ -45,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Desinstalar a instância do SQL Server que contém o Data Quality Server  
  Se você for desinstalar completamente a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], exclua manualmente os bancos de dados DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA do seu computador depois que o processo de desinstalação for concluído. Para uma instalação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os arquivos dos bancos de dados DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA estão disponíveis em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Desinstalar o SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
   

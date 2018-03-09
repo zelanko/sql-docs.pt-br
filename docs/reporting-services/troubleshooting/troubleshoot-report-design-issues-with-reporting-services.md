@@ -1,27 +1,27 @@
 ---
-title: "Solucionar problemas de Design de relatório com o Reporting Services | Microsoft Docs"
+title: "Solução de problemas de Design de Relatório com o Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "5"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1a4660fb6aaf21c418ecf19d9ef5953015eaa36e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solucionar problemas de Design de Relatório com o Reporting Services
 Os problemas de design de relatórios podem ocorrer quando você cria o layout do relatório na exibição Design em um aplicativo de criação de relatório. Use este tópico para ajudar a solucionar esses problemas.   
@@ -60,7 +60,7 @@ Em geral, um relatório aumenta para conter seus dados e descarta outros itens d
   
 Para agrupar várias regiões de dados ou itens de relatório, coloque-os no mesmo contêiner pai. Por exemplo, coloque um gráfico e uma tabela em um contêiner de retângulo e alinhe as margens superiores para exibi-los lado a lado. Para obter mais informações, consulte [Rendering Behaviors in Report Builder](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)(Comportamentos de renderização no Construtor de Relatórios).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Solucionar problemas de recuperação de dados com relatórios do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Solucionar problemas de assinaturas e entrega do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
@@ -68,5 +68,4 @@ Para agrupar várias regiões de dados ou itens de relatório, coloque-os no mes
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

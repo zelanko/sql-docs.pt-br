@@ -3,9 +3,13 @@ title: Usar objetos de desempenho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,18 +23,19 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58d3b31d1ef01c500446187cd3ad1aa71d3dca22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f99696f644d5def145d4e4ff1c0b040ec29d6673
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-performance-objects"></a>Usar objetos de desempenho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent contém objetos de desempenho e contadores para monitorar o desempenho do serviço. Esses objetos de desempenho permitem-lhe usar o Monitor de Desempenho — uma ferramenta do Windows — para identificar o que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent está fazendo em segundo plano. Por exemplo, é possível identificar quantos trabalhos ativos o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent executa atualmente, para determinar quais deles estão bloqueados.  
   
 Existem objetos de desempenho e contadores do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instalada em um computador. Os objetos de desempenho são nomeados de acordo com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que representam.  
@@ -39,8 +44,8 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
   
 |Tipo de instância|Nome do objeto|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***objeto*:*contador*|  
-|Nomeado|**SQLAgent$**<br /> **&#42;nome_da_instância&#42; :***objeto*:*contador*|  
+|Padrão|**SQLAgent:***object*:*counter*|  
+|Nomeado|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] contém os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a seguir.  
   
@@ -51,7 +56,7 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
 |[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informações sobre o número de alertas e notificações|  
 |[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Informações gerais do desempenho|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar e ajustar o desempenho](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Como iniciar o Monitor do Sistema (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

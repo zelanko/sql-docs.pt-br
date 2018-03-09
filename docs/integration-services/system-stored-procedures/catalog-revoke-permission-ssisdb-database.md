@@ -1,5 +1,5 @@
 ---
-title: Catalog. revoke_permission (banco de dados SSISDB) | Microsoft Docs
+title: catalog.revoke_permission (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e a operação (`4`). O *object_type* é **smallint***.*  
+ [ @object_type = ] *object_type*  
+ O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint***.*  
   
- [ @object_id =] *object_id*  
- O identitifier exclusivo (ID) do objeto protegível. O *object_id* é **bigint**.  
+ [ @object_id = ] *object_id*  
+ A ID (identificador) exclusiva do objeto protegível. O *object_id* é **bigint**.  
   
- [ @principal_id =] *principal_id*  
+ [ @principal_id = ] *principal_id*  
  O ID da entidade de segurança que terá a permissão revogada. O *principal_id* é **int**.  
   
- [ @permission_type =] *permission_type*  
+ [ @permission_type = ] *permission_type*  
  O tipo de permissão. O *permission_type* é **smallint**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -62,29 +61,29 @@ catalog.revoke_permission [ @object_type = ] object_type
   
  2 (object_id não existe)  
   
- 3 (entidade de segurança não existe)  
+ 3 (a entidade de segurança não existe)  
   
  4 (permissão não é válida)  
   
  5 (outro erro)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
-## <a name="remarks"></a>Comentários  
- Nenhuma  
+## <a name="remarks"></a>Remarks  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões ASSIGN_PERMISSIONS no objeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
-## <a name="remarks"></a>Comentários  
- Se permission_type for especificado, o procedimento armazenado remove a permissão atribuída explicitamente à entidade de segurança para o objeto. Mesmo que não existam essas instâncias, o procedimento retornará um valor de código de êxito (`0`). Se permission_type for omitido, o procedimento armazenado remove todas as permissões da entidade de segurança para o objeto.  
+## <a name="remarks"></a>Remarks  
+ Se permission_type for especificado, o procedimento armazenado removerá a permissão atribuída explicitamente à entidade para o objeto. Mesmo que não existam essas instâncias, o procedimento retornará um valor de código de êxito (`0`). Se permission_type for omitido, o procedimento armazenado removerá todas as permissões da entidade para o objeto.  
   
 > [!NOTE]  
 >  A entidade de segurança ainda poderá ter a permissão especificada no objeto se a entidade de segurança for membro de uma função que tem a permissão especificada.  
@@ -104,4 +103,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|Permite que a entidade de segurança gerencie permissões em todos os objetos na pasta.|Pasta|  
   
   
-

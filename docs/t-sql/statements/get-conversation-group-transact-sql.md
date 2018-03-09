@@ -1,5 +1,5 @@
 ---
-title: "OBTER grupo de conversação (Transact-SQL) | Microsoft Docs"
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -27,17 +27,16 @@ helpviewer_keywords:
 - GET CONVERSATION GROUP statement
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5cf1bd19e9ccc290c2c822ab59f00be75d447ba1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 04035a9ccbe406b9fa50b5003ab109c3f1ff997d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,13 +77,13 @@ ms.lasthandoff: 09/01/2017
  *schema_name*  
  É o nome do esquema proprietário da fila na qual o grupo de conversa deve ser obtido. Quando nenhum *schema_name* for fornecido, o padrão é o esquema padrão para o usuário atual.  
   
- *nome_da_fila*  
+ *queue_name*  
  É o nome da fila na qual o grupo de conversa deve ser obtido.  
   
  Tempo limite *tempo limite*  
  Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou *tempo limite* é -1, o tempo de espera é ilimitado. Se o tempo limite expirar, GET CONVERSATION GROUP definirá a  *@conversation_group_id*  variáveis como NULL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se a instrução GET CONVERSATION GROUP não é a primeira instrução em um lote ou procedimento armazenado, a instrução anterior deverá ser encerrada com um ponto e vírgula (**;**), o [!INCLUDE[tsql](../../includes/tsql-md.md)] terminador de instrução.  
@@ -145,8 +144,7 @@ FROM AdventureWorks.dbo.ExpenseQueue ;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Mover para a CONVERSA &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   
-

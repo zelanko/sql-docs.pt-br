@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExecDirect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExecDirect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExecDirect
-helpviewer_keywords:
-- SQLExecDirect function [ODBC]
+f1_keywords: SQLExecDirect
+helpviewer_keywords: SQLExecDirect function [ODBC]
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9e2db598d233bb36eadd8161dc63a6be9a8ac4be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fdf6183eda2b66263a8ff27664d046640b94ea95
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlexecdirect-function"></a>Função SQLExecDirect
 **Conformidade**  
@@ -169,7 +163,6 @@ SQLRETURN SQLExecDirect(
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

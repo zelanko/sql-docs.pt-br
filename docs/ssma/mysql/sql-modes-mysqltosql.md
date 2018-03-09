@@ -1,29 +1,30 @@
 ---
 title: Modos SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3f9271008c9633a5266d2171e7724d259ebae37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 175e135f99f8ed96754ff255cbad7f32cc202479
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos SQL (MySQLToSQL)
 O SSMA para MySQL pode operar em diferentes modos SQL e pode aplicar esses modos de forma diferente para diferentes clientes.  
@@ -85,4 +86,3 @@ Modos de SQL efetivo pode ser definidos em vários níveis da seguinte maneira:
   
     3.  O modo efetivo do SQL que é definido explicitamente não é refletido como modo herdado do SQL e, por fim, é aplicado ao objeto.  
   
-

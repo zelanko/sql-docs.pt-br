@@ -1,5 +1,5 @@
 ---
-title: Catalog. object_versions (banco de dados SSISDB) | Microsoft Docs
+title: catalog.object_versions (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ea7c5ae054a002b9bb4f150e60f323ae03d702a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a8a790874900f5fc69e4f8e50d4f84d835d63c1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.lasthandoff: 09/26/2017
 |object_id|**bigint**|A ID exclusiva do objeto.|  
 |object_type|**smallint**|O tipo do objeto. Um valor `20` será exibido para projetos.|  
 |object_name|**sysname(nvarchar(128))**|O nome do objeto.|  
-|descrição|**nvarchar (1024)**|A descrição do projeto.|  
-|created_by|**nvarchar (128)**|O nome do usuário que adicionou o objeto ao catálogo.|  
+|descrição|**nvarchar(1024)**|A descrição do projeto.|  
+|created_by|**nvarchar(128)**|O nome do usuário que adicionou o objeto ao catálogo.|  
 |created_time|**datetimeoffset**|A data e a hora nas quais o objeto foi adicionado ao catálogo.|  
-|restored_by|**nvarchar (128)**|O nome do usuário que restaurou o objeto.|  
+|restored_by|**nvarchar(128)**|O nome do usuário que restaurou o objeto.|  
 |last_restored_time|**datetimeoffset**|A data e a hora na qual o objeto foi restaurado pela última vez.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada versão de um objeto no catálogo.  
   
 ## <a name="permissions"></a>Permissões  
@@ -50,12 +49,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ no objeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor.  
+-   Associação na função de servidor **sysadmin**.  
   
 > [!NOTE]  
 >  A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

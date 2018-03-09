@@ -15,13 +15,13 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e122b8b8aba89b971407c43c35715a387a687e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurar um grupo de disponibilidade distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Para criar um grupo de disponibilidade distribuído, você deve criar um grupo d
 
 Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Definir os ouvintes do ponto de extremidade para escutar em todos os endereços IP
 
@@ -209,12 +209,18 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a> Ingressar no banco de dados no secundário do segundo grupo de disponibilidade
+Depois que o banco de dados no secundário do segundo grupo de disponibilidade tiver entrado em um estado de repouso, você terá que ingressar manualmente no grupo de disponibilidade.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Fazer failover em um grupo de disponibilidade secundário  
 No momento, apenas o failover manual é permitido. A seguinte instrução Transact-SQL faz failover de um grupo de disponibilidade distribuído denominado `distributedag`:  
 
 
-1. Defina o modo de disponibilidade como confirmação síncrona para o grupo de disponibilidade secundário. 
+1. Defina o modo de disponibilidade como confirmação síncrona para ambos os grupos de disponibilidade. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -223,7 +229,7 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

@@ -2,15 +2,13 @@
 title: "Referência técnica do algoritmo de associação da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
-  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
   
  Tanto o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] como o Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] podem ser usados para analisar associações, mas as regras encontradas podem variar conforme o algoritmo. Em um modelo de árvores de decisão, as divisões que levam as regras específicas baseiam-se nas informações obtidas, enquanto no modelo de associação elas se baseiam totalmente na confiança. Assim, em um modelo de associação, um regra forte, ou aquela com mais confiança, não seria necessariamente interessante porque não fornece informações novas.  
   
@@ -170,8 +169,8 @@ ms.lasthandoff: 11/17/2017
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo Associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

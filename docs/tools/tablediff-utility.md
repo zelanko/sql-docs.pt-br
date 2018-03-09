@@ -2,9 +2,12 @@
 title: "Utilitário tablediff | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: tabledif
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d424e7c3b7e59d0bd80f4c02a020ffea7f62024
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
-  O utilitário **tablediff** é usado para comparar dados em duas tabelas para não convergência e é particularmente útil para solução de problemas de não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]O **tablediff** utilitário é usado para comparar os dados em duas tabelas para não convergência e é particularmente útil para solução de problemas não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
   
 -   Uma comparação linha por linha entre uma tabela de origem em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como um Publicador de replicação e a tabela de destino em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como Assinantes de replicação.  
   
@@ -167,13 +170,13 @@ tablediff
   
 ## <a name="return-value"></a>Valor de retorno  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Success|  
 |**1**|Erro crítico|  
 |**2**|Diferenças de tabela|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O utilitário **tablediff** não pode ser usado com servidores não[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Não há suporte para tabelas com colunas de tipo de dados **sql_variant** .  
@@ -184,7 +187,7 @@ tablediff
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**, **int**ou **bigint**|  
 |**smallint**|**int** ou **bigint**|  
-|**int**|**bigint**|  
+|**Int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  

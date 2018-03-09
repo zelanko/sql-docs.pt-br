@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Definindo opções de Pooling de Conexão de ODBC
 O pool de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar o **Pooling de Conexão** guia do **administrador de fonte de dados ODBC** caixa de diálogo para habilitar e desabilitar o monitoramento do desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
@@ -51,4 +49,3 @@ O pool de Conexão permite que um aplicativo para usar uma conexão de um pool d
 |Pools criados|O número de pools de ativos, incluindo pools ativos e removidos. Esse contador foi adicionado no Windows 8, drivers de gerenciam conexões no pool de conexão. Para obter mais informações, consulte [Pooling de Conexão com reconhecimento de Driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Você deve especificar seus próprios parâmetros de monitoramento. Exemplos de monitoramento de desempenho foram incluídos com esta versão do ODBC.
-

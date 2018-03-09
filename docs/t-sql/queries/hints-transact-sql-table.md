@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, consulte Comentários.  
   
- ÍNDICE **(***index_value* [**,**... *n* ] ) | ÍNDICE = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
  Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
@@ -383,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Especifica que bloqueios exclusivos serão usados e mantidos até que a transação seja concluída. Se especificados com ROWLOCK, PAGLOCK ou TABLOCK, os bloqueios exclusivos serão aplicados ao nível adequado de granularidade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As dicas de tabela serão ignoradas se a tabela não for acessada pelo plano de consulta. Isso pode ser provocado porque o otimizador opta por não acessar a tabela ou porque uma exibição indexada é acessada. No último caso, o acesso a uma exibição indexada pode ser evitado pela dica de consulta OPTION (EXPAND VIEWS).  
   
  Todas as dicas de bloqueio são propagadas para todas as tabelas e exibições que são acessadas pelo plano de consulta, incluindo tabelas e exibições referenciadas em uma exibição. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa os testes de consistência de bloqueio correspondentes.  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Usando a dica TABLOCK para especificar um método de bloqueio  
  O seguinte exemplo especifica que um bloqueio compartilhado será usado na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e mantido até o término da instrução UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  O exemplo a seguir usa a dica FORCESEEK com um índice para forçar o otimizador de consulta a executar uma operação de busca de índice no índice e na coluna de índice especificados.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Usando a dica FORCESCAN para especificar uma operação de verificação de índice  
  O exemplo a seguir usa a dica FORCESCAN para forçar o otimizador de consultas a executar uma operação de verificação na tabela `Sales.SalesOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -501,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Consulte também  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

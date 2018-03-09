@@ -2,10 +2,14 @@
 title: Gerar um esquema XSD embutido | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44746f3bdfb42e58addf3841e3cfb826aeec31c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2b651f16b3bf5c43755aafa1c6b67cbef06fc1cd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
-  Em uma cláusula FOR XML, é possível solicitar que a consulta retorne um esquema embutido junto com os resultados da consulta. Para obter um esquema XDR, use a palavra-chave XMLDATA na cláusula FOR XML. Para obter um esquema XSD, use a palavra-chave XMLSCHEMA.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Em uma cláusula FOR XML, é possível solicitar que a consulta retorne um esquema embutido junto com os resultados da consulta. Para obter um esquema XDR, use a palavra-chave XMLDATA na cláusula FOR XML. Para obter um esquema XSD, use a palavra-chave XMLSCHEMA.  
   
  Este tópico descreve a palavra-chave XMLSCHEMA e explica a estrutura do esquema XSD embutido resultante. As limitações a seguir estão presentes quando você está solicitando esquemas embutidos:  
   

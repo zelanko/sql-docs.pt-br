@@ -2,16 +2,13 @@
 title: "Ações (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
-  As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
   
 -   Ações de detalhamento, que retornam o conjunto de linhas que representa os dados subjacentes das células selecionadas do cubo onde a ação ocorre.  
   
@@ -85,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Ações em modelos multidimensionais](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   
-

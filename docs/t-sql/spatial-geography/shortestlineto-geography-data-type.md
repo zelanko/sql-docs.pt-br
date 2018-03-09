@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ShortestLineTo_TSQL
 - ShortestLineTo
-dev_langs: TSQL
-helpviewer_keywords: ShortestLineTo method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0558b68946a77baf2000c451c15f9248a7acc0c4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0b920113686547966cb67e31fc3f726ffbefba67
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O método retorna um **LineString** instância com pontos de extremidade nas bordas dos dois sem interseção **geografia** instâncias que estão sendo comparadas. O comprimento do **LineString** é igual a distância mais curta entre as duas **geografia** instâncias. Vazio **LineString** instância é retornada quando as duas **geografia** instâncias se cruzam entre si.  
   
 ## <a name="examples"></a>Exemplos  

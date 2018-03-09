@@ -2,10 +2,14 @@
 title: "Agente de Distribuição de Replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
-  O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
   
 > [!NOTE]  
 >  Os parâmetros podem ser especificados em qualquer ordem. Quando não são especificados parâmetros opcionais, são usados valores de configurações de registro predefinidos no computador local.  
@@ -94,13 +99,13 @@ distrib [-?]
  Imprime todos os parâmetros disponíveis.  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** *publisher_database*  
  É o nome do banco de dados Publicador.  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-SubscriberDB** *subscriber_database*  
  É o nome do banco de dados do Assinante.  
@@ -138,7 +143,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL usada pelo Agente de Distribuição ao fazer conexões.  
   
-|Valor EncryptionLevel|Descrição|  
+|Valor EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -164,13 +169,13 @@ distrib [-?]
  **-FtpPort** *ftp_port*  
  É o número da porta do serviço FTP para o Distribuidor. Quando não especificado, o número da porta padrão para serviço de FTP (21) é usado.  
   
- **-FtpUserName**  *ftp_user_name*  
+ **-FtpUserName** *ftp_user_name*  
  É o nome de usuário usado para se conectar ao serviço FTP. Quando não especificado, **anonymous** é usado.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Especifica a quantidade de histórico registrada durante uma operação de distribuição. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Descrição|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Mensagens de Progresso são gravadas no console ou em um arquivo de saída. Registros de histórico não são registrados no banco de dados de distribuição.|  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -222,7 +227,7 @@ distrib [-?]
  **-ProfileName** *profile_name*  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication**  *publication*  
+ **-Publication** *publication*  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -249,7 +254,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Especifica o tipo de conexão de Assinante usado pelo Agente de Distribuição.  
   
-|Valor SubscriberType|Descrição|  
+|Valor SubscriberType|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Fonte de dados ODBC|  
@@ -274,7 +279,7 @@ distrib [-?]
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push, um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. Veja o parâmetro **–MessageInterval**anterior.  
+ Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Deve ser especificado como um parâmetro para uma publicação que permite transformação de dados.  
@@ -285,7 +290,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Quando especificado, habilita a associação de dados de objeto binário grande como um fluxo. Use **-OledbStreamThreshold** para especificar o tamanho, em bytes, acima do qual um fluxo será usado. **UseOledbStreaming** está habilitado por padrão. **UseOledbStreaming** grava na pasta **C:\Program Files\Microsoft SQL Server\\<version\>\COM**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se você instalou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para ser executado com uma conta Sistema Local em vez de uma conta de usuário de domínio (o padrão), o serviço só poderá acessar o computador local. Se o Agente de Distribuição executado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent for configurado para usar o Modo de Autenticação do Windows ao fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Agente de Distribuição falhará. A configuração padrão é Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter informações em como alterar contas de segurança, consulte [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -298,7 +303,7 @@ distrib [-?]
 |---------------------|  
 |Adicionado o parâmetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

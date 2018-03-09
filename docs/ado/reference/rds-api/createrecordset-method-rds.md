@@ -3,8 +3,9 @@ title: "Método CreateRecordset (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um vazio, desconectado [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -61,7 +63,7 @@ object.CreateRecordset(ColumnInfos)
   
  O conjunto de matrizes de coluna, em seguida, é agrupado em uma matriz, que define o **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O objeto comercial do lado do servidor pode preencher resultante **registros** com dados de um provedor de dados não - OLE DB, como um sistema operacional do arquivo contendo cotações de ações.  
   
  A seguinte tabela lista o [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores com suporte a **CreateRecordset** método. O número listado é o número de referência usada para definir campos.  

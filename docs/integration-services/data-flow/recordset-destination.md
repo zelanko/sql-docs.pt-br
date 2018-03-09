@@ -20,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ba67dbc528d781325f35a7b6c1556b1debee1171
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab4bf394d566195b09c3fa3f68f1b69d8d59a9bb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="recordset-destination"></a>Destino do Conjunto de Registros
   O destino do conjunto de registros cria e popula um conjunto de registros ADO na memória. A forma do conjunto de registros é definida na entrada para o destino de conjunto de registros no tempo de design.  
@@ -52,8 +51,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Usar um destino do conjunto de registros](../../integration-services/data-flow/use-a-recordset-destination.md)  
   
   
-

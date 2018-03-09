@@ -3,8 +3,11 @@ title: Navegar no Designer de Diagramas de Banco de Dados (Visual Database Tools
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,23 +19,23 @@ ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c07ed4430746956d41af750140d24066c49217f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6274d6f8e01833e850c5fedca92dcd18a769f784
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navegar no Designer de Diagrama de Banco de Dados (Visual Database Tools)
-Você pode trabalhar no Designer de Diagrama de Banco de Dados usando o teclado, assim como o mouse. Consulte as tabelas a seguir para obter os métodos específicos usados no Designer de Diagrama de Banco de Dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode trabalhar no Designer de Diagramas de Banco de Dados usando o teclado, assim como o mouse. Consulte as tabelas a seguir para obter os métodos específicos usados no Designer de Diagrama de Banco de Dados.  
   
 |**Para**|**Pressione**|  
 |----------|-------------|  
 |Acessar o menu Diagrama de Banco de Dados|ALT+M|  
 |Mover entre tabelas e relações, se houver|TAB ou SHIFT+TAB|  
 |Mover entre as colunas de uma tabela|Teclas de direção|  
-|Remover a tabela selecionada do diagrama|DELETE|  
+|Remover a tabela selecionada do diagrama|Delete (excluir)|  
 |Eliminar uma tabela ou relação do banco de dados|SHIFT+DELETE|  
 |Mover tabelas pela superfície do diagrama|CTRL+ UP ARROW ou CTRL+DOWN ARROW|  
 |Rolar para a direita/esquerda e para cima/baixo|PAGE UP/DOWN para vertical, CTL+PAGE UP/DOWN para horizontal|  
@@ -40,6 +43,6 @@ Você pode trabalhar no Designer de Diagrama de Banco de Dados usando o teclado,
 |Alterar a quantidade de informações apresentadas em uma tabela|CTRL+T|  
 |Zoom|CTRL+ PLUS KEY ou MINUS KEY|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

@@ -3,8 +3,11 @@ title: "Propriedades do SQL Server Agent (página Histórico) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81fff02ee48db428966e11683c8802e3ceee2da9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: de59a618dc53759a837a6855b5b89a9daa3552fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-history-page"></a>Propriedades do SQL Server Agent (página Histórico)
-Use essa página para exibir e modificar as configurações de gerenciamento do log de histórico do serviço [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa página para exibir e modificar as configurações de gerenciamento do log de histórico do serviço [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
 **Limitar tamanho do log do histórico de trabalho**  
@@ -40,6 +43,6 @@ Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent
 **Com mais de**  
 Define o período durante o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent manterá entradas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Log de erros do SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)  
   

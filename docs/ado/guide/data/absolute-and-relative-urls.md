@@ -3,8 +3,9 @@ title: URLs absolutas e relativas | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante*.*  
@@ -38,16 +39,16 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
   
  Uma URL relativa normalmente consiste apenas o *caminho*e, opcionalmente, o *recurso*, mas não *esquema* ou *server*. As tabelas a seguir definem as partes individuais do formato de URL completa.  
   
- *esquema*  
+ *scheme*  
  Especifica como o *recurso* deve ser acessado.  
   
- *servidor*  
+ *server*  
  Especifica o nome do computador onde o *recurso* está localizado.  
   
- *caminho*  
+ *path*  
  Especifica a sequência de diretórios à esquerda para o destino. Se *recurso* é omitido, o destino é o último diretório no *caminho*.  
   
- *recurso*  
+ *resource*  
  Se for incluído, *recurso* é o destino e é normalmente o nome de um arquivo. Pode ser um *arquivo simple,* que contém um único fluxo binário de bytes, ou um *documento estruturado,* que contém um ou mais armazenamentos e fluxos binários de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro de esquema de URL  

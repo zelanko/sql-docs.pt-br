@@ -21,17 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar a origem dos pacotes com assinaturas digitais
   Um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser assinado com um certificado digital para identificar sua origem. Depois que o pacote for assinado com um certificado digital, você poderá configurar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para verificar a assinatura digital antes de carregar o pacote. Para que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verifique a assinatura, defina uma opção no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou no utilitário **dtexec** (dtexec.exe) ou defina um valor opcional do Registro.  
@@ -66,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
  A tabela a seguir lista os valores válidos dos dados de DWORD e sua política associada.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|Nenhuma restrição administrativa.|  
 |1|Bloquear assinaturas inválidas.<br /><br /> Essa configuração não bloqueia pacotes não assinados.|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/03/2017
   
      Embora o pacote tenha sido assinado, é necessário configurar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para verificar a assinatura digital antes de carregar o pacote.  
 
-## <a name="signing_dialog"></a>Referência caixa diálogo assinatura digital da interface do usuário
+## <a name="signing_dialog"></a> Referência da interface do usuário da caixa de diálogo Assinatura Digital
   Use a caixa de diálogo **Assinatura Digital** para assinar um pacote com uma assinatura digital ou remover a assinatura. A caixa de diálogo **Assinatura Digital** está disponível na opção **Assinatura Digital** do menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Para saber mais, veja [Assinar um pacote por meio de um certificado digital](#cert).  
@@ -155,7 +154,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>Consulte também  
  [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Visão geral de segurança &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

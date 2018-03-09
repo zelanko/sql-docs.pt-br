@@ -1,26 +1,30 @@
 ---
 title: Criando fluxos de trabalho de BI com R | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 177242eadd1883e4f6c9de0893dc805c4312c36f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Criando fluxos de trabalho de BI com R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Um banco de dados relacional é uma tecnologia altamente otimizada para fornecer soluções escalonáveis para processamento, armazenamento e consulta de dados de transações.
 
@@ -65,7 +69,7 @@ Aqui estão alguns ideass de como você pode automatizar seus dados de processam
 
 Esta postagem de blog demonstra técnicas básicas de manipulação de código R usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Chamar o R usando a tarefa Executar SQL, para gerar dados e salvá-lo em[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Chamar o R usando a tarefa Executar SQL, para gerar dados e salvá-lo em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + Usar um procedimento armazenado para treinar um modelo R e armazená-lo no banco de dados
 

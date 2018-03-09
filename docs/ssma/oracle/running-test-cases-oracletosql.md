@@ -1,10 +1,13 @@
 ---
 title: Executar casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>Casos de teste em execução (OracleToSQL)
 Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
@@ -36,7 +39,7 @@ Quando o teste for concluído, o relatório de caso de teste é criado. Clique o
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução do caso de teste  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 O SSMA Tester verifica se todos os pré-requisitos são atendidos para a execução de teste antes do início do teste. Se algumas condições não forem atendidas, uma mensagem de erro é exibida.  
   
 ### <a name="initialization"></a>Inicialização  
@@ -83,7 +86,7 @@ Durante a finalização SSMA Tester limpa os objetos auxiliares criados no **ini
 ## <a name="next-step"></a>Próxima etapa  
 [Exibindo relatórios de caso de teste &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Selecionando e Configurando objetos para teste &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [Selecionando e configurando afetados objetos &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

@@ -2,28 +2,34 @@
 title: "Janela Inspeção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.watch
-helpviewer_keywords: Watch Window [Transact-SQL]
+f1_keywords:
+- vs.debug.watch
+helpviewer_keywords:
+- Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fd2fb6a5e923661dbcb4a406abe25c230ff506a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 504bd9a02382a92d21e64279c8b55f7f6f45ea9c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Depurador do Transact-SQL – janela Inspeção
-  A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Inspeção** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar as janelas Inspecionar**  
@@ -48,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Instruções Transact-SQL que retornam um único valor, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Valor**  
+ **Value**  
  Exibe o valor retornado depois que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] avalia a expressão especificada em **Nome**.  
   
  Se o comprimento de uma expressão for maior do que a largura da coluna **Valor** , uma dica de ferramenta exibe o valor total quando o ponteiro passa sobre a célula **Valor** daquela expressão.  
@@ -58,7 +64,7 @@ ms.lasthandoff: 11/09/2017
  **Tipo**  
  Exibe o tipo de dados da expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Janela Locais](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   

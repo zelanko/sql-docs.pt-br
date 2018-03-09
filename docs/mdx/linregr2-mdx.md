@@ -2,34 +2,32 @@
 title: LinRegR2 (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGR2
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegR2 function
+f1_keywords: LINREGR2
+dev_langs: kbMDX
+helpviewer_keywords: LinRegR2 function
 ms.assetid: 770d1e1e-d034-43f1-82b1-3f91d52c86be
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ff4cbeba77820d725ebef804efc1b9e467dcdd1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f136ba9ed71fbdde7c9f7b797f3caae8bcc27da
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Calcula a regressão linear de um conjunto e retorna o coeficiente de determinação, R<sup>2</sup>.  
   
@@ -50,7 +48,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número que representa valores do eixo x.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A regressão linear, que usa o método dos mínimos quadrados, calcula a equação de uma linha de regressão (ou seja, a linha mais adequada para uma série de pontos). A linha de regressão tem a seguinte equação, onde um é a inclinação e b é a interceptação:  
   
  y = ax+b  
@@ -69,8 +67,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea5a719b09f55de405593a29445824ba01902a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ As tabelas com otimização de memória podem ser acessadas com mais eficiência
 |Recurso|Acesso através de um procedimento armazenado compilado nativamente|Acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado|Acesso à CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabela com otimização de memória|Sim|Sim|Não*|  
-|Tipo de tabela com otimização de memória|Sim|Sim|Não|  
+|Tipo de tabela com otimização de memória|Sim|Sim|não|  
 |Procedimento armazenado compilado nativamente|Agora há suporte para o aninhamento de procedimentos armazenados nativamente compilados. Você pode usar a sintaxe EXECUTE dentro dos procedimentos armazenados, desde que o procedimento referenciado também seja nativamente compilado.|Sim|Não*|  
   
  *Não é possível acessar uma tabela com otimização de memória ou um procedimento armazenado compilado de modo nativo por meio da conexão de contexto (a conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -93,7 +94,7 @@ A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmen
   
 |Problema|Impacto do OLTP na memória|  
 |-----------|----------------------------|  
-|Desempenho<br /><br /> Alto uso de recursos (CPU, E/S, rede ou memória).|CPU<br /> Os procedimentos armazenados compilados nativamente podem reduzir significativamente o uso da CPU, pois exigem muito menos instruções para executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] comparada com os procedimentos armazenados interpretados.<br /><br /> O OLTP na memória pode ajudar a reduzir o investimento de hardware em cargas de trabalho expandidas, pois um servidor pode potencialmente fornecer a taxa de transferência de cinco a dez servidores.<br /><br /> E/S<br /> Se você encontrar um afunilamento de E/S, do processamento às páginas de dados ou índice, o OLTP na memória poderá reduzir esse afunilamento. Além disso, o ponto de verificação de objetos OLTP na memória é contínuo e não resulta em aumentos repentinos nas operações de E/S. No entanto, se o conjunto de trabalho das tabelas críticas de desempenho não se ajustar na memória, o OLTP na memória não melhorará o desempenho, pois ele exige que os dados sejam residentes na memória. Se você encontrar um afunilamento de E/S no log, o OLTP na memória poderá reduzi-lo, pois ele gera menos registros. Se uma ou mais tabelas com otimização de memória forem configuradas como tabelas não duráveis, você poderá eliminar o registro de dados.<br /><br /> Memória<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Além disso, o OLTP na memória pode fazer mais pressão na memória, pois os objetos precisam ser residentes na memória.<br /><br /> Rede<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Os dados precisam ser comunicados da camada de dados à camada de aplicativos.|  
+|Desempenho<br /><br /> Alto uso de recursos (CPU, E/S, rede ou memória).|CPU<br /> Os procedimentos armazenados compilados nativamente podem reduzir significativamente o uso da CPU, pois exigem muito menos instruções para executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] comparada com os procedimentos armazenados interpretados.<br /><br /> O OLTP na memória pode ajudar a reduzir o investimento de hardware em cargas de trabalho expandidas, pois um servidor pode potencialmente fornecer a taxa de transferência de cinco a dez servidores.<br /><br /> E/S<br /> Se você encontrar um gargalo de E/S, do processamento às páginas de dados ou índice, o OLTP na memória poderá reduzir esse gargalo. Além disso, o ponto de verificação de objetos OLTP na memória é contínuo e não resulta em aumentos repentinos nas operações de E/S. No entanto, se o conjunto de trabalho das tabelas críticas de desempenho não se ajustar na memória, o OLTP na memória não melhorará o desempenho, pois ele exige que os dados sejam residentes na memória. Se você encontrar um gargalo de E/S no log, o OLTP na memória poderá reduzi-lo, pois ele gera menos registros. Se uma ou mais tabelas com otimização de memória forem configuradas como tabelas não duráveis, você poderá eliminar o registro de dados.<br /><br /> Memória<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Além disso, o OLTP na memória pode fazer mais pressão na memória, pois os objetos precisam ser residentes na memória.<br /><br /> Rede<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Os dados precisam ser comunicados da camada de dados à camada de aplicativos.|  
 |Escalabilidade<br /><br /> A maioria dos problemas de colocação em escala nos aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é causada por problemas de simultaneidade, como contenção em bloqueios, travas e spinlocks.|Contenção de trava<br /> Um cenário típico é a contenção na última página de um índice na inserção de linhas simultaneamente na ordem de chave. Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de trava são totalmente removidos.<br /><br /> Contenção de spinlock<br /> Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de spinlock são totalmente removidos.<br /><br /> Contenção relacionada ao bloqueio<br /> Se seu aplicativo de banco de dados detectar problemas de bloqueio entre operações de leitura e gravação, o OLTP na memória removerá esses problemas, pois ele usa um novo formulário de controle de simultaneidade otimista para implementar todos os níveis de isolamento de transação. O OLTP na memória não usa TempDB para armazenar versões de linha.<br /><br /> Se o problema de colocação em escala for causado por um conflito entre duas operações de gravação, como duas transações simultâneas tentando atualizar a mesma linha, o OLTP na memória permitirá que uma transação tenha êxito e que a outra falhe. A transação com falha deve ser reenviada explícita ou implicitamente, repetindo a transação. Em ambos os casos, você precisa fazer alterações no aplicativo.<br /><br /> Se seu aplicativo apresentar conflitos frequentes entre duas operações de gravação, o valor do bloqueio otimista será diminuído. O aplicativo não é apropriado para o OLTP na memória. A maioria dos aplicativos OLTP não apresentam conflitos de gravação, a menos que o conflito seja induzido pelo escalonamento de bloqueios.|  
   
 ##  <a name="rls"></a> Segurança em nível de linha em tabelas com otimização de memória  
@@ -109,7 +110,7 @@ EXECUTE AS CALLER tem um impacto pequeno (aproximadamente 10%) sobre o desempenh
 
 Para ver uma breve discussão de cenários típicos em que o [!INCLUDE[hek_1](../../includes/hek-1-md.md)] pode melhorar o desempenho, veja [OLTP in-memory](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -2,9 +2,12 @@
 title: "Acessar FileTables com APIs de entrada e saída de arquivo | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
-  Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
   
 ##  <a name="accessing"></a> Começar a usar APIs de E/S de arquivos com FileTables  
  O uso primário de FileTables espera ser por meio do sistema de arquivos do Windows e APIs de E/S de arquivos. FileTables oferecem suporte ao acesso não transacional por meio do conjunto vasto de APIs de E/S de arquivos disponíveis.  
@@ -60,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Excluindo arquivos e diretórios em uma FileTable  
  Toda a semântica da API de E/S de arquivos do Windows é imposta ao excluir um arquivo ou diretório.  
   
--   Excluindo um diretório falhará se o diretório contiver qualquer subdiretório de arquivos.  
+-   A exclusão de um diretório falhará se o diretório contiver arquivos ou subdiretórios.  
   
 -   A exclusão de um arquivo ou diretório remove a linha correspondente da FileTable. Isso é equivalente a excluir a linha por meio de uma operação [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -109,31 +113,30 @@ ms.lasthandoff: 06/22/2017
 |Recurso|Supported|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
-|**Atributos estendidos**|Não||  
-|**Pontos de reanálise**|Não||  
-|**ACLs persistentes**|Não||  
-|**Fluxos nomeados**|Não||  
+|**Atributos estendidos**|não||  
+|**Pontos de reanálise**|não||  
+|**ACLs persistentes**|não||  
+|**Fluxos nomeados**|não||  
 |**Arquivos esparsos**|Sim|A dispersão pode ser definida somente em arquivos e afeta o armazenamento do fluxo de dados. Como os dados FILESTREAM são armazenados em volumes NTFS, o recurso FileTable oferece suporte a arquivos esparsos encaminhando as solicitações ao sistema de arquivos NTFS.|  
 |**Compactação**|Sim||  
 |**Criptografia**|Sim||  
-|**TxF**|Não||  
-|**Ids de arquivo**|Não||  
-|**Ids de objeto**|Não||  
-|**Links simbólicos**|Não||  
-|**Links físicos**|Não||  
-|**Nomes curtos**|Não||  
-|**Notificações de alteração de diretório**|Não||  
+|**TxF**|não||  
+|**Ids de arquivo**|não||  
+|**Ids de objeto**|não||  
+|**Links simbólicos**|não||  
+|**Links físicos**|não||  
+|**Nomes curtos**|não||  
+|**Notificações de alteração de diretório**|não||  
 |**Bloqueio de intervalo de bytes**|Sim|As solicitações de bloqueio de intervalo de bytes são passadas ao sistema de arquivos NTFS.|  
-|**Arquivos mapeados na memória**|Não||  
+|**Arquivos mapeados na memória**|não||  
 |**Cancelar E/S**|Sim||  
-|**Segurança**|Não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
-|**Diário USN**|Não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
+|**Segurança**|não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
+|**Diário USN**|não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Carregar arquivos em FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Acessar FileTables com Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

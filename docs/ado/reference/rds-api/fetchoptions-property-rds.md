@@ -3,8 +3,9 @@ title: Propriedade FetchOptions (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FetchOptions property [ADO]
+helpviewer_keywords:
+- FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb723da9cfd35101167b3d8618fefd4d55cc8f9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>Propriedade FetchOptions (RDS)
 Indica o tipo de busca de maneira assíncrona.  
@@ -43,7 +45,7 @@ Indica o tipo de busca de maneira assíncrona.
 > [!NOTE]
 >  Cada arquivo executável do lado do cliente que usa constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constantes desejado do arquivo Adcvbs.inc, localizado na pasta de instalação padrão para a biblioteca RDS.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em um aplicativo Web, você normalmente deve usar **adcFetchAsync** (o valor padrão), porque ele fornece um melhor desempenho. Em um aplicativo cliente compilado, você normalmente deve usar **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Aplica-se a  

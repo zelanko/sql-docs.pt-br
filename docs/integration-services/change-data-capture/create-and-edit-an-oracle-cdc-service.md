@@ -15,36 +15,35 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
   Você cria e edita um novo Serviço do Windows do Oracle CDC a partir do Console de Configuração do Serviço CDC.  
   
  Para criar um novo Serviço do Windows do Oracle CDC, selecione **Serviços Locais de CDC** no painel esquerdo e clique em **Novo Serviço** no painel **Ações** . Você também pode clicar com o botão direito do mouse em **Serviços Locais de CDC** e selecionar **Novo Serviço**. O caixa de diálogo Novo Serviço do Windows do Oracle CDC é aberta.  
   
- **OU**  
+ **OR**  
   
  Para editar as propriedade de serviço CDC, selecione o serviço para o qual você deseja editar as propriedades e clique em **Propriedades** no painel **Ações** . Você também pode clicar com o botão direito do mouse no serviço com o qual você está trabalhando e selecionar **Propriedades**. A caixa de diálogo Propriedades do Serviço CDC será aberta.  
   
  Insira as informações a seguir na caixa de diálogo Novo Serviço do Windows do Oracle CDC ou na caixa de diálogo Propriedades de Serviço CDC.  
   
-* * Nome de serviço * *  
+** Nome do Serviço**  
  Digite o nome do novo Serviço do Windows do Oracle CDC. Você não deve usar nomes longos, se possível. Os caracteres / e \ não podem ser usados no nome de serviço.  
   
 > [!NOTE]  
 > Esta opção não está disponível ao editar o serviço. Você não pode alterar o nome de um Serviço do Windows que já exist.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição do serviço para ajudar a identificá-lo.  
   
  **Conta de Serviço**  
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância se conectar (por exemplo,  **\\ \\< nome_do_computador >\\< nome_da_instância >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>**). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  
@@ -95,8 +94,7 @@ ms.lasthandoff: 09/26/2017
   
  A mesma senha mestre também deve ser usada quando outras instâncias são configuradas do mesmo serviço em outros nós em um cluster em configuração de alta disponibilidade. Se você perder ou modificar a senha mestra, todas as senhas de mineração de logs armazenadas em bancos de dados de Instância Oracle CDC devem ser reinseridas usando o CDC Designer Console.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar e editar um Serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

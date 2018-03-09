@@ -2,16 +2,13 @@
 title: "Alterar propriedades em uma exibição de fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
-  Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
   
 -   Critérios de correspondência da exibição da fonte de dados  
   
@@ -90,8 +87,7 @@ ms.lasthandoff: 09/01/2017
 |Nome|Especifica o nome da coluna subjacente ou o nome do cálculo nomeado. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir atributos com base em cálculos nomeados. Essa propriedade é editável apenas no caso de cálculos nomeados.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   
-

@@ -8,23 +8,24 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CLR functions [SQL Server]
 - user-defined functions [SQL Server], CLR
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05a01fb9d05573b0837f25980f66074ed1b4a7d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 494efdab2237d7212355142682b921e3d0cfc215
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-clr-functions"></a>Criar funções CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="accessing-native-code"></a>Acessando código nativo  
  Podem ser usadas funções CLR para acessar código nativo (não gerenciado), como código escrito em C ou C++, pelo uso de PInvoke de código gerenciado (veja [Chamando funções nativas com base no código gerenciado](http://go.microsoft.com/fwlink/?LinkID=181929) para obter detalhes). Isto pode permitir reutilizar o código herdado como CLR UDFs ou escrever UDFs de desempenho crítico em código nativo. Isto requer o uso de um assembly UNSAFE. Veja [Segurança de acesso a código da integração CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) para obter advertências sobre o uso de assemblies UNSAFE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Criar agregações definidas pelo usuário](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Executar funções definidas pelo usuário](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

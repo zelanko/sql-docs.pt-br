@@ -2,32 +2,32 @@
 title: Conjunto de linhas DISCOVER_TRACES | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b48a6756325dc95da634842c5f695378b20319b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraces-rowset"></a>Conjunto de linhas DISCOVER_TRACES
-  Oferece informações sobre os rastreamentos atualmente ativos no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Oferece informações sobre os rastreamentos atualmente ativos no servidor.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**LogFileName**|**DBTYPE_WSTR**|O nome do arquivo de log de rastreamento.|  
 |**LogFileSize**|**DBTYPE_I4**|O tamanho do arquivo de log de rastreamento.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|Quando o valor for true, indicará que o arquivo de log deve ser substituído; caso contrário, será false.|  
-|**Reinicialização automática**|**DBTYPE_BOOL**|Quando o valor for true, indicará que a opção de reinicialização automática está habilitada; caso contrário, será false.|  
+|**AutoRestart**|**DBTYPE_BOOL**|Quando o valor for true, indicará que a opção de reinicialização automática está habilitada; caso contrário, será false.|  
 |**CreationTime**|**DBTYPE_TIME**|A data e a hora em que o rastreamento foi criado.|  
 |**StopTime**|**DBTYPE_TIME**|A hora de parada de um rastreamento.|  
 |**Tipo**|**PF_DBTYPE_WSTR**|O tipo de rastreamento.|  
@@ -64,9 +64,9 @@ ms.lasthandoff: 11/17/2017
 |Argumento|Valor|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACES|  
+|Cadeia de caracteres|DISCOVER_TRACES|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

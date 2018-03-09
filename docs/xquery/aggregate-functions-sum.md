@@ -3,8 +3,11 @@ title: "Função SUM (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 599080605291b48f30a40c85354ea5bb2f2320c6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ae0eacebba36dd75537a36cfaf0ce46ba43f332
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions---sum"></a>Funções de agregação - soma
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna a soma de uma sequência de números.  
   
@@ -45,7 +47,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Sequência de valores atômicos cuja soma deve ser calculada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todos os tipos de valores atomizados que são passados para **SUM ()** precisam ser subtipos do mesmo tipo base. Os tipos base aceitos são os três tipos base numéricos internos ou xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
   
  O resultado de **SUM ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic, mesmo se a entrada for opcionalmente a sequência vazia. Se a entrada estiver estaticamente vazia, o resultado será 0 com o tipo estático e dinâmico de xs:integer.  
@@ -128,4 +130,3 @@ ProductModelID Name                 TotalLaborHours
  [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

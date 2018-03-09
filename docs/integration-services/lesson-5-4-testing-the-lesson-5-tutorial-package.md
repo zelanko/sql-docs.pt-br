@@ -1,11 +1,11 @@
 ---
-title: "Etapa 4: Testando o pacote de Tutorial da lição 5 | Microsoft Docs"
+title: "Etapa 4: testar o pacote de tutoriais da Lição 5 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 600fa07aaffe0612cd87bcf33436c01481658782
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lição 5-4: Testando o pacote de Tutorial da lição 5
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lição 5-4 – testar o pacote de tutoriais da Lição 5
 Em tempo de execução, o pacote irá obter o valor da propriedade **Directory** de uma variável atualizada em tempo de execução, ao invés de utilizar o nome original de diretório que foi especificado quando você criou o pacote. O valor da variável é populado pelo arquivo SSISTutorial.dtsConfig.  
   
 Para verificar se, em tempo de execução, o pacote atualizou corretamente o Diretório com o novo valor, simplesmente execute o pacote. Devido a serem copiados apenas três arquivos de dados de exemplo para o novo diretório, o fluxo de dados irá executar apenas três vezes ao invés de interagir com 14 arquivos da pasta original.  
@@ -37,11 +36,11 @@ Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados 
   
 **Fluxo de Controle**  
   
-![Controlar o fluxo do pacote](../integration-services/media/task4lesson2control.gif "controlar o fluxo do pacote")  
+![Fluxo de controle no pacote](../integration-services/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
 **Fluxo de Dados**  
   
-![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "no pacote de fluxo de dados")  
+![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Para testar o pacote de tutorial da Lição 5  
   
@@ -54,4 +53,3 @@ Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados 
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Eventos registrados pelo serviço do Integration Services | Microsoft Docs"
+title: "Eventos registrados em log pelo serviço Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados em log pelo serviço Integration Services Service
   O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens no log de eventos de Aplicativo do Windows. O serviço registra essas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/03/2017
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Serviço: interrompendo a execução do pacote.%nIdentificação de instância do pacote: %1%nIdentificação do pacote: %2%nNome do pacote: %3%nDescrição do pacote: %4%nPacote|O serviço está tentando interromper um pacote em execução. Você pode monitorar e interromper pacotes em execução no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter informações sobre como gerenciar pacotes no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).|  
 
 ## <a name="view-events"></a>Exibir eventos
-  Há duas ferramentas nas quais você pode exibir eventos do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+  Há duas ferramentas nas quais você pode exibir eventos do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   A caixa de diálogo **Visualizador do Arquivo de Log** em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. A caixa de diálogo **Visualizador do Arquivo de Log** inclui opções para exportar, filtrar e pesquisar o log. Para obter mais informações sobre as opções do **Visualizador do Arquivo de Log**, consulte [Ajuda F1 do Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
@@ -103,6 +102,5 @@ ms.lasthandoff: 08/03/2017
   
 9. No menu **Arquivo** , clique em **Sair** para fechar a caixa de diálogo **Visualizador de Eventos** .  
  
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como exibir entradas de log, consulte [Eventos registrados em log por um pacote do Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

@@ -2,15 +2,13 @@
 title: "Aplicar um filtro a um modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/19/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
-  Se a sua estrutura de mineração tiver uma tabela aninhada, você poderá aplicar um filtro à tabela de casos, à tabela aninhada ou a ambas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Se a sua estrutura de mineração tiver uma tabela aninhada, você poderá aplicar um filtro à tabela de casos, à tabela aninhada ou a ambas.  
   
  O procedimento a seguir indica como criar os dois tipos de filtros: filtros de caso e filtros nas linhas da tabela aninhada.  
   
@@ -134,9 +132,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
-

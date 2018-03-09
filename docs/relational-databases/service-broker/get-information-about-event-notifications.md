@@ -2,10 +2,14 @@
 title: "Obter informações sobre notificações de eventos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - status information [SQL Server], event notifications
 - metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d71b5cb9f5e418607e56e69cac3df9ef15063ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e8a2f7837c7f18293afe66c168b5d52c8b03da9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-information-about-event-notifications"></a>Obter informações sobre notificações de eventos
-  As exibições de catálogo a seguir estão disponíveis para consultar metadados sobre notificações de eventos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+As exibições de catálogo a seguir estão disponíveis para consultar metadados sobre notificações de eventos.  
   
  **Para obter informações sobre notificações de eventos em nível que não seja de servidor**  
   
@@ -48,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Essa exibição de catálogo não retorna grupos de eventos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Notificações de eventos](../../relational-databases/service-broker/event-notifications.md)  
   
   

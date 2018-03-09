@@ -21,12 +21,12 @@ ms.assetid:
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar um grupo de disponibilidade para transações distribuídas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Em uma transação distribuída, aplicativos cliente funcionam com o MS DTC (Coo
 
 O [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] não impede transações distribuídas para bancos de dados em um grupo de disponibilidade – mesmo quando o grupo de disponibilidade não está configurado para transações distribuídas. No entanto, quando um grupo de disponibilidade não está configurado para transações distribuídas, o failover pode não ser bem-sucedido em algumas situações. Especificamente, a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] da nova réplica primária pode não conseguir obter o resultado da transação do DTC. Para permitir que a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] obtenha o resultado de transações incertas do DTC após o failover, configure o grupo de disponibilidade para transações distribuídas. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de configurar um grupo de disponibilidade para dar suporte a transações distribuídas, você deve atender aos seguintes pré-requisitos:
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ Depois de confirmar ou reverter a transação, use `ALTER DATABASE` para definir
 
 Para obter mais informações sobre como resolver transações incertas, consulte [Resolver transações manualmente](http://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 
 [Transações distribuídas](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

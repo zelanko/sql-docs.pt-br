@@ -1,29 +1,30 @@
 ---
 title: "Configurações (sincronização) (MySQLToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2b2fcc99f40b7d06cdb9bb831cee5b5bf7490f7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Configurações de projeto (sincronização) (MySQLToSQL)
 A sincronização **configurações do projeto** permitem que você configure como os objetos de banco de dados MySQL são sincronizados com os objetos de banco de dados do SQL Server.  
@@ -113,4 +114,3 @@ Especifica a configuração padrão na caixa de diálogo de sincronização quan
   
 -   Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.  
   
-

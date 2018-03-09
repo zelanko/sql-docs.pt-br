@@ -1,13 +1,14 @@
 ---
-title: "Armazenar em cache um relatório (Gerenciador de relatórios) | Microsoft Docs"
+title: "Armazenar um relatório em cache (Gerenciador de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df14dfdb363b4c1dc1836d073f6c1ae05edc703c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cache-a-report-report-manager"></a>Armazenar um relatório em cache (Gerenciador de Relatórios)
   Um modo de melhorar o desempenho é configurar propriedades de cache para um relatório. Quando um relatório é armazenado em cache, uma cópia do relatório renderizado é salva por um curto período de tempo. O primeiro usuário que solicita o relatório deve aguardar a conclusão do processamento antes de exibir o relatório. Usuários subsequentes que solicitam o relatório dentro do período de cache podem exibi-lo imediatamente porque o processamento já ocorreu.  
@@ -48,15 +48,14 @@ ms.lasthandoff: 08/09/2017
   
 6.  Selecione um das duas opções de cache a seguir e configure a validade do seguinte modo:  
   
-    -   Para configurar uma cópia armazenada em cache para expirar depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após um número de minutos**. Digite o número de minutos para a validade do relatório.  
+    -   Para configurar uma cópia armazenada em cache para expirar depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos**. Digite o número de minutos para a validade do relatório.  
   
-    -   Para configurar uma cópia armazenada em cache para expirar em uma agenda, clique em **armazenar uma cópia temporária do relatório. Expire cópia de relatório na seguinte agenda.** Clique em **Configurar**ou selecione uma agenda compartilhada para controlar a validade do relatório  
+    -   Para configurar uma cópia armazenada em cache para expirar com base em um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no próximo agendamento.** Clique em **Configurar**ou selecione uma agenda compartilhada para controlar a validade do relatório  
   
 7.  Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

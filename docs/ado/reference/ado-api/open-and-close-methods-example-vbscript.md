@@ -3,7 +3,7 @@ title: "Abrir e fechar o exemplo de métodos (VBScript) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADO], VBScript example
 - Open method [ADO], VBScript example
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: a3cb736c5445a674e4e40931463379506fb2a652
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf744448bccfe9697946889970a4e35a9709a458
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Exemplo dos métodos de abertura e fechamento (VBScript)
 Este exemplo usa o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos os [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  
@@ -175,4 +174,3 @@ BODY {
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

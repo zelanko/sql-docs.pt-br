@@ -2,33 +2,30 @@
 title: "Colunas de dados de relatórios de andamento | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Progress Reports event category
+helpviewer_keywords: Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eb8a5e4ba89eb9fc56b3498829e2ab2733c74b18
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="progress-reports-data-columns"></a>Colunas de dados de relatórios de andamento
-  A categoria de evento Progress Reports tem as seguintes classes de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento Progress Reports tem as seguintes classes de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  
@@ -73,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Contém a hora atual do evento relatado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |JobID|7|1|Contém a ID de trabalho associada ao evento relatado.|  
 |SessionType|8|8|Contém o tipo de sessão (a entidade que causa o evento) associado ao evento relatado. Para o processamento de eventos, os valores são:<br /><br /> 1 = Usuário<br /><br /> 2 = Cache pró-ativo<br /><br /> 3= Processamento lento|  
@@ -130,7 +127,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Contém a hora atual do evento relatado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Contém o tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|Contém a ID de trabalho associada ao evento relatado.|  
 |SessionType|8|8|Contém o tipo de sessão (a entidade que causa o evento) associado ao evento relatado. Para o processamento de eventos, os valores são:<br /><br /> 1 = Usuário<br /><br /> 2 = Cache pró-ativo<br /><br /> 3= Processamento lento|  
 |ProgressTotal|9|1|Contém o total de andamento do evento relatado.|  
@@ -149,8 +146,7 @@ ms.lasthandoff: 09/01/2017
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   
-

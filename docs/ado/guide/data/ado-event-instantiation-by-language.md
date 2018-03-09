@@ -3,8 +3,9 @@ title: "Instanciação de evento ADO pela linguagem | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], instantiation by language
 - event handlers [ADO], instantiation by language
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d7b4a0e32cdf4890f742323c9e55f637725212
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6591af543a7aa7e51fb217ca3b77731e9a1d8e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-event-instantiation-by-language"></a>Instanciação de evento ADO por idioma
 Cada linguagem de programação cria instâncias de eventos de ADO diferente. Todos os exemplos a seguir criar um **ConnectComplete** manipulador de eventos.  

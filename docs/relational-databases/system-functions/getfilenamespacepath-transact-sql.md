@@ -8,34 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e2f2e898438a6d8ce613aab6960f0472c32a55e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f5c7dcdc32fa7f7d9519b00f5d33d9d0083ca85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o caminho UNC de um arquivo ou diretório em uma FileTable.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://msdn.microsoft.com/library/bb500435.aspx)).|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome da coluna*  
+ *column-name*  
  O nome da coluna do varbinary (max) **file_stream** coluna em uma FileTable.  
   
  O *nome de coluna* valor deve ser um nome de coluna válido. Não pode ser uma expressão ou um valor convertido de uma coluna de outro tipo de dados.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  *is_full_path*  
  Uma expressão de inteiro que especifica se um caminho relativo ou absoluto deve ser retornado. *is_full_path* pode ter um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Retorna o caminho relativo dentro do diretório no nível do banco de dados.<br /><br /> Esse é o valor padrão.|  
 |**1**|Retorna o caminho UNC completo, a partir do `\\computer_name`.|  
@@ -61,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  *@option*  
  Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option*pode ter um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Este é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -84,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="best-practices"></a>Práticas recomendadas  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funções juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -94,7 +93,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como chamar o **GetFileNamespacePath** função para obter o caminho UNC para um arquivo ou diretório em uma FileTable.  

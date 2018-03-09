@@ -2,10 +2,14 @@
 title: "Criar instâncias de dados XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 289962e12bcff765908e1fa088ad8caa867a636d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
-  Este tópico descreve como gerar instâncias XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como gerar instâncias XML.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode gerar instâncias XML das seguintes maneiras:  
   
@@ -70,7 +75,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Por padrão, o analisador XML descarta espaço em branco insignificante quando converte dados de cadeia de caracteres em XML se uma das seguintes situações for verdadeira:  
   
--   `The xml:space` o atributo não está definido em um elemento ou em seus elementos ancestrais.  
+-   O atributo `xml:space` não está definido em um elemento ou em seus elementos ancestrais.  
   
 -   O atributo `xml:space` em efeito em um elemento ou em um de seus elementos ancestrais tem o valor de padrão.  
   
@@ -212,11 +217,11 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Recuperar e consultar dados XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

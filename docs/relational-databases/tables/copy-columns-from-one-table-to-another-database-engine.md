@@ -8,25 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - copying columns
 - columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "23"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab6c5c510e8f1d13c5212f316d27dabcdedd1009
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -95,7 +93,7 @@ ms.lasthandoff: 06/22/2017
 9.  Execute a consulta para inserir os dados da tabela de origem na tabela de destino.
 
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 06/22/2017
     ```  
   
   
-

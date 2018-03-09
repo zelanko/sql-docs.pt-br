@@ -2,27 +2,30 @@
 title: Monitor de Atividade | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09ef7a3e992e4c9cdfd0a077de72587079f51aae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ea6bf8c22a8315e12e8fa66e75788695499dff1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
-  O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O Monitor de Atividade é uma janela do documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **Visão Geral**, **Tarefas do Usuário Ativo**, **Esperas Recentes**, **E/S de Arquivo de Dados**e **Consultas Caras Recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Você pode expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STExteriorRing_TSQL
 - STExteriorRing (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STExteriorRing (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STExteriorRing (geometry Data Type)
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b74f13c6acf0f45ace93966cf7e820dcaa1379c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6311d2b2c50c98e8581749ba0d4ae305f2520908
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ Retorna o anel exterior de uma **geometria** instância que é um polígono.
   
  Abra o tipo Geospatial Consortium (OGC): **LineString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método retorna **nulo** se o **geometria** instância não é um polígono.  
   
 ## <a name="examples"></a>Exemplos  

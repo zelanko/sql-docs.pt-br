@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85de42e271f937c7a3de1aacba918bb43ea463d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de Cursor rolável
 Os quatro tipos de cursores roláveis são estático, dinâmico, controlado por e misto. Cursores estáticos detectam poucas ou nenhuma alteração, mas são relativamente baratos implementar. Cursores dinâmicos detectam todas as alterações, mas são caros implementar. Cursores controlados por conjunto de chaves e mistos se encontra a média, detectando a maioria das alterações, mas com menos despesas que cursores dinâmicos.  
@@ -54,4 +52,3 @@ Os quatro tipos de cursores roláveis são estático, dinâmico, controlado por 
 -   [Cursores controlados por conjunto de chaves](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
 -   [Cursores mistos](../../../odbc/reference/develop-app/mixed-cursors.md)
-

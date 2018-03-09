@@ -2,28 +2,32 @@
 title: 'Etapa 4: Criar recursos de dados usando o T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 3adcfd4a53da9f0e61c7ae62d1367cff48194782
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Etapa 4: Criar recursos de dados usando o T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Depois de exploração de dados, coletar algumas informações dos dados e estiver pronto para migrar para *engenharia de recurso*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
 

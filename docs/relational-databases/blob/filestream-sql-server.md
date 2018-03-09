@@ -1,14 +1,15 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 10/17/2016
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9435c864a481a5df25e74c132062cada5ca0e7b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e0a757bb7582d3bc9690d804ab34d47aeaedf03
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  
   
@@ -154,7 +154,7 @@ O acesso do sistema de arquivos remoto a dados FILESTREAM é habilitado pelo pro
 
 Não há suporte para a criação de exibições mapeadas de memória (E/S mapeada de memória) usando um identificador de FILESTREAM. Se o mapeamento de memória for usado para dados FILESTREAM, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não poderá garantir consistência e durabilidade dos dados ou integridade do banco de dados.  
 
-## <a name="related-tasks"></a>Tarefas relacionadas
+## <a name="related-tasks"></a>Related Tasks
 
 [Habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Criar um banco de dados habilitado para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  

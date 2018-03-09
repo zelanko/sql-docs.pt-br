@@ -2,32 +2,30 @@
 title: Power Pivot Configuration Tools | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="power-pivot-configuration-tools"></a>Ferramentas de Configuração do Power Pivot
-  Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as Ferramentas de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+# <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as Ferramentas de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  O Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não instala o as ferramentas de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. As ferramentas de configuração estarão disponíveis para download em uma versão futura do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

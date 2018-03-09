@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - system requirements [ODBC], desktop database drivers
 - requirements [ODBC], desktop database drivers
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7cee0668d49ba0edb88d21799ec571aa708259dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2545fba508ef3862834743ddaa8dd74183123b30
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Requisitos de hardware e Software (ODBC)
 Este tópico lista os requisitos para usar os Drivers de banco de dados de área de trabalho do ODBC.  
@@ -62,4 +60,3 @@ Este tópico lista os requisitos para usar os Drivers de banco de dados de área
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Requisitos de Software e Hardware específicos de driver  
   
 -   O MicrosoftAccess e dBASEdrivers podem exigir alterações nos arquivos de arquivos Autoexec.bat ou sys.
-

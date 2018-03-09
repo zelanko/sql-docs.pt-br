@@ -1,27 +1,33 @@
 ---
 title: "Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef160e0b0bce71d437e7dd83809a31185ec94767
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7deac98fa7bef4e087647aad142c735f01747c67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo. Para obter mais informações sobre como usar backups de instantâneo de arquivo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo, siga estas etapas:  

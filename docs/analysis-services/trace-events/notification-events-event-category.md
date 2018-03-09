@@ -2,14 +2,13 @@
 title: Categoria Notification Events | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - Notification Events event category
 - notification events [Analysis Services]
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4359a0599078688729e69bdc033d007fbc504af0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b92be65e6439b038dc41d7c7ba49b4265645b6a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="notification-events-event-category"></a>categoria Notification Events
-  A categoria Notification Events tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria Notification Events tem as classes de evento descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
 |-----------------|--------------|-----------------|  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
-

@@ -2,36 +2,33 @@
 title: "Criar e gerenciar uma partição remota (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5c1dc173a2ea724f7542e5ca1f862b4d9df0dad
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
-  Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
   
  Partições remotas para um cubo (chamado de banco de dados mestre), são armazenadas em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dedicado na instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (chamado de banco de dados secundário).  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Ambas as instâncias de servidor devem ter a mesma versão. Ambos os bancos de dados devem ter o mesmo nível funcional.  
   
--   Ambas as instâncias devem ser configuradas para conexões TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não dá suporte à criação de partições remotas usando o protocolo HTTP.  
+-   Ambas as instâncias devem ser configuradas para conexões TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]não oferece suporte a criação de partições remotas usando o protocolo HTTP.  
   
 -   As configurações de firewall em ambos os computadores devem ser definidas para aceitar conexões externas. Para obter mais informações sobre como configurar o firewall, consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -142,7 +139,6 @@ ms.lasthandoff: 09/01/2017
 >  Embora bancos de dados dedicados a armazenamento de partições remotas não seja exposto a conjuntos de linhas de esquema, os aplicativos que usam AMO (Objetos de Gerenciamento de Análise) ainda podem descobrir um banco de dados dedicado usando o comando Discover do XML for Analysis. Qualquer comando CREATE ou DELETE que é enviado diretamente a um banco de dados dedicado usando um TCP ou cliente de HTTP terá sucesso, mas o servidor retornará um aviso indicando que a ação pode danificar o banco de dados gerenciado de perto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partições &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
-

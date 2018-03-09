@@ -2,16 +2,13 @@
 title: "Definir relações lógicas em uma exibição da fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relações lógicas em uma exibição da fonte de dados (Analysis Services)
-  O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem relações entre as tabelas adicionadas a uma DSV (exibição da fonte de dados) com base nas relações do banco de dados subjacente ou nos critérios de correspondência de nomes que você especificar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem relações entre as tabelas adicionadas a uma DSV (exibição da fonte de dados) com base nas relações do banco de dados subjacente ou nos critérios de correspondência de nomes que você especificar.  
   
  Nos casos em que você está trabalhando com dados de diversas fontes de dados, pode ser necessário definir manualmente relações lógicas na DSV (exibição da fonte de dados) para complementar essas relações que são definidas automaticamente. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de relações para identificar tabelas de fatos e dimensões, construir consultas para recuperar dados e metadados de fontes de dados subjacentes e aproveitar os recursos avançados de business intelligence.  
   
@@ -95,7 +92,6 @@ ms.lasthandoff: 09/01/2017
 3.  Clique com o botão direito do mouse na relação que você deseja modificar e, em seguida, clique em **Editar Relação**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

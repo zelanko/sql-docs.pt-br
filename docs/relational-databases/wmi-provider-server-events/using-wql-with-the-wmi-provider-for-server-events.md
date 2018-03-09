@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usando o WQL com o Provedor WMI para eventos de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Acesso a aplicativos de gerenciamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos usando o provedor WMI para eventos de servidor emitindo instruções de linguagem de consulta WMI (WQL). O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Ao usar o WQL, um aplicativo recupera um tipo de evento em uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um banco de dados ou um objeto de banco de dados (o único objeto com suporte no momento é o de fila). O provedor WMI para eventos de servidor converte a consulta em uma notificação de evento que é criada no banco de dados destino para notificações de eventos no escopo do banco de dados ou objeto de escopo, ou no **mestre** banco de dados para eventos no escopo do servidor notificações.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Os aplicativos de gerenciamento acessam eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o Provedor WMI para eventos de servidor emitindo instruções WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Ao usar o WQL, um aplicativo recupera um tipo de evento em uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um banco de dados ou um objeto de banco de dados (o único objeto com suporte no momento é o de fila). O provedor WMI para eventos de servidor converte a consulta em uma notificação de evento que é criada no banco de dados destino para notificações de eventos no escopo do banco de dados ou objeto de escopo, ou no **mestre** banco de dados para eventos no escopo do servidor notificações.  
   
  Por exemplo, considere a seguinte consulta WQL:  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  É uma propriedade de um evento. Os exemplos incluem **PostTime**, **SPID**, e **LoginName**. Pesquisar cada evento listado na [provedor WMI para Classes de eventos do servidor e as propriedades](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) para determinar quais propriedades que ele contém. Por exemplo, o evento DDL_DATABASE_LEVEL_EVENTS contém o **DatabaseName** e **UserName** propriedades. Ele também herda a **SQLInstance**, **LoginName**, **PostTime**, **SPID**, e **ComputerName** Propriedades de seus eventos pai.  
   
- **,** *... n*  
+ **,** *...n*  
  Indica que *event_property* podem ser consultados várias vezes, separadas por vírgulas.  
   
  \*  
@@ -88,7 +90,7 @@ WHERE where_condition
   
  Somente o `=` operando pode ser usado junto com **DatabaseName**, **SchemaName**, e **ObjectName**. Não é possível usar outras expressões com essas propriedades de eventos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *where_condition* do provedor WMI para eventos de servidor sintaxe determina o seguinte:  
   
 -   O escopo pelo qual o provedor tenta recuperar especificado *event_type*: o nível de servidor, banco de dados ou nível de objeto (o único objeto que tem suportado no momento é a fila). Por fim, esse escopo determina o tipo de notificação de eventos criado no banco de dados de destino. Esse processo chamou o registro de notificação de eventos.  

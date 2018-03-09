@@ -2,10 +2,14 @@
 title: "Dados hierárquicos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
-  O tipo de dados interno **hierarchyid** facilita o armazenamento e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+O tipo de dados interno **hierarchyid** facilita o armazenamento e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
   
@@ -526,7 +531,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  

@@ -1,12 +1,14 @@
 ---
 title: Trabalhando com os arquivos de Script do Console de exemplo (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ed17f63dedb91eb41eea2cc991771daf35af48fc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aa5a59b9638c83fd99f6d330561e4b0a7b5f4cc6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (OracleToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -127,9 +128,8 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     `object-name:`Especifica o banco de dados de origem / tabelas nome que requer a serem migradas. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
 [Criar os arquivos de Conexão do servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
 [Gerando relatórios &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   
-

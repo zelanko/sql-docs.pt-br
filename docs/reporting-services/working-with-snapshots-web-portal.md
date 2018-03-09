@@ -1,33 +1,33 @@
 ---
-title: "Trabalhar com instantâneos (portal da web) | Microsoft Docs"
+title: "Trabalhando com instantâneos (portal da Web) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51abaf6facdb6c9dbb9ed360d371057a0274de3f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Você pode controlar se os instantâneos são criados para um relatório selecionando o **reticências (...)**  de um relatório, selecionando **gerenciar** e selecionando **cache** ou **instantâneos de histórico**.  
+Você pode controlar se os instantâneos são criados para um relatório selecionando as **reticências (...)** de um relatório, **Gerenciar** e **Cache** ou **Instantâneos de Histórico**.  
   
 > [!NOTE]
 > O serviço SQL Server Agent precisa ser iniciado.  
@@ -84,5 +84,4 @@ Marcar essa opção copiará um instantâneo de relatório gerado com base nas p
 [Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

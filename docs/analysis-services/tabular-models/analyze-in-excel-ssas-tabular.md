@@ -1,36 +1,33 @@
 ---
-title: Analisar no Excel (SSAS Tabular) | Microsoft Docs
+title: Analisar no Excel | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
-  O recurso analisar no Excel, no SSDT, fornece uma maneira de analisar projetos de modelo rapidamente durante o desenvolvimento de autores de modelo de tabela. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de espaço de trabalho (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+O recurso analisar no Excel, no SSDT, fornece uma maneira de analisar projetos de modelo rapidamente durante o desenvolvimento de autores de modelo de tabela. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de espaço de trabalho (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
   
- Este tópico pressupõe que você já esteja familiarizado com o Microsoft Excel, Tabelas Dinâmicas e Gráficos Dinâmicos. Para saber mais sobre o uso do Excel, consulte a Ajuda do Excel.  
+ Este artigo pressupõe que você já estiver familiarizado com o Microsoft Excel, tabelas dinâmicas e gráficos dinâmicos. Para saber mais sobre o uso do Excel, consulte a Ajuda do Excel.  
   
 ##  <a name="bkmk_benefits"></a> Benefícios  
  O recurso Analisar no Excel fornece aos autores de modelo a capacidade para testar a eficácia de um projeto de modelo usando o aplicativo comum de análise de dados, Microsoft Excel. Para usar o recurso analisar no Excel, você deve ter o Microsoft Office 2003 ou posterior instalado no mesmo computador que o SSDT.  
@@ -50,16 +47,15 @@ ms.lasthandoff: 09/01/2017
   
  Além do usuário efetivo ou função, você pode especificar uma perspectiva. As perspectivas permitem que os autores do modelo definam exibições de cenário comerciais específicas de objetos modelo e dados. Por padrão, nenhuma perspectiva é usada. Para usar uma perspectiva com o analisar no Excel, as perspectivas já devem ser definidas usando a caixa de diálogo perspectivas no SSDT. Se uma perspectiva for especificada, a Lista de campos da Tabela Dinâmica conterá somente esses objetos selecionados na perspectiva. Para obter mais informações, consulte [criar e gerenciar perspectivas](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tarefas relacionadas  
+##  <a name="bkmk_rt"></a> Related tasks  
   
-|**Tópico**|**Description**|  
+|**Tópico**|**Descrição**|  
 |---------------|---------------------|  
-|[Analisar um modelo Tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e adicionar uma Tabela Dinâmica à planilha.|  
+|[Analisar um modelo tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Este artigo descreve como usar o recurso analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão de fonte de dados para o banco de dados de espaço de trabalho do modelo e adicionar uma tabela dinâmica à planilha.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Analisar um modelo Tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Analisar um modelo tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [Funções](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

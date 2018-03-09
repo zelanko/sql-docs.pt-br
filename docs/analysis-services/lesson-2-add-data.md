@@ -2,30 +2,27 @@
 title: "Lição 2: Adicionar dados | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f17ae5dc82279056efc825f3d6a8092ea1b7623
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -36,7 +33,7 @@ Usando o Assistente de importação de tabela, você pode importar dados de uma 
   
 Tempo estimado para concluir esta lição: **20 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição, você deve ter concluído a lição anterior: [Lição 1: Criar um novo projeto de modelo de tabela](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Criar uma conexão  
@@ -96,7 +93,7 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
     
     **DimDate**
     
-      |Coluna|  
+      |coluna|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -106,7 +103,7 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
   
     **DimGeography**
   
-      |Coluna|  
+      |coluna|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -114,7 +111,7 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
   
     **DimProduct**
   
-      |Coluna|  
+      |coluna|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -129,21 +126,21 @@ A tabela DimCustomer que você está importando do banco de dados de exemplo con
   
     **DimProductCategory**
   
-      |Coluna|  
+      |coluna|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |Coluna|  
+      |coluna|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |Coluna|  
+      |coluna|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
@@ -179,4 +176,3 @@ Vá para a próxima lição: [lição 3: marcar como tabela de data](../analysis
 
   
   
-

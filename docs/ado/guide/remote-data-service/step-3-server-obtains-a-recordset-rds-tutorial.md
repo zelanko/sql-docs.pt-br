@@ -3,7 +3,7 @@ title: "Etapa 3: O servidor obtém um conjunto de registros (Tutorial de RDS) | 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a6a55083897b680ece362fe734f3f4a4cd97db4d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62210ae4cbf206faebed32b87bdbf64edd3265d9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Etapa 3: O servidor obtém um conjunto de registros (Tutorial de RDS)
 O programa de servidor usa o texto de cadeia de caracteres e o comando connect para consultar a fonte de dados para as linhas desejadas. ADO normalmente é usado para recuperar esse **registros**, embora outros dados do Microsoft interfaces de acesso, como OLE DB, pode ser usado.  
@@ -48,4 +47,3 @@ End Function
 ## <a name="see-also"></a>Consulte também  
  [Etapa 4: O servidor retorna o conjunto de registros (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

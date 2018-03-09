@@ -2,12 +2,13 @@
 title: "Funções predefinidas | Microsoft Docs"
 ms.custom: 
 ms.date: 10/22/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +16,18 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="role-definitions---predefined-roles"></a>Definições de função - funções predefinidas
+# <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
   
 ## <a name="how-to-use-predefined-roles"></a>Como usar funções predefinidas  
@@ -213,14 +213,13 @@ ms.lasthandoff: 08/09/2017
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a opção Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para Gerenciador de Relatórios é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
 |Exibir agendas compartilhadas|Exiba os agendamentos compartilhados usados para executar relatórios ou atualizar um.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , os usuários não poderão selecionar os agendamentos compartilhados a serem usados com assinaturas e outras opções agendadas.|  
   
- A função **Usuário do Sistema** pode ser usada para complementar a segurança padrão. Você pode incluir a função em novas atribuições de função que ampliam o acesso do servidor de relatório aos usuários de relatórios. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ A função **Usuário do Sistema** pode ser usada para complementar a segurança padrão. Você pode incluir a função em novas atribuições de função que ampliam o acesso do servidor de relatório aos usuários de relatórios. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Criar, excluir ou modificar uma função &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder acesso de usuário a um servidor de relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)  
   
   
-

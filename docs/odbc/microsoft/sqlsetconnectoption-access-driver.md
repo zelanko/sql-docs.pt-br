@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8183c706378493b2fd854019228e429a7cfcc839
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Driver de acesso)
 > [!NOTE]  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION é sempre SQL_TXN_READ_COMMITTED.|  
   
  [1] não há suporte para transações atômicas pelo driver do Microsoft Access. Quando a confirmação de uma transação usando o driver do Microsoft Access, um atraso finito existe entre o momento em que a transação é confirmada e a hora em que os valores são gravados no disco. Esse atraso é determinado por um atraso inerente no mecanismo do Microsoft Jet. O tempo limite da página não pode ser menor que um valor mínimo, mesmo se a opção PageTimeout está definida abaixo do valor. Como resultado, não há nenhuma garantia de que foi confirmada dados estável, desde que as alterações podem ser feitas durante o intervalo.
-

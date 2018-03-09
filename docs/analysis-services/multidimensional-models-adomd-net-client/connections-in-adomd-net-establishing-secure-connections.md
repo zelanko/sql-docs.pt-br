@@ -1,16 +1,14 @@
 ---
 title: "Estabelecendo conexões seguras no ADOMD.NET | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2cf974a0cc74127203b24b2e94acabec1e4339a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexões no ADOMD.NET - estabelecer conexões seguras
   Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -83,9 +80,9 @@ ms.lasthandoff: 09/01/2017
   
 |Valor de ProtectionLevel|Usar com HTTP ou HTTPS|  
 |---------------------------|----------------------------|  
-|**Nenhuma**|Não|  
+|**Nenhuma**|não|  
 |**Conectar**|HTTP|  
-|**Integridade do PCT** ou **PktIntegrity**|Não|  
+|**Integridade do PCT** ou **PktIntegrity**|não|  
 |**Privacidade do PCT** ou **PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>Abrindo uma conexão HTTP segura  
@@ -127,4 +124,3 @@ End Function
  [Estabelecendo conexões no ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - number of packets read
 - packets [SQL Server], number read
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4d0bfea159c945dab24060144783221513e9fcd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1dfa728de6b80397de18bf0bc519c00dfad524ae
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40packreceived-transact-sql"></a>& #x 40; & #x 40. PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,4 +73,3 @@ Packets Received
  [Funções estatísticas do sistema](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
-

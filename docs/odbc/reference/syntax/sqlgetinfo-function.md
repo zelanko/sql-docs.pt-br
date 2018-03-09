@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetInfo
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetInfo
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetInfo
-helpviewer_keywords:
-- SQLGetInfo function [ODBC]
+f1_keywords: SQLGetInfo
+helpviewer_keywords: SQLGetInfo function [ODBC]
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5ef6197247bbe50397c543a91156e0c5db294422
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57ba22ee8645f1d3548be91adc9aafb4fc016c79
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-function"></a>Função SQLGetInfo
 **Conformidade**  
@@ -1843,7 +1837,6 @@ else
  Retornando informações sobre tipos de dados de uma fonte de dados  
  [Função SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

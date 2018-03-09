@@ -1,26 +1,27 @@
 ---
-title: "Criar um relatório móvel com guias usando o detalhamento | Relatórios do Reporting Services móveis | Microsoft Docs"
+title: "Criar um relatório móvel com guias usando o detalhamento | Relatórios móveis do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6554f808c19540d2a3b7cbe3fdf4e86c5fe7a357
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9824bbc98ac886f8836b73ae8ca49cbdce93afaa
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Criar um relatório móvel com guias usando o detalhamento
 Saiba como criar um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com aparência e funcionamento de um relatório com guias usando detalhamento e parâmetros.
@@ -29,9 +30,9 @@ Por exemplo, neste relatório, os indicadores na parte superior funcionam como g
 
 ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
-Nos bastidores, isso é realmente um conjunto de cinco relatórios separados, cada um com um parâmetro diferente que filtra o relatório para corresponder ao medidor selecionado na parte superior do relatório. Criar todos os cinco relatórios pela primeira vez, e para cada um dos cinco relatórios, fazer os outros quatro medidores em drillthroughs quatro relatórios.
+Nos bastidores, isso é realmente um conjunto de cinco relatórios separados, cada um com um parâmetro diferente que filtra o relatório para corresponder ao medidor selecionado na parte superior do relatório. Você cria todos os cinco relatórios primeiro e, para cada um dos cinco relatórios, você transforma os outros quatro medidores em detalhamentos para os outros quatro relatórios.
 
-Aqui estão as etapas para este exemplo.
+Veja abaixo as etapas para este exemplo.
 
 ## <a name="create-the-basic-report"></a>Criar o relatório básico
 
@@ -43,64 +44,64 @@ Aqui estão as etapas para este exemplo.
     * Armazenamento
     * Despesas diversas
 
-   ![01-vendas---publicador de relatórios móveis](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Definir **acentos** para **em** para o indicador de vendas, portanto ele irá comparar com o restante do relatório – nesse caso, branco em preto.
+2. Defina **Ênfase** como **Ativado** para o medidor Vendas, de modo que ele seja destacado em relação ao restante do relatório – nesse caso, branco no preto.
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
-3. Salvá-lo para um [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] servidor de relatório.
+3. Salve-o em um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
 ## <a name="make-copies-of-the-report"></a>Fazer cópias do relatório
 
-1. Fazer quatro cópias do relatório de vendas e nomeá-los: 
+1. Faça quatro cópias do relatório Vendas e nomeie-as: 
 
     * Transporte
     * Combustível
     * Armazenamento
     * Despesas diversas
 
-3. Salvá-los para o [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] servidor de relatório.
+3. Salve-as no servidor de relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
 ## <a name="set-the-gauge-as-a-drillthrough"></a>Definir o medidor como um detalhamento
 
-Nesta seção, você pode definir cada medidor (que não seja o medidor de vendas) como um detalhamento para seu respectivo relatório.
+Nesta seção, você define cada medidor (que não seja o medidor de Vendas) como um detalhamento de seu respectivo relatório.
 
-1. No relatório de vendas, selecione o indicador de transporte.
+1. No relatório Vendas, selecione o medidor Transporte.
 
     ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. Com o **Layout** guia selecionada, o **propriedades visuais** painel, selecione **destino do detalhamento**.
+2. Com a guia **Layout** selecionada, no painel **Propriedades visuais**, selecione **Destino de detalhamento**.
 
-3. Selecione **relatório móvel**.
+3. Selecione **Relatório móvel**.
 
-4. Navegue até e selecione o relatório que será o destino para o detalhamento – nesse caso, "Finanças - transporte".
+4. Navegue para o relatório que será o destino do detalhamento e selecione-o – nesse caso, “Finanças – Transporte”.
 
     ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. Em **Configurar relatório de destino**, selecione o parâmetro para filtrar o relatório e selecione **aplicar**.
+5. Em **Configurar relatório de destino**, selecione o parâmetro para filtrar o relatório e selecione **Aplicar**.
 
    ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
-6. Repita essas etapas para cada um dos outros medidores no relatório de vendas. 
+6. Repita essas etapas para cada um dos outros medidores no relatório Vendas. 
 
-## <a name="set-the-gauges-for-the-other-reports"></a>Definir os medidores em outros relatórios
+## <a name="set-the-gauges-for-the-other-reports"></a>Definir os medidores para os outros relatórios
 
-1.  Abra o relatório de transporte, defina o indicador de vendas como um detalhamento para o relatório de vendas e os outros três medidores como drillthroughs a seus respectivos relatórios.
+1.  Abra o relatório Transporte, defina o medidor Vendas como um detalhamento para o relatório Vendas e os outros três medidores como detalhamentos de seus respectivos relatórios.
 
-2. Ainda no relatório de transporte, defina **acentos** para o medidor de transporte **em**, compare com o restante do relatório.
+2. Ainda no relatório Transporte, defina **Ênfase** do medidor Transporte como **Ativado**, para contrastar com o restante do relatório.
 
-3. Repita essas etapas para os relatórios de combustível, armazenamento e despesas diversas. 
+3. Repita essas etapas para os relatórios Combustível, Armazenamento e Despesas Diversas. 
 
-## <a name="view-the-report-in-the-web-portal"></a>Exibir o relatório no portal da web
+## <a name="view-the-report-in-the-web-portal"></a>Exibir o relatório no portal da Web
 
-1. Vá para o [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] servidor de relatório e abra um dos relatórios. 
+1. Acesse o servidor do relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e abra um dos relatórios. 
 
 2. Observe que cada um dos medidores tem um ícone de detalhamento no canto superior direito.
 
     ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
-3. Selecione um dos indicadores para ir para o relatório filtrado para dados do medidor que.
+3. Selecione um dos medidores para acessar o relatório filtrado para dados desse medidor.
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
@@ -113,5 +114,4 @@ Nesta seção, você pode definir cada medidor (que não seja o medidor de venda
 
 
   
-
 

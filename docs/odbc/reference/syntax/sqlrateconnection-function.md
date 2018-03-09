@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLRateConnection function [ODBC]
+helpviewer_keywords: SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22f7e5c4181a0b36a862ab0e0b819891a3dee9fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e63a6312a6f4b637d13282e25311204ea3879fd5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlrateconnection-function"></a>Função SQLRateConnection
 **Conformidade**  
@@ -67,7 +64,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>diagnóstico  
  O Gerenciador de Driver não processa informações de diagnóstico retornadas por essa função.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **SQLRateConnection** produz uma pontuação entre 0 e 100 (inclusive) que indica quanto uma conexão existente corresponde à solicitação.  
   
 |Pontuação|Significado (quando SQL_SUCCESS é retornado)|  
@@ -90,8 +87,7 @@ SQLRETURN  SQLRateConnection(
   
  Inclua sqlspi.h para desenvolvimento de driver ODBC.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pooling de Conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
-

@@ -3,7 +3,7 @@ title: Conectando-se a fontes de dados | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f09a5d0fb07b9af4db1f801252359f8b77039d74
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connecting-to-data-sources"></a>Conectando-se a fontes de dados
 ADO **Conexão** objeto representa uma sessão exclusiva com uma fonte de dados, incluindo um DBMS, um repositório de arquivo ou um arquivo de texto delimitado por vírgula. No caso de um sistema de banco de dados cliente/servidor, a conexão ADO pode ser uma conexão de rede reais para o servidor.  
@@ -45,4 +44,3 @@ ADO **Conexão** objeto representa uma sessão exclusiva com uma fonte de dados,
 -   [Especificando propriedades de conexão](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Controle de transações](../../../ado/guide/data/controlling-transactions-ado.md)
-

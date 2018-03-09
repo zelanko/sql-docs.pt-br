@@ -2,9 +2,12 @@
 title: "Política de failover automático flexível – grupo de disponibilidade | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f80c2603b7b67908a4c3e0d7bdea8c48c0582ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>Política de failover automático flexível – grupo de disponibilidade
-  Uma política de failover flexível fornece um controle granular das condições que causam um [failover automático](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) de um grupo de disponibilidade. Ao alterar as condições de falha que disparam um failover automático e a frequência de verificações de integridade, você pode aumentar ou diminuir a probabilidade de um failover automático para oferecer suporte ao seu SLA para alta disponibilidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma política de failover flexível fornece o controle granular das condições que causam um [failover automático](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) para um grupo de disponibilidade. Ao alterar as condições de falha que disparam um failover automático e a frequência de verificações de integridade, você pode aumentar ou diminuir a probabilidade de um failover automático para oferecer suporte ao seu SLA para alta disponibilidade.  
   
  A política de failover flexível de um grupo de disponibilidade é definida por seu nível da condição de falha e pelo limite de tempo limite da verificação de integridade. Ao detectar que um grupo de disponibilidade excedeu seu nível de condição de falha ou seu limite de tempo limite da verificação de integridade, a DLL de recurso do grupo de disponibilidade responde ao cluster WSFC (Windows Server Failover Clustering). O cluster WSFC inicia um failover automático para a réplica secundária.  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

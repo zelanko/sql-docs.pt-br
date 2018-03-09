@@ -2,27 +2,33 @@
 title: Classe de evento Showplan XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Showplan XML event class
+helpviewer_keywords:
+- Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813e54cf56af7b0d0b465e474582ea16d9fea16a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9034829fb4c0d5174cc66eff34eefe22b4adb22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="showplan-xml-event-class"></a>classe de evento Showplan XML
-  A classe de evento Showplan XML ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento Showplan XML ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
   
  Quando a classe de evento Showplan XML estiver incluída em um rastreamento, a quantidade de sobrecarga será um obstáculo significativo ao desempenho. O Showplan XML armazena um plano de consulta que é criado quando a consulta é otimizada. Para minimizar a sobrecarga gerada, limite o uso dessa classe de evento para rastreamentos que monitorem problemas específicos em breves períodos de tempo.  
   
@@ -30,29 +36,29 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Colunas de dados da classe de evento Showplan XML  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
-|BinaryData|**image**|Custo estimado da consulta.|2|Não|  
+|BinaryData|**imagem**|Custo estimado da consulta.|2|não|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |DatabaseID|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
-|DatabaseName|**nvarchar**|Nome do banco de dados.|35|Não|  
-|Event Class|**int**|Tipo de evento = 122.|27|Não|  
-|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
+|DatabaseName|**nvarchar**|Nome do banco de dados.|35|não|  
+|Event Class|**int**|Tipo de evento = 122.|27|não|  
+|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |Integer Data|**inteiro**|Número estimado de linhas retornadas.|25|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |LineNumber|**int**|Exibe o número da linha que contém o erro.|5|Sim|  
 |LoginName|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO/nomedousuário).|11|Sim|  
-|LoginSID|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Não|  
+|LoginSID|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|não|  
 |NestLevel|**int**|Inteiro que representa os dados retornados por @@NESTLEVEL.|29|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |ObjectID|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |ObjectName|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
 |ObjectType|**int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição do catálogo sys.objects. Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
@@ -60,7 +66,7 @@ ms.lasthandoff: 11/09/2017
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token usado para descrever a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

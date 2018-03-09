@@ -2,15 +2,13 @@
 title: "Exemplos de consulta de modelo de Clustering de sequência | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
-  Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  As consultas de previsão em um modelo de clusterização de sequência geralmente fazem recomendações com base nas sequências e transições, em atributos não sequenciais incluídos no modelo ou em uma combinação de atributos sequenciais e não sequenciais.  
   
@@ -267,24 +265,23 @@ AS t
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Retorna a distância do caso de entrada do cluster especificado ou, caso nenhum cluster tenha sido especificado, a distância do caso de entrada do cluster mais provável.<br /><br /> Essa função pode ser usada com qualquer tipo de modelo de clustering (EM, K-Means etc.), mas o resultado será diferente de acordo com o algoritmo.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
 |[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica se o nó especificado contém o caso atual.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ajustada de um estado especificado.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Retorna a probabilidade ajustada de um estado especificado.|  
 |[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Prevê associação de membro.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Retorna a probabilidade de que um caso de entrada se ajuste ao modelo existente.|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Retorna uma tabela que representa um histograma para a previsão de uma determinada coluna.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Retorna o Node_ID do nó no qual o caso é classificado.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para um estado especificado.|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Retorna uma tabela que representa um histograma para a previsão de uma determinada coluna.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Retorna o Node_ID do nó no qual o caso é classificado.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Retorna a probabilidade para um estado especificado.|  
 |[PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|Prediz valores de sequência futuros para um conjunto especificado de dados de sequência.|  
 |[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retorna o desvio padrão previsto para a coluna especificada.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retorna a variação de uma coluna especificada.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Retorna o valor de suporte para um estado especificado.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Retorna a variação de uma coluna especificada.|  
   
  Para obter uma lista das funções comuns a todos os algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)], consulte [Funções de previsão gerais &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
  [Referência técnica do algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos de Clustering de sequência &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

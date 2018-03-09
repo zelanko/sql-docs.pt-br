@@ -3,8 +3,11 @@ title: Executar Consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55bfcef3096f8b0cdc1e89787058b9c18cb965cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d4f7e1e866b10bedc5c43e21c4ec8b20c723f4d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-queries-visual-database-tools"></a>Executar consultas (Visual Database Tools)
-Quando você tiver terminado de criar a consulta, execute-a.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você tiver terminado de criar a consulta, poderá executá-la.  
   
 ### <a name="to-execute-a-query"></a>Para executar uma consulta  
   
@@ -42,7 +45,7 @@ O Designer de Consulta e Exibição retorna resultados para o seu computador em 
   
 Quando você criar uma consulta Update, Insert From, Insert Into, Delete ou Make Table, o Designer de Consulta e Exibição exibirá uma mensagem mostrando o número de linhas afetadas pela consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e02d385d699c1c26d44f2e7383584416c2d9dd5c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 79f10b22ba88d6dd860c608c9468e20a27615650
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,4 +114,3 @@ FROM   T
  [Métodos de Tipos de Dados XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

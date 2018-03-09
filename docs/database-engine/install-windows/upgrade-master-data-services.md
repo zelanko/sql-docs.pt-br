@@ -2,26 +2,31 @@
 title: Fazer upgrade do Master Data Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 28d67eed4c978e9f8c3b37752c8096fa00eec104
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 2503805434e4bcacbe2cd764a4bfbe66d1645a72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Veja a seguir os cenários de upgrade do Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
 -   [Atualize sem a atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
   
  O problema também poderá ocorrer se você não parar e reiniciar o **Pool de Aplicativos MDS** no IIS ao atualizar o esquema de banco de dados MDS. Reinicie o **Pool de Aplicativos MDS** para corrigir o problema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

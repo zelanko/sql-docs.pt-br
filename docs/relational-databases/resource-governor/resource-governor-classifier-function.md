@@ -2,9 +2,12 @@
 title: "Função do classificador do Resource Governor | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd888ee38d5afb60fc6a071af2f6e072d31ff290
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-governor-classifier-function"></a>Função de classificação do Administrador de Recursos
-  O processo de classificação do administrador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui sessões de entrada a um grupo de cargas de trabalho baseado nas características da sessão. Você pode personalizar a lógica de classificação gravando uma função definida pelo usuário, chamado de função de classificador.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O processo de classificação do administrador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui sessões de entrada a um grupo de cargas de trabalho baseado nas características da sessão. Você pode personalizar a lógica de classificação gravando uma função definida pelo usuário, chamado de função de classificador.  
   
 ## <a name="classification"></a>Classificação  
  O Administrador de Recursos oferece suporte à classificação de sessões de entrada. A classificação baseia-se em um conjunto de critérios gravados pelo usuário contido em uma função. Os resultados da lógica de função permitem que o Administrador de Recursos classifique as sessões em grupos de carga de trabalho existentes.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
 |----------------------|-----------|  
 |Descreve como criar e testar uma função de classificação definida pelo usuário.|[Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

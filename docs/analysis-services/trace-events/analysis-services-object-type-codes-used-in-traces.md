@@ -2,31 +2,30 @@
 title: "Usado em traços de códigos de tipo de objeto de Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados em traços
-  Esta página exibe o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta página exibe o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
   
 > [!NOTE]  
 >  Há mais códigos listados abaixo do que realmente aparecerá em um log de rastreamento. A lista abaixo é uma lista abrangente dos códigos de tipo para cada objeto, mas apenas objetos que fazem um bloqueio apresentará um código de tipo de objeto em um log de rastreamento.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 |-----------------|-----------------|  
 |100000|Servidor|  
 |100001|Comando|  
-|100002|Banco de dados|  
+|100002|banco de dados|  
 |100003|DataSource|  
 |100004|DataPermission|  
 |100005|Função|  
@@ -130,4 +129,3 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
-

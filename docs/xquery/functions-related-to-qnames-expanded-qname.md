@@ -3,30 +3,36 @@ title: Expanded-QName (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a688ffc9299e8f00b0b4d8cccd0e33538cbe63d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9a00b0b5f6e21f8590c4dee3e1a588d0203f004
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções relacionadas a QNames - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna um valor do tipo xs: QName com o namespace URI especificado no *$paramURI* e o nome do local especificado no *$paramLocal*. Se *$paramURI* é a cadeia de caracteres vazia ou a sequência vazia, ele não representará um namespace.  
   
@@ -43,7 +49,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  É a parte do nome local do QName.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O seguinte se aplica ao **expanded-QName()** função:  
   
 -   Se o *$paramLocal* valor especificado não está na forma léxica correta do tipo xs: NCName, a sequência vazia será retornada e representa um erro dinâmico.  

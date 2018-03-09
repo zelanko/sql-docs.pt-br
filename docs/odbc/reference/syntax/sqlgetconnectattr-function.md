@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetConnectOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetConnectOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetConnectAttr
-helpviewer_keywords:
-- SQLGetConnectAttr function [ODBC]
+f1_keywords: SQLGetConnectAttr
+helpviewer_keywords: SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc8f754301b5b0c0d5259cd7613bacdf302a06e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetconnectattr-function"></a>Função SQLGetConnectAttr
 **Conformidade**  
@@ -133,7 +127,6 @@ SQLRETURN SQLGetConnectAttr(
 |Definindo um atributo de ambiente|[Função SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

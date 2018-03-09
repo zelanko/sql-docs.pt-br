@@ -1,29 +1,30 @@
 ---
 title: Conecte-se ao DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 733fae47c5c74eb120b7f8719dd53675eb5b7e36
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conecte-se ao DB2 (DB2ToSQL)
 Use o **conectar ao DB2** caixa de diálogo para se conectar ao banco de dados DB2 que você deseja migrar.  
@@ -64,7 +65,7 @@ Insira o SID para o banco de dados. O SID é um identificador que distingue o ba
   
 Essa é uma opção de modo padrão.  
   
-**Nome de usuário**  
+**User name**  
 Digite o nome de usuário SSMA usará para se conectar ao banco de dados DB2.  
   
 **Senha**  
@@ -82,4 +83,3 @@ Cadeias de caracteres de Conexão consistem de pares de nome e valor de parâmet
   
 Cadeias de caracteres de conexão do SSMA, sempre inclua o parâmetro de provedor. Além disso, certifique-se de incluir o parâmetro Port quando você se conectar ao DB2.  
   
-

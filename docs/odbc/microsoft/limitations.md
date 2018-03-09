@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 784e99e2b0d3885956d31744261345169239dc10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="limitations"></a>Limitações
 Esta seção descreve as limitações dos Drivers ODBC de banco de dados de área de trabalho com relação aos tópicos a seguir:  
@@ -53,4 +51,3 @@ Esta seção descreve as limitações dos Drivers ODBC de banco de dados de áre
 |||[ONDE cláusula](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[ONDE atual da cláusula](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[Cadeia de caracteres](../../odbc/microsoft/string-limitations.md)|
-

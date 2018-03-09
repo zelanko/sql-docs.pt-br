@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STUnion (geometry Data Type)
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c41cbcf144e8772cd17cbfb43da403aea29a353
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 45156b37fbc46ed92cb342eb1b1e82baa93131f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Retorna um objeto que representa a união de uma **geometria** instância com ou
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
@@ -81,8 +80,7 @@ SELECT @g.STUnion(@h).ToString();
  `STUnion()` retorna um resultado que contém um segmento de arco circular porque a instância que invocou `STUnion()` contém um segmento de arco circular.  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

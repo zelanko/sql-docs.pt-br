@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: 8
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTAURAR o banco de dados (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -188,4 +187,3 @@ RESTORE HEADERONLY
  [Banco de dados de BACKUP &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
-

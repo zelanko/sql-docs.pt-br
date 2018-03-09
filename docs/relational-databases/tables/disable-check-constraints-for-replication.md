@@ -18,15 +18,15 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b07d0651a5f0223e66783c906e5e2ddcf827377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 432f3190da0556a78f5f434b73b603375e4b037f
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-check-constraints-for-replication"></a>Desabilitar verificação de restrições para replicação
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Desabilitar uma verificação de restrição de replicação  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
  Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar opções de esquema](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

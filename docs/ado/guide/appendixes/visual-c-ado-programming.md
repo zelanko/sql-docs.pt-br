@@ -3,7 +3,7 @@ title: "Programação do Visual C++ ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9000f90f30c8761845305e75cf3d0ea7ea86927a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Programação de ADO do Visual C++
 A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma sintaxe semelhante para o Microsoft Visual Basic. Embora o público-alvo é todos os usuários, programadores ADO empregam diversas linguagens como Visual Basic, Visual C++ (com e sem o **#import** diretiva) e o Visual J++ (com o pacote de classe ADO/WFC).  
@@ -47,7 +46,7 @@ A referência de API ADO descreve a funcionalidade do ADO API (API) usando uma s
   
  Para cada operação dentro de uma classe (ou seja, uma chamada de método ou propriedade), há uma declaração para chamar a operação diretamente (ou seja, o formulário "bruto" da operação) e uma declaração para chamar a operação bruta e lança um erro COM se a operação falhar ao executar succ essfully. Se a operação é uma propriedade, normalmente há uma diretiva de compilador que cria uma sintaxe alternativa para a operação que tem sintaxe como o Visual Basic.  
   
- Operações de recuperar o valor de uma propriedade têm nomes do formulário, **obter***propriedade*. Operações que defina o valor de uma propriedade têm nomes do formulário, **colocar***propriedade*. Operações que defina o valor de uma propriedade com um ponteiro para um objeto ADO têm nomes do formulário, **PutRef***propriedade*.  
+ Operações de recuperar o valor de uma propriedade têm nomes no formato **obter * propriedade*. Operações que defina o valor de uma propriedade têm nomes no formato **colocar * propriedade*. Operações que defina o valor de uma propriedade com um ponteiro para um objeto ADO têm nomes no formato **PutRef * propriedade*.  
   
  Você pode obter ou definir uma propriedade com chamadas destas formas:  
   
@@ -72,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- O compilador gerará apropriada **obter***-*, **colocar**-, ou **PutRef***propriedade* chamada com base no qual a sintaxe alternativa é declarada e se a propriedade está sendo lidos ou gravados.  
+ O compilador gerará apropriada **Get *-*, **colocar**-, ou **PutRef * propriedade* chamada com base no qual a sintaxe alternativa é declarada e se a propriedade é sendo lidos ou gravados.  
   
  O **__declspec(property...)**  diretiva de compilador só pode declarar **obter**, **colocar**, ou **obter** e **colocar** a sintaxe alternativa para uma função. Operações somente leitura só têm um **obter** declaração; operações de somente gravação só tem um **colocar** declaração; operações que são leitura e gravação ter **obter** e **colocar** declarações.  
   
- Apenas duas declarações são possíveis com esta diretiva; No entanto, cada propriedade pode ter três funções de propriedade: **obter***propriedade*, **colocar***propriedade*, e **PutRef**  *Propriedade*. Nesse caso, apenas duas formas da propriedade tem a sintaxe alternativa.  
+ Apenas duas declarações são possíveis com esta diretiva; No entanto, cada propriedade pode ter três funções de propriedade: **obter * propriedade*, **colocar * propriedade*, e **PutRef * propriedade*. Nesse caso, apenas duas formas da propriedade tem a sintaxe alternativa.  
   
- Por exemplo, o **comando** objeto **ActiveConnection** propriedade é declarada com uma sintaxe alternativa para **obter***ActiveConnection*e **PutRef***ActiveConnection*. O **PutRef**-sintaxe é uma boa opção porque, na prática, você normalmente deve colocar um aberto **Conexão** objeto (ou seja, um **Conexão** ponteiro de objeto) nesse propriedade. Por outro lado, o **registros** objeto tem **obter**-, **colocar**-, e **PutRef***ActiveConnection*operações, mas nenhuma sintaxe alternativa.  
+ Por exemplo, o **comando** objeto **ActiveConnection** propriedade é declarada com uma sintaxe alternativa para **obter * ActiveConnection* e **PutRef * * * ActiveConnection*. O **PutRef**-sintaxe é uma boa opção porque, na prática, você normalmente deve colocar um aberto **Conexão** objeto (ou seja, um **Conexão** ponteiro de objeto) nesse propriedade. Por outro lado, o **registros** objeto tem **obter**-, **colocar**-, e **PutRef * ActiveConnection* operações, mas nenhuma alternativa sintaxe.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>A propriedade do Item, o método GetItem e coleções  
  ADO define várias coleções, incluindo **campos**, **parâmetros**, **propriedades**, e **erros**. No Visual C++, o **GetItem (***índice***)** método retorna um membro da coleção. *Índice* é um **Variant**, o valor que é um índice numérico do membro na coleção, ou uma cadeia de caracteres que contém o nome do membro.  
@@ -440,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- Este exemplo do Visual C++ demonstra o **obter**/**colocar**/**PutRef***propriedade*.  
+ Este exemplo do Visual C++ demonstra o **obter**/**colocar**/**PutRef * propriedade*.  
   
 #### <a name="notes"></a>Observações  
  As observações a seguir correspondem às seções comentadas no exemplo de código.  
@@ -604,4 +603,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

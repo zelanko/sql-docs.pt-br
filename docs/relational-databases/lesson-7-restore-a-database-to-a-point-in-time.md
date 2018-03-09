@@ -1,27 +1,33 @@
 ---
 title: "Lição 7: Restaurar um banco de dados em um ponto no tempo | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 479f890cd6623b457b53cc0024691f9169937538
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lição 7: Restaurar um banco de dados em um ponto específico
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 em um ponto específico entre dois backups de log de transações.  
   
 Com backups tradicionais, para realizar a restauração pontual, você precisará usar o backup do banco de dados completo, talvez um backup diferencial, e todos os arquivos de log de transações incluindo e logo após o ponto específico para o qual você quer restaurar. Com os backups de instantâneo de arquivo, você só precisa de dois arquivos de log de backup adjacentes que fornecem as postagens de meta enquadrando o tempo para o qual você quer restaurar. Você só precisa dois conjuntos de backup de instantâneo de arquivo de log, pois cada backup de log cria um instantâneo de arquivo de cada arquivo de banco de dados (cada arquivo de dados e o arquivo de log).  

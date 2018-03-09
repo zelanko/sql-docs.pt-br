@@ -2,9 +2,12 @@
 title: SQL Server, objeto Bloqueios | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 159bb57b8f8798a0e6043d57b0c033374482d079
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, objeto Locks
-  O objeto **SQLServer:Locks** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre bloqueios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em tipos de recurso individuais. Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como linhas lidas ou modificadas durante uma transação, para evitar o uso simultâneo de recursos por transações diferentes. Por exemplo, se um bloqueio exclusivo (X) for mantido em uma linha de uma tabela por uma transação, nenhuma outra transação poderá modificar essa linha até que o bloqueio seja liberado. Minimizar bloqueios aumenta a simultaneidade, o que pode melhorar o desempenho. Várias instâncias do objeto **Locks** podem ser monitoradas ao mesmo tempo, com cada instância representando um bloqueio em um tipo de recurso.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:Locks** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre bloqueios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em tipos de recurso individuais. Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como linhas lidas ou modificadas durante uma transação, para evitar o uso simultâneo de recursos por transações diferentes. Por exemplo, se um bloqueio exclusivo (X) for mantido em uma linha de uma tabela por uma transação, nenhuma outra transação poderá modificar essa linha até que o bloqueio seja liberado. Minimizar bloqueios aumenta a simultaneidade, o que pode melhorar o desempenho. Várias instâncias do objeto **Locks** podem ser monitoradas ao mesmo tempo, com cada instância representando um bloqueio em um tipo de recurso.  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** .  
   
-|Contadores Locks do SQL Server|Descrição|  
+|Contadores Locks do SQL Server|Description|  
 |-------------------------------|-----------------|  
 |**Tempo de Espera Médio (ms)**|Tempo médio de espera (em milissegundos) de cada solicitação de bloqueio que resultou em uma espera.|  
 |**Base do tempo de espera médio**|Somente para uso interno.|
@@ -41,14 +44,14 @@ ms.lasthandoff: 11/09/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode bloquear esses recursos.  
   
-|Item|Descrição|  
+|Item|Description|  
 |----------|-----------------|  
 |**_Total**|Informações de todos os bloqueios.|  
 |**AllocUnit**|Um bloqueio em uma unidade de alocação.|  
 |**Aplicativo**|Um bloqueio em um recurso especificado por aplicativo.|  
-|**Banco de dados**|Um bloqueio em um banco de dados, inclusive todos os seus objetos.|  
+|**Backup de banco de dados**|Um bloqueio em um banco de dados, inclusive todos os seus objetos.|  
 |**Extensão**|Um bloqueio em um grupo contíguo de 8 páginas.|  
-|**Arquivo**|Um bloqueio em um arquivo de banco de dados.|  
+|**File**|Um bloqueio em um arquivo de banco de dados.|  
 |**Heap/BTree**|Heap ou BTree (HOBT). Um bloqueio em um heap de páginas de dados ou na estrutura BTree de um índice.|  
 |**Chave**|Um bloqueio em uma linha de um índice.|  
 |**Metadados**|Um bloqueio em uma parte das informações de catálogo, também chamadas de metadados.|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 |**Página**|Um bloqueio em uma página de 8 quilobytes (KB) em um banco de dados.|  
 |**RID**|ID de linha. Um bloqueio em uma única linha de um heap.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

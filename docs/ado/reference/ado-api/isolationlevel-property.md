@@ -3,7 +3,7 @@ title: Propriedade IsolationLevel | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b66b246ef3bc64e841ec6322de41ba0fc1e7af97
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aff806c29bd72244c44011ab513affc77438e874
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-property"></a>Propriedade IsolationLevel
 Indica o nível de isolamento para um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -36,7 +35,7 @@ Indica o nível de isolamento para um [Conexão](../../../ado/reference/ado-api/
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) valor. O padrão é **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **IsolationLevel** propriedade para definir o isolamento de nível de um **Conexão** objeto. A configuração não terá efeito até a próxima vez que você chamar o [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método. Se o nível de isolamento solicitar estiver disponível, o provedor pode retornar o próximo maior nível de isolamento sem atualizar o **IsolationLevel** propriedade.  
   
  O **IsolationLevel** propriedade é leitura/gravação.  
@@ -50,4 +49,3 @@ Indica o nível de isolamento para um [Conexão](../../../ado/reference/ado-api/
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de propriedades de modo (VB) e IsolationLevel](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [Exemplo de propriedades de modo (VC + +) e IsolationLevel](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
-

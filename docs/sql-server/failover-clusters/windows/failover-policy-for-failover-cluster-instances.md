@@ -2,9 +2,12 @@
 title: "Política de failover para instâncias de cluster de failover | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44a3b05bea5c8962566c766662f99f5d430abfd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 70117aaa0f1e936fff8c8d78f82636d4e77c460b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
-  Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], somente um nó pode ter o grupo de recursos de cluster do WSFC (Cluster de Failover do Windows Server) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
   
  Uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende do serviço do WSFC subjacente para detecção de failover. Assim, dois mecanismos determinam o comportamento de failover para FCI: a primeira é a funcionalidade nativa do WSFC e a última é a funcionalidade adicionada pela instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

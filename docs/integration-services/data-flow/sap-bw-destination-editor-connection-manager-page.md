@@ -1,5 +1,5 @@
 ---
-title: "Editor de destino do SAP BW (página Gerenciador de Conexão) | Microsoft Docs"
+title: "Editor de destino SAP BW (página Gerenciador de Conexões) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino SAP BW** para selecionar o gerenciador de conexões do SAP BW que o destino de SAP BW usará. Nesta página, você também seleciona os parâmetros para carregar os dados no sistema SAP Netweaver BW.  
@@ -119,11 +118,10 @@ ms.lasthandoff: 08/03/2017
 |**InfoSource**|Crie um novo InfoSource usando a caixa de diálogo **Criar InfoSource** e, em seguida, **Criar InfoSource para os Dados da Transação** ou **Criar InfoSource para Dados Mestres** . Para obter mais informações sobre essas caixas de diálogo, consulte [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) e [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Crie um novo InfoPackage usando a caixa de diálogo **Criar InfoPackage** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de destino do SAP BW &#40; Página mapeamentos &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Editor de destino do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de destino do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de Destino SAP BW &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Editor de Destino SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de Destino SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

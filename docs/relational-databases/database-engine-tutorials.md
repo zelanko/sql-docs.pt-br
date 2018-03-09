@@ -2,25 +2,30 @@
 title: Tutoriais do Mecanismo de Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-query-tuning
+ms.suite: sql
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 618716ff9a9c6515945c3b93827136cba85d8470
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3765d87fd95fdc07513319d1c4f175ec66e9f813
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Esta seção contém tutoriais para [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Tutorial: introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
@@ -53,7 +58,7 @@ Este tutorial ilustra como fazer um backup do SQL Server e uma restauração do 
 [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de armazenamento de Blob do Windows Azure.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI: exemplos do SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
   

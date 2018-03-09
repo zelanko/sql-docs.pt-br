@@ -2,9 +2,12 @@
 title: "Otimizar o desempenho da replicação de mesclagem com artigos de somente download | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb4df0261b65ff9524979bfcf2897c20933cd31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7cf9009385126a41283ce8044acba2bd35d08867
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Otimizar o desempenho de replicação de mesclagem com artigos de somente download
-  A replicação de mesclagem oferece dois tipos de artigo diferentes para endereçar as diferentes necessidades de aplicativo. Publicações podem conter um ou mais destes tipos de artigo conforme for apropriado para o aplicativo:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação de mesclagem oferece dois tipos de artigo diferentes para endereçar as diferentes necessidades de aplicativo. Publicações podem conter um ou mais destes tipos de artigo conforme for apropriado para o aplicativo:  
   
 -   Artigos padrão  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="using-different-article-types-in-your-applications"></a>Usando tipos diferentes de artigos em seus aplicativos  
  Entendendo os requisitos de seu aplicativo, você pode alternar entre máxima flexibilidade e desempenho ideal. Por exemplo, aplicativos com vários conflitos e alterações tanto no Publicador quanto do Assinante usarão a publicação criada a partir de artigos padrão. Alguns aplicativos, como o aplicativo de automação de departamento de vendas, poderiam ter artigos com um potencial para conflitos, e outros artigos que têm a função de tabelas de pesquisa, que podem ser especificados como somente para download. Aplicativos de entrada de dados, como aplicativos de sistemas de ponto de venda e automação de campo, frequentemente particionam os dados de forma que os conflitos são eliminados, e os dados de um Assinante nunca vão a outro. Nessas situações, uma combinação de partições não sobrepostas, artigos de somente download e partições pré-computadas fornecem o melhor desempenho e escalabilidade. Para obter mais informações sobre partições não sobrepostas e partições pré-computadas, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   

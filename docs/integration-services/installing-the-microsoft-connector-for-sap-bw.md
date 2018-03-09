@@ -1,11 +1,11 @@
 ---
-title: Instalando o Microsoft Connector para SAP BW | Microsoft Docs
+title: Instalar o Microsoft Connector para SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 663ae1f9c71987729b96510157ce39868490f00b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1d2716714e810143e17d3435c61de394e82b9bc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Instalação do Microsoft Connector para SAP BW
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW para SQL Server 2016 é um componente do SQL Server 2016 Feature Pack. Para instalar o Connector for SAP BW e sua documentação, baixe e execute o instalador na [página Web do SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
@@ -47,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 -   Para executar pacotes no modo de 32 bits em qualquer sistema operacional Windows de 64 bits, copie o arquivo do SAP GUI, librfc32.dll, para a pasta **SysWow64** da pasta Windows. (Normalmente, o local da pasta é **C:\Windows\SysWow64**.)  
   
   
-

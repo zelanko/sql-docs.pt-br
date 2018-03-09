@@ -2,9 +2,12 @@
 title: Implantar um aplicativo da camada de dados | Microsoft Docs
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,18 +25,18 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
-  Implante um DAC (aplicativo da camada de dados) de um pacote de DAC em uma instância existente do mecanismo de banco de dados ou do Banco de dados SQL do Azure usando um assistente ou um script do PowerShell. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Implante um DAC (aplicativo da camada de dados) de um pacote de DAC em uma instância existente do mecanismo de banco de dados ou do Banco de dados SQL do Azure usando um assistente ou um script do PowerShell. 
   
  O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]); cria um banco de dados, em seguida o preenche com todos os objetos de banco de dados definidos no DAC.  
  
@@ -177,7 +180,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="more-information"></a>Mais informações 
- [Aplicativos da camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)   
  [Identificadores de banco de dados](../../relational-databases/databases/database-identifiers.md)  
   

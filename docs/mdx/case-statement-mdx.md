@@ -2,32 +2,31 @@
 title: "Instrução CASE (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CASE
+dev_langs: kbMDX
+helpviewer_keywords: statements [MDX], CASE
 ms.assetid: 0aee3b4a-d5f7-4c9a-87b8-e5efc2da6b6d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: a4dbcc7ab42a0e044be0c7561adff4049fd8d1b9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: df719ea2e82824dbdb7a025356487e296f68d9c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="case-statement-mdx"></a>Instrução CASE (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Permite retornar de modo condicional valores específicos de várias comparações. Há dois tipos de instruções CASE:  
   
@@ -70,7 +69,7 @@ END
  *Boolean_expression*  
  Uma expressão MDX avaliada como um valor escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se não houver nenhuma cláusula ELSE e todas as cláusulas WHEN forem avaliadas como false, o resultado será uma célula vazia.  
   
 ## <a name="simple-case-expression"></a>Expressão CASE simples  
@@ -116,8 +115,7 @@ FROM [Adventure Works]
 WHERE [Measures].x  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

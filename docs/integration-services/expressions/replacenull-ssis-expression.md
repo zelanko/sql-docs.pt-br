@@ -1,5 +1,5 @@
 ---
-title: "REPLACENULL (expressão SSIS) | Microsoft Docs"
+title: "REPLACENULL (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b99a726d050dc2235f653061295e5f0829e93150
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f8ce8999c06fae17636000d7931dd2267687b8cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (Expressão SSIS)
   Retornará o valor do parâmetro da segunda expressão se o valor do parâmetro da primeira expressão for NULL; caso contrário, retornará o valor da primeira expressão.  
@@ -44,7 +43,7 @@ REPLACENULL(expression 1,expression 2)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   O comprimento de *expression 2* pode ser zero.  
   
@@ -62,11 +61,10 @@ REPLACENULL(MyColumn, "1900-01-01")
 ```  
   
 > [!NOTE]  
->  O exemplo a seguir mostra como isso foi feito [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] / [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
+>  O exemplo a seguir mostra como isso foi feito no [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? “1900-01-01” : MyColumn)   
 ```  
   
   
-

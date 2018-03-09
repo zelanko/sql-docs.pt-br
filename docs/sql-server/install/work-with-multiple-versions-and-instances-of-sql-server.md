@@ -2,10 +2,14 @@
 title: "Trabalhar com várias versões e instâncias do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,18 +23,20 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 50c3f64fed5b1a6eba3f2675458001e2e70e4ba5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ccae571c9784b781197bf5ec462b6a8142d56452
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador. Você também pode atualizar versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador em que versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estejam instaladas. Para ver os cenários de atualização com suporte, confira [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 ## <a name="version-components-and-numbering"></a>Componentes de versão e numeração  
@@ -99,7 +105,7 @@ A tabela a seguir mostra o suporte lado a lado para o [!INCLUDE[ssSQL15](../../i
 ## <a name="preventing-ip-address-conflicts"></a>Impedindo conflitos de endereço IP  
  Quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalada lado a lado com uma instância autônoma do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], procure evitar conflitos de número de porta TCP nos endereços IP. Conflitos normalmente ocorrem quando duas instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são ambas configuradas para usar a porta TCP padrão (1433). Para evitar conflitos, configure uma instância para usar uma porta fixa não padrão. A configuração de uma porta fixa é normalmente mais fácil na instância autônoma. A configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usar portas diferentes impedirá um conflito de Endereço IP/porta TCP inesperado que bloqueie uma inicialização de instância quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhar para o nó em espera  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Requisitos de hardware e de software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

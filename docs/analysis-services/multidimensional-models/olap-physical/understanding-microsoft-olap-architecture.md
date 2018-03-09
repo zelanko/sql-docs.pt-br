@@ -2,15 +2,13 @@
 title: "Noções básicas sobre a arquitetura Microsoft OLAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,20 +16,20 @@ applies_to:
 helpviewer_keywords:
 - multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 29fa27487fde84c7838f834dc0dfe397bc3d356e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6416855a4cfac989e9571f187d95a65343dba196
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
-  Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
   
  ![Ícone de pasta do arquivo pequeno](../../../analysis-services/media/filefolder-small.png "arquivo pequeno ícone da pasta") **arquitetura lógica**  
  [Objetos de servidor &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
@@ -60,7 +58,6 @@ ms.lasthandoff: 09/01/2017
  [Cenários de globalização para Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica &#40; SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [Referência técnica ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   
-

@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: 4
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cef84a613d71e65b33bed1c1e740dc59eeed9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 88ba00513a8f76ae560ed717801150aa9b80046e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ cadeia de caracteres
 ## <a name="return-types"></a>Tipos de retorno   
 Retorna uma expressão de caractere com um tipo de argumento de cadeia de caracteres onde o caractere de espaço `char(32)` ou outros caracteres especificados são removidos de ambos os lados. Retorna `NULL` se a cadeia de caracteres de entrada é `NULL`.
 
-## <a name="remarks"></a>Comentários   
+## <a name="remarks"></a>Remarks   
 Por padrão `TRIM` função remove o caractere de espaço `char(32)` de ambos os lados. Isso é equivalente a `LTRIM(RTRIM(@string))`. Comportamento de `TRIM ` função com os caracteres especificados é idêntica ao comportamento de `REPLACE` função onde os caracteres do início ou término são substituídos por cadeias de caracteres vazias.
 
 
 ## <a name="examples"></a>Exemplos
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Remove o caractere de espaço de ambos os lados da cadeia de caracteres   
 O exemplo a seguir remove os espaços de antes e depois da palavra `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -72,7 +71,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Remove determinados caracteres de ambos os lados da cadeia de caracteres   
 O exemplo a seguir remove um ponto à direita e espaços à direita.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
@@ -81,8 +80,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## <a name="see-also"></a>Consulte também
-[Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[Substituir (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
-
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   

@@ -2,9 +2,12 @@
 title: "Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ f1_keywords:
 helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
-  Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inicialize o Orientador de Otimização do Mecanismo de Banco de Dados  
  Ao usá-lo pela primeira vez, um usuário que seja membro da função de servidor fixa **sysadmin** deve inicializar o Orientador de Otimização do Mecanismo de Banco de Dados. Isso acontece porque devem ser criadas vários tabelas do sistema no banco de dados **msdb** para oferecer suporte a operações de ajuste. A inicialização também possibilita que os usuários membros da função de banco de dados fixa **db_owner** ajustem cargas de trabalho em tabelas em seus próprios bancos de dados.  
@@ -362,7 +365,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
  **Nome da sessão**  
  Especifique um nome para a sessão. O nome de sessão associa um nome a uma sessão de otimização. Você pode consultar esse nome para revisar a sessão de otimização posteriormente.  
   
- **Arquivo**  
+ **File**  
  Especifique um script .sql ou arquivo de rastreamento para uma carga de trabalho. Especifique o caminho e o nome de arquivo na caixa de texto associada. O Orientador de Otimização do Mecanismo de Banco de Dados pressupõe que o arquivo de rastreamento de carga de trabalho seja um arquivo de substituição. Para obter mais informações sobre arquivos de substituição, consulte [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
  **Tabela**  
@@ -517,7 +520,7 @@ database_name.owner_name.table_name
  **Log de Ajuste**  
  Contém informações relativas a esta sessão de ajuste. Para imprimir esse log, clique com o botão direito do mouse no log e clique em **Imprimir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

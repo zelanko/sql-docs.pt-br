@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Este tópico descreve como determinar quem tem permissões para vários objetos 
 As funções de servidor fixas e as funções de banco de dados fixas têm permissões pré-configuradas que não podem ser alteradas. Para determinar quem é membro de uma função de servidor fixa, execute a consulta a seguir.    
 >  [!NOTE] 
 >  Não se aplica ao Banco de Dados SQL ou SQL Data Warehouse em que a permissão de nível de servidor não está disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Essa consulta verifica tabelas no banco de dados mestre, mas ela pode ser executada em qualquer banco de dados do produto local. 
 
 Para determinar quem é membro de uma função de banco de dados fixa, execute a consulta a seguir em cada banco de dados.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ Lembre-se de que um usuário do Windows pode ser membro de mais de um grupo do W
 A consulta a seguir retorna uma lista das permissões concedidas ou negadas no nível do servidor. Essa consulta pode ser executada no banco de dados mestre.   
 >  [!NOTE] 
 >  As permissões de nível de servidor não podem ser concedidas ou consultadas no Banco de Dados SQL ou o SQL Data Warehouse.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Permissões de banco de dados
 
 A consulta a seguir retorna uma lista das permissões concedidas ou negadas no nível do banco de dados. Essa consulta pode ser executada em cada banco de dados.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Cada classe de permissão da tabela de permissões pode ser unida a outras exibições do sistema que fornecem informações relacionadas sobre essa classe de protegível. Por exemplo, a consulta a seguir fornece o nome do objeto de banco de dados que é afetado pela permissão.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -152,7 +152,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
 Use a função `HAS_PERMS_BY_NAME` para determinar se um usuário específico (neste caso `TestUser`) tem uma permissão. Por exemplo:   
-```tsql
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

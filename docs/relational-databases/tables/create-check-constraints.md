@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 985ad5303608fd44c8d43fb2017d633ff8ea469f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a7fb39dd90a2df6a7567fecaaa9638f855c405c4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-check-constraints"></a>Criar restrições de verificação
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Para criar uma nova restrição de verificação  
   

@@ -2,12 +2,13 @@
 title: "Arquivo de configuração ReportingServicesService | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "41"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e848cffab72a3523d0a63617f5ebbb5bb5717559
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reportingservicesservice-configuration-file"></a>arquivo de configuração ReportingServicesService
  ||  
@@ -94,9 +94,8 @@ O arquivo ReportingServicesService.exe.config inclui configurações de rastream
 |**Componentes**|Especifica os componentes para os quais são criados logs de rastreamento. O valor padrão é **all**. Outros valores válidos para esta configuração incluem os nomes de componentes internos. Não modifique esse valor.|  
 |**Tempo de execução**|Especifica configurações que oferecem suporte para a compatibilidade com versões anteriores. As configurações de tempo de execução são usadas para redirecionar solicitações relacionadas à versão anterior de Microsoft.ReportingServices.Interfaces para a nova versão.<br /><br /> Todas as configurações desta seção são descritas na documentação do produto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações, procure “Configurações de esquema de tempo de execução” no site do MSDN ou na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Log de rastreamento do serviço de servidor de relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

@@ -3,8 +3,9 @@ title: HelpContext, HelpFile propriedades | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dce4f5513199be2b4c74903741178844c0ecedf6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d93d8f16d828892e8e5c11ca1036f7dc83b75fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="helpcontext-helpfile-properties"></a>Propriedades HelpContext e HelpFile
 Indica o arquivo de Ajuda e o tópico associado a um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -43,7 +44,7 @@ Indica o arquivo de Ajuda e o tópico associado a um [erro](../../../ado/referen
   
 -   **Arquivo de Ajuda** retorna um **cadeia de caracteres** valor que é avaliada como um caminho totalmente resolvido para um arquivo de Ajuda.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um arquivo de Ajuda é especificado no **HelpFile** propriedade, o **HelpContext** propriedade é usada para exibir o tópico da Ajuda, ele identifica automaticamente. Se não houver nenhum tópico da Ajuda relevante disponíveis, o **HelpContext** propriedade retorna zero e o **HelpFile** propriedade retorna uma cadeia de caracteres de comprimento zero ("").  
   
 ## <a name="applies-to"></a>Aplica-se a  

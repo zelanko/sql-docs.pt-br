@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,16 +49,16 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: "256"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -365,7 +367,7 @@ column_name <data_type>
  
  Cria a nova tabela como uma FileTable. Você não especifica colunas porque uma FileTable tem um esquema fixo. Para obter mais informações sobre FileTables, consulte [FileTables &#40; SQL Server &#41; ](../../relational-databases/blob/filetables-sql-server.md).  
   
- *nome da coluna*  
+ *column_name*  
  *computed_column_expression*  
  É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. A coluna é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada pode ter a definição: **custo** AS **preço** \* **qty**. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta nem conter um tipo de dados do alias.  
   
@@ -716,7 +718,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Logical_Expression*  
  É uma expressão lógica que retorna TRUE ou FALSE. Tipos de dados do alias não podem fazer parte da expressão.  
   
- *coluna*  
+ *column*  
  É uma coluna, ou lista de colunas, entre parênteses, usada em restrições de tabela para indicar as colunas usadas na definição da restrição.  
   
  [ **ASC** | DESC]  
@@ -763,7 +765,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:  
   
- NONE  
+ Nenhuma  
  A tabela ou as partições especificadas não são compactadas.  
   
  ROW  
@@ -980,7 +982,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Os índices de hash têm suporte apenas em tabelas com otimização de memória.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter informações sobre o número de tabelas permitidas, colunas, restrições e índices, consulte [especificações de capacidade máxima para o SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
  Geralmente, o espaço é alocado a tabelas e índices em incrementos de uma extensão por vez. Quando a opção SET MIXED_PAGE_ALLOCATION de ALTER DATABASE é definida como TRUE, ou sempre antes [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], quando uma tabela ou índice é criado, ele é páginas alocado de extensões mistas até que haja páginas suficientes para preencher um extensão uniforme. Quando houver páginas suficiente para preencher um extensão uniforme, outra extensão será alocada sempre que as extensões já alocadas ficarem cheias. Para um relatório sobre a quantidade de espaço alocada e usada por uma tabela, executar **sp_spaceused**.  
@@ -1077,13 +1079,13 @@ Para a solução de problemas de tempdb, consulte [espaço em disco insuficiente
   
 ### <a name="permissions"></a>Permissões  
 
- Qualquer usuário pode criar objetos temporários globais. Os usuários podem acessar somente seus próprios objetos, a menos que recebam permissões adicionais. .  
+ Qualquer usuário pode criar objetos temporários globais. Os usuários podem acessar somente seus próprios objetos, a menos que recebam permissões adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ### <a name="examples"></a>Exemplos 
 
 - Sessão A cria uma tabela temporária global ##test no banco de dados do Azure SQL testdb1 e adiciona 1 linha
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1103,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Sessão B se conecta ao banco de dados do Azure SQL testdb1 e pode acessar a tabela ##test criado por sessão A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1111,7 @@ SELECT * FROM ##test
 
 - Sessão C se conecta a outro banco de dados no banco de dados do Azure SQL testdb2 e deseja acessar ##test criado em testdb1. Este select falha porque o escopo do banco de dados para as tabelas temporárias globais 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1120,7 @@ Invalid object name '##test'
 
 - Objeto do sistema no banco de dados do Azure SQL tempdb de endereçamento de testdb1 de banco de dados de usuário atual
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1639,7 +1641,7 @@ GO
  ```
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

@@ -2,9 +2,12 @@
 title: "Comparar tabelas replicadas para descobrir diferenças (Programação de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cc4dc8f164896f5fd1331374de4f268e34b0b7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 225c0d7352cc1f70bee986b0d7b49c02bf743517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparar tabelas replicadas para descobrir diferenças (Programação de replicação)
-  A validação de artigo é usada para determinar se os dados publicados em artigos de tabelas no Publicador e no Assinante não são idênticos, pois isso poderia indicar não convergência. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md). Entretanto, a validação apenas retorna informações que passaram ou falharam e não fornece informação sobre qual é a diferença entre as tabelas de origem e de destino. O utilitário de prompt de comando **tablediff** retorna informações detalhadas sobre a diferença entre duas tabelas e pode até gerar um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para fazer convergir a assinatura com os dados no Publicador.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A validação de artigo é usada para determinar se os dados publicados em artigos de tabelas no Publicador e no Assinante não são idênticos, pois isso poderia indicar não convergência. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md). Entretanto, a validação apenas retorna informações que passaram ou falharam e não fornece informação sobre qual é a diferença entre as tabelas de origem e de destino. O utilitário de prompt de comando **tablediff** retorna informações detalhadas sobre a diferença entre duas tabelas e pode até gerar um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para fazer convergir a assinatura com os dados no Publicador.  
   
 > [!NOTE]  
 >  O utilitário **tablediff** tem suporte apenas nos servidores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
     -   (Opcional) Use **- strict** para impor uma comparação de esquema estrita entre tabelas de origem e destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Validar dados no assinante](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

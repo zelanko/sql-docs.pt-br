@@ -1,31 +1,32 @@
 ---
-title: "Exportando para um arquivo PDF (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Exportando para um arquivo PDF (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 1cd71e9803dce9b7f0739bc93a849a2aa08c4547
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 11.0 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  
   
- A extensão de renderização PDF suporta caracteres ANSI e pode traduzir caracteres Unicode do japonês, coreano, chinês tradicional, chinês simplificado, cirílico, hebraico e árabe com certas limitações. Para obter mais informações sobre as limitações, consulte [exportar relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ A extensão de renderização PDF suporta caracteres ANSI e pode traduzir caracteres Unicode do japonês, coreano, chinês tradicional, chinês simplificado, cirílico, hebraico e árabe com certas limitações. Para obter mais informações sobre as limitações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  O renderizador PDF é um renderizador físico de páginas e, portanto, tem um comportamento de paginação que difere dos demais renderizadores, tais como o HTML e o Excel. Este tópico fornece informações específicas sobre o renderizador PDF e descreve as exceções às regras.  
   
@@ -108,12 +109,11 @@ ms.lasthandoff: 08/09/2017
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Consulte também  
- [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,11 +1,11 @@
 ---
-title: "Etapa 1: Compilando o utilitário de implantação | Microsoft Docs"
+title: "Etapa 1: compilar o utilitário de implantação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 227ebbba4190ff05ebdc04f988beafec4edc8a37
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ad64bdaf8424da073dff170761eab0d7bacac750
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1-criar o utilitário de implantação
+# <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1 – compilar o utilitário de implantação
 Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
   
 Antes de compilar o utilitário de implantação, você deve modificar as propriedades do projeto do Tutorial de Implantação. Você usará a caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** para configurar essas propriedades. Nesta caixa de diálogo, você deve habilitar o recurso para atualizar configurações durante a implantação e especificar que o processo de compilação gera um utilitário de implantação. Depois que você definir as propriedades, o projeto será compilado.  
@@ -73,9 +72,8 @@ Antes de compilar o utilitário de implantação, você deve modificar as propri
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar um utilitário de implantação](../integration-services/packages/create-a-deployment-utility.md)  
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Transformação auditoria | Microsoft Docs"
+title: "Transformação Auditoria | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
   A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/19/2017
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
-  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
+  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
   
 ### <a name="options"></a>Opções  
  **Nome da coluna de saída**  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/19/2017
  **Tipo de auditoria**  
  Selecione uma variável de sistema disponível para fornecer as informações de auditoria.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**GUID de instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
 |**ID do Pacote**|Insira o GUID que identifica com exclusividade o pacote.|  
@@ -82,9 +81,8 @@ ms.lasthandoff: 08/19/2017
 |**ID da Versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
 |**Hora de início de execução**|Insira a hora de início de execução do pacote.|  
 |**Nome do computador**|Insira o nome do computador no qual o pacote foi inicializado.|  
-|**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
+|**User name**|Insira o nome de logon do usuário que inicializou o pacote.|  
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
 |**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   
   
-

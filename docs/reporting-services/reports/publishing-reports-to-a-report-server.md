@@ -2,12 +2,13 @@
 title: "Publicando relatórios em um servidor de relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
   Depois de criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos implantação do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório que pode incluir vários relatórios e fontes de dados. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o termo *implantar*, em vez termo *publicar*. Os dois termos significam o mesmo.  
@@ -58,7 +58,7 @@ A permissão é determinada por segurança baseada em função que é definida p
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Para publicar todos os relatórios em um projeto  
   
-Sobre o **criar** menu, clique em **implantar \<nome do projeto de relatório >**. Como alternativa, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto de relatório e clique em **Implantar**. Você pode visualizar o status do processo de publicação na janela Saída.  
+No menu **Compilar**, clique em **Implantar \<report project name>**. Como alternativa, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto de relatório e clique em **Implantar**. Você pode visualizar o status do processo de publicação na janela Saída.  
   
 Quando você implantar um projeto do Servidor de Relatório, também são implantadas as fontes de dados compartilhadas no projeto de relatório. Todos os relatórios são implantados usando a mesma configuração de projeto: no mesmo servidor de relatório, na mesma pasta no servidor, e assim por diante. Para publicar relatórios em servidores diferentes, publique-os um por um ou somente inclua os relatórios desejados no projeto do Servidor de Relatório. Uma solução pode incluir vários projetos do Servidor de Relatório. Usar vários projetos pode facilitar o gerenciamento da implantação de relatórios, porque você pode usar uma configuração diferente para implantar projetos diferentes. 
   
@@ -74,10 +74,9 @@ No Gerenciador de Soluções, clique com o botão direito do mouse no relatório
  A URL do servidor de destino do servidor de relatório deve ser especificada e você pode alterar as pastas padrão para as quais os relatórios e as fontes de dados compartilhadas devem ser implantados.  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Gerenciamento de conteúdo de servidor de relatório e &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

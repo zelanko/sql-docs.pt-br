@@ -18,17 +18,16 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b2cd81e4b96ce5c38a816c50728d794390bb383
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7a3822e0469836b59369eb676ece956533d4df58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-method-xml-data-type"></a>Método de valor() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -169,8 +168,7 @@ GO
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

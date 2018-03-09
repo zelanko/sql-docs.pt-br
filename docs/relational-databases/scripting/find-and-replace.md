@@ -2,38 +2,43 @@
 title: Localizar e substituir | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords: Find and Replace dialog box
+helpviewer_keywords:
+- Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-replace"></a>Localizar e Substituir
-  Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  
   
  Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   
 ## <a name="find-what"></a>Localizar  
  Esses controles lhe permitem especificar a cadeia de caracteres ou expressão para as quais haverá correspondência.  
   
- **Find what**  
+ **Localizar**  
  Digite o texto a procurar. A caixa de diálogo tenta preencher um texto de pesquisa provável, usando o texto selecionado com o cursor antes de a caixa de diálogo ser aberta, um texto próximo a ele ou um texto pesquisado anteriormente. Você pode reutilizar uma das últimas 20 cadeias de caracteres pesquisadas selecionando-a nessa lista suspensa.  
   
  **[cadeia de caracteres com curingas]**  
@@ -126,7 +131,7 @@ ms.lasthandoff: 11/09/2017
  **Substituir em Arquivos**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Substituir nos Arquivos**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

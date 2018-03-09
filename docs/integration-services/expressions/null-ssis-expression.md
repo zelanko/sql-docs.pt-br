@@ -16,17 +16,16 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5b8b9f8e703b402b55bef24b30977b086b75d1f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-ssis-expression"></a>NULL (Expressão SSIS)
   Retorna um valor nulo de um tipo de dados solicitado.  
@@ -45,7 +44,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Tipos de resultado  
  Qualquer tipo de dados válido com um valor nulo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  NULL retornará um resultado nulo se o argumento for nulo.  
   
  Os parâmetros são exigidos para solicitar um valor nulo para alguns tipos de dados. A tabela a seguir lista esses tipos de dados e seus parâmetros.  
@@ -68,9 +67,8 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ISNULL &#40; Expressão do SSIS &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [ISNULL &#40;Expressão SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

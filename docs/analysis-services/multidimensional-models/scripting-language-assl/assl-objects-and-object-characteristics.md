@@ -2,15 +2,13 @@
 title: "Objetos e características de objeto ASSL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,20 +23,20 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, objects
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 54c1e299952f042587389631e3220eb241ea598e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
-  Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
  Todos os [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
@@ -109,7 +107,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="object-processing"></a>Processamento de objetos  
  ASSL inclui elementos ou propriedades somente leitura (por exemplo, **LastProcessed**) que pode ser lido o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância, mas que são omitidos quando os scripts de comando são enviados para a instância. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora valores modificados para elementos somente leitura sem aviso ou erro.  
   
- O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] também ignora propriedades impróprias ou irrelevantes sem gerar erros de validação. Por exemplo, o elemento X só deve estar presente quando o elemento Y tiver um valor específico. A instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora o elemento X em vez de validar aquele elemento em relação ao valor do elemento Y.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] também ignora propriedades impróprias ou irrelevantes sem gerar erros de validação. Por exemplo, o elemento X só deve estar presente quando o elemento Y tiver um valor específico. A instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignora o elemento X em vez de validar aquele elemento em relação ao valor do elemento Y.  
   
   
-

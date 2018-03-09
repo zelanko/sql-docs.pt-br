@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bf66d7aa47b9f15428b08943638dac0cd905fde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/17/2017
  Especifica o grupo de arquivos para obter dados de FILESTREAM. Essa lista exibe apenas grupos de arquivos FILESTREAM. A seleção de lista padrão é o grupo de arquivos PRIMARY FILESTREAM. Para obter mais informações, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Esquema de partição**  
- Armazena o índice em um esquema de partição. Clicando em **Esquema de Partição** a grade abaixo é habilitada. A seleção de lista padrão é o esquema de partição usado para armazenar os dados de tabela. Ao selecionar um esquema de partição diferente na lista, a informações na grade é atualizada. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Armazena o índice em um esquema de partição. Clicando em **Esquema de Partição** a grade abaixo é habilitada. A seleção de lista padrão é o esquema de partição usado para armazenar os dados de tabela. Ao selecionar um esquema de partição diferente na lista, a informações na grade é atualizada. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  A opção de esquema de partição fica indisponível se não houver nenhum esquema de partição no banco de dados.  
   
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="bounding-box"></a>Caixa delimitadora  
  A *caixa delimitadora* é o perímetro da grade de alto nível de um plano geométrico. Os parâmetros da caixa delimitadora só existem no mosaico de grade geométrica. Esses parâmetros ficarão indisponíveis se o **Esquema de Mosaico** for **Grade geográfica**.  
   
- O painel exibe as coordenadas **(***X mín.***,***Y mín.***)** e **(***X máx.***,***Y máx.***)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
+ O painel exibe as coordenadas **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
   
  **X mín.**  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  
@@ -246,7 +247,7 @@ ms.lasthandoff: 11/17/2017
  **Expressão de filtro**  
  Define quais linhas de dados devem ser incluídas no índice filtrado. Por exemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções Set Index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

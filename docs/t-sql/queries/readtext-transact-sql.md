@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
 - READTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - column reading [SQL Server]
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,22 +51,22 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tabela* **.** *coluna*  
+ *table* **.** *column*  
  É o nome de uma tabela e uma coluna a partir das quais a leitura será feita. Nomes de tabela e coluna devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação dos nomes de tabela e coluna é necessária; entretanto, a especificação do nome do banco de dados e de nomes de proprietário é opcional.  
   
  *text_ptr*  
  É um ponteiro de texto válido. *text_ptr* devem ser **binário (16)**.  
   
- *deslocamento*  
+ *offset*  
  É o número de bytes (quando o **texto** ou **imagem** tipos de dados são usados) ou caracteres (quando o **ntext** tipo de dados é usado) para ignorar antes de começar a ler o **texto**, **imagem**, ou **ntext** dados.  
   
- *tamanho*  
+ *size*  
  É o número de bytes (quando o **texto** ou **imagem** tipos de dados são usados) ou caracteres (quando o **ntext** tipo de dados é usado) de dados a serem lidos. Se *tamanho* é 0, 4 KB bytes de dados é lida.  
   
  HOLDLOCK  
  Faz com que o valor de texto seja bloqueado para leituras até o final da transação. Outros usuários podem ler o valor, mas não podem modificá-lo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) função para obter um válido *text_ptr* valor. TEXTPTR retorna um ponteiro para o **texto**, **ntext**, ou **imagem** coluna da linha especificada ou para o **texto**, **ntext** , ou **imagem** coluna na última linha retornada pela consulta se mais de uma linha é retornada. Como TEXTPTR retorna uma cadeia binária de 16 bytes, recomenda-se declarar uma variável local para conter o ponteiro de texto e usá-la com READTEXT. Para obter mais informações sobre como declarar uma variável local, consulte [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha, mas podem não ser válidos. Para obter mais informações sobre o **texto em linha** opção, consulte [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter mais informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  

@@ -5,23 +5,24 @@ ms.date: 01/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: "21"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3bb7af051f64737458f34655aac731c85ab34701
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 Este artigo mostra exemplos de regras de negócio do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Você encontrará esses exemplos nos modelos de exemplo incluídos na instalação do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   

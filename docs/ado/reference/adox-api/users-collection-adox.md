@@ -3,8 +3,9 @@ title: "Coleção de usuários (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,23 +17,24 @@ f1_keywords:
 - Group::Users
 - Users
 - Catalog::Users
-helpviewer_keywords: Users collection [ADOX]
+helpviewer_keywords:
+- Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e063db5cd8fa810a1729b0591883b9dda0f9bc2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="users-collection-adox"></a>Coleção de usuários (ADOX)
 Contém todos os armazenados [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) ou [grupo](../../../ado/reference/adox-api/group-object-adox.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **usuários** coleção de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa usuários todos do catálogo. O **usuários** coleção para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) representa apenas os usuários que têm uma associação no grupo específico.  
   
  O [Append](../../../ado/reference/adox-api/append-method-adox-users.md) método para um **usuários** coleção é exclusiva para ADOX. Você pode:  

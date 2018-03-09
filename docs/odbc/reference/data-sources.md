@@ -5,29 +5,27 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>Fontes de Dados
+# <a name="data-sources"></a>Fontes de dados
 Um *fonte de dados* é simplesmente a fonte de dados. Ele pode ser um arquivo, um banco de dados específico em um DBMS ou até mesmo um feed de dados ao vivo. Os dados podem ser localizados no mesmo computador que o programa, ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS do Oracle em execução em um sistema de operacional OS/2®, acessado por Novell® Netware; um DBMS de DB2 da IBM acessados por meio de um gateway. uma coleção de arquivos Xbase em um diretório de servidor. ou um arquivo de banco de dados local do Microsoft® Access.  
   
  A finalidade de uma fonte de dados é reunir todas as informações técnicas necessárias para acessar os dados — o nome do driver, endereço de rede, software de rede e assim por diante — em uma única colocar e ocultá-lo do usuário. O usuário deve ser capaz de ver uma lista que inclui a folha de pagamento, inventário e pessoal, escolha da folha de pagamento da lista e têm o aplicativo se conectar aos dados da folha de pagamento, tudo sem saber onde residem os dados de folha de pagamento ou como o aplicativo obteve a ele.  
@@ -41,4 +39,3 @@ Um *fonte de dados* é simplesmente a fonte de dados. Ele pode ser um arquivo, u
 -   [Usando fontes de dados](../../odbc/reference/using-data-sources.md)  
   
 -   [Exemplo de fonte de dados](../../odbc/reference/data-source-example.md)
-

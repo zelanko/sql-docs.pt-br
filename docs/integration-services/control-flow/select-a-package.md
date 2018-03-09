@@ -1,5 +1,5 @@
 ---
-title: Selecione um pacote | Microsoft Docs
+title: Selecionar um pacote | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ac230866e3abd79f711441928d09c11c05ba650
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fab572c14d87acd3776a94675063ffe372525a5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-a-package"></a>Selecionar um Pacote
   Use a caixa de diálogo **Selecionar um Pacote** para especificar o pacote do qual a tarefa Fila de Mensagens pode receber mensagens.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/03/2017
  **Local**  
  Especifique o local do pacote. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao selecionar esse valor, as opções dinâmicas **Servidor**, **Usar Autenticação do Windows**, **Usar Autenticação do SQL Server**, **Nome de usuário**e **Senha**são exibidas.|  
 |Arquivo DTSX|Defina o local para um arquivo DTSX. Ao selecionar este valor,a opção dinâmica **Nome do arquivo**será exibida.|  
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/03/2017
  **Usar Autenticação do SQL Server**  
  Clique para usar Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nome de usuário**  
+ **User name**  
  Se usar Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário a ser usado no logon no servidor.  
   
  **Senha**  
@@ -66,8 +65,7 @@ ms.lasthandoff: 08/03/2017
  **Nome do arquivo**  
  Forneça o caminho de um pacote ou clique no botão Procurar **(...)** e localize o pacote.  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefa fila de mensagens](../../integration-services/control-flow/message-queue-task.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefa Fila de Mensagens](../../integration-services/control-flow/message-queue-task.md)  
   
   
-

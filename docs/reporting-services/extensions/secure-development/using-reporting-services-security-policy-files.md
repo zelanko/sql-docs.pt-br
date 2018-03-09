@@ -1,13 +1,14 @@
 ---
-title: Usando o Reporting Services Security Policy Files | Microsoft Docs
+title: "Usando arquivos de política de segurança do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,22 +22,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
-  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança do componente em três arquivos de configuração que são copiados para o sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  
   
 > [!NOTE]  
->  Há dois modos de visualização do Designer de relatórios: a guia Visualizar e a janela de visualização pop-up que é iniciada quando o projeto de relatório é inicializado no **DebugLocal** modo. O **visualização** guia não é um componente de segurança e não se aplica a configurações de política de segurança. A janela de exibição foi desenvolvida para simular a funcionalidade do servidor de relatório e, portanto, tem um arquivo de configuração de política que você ou um administrador devem modificar para usar assemblies e extensões personalizadas no Designer de Relatórios.  
+>  Há dois modos de visualização do Designer de Relatórios: a guia Visualizar e a janela pop-up Visualizar, que é iniciada quando o Projeto de Relatório é inicializado no modo **DebugLocal**. A guia **Visualizar** não é um componente protegível e não aplica as configurações de política de segurança. A janela de exibição foi desenvolvida para simular a funcionalidade do servidor de relatório e, portanto, tem um arquivo de configuração de política que você ou um administrador devem modificar para usar assemblies e extensões personalizadas no Designer de Relatórios.  
   
  Os arquivos de configuração de política de segurança contêm informações sobre a classe de segurança, alguns conjuntos nomeados padrão de permissões e os grupos de código para os assemblies do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os arquivos de configuração de política do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são similares ao arquivo Security.config que determina a hierarquia de grupos de código e os conjuntos de permissões associados às políticas do nível corporativo e de máquina do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. O local deste arquivo é C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   
@@ -45,8 +46,8 @@ ms.lasthandoff: 08/12/2017
   
 |Nome do arquivo|Local (instalação padrão)|Description|  
 |---------------|---------------------------------------|-----------------|  
-|rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting services\reportserver.|O arquivo de configuração de política de servidor de relatório. Estas políticas de segurança afetam principalmente expressões de relatório e assemblies personalizados após um relatório ser implantado em um servidor de relatório. Este arquivo de política também afeta dados personalizados, extensões de entrega, renderização e segurança implantados no servidor de relatório.|  
-|rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting services\reportmanager.|Arquivo de configuração de política do Gerenciador de Relatórios. Estas políticas de segurança afetam todos os assemblies que estendem o Gerenciador de Relatórios; por exemplo, extensões de interface de usuário de assinatura para entrega personalizada.|  
+|rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|O arquivo de configuração de política de servidor de relatório. Estas políticas de segurança afetam principalmente expressões de relatório e assemblies personalizados após um relatório ser implantado em um servidor de relatório. Este arquivo de política também afeta dados personalizados, extensões de entrega, renderização e segurança implantados no servidor de relatório.|  
+|rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Arquivo de configuração de política do Gerenciador de Relatórios. Estas políticas de segurança afetam todos os assemblies que estendem o Gerenciador de Relatórios; por exemplo, extensões de interface de usuário de assinatura para entrega personalizada.|  
 |rspreviewpolicy.config|C:\Arquivos de Programas\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies|Arquivo de configuração de política de visualização autônoma do Designer de Relatórios. Estas políticas de segurança afetam assemblies personalizados e expressões de relatório que são usados em relatórios durante a visualização e o desenvolvimento. Estas políticas também afetam extensões personalizadas, como extensões de processamento de dados, que são implantadas no Designer de Relatórios.|  
   
 ## <a name="modifying-configuration-files"></a>Modificando arquivos de configuração  
@@ -88,7 +89,7 @@ ms.lasthandoff: 08/12/2017
   
  Grupos de código adicionais podem ser adicionados um depois do outro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreender as políticas de segurança](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

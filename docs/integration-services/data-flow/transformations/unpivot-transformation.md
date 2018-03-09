@@ -1,5 +1,5 @@
 ---
-title: "Transformação não dinâmica | Microsoft Docs"
+title: "Transformação de Reversão da Dinamização | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,28 +21,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 667a8c77caa3d3cdbfe4601f1f8597ac7e6d5a11
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
   A transformação não dinâmica transforma um conjunto de dados não normalizado em uma versão mais normalizada, expandindo valores de várias colunas de um único registro em vários registros, com os mesmos valores em uma única coluna. Por exemplo, um conjunto de dados que lista nomes de clientes tem uma linha para cada cliente, com os produtos e a quantidade comprada mostrados em colunas da linha. Depois que a transformação não dinâmica normaliza o conjunto de dados, este contém uma linha diferente para cada produto que o cliente comprou.  
   
  O diagrama a seguir mostra um conjunto de dados antes da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados após reverter a dinamização](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "conjunto de dados após reverter a dinamização")  
+ ![Conjunto de dados após sua dinamização ser revertida](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Conjunto de dados após sua dinamização ser revertida")  
   
  O diagrama a seguir mostra um conjunto de dados depois da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados antes de reverter a dinamização](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "conjunto de dados antes de reverter a dinamização")  
+ ![Conjunto de dados antes da sua dinamização ser revertida](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Conjunto de dados antes da sua dinamização ser revertida")  
   
  Em algumas circunstâncias, os resultados da transformação não dinâmica podem conter linhas com valores inesperados. Por exemplo, se os dados de exemplo a serem transformados mostrados no diagrama tivessem valores nulos em todas as colunas Qtd para Fred, a saída incluiria somente uma linha para Fred, e não cinco. A coluna Qtd conteria valor nulo ou zero, dependendo do tipo de dados da coluna.  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+-   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
@@ -99,9 +98,8 @@ ms.lasthandoff: 08/19/2017
   
  No cenário Não Dinâmico descrito em [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), o nome de coluna de chave dinâmica é **Product** e designa a nova coluna **Product** , na qual as colunas **Ham**, **Soda**, **Milk**, **Beer**e **Chips** são não dinâmicos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Dinâmica](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Otimizar a propriedade dinâmica (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ded694b5bbc332483e2363be6212381f27035af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aeae41d865e585c4c8b93c86bd6f8e9753eaea1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-dynamic-ado"></a>Otimizar a propriedade dinâmica (ADO)
 Especifica se um índice deve ser criado em uma [campo](../../../ado/reference/ado-api/field-object.md).  
@@ -34,7 +33,7 @@ Especifica se um índice deve ser criado em uma [campo](../../../ado/reference/a
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **booliano** valor que indica se um índice deve ser criado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um índice pode melhorar o desempenho de operações que encontrar ou classificar valores em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). O índice é interno ao ADO; não é possível acessar ou usá-lo em seu aplicativo explicitamente.  
   
  Para criar um índice em um campo, defina o **otimizar** propriedade **True**. Para excluir o índice, defina essa propriedade como **False**.  
@@ -63,4 +62,3 @@ fld.Properties("Optimize") = False   'Delete an index
  [Propriedade de filtro](../../../ado/reference/ado-api/filter-property.md)   
  [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Propriedade Sort](../../../ado/reference/ado-api/sort-property.md)
-

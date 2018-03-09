@@ -2,11 +2,13 @@
 title: "Caixas de diálogo do SQL Server Profiler | Microsoft Docs"
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,20 +43,19 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
-O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriedades do rastreamento
 ### <a name="general-tab"></a>Guia Geral
 Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar propriedades de um rastreamento.  
@@ -281,4 +282,3 @@ Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo 
 [Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

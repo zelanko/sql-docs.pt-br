@@ -2,30 +2,27 @@
 title: "Lição 5: Criar relações | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 096f19dc25973b2d515c6ccfb9961e7b0fe07c21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-create-relationships"></a>Lição 4: Criar relações
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +31,7 @@ Nesta lição você verificará as relações que foram criadas automaticamente 
   
 Tempo estimado para concluir esta lição: **10 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 3: marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Revisar relações existentes e adicionar novas relações  
@@ -59,7 +56,7 @@ Quando você importar dados usando o Assistente de importação de tabela, você
   
 3.  Use o designer de modelo na exibição de diagrama ou a caixa de diálogo Gerenciar relações, para verificar se as seguintes relações foram criadas quando cada uma das tabelas foi importada do banco de dados AdventureWorksDW:  
   
-    |Ativa|Tabela|Tabela de Pesquisa Relacionada|  
+    |Ativa|Table|Tabela de Pesquisa Relacionada|  
     |----------|---------|------------------------|  
     |Sim|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Sim|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -106,4 +103,3 @@ Vá para a próxima lição: [lição 5: criar colunas calculadas](../analysis-s
   
   
   
-

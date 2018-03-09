@@ -3,8 +3,9 @@ title: Comando (ADO - sintaxe WFC) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Command collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40ffeed6b4cb5457f5f8dd271484fba086cad430
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 310b7c246fc5d7006cc2e358340d0aa062dc3ab3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-ado---wfc-syntax"></a>Comando (ADO - WFC sintaxe)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  

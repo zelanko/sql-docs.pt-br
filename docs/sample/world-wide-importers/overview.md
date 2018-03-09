@@ -1,30 +1,31 @@
 ---
 title: "Visão geral | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-overview"></a>Visão geral da Wide World Importers
-Isso é uma visão geral a empresa fictícia Wide World Importers e os fluxos de trabalho que são abordados nos bancos de dados de exemplo de WideWorldImporters para SQL Server e banco de dados do SQL Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Isso é uma visão geral a empresa fictícia Wide World Importers e os fluxos de trabalho que são abordados nos bancos de dados de exemplo de WideWorldImporters para SQL Server e banco de dados do SQL Azure.  
 
 Wide World Importers (WWI) é um importador de mercadorias novidade atacado e o distribuidor operacional da área de são Francisco compartimento.
 
@@ -71,4 +72,3 @@ A empresa opera com um ano fiscal inicia em 1º de novembro.
 A licença para o banco de dados de exemplo e o código de exemplo descrita aqui: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 O banco de dados de exemplo inclui dados públicos que foi carregados de data.gov e EarthData Natural. Os termos de uso estão aqui: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

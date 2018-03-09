@@ -1,5 +1,5 @@
 ---
-title: "NÃO (Transact-SQL) | Microsoft Docs"
+title: NOT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expressions [SQL Server], negating
 - reversing Boolean expression values
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 85cdc60ebe0c6f66624b539e0f20d83f32c19500
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 420117f333b43b67c282d0c44c56c43ebbc375db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="result-value"></a>Valor do resultado  
  NOT inverte o valor de qualquer expressão booliana.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Usar NOT nega uma expressão.  
   
  A tabela a seguir mostra os resultados ao comparar valores TRUE e FALSE que usam o operador NOT.  
@@ -106,13 +105,12 @@ WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

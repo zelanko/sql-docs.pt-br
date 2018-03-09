@@ -1,34 +1,33 @@
 ---
-title: Tabela de propriedades (SSAS Tabular) | Microsoft Docs
+title: Propriedades de tabela | Microsoft Docs
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 695089ef33e005c2fec56afb3401b10a7dc81403
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>Propriedades da tabela (SSAS tabular)
-  Este tópico descreve as propriedades do modelo de tabela. As propriedades descritas aqui são diferentes daquelas na caixa de diálogo Editar Propriedades de Tabela, que definem quais colunas da origem são importadas.  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve as propriedades do modelo de tabela. As propriedades descritas aqui são diferentes daquelas na caixa de diálogo Editar Propriedades de Tabela, que definem quais colunas da origem são importadas.  
   
  Seções neste tópico:  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  **Propriedades de relatório**  
   
- Para obter descrições detalhadas e informações de configuração das propriedades de relatório, consulte [Propriedades de relatório do Power View &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ Para obter descrições detalhadas e informações de configuração de propriedades de relatório, consulte [propriedades de relatório do Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  

@@ -1,12 +1,14 @@
 ---
 title: "Configurar um servidor de relatório para administração remota | Microsoft Docs"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +18,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode configurar instâncias de servidor de relatório local ou remotamente. Para configurar uma instância remota do servidor de relatório, é possível usar a ferramenta Configuração do Reporting Services ou gravar código personalizado que use o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A ferramenta Configuração do Reporting Services fornece uma interface gráfica para o provedor WMI, de maneira que você possa configurar um servidor de relatório sem precisar gravar código. Ao iniciar a ferramenta, você pode especificar um servidor remoto para se conectar.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para modificar as configurações do firewall, você deve fazer logon localmente e ser membro do grupo Administradores local. Não é possível modificar as configurações do firewall do Windows de um computador remoto via conexão remota.  
   
  Para habilitar a administração remota para um usuário que não seja administrador, você deve conceder à conta as permissões de Ativação Remota de DCOM (Distributed Component Object Model). As instruções sobre como configurar o servidor para acesso de não administrador estão descritas neste tópico.  
@@ -114,7 +116,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Digite o nome de sua conta de usuário e clique em **OK**.  
   
-10. Em **permissões para \<usuário ou grupo >**, no **permitir** coluna, selecione **inicialização remota** e **ativação remota**e, em seguida, clique em **Okey**.  
+10. Em **Permissões para \<Usuário ou Grupo>**, na coluna **Permitir**, selecione **Inicialização Remota** e **Ativação Remota** e, em seguida, clique em **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Para definir permissões no namespace WMI do servidor de relatório para não administradores  
   
@@ -144,8 +146,7 @@ ms.lasthandoff: 08/09/2017
   
 13. Na coluna **Permitir** , selecione **Habilitar Conta**, **Ativação Remota**e **Ler Segurança**e clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

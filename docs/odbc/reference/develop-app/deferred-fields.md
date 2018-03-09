@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>Campos adiados
 Os valores de *adiada campos* não são usadas quando eles são definidos, mas o driver salva os endereços das variáveis para um efeito adiada. Para um descritor de parâmetro de aplicativo, o driver usa o conteúdo das variáveis no momento da chamada para **SQLExecDirect** ou **SQLExecute**. Para um descritor de linha de aplicativo, o driver usa o conteúdo das variáveis no momento da busca.  
@@ -50,4 +48,3 @@ Os valores de *adiada campos* não são usadas quando eles são definidos, mas o
 -   Se o campo SQL_DESC_OCTET_LENGTH_PTR de um APD tem um valor nulo e o parâmetro é uma cadeia de caracteres, o driver pressupõe que a cadeia de caracteres é terminada em nulo. Parâmetros de saída dinâmica, um valor nulo no campo impede que o driver retornando informações de comprimento. (Se o campo SQL_DESC_TYPE não indicar um parâmetro de cadeia de caracteres, o campo SQL_DESC_OCTET_LENGTH_PTR é ignorado.)  
   
  O aplicativo não deve ser desalocada ou descarte variáveis usadas para campos adiados entre a hora em que associa-os com os campos e a hora em que o driver lê ou grava.
-

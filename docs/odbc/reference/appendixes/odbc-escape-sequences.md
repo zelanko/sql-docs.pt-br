@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e18a76c2f14a4733d7d0bf48294a0d0694219aae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 525475b3e9d7cdeae9755208da1cb19e9c077fe8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-escape-sequences"></a>Sequências de Escape ODBC
 Sequências de escape a seguir são usadas em ODBC. A gramática nesta seção usa alguns elementos definidos no [elementos usados em instruções SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
@@ -43,4 +41,3 @@ Sequências de escape a seguir são usadas em ODBC. A gramática nesta seção u
 -   [Sequência de escape da chamada de procedimento](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)  
   
 -   [Sequência de escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)
-

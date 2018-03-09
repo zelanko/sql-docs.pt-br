@@ -2,27 +2,28 @@
 title: "Criar um pool de recursos para o aprendizado de máquina | Microsoft Docs"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f56dcd77490f258afd3086a94577c443adc879c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Criar um pool de recursos para o aprendizado de máquina
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve como você pode criar um pool de recursos especificamente para gerenciar cargas de trabalho de aprendizado de máquina no SQL Server. Ele pressupõe que você já tiver instalado e habilitado a recursos de aprendizado de máquina e deseja reconfigurar a instância para dar suporte a mais gerenciamento refinado dos recursos usados por um processo externo, como R ou Python.
 
@@ -34,7 +35,7 @@ O processo inclui várias etapas:
 4.  Crie uma função de classificação para identificar solicitações de script externo.
 5.  Verifique se que o novo pool de recursos externos está capturando trabalhos de R ou Python do clientes especificados ou contas.
 
-**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Verificar o status dos pools de recursos existentes
   

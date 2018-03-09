@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 74b47bec1033728d47e5fe577af29c6d43e9af65
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTERAR o banco de dados (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -59,13 +58,13 @@ ALTER DATABASE database_name
  AUMENTO AUTOMÁTICO = {ON | OFF}  
  A opção de aumento automático de atualizações. Quando o crescimento automático for ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automaticamente aumenta o espaço alocado para tabelas replicadas, tabelas distribuídas e o log de transações conforme necessário para acomodar o crescimento dos requisitos de armazenamento. Quando o crescimento automático for OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retorna um erro se tabelas, replicadas distribuídas tabelas, ou o log de transações excede o tamanho máximo.  
   
- REPLICATED_SIZE = *tamanho* [GB]  
+ REPLICATED_SIZE = *size* [GB]  
  Especifica os novo gigabytes máxima por nó de computação para armazenar todas as tabelas replicadas no banco de dados que está sendo alterado. Se você estiver planejando para espaço de armazenamento do dispositivo, você precisará multiplicar REPLICATED_SIZE pelo número de nós de computação no dispositivo.  
   
- DISTRIBUTED_SIZE = *tamanho* [GB]  
+ DISTRIBUTED_SIZE = *size* [GB]  
  Especifica os novo gigabytes máximo por banco de dados para armazenar todas as tabelas distribuídas no banco de dados que está sendo alterado. O tamanho é distribuído por todos os nós de computação no dispositivo.  
   
- LOG_SIZE = *tamanho* [GB]  
+ LOG_SIZE = *size* [GB]  
  Especifica os novo gigabytes máximo por banco de dados para armazenar todos os logs de transação no banco de dados que está sendo alterado. O tamanho é distribuído por todos os nós de computação no dispositivo.  
   
  CRIPTOGRAFIA {ON | OFF}  
@@ -174,4 +173,3 @@ ALTER DATABASE CustomerSales
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
-

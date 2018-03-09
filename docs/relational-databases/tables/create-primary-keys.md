@@ -14,36 +14,22 @@ ms.topic: article
 helpviewer_keywords: primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 388ea24b3ae23533db81025287d41ccdce10efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cbd22a0b9fdd7b33ff7d4ccf9999d7142acf4fb7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-primary-keys"></a>Criar chaves primárias
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar chaves primárias](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
 
-  Você pode definir uma chave primária no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar uma chave primária cria automaticamente um índice correspondente exclusivo, clusterizado ou não clusterizado.  
-  
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Segurança](#Security)  
-  
--   **Para criar uma chave primária usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
+  Você pode definir uma chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A criação de uma chave primária cria automaticamente um índice clusterizado correspondente exclusivo ou um índice não clusterizado, caso seja especificado dessa forma.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -79,9 +65,9 @@ ms.lasthandoff: 11/17/2017
   
  Se você definir uma chave combinada, a ordem das colunas na chave primária corresponderá à ordem das colunas, como é mostrado na tabela. Entretanto, você poderá alterar a ordem de colunas depois que a chave primária for criada. Para obter mais informações, veja [Modificar chaves primárias](../../relational-databases/tables/modify-primary-keys.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
-  
-#### <a name="to-create-a-primary-key-in-an-existing-table"></a>Para criar uma chave primária em uma tabela existente  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+
+### <a name="to-create-a-primary-key-in-an-existing-table"></a>Para criar uma chave primária em uma tabela existente  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -89,16 +75,15 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma chave primária no coluna `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
     ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);  
     GO  
-  
     ```  
   
-#### <a name="to-create-a-primary-key-in-a-new-table"></a>Para criar uma chave primária em uma nova tabela  
+### <a name="to-create-a-primary-key-in-a-new-table"></a>Para criar uma chave primária em uma nova tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,18 +91,42 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma tabela e define uma chave primária na coluna `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
-       TransactionID int NOT NULL,  
+       TransactionID int IDENTITY (1,1) NOT NULL,  
        CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
     );  
     GO  
-  
     ```  
+
+### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>Para criar uma chave primária com um índice não clusterizado em uma nova tabela  
   
-     Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-###  <a name="TsqlExample"></a>  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma tabela e define uma chave primária na coluna `CustomerID` e um índice clusterizado em `TransactionID`.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+    CREATE TABLE Production.TransactionHistoryArchive1  
+    (  
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,  
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+    );  
+    GO  
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+    ```  
+
+## <a name="see-also"></a>Consulte Também    
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

@@ -1,33 +1,33 @@
 ---
-title: Conjunto de linhas DISCOVER_MEMORYGRANT | Microsoft Docs
+title: DISCOVER_MEMORYGRANT Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68bbbbcebe6c3f47f8b3868ba7a67b79f75503cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>Conjunto de linhas DISCOVER_MEMORYGRANT
-  Retorna uma lista de concessões de cota de memória interna que são usadas por trabalhos atualmente em execução no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna uma lista de concessões de cota de memória interna que são usadas por trabalhos atualmente em execução no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -37,12 +37,12 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||Um número que identifica a concessão de cota de memória. Exclusivo no contexto de uma única solicitação DISCOVER_MEMORYGRANT.|  
-|**SPID**|**DBTYPE_I4**|Required|O SPID que você pode obter executando `Select * from $System.Discover_Sessions`.|  
+|**SPID**|**DBTYPE_I4**|Obrigatório|O SPID que você pode obter executando `Select * from $System.Discover_Sessions`.|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||A hora em que a cota foi concedida.|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||A hora em que a solicitação de cota foi modificada pela última vez.|  
 |**MemoryUsed**|**DBTYPE_I4**||A quantidade de memória usada em associação com a cota.|  
 |**MemoryGranted**|**DBTYPE_I4**||A quantidade de memória concedida para uso pelo trabalho que está obtendo a cota de memória.|  
-|**Bloqueado**|**DBTYPE_BOOL**||Um booliano que indica o status de bloqueio do trabalho. True indica que o trabalho está bloqueado, aguardando que outro trabalho libere uma cota suficiente para conceder sua solicitação de cota. False indica que o trabalho recebeu sua cota e pode ser executado.|  
+|**Blocked**|**DBTYPE_BOOL**||Um booliano que indica o status de bloqueio do trabalho. True indica que o trabalho está bloqueado, aguardando que outro trabalho libere uma cota suficiente para conceder sua solicitação de cota. False indica que o trabalho recebeu sua cota e pode ser executado.|  
   
  Este conjunto de linhas do esquema não é classificado.  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 11/17/2017
 |ADOMDNAME|MemoryGrant|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

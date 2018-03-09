@@ -1,32 +1,31 @@
 ---
-title: "Integrar o Reporting Services usando o acesso à URL | Microsoft Docs"
+title: "Integrando o Reporting Services usando o acesso à URL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: 32
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "32"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 2ed79fbeaa1ec2f4f29878d715ae0a4f87986722
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 5f82228cfa6f52195c7d0836fe557aad9da068f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
   Com o acesso de URL, você acessa relatórios por uma URL do servidor de relatório. Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório. Você também pode personalizar a exibição de relatório e a experiência de navegação por seus usuários. A cadeia de caracteres da consulta do URL contém configurações de informações de dispositivo, como também parâmetros de relatório destinados a seu relatório e à saída de renderização escolhida. A forma que o servidor de relatório trata das solicitações de URL dependerá dos parâmetros, prefixos de parâmetro e tipo de item que você está acessando por meio da URL.  
@@ -43,9 +42,8 @@ ms.lasthandoff: 08/12/2017
  [Usando o acesso à URL em um aplicativo do Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
  Descreve como usar o acesso de URL para integrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um ambiente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integrando o Reporting Services em aplicativos](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Acesso de URL &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

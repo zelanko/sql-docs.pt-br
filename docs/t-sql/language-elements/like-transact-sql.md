@@ -1,5 +1,5 @@
 ---
-title: COMO (Transact-SQL) | Microsoft Docs
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -33,17 +33,16 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 07a8bb8b08120f08cd54e42dcd332459544c206d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo de dados de caractere.  
   
- *padrão*  
+ *pattern*  
  É a cadeia de caracteres específica de caracteres a ser pesquisado em *match_expression*e pode incluir os seguintes caracteres curinga válidos. *padrão de* pode ter um máximo de 8.000 bytes.  
   
 |Caractere curinga|Description|Exemplo|  
@@ -89,12 +88,12 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valor do resultado  
  LIKE retornará TRUE se o *match_expression* corresponde especificado *padrão*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao executar comparações de cadeias de caracteres usando LIKE, todos os caracteres na cadeia padrão são significativos. Isso inclui espaços à esquerda ou à direita. Se uma comparação em uma consulta deve retornar todas as linhas com uma cadeia de caracteres LIKE 'abc ' (abc seguido de um único espaço), não será retornada nenhuma linha na qual o valor daquela coluna seja abc (abc sem espaço). Entretanto, os espaços em branco à direita da expressão cujo padrão é correspondido são ignorados. Se uma comparação em uma consulta deve retornar todas as linhas com a cadeia de caracteres LIKE 'abc' (abc sem espaço), serão retornadas todas as linhas que comecem com abc e que tenham zero ou mais espaços em branco à direita.  
   
  Uma comparação de cadeia de caracteres usando um padrão que contém **char** e **varchar** dados não podem passar uma comparação LIKE devido a como os dados são armazenados. Você deve entender o armazenamento de cada tipo de dados e onde uma comparação LIKE pode falhar. O exemplo a seguir passa um local **char** variável para um procedimento armazenado e, em seguida, usa correspondência de padrões para localizar todos os funcionários cujos sobrenomes comecem com um conjunto especificado de caracteres.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -112,7 +111,7 @@ GO
   
  No entanto, o exemplo a seguir terá êxito porque os espaços em branco não são adicionados a um **varchar** variável.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -140,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  A seguir é apresentada uma série de exemplos que mostram as diferenças em linhas retornadas entre a correspondência de padrão LIKE ASCII e Unicode.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -171,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Por exemplo, a consulta a seguir mostra todas as exibições de gerenciamento dinâmico do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], porque todas começam com as letras `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -210,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Usando LIKE com o caractere curinga %  
  O exemplo a seguir localiza todos os números de telefone com o código de área `415` na tabela `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -244,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Usando NOT LIKE com o caractere curinga %  
  O exemplo a seguir localiza todos os números de telefone na tabela `PersonPhone` que têm códigos de área diferentes de `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -275,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Usando a cláusula ESCAPE  
  O exemplo a seguir usa a cláusula `ESCAPE` e o caractere de escape para localizar a cadeia de caracteres exata `10-15%` na coluna `c1` da tabela `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -300,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Usando os caracteres curinga [ ]  
  O exemplo a seguir localiza funcionários no `Person` tabela com o nome de `Cheryl` ou `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -311,7 +310,7 @@ GO
   
  O exemplo a seguir localiza as linhas de funcionários na tabela `Person` com os sobrenomes `Zheng` ou `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -326,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Usando LIKE com o caractere curinga %  
  O exemplo a seguir localiza todos os funcionários a `DimEmployee` tabela com números de telefone que começam com `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -338,7 +337,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Usando NOT LIKE com o caractere curinga %  
  O exemplo a seguir localiza todos os números de telefone no `DimEmployee` tabela que não começam com `612`.  .  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -350,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Usando LIKE com o caractere curinga de _  
  O exemplo a seguir localiza todos os números de telefone que tem um código de área, começando com `6` e terminando em `2` no `DimEmployee` tabela. Observe que o caractere curinga % também é incluído no final do padrão de pesquisa, já que o código de área é a primeira parte do número de telefone e caracteres adicionais existirem depois do valor de coluna.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -360,9 +359,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  
-

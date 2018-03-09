@@ -2,9 +2,12 @@
 title: "Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3ac32a1bded13f7d2411fac6100353f3ec7e2c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa de Aperfeiçoamento da Experiência do Usuário para SQL Server Data Tools
-  Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Microsoft a identificar maneiras de aperfeiçoar o nosso software.  Você pode configurar ferramentas para aceitá-las ou recusá-las a qualquer momento.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Microsoft a identificar maneiras de aperfeiçoar o nosso software.  Você pode configurar ferramentas para aceitá-las ou recusá-las a qualquer momento.  
   
 > [!NOTE]  
 >  Para ver uma explicação sobre as práticas de coleta e de uso de dados do usuário das versões do Microsoft SQL Server 2016 e de outros produtos e serviços, consulte esta [política de privacidade da Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  

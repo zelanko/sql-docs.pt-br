@@ -2,9 +2,12 @@
 title: Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn
-Este tópico descreve uma configuração completa de um recurso DTC clusterizado para o Grupo de Disponibilidade AlwaysOn do SQL Server. A configuração completa pode levar até uma hora para ser concluída. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve uma configuração completa de um recurso DTC clusterizado para o Grupo de Disponibilidade Always On do SQL Server. A configuração completa pode levar até uma hora para ser concluída. 
 
 O passo a passo cria um recurso DTC clusterizado e os Grupos de Disponibilidade do SQL Server para se alinharem aos requisitos descritos em [Cluster DTC para Grupos de Disponibilidade do SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
@@ -117,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  Configurar **in-doubt xact resolution** 
 Esse script vai configurar a opção **in-doubt xact resolution** de configuração do servidor como “presume commit” para as transações incertas.  Execute o script T-SQL a seguir no SSMS (SQL Server Management Studio) para `SQLNODE1`, no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -158,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4. Criar bancos de dados de teste
 O script criará um banco de dados chamado `AG1` no `SQLNODE1` e um banco de dados chamado `dtcDemoAG1` no `SQLNODE2`.  Execute o script T-SQL a seguir no SSMS para `SQLNODE1` no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -216,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5.   Criar pontos de extremidade
 Esse script criará um ponto de extremidade chamado `AG1_endpoint` que escuta na porta TCP `5022`.  Execute o script T-SQL a seguir no SSMS para `SQLNODE1` no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -249,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   Preparar bancos de dados para o Grupo de Disponibilidade
 O script fará backup do `AG1` no `SQLNODE1` e o restaurará no `SQLNODE2`.  Execute o script T-SQL a seguir no SSMS para `SQLNODE1` no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -282,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7.   Criar grupo de disponibilidade
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve ser criado com o comando **CREATE AVAILABILITY GROUP** e a cláusula **WITH DTC_SUPPORT = PER_DB**.  No momento, você não pode alterar um grupo de disponibilidade existente.  O Assistente de Novo Grupo de Disponibilidade não permite habilitar o suporte a DTC para um novo Grupo de Disponibilidade.  O script a seguir criará o novo Grupo de Disponibilidade e unirá o secundário.  Execute o script T-SQL a seguir no SSMS para `SQLNODE1` no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -485,7 +488,7 @@ Com o serviço DTC clusterizado totalmente configurado, será necessário interr
 Na primeira vez em que o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exigir uma transação distribuída, ele é inscrito em um serviço DTC. O serviço do SQL Server continuará a usar o serviço DTC até que ele seja reiniciado. Se um serviço DTC clusterizado estiver disponível, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será inscrito no serviço DTC clusterizado. Se um serviço DTC clusterizado não estiver disponível, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será inscrito no serviço DTC local. Para verificar se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é inscrito no serviço DTC clusterizado, interrompa e reinicie cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 
 Siga as etapas contidas no script T-SQL abaixo:
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -546,7 +549,7 @@ Esse teste usa um servidor vinculado do `SQLNODE1` para o `SQLNODE2` para criar 
 ### <a name="create-linked-servers"></a>Criar servidores vinculados  
 O script a seguir criará dois servidores vinculados no `SQLNODE1`.  Execute o script T-SQL a seguir no SSMS para `SQLNODE1`.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -562,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>Executar uma transação distribuída
 Esse script primeiro retornará as estatísticas atuais de transação do DTC.  Em seguida, o script executará uma transação distribuída usando bancos de dados no `SQLNODE1` e `SQLNODE2`.  Em seguida, o script retornará novamente estatísticas de transação do DTC que agora deverão ter uma contagem maior.  Conecte-se fisicamente ao `SQLNODE1` e execute o script T-SQL a seguir no SSSMS para `SQLNODE1` no **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

@@ -1,37 +1,33 @@
 ---
-title: ALTER biblioteca externa (Transact-SQL) | Microsoft Docs
+title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>ALTER biblioteca externa (Transact-SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Modifica o conteúdo de uma biblioteca existente do pacote externo.
 
@@ -61,7 +57,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Argumentos
 
-**nome_da_biblioteca**
+**library_name**
 
 Especifica o nome de uma biblioteca de pacote existente. Bibliotecas de escopo serão o usuário. Ou seja, nomes de biblioteca são considerados exclusivos dentro do contexto de um usuário específico ou um proprietário.
 
@@ -92,7 +88,7 @@ Especifica o conteúdo do pacote como um literal hexadecimal, semelhante aos ass
 
 Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente. Windows é a única plataforma com suporte.
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 Para a linguagem R, os pacotes devem ser preparados na forma de arquivos compactados com o. Extensão ZIP para Windows. Atualmente, apenas a plataforma do Windows tem suporte.  
 
@@ -141,8 +137,7 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 
 ## <a name="see-also"></a>Consulte também  
 
-[Criar biblioteca externa (Transact-SQL)](create-external-library-transact-sql.md)
-[DROP biblioteca externa (Transact-SQL)](drop-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

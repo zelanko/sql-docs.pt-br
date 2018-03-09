@@ -2,34 +2,31 @@
 title: "Anotações CSDL para Business Intelligence (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cf3fd7bb1f6e5bf907e6550fe48a3e87c6be5af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte à apresentação da definição de um modelo de tabela em um formato XML chamado CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de Business Intelligence). Este tópico fornece uma visão geral da CSDLBI e como ela é usada com os modelos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="understanding-the-role-of-csdl"></a>Compreendendo a função da CSDL  
@@ -37,9 +34,9 @@ ms.lasthandoff: 11/17/2017
   
  Embora a CSDL seja compatível com a Estrutura de Dados de Entidade, não é necessário compreender o modelo de relação entre entidades nem ter ferramentas especiais para criar um modelo de tabela ou um relatório baseado em um modelo. Você cria modelos usando ferramentas de cliente, como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou uma API, como AMO, e implanta o modelo em um servidor. Os clientes se conectam ao modelo usando um arquivo de definição de modelo, geralmente publicado em uma biblioteca do SharePoint, onde ele pode ser usado por designers e consumidores de relatório. Para obter mais informações, consulte estes links:  
   
--   [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [Soluções de modelo tabular](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Implantação de solução de modelo de tabela](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Propriedades de visualização e navegação. Por exemplo, as propriedades foram adicionadas para oferecer suporte a campos de classificação personalizados, imagens padrão e  
   
- **1.1 DA CSDLBI**  
+ **CSDLBI 1.1**  
   
  Essa versão do esquema da CSDLBI inclui adições para suporte de bancos de dados multidimensionais (como cubos OLAP). Os novos elementos e propriedades são os seguintes:  
   

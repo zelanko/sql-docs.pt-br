@@ -2,15 +2,13 @@
 title: "Método Execute (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Execute Method
@@ -30,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2743ccdbe0f2186db5721479c812f61adfcfe92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 083137b2c739916210113373c709ab04c0e8f4e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---methods---execute"></a>Elementos XML - métodos - executar
-  Envia o XML para comandos Analysis (XMLA) para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Isso inclui solicitações que envolvem transferência de dados, como a recuperação ou a atualização dos dados no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Envia o XML para comandos Analysis (XMLA) para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Isso inclui solicitações que envolvem transferência de dados, como a recuperação ou a atualização dos dados no servidor.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -56,20 +54,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-1: elemento opcional que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|Nenhuma|  
+|Elemento pai|Nenhum|  
 |Elementos filho|[Comando](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [parâmetros](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [propriedades](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Execute** método executa comandos XMLA fornecidos no **comando** elemento e retorna qualquer dado resultante usando o XMLA [linhas](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo de dados (para resultados de tabela Define) ou o XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) de tipo de dados (para conjuntos de resultados multidimensional).  
   
 ## <a name="example"></a>Exemplo  
@@ -93,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 </Execute>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados XML &#40; XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Descobrir o método &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Métodos &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   

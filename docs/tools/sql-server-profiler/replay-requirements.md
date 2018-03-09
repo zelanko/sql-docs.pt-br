@@ -2,9 +2,12 @@
 title: "Requisitos para repetição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5000a910eb0868ed2113b71c698e7de5ec7163ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fe999b92d34b9070a1c461340919c839468c02c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-requirements"></a>Requisitos para repetição
-  Para reproduzir dados de rastreamento com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Distributed Replay Utility, um conjunto específico de colunas e classes de evento deve ser capturado no rastreamento. Essas configurações serão habilitadas por padrão se o modelo de rastreamento **TSQL_Replay** for usado para configurar um rastreamento que será usado posteriormente para reprodução. Este tópico descreve estas configurações e outros requisitos de reprodução.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para reproduzir dados de rastreamento com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Distributed Replay Utility, um conjunto específico de classes de evento e colunas devem ser capturados no rastreamento. Essas configurações serão habilitadas por padrão se o modelo de rastreamento **TSQL_Replay** for usado para configurar um rastreamento que será usado posteriormente para reprodução. Este tópico descreve estas configurações e outros requisitos de reprodução.  
   
 > [!NOTE]  
 >  É recomendável usar o Distributed Replay Utility para reproduzir um aplicativo OLTP intensivo (com muitas conexões simultâneas ativas ou alta taxa de transferência). O Distributed Replay Utility pode reproduzir dados de rastreamento de vários computadores, com uma simulação melhor de uma carga de trabalho de missão crítica. Para obter mais informações, consulte [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/09/2017
  Para obter informações sobre quais permissões são necessárias para reproduzir um rastreamento, veja [Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Reproduzir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Reproduzir uma tabela de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   

@@ -1,35 +1,30 @@
 ---
-title: "Criar e gerenciar partições de modelo Tabular (SSAS Tabular) | Microsoft Docs"
+title: "Criar e gerenciar partições de modelo de tabela | Microsoft Docs"
 ms.custom: 
-ms.date: 05/31/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a6acec0d1ee91c553d748a334733faff36bc08
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-tabular-model-partitions"></a>Criar e Gerenciar partições de modelos tabulares
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+# <a name="create-and-manage-tabular-model-partitions"></a>Criar e gerenciar partições de modelo de tabela
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As tarefas fornecidas neste tópico descrevem como criar e gerenciar partições para um modelo implantado.  
   
@@ -71,7 +66,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Partições de modelo de tabela](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Processar partições de modelo de tabela](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo de tabela de processo](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   
-

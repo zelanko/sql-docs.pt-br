@@ -1,7 +1,7 @@
 ---
 title: "Usando metadados de parâmetro | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50af4d0d22d6042230fed2ee6b989fb7c53408d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-parameter-metadata"></a>Usando metadados de parâmetro
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ ms.lasthandoff: 09/09/2017
     
 > [!NOTE]  
 Existem algumas limitações ao usar a classe SQLServerParameterMetaData com instruções preparadas. 
-**Com o Microsoft JDBC Driver 6.0 (ou superior) para o SQL Server**: ao usar o SQL Server 2008 ou 2008 R2, o driver JDBC oferece suporte a instruções SELECT, DELETE, INSERT e UPDATE, desde que essas instruções não contêm subconsultas e/ou junções. Consultas de mesclagem também não há suporte para classe SQLServerParameterMetaData ao usar o SQL Server 2008 ou 2008 R2. Para o SQL Server 2012 e metadados de parâmetro de versões anteriores com consultas complexas que têm suporte. Não há suporte para a recuperação de metadados de parâmetro para colunas criptografadas. **Com o Microsoft JDBC Driver 4.0, 4.1 ou 4.2 para SQL Server**: O JDBC driver dá suporte a instruções SELECT, DELETE, INSERT e UPDATE desde que essas instruções não contêm subconsultas e/ou junções. Consultas de mesclagem também não têm suporte para a classe SQLServerParameterMetaData.  
+**Com o Microsoft JDBC Driver 6.0 (ou superior) para o SQL Server**: ao usar o SQL Server 2008 ou 2008 R2, o driver JDBC oferece suporte a instruções SELECT, DELETE, INSERT e UPDATE, desde que essas instruções não contêm subconsultas e/ou junções.  
 
-## <a name="see-also"></a>Consulte também  
- [Tratando metadados com o JDBC Driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+Consultas de mesclagem também não há suporte para classe SQLServerParameterMetaData ao usar o SQL Server 2008 ou 2008 R2. Para o SQL Server 2012 e metadados de parâmetro de versões anteriores com consultas complexas que têm suporte.  
+
+Não há suporte para a recuperação de metadados de parâmetro para colunas criptografadas. **Com o Microsoft JDBC Driver 4.1 ou 4.2 para SQL Server**: O JDBC driver dá suporte a instruções SELECT, DELETE, INSERT e UPDATE desde que essas instruções não contêm subconsultas e/ou junções. Consultas de mesclagem também não têm suporte para a classe SQLServerParameterMetaData.  
   
   
-

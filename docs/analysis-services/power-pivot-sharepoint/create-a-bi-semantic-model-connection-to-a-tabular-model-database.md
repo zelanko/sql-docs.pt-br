@@ -2,32 +2,30 @@
 title: "Criar uma Conexão de modelo semântico de BI para um banco de dados de modelo de tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela
-  Use as informações neste tópico para configurar uma conexão de modelo semântico de BI que redireciona para um banco de dados modelo de tabela em execução em uma instância do Analysis Services fora do farm do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Use as informações neste tópico para configurar uma conexão de modelo semântico de BI que redireciona para um banco de dados modelo de tabela em execução em uma instância do Analysis Services fora do farm do SharePoint.  
   
  Depois de criar uma conexão de modelo semântico de BI e configurar o SharePoint e as permissões do Analysis Services, as pessoas podem usá-lo como uma fonte de dados para Excel ou relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_BISM"></a> Conceder permissões de leitura no banco de dados de modelo de tabela  
  Como o banco de dados está sendo executado em um servidor que é externo ao farm, parte de configurar suas conexões incluirá conceder permissões de usuário de banco de dados no servidor do Analysis Services de back-end. O Analysis Services usa um modelo de permissão baseado em função. Usuários que conectam a bancos de dados modelo devem fazer isso com permissões de leitura ou superiores, através de uma função que conceda acesso de leitura a seus membros.  
   
- Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [Criar e gerenciar funções &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Atribuir associação de função  
   

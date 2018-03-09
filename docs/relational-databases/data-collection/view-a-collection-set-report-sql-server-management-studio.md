@@ -2,30 +2,36 @@
 title: "Exibir um relatório de conjuntos de coleta (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dc.reporthistory.calendar.f1
+f1_keywords:
+- sql13.swb.dc.reporthistory.calendar.f1
 helpviewer_keywords:
 - collection sets [SQL Server], viewing reports
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4aa59de594b5f48e300f3a1284ad7f88e280934
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 537ccf1648d36229ead7680826f63d081663c998
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
-  Depois de configurar o data warehouse de gerenciamento, você pode exibir um relatório do conjunto de coleta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os relatórios são fornecidos para os conjuntos de coleta de Dados do Sistema instalados durante a instalação. Os relatórios incluídos são:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Depois de configurar o data warehouse de gerenciamento, você pode exibir um relatório do conjunto de coleta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os relatórios são fornecidos para os conjuntos de coleta de Dados do Sistema instalados durante a instalação. Os relatórios incluídos são:  
   
 -   Resumo de Uso do Disco  
   
@@ -56,7 +62,7 @@ ms.lasthandoff: 11/09/2017
  **Duration**  
  Especifique o intervalo de tempo que será incluído no relatório. O valor padrão é 240 minutos. Os valores disponíveis para seleção são 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) e 1440 minutos (24 horas).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Relatórios personalizados no Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)   
  [Configurar o Data Warehouse de Gerenciamento &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  

@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2fa06f270ad653e9c8e43a5ec5456257e785670e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6bd49bb41c8db0fa702e97e5ad8316961e7af15
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um valor do tipo **float** (**duplo** no .NET Framework) Especifica a distância do **geografia** instância em torno da qual calcular o buffer.  
   
  A distância máxima do buffer não pode exceder 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferência da Terra) ou o globo inteiro.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Stbuffer () calcula um buffer da mesma maneira que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), especificando *tolerância* = ABS (Distance) \* .001 e *relativo*  =  **false**.  
   
  Um buffer negativo remove todos os pontos dentro da distância determinada do limite do **geografia** instância.  
@@ -83,7 +82,6 @@ SELECT @g.STBuffer(1).ToString();
   
 ## <a name="see-also"></a>Consulte também  
  [BufferWithTolerance &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

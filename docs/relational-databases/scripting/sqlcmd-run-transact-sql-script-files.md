@@ -2,27 +2,32 @@
 title: Executar arquivos de script Transact-SQL usando sqlcmd | Microsoft Docs
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transact sql scripts
+helpviewer_keywords:
+- transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fdb3188dfd164ff5bd72dcd60be58d7a5c609923
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 815b9a2deb8dd4c3f81e46257ae3756eeefe9512
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd – Executar arquivos de script do Transact-SQL
- Use **sqlcmd** para executar um arquivo de script do Transact-SQL. Um arquivo de script do Transact-SQL é um arquivo de texto que pode conter uma combinação de instruções Transact-SQL, comandos **sqlcmd** e variáveis de script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use o **SQLCMD** para executar um arquivo de script do Transact-SQL. Um arquivo de script do Transact-SQL é um arquivo de texto que pode conter uma combinação de instruções Transact-SQL, comandos **sqlcmd** e variáveis de script.  
 
 ## <a name="create-a-script-file"></a>Criar um arquivo de script  
  Para criar um arquivo de script simples do Transact-SQL usando o Bloco de Notas, siga estas etapas:  
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
  Nenhuma saída é retornada na janela de prompt de comando. Em vez disso, a saída é enviada ao arquivo EmpAdds.txt. Você pode verificar essa saída abrindo o arquivo EmpAdds.txt.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
   

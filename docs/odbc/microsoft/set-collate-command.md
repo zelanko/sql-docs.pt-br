@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set collate command [ODBC]
+helpviewer_keywords: set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfd2225157c048840cd20bd140ed74ae31384b8a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-collate-command"></a>Comando do conjunto COLLATE
 Especifica uma sequência de agrupamento para campos de caractere em operações de classificação e indexação subsequentes.  
@@ -41,7 +38,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica uma sequência de agrupamento. As opções de sequência de agrupamento disponíveis são descritas na tabela a seguir.  
   
-|Opções|Idioma|  
+|Opções|Linguagem|  
 |-------------|--------------|  
 |HOLANDÊS|Holandês|  
 |GENERAL|Inglês, francês, alemão, espanhol moderno, português e outros idiomas da Europa Ocidental|  
@@ -76,11 +73,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Definir COLLATE permite às tabelas de ordem que contém os caracteres acentuados para qualquer um dos idiomas com suporte. Alterando a configuração de AGRUPAMENTO de conjunto não afeta a sequência de agrupamento de índices abertos anteriormente. Do Visual FoxPro mantém automaticamente os índices existentes, fornece a flexibilidade para criar vários tipos diferentes de índices, mesmo para o mesmo campo.  
   
  Por exemplo, se um índice é criado com definir AGRUPAMENTO definido como geral e a configuração de AGRUPAMENTO definido for alterada posteriormente para espanhol, o índice retém a sequência de agrupamento geral.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Update () (Transact-SQL) | Microsoft Docs
+title: UPDATE() (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 29
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 644848af581b0db5a26b9958db4660b4cab66163
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - funções de gatilho (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,4 +103,3 @@ GO
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   
-

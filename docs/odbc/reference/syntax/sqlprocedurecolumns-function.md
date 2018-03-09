@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLProcedureColumns
-apilocation:
-- sqlsrv32.dll
+apiname: SQLProcedureColumns
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLProcedureColumns
-helpviewer_keywords:
-- SQLProcedureColumns function [ODBC]
+f1_keywords: SQLProcedureColumns
+helpviewer_keywords: SQLProcedureColumns function [ODBC]
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db80c3c1fbf8e4d22f09849c95dde4bc4319bedf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedurecolumns-function"></a>Função SQLProcedureColumns
 **Conformidade**  
@@ -197,7 +191,6 @@ SQLRETURN SQLProcedureColumns(
 |Buscar um bloco de dados ou rolar por um resultado definido|[Função SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Retornando uma lista de procedimentos em uma fonte de dados|[Função SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], dBASE Driver
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8354ed96f68d1471a2deb275506d4d45d4c8f3cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não é somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|  
 |STATISTICS|Para o driver dBASE, determina se as estatísticas de tamanho de tabela são aproximadas. Observe que essa opção se aplica a todas as fontes de dados que usam o driver ODBC.<br /><br /> Isso define a mesma opção como **contagem aproximada de linha** na caixa de diálogo de instalação.|  
 |THREADS|O número de threads de plano de fundo para o mecanismo de usar. Esse valor é 3 e não pode ser alterado.<br /><br /> Isso define a mesma opção como **Threads** na caixa de diálogo de instalação.|
-

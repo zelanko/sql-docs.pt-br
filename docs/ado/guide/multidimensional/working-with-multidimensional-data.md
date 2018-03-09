@@ -3,26 +3,28 @@ title: Trabalhando com dados multidimensionais | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: multidimensional data [ADO]
+helpviewer_keywords:
+- multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2f0cdb5d3cad2bda529ff2abf5393701c7221a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Trabalhando com dados multidimensionais
 Um *conjunto de células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, geralmente não mais do que quatro eixos e geralmente apenas dois ou três. Um *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -31,17 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras e procedimentos armazenados (do Visual FoxPro ODBC Driver), valores padrão e gatilhos
 Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou procedimentos armazenados usando o Driver de ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com as regras existentes, gatilhos, valores padrão ou procedimentos armazenados que insere, atualiza ou exclui do Visual FoxPro dados armazenados em um banco de dados.  
@@ -60,7 +59,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Operador de $|Operador %|& Comando|  
 |& & Comando|* O comando|= O comando|  
   
-## <a name="a"></a>Um  
+## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  
@@ -139,7 +138,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
   
 ||||  
 |-|-|-|  
-|OBTER comando|Função do GETNEXTMODIFIED)|Comando GO/GOTO|  
+|OBTER comando|GETNEXTMODIFIED( ) Function|Comando GO/GOTO|  
 |Função do GETFLDSTATE)|Função do GOMONTH)||  
 |Função do GETCP)|Função do GETENV)||  
   
@@ -209,7 +208,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |PARÂMETROS de comando|Função (primário)|Comando PRIVADA|  
 |Função do PI)|Função do programa)|Função adequado (de)|  
 |Comando de procedimento|Função do VP)||  
-|Comando público|(PADL) &#124; () PADR &#124; Funções do PADC)||  
+|Comando público|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   
@@ -238,7 +237,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Comando de filtro de conjunto|Comando FIXA do conjunto|Comando de caminho completo do conjunto|  
 |CONJUNTO FWEEK comando|DEFINIDAS horas de comando|Comando de conjunto de índice|  
 |Comando de bloqueio do conjunto|Comando MULTILOCKS SET|Defina o próximo comando|  
-|CONJUNTO NOCPTRANS comando|CONJUNTO de comando de notificação|Comando de conjunto nulo|  
+|SET NOCPTRANS Command|CONJUNTO de comando de notificação|Comando de conjunto nulo|  
 |Comando de otimização do conjunto|Comando de ordem do conjunto|Comando DEMARCADOR do conjunto|  
 |Comando do conjunto de PROCEDURE|Comando de relação de conjunto|Definir relação OFF comando|  
 |Comando de REPROCESSAMENTO do conjunto|Defina o comando Ignorar|CONJUNTO UDFPARMS comando|  
@@ -257,7 +256,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 |Variável de memória de sistema _TALLY|Variável de memória de sistema _TRIGGERLEVEL|Função do TAGCOUNT)|  
 |Função do TABLEUPDATE)|Função () de marca|Função () de destino|  
 |Função do TAGNO)|Função TAN (.)|() Função TRIM|  
-|Função do tempo)|Comando TOTAL|Função do TXNLEVEL)|  
+|Função do tempo)|Comando TOTAL|TXNLEVEL( ) Function|  
 |Função do TTOC)|Função do TTOD)||  
 |TIPO de função)|Função do TABLEREVERT)||  
   
@@ -292,4 +291,3 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 ||||  
 |-|-|-|  
 |Comando ZAP|||
-

@@ -1,15 +1,14 @@
 ---
-title: Criar biblioteca externa (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,20 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CREATE EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 8066d267790f346a22a649fb0c873a3d454489a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-library-transact-sql"></a>Criar biblioteca externa (Transact-SQL)  
+# <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Carrega os pacotes de R para um banco de dados do caminho do arquivo ou fluxo de bytes especificado.
 
@@ -65,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Argumentos
 
-**nome_da_biblioteca**
+**library_name**
 
 Bibliotecas forem adicionadas ao banco de dados com escopo para o usuário. Ou seja, nomes de biblioteca são considerados exclusivos dentro do contexto de um usuário específico ou um proprietário e nomes de biblioteca devem ser exclusivos por usuário. Por exemplo, dois usuários **RUser1** e **RUser2** podem ambos individualmente e separadamente carregar a biblioteca R `ggplot2`.
 
@@ -93,7 +89,7 @@ Especifica o conteúdo do pacote como um literal hexadecimal, semelhante aos ass
 
 Especifica a plataforma para o conteúdo da biblioteca. O valor padrão para a plataforma de host que está executando o SQL Server. Portanto, o usuário não precisa especificar o valor. É necessário no caso em que várias plataformas têm suporte ou o usuário precisa especificar uma plataforma diferente. Windows é a única plataforma com suporte.
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 Para a linguagem R, ao usar um arquivo, os pacotes devem ser preparados na forma de arquivos compactados com o. Extensão ZIP para Windows. Atualmente, apenas a plataforma do Windows tem suporte
 
@@ -195,8 +191,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 
 ## <a name="see-also"></a>Consulte também
 
-[ALTER biblioteca externa (Transact-SQL)](alter-external-library-transact-sql.md)  
-[SOLTE a biblioteca externa (Transact-SQL)](drop-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

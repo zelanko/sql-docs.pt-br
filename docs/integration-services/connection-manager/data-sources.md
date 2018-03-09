@@ -15,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eccbd3683393dfd27665fe827af74100cef415db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-sources"></a>Fontes de Dados
+# <a name="data-sources"></a>Fontes de dados
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um objeto de tempo de design que você pode usar em pacotes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : a fonte de dados.  
   
  Um objeto de fonte de dados é uma referência para uma conexão e, no mínimo, inclui uma cadeia de caracteres de conexão e um identificador de fonte de dados. Ele também pode incluir metadados adicionais como uma descrição, um nome, um nome de usuário e uma senha.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  Não há nenhuma dependência entre uma fonte de dados e os gerenciadores de conexões que fazem referência a ela. Se uma fonte de dados não faz mais parte do projeto, o pacote continua a ser válido, pois informações sobre a fonte de dados, tais como o tipo da conexão e a cadeia de caracteres da conexão, são inclusas na definição do pacote.  
   
   
-

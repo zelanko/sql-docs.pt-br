@@ -5,24 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f27d9b0172671e11a9bea26db398c6229e458320
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 797ae8c8901f4fe102a6689bb1f752a1de3fa4ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lição 1-6 – adicionar e configurar as transformações de pesquisa
 Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
@@ -61,34 +63,11 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
     2.  Selecione **Usar os resultados de uma consulta SQL**e digite ou copie a seguinte instrução SQL:  
   
         ```sql
-        select * from (select * from [dbo].[DimCurrency]) as refTable  
-        where [refTable].[CurrencyAlternateKey] = 'ARS'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'AUD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'BRL'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CAD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CNY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'DEM'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'EUR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'FRF'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'GBP'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'JPY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'MXN'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'SAR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'USD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'VEB'  
+        SELECT * FROM [dbo].[DimCurrency]
+        WHERE [CurrencyAlternateKey]
+        IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
+            'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
+            'MXN', 'SAR', 'USD', 'VEB')
         ```  
   
 7.  Na página **Colunas** , faça as seguintes seleções:  
@@ -140,7 +119,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 7: Adicionando e configurando o destino OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

@@ -25,17 +25,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-caps.latest.revision: 34
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2544da5cb252b27f42a82e1fa400d7c28f503f20
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f1b2025ee9fdc5ca0aaf4967305db40cb65d038c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ FILE_ID ( file_name )
 ## <a name="return-types"></a>Tipos de retorno  
  **smallint**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  *file_name* corresponde ao nome do arquivo lógico exibido na coluna nome nas exibições do catálogo sys. master_files ou sys. database_files.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o número de identificação de arquivo atribuído a catálogos de texto completo é maior que 32.767. Porque o tipo de retorno da função FILE_ID **smallint**, essa função não pode ser usada para arquivos de texto completo. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) em vez disso.  
@@ -69,7 +68,7 @@ FILE_ID ( file_name )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a ID de arquivo para o arquivo `AdventureWorks_Data`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_ID('AdventureWorks2012_Data')AS 'File ID';  
@@ -85,7 +84,7 @@ File ID
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [File_name &#40; Transact-SQL &#41;](../../t-sql/functions/file-name-transact-sql.md)   
  [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
@@ -93,4 +92,3 @@ File ID
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
-

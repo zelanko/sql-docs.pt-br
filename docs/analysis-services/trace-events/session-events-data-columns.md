@@ -2,13 +2,13 @@
 title: "Colunas de dados de eventos de sessão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Session Events event category
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6692609a547efbe6baa2be620d5405f634e5d5dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Colunas de dados de eventos de sessão
-  A categoria Session Events tem a seguinte classe de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria Session Events tem a seguinte classe de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
 |------------------|--------------------|---------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |ServerName|43|8|Nome do servidor que gera o evento.|  
 |RequestProperties|45|9|Propriedades de solicitação XMLA|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

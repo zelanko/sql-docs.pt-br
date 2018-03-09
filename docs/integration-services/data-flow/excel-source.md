@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/17/2017
   
  Para obter informações sobre loop através de um grupo de arquivos do Excel, consulte [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Loop por meio do Excel arquivos e tabelas usando um contêiner Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
   Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
@@ -116,7 +115,7 @@ ms.lasthandoff: 08/17/2017
 >  A propriedade **CommandTimeout** da origem do Excel não está disponível no **Editor de Origem do Excel**, mas ela pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Opções estáticas  
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões do Excel existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Nova**  
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/17/2017
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
 |Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -196,7 +195,7 @@ ms.lasthandoff: 08/17/2017
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição do erro.  
   
  **Definir este valor para células selecionadas**  
@@ -216,4 +215,3 @@ ms.lasthandoff: 08/17/2017
 -   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
   
   
-

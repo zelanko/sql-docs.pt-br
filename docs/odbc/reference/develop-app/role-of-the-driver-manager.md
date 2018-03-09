@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver-manager"></a>Função do Gerenciador de Driver
 O Gerenciador de Driver determina a ordem final para retornar registros de status que ele gera. Em particular, ele determina qual registro tem a classificação mais alta e deve ser retornada pela primeira vez. O driver é responsável por ordenar registros de status que ele gera. Se os registros de status são lançados pelo Gerenciador de Driver e o driver, o Gerenciador de Driver é responsável por ordená-los. Para obter mais informações, consulte [sequência de registros de Status](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
@@ -49,4 +47,3 @@ O Gerenciador de Driver determina a ordem final para retornar registros de statu
 -   [Verificações de erro gerais](../../../odbc/reference/develop-app/general-error-checks.md)  
   
 -   [Verificações de aviso e de erro do Gerenciador de Driver](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-

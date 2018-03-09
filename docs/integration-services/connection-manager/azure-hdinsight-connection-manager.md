@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador de Conexão de HDInsight do Azure | Microsoft Docs"
+title: "Gerenciador de Conexões do Azure HDInsight | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
@@ -16,27 +16,25 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPHDICM.F1
 - SQL14.DTS.DESIGNER.AFPHDICM.F1
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
-caps.latest.revision: 4
+caps.latest.revision: 
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 080cd1184d3c29673ac476d6fe6087b697160544
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 3ead8a391d34f3d679beee4e85aed5bacd0e1334
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="azure-hdinsight-connection-manager"></a>Gerenciador de Conexão de HDInsight do Azure
-O **Gerenciador de Conexão do Azure HDInsight** permite que um pacote do SSIS para se conectar a um cluster Azure HDInsight.
+# <a name="azure-hdinsight-connection-manager"></a>Gerenciador de Conexões do Azure HDInsight
+O **Gerenciador de Conexões do Azure HDInsight** permite que um pacote do SSIS se conecte a um cluster HDInsight do Azure.
 
-O **Gerenciador de Conexão do Azure HDInsight** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+O **Gerenciador de Conexões do Azure HDInsight** é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-Para criar e configurar um **Gerenciador de Conexão do Azure HDInsight**, siga as etapas abaixo:
+Para criar e configurar um **Gerenciador de Conexões do Azure HDInsight**, siga as etapas abaixo:
 
-1. No **adicionar Gerenciador de Conexão SSIS** caixa de diálogo, selecione **AzureHDInsight**e clique em **adicionar**.
-2. No **Editor do Gerenciador de Conexão de HDInsight do Azure** caixa de diálogo, especifique o **nome DNS de Cluster** (sem o prefixo de protocolo), **Username**, e **senha** para o cluster HDInsight para se conectar ao.
+1. Na caixa de diálogo **Adicionar Gerenciador de Conexões do SSIS**, selecione **AzureHDInsight** e clique em **Adicionar**.
+2. Na caixa de diálogo **Editor do Gerenciador de Conexões do Azure HDInsight**, especifique o **Nome DNS de Cluster** (sem o prefixo de protocolo), **Nome de usuário** e **Senha** para o cluster HDInsight ao qual se conectar.
 3. Clique em **OK** para fechar a caixa de diálogo.
 4. Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .
-

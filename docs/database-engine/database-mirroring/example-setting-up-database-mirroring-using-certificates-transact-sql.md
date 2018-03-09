@@ -2,10 +2,14 @@
 title: 'Exemplo: configurar o espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e59dc131a6632bb36da92d6d3d3f6e5f6226485
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 361727b4d3a6e5373470c8f82319c6447438cf28
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
-  Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  
   
@@ -264,7 +269,7 @@ ms.lasthandoff: 11/09/2017
     ```  
   
     > [!NOTE]  
-    >  Se desejar executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'**. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
@@ -282,7 +287,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

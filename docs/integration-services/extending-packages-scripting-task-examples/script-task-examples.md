@@ -1,5 +1,5 @@
 ---
-title: Exemplos de tarefa de script | Microsoft Docs
+title: Exemplos de Tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5187a97eb3424813b94b03438a31c62f583ee852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task-examples"></a>Exemplos de tarefa Script
   A tarefa Script é uma ferramenta com vários fins que pode ser usada em um pacote para preencher quase todos os requisitos que não sejam satisfeitos pelas tarefas incluídas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Este tópico lista exemplos de código da tarefa Script, que demonstram algumas das funcionalidades disponíveis.  
@@ -51,16 +49,16 @@ ms.lasthandoff: 09/26/2017
  Coleta uma lista de arquivos que satisfazem critérios especificados pelo usuário e preenche uma variável para ser usada posteriormente pelo Enumerador Foreach de Variável.  
   
  [Consultar o Active Directory com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Recupera informações de usuário do Active Directory com base no valor de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variável, usando classes no namespace System. DirectoryServices.  
+ Recupera informações de usuário do Active Directory com base no valor de uma variável do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usando classes no namespace System.DirectoryServices.  
   
  [Monitorar contadores de desempenho com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Cria um contador de desempenho personalizados que pode ser usado para rastrear o progresso da execução de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote, usando classes no namespace System. Diagnostics.  
+ Cria um contador de desempenho personalizado que pode ser usado para rastrear o progresso da execução de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usando classes no namespace System.Diagnostics.  
   
  [Trabalhar com imagens com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- Compacta imagens no formato JPEG e cria imagens de miniatura, usando classes no namespace System. Drawing.  
+ Compacta imagens no formato JPEG e cria imagens de miniatura, usando classes no namespace System.Drawing.  
   
  [Localizar impressoras instaladas com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- Localiza impressoras instaladas que dão suporte a um tamanho de papel específico, usando classes no namespace System Printing.  
+ Localiza impressoras instaladas compatíveis com um tamanho de papel específico, usando classes no namespace System.Drawing.Printing.  
   
  [Enviar uma mensagem de email HTML com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  Envia uma mensagem de email em formato HTML em vez de formato de texto sem-formatação.  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/26/2017
  Registra o número de itens processados pela tarefa para provedores de log habilitados.  
   
   
-

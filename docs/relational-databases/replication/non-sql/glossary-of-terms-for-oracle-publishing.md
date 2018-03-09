@@ -2,27 +2,30 @@
 title: "Glossário de termos para publicações Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b0a29acf37c9e6508b244c531a4f7bb6a048b39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 835ca9131d8484a2abe4995fb589775ba24bb953
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossário de termos para publicações Oracle
-  Você deve estar familiarizado com os seguintes termos da Oracle ao configurar e administrar publicações Oracle. Para uma lista completa de termos da Oracle, consulte a documentação online da Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você deve estar familiarizado com os seguintes termos da Oracle ao configurar e administrar publicações Oracle. Para uma lista completa de termos da Oracle, consulte a documentação online da Oracle.  
   
  Tabelas organizadas por índice (IOT)  
  Uma tabela cujos dados estão classificados fisicamente em disco por ordem de índice; é semelhante a uma tabela com índice clusterizado do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Uma IOT é reproduzida a um Assinante como uma tabela com um índice cluster.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
  Esquema de usuário  
  Um esquema de usuário pode ser considerado como um usuário de banco de dados que possui um conjunto particular de objetos de banco de dados. O esquema do usuário administrativo da replicação possui todos os objetos criados pelo processo de replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no banco de dados Oracle, exceto o sinônimo público **MSSQLSERVERDISTRIBUTOR** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Objetos criados no Publicador Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Publicadores não SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   

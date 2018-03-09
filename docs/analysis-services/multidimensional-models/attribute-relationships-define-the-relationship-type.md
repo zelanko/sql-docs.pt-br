@@ -2,16 +2,13 @@
 title: "Definir o tipo de relação de uma relação de atributo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfb5edcfcec3d977af9a78ce8cad43161ea0180b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Relações de atributo - definir o tipo de relação
-  Você define o tipo de relação de uma relação de atributo usando a guia **Relações de Atributo** do Designer de Dimensão, que pode ser acessada em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você define o tipo de relação de uma relação de atributo usando a guia **Relações de Atributo** do Designer de Dimensão, que pode ser acessada em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>Para definir o tipo de relação de uma relação de atributo.  
   

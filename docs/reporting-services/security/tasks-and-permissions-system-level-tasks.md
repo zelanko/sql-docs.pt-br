@@ -1,31 +1,30 @@
 ---
-title: "Tarefas de nível de sistema | Microsoft Docs"
+title: "Tarefas em nível do sistema | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- system-level tasks [Reporting Services]
+helpviewer_keywords: system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8f8eac1d05b8bdd034879cb2eba1c4fc867fce66
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 035467f28ebd5e5b8cd6a2269688d1b65db09874
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="tasks-and-permissions---system-level-tasks"></a>Tarefas e permissões - tarefas de nível de sistema
+# <a name="tasks-and-permissions---system-level-tasks"></a>Tarefas e permissões – tarefas em nível do sistema
   Uma tarefa em nível do sistema é uma coleção de permissões relacionadas a operações que se aplicam ao site do servidor de relatório como um todo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também inclui tarefas em nível de item que se aplicam a itens específicos. Para obter mais informações, consulte [Tarefas em nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). Para obter mais informações sobre tarefas e permissões em geral, consulte [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -46,8 +45,7 @@ ms.lasthandoff: 08/09/2017
 |Exibir propriedades do servidor de relatório|Ler Propriedades do Sistema|  
 |Exibir agendas compartilhadas|Ler Agendas|  
   
-## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

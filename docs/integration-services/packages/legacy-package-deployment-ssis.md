@@ -34,17 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  
@@ -153,7 +152,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>Entrada de Registro  
  Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do Registro que você usa deve ter um valor denominado **Value**. O valor pode ser um DWORD ou uma cadeia de caracteres.  
   
- Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<chave do registro >. Se você quiser usar uma chave do registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<chave do registro key\registry\\... > para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite **SSISPackages\MyPackage**.  
+ Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite **SSISPackages\MyPackage**.  
   
 #### <a name="sql-server"></a>SQL Server  
  Se você selecionar o tipo de configuração **SQL Server** , especifique a conexão para o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que deseja armazenar as configurações. Você pode salvar as configurações em uma tabela existente ou criar uma tabela no banco de dados especificado.  
@@ -223,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |**Nome da Configuração**|O nome da configuração.|  
 |**Tipo de Configuração**|O tipo de configuração.|  
@@ -325,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuração**  
  Selecione o tipo de fonte na qual deseja armazenar a configuração usando as seguintes opções:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Arquivo de configuração XML**|Armazene a configuração como um arquivo XML. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
 |**Variável de ambiente**|Armazene a configuração em uma das variáveis de ambiente. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
@@ -342,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Nome do arquivo de configuração**|Digite o caminho do arquivo de configuração gerado pelo assistente.|  
 |**Procurar**|Use a caixa de diálogo **Selecionar Local do Arquivo de Configuração** para especificar o caminho do arquivo de configuração gerado pelo assistente. Se o arquivo não existir, ele será criado pelo assistente.|  
@@ -350,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual você deseja armazenar a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -362,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Entrada de Registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<chave do registro >.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se você quiser usar um registro de chave não é a raiz de HKEY_CURRENT_USER, use o formato \<chave do registro key\registry\\... > para identificar a chave.|  
+|**Entrada de Registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual deseja armazenar a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -377,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável pai**|Especifique a variável no pacote pai que contém as informações de configuração.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente que armazena a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -392,7 +391,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão**|Selecione uma conexão da lista ou clique em **Nova** para criar uma nova conexão.|  
 |**Tabela de configuração**|Selecione uma tabela existente ou clique em **Nova** para gravar uma instrução SQL que cria uma nova tabela.|  
@@ -401,7 +400,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente onde a configuração está armazenada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -431,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Concluir**  
  Crie a configuração e saia do **Assistente de Configuração de Pacotes**.  
 
-## <a name="child"></a>Use os valores de variáveis e parâmetros em um pacote filho
+## <a name="child"></a> Usar os valores de variáveis e parâmetros em um pacote filho
   Este procedimento descreve como criar uma configuração de pacote que usa o tipo de configuração variável pai. Este tipo de configuração habilita um pacote filho que é executado de um pacote pai para acessar uma variável no pai.  
   
 > [!NOTE]  
@@ -492,7 +491,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|Um valor que especifica se um utilitário de implantação do pacote é criado quando o projeto é compilado. Essa propriedade deve ser **True** para criar um utilitário de implantação.|  
 |DeploymentOutputPath|O local, relativo ao projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , do utilitário de implantação.|  
   
- Quando você cria um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projeto, um arquivo de manifesto, \<nome do projeto >. &Gt;.ssisdeploymentmanifest.XML é criado e adicionado, junto com cópias dos pacotes de projeto e as dependências do pacote, para a pasta bin\Deployment do projeto ou no local especificado na propriedade DeploymentOutputPath. O arquivo de manifesto lista os pacotes, as configurações de pacote e os diversos arquivos do projeto.  
+ Quando você cria um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], um arquivo de manifesto, \<project name>.SSISDeploymentManifest.xml, é criado e adicionado, junto com cópias dos pacotes de projeto e dependências do pacote, à pasta bin\Deployment do projeto ou ao local especificado na propriedade DeploymentOutputPath. O arquivo de manifesto lista os pacotes, as configurações de pacote e os diversos arquivos do projeto.  
   
  O conteúdo da pasta de implantação é atualizado toda vez que você compila o projeto. Isso significa que qualquer arquivo salvo nessa pasta que não for copiado novamente na pasta pelo processo de compilação será excluído. Por exemplo, serão excluídos arquivos de configuração do pacote salvos nas pastas de implantação.  
   
@@ -502,7 +501,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
-3.  No  **\<nome do projeto > páginas de propriedade** caixa de diálogo, clique em **utilitário de implantação**.  
+3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>**, clique em **Utilitário de Implantação**.  
   
 4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** como **True**.  
   
@@ -521,7 +520,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  O caminho da pasta de implantação está especificado na propriedade DeploymentOutputPath do projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o qual foi criado o utilitário de implantação. O caminho padrão é bin\Deployment, relativo ao projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Criar um utilitário de implantação](../../integration-services/packages/create-a-deployment-utility.md).  
   
- É possível usar o Assistente de Instalação de Pacotes para instalar os pacotes. Para iniciar o assistente, clique duas vezes no arquivo do utilitário de implantação depois de ter copiado a pasta de implantação no servidor. Esse arquivo é denominado \<nome do projeto >. SSISDeploymentManifest e pode ser encontrado na pasta de implantação no computador de destino.  
+ É possível usar o Assistente de Instalação de Pacotes para instalar os pacotes. Para iniciar o assistente, clique duas vezes no arquivo do utilitário de implantação depois de ter copiado a pasta de implantação no servidor. Esse arquivo é chamado \<project name>.SSISDeploymentManifest e pode ser encontrado na pasta de implantação do computador de destino.  
   
 > [!NOTE]  
 >  Dependendo da versão do pacote que está sendo implantado, você poderá encontrar um erro se tiver diferentes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas lado a lado. Esse erro pode ocorrer porque a extensão do nome de arquivo .SSISDeploymentManifest é a mesma para todas as versões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Clicar duas vezes no arquivo chama o instalador (dtsinstall.exe) da versão instalada mais recentemente do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], que talvez não seja a mesma versão do arquivo de utilitário de implantação. Para resolver esse problema, execute a versão correta de dtsinstall.exe na linha de comando e forneça o caminho do arquivo de utilitário de implantação.  
@@ -544,7 +543,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  Abra a pasta de implantação no computador de destino.  
   
-2.  Clique duas vezes no arquivo de manifesto, \<nome do projeto >. SSISDeploymentManifest, para iniciar o Assistente de instalação do pacote.  
+2.  Clique duas vezes no arquivo de manifesto, \<project name>.SSISDeploymentManifest, para iniciar o Assistente de Instalação de Pacotes.  
   
 3.  Na página **Implantar Pacotes SSIS** , selecione a opção **Implantação no SQL Server** .  
   
@@ -677,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usar Autenticação do SQL Server**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no servidor. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
- **Nome de usuário**  
+ **User name**  
  Especifique um nome de usuário.  
   
  **Senha**  
@@ -705,5 +704,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Concluir**  
  Para sair do assistente, clique em **Concluir**.  
-
 

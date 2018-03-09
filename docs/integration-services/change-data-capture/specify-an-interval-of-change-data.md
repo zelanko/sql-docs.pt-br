@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbe685552f38f7da644d4e57d63fe47a1c400da6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 262f93736e963785054686dd573389670d44bc46
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Estes pontos de extremidade são valores **datetime** e são armazenados em variáveis do pacote para uso posterior.  
@@ -115,11 +114,10 @@ ms.lasthandoff: 08/03/2017
   
  **Próximo tópico:** [Determinar se os dados de alteração estão prontos](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40; SSIS &#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md)   
- [Tarefa de script](../../integration-services/control-flow/script-task.md)  
+ [Tarefa Script](../../integration-services/control-flow/script-task.md)  
   
   
-

@@ -2,41 +2,37 @@
 title: O objeto de fonte de dados (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>Objeto de fonte de dados (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define uma conexão com uma fonte de dados usada pelo modelo durante a importação para adicionar dados ao modelo, ou em consultas passagem por meio do modo DirectQuery.  Modelos no modo DirectQuery só podem ter uma **DataSource** objeto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Define uma conexão com uma fonte de dados usada pelo modelo durante a importação para adicionar dados ao modelo, ou em consultas passagem por meio do modo DirectQuery.  Modelos no modo DirectQuery só podem ter uma **DataSource** objeto.  
   
  A menos que você está criando, substituindo, ou alterando o próprio objeto de fonte de dados, qualquer fonte de dados referenciado em seu script (como em script de partição) deve ser um existente **DataSource** objeto em seu modelo.  
   
 ## <a name="object-definition"></a>Definição do objeto  
  Todos os objetos têm um conjunto comum de propriedades, incluindo nome, tipo, descrição, uma coleção de propriedades e anotações. **Fonte de dados** objetos também têm as seguintes propriedades.  
   
- Tipo  
+ tipo  
  O tipo de DataSource. No momento, o único valor válido é o provedor (1) - cadeia de caracteres de conexão Normal.  
   
  connectionString  
@@ -192,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Modo DirectQuery &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Configurar o acesso HTTP ao Analysis Services no Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

@@ -2,23 +2,26 @@
 title: Arquitetura | Microsoft Docs
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1dcde96872f391d1be312c5b8ff9bd8c2dd7a479
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Visão geral da arquitetura de serviços de aprendizado de máquina com Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico fornece uma visão geral de como o Python é integrado com o SQL Server, incluindo o modelo de segurança, os componentes no mecanismo de banco de dados que oferecem suporte à execução de scripts externos e novos componentes que permitem a interoperabilidade do Python com o SQL Server. Para obter detalhes, consulte os tópicos vinculados.
 

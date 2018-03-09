@@ -2,9 +2,12 @@
 title: "Filtros de linha com parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
-  Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
   
  Partições que não se sobrepõem podem ser compartilhadas entre assinaturas ou podem ser restringidas de modo que só uma assinatura receba uma determinada partição. As configurações que controlam comportamento de partição são descritas em "Usando opções de filtragem apropriadas", mais adiante neste tópico. Usando essas configurações você pode personalizar a filtragem com parâmetros de acordo com o aplicativo e os requisitos de desempenho. Em geral, partições que se sobrepõem permitem maior flexibilidade e partições que não se sobrepõem replicadas a uma única assinatura proporcionam melhor desempenho.  
   
@@ -127,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Definindo 'opções de partição’  
  Você especifica um valor para a propriedade **opções de partição** ao criar um artigo, de acordo com a maneira em que os dados na tabela filtrada serão compartilhados pelos Assinantes. A propriedade pode ser definida com um dentre quatro valores usando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)e a caixa de diálogo **Propriedades do Artigo** . A propriedade pode ser definida com um dentre dois valores usando as caixas de diálogo **Adicionar Filtro** ou **Editar Filtro** , que estão disponíveis no Assistente de Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . A tabela a seguir resume os valores disponíveis:  
   
-|Descrição|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
+|Description|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Os dados nas partições estão sobrepostos e o Assinante pode atualizar colunas referenciadas em um filtro com parâmetros.|**Uma linha dessa tabela irá para múltiplas assinaturas**|**Com sobreposição**|**0**|  
 |Os dados nas partições estão sobrepostos e o Assinante não pode atualizar colunas referenciadas em um filtro com parâmetros.|N/A*|**Com sobreposição, não permitir alterações de dados fora da partição**|**1**|  
@@ -187,7 +190,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Se duas tabelas do Publicador tiverem uma relação de filtro de junção e a tabela filho tiver linhas que não tenham nenhuma linha correspondente na tabela pai, uma inserção da linha pai faltante não fará com que as linhas relacionadas sejam baixadas para o Assinante (as linhas seriam baixadas com partições que se sobrepusessem). Por exemplo, se a tabela **SalesOrderDetail** tiver linhas sem nenhuma linha correspondente na tabela **SalesOrderHeader** e você inserir a linhas faltante em **SalesOrderHeader**, a linha é baixada para o Assinante, mas as linhas correspondentes em **SalesOrderDetail** não o são.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Melhores práticas para filtros de linha baseados em tempo](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar dados publicados para a replicação de mesclagem](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

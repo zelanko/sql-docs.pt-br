@@ -2,33 +2,36 @@
 title: "Extensão do pool de buffers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="buffer-pool-extension"></a>Extensão do pool de buffers
-  Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+# <a name="buffer-pool-extension"></a>Buffer Pool Extension
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Benefícios da extensão do pool de buffers  
  A principal finalidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é armazenar e recuperar dados, de modo que a intensa E/S de disco é uma característica importante do Mecanismo de Banco de Dados. Como as operações de E/S de disco podem consumir muitos recursos e levar um tempo relativamente longo para terminar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se concentra em tornar a E/S altamente eficiente. O pool de buffers serve como fonte de alocação de memória primária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O gerenciamento de buffer é um componente fundamental para alcançar essa eficiência. O componente de gerenciamento de buffer consiste em dois mecanismos: o gerenciador de buffer, para acessar e atualizar páginas de banco de dados, e o cache do pool de buffers, para reduzir a E/S do arquivo de banco de dados.  
   
  As páginas de índice e dados são lidas do disco no pool de buffers e as páginas modificadas (também conhecidas como páginas sujas) são gravadas novamente no disco. A demanda de memória nos pontos de verificação de servidor e banco de dados faz com que as páginas sujas dinâmicas (ativas) no cache do buffer sejam removidas do cache e gravadas nos discos mecânicos e, em seguida, lidas novamente no cache. Normalmente, essas operações de E/S são leituras e gravações aleatórias pequenas de 4 a 16 KB de dados. Os padrões de E/S aleatória pequena incorrem em buscas frequentes, competição por braço do disco mecânico, aumento de latência de E/S e redução da taxa de transferência de E/S agregada do sistema.  
   
- A abordagem comum para resolver esses afunilamentos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: a DRAM é mais cara do que as unidades de armazenamento de dados, e a adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.  
+ A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: a DRAM é mais cara do que as unidades de armazenamento de dados, e a adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.  
   
  O recurso de extensão do pool de buffers estende o cache do pool de buffers com o armazenamento não volátil (geralmente, SSD). Graças a essa extensão, o pool de buffers pode acomodar um conjunto de trabalho de banco de dados maior, o que força a paginação de E/Ss entre a RAM e as SSDs. Isso descarrega eficazmente as E/Ss aleatórias pequenas dos discos mecânicos nas SSDs. Devido à latência mais baixa e ao melhor desempenho de E/S aleatória das SSDs, a extensão do pool de buffers melhora significativamente a taxa de transferência de E/S.  
   
@@ -90,14 +93,14 @@ ms.lasthandoff: 11/09/2017
   
  Os Xevents a seguir estão disponíveis.  
   
-|XEvent|Descrição|Parâmetros|  
+|XEvent|Description|Parâmetros|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|É acionado quando uma página ou um grupo de páginas é removido do pool de buffers e gravado no arquivo de extensão do pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|É acionado quando uma página é lida do arquivo de extensão do pool de buffers para o pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_evicted|É acionado quando uma página é removida do arquivo de extensão do pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|É acionado quando o limite de remoção é calculado.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_reference_type (banco de dados SSISDB) | Microsoft Docs
+title: catalog.set_environment_reference_type (banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a4f3e97d5b6dd1aea83d806c4c9d4dbeaa0d3524
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,44 +38,43 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @reference_id =] *reference_id*  
+ [ @reference_id = ] *reference_id*  
  O identificador exclusivo da referência de ambiente que deve ser atualizada. O *reference_id* é **bigint**.  
   
- [ @reference_type =] *reference_type*  
- Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_type* é **char (1)**.  
+ [ @reference_type = ] *reference_type*  
+ Indica se o ambiente pode ser localizado na mesma pasta do projeto (referência relativa) ou em uma pasta diferente (referência absoluta). Use o valor `R` para indicar uma referência relativa. Use o valor `A` para indicar uma referência absoluta. O *reference_type* é **char(1)**.  
   
- [ @environment_folder_name =] *environment_folder_name*  
- A pasta na qual o ambiente está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar (128)**.  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ A pasta na qual o ambiente está localizado. Esse valor é necessário para referências absolutas. O *environment_folder_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no projeto e permissão READ no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
   
 -   O nome de pasta, o nome de ambiente ou o ID de referência não é válido  
   
--   O usuário não as permissões adequadas  
+-   O usuário não tem as permissões adequadas  
   
--   Uma referência absoluta é especificada usando o `A` caractere o *reference_location* parâmetro, mas o nome da pasta não foi especificado com o *environment_folder_name* parâmetro.  
+-   Uma referência absoluta está especificada usando o caractere `A` no parâmetro *reference_location*, mas o nome da pasta não foi especificado com o parâmetro *environment_folder_name*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome e requerem que ele resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Elas podem fazer referência a ambientes que residam em uma pasta diferente da pasta do projeto. Um projeto pode fazer referência a vários ambientes.  
   
 > [!IMPORTANT]  
->  Se uma referência relativa for especificada, o *environment_folder_name* o valor do parâmetro não é usado e o nome da pasta de ambiente é definido automaticamente como **nulo**. Se uma referência absoluta for especificada, o nome da pasta de ambiente deve ser fornecido no *environment_folder_name* parâmetro.  
+>  Se uma referência relativa for especificada, o valor do parâmetro *environment_folder_name* não será usado e o nome da pasta do ambiente será definido automaticamente como **NULL**. Se uma referência absoluta for especificada, o nome da pasta de ambiente deverá ser fornecido no parâmetro *environment_folder_name*.  
   
   
-

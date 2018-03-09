@@ -1,12 +1,14 @@
 ---
 title: "Instalando o Assistente de migração do SQL Server para Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -26,22 +28,21 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e93611af32e1317096fc2ea95f8b4d2147a88bcc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalando o Assistente de migração do SQL Server para Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para acesso é instalado usando um assistente baseado no Windows Installer. Este tópico fornece informações sobre os pré-requisitos de instalação, um link para a versão mais recente do SSMA e instruções para a instalação, licenciamento, desinstalar e atualizar SSMA.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar o SSMA, certifique-se de que seu sistema atende aos seguintes requisitos:  
   
 -   Windows 7 ou posterior, ou Windows Server 2008 ou posterior.  
@@ -101,4 +102,3 @@ Se você abrir um projeto criado em uma versão anterior do SSMA para Access, SS
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Vinculando a aplicativos de acesso ao SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   
-

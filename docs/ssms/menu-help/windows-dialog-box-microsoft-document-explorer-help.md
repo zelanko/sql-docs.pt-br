@@ -3,8 +3,11 @@ title: "Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84b957abb58629d8d722dcae65cb934cab969a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dfec5cacbfcd9599cca6f906775ab359833b1259
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)
-Essa caixa de diálogo permite exibir, fechar e organizar documentos que estão abertos em editores e designers. Você pode exibir essa caixa de diálogo clicando em **Windows** no menu **Janela** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essa caixa de diálogo permite exibir, fechar e organizar documentos que estão abertos em editores e designers. Você pode exibir essa caixa de diálogo clicando em **Windows** no menu **Janela** .  
   
 ## <a name="options"></a>Opções  
 **Nome**  

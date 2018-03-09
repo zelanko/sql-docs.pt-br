@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: 5
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdac1899707b3caa4f4c515324511a47830f2722
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c26004fdfa5f2607235ffe7dddb7826a77f38b31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULO e desconhecido (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -42,29 +41,28 @@ ms.lasthandoff: 09/01/2017
   
 -   Valores nulos não podem ser usados como as informações necessárias para distinguir uma linha em uma tabela de outra linha em uma tabela, como chaves primárias ou de informações usadas para distribuir as linhas, tais como chaves de distribuição.  
   
- Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Essas tabelas esboçam o efeito de introduzir comparações nulas.  
+ Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Operadores lógicos em uma expressão booleana que inclui desconhecidos retornará UNKNOWN, a menos que o resultado do operador não é dependente de expressão desconhecido. Essas tabelas fornecem exemplos desse comportamento.  
   
- A tabela a seguir mostra os resultados da aplicação de um operador AND a dois operandos boolianos onde um operando retorna NULL.  
+ A tabela a seguir mostra os resultados da aplicação de um operador AND para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
   
-|Operando 1|Operando 2|Resultado|  
+|Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- A tabela a seguir mostra os resultados da aplicação de um operador OR a dois operandos boolianos onde um operando retorna NULL.  
+ A tabela a seguir mostra os resultados da aplicação de um operador OR para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
   
-|Operando 1|Operando 2|Resultado|  
+|Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Consulte também  
- [E &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
- [OU &#40; Transact-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
- [Não &#40; Transact-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   
- [É NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)  
+ [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   
+ [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)   
+ [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   
-

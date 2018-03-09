@@ -2,27 +2,28 @@
 title: "Configurar conexões SSL em um servidor de relatório de Modo Nativo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios de modo nativo
+# <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios do modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo Nativo usa o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório. Se você tiver um arquivo de certificado (.cer) instalado em um repositório de certificados local no computador do servidor de relatório, poderá associá-lo a uma reserva de URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para dar suporte a conexões do servidor de relatório por meio de um canal criptografado.  
   
 > [!TIP]  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
  Se você remover as associações do SSL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando o Gerenciador de Configurações do Reporting Services, o SSL poderá não mais funcionar para sites em um servidor que está executando o IIS (Serviços de Informações da Internet) ou em outro servidor de HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] remove a chave do Registro a seguir. Quando esta chave do Registro é removida, a associação do SSL para o IIS também é removida. Sem esta associação, o SSL não é fornecido para o protocolo HTTP. Para diagnosticar este problema, use o Gerenciador do IIS ou o utilitário da linha de comando HTTPCFG.exe. Para resolver o problema, restaure a associação SSL para seus sites usando o Gerenciador do IIS. Para impedir este problema no futuro, use o Gerenciador do IIS para remover as associações SSL e em seguida use o Gerenciador do IIS para restaurar a associação para os sites desejados. Para obter mais informações, consulte o artigo da base de dados de conhecimento [O SSL não funciona mais depois de remover uma associação SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

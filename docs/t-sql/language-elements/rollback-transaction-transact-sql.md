@@ -27,17 +27,16 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -60,13 +59,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  É o nome atribuído à transação em BEGIN TRANSACTION. *transaction_name* devem estar em conformidade com as regras para identificadores, mas somente os primeiros 32 caracteres do nome da transação são usados. Ao aninhar transações, *transaction_name* deve ser o nome da instrução BEGIN TRANSACTION externa. *transaction_name* sempre diferencia maiusculas de minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de transação válido. A variável deve ser declarada com uma **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados.  
   
  *savepoint_name*  
  É *savepoint_name* de uma instrução SAVE TRANSACTION. *savepoint_name* devem estar em conformidade com as regras para identificadores. Use *savepoint_name* quando uma reversão condicional afetar somente parte da transação.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de ponto de salvamento válido. A variável deve ser declarada com uma **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
@@ -144,9 +143,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [TRABALHO de confirmação &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   
-

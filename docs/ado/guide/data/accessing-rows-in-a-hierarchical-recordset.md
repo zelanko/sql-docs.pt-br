@@ -3,7 +3,7 @@ title: "Acessar linhas em um conjunto de registros hierárquico | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1107c5c4aafb0a2e661bbc1307f9aea71b278270
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Acessar linhas em um conjunto de registros hierárquico (exemplo)
 O exemplo a seguir mostra as etapas necessárias para acesso de linhas em um hierárquica [registros](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -77,4 +76,3 @@ End Sub
 
 ## <a name="see-also"></a>Consulte também
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md) [campo objeto](../../../ado/reference/ado-api/field-object.md) [(ADO) da coleção de campos](../../../ado/reference/ado-api/fields-collection-ado.md) [Formal de forma gramática](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [o objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [necessário provedores para modelagem de dados](../../../ado/guide/data/required-providers-for-data-shaping.md) [cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md) [Forma comandos em geral](../../../ado/guide/data/shape-commands-in-general.md) [cláusula de computação de forma](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic para funções de aplicativos](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

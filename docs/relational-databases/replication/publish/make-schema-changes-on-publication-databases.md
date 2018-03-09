@@ -2,9 +2,12 @@
 title: "Fazer alterações de esquema em bancos de dados de publicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,22 +20,24 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3ba5fca89b73eaff7ec444d3a9eeec2398f1656
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
-  A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação dá suporte a um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION não deverá ser usado se a replicação da alteração de esquema estiver habilitada e uma topologia incluir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION não deverá ser usado se a replicação da alteração de esquema estiver habilitada e uma topologia incluir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   
@@ -159,7 +164,7 @@ ms.lasthandoff: 11/09/2017
   
 -   A replicação de mesclagem leva os procedimentos armazenados a ignorar alterações de esquema durante a solução de problemas. Para obter mais informações, consulte [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) e [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

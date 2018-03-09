@@ -2,25 +2,28 @@
 title: "Diferenças nos recursos de aprendizado de máquina entre as edições do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bd59eae3617b81d3368703eba7c25a615e6a52f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>Diferenças nos recursos de aprendizado de máquina entre as edições do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Suporte para o aprendizado de máquina está disponível no SQL Server 2016 e 2017 do SQL Server. Este artigo lista as edições com suporte ao recurso, descreve as limitações adicionais que se aplicam em edições específicas e lista os recursos disponíveis apenas em algumas edições.
 
@@ -65,8 +68,8 @@ ms.lasthandoff: 11/17/2017
 
 Os idiomas de aprendizado de máquina a seguir têm suporte para todas as edições:
 
-+ SQL Server 2017: R e Python
-+ SQL Server 2016: Somente para R
++ SQL Server 2017: R and Python
++ SQL Server 2016: R only
 
 O Microsoft R Open é incluído em todas as edições.
 

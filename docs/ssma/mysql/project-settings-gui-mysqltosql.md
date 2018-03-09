@@ -1,10 +1,13 @@
 ---
 title: "Configurações (GUI) (MySQLToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e9ad8d068a578b856312418dc6c5e3e6c0f192a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3631366693d295e11b740a5ae1a27850d07cc365
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Configurações de projeto (GUI) (MySQLToSQL)
 As configurações de projeto de GUI permitem que você configure como os dados aparecem no **dados** guia e se é preciso incluir dados de relatórios com relatórios de avaliação.  

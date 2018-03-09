@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTAURAR instruções - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,23 +90,23 @@ FROM <backup_device>
   
 |Nome da coluna|Tipo de dados|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|Nome lógico do arquivo.|  
-|PhysicalName|**nvarchar (260)**|Nome do arquivo físico ou do sistema operacional.|  
-|Tipo|**char (1)**|O tipo de arquivo, um dentre:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de dados<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable ou [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contêiner|  
-|FileGroupName|**nvarchar (128)**|Nome do grupo de arquivos que contém o arquivo.|  
+|LogicalName|**nvarchar(128)**|Nome lógico do arquivo.|  
+|PhysicalName|**nvarchar(260)**|Nome do arquivo físico ou do sistema operacional.|  
+|Tipo|**char(1)**|O tipo de arquivo, um dentre:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de dados<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable ou [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contêiner|  
+|FileGroupName|**nvarchar(128)**|Nome do grupo de arquivos que contém o arquivo.|  
 |Tamanho|**numeric(20,0)**|Tamanho atual em bytes.|  
 |MaxSize|**numeric(20,0)**|Tamanho máximo permitido em bytes.|  
 |FileID|**bigint**|Identificador de arquivo, exclusivo no banco de dados.|  
 |CreateLSN|**numeric(25,0)**|Número da sequência de log na qual o arquivo foi criado.|  
-|DropLSN|**numeric(25,0)** nulo|O número de sequência de log no qual o arquivo foi descartado. Se o arquivo não tiver sido descartado, esse valor será NULL.|  
+|DropLSN|**numeric(25,0)** NULL|O número de sequência de log no qual o arquivo foi descartado. Se o arquivo não tiver sido descartado, esse valor será NULL.|  
 |UniqueID|**uniqueidentifier**|Identificador exclusivo global do arquivo.|  
 |ReadOnlyLSN|**numeric(25,0) NULL**|Número da sequência de log em que o grupo de arquivos que contém o arquivo alterado de leitura/gravação para somente leitura (a alteração mais recente).|  
-|ReadWriteLSN|**numeric(25,0)** nulo|Número da sequência de log em que o grupo de arquivos que contém o arquivo alterado de somente leitura para leitura/gravação (a alteração mais recente).|  
+|ReadWriteLSN|**numeric(25,0)** NULL|Número da sequência de log em que o grupo de arquivos que contém o arquivo alterado de somente leitura para leitura/gravação (a alteração mais recente).|  
 |BackupSizeInBytes|**bigint**|Tamanho do backup do arquivo em bytes.|  
-|SourceBlockSize|**int**|Tamanho do bloco do dispositivo físico que contém o arquivo em bytes (não o dispositivo de backup).|  
-|FileGroupID|**int**|ID do grupo de arquivos.|  
+|SourceBlockSize|**Int**|Tamanho do bloco do dispositivo físico que contém o arquivo em bytes (não o dispositivo de backup).|  
+|FileGroupID|**Int**|ID do grupo de arquivos.|  
 |LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
-|DifferentialBaseLSN|**numeric(25,0)** nulo|Para backups diferenciais, as alterações com números de sequência de log maiores que ou iguais a **DifferentialBaseLSN** são incluídas no diferencial.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|Para backups diferenciais, as alterações com números de sequência de log maiores que ou iguais a **DifferentialBaseLSN** são incluídas no diferencial.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier**|Para backups diferenciais, o identificador exclusivo da base diferencial.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
 |IsReadOnly|**bit**|**1** = o arquivo é somente leitura.|  
 |IsPresent|**bit**|**1** = o arquivo está presente no backup.|  

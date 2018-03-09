@@ -1,5 +1,5 @@
 ---
-title: "! = (Diferente de) (expressão SSIS) | Microsoft Docs"
+title: "!= (Diferente) (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cf4ece7722dfe827632adede28ad969b21a527f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Diferente) (Expressão SSIS)
   Executa uma comparação para determinar se duas expressões com tipos de dados compatíveis não são iguais. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  
@@ -48,7 +47,7 @@ expression1 != expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se qualquer expressão na comparação for nula, o resultado da comparação será nulo. Se ambas as expressões forem nulas, o resultado será nulo.  
   
  O conjunto de expressões, *expression1* e *expression2*, deve seguir uma destas regras:  
@@ -112,10 +111,9 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [= = &#40; Igual &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

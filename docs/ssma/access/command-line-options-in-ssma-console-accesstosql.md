@@ -1,10 +1,13 @@
 ---
 title: "Opções de linha de comando no Console do SSMA (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: af93a39eb16c45de0e848bc7b41cdf2758bd1ae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opções de linha de comando no Console do SSMA (AccessToSQL)
 Microsoft fornece um conjunto robusto de opções de linha de comando para executar e controlar as atividades do SSMA. As seções resultantes fornecem detalhes adicionais.  

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetCursorName
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetCursorName
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetCursorName
-helpviewer_keywords:
-- SQLGetCursorName function [ODBC]
+f1_keywords: SQLGetCursorName
+helpviewer_keywords: SQLGetCursorName function [ODBC]
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69a0da5196c5724284c2da75dc6c7deb3c3cedcd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e1f3d6fe6d80c54d136c89f1048b846ba557d4a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetcursorname-function"></a>Função SQLGetCursorName
 **Conformidade**  
@@ -106,7 +100,6 @@ SQLRETURN SQLGetCursorName(
 |Preparar uma instrução para execução|[Função SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |Definir um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

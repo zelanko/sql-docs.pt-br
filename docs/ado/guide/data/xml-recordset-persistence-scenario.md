@@ -3,7 +3,7 @@ title: "Cenário de persistência do conjunto de registros XML | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf4899425669d8c65b6b3661fb75e8bf37091ce9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que salva o conteúdo de um objeto Recordset diretamente para o objeto de resposta do ASP.  
@@ -123,4 +122,3 @@ Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que sal
 ## <a name="see-also"></a>Consulte também  
  [Método Save](../../../ado/reference/ado-api/save-method.md)   
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

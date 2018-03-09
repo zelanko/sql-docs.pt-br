@@ -24,19 +24,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8ce3046c36b7d224f6294948029cef6cf5afd43c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna o número de itens de um grupo. COUNT_BIG funciona como a função COUNT. A única diferença entre as duas funções são seus valores de retorno. COUNT_BIG sempre retorna um **bigint** valor de tipo de dados. COUNT sempre retorna um **int** valor de tipo de dados.
@@ -90,7 +89,7 @@ SOBRE **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>Tipos de retorno
 **bigint**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 COUNT_BIG(*) retorna o número de itens de um grupo. Isso inclui valores NULL e duplicatas.
   
 COUNT_BIG (todos os *expressão*) avalia *expressão* para cada linha em um grupo e retorna o número de valores não nulos.
@@ -109,4 +108,3 @@ Para obter exemplos, consulte [contagem &#40; Transact-SQL &#41; ](../../t-sql/f
 [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
-

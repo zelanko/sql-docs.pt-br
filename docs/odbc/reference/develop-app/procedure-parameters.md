@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- procedure parameters [ODBC]
+helpviewer_keywords: procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea30d30d66761e245a89fadd4bea37d6503c458b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-parameters"></a>Parâmetros de procedimento
 Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam ou parâmetros de saída. Isso é diferente de parâmetros em todas as outras instruções de SQL, que sempre são parâmetros de entrada.  
@@ -61,4 +58,3 @@ Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam o
  Depois que a instrução foi executada, drivers de armazenam os valores retornados de entrada/saída e os parâmetros de saída nas variáveis associadas a esses parâmetros. Esses retornados valores não há garantia de ser definida até depois que todos os resultados retornados pelo procedimento foram buscados e **SQLMoreResults** retornou SQL_NO_DATA. Se a execução da instrução resulta em um erro, o conteúdo do buffer de parâmetro de entrada/saída ou buffers de parâmetro de saída é indefinido.  
   
  Um aplicativo chama **SQLProcedure** para determinar se um procedimento tem um valor de retorno. Ele chama **SQLProcedureColumns** para determinar o tipo (valor de retorno, entrado, entrada/saída ou saído) de cada parâmetro de procedimento.
-

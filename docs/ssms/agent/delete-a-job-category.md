@@ -3,9 +3,13 @@ title: Excluir uma categoria de trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +19,19 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10a8fa71d49eddf927256f250977d37d1a78515e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7dffa6ac4140d71fdd8800a6696f48ecb7023799
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-a-job-category"></a>Excluir uma categoria de trabalho
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como excluir uma categoria de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou o SQL Server Management Objects.  
   
 As categorias de trabalho ajudam a organizar os trabalhos de modo a facilitar sua filtragem e agrupamento. Por exemplo, você pode organizar todos os seus trabalhos de backup de banco de dados na categoria Manutenção de Banco de Dados.  
@@ -65,13 +70,13 @@ Para obter informações detalhadas, consulte [Implement SQL Server Agent Securi
   
 3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Gerenciar Categorias de Trabalho**.  
   
-4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name* , selecione a categoria de trabalho a excluir.  
+4.  Na caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*, selecione a categoria de trabalho a ser excluída.  
   
 5.  Clique em **Excluir**.  
   
 6.  Na caixa de diálogo **Categorias de Trabalho** , clique em **Sim**.  
   
-7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho***server_name* .  
+7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho***server_name*.  
   
 ## <a name="TSQL"></a>Usando Transact-SQL  
   

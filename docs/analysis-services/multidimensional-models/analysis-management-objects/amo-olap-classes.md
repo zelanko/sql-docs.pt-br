@@ -1,34 +1,33 @@
 ---
 title: Classes OLAP AMO | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 837acf180e08c995461a96ae027480f5175e17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>Classes OLAP AMO
   As classes OLAP AMO (Objetos de Gerenciamento de Análise) ajudam você a criar, a modificar, a excluir e a processar cubos, dimensões e objetos relacionados como KPIs (Indicadores Chave de Desempenho), ações e cache.  
@@ -65,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="basic-classes"></a>Classes básicas  
   
-###  <a name="Dimensions"></a>Objetos de dimensão  
+###  <a name="Dimensions"></a> Objetos de dimensão  
  Uma dimensão é criada ao ser adicionada à coleção de dimensões do banco de dados pai e pela atualização do objeto <xref:Microsoft.AnalysisServices.Dimension> no servidor por meio do método Update.  
   
  Para remover uma dimensão, ela terá de ser descartada por meio do método Drop de <xref:Microsoft.AnalysisServices.Dimension>. Remover uma <xref:Microsoft.AnalysisServices.Dimension> da coleção de dimensões do banco de dados usando o método Remove não a excluirá do servidor, somente do modelo de objeto AMO.  
@@ -74,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Dimension> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Cubes"></a>Objetos de cubo  
+###  <a name="Cubes"></a> Objetos de cubo  
  Um cubo é criado ao ser adicionado à coleção de cubos do banco de dados, seguido pela atualização do objeto <xref:Microsoft.AnalysisServices.Cube> no servidor usando o método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor nessa ação de atualização.  
   
  Para remover um cubo, ele terá de ser descartado por meio do método Drop de <xref:Microsoft.AnalysisServices.Cube>. A remoção de um cubo da coleção não afetará o servidor.  
@@ -83,24 +82,24 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Cube> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups"></a>Objetos MeasureGroup  
+###  <a name="MeasureGroups">Objetos MeasureGroup</a>  
  Um grupo de medidas é criado ao ser adicionado à coleção de grupos de medidas do cubo, seguido pela atualização do objeto <xref:Microsoft.AnalysisServices.MeasureGroup> no servidor por meio de seu próprio método Update. Um objeto <xref:Microsoft.AnalysisServices.MeasureGroup> é removido usando seu próprio método Drop.  
   
  Um objeto <xref:Microsoft.AnalysisServices.MeasureGroup> pode ser processado depois de criado. <xref:Microsoft.AnalysisServices.MeasureGroup> pode ser processado por seu próprio método Process, ou pode ser processado quando um objeto pai processa a si mesmo usando seu próprio método Process.  
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.MeasureGroup> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition"></a>Objetos de partição  
+###  <a name="Partition">Objetos de partição</a>  
  Um objeto <xref:Microsoft.AnalysisServices.Partition> é criado ao ser adicionado à coleção de partições do grupo de medidas pai, seguido pela atualização do objeto <xref:Microsoft.AnalysisServices.Partition> no servidor por meio do método Update. Um objeto <xref:Microsoft.AnalysisServices.Partition> é removido por meio do método Drop.  
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Partition> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign"></a>Objetos AggregationDesign  
+###  <a name="AggregationDesign">Objetos AggregationDesign</a>  
  Os designs de agregação são criados por meio do método AggregationDesign a partir de um objeto <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.AggregationDesign> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation"></a>Objetos de agregação  
+###  <a name="Aggregation">Objetos de agregação</a>  
  Um objeto <xref:Microsoft.AnalysisServices.Aggregation> é criado ao ser adicionado à coleção de designs de agregação do grupo de medidas pai, seguido pela atualização do objeto do grupo de medidas pai no servidor por meio do método Update. Uma agregação é removida de <xref:Microsoft.AnalysisServices.AggregationCollection> usando o método Remove ou o método RemoveAt.  
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Aggregation> em <xref:Microsoft.AnalysisServices>.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
  O AMO é usado para criar as definições para esse comportamento avançado, mas a experiência real será definida pelo cliente de navegação que implementa todos esses aprimoramentos.  
   
-###  <a name="Action"></a>Objetos de ação  
+###  <a name="Action">Objetos de ação</a>  
  Um objeto <xref:Microsoft.AnalysisServices.Action> é criado ao ser adicionado à coleção de ações do cubo, seguido pela atualização do objeto de <xref:Microsoft.AnalysisServices.Cube> no servidor por meio do método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
  Para remover um <xref:Microsoft.AnalysisServices.Action> do objeto, ele deve ser removido da coleção e o cubo pai deve ser atualizado.  
@@ -129,7 +128,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Action> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="KPI"></a>Objetos KPI  
+###  <a name="KPI"></a> Objetos KPI  
  Um objeto <xref:Microsoft.AnalysisServices.Kpi> é criado ao ser adicionado à coleção de KPIs do cubo, seguido pela atualização do objeto de <xref:Microsoft.AnalysisServices.Cube> no servidor por meio do método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
  Para remover um <xref:Microsoft.AnalysisServices.Kpi> do objeto, ele deve ser removido da coleção, em seguida, e o cubo pai deve ser atualizado.  
@@ -138,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Kpi> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective"></a>Objetos de perspectiva  
+###  <a name="Perspective">Objetos de perspectiva</a>  
  Um objeto <xref:Microsoft.AnalysisServices.Perspective> é criado ao ser adicionado à coleção de perspectivas do cubo, seguido pela atualização do objeto <xref:Microsoft.AnalysisServices.Cube> no servidor por meio do método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
  Para remover um objeto <xref:Microsoft.AnalysisServices.Perspective>, ele deverá ser removido da coleção e o cubo pai deverá ser atualizado.  
@@ -147,14 +146,14 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Perspective> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation"></a>Objetos de tradução  
+###  <a name="Translation">Objetos de tradução</a>  
  Um objeto <xref:Microsoft.AnalysisServices.Translation> é criado ao ser adicionado à coleção de traduções do objeto desejado, seguido pela atualização do objeto pai principal mais próximo no servidor por meio do método Update. O método Update do objeto pai mais próximo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos filhos modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
  Para remover um objeto <xref:Microsoft.AnalysisServices.Translation>, ele deverá ser removido da coleção e o objeto pai mais próximo deverá ser atualizado.  
   
  Para obter mais informações sobre os métodos e as propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Translation> em <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching"></a>Objetos ProactiveCaching  
+###  <a name="ProactiveCaching">Objetos ProactiveCaching</a>  
  Um objeto <xref:Microsoft.AnalysisServices.ProactiveCaching> é criado ao ser adicionado à coleção de objetos de cache pró-ativo da dimensão ou da partição, seguido pela atualização do objeto da dimensão ou da partição no servidor por meio do método Update.  
   
  Para remover um objeto <xref:Microsoft.AnalysisServices.ProactiveCaching>, ele deverá ser removido da coleção e o objeto pai deverá ser atualizado.  

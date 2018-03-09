@@ -2,9 +2,12 @@
 title: Espelhamento de banco de dados e envio de logs (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c9b4e97b5da12b98fc6d1a4ee362a4a7cb00e70b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
-  Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um determinado banco de dados pode ser espelhado ou ter o respectivo log enviado ou pode ainda ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
   
 -   Você precisa de quantos servidores de destino?  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
  ![Envio de logs e espelhamento de banco de dados](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
- Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. .  
+ Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>O impacto do espelhamento de banco de dados em uma instância de monitoramento remoto  
  Quando o envio de logs é usado com uma instância de monitoramento remoto, a combinação da sessão de envio de logs e de espelhamento de banco de dados afeta as informações nas tabelas de monitor. As informações sobre o primário formam uma combinação de um configurado no principal/primário e o monitor configurado em cada secundário.  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Configurando um espelhamento e um envio de logs em conjunto  
  Para configurar um espelhamento de banco de dados junto com um envio de logs, siga as seguintes etapas:  
   
-1.  Restaure os backups do banco de dados principal/primário com NORECOVERY em outra instância de servidor a ser usada posteriormente como banco de dados espelho do espelhamento de banco de dados para o banco de dados principal/primário. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Restaure os backups do banco de dados principal/primário com NORECOVERY em outra instância de servidor a ser usada posteriormente como banco de dados espelho do espelhamento de banco de dados para o banco de dados principal/primário. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Configure um espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ou [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   

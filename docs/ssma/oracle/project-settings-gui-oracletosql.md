@@ -1,10 +1,13 @@
 ---
 title: "Configurações (GUI) (OracleToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: be37883101e95c60a792689d8ec5cf35896b8ac6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-oracletosql"></a>Configurações de projeto (GUI) (OracleToSQL)
 As configurações de projeto de GUI permitem que você configure como os dados aparecem no **dados** guia e mostrar o relatório de avaliação após a conversão, ou não.  

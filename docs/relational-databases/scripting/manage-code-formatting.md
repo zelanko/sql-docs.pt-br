@@ -2,10 +2,14 @@
 title: "Gerenciar a formatação de código | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +29,19 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96141b7eb166d6ffd8e082890ce005a0cc52c650
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-code-formatting"></a>Gerenciar formatação de código
-  Com o Editor, você pode formatar seu código com recuo, texto oculto, URLs etc. Você também pode formatar o código automaticamente usando o Recuo Inteligente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Com o Editor, você pode formatar seu código com recuo, texto oculto, URLs, etc. Você também pode formatar o código automaticamente usando o Recuo Inteligente.  
   
 ## <a name="indenting"></a>Recuo  
  Você pode escolher três estilos diferentes de recuo de texto. Você também pode especificar quantos espaços compõem um único recuo ou tabulação e se o editor usa tabulações ou caracteres de espaço quando estabelece o recuo.  

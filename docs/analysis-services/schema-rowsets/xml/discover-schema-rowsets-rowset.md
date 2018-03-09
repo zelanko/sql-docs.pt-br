@@ -2,15 +2,13 @@
 title: Conjunto de linhas DISCOVER_SCHEMA_ROWSETS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_SCHEMA_ROWSETS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d93c0c7f2844ac96fafa60720e945f80dfcc02c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>Conjunto de linhas DISCOVER_SCHEMA_ROWSETS
-  Retorna os nomes, as restrições, a descrição e outras informações para todos os valores de enumeração e quaisquer valores adicionais de enumeração específica de provedor que recebem suporte do provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna os nomes, restrições, descrição e outras informações para todos os valores de enumeração e quaisquer valores adicionais de enumeração específica de provedor com suporte a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para o provedor de análise (XMLA).  
   
  Se você chamar o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método com o **DISCOVER_SCHEMA_ROWSETS** valor de enumeração no [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, o **Discover**método retorna o **DISCOVER_SCHEMA_ROWSETS** conjunto de linhas.  
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |**SchemaName**|**DBTYPE_WSTR**||O nome do esquema ou solicitação. Essa solicitação retorna os valores na enumeração *RequestTypes* .|  
 |**SchemaGuid**|**DBTYPE_GUID**||O GUID do esquema.|  
 |**Restrições**|**DBTYPE_HCHAPTER**||Uma matriz das restrições suportadas pelo provedor.|  
-|**Description**|**DBTYPE_WSTR**||Uma descrição localizável do esquema.|  
+|**Descrição**|**DBTYPE_WSTR**||Uma descrição localizável do esquema.|  
 |**RestrictionsMask**|**DBTYPE_UI8**|||  
   
  Este conjunto de linhas do esquema não é classificado.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|--------------------|-----------------------|  
 |**SchemaName**|**DBTYPE_WSTR**||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -2,9 +2,12 @@
 title: "Implementar um manipulador de lógica de negócios para um artigo de mesclagem | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a497eb370a69b36ca0ab5b84b8f3809f0e6dd8b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e209ff7746c90c12079e100c2e1553d76839a8d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
-  Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a programação de replicação o RMO (Replication Management Objects).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando programação de replicação ou RMO (Replication Management Objects).  
   
  O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface que permite gravar lógicas comerciais complexas para manipular eventos que ocorrem durante o processo de sincronização da replicação de mesclagem. Os métodos do manipulador de lógica de negócios podem ser invocados pelo processo de replicação para cada linha alterada que seja replicada durante a sincronização.  
   
@@ -239,10 +242,10 @@ ms.lasthandoff: 11/09/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar um manipulador de lógica de negócios &#40;Programação de Replicação&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

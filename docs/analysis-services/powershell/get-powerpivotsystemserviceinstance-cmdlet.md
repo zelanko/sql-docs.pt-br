@@ -2,34 +2,30 @@
 title: Cmdlet Get-PowerPivotSystemServiceInstance | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5043f2f3966182853decdde119a6914f59e1c12d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 569f03f0a1444d610462317a5ee19dc60f314d31
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet Get-PowerPivotSystemServiceInstance
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Retorna uma ou mais instâncias do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em execução em servidores de aplicativos no farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retorna uma ou mais instâncias do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em execução em servidores de aplicativos no farm.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -47,7 +43,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  Especifica a instância de serviço a ser obtida. O valor deve ser um GUID válido que identifica exclusivamente o objeto no farm.  
   
 |||  
@@ -58,7 +54,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
 |Aceitar entrada de pipeline?|true|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -66,8 +62,8 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   
@@ -78,4 +74,3 @@ C:\PS>Get-PowerPivotSystemServiceInstance -Identity 1234567-890a-bcde-fghijklm |
  Este exemplo retorna propriedades adicionais da instância especificada, incluindo o nome do servidor, a versão e o status de atualização.  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "Opções de linha de comando no Console do SSMA (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d62f356dec9a1392feaa0eda9a4e735b33ad779e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5b0502ba12f5151679b6e4468bdb046b490ecc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opções de linha de comando no Console do SSMA (OracleToSQL)
 Microsoft fornece opções de linha de comando um conjunto robusto para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos.  

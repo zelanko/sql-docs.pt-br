@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 136c037cbf6d6d40335350e1c6cb9136d9bf8f0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descritores e Drivers de banco de dados de área de trabalho
 Um descritor é uma estrutura de dados que contém informações sobre os dados da coluna ou parâmetros dinâmicos. **SQLGetDescField** pode ser usado para recuperar os descritores com suporte listados abaixo. Descritores de parâmetro de implementação (IPD) não são preenchidos automaticamente porque **SQLDescribeParam** não tem suporte. Campos de descritor que não estão disponíveis por meio de Jet (como SQL_DESC_BASE_TABLE_NAME) também não são suportados.  
@@ -79,4 +77,3 @@ Um descritor é uma estrutura de dados que contém informações sobre os dados 
 |SQL_DESC_UNNAMED|Tem suporte|  
 |SQL_DESC_UNSIGNED|Tem suporte|  
 |SQL_DESC_UPDATABLE|Tem suporte|
-

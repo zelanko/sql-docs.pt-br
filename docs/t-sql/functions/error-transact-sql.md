@@ -22,17 +22,16 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: 50
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ef3f7b2f0b051fd79dd59325af7900aefff95a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Erro (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="return-types"></a>Tipos de retorno  
  inteiro  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Retornará 0 se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] anterior não tiver encontrado nenhum erro.  
   
  Retornará um número de erro se a instrução anterior encontrar um erro. Se o erro foi um dos erros na exibição do catálogo sys. messages, em seguida,@ERROR contém o valor da coluna message_id para esse erro. Você pode exibir o texto associado com um @@ERROR número do erro em sys. messages.  
@@ -76,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando @@ERROR para sair de um procedimento condicionalmente  
- O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `INSERT` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
+ O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `DELETE` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
   
 ```  
 USE AdventureWorks2012;  
@@ -185,5 +184,4 @@ GO
  [sys. messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
-
 

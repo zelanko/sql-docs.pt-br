@@ -3,8 +3,11 @@ title: "Elementos gerais da interface do usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72a00e52b92b48c7be310ab5aa985b81608c1bce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ab10f8b0aaab9cc0c967187dea73e10739164f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário
-O **Editor**, a janela **Propriedades** e a **Caixa de Ferramentas** são alguns dos elementos básicos do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O **Editor**, a janela **Propriedades** e a **Caixa de Ferramentas** são alguns dos elementos básicos do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Caixa de diálogo Sobre](../ssms/about-dialog-box.md)  

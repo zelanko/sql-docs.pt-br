@@ -1,48 +1,47 @@
 ---
 title: "Criptografar conexões ao SQL Server no Linux | Microsoft Docs"
-description: "Este tópico descreve criptografando conexões com o SQL Server no Linux."
+description: "Este artigo descreve criptografando conexões com o SQL Server no Linux."
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Criptografar conexões ao SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no Linux pode usar segurança de camada de transporte (TLS) para criptografar dados transmitidos em uma rede entre um aplicativo cliente e uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]suporta os mesmos protocolos TLS no Windows e Linux: TLS 1.0, 1.1 e 1.2. No entanto, as etapas para configurar TLS são específicas para o sistema operacional no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux pode usar segurança de camada de transporte (TLS) para criptografar dados transmitidos em uma rede entre um aplicativo cliente e uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suporta os mesmos protocolos TLS no Windows e Linux: TLS 1.0, 1.1 e 1.2. No entanto, as etapas para configurar TLS são específicas para o sistema operacional no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.  
 
 ## <a name="requirements-for-certificates"></a>Requisitos de certificados 
 Antes de começar, você precisa certificar-se de que seus certificados siga estes requisitos:
 - A hora atual do sistema deve ser posterior a válida de propriedade do certificado e antes do válido para a propriedade do certificado.
 - O certificado deve ser significativo para a autenticação do servidor. Isso exige que a propriedade uso avançado de chave do certificado para especificar a autenticação de servidor (1.3.6.1.5.5.7.3.1).
-- O certificado deve ser criado usando a opção KeySpec de AT_KEYEXCHANGE. Normalmente, a propriedade de uso de chave do certificado (KEY_USAGE) também incluirá a codificação de chave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- O certificado deve ser criado usando a opção KeySpec de AT_KEYEXCHANGE. Normalmente, a propriedade de uso de chave do certificado (KEY_USAGE) também inclui codificação de chave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - A propriedade de entidade do certificado deve indicar que o nome comum (CN) é o mesmo como o nome de host ou nome de domínio totalmente qualificado (FQDN) do computador do servidor. Observação: os certificados curinga são suportados. 
 
 ## <a name="overview"></a>Visão geral
-TLS é usado para criptografar conexões de um aplicativo cliente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando configurado corretamente, o TLS fornece privacidade e integridade dos dados para as comunicações entre o cliente e o servidor.  Conexões TLS podem ser initited intiated ou servidor de cliente. 
+TLS é usado para criptografar conexões de um aplicativo cliente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando configurado corretamente, o TLS fornece privacidade e integridade dos dados para as comunicações entre o cliente e o servidor.  Conexões TLS podem ser iniciada de cliente ou servidor iniciada. 
 
 
 ## <a name="client-initiated-encryption"></a>Criptografia iniciada pelo cliente 
-- **Gerar certificado** (/CN deve coincidir com seu nome de domínio totalmente qualificado do host do SQL Server)
+- **Gerar certificado** (/CN deve coincidir com o nome de domínio totalmente qualificado do host do SQL Server)
 
 > [!NOTE]
 > Neste exemplo, usamos um certificado autoassinado, isso não deve ser usado para cenários de produção. Você deve usar certificados de autoridade de certificação. 
@@ -64,16 +63,16 @@ TLS é usado para criptografar conexões de um aplicativo cliente para [!INCLUDE
 
 - **Registrar o certificado do computador cliente (Windows, Linux ou macOS)**
 
-    -   Se você estiver usando o certificado de autoridade de certificação assinado, você precisa copiar o certificado de autoridade de certificação (CA) em vez do certificado de usuário no computador cliente. 
-    -   Se você estiver usando o certificado autoassinado apenas copiar o arquivo. PEM para as seguintes pastas do respectivas para distribuição e executar os comandos para habilitá-las 
-        - **Ubuntu** : cert de cópia para ```/usr/share/ca-certificates/``` extensão rename. crt usar certificados de AC de reconfigure dpkg para habilitá-lo como certificado de autoridade de certificação do sistema. 
-        - **RHEL** : cert de cópia para ```/etc/pki/ca-trust/source/anchors/``` usar ```update-ca-trust``` para habilitá-lo como certificado de autoridade de certificação do sistema.
-        - **SUSE** : cert de cópia para ```/usr/share/pki/trust/anchors/``` usar ```update-ca-certificates``` para habilitar seu como certificado de autoridade de certificação do sistema.
+    -   Se você estiver usando o certificado de autoridade de certificação assinado, você precisa copiar o certificado de autoridade de certificação (CA) em vez do certificado de usuário para o computador cliente. 
+    -   Se você estiver usando o certificado autoassinado, basta copiar o arquivo. PEM para as seguintes pastas do respectivas para distribuição e executar os comandos para habilitá-los 
+        - **Ubuntu**: cert de cópia para ```/usr/share/ca-certificates/``` extensão rename. crt usar certificados de AC de reconfigure dpkg para habilitá-lo como certificado de autoridade de certificação do sistema. 
+        - **RHEL**: cert de cópia para ```/etc/pki/ca-trust/source/anchors/``` usar ```update-ca-trust``` para habilitá-lo como certificado de autoridade de certificação do sistema.
+        - **SUSE**: cert de cópia para ```/usr/share/pki/trust/anchors/``` usar ```update-ca-certificates``` para habilitá-lo como certificado de autoridade de certificação do sistema.
         - **Windows**: importar o arquivo. PEM como um certificado de usuário atual -> confiável autoridades de certificação raiz -> certificados
         - **macOS**: 
-           - Copie o certificado para```/usr/local/etc/openssl/certs```
-           - Execute o seguinte comando para obter o valor de hash:```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Renomeie o certificado para o valor. Por exemplo: ```mv mssql.pem dc2dd900.0```. Verifique se dc2dd900.0 está em```/usr/local/etc/openssl/certs```
+           - Copie o certificado para ```/usr/local/etc/openssl/certs```
+           - Execute o seguinte comando para obter o valor de hash: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Renomeie o certificado para o valor. Por exemplo: ```mv mssql.pem dc2dd900.0```. Verifique se dc2dd900.0 está em ```/usr/local/etc/openssl/certs```
     
 -   **Cadeias de conexão de exemplo** 
 
@@ -138,4 +137,3 @@ TLS é usado para criptografar conexões de um aplicativo cliente para [!INCLUDE
 |O nome da entidade de destino está incorreto.  |Certifique-se de que o campo de nome comum no certificado do SQL Server coincide com o nome do servidor especificado na cadeia de conexão do cliente. |  
 |Uma conexão existente foi fechada forçadamente pelo host remoto. |Esse erro pode ocorrer quando o cliente não oferece suporte para a versão do protocolo TLS exigida pelo SQL Server. Por exemplo, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para exigir o protocolo TLS 1.2, assegure-se de que os clientes também dão suporte ao protocolo TLS 1.2. |
 | | |   
-

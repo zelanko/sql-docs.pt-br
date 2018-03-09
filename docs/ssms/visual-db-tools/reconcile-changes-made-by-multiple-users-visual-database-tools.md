@@ -3,10 +3,12 @@ title: "Reconciliar alterações feitas por vários usuários (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 356f09be20f11e2ec701e4e98d92cb1fbbd12b63
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar alterações feitas por vários usuários (Visual Database Tools)
-Em um ambiente multiusuário, é possível ter vários usuários fazendo alterações no mesmo objeto simultaneamente. Isso pode acontecer quando você estiver trabalhando na estrutura do objeto nos designers de diagrama de banco de dados ou tabela, ou pode ocorrer em valores nos resultados retornados no painel de resultados dos Designers de Consulta e Exibição. Isso pode causar conflitos que devem ser resolvidos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em um ambiente multiusuário, é possível ter vários usuários fazendo alterações no mesmo objeto simultaneamente. Isso pode acontecer quando você estiver trabalhando na estrutura do objeto nos designers de diagrama de banco de dados ou tabela, ou pode ocorrer em valores nos resultados retornados no painel de resultados dos Designers de Consulta e Exibição. Isso pode causar conflitos que devem ser resolvidos.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflitos nos designers de diagramas de banco de dados ou tabelas  
 Por exemplo, outro usuário pode excluir ou renomear uma tabela enquanto você estiver trabalhando na mesma ou em uma tabela relacionada no Designer de Tabela. Quando você tentar salvar a tabela, a [Caixa de diálogo Alterações no Banco de Dados Detectadas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) o notifica de que o banco de dados foi atualizado desde que você abriu a tabela.  
@@ -35,7 +37,7 @@ Essa caixa de diálogo também exibe uma lista de objetos de banco de dados que 
   
 -   Escolha **Sim** para salvar sua tabela e atualizar o banco de dados com todas as alterações na lista.  
   
-    Essa ação pode afetar tabelas que compartilham os mesmos objetos de banco de dados. Por exemplo, suponha que você edite a coluna `au`_`id` na tabela `titleauthors` enquanto outro usuário esteja trabalhando na tabela `authors` , que é relacionada à tabela `titleauthors` pela coluna `au`\_`id` . Se você salvar sua tabela, afetará a tabela do outro usuário. De forma semelhante, suponha que outro usuário tenha definido uma restrição de verificação para a coluna `qty` da tabela `sales` . Se você excluir a coluna `qty` e salvar a tabela `sales` , a restrição de verificação do outro usuário será afetada.  
+    Essa ação pode afetar tabelas que compartilham os mesmos objetos de banco de dados. Por exemplo, suponha que você edite a coluna `au_id` na tabela `titleauthors` enquanto outro usuário esteja trabalhando na tabela `authors`, que está relacionada à tabela `titleauthors` pela coluna `au_id`. Se você salvar sua tabela, afetará a tabela do outro usuário. De forma semelhante, suponha que outro usuário tenha definido uma restrição de verificação para a coluna `qty` da tabela `sales` . Se você excluir a coluna `qty` e salvar a tabela `sales` , a restrição de verificação do outro usuário será afetada.  
   
 -   Selecione **Não** para cancelar a ação.  
   
@@ -62,7 +64,6 @@ Por exemplo, digamos que você e um colega executem uma consulta para mostrar to
   
     Nesse caso, você não poderá confirmar suas alterações no banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Caixa de diálogo Alterações no Banco de Dados Detectadas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

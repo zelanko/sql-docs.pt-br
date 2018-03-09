@@ -3,7 +3,7 @@ title: Preparado propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c5b45f14d0513dfda61688dc664affbf760c8598
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f47836c824401e5ca49edd5eac33c2f6f6393993
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-ado"></a>Propriedade preparado (ADO)
 Indica se é necessário salvar uma versão compilada de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) antes da execução.  
@@ -36,7 +35,7 @@ Indica se é necessário salvar uma versão compilada de uma [comando](../../../
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **booliano** valor que, se definido como **True**, indica que o comando deve ser preparado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **preparado** propriedade para que o provedor de salvar uma versão preparada (ou compilada) da consulta especificada no [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade antes de um [comando](../../../ado/reference/ado-api/command-object-ado.md) do objeto primeira execução. Isso pode reduzir a primeira execução de um comando, mas depois que o provedor compila um comando, o provedor usará a versão compilada do comando para todas as execuções subsequentes, que resultarão em desempenho aprimorado.  
   
  Se a propriedade for **False**, o provedor será executado o **comando** objeto diretamente, sem criar uma versão compilada.  
@@ -49,4 +48,3 @@ Indica se é necessário salvar uma versão compilada de uma [comando](../../../
 ## <a name="see-also"></a>Consulte também  
  [Exemplo da propriedade preparada (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Exemplo da propriedade Prepared (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
-

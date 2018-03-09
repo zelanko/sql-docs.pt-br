@@ -2,16 +2,13 @@
 title: Criar membros calculados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
-  É possível criar medidas ou membro de dimensão personalizados, chamados membros calculados, combinando dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado chamado Euros que converte dólares em euros multiplicando uma medida existente em dólar pela taxa de conversão. Euros pode então ser exibido aos usuários finais em uma linha ou coluna separada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+É possível criar medidas ou membro de dimensão personalizados, chamados membros calculados, combinando dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado chamado Euros que converte dólares em euros multiplicando uma medida existente em dólar pela taxa de conversão. Euros pode então ser exibido aos usuários finais em uma linha ou coluna separada.  
   
  As definições dos membros calculados são armazenadas, mas seus valores existem apenas na memória. No exemplo anterior, os valores em marcos são exibidos para os usuários finais mas não são armazenados como dados do cubo.  
   

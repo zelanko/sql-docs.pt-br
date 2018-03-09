@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_variable_value (banco de dados SSISDB) | Microsoft Docs
+title: catalog.set_environment_variable_value (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f30937f6dca19f82ccb2dc8ac998dd9f9510c0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ce6e82da825deeb078b0cb29c7e0e8655fc5c0fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,32 +39,32 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o ambiente. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- O nome do ambiente. O *environment_name* é **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ O nome do ambiente. O *environment_name* é **nvarchar(128)**.  
   
- [ @variable Name =] *variável name*  
- O nome da variável de ambiente. O *variável name* é **nvarchar (128)**.  
+ [ @variable_name = ] *variable_name*  
+ O nome da variável de ambiente. O *variable _name* é **nvarchar(128)**.  
   
- [ @value =] *valor*  
- O valor da variável de ambiente. O *valor* é **sql_variant**.  
+ [ @value = ] *value*  
+ O valor da variável de ambiente. O *value* é **sql_variant**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -79,4 +78,3 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 -   O usuário não tem as permissões adequadas  
   
   
-

@@ -2,9 +2,12 @@
 title: "Configuração de rede do servidor | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
-  Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome do Principal do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome da Entidade do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
   
  A configuração da rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é realizada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o Utilitário de Rede do Servidor fornecido com esses produtos.  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
  Também podem ser usados SPNs para fazer autenticação de cliente mais segura ao conectar-se com NTLM. Para obter mais informações, veja [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>Serviço Navegador do SQL Server  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado no servidor e ajuda computadores cliente a encontrar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não é necessário configurar o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas é necessário estar em execução em alguns cenários de conexão. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, veja [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)  
   
 ## <a name="hiding-sql-server"></a>Ocultando o SQL Server  

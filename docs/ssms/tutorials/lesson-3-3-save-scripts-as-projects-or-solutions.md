@@ -2,27 +2,30 @@
 title: "Salvar scripts como projetos ou soluções | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6921ad197e0cd07eb2e0df3b3b0b4864f2b903e0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Lição 3-3 – Salvar scripts como projetos ou soluções
-Desenvolvedores familiarizados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio darão as boas-vindas ao Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os scripts que dão suporte a seu negócio podem ser agrupados em projetos de script e os projetos de script podem ser administrados juntos, como uma solução. Quando os scripts são colocados em projetos de script e soluções, eles podem ser abertos em conjunto, como um grupo, ou salvos em conjunto em um produto de controle de código-fonte, como o Visual SourceSafe. Projetos de script incluem as informações de conexão dos scripts para serem executados corretamente, e podem incluir arquivos diferentes (não script), como um arquivo de texto de suporte.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Desenvolvedores familiarizados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio darão as boas-vindas ao Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os scripts que dão suporte a seu negócio podem ser agrupados em projetos de script e os projetos de script podem ser administrados juntos, como uma solução. Quando os scripts são colocados em projetos de script e soluções, eles podem ser abertos em conjunto, como um grupo, ou salvos em conjunto em um produto de controle de código-fonte, como o Visual SourceSafe. Projetos de script incluem as informações de conexão dos scripts para serem executados corretamente, e podem incluir arquivos diferentes (não script), como um arquivo de texto de suporte.  
   
 O procedimento a seguir cria um script curto que consulta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , colocado em um projeto de script ou em uma solução.  
   

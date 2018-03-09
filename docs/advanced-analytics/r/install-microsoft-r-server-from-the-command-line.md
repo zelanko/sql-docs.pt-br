@@ -2,27 +2,28 @@
 title: "Instalar o servidor de aprendizado de máquina (autônomo) ou Microsoft R Server (autônomo) na linha de comando | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar o servidor de aprendizado de máquina (autônomo) ou Microsoft R Server (autônomo) na linha de comando
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como usar argumentos de linha de comando do SQL Server para instalar os seguintes recursos do SQL Server usando a linha de comando:
 
@@ -33,7 +34,7 @@ Um **autônoma** instalação exige que você especifique o local do utilitário
 
 Para uma instalação **silenciosa** , forneça os mesmos argumentos e adicione o switch **/q** . Nenhum prompt é fornecido e nenhuma interação é necessária. No entanto, a instalação falhará se os argumentos necessários foram omitidos.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você deve saber como executar uma instalação de linha de comando do SQL Server e estar familiarizado com os argumentos de script.
 
@@ -95,8 +96,8 @@ Após a conclusão da instalação, você pode examinar o arquivo de configuraç
 
 Por padrão, todos os resumos e logs de instalação do SQL Server e os recursos relacionados são criados nas seguintes pastas:
 
-+ 2017 do SQL Server:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Uma subpasta separada é criada para cada recurso que você instalou.
 

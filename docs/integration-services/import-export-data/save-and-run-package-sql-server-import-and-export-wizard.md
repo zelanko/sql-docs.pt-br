@@ -1,5 +1,5 @@
 ---
-title: "Salvar e executar pacote (Assistente de exportação e importação do SQL Server) | Microsoft Docs"
+title: "Salvar e executar Pacote (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/16/2017
 ms.prod: sql-non-specified
@@ -15,50 +15,49 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 40b8677cddf363e8789a2fc15b1c2aab5f49f58c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e4b19aeecea3977b08339989e07e3b553e361372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvar e Executar Pacote (Assistente de Importação e Exportação do SQL Server)
-  Depois de especificar e configurar sua fonte e destino de dados, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Salvar e executar o pacote**. Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da configuração, você também poderá salvar as configurações como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote (SSIS) para personalizá-lo e reutilizá-la posteriormente.
+  Depois de especificar e configurar sua fonte e destino de dados, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Salvar e executar o pacote**. Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da sua configuração, você também poderá salvar suas configurações como um pacote SSIS ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) para personalizá-lo e reutilizá-lo posteriormente.
   
 **O que é um pacote?** O Assistente usa o SSIS (SQL Server Integration Services) para copiar os dados. No SSIS, a unidade básica é o pacote. O assistente cria um pacote do SSIS na memória ao percorrer as páginas do assistente e especificar as opções.
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Captura de tela da página Salvar e Executar Pacote  
 A captura de tela a seguir mostra a página **Salvar e Executar o Pacote** do assistente. 
    
-![Salve e execute a página do pacote do Assistente de importação e exportação](../../integration-services/import-export-data/media/save-and-run.png "salvar e executar a página do pacote do Assistente de importação e exportação") 
+![Página Salvar e executar pacote do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/save-and-run.png "Página Salvar e executar pacote do Assistente de Importação e Exportação") 
   
 ## <a name="run-and-save-the-package"></a>Executar e salvar o pacote 
  Para continuar, você precisa selecionar pelo menos uma das duas opções a seguir.  
   
  **Run immediately**  
- Selecione esta opção para importar e exportar dados imediatamente. Por padrão, essa caixa de seleção está selecionada e a operação é executada imediatamente.
+ Selecione esta opção para importar e exportar dados imediatamente. Por padrão, essa caixa de seleção é marcada e a operação é executada imediatamente.
   
  **Salvar Pacote SSIS**  
- Salve as configurações como um pacote do SSIS. Opcionalmente, você pode personalizar o pacote e executá-lo novamente posteriormente. Se você optar por salvar o pacote, haverá opções adicionais na próxima página, **Salvar pacote SSIS**.
+ Salve as configurações como um pacote SSIS. Opcionalmente, você pode personalizar o pacote e executá-lo novamente posteriormente. Se você optar por salvar o pacote, haverá opções adicionais na próxima página, **Salvar pacote SSIS**.
  
 A opção para salvar o pacote estará disponível somente se você tiver o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition ou uma edição superior instalada.   
   
 > [!NOTE]
-> Se você concluir o assistente, execute a operação, mas parar a operação antes que ele termina em execução, o pacote não é salvo, mesmo se você tiver selecionado o **salvar pacote SSIS** caixa de seleção.  
+> Se você concluir o assistente, executar a operação mas interrompê-la antes da execução dela terminar, o pacote não será salvo mesmo que a caixa de seleção **Salvar Pacote SSIS** tenha sido marcada nesta página.  
 
-### <a name="if-you-started-the-wizard-from-visual-studio"></a>Se tiver iniciado o assistente no Visual Studio
-Se você iniciou o Assistente de um projeto do Integration Services no Visual Studio com o SQL Server Data Tools (SSDT):
--   Não é possível **executar** o pacote até depois de sair do assistente. Em seguida, você pode executar o pacote do Visual Studio.
+### <a name="if-you-started-the-wizard-from-visual-studio"></a>Se você iniciou o assistente do Visual Studio
+Se você iniciou o assistente de um projeto do Integration Services no Visual Studio com o SSDT (SQL Server Data Tools):
+-   Não é possível **executar** o pacote antes de sair do assistente. Em seguida, você poderá executar o pacote do Visual Studio.
 -   O assistente **salva** o pacote no projeto do Integration Services do qual você iniciou o assistente.
 
 ## <a name="specify-options-for-saving-the-package"></a>Especificar opções para salvar o pacote
 **SQL Server**  
- Selecione esta opção para salvar o pacote no SQL Server no **msdb** banco de dados de **sysssispackages** tabela.
+ Selecione esta opção para salvar o pacote SQL Server no banco de dados **msdb** na tabela **sysssispackages**.
  
 > [!IMPORTANT]
 > Essa opção não salva o pacote no banco de dados do catálogo do SSIS (SSISDB).  
@@ -66,7 +65,7 @@ Se você iniciou o Assistente de um projeto do Integration Services no Visual St
  Selecione o servidor de destino e forneça credenciais para se conectar ao servidor na próxima página, **Salvar pacote SSIS**. Para obter mais informações, consulte [Salvar pacote SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
  **Sistema de arquivos**  
- Selecione esta opção para salvar o pacote como um arquivo com o **dtsx** extensão.  
+ Selecione essa opção para salvar o pacote como um arquivo com extensão **.dtsx**.  
   
  Selecione a pasta de destino e o nome de arquivo para o pacote na próxima página, **Salvar pacote SSIS**. Para obter mais informações, consulte [Salvar pacote SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
  
@@ -83,7 +82,7 @@ Se você iniciou o Assistente de um projeto do Integration Services no Visual St
  Digite a senha novamente.  
   
 > [!NOTE]
-> As opções de senha estão disponíveis apenas se especificar um **nível de proteção do pacote** que requer uma senha - ou seja, se você especificar um **criptografar dados confidenciais com senha** ou **criptografar todos os dados com senha**.  
+> As opções de senha só estarão disponíveis se você especificar um **Nível de proteção do pacote** que requer uma senha – ou seja, se você especificar **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Sobre as duas páginas de opções para salvar o pacote  
  A página **Salvar e executar pacote** é uma das duas páginas nas quais você pode selecionar opções para salvar o pacote do SSIS.  
@@ -101,12 +100,11 @@ Se você iniciou o Assistente de um projeto do Integration Services no Visual St
   
 -   Se você tiver selecionado a opção para salvar o pacote, a próxima página será **Salvar pacote SSIS**. Nessa página, você deve especificar as opções adicionais para salvar o pacote. (Depois de salvar o pacote, a página a seguinte será **Concluir o assistente**.) Para obter mais informações, consulte [Salvar pacote SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Salvar pacotes](../../integration-services/save-packages.md)  
 [Executar pacotes do SSIS (Integration Services)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-[Começar com esse exemplo simples de Assistente de importação e exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Começar com esse exemplo simples de Assistente de Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
-
 

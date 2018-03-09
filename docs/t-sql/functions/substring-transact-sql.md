@@ -1,5 +1,5 @@
----
-title: Subcadeia de caracteres (Transact-SQL) | Microsoft Docs
+﻿---
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 65
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7f36ec82c65e5d52c2186c67033adddbf1700c4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -54,35 +53,35 @@ SUBSTRING (expressão, início, comprimento)
   
 ## <a name="arguments"></a>Argumentos  
  *Expressão*  
- É um **caractere**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md). 
+ É um **caractere**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *Início*  
  É um número inteiro ou **bigint** que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 base, significando que o primeiro caractere da expressão é 1). Se *início* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *início* + *comprimento*- 1 ou 0. Se *início* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
   
  *Comprimento*  
- É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* serão retornados. Se o *comprimento* for negativo, um erro será gerado e a instrução será encerrada. Se a soma de *início* e *comprimento* for maior do que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *início*, será retornada.   
+ É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* serão retornados. Se o *comprimento* for negativo, um erro será gerado e a instrução será encerrada. Se a soma de *início* e *comprimento* for maior do que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *início*, será retornada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna dados de caractere se *expressão* é um dos tipos de dados de caracteres com suporte. Retorna dados binários se *expressão* é um com suporte **binário** tipos de dados. A cadeia de caracteres retornada é do mesmo tipo que a expressão especificada com as exceções mostradas na tabela.  
   
 |Expressão especificada|Tipo de retorno|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**texto**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**binário**/**varbinary**/**imagem**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Comentários  
- Os valores para *início* e *comprimento* devem ser especificados em número de caracteres para tipos de dados **ntext**, **char**, ou **varchar** e bytes para **texto**, **imagem**, **binário** ou **varbinary**.   
+## <a name="remarks"></a>Remarks  
+ Os valores para *início* e *comprimento* devem ser especificados em número de caracteres para tipos de dados **ntext**, **char**, ou **varchar** e bytes para **texto**, **imagem**, **binário** ou **varbinary**.  
   
  A *expressão* deve ser **varchar (max)** ou **varbinary (max)** quando o *início* ou *comprimento* contém um valor maior que 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos de caracteres suplementares (SC), tanto *início* quanto *comprimento* contarão cada par substituto de *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).   
+ Ao usar agrupamentos de caracteres suplementares (SC), tanto *início* quanto *comprimento* contarão cada par substituto de *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Usando SUBSTRING com uma cadeia de caracteres  
- O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Na tabela `sys.databases`, esta consulta retorna os nomes dos bancos de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e o terceiro e o quarto caracteres na coluna final.   
+ O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Na tabela `sys.databases`, esta consulta retorna os nomes dos bancos de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e o terceiro e o quarto caracteres na coluna final.  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -123,7 +122,7 @@ bcd
 > [!NOTE]  
 >  Para executar os exemplos a seguir, você deve instalar o **pubs** banco de dados.  
   
- O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada coluna de dados de **texto** e **imagem** na tabela `pub_info`do banco de dados `pubs`. Os dados de **texto** são retornados como **varchar** e os dados de **imagem** são retornadas como **varbinary**.  
+ O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada coluna de dados de **texto** e **imagem** na tabela `pub_info` do banco de dados `pubs`. Os dados de **texto** são retornados como **varchar** e os dados de **imagem** são retornadas como **varbinary**.  
   
 ```  
 USE pubs;  
@@ -226,10 +225,15 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 
 
 

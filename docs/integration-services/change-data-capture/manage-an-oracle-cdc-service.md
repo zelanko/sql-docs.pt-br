@@ -15,19 +15,18 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f54659eeb98bd72edf2addbb0d68df8519d2eb0b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="manage-an-oracle-cdc-service"></a>Gerenciar um Serviço Oracle CDC
+# <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Você pode usar o Console de Configuração do Serviço CDC para gerenciar um Serviço CDC específico.  
   
  **Para selecionar o serviço CDC com o qual você deseja trabalhar**  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
      Você também pode clicar com o botão direito no serviço CDC com o qual você deseja trabalhar e selecionar a ação desejada. Consulte [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
- **OU**  
+ **OR**  
   
 1.  Selecione **Serviços Locais de CDC** no painel esquerdo no Console de Configuração do Serviço de CDC.  
   
@@ -65,8 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  Você também pode clicar com o botão direito do mouse no serviço CDC em que deseja editar as propriedades e selecionar **Propriedades**.  
   
-## <a name="see-also"></a>Consulte também  
- [Como gerenciar um serviço CDC Local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Como gerenciar um serviço CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   
-

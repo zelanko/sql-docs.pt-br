@@ -2,16 +2,13 @@
 title: Configurar tipos de atributo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Propriedades de atributo - configurar tipos de atributo
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade empresarial. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade empresarial. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
   
 ##  <a name="setting_attibute_types"></a> Definindo tipos de atributo  
  O valor da propriedade **Type** de um atributo determina seu tipo. Vários assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuram os tipos de atributo ao definir dimensões ou atributos. Esses assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também configuram os tipos de atributo quando os assistentes adicionam funcionalidades às dimensões. Por exemplo, o Assistente de Business Intelligence aplica diversos tipos de atributo aos atributos de uma dimensão quando o assistente adiciona inteligência de contas para identificar nas dimensão os atributos que contêm nomes, códigos, números e estrutura de conta. O Assistente de Business Intelligence também utiliza tipos de atributo, como para conversão de moeda. Para obter mais informações, consulte [Criar uma dimensão de tipo Moeda](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -315,7 +313,7 @@ ms.lasthandoff: 11/17/2017
 |**Years**|Representa anos.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

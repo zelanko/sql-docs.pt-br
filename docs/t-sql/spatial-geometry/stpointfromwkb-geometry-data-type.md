@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e32527bb0878f21ae255d72ba715024fd05c031d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cbc2b0ece517930a19c6d99aa1220b2294aaf77d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Tipo OGC: **ponto**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método lançará um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
@@ -71,8 +70,7 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

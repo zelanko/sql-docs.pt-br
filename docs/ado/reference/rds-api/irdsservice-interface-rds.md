@@ -3,7 +3,7 @@ title: Interface IRDSService (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0e360c609905f7983de95c704fe49ca72d043f71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b20227c5ce92e6f04a251c5be9dadb9ba8fa0b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="irdsservice-interface-rds"></a>Interface IRDSService (RDS)
 Expõe o [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) método, que é usado para retornar um ponteiro para a interface solicitada em uma versão maior capacidade do objeto.  
@@ -36,6 +35,5 @@ Expõe o [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos RDS](../../../ado/reference/rds-api/rds-objects.md)
-
 
 

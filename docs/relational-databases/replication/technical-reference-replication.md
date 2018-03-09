@@ -2,27 +2,30 @@
 title: "Referência técnica (Replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c40b1a86fd793fe9151d05948b3fe68b19a3a521
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 591194f20b042c1f069fc3a7756cc4bcb96581c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="technical-reference-replication"></a>Referência técnica (replicação)
-  Esta seção contém links para documentação de referência técnica para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esta seção contém links para documentação de referência técnica para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Segurança e proteção &#40;Replicação&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   

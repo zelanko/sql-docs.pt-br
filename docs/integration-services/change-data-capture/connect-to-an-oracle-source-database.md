@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados de origem do Oracle | Microsoft Docs
+title: Conectar a um banco de dados de origem Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8007bd54b9ee8612d9b65a0864b3271427f0b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
   Use a página do Oracle de origem para fornecer as informações necessárias para conectar-se ao banco de dados de origem Oracle. A instância CDC lerá os logs de refazer do banco de dados Oracle aos quais você está conectado.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Um usuário deve ter os privilégios a seguir concedidos no banco de dados Oracle para ser um usuário da mineração de logs.  
 >   
->  -   Selecione em \<any-tabela capturada >  
+>  -   SELECT em \<qualquer-tabela-capturada>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE em DBMS LOGMNR  
 > -   SELECT em V$LOGMNR CONTENTS  
@@ -73,9 +72,8 @@ ms.lasthandoff: 08/03/2017
   
  Depois de terminar de inserir informações nesta página, clique em **Avançar** para [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Editar propriedades da instância](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

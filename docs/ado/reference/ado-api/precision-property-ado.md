@@ -3,7 +3,7 @@ title: Propriedade Precision (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f100cf54a8090e7f84ee6a4310c7110c110c69fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce6c07fa24f146664ffe5433869e4edf45abdd69
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="precision-property-ado"></a>Propriedade Precision (ADO)
 Indica o grau de precisão para valores numéricos em uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto ou para numérico [campo](../../../ado/reference/ado-api/field-object.md) objetos.  
@@ -37,7 +36,7 @@ Indica o grau de precisão para valores numéricos em uma [parâmetro](../../../
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **bytes** valor que indica o número máximo de dígitos usados para representar valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **precisão** propriedade para determinar o número máximo de dígitos usados para representar valores para um numérico **parâmetro** ou **campo** objeto.  
   
  O valor é leitura/gravação em um **parâmetro** objeto.  
@@ -54,4 +53,3 @@ Indica o grau de precisão para valores numéricos em uma [parâmetro](../../../
  [Exemplo de propriedades de precisão (VB) e NumericScale](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Exemplo de propriedades de precisão (VC + +) e NumericScale](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Propriedade NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)
-

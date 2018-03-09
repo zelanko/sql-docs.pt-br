@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializability"></a>Serialização
 Idealmente, as transações devem ser *serializável*. As transações são consideradas serializável se os resultados da execução simultânea de transações são os mesmos que os resultados de executá-los em série — ou seja, um após o outro. Não é importante que transação executa pela primeira vez, apenas que o resultado não reflete qualquer combinação das transações.  
@@ -38,4 +36,3 @@ Idealmente, as transações devem ser *serializável*. As transações são cons
  Então por que é serialização desejável? Em outras palavras, por que é importante que parece uma transação for concluída antes do início da próxima transação? Considere o seguinte problema. Um vendedor está inserindo pedidos ao mesmo tempo que envia um administrador de cobranças. Suponha que o vendedor entra em uma ordem de empresa X, mas não confirmada. o vendedor ainda está se comunicando com o representante da empresa X. O administrador solicita uma lista de todos os pedidos e descobre a ordem para a empresa X e envia uma fatura. Agora o representante da empresa X decide que deseja alterar a ordem para que o vendedor altera antes de confirmar a transação. Empresa X obtém uma fatura incorreta.  
   
  Se do vendedor e do administrador de transações fossem serializáveis, esse problema nunca ter ocorrido. A transação do vendedor deve terminar antes do início de transação do auxiliar, caso em que o administrador será ter enviado o bill correto ou transação do auxiliar deve terminar antes do início de transação do vendedor, caso em que o administrador não terá enviado uma fatura para a empresa X em todos os.
-

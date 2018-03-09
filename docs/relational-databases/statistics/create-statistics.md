@@ -2,10 +2,14 @@
 title: "Criar estatísticas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-statistics
+ms.suite: sql
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 161543d02f49763db010021f817302635367c001
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>Criar estatísticas
-  Você pode criar estatísticas de otimização de consulta em uma ou mais colunas de uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Você pode criar estatísticas de otimização de consulta em uma ou mais colunas de uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais.  
   
  **Neste tópico**  
   
@@ -72,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...**.  
   
-     As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela***table_name* .  
+     As propriedades a seguir aparecem na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
   
      **Nome da tabela**  
      Exibe o nome da tabela descrito pelas estatísticas.  
@@ -116,12 +121,12 @@ ms.lasthandoff: 11/09/2017
      **Atualize estatísticas para essas colunas**  
      Verifique para atualizar as estatísticas quando a caixa de diálogo estiver fechada.  
   
-     A propriedade a seguir é mostrada na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela***table_name* .  
+     A propriedade a seguir aparece na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
   
      **Expressão de filtro**  
      Define quais linhas de dados devem ser incluídas nas estatísticas filtradas. Por exemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name* , na página **Geral** , clique em **Adicionar**.  
+5.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, na página **Geral**, clique em **Adicionar**.  
   
      As propriedades a seguir aparecem na caixa de diálogo **Selecionar Colunas** . Essas informações são somente leitura.  
   
@@ -142,9 +147,9 @@ ms.lasthandoff: 11/09/2017
   
 6.  Na caixa de diálogo **Selecionar Colunas** , marque as caixas de seleção de cada coluna para as quais você deseja criar uma estatística e clique em **OK**.  
   
-7.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name* , clique em **OK**.  
+7.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para criar estatísticas  
   

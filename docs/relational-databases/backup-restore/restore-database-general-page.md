@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ ms.lasthandoff: 11/17/2017
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Banco de dados**|Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .|  
+|**Backup de banco de dados**|Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .|  
 |**Dispositivo**|Selecione os dispositivos lógicos ou físicos de backup (fitas, URLs ou arquivos) que contêm o backup ou os backups a serem restaurados. Isso será necessário se o backup de banco de dados foi feito em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para selecionar um ou mais dispositivos de backup lógicos ou físicos, clique no botão Procurar que abre a caixa de diálogo **Selecione dispositivos de backup** . Nessa caixa de diálogo você poderá selecionar até 64 dispositivos que pertencem a um único conjunto de mídias. Os dispositivos de fita devem ser conectados fisicamente ao computador que executa a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um arquivo de backup pode estar em um dispositivo de disco local ou remoto. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). Você também pode selecionar **URL** como o tipo de dispositivo para os arquivos de backup incluídos no armazenamento do Windows Azure.<br /><br /> Quando você fechar a caixa de diálogo **Selecione dispositivos de backup** , o dispositivo selecionado aparecerá como valores somente leitura na lista **Dispositivo** .|  
-|**Banco de dados**|Selecione o nome do banco de dados a partir do qual os backups deverão ser restaurados na lista suspensa.<br /><br /> Observação: essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups nos dispositivos selecionados estarão disponíveis.|  
+|**Backup de banco de dados**|Selecione o nome do banco de dados a partir do qual os backups deverão ser restaurados na lista suspensa.<br /><br /> Observação: essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups nos dispositivos selecionados estarão disponíveis.|  
   
 ### <a name="destination"></a>Destino  
  As opções do painel **Restaurar para** identificam o banco de dados e o ponto de restauração.  
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Banco de dados**|Insira o banco de dados a ser restaurado na lista. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.<br /><br /> Observação: para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .|  
+|**Backup de banco de dados**|Insira o banco de dados a ser restaurado na lista. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.<br /><br /> Observação: para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .|  
 |**Restaurar para**|A caixa **Restaurar para** será definida, por padrão, como "Para o último backup obtido". Você também pode clicar em **Linha do Tempo** para mostrar a caixa de diálogo **Linha do Tempo do Backup** que exibe o histórico de backup de banco de dados no formato de uma linha do tempo. Clique em **Linha do Tempo** para designar um **datetime** específico para o qual você deseja restaurar o banco de dados. O banco de dados será restaurado então no estado em que estava naquele momento determinado especificado. Consulte [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).|  
   
 ### <a name="restore-plan"></a>Plano de restauração  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="restoring-from-microsoft-azure-storage"></a>Restaurando por meio do Armazenamento do Microsoft Azure  
 Selecione **URL** na lista suspensa **Tipo de mídia de backup:** da caixa de diálogo **Selecione dispositivos de backup** .  Em seguida, clique em **Adicionar** para abrir a caixa de diálogo **Selecione um Local do Arquivo de Backup** na qual você pode selecionar um contêiner de armazenamento do Azure/credenciais do SQL Server, adicionar um novo contêiner de armazenamento do Azure com uma assinatura de acesso compartilhado ou gerar uma assinatura de acesso compartilhado e uma credencial do SQL Server para um contêiner de armazenamento existente. Depois que estiver conectado à conta de armazenamento, os arquivos de backup serão exibidos na caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** , na qual você poderá selecionar o arquivo a ser usado na restauração.  Consulte também [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)(Conectar-se a uma assinatura do Microsoft Azure).
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   

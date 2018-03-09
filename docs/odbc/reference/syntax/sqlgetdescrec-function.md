@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDescRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDescRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDescRec
-helpviewer_keywords:
-- SQLGetDescRec function [ODBC]
+f1_keywords: SQLGetDescRec
+helpviewer_keywords: SQLGetDescRec function [ODBC]
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 569a3708c13a4182e651c902ce7e1f1f9c7711dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c40e0e26ada07854f6772389ed09fc39e092952e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdescrec-function"></a>Função SQLGetDescRec
 **Conformidade**  
@@ -156,7 +150,6 @@ SQLRETURN SQLGetDescRec(
 |Obter um campo de descritor|[Função SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |Definindo vários campos de descritor|[Função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

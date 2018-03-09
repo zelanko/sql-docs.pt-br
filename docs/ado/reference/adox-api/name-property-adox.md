@@ -3,8 +3,9 @@ title: Nome de propriedade (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -40,18 +41,19 @@ f1_keywords:
 - _User25::put_Name
 - _Index::GetName
 - _User25::GetName
-helpviewer_keywords: Name property [ADOX]
+helpviewer_keywords:
+- Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47d95403232ef3b5a13fc5f7c30854591f837bab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10e899d43bd2990bff5724d87b4deefffd559090
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="name-property-adox"></a>Propriedade Name (ADOX)
 Indica o nome do objeto.  
@@ -59,7 +61,7 @@ Indica o nome do objeto.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nomes não precisam ser exclusivos dentro de uma coleção.  
   
  O **nome** propriedade é leitura/gravação em [coluna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [chave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabela](../../../ado/reference/adox-api/table-object-adox.md), e [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos. O **nome** propriedade é somente leitura no [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), e [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos.  

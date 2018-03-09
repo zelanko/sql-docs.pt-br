@@ -1,11 +1,13 @@
 ---
 title: Always Encrypted (mecanismo de banco de dados) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,24 +19,23 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- O Always Encrypted é um recurso criado para proteger dados confidenciais, como números de cartão de crédito ou de identificação nacional (por exemplo, números de previdência social), armazenados em bancos de dados do [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, o Sempre Criptografado fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso). Ao garantir que os administradores de banco de dados local, operadores de banco de dados em nuvem ou outros usuários com altos privilégios, mas não autorizados, não possam acessar os dados criptografados, o Sempre Criptografado permite que os clientes armazenem dados confidenciais com segurança fora de seu controle direto. Isso permite que as organizações criptografem dados em repouso e em uso para armazenamento no Azure, a fim de habilitar a delegação de administração de banco de dados local para terceiros, ou para reduzir os requisitos de espaço livre de segurança para sua própria equipe de DBA.  
+ O Always Encrypted é um recurso criado para proteger dados confidenciais, como números de cartão de crédito ou de identificação nacional (por exemplo, números de previdência social dos EUA), armazenados em bancos de dados do [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, o Sempre Criptografado fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso). Ao garantir que os administradores de banco de dados local, operadores de banco de dados em nuvem ou outros usuários com altos privilégios, mas não autorizados, não possam acessar os dados criptografados, o Sempre Criptografado permite que os clientes armazenem dados confidenciais com segurança fora de seu controle direto. Isso permite que as organizações criptografem dados em repouso e em uso para armazenamento no Azure, a fim de habilitar a delegação de administração de banco de dados local para terceiros, ou para reduzir os requisitos de espaço livre de segurança para sua própria equipe de DBA.  
   
  O Sempre Criptografado torna a criptografia transparente para os aplicativos. Um driver habilitado para Sempre criptografado instalado no computador cliente realiza isso automaticamente criptografando e descriptografando dados confidenciais no aplicativo cliente. O driver criptografa as colunas de dados confidenciais antes de passar os dados para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e reconfigura automaticamente as consultas para que a semântica do aplicativo seja preservada. Da mesma forma, o driver descriptografa de modo transparente os dados armazenados em colunas de banco de dados criptografado que estão contidos nos resultados da consulta.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 07/31/2017
  Um cliente tem um aplicativo local na empresa. O aplicativo opera com dados confidenciais armazenados em um banco de dados hospedado no Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em execução em uma máquina virtual no Microsoft Azure). O cliente usa o Always Encrypted e armazena as chaves do Always Encrypted em um repositório de chaves confiável hospedado localmente, a fim de garantir que os administradores de nuvem da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] não tenham acesso a dados confidenciais.  
   
 ### <a name="client-and-data-in-azure"></a>Cliente e dados no Azure  
- Um cliente tem um aplicativo cliente, hospedado no Microsoft Azure (por exemplo, em uma função de trabalho ou uma função web), que opera em dados confidenciais armazenados em um banco de dados hospedado no Azure (Banco de Dados SQL ou SQL Server em uma máquina virtual em execução no Microsoft Azure). Embora o Always Encrypted não forneça isolamento completo dos dados dos administradores de nuvem, como ambos os dados e chaves ficam expostos para os administradores da nuvem da plataforma de hospedagem da camada do cliente, o cliente ainda se beneficia com a redução da área de superfície de ataque à segurança (os dados são Always Encrypted no banco de dados).  
+ Um cliente tem um aplicativo cliente, hospedado no Microsoft Azure (por exemplo, em uma função de trabalho ou uma função web), que opera em dados confidenciais armazenados em um banco de dados hospedado no Azure (Banco de Dados SQL ou SQL Server em execução em uma máquina virtual no Microsoft Azure). Embora o Always Encrypted não forneça isolamento completo dos dados dos administradores de nuvem, como ambos os dados e chaves ficam expostos para os administradores da nuvem da plataforma de hospedagem da camada do cliente, o cliente ainda se beneficia com a redução da área de superfície de ataque à segurança (os dados são Always Encrypted no banco de dados).  
  
 ## <a name="how-it-works"></a>Como funciona
 
@@ -61,7 +62,7 @@ Para acessar dados armazenados em uma coluna criptografada em texto não criptog
 
 Em seguida, o driver contata o repositório de chaves que contém a chave mestra de coluna para descriptografar o valor da chave de criptografia de coluna criptografada e usa a chave de criptografia da coluna de texto não criptografado para criptografar o parâmetro. A chave de criptografia de coluna de texto não criptografado resultante é armazenado em cache para reduzir o número de idas e voltas para o repositório de chaves em usos subsequentes da mesma chave de criptografia de coluna. O driver substitui os valores de texto não criptografado dos parâmetros de direcionamento colunas criptografadas com seus valores criptografados e envia a consulta para o servidor para processamento.
 
-O servidor calcula o conjunto de resultados e, para qualquer criptografia no conjunto de resultados, o driver anexa os metadados de criptografia para a coluna, incluindo as informações sobre o algoritmo de criptografia e as chaves correspondentes. O driver primeiro tenta encontrar a chave de criptografia da coluna de texto não criptografado no cache local e faz apenas uma rodada para a chave mestra de coluna, se não for possível encontrar a chave no cache. Em seguida, o driver descriptografa os resultados e retorna valores de texto não criptografado para o aplicativo.
+O servidor calcula o conjunto de resultados e, para as colunas criptografadas incluídas no conjunto de resultados, o driver anexa os metadados de criptografia da coluna, incluindo as informações sobre o algoritmo de criptografia e as chaves correspondentes. O driver primeiro tenta encontrar a chave de criptografia da coluna de texto não criptografado no cache local e faz apenas uma rodada para a chave mestra de coluna, se não for possível encontrar a chave no cache. Em seguida, o driver descriptografa os resultados e retorna valores de texto não criptografado para o aplicativo.
 
  Um driver cliente interage com um repositório de chaves que contém uma chave mestra de coluna usando um provedor de repositório de chaves mestras de coluna, que é um componente de software do cliente que encapsula um repositório de chaves que contém a chave mestra de coluna. Os provedores para tipos comuns de repositório de chaves estão disponíveis em bibliotecas de drivers do lado do cliente da Microsoft ou como um download autônomo. Você também pode implementar seu próprio provedor. Recursos Always Encrypted, incluindo provedores de repositório de chaves mestras de coluna internas, variam de acordo com uma biblioteca de drivers e sua versão. 
 
@@ -85,10 +86,10 @@ Para obter detalhes sobre os algoritmos de criptografia Always Encrypted, consul
 
 |Tarefa|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Provisionamento de chaves mestras de coluna, chaves de criptografia de coluna e chaves de criptografia de coluna criptografada com suas chaves mestras de coluna correspondentes.|Sim|Sim|Não|
+|Provisionamento de chaves mestras de coluna, chaves de criptografia de coluna e chaves de criptografia de coluna criptografada com suas chaves mestras de coluna correspondentes.|Sim|Sim|não|
 |Criação de metadados de chave no banco de dados.|Sim|Sim|Sim|
 |Criando novas tabelas com colunas criptografadas|Sim|Sim|Sim|
-|Criptografar os dados existentes nas colunas do banco de dados selecionado|Sim|Sim|Não|
+|Criptografar os dados existentes nas colunas do banco de dados selecionado|Sim|Sim|não|
 
 > [!NOTE]
 > Lembre-se de executar as ferramentas de provisionamento de chaves ou de criptografia de dados em um ambiente seguro e em um computador diferente daquele que hospeda o banco de dados. Caso contrário, dados confidenciais ou as chaves podem vazar no ambiente de servidor, reduzindo os benefícios de usar o Always Encrypted.  
@@ -127,7 +128,7 @@ Use o [Assistente do Always Encrypted](../../../relational-databases/security/en
 
 -   Depois de alterar a definição de um objeto criptografado, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) para atualizar os metadados Always Encrypted para o objeto.
   
-O Always Encrypted não tem suporte para as colunas com as características abaixo (por exemplo, a cláusula *Encrypted WITH* não pode ser usada em **CREATE TABLE/ALTER TABLE** para uma coluna, se alguma das condições a seguir se aplicarem à coluna):  
+Não há suporte para o Always Encrypted nas colunas com as características abaixo (por exemplo, a cláusula *Encrypted WITH* não poderá ser usada em **CREATE TABLE/ALTER TABLE** de uma coluna se uma das seguintes condições se aplicar à coluna):  
   
 -   Colunas usando um dos seguintes tipos de dados: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias e tipos definidos pelo usuário.  
 - Colunas FILESTREAM  
@@ -236,7 +237,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
@@ -254,4 +255,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

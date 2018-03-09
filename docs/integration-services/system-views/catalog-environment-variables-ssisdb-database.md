@@ -1,5 +1,5 @@
 ---
-title: Catalog. environment_variables (banco de dados SSISDB) | Microsoft Docs
+title: catalog.environment_variables (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40e31b9697c453f6a9d60dfcc8d9302dfefe0ac4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cb3d2a6db5f17bb8c180e590426cec34b6dbc359
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|O ID (identificador exclusivo) da variável de ambiente.|  
 |environment_id|**bigint**|O ID exclusivo do ambiente ao qual a variável está associada.|  
-|name|**sysname**|O nome da variável de ambiente.|  
-|descrição|**nvarchar (1024)**|A descrição da variável do ambiente.|  
-|Tipo|**nvarchar (128)**|O tipo de dados da variável do ambiente.|  
+|NAME|**sysname**|O nome da variável de ambiente.|  
+|descrição|**nvarchar(1024)**|A descrição da variável do ambiente.|  
+|Tipo|**nvarchar(128)**|O tipo de dados da variável do ambiente.|  
 |sensitive|**bit**|Quando o valor for `1`, a variável será confidencial e criptografada quando for armazenada. Quando o valor for `0`, a variável não será confidencial e o valor será armazenado em texto não criptografado.|  
-|value|**sql_variant**|O valor da variável de ambiente. Quando confidenciais é `0`, o valor de texto sem formatação é mostrado. Quando confidenciais é `1`, o **nulo** valor é exibido.|  
+|value|**sql_variant**|O valor da variável de ambiente. Quando sensitive é `0`, o valor do texto sem formatação é mostrado. Quando sensitive é `1`, o valor **NULL** é exibido.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada variável de ambiente no catálogo.  
   
 ## <a name="permissions"></a>Permissões  
@@ -48,12 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ no ambiente correspondente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

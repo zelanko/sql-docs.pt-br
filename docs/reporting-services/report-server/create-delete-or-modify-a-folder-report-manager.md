@@ -1,13 +1,14 @@
 ---
-title: "Criar, excluir ou modificar uma pasta (Gerenciador de relatórios) | Microsoft Docs"
+title: "Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-caps.latest.revision: 49
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "49"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
-ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 6b4ddcbdf056ce23dd7837e0e3b19f56dc1a889d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
@@ -79,10 +79,9 @@ ms.lasthandoff: 11/07/2017
   
 7.  Clique em **Aplicar** para salvar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Página Nova Pasta &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
  [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

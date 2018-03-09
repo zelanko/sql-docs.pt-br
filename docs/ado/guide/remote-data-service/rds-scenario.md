@@ -3,7 +3,7 @@ title: "Cenário RDS | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 920df727d2714629a45280133c53011afccc5c4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>Cenário RDS
 > [!IMPORTANT]
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  Este cenário pressupõe que você saiba como usar marcas de layout HTML básico, técnicas de associação de dados use DHTML e programa com controles ActiveX.  
   
- Se você tiver instalado o SDK, o código-fonte completo para o aplicativo de exemplo do catálogo de endereços pode ser encontrado no diretório do SDK em samples\dataaccess\rds\AddressBook\AddressBook.asp. Para exibir o cenário de catálogo de endereços, digite no Internet Explorer 4.0 ou posterior,  **http://*webserver*/RDS/AddressBook/AddressBook.asp** onde *webserver* é o nome dada a seu computador Windows NT 4.0 ou Windows 2000 Web do servidor que está executando serviços de informações da Internet (IIS) e ASP.  
+ Se você tiver instalado o SDK, o código-fonte completo para o aplicativo de exemplo do catálogo de endereços pode ser encontrado no diretório do SDK em samples\dataaccess\rds\AddressBook\AddressBook.asp. Para exibir o cenário de catálogo de endereços, digite no Internet Explorer 4.0 ou posterior, **http://*webserver*/RDS/AddressBook/AddressBook.asp** onde *webserver* é o nome fornecido para o computador do servidor do Windows NT 4.0 ou Windows 2000 Web que está executando o Internet Information Services (IIS) e do ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introdução ao catálogo de endereços  
  O aplicativo de exemplo do catálogo de endereços fornece um catálogo de endereços online simples que você pode usar para publicar uma pasta de pesquisa em uma intranet. O catálogo de endereços foi projetado para que um usuário pode inserir uma cadeia de caracteres de pesquisa em um ou mais campos para solicitar informações sobre funcionários. Para mostrar os recursos básicos do serviço de dados remoto, o aplicativo de exemplo é intencionalmente mantido pequeno, com um número mínimo de objetos e campos de pesquisa.  
@@ -74,6 +73,5 @@ ms.lasthandoff: 09/09/2017
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

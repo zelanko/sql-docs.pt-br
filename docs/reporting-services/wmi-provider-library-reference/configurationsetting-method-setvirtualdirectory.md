@@ -2,30 +2,29 @@
 title: "Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SetVirtualDirectory method
+helpviewer_keywords: SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d86d0c416df4ecc01f940ebabad2e409aa826599
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94837f98c1b2e2b97c9acac256470d1978d873d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---setvirtualdirectory"></a>Método ConfigurationSetting - SetVirtualDirectory
+# <a name="configurationsetting-method---setvirtualdirectory"></a>Método de ConfigurationSetting – SetVirtualDirectory
   Define o nome do diretório virtual de um dado aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -60,7 +59,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um aplicativo pode ter somente um nome de diretório virtual para todas as reservas de URL.  
   
  VirtualDirectory deve seguir as convenções de nomenclatura para diretórios virtuais. VirtualDirectory não pode ser uma cadeia de caracteres vazia nem ficar em branco.  
@@ -70,8 +69,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

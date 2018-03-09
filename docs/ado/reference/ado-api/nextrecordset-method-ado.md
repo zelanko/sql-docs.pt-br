@@ -3,8 +3,9 @@ title: "Método NextRecordset (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords: NextRecordset method [ADO]
+helpviewer_keywords:
+- NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Limpa atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto e retorna o próximo **registros** pelo adiantamento por meio de uma série de comandos.  
@@ -49,7 +51,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 > [!NOTE]
 >  Este parâmetro retorna somente o número de registros afetados por uma operação; ele não retorna uma contagem de registros de uma instrução select usada para gerar o **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **NextRecordset** método para retornar os resultados do próximo comando em uma instrução composta de comando ou de um procedimento armazenado que retorna vários resultados. Se você abrir um **registros** objeto com base em uma instrução composta de comando (por exemplo, "selecionar \* de table1; Selecione \* de table2 ") usando o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método em um **Recordset**, ADO executa somente o primeiro comando e retorna os resultados para *registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o **NextRecordset** método.  
   
  Como há resultados adicionais e o **registros** que contém as declarações compostas é desconectado ou realizar marshaling nos limites de processo, não o **NextRecordset** método continuarão a retornar **registros** objetos. Se um comando de retorno de linha é executado com êxito, mas não retornou nenhum registro retornado **registros** objeto será aberto, mas vazio. Teste para este caso, verificando se o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades estiverem **True**. Se um não??? retorno de linha comando for executado com êxito, retornado **Recordset** objeto será fechado, que você pode verificar Testando o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade no **Recordset**. Quando não há mais nenhum resultado *registros* será definida como *nada*.  

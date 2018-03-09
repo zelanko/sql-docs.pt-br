@@ -1,30 +1,29 @@
 ---
-title: O Reporting Services no SQL Server Data Tools (SSDT) | Microsoft Docs
+title: Reporting Services no SSDT (SQL Server Data Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, Reporting Services in
+helpviewer_keywords: Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 0192525485f994534c7996f5cbd5b9a53a56d15c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ambiente para criar soluções de business intelligence. O SSDT contém um ambiente de autoria do Designer de Relatórios, em que você pode abrir, modificar, visualizar, salvar e implantar [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] definições de relatório paginados, fontes de dados compartilhados, conjuntos de dados compartilhados e partes de relatório. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não é incluído com o SQL Server. Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
@@ -43,11 +42,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerProjects"></a> Projetos do Servidor de Relatório  
  Ao instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os seguintes modelos de projeto são disponibilizados em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [adicionar um novo ou um relatório existente a um projeto de relatório &#40; SSRS &#41; ](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Propriedades de projeto do servidor de relatório se aplicam a todos os relatórios e compartilhado fontes de dados em um [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] projeto. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir essa caixa de diálogo, no menu **Projeto** , clique em **Propriedades**.  
+-   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir essa caixa de diálogo, no menu **Projeto** , clique em **Propriedades**.  
   
 -   **Assistente de projeto do servidor de relatório.** Quando você seleciona um Projeto do Assistente do Servidor de Relatórios, um projeto do servidor de relatórios é criado automaticamente e o Assistente de Relatório, aberto. No assistente, você pode criar um relatório seguindo as instruções em cada página para criar uma cadeia de conexão em uma origem de dados, definir credenciais de fonte de dados, criar uma consulta, adicionar uma região de dados de tabela ou matriz, especificar dados e grupos de relatórios, selecionar um estilo de fonte e cor, publicar o relatório em um servidor de relatórios e visualizá-lo localmente. Depois de criar um relatório com o assistente, você pode alterar os dados e o designer de relatórios, usando o Designer de Relatórios no Projeto do Servidor de Relatórios.  
   
- ![Novos modelos de projeto no SSDT](../../analysis-services/media/ssdt-biprojects.png "modelos de projeto novo no SSDT")  
+ ![Novos modelos de Projeto no SSDT](../../analysis-services/media/ssdt-biprojects.png "Novos modelos de Projeto no SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Imagens** A lista de imagens que estão disponíveis para serem incluídas como um item de Imagem em um relatório.  
   
- As fontes de dados e os conjuntos de dados no painel Dados do Relatório representam os elementos da definição do relatório. O painel de Dados do Relatório é um recurso com suporte de vários ambientes de criação de relatórios. No Construtor de Relatórios, esse é o único painel disponível para gerenciar fontes de dados e conjuntos de dados. No Designer de Relatórios, o painel de Dados do Relatório funciona com o Gerenciador de Soluções, que lista fontes de dados e conjuntos de dados compartilhados como arquivos. As fontes de dados compartilhadas e os conjuntos de dados compartilhados do painel de Dados do Relatório devem apontar para suas fontes de dados compartilhadas e conjuntos de dados compartilhados no Gerenciador de Soluções. Os elementos do painel de Dados do Relatórios então contêm uma referência aos arquivos de dados no Gerenciador de Soluções. As propriedades do projeto determinam se as fontes de dados compartilhadas e os conjuntos de dados compartilhados são implantados no servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [converter fontes de dados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ As fontes de dados e os conjuntos de dados no painel Dados do Relatório representam os elementos da definição do relatório. O painel de Dados do Relatório é um recurso com suporte de vários ambientes de criação de relatórios. No Construtor de Relatórios, esse é o único painel disponível para gerenciar fontes de dados e conjuntos de dados. No Designer de Relatórios, o painel de Dados do Relatório funciona com o Gerenciador de Soluções, que lista fontes de dados e conjuntos de dados compartilhados como arquivos. As fontes de dados compartilhadas e os conjuntos de dados compartilhados do painel de Dados do Relatório devem apontar para suas fontes de dados compartilhadas e conjuntos de dados compartilhados no Gerenciador de Soluções. Os elementos do painel de Dados do Relatórios então contêm uma referência aos arquivos de dados no Gerenciador de Soluções. As propriedades do projeto determinam se as fontes de dados compartilhadas e os conjuntos de dados compartilhados são implantados no servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [Converter fontes de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Se o painel Dados do Relatório não estiver visível, clique na área de Design e, em seguida, no menu **Exibir** , clique em **Dados do Relatório**. Se o painel de dados do relatório estiver flutuando, é possível ancorá-lo. Para obter mais informações, consulte [Encaixar o painel de dados do relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
@@ -101,11 +100,11 @@ ms.lasthandoff: 08/09/2017
   
  Use o painel de Propriedades para:  
   
--   Definir propriedades para o item selecionado na superfície de design. Algumas propriedades apresentam uma lista suspensa de valores. Também é possível digitar o valor diretamente na célula. Algumas propriedades contêm uma coleção de valores, indicada pelo valor **(Coleção)**. A maioria das propriedades pode aceitar uma expressão. expressões complexas são indicadas pelo valor  **\<expressão >**. Clique em  **\<expressão >** para abrir o **expressão** caixa de diálogo. Para obter mais informações, consulte [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Definir propriedades para o item selecionado na superfície de design. Algumas propriedades apresentam uma lista suspensa de valores. Também é possível digitar o valor diretamente na célula. Algumas propriedades contêm uma coleção de valores, indicada pelo valor **(Coleção)**. A maioria das propriedades pode aceitar uma expressão; expressões complexas são indicadas pelo valor **\<Expression>**. Clique em **\<Expression>** para abrir a caixa de diálogo **Expressão**. Para obter mais informações, consulte [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use os botões da barra de tarefas do painel Propriedades para alterar a grade de exibição por categoria para exibição alfabética. Na exibição por categoria, pode ser necessário expandir a categoria para ver todas as propriedades que ela contém. Para abrir a caixa de diálogo Propriedades de um item, clique no botão **Páginas de Propriedades** na barra de ferramentas ou clique no item com o botão direito do mouse e clique em **Propriedades**.  
   
--   Defina as propriedades do membro do grupo selecionado atualmente no painel de Agrupamento. A propriedades de membro do grupo ajudam a controlar como as linhas de cabeçalho e de rodapé de grupos estáticos são repetidas para cada instância do grupo. Para obter mais informações, consulte [exibir cabeçalhos e rodapés com um grupo de &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   Defina as propriedades do membro do grupo selecionado atualmente no painel de Agrupamento. A propriedades de membro do grupo ajudam a controlar como as linhas de cabeçalho e de rodapé de grupos estáticos são repetidas para cada instância do grupo. Para obter mais informações, consulte [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Para exibir o painel Propriedades, no menu **Exibir** , clique em **Janela Propriedades**. É possível desencaixar esse painel e movê-lo para outra área da janela do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ou exibi-lo como uma exibição com guias na superfície de design.  
   
@@ -316,7 +315,7 @@ ms.lasthandoff: 08/09/2017
 [Baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
 [Gerenciador de Soluções](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
 [Relatórios do Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
-[Linguagem de definição de relatório](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Linguagem RDL](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Ainda tem dúvidas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

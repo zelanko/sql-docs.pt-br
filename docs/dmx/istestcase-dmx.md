@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsTestCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTestCase function
+f1_keywords: IsTestCase
+dev_langs: DMX
+helpviewer_keywords: IsTestCase function
 ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6e25739d2c2fd92642e8e9d61e514c0fb181bb36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0880841c201e9f25eb4685d0e6368abbb5bca885
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +41,7 @@ IsTestCase()
 ## <a name="result-type"></a>Tipo de Resultado  
  Retorna **true** se o caso fizer parte do conjunto de dados de teste; caso contrário, **false**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você usar o Assistente de Mineração de Dados para criar uma estrutura de mineração e o modelo de mineração relacionado, por padrão, 30% dos casos serão separados para serem usados como um conjunto de dados de teste. Os casos restantes serão utilizados para treinar o modelo de mineração de dados. O mesmo conjunto de dados de teste pode ser usado com todos os modelos baseados nessa estrutura. No entanto, se você usar DMX para criar o modelo de mineração, por padrão, todos os dados são usados para treinar o modelo, e nenhum conjunto de teste é criado. Para habilitar a criação de um conjunto de dados de teste, você deve definir os parâmetros da cláusula WITH HOLDOUT.  
   
  É possível determinar se um conjunto de teste foi criado em uma estrutura de mineração específica exibindo o valor das propriedades <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> e <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
@@ -68,10 +62,9 @@ WHERE IsTestCase()
   
  Para obter mais informações sobre como consultar os casos usados na mineração de dados, consulte [SELECT FROM &#60; modelo de &#62;. CASOS &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) e [SELECT FROM &#60; estrutura &#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Consultas de mineração de dados](../analysis-services/data-mining/data-mining-queries.md)   
- [Conjuntos de dados de treinamento e teste](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [Conjuntos de dados de teste e treinamento](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   
-

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-length-and-indicator-values"></a>Usando valores de indicador de comprimento e
 O buffer de comprimento/indicador é usado para passar o comprimento de bytes dos dados no buffer de dados ou um indicador especial, como SQL_NULL_DATA, que indica que os dados são NULL. Dependendo da função na qual ele é usado, um buffer de comprimento/indicador é definido para ser um sqlinteger que contém ou um SQLSMALLINT. Portanto, um único argumento é necessário para descrevê-lo. Se o buffer de dados é um buffer de entrada nondeferred, esse argumento contém o comprimento em bytes de dados em si ou um valor de indicador. Ele é geralmente chamado de *StrLen_or_Ind* ou um nome semelhante. Por exemplo, o código a seguir chama **SQLPutData** para passar um buffer completo dos dados; o comprimento de bytes (*ValueLen*) é passada diretamente porque o buffer de dados (*ValuePtr*) é um buffer de entrada.  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Um procedimento é usar o valor padrão de um parâmetro de entrada em um procedimento em vez do valor no buffer de dados correspondente.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** ou **SQLSetPos** deve ignorar o valor no buffer de dados. Ao atualizar uma linha de dados por uma chamada para **SQLBulkOperations** ou **SQLSetPos,** o valor da coluna não é alterado. Ao inserir uma nova linha de dados por uma chamada para **SQLBulkOperations**, o valor da coluna é definido como padrão ou, se a coluna não tiver um padrão, como NULL.
-

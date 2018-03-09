@@ -2,9 +2,12 @@
 title: "Propriedades da Assinatura – Assinante | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 348b0b2b95f433f5c186fa71addbf418432198d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0983dafd2e95edbec342c7a885c1182f6dc053a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---subscriber"></a>Propriedades da Assinatura - Assinante
-  A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
   
  Cada propriedade na caixa de diálogo **Propriedades da Assinatura** inclui uma descrição. Clique em uma propriedade para ver sua descrição exibida na parte inferior da caixa de diálogo. Este tópico fornece informações adicionais sobre várias propriedades. As propriedades são agrupadas nas categorias seguintes:  
   
@@ -99,9 +102,9 @@ ms.lasthandoff: 11/09/2017
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

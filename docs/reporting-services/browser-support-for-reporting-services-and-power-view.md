@@ -1,14 +1,14 @@
 ---
-title: Suporte ao navegador para Reporting Services e Power View | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Suporte ao navegador para o Reporting Services e o Power View | Microsoft Docs
+ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,30 +21,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "121"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e003b5e3e50b8c19bfbbb059926b73e4113280b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Suporte ao navegador para Reporting Services e Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Saiba mais sobre o navegador versões têm suporte para gerenciar e exibir o SQL Server Reporting Services, os controles ReportViewer e Power View.
+Saiba mais sobre quais versões de navegador têm suporte para gerenciar e exibir o SQL Server Reporting Services, os Controles ReportViewer e o Power View.
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Requisitos de navegador para o portal da web
+## <a name="browser-requirements-for-the-web-portal"></a>Requisitos de navegador para o portal da Web
 
-Esta é a lista atual de navegadores com suporte para o portal da web.
+Veja a seguir a lista atual de navegadores com suporte para o portal da Web.
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -155,12 +154,11 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Localizando e exibindo relatórios no portal da web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Localizar e exibir relatórios no Portal da Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Ferramentas do Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portal da Web (Modo Nativo do SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 

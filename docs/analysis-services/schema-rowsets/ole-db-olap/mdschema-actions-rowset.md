@@ -2,39 +2,33 @@
 title: Conjunto de linhas MDSCHEMA_ACTIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_ACTIONS
+apiname: MDSCHEMA_ACTIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_ACTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abd044460f463b952eb6fbd88cd7d7a4ea2821
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemaactions-rowset"></a>Conjunto de linhas MDSCHEMA_ACTIONS
-  Descreve as ações que podem estar disponíveis ao aplicativo cliente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as ações que podem estar disponíveis para o aplicativo cliente.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_ACTIONS** linhas contém as seguintes colunas.  
@@ -79,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  Aplicativos cliente podem definir mais de um **ACTION_TYPE** usando o operador OR.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista o válido **COORDENAR** e **COORDINATE_TYPE** combinações.  
   
 |tipo de objeto COORDINATE|COORDINATE_TYPE|  
@@ -92,8 +86,7 @@ ms.lasthandoff: 09/01/2017
 |**Definir**|**MDACTION_COORDINATE_SET**|  
 |**célula**|**MDACTION_COORDINATE_CELL**|  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

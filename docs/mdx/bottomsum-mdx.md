@@ -2,10 +2,13 @@
 title: BottomSum (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: BOTTOMSUM
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e7175a655406dd27f11c2594ad53dfc233a6c1a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ea22390b27a2ec2925cbdbc3d4d6ae257b2675dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Classifica um conjunto especificado em ordem crescente e retorna um conjunto de tuplas com os valores mais baixos, cuja soma é igual a ou menor que um valor especificado.  
   
@@ -45,7 +48,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **BottomSum** função calcula a soma de uma medida especificada avaliada em um conjunto especificado, classificando o conjunto em ordem crescente. Em seguida, a função retorna os elementos com os valores mais baixos, cujo total da expressão numérica especificada seja, pelo menos, o valor especificado (soma). Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o valor especificado. Os elementos retornados são classificados do menor para maior.  
   
 > [!IMPORTANT]  
@@ -72,7 +75,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
   
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,39 +1,41 @@
 ---
-title: ALTERAR a fonte de dados externa (Transact-SQL) | Microsoft Docs
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
 - ALTER_EXTERNAL_DATA_SOURCE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 028a300c8dc6b295a0f10b3cb137809c81c4af95
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 16ea77011039c1b48ab83bfd335028c83c6f3c3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-data-source-transact-sql"></a>ALTERAR a fonte de dados externa (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifica uma fonte de dados externa usada para criar uma tabela externa. Fonte de dados externa pode ser o armazenamento de BLOBs do Azure ou Hadoop (WASB).  
+  Modifica uma fonte de dados externa usada para criar uma tabela externa. Fonte de dados externa pode ser o armazenamento de BLOBs do Azure ou Hadoop (WASB).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,14 +69,14 @@ ALTER EXTERNAL DATA SOURCE data_source_name
   
  CREDENCIAL = Credential_Name Especifica a credencial nomeada. Consulte [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-TIPO = BLOB_STORAGE   
+TYPE = BLOB_STORAGE   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Para as operações em massa, `LOCATION` devem ser válidas a URL para o armazenamento de BLOBs do Azure. Não coloque  **/** , nome de arquivo ou compartilhado parâmetros de assinatura de acesso no final de `LOCATION` URL.
 A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
   
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  Somente a única fonte pode ser modificado por vez. Solicitações simultâneas para modificar a mesma fonte de fazer com que uma instrução de espera. No entanto, as fontes diferentes podem ser modificados ao mesmo tempo. Essa instrução pode executar simultaneamente com outras instruções.
   
 ## <a name="permissions"></a>Permissões  

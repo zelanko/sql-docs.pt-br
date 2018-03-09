@@ -2,16 +2,13 @@
 title: Usando DRILLTHROUGH para recuperar dados de origem (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - queries [MDX], DRILLTHROUGH statement
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1749970e49904d8788c08f8be29cd20d189ebca3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9470c5edd50bab3622ad73f3e3404a4747b07dd7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Manipulação de dados MDX - recuperar dados de origem usando o DETALHAMENTO
-  As expressões multidimensionais (MDX) usam a instrução [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)para recuperar um conjunto de linhas dos dados de origem de uma célula de cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+As expressões multidimensionais (MDX) usam a instrução [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)para recuperar um conjunto de linhas dos dados de origem de uma célula de cubo.  
   
  Para executar uma instrução **DRILLTHROUGH** em um cubo, uma ação de drillthrough deve ser definida para esse cubo. Para definir a ação de drillthrough, no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], no Designer de Cubo, no painel **Ações** , na barra de ferramentas, clique em **Nova Ação de Drillthrough**. Na nova ação de drillthrough, especifique o nome da ação, o destino, a condição e as colunas que serão retornadas pela instrução **DRILLTHROUGH** .  
   
@@ -66,7 +63,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Manipulando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipulação de dados &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

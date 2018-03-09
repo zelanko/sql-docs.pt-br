@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQLCancelHandle
-helpviewer_keywords:
-- SQLCancelHandle function [ODBC]
+f1_keywords: SQLCancelHandle
+helpviewer_keywords: SQLCancelHandle function [ODBC]
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3760400f23b558c27cd70a3ecd288171cbd56534
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 769f1659436f4325e25f0898c759d25327a795be
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle
 **Conformidade**  
@@ -114,8 +110,7 @@ SQLRETURN SQLCancelHandle(
 |---------------------------|---------|  
 |Cancelando uma função em execução assíncrona em um identificador de instrução, cancelamento de uma função em uma instrução que precisa de dados, ou cancelar uma função em execução em uma instrução em outro thread.|[Função SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

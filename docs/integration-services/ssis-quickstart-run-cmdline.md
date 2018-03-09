@@ -1,53 +1,50 @@
 ---
-title: Executar um pacote do SSIS no prompt de comando | Microsoft Docs
+title: Executar um pacote do SSIS por meio do prompt de comando | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a33b8518ec3284f5de73d38c87209057dc1c7487
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 8d5c64fa4ba32ebd9e95d728b3a7655b523d9627
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Executar um pacote do SSIS no prompt de comando com DTExec.exe
-Este tutorial de início rápido demonstra como executar um pacote do SSIS no prompt de comando executando `DTExec.exe` com os parâmetros apropriados.
+Este tutorial de início rápido demonstra como executar um pacote do SSIS por meio do prompt de comando executando `DTExec.exe` com os parâmetros apropriados.
 
 > [!NOTE]
-> O método descrito neste artigo não foi testado com os pacotes implantados em um servidor de banco de dados SQL.
+> O método descrito neste artigo não foi testado com os pacotes implantados em um servidor de Banco de Dados SQL do Azure.
 
-Para obter mais informações sobre `DTExec.exe`, consulte [utilitário dtexec](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
+Para obter mais informações sobre o `DTExec.exe`, consulte [Utilitário dtexec](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
 
 ## <a name="run-a-package-with-dtexec"></a>Executar um pacote com dtexec
 
-Se a pasta que contém `DTExec.exe` não está no seu `path` variável de ambiente, talvez você precise usar o `cd` comando para alterar para seu diretório. Para SQL Server 2017, essa pasta é normalmente `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+Se a pasta que contém `DTExec.exe` não está na variável de ambiente `path`, talvez você precise usar o comando `cd` para mudar para o diretório dela. Para SQL Server 2017, essa pasta normalmente é `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
-Com os valores de parâmetro usados no exemplo a seguir, o programa é executado o pacote no caminho da pasta especificada no servidor do SSIS - ou seja, o servidor que hospeda o banco de dados do catálogo do SSIS (SSISDB). O `/Server` parâmetro fornece o nome do servidor. O programa se conectar como o usuário atual com a autenticação integrada do Windows. Para usar a autenticação do SQL, especifique o `/User` e `Password` parâmetros com valores apropriados.
+Com os valores de parâmetro usados no exemplo a seguir, o programa executa o pacote no caminho da pasta especificada no servidor do SSIS – ou seja, o servidor que hospeda o SSISDB (banco de dados do Catálogo do SSIS). O parâmetro `/Server` fornece o nome do servidor. O programa se conecta como o usuário atual com a Autenticação Integrada do Windows. Para usar a autenticação do SQL, especifique os parâmetros `/User` e `Password` com valores apropriados.
 
 1. Abra uma janela do prompt de comando.
 
-2. Executar `DTExec.exe` e forneça valores pelo menos para o `ISServer` e `Server` parâmetros, conforme mostrado no exemplo a seguir:
+2. Execute `DTExec.exe` e forneça valores pelo menos para os parâmetros `ISServer` e `Server`, conforme mostrado no exemplo a seguir:
 
     ```cmd
     dtexec /ISServer "\SSISDB\Project1Folder\Integration Services Project1\Package.dtsx" /Server "localhost"
     ```
 
 ## <a name="next-steps"></a>Próximas etapas
-- Considere a possibilidade de outras maneiras de executar um pacote.
+- Considere outras maneiras de executar um pacote.
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (VS código)](ssis-quickstart-run-tsql-vscode.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Executar um pacote do SSIS com o PowerShell](ssis-quickstart-run-powershell.md)
-    - [Executar um pacote do SSIS com c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md) 

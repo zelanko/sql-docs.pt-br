@@ -2,13 +2,14 @@
 title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,30 +26,31 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b3474499df5f06198377ff824c14358a86900b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > Para o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
 Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Se um firewall estiver ativado mas não corretamente configurado, as tentativas de conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão ser bloqueadas.  
   
-Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O firewall é um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Você também pode instalar um firewall de outra empresa. Este tópico discute como configurar o firewall do Windows, mas os princípios básicos se aplicam a outros programas de firewall.  
+Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O firewall é um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Você também pode instalar um firewall de outra empresa. Este artigo discute como configurar o Firewall do Windows, mas os princípios básicos se aplicam a outros programas de firewall.  
   
 > [!NOTE]  
->  Este tópico apresenta uma visão geral da configuração do firewall e resume informações de interesse de um administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre o firewall e informações sobre firewall autoritativo, consulte a documentação do firewall, como [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  Este artigo apresenta uma visão geral da configuração do firewall e resume informações de interesse de um administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o firewall e informações sobre firewall autoritativo, consulte a documentação do firewall, como [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Os usuários que já estão familiarizados com o item **Firewall do Windows** no Painel de Controle e com o snap-in Firewall do Windows com Segurança Avançada do MMC (Console de Gerenciamento Microsoft) e sabem as configurações de firewall que desejam definir podem passar diretamente para os tópicos desta lista:  
+ Os usuários que já estão familiarizados com o item **Firewall do Windows** no Painel de Controle e com o snap-in Firewall do Windows com Segurança Avançada do MMC (Console de Gerenciamento Microsoft) e sabem as configurações de firewall que desejam definir podem passar diretamente para os artigos desta lista:  
   
 -   [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -65,7 +67,7 @@ Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 -   Um administrador configura as exceções do firewall. Isto permite acesso a determinados programas executados em seu computador ou acesso a portas de conexão especificadas do computador. Nesse caso, o computador aceita tráfego de entrada não solicitado quando funciona como servidor, ouvinte ou item par. Esse é o tipo de configuração que deve ser concluída para que se possa estabelecer conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Escolher a estratégia de firewall é uma tarefa mais complexa do que simplesmente decidir se uma dada porta deve ficar aberta ou fechada. Ao elaborar uma estratégia de firewall para sua empresa, é importante que você considere todas as regras e opções de configuração disponíveis. Este tópico não examina todas as possíveis opções de firewall. É recomendável analisar os seguintes documentos:  
+ Escolher a estratégia de firewall é uma tarefa mais complexa do que simplesmente decidir se uma dada porta deve ficar aberta ou fechada. Ao elaborar uma estratégia de firewall para sua empresa, é importante que você considere todas as regras e opções de configuração disponíveis. Este artigo não examina todas as possíveis opções de firewall. É recomendável analisar os seguintes documentos:  
   
  [Guia de Introdução ao Firewall do Windows com Segurança Avançada](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -84,11 +86,11 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
 
 -  **Console de Gerenciamento Microsoft (MMC)**  
   
-     O snap-in do MMC Firewall do Windows com Segurança Avançada permite definir configurações de firewall mais avançadas. Este snap-in apresenta a maioria das opções de firewall de um jeito fácil de usar, além de todos os perfis de firewall. Para obter mais informações, veja [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc) , mais adiante neste tópico.  
+     O snap-in do MMC Firewall do Windows com Segurança Avançada permite definir configurações de firewall mais avançadas. Este snap-in apresenta a maioria das opções de firewall de um jeito fácil de usar, além de todos os perfis de firewall. Para obter mais informações, veja [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc), mais adiante neste artigo.  
   
 -   **netsh**  
   
-     A ferramenta **netsh.exe** pode ser usada por um administrador para configurar e monitorar computadores baseados no Windows em um prompt de comando ou por meio de um arquivo em lotes**.** Com a ferramenta **netsh** , você pode direcionar os comandos de contexto inseridos para o auxiliar apropriado que, em seguida, executará o comando. Um auxiliar é um arquivo .dll (Dynamic Link Library) que estende a funcionalidade da ferramenta **netsh** fornecendo configuração, monitoramento e suporte para um ou mais serviços, utilitários ou protocolos. Todos os sistemas operacionais que dão suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm um auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] também possui um auxiliar avançado de firewall chamado **advfirewall**. Os detalhes sobre como usar o **netsh** não são abordados neste tópico. No entanto, muitas das opções de configuração descritas podem ser configuradas usando o **netsh**. Por exemplo, execute o seguinte script em um prompt de comando para abrir a porta TCP 1433:  
+     A ferramenta **netsh.exe** pode ser usada por um administrador para configurar e monitorar computadores baseados no Windows em um prompt de comando ou por meio de um arquivo em lotes**.** Com a ferramenta **netsh** , você pode direcionar os comandos de contexto inseridos para o auxiliar apropriado que, em seguida, executará o comando. Um auxiliar é um arquivo .dll (Dynamic Link Library) que estende a funcionalidade da ferramenta **netsh** fornecendo configuração, monitoramento e suporte para um ou mais serviços, utilitários ou protocolos. Todos os sistemas operacionais que dão suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm um auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] também possui um auxiliar avançado de firewall chamado **advfirewall**. Os detalhes sobre como usar o **netsh** não são abordados neste artigo. No entanto, muitas das opções de configuração descritas podem ser configuradas usando o **netsh**. Por exemplo, execute o seguinte script em um prompt de comando para abrir a porta TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -116,7 +118,7 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
   
 |Cenário|Porta|Comentários|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando sobre TCP|Porta TCP 1433|Esta é a porta mais comum permitida pelo firewall. Ela se aplica a conexões de rotina com a instalação padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou com uma instância nomeada, que é a única em execução no computador. (Existem considerações especiais para instâncias nomeadas. Veja [Portas dinâmicas](#BKMK_dynamic_ports) , mais adiante neste tópico.)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando sobre TCP|Porta TCP 1433|Esta é a porta mais comum permitida pelo firewall. Ela se aplica a conexões de rotina com a instalação padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou com uma instância nomeada, que é a única em execução no computador. (Existem considerações especiais para instâncias nomeadas. Veja [Portas Dinâmicas](#BKMK_dynamic_ports) mais adiante neste artigo.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na configuração padrão|A porta TCP é uma porta dinâmica determinada no momento em que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é iniciado.|Consulte a discussão abaixo, na seção [Portas dinâmicas](#BKMK_dynamic_ports). A porta UDP 1434 pode ser necessária para o Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando você usa instâncias nomeadas.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando configuradas para usar uma porta fixa|O número de porta configurado pelo administrador.|Consulte a discussão abaixo, na seção [Portas dinâmicas](#BKMK_dynamic_ports).|  
 |Conexão de Administrador Dedicada|Porta TCP 1434 para a instância padrão. Outras portas são usadas para instâncias nomeadas. Verifique o número da porta no log de erros.|Por padrão, as conexões remotas com a Conexão de Administrador Dedicada (DAC) não são habilitadas. Para habilitar a DAC remota, use a faceta Configuração da Área da Superfície. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
@@ -124,7 +126,7 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando em um ponto de extremidade HTTP.|Pode ser especificada quando um ponto de extremidade HTTP é criado. O padrão é a porta TCP 80 para tráfego CLEAR_PORT e 443 para tráfego SSL_PORT.|Usada para uma conexão HTTP por meio de uma URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando sobre um ponto de extremidade HTTPS|Porta TCP 443|Usada para uma conexão HTTPS por meio de uma URL. HTTPS é uma conexão HTTP que usa o protocolo SSL.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Porta TCP 4022. Para verificar a porta usada, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Não existe uma porta padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mas esta é a configuração convencional usada nos exemplos dos Manuais Online.|  
-|Espelhamento de Banco de Dados|Porta escolhida pelo administrador. Para determinar a porta, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Não existe uma porta padrão para o espelhamento de banco de dados, mas os exemplos dos Manuais Online usam a porta TCP 7022. É muito importante evitar interromper um ponto de extremidade de espelhamento em uso, principalmente no modo de alta segurança com failover automático. Sua configuração de firewall deve evitar dividir o quorum. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Espelhamento de banco de dados|Porta escolhida pelo administrador. Para determinar a porta, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Não existe uma porta padrão para o espelhamento de banco de dados, mas os exemplos dos Manuais Online usam a porta TCP 5022 ou 7022. É muito importante evitar interromper um ponto de extremidade de espelhamento em uso, principalmente no modo de alta segurança com failover automático. Sua configuração de firewall deve evitar dividir o quorum. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replicação|As conexões de replicação com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam as portas normais típicas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] (porta TCP 1433 para a instância padrão etc.)<br /><br /> A sincronização da Web e o acesso FTP/UNC para instantâneo de replicação exigem a abertura de portas adicionais no firewall. Para transferir o esquema e os dados iniciais de um local para outro, a replicação pode usar o FTP (porta TCP 21) ou sincronizar via HTTP (porta TCP 80) ou Compartilhamento de Arquivos. O compartilhamento de arquivos usa a porta UDP 137 e 138, e a porta TCP 139 caso esteja usando o NetBIOS. O compartilhamento de arquivos usa a porta TCP 445.|Para sincronização por HTTP, a replicação usa o ponto de extremidade do IIS (portas configuráveis, mas o padrão é a porta 80), mas o processo do IIS se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] back-end através das portas padrão (1433 para a instância padrão).<br /><br /> Durante a sincronização da Web usando FTP, a transferência por FTP ocorre entre o IIS e o publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e não entre o assinante e o IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)<br /><br /> A exceção [IPsec](#BKMK_IPsec) também pode ser necessária.|Se estiver usando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no computador host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , você também deverá adicionar **Devenv.exe** à lista Exceções e abrir a porta TCP 135.<br /><br /> Se estiver usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], no computador host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , você também deverá adicionar **ssms.exe** à lista Exceções e abrir a porta TCP 135. Para obter mais informações, veja [Configurar regras de firewall antes de executar o Depurador TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
@@ -316,7 +318,7 @@ A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](..
   
 -   O utilitário **PortQry** pode ser usado para relatar o status das portas TCP/IP como escutando, não escutando ou filtrado. (Com o status filtrado, a porta pode ou não estar escutando; esse status indica que o utilitário não recebeu uma resposta da porta.) O utilitário **PortQry** está disponível para download no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de serviços e requisitos de porta de rede para o sistema do Windows Server](http://support.microsoft.com/kb/832017)   
  [Como: definir as configurações do Firewall (Banco de Dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   

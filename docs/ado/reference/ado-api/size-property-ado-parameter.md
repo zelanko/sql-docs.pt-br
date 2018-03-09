@@ -3,7 +3,7 @@ title: "Tamanho de propriedade (parâmetro ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1959316966e284ab1f7880d6afcaa4820c009556
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73a6f0f2cd2e0d59ba6cd3e581e9f2aab8934c5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="size-property-ado-parameter"></a>Propriedade Size (parâmetro ADO)
 Indica o tamanho máximo, em bytes ou caracteres, de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -36,7 +35,7 @@ Indica o tamanho máximo, em bytes ou caracteres, de um [parâmetro](../../../ad
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que indica o tamanho máximo em bytes ou caracteres de um valor em uma **parâmetro** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **tamanho** propriedade para determinar o tamanho máximo de valores gravado ou lido a partir de [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade de um **parâmetro** objeto.  
   
  Se você especificar um tipo de dados de comprimento variável para um **parâmetro** objeto (por exemplo, qualquer **cadeia de caracteres** tipo, como **adVarChar**), você deve definir o objeto  **Tamanho** propriedade antes de acrescentá-lo para o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção; caso contrário, ocorrerá um erro.  
@@ -55,4 +54,3 @@ Indica o tamanho máximo, em bytes ou caracteres, de um [parâmetro](../../../ad
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Propriedade Size (Fluxo do ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)
-

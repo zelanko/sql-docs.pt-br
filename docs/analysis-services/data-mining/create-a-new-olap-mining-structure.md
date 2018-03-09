@@ -2,15 +2,13 @@
 title: "Criar uma nova estrutura de mineração OLAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
-  Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para criar uma nova estrutura de mineração OLAP  
   
@@ -139,7 +137,6 @@ ms.lasthandoff: 09/01/2017
      **Criar cubo usando a dimensão do modelo de mineração**: marque esta caixa de seleção e forneça um nome para o novo cubo. Quando você usa esta opção, um novo cubo é criado, contendo as dimensões existentes, que foram usadas para criar a estrutura, e a nova dimensão de mineração de dados, contendo os resultados do modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

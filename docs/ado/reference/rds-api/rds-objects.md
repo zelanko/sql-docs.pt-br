@@ -1,27 +1,30 @@
 ---
 title: Objetos RDS | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 217fb3282f843c2bba6963a48b6a50212e7da7dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aac19cd0fadb642ba8b18550694e1b54dba46d87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-objects"></a>Objetos RDS
 > [!IMPORTANT]

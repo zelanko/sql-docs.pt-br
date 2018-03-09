@@ -22,13 +22,13 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
  A réplica primária envia registros de log de alterações no banco de dados primário para as réplicas secundárias. Em cada banco de dados secundário, um thread de restauração dedicado aplica os registros de log. Em um banco de dados secundário de acesso de leitura, uma determinada alteração de dados não aparece nos resultados da consulta até que o registro de log que contém a alteração seja aplicado ao banco de dados secundário e a transação seja confirmada no banco de dados primário.  
   
- Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem afunilamentos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
+ Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem gargalos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latência de dados em banco de dados com tabelas com otimização de memória  
  No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], havia considerações especiais relativas à latência de dados em secundárias ativas – consulte [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundárias ativas: réplicas secundárias legíveis](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , não há considerações especiais em relação à latência de dados em tabelas com otimização de memória. A latência de dados esperada para tabelas com otimização de memória é comparável à latência para tabelas baseadas em disco.  
@@ -210,7 +210,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
  Os níveis de isolamento de transação que podem ser usados com tabelas com otimização de memória em uma réplica secundária são os mesmos que na réplica primária. A recomendação é definir o nível de isolamento no nível de sessão como READ COMMITTED e definir a opção no nível de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. Por exemplo:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -237,12 +237,12 @@ GO
   
     |Réplica secundária legível?|O isolamento do instantâneo ou nível RCSI está habilitado?|Banco de dados primário|Banco de dados secundário|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |Não|Não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
-    |Não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
-    |Sim|Não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
+    |não|não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
+    |não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
+    |Sim|não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
     |Sim|Sim|Versões de linha e sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="bkmk_RelatedTasks"></a> Tarefas Relacionadas  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -260,7 +260,7 @@ GO
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

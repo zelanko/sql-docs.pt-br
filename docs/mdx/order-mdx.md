@@ -2,10 +2,13 @@
 title: Ordem (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ORDER
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f2d5c411729b51b4daeaccb53162defb1a7625dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="order-mdx"></a>Order (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Organiza membros de um conjunto especificado, preservando opcionalmente ou quebrando a hierarquia.  
   
@@ -52,7 +55,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Uma expressão de cadeia de caracteres válida, geralmente uma expressão MDX válida de coordenadas de célula, que retorna um número expresso como uma cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ordem** função pode ser hierárquica (conforme especificado por meio a **ASC** ou **DESC** sinalizador) ou não hierárquico (conforme especificado por meio de **BASC** ou **BDESC** sinalizador; o **B** significa "quebra de hierarquia"). Se **ASC** ou **DESC** for especificado, o **ordem** função primeiro organizará os membros de acordo com sua posição na hierarquia e, em seguida, ordenará cada nível. Se **BASC** ou **BDESC** for especificado, o **ordem** função organiza os membros do conjunto independentemente da hierarquia. Nenhum sinalizador for especificado, **ASC** é o padrão.  
   
  Se o **ordem** função é usada com um conjunto onde duas ou mais hierarquias são interjuntadas e o **DESC** sinalizador for usado, somente os membros da última hierarquia no conjunto são ordenados. Esta é uma alteração do Analysis Services 2000 onde foram ordenadas todas as hierarquias no conjunto.  
@@ -218,7 +221,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

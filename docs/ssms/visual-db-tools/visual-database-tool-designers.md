@@ -3,8 +3,11 @@ title: Designers do Visual Database Tool | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
-O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
   
 ## <a name="properties-window"></a>Janela Propriedades  
 A janela de propriedades não é específica do Visual Database Tools, mas é onde muitas modificações podem ser feitas. Ela mostra as propriedades atuais do item selecionado (como uma tabela) e permite a edição dessas propriedades (tudo, do nome das propriedades até o agrupamento de uma coluna). Algumas propriedades podem ser observadas na janela de propriedades, mas devem ser modificadas em outra ferramenta.  
@@ -89,7 +92,7 @@ Quando o designer é aberto, o menu **Designer de Consultas** é exibido no menu
 >   
 > Essa versão do Visual Database Tools não dá suporte ao Microsoft SQL Server versão 7 e anteriores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [Criar tabelas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -2,10 +2,14 @@
 title: Especificar metapropriedades no OPENXML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
-  Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
   
  Você pode mapear essas metapropriedades para as colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* . As colunas conterão os valores das metapropriedades para as quais elas são mapeadas. Para obter mais informações sobre a sintaxe do OPENXML, consulte [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Não é possível fazer referência a essas metapropriedades em qualquer navegação XPath.  
   
-|Atributo de metapropriedade|Descrição|  
+|Atributo de metapropriedade|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
 |**@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
@@ -51,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
-|Atributo de metapropriedade pai|Descrição|  
+|Atributo de metapropriedade pai|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Corresponde a **../@mp:id**|  
 |**@mp:parentlocalname**|Corresponde a **../@mp:localname**|  
@@ -214,7 +219,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

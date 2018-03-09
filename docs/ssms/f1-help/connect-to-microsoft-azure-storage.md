@@ -3,8 +3,11 @@ title: Conectar ao Armazenamento do Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid:
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb66aa6f65eb0e1c8b0de50de11a9cc3e090bc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f6948e2719018550a07b9b20087bcfc255ef72cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
-Use a caixa de diálogo **Conexão de Armazenamento do Windows Azure** para especificar uma conta de armazenamento e validar sua conexão com o Windows Azure.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Conexão de Armazenamento do Microsoft Azure** para especificar uma conta de armazenamento e validar sua conexão com o Microsoft Azure.  
   
 ## <a name="options"></a>Opções  
 Especifique as informações a seguir sobre sua conta do Windows Azure e clique em **Avançar** para continuar.  

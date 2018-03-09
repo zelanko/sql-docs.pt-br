@@ -3,8 +3,9 @@ title: Provedor Microsoft OLE DB para ODBC | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral ODBC
 Para um programador ADO ou RDS, um mundo ideal seria um no qual todos os dados de origem expõe uma interface OLE DB, para que o ADO poderia chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso hoje podem ser acessados por meio de ODBC.
@@ -86,7 +87,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  Se você usar um **DSN** ou **FileDSN**, ele deverá ser definido por meio de administrador de fonte de dados do ODBC no painel de controle do Windows. No Microsoft Windows 2000, o administrador ODBC está localizado em Ferramentas administrativas. Em versões anteriores do Windows, o ícone de administrador de ODBC é denominado **ODBC de 32 bits** ou apenas **ODBC**.
 
  Como alternativa à configuração de um **DSN**, você pode especificar o driver ODBC (**DRIVER =**), como "SQL Server"; o nome do servidor (**SERVER =**); e o nome do banco de dados (**Banco de dados =**).
@@ -145,7 +146,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 "{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
 ```
 
- Cada **?** faz referência a um objeto de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. A primeira **?** referências **parâmetros**(0), a próxima **?** referências **parâmetros**(1), e assim por diante.
+ Each **?** faz referência a um objeto de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. A primeira **?** referências **parâmetros**(0), a próxima **?** referências **parâmetros**(1), e assim por diante.
 
  As referências de parâmetro são opcionais e dependem da estrutura do procedimento armazenado. Se você quiser chamar um procedimento armazenado que define sem parâmetros, a cadeia de caracteres seria semelhante ao seguinte:
 
@@ -184,12 +185,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|somente leitura|somente leitura|somente leitura|somente leitura|
-|[Indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|não disponível|não disponível|leitura/gravação|leitura/gravação|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|somente leitura|somente leitura|somente leitura|somente leitura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
+|[Filtro](../../../ado/reference/ado-api/filter-property.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
@@ -210,20 +211,20 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|não|Não|Sim|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
+|[Delete (excluir) (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Sim|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|não|Sim|Sim|Sim|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|não|Sim|Sim|Sim|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Sim|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
-|[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
-|[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|não|Não|Sim|Sim|
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
 |[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|
 

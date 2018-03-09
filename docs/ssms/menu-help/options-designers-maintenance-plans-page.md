@@ -3,8 +3,11 @@ title: "Opções (página Designers – Planos de Manutenção) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1bacc1904e7a509c98653683211b9d0cbeda86d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opções (página Designer – Planos de manutenção)
-Use a caixa de diálogo **Opções** para determinar o comportamento padrão do designer quando novas formas forem adicionadas à superfície de design. No menu **Ferramentas** , clique em **Opções**, expanda **Designers**e selecione **Planos de Manutenção**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Opções** para determinar o comportamento padrão do designer quando novas formas forem adicionadas à superfície de design. No menu **Ferramentas** , clique em **Opções**, expanda **Designers**e selecione **Planos de Manutenção**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
 **Conecte uma nova forma à forma selecionada por padrão**  

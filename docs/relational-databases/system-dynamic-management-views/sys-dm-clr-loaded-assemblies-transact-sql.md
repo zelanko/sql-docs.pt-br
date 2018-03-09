@@ -1,5 +1,5 @@
 ---
-title: sys.DM clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_loaded_assemblies_TSQL
 - dm_clr_loaded_assemblies_TSQL
 - sys.dm_clr_loaded_assemblies
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_loaded_assemblies dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44005aa828f6c8225832f961a7f32b8be8c5566e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a5c24a05e1f33512234edafd3fb6d2672a8eee6a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +43,14 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|ID do assembly carregado. O **assembly_id** pode ser usado para consultar mais informações sobre o assembly no [sys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) exibição do catálogo. Observe que o [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catálogo mostra os assemblies de banco de dados atual. O **sqs.dm_clr_loaded_assemblies** exibição mostra todos os assemblies carregados no servidor.|  
-|**appdomain_address**|**int**|Endereço do domínio do aplicativo (**AppDomain**) no qual o assembly é carregado. Todos os assemblies de propriedade de um único usuário são sempre carregados no mesmo **AppDomain**. O **appdomain_address** pode ser usado para pesquisar mais informações sobre o **AppDomain** no [sys.DM clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) exibição.|  
+|**assembly_id**|**Int**|ID do assembly carregado. O **assembly_id** pode ser usado para consultar mais informações sobre o assembly no [sys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) exibição do catálogo. Observe que o [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catálogo mostra os assemblies de banco de dados atual. O **sqs.dm_clr_loaded_assemblies** exibição mostra todos os assemblies carregados no servidor.|  
+|**appdomain_address**|**Int**|Endereço do domínio do aplicativo (**AppDomain**) no qual o assembly é carregado. Todos os assemblies de propriedade de um único usuário são sempre carregados no mesmo **AppDomain**. O **appdomain_address** pode ser usado para pesquisar mais informações sobre o **AppDomain** no [sys.DM clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) exibição.|  
 |**load_time**|**datetime**|Hora em que o assembly foi carregado. Observe que o assembly permanece carregado até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sob pressão de memória e descarrega o **AppDomain**. Você pode monitorar **load_time** para entender com que frequência [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vem sob pressão de memória e descarrega o **AppDomain**.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **dm_clr_appdomains** exibição tem uma relação muitos-para-um com **dm_clr_appdomains**. O **dm_clr_loaded_assemblies** exibição tem uma relação um-para-muitos com **assembly_id**.  
   
 ## <a name="examples"></a>Exemplos  

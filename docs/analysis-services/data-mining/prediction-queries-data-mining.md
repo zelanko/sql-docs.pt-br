@@ -2,32 +2,30 @@
 title: "Consultas de previsão (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
-  O objetivo de um projeto de mineração de dados típico é usar o modelo de mineração para fazer previsões. Por exemplo, você pode querer prever a quantidade de tempo de inatividade esperado para um determinado cluster de servidores ou gerar uma pontuação que indica a probabilidade de os segmentos de clientes responderem a uma campanha publicitária. Para fazer todas estas coisas, você cria uma consulta de previsão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O objetivo de um projeto de mineração de dados típico é usar o modelo de mineração para fazer previsões. Por exemplo, você pode querer prever a quantidade de tempo de inatividade esperado para um determinado cluster de servidores ou gerar uma pontuação que indica a probabilidade de os segmentos de clientes responderem a uma campanha publicitária. Para fazer todas estas coisas, você cria uma consulta de previsão.  
   
  Funcionalmente, há tipos diferentes de consultas de previsão com suporte no SQL Server, dependendo do tipo de entradas à consulta:  
   
@@ -157,8 +155,7 @@ FROM
  Se o provedor não puder manipular conjuntos de linhas hierárquicos, você poderá mesclar os resultados usando a palavra-chave FLATTEN na consulta de previsão. Para obter mais informações, inclusive exemplos de conjuntos de linhas bidimensionais, consulte [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de conteúdo &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Consultas de definição de dados &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Conteúdo de consultas &#40; mineração de dados &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Consultas de definição de dados &#40; mineração de dados &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
-

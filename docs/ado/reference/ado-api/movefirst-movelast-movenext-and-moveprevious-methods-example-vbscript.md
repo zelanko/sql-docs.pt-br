@@ -3,7 +3,7 @@ title: Mova o ponteiro do registro de exemplo de conjunto de registros (VBScript
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VBScript example
 - MoveFirst method [ADO], VBScript example
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fd1569ee7b88c9f8e59bfedb7e41b9ca7b715982
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b85d223f9c5b48d3426f9daf4159a021cbb9d2b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VBScript)
 Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover o ponteiro do registro de um [Registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido.  
@@ -194,4 +193,3 @@ Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast
 ## <a name="see-also"></a>Consulte também  
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

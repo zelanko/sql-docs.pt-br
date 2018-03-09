@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STCentroid (geometry Data Type)
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c34e8eb334190b72a560086a9d5e862ba6667dec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7b818474bff0f7f233eb3ee06ba1b2a8dfb8c567
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ Retorna o centro Geométrico de uma **geometria** instância que consiste em um 
   
  Abra o tipo Geospatial Consortium (OGC): **ponto**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STCentroid()`retornará nulo se o **geometria** instância não é um **Polygon, CurvePolygon**, ou **MultiPolygon** tipo.  
   
 ## <a name="examples"></a>Exemplos  
@@ -74,8 +73,7 @@ SELECT @g.STCentroid().ToString();
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

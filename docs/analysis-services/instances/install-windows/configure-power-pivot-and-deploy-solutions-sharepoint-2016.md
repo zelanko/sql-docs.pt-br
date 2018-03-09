@@ -2,31 +2,30 @@
 title: "Configurar o PowerPivot e implantar soluções (SharePoint 2016) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2016)
-  Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , incluindo a Galeria [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute a ferramenta de **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para concluir o seguinte:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , incluindo a Galeria [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute a ferramenta de **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para concluir o seguinte:  
   
 -   Implantar os arquivos de solução do SharePoint.  
   
@@ -35,18 +34,6 @@ ms.lasthandoff: 09/01/2017
 -   Para obter informações sobre serviços de back-end e sobre como instalar um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , consulte [Instale o Analysis Services no modo do Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Para obter informações sobre como instalar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para a ferramenta de configuração do SharePoint 2016, consulte [instalar ou desinstalar o PowerPivot para SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- Este tópico contém as seguintes seções:  
-  
- [Executar a configuração do Power Pivot para SharePoint 2016](#bkmk_run_configuration_tool)  
-  
- [Verificar a configuração do Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Solucionar problemas](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Executar a configuração do Power Pivot para SharePoint 2016  
  **Observação:** para concluir as etapas a seguir, você deve ser um administrador de farm. Se uma mensagem de erro semelhante à seguinte for exibida:  
@@ -142,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  Para obter mais informações sobre a ferramenta de configuração, consulte [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

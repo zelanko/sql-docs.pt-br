@@ -2,28 +2,34 @@
 title: "Caixa de diálogo QuickWatch | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.quickwatch
-helpviewer_keywords: QuickWatch Dialog [Transact-SQL]
+f1_keywords:
+- vs.debug.quickwatch
+helpviewer_keywords:
+- QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef8bb83c91b0f0b7d576c087db2666810a3a5bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3b655a3f433c0957b36dc639c3f1d7f309cd151
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Depurador do Transact-SQL – caixa de diálogo QuickWatch
-  Use a caixa de diálogo **QuickWatch** para exibir rapidamente o tipo e o valor de dados de uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] , como uma variável ou parâmetro, quando você estiver depurando um código [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ao observar várias expressões, você também pode acrescentar a expressão à janela **Inspecionar** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **QuickWatch** para exibir rapidamente o tipo e o valor de dados de uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)], como uma variável ou parâmetro, quando você estiver depurando um código [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao observar várias expressões, você também pode acrescentar a expressão à janela **Inspecionar** .  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar a caixa de diálogo QuickWatch**  
@@ -64,7 +70,7 @@ ms.lasthandoff: 11/09/2017
  **Nome**  
  É a expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] que é inspecionada.  
   
- **Valor**  
+ **Value**  
  Exibe o valor atribuído atualmente à expressão. Um espaço em branco é exibido se atualmente a expressão não tiver nenhum valor.  
   
  Se o comprimento de uma expressão for maior do que a largura da coluna **Valor** , uma dica de ferramenta exibe o valor total quando o ponteiro passa sobre a célula **Valor** daquela expressão.  
@@ -74,7 +80,7 @@ ms.lasthandoff: 11/09/2017
  **Tipo**  
  Exibe o tipo de dados da expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Janela de Observação](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

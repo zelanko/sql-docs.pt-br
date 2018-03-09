@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set nullSET NULL
+helpviewer_keywords: set nullSET NULL
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1050db2b6a50fc794626b6017bd26af05f458a8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 14cade223de7014dd4a0c27295d3ff742d18af17
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-null-command"></a>Comando de conjunto nulo
 Determina como os valores nulos são suportados pelo SQL ALTER TABLE - SQL, criar tabela - e inserir - comandos SQL.  
@@ -48,11 +45,10 @@ SET NULL ON | OFF
   
  Também especifica que inserir - SQL será inserir valores em branco em todas as colunas não incluídas na instrução INSERT - cláusula VALUE de SQL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SET NULL afeta somente como valores nulos são suportados pelo ALTER TABLE, CREATE TABLE e inserir - SQL. Outros comandos não são afetados por SET NULL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE - comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [Criar tabela - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT – comando SQL](../../odbc/microsoft/insert-sql-command.md)
-

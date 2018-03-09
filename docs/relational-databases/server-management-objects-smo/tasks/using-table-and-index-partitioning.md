@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +18,20 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97bb7090df8c92ab960cb252ac0da2d91861878f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>Usando o particionamento de tabela e índice
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dados podem ser armazenados usando os algoritmos de armazenamento fornecidos por [tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dados podem ser armazenados usando os algoritmos de armazenamento fornecidos por [tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
   
 ## <a name="index-and-table-partitioning"></a>Particionamento de tabela e índice  
  O recurso permite a difusão de dados de tabela e índice por vários grupos de arquivos em partições. Uma função de partição define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de certas colunas, chamadas de colunas de particionamento. Um esquema de partição mapeia cada partição especificada pela função de partição para um grupo de arquivos. Isso permite desenvolver estratégias de arquivamento que possibilitam o dimensionamento de tabelas em grupos de arquivos e, portanto, em dispositivos físicos.  

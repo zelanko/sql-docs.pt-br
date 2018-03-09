@@ -27,17 +27,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: db58418025c1659d42c4f1b76a06af8b08ff2ea6
-ms.openlocfilehash: 9e6dad4cbd3e3b64b35f859986b4b7b9928babd5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>Selecione - a cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Especifica uma coluna ou expressão na qual ordenar. *order_by_expression* só podem fazer referência a colunas disponibilizadas pela cláusula FROM. Um número inteiro não pode ser especificado para representar um nome de coluna ou alias.  
   
  COLLATE *collation_name*  
- Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
+ Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
   
  **ASC** | DESC  
  Define que os valores na coluna especificada devem ser classificados em ordem crescente ou decrescente. ASC é a ordem de classificação padrão. Valores nulos são tratados como os menores valores possíveis.  
@@ -198,7 +197,7 @@ Se ROWS/RANGE for especificado e \<quadro de janela anterior > é usado para \<e
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir mostra como usar a cláusula OVER com a função ROW_NUMBER para exibir um número de linha para cada linha em uma partição. A cláusula ORDER BY especificada na cláusula OVER ordena as linhas em cada partição pela coluna `SalesYTD`. A cláusula ORDER BY na instrução SELECT determina a ordem na qual todo o conjunto de resultados da consulta é retornado.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -238,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Usando a cláusula OVER com funções de agregação  
  O exemplo a seguir usa a cláusula `OVER` com funções de agregação sobre todas as linhas retornadas pela consulta. Neste exemplo, o uso da cláusula `OVER` é mais eficiente que o uso de subconsultas para derivar os valores agregados.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -281,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  O exemplo a seguir mostra o uso da cláusula `OVER` com uma função de agregação em um valor calculado.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -325,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. Gerando uma média móvel e o total cumulativo  
  O exemplo a seguir usa as funções AVG e SUM com a cláusula OVER para fornecer uma média móvel e um total cumulativo de vendas anuais para cada território na tabela `Sales.SalesPerson`. Os dados são particionados por `TerritoryID` e ordenados logicamente por `SalesYTD`. Isso significa que a função AVG é computada para cada território com base no ano de vendas. Observe que para `TerritoryID` 1, há duas linhas para o ano de vendas 2005 que representam os dois vendedores com vendas nesse ano. As vendas médias para essas duas linhas são computadas e a terceira linha que representa vendas do ano 2006 é incluída na computação.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -364,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  Neste exemplo, a cláusula OVER não inclui PARTITION BY. Isso significa que a função será aplicada a todas as linhas retornadas pela consulta. A cláusula ORDER BY especificada na cláusula OVER determina a ordem lógica na qual a função AVG é aplicada. A consulta retorna uma média móvel de vendas por ano para todos os territórios de vendas especificados na cláusula WHERE. A cláusula ORDER BY especificada na instrução SELECT determina a ordem na qual as linhas da consulta são exibidas.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -401,7 +400,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  O exemplo a seguir usa a cláusula ROWS para definir uma janela na qual as linhas são computadas como a linha atual e o *N* número de linhas que seguem (1 linha neste exemplo).  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -431,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  No exemplo a seguir, a cláusula ROWS é especificada com UNBOUNDED PRECEDING. O resultado é que a janela inicia na primeira linha da partição.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -465,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir retorna o ROW_NUMBER para representantes de vendas com base em suas cotas de vendas atribuída.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -492,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Usando a cláusula OVER com funções de agregação  
  Os exemplos a seguir mostram usando a cláusula OVER com funções de agregação. Neste exemplo, usando a cláusula OVER é mais eficiente do que o uso de subconsultas.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -524,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  O exemplo a seguir mostra usando a cláusula OVER com uma função de agregação em um valor calculado. Observe que as agregações são calculadas por `SalesOrderNumber` e a porcentagem do pedido de vendas total é calculada para cada linha de cada `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -556,4 +555,3 @@ ORDER BY SalesOrderNumber,ProductKey;
  [Excelente postagem de blog sobre funções de janela e failover, em sqlmag.com, Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
-

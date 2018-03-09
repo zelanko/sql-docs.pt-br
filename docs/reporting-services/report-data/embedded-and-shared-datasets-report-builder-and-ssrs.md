@@ -1,26 +1,27 @@
 ---
-title: "Inseridos e compartilhados (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: c5106507d97ee357f2c88ad565a00c87a7c8964d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS)
   Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. O conjunto de dados depende da conexão de dados que contém informações sobre a fonte de dados externa. Os dados em si não são incluídos na definição de relatório. O conjunto de dados contém um comando de consulta, uma coleção de campos, parâmetros, filtros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e agrupamento. Existem dois tipos de conjuntos de dados:  
@@ -43,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
  No Construtor de Relatórios, você pode fazer o seguinte:  
   
-1.  Para criar um conjunto de dados compartilhado, use o modo de exibição Design de Conjunto de Dados Compartilhado. É possível salvá-lo em um servidor de relatório ou site do SharePoint para compartilhar com outros relatórios. Você também pode navegar até o servidor de relatório e editar um conjunto de dados compartilhado existente. Nesta exibição, você pode criar uma consulta e definir todas as opções de conjunto de dados. Para obter mais informações, consulte [compartilhado exibição de Design de conjunto de dados &#40; Construtor de relatórios &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Para criar um conjunto de dados compartilhado, use o modo de exibição Design de Conjunto de Dados Compartilhado. É possível salvá-lo em um servidor de relatório ou site do SharePoint para compartilhar com outros relatórios. Você também pode navegar até o servidor de relatório e editar um conjunto de dados compartilhado existente. Nesta exibição, você pode criar uma consulta e definir todas as opções de conjunto de dados. Para obter mais informações, consulte [Modo de exibição de design de conjunto de dados compartilhado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Para adicionar um conjunto de dados compartilhado a um relatório, abra o Construtor de Relatórios no Modo Design do Relatório. De um assistente ou do painel de dados do relatório, vá para o servidor de relatório e selecione o conjunto de dados compartilhado para adicionar seu relatório. Nesta exibição, você não pode alterar a consulta, exceto para adicionar campos. Você pode substituir outras opções de dados e adicionar filtros. Você não pode remover filtros.  
   
@@ -56,19 +57,19 @@ ms.lasthandoff: 08/09/2017
     |Filtros|Definir filtros|Não é possível exibir ou alterar filtros de conjuntos de dados que fazem parte da definição<br /><br /> Pode criar filtros adicionais|  
     |fonte de dados|Deve ser uma fonte de dados compartilhada|Não pode alterar a fonte de dados|  
     |Campos|Campos do comando query<br /><br /> Campos calculados não fazem parte da definição do conjunto de dados|Exiba os campos, mas não é possível alterá-los<br /><br /> A coleção de campos é estática com base na consulta no momento em que você adicionou o conjunto de dados compartilhado ao relatório. Para atualizar, clique em **Atualizar Campos** na caixa de diálogo **Propriedades do Conjunto de Dados** . A coleção de campos real é o que quer que seja retornado pela consulta atual na definição.<br /><br /> Adicionar campos calculados|  
-    |Conjunto de dados|Opções de dados, como a diferenciação de maiúsculas e minúsculas|Substitua as opções de dados na instância|  
+    |Dataset|Opções de dados, como a diferenciação de maiúsculas e minúsculas|Substitua as opções de dados na instância|  
   
 ## <a name="embedded-datasets"></a>Conjuntos de dados inseridos  
  Use um conjunto de dados inserido quando você desejar obter dados de uma fonte de dados externa a ser usada somente em um relatório. Os conjuntos de dados inseridos são úteis quando você deseja criar uma consulta que não tem outras dependências e que não precisa ser usada para vários relatórios.  
   
  Para criar ou editar um conjunto de dados inserido, use o painel de dados do relatório. Após criar um conjunto de dados, você poderá configurar as propriedades na caixa de diálogo **Propriedades de Conjunto de Dados** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Criar um conjunto de dados compartilhado ou conjunto de dados inserido &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Coleção de campos de conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

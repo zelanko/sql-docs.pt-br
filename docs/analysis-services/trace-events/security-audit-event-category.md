@@ -2,14 +2,13 @@
 title: "Categoria de evento de auditoria de segurança | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - event classes [Analysis Services], security audit
 - security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d78568fe6eda8384494fb1e1e064eed707065b38
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb384601c49088675c25547b3ae7dc21b4510380
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-audit-event-category"></a>Categoria de evento de auditoria de segurança
-  A categoria de evento de auditoria de segurança tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria de evento de auditoria de segurança tem as classes de evento descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
 |-----------------|--------------|-----------------|  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
-

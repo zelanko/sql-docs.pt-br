@@ -3,8 +3,9 @@ title: "Método ExcluirRegistro (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
 - _Record::DeleteRecord
-helpviewer_keywords: DeleteRecord method [ADO]
+helpviewer_keywords:
+- DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-method-ado"></a>Método ExcluirRegistro (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -42,10 +44,10 @@ Record.DeleteRecord Source, Async
  *Origem*  
  Opcional. Um **cadeia de caracteres** valor que contém uma URL que identifica a entidade (por exemplo, o arquivo ou diretório) a ser excluído. Se *fonte* for omitido ou especifica uma cadeia de caracteres vazia, a entidade representada por atual [registro](../../../ado/reference/ado-api/record-object-ado.md) é excluído. Se o registro é um registro de coleção ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como um diretório) todos os filhos (por exemplo, subdiretórios) também serão excluídos.  
   
- *Assíncrono*  
+ *Async*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que a operação de exclusão é assíncrona.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Operações no objeto representado por esse **registro** pode falhar depois que esse método é concluído. Depois de chamar **ExcluirRegistro**, o **registro** devem ser fechados porque o comportamento do **registro** pode se tornar imprevisível dependendo de quando o provedor de atualizações do **Registro** com a fonte de dados.  
   
  Se este **registro** foi obtido um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), em seguida, os resultados dessa operação não serão refletidos imediatamente no **conjunto de registros**. Atualizar o **registros** , feche e reabra-lo, ou executando o **registros** [Requery](../../../ado/reference/ado-api/requery-method.md) método, o [atualização](../../../ado/reference/ado-api/update-method.md) método, ou o [Resync](../../../ado/reference/ado-api/resync-method.md) método.  

@@ -2,9 +2,12 @@
 title: "Histórico de espelhamento de banco de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ef0ef28324c0ac78a6970b4fdac7b1523e85a4f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Histórico do espelhamento de banco de dados
-  Use essa caixa de diálogo para exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada.  
   
  **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
  **Instância de servidor**  
  Nome da instância de servidor a partir da qual o histórico está sendo informado.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  Nome do banco de dados cujo histórico está sendo informado.  
   
  **Filtrar lista por**  
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
  **Histórico**  
  Exibe a lista de histórico. Clique em um cabeçalho de coluna para classificar a grade por essa coluna. A lista contém as seguintes colunas:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|Description|  
 |-----------------|-----------------|  
 |**Hora registrada**|Carimbo de data/hora da linha do histórico.|  
 |**Função**|Função de espelhamento atual da instância de servidor deste banco de dados, Principal ou Espelho.|  
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
 |**Taxa de Recuperação**|Taxa em que as transações estão sendo recuperadas no banco de dados espelho, em KB por segundo.|  
 |**Sobrecarga Espelhada Confirmada**|Atraso médio por transação em milissegundos (somente em modos síncronos). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

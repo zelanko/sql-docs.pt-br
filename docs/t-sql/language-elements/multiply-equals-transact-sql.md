@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '*=_TSQL'
 - '*='
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compound operators, *=
 - assignment operators, *=
@@ -22,18 +24,18 @@ helpviewer_keywords:
 - '*= (multiply equals)'
 - '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d430048203348e4f249d9866d76a5e02964deac5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c0979f2a61d15c5edd6aec72a8db07309db3cc2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-multiplication-assignment-transact-sql"></a>* = (Atribuição de multiplicação) (Transact-SQL)
+# <a name="-multiplication-assignment-transact-sql"></a>*= (Multiplication Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Multiplica dois números e define um valor como o resultado da operação. Por exemplo, se uma variável @x é igual a 35, então @x * = 2 assumirá o valor original de @x, multiplicará por 2 e define @x para esse novo valor (70).  
@@ -53,12 +55,12 @@ expression *= expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações, consulte [&#42; &#40; Multiplicação &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/multiply-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

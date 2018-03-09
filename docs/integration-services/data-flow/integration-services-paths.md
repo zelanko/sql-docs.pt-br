@@ -23,17 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
   Um caminho conecta dois componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente. Um caminho tem uma origem e um destino. Por exemplo, se um caminho conectar uma origem OLE DB e uma transformação Classificação, a origem OLE DB será a origem do caminho e a transformação Classificação será o destino do caminho. A origem é o componente onde o caminho inicia, e o destino é o componente onde o caminho termina.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
  Os metadados exibem nome, tipo de dados, precisão, escala, comprimento, página de código e componente de origem de cada coluna na saída do componente anterior. O componente de origem é o componente de fluxo de dados que criou a coluna. Isso pode ou não ser o primeiro componente no fluxo de dados. Por exemplo, as transformações Union All e Classificação criam as próprias colunas e são as origens de suas colunas de saída. Em contrapartida, uma transformação Copiar Coluna pode passar por colunas sem as alterá-las ou pode criar colunas novas copiando as colunas de entrada. A transformação Copiar Coluna é o componente de origem somente das novas colunas.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Definir as propriedades de um caminho com os dados de fluxo de Editor de caminho
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Definir as propriedades de um caminho por meio do Editor de Caminho do Fluxo de Dados
 Os caminhos conectam dois componentes de fluxos de dados. Antes de você poder definir as propriedades do caminho, o fluxo de dados deve conter pelo menos dois componentes de fluxo de dados conectados.
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
@@ -64,7 +63,7 @@ Os caminhos conectam dois componentes de fluxos de dados. Antes de você poder d
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
-## <a name="general-page---data-flow-path-editor"></a>Página geral - Editor de caminho de fluxo de dados
+## <a name="general-page---data-flow-path-editor"></a>Página Geral – Editor de Caminho do Fluxo de Dados
 Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir propriedades de caminho, visualizar metadados de colunas e gerenciar os visualizadores de dados que estão anexados ao caminho.  
   
  Use o nó **Geral** da caixa de diálogo **Editor de Caminho de Fluxo de Dados** para nomear e descrever o caminho e especificar as opções de anotação de caminho.  
@@ -79,7 +78,7 @@ Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir pro
  **IdentificationString**  
  A cadeia de caracteres que identifica o caminho. Gerada automaticamente a partir do nome digitado acima.  
   
- **Description**  
+ **Descrição**  
  Descreva o caminho.  
   
  **PathAnnotation**  
@@ -91,11 +90,11 @@ Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir pro
  **SourceName**  
  Exibe a saída que é o início do caminho.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>Página metadados - Editor de caminho de fluxo de dados
+## <a name="metadata-page---data-flow-path-editor"></a>Página de Metadados – Editor de Caminho do Fluxo de Dados
 Use a página **Metadados** da caixa de diálogo **Editor do Caminho de Fluxo de Dados** para exibir o metadados das colunas de caminho.  
   
 ### <a name="options"></a>Opções  
- **Metadados do caminho**  
+ **Página de metadados**  
  Lista metadados das colunas. Clique nos títulos das colunas para classificar seus dados.  
   
  **Nome**  
@@ -116,7 +115,7 @@ Use a página **Metadados** da caixa de diálogo **Editor do Caminho de Fluxo de
  **Página de Código**  
  Lista a página de código da coluna. O valor **0** indica que a coluna não usa uma página de código. Isso acontece quando os dados estão em Unicode ou têm tipo de dados numérico, de data ou de hora.  
   
- **Posição da chave de classificação**  
+ **Posição da Chave de Classificação**  
  Lista a posição da chave de classificação da coluna. O valor **0** indica que a coluna não está classificada.  
   
 > [!NOTE]  
@@ -125,20 +124,20 @@ Use a página **Metadados** da caixa de diálogo **Editor do Caminho de Fluxo de
  **Sinalizadores de Comparação**  
  Lista os sinalizadores de comparação aplicados à coluna.  
   
- **Componente de origem**  
+ **Componente de Origem**  
  Lista o componente do fluxo de dados que é a origem da coluna.  
   
- **Copiar para área de transferência**  
+ **Copiar para a Área de Transferência**  
  Copia os metadados da coluna para a área de transferência. Por padrão, todas as linhas de metadados são copiadas na ordem exibida atualmente.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>Página de visualizadores de dados - Editor de caminho de fluxo de dados
+## <a name="data-viewers-page---data-flow-path-editor"></a>Página Visualizadores de Dados – Editor de Caminho do Fluxo de Dados
 Use a página **Visualizadores de Dados** da caixa de diálogo **Editor de Caminho de Fluxo de Dados** para gerenciar os visualizadores de dados que estão anexados ao caminho.  
   
 ### <a name="options"></a>Opções  
  **Nome**  
  Lista os visualizadores de dados.  
   
- **Tipo de Visualizador de dados**  
+ **Tipo de Visualizador de Dados**  
  Lista o tipo de visualizador de dados.  
   
  **Adicionar**  
@@ -165,4 +164,3 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
 |PathAnnotation|Inteiro (enumeração)|Um valor que indica se uma anotação deve ser exibida com o caminho na superfície do designer. Os valores possíveis são **AsNeeded**, **SourceName**, **PathName**e **Never**. O valor padrão é **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|A entrada associada ao caminho.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|A saída associada ao caminho.|  
-

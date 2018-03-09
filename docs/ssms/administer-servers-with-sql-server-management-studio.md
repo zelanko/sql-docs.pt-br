@@ -3,8 +3,11 @@ title: Administrar servidores com o SQL Server Management Studio | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,16 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 caps.latest.revision: "7"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078241a1d79e1836c7779e9f82c5aeeca7647435
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88558a8b94f886533ee1c9e9541ef76c564388cf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Gerenciar servidores com o SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] é um cliente administrativo rico e integrado, projetado para satisfazer os requisitos de gerenciamento de servidor do administrador do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e do Banco de Dados SQL do Azure. No [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)], as tarefas administrativas são realizadas com o Pesquisador de Objetos, que permite conectar-se a qualquer servidor da família [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e procurar conteúdo de forma gráfica. Um servidor pode ser uma instância do [!INCLUDE[ssDE](../includes/ssde_md.md)], do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], do [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] ou do Banco de Dados SQL do Azure.  
   
 Os componentes de ferramentas do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] incluem os Servidores Registrados, o Pesquisador de Objetos, o Gerenciador de Soluções, o Explorador de Modelos, a página Detalhes do Pesquisador de Objetos e a janela de documentos. Para exibir uma ferramenta, no menu **Exibir** , clique no nome da ferramenta. Para exibir a ferramenta Editor de Consultas, clique no botão **Nova Consulta** na barra de ferramentas.  
@@ -61,7 +65,7 @@ Use o [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para:
   
 Para iniciar e parar o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] ou o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Agent, use o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Configuration Manager.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Usar o SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Como exibir propriedades do servidor (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

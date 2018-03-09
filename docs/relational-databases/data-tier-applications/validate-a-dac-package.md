@@ -2,9 +2,12 @@
 title: Validar um pacote de DAC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4bf32f3b4b39bbb4437fc61922e4c7ae1e552a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
-  Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta é uma prática recomendada para examinar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
 1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
@@ -173,8 +176,8 @@ $fileStream.Close()
   
  Outra alternativa é desempacotar os DACs em pastas separadas. Você pode usar uma ferramenta de diferenças, como o utilitário WinDiff, para analisar as diferenças.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   

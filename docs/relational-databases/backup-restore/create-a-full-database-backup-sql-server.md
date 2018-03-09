@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, considere complementar um backup de banco de dados completo com uma série de [backups de banco de dados diferencial]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, considere complementar um backup de banco de dados completo com uma série de [backups de bancos de dados diferenciais](../../relational-databases/backup-restore/differential-backups-sql-server.md). Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/17/2017
   
          Para obter mais informações sobre datas de validade de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-21. Na seção **Compactação** , use a lista suspensa **Definir compactação de backup** para selecionar o nível de compactação desejado.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+21. Na seção **Compactação** , use a lista suspensa **Definir compactação de backup** para selecionar o nível de compactação desejado.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      Para obter mais informações sobre configurações de compactação de backup, consulte [Exibir ou configurar a Opção de Configuração de Servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -247,7 +248,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   8.    Clique em **OK**.
 
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ### <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo  
   
@@ -265,7 +266,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
      [ WITH *com_opções* [ **,**...*o* ] ] ;  
   
-    |Opção|Descrição|  
+    |Opção|Description|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
     |*backup_device* [ **, o**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
@@ -304,7 +305,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
 #### <a name="a-back-up-to-a-disk-device"></a>**A. Fazer backup em um dispositivo de disco**  
  O exemplo a seguir faz backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em um disco, usando `FORMAT` para criar um novo conjunto de mídia.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +319,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. Fazer backup em um dispositivo de fita**  
  O exemplo a seguir faz backup do banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em fita, anexando o backup aos backups anteriores.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +332,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Fazer backup em um dispositivo de fita lógico**  
  O exemplo a seguir cria um dispositivo de backup lógico para uma unidade de fita. O exemplo faz backup completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nesse dispositivo.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

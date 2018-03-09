@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3ad9ed32342dbd2dc7faf955eba3e9141b4fab1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de Fonte de Dados ODBC
 O administrador de fonte de dados do Microsoft® ODBC gerencia o banco de dados drivers e fontes de dados. Esse aplicativo está localizado no painel de controle do Windows em **ferramentas administrativas**. Começando no Windows 8, o ícone é chamado **fontes de dados ODBC**, e há uma versão de 32 bits e 64 bits em sistemas operacionais de 64 bits.  

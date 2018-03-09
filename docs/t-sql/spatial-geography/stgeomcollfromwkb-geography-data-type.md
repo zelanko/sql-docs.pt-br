@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMGeomCollFromWKB method
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f09f502625b555c59da3dbfce63049c9004fa51
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b11823d7be29be6187b50d9806364bde0381d294
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geografia** instância retornada por STGeomCollFromWKB() é definida como **GeometryCollection**, **MultiPolygon**, **MultiLineString**, ou **MultiPoint**, dependendo da entrada WKB correspondente.  
   
  Este método lança um **FormatException** exceção se a entrada não for bem formatada.  
@@ -71,7 +70,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática do OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: O SQL Server Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 319e14792033ea15f4bcfc8b295a0b62f37f87c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9672fa8ab5fd84c3b9526f24838c192a7ff170e1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
-  O recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ajuda a avaliar o impacto de atualizações futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay ajuda você a avaliar o impacto de futuro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualizações. Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-distributed-replay"></a>Benefícios do Distributed Replay  
  De modo semelhante ao [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode usar o Distributed Replay para reproduzir um rastreamento capturado em um ambiente de teste atualizado. Diferentemente do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o Distributed Replay não está limitado à reprodução da carga de trabalho de um único computador.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="when-to-use-distributed-replay"></a>Quando usar o Distributed Replay  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e o Distributed Replay fornecem algumas funções sobrepostas.  
   
- Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para repetir um rastreamento capturado em um ambiente de teste atualizado. Também é possível analisar os resultados da repetição para procurar incompatibilidades de função e desempenho. No entanto, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] somente pode repetir uma carga de trabalho de um único computador. Ao repetir um aplicativo OLTP intensivo que tenha muitas conexões simultâneas ativas ou alta taxa de transferência, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode se tornar um afunilamento de recurso.  
+ Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para repetir um rastreamento capturado em um ambiente de teste atualizado. Também é possível analisar os resultados da repetição para procurar incompatibilidades de função e desempenho. No entanto, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] somente pode repetir uma carga de trabalho de um único computador. Ao repetir um aplicativo OLTP intensivo que tenha muitas conexões simultâneas ativas ou alta taxa de transferência, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode se tornar um gargalo de recurso.  
   
  O Distributed Replay oferece uma solução mais dimensionável do que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Use o Distributed Replay para reproduzir uma carga de trabalho de vários computadores e simular melhor uma carga de trabalho de missão crítica.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usando o Distributed Replay para teste do SQL Server – parte 2 de carga](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usando o Distributed Replay para teste do SQL Server – parte 1 de carga](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Usando o Distributed Replay para teste de carga do SQL Server – parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

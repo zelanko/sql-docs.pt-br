@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], permissions
 - denying permissions [SQL Server], fulll-text
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - DENY statement, full-text permissions
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b805c79267125e3e888bccd618313678a96cf47
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 70af6c1c5b5f23e857a989d37fb4cf99701dc1fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>Permissões de texto completo DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +55,13 @@ DENY permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- NO catálogo de texto completo **::***text_catalog_name completo*  
+ NO catálogo de texto completo **:: * text_catalog_name completo*  
  Especifica o catálogo de texto completo no qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
- EM FULLTEXT STOPLIST **::***text_stoplist_name completo*  
+ EM FULLTEXT STOPLIST **:: * text_stoplist_name completo*  
  Especifica a lista de palavras irrelevantes de texto completo em que a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
  *database_principal*  
@@ -130,20 +132,20 @@ DENY permission [ ,...n ] ON
  Requer a permissão CONTROL no catálogo de texto completo. Se usar a opção AS, a entidade de segurança especificada deverá ser proprietária do catálogo de texto completo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CRIAR o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [Permissões de texto completo GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

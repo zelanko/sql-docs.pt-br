@@ -3,8 +3,11 @@ title: "Propriedades da etapa de trabalho – Nova etapa de trabalho (página Av
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ad17a4381de9bac0443cd0bc65ebfbfbd1f9a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99d0e4a39d2a4c2e1bdada89142f1fee9b7cb78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Avançado)
-Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
 **Ação ao obter êxito**  
@@ -44,7 +47,7 @@ Define o arquivo a usar para saída da etapa de trabalho. Essa opção só está
 **...**  
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
-**Exibição**  
+**Exibir**  
 No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
@@ -53,7 +56,7 @@ Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteú
 **Registrar na tabela**  
 Registra a saída da etapa de trabalho na tabela **sysjobstepslogs** no banco de dados **msdb** .  
   
-**Exibição**  
+**Exibir**  
 Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
 **Anexar saída à entrada existente na tabela**  
@@ -72,7 +75,7 @@ Define o arquivo a usar para saída da etapa de trabalho.
 **...**  
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
-**Exibição**  
+**Exibir**  
 No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
@@ -81,7 +84,7 @@ Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada 
 **Registrar na tabela**  
 Registra a saída da etapa de trabalho na tabela **sysjobstepslogs** no banco de dados **msdb** .  
   
-**Exibição**  
+**Exibir**  
 Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
 **Anexar saída à entrada existente na tabela**  
@@ -97,7 +100,7 @@ Define o arquivo a usar para saída da etapa de trabalho.
 **...**  
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
-**Exibição**  
+**Exibir**  
 No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
@@ -106,7 +109,7 @@ Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada 
 **Registrar na tabela**  
 Registra a saída da etapa de trabalho na tabela **sysjobstepslogs** no banco de dados **msdb** .  
   
-**Exibição**  
+**Exibir**  
 Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
 **Anexar saída à entrada existente na tabela**  
@@ -119,7 +122,7 @@ Selecione esta opção para incluir a saída da etapa de trabalho no histórico 
 **Servidor**  
 Define o servidor a usar para uma etapa de trabalho do Replication Queue Reader.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
 Define o banco de dados a usar para uma etapa de trabalho do Replication Queue Reader.  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>Opções para etapas de trabalho do SQL Server Analysis Services  
@@ -138,7 +141,7 @@ Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteú
 **Registrar na tabela**  
 Registra a saída da etapa de trabalho na tabela **sysjobstepslogs** no banco de dados **msdb** .  
   
-**Exibição**  
+**Exibir**  
 Depois de a etapa de trabalho ter sido executada pelo menos uma vez, clique em **Exibir** para exibir sua saída na tabela.  
   
 **Anexar saída à entrada existente na tabela**  
@@ -147,6 +150,6 @@ Anexa a saída aos conteúdos existentes na tabela. Caso contrário, os conteúd
 **Incluir saída da etapa no histórico**  
 Selecione esta opção para incluir a saída da etapa de trabalho no histórico de trabalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)  
   

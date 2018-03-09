@@ -8,25 +8,23 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26f92ed23a77fc4cf670f8184a9cf1b1de78ba20
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Como enviar dados como um fluxo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -182,4 +180,3 @@ Embora os exemplos neste tópico enviem dados de caractere para o servidor, é p
 [Recuperando dados como um fluxo usando o driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
   
-

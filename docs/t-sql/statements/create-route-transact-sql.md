@@ -1,5 +1,5 @@
 ---
-title: Criar ROTA (Transact-SQL) | Microsoft Docs
+title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,17 +29,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7268b5c9b43505d3c66fb6573a9a41c3cd62e3a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +86,13 @@ WHERE database_id = DB_ID()
   
  Quando a cláusula BROKER_INSTANCE é omitida, essa rota corresponde a qualquer instância do agente. Uma rota que corresponde a qualquer instância do agente tem prioridade maior para correspondência do que rotas com uma instância do agente explícita quando a conversa não especifica a instância. Para conversas que especificam uma instância do agente, uma rota com uma instância do agente tem prioridade maior do que uma rota que corresponde a qualquer instância do agente.  
   
- Tempo de vida  **=**  *route_lifetime*  
+ Tempo de vida **= * route_lifetime*  
  Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, o *route_lifetime* for NULL e a rota nunca expira.  
   
- ENDEREÇO **='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  Especifica o endereço de rede para essa rota. O *next_hop_address* Especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *endereço_IP* } **:**  *número_da_porta*  
+ **TCP: / /**{ *dns_name* | *netbios_name* | *endereço_IP* } **: * port_number*  
   
  Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Especifica o endereço de rede para um banco de dados espelhado com um banco de dados espelho hospedado no *next_hop_address*. O *next_hop_mirror_address* Especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *endereço_IP* } **:**  *número_da_porta*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
@@ -128,7 +127,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Quando MIRROR_ADDRESS é especificado, a rota deve especificar as cláusulas SERVICE_NAME e BROKER_INSTANCE. Uma rota que especifica **'LOCAL'** ou **'TRANSPORT'** para o *next_hop_address* pode não especificar um endereço de espelho.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lidos por meio de **routes** exibição do catálogo. Essa exibição do catálogo pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  Por padrão, a tabela de roteamento em cada banco de dados de usuário contém uma rota. Essa rota é chamada **AutoCreatedLocal**. A rota especifica **'LOCAL'** para o *next_hop_address* e corresponde a qualquer identificador de instância de nome e o agente de serviço.  
@@ -230,9 +229,8 @@ CREATE ROUTE TransportRoute
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
- [Remover ROTA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

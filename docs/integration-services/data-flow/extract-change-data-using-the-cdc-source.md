@@ -1,5 +1,5 @@
 ---
-title: Extrair dados usando a origem CDC | Microsoft Docs
+title: "Extrair dados de alteração por meio da origem CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
   Para adicionar e configurar uma origem de CDC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma tarefa Controle de CDC.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Selecione ou digite o nome da **instância de captura CDC** com a tabela CDC que deve ser lida.  
   
-     Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome de instância de captura padrão para uma tabela [esquema]. [table] é \<esquema > _\<tabela >, mas que os nomes de instância de captura real em uso podem ser diferentes. A tabela real que é lido da é a tabela CDC **cdc.\< instância de captura > CT**.  
+     Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome padrão da instância de captura para uma tabela [esquema].[tabela] é \<esquema>_\<tabela>, mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela da qual a leitura é realmente realizada é a tabela CDC **cdc.\<instância-de-captura>_CT**.  
   
 8.  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
-    -   **Líquido com máscara de atualização**: este modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\__Changed** que indica a linha de alteração de colunas alteradas na atual.  
+    -   **Líquido com máscara atualizada**: este modo é semelhante ao modo Líquido normal, mas também adiciona colunas boolianas com o nome padrão **__$\<nome-da-coluna>\__Changed**, que indica as colunas alteradas na linha de alteração atual.  
   
     -   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
   
@@ -78,10 +77,9 @@ ms.lasthandoff: 08/03/2017
   
 15. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC & #40; Página Gerenciador de Conexão & #41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Editor de origem CDC & #40; Página colunas & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Editor de origem CDC & #40; Página de saída de erro & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Editor de Origem CDC &#40;página Colunas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   
-

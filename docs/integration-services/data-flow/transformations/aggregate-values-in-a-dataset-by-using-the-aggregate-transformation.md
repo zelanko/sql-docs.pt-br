@@ -1,5 +1,5 @@
 ---
-title: "Agregar valores em um conjunto de dados usando a transformação agregação | Microsoft Docs"
+title: "Agregar valores em um conjunto de dados por meio da transformação Agregação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores em um conjunto de dados por meio da transformação Agregação
   Para adicionar e configurar uma transformação de Agregação, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -76,11 +75,10 @@ ms.lasthandoff: 08/03/2017
   
 15. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação agregação](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação Agregação](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

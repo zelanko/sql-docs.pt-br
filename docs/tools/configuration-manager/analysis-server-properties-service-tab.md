@@ -2,26 +2,31 @@
 title: "Propriedades do Analysis Server (guia serviço) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c87e7964ebdc5fda49b1a0d902e92e3cbc72cc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a262eb84e3264fd1ac4b6a58435344ef7f2fbbe7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriedades do Analysis Server (guia Serviço)
-  Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele deve estar sendo executado para que o [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione corretamente. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele deve estar sendo executado para que o [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione corretamente. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
   
 ## <a name="options"></a>Opções  
  **Caminho Binário**  
@@ -43,7 +48,7 @@ ms.lasthandoff: 11/09/2017
  Exibe o número usado pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para manter o controle dos processos deste programa.  
   
  **Tipo de Serviço do SQL**  
- Exibe o tipo de serviço fornecido a processos de chamada. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala vários serviços.  
+ Exibe o tipo de serviço fornecido a processos de chamada. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala vários serviços.  
   
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  

@@ -2,10 +2,13 @@
 title: "Instrução CREATE GLOBAL CUBE (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ec645e2e9d97abe96d95bc6d1118fce180355029
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definição de dados MDX - criar cubo GLOBAL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente. Para obter mais informações sobre cubos locais, consulte [cubos locais &#40; Analysis Services - dados multidimensionais &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
@@ -129,7 +132,7 @@ FROM source_cube_name (<param list>)
  \<tipo de nível >  
  Especificação válida somente para definição de dimensão derivada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um cubo local é definedin termos as medidas e definições que definem-lo. Há dois tipos de dimensões:  
   
 -   Dimensões de origem – São dimensões que faziam parte de um dentre mais cubos de origem.  
@@ -212,7 +215,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Criar instrução de cubo de sessão &#40; MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   

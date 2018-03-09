@@ -2,32 +2,30 @@
 title: "Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação
-  Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , adicione-o a uma lista de associações de serviço.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , adicione-o a uma lista de associações de serviço.  
   
 > [!IMPORTANT]  
 >  Deve haver apenas um aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no grupo padrão para garantir o funcionamento correto do Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não adicione mais de um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao grupo padrão. A adição de várias entradas do mesmo tipo de aplicativo do serviço não é uma configuração compatível e pode causar erros. Se você estiver criando aplicativos de serviço adicionais, adicione-os a listas personalizadas.  

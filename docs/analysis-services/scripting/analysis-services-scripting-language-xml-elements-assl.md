@@ -2,15 +2,13 @@
 title: Elementos XML de script Language (ASSL) do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af8401c0f7fb3b4e5a9088bc3698ce83fad70119
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Elementos XML de script Language (ASSL) do Analysis Services
-  Embora o esquema ASSL (Analysis Services Scripting Language) contenha somente elementos XML, do ponto de vista do desenvolvedor, esses elementos correspondem aos seguintes conceitos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Embora o esquema ASSL (Analysis Services Scripting Language) contenha somente elementos XML, do ponto de vista do desenvolvedor, esses elementos correspondem aos seguintes conceitos:  
   
 -   Objetos, como **banco de dados**, **cubo**, e **dimensão** objetos na hierarquia de objetos contidos em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

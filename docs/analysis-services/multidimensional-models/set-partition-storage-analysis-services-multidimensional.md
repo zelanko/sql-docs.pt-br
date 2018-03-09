@@ -2,16 +2,13 @@
 title: "Definir armazenamento de partição (Analysis Services - Multidimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,20 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Definir armazenamento de partição (Analysis Services – Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
   
  Você pode especificar o armazenamento da partição na guia Partições do cubo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou na página de propriedades da partição no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -91,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Partições em modelos multidimensionais](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   
-

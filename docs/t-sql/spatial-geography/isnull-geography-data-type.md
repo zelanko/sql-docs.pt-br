@@ -19,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9f65a3860b1b0d54231d3243fdfdf1902ae8ca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c07ddb41209c507845da7e790035ab54ed1044f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `IsNull`pode ser usado para testar se um **geografia** instância é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
   
  Esse método é usado principalmente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infraestrutura; é recomendável que você use o predicado T-SQL IS NULL para testar se um **geografia** instância é nula. Para obter mais informações sobre o T-SQL de predicado IS NULL, consulte [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
@@ -56,7 +55,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Exemplos  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Métodos estendidos em instâncias geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

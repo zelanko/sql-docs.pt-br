@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de hora
 A sequência de escape para literais de data, hora e carimbo de hora é  
@@ -36,7 +33,7 @@ A sequência de escape para literais de data, hora e carimbo de hora é
   
 |*tipo literal*|Significado|Formato de *valor*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Data|*aaaa*-*mm*-*dd*|  
+|**d**|data|*aaaa*-*mm*-*dd*|  
 |**t**|Hora *|*hh*:*mm*:*ss*[1]|  
 |**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
@@ -97,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Para determinar se um driver suporta as sequências de escape ODBC para literais de intervalo, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados oferece suporte a um tipo de dados de intervalo de data e hora, ele também deve oferecer suporte a sequência de escape correspondente.  
   
  Fontes de dados também podem dar suporte as literais datetime definidos na especificação do ANSI SQL-92, que são diferentes das sequências de escape ODBC para literais de intervalo de data e hora. Para determinar se uma fonte de dados oferece suporte as literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.
-

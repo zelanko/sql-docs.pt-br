@@ -2,9 +2,12 @@
 title: 'Resumo: Criando objetos de banco de dados | Microsoft Docs'
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ applies_to:
 helpviewer_keywords:
 - creating database objects
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
-caps.latest.revision: 12
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5e266c8895c18fdf71895442eef04165a7505cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 03ac714977d38e84191a2b0b22343f090f7f463e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-5---summary---creating-database-objects"></a>Lição 1-5 - resumo - criar objetos de banco de dados
-Neste tutorial, você criou um banco de dados, criou uma tabela no banco de dados, inseriu dados na tabela, alterou os dados e, em seguida, leu os dados da tabela. A sintaxe para as instruções que foram usadas é somente a sintaxe básica e muitas opções de sintaxe não foram abordadas neste tutorial. Para saber mais sobre essas instruções, leia a sintaxe completa para as instruções nos Manuais online do SQL Server e analise os vários exemplos fornecidos nestes tópicos.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Neste tutorial, que você criou um banco de dados, criado uma tabela no banco de dados, dados inseridos na tabela, alterou os dados e, em seguida, ler os dados da tabela. A sintaxe para as instruções que foram usadas é somente a sintaxe básica e muitas opções de sintaxe não foram abordadas neste tutorial. Para saber mais sobre essas instruções, leia a sintaxe completa para as instruções nos Manuais online do SQL Server e analise os vários exemplos fornecidos nestes tópicos.  
   
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 2: Configurando permissões em objetos de banco de dados](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
@@ -37,4 +39,3 @@ Neste tutorial, você criou um banco de dados, criou uma tabela no banco de dado
   
   
   
-

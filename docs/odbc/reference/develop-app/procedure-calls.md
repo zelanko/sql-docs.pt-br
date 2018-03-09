@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4ca9347cae8227885237882117ae3f486309093
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-calls"></a>Chamadas de procedimento
 Um *procedimento* é um objeto executável armazenado na fonte de dados. Em geral, é uma ou mais instruções SQL que foram pré-compiladas. É a sequência de escape para chamar um procedimento  
@@ -71,4 +69,3 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  Para determinar se uma fonte de dados oferece suporte a procedimentos, um aplicativo chama **SQLGetInfo** com a opção SQL_PROCEDURES.  
   
  Para obter mais informações sobre procedimentos, consulte [procedimentos](../../../odbc/reference/develop-app/procedures-odbc.md).
-

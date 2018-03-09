@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 91fe107bf25d2ec2702778475af9f366af22a120
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-name-limitations"></a>Limitações de nome de coluna
 Nomes de coluna podem conter quaisquer caracteres válidos (por exemplo, espaços). Se os nomes de coluna contiverem qualquer caractere, exceto letras, números e sublinhados, o nome deve ser delimitado colocando-o entre aspas back (').  
@@ -35,9 +33,8 @@ Nomes de coluna podem conter quaisquer caracteres válidos (por exemplo, espaço
   
  Quando o driver dBASE é usado, os caracteres com um valor ASCII maior do que 127 são convertidos em sublinhados.  
   
- Quando o driver do Microsoft Excel é usado, se houver nomes de coluna, eles devem ser a primeira linha. Um nome que deseja usar no Microsoft Excel a "!" caractere deve ser colocado entre aspas back ('). O "!" caractere é convertido para o caractere "$", porque o "!" caractere não é válido em um nome ODBC, mesmo quando o nome é colocado entre aspas voltar. Todos os outros caracteres válidos do Microsoft Excel (exceto o caractere de pipe (& #124 ;)) pode ser usado em um nome de coluna, incluindo espaços. Um identificador delimitado deve ser usado para um nome de coluna do Microsoft Excel com um espaço. Nomes de coluna especificado serão substituídos com nomes gerados pelo driver, por exemplo, "Col1" para a primeira coluna.  
+ Quando o driver do Microsoft Excel é usado, se houver nomes de coluna, eles devem ser a primeira linha. Um nome que deseja usar no Microsoft Excel a "!" caractere deve ser colocado entre aspas back ('). O "!" caractere é convertido para o caractere "$", porque o "!" caractere não é válido em um nome ODBC, mesmo quando o nome é colocado entre aspas voltar. Todos os outros caracteres válidos do Microsoft Excel (exceto o caractere de pipe (&#124;;)) pode ser usado em um nome de coluna, incluindo espaços. Um identificador delimitado deve ser usado para um nome de coluna do Microsoft Excel com um espaço. Nomes de coluna especificado serão substituídos com nomes gerados pelo driver, por exemplo, "Col1" para a primeira coluna.  
   
  O caractere de pipe (&#124;) não pode ser usado em um nome de coluna, se o nome é colocado entre aspas back ou não.  
   
  Quando o driver de texto é usado, o driver fornece um nome padrão, se não for especificado um nome de coluna. Por exemplo, o driver chama a primeira coluna F1, a segunda coluna F2 e assim por diante.
-

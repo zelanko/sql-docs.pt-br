@@ -2,16 +2,13 @@
 title: "Definindo dados de um fonte de exibição (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aae9714c37d9bd4272add2829d4cdef8f2d9c9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
-  Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
   
 -   Contém os metadados que representam os objetos selecionados, de uma ou mais fontes de dados subjacentes, ou os metadados que serão usados para gerar um armazenamento de dados relacional subjacente se você estiver seguindo a abordagem de cima para baixo para a geração de esquemas.  
   
@@ -152,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   
-

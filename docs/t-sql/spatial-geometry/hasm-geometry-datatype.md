@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: HasM geometry
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- HasM geometry
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2ee9cd8f4d41cfc24b06ca5ef7dbceb9acc3a12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cb449a098a60e253204b4d37e5dc22fd05c8f50b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,11 +45,11 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **booliano**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Point(1 1 1 1)'  
 SELECT @p.HasM   
 --Returns: 1 (true)  

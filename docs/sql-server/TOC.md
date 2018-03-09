@@ -15,17 +15,14 @@
 #### [Gerenciamento](partner-management-sql-server.md)
 #### [Desenvolvimento](partner-dev-sql-server.md)
 
-# [Atualizado recentemente artigos do SQL Server](sql-server-new-updated-sql-docs-pr.md)
+# [Artigos novos e atualizados](new-updated-sql-server.md)
 
 # Notas de Versão
 
 ## [Notas do SQL Server 2017](sql-server-2017-release-notes.md)
 ## [Notas do SQL Server 2016](sql-server-2016-release-notes.md)
 ## [Notas do SQL Server 2014](sql-server-2014-release-notes.md)
-## [Notas do SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
-## [Notas do SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
-## [Notas do SQL Server 2012 SP2](sql-server-2012-sp2-release-notes.md)
-## [Notas do SQL Server 2012 SP1](sql-server-2012-sp1-release-notes.md)
+## [Notas de Versão do Service Pack do SQL Server 2012](sql-server-2012-sp4-release-notes.md)
 ## [Notas do SQL Server 2012](sql-server-2012-release-notes.md)
 ## [Notas do SQL Server 2008 R2 SP2](sql-server-2008-r2-sp2-release-notes.md)
 
@@ -43,15 +40,21 @@
 # [Tutoriais do SQL Server](tutorials-for-sql-server-2016.md)
 
 # Recursos
+
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [Mecanismo de Banco de Dados do SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [Segurança do SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
+
+## Saiba mais
+### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [SQL no Canal 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## Ajuda e comentários
+### [UserVoice – Sugira uma melhoria para o SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Estouro de pilha](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [Conteúdo local com o Visualizador da Ajuda](sql-server-help-installation.md)

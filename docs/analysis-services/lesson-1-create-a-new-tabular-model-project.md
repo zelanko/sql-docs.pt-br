@@ -2,27 +2,28 @@
 title: "Lição 1: Criar um novo projeto de modelo de tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6c65307cd9368c976d28b60c567ed0b9bcd29b97
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ Nesta lição, você criará um novo projeto de modelo de tabela em branco no [!
   
 Tempo estimado para concluir esta lição: **10 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico é a primeira lição em um tutorial de criação de modelo de tabela. Para concluir esta lição, você deve ter o banco de dados de exemplo AdventureWorksDW instalado em uma instância do SQL Server. Para obter mais informações, consulte [modelagem de tabela &#40; Tutorial do Adventure Works &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Criar um novo projeto de modelo de tabela  
@@ -54,7 +55,7 @@ Este tópico é a primeira lição em um tutorial de criação de modelo de tabe
       
 6.  Em **Nível de compatibilidade**, verifique se a opção **SQL Server 2016 (1200)** está selecionada e clique em **OK**.   
  
-    ![como-tabela-lição 1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Se você não vir o SQL Server 2016 RTM (1200) na caixa de listagem de nível de compatibilidade, você não estiver usando a versão mais recente do SQL Server Data Tools. Para obter a versão mais recente, consulte [Instalar o SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
@@ -67,15 +68,15 @@ Agora que você criou um novo projeto de modelo de tabela, vamos explorar o ambi
   
 Depois que o projeto é criado, ele é aberto no SSDT. No lado direito, em **Gerenciador de modelos de tabela**, você verá uma exibição de árvore de objetos em seu modelo. Desde que você ainda não tiver importado dados, as pastas estará vazias. Clique com botão direito uma pasta de objeto para executar ações, semelhantes à barra de menus. Conforme você percorrer este tutorial, você usará o Gerenciador de modelos de tabela para navegar objetos diferentes em seu projeto de modelo.
 
-![como-tabela-lição 1-tempo](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Clique o **Solution Explorer** guia. Aqui, você verá seu **Model.bim** arquivo. Se você não vir a janela do designer para a esquerda (a janela vazia com a guia Model.bim), em **Solution Explorer**, em **projeto de vendas da Internet AW**, clique duas vezes o **Model.bim** arquivo. O arquivo Model.bim contém todos os metadados para o seu projeto de modelo. 
 
-![como-tabela-lição 1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Vamos examinar as propriedades do modelo. Clique em **Model.bim**. No **propriedades** janela, você verá o [propriedades de modelo](../analysis-services/tabular-models/model-properties-ssas-tabular.md), mais importante do que é o **o modo DirectQuery** propriedade. Essa propriedade especifica se o modelo será implantado ou não no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.
 
-![tabela-lição 1-propriedades como](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Quando você cria um novo modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas o **ferramentas** > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você poderá alterar essas configurações posteriormente se necessário, mas, por enquanto, deixe essas propriedades como estão.  
 
@@ -91,7 +92,7 @@ Explore algumas das caixas de diálogo e locais de vários recursos específicos
 
 
 ## <a name="additional-resources"></a>Recursos adicionais
-Para saber mais sobre os diferentes tipos de projetos de modelo de tabela, consulte [Projetos de modelo de tabela &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação do modelo de tabela, consulte [Designer de modelo de tabela &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Para saber mais sobre os diferentes tipos de projetos de modelo de tabela, consulte [projetos de modelo de tabela](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação do modelo de tabela, consulte [Designer de modelo de tabela ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>O que vem a seguir?

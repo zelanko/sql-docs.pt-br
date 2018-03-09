@@ -1,5 +1,5 @@
 ---
-title: Catalog.worker_agents (banco de dados SSISDB) | Microsoft Docs
+title: catalog.worker_agents (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -13,43 +13,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d56af0ab150255c53746898a638a32112938755c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 5b3d7ae2666a6adc774093a8496863685457e7e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>Catalog.worker_agents (banco de dados SSISDB)
+# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Exibe as informações sobre o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala fora do trabalho.
+Exibe as informações do Trabalho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|WorkerAgentId|**uniqueidentifier**|O agente de trabalho ID de escala Out trabalhador.|
-|IsEnabled|**bit**|Se o trabalho de fora de escala está habilitado.|
-|DisplayName|**nvarchar(256)**|O nome de exibição da escala fora do trabalho.|
-|Description|**nvarchar(256)**|A descrição da escala fora do trabalho.|
-|MachineName|**nvarchar(256)**|O nome da máquina para escala fora do trabalho.|
-|Marcas|**nvarchar(max)**|As marcas de escala fora do trabalho.|
-|Conta do usuário|**nvarchar(256)**|A conta de usuário que executa o serviço de escala fora do trabalho.|
-|LastOnlineTime|**DateTimeOffset(7)**|A última vez em que o trabalho de fora de escala está online.|
+|WorkerAgentId|**uniqueidentifier**|A ID do agente de trabalho do Trabalhador do Scale Out.|
+|IsEnabled|**bit**|Se o Trabalho do Scale Out está habilitado.|
+|DisplayName|**nvarchar(256)**|O nome de exibição do Trabalho do Scale Out.|
+|Description|**nvarchar(256)**|A descrição do Trabalho do Scale Out.|
+|MachineName|**nvarchar(256)**|O nome do computador do Trabalho do Scale Out.|
+|Marcas|**nvarchar(max)**|As marcas do Trabalho do Scale Out.|
+|UserAccount|**nvarchar(256)**|A conta de usuário que executa o serviço Trabalho do Scale Out.|
+|LastOnlineTime|**datetimeoffset(7)**|A última vez em que o Trabalho do Scale Out esteve online.|
 
-## <a name="remarks"></a>Comentários
-Essa exibição mostra uma linha para cada escala Out conectar-se a escala Out mestre trabalhando com o catálogo do SSISDB.
+## <a name="remarks"></a>Remarks
+Essa exibição mostra uma linha para cada Trabalho do Scale Out se conectando ao Mestre do Scale Out trabalhando com o catálogo do SSISDB.
 
 ## <a name="permissions"></a>Permissões
 Esta exibição requer uma das seguintes permissões:
 
-- Associação de **ssis_admin** função de banco de dados
+- Associação à função de banco de dados **ssis_admin**
 
-- Associação de **ssis_cluster_executor** função de banco de dados
+- Associação à função de banco de dados **ssis_cluster_executor**
 
-- Associação de **sysadmin** função de servidor
-
+- Associação à função de servidor **sysadmin**

@@ -2,36 +2,31 @@
 title: Conjunto de linhas DISCOVER_DB_CONNECTIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DB_CONNECTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8a932cfa872e0cceed0b132f486349716ba4210b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a592cffbf5d8fe19d37fc48989d9c2776df81a4e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdbconnections-rowset"></a>Conjunto de linhas DISCOVER_DB_CONNECTIONS
-  Oferece uso de recursos e de informações de atividade sobre as conexões abertas no momento do servidor para um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de uso e a atividade de recurso sobre as conexões abertas no momento do servidor para um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_DB_CONNECTIONS** contém as colunas a seguir.  
@@ -65,8 +60,7 @@ ms.lasthandoff: 09/01/2017
 |CONNECTION_CATALOG_NAME|DBTYPE_WSTR|Obrigatórios.|  
 |CONNECTION_SPID|DBTYPE_I4|Opcional.|  
   
-## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

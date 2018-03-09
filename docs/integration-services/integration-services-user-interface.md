@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e20802025336f64affff827bac4a59fe25076057
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
   Além das superfícies de design nas guias do Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a interface do usuário fornece acesso às seguintes janelas e caixas de diálogo para adicionar recursos a pacotes e configurar as propriedades de objetos do pacote:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/03/2017
 |**Assinatura Digital**|Assine um pacote ou remova a assinatura do pacote.|No menu **SSIS** , clique em **Assinatura Digital**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse em qualquer lugar na superfície de design da guia **Fluxo de Controle** e clique em **Assinatura Digital**.|  
 |**Definir Pontos de Interrupção**|Habilite pontos de interrupção em tarefas e defina propriedades do ponto de interrupção.|Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa ou um contêiner e clique em **Editar Pontos de Interrupção**. Para definir pontos de interrupção no pacote, clique com o botão direito do mouse em qualquer lugar da superfície de design da guia **Fluxo de Controle** e clique em **Editar Pontos de Interrupção**.|  
   
- A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável que você não modifique o \<GettingStartedSamples > URL do valor do elemento que especifica o RSS feed. O arquivo está localizado no  *\<drive >*: pasta \Program Files\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado no  *\<drive >*: pasta de \Microsoft SQL Server\110\DTS\Binn do \Program Files (x86)  
+ A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS Feed. O arquivo está localizado na pasta *\<unidade>*:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<unidade>*:\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Se o arquivo SamplesSites.xml se tornar corrompido, substitua o xml no arquivo pelo seguinte xml padrão.  
   
@@ -121,11 +120,10 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre janelas e menus adicionais, consulte a documentação do Visual Studio.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como criar pacotes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consulte [Copiar pacotes no SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Designer SSIS](../integration-services/ssis-designer.md)  
   
   
-

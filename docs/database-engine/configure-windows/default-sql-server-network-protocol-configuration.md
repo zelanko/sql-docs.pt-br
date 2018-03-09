@@ -2,9 +2,12 @@
 title: "Configuração de protocolo de rede padrão do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a988fcab5de7d5d21246ce82684213afed0c7fbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuração de protocolo de rede padrão do SQL Server
-Para melhorar a segurança, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] desabilita a conectividade de rede para algumas instalações novas. A conectividade de rede usando TCP/IP não será desabilitada se você estiver usando a edição Enterprise, Standard, Evaluation ou Workgroup ou se houver uma instalação prévia do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Em todas as instalações, o protocolo de memória compartilhada é habilitado para permitir conexões locais com o servidor. O serviço Navegador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser parado, dependendo de condições e opções da instalação.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para melhorar a segurança, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] desabilita a conectividade de rede para algumas instalações novas. A conectividade de rede usando TCP/IP não será desabilitada se você estiver usando a edição Enterprise, Standard, Evaluation ou Workgroup ou se houver uma instalação prévia do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Em todas as instalações, o protocolo de memória compartilhada é habilitado para permitir conexões locais com o servidor. O serviço Navegador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser parado, dependendo de condições e opções da instalação.
 
 Use o nó Configuração de Rede do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager para configurar os protocolos de rede após a instalação. Use o nó Serviços do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager para configurar o serviço [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser para ser iniciado automaticamente. Para obter mais informações, consulte [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -35,14 +38,14 @@ A tabela a seguir descreve a configuração após a instalação.
 
 Edição | Nova instalação versus instalação anterior está presente | Memória compartilhada | TCP/IP    | Pipes nomeados
 | -------- | -- | -- | -- | --  |  
-Enterprise  | Nova instalação  | Ativado   | Ativado   | Desabilitado para conexões de rede.
-Standard    | Nova instalação  | Ativado   | Ativado   | Desabilitado para conexões de rede.
-Web | Nova instalação  | Ativado   | Ativado   | Desabilitado para conexões de rede.
-Desenvolvedor   | Nova instalação  | Ativado   | Desabilitado  | Desabilitado para conexões de rede.
-Evaluation  | Nova instalação  | Ativado   | Ativado   | Desabilitado para conexões de rede.
-SQL Server Express  | Nova instalação  | Ativado   | Desabilitado  | Desabilitado para conexões de rede.
+Enterprise  | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
+Standard    | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
+Web | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
+Desenvolvedor   | Nova instalação  | Habilitado   | Desabilitado  | Desabilitado para conexões de rede.
+Evaluation  | Nova instalação  | Habilitado   | Habilitado   | Desabilitado para conexões de rede.
+SQL Server Express  | Nova instalação  | Habilitado   | Desabilitado  | Desabilitado para conexões de rede.
 Todas as edições    | A instalação anterior está presente, mas não está sendo atualizada.   | Igual à nova instalação  | Igual à nova instalação  | Igual à nova instalação
-Todas as edições    | Atualizar   | Ativado   | As configurações da instalação anterior são preservadas.    | As configurações da instalação anterior são preservadas.
+Todas as edições    | UPGRADE   | Habilitado   | As configurações da instalação anterior são preservadas.    | As configurações da instalação anterior são preservadas.
 
 
 >[!NOTE]
@@ -69,7 +72,7 @@ O serviço Navegador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.
 * Ao instalar uma instância nomeada do Mecanismo de Banco de Dados, incluindo todas as instâncias do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * Ao instalar uma instância nomeada do Analysis Services.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

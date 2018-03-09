@@ -2,26 +2,31 @@
 title: "Considerações sobre a instalação do SQL Server usando o SysPrep | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f10952679464999ae78fbb00432d3a8b8a7dc5ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: e1089089d6e0eb1a3085dad9306a6e598535b739
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerações para instalação do SQL Server usando SysPrep
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep permite preparar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador e concluir a configuração posteriormente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep envolve um processo de duas etapas para obter uma instância autônoma configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As etapas incluem o seguinte:  
   
 - [Preparar imagem](#BKMK_PrepareImage)  
@@ -96,5 +101,5 @@ Você pode concluir as instâncias preparadas do [!INCLUDE[ssNoVersion](../../in
   
 - Acessar a etapa **Conclusão de imagem de uma instância autônoma preparada** na página **Avançado** da **Central de Instalação**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

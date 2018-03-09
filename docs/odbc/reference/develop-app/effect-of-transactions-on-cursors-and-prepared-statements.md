@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 836cef9465c2ee935628e92168b9ace7650b8e66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Efeito de transações em cursores e instruções preparadas
 Confirmar ou reverter uma transação tem o seguinte efeito em cursores e planos de acesso:  
@@ -66,4 +64,3 @@ Confirmar ou reverter uma transação tem o seguinte efeito em cursores e planos
  Aplicativos, especialmente em tela em que o usuário rola em todo o conjunto de resultados e as atualizações ou exclui as linhas, devem ter cuidadosos ao código alternativa para esse comportamento.  
   
  Para determinar como uma fonte de dados se comporta quando uma transação é confirmada ou revertida, um aplicativo chama **SQLGetInfo** com as opções SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR.
-

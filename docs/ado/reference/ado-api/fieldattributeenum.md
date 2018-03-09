@@ -3,7 +3,7 @@ title: FieldAttributeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfac02887d8f66066a11674ca6dded410df709aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indica que o provedor armazena em cache os valores de campo e terminar subsequentes leituras do cache.|  
 |**adFldFixed**|0x10|Indica que o campo contém dados de comprimento fixo.|  
@@ -53,8 +52,8 @@ Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/fi
 |**adFldUnspecified**|-1 0xFFFFFFFF|Indica que o provedor não especifica os atributos de campo.|  
 |**adFldUpdatable**|0x4|Indica que você pode escrever para o campo.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  
@@ -76,4 +75,3 @@ Especifica um ou mais atributos de uma [campo](../../../ado/reference/ado-api/fi
 |||  
 |-|-|  
 |[Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
-

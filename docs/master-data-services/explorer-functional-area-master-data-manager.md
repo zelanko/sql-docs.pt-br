@@ -5,23 +5,24 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e27e14243a4a4de9713093bbb81764fb44d9888
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e27bc7398e0c18b07a8753b4ef3519d03fcb032
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional Gerenciador (Master Data Manager)
   Na área funcional Gerenciador, você pode atualizar dados e trabalhar com hierarquias e coleções.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Adicionando tarefas programaticamente | Microsoft Docs
+title: Adicionar tarefas programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0b56ab341749f86174bb743895a7c5741e982f57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-tasks-programmatically"></a>Adicionando tarefas programaticamente
   As tarefas podem ser adicionadas aos seguintes tipos de objetos no mecanismo de tempo de execução:  
@@ -50,10 +48,10 @@ ms.lasthandoff: 08/03/2017
   
  Cada contêiner tem uma coleção <xref:Microsoft.SqlServer.Dts.Runtime.Executables> que contém os objetos individuais <xref:Microsoft.SqlServer.Dts.Runtime.Executable>. Cada tarefa executável herda e implementa os métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. Esses dois métodos são chamados pelo mecanismo de tempo de execução para processar cada <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   
- Para adicionar uma tarefa a um pacote, você precisa de um contêiner com uma coleção existente <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. Em geral, a tarefa a ser adicionada à coleção é um pacote. Para adicionar a nova tarefa executável na coleção para o contêiner, você deve chamar o <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> método. O método possui um único parâmetro, uma cadeia de caracteres, que contém CLSID, PROGID, o moniker STOCK ou o <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> da tarefa você está adicionando.  
+ Para adicionar uma tarefa a um pacote, você precisa de um contêiner com uma coleção existente <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. Em geral, a tarefa a ser adicionada à coleção é um pacote. Para adicionar o executável da nova tarefa na coleção para esse contêiner, chame o método <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. O método possui um único parâmetro, uma cadeia de caracteres, que contém CLSID, PROGID, o moniker STOCK ou o <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> da tarefa você está adicionando.  
   
 ## <a name="task-names"></a>Nomes de tarefas  
- Embora você possa especificar uma tarefa por nome ou ID, o **estoque** moniker é o parâmetro usado com mais frequência no <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> método. Para adicionar uma tarefa para um executável identificado pelo **estoque** moniker, use a seguinte sintaxe:  
+ Embora você possa especificar uma tarefa pelo nome ou pela ID, o moniker **STOCK** é o parâmetro mais usado no método <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Para adicionar uma tarefa a um executável identificado pelo moniker **STOCK**, use a seguinte sintaxe:  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +63,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- A lista a seguir mostra os nomes para cada tarefa que são usados após o **estoque** moniker.  
+ A lista a seguir mostra os nomes de cada tarefa que são usados depois do moniker **STOCK**.  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +125,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- Você pode obter o nome longo para a tarefa programaticamente, sem a necessidade de especificar a versão da tarefa, usando o **AssemblyQualifiedName** propriedade da classe, conforme mostrado no exemplo a seguir. Esse exemplo precisa de uma referência ao assembly Microsoft.SqlServer.SQLTask.  
+ Você pode obter o nome longo para a tarefa programaticamente, sem precisar especificar a versão da tarefa, usando a propriedade **AssemblyQualifiedName** da classe, conforme mostrado no exemplo a seguir. Esse exemplo precisa de uma referência ao assembly Microsoft.SqlServer.SQLTask.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +141,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- O exemplo de código a seguir mostra como criar um <xref:Microsoft.SqlServer.Dts.Runtime.Executables> coleção de um novo pacote e, em seguida, adicionar uma tarefa de sistema de arquivos e uma tarefa de inserção em massa à coleção, usando seus **estoque** identificadores de origem. Esse exemplo precisa de uma referência aos assemblies Microsoft.SqlServer.FileSystemTask e Microsoft.SqlServer.BulkInsertTask.  
+ O exemplo de código a seguir mostra como criar uma coleção <xref:Microsoft.SqlServer.Dts.Runtime.Executables> de um novo pacote e, depois, adicionar uma tarefa Sistema de Arquivos e uma tarefa Inserção em Massa à coleção, através de seus monikers **STOCK**. Esse exemplo precisa de uma referência aos assemblies Microsoft.SqlServer.FileSystemTask e Microsoft.SqlServer.BulkInsertTask.  
   
 ```csharp  
 using System;  
@@ -327,11 +325,11 @@ End Module
   
  O uso da classe <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> em código, em vez de sua conversão na classe específica da tarefa apresenta as seguintes vantagens:  
   
--   O <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> provedor não requer uma referência ao assembly no código.  
+-   O provedor <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> não precisa de uma referência ao assembly no código.  
   
 -   Você pode criar rotinas com código genérico que funcionam para qualquer tarefa, pois você não precisa saber o nome da tarefa no momento de compilação. Tais rotinas genéricas incluem métodos onde você transmite o nome da tarefa para o método; o código do método funciona para todas as tarefas. Esse é um método bom para escrever código de teste.  
   
- Conversão do <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> na classe específica da tarefa apresenta as seguintes vantagens:  
+ A conversão do <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> na classe específica de tarefa apresenta as seguintes vantagens:  
   
 -   O projeto do Visual Studio oferece conclusão de instrução (IntelliSense).  
   
@@ -420,10 +418,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [EzAPI – atualizado para o SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), em blogs.msdn.com.  
+ Entrada de blog, [EzAPI – Atualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) em blogs.msdn.com.  
 
-## <a name="see-also"></a>Consulte também  
- [Conectando tarefas programaticamente](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conectar tarefas programaticamente](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

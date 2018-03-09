@@ -1,11 +1,11 @@
 ---
-title: 'Etapa 5: Adicionando e configurando simples de arquivo fonte | Microsoft Docs'
+title: 'Etapa 5: Adicionando e configurando a fonte de arquivo simples | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c56b634f36e69e06e03e0206cd70d841f4682ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8f12346caf8cee8dfbcdb6f20d4f4afa00dfd7d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lição 1-5-adicionando e configurando a fonte de arquivo simples
+# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lição 1-5 – adicionar e configurar a fonte de arquivo simples
 Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
   
 Para este tutorial, você irá configurar a fonte de arquivo simples para usar o gerenciador de conexões **Dados da Fonte de Arquivo Simples de Exemplo** criada anteriormente.  
@@ -55,10 +54,9 @@ Para este tutorial, você irá configurar a fonte de arquivo simples para usar o
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 6: Adicionando e configurando a transformação Pesquisa](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Fonte de Arquivo Simples](../integration-services/data-flow/flat-file-source.md)  
 [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
   
   
   
-

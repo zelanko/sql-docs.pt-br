@@ -3,27 +3,28 @@ title: "Configurações (sincronização) (SybaseToSQL) do projeto | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6533ce1774dec4967c9d43ea27902281d5bf756
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Configurações de projeto (sincronização) (SybaseToSQL)
 A página de sincronização do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA carrega os objetos de banco de dados, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure.  
@@ -67,4 +68,3 @@ Se você selecionar **gravar no banco de dados**, SSMA excluirá o objeto do ban
 Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.   
 Conjunto de opção padrão é **de atualização do banco de dados**.  
   
-

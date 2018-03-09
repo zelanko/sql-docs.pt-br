@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- INSERT [ODBC]
+helpviewer_keywords: INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c78b10cece63014d10d131446d9f43b154e91d7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6862ff2ec4d95ce6a2149bbcd7647cdf8ea6819f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insert---sql-command"></a>Insira - o comando SQL
 Acrescenta um registro para o final de uma tabela que contém os valores do campo especificado.  
@@ -54,13 +51,12 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
  VALORES ( *eExpression1*[, *eExpression2*[,...]])  
  Especifica os valores de campo inseridos no novo registro. Se você omitir os nomes de campo, você deve especificar os valores de campo na ordem definida pela estrutura de tabela.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O novo registro contém os dados listados na cláusula VALUES.  
   
 ## <a name="driver-remarks"></a>Comentários de driver  
  Quando o aplicativo envia a instrução INSERT do ODBC SQL para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando FoxProINSERT Visual sem conversão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar tabela - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [SELECT – comando SQL](../../odbc/microsoft/select-sql-command.md)
-

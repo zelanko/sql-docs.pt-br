@@ -2,10 +2,14 @@
 title: "Referência da classe de evento do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +19,19 @@ helpviewer_keywords:
 - SQL Server event classes, listed
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3ffd0d188f72e949a520b72562f0b82694970ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2fba1a18c8d5dca4490002b967d022c4f2924f31
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-event-class-reference"></a>Referência de classe de evento do SQL Server
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite registrar eventos à medida que eles ocorrem em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Os eventos registrados são instâncias das classes de evento na definição de rastreamento. No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], as classes de evento e suas categorias estão disponíveis na guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** .  
   
  A tabela a seguir descreve as categorias de evento e lista suas classes de evento associadas.  
@@ -54,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 |A [Categoria de Evento TSQL](../../relational-databases/event-classes/tsql-event-category.md) contém as classes de evento produzidas pela execução de instruções Transact-SQL passadas do cliente para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Classe de evento Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)<br /><br /> [Classe de evento Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)<br /><br /> [Classe de evento SQL:BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)<br /><br /> [Classe de evento SQL:BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md)<br /><br /> [Classe de evento SQL:StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)<br /><br /> [Classe de evento SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)<br /><br /> [Classe de evento SQL:StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)<br /><br /> [Classe de evento Unprepare SQL](../../relational-databases/event-classes/unprepare-sql-event-class.md)<br /><br /> [Classe de evento XQuery Static Type](../../relational-databases/event-classes/xquery-static-type-event-class.md)|  
 |A [Categoria de Evento Configurável pelo Usuário](../../relational-databases/event-classes/user-configurable-event-category.md) inclui classes de evento que você pode definir.|[Classe de evento User-Configurable](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "13"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
   Este tópico descreve o uso de domínios no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio contém uma representação semântica dos dados em um campo específico na fonte de dados que será analisada. Um domínio faz parte da base de dados de conhecimento que você cria para uma fonte de dados e o conhecimento que acumula analisando uma amostra da fonte de dados ou importando dados é adicionado aos domínios definidos na base de dados de conhecimento. O conhecimento nesses domínios é usado depois para executar a limpeza e a correspondência em um projeto de qualidade de dados. Os domínios estão ao núcleo de todas as atividades no Data Quality Services.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 09/09/2017
  Também pode criar um domínio composto que abrange dois ou mais domínios individuais que contêm conhecimentos sobre dados comuns. Para obter mais informações, consulte [Gerenciando um domínio de composição](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Propriedades do Domínio  
- Quando você cria um domínio, tem as opções a seguir para populá-lo a partir da fonte de dados e apresentar a saída dos valores de domínio. Para obter mais informações, consulte [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
+ Quando você cria um domínio, tem as opções a seguir para populá-lo a partir da fonte de dados e apresentar a saída dos valores de domínio. Para obter mais informações, consulte [Definir propriedades do domínio](../data-quality-services/set-domain-properties.md).  
   
 -   Selecione o tipo dos dados com o qual você popula o domínio. Para obter informações sobre tipos de dados com suporte para cada tipo de dados de domínio, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/09/2017
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../data-quality-services/create-term-based-relations.md)|  
 |Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 |Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciar um domínio de composição](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

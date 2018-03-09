@@ -2,15 +2,13 @@
 title: Elemento Parameters (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Parameters Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82cdd4102a5858473df3baf59c994ee765d8dcd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8756ded720e9884596a7a7aaab6fdd6e2271ef7a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parameters-element-xmla"></a>Elemento Parameters (XMLA)
-  Contém uma coleção de [parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elementos usados pelo [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de [parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elementos usados pelo [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
  **Namespace:**`urn:schemas-microsoft-com:xml-analysis`  
   
@@ -54,11 +52,11 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -67,12 +65,12 @@ ms.lasthandoff: 11/17/2017
 |Elementos pai|[Executar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Elementos filho|[Parâmetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Alguns comandos do XMLA (XML for Analysis), como o comando [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) , podem requerer informações adicionais. O **parâmetros** elemento fornece um mecanismo para fornecer informações adicionais, incluindo partes de informações de um comando XMLA.  
   
  Se o comando XMLA não usar o **parâmetros** elemento, o elemento pode ser omitido ao chamar o **Execute** método.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

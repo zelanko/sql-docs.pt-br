@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Grupos de disponibilidade independentes de domínio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,69 +87,87 @@ Atualmente, a criação de um Grupo de Disponibilidade Independente de Domínio 
 1. [Usando as instruções deste link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), implante um Cluster de Grupo de Trabalho composto por todos os servidores que farão parte do grupo de disponibilidade. Verifique se o sufixo DNS comum já está configurado antes de configurar o Cluster de Grupo de Trabalho.
 2. [Habilite o recurso Grupos de Disponibilidade AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) em cada instância que fará parte do grupo de disponibilidade. Isso exigirá uma reinicialização de cada instância do SQL Server.
 3. Cada instância que hospedará a réplica primária exige uma chave mestra de banco de dados. Se uma chave mestra ainda não existir, execute o seguinte comando:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. Na instância que será a réplica primária, crie o certificado que será usado para conexões de entrada nas réplicas secundárias e para proteger o ponto de extremidade na réplica primária.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Faça backup do certificado. Você também pode fornecer proteção avançada a ele com uma chave privada, se desejado. Esse exemplo não usa uma chave privada.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Repita as Etapas 4 e 5 para criar e fazer backup dos certificados de cada réplica secundária, usando os nomes apropriados para os certificados, como InstanceB_Cert.
 7. Na réplica primária, crie um logon para cada réplica secundária do grupo de disponibilidade. Esse logon receberá permissões para se conectar ao ponto de extremidade usado pelo Grupo de Disponibilidade Independente de Domínio. Por exemplo, em uma réplica chamada InstanceB:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. Em cada réplica secundária, crie um logon para a réplica primária. Esse logon receberá permissões para se conectar ao ponto de extremidade. Por exemplo, em uma réplica chamada InstanceB:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. Em todas as instâncias, crie um usuário para cada logon que foi criado. Isso será usado ao restaurar os certificados. Por exemplo, para criar um usuário para a réplica primária:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Para qualquer réplica que possa ser uma primária, crie um logon e um usuário em todas as réplicas secundárias relevantes.
 11. Em cada instância, restaure os certificados para as outras instâncias que tinham um logon e um usuário criados. Na réplica primária, restaure todos os certificados da réplica secundária. Em cada secundária, restaure o certificado da réplica primária e também em qualquer outra réplica que pode ser uma primária. Por exemplo:
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Crie o ponto de extremidade que será usado pelo grupo de disponibilidade em cada instância que será uma réplica. Para grupos de disponibilidade, o ponto de extremidade deve ter um tipo de DATABASE_MIRRORING. O ponto de extremidade usa o certificado criado na Etapa 4 para essa instância para autenticação. Uma sintaxe de exemplo é mostrada abaixo para a criação de um ponto de extremidade usando um certificado. Use o método de criptografia apropriado e outras opções relevantes para o ambiente. Para obter mais informações sobre as opções disponíveis, consulte [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Atribua direitos a cada usuário criado nessa instância na Etapa 9 para que eles possam se conectar ao ponto de extremidade. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. Quando os certificados subjacentes e a segurança do ponto de extremidade são configurados, crie o grupo de disponibilidade usando seu método preferido. É recomendável fazer backup manualmente, copiar e restaurar o backup usado para inicializar a secundária ou usar a [propagação automática](automatically-initialize-always-on-availability-group.md). O uso do Assistente para inicializar as réplicas secundárias envolve o uso de arquivos do protocolo SMB, que talvez não funcionem ao usar um Cluster de Grupo de Trabalho não ingressado no domínio.
 15. Se estiver criando um ouvinte, verifique se seu nome e endereço IP são registrados no DNS.
 
 ### <a name="next-steps"></a>Próximas etapas 
 
-- [Usar o Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

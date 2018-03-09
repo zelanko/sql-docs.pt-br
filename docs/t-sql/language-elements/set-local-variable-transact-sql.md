@@ -20,19 +20,18 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a92fa424de70d1ba9cccf437a2de49ab8432ba1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>DEFINIR @local_variable (Transact-SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Define a variável local especificada, criada anteriormente usando o DECLARE @*local_variable* instrução, para o valor especificado.  
@@ -77,13 +76,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@***local_variable*  
+ **@** *local_variable*  
  É o nome de uma variável de qualquer tipo, exceto **cursor**, **texto**, **ntext**, **imagem**, ou **tabela**. Nomes de variável devem começar com um sinal de arroba (**@**). Nomes de variáveis devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *Property_Name*  
+ *property_name*  
  É uma propriedade de um tipo definido pelo usuário.  
   
- *nome_do_campo*  
+ *field_name*  
  É um campo público de um tipo definido pelo usuário.  
   
  *udt_name*  
@@ -95,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *nome_do_método* **(** *argumento* [ **,**... *n* ] **)**  
  É um método de um tipo definido pelo usuário que obtém um ou mais argumentos para modificar o estado de uma instância de um tipo. Os métodos estáticos devem ser públicos.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  É uma variável cujo tipo está localizado em um assembly. Para obter mais informações, consulte [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -179,12 +178,12 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  ATUALIZAÇÃO [OF *column_name*[ **,**... *n* ] ]  
  Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**...  *n* ] for fornecido, somente as colunas listadas permitirão modificações. Se nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Depois de uma variável ser declarada, ela é inicializada como NULL. Use a instrução SET para atribuir um valor que não é NULL a uma variável declarada. A instrução SET que atribui um valor à variável retorna um único valor. Ao inicializar várias variáveis, use uma instrução SET separada para cada variável local.  
   
  As variáveis podem ser usadas somente em expressões, não em nomes de objeto ou palavras-chave. Para construir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] dinâmicas, use EXECUTE.  
   
- As regras de sintaxe para definir  **@**  *cursor_variable* não incluem as palavras-chave LOCAL e GLOBAL. Quando o conjunto  **@**  *cursor_variable* = CURSOR... sintaxe é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados de cursor local.  
+ As regras de sintaxe para definir **@ * cursor_variable* não incluem as palavras-chave LOCAL e GLOBAL. Quando o conjunto **@ * cursor_variable* = CURSOR... sintaxe é usada, o cursor é criado como GLOBAL ou LOCAL, dependendo da configuração padrão da opção de banco de dados de cursor local.  
   
  As variáveis de cursor sempre são locais, mesmo se fizerem referência a um cursor global. Quando uma variável de cursor faz referência a um cursor global, o cursor tem as duas referências, uma global e uma local. Para obter mais informações, veja o Exemplo C.  
   
@@ -195,7 +194,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Não use uma variável em uma instrução SELECT para concatenar valores (ou seja, para computar valores agregados). Resultados inesperados de consulta podem ocorrer. Isso ocorre porque todas as expressões na lista SELECT (incluindo atribuições) não têm garantia de serem executadas exatamente uma vez para cada linha de saída. Para obter mais informações, consulte [neste artigo da KB](http://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função public. Todos os usuários podem usar SET  **@**  *local_variable*.  
+ Requer associação à função public. Todos os usuários podem usar SET **@ * local_variable*.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -370,11 +369,11 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

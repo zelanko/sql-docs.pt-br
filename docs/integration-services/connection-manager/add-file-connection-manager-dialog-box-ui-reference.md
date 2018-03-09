@@ -1,5 +1,5 @@
 ---
-title: "Adicionar referência de interface do usuário da caixa de diálogo Gerenciador de Conexão de arquivo | Microsoft Docs"
+title: "Referência de interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d4f3ee30eb310bdf109914dbdfb7dd0b56fb94c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
   Use a caixa de diálogo do **Adicionar Gerenciador de Conexões de Arquivos** para definir uma conexão com um grupo de arquivos ou pastas.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/03/2017
  **Tipo de uso**  
  Especifique os tipos de arquivos a serem usados para o gerenciador de conexões de vários arquivos.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Criar arquivos**|O gerenciador de conexões criará os arquivos.|  
 |**Arquivos existentes**|O gerenciador de conexões utilizará arquivos existentes.|  
@@ -63,8 +62,7 @@ ms.lasthandoff: 08/03/2017
  **Botões de seta**  
  Selecione um arquivo ou pasta e use os botões de seta para movê-los para cima ou para baixo para especificar a sequência de acesso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

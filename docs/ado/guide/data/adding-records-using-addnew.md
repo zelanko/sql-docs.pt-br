@@ -3,8 +3,9 @@ title: Adicionando registros usando AddNew | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3bb2828935872cc4759608b0041db71ce8c24d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>Adicionando registros usando o método AddNew
 Esta é a sintaxe básica do **AddNew** método:
 
- *conjunto de registros*. AddNew *FieldList*, *valores*
+ *recordset*.AddNew *FieldList*, *Values*
 
  O *FieldList* e *valores* argumentos são opcionais. *Lista de campos* é um nome único ou uma matriz de nomes ou posições ordinais dos campos no novo registro.
 
@@ -53,5 +54,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  Porque esse código usa um desconectada **registros** com um cursor do lado do cliente no modo de lote, você deve reconectar o **registros** à fonte de dados com um novo **Conexão** objeto antes de chamar o **UpdateBatch** método para postar as alterações no banco de dados. Isso é feito facilmente usando a nova função **GetNewConnection**.

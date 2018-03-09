@@ -1,14 +1,15 @@
 ---
 title: "Índices em colunas computadas | Microsoft Docs"
 ms.custom: 
-ms.date: 02/17/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,37 +19,33 @@ helpviewer_keywords:
 - persisted computed columns
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea21b5b7cab5a9da6c107c3b54d9e156c0b38196
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17eefea966232b9ef297477efae843e556098ba8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Você pode definir índices em colunas computadas contanto que os seguintes requisitos sejam satisfeitos:  
+Você pode definir índices em colunas computadas contanto que os seguintes requisitos sejam satisfeitos:  
   
 -   Requisitos de propriedade  
-  
 -   Requisitos de determinismo  
-  
 -   Requisitos de precisão  
-  
 -   Requisitos de tipo de dados  
-  
 -   Requisitos de opção SET  
   
- **Ownership Requirements**  
+**Ownership Requirements**  
   
- Todas as referências de função na coluna computada devem ter o mesmo proprietário da tabela.  
+Todas as referências de função na coluna computada devem ter o mesmo proprietário da tabela.  
   
- **Determinism Requirements**  
+**Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Expressões são determinísticas se elas sempre retornarem o mesmo resultado para um conjunto de entradas especificado. A propriedade **IsDeterministic** da função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) relata se um *computed_column_expression* é determinístico.  
@@ -63,24 +60,29 @@ ms.lasthandoff: 11/17/2017
   
 -   A *computed_column_expression* não tem acesso a dados do sistema nem a dados do usuário.  
   
- Qualquer coluna computada que contenha uma expressão CLR (Common Language Runtime) deve ser determinística e marcada como PERSISTED antes que a coluna possa ser indexada. Expressões de tipo de dado CLR definido pelo usuário são permitidas em definições de coluna computada. Colunas computadas cujo tipo é um tipo de dado CLR definido pelo usuário podem ser indexadas contanto que o tipo seja comparável. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+Qualquer coluna computada que contenha uma expressão CLR (Common Language Runtime) deve ser determinística e marcada como PERSISTED antes que a coluna possa ser indexada. Expressões de tipo de dado CLR definido pelo usuário são permitidas em definições de coluna computada. Colunas computadas cujo tipo é um tipo de dado CLR definido pelo usuário podem ser indexadas contanto que o tipo seja comparável. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
-> [!NOTE]  
->  Quando você se referir a literais de cadeia de caracteres do tipo de dados de data em colunas computadas indexadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recomendamos que você converta explicitamente o literal para o tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). Expressões que envolvem conversão implícita de cadeias de caracteres para tipos de dados de data são consideradas não determinísticas, a menos que o nível de compatibilidade de banco de dados seja definido como 80 ou abaixo disso. Isso ocorre porque os resultados dependem das configurações de [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`30 listopad 1996`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
+> [!IMPORTANT]  
+>  Quando você se referir a literais de cadeia de caracteres do tipo de dados de data em colunas computadas indexadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recomendamos que você converta explicitamente o literal para o tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+
+> [!NOTE]
+> Expressões que envolvem conversão implícita de cadeias de caracteres para tipos de dados de data são consideradas não determinísticas, a menos que o nível de compatibilidade de banco de dados seja definido como 80 ou abaixo disso. Isso ocorre porque os resultados dependem das configurações de [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) da sessão de servidor. 
+>
+> Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`30 listopad 1996`' significa meses diferentes em idiomas. 
+> Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
 >   
->  A conversão implícita de dados de caracteres não Unicode entre agrupamentos também é considerada não determinística, a menos que o nível de compatibilidade seja definido como 80 ou abaixo disso.  
+> A conversão implícita de dados de caracteres não Unicode entre agrupamentos também é considerada não determinística, a menos que o nível de compatibilidade seja definido como 80 ou abaixo disso.  
 >   
->  Quando o nível da configuração da compatibilidade de banco de dados é 90, você não pode criar índices em colunas computadas que contêm essas expressões. Porém, a existência de colunas computadas com essas expressões de um banco de dados atualizado é sustentável. Se você usar colunas computadas indexadas que contêm conversões implícitas de cadeia de caracteres para datas; para evitar possível corrupção de índice, verifique se as configurações LANGUAGE e DATEFORMAT estão consistentes em seus bancos de dados e aplicativos.  
+> Quando o nível da configuração da compatibilidade de banco de dados é 90, você não pode criar índices em colunas computadas que contêm essas expressões. Porém, a existência de colunas computadas com essas expressões de um banco de dados atualizado é sustentável. Se você usar colunas computadas indexadas que contêm conversões implícitas de cadeia de caracteres para datas; para evitar possível corrupção de índice, verifique se as configurações LANGUAGE e DATEFORMAT estão consistentes em seus bancos de dados e aplicativos.  
   
  **Precision Requirements**  
   
  A *computed_column_expression* deve ser precisa. Uma *computed_column_expression* é precisa quando uma ou mais das seguintes opções é verdadeira:  
   
 -   Não é uma expressão dos tipos de dados **float** ou **real** .  
-  
 -   Não usa um tipo de dados **float** ou **real** na definição. Por exemplo, na instrução a seguir, a coluna `y` é **int** e determinística, mas não é precisa.  
   
-    ```  
+    ```sql  
     CREATE TABLE t2 (a int, b int, c int, x float,   
        y AS CASE x   
              WHEN 0 THEN a   
@@ -90,44 +92,38 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 > [!NOTE]  
->  Qualquer expressão **float** ou **real** é considerada imprecisa e não pode ser uma chave de um índice; uma expressão **float** ou **real** pode ser usada em uma exibição indexada, mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão ou função definida pelo usuário será considerada imprecisa se contiver uma expressão **float** ou **real** . Isso inclui as lógicas (comparações).  
+> Qualquer expressão **float** ou **real** é considerada imprecisa e não pode ser uma chave de um índice; uma expressão **float** ou **real** pode ser usada em uma exibição indexada, mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão ou função definida pelo usuário será considerada imprecisa se contiver uma expressão **float** ou **real** . Isso inclui as lógicas (comparações).  
   
- A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_column_expression* é precisa.  
+A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_column_expression* é precisa.  
   
- **Data Type Requirements**  
+**Data Type Requirements**  
   
 -   A *computed_column_expression* definida para a coluna computada não pode ser avaliada para os tipos de dados **text**, **ntext**ou **image** .  
-  
 -   Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**e **xml** podem ser indexadas, desde que o tipo de dados da coluna computada seja permitido como uma coluna de chave de índice.  
-  
 -   Colunas computadas derivadas dos tipos de dados **image**, **ntext**e **text** podem ser colunas (incluídas) não chave em um índice não clusterizado, desde que o tipo de dados da coluna computada seja permitida como uma coluna de índice não chave.  
   
- **SET Option Requirements**  
+**SET Option Requirements**  
   
 -   A opção de nível de conexão ANSI_NULLS deve ser definida como ON quando a instrução CREATE TABLE ou ALTER TABLE que define a coluna computada é executada. A função [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) relata se a opção está ativa pela propriedade **IsAnsiNullsOn** .  
-  
 -   A conexão na qual o índice é criado e todas as conexões que tentam instruções INSERT, UPDATE ou DELETE que alterarão valores no índice, deve ter seis opções de SET definidas como ON e uma opção definida como OFF. O otimizador ignora um índice em uma coluna computada para qualquer instrução SELECT executada por uma conexão que não tenha essas mesmas opções de configuração.  
   
     -   A opção de NUMERIC_ROUNDABORT deve ser definida como OFF e as opções seguintes devem ser definidas como ON:  
-  
     -   ANSI_NULLS  
-  
     -   ANSI_PADDING  
-  
     -   ANSI_WARNINGS  
-  
     -   ARITHABORT  
-  
     -   CONCAT_NULL_YIELDS_NULL  
-  
     -   QUOTED_IDENTIFIER  
   
-     A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais.  
+> [!NOTE]
+> A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais.  
   
-##  <a name="BKMK_persisted"></a> Criando índices em colunas computadas persistentes  
- Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena os valores computados na tabela e os atualiza quando as outras colunas das quais a coluna computada depende são atualizadas. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa esses valores persistentes ao criar um índice na coluna e quando o índice é referenciado em uma consulta. Essa opção permite a você criar um índice em uma coluna computada quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] não puder provar, com exatidão, se uma função que retorna expressões de coluna computada, particularmente uma função CLR que é criada no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é determinística e precisa.  
+## <a name="BKMK_persisted"></a> Criando índices em colunas computadas persistentes  
+Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena os valores computados na tabela e os atualiza quando as outras colunas das quais a coluna computada depende são atualizadas. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa esses valores persistentes ao criar um índice na coluna e quando o índice é referenciado em uma consulta. Essa opção permite a você criar um índice em uma coluna computada quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] não puder provar, com exatidão, se uma função que retorna expressões de coluna computada, particularmente uma função CLR que é criada no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é determinística e precisa.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)    
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
   
   

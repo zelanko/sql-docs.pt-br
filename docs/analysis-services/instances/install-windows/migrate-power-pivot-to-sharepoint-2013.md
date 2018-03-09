@@ -2,39 +2,34 @@
 title: Migrar o Power Pivot para SharePoint 2013 | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar o Power Pivot para o SharePoint 2013
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   
   
  O SharePoint 2013 não oferece suporte a atualização in-loco. De qualquer modo, o procedimento de **atualização da anexação do banco de dados tem suporte**. O comportamento é diferente de atualizar para o SharePoint 2010, onde um cliente pode escolher entre as duas abordagens básicas de atualização, atualização in-loco e atualizações de anexação do banco de dados.  
   
  Se você tiver uma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] integrada com o SharePoint 2010, não poderá atualizar o servidor do SharePoint in-loco. No entanto, você pode migrar bancos de dados de conteúdo e bancos de dados de aplicativo de serviço do farm do SharePoint 2010 para um farm do SharePoint 2013. Este tópico é uma visão geral das etapas necessárias para concluir uma atualização de anexação de banco de dados e uma migração relacionada ao [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ### <a name="migration-overview"></a>Visão geral da migração  
   
@@ -64,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Instalar uma instância de um servidor do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Para saber mais, veja [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Executar o pacote de instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** em cada farm do SharePoint Server. Para obter mais informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  Executar o pacote de instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** em cada farm do SharePoint Server. Para obter informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 5.  Na Administração Central do SharePoint 2013, configure o aplicativo de serviço dos Serviços do Excel para usar o servidor do modo do SharePoint do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] criado na etapa anterior. Para obter mais informações, consulte a seção “Configure a integração básica do Analysis Services SharePoint” de [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
@@ -188,4 +183,3 @@ ms.lasthandoff: 09/01/2017
 -   [Atualizar bancos de dados do SharePoint 2010 para o SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
   
-

@@ -2,15 +2,13 @@
 title: "Convenções de XML do ASSL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -30,20 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a8cd244f64d45ff81ff51cba6b528c81ba743ff1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
-  A ASSL (Analysis Services Scripting Language) representa a hierarquia de objetos como um conjunto de tipos de elementos, cada um definindo os elementos filhos que podem conter.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A ASSL (Analysis Services Scripting Language) representa a hierarquia de objetos como um conjunto de tipos de elementos, cada um definindo os elementos filhos que podem conter.  
   
  Para representar a hierarquia de objeto, a ASSL usa as seguintes convenções XML:  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  **Longo**  
  Um valor inteiro no intervalo de -263 até 263 – 1.  
   
- **Cadeia de caracteres**  
+ **String**  
  Um valor de cadeia de caracteres em conformidade com as seguintes regras globais:  
   
 -   Os caracteres de controle são retirados.  
@@ -160,9 +158,9 @@ ms.lasthandoff: 09/01/2017
 |Tipo de dados XML|Valor padrão|  
 |-------------------|-------------------|  
 |**Booliano**|Falso|  
-|**Cadeia de caracteres**|"" (cadeia de caracteres vazia)|  
+|**String**|"" (cadeia de caracteres vazia)|  
 |**Inteiro** ou **longo**|0 (zero)|  
-|**Carimbo de hora**|12:00:00 AM, 1/1/0001 (correspondente a um .NET Frameworks **System. DateTime** com 0 tiques)|  
+|**Timestamp**|12:00:00 AM, 1/1/0001 (correspondente a um .NET Frameworks **System. DateTime** com 0 tiques)|  
   
  Um elemento que está presente mas vazio será interpretado como tendo um valor de uma cadeia de caracteres nula, e não como o valor padrão.  
   
@@ -192,4 +190,3 @@ ms.lasthandoff: 09/01/2017
  Para obter mais informações sobre padrões herdados, consulte [objetos e características de objeto ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
   
-

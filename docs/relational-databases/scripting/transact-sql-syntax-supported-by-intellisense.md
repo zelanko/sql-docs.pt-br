@@ -2,30 +2,35 @@
 title: Sintaxe Transact-SQL com suporte no IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fa116b3ef7a86697f053a653c14aad0e86f1535
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0775b58cc86f349e94ae2305fa058a1edfe42370
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxe Transact-SQL com suporte do IntelliSense
-  Este tópico descreve as instruções e os elementos de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] aos quais o IntelliSense dá suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve as instruções e os elementos de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] aos quais o IntelliSense dá suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Instruções com suporte do IntelliSense  
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o IntelliSense dá suporte apenas às instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] mais usadas. Algumas condições gerais do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem impedir que o IntelliSense funcione. Para obter mais informações, consulte [Solucionando problemas do IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
@@ -49,17 +54,17 @@ ms.lasthandoff: 11/09/2017
   
 |Instrução Transact-SQL|Sintaxe com suporte|Exceções|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda a sintaxe, exceto a cláusula *execute_statement* .|Nenhuma|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Execução de procedimentos armazenados definidos pelo usuário, procedimentos armazenados do sistema, funções definidas pelo usuário e funções do sistema.|Nenhuma|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda a sintaxe, exceto a cláusula *execute_statement* .|Nenhum|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toda a sintaxe.|Nenhum|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toda a sintaxe.|Nenhum|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toda a sintaxe.|Nenhum|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toda a sintaxe.|Nenhum|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Execução de procedimentos armazenados definidos pelo usuário, procedimentos armazenados do sistema, funções definidas pelo usuário e funções do sistema.|Nenhum|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toda a sintaxe.|Nenhum|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toda a sintaxe.|Nenhum|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Toda a sintaxe.|Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Toda a sintaxe|Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toda a sintaxe.|Nenhuma|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toda a sintaxe.|Nenhum|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense em instruções com suporte  
  No Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , o IntelliSense dá suporte aos seguintes elementos de sintaxe, quando usados em uma das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] com suporte:  

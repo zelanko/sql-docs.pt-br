@@ -3,13 +3,19 @@ title: Tipo de sistema (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - type system [XQuery]
@@ -22,19 +28,19 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8c3bc023375876e4581e28f1cbeec39c1fa8995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery é uma linguagem com rigidez de tipos para esquemas digitados, e uma linguagem fraca em tipos para dados não digitados. Os tipos predefinidos de XQuery incluem o seguinte:  
   

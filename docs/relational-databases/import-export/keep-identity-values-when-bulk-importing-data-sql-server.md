@@ -2,10 +2,14 @@
 title: Manter valores de identidade ao importar dados em massa (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4eaed7f393eaf022482ae585cd5691834fa39881
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 076fe1050d7ac2c6d0696b0dd0baff051597ad30
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Os dados de arquivo que contêm valores de identidade podem ser importados em massa para uma instância do Microsoft SQL Server.  Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente.  Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.
 
 Se o arquivo de dados não contiver valores para a coluna de identificador na tabela, use um arquivo de formato para especificar que a coluna de identificador na tabela deve ser ignorada durante a importação dos dados.  Consulte [Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) para obter mais informações.
@@ -323,7 +328,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   

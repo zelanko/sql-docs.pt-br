@@ -1,35 +1,35 @@
 ---
-title: Entrega de compartilhamento no Reporting Services do arquivo | Microsoft Docs
+title: Entrega de compartilhamento de arquivos no Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "54"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cfdf980d2d9ed24f18c29771920bcf16b34aebd5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de compartilhamento de arquivos que possibilita entregar um relatório a uma pasta. A extensão de entrega de compartilhamento de arquivos está disponível por padrão e não requer configuração adicional. Para que a entrega do arquivo seja bem-sucedida, você deve definir permissões de acesso de gravação na pasta compartilhada. A conta que exige permissões de gravador pode ser uma credencial configurada na assinatura ou uma **Conta de compartilhamento de arquivos** configurada para o servidor de relatório. Para obter mais informações sobre a conta de compartilhamento de arquivo, consulte [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Além disso, os usuários que precisam acessar os relatórios devem ter permissões de leitura na pasta compartilhada.  
   
- Para distribuir um relatório a um compartilhado de arquivos, defina uma assinatura padrão ou uma assinatura controlada por dados. Para saber como usar a entrega de compartilhamento de arquivos em uma assinatura controlada por dados, consulte [criar uma assinatura controlada por dados &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Além disso, a conta que executa assinaturas de compartilhamentos de arquivos remotos exige direitos para logon local no computador [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Para distribuir um relatório a um compartilhado de arquivos, defina uma assinatura padrão ou uma assinatura controlada por dados. Para saber como usar a entrega de compartilhamento de arquivos em uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Além disso, a conta que executa assinaturas de compartilhamentos de arquivos remotos exige direitos para logon local no computador [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -86,9 +86,8 @@ ms.lasthandoff: 08/09/2017
   
  ![assinatura de compartilhamento de arquivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "assinatura de compartilhamento de arquivos")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40; Configuration Manager &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
-

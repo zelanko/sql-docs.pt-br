@@ -20,19 +20,19 @@ ms.date: 07/19/2017"
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 É possível usar uma ferramenta de diagnóstico interativo criada no PolyBase para ajudar a solucionar problemas de autenticação no uso do PolyBase em um cluster Hadoop protegido por Kerberos. 
 
 Este artigo descreve o processo de depuração desses problemas por meio dessa ferramenta.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 ou versões posteriores com o PolyBase instalado
 1. Um cluster Hadoop (Cloudera ou Hortonworks) protegido por Kerberos (Active Directory ou MIT)
@@ -208,6 +208,5 @@ No Active Directory, os SPNs podem ser exibidos por meio do Painel de Controle >
 [Guia do Cloudera para a Configuração do Kerberos para CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Guia do Hortonworks para a Configuração do Kerberos para HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [Solução de problemas do PolyBase](polybase-troubleshooting.md)
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: "LTRIM (expressão SSIS) | Microsoft Docs"
+title: "LTRIM (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d68b87ab59dab0a5b7bbd199b58a6259eb28daf9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29461d1213fb251895a6dc423e5fdd1df09b2b12
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (Expressão SSIS)
   Retorna uma expressão de caractere depois de remover espaços em branco à esquerda.  
@@ -48,7 +47,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  LTRIM só funciona com o tipo de dados DT_WSTR. Um argumento *character_expression* que é um literal de cadeia de caracteres ou uma coluna de dados com o tipo de dados DT_STR é implicitamente convertido para o tipo de dados DT_WSTR antes de LTRIM executar sua operação. Outros tipos de dados devem ser explicitamente convertidos para o tipo de dados DT_WSTR. Para obter mais informações, consulte [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md) e [Cast &#40;Expressão SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  LTRIM retornará um resultado nulo se o argumento for nulo.  
@@ -72,10 +71,9 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [RTRIM &#40; Expressão do SSIS &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [TRIM &#40; Expressão do SSIS &#41;](../../integration-services/expressions/trim-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [RTRIM &#40;Expressão SSIS&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [TRIM &#40;Expressão SSIS&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

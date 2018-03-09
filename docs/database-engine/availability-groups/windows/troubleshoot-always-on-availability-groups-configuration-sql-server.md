@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  **Neste tópico:**  
   
-|Seção|Descrição|  
+|Seção|Description|  
 |-------------|-----------------|  
 |[Os grupos de disponibilidade AlwaysOn não estão habilitados](#IsHadrEnabled)|Se uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não estiver habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a instância não dará suporte à criação de grupo de disponibilidade e não poderá hospedar nenhuma réplica de disponibilidade.|  
 |[Contas](#Accounts)|Discute os requisitos para configurar corretamente as contas nas quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado.|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/20/2017
     GO  
     ```  
   
-     Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md).  
+     Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
 5.  Verifique se o logon do outro servidor tem permissão CONNECT. Para determinar quem tem permissão CONNECT para um ponto de extremidade, em cada instância do servidor, use a seguinte instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
@@ -171,7 +172,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configuração de rede do cliente](../../../database-engine/configure-windows/client-network-configuration.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

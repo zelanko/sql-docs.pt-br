@@ -2,9 +2,12 @@
 title: "Funções de aplicativo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: "31"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9437e6150d5c1dba89b082d016dccaa59744d4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76f05f0da9acce4f7e1a9e7749972a29ddd31a67
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="application-roles"></a>Funções de aplicativo
-  Uma função de aplicativo é uma entidade de banco de dados que permite que um aplicativo execute com suas próprias permissões de usuário. As funções de aplicativos podem ser usadas para habilitar acesso a dados específicos somente aos usuários que se conectam por um aplicativo específico. Diferentemente de funções de banco de dados, funções de aplicativo não contêm membros e são inativas por padrão. Funções de aplicativo trabalham com ambos os modos de autenticação. Funções de aplicativo são habilitadas usando **sp_setapprole**, que requer uma senha. Como as funções de aplicativo são uma entidade de nível de banco de dados, elas só podem acessar outros bancos de dados através de permissões concedidas nesses bancos de dados como **convidado**. Portanto, qualquer banco de dados no qual o **convidado** tenha sido desabilitado estará inacessível a funções de aplicativo em outros bancos de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Uma função de aplicativo é uma entidade de banco de dados que permite que um aplicativo seja executado com suas próprias permissões semelhantes a de usuário. As funções de aplicativos podem ser usadas para habilitar acesso a dados específicos somente aos usuários que se conectam por um aplicativo específico. Diferentemente de funções de banco de dados, funções de aplicativo não contêm membros e são inativas por padrão. Funções de aplicativo trabalham com ambos os modos de autenticação. Funções de aplicativo são habilitadas usando **sp_setapprole**, que requer uma senha. Como as funções de aplicativo são uma entidade de nível de banco de dados, elas só podem acessar outros bancos de dados através de permissões concedidas nesses bancos de dados como **convidado**. Portanto, qualquer banco de dados no qual o **convidado** tenha sido desabilitado estará inacessível a funções de aplicativo em outros bancos de dados.  
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], funções de aplicativo não podem acessar metadados de nível de servidor porque eles não estão associados a uma entidade de nível de servidor. Para desabilitar essa restrição e assim permitir que funções de aplicativo acessem metadados de nível de servidor, defina o sinalizador global 4616. Para obter mais informações, consulte [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
   

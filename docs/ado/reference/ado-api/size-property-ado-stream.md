@@ -3,8 +3,9 @@ title: Tamanho de propriedade (fluxo de ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Size
-helpviewer_keywords: Size property [ADO Stream]
+f1_keywords:
+- _Stream::Size
+helpviewer_keywords:
+- Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28bea0348e59cc3003009cd2c82242f826e9250c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cfd7bc505122ec142e61d53cdd3502c8c6ad3075
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="size-property-ado-stream"></a>Propriedade Size (fluxo de ADO)
 Indica o tamanho do fluxo no número de bytes.  
@@ -32,7 +35,7 @@ Indica o tamanho do fluxo no número de bytes.
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **longo** valor que especifica o tamanho do fluxo no número de bytes. O valor padrão é o tamanho do fluxo ou -1 se o tamanho do fluxo não é conhecido.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **Tamanho** pode ser usado apenas com open [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
 > [!NOTE]

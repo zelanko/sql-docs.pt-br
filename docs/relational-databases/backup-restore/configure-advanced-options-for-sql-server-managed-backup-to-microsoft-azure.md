@@ -2,26 +2,29 @@
 title: "Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
-  O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
   
  Em cada cenário, o backup é especificado usando o parâmetro `database_name` . Quando `database_name` é NULL ou *, as alterações afetam as configurações padrão no nível da instância. Configurações de nível de instância também afetam os novos bancos de dados criados após a alteração.  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  **Criar um certificado de backup ou uma chave assimétrica:** você pode usar um certificado ou uma chave assimétrica com a criptografia. O exemplo a seguir cria um certificado de backup a ser usado na criptografia.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -112,10 +115,10 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Depois de configurar opções avançadas e agendas personalizadas, é necessário habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no banco de dados de destino ou instância do SQL Server. Para obter mais informações, veja [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

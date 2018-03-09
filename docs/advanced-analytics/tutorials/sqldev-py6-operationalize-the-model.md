@@ -2,31 +2,32 @@
 title: 'Etapa 6: Colocar o modelo de Python usando o SQL Server | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Etapa 6: Colocar o modelo de Python usando o SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -377,4 +378,3 @@ Neste tutorial, você aprendeu como trabalhar com o código Python incorporado e
 ## <a name="see-also"></a>Consulte também
 
 [Serviços de aprendizado de máquina com Python](../python/sql-server-python-services.md)
-

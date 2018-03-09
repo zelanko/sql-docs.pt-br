@@ -2,15 +2,13 @@
 title: "Segurança de nível de objeto de modelo de tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,18 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed695cd15d9e0622ff28ed449395f0684b2cf9f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Segurança em nível de objeto
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-Segurança do modelo de dados começa com efetivamente implementando [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtros de nível de linha para definir permissões de usuário nos dados e objetos de modelo de dados. Começando com modelos de tabela 1400, você também pode definir segurança em nível de objeto, que inclui a segurança em nível de tabela e segurança em nível de coluna a [objeto funções](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Segurança do modelo de dados começa com efetivamente implementando [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtros de nível de linha para definir permissões de usuário nos dados e objetos de modelo de dados. Começando com modelos de tabela 1400, você também pode definir segurança em nível de objeto, que inclui a segurança em nível de tabela e segurança em nível de coluna a [objeto funções](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## <a name="table-level-security"></a>Segurança em nível de tabela
 
@@ -84,7 +78,7 @@ Neste exemplo, a propriedade metadataPermission da classe columnPermissions para
   }
 ```
 
-## <a name="restrictions"></a>Restrições
+## <a name="restrictions"></a>Restrictions
 
 *  Segurança em nível de tabela não pode ser definida para um modelo se ele divide uma cadeia de relações. É gerado um erro em tempo de design.
  Por exemplo, se houver relações entre as tabelas A e B e B e C, você não pode proteger tabela B. Se a tabela B estiver protegida, de uma consulta na tabela A não pode trânsito as relações entre a tabela A e B e B e C. Nesse caso, uma relação separada pode ser configurada entre as tabelas A e B.
@@ -101,11 +95,10 @@ Neste exemplo, a propriedade metadataPermission da classe columnPermissions para
 
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[Objeto de funções (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+[Objeto Roles (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [TMSL (linguagem de script de modelo de tabela)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
 [Modelo de objeto de tabela (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md).
 
   
-

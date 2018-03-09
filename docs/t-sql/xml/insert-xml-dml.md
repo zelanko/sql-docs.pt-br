@@ -20,17 +20,16 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f995a0dcd0b91c0835c4121a7a2072c2a586f35
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d3acf76573d2c9c2b84e54acf9ebd43e0a42271d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="insert-xml-dml"></a>inserir (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -419,8 +418,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

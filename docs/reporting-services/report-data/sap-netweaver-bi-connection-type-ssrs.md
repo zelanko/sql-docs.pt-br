@@ -1,27 +1,27 @@
 ---
-title: "Tipo de Conexão do SAP NetWeaver BI (SSRS) | Microsoft Docs"
+title: "Tipo de conexão do SAP NetWeaver BI (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f7a1cea7b91f3b45afd364bc55e9a4b42c836935
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexão SAP NetWeaver BI (SSRS)
   Para incluir dados de uma fonte de dados externa do SAP NetWeaver® Business Intelligence em seu relatório, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Esse tipo de fonte de dados interna tem como base a extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -91,13 +91,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objeto**|Especifica o valor de dados do campo.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para o número chave.|  
-|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
-|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
+|**FormattedValue**|**String**|Retorna um valor formatado para o número chave.|  
+|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
+|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
 |**Chave**|**Objeto**|Retorna a chave para um nível.|  
 |**LevelNumber**|**Integer**|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
-|**ParentUniqueName**|**Cadeia de caracteres**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
-|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** para um funcionário pode ser *[0D_Company].[10D_Department].[11]*.|  
+|**ParentUniqueName**|**String**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
+|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** para um funcionário pode ser *[0D_Company].[10D_Department].[11]*.|  
   
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -115,7 +115,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Adicionar um filtro a um conjunto de dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Seções relacionadas  
@@ -124,23 +124,22 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fornece informações sobre conjuntos de dados inseridos e compartilhados.  
   
- [Coleção de campos de conjunto de dados e &#40; Construtor de relatórios e SSRS & &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

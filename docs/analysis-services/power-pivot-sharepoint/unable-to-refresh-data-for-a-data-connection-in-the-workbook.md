@@ -2,31 +2,30 @@
 title: "Não é possível atualizar dados de uma conexão de dados na pasta de trabalho | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho
-  Para pastas de trabalho do Excel contendo dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os serviços do Excel retornam este erro quando enviam uma solicitação de conexão a um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e a solicitação falha.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Para pastas de trabalho do Excel contendo dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os serviços do Excel retornam este erro quando enviam uma solicitação de conexão a um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e a solicitação falha.  
   
 ## <a name="details"></a>Detalhes  
   
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  Um ou mais serviços podem estar em um estado inconsistente. Em alguns casos, executar IISRESET resolverá o problema.  
   
   
-

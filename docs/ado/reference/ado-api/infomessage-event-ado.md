@@ -3,7 +3,7 @@ title: Evento do InfoMessage (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 307ed28d6e4d6e305e44155ff1c8e7b2c2fdf5ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7f1e479b4dfb5b9cb557030e03afeac3f6278720
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="infomessage-event-ado"></a>Evento do InfoMessage (ADO)
 O **InfoMessage** evento é chamado sempre que ocorrer um aviso durante uma **ConnectionEvent** operação.  
@@ -57,4 +56,3 @@ InfoMessage pError, adStatus, pConnection
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo de manipulador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

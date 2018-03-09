@@ -3,8 +3,11 @@ title: Abrir diagramas de banco de dados (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdc67f6f17ac210462c7ba634f3bc9a6e4b24a1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d96421cdb127c87165fef692e94265ffaf2d3f51
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de banco de dados (Visual Database Tools)
-Você pode abrir diagramas de banco de dados para exibir ou editar a estrutura do diagrama.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode abrir diagramas de banco de dados para exibir ou editar a estrutura do diagrama.  
   
 ### <a name="to-open-a-database-diagram"></a>Para abrir um diagrama de banco de dados  
   
@@ -42,7 +45,7 @@ O diagrama de banco de dados é aberto no Designer de Diagrama de Banco de Dados
 > [!NOTE]  
 > Só o proprietário do diagrama ou um membro da função db_owner do banco de dados pode abrir o diagrama.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

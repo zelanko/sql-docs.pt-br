@@ -2,29 +2,32 @@
 title: Interoperabilidade do Python com o SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interoperabilidade do Python com o SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve os componentes do Python que são instalados quando você habilitar o recurso **serviços de aprendizado de máquina (no banco de dados)** e selecione Python como o idioma.
 
 ## <a name="python-components"></a>Componentes do Python
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Não modifique os executáveis de Python. O tempo de execução do Python é instalado, independentemente das ferramentas do SQL e é executado fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processo.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Não modifique os executáveis de Python. O tempo de execução do Python é instalado, independentemente das ferramentas do SQL e é executado fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processo.
 
 A distribuição que está associada um determinado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instância pode ser encontrada na pasta associada à instância.
 

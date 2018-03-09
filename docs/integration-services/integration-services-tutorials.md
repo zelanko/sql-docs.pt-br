@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd2138b371ba32d79208565e308b3c49ff9e3f08
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dfb5ce47e5d384746c575c615581f465ba696259
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-tutorials"></a>Tutoriais do Integration Services
 Esta seção contém tutoriais [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -36,4 +35,3 @@ Esta seção contém tutoriais [!INCLUDE[ssISnoversion](../includes/ssisnoversio
   
   
   
-

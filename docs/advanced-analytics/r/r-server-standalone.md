@@ -1,26 +1,31 @@
 ---
 title: "R Server (Autônomo) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Autônomo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 No SQL Server 2016, a Microsoft lançou o **R Server (autônomo)**, como parte de sua plataforma para dar suporte a análise de classe empresarial.  Microsoft R Server fornece a escalabilidade e segurança para a linguagem R e aborda as limitações de memória de software livre R. Como o SQL Server R Services, o Microsoft R Server (autônomo) fornece processamento paralelo e em partes de dados, permitindo que os usuários de R usar dados muito maiores do que pode caber na memória.
 

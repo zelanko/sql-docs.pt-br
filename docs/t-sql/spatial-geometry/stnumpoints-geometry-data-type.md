@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints (geometry Data Type)
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17dc20837c72439fc79fec62170edfb8eca34d9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 51e08f456377ecef45bd26fc53a7a546c95220fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Tipo de retorno CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método conta os pontos na descrição de um **geometria** instância. Pontos duplicados são contados. Se esta instância for um **coleção** tipo, esse método retorna a soma dos pontos em cada um de seus elementos.  
   
 ## <a name="examples"></a>Exemplos  
@@ -62,7 +61,6 @@ SELECT @g.STNumPoints();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

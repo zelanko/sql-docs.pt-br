@@ -2,9 +2,12 @@
 title: Elemento de carga de trabalho (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2ff19d6a4044a6a3e29cb59592cdd7dd653e79
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
-  Especifica a carga de trabalho a ser usada em uma sessão de ajuste.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica a carga de trabalho a ser usado para uma sessão de ajuste.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Elementos filho**|[Elemento File &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento Database para Workload &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Elementos filho**|[Elemento File &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento Database para Workload &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Comentários  
  A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados pode usar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , arquivos de rastreamento e tabelas de rastreamento como cargas de trabalho.  

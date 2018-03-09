@@ -2,9 +2,12 @@
 title: "Especificar agendas de sincronização | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7858c07206dd1f3f9bbbbb3a1e91d7284280ea34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85455c6b48ed6670c4d93c7ebf07e55345de0a80
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
-  Este tópico descreve como especificar agendas de sincronização no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Quando criar uma assinatura, você pode definir uma agenda de sincronização que controla quando o agente de replicação para a assinatura executará. Se você não especificar os parâmetros de programação, a assinatura usará a agenda padrão.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como especificar agendas de sincronização no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects). Quando criar uma assinatura, você pode definir uma agenda de sincronização que controla quando o agente de replicação para a assinatura executará. Se você não especificar os parâmetros de programação, a assinatura usará a agenda padrão.  
   
  Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento.  
   
@@ -141,7 +144,7 @@ ms.lasthandoff: 11/09/2017
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode definir agendas de sincronização de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados que você usar dependem do tipo de replicação e do tipo de assinatura (de recepção ou push).  
   
  Uma agenda é definida pelos seguintes parâmetros de programação, os comportamentos dos quais são herdados de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
@@ -327,9 +330,9 @@ ms.lasthandoff: 11/09/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Consulte também  
- [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sincronizar uma assinatura push](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Sincronizar uma assinatura pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)  

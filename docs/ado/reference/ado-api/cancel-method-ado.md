@@ -3,7 +3,7 @@ title: "Cancelar o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d9dd6f6c62d9ee20f75dabc8b28831b7376fc00b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba15f12006b31fa8ce0f67fd14ef7c6afb46863b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-ado"></a>Método Cancel (ADO)
 Cancela a execução de uma chamada de método assíncrono pendente.  
@@ -44,18 +43,18 @@ Cancela a execução de uma chamada de método assíncrono pendente.
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **Cancelar** método para finalizar a execução de uma chamada de método assíncrono: ou seja, um método invocado com o **adAsyncConnect**, **adAsyncExecute**, ou **adAsyncFetch** opção.  
   
  A tabela a seguir mostra qual tarefa foi finalizada quando você usa o **Cancelar** método em um determinado tipo de objeto.  
   
 |Se *objeto* é um|A última chamada assíncrona para este método é finalizada|  
 |----------------------|-------------------------------------------------------------|  
-|[Comando](../../../ado/reference/ado-api/command-object-ado.md)|[Executar](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Comando](../../../ado/reference/ado-api/command-object-ado.md)|[Execute (executar)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Conexão](../../../ado/reference/ado-api/connection-object-ado.md)|[Executar](../../../ado/reference/ado-api/execute-method-ado-connection.md) ou [aberto](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[Registro](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [ExcluirRegistro](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), ou [aberto](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|[Abrir](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [ExcluirRegistro](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), ou [aberto](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Abrir](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Aplica-se a  
   
@@ -76,4 +75,3 @@ object.Cancel
  [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)
-

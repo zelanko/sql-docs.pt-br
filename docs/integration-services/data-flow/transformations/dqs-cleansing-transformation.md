@@ -1,5 +1,5 @@
 ---
-title: "Transformação de limpeza do DQS | Microsoft Docs"
+title: "Transformação de Limpeza DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3071f2f7edbfd91a6819cf7a31a1986e77eca103
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 8cf75ff26033b7f6d2dd29af0d226b6b0172c094
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
   A transformação de Limpeza DQS usa o DQS (Data Quality Services) para corrigir dados de uma fonte de dados conectada com a aplicação de regras aprovadas, que foram criadas para a fonte de dados conectada ou uma fonte de dados semelhante. Para obter informações sobre regras de correção de dados, consulte [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Para obter mais informações sobre o DQS, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/27/2017
 ## <a name="data-quality-projects-and-values"></a>Projetos de qualidade de dados e valores  
  Quando você processar dados com a transformação de limpeza DQS, um projeto de limpeza é criado no Data Quality Server. Você usa o Cliente Data Quality para gerenciar o projeto. Além disso, você pode usar o Cliente Data Quality para importar os valores de projeto em um domínio da base de dados de conhecimento do DQS. Você só pode importar os valores para um domínio (ou domínio vinculado) que a transformação de limpeza DQS tiver configurado para usar.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Abrir projetos do Integration Services no cliente Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/27/2017
   
 3.  Clique em **Adicionar**.  
   
-

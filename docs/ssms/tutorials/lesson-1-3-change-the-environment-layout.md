@@ -2,27 +2,30 @@
 title: Alterar o layout do ambiente | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 140a909962391f037158178f9f5c85441714cfaa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a256c1d0e37956f235754724c4b208d9c48b7d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lição 1-3 – Alterar o layout do ambiente
-Os componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] competem por espaço de tela. Para ter mais espaço, você pode fechar, ocultar ou mover componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Os exercícios desta página movem os componentes para locais diferentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] competem por espaço na tela. Para ter mais espaço, você pode fechar, ocultar ou mover componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Os exercícios desta página movem os componentes para locais diferentes.  
   
 ## <a name="closing-and-hiding-components"></a>Fechando e ocultando componentes  
   
@@ -54,7 +57,7 @@ Você pode personalizar a apresentação dos componentes do [!INCLUDE[ssManStudi
   
 1.  Clique com o botão direito do mouse na barra de título do Pesquisador de Objetos e observe as opções de menu a seguir:  
   
-    -   Valor Flutuante  
+    -   float  
   
     -   Encaixar  
   

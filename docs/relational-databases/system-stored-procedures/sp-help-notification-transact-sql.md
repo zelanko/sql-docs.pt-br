@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +51,16 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@object_type =**] **'***object_type***'**  
+ [ **@object_type =**] **'***object_type***'**  
  O tipo de informação a ser retornado. *object_type*é **char(9)**, sem padrão. *object_type* pode ser ALERTS, que lista os alertas atribuídos ao nome de operador fornecido*,* ou OPERATORS, que lista os operadores responsáveis pelo nome de alerta fornecido de*.*  
   
- [  **@name =**] **'***nome***'**  
+ [ **@name =**]  **'***name***'**  
  Um nome de operador (se *object_type* for OPERATORS) ou um nome de alerta (se *object_type* for ALERTS). *nome* é **sysname**, sem padrão.  
   
- [  **@enum_type =**] **'***enum_type***'**  
+ [ **@enum_type =**] **'***enum_type***'**  
  O *object_type*informações retornadas. *enum_type* é ACTUAL na maioria dos casos. *enum_type*é **char (10)**, sem padrão e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ACTUAL|Lista apenas o *object_types* associado *nome*.|  
 |ALL|Lista todos os*object_types* incluindo aqueles que não estão associados com *nome*.|  
@@ -66,7 +69,7 @@ sp_help_notification
  [  **@notification_method =**] *notification_method*  
  Um valor numérico que determina as colunas de método de notificação que devem ser retornadas. *notification_method* é **tinyint**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Email: retorna apenas o **use_email** coluna.|  
 |**2**|Pager: retorna apenas o **use_pager** coluna.|  
@@ -84,29 +87,29 @@ sp_help_notification
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**alert_id**|**int**|Número de identificador de alerta.|  
+|**alert_id**|**Int**|Número de identificador de alerta.|  
 |**alert_name**|**sysname**|Nome do alerta.|  
-|**use_email**|**int**|Email é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_pager**|**int**|Pager é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_netsend**|**int**|Pop-up de rede é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_email**|**int**|Número de notificações de email enviadas para esse alerta.|  
-|**has_pager**|**int**|Número de notificações de pager enviadas para esse alerta.|  
-|**has_netsend**|**int**|Número de **net send** notificações enviadas para esse alerta.|  
+|**use_email**|**Int**|Email é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**use_pager**|**Int**|Pager é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**use_netsend**|**Int**|Pop-up de rede é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**has_email**|**Int**|Número de notificações de email enviadas para esse alerta.|  
+|**has_pager**|**Int**|Número de notificações de pager enviadas para esse alerta.|  
+|**has_netsend**|**Int**|Número de **net send** notificações enviadas para esse alerta.|  
   
  Se **object_type** é **OPERADORES**, o conjunto de resultados listará todos os operadores para um determinado alerta.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**operator_id**|**int**|Número de identificação do operador.|  
+|**operator_id**|**Int**|Número de identificação do operador.|  
 |**operator_name**|**sysname**|Nome do operador.|  
-|**use_email**|**int**|O email é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_pager**|**int**|O pager é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_netsend**|**int**|É um pop-up de rede usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_email**|**int**|O operador tem um endereço de email:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_pager**|**int**|O operador tem um endereço de pager:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_netsend**|**int**|O operador tem uma notificação net send configurada.<br /><br /> **1** = Sim<br /><br /> **0** = não|  
+|**use_email**|**Int**|O email é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**use_pager**|**Int**|O pager é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**use_netsend**|**Int**|É um pop-up de rede usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**has_email**|**Int**|O operador tem um endereço de email:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**has_pager**|**Int**|O operador tem um endereço de pager:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**has_netsend**|**Int**|O operador tem uma notificação net send configurada.<br /><br /> **1** = Sim<br /><br /> **0** = No|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse procedimento armazenado deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -145,9 +148,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

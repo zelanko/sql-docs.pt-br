@@ -1,5 +1,5 @@
 ---
-title: "REVERSE (expressão SSIS) | Microsoft Docs"
+title: "REVERSE (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb7529a91258c78d9bc8c752c775a5544975e7d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f34128df8045d69fd6e783dd3ec1a91170ed5beb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (Expressão SSIS)
   Retorna uma expressão character na ordem inversa.  
@@ -45,7 +44,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O argumento *character_expression* deve ter o tipo de dados DT_WSTR.  
   
  REVERSE retornará um resultado nulo se *character_expression* for nulo.  
@@ -63,8 +62,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

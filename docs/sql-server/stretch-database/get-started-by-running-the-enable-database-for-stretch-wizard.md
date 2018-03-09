@@ -2,13 +2,14 @@
 title: Comece executando o Assistente para Habilitar o Banco de Dados para Stretch | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2ccd1b0f7c5b3c15d0871d53690b81465d21063
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Para configurar um banco de dados para o Stretch Database, execute o Assistente para Habilitar o Banco de Dados para Alongamento.  Este tópico descreve as informações que você precisa inserir, e as opções que você deve fazer no assistente.  
+
+ Para configurar um banco de dados para o Stretch Database, execute o Assistente para Habilitar o Banco de Dados para Alongamento.  Este artigo descreve as informações que você precisa inserir, bem como as escolhas que você deve fazer no assistente.  
   
  Para saber mais sobre o Stretch Database, confira [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 2.  Clique com o botão direito do mouse e selecione **Tarefas**, **Stretch**e **Habilitar** para iniciar o assistente.  
   
 ##  <a name="Intro"></a> Introdução  
- Examine a finalidade do assistente e os pré-requisitos.  
+ Verifique o objetivo do assistente e os pré-requisitos.  
  
  Os pré-requisitos importantes incluem os descritos a seguir.
  -   Você precisa ser um administrador para alterar as configurações de banco de dados.
@@ -69,7 +71,7 @@ Tabelas com várias linhas aparecem na parte superior da lista classificada. Ant
   
  ![Página Selecionar Tabelas do Assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página Selecionar Tabelas do Assistente do Stretch Database")  
   
-|Coluna|Descrição|  
+|coluna|Description|  
 |------------|-----------------|  
 |(sem título)|Marque a caixa de seleção nesta coluna para habilitar a tabela selecionada para o Stretch.|  
 |**Nome**|Especifica o nome da coluna no banco de dados.|  
@@ -201,7 +203,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 -   [Restaurar bancos de dados habilitados para Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar o Stretch Database para um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

@@ -2,16 +2,13 @@
 title: "Criar uma dimensão de tipo de data | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensões de banco de dados - criar uma dimensão de tipo de data
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
   
  Normalmente, os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorporam uma dimensão de tempo de uma outra forma. Um cubo pode conter mais de uma dimensão de tempo ou várias hierarquias provenientes da mesma dimensão de tempo, dependendo da granularidade dos dados e dos requisitos de reporte. Contudo, nem todos os cubos requerem uma dimensão de tempo. Alguns aplicativos OLAP, como os de custos por atividade, não precisam de uma dimensão de tempo porque a geração de custos em uma dimensão baseada em atividades usa as atividades em vez do tempo.  
   

@@ -3,30 +3,32 @@ title: Exemplo de propriedades de PageSize (VC + +), PageCount e AbsolutePage | 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - PageCount property [ADO], VC++ example
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 703979cfbdcd81f36f25f7885365924910025de3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2f76c8159a384a544fa92e451731502097db493
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount e exemplo de propriedades de PageSize (VC + +)
 Este exemplo usa o [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), e [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriedades para exibir nomes e contratar datas desde o ***funcionário*** tabela, cinco registros por vez.  

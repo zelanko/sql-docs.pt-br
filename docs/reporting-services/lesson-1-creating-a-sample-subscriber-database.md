@@ -2,34 +2,33 @@
 title: "Lição 1: Criando um banco de dados do assinante de exemplo | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 472bedc3291af96ecec8cafae7c4b4462b578284
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
 
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você cria um banco de dados pequeno de “assinante” para armazenar dados de assinatura que serão usados por uma assinatura controlada por dados. Quando a assinatura é processada, o servidor de relatório recupera esses dados e os utiliza para personalizar a saída do relatório. Por exemplo, as linhas de dados incluem números de pedido específicos a serem usados para filtros e em quais formatos de arquivo os relatórios gerados estarão quando forem criados.  
   
-Esta lição supõe que você está usando [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] para criar um banco de dados do SQL Server.  
+Esta lição pressupõe que você esteja usando o [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] para criar um banco de dados do SQL Server.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Para criar um banco de dados de assinantes de exemplo  
   
@@ -69,7 +68,7 @@ Esta lição supõe que você está usando [!INCLUDE[ssManStudioFull_md](../incl
   
 8.  Use uma instrução SELECT para verificar se há três linhas de dados. Por exemplo: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 + Você criou com êxito os dados de assinatura que controlarão a distribuição de relatórios e modificarão a saída de relatório para cada assinante. 
 + Em seguida, você modificará as propriedades de fonte de dados do relatório para usar credenciais armazenadas. 
 + Você também modificará o design do relatório para incluir um parâmetro que a assinatura usará com os dados do assinante. [Lição 2: Modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
@@ -80,5 +79,4 @@ Esta lição supõe que você está usando [!INCLUDE[ssManStudioFull_md](../incl
 [Criar um banco de dados](../relational-databases/databases/create-a-database.md)  
 [Criar um relatório de tabela básico](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

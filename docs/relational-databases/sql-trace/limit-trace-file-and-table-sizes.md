@@ -2,9 +2,12 @@
 title: Limitar o tamanho de tabelas e arquivos de rastreamento | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0a450e9f52065238bb2b3a91b5c52f4c4d8fba50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar o tamanho de arquivos e tabelas de rastreamento
-  Os resultados do Rastreamento do SQL variam em tamanho, dependendo das classes de evento incluídas e da forma com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é usado. Se você rastreia classes de evento que ocorrem com frequência, é possível minimizar a quantidade de dados coletados pelo rastreamento definindo o tamanho máximo de arquivo ou o número máximo de linhas. Especificando o tamanho máximo de arquivo ou de linhas, garante-se que o arquivo ou tabela de rastreamento não ultrapassem esse limite.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os resultados do Rastreamento do SQL variam em tamanho, dependendo das classes de evento incluídas e da forma com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é usado. Se você rastreia classes de evento que ocorrem com frequência, é possível minimizar a quantidade de dados coletados pelo rastreamento definindo o tamanho máximo de arquivo ou o número máximo de linhas. Especificando o tamanho máximo de arquivo ou de linhas, garante-se que o arquivo ou tabela de rastreamento não ultrapassem esse limite.  
   
 > [!NOTE]  
 >  Se os dados do rastreamento forem salvos em um arquivo que já existe, é possível adicionar dados ao arquivo ou substituir os que ele contém. Se optar por acrescentar os dados ao arquivo e o arquivo de rastreamento atingir ou exceder o tamanho máximo especificado, você será notificado e terá a oportunidade de aumentar o tamanho máximo de arquivo ou especificar um novo arquivo. O mesmo vale para tabelas de rastreamento.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
  [Definir um tamanho máximo para uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   

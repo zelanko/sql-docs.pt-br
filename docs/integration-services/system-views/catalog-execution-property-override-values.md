@@ -1,5 +1,5 @@
 ---
-title: Catalog.execution_property_override_values | Microsoft Docs
+title: catalog.execution_property_override_values | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed9ae4ea7a7165efe53a551832d8e4a0eb7a2114
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7a126110bfeca6f3822e47f9f7c0e31f3f89952
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +37,19 @@ ms.lasthandoff: 09/26/2017
 |property_value|**nvarchar(max)**|O valor de substituição da propriedade.|  
 |sensitive|**bit**|Quando o valor for 1, a propriedade será confidencial e criptografada quando for armazenada. Quando o valor for 0, a propriedade não será confidencial e o valor será armazenado em texto não criptografado.|  
   
-## <a name="remarks"></a>Comentários  
- Essa exibição mostra uma linha para cada execução no qual propriedade valores foram substituídos usando o **substituições de propriedade** seção o **avançado** guia do **executar pacote** caixa de diálogo. O caminho para a propriedade é derivado de **caminho de pacote** propriedade da tarefa de pacote.  
+## <a name="remarks"></a>Remarks  
+ Essa exibição mostra uma linha para cada execução em que os valores de propriedade foram substituídos usando a seção **Substituições de propriedade** na guia **Avançado** da caixa de diálogo **Executar Pacote**. O caminho para a propriedade é derivado da propriedade **Caminho do Pacote** da tarefa de pacote.  
   
 ## <a name="permissions"></a>Permissões  
  Esta exibição requer uma das seguintes permissões:  
   
 -   Permissão READ na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

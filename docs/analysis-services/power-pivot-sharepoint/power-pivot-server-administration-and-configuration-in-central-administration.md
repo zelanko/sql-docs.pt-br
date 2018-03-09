@@ -2,32 +2,29 @@
 title: "Power Pivot administração de servidor e a configuração na Administração Central | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dd5476281506f84282fb8b6b6a534820ebea078
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administração e configuração de servidor do Power Pivot na Administração Central
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são realizadas por administradores de aplicativo de serviço do SharePoint, usando a Administração Central do SharePoint.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint deve ser configurado antes de ser usado. Após instalar o [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usando a Instalação do SQL Server, você poderá configurá-lo usando uma das seguintes abordagens:  
@@ -59,9 +56,9 @@ ms.lasthandoff: 09/01/2017
   
 |Link|Tipo|Descrição da tarefa|  
 |----------|----------|----------------------|  
-|[Implantar soluções Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|Required|Esta etapa instala os arquivos da solução que adicionam arquivos de programa e páginas de aplicativo ao farm e às coleções de sites.|  
-|[Criar e configurar um aplicativo de serviço do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Required|Esta etapa provisiona o Serviço de Sistema do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|[Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|Esta etapa ativa os recursos do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] no nível de conjunto de sites.|  
+|[Implantar soluções Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|Obrigatório|Esta etapa instala os arquivos da solução que adicionam arquivos de programa e páginas de aplicativo ao farm e às coleções de sites.|  
+|[Criar e configurar um aplicativo de serviço do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Obrigatório|Esta etapa provisiona o Serviço de Sistema do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
+|[Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Obrigatório|Esta etapa ativa os recursos do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] no nível de conjunto de sites.|  
 |[Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|Esta etapa adiciona o provedor OLE DB do Analysis Services como um provedor de confiança em Serviços do Excel.|  
 |[Atualização de dados do Power Pivot com o SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Recomendado|A atualização de dados é opcional, porém recomendada. Ela permite programar atualizações autônomas ao dados do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] em pastas de trabalho do Excel publicadas.|  
 |[Configurar a conta da atualização de dados autônoma Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recomendado|Esta etapa provisiona uma conta com finalidade especial que pode ser usada para executar trabalhos de atualização de dados no servidor.|  
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Recuperação de desastres para PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
-

@@ -3,27 +3,30 @@ title: Exemplo da propriedade MaxRecords (VC + +) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: MaxRecords property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ba77502023c04aac8bdb262c66314a4c0c04d12
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC + +)
 Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriedade para abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  

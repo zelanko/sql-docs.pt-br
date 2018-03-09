@@ -1,45 +1,44 @@
 ---
-title: "Proteção estendida para autenticação com o Reporting Services | Microsoft Docs"
+title: "Proteção Estendida para Autenticação com o Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
 
   A Proteção Estendida é um conjunto de melhorias das versões recentes do sistema operacional Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] . A Proteção Estendida aprimora a maneira como as credenciais e a autenticação podem ser protegidas através de aplicativos. O recurso em si não oferece proteção diretamente contra ataques específicos, tais como encaminhamento de credenciais, mas oferece uma infraestrutura para aplicativos tais como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fiscalizar a Proteção Estendida para Autenticação.  
   
  Os principais aprimoramentos de autenticação que fazem parte de proteção estendida são a associação de serviço e a associação de canal. A associação de canal usa um token de associação de canal (CBT) para verificar se o canal estabelecido entre dois terminais não foi comprometido. A associação de serviço usa Nomes de Serviço Principais (SPN) para verificar o destino pretendido dos tokens de autenticação. Para obter mais informações básicas sobre a proteção estendida, consulte [Autenticação Integrada do Windows com Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
-SQL Server Reporting Services (SSRS) oferece suporte e impõe proteção estendida que foi habilitado no sistema operacional e configurada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM e, portanto, podem aproveitar o suporte à Proteção Estendida no sistema operacional e os recursos da proteção estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+O SSRS (SQL Server Reporting Services) dá suporte e impõe a Proteção Estendida que foi habilitada no sistema operacional e configurada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM e, portanto, podem aproveitar o suporte à Proteção Estendida no sistema operacional e os recursos da proteção estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Por padrão, a Proteção Estendida não está habilitada no o Windows. Para obter informações sobre como habilitar a Proteção Estendida no Windows, consulte [Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkID=178431). O sistema operacional e a pilha de autenticação de cliente devem suportar a Proteção Estendida de forma que a autenticação seja bem-sucedida. Para sistemas operacionais mais antigos, pode ser necessário instalar mais de uma atualização para um computador completo compatível com a Proteção Estendida. Para obter informações sobre os desenvolvimentos mais recentes da Proteção Estendida, consulte as informações atualizadas do [com a Proteção Estendida](http://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Visão Geral da Proteção Estendida do Reporting Services
 
-SSRS suporta e impõe proteção estendida que foi habilitada no sistema operacional. Se o sistema operacional não suportar a proteção estendida ou se o recurso não foi ativado no sistema operacional, o recurso de Proteção Estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não conseguirá ser autenticado. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também exige um Certificado de SSL. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatório do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema operacional. Se o sistema operacional não suportar a proteção estendida ou se o recurso não foi ativado no sistema operacional, o recurso de Proteção Estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não conseguirá ser autenticado. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também exige um Certificado de SSL. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatório do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
   
 > [!IMPORTANT]  
->  Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não vem com a Proteção Estendida habilitada. O recurso pode ser habilitado por meio da modificação do arquivo de configuração **rsreportserver.config** ou por meio das APIs WMI para atualização do arquivo de configuração. SSRS não fornece uma interface do usuário para modificar ou exibir configurações de proteção de estendida. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.  
+>  Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não vem com a Proteção Estendida habilitada. O recurso pode ser habilitado por meio da modificação do arquivo de configuração **rsreportserver.config** ou por meio das APIs WMI para atualização do arquivo de configuração. O SSRS não fornece uma interface do usuário para modificar ou exibir as configurações de proteção estendida. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.  
   
  Problemas que normalmente ocorrem em virtude de alterações nas configurações de proteção estendida ou de parâmetros incorretamente configurados não são expostos com mensagens de erro óbvias nem com janelas de caixa de diálogo. Problemas relacionados à configuração e à compatibilidade de proteção estendida geram falhas de autenticação e erros nos logs de rastreamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -51,9 +50,9 @@ SSRS suporta e impõe proteção estendida que foi habilitada no sistema operaci
 >   
 >  A documentação de uma tecnologia de acesso a dados deve ter informações sobre suporte para proteção estendida.  
   
-### <a name="upgrade"></a>Atualizar  
+### <a name="upgrade"></a>UPGRADE  
   
--   Atualizando um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server para o SQL Server 2016 adiciona parâmetros de configuração com valores padrão para o **rsreportserver. config** arquivo. Se as configurações já estavam presentes, a instalação do SQL Server 2016 preservará no **rsreportserver. config** arquivo.  
+-   O upgrade de um servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o SQL Server 2016 adiciona definições de configuração com valores padrão ao arquivo **rsreportserver.config**. Se as configurações já estiverem presentes, a instalação do SQL Server 2016 as preservará no arquivo **rsreportserver.config**.  
   
 -   Quando os parâmetros de configuração forem acrescentados ao arquivo de configuração **rsreportserver.config** , o comportamento padrão será que o recurso da proteção estendida do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esteja desativado e você deverá habilitar o recurso da forma descrita neste tópico. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.  
   
@@ -179,4 +178,4 @@ SSRS suporta e impõe proteção estendida que foi habilitada no sistema operaci
 [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

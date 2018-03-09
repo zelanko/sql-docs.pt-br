@@ -3,8 +3,11 @@ title: Projetos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57d972b2af70f5ffa7b7d2682ea235f062fa27c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6aee221e94bfddd9ef968d5868c07ae2d9291d91
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
-Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
   
 ## <a name="script-project-overview"></a>Visão geral de projeto de script  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são exibidos no componente Gerenciador de Soluções do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Um projeto de script pode conter zero ou mais arquivos de projeto. Você pode adicionar um projeto a uma solução ou combinar mais de um projeto em uma solução.  
@@ -58,7 +61,7 @@ Para modificar informações sobre uma conexão, use a janela de propriedades no
 |Descreve como alterar as informações de conexão para uma consulta.|[Alterar a conexão associada a uma consulta](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Descreve como alterar propriedades de conexão.|[Exibir ou alterar as propriedades de uma conexão em um projeto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Soluções &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

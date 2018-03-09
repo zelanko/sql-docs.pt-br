@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Original   |int    |decimal |  
+|Original   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -84,10 +86,10 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *data_type*  
 É o tipo de dados de destino. Isso inclui **xml**, **bigint**, e **sql_variant**. Tipos de dados alias não podem ser usados.
   
-*length*  
+*comprimento*  
 É um inteiro opcional que especifica o comprimento do tipo de dados de destino. O valor padrão é 30.
   
-*estilo*  
+*style*  
 É uma expressão de inteiro que especifica como a função CONVERT converter *expressão*. Se o estilo for NULL, NULL será retornado. O intervalo é determinado pelo *data_type*. 
   
 ## <a name="return-types"></a>Tipos de retorno
@@ -147,7 +149,7 @@ Quando você converte em **datetimeoffset** de dados de caracteres com um estilo
 ## <a name="float-and-real-styles"></a>estilos float e real
 Quando *expressão* é **float** ou **real**, *estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
   
-|Valor|Saída|  
+|Value|Saída|  
 |---|---|
 |**0** (padrão)|Um máximo de 6 dígitos. Use em notação científica, quando apropriado.|  
 |**1**|Sempre 8 dígitos. Use sempre em notação científica.|  
@@ -158,7 +160,7 @@ Quando *expressão* é **float** ou **real**, *estilo* pode ser um dos valores m
 ## <a name="money-and-smallmoney-styles"></a>estilos Money e smallmoney
 Quando *expressão* é **money** ou **smallmoney**, *estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
   
-|Valor|Saída|  
+|Value|Saída|  
 |---|---|
 |**0** (padrão)|Nenhuma vírgula a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal. Por exemplo, 4235.98.|  
 |**1**|Vírgulas a cada três dígitos à esquerda do ponto decimal e dois dígitos à direita do ponto decimal. Por exemplo, 3,510.92.|  
@@ -166,9 +168,9 @@ Quando *expressão* é **money** ou **smallmoney**, *estilo* pode ser um dos val
 |**126**|Equivalente ao estilo 2 ao converter para char(n) ou varchar (n)|  
   
 ## <a name="xml-styles"></a>estilos XML
-Quando *expressão* é **xml***, estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
+Quando *expressão* é **xml *, estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0.
   
-|Valor|Saída|  
+|Value|Saída|  
 |---|---|
 |**0** (padrão)|Use comportamento de análise padrão que descarta espaço em branco insignificante e não permite um subconjunto de DTD interno.<br /> **Observação:** ao converter para o **xml** tipo de dados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espaço em branco insignificante é tratado de maneira diferente no XML 1.0. Para obter mais informações, consulte [criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Preserva espaço em branco insignificante. Essa configuração de estilo define o padrão **XML: space** tratamento se comporte da mesma como se **XML: space = "preserve"** foi especificado em vez disso.|  
@@ -178,7 +180,7 @@ Quando *expressão* é **xml***, estilo* pode ser um dos valores mostrados na ta
 ## <a name="binary-styles"></a>Estilos binários
 Quando *expressão* é **Binary**, **varbinary**, **char**, ou **varchar**, *estilo* pode ser um dos valores mostrados na tabela a seguir. Valores de estilo que não estão listados na tabela retornarão um erro.
   
-|Valor|Saída|  
+|Value|Saída|  
 |---|---|
 |**0** (padrão)|Converte caracteres ASCII em bytes binários ou bytes binários em caracteres ASCII. Cada caractere ou byte é convertido 1:1.<br /> Se o *data_type* é um tipo binário, os caracteres 0x serão adicionados à esquerda do resultado.|  
 |**1**, **2**|Se o *data_type* é um tipo binário, a expressão deve ser uma expressão de caractere. O *expressão* deve ser composto de um número par de dígitos hexadecimais (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se o *estilo* for definido como 1 os caracteres 0x devem ser os dois primeiros caracteres na expressão. Se a expressão contiver um número de caracteres ímpar ou se algum dos caracteres for inválido, ocorrerá um erro.<br /> Se o comprimento da expressão convertida for maior que o comprimento do *data_type* o resultado será truncado à direita.<br /> Comprimento fixo *data_types* que são maiores do que o resultado convertido tem zeros adicionados à direita do resultado.<br /> Se o data_type for tipo de caractere, a expressão deve ser uma expressão de binária. Cada caractere binário é convertido em dois caracteres hexadecimais. Se o comprimento da expressão convertida for maior do que o *data_type* comprimento, ele será truncado à direita.<br /> Se o *data_type* é um tipo de caractere de tamanho fixo e o comprimento do resultado convertido for menor que o comprimento do *data_type*; espaços são adicionados à direita da expressão convertida para manter um mesmo número de dígitos hexadecimais.<br /> Os caracteres 0x serão adicionados à esquerda do resultado convertido para *estilo* 1.|  
@@ -278,14 +280,14 @@ Ao converter tipos de dados que têm casas decimais diferentes, às vezes o valo
 |De|Para|Comportamento|  
 |---|---|---|
 |**numeric**|**numeric**|Arredondamento|  
-|**numeric**|**int**|Truncar|  
+|**numeric**|**Int**|Truncar|  
 |**numeric**|**money**|Arredondamento|  
-|**money**|**int**|Arredondamento|  
+|**money**|**Int**|Arredondamento|  
 |**money**|**numeric**|Arredondamento|  
-|**float**|**int**|Truncar|  
+|**float**|**Int**|Truncar|  
 |**float**|**numeric**|Arredondamento<br /><br /> Conversão de **float** valores que usam notação científica para **decimal** ou **numérico** é restrita a valores de precisão de 17 dígitos apenas. Qualquer valor com precisão mais alto que 17 rodadas para zero.|  
 |**float**|**datetime**|Arredondamento|  
-|**datetime**|**int**|Arredondamento|  
+|**datetime**|**Int**|Arredondamento|  
   
 Por exemplo, os valores 10.6496 e-10.6496 podem ser truncados ou arredondados durante a conversão para **int** ou **numérico** tipos:
   
@@ -711,8 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

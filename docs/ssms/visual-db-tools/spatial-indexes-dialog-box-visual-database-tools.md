@@ -3,8 +3,11 @@ title: "Caixa de diálogo Índices Espaciais (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a3e6df8d3ffcae88b1a89c5c4551d0a8a5b8b8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bfaa6bfd65d898bedcbf7568f86c99b9c4b6a952
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
-Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves**. Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
   
 Para obter informações sobre restrições de criação de índices espaciais, consulte [Visão geral de índices espaciais](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
@@ -117,6 +120,6 @@ Especifica se as novas estatísticas deverão ser recalculadas quando o índice 
 **Bloqueios de Linha Permitidos**  
 Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Visão geral de índices espaciais](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

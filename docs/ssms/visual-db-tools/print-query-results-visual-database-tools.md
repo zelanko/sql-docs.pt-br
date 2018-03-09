@@ -3,8 +3,11 @@ title: Imprimir resultados da consulta (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60759d9fb81b6602665325dc8f5c9f5fba702d99
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimir resultados da consulta (Visual Database Tools)
-Para imprimir os resultados de sua consulta, você pode copiar o conteúdo do [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) em outro programa do Windows, como um programa de processamento de texto, depois formatar e imprimi-lo.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para imprimir os resultados de sua consulta, você pode copiar o conteúdo do [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) em outro programa do Windows, como um programa de processamento de texto, depois formatar e imprimi-lo.  
   
 O Designer de Consulta e Exibição coloca os resultados da consulta na Área de Transferência utilizando guias como delimitadores entre colunas e caracteres de retorno de carro e avanço de linha como delimitadores entre linhas.  
   
@@ -42,6 +45,6 @@ O Designer de Consulta e Exibição coloca os resultados da consulta na Área de
   
 5.  Formate e imprima os resultados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

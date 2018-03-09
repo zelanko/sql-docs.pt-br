@@ -2,33 +2,30 @@
 title: "Configurar o Analysis Services e delegação restrita Kerberos (KCD) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar o Analysis Services e a KCD (Delegação restrita de Kerberos)
-  A KCD (delegação restrita de Kerberos) é um protocolo de autenticação que você pode configurar com a autenticação do Windows a fim de delegar credenciais de cliente, de serviço para serviço, em todo o seu ambiente. A KCD exige infraestrutura adicional, por exemplo, um Controlador de Domínio, e a configuração adicional de seu ambiente. A KCD é um requisito em alguns cenários que envolvem dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com o SharePoint 2016. No SharePoint 2016, os Serviços do Excel foram movidos para fora do farm do SharePoint para um servidor novo e separado, o **Servidor do Office Online**. Como o Servidor do Office Online é separado, há uma necessidade crescente por uma forma de delegar credenciais de cliente em cenários típicos de dois saltos.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A KCD (delegação restrita de Kerberos) é um protocolo de autenticação que você pode configurar com a autenticação do Windows a fim de delegar credenciais de cliente, de serviço para serviço, em todo o seu ambiente. A KCD exige infraestrutura adicional, por exemplo, um Controlador de Domínio, e a configuração adicional de seu ambiente. A KCD é um requisito em alguns cenários que envolvem dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com o SharePoint 2016. No SharePoint 2016, os Serviços do Excel foram movidos para fora do farm do SharePoint para um servidor novo e separado, o **Servidor do Office Online**. Como o Servidor do Office Online é separado, há uma necessidade crescente por uma forma de delegar credenciais de cliente em cenários típicos de dois saltos.  
   
 ## <a name="overview"></a>Visão geral  
  A KCD permite que uma conta represente outra conta com a finalidade de fornecer acesso aos recursos. A conta de representação pode ser uma conta de serviço atribuída a um aplicativo Web, ou a conta de computador do servidor Web. Enquanto a conta representada seria uma conta de usuário que exige acesso aos recursos. A KCD funciona no nível de serviço, para que os serviços selecionados em um servidor possam receber acesso da conta de representação, enquanto outros serviços no mesmo servidor, ou serviços em outros servidores, não recebem o acesso.  

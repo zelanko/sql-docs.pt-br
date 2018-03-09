@@ -1,12 +1,14 @@
 ---
 title: Trabalhando com projetos do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7fd7677d8194938fdc11dc364de8ceea9fe1414
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44d7c381e4cc0599e24f5df1024b31b75b1598f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhando com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para o SQL Server ou SQL Azure, primeiro você deve criar um projeto SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -140,10 +141,9 @@ Quando você abre um projeto, ele é desconectado do MySQL e do SQL Server ou SQ
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [se conectar ao MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Conectando ao MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conectar-se ao SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [Conectar-se ao banco de dados SQL do Azure &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
-

@@ -3,10 +3,10 @@ title: Desinstalar o Analytics Platform System Hotfixes (Analytics Platform Syst
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
 caps.latest.revision: "21"
-ms.openlocfilehash: 04740eeccc1b7837c278ce0041cc1e6f78fd4c60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32d733f2e05855eb361095d23d6c34acefd343dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalar Hotfixes do sistema de plataforma de análise
 As etapas a seguir descrevem como desinstalar um hotfix Analytics Platform System instalado anteriormente.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Para executar essas etapas, você precisará de:  
   
 -   Um logon Analytics Platform System com permissões para acessar o Console de administração para monitorar o dispositivo.  
@@ -54,7 +54,7 @@ Para executar essas etapas, você precisará de:
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Baixe e aplique as atualizações da Microsoft &#40; Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)  
 [Desinstalar as atualizações da Microsoft &#40; Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
 [Aplicar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](apply-analytics-platform-system-hotfixes.md)  

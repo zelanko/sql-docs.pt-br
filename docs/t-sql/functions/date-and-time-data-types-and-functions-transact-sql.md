@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>tipos de dados e funções de data e hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +91,9 @@ Todos os valores de data e hora do sistema são derivados do sistema operacional
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *data* )|Retorna uma cadeia de caracteres que representa a *datepart* da data especificada.|**nvarchar**|Não determinístico|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *data* )|Retorna um inteiro que representa a *datepart* especificada *data*.|**int**|Não determinístico|  
-|[DIA](../../t-sql/functions/day-transact-sql.md)|DIA ( *data* )|Retorna um inteiro que representa a parte do dia especificada *data*.|**int**|Determinística|  
-|[MÊS](../../t-sql/functions/month-transact-sql.md)|MÊS ( *data* )|Retorna um inteiro que representa a parte do mês de um especificado *data*.|**int**|Determinística|  
-|[ANO](../../t-sql/functions/year-transact-sql.md)|ANO ( *data* )|Retorna um inteiro que representa a parte do ano de determinado *data*.|**int**|Determinística|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DIA ( *data* )|Retorna um inteiro que representa a parte do dia especificada *data*.|**int**|Determinística|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MÊS ( *data* )|Retorna um inteiro que representa a parte do mês de um especificado *data*.|**int**|Determinística|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|ANO ( *data* )|Retorna um inteiro que representa a parte do ano de determinado *data*.|**int**|Determinística|  
   
 ###  <a name="fromParts"></a>Funções que obtêm valores de data e hora de suas partes
   
@@ -129,10 +126,10 @@ Todos os valores de data e hora do sistema são derivados do sistema operacional
   
 |Função|Sintaxe|Valor de retorno|Tipo de dados de retorno|Determinismo|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Retorna o valor atual, da sessão, de SET DATEFIRST.|**tinyint**|Não determinístico|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |Retorna o valor atual, da sessão, de SET DATEFIRST.|**tinyint**|Não determinístico|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *número* &#124;  **@**  *number_var* }|Define o primeiro dia da semana como um número de 1 a 7.|Não aplicável|Não aplicável|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *formato* &#124;  **@**  *format_var* }|Define a ordem das partes de data (dia/mês/ano) para inserir **datetime** ou **smalldatetime** dados.|Não aplicável|Não aplicável|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Retorna o nome do idioma que está sendo usado. @@LANGUAGE não é uma função de data ou hora. No entanto, a definição de idioma pode afetar a saída das funções de data.|Não aplicável|Não aplicável|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |Retorna o nome do idioma que está sendo usado. @@LANGUAGE não é uma função de data ou hora. No entanto, a definição de idioma pode afetar a saída das funções de data.|Não aplicável|Não aplicável|  
 |[CONJUNTO DE LINGUAGEM](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] **'***idioma***'** &#124;  **@**  *language_var* }|Define o ambiente de idioma para as mensagens do sistema e da sessão. SET LANGUAGE não é uma função de data ou hora. No entanto, a definição de idioma afeta a saída das funções de data.|Não aplicável|Não aplicável|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] **'***idioma***'** ]|Retorna informações sobre formatos de data de todos os idiomas com suporte. **sp_helplanguage** não é uma data ou hora procedimento armazenado. No entanto, a definição de idioma afeta a saída das funções de data.|Não aplicável|Não aplicável|  
   
@@ -149,11 +146,10 @@ Todos os valores de data e hora do sistema são derivados do sistema operacional
 |[CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Fornece informações sobre a conversão de valores de data e hora para e de literais de cadeia de caracteres, bem como outros formatos de data e hora.|  
 |[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)|Fornece diretrizes para a portabilidade de bancos de dados e aplicativos de banco de dados que usam [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções de um idioma para outro, ou que oferecem suporte a vários idiomas.|  
 |[Funções escalares ODBC &#40; Transact-SQL &#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Fornece informações sobre funções escalares ODBC que podem ser usados em [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. Isso inclui funções de data e hora do ODBC.|  
-|[FUSO horário &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Fornece conversão de fuso horário.|  
+|[FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Fornece conversão de fuso horário.|  
   
 ## <a name="see-also"></a>Consulte também
 [Funções](../../t-sql/functions/functions.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

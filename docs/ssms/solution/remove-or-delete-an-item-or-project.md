@@ -3,8 +3,11 @@ title: Remover ou excluir um item ou projeto | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b070ebeb1f5d666653fa127b4a29b45af0f17df5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 260005349211feaeb74280a65e1b5d89ef092426
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Remover ou excluir um item ou projeto
-Os itens de projeto do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] são consultas, conexões e arquivos diversos. Você pode remover consultas de projeto e arquivos diversos de sua solução sem apagar os arquivos do armazenamento. Remova um projeto ou item quando não for útil na solução atual, mas que você deseja incluí-lo em outra solução.  
+Os itens de projeto [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] em projetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] são Consultas, Conexões e arquivos Diversos. Você pode remover consultas de projeto e arquivos diversos de sua solução sem apagar os arquivos do armazenamento. Remova um projeto ou item quando não for útil na solução atual, mas que você deseja incluí-lo em outra solução.  
   
 ### <a name="to-remove-a-project-item"></a>Para remover um item de projeto  
   
@@ -55,7 +58,7 @@ Você pode excluir um projeto permanentemente, mas primeiro é necessário remov
   
 3.  No menu **Arquivo** , clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Adicionar novos itens a um projeto](../../ssms/solution/add-new-items-to-a-project.md)  
 [Adicionar itens existentes a um projeto](../../ssms/solution/add-existing-items-to-a-project.md)  

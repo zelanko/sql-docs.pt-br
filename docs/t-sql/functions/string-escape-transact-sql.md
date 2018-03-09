@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_ESCAPE function
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: 11
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 41f969e292eff76c9a836ccd3177519d88e355ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f850839d54f5a1e4d58277524b1f2d35b56c7b4e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ STRING_ESCAPE( text , type )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *texto*  
+ *text*  
  É um **nvarchar**[expressão](../../t-sql/language-elements/expressions-transact-sql.md) expressão que representa o objeto que deve ser de escape.  
   
- *tipo*  
+ *type*  
  Regras de escape que serão aplicadas. Atualmente, o valor com suporte é `'json'`.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -73,7 +72,7 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -102,8 +101,15 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Subcadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   
-

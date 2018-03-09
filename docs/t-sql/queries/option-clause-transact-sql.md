@@ -23,17 +23,16 @@ helpviewer_keywords:
 - clauses [SQL Server], OPTION
 - OPTION clause
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5457a572985c9a83984efbe9ce90811e22cf2d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cf74a87408ca73229636f3e4ad341838c861bc43
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="option-clause-transact-sql"></a>Cláusula OPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -200,12 +199,11 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [Mesclar &#40; Transact-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
   
   
-
 

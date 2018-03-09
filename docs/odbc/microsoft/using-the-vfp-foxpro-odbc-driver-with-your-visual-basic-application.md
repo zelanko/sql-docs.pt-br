@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 266577d54e579956fcc2435283a9835c19f9ef36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Usando o Driver ODBC FoxPro VFP com seu aplicativo Visual Basic
 Aplicativo do Microsoft® Visual Basic® pode se comunicar com os dados do Visual FoxPro, criando um controle de dados que se conecta a uma fonte de dados do Visual FoxPro.  
@@ -74,4 +72,3 @@ Aplicativo do Microsoft® Visual Basic® pode se comunicar com os dados do Visua
     ```  
   
 8.  Executar o formulário e use o controle de dados para saltar entre os campos id do cliente do banco de dados de exemplo TasTrade do Visual FoxPro.
-

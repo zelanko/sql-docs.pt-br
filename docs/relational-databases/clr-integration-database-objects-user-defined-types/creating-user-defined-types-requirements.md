@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52083d3b3d82f46f3248450b6242d5c66a213138
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Criando tipos definidos pelo usuário - requisitos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) para ser instalado em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) para ser instalado em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementação de UDTs  
  Para ser executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o UDT precisa implementar os seguintes requisitos na definição do UDT:  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="native-serialization"></a>Serialização nativa  
  A escolha dos atributos de serialização adequados para o UDT depende do tipo de UDT que você está tentando criar. O **nativo** utiliza uma estrutura muito simple que permite que o formato de serialização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazene uma representação nativa eficiente do UDT em disco. O **nativo** formato é recomendado se o UDT é simple e contiver somente campos dos seguintes tipos:  
   
- **bool**, **bytes**, **sbyte**, **curto**, **ushort**, **int**,  **uint**, **longo**, **ulong**, **float**, **duplo**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Tipos de valores que são compostos de campos dos tipos anteriores são bons candidatos para **nativo** formato, como **estruturas** no Visual c# (ou **estruturas** como são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o **nativo** formato de serialização pode conter um campo de outro UDT que também foi especificado com o **nativo** formato. Se a definição de UDT é mais complexa e contém os tipos de dados na lista acima, você deve especificar o **UserDefined** em vez disso, o formato de serialização.  
   

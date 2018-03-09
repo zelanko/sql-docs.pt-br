@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects (geometry Data Type)
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: feef169a9108efd3b76afd4fe1d5b26b904a81ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9bbadc0c93f8d1c75a60d8c4798b5b4a460b79e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Retornará 1 se uma **geometria** instância intercepta outra **geometria** inst
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método sempre retornará nulo se as IDs de referência espaciais (SRIDs) da **geometria** instâncias não coincidem.  
   
 ## <a name="examples"></a>Exemplos  
@@ -69,8 +68,7 @@ SELECT @g.STIntersects(@h);
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

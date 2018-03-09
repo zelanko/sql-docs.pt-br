@@ -2,11 +2,13 @@
 title: SQL Server, objeto Recursos Preteridos | Microsoft Docs
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "61"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -114,7 +116,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
-|Lista de seleção de exibição indexada sem COUNT_BIG (*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (*).|  
+|Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
 |INDEX_OPTION|As sintaxes CREATE TABLE, ALTER TABLE ou CREATE INDEX sem parênteses delimitando as opções foram encontradas. Reescreva a instrução para usar a sintaxe atual. Ocorre uma vez por consulta.|  
 |INDEXKEY_PROPERTY|A sintaxe INDEXKEY_PROPERTY foi encontrada. Reescreva instruções para consultar sys.index_columns. Ocorre uma vez por compilação.|  
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -128,7 +130,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Nome de coluna com mais de duas partes|Uma consulta usou um nome de 3 partes ou de 4 partes na lista de colunas. Altere a consulta para usar os nomes de 2 partes em conformidade com o padrão. Ocorre uma vez por compilação.|  
 |Várias dicas de tabela sem vírgula|Um espaço foi usado como o separador entre dicas de tabela. Use uma vírgula. Ocorre uma vez por compilação.|  
 |NOLOCK ou READUNCOMMITTED em UPDATE ou DELETE|NOLOCK ou READUNCOMMITTED foram encontradas na cláusula FROM de uma instrução UPDATE ou DELETE. Remova as dicas de tabela NOLOCK ou READUNCOMMITTED da cláusula FROM.|  
-|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção * = ou =\* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
+|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção *= ou =\* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
@@ -271,7 +273,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
 |TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 |TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
-|TIMESTAMP|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
+|timestamp|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
 |UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
@@ -282,7 +284,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |xp_loginconfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
 |xp_revokelogin|O procedimento xp_revokelogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE ou DROP LOGIN. Ocorre uma vez por compilação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Recursos de pesquisa de texto completo preteridos no SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe de evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
@@ -292,4 +294,3 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
  [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

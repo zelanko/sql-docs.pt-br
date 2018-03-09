@@ -2,27 +2,32 @@
 title: "Fazer upgrade para outra edição do SQL Server 2016 (Instalação) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 6dd36fb8359a26f887ccda3821cb8a1b93b8a4f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 976dc265c028061ee04d8188b8de4325ba335a69
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
-A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização de edição entre várias edições do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Para obter informações sobre os caminhos de atualização de edição com suporte, consulte [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Antes de você iniciar a atualização de edição de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos seguintes:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização de edição entre várias edições do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Para obter informações sobre os caminhos de atualização de edição com suporte, consulte [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Antes de você iniciar a atualização de edição de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examine os seguintes artigos:  
 
 - [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
@@ -32,7 +37,7 @@ A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá 
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** a execução do upgrade da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
 > [!IMPORTANT]  
@@ -80,7 +85,7 @@ Para instalações locais, você deve executar a Instalação como um administra
   
 -   Os bancos de dados modelo permanecem no computador após a atualização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores_excluída](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

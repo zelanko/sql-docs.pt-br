@@ -3,26 +3,28 @@ title: Tutorial RDS | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO]
+helpviewer_keywords:
+- RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7cb8882a540b2f079aeff1c3a014dc6b43c692d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9918088a748a778fb31d064b73ccdc70eae61bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-tutorial"></a>Tutorial RDS
 Este tutorial ilustra o uso do modelo de programação do RDS para consultar e atualizar uma fonte de dados. Primeiro, ele descreve as etapas necessárias para realizar essa tarefa. Em seguida, o tutorial é repetido no Microsoft® Visual Basic Scripting Edition (com o ADO para Windows Foundation Classes (ADO/WFC)).  

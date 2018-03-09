@@ -24,17 +24,16 @@ helpviewer_keywords:
 - output buffers
 - current output buffer
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de51ee1a87f37e8fcdf97e23be0d2fb9701e9433
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 836055f5a80a7f3768d1485a6c0514eafd6258aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC OUTPUTBUFFER exibe os resultados enviados ao cliente especificado (*session_id*). Para processos que não contêm fluxos de saída, é retornada uma mensagem de erro.
   
 Para mostrar a instrução executada que retornou os resultados exibidos por DBCC OUTPUTBUFFER, execute DBCC INPUTBUFFER.
@@ -107,4 +106,3 @@ DBCC OUTPUTBUFFER (52);
 [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

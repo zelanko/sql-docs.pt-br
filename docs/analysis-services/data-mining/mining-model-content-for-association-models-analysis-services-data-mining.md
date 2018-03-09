@@ -2,15 +2,13 @@
 title: "Conteúdo do modelo de associação de modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>Entendendo a estrutura de um modelo de associação  
  Um modelo de associação tem uma estrutura simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e cada nó pai possui uma lista simples de conjuntos de itens e regras. Os conjuntos de itens e as regras não são organizados em árvores, são ordenados com os conjuntos de itens primeiro e depois as regras, como mostra o diagrama a seguir.  
@@ -202,9 +200,8 @@ ms.lasthandoff: 09/01/2017
  Em branco.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo Associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Exemplos de consulta de um modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Conteúdo do modelo de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

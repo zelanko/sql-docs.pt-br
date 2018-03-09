@@ -3,7 +3,7 @@ title: Comando de objeto (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 652b43d112d1a8ffb0741310f0af324d345b183f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 863c922dce68f5e3108136baf90ebc5a3d0b697a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-ado"></a>Objeto de comando (ADO)
 Define um comando específico que você pretende executar em relação a uma fonte de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use um **comando** objeto para consultar um banco de dados e retornar os registros em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, para executar uma operação em massa, ou para manipular a estrutura de um banco de dados. Dependendo da funcionalidade do provedor, alguns **comando** coleções, métodos ou propriedades podem gerar um erro quando eles são referenciados.  
   
  Com as coleções, métodos e propriedades de um **comando** do objeto, você pode fazer o seguinte:  
@@ -89,4 +88,3 @@ objCmd(0)
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-

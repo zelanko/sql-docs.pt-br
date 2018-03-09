@@ -1,16 +1,14 @@
 ---
 title: "Classes de mineração de dados AMO | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4eeb92697ce1a6a8475fa973a51ee6bdf9536b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>Classes de mineração de dados AMO
   As classes de mineração de dados ajudam você a criar, modificar, excluir e processar objetos de mineração de dados. O trabalho com objetos de mineração de dados inclui a criação de estruturas de mineração de dados, a criação de modelos de mineração de dados e o processamento dos modelos.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
  ![Classes DataMining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "Classes DataMining AMO")  
   
-##  <a name="MiningStructure"></a>Objetos MiningStructure  
+##  <a name="MiningStructure">Objetos MiningStructure</a>  
  Uma estrutura de mineração é o contêiner para modelos de mineração. A estrutura define todas as colunas possíveis que os modelos de mineração podem usar. Cada modelo de mineração define suas próprias colunas a partir do conjunto de colunas definidas na estrutura.  
   
  Um objeto simples <xref:Microsoft.AnalysisServices.MiningStructure> é composto de: informações básicas, uma exibição da fonte de dados, um ou mais <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, nenhum ou mais <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> e um <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -101,7 +98,7 @@ ms.lasthandoff: 09/01/2017
   
  Para remover um <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, ele terá de ser removido da coleção do <xref:Microsoft.AnalysisServices.MiningStructure> pai e o objeto <xref:Microsoft.AnalysisServices.MiningStructure> pai terá de ser atualizado no servidor por meio do método Update.  
   
-##  <a name="MiningModel"></a>Objetos MiningModel  
+##  <a name="MiningModel">Objetos MiningModel</a>  
  Um <xref:Microsoft.AnalysisServices.MiningModel> é o objeto que permite a você escolher que colunas da estrutura serão usadas, quais serão os algoritmos usados e, opcionalmente, especificar parâmetros para ajustar o modelo. Por exemplo, talvez você queira definir vários modelos de mineração na mesma estrutura de mineração que usa os mesmos algoritmos, mas para ignorar algumas colunas da estrutura de mineração de um modelo, use-as como entradas em outro modelo e use-as como entrada e faça a previsão de um terceiro modelo. Isso pode ser útil se você quiser tratar uma coluna como contínua em um modelo de mineração, mas como diferenciada em outro.  
   
  Um objeto simples <xref:Microsoft.AnalysisServices.MiningModel> é composto de: informações básicas, definição de algoritmo e colunas.  
@@ -127,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

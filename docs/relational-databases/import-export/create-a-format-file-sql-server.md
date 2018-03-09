@@ -2,27 +2,33 @@
 title: Criar um arquivo de formato (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: format files [SQL Server], creating
+helpviewer_keywords:
+- format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fee14b47a0d667d593257f356776291407a1955f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 39e7e7d14ab96b696ac5b849b413544f1de24c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
-  Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dois tipos de arquivo de formato: XML e não XML. O formato não XML é o formato original com suporte em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -63,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Descrição|  
+|Qualificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica o arquivo de formato não XML.|  
 |**-n**|Especifica tipos de dados nativos.|  
@@ -93,7 +99,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Descrição|  
+|Qualificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica um arquivo de formato não XML.|  
 |**-c**|Especifica dados de caracteres.|  
@@ -192,7 +198,7 @@ A seguir, um exemplo do formato de arquivo sem as informações de agrupamento.
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Descrição|  
+|Qualificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica o arquivo de formato XML.|  
 |**-c**|Especifica dados de caracteres.|  
@@ -232,7 +238,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  O comando **bcp** contém os qualificadores a seguir.  
   
-|Qualificadores|Descrição|  
+|Qualificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica o arquivo de formato XML.|  
 |**-n**|Especifica tipos de dados nativos.|  
@@ -275,8 +281,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

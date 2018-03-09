@@ -3,7 +3,7 @@
 # Visão geral
 ## [O que são os Microsoft serviços do Machine Learning](r/r-services.md)
 ## [Novidades no aprendizado de máquina](what-s-new-in-sql-server-machine-learning-services.md)
-## [Artigos novos e atualizados recentemente](new-updated-advanced-analytics.md)
+## [Artigos novos e atualizados](new-updated-advanced-analytics.md)
 ## [Arquitetura e visão geral](architecture-overview-machine-learning.md)
 ## [Diferenças nos recursos de aprendizado de máquina entre edições do SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -84,7 +84,10 @@
 ## [Tutoriais do Python](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: executar o Python usando o T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python: criar um modelo usando revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Encapsular o Python em um procedimento armazenado](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Treinamento e pontuação em um modelo do Python no SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Criar um modelo usando revoscalepy em um contexto de computação do SQL Server](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: análise no banco de dados para desenvolvedores do SQL](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Baixar dados de exemplo](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [Treinar e salvar o modelo](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Colocar o modelo em operação](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: implantar e consumir modelos](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python: implantar e consumir modelos usando um servidor autônomo](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Servidor do Machine Learning – Autônomo](r/r-server-standalone.md)
 ## [Introdução](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -107,6 +110,8 @@
 ## [Gerenciamento de pacotes R para SQL Server](r/r-package-management-for-sql-server-r-services.md)
 
 ### [Instalar os novos pacotes R no SQL Server](r/install-additional-r-packages-on-sql-server.md)
+
+### [Instalar os novos pacotes Python no SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
 ### [Habilitar o gerenciamento de pacotes R para uma instância do SQL Server](r/r-package-how-to-enable-or-disable.md)
 
@@ -121,7 +126,6 @@
 ### [Usar miniCRAN para criar um repositório de pacotes local](r/create-a-local-package-repository-using-minicran.md)
 
 ### [Evitar erros com as bibliotecas de pacote de usuário para R](r/packages-installed-in-user-libraries.md)
-
 
 ## Exploração de dados e modelagem
 
@@ -154,12 +158,15 @@
 ### [Considerações sobre segurança para o tempo de execução de R no SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modificar o pool de contas de usuário para os serviços de Machine Learning do SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [Adicionar SQLRUserGroup como um usuário de banco de dados](r/add-sqlrusergroup-to-database.md)
+
 ### [Implantar e consumir modelos usando serviços Web](operationalization-with-mrsdeploy.md)
+
 ### [Gerenciando e monitorando soluções de aprendizado de máquina](r/managing-and-monitoring-r-solutions.md)
 ### [Governança de recursos para serviços do Machine Learning](r/resource-governance-for-r-services.md)
 ### [Criar um pool de recursos para o aprendizado de máquina](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos estendidos para serviços do Machine Learning](r/extended-events-for-sql-server-r-services.md)
-
+### [Eventos estendidos para monitoramento de instruções PREDICT](xe-event-predict-tsql.md)
 ### [DMVs para serviços do Machine Learning](r/dmvs-for-sql-server-r-services.md)
 ### [Usando funções de criação de perfil de código de R](r/using-r-code-profiling-functions.md)
 ### [Monitorar os serviços do Machine Learning usando relatórios personalizados no Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)

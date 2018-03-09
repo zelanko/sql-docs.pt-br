@@ -1,5 +1,5 @@
 ---
-title: "Transformação cache | Microsoft Docs"
+title: "Transformação Cache | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-transform"></a>transformação Cache
   A Transformação Cache gera um conjunto de dados de referência para uma Transformação Pesquisa, gravando dados de uma fonte de dados conectada no fluxo de dados para um gerenciador de conexões de Cache. A transformação Pesquisa executa pesquisas, unindo dados em colunas de entrada de uma fonte de dados conectados com colunas no banco de dados de referência.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/19/2017
   
  Em um único pacote, somente uma transformação Cache pode gravar dados no mesmo gerenciador de conexões de cache. Se o pacote contiver várias transformações Cache, a primeira transformação, que é chamada quando o pacote é executado, gravará os dados no gerenciador de conexões. As operações de gravação das transformações Cache subsequentes falham.  
   
- Para obter mais informações, consulte [Gerenciador de Conexão de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obter mais informações, consulte [Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuração da transformação Cache  
  Você pode configurar o gerenciador de conexões de cache para salvar os dados em um arquivo de cache (.caw).  
@@ -74,15 +73,14 @@ ms.lasthandoff: 08/19/2017
  **Cache connection manager**  
  Selecione um gerenciador de conexões de Cache existente usando a lista ou crie uma conexão nova usando o botão **Novo** .  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão usando a caixa de diálogo Editor de Gerenciador de Conexões de Cache.  
   
  **Editar**  
  Modifique uma conexão existente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
   
   
-

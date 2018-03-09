@@ -2,32 +2,32 @@
 title: "Lição 3: Modificando medidas, atributos e hierarquias | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 692d6b3567f9f9ea3e3fe404a85f8d9e09f44c5f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 776acb877537233ffc25378d53160eb19a19038f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lição 3: Modificando medidas, atributos e hierarquias
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Depois de definir o cubo inicial, você poderá melhorar a utilidade e a facilidade de uso do cubo. Você pode fazer isto adicionando hierarquias que dão suporte à navegação e agregação em vários níveis, aplicando formatos a medidas específicas, e definindo cálculos e relações.  
   
 > [!NOTE]  
@@ -38,10 +38,10 @@ Esta lição contém as seguintes tarefas:
 [Modificando medidas](../analysis-services/lesson-3-1-modifying-measures.md)  
 Nesta tarefa, você especificará propriedades de formatação para as medidas moeda e porcentagem do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-[Modificando a dimensão Cliente](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[Modificando a dimensão cliente](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
 Nesta tarefa, você definirá uma hierarquia de usuário, criará cálculos nomeados, modificará atributos que serão usados em cálculos nomeados e agrupará atributos e hierarquias de usuário em pastas de exibição.  
   
-[Modificando a dimensão Produto](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
+[Modificando a dimensão produto](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
 Nesta tarefa, você definirá uma hierarquia do usuário, criará cálculos nomeados, definirá o nome do membro Todos e definirá as pastas de exibição.  
   
 [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
@@ -52,8 +52,7 @@ Nesta tarefa, você navegará pelos dados do cubo usando o navegador no Designer
   
 ## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
-
