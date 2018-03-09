@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef3927340e8fc87e8d25796ae331273556c43a6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5bdddde1f7aedfc2aa576d5745df9d0f601c868f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Retornando as opções SET com que o plano foi compilado  
- O exemplo seguinte retorna as opções SET com que o plano foi compilado. O `sql_handle` do plano também é retornado. O operador PIVOT é usado para a saída de `set_options` e `sql_handle` atributos como colunas em vez de linhas. Para obter mais informações sobre o valor retornado em `set_options`, consulte [sys.DM exec_plan_attributes &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ O exemplo seguinte retorna as opções SET com que o plano foi compilado. O `sql_handle` do plano também é retornado. O operador PIVOT é usado para a saída de `set_options` e `sql_handle` atributos como colunas em vez de linhas. Para obter mais informações sobre o valor retornado em `set_options`, consulte [sys.DM exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -108,7 +108,7 @@ GO
   
 ```  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
-    omo.memory_object_address, pages_allocated_count, type, page_size_in_bytes   
+    omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   
 JOIN sys.dm_os_memory_objects AS omo   
     ON ecp.memory_object_address = omo.memory_object_address   
@@ -119,7 +119,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   

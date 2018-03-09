@@ -4,7 +4,7 @@ description: "Este guia de início rápido mostra como usar o Docker para execut
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Início rápido: Executar a imagem de contêiner de 2017 do SQL Server com o Docker
 
@@ -52,6 +52,8 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
    ```
 
    O comando anterior efetua pull da imagem de contêiner mais recente do SQL Server 2017. Se você quiser efetuar pull de uma imagem específica, adicione dois-pontos e o nome da marca (por exemplo, `microsoft/mssql-server-linux:2017-GA`). Para ver todas as imagens disponíveis, veja [a página de hub do Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   
+   Para os comandos de bash neste artigo, `sudo` é usado. Em MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` para executar o Docker, você pode configurar um **docker** grupo e adicionar usuários a esse grupo. Para obter mais informações, consulte [as etapas de pós-instalação para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Para executar a imagem de contêiner com o Docker, você pode usar o comando a seguir de um shell bash (Linux/macOS) ou do prompt de comando do PowerShell elevado.
 
