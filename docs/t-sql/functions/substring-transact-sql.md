@@ -1,4 +1,4 @@
----
+﻿---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
@@ -37,8 +37,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/18/2018
 ---
+
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna parte de uma expressão de caractere, binária, de texto ou de imagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-SUBSTRING ( expression ,start , length )  
+SUBSTRING (expressão, início, comprimento)  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -55,7 +56,7 @@ SUBSTRING ( expression ,start , length )
  É um **caractere**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *Início*  
- É um número inteiro ou **bigint** expressão que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 com base, significando que o primeiro caractere da expressão é 1). Se *iniciar* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *iniciar* + *comprimento*- 1 ou 0. Se *iniciar* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
+ É um número inteiro ou **bigint** que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 base, significando que o primeiro caractere da expressão é 1). Se *início* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *início* + *comprimento*- 1 ou 0. Se *início* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
   
  *Comprimento*  
  É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* serão retornados. Se o *comprimento* for negativo, um erro será gerado e a instrução será encerrada. Se a soma de *início* e *comprimento* for maior do que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *início*, será retornada.  
@@ -141,7 +142,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- O exemplo a seguir mostra o efeito de SUBSTRING em ambos os **texto** e **ntext** dados. Primeiro, este exemplo cria uma nova tabela no banco de dados `pubs` chamado `npub_info`. Depois, o exemplo cria a coluna `pr_info` na tabela `npub_info` com os primeiros 80 caracteres da coluna `pub_info.pr_info` e adiciona um `ü` como o primeiro caractere. Por fim, um `INNER JOIN` recupera todos os números de identificação de publicador e o `SUBSTRING` de ambos os **texto** e **ntext** colunas de informações do publicador.  
+ O exemplo a seguir mostra o efeito de SUBSTRING em ambos os tipos de dado **texto** e **ntext**. Primeiro, este exemplo cria uma nova tabela no banco de dados `pubs` chamado `npub_info`. Depois, o exemplo cria a coluna `pr_info` na tabela `npub_info` com os primeiros 80 caracteres da coluna `pub_info.pr_info` e adiciona um `ü` como o primeiro caractere. Por fim, um `INNER JOIN` recupera todos os números de identificação de publicador e o `SUBSTRING` de ambos os **texto** e **ntext** colunas de informações do publicador.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -233,5 +234,6 @@ bcd
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
+
 
 

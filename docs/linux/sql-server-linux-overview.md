@@ -1,4 +1,4 @@
----
+﻿---
 title: "Visão geral do SQL Server no Linux | Microsoft Docs"
 description: "Este artigo descreve como o SQL Server é executado no Linux e fornece informações sobre como saber mais."
 author: rothja
