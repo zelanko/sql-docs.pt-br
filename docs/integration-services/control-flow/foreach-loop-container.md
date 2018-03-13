@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -102,11 +102,11 @@ ms.lasthandoff: 02/15/2018
 |Arquivo ADLS Foreach|Especifique o diretório do Azure Data Lake Store que contém os arquivos a serem enumerados.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Adicionar enumeração a um fluxo de controle com um contêiner do Loop Foreach
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui o contêiner Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumere arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
  O contêiner Loop Foreach não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível, especifica o tipo do enumerados e configura o enumerador. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop Foreach. Para obter mais informações, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
- O contêiner Loop Foreach pode incluir um fluxo de controle com várias tarefas e outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop Foreach é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Foreach e não para o pacote. Se o contêiner Loop Foreach incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
+ O contêiner Loop Foreach pode incluir um fluxo de controle com várias tarefas e outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop Foreach é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Foreach e não para o pacote. Se o contêiner Loop Foreach incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Adicionar e configurar um contêiner de Loop Foreach
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  Configure o contêiner Loop Foreach. Para obter mais informações, consulte [Configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
-## <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
+## <a name="configure-a-foreach-loop-container"></a>Configurar um contêiner Loop Foreach
 Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo expressões de propriedade nos níveis de enumerador e contêiner.  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
@@ -205,7 +205,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Enumerador**  
  Selecione o tipo de enumerador na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Enumerador de Arquivo Foreach**|Enumera arquivos. Se este valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivo Foreach**.|  
 |**Enumerador de Item Foreach**|Enumera valores em um item. Se este valor for selecionado serão exibidas as opções dinâmicas na seção **Enumerador de Item Foreach**.|  
@@ -346,7 +346,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **DocumentSourceType**  
  Selecione o tipo de origem do documento XML. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -366,7 +366,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **EnumerationType**  
  Selecione um tipo de enumeração na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Navegador**|Enumere usando um XPathNavigator.|  
 |**Nó**|Enumere nós retornados por uma operação XPath.|  
@@ -376,7 +376,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **OuterXPathStringSourceType**  
  Selecione o tipo de origem da cadeia XPath. As opções desta propriedade estão listadas na seguinte tabela: 
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -399,7 +399,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **InnerXPathStringSourceType**  
  Seleciona o tipo de origem da cadeia interna XPath. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -515,7 +515,7 @@ Especifica se deve-se pesquisar recursivamente dentro do diretório especificado
 > [!NOTE]  
 >  O índice é baseado em 0.  
   
-**Delete (excluir)**  
+**Delete (excluir) (excluir)**  
  Selecione uma variável e clique em **Excluir**.  
 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Caixa de diálogo Restrições de Esquemas (ADO.NET)
@@ -550,7 +550,7 @@ Use a caixa de diálogo **Colunas Para Cada Item** para definir as colunas nos i
  Selecione uma coluna e clique em **Remover**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>caixa de diálogo Selecionar Enumeração SMO
-Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  
+Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  
   
 ### <a name="options"></a>Opções  
  **Enumerar**  
@@ -559,7 +559,7 @@ Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objet
  **Objetos**  
  Usa o tipo de enumeração Objetos.  
   
- **Pré-popular**  
+ **Preencher previamente**  
  Usa a opção **Pré-popular** com o tipo de enumeração Objetos.  
   
  **Nomes**  
@@ -578,7 +578,7 @@ Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objet
   
  Para evitar consequências negativas do controle não determinante da execução paralela de tarefas no loop, o pacote deve ser configurado para executar só um executável de cada vez. Por exemplo, se um pacote puder executar várias tarefas simultaneamente; um contêiner Loop Foreach que enumera arquivos na pasta, recupera os nomes de arquivo e, depois, usa uma tarefa Executar SQL para inserir os nomes de arquivo em uma tabela podem gerar conflitos de gravação quando duas instâncias da tarefa Executar SQL tentarem gravar ao mesmo tempo. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   

@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Referência técnica do algoritmo MTS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclui dois algoritmos separados para análise de série temporal:  
+  O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclui dois algoritmos separados para análise de série temporal:  
   
 -   O algoritmo ARTXP, introduzido no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], foi otimizado para prever o próximo valor provável em uma série.  
   
@@ -53,7 +53,7 @@ O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Serie
  Este tópico fornece informações adicionais sobre como cada algoritmo é implementado e como você pode personalizar o algoritmo com a configuração de parâmetros para ajustar a análise e os resultados da previsão.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implementação do algoritmo MTS  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research desenvolveu o algoritmo ARTXP original que era usado no SQL Server 2005, baseando a implementação no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Portanto, o algoritmo ARTXP pode ser descrito como um modelo de árvore de regressão automática para representar dados de série temporal periódicos. Esse algoritmo relaciona um número variável de itens passados a cada item atual que está sendo previsto. O nome ARTXP tem origem no fato de o método de árvore de regressão automática (um algoritmo ART) ser aplicado a vários estados anteriores desconhecidos. Para obter uma explicação detalhada do algoritmo ARTXP, consulte [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research desenvolveu o algoritmo ARTXP original que foi usado no SQL Server 2005, baseando a implementação no [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo árvores de decisão. Portanto, o algoritmo ARTXP pode ser descrito como um modelo de árvore de regressão automática para representar dados de série temporal periódicos. Esse algoritmo relaciona um número variável de itens passados a cada item atual que está sendo previsto. O nome ARTXP tem origem no fato de o método de árvore de regressão automática (um algoritmo ART) ser aplicado a vários estados anteriores desconhecidos. Para obter uma explicação detalhada do algoritmo ARTXP, consulte [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
  O algoritmo ARIMA foi adicionado ao algoritmo Microsoft Time Series no SQL Server 2008 para melhorar a previsão de longo prazo. Ele é uma implementação do processo de computação de média de movimentação integrada de regressão automática, descrito por Box e Jenkins. A metodologia ARIMA permite determinar dependências em observações feitas consecutivamente em um determinado tempo e pode incorporar choques aleatórios como parte do modelo. O método ARIMA também aceita a periodicidade multiplicativa. Leitores com interesse em saber mais sobre o algoritmo ARIMA devem ler o trabalho seminal de Box e Jenkins; esta seção visa fornecer detalhes específicos sobre como a metodologia ARIMA foi implementada no algoritmo Microsoft Time Series.  
   

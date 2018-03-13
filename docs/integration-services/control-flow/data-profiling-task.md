@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 |**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Query End<br /><br /> Concluir solicitação de computação|  
   
 ## <a name="output-and-its-schema"></a>Saída e seu esquema  
- A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
+ A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
   
  Com relação às informações sobre a qualidade de dados, o esquema pode ser útil para:  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Construir ferramentas personalizadas que trabalhem com informações de qualidade de dados.  
   
- O namespace de destino é identificado no esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ O namespace de destino é identificado no esquema como [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Saída no fluxo de trabalho condicional de um pacote  
  Os componentes de criação de perfil de dados, não incluem funcionalidade interna pronta para implementar lógica condicional no fluxo de trabalho do pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , com base na saída da tarefa de Criação de Perfil de Dados. Porém, você pode adicionar facilmente esta lógica, com uma quantidade mínima de programação, em uma tarefa de Script. Este código poderia efetuar uma consulta XPath contra a saída da XML e salvar o resultado em uma variável de pacote. Restrições de precedência que conectam a tarefa Script a tarefas subsequentes, podem usar uma expressão para determinar o fluxo de trabalho. Por exemplo, a tarefa Script detecta que a porcentagem de valores nulos em uma coluna excede um certo limite. Quando esta condição for verdade, você poderia querer interromper o pacote e resolver o problema antes de continuar.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/15/2018
  [Página de Solicitações de perfil](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  Na página **Solicitações de Perfil** , você especifica a fonte de dados e seleciona e configura os perfis de dados que quer computar. Para obter mais informações sobre os vários perfis que podem ser configurados, consulte os tópicos a seguir:  
   
--   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil chave de candidato &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
