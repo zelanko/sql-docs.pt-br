@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: "40"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c55bc119e70be951807a9abd2ee37712d14aa46
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 99e471d27c6212412e991e883bcf028ce18176d4
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Caso haja um ou mais procedimentos armazenados que sejam executados no Publicador e afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Caso haja um ou mais procedimentos armazenados executados no Publicador e que afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
   
 ```  
 CREATE PROC give_raise AS  

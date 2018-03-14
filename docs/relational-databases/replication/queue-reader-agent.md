@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.queuereaderagent.f1
-helpviewer_keywords: Queue Reader Agent dialog box
+f1_keywords:
+- sql13.rep.monitor.queuereaderagent.f1
+helpviewer_keywords:
+- Queue Reader Agent dialog box
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 536010c7312cc33b7ee7b394ac2761be7aefc8dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec8f976ee2d68d61be3374527d10909363b25c3b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="queue-reader-agent"></a>Queue Reader Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Queue Reader Agent** exibe informações detalhadas sobre o Queue Reader Agent, incluindo status, histórico, mensagens informativas e eventuais mensagens de erro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  A caixa de diálogo **Queue Reader Agent** exibe informações detalhadas sobre o Queue Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
   
 ## <a name="options"></a>Opções  
  Selecione as sessões do Queue Reader Agent a serem exibidas no menu **Exibir** e depois selecione uma sessão específica na grade rotulada **Sessões do Queue Reader Agent**. Informações detalhadas sobre essa sessão são exibidas na grade rotulada **Ações na sessão selecionada**. Se a sessão selecionada terminou em erro, a área de texto rotulada **Detalhes ou mensagem de erro da sessão selecionada** também será exibida.  

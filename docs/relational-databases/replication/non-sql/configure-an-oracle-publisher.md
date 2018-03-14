@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: "60"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 115247323429a5a981fdeff76ebb4d0f6d33581f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
   
 1.  Crie um usuário administrativo de replicação no banco de dados do Oracle, usando o script fornecido.  
   

@@ -19,18 +19,19 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec6dfe48d0d12626ff908efd24b810c276249f7c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
   
 -   O banco de dados de publicação no Publicador.  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/18/2018
   
  Para reinicializar uma assinatura, consulte [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Para criar e aplicar um instantâneo, consulte [Create e Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para criar e aplicar um instantâneo, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Fazendo backup e restaurando o banco de dados de distribuição  
  Com a replicação de mesclagem, deve ser realizado regularmente o backup do banco de dados de distribuição, e, pode ser restaurado sem nenhuma consideração especial, contanto que o backup usado não seja anterior ao menor período de retenção de todas as publicações que usam o Distribuidor. Por exemplo, se houver três publicações com períodos de retenção de 10, 20, e 30 dias, respectivamente, o backup usado para restaurar o banco de dados não deve ter mais de 10 dias. O banco de dados de distribuição tem uma função limitada na replicação de mesclagem: não armazena nenhum dos dados usados no controle de alterações e não fornece o armazenamento temporário das mudanças de replicação de mesclagem a serem encaminhadas aos bancos de dados de assinatura (como faz na replicação transacional).  

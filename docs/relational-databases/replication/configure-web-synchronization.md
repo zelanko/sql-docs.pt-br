@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: "74"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/18/2018
  Depois de habilitar uma publicação e configurar o IIS, crie uma assinatura pull e especifique que ela deve ser sincronizada usando o IIS. (A sincronização da Web tem suporte apenas para assinaturas pull.)  
   
 ## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Atualizando de uma versão anterior do SQL Server  
- Se houver uma topologia de sincronização da Web existente e você atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário verificar se a última versão de Replisapi.dll foi copiada para o diretório virtual usado pela sincronização da Web. Por padrão, a versão mais recente de Replisapi.dll está localizada em C:\Program Files\Microsoft SQL Server\\<nnn\>\COM.  
+ Se houver uma topologia de sincronização da Web existente e você atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário verificar se a última versão de Replisapi.dll foi copiada para o diretório virtual usado pela sincronização da Web. Por padrão, a última versão de Replisapi.dll está localizada em C:\Arquivos de Programas\Microsoft SQL Server\\<nnn\>\COM.  
   
 ## <a name="replicating-large-volumes-of-data"></a>Replicando grandes volumes de dados  
  Para ajudar a evitar possíveis problemas de memória em computadores Assinantes, a sincronização da Web usa um tamanho padrão máximo de 100 MB para o arquivo XML usado para transferir alterações. O limite pode ser aumentado definindo a seguinte chave do registro:  
