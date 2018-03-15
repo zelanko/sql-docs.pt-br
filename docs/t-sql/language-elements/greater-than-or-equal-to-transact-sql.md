@@ -1,5 +1,5 @@
 ---
-title: '&gt;= (Maior ou igual a) (Transact-SQL) | Microsoft Docs'
+title: '&gt;= (maior ou igual a) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (Maior ou igual a) (Transact-SQL)
+# <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maior ou igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Compara duas expressões por maior ou igual a (um operador de comparação).  
@@ -52,7 +52,7 @@ expression >= expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Booliano  
@@ -91,11 +91,11 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [= &#40;Equals&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
- [&#62; &#40;Greater Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [&#62; &#40;Maior que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

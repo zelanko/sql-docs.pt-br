@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de entidade de servidor (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de entidade de segurança do servidor (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- LOGON **::** *SQL_Server_login*  
- Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ LOGIN **::** *SQL_Server_login*  
+ Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO de servidor **::** *server_role*  
- Especifica a função de servidor na qual a permissão está sendo negada. O qualificador de escopo (**::**) é necessária.  
+ SERVER ROLE **::** *server_role*  
+ Especifica a função de servidor na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
   
- PARA \<server_principal >  
+ TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função de servidor ao qual a permissão está sendo concedida.  
   
- PARA *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo negada.  
   
  *SQL_Server_login*  
@@ -99,12 +99,12 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é mestre.  
   
- Obter informações sobre permissões de servidor estão disponíveis na [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição do catálogo. Obter informações sobre as entidades de servidor estão disponíveis na [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). As informações sobre principais de servidor estão disponíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- A instrução DENY falhará se CASCADE não for especificado ao negar uma permissão a uma entidade que foi concedida com GRANT OPTION.  
+ A instrução DENY falhará se CASCADE não for especificado ao negar uma permissão a um principal ao qual ela foi concedida com GRANT OPTION especificado.  
   
  Os logons e as funções de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são protegíveis no nível do servidor. As permissões mais específicas e limitadas que podem ser negadas em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função de servidor são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -150,7 +150,7 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [Permissões GRANT de entidade do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

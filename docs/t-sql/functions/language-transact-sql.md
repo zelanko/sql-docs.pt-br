@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40. IDIOMA (Transact-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o nome do idioma que está sendo usado atualmente.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentários  
- Para exibir informações sobre configurações de idioma, incluindo nomes de idioma oficial válido, execute **sp_helplanguage** sem um parâmetro especificado.  
+## <a name="remarks"></a>Remarks  
+ Para exibir informações sobre configurações de idioma, incluindo nomes de idiomas oficiais válidos, execute **sp_helplanguage** sem um parâmetro especificado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o idioma da sessão atual.  
@@ -68,10 +68,10 @@ Language Name
 us_english                      
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Definir idioma &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

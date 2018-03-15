@@ -1,5 +1,5 @@
 ---
-title: Palavras-chave (Transact-SQL) reservadas | Microsoft Docs
+title: Palavras-chave reservadas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Delete (excluir)|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**AÇÃO**|**EXECUTE**|**PAD**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -126,44 +126,44 @@ ms.lasthandoff: 01/25/2018
 |**ALTER**|**FETCH**|**PREPARE**|  
 |**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**SÃO**|**PARA**|**PRIOR**|  
-|**AS**|**EXTERNA**|**PRIVILEGES**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**ASSERTION**|**ENCONTRADO**|**PUBLIC**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**REAL**|  
-|**AVG**|**OBTER**|**REFERÊNCIAS**|  
+|**AVG**|**GET**|**REFERENCES**|  
 |**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
-|**BY**|**TENDO**|**ROWS**|  
+|**BY**|**HAVING**|**ROWS**|  
 |**CASCADE**|**HOUR**|**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
-|**CAST**|**IN**|**SEÇÃO**|  
+|**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
-|**CHAR**|**INDEX**|**SESSÃO**|  
-|**CHAR_LENGTH**|**INDICADOR**|**SESSION_USER**|  
-|**CARACTERE**|**INITIALLY**|**DEFINIR**|  
-|**CHARACTER_LENGTH**|**INTERNA**|**SIZE**|  
+|**CHAR**|**INDEX**|**SESSION**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
 |**CHECK**|**INPUT**|**SMALLINT**|  
-|**CLOSE**|**INSENSITIVE**|**ALGUNS**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
-|**AGRUPAMENTO**|**INTEGER**|**SQLCA**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
 |**CONNECT**|**INTO**|**SQLSTATE**|  
-|**CONEXÃO**|**É**|**SQLWARNING**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
 |**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
 |**CONSTRAINTS**|**JOIN**|**SUM**|  
-|**CONTINUE**|**CHAVE**|**SYSTEM_USER**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
-|**COUNT**|**À ESQUERDA**|**EM SEGUIDA**|  
-|**CREATE**|**LEFT**|**TEMPO**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
@@ -171,30 +171,30 @@ ms.lasthandoff: 01/25/2018
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATA**|**MINUTO**|**TRANSLATION**|  
-|**DAY**|**MÓDULO**|**TRIM**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NAMES**|**UNIÃO**|  
-|**DECIMAL**|**NACIONAL**|**UNIQUE**|  
-|**DECLARE**|**NATURAL**|**DESCONHECIDO**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**DEFERRABLE**|**AVANÇAR**|**UPPER**|  
-|**ADIADO**|**NÃO**|**USO**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**USANDO O**|  
+|**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
-|**DESCRIPTOR**|**NULLIF**|**VALORES**|  
-|**DIAGNÓSTICO**|**NUMERIC**|**VARCHAR**|  
-|**DESCONECTAR**|**OCTET_LENGTH**|**VARIÁVEL**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
-|**DOMAIN**|**ON**|**QUANDO**|  
-|**DUPLO**|**ONLY**|**WHENEVER**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
 |**ELSE**|**OPTION**|**WITH**|  
-|**END**|**OU**|**TRABALHO**|  
-|**END-EXEC**|**ORDEM**|**WRITE**|  
-|**ESCAPE**|**EXTERNA**|**YEAR**|  
-|**EXCEPT**|**SAÍDA**|**ZONE**|  
+|**END**|**OR**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>Palavras-chave futuras  
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Não|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Nenhuma|TRAILING|  
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Parâmetro|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -280,7 +280,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -294,8 +294,8 @@ ms.lasthandoff: 01/25/2018
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>Consulte também  
- [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

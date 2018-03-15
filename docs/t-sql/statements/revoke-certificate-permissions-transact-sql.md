@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de certificado (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de certificado (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um certificado. Listada abaixo.  
   
- CERTIFICADO ON **::***certificate_name*  
+ ON CERTIFICATE **::***certificate_name*  
  Especifica o certificado no qual a permissão está sendo revogada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um certificado é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um certificado estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de certificado|Indicado pela permissão de certificado|Implícito na permissão de banco de dados|  
@@ -119,13 +119,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no certificado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

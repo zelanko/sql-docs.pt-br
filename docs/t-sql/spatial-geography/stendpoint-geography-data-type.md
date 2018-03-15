@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geography-data-type"></a>STEpoint (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o ponto de extremidade de uma **geografia** instância.  
+  Retorna o ponto de extremidade de uma instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- STEndPoint() é o equivalente de [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
+ STEndPoint() é o equivalente a [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
- Esse método retornará nulo se chamado em vazio **geografia** instância.  
+ Esse método retornará nulo se for chamado em uma instância de **geography** vazia.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `LineString` com `STGeomFromText()` e usa `STEndpoint()` para recuperar o ponto de extremidade de `LineString`.  
@@ -64,7 +64,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STEndPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

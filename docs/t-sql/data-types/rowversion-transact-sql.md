@@ -43,40 +43,40 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-É um tipo de dados que expõe números binários exclusivos, gerados automaticamente, em um banco de dados. **rowversion** geralmente é usado como um mecanismo para linhas de tabela de carimbo de versão. O tamanho de armazenamento é de 8 bytes. O **rowversion** tipo de dados é apenas um número incrementado e não preserva uma data ou hora. Para registrar uma data ou hora, use um **datetime2** tipo de dados.
+É um tipo de dados que expõe números binários exclusivos, gerados automaticamente, em um banco de dados. **rowversion** geralmente é usado como um mecanismo para linhas de tabela de registro de versão. O tamanho de armazenamento é de 8 bytes. O tipo de dados **rowversion** é apenas um número que aumenta e não preserva uma data nem hora. Para gravar uma data ou hora, use um tipo de dados **datetime2**.
   
-## <a name="remarks"></a>Comentários  
-Cada banco de dados tem um contador é incrementado para cada inserção ou uma operação de atualização é executada em uma tabela que contém um **rowversion** coluna no banco de dados. Esse contador é a rowversion do banco de dados. Isso controla uma hora relativa em um banco de dados, não uma hora real que pode ser associada a um relógio. Uma tabela pode ter apenas um **rowversion** coluna. Sempre que uma linha com um **rowversion** coluna é modificada ou inserida, o valor de rowversion do banco de dados incrementado é inserido no **rowversion** coluna. Essa propriedade torna uma **rowversion** coluna uma pobre candidata a chaves, especialmente as chaves primárias. Qualquer atualização feita na linha altera o valor de rowversion e, portanto, altera o valor de chave. Se a coluna estiver em uma chave primária, o valor da chave antiga não será mais válido e as chaves estrangeiras que fazem menção ao valor antigo não serão mais válidas. Se a tabela for mencionada em um cursor dinâmico, todas as atualizações alterarão a posição das linhas no cursor. Se a coluna for uma chave de índice, todas as atualizações na linha de dados também gerarão atualizações do índice.  O **rowversion** valor é incrementado com qualquer instrução update, mesmo se nenhum valor de linha é alterados. (Por exemplo, se um valor de coluna é 5 e uma instrução update define o valor para 5, essa ação é considerada uma atualização, embora não exista nenhuma alteração e o **rowversion** é incrementada.)
+## <a name="remarks"></a>Remarks  
+Cada banco de dados tem um contador que é incrementado para cada operação de inserção ou atualização executada em uma tabela que contém uma coluna **rowversion** no banco de dados. Esse contador é a rowversion do banco de dados. Isso controla uma hora relativa em um banco de dados, não uma hora real que pode ser associada a um relógio. Uma tabela pode ter apenas uma coluna **rowversion**. Sempre que uma linha com uma coluna **rowversion** é modificada ou inserida, o valor de rowversion do banco de dados incrementado é inserido na coluna **rowversion**. Essa propriedade torna uma coluna **rowversion** uma pobre candidata a chaves, especialmente, chaves primárias. Qualquer atualização feita na linha altera o valor de rowversion e, portanto, altera o valor de chave. Se a coluna estiver em uma chave primária, o valor da chave antiga não será mais válido e as chaves estrangeiras que fazem menção ao valor antigo não serão mais válidas. Se a tabela for mencionada em um cursor dinâmico, todas as atualizações alterarão a posição das linhas no cursor. Se a coluna for uma chave de índice, todas as atualizações na linha de dados também gerarão atualizações do índice.  O valor de **rowversion** é incrementado com qualquer instrução de atualização, mesmo se nenhum valor de linha for alterado. (Por exemplo, se um valor de coluna é 5 e uma instrução de atualização define o valor como 5, essa ação é considerada uma atualização, embora não exista nenhuma alteração e a **rowversion** seja incrementada.)
   
-**carimbo de hora** é o sinônimo para o **rowversion** tipo de dados e está sujeito ao comportamento de dados sinônimos de tipo. Em instruções DDL, use **rowversion** em vez de **timestamp** sempre que possível. Para obter mais informações, consulte [sinônimos de tipos de dados &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+**timestamp** é o sinônimo do tipo de dados **rowversion** e está sujeito ao comportamento de sinônimos de tipo de dados. Em instruções DDL, use **rowversion** em vez de **timestamp** sempre que possível. Para obter mais informações, consulte [Sinônimos de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-O [!INCLUDE[tsql](../../includes/tsql-md.md)] **timestamp** tipo de dados é diferente de **timestamp** tipo de dados definido no padrão ISO.
+O tipo de dados **timestamp** do [!INCLUDE[tsql](../../includes/tsql-md.md)] é diferente do tipo de dados **timestamp** definido no padrão ISO.
   
 > [!NOTE]  
->  O **timestamp** sintaxe foi preterida. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  A sintaxe de **timestamp** foi preterida. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Em uma instrução CREATE TABLE ou ALTER TABLE, você não precisa especificar um nome de coluna para o **timestamp** tipo de dados, por exemplo:
+Em uma instrução CREATE TABLE ou ALTER TABLE, você não precisará especificar um nome de coluna para o tipo de dados **timestamp**, por exemplo:
   
 ```sql
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
-Se você não especificar um nome de coluna, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gera o **timestamp** nome de coluna; no entanto, o **rowversion** sinônimo não segue esse comportamento. Quando você usa **rowversion**, você deve especificar um nome de coluna, por exemplo:
+Se você não especificar um nome de coluna, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gerará o nome da coluna **timestamp**; no entanto, o sinônimo de **rowversion** não segue este comportamento. Quando você usar **rowversion**, precisará especificar um nome de coluna, por exemplo:
   
 ```sql
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  
 ```  
   
 > [!NOTE]  
->  Duplicar **rowversion** valores podem ser gerados usando a instrução SELECT INTO na qual um **rowversion** coluna está na lista de seleção. Não é recomendável usar **rowversion** dessa maneira.  
+>  Os valores duplicados de **rowversion** podem ser gerados com a instrução SELECT INTO na qual uma coluna **rowversion** está na lista SELECT. Não recomendamos o uso de **rowversion** desta maneira.  
   
-Um nulo **rowversion** coluna é semanticamente equivalente a um **binary (8)** coluna. Um valor nulo **rowversion** coluna é semanticamente equivalente a um **varbinary (8)** coluna.
+Uma coluna **rowversion** que não permite valor nulo é semanticamente equivalente a uma coluna **binary(8)**. Uma coluna **rowversion** que permite valor nulo é semanticamente equivalente a uma coluna **varbinary(8)**.
   
-Você pode usar o **rowversion** coluna de uma linha para determinar facilmente se a linha teve uma instrução update é executado em relação a ela desde a última vez que foi lido. Se uma instrução update é executada em relação a linha, o valor de rowversion será atualizado. Se nenhuma atualização instruções são executou em linha, o valor de rowversion é igual a quando ele foi lido anteriormente. Para retornar o valor de rowversion atual para um banco de dados, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+Use a coluna **rowversion** de uma linha para determinar com facilidade se a linha teve uma instrução de atualização executada nela desde a última vez que ela foi lida. Se uma instrução de atualização é executada na linha, o valor de rowversion é atualizado. Se nenhuma instrução de atualização é executada na linha, o valor de rowversion é igual a quando ele foi lido anteriormente. Para retornar o valor de rowversion atual para um banco de dados, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
-Você pode adicionar uma **rowversion** coluna a uma tabela para ajudar a manter a integridade do banco de dados quando vários usuários estão atualizando linhas ao mesmo tempo. Você também pode querer saber quantas e quais linhas foram atualizadas sem consultar novamente a tabela.
+Adicione uma coluna **rowversion** à uma tabela para ajudar a manter a integridade do banco de dados quando vários usuários estão atualizando as linhas ao mesmo tempo. Você também pode querer saber quantas e quais linhas foram atualizadas sem consultar novamente a tabela.
   
-Por exemplo, vamos suporte que você crie uma tabela chamada `MyTest`. Você popula alguns dados na tabela, executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.
+Por exemplo, vamos suporte que você crie uma tabela chamada `MyTest`. Popule alguns dados na tabela executando as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir.
   
 ```sql
 CREATE TABLE MyTest (myKey int PRIMARY KEY  
@@ -106,11 +106,11 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue`é o **rowversion** valor de coluna para a linha que indica a última vez que você leia a linha. Esse valor deve ser substituído por real **rowversion** valor. Um exemplo de real **rowversion** valor é 0x00000000000007D3.
+`myValue` é o valor de coluna **rowversion** da linha que indica a última vez que você a leu. Esse valor deve ser substituído pelo valor de **rowversion** real. Um exemplo do valor de **rowversion** real é 0x00000000000007D3.
   
 Você também pode colocar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra em uma transação. Consultando a variável `@t` no escopo da transação, você pode recuperar a coluna `myKey` atualizada da tabela, sem consultar a tabela `MyTes`t.
   
-Este é o mesmo exemplo usando o **timestamp** sintaxe:
+Este é o mesmo exemplo usando a sintaxe de **timestamp**:
   
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
@@ -143,7 +143,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
   

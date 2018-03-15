@@ -1,5 +1,5 @@
 ---
-title: "Cadeia de caracteres funções (Transact-SQL) | Microsoft Docs"
+title: "Funções de cadeia de caracteres (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Funções de cadeia de caracteres interna exceto `FORMAT` são determinísticas. Isso significa que elas retornam o mesmo valor sempre que são chamadas com um conjunto específico de valores de entrada. Para obter mais informações sobre determinismo de função, consulte [determinísticas e funções não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Todas as funções de cadeia de caracteres internas, exceto `FORMAT`, são determinísticas. Isso significa que elas retornam o mesmo valor sempre que são chamadas com um conjunto específico de valores de entrada. Para obter mais informações sobre determinismo de funções, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Quando as funções de cadeias de caracteres recebem argumentos que não são valores de cadeias de caracteres, o tipo de entrada é implicitamente convertido em um tipo de dados de texto. Para obter mais informações, consulte [conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Quando as funções de cadeias de caracteres recebem argumentos que não são valores de cadeias de caracteres, o tipo de entrada é implicitamente convertido em um tipo de dados de texto. Para obter mais informações, consulte [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

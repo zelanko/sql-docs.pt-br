@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor de incremento (retornado como **numérico** (**@@**MAXPRECISION,0)) especificado durante a criação de uma coluna identity em uma tabela ou exibição que tenha uma coluna de identidade.  
+  Retorna o valor de incremento (retornado como **numeric** (**@@**MAXPRECISION,0)) especificado durante a criação de uma coluna de identidade em uma tabela ou exibição que tem uma coluna de identidade.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *table_or_view* **'**  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) especificando a tabela ou exibição para verificar se há um valor de incremento de identidade válida. *table_or_view* pode ser uma constante de cadeia de caracteres entre aspas, uma variável, uma função ou um nome de coluna. *table_or_view* é **char**, **nchar**, **varchar**, ou **nvarchar**.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que especifica a tabela ou exibição em que um valor de incremento de identidade válido é verificado. *table_or_view* pode ser uma constante de cadeia de caracteres incluída entre aspas, uma variável, uma função ou um nome de coluna. *table_or_view* é **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **numeric**  
@@ -98,12 +98,12 @@ dbo                 AWBuildVersion                     1
 Production          BillOfMaterials                    1
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

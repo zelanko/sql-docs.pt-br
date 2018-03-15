@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que retorna TRUE, FALSE ou UNKNOWN.  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida que retorna TRUE, FALSE ou UNKNOWN.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
@@ -63,7 +63,7 @@ boolean_expression OR boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**DESCONHECIDO**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa a exibição `vEmployeeDepartmentHistory` para recuperar os nomes dos funcionários de `Quality Assurance` que trabalham no turno da tarde ou da noite. Se os parênteses forem omitidos, a consulta retornará funcionários de `Quality Assurance` que trabalham no turno da tarde e todos os funcionários que trabalham no turno da noite.  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir recupera os nomes de funcionários que a ganhar um `BaseRate` menos de 20 ou tem um `HireDate` 1 de janeiro de 2001 ou posterior.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir recupera os nomes de funcionários que ganham uma `BaseRate` menor de 20 ou têm uma `HireDate` igual a 1 de janeiro de 2001 ou posterior.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,10 +97,10 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

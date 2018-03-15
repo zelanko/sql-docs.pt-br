@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o número total de pontos em cada uma das figuras em uma **geografia** instância.  
+  Retorna o número total de pontos em cada uma das figuras em uma instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método conta os pontos na descrição de um **geografia** instância. Pontos duplicados são contados. No entanto, os pontos de conexão entre segmentos são contados apenas uma vez. Se esta instância é uma coleção, esse método retorna o número total de pontos na coleção.  
+ Esse método conta os pontos na descrição de uma instância de **geography**. Pontos duplicados são contados. No entanto, os pontos de conexão entre segmentos são contados apenas uma vez. Se a instância for uma coleção, esse método retornará o número total de pontos na coleção.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -79,7 +79,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

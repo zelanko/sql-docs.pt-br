@@ -45,24 +45,24 @@ CONNECTIONPROPERTY ( property )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*propriedade*  
-É a propriedade da conexão. *propriedade* pode ser um dos valores a seguir.
+*property*  
+É a propriedade da conexão. *property* pode ser um dos valores a seguir.
   
 |Valor|Tipo de dados|Description|  
 |---|---|---|
-|net_transport|**nvarchar (40)**|Retorna o protocolo de transporte físico usado por essa conexão. Não permite valor nulo.<br /><br /> Valores de retorno são: **HTTP**, **pipe nomeado**, **sessão**, **memória compartilhada**, **SSL**, **TCP**, e **VIA**.<br /><br /> Observação: Sempre retorna **sessão** quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados e o pool de conexão está habilitado.|  
-|protocol_type|**nvarchar (40)**|Retorna o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
-|auth_scheme|**nvarchar (40)**|Retorna o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema de autenticação para uma conexão. O esquema de autenticação é a Autenticação do Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) ou a autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
+|net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Não permite valor nulo.<br /><br /> Os valores retornados são: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP** e **VIA**.<br /><br /> Observação: sempre retorna **Session** quando uma conexão tem o MARS (conjunto de resultados ativos múltiplos) habilitado e o pooling de conexões está habilitado.|  
+|protocol_type|**nvarchar(40)**|Retorna o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
+|auth_scheme|**nvarchar(40)**|Retorna o esquema de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma conexão. O esquema de autenticação é a Autenticação do Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) ou a autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
 |local_net_address|**varchar(48)**|Retorna o endereço IP no servidor a que se destina esta conexão. Disponível apenas para conexões que usam o provedor de transporte TCP. Permite valor nulo.|  
 |local_tcp_port|**int**|Retornará a porta TCP de servidor destinada a esta conexão se houver uma conexão que use o transporte TCP. Permite valor nulo.|  
 |client_net_address|**varchar(48)**|Solicita o endereço do cliente que está efetuando conexão neste servidor. Permite valor nulo.|  
-|physical_net_transport|**nvarchar (40)**|Retorna o protocolo de transporte físico usado por essa conexão. Preciso quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados.|  
-|\<Qualquer outra cadeia de caracteres >||Retornará NULL se a entrada não for válida.|  
+|physical_net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Preciso quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados.|  
+|\<Qualquer outra cadeia de caracteres>||Retornará NULL se a entrada não for válida.|  
   
-## <a name="remarks"></a>Comentários  
-**local_net_address** e **local_tcp_port** retornam NULL em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+## <a name="remarks"></a>Remarks  
+**local_net_address** e **local_tcp_port** retornam NULL no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-Os valores retornados são os mesmos das opções mostradas para as colunas correspondentes no [sys.DM exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) exibição de gerenciamento dinâmico. Por exemplo:
+Os valores retornados são os mesmos das opções mostradas para as colunas correspondentes na exibição de gerenciamento dinâmico [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Por exemplo:
   
 ```sql
 SELECT   
@@ -72,6 +72,6 @@ ConnectionProperty('protocol_type') AS 'Protocol type';
   
 ## <a name="see-also"></a>Consulte também
 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
-[exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
   
   

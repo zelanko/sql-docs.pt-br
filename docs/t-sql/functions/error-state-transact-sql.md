@@ -57,7 +57,7 @@ ERROR_STATE ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Algumas mensagens de erro podem ser geradas em vários pontos no código para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, um erro "1105" pode ser gerado para várias condições diferentes. Cada condição específica que gera o erro atribui um código de estado exclusivo.  
   
  Ao exibir bancos de dados de problemas conhecidos, como a Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)], é possível usar o número de estado para determinar se o problema registrado é o mesmo do erro que você encontrou. Por exemplo, se um Artigo da Base de Dados de Conhecimento descreve uma mensagem de erro 1105 com um estado 2, e a mensagem de erro 1105 que você recebeu tinha um estado 3, o erro provavelmente tem uma causa diferente daquela informada no artigo.  
@@ -66,14 +66,14 @@ ERROR_STATE ( )
   
  ERROR_STATE pode ser chamado em qualquer lugar dentro do escopo de um bloco CATCH.  
   
- ERROR_STATE retorna o estado de erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. Isso é diferente de funções como @@ERROR, que retorna somente o número do erro na instrução imediatamente posterior àquela que causa um erro ou na primeira instrução de um bloco CATCH.  
+ ERROR_STATE retorna o estado de erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. Isso é diferente de funções como @@ERROR, que retornam apenas o número de erro na instrução imediatamente posterior àquela que causa um erro, ou na primeira instrução de um bloco CATCH.  
   
  Em blocos CATCH aninhados, ERROR_STATE retorna o estado de erro específico do escopo do bloco CATCH no qual é referenciado. Por exemplo, o bloco CATCH de uma construção TRY...CATCH externa poderia ter uma construção TRY...CATCH aninhada. Dentro do bloco CATCH aninhado, ERROR_STATE retorna o estado do erro que invocou o bloco CATCH aninhado. Se ERROR_STATE for executado em um bloco CATCH externo, retornará o estado do erro que invocou aquele bloco CATCH.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-errorstate-in-a-catch-block"></a>A. Usando ERROR_STATE em um bloco CATCH  
- A exemplo a seguir mostra um `SELECT` instrução que gera um erro de divisão por zero. O estado do erro é retornado.  
+ O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. O estado do erro é retornado.  
   
 ```  
 BEGIN TRY  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
- A exemplo a seguir mostra um `SELECT` instrução que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
+ O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
   
 ```  
 BEGIN TRY  
@@ -106,10 +106,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_STATE em um bloco CATCH com outras ferramentas de tratamento de erros  
- A exemplo a seguir mostra um `SELECT` instrução que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
+ O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Junto com o estado de erro, são retornadas as informações relacionadas ao erro.  
   
 ```  
 BEGIN TRY  
@@ -127,7 +127,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

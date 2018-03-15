@@ -29,7 +29,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lição 2: Configurando permissões em objetos de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Conceder um acesso de usuário a um banco de dados envolve três etapas. Primeiro, crie um logon. O logon permite que o usuário se conecte ao [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Em seguida, configure o logon como um usuário no banco de dados especificado. E, finalmente, conceda essa permissão de usuário a objetos de banco de dados. Esta lição mostra essas três etapas e demonstra como criar uma exibição e um procedimento armazenado como o objeto.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] A concessão de acesso de usuário a um banco de dados envolve três etapas. Primeiro, crie um logon. O logon permite que o usuário se conecte ao [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Em seguida, configure o logon como um usuário no banco de dados especificado. E, finalmente, conceda essa permissão de usuário a objetos de banco de dados. Esta lição mostra essas três etapas e demonstra como criar uma exibição e um procedimento armazenado como o objeto.  
   
 Eis os tópicos desta lição:  
   

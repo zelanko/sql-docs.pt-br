@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Lição 1 de 3: excluindo objetos de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Para remover todos os rastreamentos deste tutorial, você pode simplesmente excluir o banco de dados. No entanto, neste tópico, você passará pelas etapas para reverter todas as ações feitas durante o tutorial.  
+# <a name="lesson-3-1---deleting-database-objects"></a>Lição 3-1 – Excluindo objetos de banco de dados
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Para remover todos os rastreamentos deste tutorial, você pode simplesmente excluir o banco de dados. No entanto, neste tópico, você passará pelas etapas para reverter todas as ações feitas durante o tutorial.  
   
 ### <a name="removing-permissions-and-objects"></a>Removendo permissões e objetos  
   
@@ -111,7 +111,7 @@ Isso conclui o tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql
 ## <a name="return-to-sql-server-tools-portal"></a>Retorne ao portal Ferramentas do SQL Server  
 [Tutorial: Gravando instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
 [DROP USER &#40;Transact-SQL&#41;](../t-sql/statements/drop-user-transact-sql.md)  
 [DROP LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/drop-login-transact-sql.md)  

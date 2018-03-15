@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Comentários  
- Você sempre deve definir ARITHABORT como ON nas sessões de logon. Configuração de ARITHABORT como OFF pode otimização de consulta de impacto, levando a problemas de desempenho negativo.  
+## <a name="remarks"></a>Remarks  
+ Você sempre deve definir ARITHABORT como ON nas sessões de logon. A definição de ARITHABORT como OFF pode afetar negativamente a otimização de consulta, levando a problemas de desempenho.  
   
 > [!WARNING]  
 >  A configuração padrão ARITHABORT de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é ON. Os aplicativos cliente que definem ARITHABORT como OFF podem receber planos de consulta diferentes, dificultando a solução de problemas de consultas executadas insatisfatoriamente. Ou seja, a mesma consulta pode ser executada rapidamente no Management Studio, mas lentamente no aplicativo. Ao solucionar problemas de consultas com [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], sempre faça a correspondência com a configuração ARITHABORT do cliente.  
@@ -82,7 +82,7 @@ SET ARITHABORT ON
   
  Se SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
   
- Se SET ARITHABORT for definido como OFF e ocorre um erro de interrupção durante a avaliação da condição booleana de uma instrução IF, a ramificação FALSE será executada.
+ Se SET ARITHABORT for definido como OFF e ocorrer um erro de anulação durante a avaliação da condição booliana de uma instrução IF, o branch FALSE será executado.
   
  SET ARITHABORT deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET ARITHABORT for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE das tabelas com índices em colunas computadas ou modos de exibição indexados falhará.
   
@@ -196,9 +196,9 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [Definir ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

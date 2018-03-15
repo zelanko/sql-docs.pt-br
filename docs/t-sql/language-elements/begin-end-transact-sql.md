@@ -84,8 +84,8 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- No exemplo a seguir, `BEGIN` e `END` definir uma série de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] instruções que são executados juntos. Se o `BEGIN...END` bloco não são incluídas, o exemplo a seguir esteja em um loop contínuo.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ No exemplo a seguir, `BEGIN` e `END` definem uma série de instruções do [!INCLUDE[DWsql](../../includes/dwsql-md.md)] que são executadas em conjunto. Se o bloco `BEGIN...END` não for incluído, o exemplo a seguir ficará em um loop contínuo.  
   
 ```  
 -- Uses AdventureWorks  
@@ -100,9 +100,9 @@ END;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   

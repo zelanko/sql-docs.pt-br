@@ -1,5 +1,5 @@
 ---
-title: int, bigint, smallint e tinyint (Transact-SQL) | Microsoft Docs
+title: int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/8/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de dados numéricos exatos que usam dados inteiros. Para economizar espaço no banco de dados, use o menor tipo de dados que confiável pode conter todos os valores possíveis. Por exemplo, tinyint seria suficiente para a idade de uma pessoa porque não existe para ter mais de 255 anos. Mas tinyint não seria suficiente para a idade do prédio porque uma compilação pode ser mais de 255 anos de idade.
+Tipos de dados numéricos exatos que usam dados inteiros. Para economizar espaço no banco de dados, use o menor tipo de dados que pode conter todos os valores possíveis de maneira confiável. Por exemplo, tinyint é suficiente para a idade de uma pessoa porque não existe ninguém que viva por mais de 255 anos. Mas tinyint não é suficiente para a idade de um edifício, porque um edifício pode ter mais de 255 anos.
   
 |Tipo de dados|Intervalo|Armazenamento|  
 |---|---|---|
@@ -53,24 +53,24 @@ Tipos de dados numéricos exatos que usam dados inteiros. Para economizar espaç
 |**smallint**|-2^15 (-32.768) a 2^15-1 (32.767)|2 bytes|  
 |**tinyint**|0 a 255|1 byte|  
   
-## <a name="remarks"></a>Comentários  
-O **int** tipo de dados é o tipo de dados de inteiro primário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O **bigint** tipo de dados é destinado ao uso quando valores inteiros possam exceder o intervalo que é compatível com o **int** tipo de dados.
+## <a name="remarks"></a>Remarks  
+O tipo de dados **int** é o tipo de dados inteiros primário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados **bigint** deve ser usado quando valores inteiros podem exceder o intervalo ao qual tipo de dados **int** dá suporte.
   
-**bigint** se encaixa entre **smallmoney** e **int** no gráfico de precedência de tipo de dados.
+**bigint** se ajusta entre **smallmoney** e **int** no gráfico de precedência de tipo de dados.
   
-As funções retornam **bigint** somente se a expressão de parâmetro é um **bigint** tipo de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não promove automaticamente outros tipos de dados inteiro (**tinyint**, **smallint**, e **int**) para **bigint**.
+As funções retornam **bigint** somente se a expressão de parâmetro é um tipo de dados **bigint**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não promove automaticamente outros tipos de dados inteiros (**tinyint**, **smallint** e **int**) para **bigint**.
   
 > [!CAUTION]  
->  Quando você usa o +, -, \*, /, ou os operadores aritméticos para executar a conversão implícita ou explícita de % **int**, **smallint**, **tinyint**, ou  **bigint** valores constantes para o **float**, **real**, **decimal** ou **numérico** tipos de dados, as regras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica ao calcular o tipo de dados e a precisão dos resultados da expressão diferem dependendo se a consulta for automaticamente parametrizada ou não.  
+>  Ao usar os operadores aritméticos +, -, \*, / ou % para executar a conversão implícita ou explícita de valores constantes **int**, **smallint**, **tinyint** ou **bigint** nos tipos de dados **float**, **real**, **decimal** ou **numeric**, as regras que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica ao calcular o tipo de dados e a precisão dos resultados da expressão diferem, dependendo do fato de a consulta ser ou não automaticamente parametrizada.  
 >   
->  Portanto, as expressões semelhantes em consultas podem, às vezes, produzir resultados diferentes. Quando uma consulta não for automaticamente parametrizada, o valor da constante é primeiro convertido em **numérico**, cuja precisão é grande o suficiente para conter o valor da constante, antes de converter o tipo de dados especificado. Por exemplo, o valor da constante 1 é convertido em **numérico (1, 0)**, e o valor constante 250 é convertido em **numérico (3, 0)**.  
+>  Portanto, as expressões semelhantes em consultas podem, às vezes, produzir resultados diferentes. Quando uma consulta não é automaticamente parametrizada, o valor de constante é primeiramente convertido em **numeric**, cuja precisão é apenas grande o suficiente para conter o valor da constante, antes de fazer a conversão no tipo de dados especificado. Por exemplo, o valor de constante 1 é convertido em **numeric (1, 0)** e o valor de constante 250 é convertido em **numeric (3, 0)**.  
 >   
->  Quando uma consulta for automaticamente parametrizada, o valor da constante sempre é convertido em **numérico (10, 0)** antes de converter o tipo de dados final. Quando o operador / estiver envolvido, não apenas a precisão do tipo do resultado pode diferir entre consultas semelhantes, mas também o valor do resultado. Por exemplo, o valor do resultado de uma consulta automaticamente parametrizada que inclua a expressão `SELECT CAST (1.0 / 7 AS float)`, difere do valor do resultado da consulta mesmo que não é automaticamente parametrizada, porque os resultados da consulta automaticamente parametrizada, são truncados para se ajustar à o **numérico (10, 0)** tipo de dados.  
+>  Quando uma consulta é automaticamente parametrizada, o valor de constante sempre é convertido em **numeric (10, 0)** antes da conversão no tipo de dados final. Quando o operador / estiver envolvido, não apenas a precisão do tipo do resultado pode diferir entre consultas semelhantes, mas também o valor do resultado. Por exemplo, o valor do resultado de uma consulta automaticamente parametrizada que inclui a expressão `SELECT CAST (1.0 / 7 AS float)` diferirá do valor do resultado da mesma consulta que não é automaticamente parametrizada, porque os resultados da primeira serão truncados para se ajustarem ao tipo de dados **numeric (10, 0)**.  
   
 ## <a name="converting-integer-data"></a>Convertendo dados inteiros
 Quando integers são convertidos implicitamente em um tipo de dados character, se o integer for muito grande para ser ajustado no campo de caractere, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] digitará o caractere ASCII 42, o asterisco (*).
   
-Constantes de inteiro maiores que 2.147.483.647 são convertidos para o **decimal** tipo de dados, não o **bigint** tipo de dados. O exemplo a seguir mostra que, quando o valor de limite for excedido, altera o tipo de dados do resultado de uma **int** para um **decimal**.
+As constantes de inteiro maiores que 2.147.483.647 são convertidas no tipo de dados **decimal**, não no tipo de dados **bigint**. O exemplo a seguir mostra que quando o valor limite é excedido, o tipo de dados do resultado é alterado de um **int** para um **decimal**.
   
 ```sql
 SELECT 2147483647 / 2 AS Result1, 2147483649 / 2 AS Result2 ;  
@@ -84,7 +84,7 @@ Result1      Result2
 ```  
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir cria uma tabela usando o **bigint**, **int**, **smallint**, e **tinyint** tipos de dados. Os valores são inseridos em cada coluna e retornados na instrução SELECT.
+O exemplo a seguir cria uma tabela usando os tipos de dados **bigint**, **int**, **smallint** e **tinyint**. Os valores são inseridos em cada coluna e retornados na instrução SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -119,6 +119,6 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

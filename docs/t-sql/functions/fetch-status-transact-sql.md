@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>& #x 40; & #x 40. FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o status do último cursor que a instrução FETCH emitiu em relação a qualquer cursor atualmente aberto pela conexão.  
@@ -59,12 +59,12 @@ ms.lasthandoff: 11/21/2017
 |-2|A linha buscada está ausente.|
 |-9|O cursor não está executando uma operação de busca.|  
   
-## <a name="remarks"></a>Comentários  
- Como @@FETCH_STATUS é global para todos os cursores em uma conexão, use @@FETCH_STATUS com cuidado. Depois que uma instrução FETCH é executada, o teste para @@FETCH_STATUS devem ocorrer antes que qualquer outra instrução FETCH é executada em outro cursor. O valor de @@FETCH_STATUS é indefinido antes de ocorrer qualquer busca sobre a conexão.  
+## <a name="remarks"></a>Remarks  
+ Uma vez que @@FETCH_STATUS é global para todos os cursores em uma conexão, use @@FETCH_STATUS com cuidado. Depois que uma instrução FETCH é executada, o teste para @@FETCH_STATUS deve ocorrer antes que qualquer outra instrução FETCH seja executada com relação a outro cursor. O valor de @@FETCH_STATUS é indefinido antes de ocorrer qualquer busca na conexão.  
   
- Por exemplo, um usuário executa uma instrução FETCH a partir de um cursor e, depois, chama um procedimento armazenado que abre e processa os resultados de outro cursor. Quando o controle é retornado do procedimento armazenado chamado, @@FETCH_STATUS reflete o último FETCH executado no procedimento armazenado, não a instrução FETCH executada antes que o procedimento armazenado é chamado.  
+ Por exemplo, um usuário executa uma instrução FETCH a partir de um cursor e, depois, chama um procedimento armazenado que abre e processa os resultados de outro cursor. Quando o controle é retornado do procedimento armazenado chamado, @@FETCH_STATUS reflete o último FETCH executado no procedimento armazenado, e não a instrução FETCH executada antes que o procedimento armazenado fosse chamado.  
   
- Para recuperar o último status de busca de um cursor específico, consulte o **fetch_status** coluna o **sys.DM exec_cursors** função de gerenciamento dinâmico.  
+ Para recuperar o último status chamado de um cursor específico, veja a coluna **fetch_status** da função de gerenciamento dinâmico **sys.dm_exec_cursors**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `@@FETCH_STATUS` para controlar atividades de cursor em um loop `WHILE`.  
@@ -84,8 +84,8 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [Busca &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

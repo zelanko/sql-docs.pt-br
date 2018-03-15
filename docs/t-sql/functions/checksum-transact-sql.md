@@ -1,5 +1,5 @@
 ---
-title: "Soma de verificação (Transact-SQL) | Microsoft Docs"
+title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>Argumentos  
 \*  
-Especifica que o cálculo é feito em todas as colunas da tabela. CHECKSUM retorna um erro se alguma coluna for do tipo de dados não comparável. Tipos de dados não comparáveis são **texto**, **ntext**, **imagem**, XML, e **cursor**e também **sql_variant**com qualquer um dos tipos anteriores como seu tipo base.
+Especifica que o cálculo é feito em todas as colunas da tabela. CHECKSUM retorna um erro se alguma coluna for do tipo de dados não comparável. Tipos de dados não comparáveis são **text**, **ntext**, **image**, XML e **cursor** e também **sql_variant** com qualquer um dos tipos anteriores como seu tipo base.
   
 *expressão*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo, exceto um tipo de dados não comparáveis.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo, com exceção de um tipo de dados não comparável.
   
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 CHECKSUM calcula um valor de hash, chamado de soma de verificação, em sua lista de argumentos. O valor de hash deve ser usado na criação de índices de hash. Se os argumentos de CHECKSUM forem colunas e um índice for criado no valor de CHECKSUM calculado, o resultado será um índice de hash. Isso pode ser usado para pesquisas de igualdade em colunas.
   
-CHECKSUM satisfaz as propriedades de uma função de hash: CHECKSUM aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, os valores nulos de um tipo especificado são considerados para serem comparados como iguais. Se um dos valores da lista de expressão for alterado, em geral, a soma de verificação da lista também será alterada. Entretanto, há uma pequena chance de que a soma de verificação não seja alterada. Por esse motivo, não recomendamos o uso de CHECKSUM para detectar se os valores foram alterados, a não ser que o aplicativo ofereça suporte, ocasionalmente, para a ausência de uma alteração. Considere o uso de [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) em vez disso. Quando um algoritmo de hash MD5 é especificado, a probabilidade de HashBytes retornar o mesmo resultado para duas entradas diferentes é muito maior que o do retorno de CHECKSUM.
+CHECKSUM satisfaz as propriedades de uma função de hash: CHECKSUM aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, os valores nulos de um tipo especificado são considerados para serem comparados como iguais. Se um dos valores da lista de expressão for alterado, em geral, a soma de verificação da lista também será alterada. Entretanto, há uma pequena chance de que a soma de verificação não seja alterada. Por esse motivo, não recomendamos o uso de CHECKSUM para detectar se os valores foram alterados, a não ser que o aplicativo ofereça suporte, ocasionalmente, para a ausência de uma alteração. Considere a possibilidade de usar [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md). Quando um algoritmo de hash MD5 é especificado, a probabilidade de HashBytes retornar o mesmo resultado para duas entradas diferentes é muito maior que o do retorno de CHECKSUM.
   
 A ordem das expressões afeta o valor resultante de CHECKSUM. A ordem das colunas usada com CHECKSUM(*) é a mesma especificada na definição da tabela ou exibição. Isso inclui as colunas computadas.
   
@@ -96,8 +96,8 @@ GO
 A criação do índice na coluna computada materializa a coluna de soma de verificação e todas as alterações no valor de `ProductName` serão propagados na coluna de soma de verificação. Opcionalmente, um índice pode ser criado diretamente na coluna indexada. No entanto, se os valores de chave forem longos, um índice normal provavelmente não será executado, assim como um índice de soma de verificação.
   
 ## <a name="see-also"></a>Consulte também
-[CHECKSUM_AGG &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM &#40; Transact-SQL &#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

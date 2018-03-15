@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
+# <a name="-addition-transact-sql"></a>+ (Adição) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Soma dois números. Este operador aritmético de adição também pode adicionar um número, em dias, a uma data.  
@@ -52,7 +52,7 @@ expression + expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos dados de tipos da categoria numérica, exceto o **bit** tipo de dados. Não pode ser usado com **data**, **tempo**, **datetime2**, ou **datetimeoffset** tipos de dados.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de qualquer um dos tipos de dados na categoria numérica, com exceção do tipo de dados **bit**. Não pode ser usado com os tipos de dados **date**, **time**, **datetime2** ou **datetimeoffset**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -60,7 +60,7 @@ expression + expression
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário.  
- Este exemplo localiza o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como doença.  
+ Este exemplo encontra o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como ausência por motivo de doença.  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. Usando o operador de adição para somar dias a valores de data e hora  
- Este exemplo adiciona um número de dias para uma `datetime` Data.  
+ Este exemplo adiciona um número de dias a uma data `datetime`.  
   
 ```  
   
@@ -98,7 +98,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. Adicionando tipos de dados de caractere e inteiro  
- O exemplo a seguir adiciona uma **int** tipo de dados valor e um valor de caractere ao converter o tipo de dados de caractere para **int**. Se existir um caractere que não é válido no **char** cadeia de caracteres, o [!INCLUDE[tsql](../../includes/tsql-md.md)] retornará um erro.  
+ O exemplo a seguir adiciona um valor do tipo de dados **int** e um valor de caractere pela conversão do tipo de dados de caractere em **int**. Se um caractere que não é válido estiver na cadeia de caracteres **char**, o [!INCLUDE[tsql](../../includes/tsql-md.md)] retornará um erro.  
   
 ```  
 DECLARE @addvalue int;  
@@ -115,10 +115,10 @@ SELECT '125127' + @addvalue;
 (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário de unidade d:  
- O exemplo a seguir localiza o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como doença e classifica os resultados em ordem crescente.  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D: Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário  
+ O exemplo a seguir localiza o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como ausência por motivo de doença e classifica os resultados em ordem ascendente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,12 +129,12 @@ FROM DimEmployee
 ORDER BY TotalHoursAway ASC;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [+= &#40;Addition Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

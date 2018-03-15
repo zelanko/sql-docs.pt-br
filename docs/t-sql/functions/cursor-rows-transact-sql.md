@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40. CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o número de linhas de qualificação atualmente no último cursor aberto na conexão. Para melhorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode popular cursores estáticos e conjuntos de chaves grandes assincronamente. @@CURSOR_ROWS pode ser chamado para determinar que o número de linhas que se qualificam para um cursor é recuperado no momento @@CURSOR_ROWS é chamado.
+Retorna o número de linhas de qualificação atualmente no último cursor aberto na conexão. Para melhorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode popular cursores estáticos e conjuntos de chaves grandes assincronamente. @@CURSOR_ROWS pode ser chamado para determinar que o número das linhas que se qualificam para um cursor é recuperado no momento em que @@CURSOR_ROWS é chamado.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,8 +59,8 @@ Retorna o número de linhas de qualificação atualmente no último cursor abert
 |0|Nenhum cursor foi aberto, nenhuma linha se qualificou para o último cursor aberto ou o último cursor aberto foi fechado ou desalocado.|  
 |*n*|A tabela está totalmente populada. O valor retornado (*n*) é o número total de linhas no cursor.|  
   
-## <a name="remarks"></a>Comentários  
-O número retornado por@CURSOR_ROWS é negativo se o último cursor tiver sido aberto assincronamente. Driver de conjunto de chaves ou Cursores estáticos serão abertos assincronamente se o valor de limite do cursor sp_configure for maior que 0 e o número de linhas no conjunto de resultados de cursor for maior que o limite do cursor.
+## <a name="remarks"></a>Remarks  
+O número retornado por @@CURSOR_ROWS é negativo se o último cursor foi aberto de forma assíncrona. Os cursores controlados por conjunto de chaves ou estáticos são abertos de forma assíncrona se o valor do limite do cursor sp_configure é maior que 0 e o número de linhas no conjunto de resultados do cursor é maior que o limite do cursor.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo seguinte declara um cursor e usa `SELECT` para exibir o valor de `@@CURSOR_ROWS`. A configuração tem um valor de `0` antes de o cursor ser aberto e um valor de `-1` para indicar que o conjunto de chaves do cursor é populado assincronamente.
@@ -98,7 +98,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de cursor &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[Abrir &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)
+[Funções do cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

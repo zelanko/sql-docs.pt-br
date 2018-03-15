@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-A propriedade de coordenada X de um **ponto**instância.
+A propriedade de coordenada X de uma instância de **Point**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ A propriedade de coordenada X de um **ponto**instância.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- O valor dessa propriedade será nulo se o **geometria** instância não é um ponto.  
+ O valor dessa propriedade será nulo se a instância de **geometry** não for um ponto.  
   
  Esta propriedade é somente leitura.  
   
@@ -62,9 +62,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STX;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STY &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

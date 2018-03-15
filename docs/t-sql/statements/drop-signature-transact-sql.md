@@ -1,5 +1,5 @@
 ---
-title: ASSINATURA de DROP (Transact-SQL) | Microsoft Docs
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,16 +56,16 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_de_módulo*  
+ *module_name*  
  É o nome de um procedimento armazenado, função, assembly ou gatilho.  
   
- CERTIFICADO *cert_name*  
+ CERTIFICATE *cert_name*  
  É o nome de um certificado com que o procedimento armazenado, função, assembly ou gatilho é assinado.  
   
- CHAVE ASSIMÉTRICA *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  É o nome de uma chave assimétrica com que o procedimento armazenado, função, assembly ou gatilho é assinado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As informações sobre assinaturas são visíveis na exibição do catálogo sys.crypt_properties.  
   
 ## <a name="permissions"></a>Permissões  
@@ -81,8 +81,8 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Adicionar assinatura &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

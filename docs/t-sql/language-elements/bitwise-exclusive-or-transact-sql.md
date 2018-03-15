@@ -1,5 +1,5 @@
 ---
-title: ^ (Bit a bit exclusivo) (Transact-SQL) | Microsoft Docs
+title: ^ (OR exclusivo bit a bit) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ expression ^ expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos tipos de dados da categoria de tipo de dados inteiro, ou o **bit**, ou o **binário** ou **varbinary** tipos de dados. *expressão* é tratado como um número binário para a operação bit a bit.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de qualquer tipo de dados da categoria de tipo de dados inteiros ou os tipos de dados **bit**, **binary** ou **varbinary**. *expression* é tratada como um número binário para a operação bit a bit.  
   
 > [!NOTE]  
->  Apenas uma *expressão* pode ser do **binário** ou **varbinary** tipo de dados em uma operação bit a bit.  
+>  Apenas uma *expression* pode ser do tipo de dados **binary** ou **varbinary** em uma operação bit a bit.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **int** se os valores de entrada são **int**.  
@@ -66,12 +66,12 @@ expression ^ expression
  **tinyint** se os valores de entrada são **tinyint**.  
   
 ## <a name="remarks"></a>Remarks  
- O  **^**  operador bit a bit executa um lógica OR exclusivo bit a bit entre as duas expressões, usando cada bit para ambas as expressões correspondente. Os bits no resultado são definidos como 1 se um dos dois bits  (mas não ambos) para o bit atual a ser resolvido nas expressões de entrada tiver o valor de 1. Se os dois bits forem 0 ou 1, o bit no resultado será limpo com o valor 0.  
+ O operador bit a bit **^** executa um OR exclusivo lógico bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado são definidos como 1 se um dos dois bits  (mas não ambos) para o bit atual a ser resolvido nas expressões de entrada tiver o valor de 1. Se os dois bits forem 0 ou 1, o bit no resultado será limpo com o valor 0.  
   
- Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Nesse caso, o **smallint * expressão* é convertido em um **int**.  
+ Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Nesse caso, a **smallint***expression* é convertida em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma tabela usando o **int** dados de tipo para armazenar os valores originais e insere os dois valores em uma linha.  
+ O exemplo a seguir cria uma tabela usando o tipo de dados **int** para armazenar os valores originais e insere os dois valores em uma linha.  
   
 ```  
 CREATE TABLE bitwise  
@@ -113,12 +113,12 @@ GO
   
 
   
-## <a name="see-also"></a>Consulte também  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [^ = &#40; Bit a bit exclusivo ou atribuição &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [^= &#40;Atribuição de OR exclusivo bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

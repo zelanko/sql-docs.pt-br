@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<*search_condition* > define a condição a ser atendida para as linhas a serem retornadas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa. Para obter mais informações sobre critérios de pesquisa e predicados, consulte [critério de pesquisa &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > define a condição a ser atendida para que as linhas sejam retornadas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa. Para obter mais informações sobre critérios de pesquisa e predicados, consulte [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar algumas condições de pesquisa comuns na cláusula `WHERE`.  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
- [Critério de pesquisa &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Predicados &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

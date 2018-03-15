@@ -53,11 +53,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>Argumentos  
  *timeout_period*  
- É o número de milissegundos que decorrerão antes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um erro de bloqueio. Um valor de -1 (padrão) indica nenhum tempo limite (isto é, esperar indefinidamente).  
+ É o número de milissegundos que se passarão antes que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorne um erro de bloqueio. Um valor de -1 (padrão) indica nenhum tempo limite (isto é, esperar indefinidamente).  
   
  Quando uma espera por um bloqueio exceder o valor limite, um erro será retornado. Um valor de 0 significa não esperar e retornar uma mensagem assim que um bloqueio for encontrado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  No começo de uma conexão esta configuração tem um valor de -1. Após ser alterado, a nova configuração permanece durante toda a conexão.  
   
  A configuração de SET LOCK_TIMEOU é definida no momento da execução e não no momento da análise.  
@@ -71,7 +71,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>R: definir o tempo limite de bloqueio como 1800 milissegundos  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: Definir o tempo limite de bloqueio como 1.800 milissegundos  
  O seguinte exemplo define o período de tempo limite de bloqueio para `1800` milissegundos.  
   
 ```sql  
@@ -79,22 +79,22 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Defina o tempo limite de bloqueio para esperar por um bloqueio seja liberado.  
- O exemplo a seguir define o tempo limite de bloqueio para esperar e nunca expirar. Esse é o comportamento padrão que já está definido no início de cada conexão.  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Definir o tempo limite de bloqueio para esperar por um bloqueio ser liberado.  
+ O exemplo a seguir define o tempo limite de bloqueio para esperar para sempre e nunca expirar. Esse é o comportamento padrão que já está definido no início de cada conexão.  
   
 ```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
- O seguinte exemplo define o período de tempo limite de bloqueio para `1800` milissegundos. Nesta versão, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] analisará a instrução com êxito, mas irá ignorar o valor 1800 e continuar a usar o comportamento padrão.  
+ O seguinte exemplo define o período de tempo limite de bloqueio para `1800` milissegundos. Nesta versão, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] analisará a instrução com êxito, mas ignorará o valor 1.800 e continuará usando o comportamento padrão.  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

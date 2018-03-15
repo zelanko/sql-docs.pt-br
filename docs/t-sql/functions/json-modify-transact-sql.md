@@ -39,61 +39,61 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- Uma expressão. Normalmente, o nome de uma variável ou uma coluna que contém o texto JSON.  
+ Uma expressão. Normalmente, o nome de uma variável ou de uma coluna que contém o texto JSON.  
   
- **JSON_MODIFY** retornará um erro se *expressão* não contém um JSON válido.  
+ **JSON_MODIFY** retornará um erro se *expression* não contiver um JSON válido.  
   
- *caminho*  
- Uma expressão de caminho JSON que especifica a propriedade para atualizar.
+ *path*  
+ Uma expressão de caminho JSON que especifica a propriedade a ser atualizada.
 
- *caminho* tem a seguinte sintaxe:  
+ *path* tem a seguinte sintaxe:  
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *Acrescentar*  
-    Modificador opcional que especifica que o novo valor deve ser acrescentado à matriz referenciada por  *\<caminho json >*.  
+-   *append*  
+    Modificador opcional que especifica que o novo valor deve ser acrescentado à matriz referenciada por *\<json path>*.  
   
--   *incerta*  
-    Especifica que a propriedade referenciada por  *\<caminho json >* não precisa existir. Se a propriedade não estiver presente, JSON_MODIFY tenta inserir o novo valor no caminho especificado. Inserção pode falhar se a propriedade não pode ser inserida no caminho. Se você não especificar *lax* ou *estrito*, *lax* é o modo padrão.  
+-   *lax*  
+    Especifica que a propriedade referenciada por *\<json path>* não precisa existir. Se a propriedade não estiver presente, JSON_MODIFY tentará inserir o novo valor no caminho especificado. A inserção poderá falhar se a propriedade não puder ser inserida no caminho. Se você não especificar *lax* ou *strict*, *lax* será o modo padrão.  
   
--   *estrito*  
-    Especifica que a propriedade referenciada por  *\<caminho json >* devem estar na expressão de JSON. Se a propriedade não estiver presente, JSON_MODIFY retornará um erro.  
+-   *strict*  
+    Especifica que a propriedade referenciada por *\<json path>* deve estar na expressão JSON. Se a propriedade não estiver presente, JSON_MODIFY retornará um erro.  
   
--   *\<caminho JSON >*  
-    Especifica o caminho para a propriedade atualizar. Para obter mais informações, consulte [expressões de caminho JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+-   *\<json path>*  
+    Especifica o caminho para a propriedade a ser atualizado. Para obter mais informações, confira [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-Em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e em [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], você pode fornecer uma variável como o valor de *caminho*.
+No [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e no [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], você pode fornecer uma variável como o valor de *path*.
 
-**JSON_MODIFY** retornará um erro se o formato de *caminho* não é válido.  
+**JSON_MODIFY** retornará um erro se o formato de *path* não for válido.  
   
  *newValue*  
- O novo valor para a propriedade especificada pelo *caminho*.  
+ O novo valor para a propriedade especificada por *path*.  
   
- No modo de lax JSON_MODIFY exclui a chave especificada se o novo valor é NULL.  
+ No modo incerto, JSON_MODIFY exclui a chave especificada se o novo valor é NULL.  
   
-JSON_MODIFY ignora todos os caracteres especiais no novo valor, se o tipo do valor for NVARCHAR ou VARCHAR. Um valor de texto não é ignorado se ele está corretamente formatado JSON produzida por FOR JSON, JSON_QUERY ou JSON_MODIFY.  
+JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tipo do valor é NVARCHAR ou VARCHAR. Um valor de texto não é seguido de caracteres de escape se ele é um JSON formatado corretamente produzido por FOR JSON, JSON_QUERY ou JSON_MODIFY.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o valor atualizado da *expressão* como corretamente formatado texto JSON.  
+ Retorna o valor atualizado de *expression* como um texto JSON formatado corretamente.  
   
-## <a name="remarks"></a>Comentários  
- A função JSON_MODIFY permite que você atualize o valor de uma propriedade existente, insira um novo par de chave: valor ou excluir uma chave com base em uma combinação dos modos e os valores fornecidos.  
+## <a name="remarks"></a>Remarks  
+ A função JSON_MODIFY permite atualizar o valor de uma propriedade existente, inserir um novo par de chave/valor ou excluir uma chave com base em uma combinação de modos e valores fornecidos.  
   
- A tabela a seguir compara o comportamento de **JSON_MODIFY** no modo incerto e no modo estrito. Para obter mais informações sobre a especificação de modo de demarcador opcional (lax ou strict), consulte [expressões de caminho JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ A tabela a seguir compara o comportamento de **JSON_MODIFY** no modo incerto e no modo estrito. Para obter mais informações sobre a especificação de modo de demarcador opcional (incerto ou estrito), confira [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Valor existente|Caminho existe|Modo incerto|Modo estrito|  
+|Valor existente|O caminho existe|Modo incerto|Modo estrito|  
 |--------------------|-----------------|--------------|-----------------|  
-|Não nulo|Sim|Atualize o valor existente.|Atualize o valor existente.|  
-|Não nulo|Não|Tente criar um novo par de chave: valor no caminho especificado.<br /><br /> Isso pode falhar. Por exemplo, se você especificar o caminho `$.user.setting.theme`, JSON_MODIFY não inserir a chave `theme` se o `$.user` ou `$.user.settings` objetos não existirem, ou se as configurações é uma matriz ou um valor escalar.|Erro – INVALID_PROPERTY|  
+|Não NULL|Sim|Atualize o valor existente.|Atualize o valor existente.|  
+|Não NULL|não|Tente criar um novo par de chave/valor no caminho especificado.<br /><br /> Isso poderá falhar. Por exemplo, se você especificar o caminho `$.user.setting.theme`, JSON_MODIFY não inserirá a chave `theme`, caso os objetos `$.user` ou `$.user.settings` não existam ou caso as configurações sejam uma matriz ou um valor escalar.|Erro – INVALID_PROPERTY|  
 |NULL|Sim|Exclua a propriedade existente.|Defina o valor existente como nulo.|  
-|NULL|Não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
+|NULL|não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
   
- No modo de lax JSON_MODIFY tenta criar um novo par de chave: valor, mas em alguns casos pode falhar.  
+ No modo incerto, JSON_MODIFY tenta criar um novo par de chave/valor, mas em alguns casos, ele pode falhar.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="example---basic-operations"></a>Exemplo – operações básicas  
- O exemplo a seguir mostra as operações básicas que podem ser feitas com texto JSON.  
+ O exemplo a seguir mostra as operações básicas que podem ser executadas com um texto JSON.  
   
  **Consulta**  
   
@@ -151,7 +151,7 @@ PRINT @info
 ```  
   
 ### <a name="example---multiple-updates"></a>Exemplo – várias atualizações  
- Com JSON_MODIFY, você pode atualizar apenas uma propriedade. Se você precisa fazer várias atualizações, você pode usar várias chamadas JSON_MODIFY.  
+ Com JSON_MODIFY, você pode atualizar apenas uma propriedade. Se precisar fazer várias atualizações, use várias chamadas JSON_MODIFY.  
   
  **Consulta**  
   
@@ -180,8 +180,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---rename-a-key"></a>Exemplo: renomear uma chave  
- O exemplo a seguir mostra como renomear uma propriedade em texto JSON com a função JSON_MODIFY. Primeiro, você pode pegar o valor de uma propriedade existente e inseri-lo como um novo par de chave: valor. Em seguida, você pode excluir a chave antiga, definindo o valor da propriedade antiga como NULL.  
+### <a name="example---rename-a-key"></a>Exemplo – renomear uma chave  
+ O exemplo a seguir mostra como renomear uma propriedade em texto JSON com a função JSON_MODIFY. Primeiro, você pode usar o valor de uma propriedade existente e inseri-lo como um novo par de chave/valor. Em seguida, exclua a chave antiga definindo o valor da propriedade antiga como NULL.  
   
  **Consulta**  
   
@@ -212,10 +212,10 @@ PRINT @product
 }
 ```  
   
- Se você não converter o novo valor para um tipo numérico, JSON_MODIFY a trata como texto e ao seu redor com aspas duplas.  
+ Se você não converter o novo valor em um tipo numérico, JSON_MODIFY o tratará como texto e o colocará entre aspas duplas.  
   
-### <a name="example---increment-a-value"></a>Exemplo - um valor de incremento  
- O exemplo a seguir mostra como incrementar o valor de uma propriedade em texto JSON com a função JSON_MODIFY. Primeiro, você pode pegar o valor da propriedade existente e inseri-lo como um novo par de chave: valor. Em seguida, você pode excluir a chave antiga, definindo o valor da propriedade antiga como NULL.  
+### <a name="example---increment-a-value"></a>Exemplo – incrementar um valor  
+ O exemplo a seguir mostra como incrementar o valor de uma propriedade em texto JSON com a função JSON_MODIFY. Primeiro, você pode usar o valor da propriedade existente e inseri-lo como um novo par de chave/valor. Em seguida, exclua a chave antiga definindo o valor da propriedade antiga como NULL.  
   
  **Consulta**  
   
@@ -242,8 +242,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>Exemplo: modificar um objeto JSON  
- JSON_MODIFY trata o *newValue* argumento como texto sem formatação mesmo que ele contém corretamente formatado texto JSON. Como resultado, a saída JSON da função é colocada entre aspas duplas e todos os caracteres especiais são substituídos, conforme mostrado no exemplo a seguir.  
+### <a name="example---modify-a-json-object"></a>Exemplo – modificar um objeto JSON  
+ JSON_MODIFY trata o argumento *newValue* como um texto sem formatação, mesmo que ele contém um texto JSON formatado corretamente. Como resultado, a saída JSON da função é colocada entre aspas duplas e todos os caracteres especiais têm escape, conforme mostrado no exemplo a seguir.  
   
  **Consulta**  
   
@@ -271,7 +271,7 @@ PRINT @info
 }
 ```  
   
- Para evitar a substituição automática, fornecer *newValue* usando a função JSON_QUERY. JSON_MODIFY sabe que o valor retornado por JSON_MODIFY está corretamente formatado JSON, portanto ele não o valor de escape.  
+ Para evitar o escape automático, forneça *newValue* usando a função JSON_QUERY. JSON_MODIFY sabe que o valor retornado por JSON_MODIFY é um JSON formatado corretamente e, portanto, ele não faz o escape do valor.  
   
  **Consulta**  
   
@@ -299,7 +299,7 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>Exemplo - atualização de uma coluna JSON  
+### <a name="example---update-a-json-column"></a>Exemplo – atualizar uma coluna JSON  
  O exemplo a seguir atualiza o valor de uma propriedade em uma coluna de tabela que contém JSON.  
   
 ```sql  
@@ -309,8 +309,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões de caminho JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Dados JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

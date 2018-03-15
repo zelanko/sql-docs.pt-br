@@ -1,5 +1,5 @@
 ---
-title: "-(Comentário) (Transact-SQL) | Microsoft Docs"
+title: "-- (Comentário) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |Transformar o texto selecionado em um comentário|CTRL+K, CTRL+C|  
 |Remover comentário do texto selecionado|CTRL+K, CTRL+U|  
   
- Para obter mais informações sobre atalhos de teclado, consulte [atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Para obter mais informações sobre atalhos de teclado, consulte [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Para comentários de várias linhas, consulte [estrela de barra &#40; Bloco de comentário &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Para comentários de várias linhas, consulte [Barra "/" e asterisco &#40;bloco de comentário&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa os caracteres de comentário --.  
@@ -80,7 +80,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

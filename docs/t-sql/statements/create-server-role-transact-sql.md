@@ -1,5 +1,5 @@
 ---
-title: "Criar função de servidor (Transact-SQL) | Microsoft Docs"
+title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  É o nome da função de servidor a ser criada.  
   
- AUTORIZAÇÃO *server_principal*  
+ AUTHORIZATION *server_principal*  
  É o logon que possuirá a função de servidor. Se nenhum logon for especificado, a função de servidor será de propriedade do logon que executa CREATE SERVER ROLE.  
   
 ## <a name="remarks"></a>Remarks  
- As funções de servidor são protegíveis no nível do servidor. Depois de criar uma função de servidor, configure as permissões no nível de servidor da função por meio de GRANT, DENY e REVOKE. Para adicionar logons ou remover logons de uma função de servidor, use [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Para descartar uma função de servidor, use [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Para obter mais informações, veja [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ As funções de servidor são protegíveis no nível do servidor. Depois de criar uma função de servidor, configure as permissões no nível de servidor da função por meio de GRANT, DENY e REVOKE. Para adicionar logons ou remover logons de uma função de servidor, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Para remover uma função de servidor, use [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Para obter mais informações, veja [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Você pode exibir as funções de servidor consultando o [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibições do catálogo.  
+ É possível exibir as funções de servidor consultando as exibições do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  As funções de servidor não podem receber permissão nos protegíveis do banco de dados. Para criar funções de banco de dados, veja [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md).  
   
@@ -72,7 +72,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Também exige IMPERSONATE no *server_principal* para logons, permissão ALTER para funções de servidor usadas como o *server_principal*ou associação em um grupo do Windows que é usado como o server_principal.  
   
- Isso acionará o evento Audit Server Principal Management com o tipo de objeto definido para a função de servidor e o tipo de evento para adicionar.  
+ Isso disparará o evento Auditar Gerenciamento da Entidade de Segurança do Servidor com o tipo de objeto definido para a função de servidor e o tipo de evento a adicionar.  
   
  Ao usar a opção AUTHORIZATION para atribuir a propriedade de um função de servidor, as seguintes permissões também são necessárias:  
   
@@ -100,7 +100,7 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

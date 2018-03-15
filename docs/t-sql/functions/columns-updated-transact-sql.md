@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **varbinary** padrão de bits que indica as colunas em uma tabela ou exibição que foram inseridas ou atualizadas. COLUMNS_UPDATE é usado em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do [!INCLUDE[tsql](../../includes/tsql-md.md)] para testar se o gatilho deve executar determinadas ações.
+Retorna um padrão de bit **varbinary** que indica as colunas de uma tabela ou exibição que foram inseridas ou atualizadas. COLUMNS_UPDATE é usado em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do [!INCLUDE[tsql](../../includes/tsql-md.md)] para testar se o gatilho deve executar determinadas ações.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Comentários  
-COLUMNS_UPDATED testa para UPDATE ou INSERT as ações executadas em colunas várias. Para testar para tentativas de UPDATE ou INSERT em uma coluna, use [Update ()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED testa para UPDATE ou INSERT as ações executadas em colunas várias. Para testar as tentativas de UPDATE ou INSERT em uma coluna, use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 COLUMNS_UPDATED retorna um ou mais bytes que são ordenados da esquerda para a direita, sendo que o bit menos significativo fica mais à direita. O mais à direita do byte mais à esquerda representa a primeira coluna da tabela; o próximo bit à esquerda representa a segunda coluna, e assim por diante. COLUMNS_UPDATED retornará vários bytes se a tabela na qual o gatilho foi criado contiver mais que oito colunas, com pelo menos um byte significativo sendo o que fica mais à esquerda. COLUMNS_UPDATED retorna TRUE para todas as colunas em ações INSERT porque as colunas têm valores explícitos ou implícitos (NULL) inseridos.
   
-Para testar as atualizações ou inserções feitas em colunas específicas, a sintaxe deve ser seguida por um operador bit a bit e um bitmask inteiro das colunas que estão sendo testadas. Por exemplo, tabela **t1** contém colunas **C1**, **C2**, **C3**, **C4**, e **C5** . Para verificar se as colunas **C2**, **C3**, e **C4** forem todas atualizadas (com tabela **t1** tendo um gatilho UPDATE), siga a sintaxe com **& 14**. Para testar se a única coluna **C2** é atualizado, especifique **& 2**.
+Para testar as atualizações ou inserções feitas em colunas específicas, a sintaxe deve ser seguida por um operador bit a bit e um bitmask inteiro das colunas que estão sendo testadas. Por exemplo, a tabela **t1** contém as colunas **C1**, **C2**, **C3**, **C4** e **C5**. Para verificar se as colunas **C2**, **C3** e **C4** foram todas atualizadas (com a tabela **t1** tendo um gatilho UPDATE), siga a sintaxe com **& 14**. Para testar se apenas a coluna **C2** foi atualizada, especifique **& 2**.
   
 COLUMNS_UPDATED pode ser usado em qualquer lugar dentro de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ou UPDATE.
   
@@ -80,7 +80,7 @@ Quando um conjunto de coluna for definido em uma tabela, a função COLUMNS_UPDA
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Usando COLUMNS_UPDATED para testar as primeiras oito colunas de uma tabela  
-O exemplo a seguir cria duas tabelas: `employeeData` e `auditEmployeeData`. A tabela `employeeData` mantém informações confidenciais da folha de pagamento dos funcionários e pode ser modificada por membros do departamento de recursos humanos. Se o número da previdência social (INSS), o salário anual ou o número da conta bancária de um funcionário for alterado, um registro de auditoria será gerado e inserido na tabela de auditoria `auditEmployeeData`.
+O exemplo a seguir cria duas tabelas, `employeeData` e `auditEmployeeData`. A tabela `employeeData` mantém informações confidenciais da folha de pagamento dos funcionários e pode ser modificada por membros do departamento de recursos humanos. Se o número da previdência social (INSS), o salário anual ou o número da conta bancária de um funcionário for alterado, um registro de auditoria será gerado e inserido na tabela de auditoria `auditEmployeeData`.
   
 Usando `COLUMNS_UPDATED()`, você consegue testar rapidamente todas as alterações feitas em colunas que contêm informações confidenciais de funcionários. O uso de `COLUMNS_UPDATED()` dessa forma funcionará apenas quando você estiver tentando detectar alterações nas primeiras oito colunas da tabela.
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Usando COLUMNS_UPDATED para testar mais de oito colunas  
-Para testar as atualizações que afetam outras colunas além das oito primeiras da tabela, use a função `SUBSTRING` para testar o bit correto retornado por `COLUMNS_UPDATED`. O exemplo a seguir testa as atualizações que afetam as colunas `3`, `5`, e `9` no `AdventureWorks2012.Person.Person` tabela.
+Para testar as atualizações que afetam outras colunas além das oito primeiras da tabela, use a função `SUBSTRING` para testar o bit correto retornado por `COLUMNS_UPDATED`. O exemplo a seguir testa as atualizações que afetam as colunas `3`, `5` e `9` da tabela `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[Atualizar &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

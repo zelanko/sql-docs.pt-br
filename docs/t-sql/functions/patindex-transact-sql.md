@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argumentos  
  *pattern*  
- É uma expressão de caractere que contém a sequência a ser localizada. Caracteres curinga podem ser usados; No entanto, o caractere % deve vir antes e seguir *padrão* (exceto quando você procura primeiro e último caracteres). *padrão de* é uma expressão da categoria de tipo de dados de cadeia de caracteres. *padrão de* é limitado a 8000 caracteres.  
+ É uma expressão de caractere que contém a sequência a ser localizada. Caracteres curinga podem ser usados; entretanto, o caractere % deve vir antes e seguir *pattern* (exceto quando você pesquisa o primeiro e último caracteres). *pattern* é uma expressão da categoria de tipo de dados de cadeia de caracteres. *pattern* é limitado a 8.000 caracteres.  
   
  *expressão*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md), normalmente uma coluna que é pesquisada para o padrão especificado. *expressão* é a categoria de tipo de dados de cadeia de caracteres.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md), geralmente, uma coluna na qual procurar o padrão especificado. *expression* é uma expressão da categoria de tipo de dados de cadeia de caracteres.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **bigint** se *expressão* é o **varchar (max)** ou **nvarchar (max)** tipos de dados; caso contrário, **int**.  
+ **bigint** se *expression* é dos tipos de dados **varchar(max)** ou **nvarchar(max)**; caso contrário, **int**.  
   
 ## <a name="remarks"></a>Remarks  
- Se qualquer um dos *padrão* ou *expressão* for NULL, PATINDEX retornará NULL.  
+ Se *pattern* ou *expression* for NULL, PATINDEX retornará NULL.  
   
  PATINDEX executa comparações com base no agrupamento da entrada. Para executar uma comparação em um agrupamento especificado, é possível usar COLLATE para aplicar um agrupamento explícito à entrada.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos SC, o valor de retorno contará qualquer par de substituto UTF-16 *expressão* parâmetro como um único caractere. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar agrupamentos SC, o valor retornado contará os pares alternativos UTF-16 no parâmetro *expression* como um caractere único. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em PATINDEX.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-patindex-example"></a>A. Exemplo simples de PATINDEX  
- O exemplo a seguir verifica uma cadeia de caracteres curtas (`interesting data`) para o local inicial dos caracteres `ter`.  
+ O exemplo a seguir verifica uma cadeia de caracteres curta (`interesting data`) em busca do local inicial dos caracteres `ter`.  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Usando uma variável para especificar o padrão  
- O exemplo a seguir usa uma variável para passar um valor para o *padrão* parâmetro. Este exemplo usa o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir usa uma variável para passar um valor para o parâmetro *pattern*. Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -148,15 +148,15 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40; Curinga – caracteres &#40; s &#41; a correspondência &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40; Curinga – caracteres &#40; s &#41; Para não coincidir &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40; Curinga – corresponde a um caractere &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [Caractere de porcentagem &#40; Curinga – caracteres &#40; s &#41; a correspondência &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [&#40;Curinga – caracteres para correspondência&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#40;Curinga – caracteres para não correspondência&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ &#40;Curinga – encontrar a correspondência de um caractere&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [Caractere de percentual &#40;Curinga – caracteres para correspondência&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

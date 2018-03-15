@@ -61,21 +61,21 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  Indica que todos os disparadores definidos no escopo da cláusula ON estão habilitados.  
   
  *object_name*  
- É o nome da tabela ou exibição na qual o gatilho DML *trigger_name* foi criado para executar.  
+ É o nome da tabela ou da exibição na qual o gatilho DML *trigger_name* foi criado para ser executado.  
   
  DATABASE  
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com escopo de banco de dados.  
+ Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do banco de dados.  
   
  ALL SERVER  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com escopo no servidor. ALL SERVER também é aplicado a gatilhos de logon.  
+ Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do servidor. ALL SERVER também é aplicado a gatilhos de logon.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
- A habilitação de um disparador não recria o mesmo. Um disparador desabilitado ainda existe como um objeto no banco de dados atual, mas não é acionado. A habilitação de um disparador faz com que ele seja acionado quando forem executadas quaisquer instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais ele foi originalmente programado. Os gatilhos são desabilitados usando [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Gatilhos DML definidos nas tabelas podem ser também ser habilitado ou desabilitado usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ A habilitação de um disparador não recria o mesmo. Um disparador desabilitado ainda existe como um objeto no banco de dados atual, mas não é acionado. A habilitação de um disparador faz com que ele seja acionado quando forem executadas quaisquer instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais ele foi originalmente programado. Os gatilhos são desabilitados usando [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Para habilitar um disparador DML, no mínimo, um usuário deve ter a permissão ALTER na tabela ou exibição na qual o disparador foi criado.  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Habilitando um gatilho DML em uma tabela  
- O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address` no banco de dados AdventureWorks e, em seguida, habilita a ele.  
+ O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address` no banco de dados AdventureWorks e, em seguida, habilita-o.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. Habilitando um gatilho DDL  
- O exemplo a seguir cria um gatilho DDL `safety` com escopo de banco de dados e, em seguida, desabilitar e permite que ele.  
+ O exemplo a seguir cria um gatilho DDL `safety` com escopo definido no banco de dados e depois o desabilita e habilita.  
   
 ```  
 CREATE TRIGGER safety   
@@ -121,7 +121,7 @@ ENABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

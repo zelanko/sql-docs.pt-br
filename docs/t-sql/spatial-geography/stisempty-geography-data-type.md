@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retornará 1 se uma **geografia** instância está vazia. Retorna 0 se uma **geografia** instância não está vazia.  
+  Retornará 1 se uma instância de **geography** estiver vazia. Retornará 0 se uma instância de **geography** não estiver vazia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geography` vazia e usa `STIsEmpty()` para verificar se a instância está vazia.  
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('POLYGON EMPTY', 4326);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

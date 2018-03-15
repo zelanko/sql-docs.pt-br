@@ -57,16 +57,16 @@ SEND
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- CONVERSA *conversation_handle [... @conversation_handle_n]*  
- Especifica as conversas às quais a mensagem pertence. O *conversation_handle* devem conter um identificador de conversação válido. O mesma identificador de conversação não pode ser usado mais de uma vez.  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ Especifica as conversas às quais a mensagem pertence. O *conversation_handle* deve conter um identificador de conversa válido. O mesma identificador de conversação não pode ser usado mais de uma vez.  
   
- TIPO de mensagem *message_type_name*  
+ MESSAGE TYPE *message_type_name*  
  Especifica o tipo da mensagem enviada. Esse tipo de mensagem deve ser incluído nos contratos de serviço usado por essas conversas. Esses contratos devem permitir que o tipo de mensagem seja enviado desse lado da conversa. Por exemplo, os serviços de destino das conversas podem enviar somente mensagens especificadas no contrato como SENT BY TARGET ou SENT BY ANY. Se essa cláusula for omitida, a mensagem será do tipo DEFAULT.  
   
  *message_body_expression*  
- Fornece uma expressão que representa o corpo de mensagem. O *message_body_expression* é opcional. No entanto, se o *message_body_expression* está presente a expressão deve ser de um tipo que possa ser convertido em **varbinary (max)**. A expressão não pode ser NULL. Se essa cláusula for omitida, o corpo de mensagem será vazio.  
+ Fornece uma expressão que representa o corpo de mensagem. A *message_body_expression* é opcional. No entanto, se *message_body_expression* estiver presente a expressão deverá ser de um tipo que possa ser convertido em **varbinary(max)**. A expressão não pode ser NULL. Se essa cláusula for omitida, o corpo de mensagem será vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se a instrução SEND não for a primeira instrução de um procedimento em lote ou armazenado, a instrução anterior deverá ser encerrada com um ponto-e-vírgula (;).  
@@ -81,7 +81,7 @@ SEND
   
  Em muitos casos, o código que contém a instrução SEND é separado do código que contém as instruções BEGIN DIALOG ou RECEIVE que fornecem o indicador de conversa. Nesses casos, o identificador de conversação deve ser um dos itens de dados nas informações de estado passadas ao código que contém a instrução SEND.  
   
- As mensagens que são enviadas a serviços em outras instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] são armazenadas em uma fila de transmissão no banco de dados atual até que possam ser transmitidas às filas do serviço nas instâncias remotas. As mensagens enviadas a serviços na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são colocadas diretamente nas filas associadas a esses serviços. Se uma condição impede que uma mensagem local seja colocada diretamente na fila de serviço de destino, pode ser armazenado na fila de transmissão até que a condição seja resolvida. Isso ocorre, por exemplo, quando há alguns tipos de erros ou a fila de serviço de destino está ficando inativa. Você pode usar o **transmission_queue** exibição do sistema para ver as mensagens na fila de transmissão.  
+ As mensagens que são enviadas a serviços em outras instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] são armazenadas em uma fila de transmissão no banco de dados atual até que possam ser transmitidas às filas do serviço nas instâncias remotas. As mensagens enviadas a serviços na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são colocadas diretamente nas filas associadas a esses serviços. Se uma condição evitar que uma mensagem local seja colocada diretamente na fila de serviço de destino, ela poderá ser armazenada na fila de transmissão até que a condição seja resolvida. Isso ocorre, por exemplo, quando há alguns tipos de erros ou a fila de serviço de destino está ficando inativa. É possível usar o modo de exibição do sistema **sys.transmission_queue** para ver as mensagens na fila de transmissão.  
   
  SEND é uma instrução atômica, ou seja, se uma instrução SEND que envia uma mensagem em várias conversas falhar, por exemplo, porque uma conversa está em um estado com erro, nenhuma mensagem será armazenada na fila de transmissão, nem colocada em nenhuma fila de serviço de destino.  
   
@@ -103,7 +103,7 @@ SEND
  Para enviar uma mensagem, o usuário atual deve ter a permissão RECEIVE na fila de cada serviço que envia a mensagem.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir abre uma caixa de diálogo e envia uma mensagem XML nela. Para enviar a mensagem, o exemplo converte o objeto xml a **varbinary (max)**.  
+ O exemplo a seguir abre uma caixa de diálogo e envia uma mensagem XML nela. Para enviar a mensagem, o exemplo converte o objeto xml em **varbinary(max)**.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -151,10 +151,10 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Instrução END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [RECEBER &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

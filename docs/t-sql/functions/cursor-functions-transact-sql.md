@@ -39,7 +39,7 @@ As seguintes funções escalares retornam informações sobre cursores:
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-Todas as funções de cursor são não determinísticas. Isso significa que essas funções nem sempre retornam os mesmos resultados a cada chamada, mesmo com o mesmo conjunto de valores de entrada. Para obter mais informações sobre determinismo de função, consulte [determinísticas e funções não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Todas as funções de cursor são não determinísticas. Isso significa que essas funções nem sempre retornam os mesmos resultados a cada chamada, mesmo com o mesmo conjunto de valores de entrada. Para obter mais informações sobre determinismo de funções, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="see-also"></a>Consulte também
 [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR a função de servidor (Transact-SQL) | Microsoft Docs"
+title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-non-specified
@@ -64,37 +64,37 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 *server_role_name*  
 É o nome da função de servidor a ser alterada.  
   
-Adicionar membro *server_principal*  
-Adiciona a entidade de segurança do servidor especificado à função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados ou sa.  
+ADD MEMBER *server_principal*  
+Adiciona a entidade de segurança do servidor especificado à função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados nem sa.  
   
-Remover membro *server_principal*  
-Remove a entidade de segurança de servidor especificada da função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados ou sa.  
+DROP MEMBER *server_principal*  
+Remove a entidade de segurança de servidor especificada da função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados nem sa.  
   
-COM o nome  **=**  *new_server_role_name*  
+WITH NAME **=***new_server_role_name*  
 Especifica o novo nome da função de servidor definida pelo usuário. Esse nome ainda não pode existir no servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 A alteração do nome de uma função de servidor definida pelo usuário não altera o número da ID, o proprietário ou as permissões da função.  
   
 Para alterar a associação de função, `ALTER SERVER ROLE` substitui sp_addsrvrolemember e sp_dropsrvrolemember. Esses procedimentos armazenados foram preteridos.  
   
 É possível exibir as funções de servidor por meio de consulta das exibições do catálogo `sys.server_role_members` e `sys.server_principals`.  
   
-Para alterar o proprietário de uma função de servidor definida pelo usuário, use [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+Para alterar o proprietário de uma função de servidor definida pelo usuário, use [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
-Requer `ALTER ANY SERVER ROLE` permissão no servidor para alterar o nome de uma função de servidor definida pelo usuário.  
+Requer a permissão `ALTER ANY SERVER ROLE` no servidor para alterar o nome de uma função de servidor definida pelo usuário.  
   
-**Funções de servidor fixas**  
+**Funções fixas de servidor**  
   
 Para adicionar um membro a uma função de servidor fixa, você deve ser membro dessa função de servidor fixa ou da função de servidor fixa `sysadmin`.  
   
 > [!NOTE]  
->  O `CONTROL SERVER` e `ALTER ANY SERVER ROLE` permissões não forem suficientes para executar `ALTER SERVER ROLE` para uma função de servidor fixa, e `ALTER` permissão não pode ser concedida em uma função de servidor fixa.  
+>  As permissões `CONTROL SERVER` e `ALTER ANY SERVER ROLE` não são suficientes para executar `ALTER SERVER ROLE` para uma função de servidor fixa, e a `ALTER` permissão não pode ser concedida em uma função de servidor fixa.  
   
 **Funções de servidor definidas pelo usuário**  
   
-Para adicionar um membro a uma função de servidor definida pelo usuário, você deve ser um membro do `sysadmin` função de servidor fixa ou tem `CONTROL SERVER` ou `ALTER ANY SERVER ROLE` permissão. Ou você deve ter `ALTER` permissão nessa função.  
+Para adicionar um membro a uma função de servidor definida pelo usuário, você deve ser um membro da função fixa de servidor `sysadmin` ou ter a permissão `CONTROL SERVER` ou `ALTER ANY SERVER ROLE`. Ou você deve ter a permissão `ALTER` naquela função.  
   
 > [!NOTE]  
 >  Ao contrário das funções de servidor fixas, os membros de uma função de servidor definida pelo usuário não têm permissão inerentemente para adicionar membros àquela mesma função.  
@@ -118,7 +118,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Adicionando um logon do SQL Server a uma função de servidor  
-O exemplo a seguir adiciona uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon denominado `Ted` para o `diskadmin` função de servidor fixa.  
+O exemplo a seguir adiciona o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamado `Ted` à função fixa de servidor `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -133,7 +133,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Removendo um logon do SQL Server de uma função de servidor  
-O exemplo a seguir remove o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Ted` do `diskadmin` função de servidor fixa.  
+O exemplo a seguir remove o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted` da função fixa de servidor `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. Para exibir a associação de função  
-Para exibir a associação de função, use o **a função de servidor (membros)** página [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou executar a consulta a seguir:  
+Para exibir a associação de função, use a página **Função de Servidor (Membros)** em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou execute a seguinte consulta:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -162,31 +162,31 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. Sintaxe básica  
-O exemplo a seguir adiciona o logon `Anna` para o `LargeRC` função de servidor.  
+O exemplo a seguir adiciona o logon no `Anna` à função de servidor `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Remova um logon de uma classe de recurso.  
-O exemplo a seguir remove a associação de Anna no `LargeRC` função de servidor.  
+O exemplo a seguir remove a associação de Ana na função de servidor `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-[Criar função de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
-[Remover função de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
-[Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
-[ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
-[Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
-[Segurança armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+[DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+[Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
 [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
-[server_role_members &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

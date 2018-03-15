@@ -33,10 +33,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servicename-transact-sql"></a>& #x 40; & #x 40. SERVICENAME (Transact-SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o nome da chave do Registro na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. @@SERVICENAME retornará 'MSSQLSERVER' se a instância atual for a instância padrão; essa função retorna o nome da instância, se a instância atual for uma instância nomeada.  
+  Retorna o nome da chave do Registro na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. @@SERVICENAME retornará 'MSSQLSERVER' se a instância atual for a instância padrão; essa função retornará o nome da instância se a atual for uma instância nomeada.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço denominado MSSQLServer.  
   
 ## <a name="examples"></a>Exemplos  
@@ -67,7 +67,7 @@ Service Name
 MSSQLSERVER                     
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   

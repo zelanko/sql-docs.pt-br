@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a representação GML Geography Markup Language () de um **geometria** instância.
+Retorna a representação GML (Geography Markup Language) de uma instância de **geometry**.
   
-Para obter mais informações sobre Geography Markup Language, consulte a seguinte especificação aberta da Consortium geoespaciais:[OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Para obter mais informações sobre Geography Markup Language, confira a seguinte especificação do Open Geospatial Consortium:[Especificação do OGC, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,9 +48,9 @@ Para obter mais informações sobre Geography Markup Language, consulte a seguin
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **xml**  
+ Tipo de retorno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **XML**  
   
- Tipo de retorno CLR: **SqlXml**  
+ Tipo de retorno do CLR: **SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -70,7 +70,7 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

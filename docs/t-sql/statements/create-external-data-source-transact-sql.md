@@ -8,42 +8,42 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
-ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 9d7d610008b17db9fdec1e33b1577e38a3d9f3a9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Cria uma fonte de dados externa para o PolyBase, consultas de banco de dados Elástico ou armazenamento de BLOBs do Azure. Dependendo do cenário, a sintaxe irá diferir significativamente. Uma fonte de dados criada para PolyBase não pode ser usada para consultas de banco de dados Elástico.  Da mesma forma, uma fonte de dados criada para consultas de banco de dados Elástico não pode ser usada para o PolyBase, etc. 
+  Cria uma fonte de dados externa para consultas do PolyBase ou do Banco de Dados Elástico. Dependendo do cenário, a sintaxe poderá variar consideravelmente. Uma fonte de dados externa criada para o PolyBase não pode ser usada para consultas do Banco de Dados Elástico.  Da mesma forma, uma fonte de dados externa criada para consultas do Banco de Dados Elástico não pode ser usada para o PolyBase, etc. 
   
 > [!NOTE]  
->  PolyBase só tem suporte em SQL Server 2016, o Azure SQL Data Warehouse e o Parallel Data Warehouse. Consultas de banco de dados Elásticos têm suporte apenas no banco de dados SQL v12 ou posterior.  
+>  O PolyBase é compatível apenas com o SQL Server 2016 (ou superior), o SQL Data Warehouse do Azure e o Parallel Data Warehouse. As consultas do Banco de Dados Elástico são compatíveis apenas com o Banco de Dados SQL do Azure v12 ou posterior.  
   
- Para cenários de PolyBase, a fonte de dados externa é um sistema de arquivo Hadoop (HDFS), um contêiner de blob de armazenamento do Azure ou repositório Azure Data Lake. Para obter mais informações, consulte [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+ Para cenários do PolyBase, a fonte de dados externa é um HDFS (Sistema de Arquivos Hadoop), um contêiner do Azure Storage Blob ou um Azure Data Lake Store. Para obter mais informações, consulte [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
- Para cenários de consulta de banco de dados Elástico fonte externa é um Gerenciador de mapa do fragmento (no banco de dados SQL Azure) ou um banco de dados remoto (no banco de dados SQL Azure).  Use [sp_execute_remote &#40; Banco de dados SQL do Azure &#41; ](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md) depois de criar uma fonte de dados externa. Para obter mais informações, consulte [consulta de banco de dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+ Para cenários de consulta do Banco de Dados Elástico, a fonte externa é um gerenciador de mapa de fragmentos (no Banco de Dados SQL do Azure) ou um banco de dados remoto (no Banco de Dados SQL do Azure).  Use [sp_execute_remote &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md) depois de criar uma fonte de dados externa. Para obter mais informações, confira [Consulta do Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
 
-  Fonte de dados externos de armazenamento de BLOBs do Azure dá suporte a `BULK INSERT` e `OPENROWSET` sintaxe e é diferente de armazenamento de BLOBs do Azure para PolyBase.
+  A fonte de dados externa do Armazenamento de Blobs do Azure é compatível com as sintaxes de `BULK INSERT` e `OPENROWSET` e é diferente do Armazenamento de Blobs do Azure para o PolyBase.
     
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -133,31 +133,31 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *data_source_name* Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no SQL Server, o banco de dados do SQL Azure e o Azure SQL Data Warehouse. O nome deve ser exclusivo dentro do servidor no Parallel Data Warehouse.
+ *data_source_name* Especifica o nome da fonte de dados definido pelo usuário. O nome precisa ser exclusivo no banco de dados no SQL Server, no Banco de Dados SQL do Azure e no SQL Data Warehouse do Azure. O nome precisa ser exclusivo no servidor no Parallel Data Warehouse.
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- Especifica o tipo de fonte de dados. Use o HADOOP quando a fonte de dados externa é Hadoop ou blob de armazenamento do Azure para Hadoop. Use SHARD_MAP_MANAGER ao criar uma fonte de dados externa para consulta de banco de dados Elástico fragmentação no banco de dados do SQL Azure. Use o RDBMS com fontes de dados externas para consultas de bancos de dados com a consulta de banco de dados Elástico no banco de dados do SQL Azure.  Use BLOB_STORAGE ao executar operações em massa usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+ Especifica o tipo de fonte de dados. Use HADOOP quando a fonte de dados externa for o Hadoop ou o Azure Storage Blob para Hadoop. Use SHARD_MAP_MANAGER ao criar uma fonte de dados externa para consulta do Banco de Dados Elástico, para fragmentação no Banco de Dados SQL do Azure. Use o RDBMS com fontes de dados externas para consultas entre bancos de dados com a consulta do Banco de Dados Elástico no Banco de Dados SQL do Azure.  Use BLOB_STORAGE ao executar operações em massa usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
 LOCATION = \<location_path> **HADOOP**    
-Para HADOOP, especifica o URI Uniform Resource Indicator () para um cluster Hadoop.  
+Para HADOOP, especifica o URI (Uniform Resource Indicator) para um cluster do Hadoop.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI: O nome do computador ou endereço IP do cluster Hadoop Namenode.  
-porta: porta de IPC de Namenode o. Isso é indicado pelo parâmetro de configuração fs.default.name no Hadoop. Se o valor não for especificado, 8020 será usado por padrão.  
+NameNode_URI: o nome do computador ou o endereço IP do Namenode do cluster do Hadoop.  
+port: a porta de IPC do Namenode. Indicada pelo parâmetro de configuração fs.default.name no Hadoop. Se o valor não for especificado, 8020 será usado por padrão.  
 Exemplo: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
-Para o armazenamento de BLOBs do Azure com Hadoop, especifica o URI para se conectar ao armazenamento de BLOBs do Azure.  
+Para o Armazenamento de Blobs do Azure com Hadoop, especifica o URI para conectar-se ao Armazenamento de Blobs do Azure.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb [s]: Especifica o protocolo para o armazenamento de BLOBs do Azure. [S] é opcional e especifica uma conexão SSL segura; dados enviados do SQL Server são criptografados com segurança por meio do protocolo SSL. É altamente recomendável usar wasbs em vez de 'wasb'. Observe que o local pode usar asv [s] em vez de wasb [s]. A sintaxe de asv [s] foi substituída e será removida em uma versão futura.  
-contêiner: Especifica o nome do contêiner de armazenamento de BLOBs do Azure. Para especificar o contêiner raiz do domínio conta de armazenamento, use o nome de domínio em vez do nome do contêiner. Contêineres de raiz são somente leitura, para que os dados não podem ser gravados para o contêiner.  
-account_name: O nome de domínio totalmente qualificado (FQDN) da conta de armazenamento do Azure.  
+wasb[s]: especifica o protocolo para o Armazenamento de Blobs do Azure. [s] é opcional e especifica uma conexão SSL segura. Os dados enviados do SQL Server são criptografados com segurança pelo protocolo SSL. É altamente recomendável usar 'wasbs' em vez de 'wasb'. Observe que o local pode usar asv[s] em vez de wasb[s]. A sintaxe de asv[s] foi preterida e será removida em uma versão futura.  
+contêiner: especifica o nome do contêiner de Armazenamento de Blobs do Azure. Para especificar o contêiner raiz da conta de armazenamento do domínio, use o nome de domínio em vez do nome do contêiner. Os contêineres raiz são somente leitura, portanto, os dados não podem ser gravados no contêiner.  
+account_name: o FQDN (nome de domínio totalmente qualificado) da conta de Armazenamento do Azure.  
 Exemplo: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
-Para o repositório do Azure Data Lake local Especifica o URI para se conectar ao seu repositório Azure Data Lake.
+Para o Azure Data Lake Store, o local especifica o URI para conectar-se ao Azure Data Lake Store.
 
 
 
 **SHARD_MAP_MANAGER**   
- Para SHARD_MAP_MANAGER, especifica o nome do servidor lógico que hospeda o Gerenciador de mapa de fragmento no banco de dados SQL ou um banco de dados do SQL Server em uma máquina virtual do Azure.
+ Para SHARD_MAP_MANAGER, especifica o nome do servidor lógico que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em um banco de dados do SQL Server em uma máquina virtual do Azure.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -175,10 +175,10 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ) ;
 ```
 
-Para obter um tutorial passo a passo, consulte [guia de Introdução com consultas Elásticos de fragmentação (particionamento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
+Para obter um tutorial passo a passo, confira [Introdução a consultas elásticas para fragmentação (particionamento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-Para o RDBMS, especifica o nome do servidor lógico do banco de dados remoto no banco de dados do SQL Azure.  
+Para o RDBMS, especifica o nome do servidor lógico do banco de dados remoto no Banco de Dados SQL do Azure.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -195,21 +195,21 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ) ;   
 ```  
   
-Para obter um tutorial passo a passo em RDBMS, consulte [guia de Introdução com consultas de bancos de dados (particionamento vertical)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
+Para obter um tutorial passo a passo sobre o RDBMS, confira [Introdução às consultas entre bancos de dados (particionamento vertical)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Para as operações em massa, `LOCATION` devem ser válidas a URL para o armazenamento de BLOBs do Azure e o contêiner. Não coloque  **/** , nome de arquivo ou compartilhado parâmetros de assinatura de acesso no final de `LOCATION` URL.   
-A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para obter um exemplo de como acessar o armazenamento de blob, consulte o exemplo F de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+Para operações em massa, `LOCATION` precisa ser uma URL válida para o contêiner e o Armazenamento de Blobs do Azure. Não coloque **/**, nome de arquivo ou parâmetros de Assinatura de Acesso Compartilhado no final da URL de `LOCATION`.   
+A credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para obter um exemplo de como acessar o Armazenamento de Blobs, veja o exemplo F de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Especifica o local do Gerenciador de recursos Hadoop. Quando especificado, o otimizador de consulta pode fazer uma decisão baseada em custo para pré-processar dados de uma consulta do PolyBase usando recursos de computação do Hadoop com MapReduce. Chamado a aplicação de predicado, isso pode reduzir significativamente o volume de dados transferidos entre Hadoop e SQL e, portanto, melhorar o desempenho da consulta.  
+ Especifica o local do gerenciador de recursos do Hadoop. Quando especificado, o otimizador de consulta pode tomar uma decisão baseada em custo para pré-processar os dados de uma consulta do PolyBase usando recursos de computação do Hadoop com o MapReduce. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.  
   
- Quando isso não for especificado, envio de computação para Hadoop está desabilitada para consultas do PolyBase.  
+ Quando não for especificado, o envio de computação por push para o Hadoop estará desabilitado para consultas do PolyBase.  
  
-Se a porta não for especificada, o valor padrão é determinado usando a configuração atual para a configuração de 'conectividade do hadoop'.
+Se a porta não for especificada, o valor padrão será determinado usando a definição atual da configuração 'conectividade do hadoop'.
 
-|Conectividade do Hadoop|Porta do Gerenciador de recursos padrão|
+|Conectividade do Hadoop|Porta do Gerenciador de Recursos padrão|
 |-------------------|-----------------------------|
 |1|50300|
 |2|50300|
@@ -219,12 +219,12 @@ Se a porta não for especificada, o valor padrão é determinado usando a config
 |6|8032|
 |7|8050|
 
-Para obter uma lista completa de distribuições do Hadoop e versões compatíveis com cada valor de conectividade, consulte [configuração do PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+Para obter uma lista completa das distribuições do Hadoop e das versões compatíveis com cada valor de conectividade, confira [Configuração de conectividade do PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
   
 > [!IMPORTANT]  
->  O valor RESOURCE_MANAGER_LOCATION é uma cadeia de caracteres e não é validado quando você criar a fonte de dados externa. Inserir um valor incorreto pode causar atrasos futuros ao acessar o local.  
+>  O valor de RESOURCE_MANAGER_LOCATION é uma cadeia de caracteres e não é validado quando você cria a fonte de dados externa. Inserir um valor incorreto poderá causar atrasos futuros ao acessar o local.  
   
- Exemplos de Hadoop:  
+ Exemplos do Hadoop:  
   
 -   Hortonworks HDP 2.0, 2.1, 2.2. 2.3 no Windows:   
     ```  
@@ -251,62 +251,62 @@ Para obter uma lista completa de distribuições do Hadoop e versões compatíve
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
     ```  
   
--   Cloudera 5.1 5.11 no Linux:   
+-   Cloudera 5.1 a 5.11 no Linux:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
  CREDENTIAL = *credential_name*  
- Especifica uma credencial no escopo do banco de dados para autenticar a fonte de dados externa. Para obter um exemplo, consulte [C. Crie uma fonte de dados externos de armazenamento de BLOBs do Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Para criar uma credencial, consulte [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Observe que a CREDENCIAL não é necessária para conjuntos de dados públicos que permitem o acesso anônimo. 
+ Especifica uma credencial no escopo do banco de dados para a autenticação na fonte de dados externa. Para obter um exemplo, confira [C. Criar uma fonte de dados externa do Armazenamento de Blobs do Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Para criar uma credencial, confira [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Observe que a CREDENTIAL não é necessária para conjuntos de dados públicos que permitem acesso anônimo. 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
- O nome do banco de dados que funciona como o Gerenciador do mapa de fragmento (para SHARD_MAP_MANAGER) ou o banco de dados remoto (para o RDBMS).  
+ O nome do banco de dados que funciona como o gerenciador do mapa de fragmentos (para o SHARD_MAP_MANAGER) ou o banco de dados remoto (para o RDBMS).  
   
  SHARD_MAP_NAME = *'ShardMapName'*  
- Para SHARD_MAP_MANAGER. O nome do mapa do fragmento. Para obter mais informações sobre como criar um mapa do fragmento, consulte [Introdução à consulta de banco de dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)  
+ Somente para o SHARD_MAP_MANAGER. O nome do mapa de fragmentos. Para obter mais informações de como criar um mapa de fragmentos, confira [Introdução à consulta do Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)  
   
-## <a name="polybase-specific-notes"></a>Anotações específicas para PolyBase  
-Para obter uma lista completa de fontes de dados externas com suporte, consulte [configuração do PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+## <a name="polybase-specific-notes"></a>Observações específicas do PolyBase  
+Para obter uma lista completa de fontes de dados externas compatíveis, confira [Configuração de conectividade do PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
- Para usar o PolyBase, você precisa criar essas três objetos:  
+ Para usar o PolyBase, você precisa criar estes três objetos:  
   
 -   Uma fonte de dados externa.  
   
--   Um formato de arquivo externo, e  
+-   Um formato de arquivo externo e  
   
 -   Uma tabela externa que referencia a fonte de dados externa e o formato de arquivo externo.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão CONTROL no banco de dados no SQL DW, SQL Server, APS 2016 e banco de dados SQL.
+ Requer a permissão CONTROL no banco de dados no SQL DW, no SQL Server, no APS 2016 e no BD SQL.
 
 > [!IMPORTANT]  
->  Em versões anteriores do PDW, crie permissões de ALTER ANY EXTERNAL DATA SOURCE de necessárias de fonte de dados externa.
+>  Nas versões anteriores do PDW, a criação de fonte de dados externa exigia as permissões ALTER ANY EXTERNAL DATA SOURCE.
   
   
 ## <a name="error-handling"></a>Tratamento de erros  
- Se as fontes de dados externas do Hadoop são inconsistentes sobre ter RESOURCE_MANAGER_LOCATION definida, ocorrerá um erro de tempo de execução. Ou seja, você não pode especificar duas fontes de dados externas que referenciam o mesmo cluster de Hadoop e, em seguida, fornecer o local do Gerenciador de recursos para um e não para outros.  
+ Se as fontes de dados externas do Hadoop estiverem inconsistentes em relação à definição de RESOURCE_MANAGER_LOCATION, ocorrerá um erro de tempo de execução. Ou seja, não é possível especificar duas fontes de dados externas que referenciem o mesmo cluster do Hadoop e, em seguida, fornecer o local do Gerenciador de Recursos para uma e não para a outra.  
   
- O mecanismo do SQL não verifica a existência de fonte de dados externa quando ele cria o objeto de fonte de dados externa. Se a fonte de dados não existe durante a execução de consulta, ocorrerá um erro.  
+ O mecanismo do SQL não verifica a existência de fonte de dados externa quando cria o objeto de fonte de dados externa. Se a fonte de dados não existir durante a execução da consulta, ocorrerá um erro.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
-Para PolyBase, a fonte de dados externa é o escopo do banco de dados no SQL Server e SQL Data Warehouse. Ele está no escopo do servidor no Parallel Data Warehouse.
+Para o PolyBase, a fonte de dados externa está no escopo do banco de dados no SQL Server e no SQL Data Warehouse. Ela está no escopo do servidor no Parallel Data Warehouse.
   
-Para o PolyBase, quando RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION é definida, o otimizador de consulta considerará otimizando a cada consulta por meio de um mapa de reduzir o trabalho na fonte externa do Hadoop e enviar por push para baixo de computação. Isso é totalmente uma decisão baseada em custo.  
+Para o PolyBase, quando RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION for definido, o otimizador de consulta considerará a otimização de cada consulta iniciando um trabalho de redução de mapa na fonte externa do Hadoop e efetuando pushdown da computação. Essa é uma decisão totalmente baseada em custo.  
 
-Para garantir que as consultas do PolyBase com êxito no caso de failover de Hadoop NameNode, considere o uso de um endereço IP virtual para NameNode do cluster Hadoop. Se você não usar um endereço IP virtual para o Hadoop NameNode, no caso de um failover de Hadoop NameNode você terá ao objeto de fonte de dados externa ALTER para apontar para o novo local.  
+Para garantir o sucesso das consultas do PolyBase no caso de failover do NameNode do Hadoop, considere usar um endereço IP virtual para o NameNode do cluster do Hadoop. Se você não usar um endereço IP virtual para o NameNode do Hadoop, no caso de um failover do NameNode do Hadoop, será necessário efetuar ALTER EXTERNAL DATA SOURCE no objeto para apontar para o novo local.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Todas as fontes de dados definidas no mesmo local do cluster Hadoop devem usar a mesma configuração para RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION. Se houver uma inconsistência, ocorrerá um erro de tempo de execução.  
+ Todas as fontes de dados definidas no mesmo local do cluster do Hadoop precisam usar a mesma configuração de RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION. Se houver inconsistência, ocorrerá um erro de tempo de execução.  
   
- Se o cluster Hadoop é configurado com um nome e a fonte de dados externos usa o endereço IP para o local do cluster, PolyBase ainda deve ser capaz de resolver o nome do cluster quando a fonte de dados é usada. Para resolver o nome, você deve habilitar um encaminhador DNS.  
+ Se o cluster do Hadoop for configurado com um nome e a fonte de dados externa usar o endereço IP do local do cluster, o PolyBase ainda precisará ser capaz de resolver o nome do cluster quando a fonte de dados for usada. Para resolver o nome, você precisa habilitar um encaminhador de DNS.  
   
 ## <a name="locking"></a>Bloqueio  
- Leva um bloqueio compartilhado no objeto de fonte de dados externa.  
+ Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
   
-##  <a name="examples"></a>Exemplos: SQL Server 2016  
+##  <a name="examples"></a> Exemplos: SQL Server 2016  
   
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Criar fonte de dados externa a referência de Hadoop  
-Para criar uma fonte de dados externa para fazer referência a seu cluster Hortonworks ou Cloudera Hadoop, especifique o nome do computador ou endereço IP do Namenode de Hadoop e a porta.  
+### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Criar uma fonte de dados externa para referenciar o Hadoop  
+Para criar uma fonte de dados externa para referenciar o cluster do Hadoop do Hortonworks ou do Cloudera, especifique o nome do computador ou o endereço IP do Namenode do Hadoop e a porta.  
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -317,8 +317,8 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Criar fonte de dados externa para referência Hadoop com a aplicação de habilitado  
-Especifique a opção RESOURCE_MANAGER_LOCATION para habilitar a computação de propagação para Hadoop para consultas do PolyBase. Uma vez habilitada, o PolyBase usa uma decisão baseada em custo para determinar se a computação de consulta deve ser enviada para o Hadoop ou todos os dados devem ser movidos para processar a consulta no SQL Server.
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado  
+Especifique a opção RESOURCE_MANAGER_LOCATION para habilitar o pushdown de computação para o Hadoop em consultas do PolyBase. Quando essa opção estiver habilitada, o PolyBase usará uma decisão baseada em custo para determinar se a computação da consulta deve ser enviada por push para o Hadoop ou se todos os dados devem ser movidos para processar a consulta no SQL Server.
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -330,8 +330,8 @@ WITH (
 
 ```
   
-###  <a name="credential"></a> C. Criar fonte de dados externa para fazer referência a Hadoop protegido por Kerberos  
-Para verificar se o cluster Hadoop é protegido por Kerberos, verifique o valor da propriedade hadoop.security.authentication no Hadoop Core-site.XML. Para fazer referência a um cluster Hadoop protegido por Kerberos, você deve especificar uma credencial no escopo do banco de dados que contém o nome de usuário do Kerberos e a senha. A chave mestra de banco de dados é usada para criptografar o segredo de credencial no escopo do banco de dados. 
+###  <a name="credential"></a> C. Criar uma fonte de dados externa para referenciar o Hadoop protegido pelo Kerberos  
+Para verificar se o cluster do Hadoop está protegido pelo Kerberos, verifique o valor da propriedade hadoop.security.authentication no core-site.xml do Hadoop. Para referenciar um cluster do Hadoop protegido pelo Kerberos, você precisa especificar uma credencial no escopo do banco de dados contendo o nome de usuário e a senha do Kerberos. A chave mestra do banco de dados é usada para criptografar o segredo da credencial no escopo do banco de dados. 
   
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -351,12 +351,12 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Criar fonte de dados externa para referenciar o armazenamento de BLOBs do Azure
-Para criar uma fonte de dados externa para fazer referência a seu contêiner de armazenamento de BLOBs do Azure, especifique o URI de armazenamento de BLOBs do Azure e uma credencial no escopo do banco de dados que contém a chave da conta de armazenamento do Azure.
+### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure
+Para criar uma fonte de dados externa para referenciar o contêiner de Armazenamento de Blobs do Azure, especifique o URI do Armazenamento de Blobs do Azure e uma credencial no escopo do banco de dados contendo a chave de conta de Armazenamento do Azure.
 
-Neste exemplo, a fonte de dados externa é um contêiner de armazenamento de BLOBs do Azure chamado dailylogs sob a conta de armazenamento do Azure chamada minha conta. O armazenamento do Azure é de fonte de dados externa para a transferência de dados. e não dá suporte a aplicação de predicado.
+Neste exemplo, a fonte de dados externa é um contêiner do Armazenamento de Blobs do Azure chamado dailylogs na conta de Armazenamento do Azure chamada myaccount. A fonte de dados externa do Armazenamento do Azure é destinada apenas para transferência de dados e não é compatível com pushdown de predicado.
 
-Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação no armazenamento do Azure. Especifique a chave de conta de armazenamento do Azure o segredo de credencial de banco de dados. Especifique a identidade da credencial no escopo de qualquer cadeia de caracteres no banco de dados, ele não é usado para autenticação no armazenamento do Azure. Em seguida, a credencial é usada na instrução que cria uma fonte de dados externa.
+Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação no Armazenamento do Azure. Especifique a chave de conta de Armazenamento do Azure no segredo da credencial do banco de dados. Especifique qualquer cadeia de caracteres na identidade da credencial no escopo do banco de dados. Ela não será usada para autenticação no Armazenamento do Azure. A credencial será usada na instrução que cria uma fonte de dados externa.
 
 ```
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -375,10 +375,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>Exemplos: Banco de dados do SQL Azure
+## <a name="examples-azure-sql-database"></a>Exemplos: Banco de Dados SQL do Azure
 
-### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Criar uma fonte de dados externos de Gerenciador de mapa de fragmento
-Para criar uma fonte de dados externa para fazer referência a um SHARD_MAP_MANAGER, especifique o nome do servidor lógico que hospeda o Gerenciador de mapa de fragmento no banco de dados SQL ou um banco de dados do SQL Server em uma máquina virtual do Azure.
+### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Criar uma fonte de dados externa do gerenciador de mapa de fragmentos
+Para criar uma fonte de dados externa para referenciar um SHARD_MAP_MANAGER, especifique o nome do servidor lógico que hospeda o gerenciador de mapa de fragmentos no Banco de Dados SQL do Azure ou em banco de dados do SQL Server em uma máquina virtual do Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -398,7 +398,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Criar uma fonte de dados externa do RDBMS
-Para criar uma fonte de dados externa para fazer referência a um RDBMS, especifica o nome de servidor lógico do banco de dados remoto no banco de dados do SQL Azure.
+Para criar uma fonte de dados externa para referenciar um RDBMS, especifica o nome do servidor lógico do banco de dados remoto no Banco de Dados SQL do Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -416,10 +416,10 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>Exemplos: Azure SQL Data Warehouse
+## <a name="examples-azure-sql-data-warehouse"></a>Exemplos: SQL Data Warehouse do Azure
 
-### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Criar fonte de dados externa para referência repositório Azure Data Lake
-Conectividade do repositório Azure Data lake baseia-se em seu URI ADLS e entidade de serviço do Azure Active directory do seu aplicativo. Documentação para criar esse aplicativo pode ser encontrada em[autenticação do repositório Data lake usando o Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Criar uma fonte de dados externa para referenciar o Azure Data Lake Store
+A conectividade do Azure Data Lake Store baseia-se no URI do ADLS e na entidade de serviço do aplicativo do Azure Active Directory. A documentação para criar esse aplicativo pode ser encontrada em [Autenticação do Data Lake Store usando o Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -441,8 +441,8 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>Exemplos: Parallel Data Warehouse
 
-### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Criar fonte de dados externa para referência Hadoop com a aplicação de habilitado
-Especifique a opção JOB_TRACKER_LOCATION para habilitar a computação de propagação para Hadoop para consultas do PolyBase. Uma vez habilitada, o PolyBase usa uma decisão baseada em custo para determinar se a computação de consulta deve ser enviada para o Hadoop ou todos os dados devem ser movidos para processar a consulta no SQL Server. 
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Criar uma fonte de dados externa para referenciar o Hadoop com pushdown habilitado
+Especifique a opção JOB_TRACKER_LOCATION para habilitar a computação de pushdown para Hadoop em consultas do PolyBase. Quando essa opção estiver habilitada, o PolyBase usará uma decisão baseada em custo para determinar se a computação da consulta deve ser enviada por push para o Hadoop ou se todos os dados devem ser movidos para processar a consulta no SQL Server. 
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -453,10 +453,10 @@ WITH (
 );
 ```
 
-### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Criar fonte de dados externa para referenciar o armazenamento de BLOBs do Azure
-Para criar um externo fonte de dados para fazer referência a seu contêiner de armazenamento de BLOBs do Azure, especifique o URI de armazenamento de BLOBs do Azure como os dados externos local de origem. Adicione sua chave de conta de armazenamento do Azure para arquivo de Core-site.XML PDW para autenticação.
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure
+Para criar uma fonte de dados externa para referenciar o contêiner de Armazenamento de Blobs do Azure, especifique o URI do Armazenamento de Blobs do Azure como o LOCATION da fonte de dados externa. Adicione a chave de conta de Armazenamento do Azure no arquivo core-site.xml do PDW para autenticação.
 
-Neste exemplo, a fonte de dados externa é um contêiner de armazenamento de BLOBs do Azure chamado dailylogs sob a conta de armazenamento do Azure chamada minha conta. A fonte de dados externa do armazenamento do Azure destina-se somente a transferência de dados e não oferece suporte para aplicação de predicado.
+Neste exemplo, a fonte de dados externa é um contêiner do Armazenamento de Blobs do Azure chamado dailylogs na conta de Armazenamento do Azure chamada myaccount. A fonte de dados externa do Armazenamento do Azure é destinada apenas para transferência de dados e não é compatível com pushdown de predicado.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
@@ -465,10 +465,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>Exemplos: Operações em massa   
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Crie uma fonte de dados externa para operações em massa recuperando dados do armazenamento de BLOBs do Azure.   
+## <a name="examples-bulk-operations"></a>Exemplos: operações em massa   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure.   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Use a fonte de dados para operações em massa usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
+Use a seguinte fonte de dados para operações em massa com [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). A credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
@@ -477,14 +477,14 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
         CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-Para ver esse exemplo em uso, consulte [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
+Para ver esse exemplo em uso, confira [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
-[Criar tabela como SELECT &#40; Depósito de dados SQL do Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
+[CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   

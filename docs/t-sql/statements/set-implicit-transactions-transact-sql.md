@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Define o modo de BEGIN TRANSACTION para *implícita*, para a conexão.  
+  Define o modo de BEGIN TRANSACTION como *implicit* para a conexão.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Quando ativado, o sistema está em *implícita* modo de transação. Isso significa que, se @@TRANCOUNT = 0, qualquer uma das seguintes instruções Transact-SQL inicia uma nova transação. É equivalente a um despercebidos BEGIN TRANSACTION está sendo executado pela primeira vez:  
+ Quando ativado, o sistema está no modo de transação *implicit*. Isso significa que, se @@TRANCOUNT = 0, qualquer uma das seguintes instruções Transact-SQL iniciará uma nova transação. É equivalente a uma BEGIN TRANSACTION não vista ser executada primeiro:  
   
 ||||  
 |-|-|-|  
@@ -61,21 +61,21 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |Delete (excluir)|OPEN|UPDATE|  
 |DROP|para obter informações sobre a ferramenta de configuração e recursos adicionais.|para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
   
- Quando OFF, cada uma das instruções T-SQL anteriores é delimitada por uma BEGIN TRANSACTION invisíveis e uma instrução COMMIT TRANSACTION despercebida. Quando OFF, dizemos que é o modo de transação *autocommit*. Se seu código T-SQL visivelmente emite um BEGIN TRANSACTION, dizemos que é o modo de transação *explícita*.  
+ Quando OFF, cada uma das instruções T-SQL anteriores é delimitada por instruções BEGIN TRANSACTION e COMMIT TRANSACTION não vistas. Quando OFF, dizemos que o modo de transação é *autocommit*. Se seu código T-SQL visivelmente emite um BEGIN TRANSACTION, dizemos que é o modo de transação *explicit*.  
   
- Há vários ponto clarifying entender:  
+ Há vários ponto esclarecedores a entender:  
   
--   Quando o modo de transação é implícita, sem nunca vistos BEGIN TRANSACTION for emitido se @@trancount > 0 já. No entanto, qualquer instrução BEGIN TRANSACTION explícita ainda incremento @@TRANCOUNT.  
+-   Quando o modo de transação é implícito, nenhuma BEGIN TRANSACTION não vista será emitido se @@trancount > 0. No entanto, qualquer instrução BEGIN TRANSACTION explícita ainda incrementará @@TRANCOUNT.  
   
--   Quando as instruções INSERT e qualquer coisa em sua unidade de trabalho for concluído, você deve emitir instruções COMMIT TRANSACTION até @@TRANCOUNT é reduzido de volta para 0. Ou você pode emitir um ROLLBACK TRANSACTION.  
+-   Quando as instruções INSERT e qualquer outro elemento em sua unidade de trabalho for concluído, emita instruções COMMIT TRANSACTION até @@TRANCOUNT ser reduzido de volta a 0. Ou você pode emitir uma ROLLBACK TRANSACTION.  
   
 -   As instruções SELECT que não selecionam de uma tabela não iniciam transações implícitas. Por exemplo, `SELECT GETDATE();` ou `SELECT 1, 'ABC';` não exigem transações.  
   
--   Transações implícitas inesperadamente podem ser ON devido aos padrões ANSI. Para obter detalhes, consulte [SET ANSI_DEFAULTS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
+-   As transações implícitas podem ficar ON inesperadamente devido a padrões ANSI. Para obter detalhes, veja [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
   
-     IMPLICIT_TRANSACTIONS ON não é conhecido. Na maioria dos casos onde IMPLICIT_TRANSACTIONS está ON, é porque a opção de SET ANSI_DEFAULTS ON foi feita.  
+     IMPLICIT_TRANSACTIONS ON não é popular. Na maioria dos casos em que IMPLICIT_TRANSACTIONS está ON, é porque a escolha SET ANSI_DEFAULTS ON foi feita.  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, automaticamente definido IMPLICIT_TRANSACTIONS como OFF, ao se conectar. Padrões de SET IMPLICIT_TRANSACTIONS como OFF para conexões com o provedor gerenciado SQLClient e para solicitações SOAP recebidas por meio de pontos de extremidade HTTP.  
+-   O Provedor OLE DB Provider do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC definem automaticamente IMPLICIT_TRANSACTIONS como OFF quando estão conectados. SET IMPLICIT_TRANSACTIONS usa OFF como padrão para conexões com o provedor gerenciado SQLClient e para solicitações SOAP recebidas por meio de pontos de extremidade HTTP.  
   
  Para exibir a configuração atual de IMPLICIT_TRANSACTIONS, execute a consulta a seguir.  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ```  
   
 ## <a name="examples"></a>Exemplos  
- Script Transact-SQL a seguir é executado em alguns casos de teste diferentes. A saída de texto também é fornecida, que mostra o comportamento detalhado e os resultados de cada caso de teste.  
+ O script Transact-SQL a seguir é executado em alguns casos de teste diferentes. A saída de texto também é fornecida, mostrando o comportamento detalhado e os resultados de cada caso de teste.  
   
 ```sql  
 -- Transact-SQL.  
@@ -207,17 +207,17 @@ go
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Remover tabela &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [Busca &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Abrir &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
- [TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

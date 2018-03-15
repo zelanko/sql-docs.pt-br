@@ -54,7 +54,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>Tipos de retorno  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um valor de identidade for especificado quando a chave é criada, seu GUID será um hash MD5 desse valor de identidade. Se nenhum valor de identidade for especificado, o servidor irá gerar o GUID.  
   
  Se a chave for uma chave temporária, o nome da chave deverá iniciar com um sinal de cerquilha (#).  
@@ -69,9 +69,9 @@ Key_GUID( 'Key_Name' )
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [key_encryptions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   

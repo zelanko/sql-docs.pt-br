@@ -65,8 +65,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

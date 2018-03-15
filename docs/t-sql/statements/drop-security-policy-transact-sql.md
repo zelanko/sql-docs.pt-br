@@ -48,10 +48,10 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Descarta condicionalmente a política de segurança somente se ele já existe.  
+ Remove condicionalmente a política de segurança somente se ela já existe.  
   
  *schema_name*  
  É o nome do esquema ao qual a política de segurança pertence.  
@@ -59,7 +59,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  O nome da política de segurança. Nomes de políticas de segurança devem obedecer às regras de identificadores e devem ser exclusivos dentro do banco de dados e em seu esquema.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY SECURITY POLICY e a permissão ALTER no esquema.  
@@ -70,11 +70,11 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 DROP SECURITY POLICY secPolicy;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança em nível de linha](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argumentos  
  *notification_name*  
- É o nome da notificação de eventos a ser removida. Podem ser especificadas várias notificações de eventos. Para ver uma lista de notificações de eventos atualmente criadas, use [event_notifications & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ É o nome da notificação de eventos a ser removida. Podem ser especificadas várias notificações de eventos. Para ver uma lista de notificações de eventos atualmente criadas, use [event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indica que o escopo da notificação de eventos se aplica ao servidor atual. SERVER deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada.  
@@ -61,8 +61,8 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Indica que o escopo da notificação de eventos se aplica ao banco de dados atual. DATABASE deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada.  
   
- FILA *nome_da_fila*  
- Indica o escopo da notificação de eventos se aplica à fila especificada pelo *nome_da_fila*. QUEUE deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada. *nome_da_fila* é o nome da fila e também deve ser especificado.  
+ QUEUE *queue_name*  
+ Indica que o escopo da notificação de eventos se aplica à fila especificada por *queue_name*. QUEUE deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada. *queue_name* é o nome da fila e também deve ser especificado.  
   
 ## <a name="remarks"></a>Remarks  
  Se uma notificação de eventos for acionada em uma transação e for descartada na mesma transação, a instância da notificação de eventos será enviada e depois descartada.  
@@ -91,9 +91,9 @@ ON DATABASE;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar notificação de eventos & #40; Transact-SQL & #41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [event_notifications & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Events & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

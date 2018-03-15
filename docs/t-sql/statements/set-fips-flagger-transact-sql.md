@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Especifica a verificação de conformidade com o padrão FIPS 127-2. Baseia-se no padrão ISO. Para obter informações sobre a conformidade com FIPS do SQL Server, consulte [como usar o SQL Server 2016 no modo FIPS 140-2-compatível com](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
+  Especifica a verificação de conformidade com o padrão FIPS 127-2. Baseia-se no padrão ISO. Para obter informações sobre a conformidade com FIPS do SQL Server, veja [Como usar o SQL Server 2016 no modo compatível com FIPS 140-2](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,10 +49,10 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *nível* **'**  
- É o nível de conformidade em relação ao padrão FIPS 127-2, segundo o qual todas as operações de banco de dados são verificadas. Se uma operação de banco de dados está em conflito com o nível de padrões ISO escolhido, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um aviso.  
+ **'** *level* **'**  
+ É o nível de conformidade em relação ao padrão FIPS 127-2, segundo o qual todas as operações de banco de dados são verificadas. Se uma operação de banco de dados estiver em conflito com o nível de padrões ISO escolhido, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um aviso.  
   
- *nível de* deve ser um dos valores a seguir.  
+ *level* deve ser um dos valores a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -61,15 +61,15 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|Verificação dos padrões com relação à conformidade do nível intermediário do ISO.|  
 |OFF|Nenhum padrão é verificado.|  
   
-## <a name="remarks"></a>Comentários  
- A configuração de `SET FIPS_FLAGGER` está definida no momento da análise e não em execução ou tempo de execução. Configuração no momento da análise significa que se a instrução SET estiver presente no lote ou procedimento armazenado, ele entra em vigor, independentemente se a execução de código realmente atinge esse ponto; e o `SET` declaração entra em vigor antes de qualquer instrução ser executada. Por exemplo, mesmo se o `SET` instrução está em um `IF...ELSE` bloco de instrução que nunca é alcançado durante a execução, o `SET` instrução ainda entrará em vigor porque o `IF...ELSE` bloco de instrução é analisado.  
+## <a name="remarks"></a>Remarks  
+ A configuração de `SET FIPS_FLAGGER` é definida no tempo da análise, e não no tempo de execução ou operação. A configuração no momento da análise significa que se a instrução SET estiver presente no lote ou no procedimento armazenado, ela terá efeito, independentemente de se a execução do código realmente atinge esse ponto; e a instrução `SET` terá efeito antes de qualquer instrução ser executada. Por exemplo, mesmo que a instrução `SET` esteja em um bloco de instruções `IF...ELSE` que nunca é atingido durante a execução, a instrução `SET` ainda entrará em vigor porque o bloco de instruções `IF...ELSE` é analisado.  
   
- Se `SET FIPS_FLAGGER` é definido em um procedimento armazenado, o valor de `SET FIPS_FLAGGER` é restaurado depois que o controle é retornado pelo procedimento armazenado. Portanto, um `SET FIPS_FLAGGER` instrução especificada em SQL dinâmico não tem nenhum efeito em qualquer instrução após a instrução SQL dinâmica.  
+ Se `SET FIPS_FLAGGER` for definido em um procedimento armazenado, um valor de `SET FIPS_FLAGGER` será restaurado depois que o controle for retornado do procedimento armazenado. Portanto, uma instrução `SET FIPS_FLAGGER` especificada em SQL dinâmico não causa nenhum efeito em nenhuma instrução depois da instrução SQL dinâmica.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

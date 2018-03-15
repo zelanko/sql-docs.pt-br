@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retorna um **smalldatetime** valor para a data e hora especificadas.  
+  Retorna um valor de **smalldatetime** para a data e a hora especificadas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ano*  
+ *year*  
  Expressão de inteiro que especifica um ano.  
   
- *mês*  
+ *month*  
  Expressão de inteiro que especifica um mês.  
   
- *dia*  
+ *day*  
  Expressão de inteiro que especifica um dia.  
   
- *hora*  
+ *hour*  
  Expressão de inteiro que especifica horas.  
   
- *minuto*  
+ *minute*  
  Expressão de inteiro que especifica minutos.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **smalldatetime**  
   
-## <a name="remarks"></a>Comentários  
- Essa função funciona como um construtor para completamente inicializado **smalldatetime** valor. Se os argumentos não forem válidos, um erro será lançado. Se os argumentos necessários forem nulos, nulo será retornado.  
+## <a name="remarks"></a>Remarks  
+ Essa função atua como um construtor para um valor de **smalldatetime** totalmente inicializado. Se os argumentos não forem válidos, um erro será lançado. Se os argumentos necessários forem nulos, nulo será retornado.  
   
- Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Não é remota para servidores que têm uma versão anterior [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não é remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
   

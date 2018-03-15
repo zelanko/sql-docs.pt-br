@@ -1,5 +1,5 @@
 ---
-title: Criando um banco de dados (Tutorial) | Microsoft Docs
+title: Criando um banco de dados (tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-1---creating-a-database"></a>Lição 1-1-criação de um banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Como muitas [!INCLUDE[tsql](../includes/tsql-md.md)] instruções, a instrução CREATE DATABASE tem um parâmetro obrigatório: o nome do banco de dados. CREATE DATABASE também tem muitos parâmetros opcionais, como o local de disco onde você deseja armazenar os arquivos de banco de dados. Quando você executa CREATE DATABASE sem os parâmetros opcionais, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa valores padrão para muitos destes parâmetros. Este tutorial usa poucos parâmetros de sintaxe opcionais.  
+# <a name="lesson-1-1---creating-a-database"></a>Lição 1-1 – Criando um banco de dados
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Como muitas instruções [!INCLUDE[tsql](../includes/tsql-md.md)], a instrução CREATE DATABASE tem um parâmetro obrigatório: o nome do banco de dados. CREATE DATABASE também tem muitos parâmetros opcionais, como o local de disco onde você deseja armazenar os arquivos de banco de dados. Quando você executa CREATE DATABASE sem os parâmetros opcionais, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa valores padrão para muitos destes parâmetros. Este tutorial usa poucos parâmetros de sintaxe opcionais.  
   
 ### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
@@ -52,7 +52,7 @@ Ao criar um banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Criando uma tabela &#40;Tutorial&#41;](../t-sql/lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

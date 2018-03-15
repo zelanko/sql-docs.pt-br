@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Uma variável local do Transact-SQL é um objeto que pode conter um único valor de dados de um tipo específico. As variáveis em lotes e scripts são normalmente usadas: 
+Uma variável local Transact-SQL é um objeto que pode conter um único valor de dados de um tipo específico. As variáveis em lotes e scripts são normalmente usadas: 
 
 * Como um contador, para contar o número de vezes que um loop é executado ou controlar quantas vezes que o loop é executado.
 * Para reter um valor de dados a ser testado por uma instrução de controle de fluxo.
 * Para salvar um valor de dados a ser retornado por um código de retorno de procedimento armazenado ou valor de retorno de função.
 
 > [!NOTE]
-> Os nomes de algumas funções do sistema Transact-SQL começam com dois *em* sinais de @ (@). Embora nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o @@functions são chamados para como variáveis globais, elas não são variáveis em não têm os mesmos comportamentos de variáveis. O @@functions são funções de sistema e uso de sua sintaxe segue as regras para funções.
+> Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais *at* (@@). Embora nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @@functions sejam referenciadas como variáveis globais, elas não são variáveis e não têm os mesmos comportamentos de variáveis. As funções @@functions são funções do sistema, e o uso de sua sintaxe segue as regras de funções.
 
 O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O script usa uma variável para fazer três coisas: 
 
@@ -91,18 +91,18 @@ A instrução DECLARE inicializa uma variável Transact-SQL por:
 * Atribuição de um tipo de dados fornecido por sistema ou definido pelo usuário e um comprimento. Para variáveis numéricas, precisão e escala também são atribuídas. Para variáveis do tipo XML, uma coleção de esquema opcional pode ser atribuída.
 * Definição do valor como NULL.
 
-Por exemplo, a seguinte **DECLARE** instrução cria uma variável local chamada  **@mycounter**  com um tipo de dados int.  
+Por exemplo, a instrução **DECLARE** a seguir cria uma variável local chamada **@mycounter** com um tipo de dados int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Para declarar mais de uma variável local, use uma vírgula depois da primeira variável local definida, e especifique o próximo nome de variável local e o tipo de dados.
 
-Por exemplo, a seguinte **DECLARE** instrução cria três variáveis locais denominadas  **@LastName** ,  **@FirstName**  e  **@StateProvince** e inicializa cada uma como NULL:  
+Por exemplo, a seguinte instrução **DECLARE** cria três variáveis locais chamadas **@LastName**, **@FirstName** e **@StateProvince** e inicializa cada uma como NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-O escopo de uma variável é as instruções de intervalo de Transact-SQL que podem fazer referência à variável. O escopo de uma variável dura do ponto em que é declarada até o término do lote ou procedimento armazenado no qual ela é declarada. Por exemplo, o seguinte script gera um erro de sintaxe porque a variável é declarada em um lote e referenciada em outro:  
+O escopo de uma variável é a gama de instruções Transact-SQL que podem referenciar a variável. O escopo de uma variável dura do ponto em que é declarada até o término do lote ou procedimento armazenado no qual ela é declarada. Por exemplo, o seguinte script gera um erro de sintaxe porque a variável é declarada em um lote e referenciada em outro:  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > Se houver várias cláusulas de atribuições em uma única instrução SELECT, o SQL Server não garante a ordem de avaliação das expressões. Observe que os efeitos são visíveis apenas se houver referências entre as atribuições.
 
-Se uma instrução SELECT retorna mais de uma linha e a variável referenciar uma expressão não escalar, a variável é definida como o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no lote a seguir  **@EmpIDVariable**  é definido como o **BusinessEntityID** valor da última linha retornada, que é 1:  
+Se uma instrução SELECT retornar mais de uma linha e a variável referenciar uma expressão não escalar, a variável será definida com o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no seguinte lote, **@EmpIDVariable** é definido com o valor de **BusinessEntityID** da última linha retornada, que é 1:  
 
 ```sql
 USE AdventureWorks2014;
@@ -182,11 +182,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>Consulte também  
- [Declare@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Declarar @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

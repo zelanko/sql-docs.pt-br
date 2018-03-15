@@ -36,22 +36,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="binding-relational-data-inside-xml-data"></a>Associando dados relacionais dentro de dados XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Você pode especificar [métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md) contra um **xml** variável ou coluna de tipo de dados. Por exemplo, o [consulta &#40; &#41; Método &#40; tipo de dados xml &#41; ](../../t-sql/xml/query-method-xml-data-type.md) executa o XQuery especificado em uma instância XML. Quando você cria um XML dessa maneira, é recomendável utilizar um valor de uma coluna que não seja do tipo XML ou uma variável Transact-SQL. Esse processo refere-se à associação de dados relacionais dentro do XML.  
+  Especifique [Métodos de Tipo de Dados xml](../../t-sql/xml/xml-data-type-methods.md) em uma variável ou coluna de tipo de dados **xml**. Por exemplo, o [Método query&#40;&#41; &#40;tipo de dados xml&#41;](../../t-sql/xml/query-method-xml-data-type.md) executa o XQuery especificado em uma instância XML. Quando você cria um XML dessa maneira, é recomendável utilizar um valor de uma coluna que não seja do tipo XML ou uma variável Transact-SQL. Esse processo refere-se à associação de dados relacionais dentro do XML.  
   
  Para associar os dados relacionais de um não XML dentro do XML, o Mecanismo de Banco de Dados do SQL Server fornece as seguintes pseudofunções:  
   
--   [SQL: Column &#40; &#41; Função &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-column.md) Permite que você use os valores de uma coluna relacional na expressão XML DML ou XQuery.  
+-   [Função sql:column&#40;&#41; &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) Permite usar os valores de uma coluna relacional na expressão XQuery ou XML DML.  
   
--   [SQL: Variable &#40; &#41; Função &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-variable.md) . Permite usar o valor de uma variável SQL variável na expressão XML DML ou XQuery.  
+-   [Função sql:variable&#40;&#41; &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md). Permite usar o valor de uma variável SQL variável na expressão XML DML ou XQuery.  
   
- Você pode usar essas funções com **xml** métodos de tipo de dados sempre que você deseja expor um valor relacional dentro do XML.  
+ Use essas funções com métodos de tipo de dados **xml** sempre que desejar expor um valor relacional dentro do XML.  
   
- Você não pode usar essas funções para fazer referência a dados em colunas ou variáveis do **xml**, CLR definido pelo usuário tipos, datetime, smalldatetime, **texto**, **ntext**, **sql_variant**, e **imagem** tipos.  
+ Não é possível usar essas funções para referenciar dados em colunas ou variáveis dos tipos **xml**, tipos CLR definidos pelo usuário, datetime, smalldatetime, **text**, **ntext**, **sql_variant** e **image**.  
   
- Além disso, essa associação destina-se apenas a finalidades somente leitura. Isto é, você não pode gravar dados em colunas que usam essas funções. Por exemplo, sql:variable("@x") = "*alguma expressão"* não é permitido.  
+ Além disso, essa associação destina-se apenas a finalidades somente leitura. Isto é, você não pode gravar dados em colunas que usam essas funções. Por exemplo, sql:variable("@x")="*some expression"* não é permitido.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable ()  
- Este exemplo mostra como **SQL: Variable** pode permitir que um aplicativo parametrizar uma consulta. O ISBN é passado usando uma variável SQL @isbn. Substituindo a constante com **SQL: Variable**, a consulta pode ser usada para pesquisar qualquer ISBN e não apenas aquele cujo ISBN é 0-7356-1588-2.  
+ Este exemplo mostra como **sql:variable()** pode permitir que um aplicativo parametrize uma consulta. O ISBN é passado usando uma variável SQL @isbn. Substituindo a constante por **sql:variable()**, a consulta pode ser usada para pesquisar qualquer ISBN e não apenas aquele cujo ISBN é 0-7356-1588-2.  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -61,9 +61,9 @@ FROM    T
 WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1  
 ```  
   
- **SQL: Column** pode ser usado de maneira semelhante e oferece benefícios adicionais. Os índices sobre a coluna podem ser usados para eficiência, conforme decidido pelo otimizador de consulta baseado no custo. Além disso, a coluna computada pode armazenar uma propriedade promovida.  
+ **sql:column()** pode ser usado de maneira semelhante e oferece outros benefícios. Os índices sobre a coluna podem ser usados para eficiência, conforme decidido pelo otimizador de consulta baseado no custo. Além disso, a coluna computada pode armazenar uma propriedade promovida.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos de Tipos de Dados XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   

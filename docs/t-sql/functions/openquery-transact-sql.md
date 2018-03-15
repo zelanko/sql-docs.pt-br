@@ -53,7 +53,7 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  É um identificador que representa o nome do servidor vinculado.  
   
- **'** *consulta* **'**  
+ **'** *query* **'**  
  É a cadeia de caracteres de consulta executada no servidor vinculado. O comprimento máximo da cadeia de caracteres é 8 KB.  
   
 ## <a name="remarks"></a>Remarks  
@@ -96,7 +96,7 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Executando uma consulta de passagem SELECT  
- O exemplo a seguir usa uma passagem `SELECT` consulta para selecionar a linha inserida no exemplo C.  
+ O exemplo a seguir usa uma consulta passagem `SELECT` para excluir a linha inserida no exemplo C.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
@@ -108,11 +108,11 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Funções de conjunto de linhas &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Funções de conjunto de linhas &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

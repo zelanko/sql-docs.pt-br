@@ -1,5 +1,5 @@
 ---
-title: "Definir tempo de estatísticas (Transact-SQL) | Microsoft Docs"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET STATISTICS TIME for ON, serão exibidas as estatísticas de hora da instrução. Se OFF, as estatísticas de hora não serão exibidas.  
   
  A configuração de SET STATISTICS TIME é definida no momento da execução ou do tempo de execução, e não no momento da análise.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é capaz de fornecer estatísticas precisas em modo de fibra, que é ativado quando você habilita o **lightweight pooling** opção de configuração.  
+ O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fornecer estatísticas precisas em modo fibra, que é ativado quando a opção de configuração **lightweight pooling** é habilitada.  
   
- O **cpu** coluna o **sysprocesses** tabela só é atualizada quando uma consulta é executada com SET STATISTICS TIME ON. Quando SET STATISTICS TIME for OFF, **0** é retornado.  
+ A coluna **cpu** na tabela **sysprocesses** apenas é atualizada quando uma consulta é executada com SET STATISTICS TIME ON. Quando SET STATISTICS TIME for OFF, será retornado **0**.  
   
  As configurações ON e OFF também afetam a coluna de CPU na Exibição de Informações de Processos da Atividade Atual no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -99,8 +99,8 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

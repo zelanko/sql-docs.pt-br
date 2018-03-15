@@ -1,5 +1,5 @@
 ---
-title: COMPACTAR (Transact-SQL) | Microsoft Docs
+title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="compress-transact-sql"></a>COMPACTAR (Transact-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Compacta a expressão de entrada usando o algoritmo GZIP. O resultado da compactação é a matriz de bytes de tipo **varbinary (max)**.
+Compacta a expressão de entrada usando o algoritmo GZIP. O resultado da compactação é uma matriz de bytes do tipo **varbinary(max)**.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Argumentos  
 *expressão*  
-É um **nvarchar (***n***)**, **nvarchar (max)**, **varchar (**  *n*  **)**, **varchar (max)**, **varbinary (**  *n*  **)**, **varbinary (max)**, **char (***n***)**, **(nchar**   *n*  **)**, ou **binário (***n***)** expressão. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+É uma expressão **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** ou **binary(***n***)**. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de retorno
-Retorna o tipo de dados de **varbinary (max)** que representa o conteúdo compactado de entrada.
+Retorna o tipo de dados **varbinary(max)** que representa o conteúdo compactado da entrada.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Dados compactados não podem ser indexados.
   
-A função COMPRESS compacta os dados fornecidos como expressão de entrada e deve ser chamada para cada seção de dados deve ser compactado. Para a compactação no nível de linha ou de página automática durante o armazenamento, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).
+A função COMPRESS compacta os dados fornecidos como a expressão de entrada e deve ser invocada para cada seção de dados a ser compactada. Para obter a compactação automática no nível da linha ou da página durante o armazenamento, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. Compactar dados durante a inserção de tabela  
-O exemplo a seguir mostra como compactar dados inseridos na tabela:
+O seguinte exemplo mostra como compactar dados inseridos na tabela:
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +68,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Versão compactada do arquivo morto de linhas excluídas  
-A instrução a seguir exclui registros antigos do player do `player` de tabela e armazena os registros a `inactivePlayer` tabela em um formato compactado para economizar espaço.
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Arquivar a versão compactada de linhas excluídas  
+A instrução a seguir exclui registros antigos do player da tabela `player` e armazena os registros na tabela `inactivePlayer` em um formato compactado para economizar espaço.
   
 ```sql
 DELETE player  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[Descompactar &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+[Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

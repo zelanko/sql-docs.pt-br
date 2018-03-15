@@ -1,5 +1,5 @@
 ---
-title: Criar banco de dados (SQL Server Transact-SQL) | Microsoft Docs
+title: CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -133,7 +133,7 @@ CREATE DATABASE database_name
 }   
 ```  
   
-Criar um instantâneo de banco de dados    
+Criar um instantâneo do banco de dados    
 
 ```  
 CREATE DATABASE database_snapshot_name   
@@ -148,101 +148,101 @@ CREATE DATABASE database_snapshot_name
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- É o nome do novo banco de dados. Nomes de banco de dados devem ser exclusivos dentro de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ É o nome do novo banco de dados. Nomes de bancos de dados devem ser exclusivos dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *Database_Name* pode ter no máximo 128 caracteres, a menos que um nome lógico não é especificado para o arquivo de log. Se não for especificado um nome de arquivo de log lógico, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera o *logical_file_name* e *os_file_name* para o log acrescentando um sufixo para *database_name*. Isso limita *database_name* para 123 caracteres para o nome de arquivo lógico gerado é não mais de 128 caracteres.  
+ *database_name* pode conter um máximo de 128 caracteres, a menos que um nome lógico não esteja especificado para o arquivo de log. Se não for especificado um nome de arquivo de log lógico, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará o *logical_file_name* e *os_file_name* para o log acrescentando um sufixo a *database_name*. Isso limita o *database_name* a 123 caracteres de modo que o nome do arquivo lógico gerado não seja maior do que 128 caracteres.  
   
- Se o nome do arquivo de dados não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa *database_name* como o *logical_file_name* e como o *os_file_name*. O caminho padrão é obtido do Registro. O caminho padrão pode ser alterado usando o **propriedades do servidor (página de configurações do banco de dados)** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A alteração do caminho padrão exige o reinício do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se o nome do arquivo de dados não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará *database_name* como o *logical_file_name* e como o *os_file_name*. O caminho padrão é obtido do Registro. O caminho padrão pode ser alterado usando as **Propriedades do Servidor (Página Configurações de Banco de Dados)** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A alteração do caminho padrão exige o reinício do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  CONTAINMENT = { NONE | PARTIAL }  
 
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica o status de contenção do banco de dados. NONE = banco de dados dependente. PARTIAL = banco de dados parcialmente independente.  
   
  ON  
- Especifica que os arquivos em disco usados para armazenar as seções de dados do banco de dados, arquivos de dados, são definidos explicitamente. ON é necessário quando seguido por uma lista separada por vírgulas de \<filespec > itens que definem os arquivos de dados para o grupo de arquivos primário. A lista de arquivos no grupo de arquivos primário pode ser seguida por uma lista opcional separada por vírgulas de \<arquivos > itens que definem os grupos de arquivos e seus arquivos.  
+ Especifica que os arquivos em disco usados para armazenar as seções de dados do banco de dados, arquivos de dados, são definidos explicitamente. ON é necessário quando seguido por uma lista de itens \<filespec> separados por vírgulas que definem os arquivos de dados para o grupo de arquivos primário. A lista de arquivos no grupo de arquivos primário pode ser seguida por uma lista opcional de itens de \<filegroup> separados por vírgulas que definem os grupos de arquivos de usuários e seus arquivos.  
   
  PRIMARY  
- Especifica que o associado \<filespec > lista define o arquivo primário. O primeiro arquivo especificado no \<filespec > entrada no grupo de arquivos primário se torna o arquivo primário. Um banco de dados pode ter apenas um arquivo primário. Para obter mais informações, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Especifica que a lista \<filespec> associada define o arquivo primário. O primeiro arquivo especificado na entrada \<filespec> no grupo de arquivos primário torna-se o arquivo primário. Um banco de dados pode conter apenas um arquivo primário. Para obter mais informações, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  Se PRIMARY não estiver especificado, o primeiro arquivo listado na instrução CREATE DATABASE se tornará o arquivo primário.  
   
  LOG ON  
- Especifica que os arquivos em disco usados para armazenar o log do banco de dados, os arquivos de log, são definidos explicitamente. LOG ON é seguido por uma lista separada por vírgulas de \<filespec > itens que definem os arquivos de log. Se LOG ON não estiver especificado, um arquivo de log será criado automaticamente com um tamanho de 25 por cento da soma dos tamanhos de todos os arquivos de dados do banco de dados ou 512 KB, o que for maior. Esse arquivo é colocado no local padrão de arquivo de log. Para obter informações sobre esse local, consulte [exibir ou alterar os locais padrão de dados e arquivos de Log &#40; SQL Server Management Studio &#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ Especifica que os arquivos em disco usados para armazenar o log do banco de dados, os arquivos de log, são definidos explicitamente. LOG ON é seguido por uma lista separada por vírgulas de itens \<filespec> que definem os arquivos de log. Se LOG ON não estiver especificado, um arquivo de log será criado automaticamente com um tamanho de 25 por cento da soma dos tamanhos de todos os arquivos de dados do banco de dados ou 512 KB, o que for maior. Esse arquivo é colocado no local padrão de arquivo de log. Para obter informações sobre esse local, veja [Exibir ou alterar os locais padrão de arquivos de log e dados &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
   
  LOG ON não pode ser especificado em um instantâneo do banco de dados.  
   
  COLLATE *collation_name*  
  Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode ser um nome de agrupamento do Windows ou um nome de agrupamento SQL. Se não estiver especificado, o agrupamento padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuído ao banco de dados. Um nome de agrupamento não pode ser especificado em um instantâneo do banco de dados.  
   
- Um nome de agrupamento não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar o agrupamento de um banco de dados anexado, visite [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Um nome de agrupamento não pode ser especificado com as cláusulas FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Para obter informações sobre como alterar o agrupamento de um banco de dados anexado, acesse o [site da Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, consulte [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
->  Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Consulte [agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.  
+>  Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Veja [Agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.  
   
- COM \<opção >  
+ WITH \<option>  
  -   **\<filestream_options>** 
   
-     NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | COMPLETO}  
+     NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      Especifica o nível de acesso não transacional de FILESTREAM ao banco de dados.  
   
-    |Value|Description|  
+    |Valor|Description|  
     |-----------|-----------------|  
     |OFF|O acesso não transacional está desabilitado.|  
     |READONLY|Os dados FILESTREAM deste banco de dados podem ser lidos por processos não transacionais.|  
     |FULL|O acesso não transacional completo a FileTables FILESTREAM está habilitado.|  
   
-     DIRECTORY_NAME = \<directory_name > **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+     DIRECTORY_NAME = \<directory_name> **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de Database_Directory na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.  
   
  As opções a seguir são permitidas apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.  
   
--   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid > | \<nome de idioma > | \<alias de idioma >**  
+-   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.  
   
--   **DEFAULT_LANGUAGE = \<lcid > | \<nome de idioma > | \<alias de idioma >**  
+-   **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
--   **NESTED_TRIGGERS = {OFF | ON}**  
+-   **NESTED_TRIGGERS = { OFF | ON}**  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
 -   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.  
   
--   **TWO_DIGIT_YEAR_CUTOFF = {2049 | \<qualquer ano entre 1753 e 9999 >}**  
+-   **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<qualquer ano entre 1753 e 9999> }**  
   
-     Quatro dígitos que representam um ano. 2049 é o valor padrão. Consulte [configurar o ano de dois dígitos cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter uma descrição completa dessa opção.  
+     Quatro dígitos que representam um ano. 2049 é o valor padrão. Veja [Configurar a opção de Configuração de Servidor de corte de ano com dois dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter uma descrição completa dessa opção.  
   
--   **DB_CHAINING {OFF | ON}**  
+-   **DB_CHAINING { OFF | ON }**  
   
      Quando ON estiver especificado, o banco de dados poderá ser a origem ou o destino de um encadeamento de propriedades de bancos de dados.  
   
      Quando OFF, o banco de dados não poderá participar do encadeamento de propriedades de bancos de dados. O padrão é OFF.  
   
     > [!IMPORTANT]  
-    >  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecerá essa configuração quando a opção do servidor Encadeamento de Propriedades de Bancos de Dados for 0 (OFF). Quando Encadeamento de Propriedades de BD for 1 (ON), todos os bancos de dados de usuário poderão participar de cadeias de propriedades de bancos de dados, independentemente do valor dessa opção. Essa opção é definida usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+    >  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecerá essa configuração quando a opção do servidor Encadeamento de Propriedades de Bancos de Dados for 0 (OFF). Quando Encadeamento de Propriedades de BD for 1 (ON), todos os bancos de dados de usuário poderão participar de cadeias de propriedades de bancos de dados, independentemente do valor dessa opção. Essa opção é definida por meio de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
      A definição dessa opção requer associação à função de servidor fixa sysadmin. A opção DB_CHAINING não pode ser definida nesses bancos de dados do sistema: mestre, modelo, tempdb.  
   
--   **TRUSTWORTHY {OFF | ON}**  
+-   **TRUSTWORTHY { OFF | ON }**  
   
      Quando ON estiver especificado, os módulos de banco de dados (por exemplo, exibições, funções definidas pelo usuário ou procedimentos armazenados) que usam um contexto de representação poderão acessar recursos fora do banco de dados.  
   
@@ -254,7 +254,7 @@ CREATE DATABASE database_snapshot_name
   
      A definição dessa opção requer associação à função de servidor fixa sysadmin.  
   
- FOR ATTACH [WITH \< attach_database_option >] Especifica o banco de dados criado por [anexando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) um conjunto existente de arquivos do sistema operacional. Deve haver um \<filespec > entrada que especifica o arquivo primário. A única outra \<filespec > entradas necessárias são aquelas para todos os arquivos que tenham um caminho diferente de quando o banco de dados foi inicialmente criado ou anexado pela última vez. Um \<filespec > entrada deve ser especificada para esses arquivos.  
+ FOR ATTACH [WITH \< attach_database_option > ] Especifica o banco de dados criado [anexando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) um conjunto existente de arquivos do sistema operacional. Deve haver uma entrada \<filespec> que especifica o arquivo primário. As únicas outras entradas \<filespec> necessárias são as de arquivos que têm um caminho diferente daquele de quando o banco de dados foi criado pela primeira vez ou anexado pela última vez. Uma entrada \<filespec> deve ser especificada para estes arquivos.  
   
  FOR ATTACH exige o seguinte:  
   
@@ -269,18 +269,18 @@ CREATE DATABASE database_snapshot_name
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todos os arquivos de texto completo que fazem parte do banco de dados que está sendo anexado serão anexados com o banco de dados. Para especificar um novo caminho do catálogo de texto completo, especifique o novo local sem o nome do arquivo do sistema operacional de texto completo. Para obter mais informações, consulte a seção Exemplos.  
   
- Anexando um banco de dados que contém uma opção de FILESTREAM de "Nome do diretório", em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância solicitará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para verificar se o nome do Database_Directory é exclusivo. Se não for, a operação de anexação falha com o erro "nome do Database_Directory do FILESTREAM \<nome > não é exclusivo nesta instância do SQL Server". Para evitar esse erro, o parâmetro opcional, *directory_name*, deve ser passado para esta operação.  
+ A anexação de um banco de dados que contém uma opção de FILESTREAM "Nome de diretório", em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solicitará que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifique se o nome de Database_Directory é exclusivo. Se não for, a operação de anexação falhará com o erro "O nome do Database_Directory do FILESTREAM \<nome> não é exclusivo nesta instância do SQL Server". Para evitar esse erro, o parâmetro opcional, *directory_name* deve ser passado para essa operação.  
   
  FOR ATTACH não pode ser especificado em um instantâneo do banco de dados.  
   
  FOR ATTACH pode especificar a opção de RESTRICTED_USER. RESTRICTED_USER permite que somente os membros da função de banco de dados fixa db_owner e das funções de servidor fixas dbcreator e sysadmin conectem-se ao banco de dados, mas não limita seu número. As tentativas de usuários não qualificados são recusadas.  
   
- Se o banco de dados usa [!INCLUDE[ssSB](../../includes/sssb-md.md)], use WITH \<service_broker_option > na cláusula FOR ATTACH: 
+ Se o banco de dados usar [!INCLUDE[ssSB](../../includes/sssb-md.md)], use WITH \<service_broker_option> na cláusula FOR ATTACH: 
   
- \<service_broker_option > controles [!INCLUDE[ssSB](../../includes/sssb-md.md)] entrega de mensagens e o [!INCLUDE[ssSB](../../includes/sssb-md.md)] identificador para o banco de dados. As opções [!INCLUDE[ssSB](../../includes/sssb-md.md)] podem ser especificadas somente quando a cláusula FOR ATTACH é usada.  
+ \<service_broker_option> Controla a entrega de mensagens [!INCLUDE[ssSB](../../includes/sssb-md.md)] e o identificador [!INCLUDE[ssSB](../../includes/sssb-md.md)] para o banco de dados. As opções [!INCLUDE[ssSB](../../includes/sssb-md.md)] podem ser especificadas somente quando a cláusula FOR ATTACH é usada.  
   
  ENABLE_BROKER  
- Especifica que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitado para o banco de dados especificado. Ou seja, a entrega de mensagens é iniciada e is_broker_enabled é definido como true na exibição do catálogo sys. Databases. O banco de dados retém o identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente.  
+ Especifica que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitado para o banco de dados especificado. Ou seja, a entrega das mensagens é iniciada e is_broker_enabled é definido como verdadeiro na exibição do catálogo sys.databases. O banco de dados retém o identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente.  
   
  NEW_BROKER  
  Cria um novo valor de service_broker_guid no sys.databases e no banco de dados restaurado e encerra todos os pontos de extremidade de conversa com limpeza. O agente está habilitado, mas nenhuma mensagem é enviada aos pontos de extremidade de conversa remotos. Qualquer rota que referencia o antigo identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser recriada novamente com o novo identificador.  
@@ -292,23 +292,23 @@ CREATE DATABASE database_snapshot_name
   
 -   Se você anexar o banco de dados à mesma instância e versão de servidor como banco de dados original, nenhuma etapa adicional será necessária.  
   
--   Se você anexar o banco de dados para a mesma instância de servidor, mas com uma versão atualizada, você deve executar [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) para atualizar a replicação após a conclusão da operação de anexação.  
+-   Se anexar o banco de dados à mesma instância de servidor, mas com uma versão atualizada, você deverá executar [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) para atualizar a replicação depois que a operação de anexação tiver sido concluída.  
   
--   Se você anexar o banco de dados a uma instância de servidor diferente, independentemente da versão, você deve executar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para remover a replicação após a conclusão da operação de anexação.  
+-   Se você anexar o banco de dados a uma instância de servidor diferente, independentemente da versão, deverá executar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para remover a replicação depois que a operação de anexação tiver sido concluída.  
   
 > [!NOTE]  
-> Anexação funciona com o **vardecimal** formato de armazenamento, mas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devem ser atualizados para pelo menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Não é possível anexar um banco de dados que usa formato de armazenamento vardecimal a uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o **vardecimal** formato de armazenamento, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
+> A anexação funciona com o formato de armazenamento **vardecimal**, mas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve ser atualizado pelo menos para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Não é possível anexar um banco de dados que usa formato de armazenamento vardecimal a uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o formato de armazenamento **vardecimal**, veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
- Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave. Para obter informações sobre como atualizar um banco de dados usando anexar, consulte [atualizar um banco de dados utilizando desanexar e anexar &#40; Transact-SQL &#41; ](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
+ Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave. Para obter informações sobre como fazer upgrade de banco de dados usando anexar, veja [Fazer upgrade de um banco de dados utilizando desanexar e anexar &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
 > [!IMPORTANT]  
-> É recomendável não anexar bancos de dados de origens desconhecidas ou não confiáveis. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de uma origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados em um servidor de produção, além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
+> É recomendável não anexar bancos de dados de origens desconhecidas ou não confiáveis. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados em um servidor que não seja de produção, e também examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
 > [!NOTE]  
-> O **TRUSTWORTHY** e **DB_CHAINING** opções não terão nenhum efeito quando anexar um banco de dados.  
+> As opções **TRUSTWORTHY** e **DB_CHAINING** não causam nenhum efeito quando um banco de dados é anexado.  
   
  FOR ATTACH_REBUILD_LOG  
- Especifica que o banco de dados é criado pela anexação de um conjunto existente de arquivos do sistema operacional. Essa opção é limitada a bancos de dados de leitura/gravação. Deve haver uma  *\<filespec >* entrada especifica o arquivo primário. Se um ou mais arquivos de log de transações estiverem ausentes, o arquivo de log será reconstruído. O ATTACH_REBUILD_LOG cria automaticamente um novo arquivo de log de 1 MB. Esse arquivo é colocado no local padrão de arquivo de log. Para obter informações sobre esse local, consulte [exibir ou alterar os locais padrão de dados e arquivos de Log &#40; SQL Server Management Studio &#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ Especifica que o banco de dados é criado pela anexação de um conjunto existente de arquivos do sistema operacional. Essa opção é limitada a bancos de dados de leitura/gravação. Deve haver uma entrada *\<filespec>* especificando o arquivo primário. Se um ou mais arquivos de log de transações estiverem ausentes, o arquivo de log será reconstruído. O ATTACH_REBUILD_LOG cria automaticamente um novo arquivo de log de 1 MB. Esse arquivo é colocado no local padrão de arquivo de log. Para obter informações sobre esse local, veja [Exibir ou alterar os locais padrão de arquivos de log e dados &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
   
 > [!NOTE]  
 >  Se os arquivos de log estiverem disponíveis, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará esses arquivos em vez de reconstruir os arquivos de log.  
@@ -326,7 +326,7 @@ CREATE DATABASE database_snapshot_name
   
  FOR ATTACH_REBUILD_LOG não pode ser especificado em um instantâneo do banco de dados.  
   
- Para obter mais informações sobre como anexar ou desanexar bancos de dados, consulte [anexar e desanexar bancos de dados &#40; SQL Server &#41; ](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Para obter mais informações sobre como anexar e desanexar bancos de dados, veja [Anexação e desanexação de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  \<filespec>  
  Controla as propriedades do arquivo.  
@@ -335,9 +335,9 @@ CREATE DATABASE database_snapshot_name
  Especifica o nome lógico do arquivo. NAME é exigido quando FILENAME está especificado, exceto ao especificar uma das cláusulas FOR ATTACH. Um grupo de arquivos FILESTREAM não pode ser denominado PRIMARY.  
   
  *logical_file_name*  
- É o nome lógico usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo. *Logical_file_name* devem ser exclusivos no banco de dados e estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). O nome pode ser um caractere ou constante Unicode ou um identificador normal ou delimitado.  
+ É o nome lógico usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao referenciar o arquivo. *Logical_file_name* deve ser exclusivo no banco de dados e estar de acordo com a regras de [identificadores](../../relational-databases/databases/database-identifiers.md). O nome pode ser um caractere ou constante Unicode ou um identificador normal ou delimitado.  
   
- Nome do arquivo { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
  Especifica o nome do arquivo (físico) do sistema operacional.  
   
  **'** *os_file_name* **'**  
@@ -345,7 +345,7 @@ CREATE DATABASE database_snapshot_name
   
  Os parâmetros SIZE, MAXSIZE e FILEGROWTH podem ser definidos quando um caminho UNC está especificado para o arquivo.  
   
- Se o arquivo estiver em uma partição bruta, *os_file_name* deve especificar somente a letra da unidade de uma partição bruta existente. Apenas um arquivo de dados pode ser criado em cada partição bruta.  
+ Se o arquivo estiver em uma partição bruta, *os_file_name* deverá especificar apenas a letra da unidade de uma partição bruta existente. Apenas um arquivo de dados pode ser criado em cada partição bruta.  
   
  Arquivos de dados não devem ser colocados em sistemas de arquivos compactados a não ser que os arquivos sejam secundários e somente leitura ou que o banco de dados seja somente leitura. Arquivos de log nunca devem ser colocados em sistemas de arquivos compactados.  
   
@@ -356,23 +356,23 @@ CREATE DATABASE database_snapshot_name
   
  As propriedades SIZE e FILEGROWTH não se aplicam a um grupo de arquivos FILESTREAM.  
   
- TAMANHO *tamanho*  
+ SIZE *size*  
  Especifica o tamanho do arquivo.  
   
- TAMANHO não pode ser especificado quando o *os_file_name* é especificado como um caminho UNC. SIZE não se aplica a um grupo de arquivos FILESTREAM.  
+ SIZE não pode ser especificado quando o *os_file_name* for especificado como um caminho UNC. SIZE não se aplica a um grupo de arquivos FILESTREAM.  
   
  *size*  
  É o tamanho inicial do arquivo.  
   
- Quando *tamanho* não for fornecido para o arquivo primário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa o tamanho do arquivo primário no banco de dados modelo. O tamanho padrão do modelo é de 8 MB (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 MB (para versões anteriores). Quando um arquivo de dados secundário ou um arquivo de log for especificado, mas *tamanho* não for especificado para o arquivo, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] faz com que o arquivo de 8 MB (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 MB (para versões anteriores). O tamanho especificado para o arquivo primário deve ser, no mínimo, tão grande quanto o arquivo primário do banco de dados modelo.  
+ Quando o *tamanho* do arquivo primário não é informado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa o tamanho do arquivo primário no modelo de banco de dados. O tamanho padrão do modelo é de 8 MB (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 MB (para versões anteriores). Quando um arquivo de dados secundário ou um arquivo de log for especificado, mas o *tamanho* não for especificado para o arquivo, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fará com que o arquivo ter 8 MB (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 MB (para versões anteriores). O tamanho especificado para o arquivo primário deve ser, no mínimo, tão grande quanto o arquivo primário do banco de dados modelo.  
   
- Os sufixos KB (quilobyte), MB (megabyte), GB (gigabyte) ou TB (terabyte) podem ser usados. O padrão é MB. Especifique um número inteiro; não inclua um decimal. *Tamanho* é um valor inteiro. Para valores maiores que 2147483647, use unidades maiores.  
+ Os sufixos KB (quilobyte), MB (megabyte), GB (gigabyte) ou TB (terabyte) podem ser usados. O padrão é MB. Especifique um número inteiro; não inclua um decimal. *Size* é um valor inteiro. Para valores maiores que 2147483647, use unidades maiores.  
   
  MAXSIZE *max_size*  
- Especifica o tamanho máximo até o qual o arquivo pode crescer. MAXSIZE não pode ser especificado quando o *os_file_name* é especificado como um caminho UNC.  
+ Especifica o tamanho máximo até o qual o arquivo pode crescer. MAXSIZE não pode ser especificado quando o *os_file_name* for especificado como um caminho UNC.  
   
  *max_size*  
- É o tamanho máximo do arquivo. Os sufixos KB, MB, GB e TB podem ser usados. O padrão é MB. Especifique um número inteiro; não inclua um decimal. Se *max_size* não for especificado, o arquivo cresce até que o disco está cheio. *Max_size* é um valor inteiro. Para valores maiores que 2147483647, use unidades maiores.  
+ É o tamanho máximo do arquivo. Os sufixos KB, MB, GB e TB podem ser usados. O padrão é MB. Especifique um número inteiro; não inclua um decimal. Se um *max_size* não for especificado, o arquivo aumentará até que o disco esteja cheio. *Max_size* é um valor inteiro. Para valores maiores que 2147483647, use unidades maiores.  
   
  UNLIMITED  
  Especifica que o arquivo crescerá até que o disco esteja cheio. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um arquivo de log especificado com crescimento ilimitado tem um tamanho máximo de 2 TB, e um arquivo de dados tem um tamanho máximo de 16 TB.  
@@ -386,35 +386,35 @@ CREATE DATABASE database_snapshot_name
  *growth_increment*  
  É a quantidade de espaço adicionada ao arquivo sempre que novo espaço é necessário.  
   
- O valor pode ser especificado em MB, KB, GB, TB ou porcentagem (%). Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB. Quando % está especificada, o tamanho do incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. O tamanho especificado é arredondado para o mais próximo de 64 KB e o valor mínimo é 64 KB.  
+ O valor pode ser especificado em MB, KB, GB, TB ou porcentagem (%). Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB. Quando % está especificada, o tamanho do incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. O tamanho especificado é arredondado para os 64 KB mais próximos e o valor mínimo é de 64 KB.  
   
  Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido.  
   
- Se FILEGROWTH não for especificado, os valores padrão são:  
+ Se FILEGROWTH não for especificado, os valores padrão serão:  
   
 |Versão|Valores padrão|  
 |-------------|--------------------|  
-|Início[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dados 64 MB. Arquivos de log 64 MB.|  
-|Início[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
+|Iniciando o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dados 64 MB. Arquivos de log 64 MB.|  
+|Iniciando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
 |Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 10%. Arquivos de log 10%.|  
   
  \<filegroup>  
  Controla as propriedades do grupo de arquivos. O grupo de arquivos não pode ser especificado em um instantâneo do banco de dados.  
   
- Grupo de arquivos *filegroup_name*  
+ FILEGROUP *filegroup_name*  
  É o nome lógico do grupo de arquivos.  
   
  *filegroup_name*  
- *filegroup_name* devem ser exclusivos no banco de dados e não pode ser os fornecido pelo sistema nomes PRIMARY e PRIMARY_LOG. O nome pode ser um caractere ou constante Unicode ou um identificador normal ou delimitado. O nome deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ *filegroup_name* deve ser exclusivo no banco de dados e não pode ser os nomes PRIMARY e PRIMARY_LOG fornecidos pelo sistema. O nome pode ser um caractere ou constante Unicode ou um identificador normal ou delimitado. O nome deve estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  CONTAINS FILESTREAM  
  Especifica que o grupo de arquivos armazena BLOBs (objetos binários grandes) FILESTREAM no sistema de arquivos.  
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Especifica que o grupo de arquivos armazena dados memory_optimized no sistema de arquivos. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos MEMORY_OPTIMIZED_DATA é permitido por banco de dados. Para obter exemplos de código que cria um grupo de arquivos para armazenar dados com otimização de memória, consulte [criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+ Especifica que o grupo de arquivos armazena dados memory_optimized no sistema de arquivos. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos MEMORY_OPTIMIZED_DATA é permitido por banco de dados. Para obter exemplos de códigos que criam um grupo de arquivos para armazenar dados com otimização de memória, veja [Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
  DEFAULT  
  Especifica que o grupo de arquivos nomeado é o grupo de arquivos padrão no banco de dados.  
@@ -422,13 +422,13 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  É o nome do novo instantâneo do banco de dados. Nomes de instantâneos de bancos de dados devem ser exclusivos dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estar de acordo com as regras de identificadores. *database_snapshot_name* pode ter no máximo 128 caracteres.  
   
- ON **(** nome  **= ***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
+ ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
  Na criação de um instantâneo do banco de dados, especifica uma lista de arquivos no banco de dados de origem. Para que o instantâneo funcione, todos os arquivos de dados devem ser especificados individualmente. No entanto, arquivos de log não são permitidos para instantâneos do banco de dados. Os grupos de arquivos FILESTREAM não são suportados pelos instantâneos do banco de dados. Se um arquivo de dados FILESTREAM for incluído em uma cláusula CREATE DATABASE ON, a instrução falhará e um erro será gerado.  
   
- Para descrições de NAME e FILENAME e seus valores, consulte as descrições dos equivalente \<filespec > valores.  
+ Para obter descrições de NAME e FILENAME e seus valores, veja as descrições dos valores equivalentes de \<filespec>.  
   
 > [!NOTE]  
-> Quando você cria um instantâneo de banco de dados, o outro \<filespec > Opções e a palavra-chave primária não são permitidas.  
+> Quando você cria um instantâneo do banco de dados, as outras opções de \<filespec> e a palavra-chave PRIMARY não são permitidas.  
   
  AS SNAPSHOT OF *source_database_name*  
  Especifica que o banco de dados que está sendo criado é um instantâneo de banco de dados do banco de dados de origem especificado por *source_database_name*. O instantâneo e o banco de dados de origem devem estar na mesma instância.  
@@ -436,13 +436,13 @@ CREATE DATABASE database_snapshot_name
  Para obter mais informações, consulte "Instantâneos do banco de dados" na seção Comentários.  
   
 ## <a name="remarks"></a>Remarks  
- O [banco de dados mestre](../../relational-databases/databases/master-database.md) deve ser feito sempre que um banco de dados do usuário for criado, modificado ou descartado.  
+ O backup do [banco de dados mestre](../../relational-databases/databases/master-database.md) deve ser feito sempre que um banco de dados de usuário é criado, modificado ou descartado.  
   
  A instrução CREATE DATABASE deve ser executada em modo de confirmação automática (o modo padrão de gerenciamento de transações) e não é permitida em uma transação explícita ou implícita.  
   
  Você pode usar uma instrução CREATE DATABASE para criar um banco de dados e os arquivos que armazenam o banco de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa a instrução CREATE DATABASE usando as seguintes etapas:  
   
-1.  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa uma cópia do [banco de dados modelo](../../relational-databases/databases/model-database.md) para inicializar o banco de dados e seus metadados.  
+1.  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa uma cópia do [modelo de banco de dados](../../relational-databases/databases/model-database.md) para inicializar o banco de dados e seu metadados.  
   
 2.  Um GUID do agente de serviço é atribuído ao banco de dados.  
   
@@ -452,41 +452,41 @@ CREATE DATABASE database_snapshot_name
   
  Cada banco de dados tem um proprietário que pode executar atividades especiais no banco de dados. O proprietário é o usuário que cria o banco de dados. O proprietário do banco de dados pode ser alterado usando [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).  
 
-Alguns recursos de banco de dados dependem de recursos ou recursos presentes no sistema de arquivos para a funcionalidade completa de um banco de dados. Alguns exemplos de recursos que dependem do conjunto de recursos de sistema de arquivo incluem:
+Alguns recursos de banco de dados dependem de recursos ou capacidades presentes no sistema de arquivos para a funcionalidade completa de um banco de dados. Alguns exemplos de recursos que dependem do conjunto de recursos de sistema de arquivos incluem:
 - DBCC CHECKDB
 - FileStream
-- Uso de instantâneos do VSS e o arquivo de backups online
+- Backups online usando instantâneos de arquivo e VSS
 - Criação de instantâneo do banco de dados
 - Grupo de arquivos de dados com otimização de memória
    
 ## <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados  
- Cada banco de dados tem pelo menos dois arquivos, um *arquivo primário* e um *arquivo de log de transação*e pelo menos um grupo de arquivos. Um máximo de 32.767 arquivos e 32.767 grupos de arquivos pode ser especificado para cada banco de dados.  
+ Cada banco de dados tem no mínimo dois arquivos, um *arquivo primário* e um *arquivo de log de transações* e pelo menos um grupo de arquivos. Um máximo de 32.767 arquivos e 32.767 grupos de arquivos pode ser especificado para cada banco de dados.  
   
  Ao criar um banco de dados, torne os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados  
   
  É recomendável usar uma rede SAN, uma rede baseada em iSCSI ou um disco conectado localmente para o armazenamento dos arquivos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pois essa configuração otimiza o desempenho e a confiabilidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="database-snapshots"></a>Instantâneos do banco de dados  
- Você pode usar a instrução CREATE DATABASE para criar uma exibição somente leitura, estática, um *instantâneo de banco de dados* do *banco de dados de origem*. Um instantâneo do banco de dados é transacionalmente consistente com o banco de dados de origem pois existia no momento da criação do banco de dados. Um banco de dados de origem pode ter vários instantâneos.  
+ É possível usar a instrução CREATE DATABASE para criar uma exibição estática somente leitura, um *instantâneo do banco de dados* do *banco de dados de origem*. Um instantâneo do banco de dados é transacionalmente consistente com o banco de dados de origem pois existia no momento da criação do banco de dados. Um banco de dados de origem pode ter vários instantâneos.  
   
 > [!NOTE]  
 > Quando você cria um instantâneo do banco de dados, a instrução CREATE DATABASE não pode fazer referência a arquivos de log, arquivos offline, arquivos de restauração e arquivos extintos.  
   
- Se a criação de um instantâneo do banco de dados falhar, o instantâneo se tornará suspeito e deverá ser excluído. Para obter mais informações, consulte [DROP DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md).  
+ Se a criação de um instantâneo do banco de dados falhar, o instantâneo se tornará suspeito e deverá ser excluído. Para obter mais informações, veja [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md).  
   
  Cada instantâneo persiste até que seja excluído usando DROP DATABASE.  
   
  Para obter mais informações, consulte [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ## <a name="database-options"></a>Opções de banco de dados  
- Várias opções de banco de dados são automaticamente definidas sempre que você cria um banco de dados. Para obter uma lista dessas opções, consulte [opções ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Várias opções de banco de dados são automaticamente definidas sempre que você cria um banco de dados. Para obter uma lista dessas opções, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ## <a name="the-model-database-and-creating-new-databases"></a>Banco de dados modelo e criação de novos bancos de dados  
- Todos os objetos definidos pelo usuário no [banco de dados modelo](../../relational-databases/databases/model-database.md) são copiados para todos os bancos de dados recém-criado. É possível adicionar quaisquer objetos, como tabelas, exibições, procedimentos armazenados, tipos de dados, etc. ao banco de dados modelo para que sejam incluídos em todos os bancos de dados recém-criados.  
+ Todos os objetos definidos pelo usuário no [modelo de banco de dados](../../relational-databases/databases/model-database.md) são copiados para todos os bancos de dados recém-criados. É possível adicionar quaisquer objetos, como tabelas, exibições, procedimentos armazenados, tipos de dados, etc. ao banco de dados modelo para que sejam incluídos em todos os bancos de dados recém-criados.  
   
- Quando um banco de dados criar *database_name* instrução for especificada sem parâmetros adicionais de tamanho, o arquivo de dados primário é feito do mesmo tamanho que o arquivo primário no banco de dados modelo.  
+ Quando uma instrução CREATE DATABASE *database_name* é especificada sem parâmetros adicionais de tamanho, o arquivo de dados primário se torna do mesmo tamanho que o arquivo primário no modelo de banco de dados.  
   
- A não ser que FOR ATTACH seja especificado, cada novo banco de dados herda as configurações de opções do banco de dados modelo. Por exemplo, a opção de banco de dados reduzir automaticamente é definida como **true** no modelo e em quaisquer novos bancos de dados que você criar. Se você alterar as opções no banco de dados modelo, essas novas configurações de opções serão usadas em todos os novos bancos de dados criados. A alteração das operações no banco de dados modelo não afeta bancos de dados existentes. Se FOR ATTACH estiver especificado na instrução CREATE DATABASE, o novo banco de dados herdará as configurações de opções do banco de dados original.  
+ A não ser que FOR ATTACH seja especificado, cada novo banco de dados herda as configurações de opções do banco de dados modelo. Por exemplo, a opção de reduzir automaticamente do banco de dados é definida como **true** no banco de dados modelo e em todos os novos bancos de dados criados. Se você alterar as opções no banco de dados modelo, essas novas configurações de opções serão usadas em todos os novos bancos de dados criados. A alteração das operações no banco de dados modelo não afeta bancos de dados existentes. Se FOR ATTACH estiver especificado na instrução CREATE DATABASE, o novo banco de dados herdará as configurações de opções do banco de dados original.  
   
 ## <a name="viewing-database-information"></a>Exibindo informações do banco de dados  
  É possível usar exibições do catálogo, funções do sistema e procedimentos armazenados do sistema para retornar informações sobre bancos de dados, arquivos e grupos de arquivos. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
@@ -511,7 +511,7 @@ GO
 |||  
 |-|-|  
 |Criado|Modificado para adicionar um novo arquivo|  
-|Anexado|O backup|  
+|Anexado|Incluído em backup|  
 |Desanexado|Restaurado|  
   
  As permissões evitam que os arquivos sejam violados acidentalmente caso residam em um diretório com permissões abertas.  
@@ -522,7 +522,7 @@ GO
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. Criando um banco de dados sem especificar arquivos  
- O exemplo a seguir cria o banco de dados `mytest` e os arquivos primário e de log de transações correspondentes. Porque a instrução não tiver nenhuma \<filespec > itens, o arquivo de banco de dados primário é o tamanho do arquivo primário de banco de dados de modelo. O log de transações é definido como o maior desses valores: 512 KB ou 25% do tamanho do arquivo de dados primário. Como MAXSIZE não é especificado, os arquivos podem crescer até encher todo o espaço em disco disponível. Este exemplo de também demonstra como descartar um banco de dados denominado `mytest`, se ele existir, antes da criação do banco de dados `mytest`.  
+ O exemplo a seguir cria o banco de dados `mytest` e os arquivos primário e de log de transações correspondentes. Como a instrução não tem nenhum item \<filespec>, o arquivo de banco de dados primário é do tamanho do arquivo primário do modelo de banco de dados. O log de transações é definido como o maior desses valores: 512 KB ou 25% do tamanho do arquivo de dados primário. Como MAXSIZE não é especificado, os arquivos podem crescer até encher todo o espaço em disco disponível. Este exemplo de também demonstra como descartar um banco de dados denominado `mytest`, se ele existir, antes da criação do banco de dados `mytest`.  
   
 ```sql  
 USE master;  
@@ -671,7 +671,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. Criando um instantâneo do banco de dados  
- O exemplo a seguir cria o instantâneo de banco de dados `sales_snapshot0600`. Como um instantâneo do banco de dados é somente leitura, um arquivo de log não pode ser especificado. Em conformidade com a sintaxe, todo arquivo do banco de dados de origem é especificado e grupos de arquivos não são especificados.  
+ O exemplo a seguir cria o instantâneo do banco de dados `sales_snapshot0600`. Como um instantâneo do banco de dados é somente leitura, um arquivo de log não pode ser especificado. Em conformidade com a sintaxe, todo arquivo do banco de dados de origem é especificado e grupos de arquivos não são especificados.  
   
  O banco de dados de origem deste exemplo é o banco de dados `Sales` criado no exemplo D.  
   
@@ -835,7 +835,7 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

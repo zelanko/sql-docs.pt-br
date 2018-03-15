@@ -1,5 +1,5 @@
 ---
-title: "TRABALHO de confirmação (Transact-SQL) | Microsoft Docs"
+title: COMMIT WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ COMMIT [ WORK ]
 ## <a name="remarks"></a>Remarks  
  Essa instrução funciona identicamente a COMMIT TRANSACTION, com exceção de que COMMIT TRANSACTION aceita um nome de transação definido pelo usuário. Esta sintaxe de COMMIT, com ou sem especificar a palavra-chave opcional WORK, é compatível com SQL-92.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

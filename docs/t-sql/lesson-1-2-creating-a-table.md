@@ -1,5 +1,5 @@
 ---
-title: Criando uma tabela (Tutorial) | Microsoft Docs
+title: Criando uma tabela (tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>Lição 1-2-criar uma tabela
+# <a name="lesson-1-2---creating-a-table"></a>Lição 1–2 – criando uma tabela
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para criar uma tabela, você deve fornecer um nome para a tabela e os nomes e tipos de dados de cada coluna na tabela. Também é uma prática recomendada indicar se são permitidos valores nulos em cada coluna. Para criar uma tabela, você deve ter a permissão `CREATE TABLE` , além da permissão `ALTER SCHEMA` no esquema que conterá a tabela. A função de banco de dados fixa `db_ddladmin` tem essas permissões.  
@@ -82,7 +82,7 @@ Para obter uma lista de tipos de dados e links para uma descrição de cada um, 
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Inserindo e atualizando dados em uma tabela &#40;tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md)  
   
   

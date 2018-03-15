@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instrução SELECT com um rótulo na cláusula OPTION  
- O exemplo a seguir mostra um simples [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instrução SELECT com um rótulo na cláusula OPTION.  
+ O exemplo a seguir mostra uma instrução [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT simples com um rótulo na cláusula OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -114,7 +114,7 @@ OPTION (HASH JOIN);
 ```  
   
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Instrução SELECT com um rótulo e várias dicas de consulta na cláusula OPTION  
- O exemplo a seguir é um [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instrução SELECT que contém um rótulo e várias dicas de consulta. Quando a consulta é executada em nós de computação, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará uma junção de hash ou junção de mesclagem, de acordo com a estratégia que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decide é o ideal.  
+ O exemplo a seguir é uma instrução [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT que contém um rótulo e várias dicas de consulta. Quando a consulta for executada nos nós de Computação, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará uma junção hash ou junção de mesclagem, de acordo com a estratégia que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decidir que é o ideal.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Usando uma dica de consulta ao consultar uma exibição  
- O exemplo a seguir cria uma exibição chamada CustomerView e, em seguida, usa uma dica de consulta HASH JOIN em uma consulta que faz referência a um modo de exibição e uma tabela.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Usando uma dica de consulta durante a consulta de uma exibição  
+ O exemplo a seguir cria uma exibição chamada CustomerView e, em seguida, usa uma dica de consulta HASH JOIN em uma consulta que referencia uma exibição e uma tabela.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Consulta com uma Subseleção e uma dica de consulta  
- O exemplo a seguir mostra uma consulta que contenha uma Subseleção e uma dica de consulta. A dica de consulta é aplicada globalmente. Dicas de consulta não podem ser anexados a instrução de Subseleção.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Consultar com uma subseleção e dica de consulta  
+ O exemplo a seguir mostra uma consulta que contém uma subseleção e uma dica de consulta. A dica de consulta é aplicada globalmente. Dicas de consulta não podem ser acrescentadas à instrução de subseleção.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forçar a ordem de junção para corresponder à ordem na consulta  
- O exemplo a seguir usa a dica ORDER FORCE para forçar o plano de consulta para usar a ordem de junção especificada pela consulta. Isso melhorará o desempenho em algumas consultas; nem todas as consultas.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forçar a ordem de junção para que ela corresponda à ordem na consulta  
+ O exemplo a seguir usa a dica FORCE ORDER para forçar o plano de consulta a usar a ordem de junção especificada pela consulta. Isso melhorará o desempenho em algumas consultas, mas nem todas.  
   
 ```  
 -- Uses AdventureWorks  
@@ -182,7 +182,7 @@ OPTION ( FORCE ORDER )
 ```  
   
 ### <a name="h-using-externalpushdown"></a>H. Usando EXTERNALPUSHDOWN  
- O exemplo a seguir força a aplicação da cláusula WHERE para o trabalho de MapReduce na tabela externa do Hadoop.  
+ O exemplo a seguir força a aplicação da cláusula WHERE ao trabalho MapReduce na tabela externa do Hadoop.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- O exemplo a seguir impede a aplicação da cláusula WHERE para o trabalho de MapReduce na tabela externa do Hadoop. Todas as linhas são retornadas ao PDW onde a cláusula WHERE é aplicada.  
+ O exemplo a seguir impede a aplicação da cláusula WHERE ao trabalho MapReduce na tabela externa do Hadoop. Todas as linhas são retornadas ao PDW em que a cláusula WHERE é aplicada.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,7 +198,7 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

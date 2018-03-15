@@ -1,5 +1,5 @@
 ---
-title: "Métodos de Geografia estática do OGC | Microsoft Docs"
+title: "Métodos de geografia estática do OGC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -71,9 +71,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos do OGC em instâncias de geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

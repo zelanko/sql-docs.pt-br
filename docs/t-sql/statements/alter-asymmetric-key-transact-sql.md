@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR a chave ASSIMÉTRICA (Transact-SQL) | Microsoft Docs"
+title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -70,24 +70,24 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Altera a proteção da chave privada.  
   
- CRIPTOGRAFIA por senha **='***stongPassword***'**  
- Especifica uma nova senha para proteção da chave privada. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção for omitida, a chave privada será criptografada pela chave mestra do banco de dados.  
+ ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ Especifica uma nova senha para proteção da chave privada. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção for omitida, a chave privada será criptografada pela chave mestra do banco de dados.  
   
- DECRYPTION BY PASSWORD **='***Senha_atual***'**  
+ DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Especifica a senha antiga com a qual a chave privada está protegida atualmente. Não será necessária se a chave privada for criptografada com a chave mestra do banco de dados.  
   
-## <a name="remarks"></a>Comentários  
- Se não houver nenhuma chave mestra do banco de dados a opção ENCRYPTION BY PASSWORD será necessária e a operação falhará se nenhuma senha for fornecida. Para obter informações sobre como criar uma chave mestra de banco de dados, consulte [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Se não houver nenhuma chave mestra do banco de dados a opção ENCRYPTION BY PASSWORD será necessária e a operação falhará se nenhuma senha for fornecida. Para obter mais informações sobre como criar uma chave mestra de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  É possível usar ALTER ASYMMETRIC KEY para alterar a proteção da chave privada especificando as opções PRIVATE KEY conforme mostrado na tabela a seguir.  
   
 |Alterar a proteção de|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Senha antiga para senha nova|Obrigatório|Required|  
-|Senha para chave mestra|Omitir|Required|  
-|Chave mestra para senha|Required|Omitir|  
+|Senha antiga para senha nova|Obrigatório|Obrigatório|  
+|Senha para chave mestra|Omitir|Obrigatório|  
+|Chave mestra para senha|Obrigatório|Omitir|  
   
- A chave mestra do banco de dados deve ser aberta antes de poder ser usada para proteger uma chave privada. Para obter mais informações, consulte [OPEN MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-master-key-transact-sql.md).  
+ A chave mestra do banco de dados deve ser aberta antes de poder ser usada para proteger uma chave privada. Para obter mais informações, consulte [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   
  Para alterar a propriedade de uma chave assimétrica, use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
@@ -125,13 +125,13 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Abra a chave MESTRA &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: GetRoot (mecanismo de banco de dados) | Microsoft Docs
+title: GetRoot (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getroot-database-engine"></a>GetRoot (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a raiz da árvore hierárquica. GetRoot () é um método estático.
+Retorna a raiz da árvore hierárquica. GetRoot() é um método estático.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +51,9 @@ static SqlHierarchyId GetRoot ( )
 ## <a name="return-types"></a>Tipos de retorno  
 **Tipo de retorno do SQL Server: hierarchyid**
   
-**Tipo de retorno CLR: SqlHierarchyId**
+**Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Usado para determinar o nó raiz em uma árvore hierárquica.
   
 ## <a name="examples"></a>Exemplos  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. Exemplo de CLR  
-O trecho de código a seguir chama o método GetRoot ():
+O seguinte trecho de código chama o método GetRoot():
   
 ```sql
 SqlHierarchyId.GetRoot()  

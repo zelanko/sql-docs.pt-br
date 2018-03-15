@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna a soma de verificação dos valores em um grupo. Valores nulos são ignorados. Pode ser seguido de [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
+Retorna a soma de verificação dos valores em um grupo. Valores nulos são ignorados. Pode ser seguido da [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 Especifica que CHECKSUM_AGG retorna a soma de verificação de valores exclusivos.
   
 *expressão*  
-É um número inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Funções de agregação e subconsultas não são permitidas.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro. Funções de agregação e subconsultas não são permitidas.
   
 ## <a name="return-types"></a>Tipos de retorno
-Retorna a soma de verificação de todos os *expressão* valores como **int**.
+Retorna a soma de verificação de todos os valores de *expression* como **int**.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 CHECKSUM_AGG pode ser usado para detectar alterações em uma tabela.
   
 A ordem das linhas na tabela não afeta o resultado de CHECKSUM_AGG. Além disso, as funções de CHECKSUM_AGG podem ser usadas com a palavra-chave DISTINCT e a cláusula GROUP BY.
   
 Se um dos valores da lista de expressão for alterado, em geral, a soma de verificação da lista também será alterada. Entretanto, há uma pequena chance de que a soma de verificação não seja alterada.
   
-CHECKSUM_AGG tem uma funcionalidade semelhante a outras funções de agregação. Para obter mais informações, consulte [funções de agregação &#40; Transact-SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG tem uma funcionalidade semelhante a outras funções de agregação. Para obter mais informações, consulte [Funções de agregação &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir usa a função `CHECKSUM_AGG` para detectar as alterações na coluna `Quantity` da tabela `ProductInventory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -103,7 +103,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Soma de verificação &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

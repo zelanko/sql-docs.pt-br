@@ -53,12 +53,12 @@ HAS_DBACCESS ( 'database_name' )
   
 ## <a name="arguments"></a>Argumentos  
  '*database_name*'  
- O nome do banco de dados para o qual o usuário deseja informações de acesso. *Database_Name* é **sysname**.  
+ O nome do banco de dados para o qual o usuário deseja informações de acesso. *database_name* é **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  HAS_DBACCESS retornará 1 se o usuário tiver acesso ao banco de dados, 0 se o usuário não tiver acesso ao banco de dados e NULL se o nome do banco de dados não for válido.  
   
  HAS_DBACCESS retornará 0 se o banco de dados estiver offline e for suspeito.  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir testa se o usuário atual tem acesso ao banco de dados `AdventureWorksPDW2012`.  
   
 ```  
@@ -84,8 +84,8 @@ SELECT HAS_DBACCESS('AdventureWorksPDW2012');
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

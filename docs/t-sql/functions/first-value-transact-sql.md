@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão arbitrária que resulte em um único valor. Outras funções analíticas não são permitidas.  
+ É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão arbitrária que resulta em um único valor. Outras funções analíticas não são permitidas.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições para o qual a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é necessário. *rows_range_clause* limita adicionalmente as linhas na partição especificando pontos inicial e final. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. *rows_range_clause* limita ainda mais as linhas dentro da partição com a especificação de pontos iniciais e finais. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- É o mesmo tipo *scalar_expression*.  
+ É o mesmo tipo que *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  FIRST_VALUE é não determinística. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -127,7 +127,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

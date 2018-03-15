@@ -1,5 +1,5 @@
 ---
-title: Data (Transact-SQL) | Microsoft Docs
+title: date (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -40,36 +40,36 @@ ms.lasthandoff: 11/21/2017
 
 Define uma data no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-## <a name="date-description"></a>Descrição de data
+## <a name="date-description"></a>Descrição de date
   
 |Propriedade|Valor|  
 |--------------|-----------|  
 |Sintaxe|**date**|  
-|Uso|DECLARAR @MyDate **data**<br /><br /> Criar tabela Table1 (Column1 **data** )|  
+|Uso|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|AAAA-MM-DD<br /><br /> Para obter mais informações, consulte a seção Compatibilidade com versões anteriores a seguir.|  
-|Intervalo|0001-01-01 a 9999-12-31 (1582-10-15 a 9999-12-31 para Informatica)<br /><br /> 1 de janeiro de 1 CE até 31 de dezembro de 9999 CE (15 de outubro de 1582 CE até 31 de dezembro, 9999 CE para Informatica)|  
-|Intervalos de elementos|AAAA são quatro dígitos de 0001 a 9999 que representam um ano. Para Informatica, AAAA está limitada ao intervalo 1582 a 9999.<br /><br /> MM são dois dígitos de 01 a 12 que representam um mês do ano especificado.<br /><br /> DD são dois dígitos de 01 a 31, dependendo do mês que representa um dia do mês especificado.|  
+|Intervalo|0001-01-01 a 9999-12-31 (1582-10-15 a 9999-12-31 para o Informatica)<br /><br /> 1 de janeiro de 1 CE até 31 de dezembro de 9999 CE (15 de outubro de 1582 CE a 31 de dezembro de 9999 CE para o Informatica)|  
+|Intervalos de elementos|AAAA são quatro dígitos de 0001 a 9999 que representam um ano. Para o Informatica, YYYY está limitado ao intervalo de 1582 a 9999.<br /><br /> MM são dois dígitos de 01 a 12 que representam um mês do ano especificado.<br /><br /> DD são dois dígitos de 01 a 31, dependendo do mês que representa um dia do mês especificado.|  
 |Comprimento de caracteres|10 posições|  
 |Precisão, escala|10, 0|  
 |Tamanho de armazenamento|3 bytes, fixo.|  
 |Estrutura de armazenamento|Um número inteiro de 1, 3 bytes armazena a data.|  
 |Precisão|Um dia|  
-|Valor padrão|1900-01-01<br /><br /> Esse valor é usado para a parte anexada de data para conversão implícita de **tempo** para **datetime2** ou **datetimeoffset**.|  
+|Valor padrão|1900-01-01<br /><br /> Esse valor é usado para a parte de data acrescentada para conversão implícita de **time** em **datetime2** ou **datetimeoffset**.|  
 |Calendário|Gregoriano|  
-|Precisão de segundo fracionário definida pelo usuário|Não|  
-|Preservação e reconhecimento de deslocamento de fuso horário|Não|  
-|Reconhecimento de horário de verão|Não|  
+|Precisão de segundo fracionário definida pelo usuário|não|  
+|Preservação e reconhecimento de deslocamento de fuso horário|não|  
+|Reconhecimento de horário de verão|não|  
   
-## <a name="supported-string-literal-formats-for-date"></a>Suporte para formatos de literal de cadeia de caracteres de data
-As tabelas a seguir mostram a cadeia de caracteres válida de formatos de literal para o **data** tipo de dados.
+## <a name="supported-string-literal-formats-for-date"></a>Formatos de literais de cadeia de caracteres compatíveis com date
+A tabela a seguir mostra os formatos de literais de cadeia de caracteres válidos para o tipo de dados **date**.
   
 |Numérico|Description|  
 |-------------|-----------------|  
-|mda<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd e [aa]aa representam o mês, o dia e o ano de uma cadeia de caracteres com barras (/), hífens (-), ou pontos (.) como separadores.<br /><br /> Somente anos de dois ou quatro dígitos possuem suporte. Use quatro dígitos para o ano sempre que possível. Para especificar um número inteiro de 0001 a 9999 que representa o ano de corte para interpretar anos de dois dígitos como anos de quatro dígitos, use o [configurar o ano de dois dígitos corte opção de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Observação:** Para Informatica, AAAA está limitada ao intervalo 1582 a 9999.<br /><br /> Um ano de dois dígitos que é menor ou igual aos últimos dois dígitos do ano de corte está no mesmo século do ano de corte. Um ano de dois dígitos que é maior ou igual aos últimos dois dígitos do ano de corte está no mesmo século que vem antes do ano de corte. Por exemplo, se o ano de corte de dois dígitos for 2049 padrão, o ano de dois dígitos 49 será interpretado como 2049 e o ano de dois dígitos 50 será interpretado como 1950.<br /><br /> Os formato padrão de data é determinado pelas configurações atuais de idioma. Você pode alterar o formato de data usando o [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) instruções.<br /><br /> O **ydm** não dá suporte ao formato **data**.|  
+|mda<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd e [aa]aa representam o mês, o dia e o ano de uma cadeia de caracteres com barras (/), hífens (-), ou pontos (.) como separadores.<br /><br /> Somente anos de dois ou quatro dígitos possuem suporte. Use quatro dígitos para o ano sempre que possível. Para especificar um inteiro de 0001 até 9999 que representa o ano de corte para interpretar anos com dois dígitos como de quatro dígitos, use [Configurar a opção two digit year cutoff de configuração do servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Observação!** Para o Informatica, YYYY está limitado ao intervalo de 1582 a 9999.<br /><br /> Um ano de dois dígitos que é menor ou igual aos últimos dois dígitos do ano de corte está no mesmo século do ano de corte. Um ano de dois dígitos que é maior ou igual aos últimos dois dígitos do ano de corte está no mesmo século que vem antes do ano de corte. Por exemplo, se o ano de corte de dois dígitos for 2049 padrão, o ano de dois dígitos 49 será interpretado como 2049 e o ano de dois dígitos 50 será interpretado como 1950.<br /><br /> Os formato padrão de data é determinado pelas configurações atuais de idioma. Você pode alterar o formato da data usando as instruções [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> O formato **ydm** não dá suporte a **date**.|  
   
 |Em ordem alfabética|Description|  
 |------------------|-----------------|  
-|mês [dd][,] aaaa<br /><br /> mês dd[,] [aa]aa<br /><br /> mês aaaa [dd]<br /><br /> [dd] mês[,] aaaa<br /><br /> dd mês[,][aa]aa<br /><br /> dd [aa]aa mês<br /><br /> [dd] aaaa mês<br /><br /> aaaa mês [dd]<br /><br /> aaaa [dd] mês|**segunda-feira** representa o nome completo do mês ou a abreviação do mês segundo o idioma atual. As vírgulas são opcionais e não há diferenciação entre letras maiúsculas e minúsculas.<br /><br /> Para evitar ambiguidade, use anos de quatro dígitos.<br /><br /> Se o dia estiver ausente, o primeiro dia do mês será fornecido.|  
+|mês [dd][,] aaaa<br /><br /> mês dd[,] [aa]aa<br /><br /> mês aaaa [dd]<br /><br /> [dd] mês[,] aaaa<br /><br /> dd mês[,][aa]aa<br /><br /> dd [aa]aa mês<br /><br /> [dd] aaaa mês<br /><br /> aaaa mês [dd]<br /><br /> aaaa [dd] mês|**mon** representa o nome completo do mês ou a abreviação do mês fornecida no idioma atual. As vírgulas são opcionais e não há diferenciação entre letras maiúsculas e minúsculas.<br /><br /> Para evitar ambiguidade, use anos de quatro dígitos.<br /><br /> Se o dia estiver ausente, o primeiro dia do mês será fornecido.|  
   
 |ISO 8601|Descrição|  
 |--------------|----------------|  
@@ -77,7 +77,7 @@ As tabelas a seguir mostram a cadeia de caracteres válida de formatos de litera
   
 |Não separado|Description|  
 |-----------------|-----------------|  
-|[aa]aammdd<br /><br /> aaaa[mm][dd]|O **data** dados podem ser especificados com quatro, seis ou oito dígitos. Uma cadeia de caracteres de seis ou oito dígitos é sempre interpretada como **ymd**. O mês e o dia sempre devem ser de dois dígitos. Uma cadeia de caracteres de quatro dígitos é interpretada como um ano.|  
+|[aa]aammdd<br /><br /> aaaa[mm][dd]|Os dados de **date** podem ser especificados com quatro, seis ou oito dígitos. Uma cadeia de caracteres de seis ou oito dígitos é sempre interpretada como **ymd**. O mês e o dia sempre devem ser de dois dígitos. Uma cadeia de caracteres de quatro dígitos é interpretada como um ano.|  
   
 |ODBC|Description|  
 |----------|-----------------|  
@@ -85,32 +85,32 @@ As tabelas a seguir mostram a cadeia de caracteres válida de formatos de litera
   
 |Formato W3C XML|Description|  
 |--------------------|-----------------|  
-|aaaa-mm-ddTZD|Suporte específico para utilização com XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -hh: mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />-+ (mais) ou – (menos), o sinal obrigatório do deslocamento de fuso horário. Ele indica que o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado) para se obter a hora local. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
+|aaaa-mm-ddTZD|Suporte específico para utilização com XML/SOAP.<br /><br /> TZD é o designador de fuso horário (Z ou + hh: mm ou -hh:mm):<br /><br /> -   hh:mm representa o deslocamento de fuso horário. hh são dois dígitos, variando de 0 a 14, que representam o número de horas no deslocamento de fuso horário.<br />-   MM são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.<br />-   + (mais) ou – (menos) é o sinal obrigatório do deslocamento de fuso horário. Ele indica que o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado) para se obter a hora local. O intervalo válido de deslocamento de fuso horário vai de -14: 00 a +14: 00.|  
   
-## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com ANSI e ISO 8601  
-**data** está em conformidade com a definição padrão ANSI SQL do calendário gregoriano: "nota 85 - tipos de dados time aceitarão que datas no formato gregoriano sejam armazenadas no data intervalo 0001 – 01 – 01 CE até 9999 – 12 – 31 CE."
+## <a name="ansi-and-iso-8601-compliance"></a>Conformidade com o ANSI e ISO 8601  
+**date** é compatível com a definição do padrão ANSI SQL do calendário Gregoriano: "NOTA 85 – Tipos de dados date e time aceitarão que datas no formato Gregoriano sejam armazenadas no intervalo de data 0001-01-01 CE a 9999-12-31 CE".
   
 O formato padrão de literais de cadeia de caracteres que é usado para clientes de nível inferior,é compatível com o formato padrão SQL que é definido como AAAA-MM-DD. Este formato é o mesmo da definição ISO 8601 para DATE.
   
 > [!NOTE]  
->  Para Informatica, o intervalo é limitado a 1582-10 a 15 (em 15 de outubro de 1582 CE) a 9999-12-31 (31 de dezembro de 9999 CE).  
+>  Para o Informatica, o intervalo é limitado a 1582-10-15 (15 de outubro de 1582 CE) a 9999-12-31 (31 de dezembro de 9999 CE).  
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>Compatibilidade com versões anteriores de clientes de nível inferior
-Alguns clientes de nível inferior não dão suporte a **tempo**, **data**, **datetime2** e **datetimeoffset** tipos de dados. A tabela a seguir mostra o mapeamento de tipos entre uma instância de nível superior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clientes de nível inferior.
+Alguns clientes de nível inferior não dão suporte aos tipos de dados **time**, **date**, **datetime2** e **datetimeoffset**. A tabela a seguir mostra o mapeamento de tipos entre uma instância de nível superior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clientes de nível inferior.
   
 |Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato de literal de cadeia de caracteres padrão passado ao cliente de nível inferior|ODBC de nível inferior|OLEDB de nível inferior|JDBC de nível inferior|SQLCLIENT de nível inferior|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
 |**date**|AAAA-MM-DD|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
 |**datetime2**|AAAA-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
-|**datetimeoffset**|AAAA-MM-DD HH [. nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|Cadeia de caracteres ou SqString|  
   
-## <a name="converting-date-and-time-data"></a>Conversão de dados de data e hora
-Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores que não pode reconhecer como datas ou horas. Para obter informações sobre como usar as funções CAST e CONVERT com dados de data e hora, consulte [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="converting-date-and-time-data"></a>Convertendo dados de data e hora
+Ao fazer a conversão em tipos de dados de data e hora, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita todos os valores que não pode reconhecer como datas ou horas. Para obter informações sobre como usar as funções CAST e CONVERT com os dados de data e hora, consulte [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
-Quando a conversão é em **time (n)**, a conversão falhará e a mensagem de erro 206 é gerada: "conflito de tipo de operando: data é incompatível com a hora".
+Quando a conversão é para **time(n)**, a conversão falha e a mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
   
-Se a conversão é em **datetime**, a data é copiada e o componente de hora é definido como 00:00:00.000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.  
+Se a conversão é feita em **datetime**, a data é copiada e o componente de hora é definido como 00:00:00.000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.  
   
 ```sql
 DECLARE @date date= '12-10-25';  
@@ -126,7 +126,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-No caso de conversão para **smalldatetime**, quando o **data** valor está no intervalo de um [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00. Quando o **data** valor está fora do intervalo de um **smalldatetime** valor, a mensagem de erro 242 é gerada: "a conversão de um **data** tipo de dados para um  **smalldatetime** resultados de tipo de dados em um valor fora do intervalo; e o **smalldatetime** valor é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
+No caso da conversão feita em **smalldatetime**, quando o valor de **date** está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00. Quando o valor de **date** está fora do intervalo de um valor de **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados **date** em um tipo de dados **smalldatetime** resulta em um valor fora do intervalo". Além disso, o valor **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -142,7 +142,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é em **DateTimeOffset (n)**, a data é copiada e a hora é definida como 00: 00.0000000 + 00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
+Quando a conversão é feita em **datetimeoffset(n)**, a data é copiada e a hora é definida como 00:00.0000000 +00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -158,7 +158,7 @@ SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';
 --(1 row(s) affected)  
 ```  
   
-Se a conversão é em **datetime2**, o componente de data é copiado e o componente de hora é definido como 00:00:00.00, independentemente do valor de (n). O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
+Se a conversão é feita em **datetime2(n)**, o componente de data é copiado e o componente de hora é definido como 00:00:00.00, independentemente do valor de (n). O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -174,12 +174,12 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 --(1 row(s) affected)  
 ```  
   
-### <a name="converting-date-to-other-date-and-time-types"></a>Convertendo data em outros tipos de data e hora
-Esta seção descreve o que ocorre quando um **data** tipo de dados é convertido em outros tipos de dados de data e hora.
+### <a name="converting-date-to-other-date-and-time-types"></a>Convertendo date em outros tipos de data e hora
+A tabela a seguir descreve o que ocorre quando um tipo de dados **date** é convertido em outros tipos de dados de data e hora.
   
-Quando a conversão é em **time (n)**, a conversão falhará e a mensagem de erro 206 é gerada: "conflito de tipo de operando: data é incompatível com a hora".
+Quando a conversão é para **time(n)**, a conversão falha e a mensagem de erro 206 é gerada: "Conflito no tipo de operando: a data é incompatível com a hora".
   
-Se a conversão é em **datetime**, data é copiada. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.
+Se a conversão é feita em **datetime**, a data é copiada. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime`.
   
 ```sql
 DECLARE @date date= '12-10-25';  
@@ -195,7 +195,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é em **smalldatetime**, o **data** valor está no intervalo de um [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o **data** valor está fora do intervalo de um **smalldatetime** valor, a mensagem de erro 242 é gerada: "a conversão de um tipo de dados de data para um tipo de dados smalldatetime resultou em um valor fora do intervalo."; e o **smalldatetime** valor é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
+Quando a conversão é feita em uma **smalldatetime**, o valor de **date**está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o valor de **date** está fora do intervalo de um valor de **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados date em um tipo de dados smalldatetime resultou em um valor fora do intervalo". Além disso, o valor de **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -211,7 +211,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Para conversão em **DateTimeOffset (n)**data é copiada e a hora é definida como 00: 00.0000000 + 00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
+Para a conversão em **datetimeoffset(n)**, a data é copiada e a hora é definida como 00:00.0000000 +00:00. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetimeoffset(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -227,7 +227,7 @@ SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é em **datetime2**, o componente de data é copiado e o componente de hora é definido como 00: 00.000000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
+Quando a conversão é feita em **datetime2(n)**, o componente de data é copiado e o componente de hora é definido como 00:00.000000. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `datetime2(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25'  
@@ -243,12 +243,12 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 --(1 row(s) affected)  
 ```  
   
-### <a name="converting-string-literals-to-date"></a>Convertendo literais de cadeia de caracteres em data
-Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras para converter uma cadeia de caracteres literal para o **data** tipo de dados.
+### <a name="converting-string-literals-to-date"></a>Convertendo literais de cadeias de caracteres em data
+Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **date**.
   
 |Literal de cadeia de caracteres de entrada|**date**|  
 |---|---|
-|ODBC DATE|Literais de cadeia de caracteres ODBC são mapeados para o **datetime** tipo de dados. Qualquer operação de atribuição de literais de ODBC DATETIME em um **data** tipo fará com que uma conversão implícita entre **datetime** e esse tipo conforme definido pelas regras de conversão.|  
+|ODBC DATE|Os literais de cadeia de caracteres do ODBC são mapeados para o tipo de dados **datetime**. Qualquer operação de atribuição de literais de ODBC DATETIME em um tipo **date** causará uma conversão implícita entre **datetime** e esse tipo, conforme definido pelas regras de conversão.|  
 |ODBC TIME|Consulte a regra de ODBC DATE anterior.|  
 |ODBC DATETIME|Consulte a regra de ODBC DATE anterior.|  
 |Apenas DATE|Trivial|  

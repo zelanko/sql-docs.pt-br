@@ -58,13 +58,13 @@ DBCC CHECKCATALOG
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id* | 0  
- É o nome ou ID do banco de dados para o qual verificar consistência do catálogo. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ É o nome ou ID do banco de dados para o qual verificar consistência do catálogo. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Os nomes de banco de dados precisam estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Remarks  
-Depois que o comando DBCC CATALOG termina, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indica que o comando foi finalizado, um valor de estado e a quantidade de tempo de execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
+Depois que o comando DBCC CATALOG termina, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
 |Estado|Description|  
 |-----------|-----------------|  
@@ -75,11 +75,11 @@ Depois que o comando DBCC CATALOG termina, uma mensagem é gravada no log de err
 |4|Uma declaração ou violação de acesso foi detectada.|  
 |5|Ocorreu um erro desconhecido que finalizou o comando DBCC.|  
   
-DBCC CHECKCATALOG executa vários testes de consistência entre tabelas de metadados do sistema. DBCC CHECKCATALOG usa um instantâneo do banco de dados interno para fornecer a consistência transacional necessária ao executar essas verificações. Para obter mais informações, consulte [exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e a seção "DBCC interno banco de dados uso de instantâneo" em [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG executa vários testes de consistência entre tabelas de metadados do sistema. DBCC CHECKCATALOG usa um instantâneo do banco de dados interno para fornecer a consistência transacional necessária ao executar essas verificações. Para obter mais informações, confira [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e a seção "Uso de instantâneo de banco de dados interno do DBCC" em [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se um instantâneo não puder ser criado, DBCC CHECKCATALOG obterá um bloqueio de banco de dados exclusivo para adquirir a consistência exigida. Se qualquer inconsistência for detectada, não poderá ser reparada e o banco de dados deverá ser restaurado a partir de um backup.
   
 > [!NOTE]  
-> Execução de DBCC CHECKCATALOG contra **tempdb** não executa nenhuma verificação. Isso ocorre porque, por motivos de desempenho, instantâneos de banco de dados não estão disponíveis em **tempdb**. Isso significa que não é possível obter a consistência transacional exigida. Recicle o servidor para resolver qualquer **tempdb** problemas de metadados.  
+> A execução de DBCC CHECKCATALOG no **tempdb** não realiza nenhuma verificação. Isso ocorre porque, por motivos de desempenho, os instantâneos do banco de dados não estão disponíveis no **tempdb**. Isso significa que não é possível obter a consistência transacional exigida. Recicle o servidor para resolver problemas de metadados do **tempdb**.  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG não verifica dados FILESTREAM. FILESTREAM armazena BLOBS (objetos binários grandes) no sistema de arquivos.  
@@ -100,7 +100,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** função fixa de servidor ou o **db_owner** função fixa de banco de dados.  
+ Requer a associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner**.  
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir verifica a integridade do catálogo no banco de dados atual e no banco de dados `AdventureWorks`.
@@ -114,7 +114,7 @@ DBCC CHECKCATALOG (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

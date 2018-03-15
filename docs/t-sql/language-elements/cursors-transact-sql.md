@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>cursores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções produzem um conjunto de resultados completo, mas há vezes em que os resultados são melhores processada uma linha por vez. Abrir um cursor em um conjunto de resultados permite o processamento do conjunto de resultados uma linha por vez. Você pode atribuir um cursor para uma variável ou parâmetro com um **cursor** tipo de dados.  
+  As instruções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produzem um conjunto de resultados completo, mas há momentos em que os resultados são mais bem processados considerando uma linha de cada vez. Abrir um cursor em um conjunto de resultados permite o processamento do conjunto de resultados uma linha por vez. Você pode atribuir um cursor a uma variável ou um parâmetro com um tipo de dados **cursor**.  
   
  Operações de cursor têm suporte nestas instruções:  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [DEFINIR](../../t-sql/statements/set-statements-transact-sql.md)  
+ [SET](../../t-sql/statements/set-statements-transact-sql.md)  
   
  Estas funções de sistema e procedimentos armazenados do sistema também oferecem suporte a cursores:  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cursores](../../relational-databases/cursors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cadeia de caracteres operadores (Transact-SQL) | Microsoft Docs
+title: Operadores de cadeia de caracteres (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [% (Curinga – Caracteres para corresponder)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [&#91; &#93; (curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; ^ &#93; (Curinga - caracteres não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [&#91;^&#93; (Curinga – caracteres para não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (Curinga – Corresponder um caractere)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

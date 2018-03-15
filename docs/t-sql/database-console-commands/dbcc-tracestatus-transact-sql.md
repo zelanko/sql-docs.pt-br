@@ -54,13 +54,13 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
   
 ## <a name="arguments"></a>Argumentos  
 *trace#*  
-É o número do sinalizador de rastreamento para o qual o status é exibido. Se *trace #*e -1 não forem especificados, todos os sinalizadores de rastreamento estão habilitados para a sessão são exibidos.
+É o número do sinalizador de rastreamento para o qual o status é exibido. Se *trace#* e -1 não forem especificados, todos os sinalizadores de rastreamento habilitados para a sessão serão exibidos.
   
 *n*  
 É um espaço reservado que indica que vários sinalizadores de rastreamento podem ser especificados.
   
 -1  
-Exibe o status dos sinalizadores de rastreamento habilitados globalmente. Se -1 for especificado sem *trace #*, todos os sinalizadores de rastreamento globais habilitados são exibidos.
+Exibe o status dos sinalizadores de rastreamento habilitados globalmente. Se -1 for especificado sem *trace#*, todos os sinalizadores de rastreamento globais habilitados serão exibidos.
   
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
@@ -73,9 +73,9 @@ A tabela a seguir descreve as informações do conjunto de resultados.
 |**TraceFlag**|Nome do sinalizador de rastreamento|  
 |**Status**|Indica se o sinalizador de rastreamento está definido como ON ou OFF, globalmente ou para a sessão.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica se o sinalizador de rastreamento está definido globalmente<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Sessão**|Indica se o sinalizador de rastreamento está definido para a sessão<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Session**|Indica se o sinalizador de rastreamento está definido para a sessão<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS retorna uma coluna para o número de sinalizador de rastreamento e uma coluna para o status. Isso indica se o sinalizador de rastreamento é ON (1) ou OFF (0). O cabeçalho da coluna para o número do sinalizador de rastreamento é **sinalizador de rastreamento Global** ou **sinalizador de rastreamento de sessão**, dependendo se você está verificando o status global ou de um sinalizador de rastreamento de sessão.
+DBCC TRACESTATUS retorna uma coluna para o número de sinalizador de rastreamento e uma coluna para o status. Isso indica se o sinalizador de rastreamento é ON (1) ou OFF (0). O cabeçalho da coluna do número do sinalizador de rastreamento é **Global Trace Flag** ou **Session Trace Flag**, dependendo se você está verificando o status do sinalizador de rastreamento global ou de sessão.
   
 ## <a name="remarks"></a>Remarks  
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor.
@@ -112,7 +112,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

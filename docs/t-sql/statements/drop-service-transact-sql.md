@@ -1,5 +1,5 @@
 ---
-title: "SERVIÇO de DROP (Transact-SQL) | Microsoft Docs"
+title: DROP SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ DROP SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SERVICE_NAME*  
+ *service_name*  
  O nome do serviço a ser descartado. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você não poderá descartar um serviço se houver alguma prioridade de conversa que recorra ao mesmo.  
   
  O descarte de um serviço exclui todas as mensagens da fila utilizada pelo serviço. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia um erro para o lado remoto de quaisquer conversas abertas que utilizam o serviço.  
@@ -69,11 +69,11 @@ DROP SERVICE service_name
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

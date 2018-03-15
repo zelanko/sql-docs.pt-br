@@ -33,10 +33,10 @@ As funções a seguir oferecem suporte à conversão de tipo de dados.
   
 ## <a name="in-this-section"></a>Nesta seção  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40; Transact-SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>Consulte também
 [Funções](../../t-sql/functions/functions.md)  

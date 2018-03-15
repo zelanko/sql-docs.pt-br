@@ -53,8 +53,8 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  É o nome da chave simétrica a ser fechada.  
   
-## <a name="remarks"></a>Comentários  
- As chaves simétricas abertas estão associadas à sessão que não está no contexto de segurança. Uma chave aberta continuará disponível até ser explicitamente fechada ou a sessão ser encerrada. CLOSE ALL SYMMETRIC KEYS fechará qualquer chave mestra de banco de dados que foi aberta na sessão atual usando o [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) instrução.  Informações sobre chaves abertas estão visíveis no [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ As chaves simétricas abertas estão associadas à sessão que não está no contexto de segurança. Uma chave aberta continuará disponível até ser explicitamente fechada ou a sessão ser encerrada. CLOSE ALL SYMMETRIC KEYS fechará qualquer chave mestra do banco de dados que tenha sido aberta na sessão atual usando a instrução [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Informações sobre chaves abertas estão visíveis na exibição do catálogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Nenhuma permissão explícita é necessária para fechar uma chave simétrica.  
@@ -77,10 +77,10 @@ CLOSE ALL SYMMETRIC KEYS;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [Remover chave SIMÉTRICA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

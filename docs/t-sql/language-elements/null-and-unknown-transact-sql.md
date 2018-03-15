@@ -1,5 +1,5 @@
 ---
-title: NULO e desconhecido (Transact-SQL) | Microsoft Docs
+title: NULL e UNKNOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -26,24 +26,24 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="null-and-unknown-transact-sql"></a>NULO e desconhecido (Transact-SQL)
+# <a name="null-and-unknown-transact-sql"></a>NULL e UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-  NULL indica que o valor é desconhecido. Um valor nulo é diferente do valor um vazio ou zero. Dois valores nulos não são iguais. Comparações entre dois valores nulos, ou entre um valor nulo e qualquer outro valor, retornam unknown porque o valor de cada NULL é desconhecido.  
+  NULL indica que o valor é desconhecido. Um valor nulo é diferente de um valor zero ou vazio. Dois valores nulos não são iguais. As comparações entre dois valores nulos ou entre um valor nulo e qualquer outro valor, retornam desconhecido porque o valor de cada NULL é desconhecido.  
   
- Valores nulos geralmente indicam dados desconhecidos, não aplicável, ou a ser adicionado posteriormente. Por exemplo, é possível que a inicial do segundo nome de um cliente não seja conhecida no momento em que o cliente faz um pedido.  
+ Os valores nulos geralmente indicam dados desconhecidos, não aplicáveis ou a serem adicionados posteriormente. Por exemplo, é possível que a inicial do segundo nome de um cliente não seja conhecida no momento em que o cliente faz um pedido.  
   
- Observe o seguinte sobre valores nulos:  
+ Observe o seguinte sobre os valores nulos:  
   
 -   Testar para obter valores null em uma consulta, use IS NULL ou IS NOT NULL na cláusula WHERE.  
   
--   Valores nulos podem ser inseridos em uma coluna declarando explicitamente NULL em uma instrução INSERT ou UPDATE ou omitindo uma coluna fora de uma instrução INSERT.  
+-   Os valores nulos podem ser inseridos em uma coluna declarando explicitamente NULL em uma instrução INSERT ou UPDATE ou retirando uma coluna de uma instrução INSERT.  
   
--   Valores nulos não podem ser usados como as informações necessárias para distinguir uma linha em uma tabela de outra linha em uma tabela, como chaves primárias ou de informações usadas para distribuir as linhas, tais como chaves de distribuição.  
+-   Os valores nulos não podem ser usados como as informações necessárias para distinguir uma linha em uma tabela de outra linha em uma tabela, como chaves primárias, ou como as informações usadas para distribuir as linhas, como chaves de distribuição.  
   
- Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Operadores lógicos em uma expressão booleana que inclui desconhecidos retornará UNKNOWN, a menos que o resultado do operador não é dependente de expressão desconhecido. Essas tabelas fornecem exemplos desse comportamento.  
+ Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Os operadores lógicos em uma expressão booliana que incluírem UNKNOWNs retornarão UNKNOWN, a menos que o resultado do operador não dependa da expressão UNKNOWN. Estas tabelas fornecem exemplos desse comportamento.  
   
- A tabela a seguir mostra os resultados da aplicação de um operador AND para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
+ A tabela a seguir mostra os resultados da aplicação de um operador AND para duas expressões boolianas, em que uma expressão retorna UNKNOWN.  
   
 |Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|FALSE|  
   
- A tabela a seguir mostra os resultados da aplicação de um operador OR para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
+ A tabela a seguir mostra os resultados da aplicação de um operador OR para duas expressões boolianas, em que uma expressão retorna UNKNOWN.  
   
 |Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|UNKNOWN|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   
  [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)   
  [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)   

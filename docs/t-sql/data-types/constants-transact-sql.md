@@ -72,7 +72,7 @@ As cadeias de caracteres vazias são representadas como duas aspas simples sem n
 As constantes de cadeia de caracteres oferecem suporte a agrupamentos avançados.
   
 > [!NOTE]  
->  Constantes de caracteres maiores que 8000 bytes recebem o tipo **varchar (max)** dados.  
+>  As constantes de caractere maiores que 8.000 bytes são tipadas como dados **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Cadeias de caracteres Unicode
 As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de caracteres, mas são precedidas por um identificador N (N significa National Language no padrão SQL-92). O prefixo N deve ser maiúsculo. Por exemplo, 'Michél' é uma constante de caracteres, enquanto N'Michél' é uma constante Unicode. As constantes Unicode são interpretadas como dados Unicode e não são avaliadas com o uso de uma página de código. As constantes Unicode têm um agrupamento. Esse agrupamento controla principalmente comparações e diferenciação de maiúsculas e minúsculas. Às constantes Unicode é atribuído o agrupamento padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar um agrupamento. Os dados Unicode são armazenados usando 2 bytes por caractere, em vez de 1 byte por caractere para dados de caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -80,7 +80,7 @@ As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de ca
 As constantes da cadeira de caracteres Unicode oferecem suporte a agrupamentos avançados.
   
 > [!NOTE]  
->  Constantes Unicode maiores que 8000 bytes recebem o tipo **nvarchar (max)** dados.  
+>  As constantes Unicode maiores que 8.000 bytes são tipadas como dados **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Constantes binárias
 As constantes binárias têm o prefixo `0x` e são uma cadeia de números hexadecimais. Elas não são incluídas entre aspas.
@@ -95,15 +95,15 @@ Os seguintes são exemplos de cadeias binárias:
 ```  
   
 > [!NOTE]  
->  Constantes binárias maiores que 8000 bytes recebem o tipo **varbinary (max)** dados.  
+>  As constantes binárias maiores que 8.000 bytes são tipadas como dados **varbinary(max)**.  
   
-## <a name="bit-constants"></a>constantes de bit
-**bit** constantes são representadas pelos números 0 ou 1 e não são colocadas entre aspas. Se um número maior que um for usado, ele será convertido em um.
+## <a name="bit-constants"></a>Constantes bit
+As constantes **bit** são representadas pelos números 0 ou 1 e não são incluídas entre aspas. Se um número maior que um for usado, ele será convertido em um.
   
-## <a name="datetime-constants"></a>constantes de data e hora
-**DateTime** constantes são representadas usando valores de data de caractere em formatos específicos, incluídos entre aspas.
+## <a name="datetime-constants"></a>Constantes datetime
+As constantes **datetime** são representadas usando valores de data de caractere em formatos específicos, incluídos entre aspas simples.
   
-Os seguintes são exemplos de **datetime** constantes:
+Estes são exemplos de constantes **datetime**:
   
 ```sql
 'December 5, 1985'  
@@ -112,7 +112,7 @@ Os seguintes são exemplos de **datetime** constantes:
 '12/5/98'  
 ```  
   
-Exemplos de constantes de data e hora são:
+Exemplos de constantes datetime são:
   
 ```sql
 '14:30:24'  
@@ -120,52 +120,52 @@ Exemplos de constantes de data e hora são:
 ```  
   
 ## <a name="integer-constants"></a>constantes de número inteiro
-**inteiro** constantes são representadas por uma cadeia de números que não são incluídos entre aspas e não contêm pontos decimais. **inteiro** constantes devem ser números inteiros; elas não podem conter decimais.
+As constantes **integer** são representadas por uma cadeia de números que não são incluídos entre aspas e que não contêm pontos decimais. As constantes **integer** devem ser números inteiros; elas não podem conter decimais.
   
-Os seguintes são exemplos de **inteiro** constantes:
+Estes são exemplos de constantes **integer**:
   
 ```sql
 1894  
 2  
 ```  
   
-## <a name="decimal-constants"></a>constantes decimais
-**decimal** constantes são representadas por uma cadeia de números que não estão entre aspas e contêm um ponto decimal.
+## <a name="decimal-constants"></a>Constantes decimal
+As constantes **decimal** são representadas por uma cadeia de números que não são incluídos entre aspas e que contêm um ponto decimal.
   
-Os seguintes são exemplos de **decimal** constantes:
+Estes são exemplos de constantes **decimal**:
   
 ```sql
 1894.1204  
 2.0  
 ```  
   
-## <a name="float-and-real-constants"></a>constantes de float e real
-**float** e **real** constantes são representadas usando notação científica.
+## <a name="float-and-real-constants"></a>Constantes float e real
+As constantes **float** e **real** são representadas com notação científica.
   
-Os seguintes são exemplos de **float** ou **real** valores:
+Estes são exemplos de valores **float** ou **real**:
   
 ```sql
 101.5E5  
 0.5E-2  
 ```  
   
-## <a name="money-constants"></a>constantes de dinheiro
-**Money** constantes são representadas como cadeia de caracteres de números com um ponto decimal opcional e um símbolo monetário opcional como prefixo. **Money** constantes não são colocados entre aspas.
+## <a name="money-constants"></a>Constantes money
+As constantes **money** são representadas como cadeias de números com um ponto decimal opcional e um símbolo da moeda opcional como prefixo. As constantes **money** não são incluídas entre aspas.
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não impõe nenhum tipo de regra de agrupamento, tal como a inserção de uma vírgula (,) a cada três dígitos em cadeias que representam dinheiro.
   
 > [!NOTE]  
->  Vírgulas são ignoradas em qualquer lugar do **money** literal.  
+>  As vírgulas são ignoradas em qualquer lugar no literal **money** especificado.  
   
-Os seguintes são exemplos de **money** constantes:
+Estes são exemplos de constantes **money**:
   
 ```sql
 $12  
 $542023.14  
 ```  
   
-## <a name="uniqueidentifier-constants"></a>constantes uniqueidentifier
-**uniqueidentifier** constantes são uma cadeia de caracteres que representa um GUID. Elas podem ser especificadas em um formato de caractere ou cadeia de binários.
+## <a name="uniqueidentifier-constants"></a>Constantes uniqueidentifier
+As constantes **uniqueidentifier** são uma cadeia de caracteres que representa um GUID. Elas podem ser especificadas em um formato de caractere ou cadeia de binários.
   
 Os exemplos a seguir especificam o mesmo GUID:
   
@@ -175,29 +175,29 @@ Os exemplos a seguir especificam o mesmo GUID:
 ```  
   
 ## <a name="specifying-negative-and-positive-numbers"></a>Especificando números negativos e positivos  
-Para indicar se um número é positivo ou negativo, aplique o  **+**  ou  **-**  operadores unários para uma constante numérica. Isso cria uma expressão numérica que representa o valor numérico com sinal. Constantes numéricas usam positivo quando o  **+**  ou  **-**  operadores unários não são aplicados.
+Para indicar se um número é positivo ou negativo, aplique os operadores unários **+** ou **-** a uma constante numérica. Isso cria uma expressão numérica que representa o valor numérico com sinal. As constantes numéricas usam positivo quando os operadores unários **+** ou **-** não são aplicados.
   
-Assinado **inteiro** expressões:  
+Expressões de **integer** com sinal:  
   
 ```sql
 +145345234
 -2147483648
 ```
-Assinado **decimal** expressões:  
+Expressões de **decimal** com sinal:  
   
 ```sql
 +145345234.2234
 -2147483648.10
 ```
   
-Assinado **float** expressões:  
+Expressões **float** com sinal:  
   
 ```sql
 +123E-3
 -12E5
 ```
   
-Assinado **money** expressões:  
+Expressões **money** com sinal:  
   
 ```sql
 -$45.56
@@ -205,11 +205,11 @@ Assinado **money** expressões:
 ```
   
 ## <a name="enhanced-collations"></a>Agrupamentos avançados  
-O SQL Server oferece suporte a constantes de cadeias de caractere e Unicode que aceitam agrupamentos avançados. Para obter mais informações, consulte o [COLLATE &#40; Transact-SQL &#41; ](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) cláusula.
+O SQL Server oferece suporte a constantes de cadeias de caractere e Unicode que aceitam agrupamentos avançados. Para obter mais informações, consulte a cláusula [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 ## <a name="see-also"></a>Consulte também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   

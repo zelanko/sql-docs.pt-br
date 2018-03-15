@@ -63,13 +63,13 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  Especifica que a sessão atual será a vítima de deadlock se outras sessões envolvidas na cadeia de deadlock tiverem prioridade de deadlock definida como um valor de inteiro superior a 5 ou é elegível como vítima de deadlock se outra sessão tiver sido definida com prioridade de deadlock HIGH ou valor inteiro igual a 5.  
   
- \<prioridade numérica >  
+ \<numeric-priority>  
  É um intervalo de valor inteiro (-10 a 10) para fornecer 21 níveis de prioridade de deadlock. Especifica que a sessão atual será a vítima de deadlock se outras sessões na cadeia de deadlock estiverem em execução em um valor de prioridade de deadlock superior, mas não será a vítima de deadlock se outras sessões estiverem em execução em um valor de prioridade de deadlock inferior ao valor da sessão atual. Ela também especifica que a sessão atual é elegível para ser vítima de deadlock se outra sessão estiver em execução com um valor de prioridade de deadlock que seja igual ao da sessão atual. LOW mapeia para -5, NORMAL para 0 e HIGH para 5.  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  É uma variável de caractere que especifica a prioridade de deadlock. A variável deve ser definida como um valor de 'LOW', 'NORMAL' ou 'HIGH'. A variável deve ser grande o suficiente para reter a cadeia de caracteres completa.  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  É uma variável de inteiro que especifica a prioridade de deadlock. A variável deve ser definida como um valor de inteiro no intervalo (-10 a 10).  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  A escolha de qual sessão será a vítima de deadlock depende da prioridade de deadlock de cada sessão:  
   
--   Se ambas as sessões tiverem a mesma prioridade de deadlock, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe a sessão que é menos dispendiosa para ser revertida como a vítima de deadlock. Por exemplo, se ambas as sessões tiverem definido sua prioridade de deadlock como HIGH, a instância escolherá como uma vítima a sessão que calcula ser menos dispendiosa para reverter. O custo é determinado comparando o número de bytes de log gravados desse ponto em cada transação. (Você pode ver esse valor como "Log utilizada" em um gráfico de deadlock).
+-   Se ambas as sessões tiverem a mesma prioridade de deadlock, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe a sessão que é menos dispendiosa para ser revertida como a vítima de deadlock. Por exemplo, se ambas as sessões tiverem definido sua prioridade de deadlock como HIGH, a instância escolherá como uma vítima a sessão que calcula ser menos dispendiosa para reverter. O custo é determinado comparando o número de bytes de log gravados naquele ponto em cada transação. (Você pode ver esse valor como "Log Utilizado" em um gráfico de deadlock).
   
 -   Se as sessões tiverem prioridades de deadlock diferentes, a sessão com a prioridade de deadlock mais baixa será escolhida como a vítima de deadlock.  
   
@@ -107,6 +107,6 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [Definir LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

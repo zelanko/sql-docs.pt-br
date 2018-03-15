@@ -44,13 +44,13 @@ ms.lasthandoff: 01/25/2018
   
 -   Funções internas que emitem metadados  
   
--   **sp_help** grupo de procedimentos armazenados  
+-   Grupo **sp_help** de procedimentos armazenados  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Procedimentos de catálogo de cliente nativo  
+-   Procedimentos de catálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 -   Exibições e funções de gerenciamento dinâmico  
   
- Para obter mais informações sobre níveis de isolamento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  A tabela a seguir fornece um resumo do acesso aos metadados em vários níveis de isolamento.  
   

@@ -1,5 +1,5 @@
 ---
-title: ToString (mecanismo de banco de dados) | Microsoft Docs
+title: ToString (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna uma cadeia de caracteres com representação lógica de *isso*. ToString é chamado implicitamente quando uma conversão de **hierarchyid** como uma cadeia de caracteres de tipo ocorre. Atua como o oposto do [Parse &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/parse-database-engine.md).
+Retorna uma cadeia de caracteres com a representação lógica de *this*. ToString é chamado implicitamente quando ocorre uma conversão de **hierarchyid** em um tipo de cadeia de caracteres. Atua como o oposto de [Parse &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,11 +52,11 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno
-**Type:nvarchar(4000) retorno do SQL Server**
+**Tipo de retorno do SQL Server: nvarchar(4000)**
   
-**Tipo de retorno CLR: String**
+**Tipo de retorno do CLR: String**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Retorna o local lógico na hierarquia. Por exemplo, `/2/1/` representa a quarta linha ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) na seguinte estrutura hierárquica de um sistema de arquivos:
   
 ```sql
@@ -71,7 +71,7 @@ Retorna o local lógico na hierarquia. Por exemplo, `/2/1/` representa a quarta 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. Exemplo de Transact-SQL em uma tabela  
-O exemplo a seguir retorna o `OrgNode` coluna como o **hierarchyid** tipo de dados e no formato de cadeia de caracteres mais legível:
+O seguinte exemplo retorna a coluna `OrgNode` como o tipo de dados **hierarchyid** e no formato de cadeia de caracteres mais legível:
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. Convertendo valores Transact-SQL sem uma tabela  
-O seguinte exemplo de código usa `ToString` para converter um **hierarchyid** valor em uma cadeia de caracteres e `Parse` para converter um valor de cadeia de caracteres para um **hierarchyid**.
+O exemplo de código a seguir usa `ToString` para converter um valor **hierarchyid** em uma cadeia de caracteres e `Parse` para converter um valor de cadeia de caracteres em uma **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +116,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. Exemplo de CLR  
-O trecho de código a seguir chama o método ToString ():
+O seguinte trecho de código chama o método ToString():
   
 ```sql
 this.ToString()  

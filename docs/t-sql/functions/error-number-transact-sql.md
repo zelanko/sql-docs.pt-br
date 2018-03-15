@@ -56,10 +56,10 @@ ERROR_NUMBER ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função pode ser chamada em qualquer lugar dentro do escopo de um bloco CATCH.  
   
- ERROR_NUMBER retorna o número do erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. Isso é em comparação com@ERROR, que retorna somente o número do erro na instrução imediatamente posterior àquela que causa um erro ou bloquear a primeira instrução de um problema.  
+ ERROR_NUMBER retorna o número do erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. É diferente de @@ERROR, que retorna apenas o número do erro na instrução imediatamente posterior àquela que causa um erro ou a primeira instrução de um bloco CATCH.  
   
  Em blocos CATCH aninhados, ERROR_NUMBER retorna o número do erro específico do escopo do bloco CATCH no qual é referenciado. Por exemplo, o bloco CATCH de uma construção TRY...CATCH externa poderia ter uma construção TRY...CATCH aninhada. Dentro do bloco CATCH aninhado, ERROR_NUMBER retorna o número do erro que invocou o bloco CATCH aninhado. Se ERROR_NUMBER for executado em um bloco CATCH externo, retornará o número do erro que invocou aquele bloco CATCH.  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_NUMBER em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Juntamente com o número do erro, são retornadas as informações relacionadas ao erro.  
@@ -122,14 +122,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

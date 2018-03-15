@@ -1,5 +1,5 @@
 ---
-title: "Permissões de texto completo GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT de texto completo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -60,11 +60,11 @@ GRANT permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- NO catálogo de texto completo **:: * text_catalog_name completo*  
- Especifica o catálogo de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é necessária.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Especifica o catálogo de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
- EM FULLTEXT STOPLIST **:: * text_stoplist_name completo*  
- Especifica a lista de palavras irrelevantes de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é necessária.  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ Especifica a lista de palavras irrelevantes de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade de segurança para o qual a permissão está sendo concedida. Um dos seguintes:  
@@ -157,12 +157,12 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRIAR o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

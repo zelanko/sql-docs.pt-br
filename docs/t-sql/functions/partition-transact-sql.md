@@ -1,5 +1,5 @@
 ---
-title: $PARTITION (transact-SQL) | Microsoft Docs
+title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ ms.lasthandoff: 11/21/2017
  É o nome de qualquer função de partição existente na qual um conjunto de valores de coluna de particionamento é aplicado.  
   
  *expressão*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) cujo tipo de dados deve corresponder ou ser implicitamente conversível para o tipo de dados de sua coluna de particionamento correspondente. *expressão* também pode ser o nome de uma coluna de particionamento que participe atualmente *partition_function_name*.  
+ É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) cujo tipo de dados deve corresponder ou pode ser convertido implicitamente no tipo de dados de sua coluna de particionamento correspondente. *expression* também pode ser o nome de uma coluna de particionamento que participe atualmente de *partition_function_name*.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- $PARTITION retorna um **int** valor entre 1 e o número de partições da função de partição.  
+## <a name="remarks"></a>Remarks  
+ $PARTITION retorna um valor **int** entre 1 e o número de partições da função de partição.  
   
  $PARTITION retorna o número de partição para qualquer valor válido, independentemente de o valor existir atualmente em um índice ou uma tabela particionada que use a função de partição.  
   
@@ -105,7 +105,7 @@ SELECT * FROM Production.TransactionHistory
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   

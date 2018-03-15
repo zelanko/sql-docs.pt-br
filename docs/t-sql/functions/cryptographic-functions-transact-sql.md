@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 
 As funções a seguir oferecem suporte a criptografia, decriptografia, assinatura digital e validação de assinaturas digitais.
   
-## <a name="symmetric-encryption-and-decryption"></a>Descriptografia e criptografia simétrica
+## <a name="symmetric-encryption-and-decryption"></a>Criptografia e descriptografia simétricas
   
 |||  
 |-|-|  
@@ -48,7 +48,7 @@ As funções a seguir oferecem suporte a criptografia, decriptografia, assinatur
 |[DECRYPTBYKEYAUTOASYMKEY](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)|[KEY_NAME](../../t-sql/functions/key-name-transact-sql.md)|  
 |[SYMKEYPROPERTY](../../t-sql/functions/symkeyproperty-transact-sql.md)||  
   
-## <a name="asymmetric-encryption-and-decryption"></a>Criptografia e decodificação simétrica
+## <a name="asymmetric-encryption-and-decryption"></a>Criptografia e descriptografia assimétricas
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ As funções a seguir oferecem suporte a criptografia, decriptografia, assinatur
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>Descriptografia simétrica com manipulação de chave automática
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>Descriptografia simétrica com manipulação automática de chave
   
 |||  
 |-|-|  
@@ -80,8 +80,8 @@ As funções a seguir oferecem suporte a criptografia, decriptografia, assinatur
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>Consulte também
 [Funções](../../t-sql/functions/functions.md)  

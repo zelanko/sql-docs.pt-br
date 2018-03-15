@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função pode ser chamada em qualquer lugar dentro do escopo de um bloco CATCH.  
   
- ERROR_LINE retorna o número da linha na qual o erro ocorreu, independentemente do número de vezes que ele é chamado ou se é chamado dentro do escopo do bloco CATCH. Isso contrasta com as funções, como@ERROR, que retorna um número de erro na instrução imediatamente posterior àquela que causa um erro ou na primeira instrução de um bloco CATCH.  
+ ERROR_LINE retorna o número da linha na qual o erro ocorreu, independentemente do número de vezes que ele é chamado ou se é chamado dentro do escopo do bloco CATCH. É diferente de funções como @@ERROR, que retornam um número de erro na instrução imediatamente após àquela que causa um erro ou na primeira instrução de um bloco CATCH.  
   
  Em blocos CATCH aninhados, ERROR_LINE retorna o número da linha do erro específico ao escopo do bloco CATCH no qual é referenciado. Por exemplo, o bloco CATCH de uma construção TRY...CATCH poderia ter uma construção TRY...CATCH aninhada. Dentro do bloco CATCH aninhado, ERROR_LINE retorna o número da linha do erro que invocou o bloco CATCH aninhado. Se ERROR_LINE for executado em um bloco CATCH externo, retornará o número da linha do erro que invocou aquele bloco CATCH.  
   
@@ -131,14 +131,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

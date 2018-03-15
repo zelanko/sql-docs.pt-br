@@ -49,21 +49,21 @@ expression = expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Se as expressões não são do mesmo tipo de dados, o tipo de dados para uma expressão deve ser implicitamente conversível para o tipo de dados da outra expressão. A conversão é baseada nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Se as expressões não são do mesmo tipo de dados, o tipo de dados para uma expressão deve ser implicitamente conversível para o tipo de dados da outra expressão. A conversão é baseada nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Booliano  
   
 ## <a name="remarks"></a>Remarks  
- Quando você compara duas expressões NULL, o resultado depende de `ANSI_NULLS` configuração:  
+ Quando você compara duas expressões NULL, o resultado depende da configuração de `ANSI_NULLS`:  
   
--   Se `ANSI_NULLS` está definida como ON, o resultado será NULL, seguindo a convenção ANSI que um valor nulo (ou desconhecido) não é igual a outro valor NULL ou desconhecido.  
+-   Se `ANSI_NULLS` for definido como ON, o resultado será NULL, seguindo a convenção ANSI de que um valor NULL (ou desconhecido) não é igual a outro valor NULL ou desconhecido.  
   
--   Se `ANSI_NULLS` é definida como OFF, o resultado de NULL comparado a NULL será TRUE.  
+-   Se `ANSI_NULLS` for definido como OFF, o resultado de NULL comparado a NULL será TRUE.  
 
 Para obter mais informações, veja [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Qualquer tipo de comparação de um valor NULL (desconhecido) para um valor não NULL sempre resulta em FALSE.  
+ Qualquer tipo de comparação de um valor NULL (desconhecido) com um valor não NULL sempre resulta em FALSE.  
   
   
 ## <a name="examples"></a>Exemplos  
@@ -94,7 +94,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Comparando valores NULL e não NULL  
- O exemplo a seguir usa os operadores de comparação Igual a (`=`) e Diferente de (`<>`) para fazer comparações com valores `NULL` e não nulos em uma tabela. O exemplo também mostra que `IS NULL` não é afetada pelo `SET ANSI_NULLS` configuração.  
+ O exemplo a seguir usa os operadores de comparação Igual a (`=`) e Diferente de (`<>`) para fazer comparações com valores `NULL` e não nulos em uma tabela. O exemplo também mostra que `IS NULL` não é afetado pela configuração de `SET ANSI_NULLS`.  
   
 ```  
 -- Create table t1 and insert 3 rows.  
@@ -226,9 +226,9 @@ NULL
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

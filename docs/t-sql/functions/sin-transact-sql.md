@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna o seno trigonométrico do ângulo especificado, em radianos, em um numérico aproximado, **float**, expressão.  
+  Retorna o seno trigonométrico do ângulo especificado, em radianos, e em uma expressão numérica aproximada, **float**.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em float.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em float.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
@@ -71,8 +71,8 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir calcula o seno de um ângulo especificado.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir calcula o sino de um ângulo especificado.  
   
 ```  
 SELECT SIN(45.175643);  
@@ -85,8 +85,8 @@ SELECT SIN(45.175643);
 0.929607
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

@@ -29,12 +29,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="numeric-types"></a>Tipos numéricos
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]suporta as seguintes **numérico** tipos.
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos tipos **numeric** a seguir.
   
 ## <a name="in-this-section"></a>Nesta seção
-[decimal e numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
-[float e real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[int, bigint, smallint, tinyint e #40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[Money e smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+[decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+[float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[money e smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
   
   

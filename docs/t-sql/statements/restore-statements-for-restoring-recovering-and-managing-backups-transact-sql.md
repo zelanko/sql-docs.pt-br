@@ -1,5 +1,5 @@
 ---
-title: "Instruções RESTORE para restaurar, recuperar, gerenciar Backups (T-SQL) | Microsoft Docs"
+title: "Instruções RESTORE para restaurar, recuperar e gerenciar backups (T-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE REWINDONLY, que é usada para retroceder e fechar dispositivos de fita que foram deixados abertos pelas instruções BACKUP ou RESTORE executadas com a opção NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Descreve a instrução de Transact-SQL RESTORE VERIFYONLY, que é usada para verificar o backup, mas não o restaura, e examina se o conjunto de backup está completo e se todo o backup está legível; não tenta verificar a estrutura dos dados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

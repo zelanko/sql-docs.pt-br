@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A configuração SET LOCK_TIMEOUT permite que um aplicativo defina o tempo máximo que uma instrução espera em um recurso bloqueado. Quando uma instrução espera por mais tempo do que a configuração LOCK_TIMEOUT, a instrução bloqueada é cancelada automaticamente e uma mensagem de erro é retornada ao aplicativo.  
   
- @@LOCK_TIMEOUT retorna um valor de -1 se SET LOCK_TIMEOUT ainda não foi executado na sessão atual.  
+ @@LOCK_TIMEOUT retorna um valor igual a -1 se SET LOCK_TIMEOUT ainda não foi executado na sessão atual.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo mostra o conjunto de resultados quando um valor LOCK_TIMEOUT não foi definido.  
@@ -71,7 +71,7 @@ Lock Timeout
 -1  
 ```  
   
- Este exemplo define LOCK_TIMEOUT como 1800 milissegundos e, em seguida, chama@LOCK_TIMEOUT .  
+ Este exemplo define LOCK_TIMEOUT com 1.800 milissegundos e, em seguida, chama @@LOCK_TIMEOUT.  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -87,8 +87,8 @@ Lock Timeout
 1800          
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Definir LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

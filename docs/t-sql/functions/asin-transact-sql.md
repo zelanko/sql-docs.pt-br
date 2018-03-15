@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o ângulo em radianos, cujo seno é especificado **float** expressão. Isso também é chamado de arco seno.
+Retorna o ângulo, em radianos, cujo seno é a expressão **float** especificada. Isso também é chamado de arco seno.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *float_expression*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em float, com um valor de -1 a 1. Valores fora deste intervalo retornam NULL e relatam um erro de domínio.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em float, com um valor de -1 a 1. Valores fora deste intervalo retornam NULL e relatam um erro de domínio.
   
 ## <a name="return-types"></a>Tipos de retorno
 **float**
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir usa uma **float** expressão e retorna o ASIN do ângulo especificado.
+O exemplo a seguir usa uma expressão **float** e retorna o ASIN do ângulo especificado.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -95,24 +95,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 O exemplo a seguir retorna o arco seno de 1,00.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-O exemplo a seguir retorna um erro, pois ele solicita o arco seno de um valor fora do intervalo permitido.
+O exemplo a seguir retorna um erro, pois solicita ao arco seno um valor fora do intervalo permitido.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Teto &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[Definir ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: NULL (tipo de dados geography) | Microsoft Docs
+title: Null (tipo de dados geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Uma propriedade somente leitura que fornece uma instância nula da **geografia** tipo.
+Uma propriedade somente leitura que fornece uma instância nula do tipo de **geografia**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,9 +46,9 @@ Null
 ## <a name="arguments"></a>Argumentos  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **geografia**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geografia**  
   
- Tipo CLR: **SqlGeography**  
+ Tipo do CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -61,7 +61,7 @@ SET @g = geography::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

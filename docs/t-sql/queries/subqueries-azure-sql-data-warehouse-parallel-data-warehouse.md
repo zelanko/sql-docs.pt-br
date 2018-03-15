@@ -1,5 +1,5 @@
 ---
-title: Subconsultas (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
+title: Subconsultas (SQL Data Warehouse do Azure, Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -24,31 +24,31 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Subconsultas (Azure SQL Data Warehouse, Parallel Data Warehouse)
+# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Subconsultas (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Este tópico fornece exemplos de uso de subconsultas em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Este tópico fornece exemplos de uso de subconsultas no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- Para a instrução SELECT, consulte [SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-transact-sql.md)  
+ Para a instrução SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
 ## <a name="contents"></a>Sumário  
   
 -   [Noções básicas](#Basics)  
   
--   [Exemplos: SQL Data Warehouse e o Parallel Data Warehouse](#Examples)  
+-   [Exemplos: SQL Data Warehouse e Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a>Noções básicas  
+##  <a name="Basics"></a> Noções básicas  
  Subconsulta  
- Uma subconsulta é uma consulta aninhada em uma instrução SELECT, INSERT, UPDATE ou DELETE, ou em subconsulta. Isso também é chamado uma consulta interna ou seleção interna.  
+ Uma subconsulta é uma consulta aninhada em uma instrução SELECT, INSERT, UPDATE ou DELETE, ou em subconsulta. Ela também é chamada de consulta interna ou seleção interna.  
   
  Consulta externa  
- A instrução que contém a subconsulta. Isso também é chamado uma seleção externa.  
+ A instrução que contém a subconsulta. Ela também é chamada de seleção externa.  
   
  Subconsulta correlacionada  
  Uma subconsulta que faz referência a uma tabela na consulta externa.  
   
-##  <a name="Examples"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Esta seção fornece exemplos de subconsultas com suporte no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Esta seção fornece exemplos de subconsultas compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP e ORDER BY em uma subconsulta  
   
@@ -59,7 +59,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>B. COM a cláusula com uma subconsulta correlacionada  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>B. A cláusula HAVING com uma subconsulta correlacionada  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -73,7 +73,7 @@ ORDER BY EmployeeKey;
   
 ```  
   
-### <a name="c-correlated-subqueries-with-analytics"></a>C. Subconsultas correlacionadas com a análise  
+### <a name="c-correlated-subqueries-with-analytics"></a>C. Subconsultas correlacionadas com análise  
   
 ```  
 SELECT * FROM ReplA AS A   
@@ -90,7 +90,7 @@ WHERE EXISTS
      UNION ALL SELECT 1 FROM RC);  
 ```  
   
-### <a name="e-join-predicates-in-a-subquery"></a>E. Unir predicados em uma subconsulta  
+### <a name="e-join-predicates-in-a-subquery"></a>E. Predicados de junção em uma subconsulta  
   
 ```  
 SELECT * FROM RA INNER JOIN RB   
@@ -119,8 +119,8 @@ SELECT * FROM RA
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
-### <a name="i-using-in-with-a-correlated-subquery"></a>I. Usando com uma subconsulta correlacionada  
- O exemplo a seguir usa `IN` em uma subconsulta correlata ou repetitiva. Trata-se de uma consulta que depende da consulta externa para obter seus valores. A consulta interna é executada repetidamente, uma vez para cada linha que pode ser selecionada pela consulta externa. Essa consulta recupera uma instância do `EmployeeKey` além do nome e sobrenome de cada funcionário para o qual o `OrderQuantity` no `FactResellerSales` tabela é `5` e para que os números de identificação de funcionário correspondem no `DimEmployee` e `FactResellerSales` tabelas.  
+### <a name="i-using-in-with-a-correlated-subquery"></a>I. Usando IN com uma subconsulta correlacionada  
+ O exemplo a seguir usa `IN` em uma subconsulta correlata ou repetitiva. Trata-se de uma consulta que depende da consulta externa para obter seus valores. A consulta interna é executada repetidamente, uma vez para cada linha que pode ser selecionada pela consulta externa. Essa consulta recupera uma instância de `EmployeeKey` além do nome e do sobrenome de cada funcionário para o qual a `OrderQuantity` na `FactResellerSales` tabela é `5` e para o qual os números de identificação de funcionário correspondem nas tabelas `DimEmployee` e `FactResellerSales`.  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -132,8 +132,8 @@ WHERE 5 IN
 ORDER BY EmployeeKey;  
 ```  
   
-### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. Usando EXISTS versus com uma subconsulta  
- O exemplo a seguir mostra consultas semanticamente equivalentes para ilustrar a diferença entre usar o `EXISTS` palavra-chave e o `IN` palavra-chave. Ambos são exemplos de uma subconsulta que recupera uma instância de cada nome de produto para o qual a subcategoria de produto é `Road Bikes`. `ProductSubcategoryKey`faz a correspondência entre o `DimProduct` e `DimProductSubcategory` tabelas.  
+### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. Usando EXISTS versus IN com uma subconsulta  
+ O exemplo a seguir mostra consultas semanticamente equivalentes para ilustrar a diferença entre usar a palavra-chave `EXISTS` e a palavra-chave `IN`. Ambos são exemplos de uma subconsulta que recupera uma instância de cada nome de produto para o qual a subcategoria de produto é `Road Bikes`. `ProductSubcategoryKey` faz a correspondência entre as tabelas `DimProduct` e `DimProductSubcategory`.  
   
 ```  
 SELECT DISTINCT EnglishProductName  

@@ -1,5 +1,5 @@
 ---
-title: "Tipo de dados precedência (Transact-SQL) | Microsoft Docs"
+title: "Precedência de tipo de dados (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -59,16 +59,16 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a seguinte ordem
 1. **tinyint**  
 1. **bit**  
 1. **ntext**  
-1. **texto**  
+1. **text**  
 1. **imagem**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (incluindo **nvarchar (max)** )  
+1. **nvarchar** [incluindo **nvarchar(max)**]  
 1. **nchar**  
-1. **varchar** (incluindo **varchar (max)** )  
+1. **varchar** [incluindo **varchar(max)**]  
 1. **char**  
-1. **varbinary** (incluindo **varbinary (max)** )  
-1. **binário** (menor)  
+1. **varbinary** [incluindo **varbinary(max)**]  
+1. **binary** (mais baixo)  
   
 ## <a name="see-also"></a>Consulte também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

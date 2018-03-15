@@ -48,13 +48,13 @@ Retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Comentários  
-@@DBTS retorna o valor usado por último carimbo de hora do banco de dados atual. Um novo valor de carimbo de data e hora é gerado quando uma linha com uma coluna **timestamp** é inserida ou atualizada.
+## <a name="remarks"></a>Remarks  
+@@DBTS retorna o valor do carimbo de data/hora do banco de dados atual usado pela última vez. Um novo valor de carimbo de data e hora é gerado quando uma linha com uma coluna **timestamp** é inserida ou atualizada.
   
-O @@DBTS função não é afetada pelas alterações nos níveis de isolamento da transação.
+A função @@DBTS não é afetada pelas alterações nos níveis de isolamento da transação.
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna atual **timestamp** do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.
+O exemplo a seguir retorna o **timestamp** atual do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de configuração &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[Simultaneidade de cursor &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[Simultaneidade do cursor &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

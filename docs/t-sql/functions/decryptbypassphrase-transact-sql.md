@@ -51,13 +51,13 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *frase secreta*  
+ *passphrase*  
  É a senha que será usada para gerar a chave para descriptografia.  
   
  @passphrase  
- É uma variável do tipo **nvarchar**, **char**, **varchar**, ou **nchar** que contém a senha que será usada para gerar a chave para descriptografia.  
+ É uma variável do tipo **nvarchar**, **char**, **varchar** ou **nchar** que contém a frase secreta que será usada para gerar a chave para descriptografia.  
   
- '*texto cifrado*'  
+ '*ciphertext*'  
  É o texto cifrado a ser descriptografado.  
   
  @ciphertext  
@@ -69,7 +69,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica se um autenticador foi criptografado junto com o texto não criptografado. É 1 se um autenticador tiver sido usado. **int**.  
   
- *autenticador*  
+ *authenticator*  
  São os dados do autenticador. **sysname**.  
   
  @authenticator  
@@ -78,7 +78,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nenhuma permissão é necessária para executar esta função.  
   
  Retorna NULL se a frase secreta errada ou informações do autenticador forem usadas.  
@@ -107,7 +107,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

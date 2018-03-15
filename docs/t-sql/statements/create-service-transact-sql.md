@@ -1,5 +1,5 @@
 ---
-title: "Criar serviço (Transact-SQL) | Microsoft Docs"
+title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,25 +54,25 @@ CREATE SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SERVICE_NAME*  
- É o nome do serviço a ser criado. Um novo serviço é criado no banco de dados atual e é de propriedade do principal especificado na cláusula AUTHORIZATION. Os nomes de servidor, banco de dados e esquema não podem ser especificados. O *service_name* deve ser um válido **sysname**.  
+ *service_name*  
+ É o nome do serviço a ser criado. Um novo serviço é criado no banco de dados atual e é de propriedade do principal especificado na cláusula AUTHORIZATION. Os nomes de servidor, banco de dados e esquema não podem ser especificados. O *service_name* deve ser um **sysname** válido.  
   
 > [!NOTE]  
->  Não crie um serviço que usa a palavra-chave ANY para o *service_name*. Quando você especifica ANY para um nome de serviço em CREATE BROLER PRIORITY, a prioridade é considerada para todos os serviços. Não fica limitada a um serviço cujo nome é ANY.  
+>  Não crie um serviço que usa a palavra-chave ANY para o *contract_name*. Quando você especifica ANY para um nome de serviço em CREATE BROLER PRIORITY, a prioridade é considerada para todos os serviços. Não fica limitada a um serviço cujo nome é ANY.  
   
- AUTORIZAÇÃO *owner_name*  
- Define o proprietário do serviço para o usuário ou função de banco de dados especificados. Quando o usuário atual é **dbo** ou **sa**, *owner_name* pode ser o nome de qualquer usuário ou função válida. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário que o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função ao qual pertence o usuário atual.  
+ AUTHORIZATION *owner_name*  
+ Define o proprietário do serviço para o usuário ou função de banco de dados especificados. Quando o usuário atual é **dbo** ou **sa**, *owner_name* pode ser o nome de qualquer usuário ou função válida. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário para o qual o usuário atual tenha a permissão IMPERSONATE ou o nome de uma função à qual o usuário atual pertença.  
   
- FILA de ON [ *schema_name***.** ] *nome_da_fila*  
- Especifica a fila que recebe as mensagens para o serviço. A fila deve existir no mesmo banco de dados assim como o serviço. Se nenhum *schema_name* for fornecido, o esquema é o esquema padrão para o usuário que executa a instrução.  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ Especifica a fila que recebe as mensagens para o serviço. A fila deve existir no mesmo banco de dados assim como o serviço. Se nenhum *schema_name* for fornecido, o esquema será o esquema padrão para o usuário que executa a instrução.  
   
  *contract_name*  
  Especifica um contrato para o qual este serviço pode ser um destino. Os programas de serviço iniciam conversas para este serviço usando os contratos especificados. Se nenhum contrato for especificado, o serviço só poderá iniciar conversas.  
   
- **[**PADRÃO**]**  
+ **[**DEFAULT**]**  
  Especifica que o serviço pode ser um destino para as conversas que seguem o contrato DEFAULT. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. O contrato DEFAULT permite que ambos os lados da conversa enviem mensagens de tipo de mensagem DEFAULT. Mensagem tipo DEFAULT usa validação NONE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um serviço expõe a funcionalidade fornecida pelos contratos com os quais está associado, de forma que eles possam ser usados por outros serviços. A instrução CREATE SERVICE especifica os contratos para os quais este serviço é o destino. Um serviço só pode ser um destino para conversas que usam os contratos especificados pelo serviço. Um serviço que não especifica nenhum contrato, não expõe nenhuma funcionalidade a outros serviços.  
   
  As conversas iniciadas deste serviço podem usar qualquer contrato. Você criará um serviço sem especificar contratos quando o serviço só for iniciar conversas.  
@@ -80,11 +80,11 @@ CREATE SERVICE service_name
  Quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] aceita uma nova conversa de um serviço remoto, o nome do serviço de destino determina a fila em que o broker coloca as mensagens na conversa.  
   
 ## <a name="permissions"></a>Permissões  
- Padrões de permissão para criar um serviço aos membros do **db_ddladmin** ou **db_owner** funções de banco de dados fixas e **sysadmin** função de servidor fixa. O usuário que executa a instrução CREATE SERVICE deve ter permissão de REFERENCES na fila e todos os contratos especificados.  
+ A permissão para criar um serviço usa como padrão os membros da função de banco de dados fixa **db_ddladmin** ou **db_owner** e a função de servidor fixa **sysadmin**. O usuário que executa a instrução CREATE SERVICE deve ter permissão de REFERENCES na fila e todos os contratos especificados.  
   
- Permissão REFERENCES para um serviço padrão é o proprietário do serviço, os membros do **db_ddladmin** ou **db_owner** fixa de funções de banco de dados e os membros do **sysadmin** função de servidor fixa. Permissões de envio para um padrão de serviço para o proprietário do serviço, os membros do **db_owner** fixo de função de banco de dados e membros do **sysadmin** função de servidor fixa.  
+ A permissão REFERENCES para um serviço usa como padrão o proprietário do serviço, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e os membros da função de servidor fixa **sysadmin**. As permissões SEND para um serviço usa como padrão o proprietário do serviço, os membros da função de banco de dados fixa **db_owner** e os membros da função de servidor fixa **sysadmin**.  
   
- Um serviço pode não ser um objeto temporário. Serviço de nomes que começam com  **#**  são permitidos, mas são objetos permanentes.  
+ Um serviço pode não ser um objeto temporário. Nomes de serviços que começam com **#** são permitidos, mas são objetos permanentes.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -107,15 +107,15 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Criando um serviço sem contratos  
- O exemplo a seguir cria o serviço `//Adventure-Works.com/Expenses on the ExpenseQueue` fila. Esse serviço não tem nenhuma informação de contrato. Portanto, o serviço só poderá ser o iniciador de um diálogo.  
+ O exemplo a seguir cria a fila `//Adventure-Works.com/Expenses on the ExpenseQueue` do serviço. Esse serviço não tem nenhuma informação de contrato. Portanto, o serviço só poderá ser o iniciador de um diálogo.  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [Remover serviço &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

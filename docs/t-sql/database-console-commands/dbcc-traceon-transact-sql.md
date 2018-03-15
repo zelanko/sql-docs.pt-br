@@ -62,12 +62,12 @@ Suprime todas as mensagens informativas.
   
 ## <a name="remarks"></a>Remarks  
 Em um servidor de produção, para evitar comportamento imprevisível, recomendamos que você habilite sinalizadores de rastreamento no servidor usando somente um dos seguintes métodos:
--   Use o **-T** opção de inicialização de linha de comando do Sqlservr.exe. Essa é a prática mais recomendada, porque assegura que todas as instruções sejam executadas com o sinalizador de rastreamento habilitado. Isso inclui comandos em scripts de inicialização. Para obter mais informações, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
--   Use DBCC TRACEON  **(* trace #* [* *,**... *n*]**, -1)** somente enquanto usuários ou aplicativos são não executando instruções simultaneamente no sistema.  
+-   Use a opção de inicialização de linha de comando **-T** do Sqlservr.exe. Essa é a prática mais recomendada, porque assegura que todas as instruções sejam executadas com o sinalizador de rastreamento habilitado. Isso inclui comandos em scripts de inicialização. Para obter mais informações, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
+-   Use DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** somente enquanto usuários ou aplicativos não estiverem executando instruções simultaneamente no sistema.  
 
 Sinalizadores de rastreamento são usados para personalizar certas características que controlam o modo operacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinalizadores de rastreamento, depois de habilitados, permanecem assim no servidor até que sejam desabilitados executando uma instrução DBCC TRACEOFF. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Para determinar o status dos sinalizadores de rastreamento, use DBCC TRACESTATUS. Para desabilitar sinalizadores de rastreamento, use DBCC TRACEOFF.
   
-Depois de ativar um sinalizador de rastreamento que afeta os planos de consulta, execute `DBCC FREEPROCCACHE;` para que os planos em cache são recompilados usando o novo comportamento que afetam o plano.
+Depois de ativar um sinalizador de rastreamento que afeta os planos de consulta, execute `DBCC FREEPROCCACHE;` para que os planos armazenados em cache sejam recompilados usando o novo comportamento que afeta o plano.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  DBCC TRACEON retorna o conjunto de resultados seguinte (mensagem):  
@@ -101,11 +101,11 @@ DBCC TRACEON (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[Habilitar que afetam o plano do SQL Server query optimizer comportamento que pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](https://support.microsoft.com/kb/2801413)
+[Habilitar o comportamento do otimizador de consulta do SQL Server que afeta o plano e pode ser controlado por diferentes sinalizadores de rastreamento em um nível de consulta específico](https://support.microsoft.com/kb/2801413)
   
   

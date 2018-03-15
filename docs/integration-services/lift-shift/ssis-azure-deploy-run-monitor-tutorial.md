@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implantar, executar e monitorar um pacote do SSIS no Azure
 Este tutorial mostra como implantar um projeto do SQL Server Integration Services no banco de dados de catálogo do SSISDB no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
@@ -29,9 +29,16 @@ Antes de começar, verifique se você tem a versão 17.2 ou posterior do SQL Ser
 
 Verifique também se você configurou o banco de dados do SSISDB e provisionou o Azure-SSIS Integration Runtime. Para obter informações sobre como provisionar o SSIS no Azure, consulte [Implantar pacotes do SSIS para o Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> A implantação no Azure tem suporte apenas para o Modelo de Implantação de Projeto.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Conectar-se ao banco de dados SSISDB
 
-Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu servidor de Banco de Dados SQL do Azure. Para obter mais informações, consulte [Conectar-se ao banco de dados do Catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md).
+Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu servidor de Banco de Dados SQL do Azure. Para saber mais e ver capturas de tela, confira o artigo [Conectar-se ao Banco de dados do catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md).
+
+Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão descritas no procedimento a seguir.
+-   Insira o nome totalmente qualificado do servidor do Banco de Dados SQL do Microsoft Azure no formato **mysqldbserver.database.windows.net**.
+-   Selecione o `SSISDB` como o banco de dados da conexão.
 
 > [!IMPORTANT]
 > Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se você estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
@@ -56,12 +63,18 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Implantar um projeto com o Assistente de Implantação
 
+Para saber mais sobre como implantar pacotes e conhecer o Assistente de Implantação, confira [Implantar pacotes e projetos do SSIS (Integration Services)](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [Assistente de Implantação do Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de Implantação do Integration Services
 1. No Pesquisador de Objetos no SSMS, com o nó **Catálogos do Integration Services** e o nó **SSISDB** expandidos, expanda a pasta do projeto.
 
 2.  Selecione o nó **Projetos**.
 
 3.  Clique com o botão direito do mouse no nó **Projetos** e selecione **Implantar projeto**. O Assistente de Implantação do Integration Services será aberto. Implante um projeto de um banco de dados de catálogo do SSIS ou do sistema de arquivos.
+
+    ![Implantar um projeto do SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![A caixa de diálogo do Assistente de Implantação do SSIS é exibida](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Implantar um projeto com o Assistente de Implantação
 1. Na página **Introdução** do Assistente de Implantação, examine a introdução. Selecione **Avançar** para abrir a página **Selecionar Origem**.

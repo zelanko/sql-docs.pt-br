@@ -1,5 +1,5 @@
 ---
-title: Object_name (Transact-SQL) | Microsoft Docs
+title: OBJECT_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna o nome de objeto de banco de dados para objetos no escopo do esquema. Para obter uma lista de objetos no escopo do esquema, consulte [sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+  Retorna o nome de objeto de banco de dados para objetos no escopo do esquema. Para obter uma lista de objetos no escopo do esquema, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- É a ID do objeto a ser usado. *object_id* é **int** e é considerado como um objeto no escopo do esquema de banco de dados especificado ou no contexto do banco de dados atual.  
+ É a ID do objeto a ser usado. *object_id* é **int** e é considerado um objeto no escopo do esquema no banco de dados especificado ou no contexto de banco de dados atual.  
   
  *database_id*  
  É a ID do banco de dados onde o objeto deve ser pesquisado. *database_id* é **int**.  
@@ -68,12 +68,12 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Permissões  
  Requer permissão ANY para o objeto. Para especificar uma identificação de banco de dados, é exigida também a permissão CONNECT para o banco de dados ou a conta de convidado deve ser habilitada.  
   
-## <a name="remarks"></a>Comentários  
- As funções de sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão for permitida. Para obter mais informações, consulte [expressões](../../t-sql/language-elements/expressions-transact-sql.md) e [onde](../../t-sql/queries/where-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ As funções de sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão for permitida. Para obter mais informações, consulte [Expressões](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  O valor retornado por esta função de sistema usa o agrupamento do banco de dados atual.  
   
- Por padrão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de objeto para a identificação do objeto especificado naquele banco de dados em vez do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
+ Por padrão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considera que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de objeto para a identificação do objeto especificado naquele banco de dados em vez do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,10 +138,10 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-objectname-in-a-where-clause"></a>D. Usando OBJECT_NAME em uma cláusula WHERE  
- O exemplo a seguir retorna colunas da exibição de catálogo `sys.objects` para o objeto especificado por `OBJECT_NAME` na cláusula `WHERE` da instrução `SELECT`. (O número de objeto (274100017 no exemplo a seguir) serão diferente.  Para testar este exemplo, pesquisar um número válido de objeto executando `SELECT name, object_id FROM sys.objects;` no banco de dados.)  
+ O exemplo a seguir retorna colunas da exibição de catálogo `sys.objects` para o objeto especificado por `OBJECT_NAME` na cláusula `WHERE` da instrução `SELECT`. O número do seu objeto (274100017, no exemplo a seguir) será diferente.  Para testar este exemplo, pesquise um número válido de objeto executando `SELECT name, object_id FROM sys.objects;` no banco de dados.)  
   
 ```  
 SELECT name, object_id, type_desc  
@@ -149,8 +149,8 @@ FROM sys.objects
 WHERE name = OBJECT_NAME(274100017);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)  
   

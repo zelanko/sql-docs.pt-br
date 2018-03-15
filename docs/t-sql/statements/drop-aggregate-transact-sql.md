@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove uma função de agregação definida pelo usuário do banco de dados atual. Funções de agregação definida pelo usuário são criadas usando [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
+  Remove uma função de agregação definida pelo usuário do banco de dados atual. As funções de agregação definidas pelo usuário são criadas usando [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta a agregação somente se ele já existe.  
+ Descarta condicionalmente a agregação somente se ela já existir.  
   
  *schema_name*  
  É o nome do esquema ao qual pertence a função de agregação definida pelo usuário.  
@@ -74,7 +74,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [Criar agregações definidas pelo usuário](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   

@@ -50,19 +50,19 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="arguments"></a>Argumentos  
  *check_expression*  
- É o [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser verificada para NULL. *check_expression* pode ser de qualquer tipo.  
+ É a [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser verificada para NULL. *check_expression* pode ser de qualquer tipo.  
   
  *replacement_value*  
- A expressão a ser retornada se *check_expression* é NULL. *replacement_value* deve ser de um tipo que é implicitamente conversível para o tipo de *check_expresssion*.  
+ É a expressão a ser retornada se *check_expression* for NULL. *replacement_value* deve ser de um tipo que seja implicitamente convertido no tipo *check_expression*.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o mesmo tipo *check_expression*. Se um NULL literal for fornecido como *check_expression*, retorna o tipo de dados de *replacement_value*. Se um NULL literal for fornecido como *check_expression* e não *replacement_value* for fornecido, retornará uma **int**.  
+ Retorna o mesmo tipo que *check_expression*. Se um NULL literal for fornecido como *check_expression*, retornará o tipo de dados de *replacement_value*. Se um NULL literal for fornecido como *check_expression* e nenhum *replacement_value* for fornecido, retornará um **int**.  
   
-## <a name="remarks"></a>Comentários  
- O valor de *check_expression* será retornado se não for NULL; caso contrário, *replacement_value* é retornado depois que ele é convertido implicitamente no tipo de *check_expression*, se os tipos são diferentes. *replacement_value* pode ser truncada se *replacement_value* é maior do que *check_expression*.  
+## <a name="remarks"></a>Remarks  
+ O valor de *check_expression* será retornado se não for NULL, caso contrário, *replacement_value* será retornado depois de ser convertido implicitamente no tipo de *check_expression*, se os tipos forem diferentes. *replacement_value* poderá ser truncado se *replacement_value* for maior do que *check_expression*.  
   
 > [!NOTE]  
->  Use [ADESÃO &#40; Transact-SQL &#41; ](../../t-sql/language-elements/coalesce-transact-sql.md) para retornar o primeiro valor não nulo.  
+>  Use [COALESCE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/coalesce-transact-sql.md) para retornar o primeiro valor não nulo.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -99,24 +99,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Description       |  DiscountPct    |   MinQty    |   Quantidade máxima       |
+|  Description       |  DiscountPct    |   MinQty    |   Quantidade Máx.       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
-|  Volume Discount   |  0.02           |   11        |   14                 |
+|  Volume Discount   |  0,02           |   11        |   14                 |
 |  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0.10           |   25        |   0                  |
+|  Volume Discount   |  0,10           |   25        |   0                  |
 |  Volume Discount   |  0.15           |   41        |   0                  |
-|  Volume Discount   |  0.20           |   61        |   0                  |
-|  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  Injeção de dependência de Capacete Sport   |  0.10           |   0         |   0                  |
-|  Road-650 Overst   |  0.30           |   0         |   0                  |
-|  Pneu para Mountain Bike S   |  0.50           |   0         |   0                  |
-|  Injeção de dependência de Capacete Sport   |  0.15           |   0         |   0                  |
-|  Quadro de estrada LL S   |  0.35           |   0         |   0                  |
-|  Pr Touring-3000   |  0.15           |   0         |   0                  |
-|  Pr Touring-1000   |  0.20           |   0         |   0                  |
-|  Metade do preço Peda   |  0.50           |   0         |   0                  |
-|  Si Mountain-500   |  0.40           |   0         |   0                  |
+|  Volume Discount   |  0,20           |   61        |   0                  |
+|  Mountain-100 Cl   |  0,35           |   0         |   0                  |
+|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Road-650 Overst   |  0,30           |   0         |   0                  |
+|  Mountain Tire S   |  0.50           |   0         |   0                  |
+|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  LL Road Frame S   |  0,35           |   0         |   0                  |
+|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
+|  Touring-1000 Pr   |  0,20           |   0         |   0                  |
+|  Half-Price Peda   |  0.50           |   0         |   0                  |
+|  Mountain-500 Si   |  0,40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
   
@@ -132,10 +132,10 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. Usando ISNULL com AVG  
- O exemplo a seguir encontra a média do peso de todos os produtos em uma tabela de exemplo. Substitui o valor `50` para todas as entradas NULL na coluna `Weight` da tabela `Product`.  
+ O exemplo a seguir localiza a média do peso de todos os produtos em uma tabela de amostra. Substitui o valor `50` para todas as entradas NULL na coluna `Weight` da tabela `Product`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,15 +168,15 @@ ORDER BY ResellerName;
   
 |  ResellerName                |  MinimumPayment    |
 |  -------------------------   |  --------------    |
-|  Uma associação de bicicleta       |     0.0000         |
-|  Um repositório de bicicleta                |     0.0000         |
-|  Uma fábrica de ciclo                |     0.0000         |
-|  Uma empresa de bicicleta ótimo     |     0.0000         |
-|  Uma loja de bicicleta típico         |   200.0000         |
-|  Aceitável de vendas e de serviço  |     0.0000         |
+|  Uma Associação de Bicicletas       |     0,0000         |
+|  Uma Loja de Bicicletas                |     0,0000         |
+|  Uma Loja de Bike                |     0,0000         |
+|  Uma Ótima Empresa de Bicicleta     |     0,0000         |
+|  Uma Loja de Bicicletas Típica         |   200,0000         |
+|  Vendas e Serviço Aceitáveis  |     0,0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Usando IS NULL para testar o NULL em uma cláusula WHERE  
- O exemplo a seguir localiza todos os produtos que têm `NULL` no `Weight` coluna. Observe o espaço entre `IS` e `NULL`.  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Usando IS NULL para testar NULL em uma cláusula WHERE  
+ O exemplo a seguir localiza todos os produtos que têm `NULL` na coluna `Weight`. Observe o espaço entre `IS` e `NULL`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,12 +186,12 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [É NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [União &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
 

@@ -48,7 +48,7 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *numeric_expression*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de exato dados numéricos aproximados ou categoria de tipo, exceto para o **bit** tipo de dados.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.
   
 ## <a name="return-types"></a>Tipos de retorno
 Retorna o mesmo tipo que *numeric_expression*.
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

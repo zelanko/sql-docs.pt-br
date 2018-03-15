@@ -46,26 +46,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *data_type [(comprimento)]*  
- O tipo de dados no qual converter *expressão*.  
+ *data_type [ ( length ) ]*  
+ O tipo de dados no qual converter *expression*.  
   
  *expressão*  
  O valor a ser convertido.  
   
- *estilo*  
- Expressão de inteiro opcional que especifica como o **TRY_CONVERT** função é converter *expressão*.  
+ *style*  
+ Expressão de inteiro opcional que especifica como a função **TRY_CONVERT** deve converter *expression*.  
   
- *estilo* aceita os mesmos valores que o *estilo* parâmetro o **converter** função. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ *style* aceita os mesmos valores do parâmetro *style* da função **CONVERT**. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
- O intervalo de valores aceitáveis é determinado pelo valor de *data_type*. Se *estilo* for nulo, **TRY_CONVERT** retorna nulo.  
+ O intervalo de valores aceitáveis é determinado pelo valor de *data_type*. Se *style* for nulo, **TRY_CONVERT** retornará nulo.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna uma conversão de valor ao tipo de dados especificado se a conversão for bem-sucedida; caso contrário, retorna nulo.  
   
 ## <a name="remarks"></a>Remarks  
- **TRY_CONVERT** usa o valor passado para ele e tenta convertê-lo em especificado *data_type*. Se a conversão for bem-sucedida, **TRY_CONVERT** retorna o valor conforme o especificado *data_type*; se ocorrer um erro, null será retornado. No entanto se você solicitar uma conversão que não é permitida explicitamente, em seguida, **TRY_CONVERT** falhará com um erro.  
+ **TRY_CONVERT** usa o valor passado a ele e tenta convertê-lo no *data_type* especificado. Se a conversão for bem-sucedida, **TRY_CONVERT** retornará o valor como o *data_type* especificado; se ocorrer um erro, será retornado nulo. Porém, se você solicitar uma conversão que não é permitida explicitamente, **TRY_CONVERT** falhará com um erro.  
   
- **TRY_CONVERT** é uma palavra reservada no nível de compatibilidade 110 e superior.  
+ **TRY_CONVERT** é uma palavra-chave reservada no nível de compatibilidade 110 e superior.  
   
  Essa função é capaz de ser remota para servidores da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

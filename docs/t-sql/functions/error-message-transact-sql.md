@@ -56,10 +56,10 @@ ERROR_MESSAGE ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ERROR_MESSAGE pode ser acionado em qualquer lugar dentro do escopo de um bloco CATCH.  
   
- ERROR_MESSAGE retorna a mensagem de erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. Isso é diferente de funções como @@ERROR, que retorna apenas um número de erro na instrução imediatamente posterior àquela que causa um erro ou bloquear a primeira instrução de um problema.  
+ ERROR_MESSAGE retorna a mensagem de erro, independentemente do número de vezes que ele é executado ou se é executado dentro do escopo do bloco CATCH. É diferente de funções como @@ERROR, que retornam apenas um número de erro na instrução imediatamente posterior àquela que causa um erro ou a primeira instrução de um bloco CATCH.  
   
  Em blocos CATCH aninhados, ERROR_MESSAGE retorna a mensagem de erro específica do escopo do bloco CATCH no qual é referenciado. Por exemplo, o bloco CATCH de uma construção TRY...CATCH externa poderia ter uma construção TRY...CATCH aninhada. Dentro do bloco CATCH aninhado, ERROR_MESSAGE retornará a mensagem de erro que invocou o bloco CATCH aninhado. Se ERROR_MESSAGE for executado em um bloco CATCH externo, retornará a mensagem de erro que invocou esse bloco CATCH.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_MESSAGE em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Além da mensagem de erro, são retornadas as informações relacionadas ao erro.  

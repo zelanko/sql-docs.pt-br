@@ -49,11 +49,11 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>Argumentos  
  *collation_name*  
- É o nome do agrupamento a ser aplicado à expressão, definição de coluna ou de banco de dados. *collation_name* pode ser apenas um especificado *Windows_collation_name* ou um *SQL_collation_name*. *collation_name* deve ser um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
+ É o nome do agrupamento a ser aplicado à expressão, definição de coluna ou de banco de dados. *collation_name* pode ser apenas um *Windows_collation_name* ou um *SQL_collation_name* especificado. *collation_name* deve ser um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
   
- *Windows_collation_name* é o nome de agrupamento para um [nome de agrupamento do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ *Windows_collation_name* é o nome de agrupamento de um [Nome de Agrupamento do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- *SQL_collation_name* é o nome de agrupamento para um [nome de agrupamento do SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ *SQL_collation_name* é o nome de agrupamento de um [Nome de Agrupamento do SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  Ao aplicar um agrupamento no nível de definição do banco de dados, não é possível usar agrupamentos do Windows somente Unicode com a cláusula COLLATE.  
   
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      É possível usar a cláusula COLLATE da instrução CREATE DATABASE ou ALTER DATABASE para especificar o agrupamento padrão do banco de dados. Também é possível especificar um agrupamento ao criar um banco de dados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se um agrupamento não for especificado, o banco de dados será atribuído ao agrupamento padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Agrupamentos somente Unicode do Windows só pode ser usado com a cláusula COLLATE para aplicar agrupamentos ao **nchar**, **nvarchar**, e **ntext** tipos de dados no nível de coluna e dados de nível de expressão; eles não podem ser usados com a cláusula COLLATE para alterar o agrupamento de uma instância de servidor ou banco de dados.  
+    >  Agrupamentos do Windows somente Unicode podem ser usados com a cláusula COLLATE somente para aplicar agrupamentos aos tipos de dados **nchar**, **nvarchar** e **ntext** em dados nos níveis de coluna e de expressão; não é possível usá-los com a cláusula COLLATE para alterar o agrupamento de uma instância de banco de dados ou de servidor.  
   
 2.  Criando ou alterando uma coluna de tabela.  
   
      Você pode especificar agrupamentos para cada coluna de cadeia de caracteres usando a cláusula COLLATE da instrução CREATE TABLE ou ALTER TABLE. Também é possível especificar um agrupamento ao criar uma tabela usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se um agrupamento não for especificado, a coluna será atribuída ao agrupamento padrão do banco de dados.  
   
-     Você também pode usar o `database_default` opção na cláusula COLLATE para especificar que uma coluna em uma tabela temporária usa o agrupamento padrão do banco de dados do usuário atual para a conexão, em vez de **tempdb**.  
+     Também é possível usar a opção `database_default` na cláusula COLLATE para especificar que uma coluna de uma tabela temporária usa o padrão de agrupamento do banco de dados de usuário atual para a conexão em vez de **tempdb**.  
   
 3.  Convertendo o agrupamento de uma expressão.  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  Variáveis, rótulos GOTO, procedimentos armazenados temporários e tabelas temporárias podem ser criados quando o contexto de conexão é associado a um banco de dados e, em seguida, referenciado quando o contexto é alternado para outro banco de dados. Os identificadores para variáveis, os rótulos GOTO, os procedimentos armazenados temporários e as tabelas temporárias estão no agrupamento padrão da instância de servidor.  
   
- A cláusula COLLATE pode ser aplicada apenas para o **char**, **varchar**, **texto**, **nchar**, **nvarchar** , e **ntext** tipos de dados.  
+ A cláusula COLLATE pode ser aplicada apenas aos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
   
- COLLATE usa *collate_name* para se referir ao nome do agrupamento do SQL Server ou o agrupamento do Windows a ser aplicado à expressão, definição de coluna ou definição de banco de dados. *collation_name* pode ser apenas um especificado *Windows_collation_name* ou um *SQL_collation_name* e o parâmetro deve conter um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
+ COLLATE usa *collate_name* para referenciar o nome do agrupamento do SQL Server ou do Windows a ser aplicado à expressão, definição de coluna ou definição de banco de dados. *collation_name* pode ser somente um *Windows_collation_name* ou *SQL_collation_name* especificado e o parâmetro deve conter um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
   
- Geralmente, os agrupamentos são identificados por um nome de agrupamento, exceto na Instalação. Na instalação, em vez disso, especifique o designador de agrupamento raiz (a localidade do agrupamento) para agrupamentos do Windows e, em seguida, especifique as opções de classificação são diferencia ou não maiusculas ou acentos.  
+ Geralmente, os agrupamentos são identificados por um nome de agrupamento, exceto na Instalação. Na Instalação, especifique o designador de agrupamento raiz (a localidade do agrupamento) para agrupamentos do Windows e, em seguida, especifique opções de classificação que diferenciam ou não maiúsculas e minúsculas ou caracteres com ou sem acentos.  
   
- Você pode executar a função de sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar uma lista de todos os nomes de agrupamento válido para agrupamentos do Windows e agrupamentos do SQL Server:  
+ Execute a função do sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar uma lista de todos os nomes de agrupamentos válidos para agrupamentos do Windows e SQL Server:  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   Especificando um agrupamento para uma coluna ao criar ou alterar uma tabela.  
   
--   Ao restaurar ou anexar um banco de dados, o agrupamento padrão do banco de dados e o agrupamento de qualquer **char**, **varchar**, e **texto** colunas ou parâmetros no banco de dados deve ser suportado pelo sistema operacional.  
+-   Ao restaurar ou anexar um banco de dados, o agrupamento padrão do banco de dados e o agrupamento de qualquer coluna ou parâmetro **char**, **varchar** e **text** no banco de dados devem ser compatíveis com o sistema operacional.  
   
 > [!NOTE]
-> Conversões de página de código têm suporte para **char** e **varchar** tipos de dados, mas não para **texto** tipo de dados. A perda de dados durante traduções de página de código não é informada.  
+> Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. A perda de dados durante traduções de página de código não é informada.  
   
 > [!NOTE]
-> Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código sem suporte no Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
+> Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código não compatível com o Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -158,11 +158,11 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. Exemplos adicionais  
- Para obter exemplos adicionais que usam **COLLATE**, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) exemplo **g. criando um banco de dados e especificando um nome de agrupamento e opções**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) exemplo **V. alterando o agrupamento de coluna**.  
+ Para obter mais exemplos que usam **COLLATE**, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples), exemplo **G. Criando um banco de dados e especificando um nome de agrupamento e opções** e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando um agrupamento de coluna**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
  [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     

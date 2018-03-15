@@ -34,32 +34,32 @@ ms.lasthandoff: 01/18/2018
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Remove o caractere de espaço `char(32)` ou outros caracteres especificados do início ou término de uma cadeia de caracteres.  
+Remove o caractere de espaço `char(32)` ou outros caracteres especificados do início ou final de uma cadeia de caracteres.  
  
 ## <a name="syntax"></a>Sintaxe   
 ```
 TRIM ( [ characters FROM ] string ) 
 ```
-[//]: # "[AMBOS | À ESQUERDA | À direita] não ainda disponível."
+[//]: # "[ BOTH | LEADING | TRAILING ] ainda não disponíveis."
 
 ## <a name="arguments"></a>Argumentos   
 
-Caracteres   
-É um literal, uma variável ou uma chamada de função de qualquer tipo de caractere não LOB (`nvarchar`, `varchar`, `nchar`, ou `char`) que contém caracteres que devem ser removidos. `nvarchar(max)`e `varchar(max)` tipos não são permitidos.
+characters   
+É um literal, uma variável ou uma chamada de função de qualquer tipo de caractere não LOB (`nvarchar`, `varchar`, `nchar` ou `char`) que contém caracteres que devem ser removidos. Os tipos `nvarchar(max)` e `varchar(max)` não são permitidos.
 
 cadeia de caracteres   
-É uma expressão de qualquer tipo de caractere (`nvarchar`, `varchar`, `nchar`, ou `char`) onde os caracteres devem ser removidos.
+É uma expressão de qualquer tipo de caractere (`nvarchar`, `varchar`, `nchar` ou `char`) na qual os caracteres devem ser removidos.
 
 ## <a name="return-types"></a>Tipos de retorno   
-Retorna uma expressão de caractere com um tipo de argumento de cadeia de caracteres onde o caractere de espaço `char(32)` ou outros caracteres especificados são removidos de ambos os lados. Retorna `NULL` se a cadeia de caracteres de entrada é `NULL`.
+Retorna uma expressão de caractere com um tipo de argumento de cadeia de caracteres na qual o caractere de espaço `char(32)` ou outros caracteres especificados são removidos de ambos os lados. Retorna `NULL` se a cadeia de caracteres de entrada é `NULL`.
 
 ## <a name="remarks"></a>Remarks   
-Por padrão `TRIM` função remove o caractere de espaço `char(32)` de ambos os lados. Isso é equivalente a `LTRIM(RTRIM(@string))`. Comportamento de `TRIM ` função com os caracteres especificados é idêntica ao comportamento de `REPLACE` função onde os caracteres do início ou término são substituídos por cadeias de caracteres vazias.
+Por padrão, a função `TRIM` remove o caractere de espaço `char(32)` de ambos os lados. Isso é equivalente a `LTRIM(RTRIM(@string))`. O comportamento da função `TRIM ` com os caracteres especificados é idêntico ao comportamento da função `REPLACE`, em que os caracteres do início ou final são substituídos por cadeias de caracteres vazias.
 
 
 ## <a name="examples"></a>Exemplos
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Remove o caractere de espaço de ambos os lados da cadeia de caracteres   
-O exemplo a seguir remove os espaços de antes e depois da palavra `test`.   
+O exemplo a seguir remove os espaços antes e depois da palavra `test`.   
 ```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
@@ -69,7 +69,7 @@ SELECT TRIM( '     test    ') AS Result;
 `test`
 
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Remove determinados caracteres de ambos os lados da cadeia de caracteres   
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Remove caracteres especificados de ambos os lados da cadeia de caracteres   
 O exemplo a seguir remove um ponto à direita e espaços à direita.
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
@@ -79,11 +79,11 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 `#     test`
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

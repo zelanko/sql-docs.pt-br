@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Ignora os caracteres especiais em textos e retorna o texto com caracteres de escape. **STRING_ESCAPE** é uma função determinística.  
+  Faz o escape dos caracteres especiais em textos e retorna o texto com caracteres com escape. **STRING_ESCAPE** é uma função determinística.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>Argumentos  
  *text*  
- É um **nvarchar**[expressão](../../t-sql/language-elements/expressions-transact-sql.md) expressão que representa o objeto que deve ser de escape.  
+ É uma expressão **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) que representa o objeto que deve ter escape.  
   
- *type*  
+ *tipo*  
  Regras de escape que serão aplicadas. Atualmente, o valor com suporte é `'json'`.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (max)** texto com especial com caracteres de escape e caracteres de controle. No momento **STRING_ESCAPE** somente podem escapar caracteres especiais do JSON mostrados nas tabelas a seguir.  
+ Texto **nvarchar(max)** com caracteres especiais e de controle com escape. No momento, **STRING_ESCAPE** somente pode fazer o escape de caracteres especiais JSON mostrados nas tabelas a seguir.  
   
 |Caractere especial|Sequência codificada|  
 |-----------------------|----------------------|  
 |Aspas (")|\\"|  
-|barra invertida (\\)|\\\|  
-|barra (/)|\\/|  
+|Barra invertida (\\)|\\\|  
+|Barra "/"|\\/|  
 |Backspace|\b|  
 |Avanço de formulário|\f|  
 |Linha nova|\n|  
@@ -76,8 +76,8 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Texto de acordo com a regras de formatação de JSON de escape  
- A consulta a seguir ignora os caracteres especiais usando regras JSON e retorna o texto de escape.  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Fazer o escape do texto de acordo com as regras de formatação do JSON  
+ A consulta a seguir faz o escape de caracteres especiais usando regras do JSON e retorna o texto com escape.  
   
 ```  
 SELECT STRING_ESCAPE('\   /  
@@ -92,15 +92,15 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. Objeto do formato JSON  
- A consulta a seguir cria o texto JSON de número e a cadeia de caracteres variáveis e ignora os caracteres especiais do JSON em variáveis.  
+### <a name="b-format-json-object"></a>B. Formatar objeto JSON  
+ A consulta a seguir cria o texto JSON com base nas variáveis de número e cadeia de caracteres e faz o escape dos caracteres JSON especiais em variáveis.  
   
 ```  
 SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -110,6 +110,6 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Gravando instruções Transact-SQL | Microsoft Docs"
+title: "Tutorial: Escrevendo instruções Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Bem-vindo à gravação [!INCLUDE[tsql](../includes/tsql-md.md)] tutorial de instruções. Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
+[!INCLUDE[tsql](../includes/tsql-md.md)] Bem-vindo ao tutorial Escrevendo instruções [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] . Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
   
 >**OBSERVAÇÃO:** se você for um iniciante, talvez seja mais fácil usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em vez de escrever instruções [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   

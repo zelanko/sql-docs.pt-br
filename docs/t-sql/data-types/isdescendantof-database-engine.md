@@ -1,5 +1,5 @@
 ---
-title: IsDescendantOf (mecanismo de banco de dados) | Microsoft Docs
+title: IsDescendantOf (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retornará true se *isso* é um descendente do pai.
+Retornará true se *this* for descendente de um pai.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*pai*  
-O **hierarchyid** nó para o qual o teste IsDescendantOf deve ser executado.
+*parent*  
+O nó **hierarchyid** para o qual o teste IsDescendantOf deve ser executado.
   
 ## <a name="return-types"></a>Tipos de retorno  
-**Tipo de retorno do SQL Server: bit**
+**SQL Server return type:bit**
   
-**Tipo de retorno CLR: SqlBoolean**
+**CLR return type:SqlBoolean**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Retornar true para todos os nós na subárvore com raiz em pai e false para todos os outros nós.
   
 Pai é considerado seu próprio descendente.

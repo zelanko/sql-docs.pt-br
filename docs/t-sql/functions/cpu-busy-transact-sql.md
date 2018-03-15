@@ -37,13 +37,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; & #x 40. CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou desde que foi iniciado pela última vez. Resultados em incrementos de tempo de CPU, ou "tiques" e é cumulativo para todas as CPUs, portanto pode exceder o tempo decorrido real. Multiplique por@TIMETICKS para converter em microssegundos.
+Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou desde que foi iniciado pela última vez. O resultado é indicado em incrementos de tempo de CPU ou "tiques", sendo cumulativo para todas as CPUs; portanto, ele pode exceder o tempo decorrido real. Multiplique por @@TIMETICKS para converter em microssegundos.
   
 > [!NOTE]  
->  Se o tempo retornado em@CPU_BUSY ou @@IO_BUSY exceder aproximadamente 49 dias de tempo de CPU cumulativo, você receberá um aviso de estouro aritmético. Nesse caso, o valor de @@CPU_BUSY, @@IO_BUSY e @@IDLE variáveis não são precisos.  
+>  Se o tempo retornado em @@CPU_BUSY ou @@IO_BUSY exceder aproximadamente 49 dias de tempo de CPU cumulativo, você receberá um aviso de estouro aritmético. Nesse caso, o valor das variáveis @@CPU_BUSY, @@IO_BUSY e @@IDLE não é preciso.  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,8 +56,8 @@ Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ## <a name="return-types"></a>Tipos de retorno
 **inteiro**
   
-## <a name="remarks"></a>Comentários  
-Para exibir um relatório que contém várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estatísticas, inclusive a atividade da CPU, execute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a atividade da CPU, execute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir mostra o retorno de atividade de CPU do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da data e hora atuais. Para evitar estouro aritmético ao converter o valor em microssegundos, o exemplo converte um dos valores no tipo de dados `float`.
@@ -76,10 +76,10 @@ CPU microseconds As of
 ```
   
 ## <a name="see-also"></a>Consulte também
-[sys.DM os_sys_info &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
+[sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  
-[sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
-[Funções estatísticas do sistema &#40;Transact-SQL&#4#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
+[Funções estatísticas do sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)
   
   

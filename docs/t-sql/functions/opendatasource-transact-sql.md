@@ -52,16 +52,16 @@ OPENDATASOURCE ( provider_name, init_string )
   
 ## <a name="arguments"></a>Argumentos  
  *provider_name*  
- É o nome registrado como PROGID do provedor OLE DB usado para acessar a fonte de dados. *provider_name* é um **char** tipo de dados, sem nenhum valor padrão.  
+ É o nome registrado como PROGID do provedor OLE DB usado para acessar a fonte de dados. *provider_name* é um tipo de dados **char** sem nenhum valor padrão.  
   
  *init_string*  
- A cadeia de caracteres de conexão é passada para a interface IDataInitialize do provedor de destino. A sintaxe da cadeia de caracteres de provedor baseia-se em pares de palavra-chave-valor separados por ponto e vírgula, como: **'***keyword1*=*valor***;** *keyword2*=*valor***'**.  
+ É a cadeia de conexão passada à interface IDataInitialize do provedor de destino. A sintaxe de cadeia de caracteres de provedor é baseada em pares de valor e palavra-chave separados por ponto e vírgula, como: **'***keyword1*=*value***;***keyword2*=*value***'**.  
   
- Para ver os pares de valor e palavra-chave específicos com suporte no provedor, consulte o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access. Essa documentação define a sintaxe básica. A tabela a seguir listas usadas mais frequentemente palavras-chave no *init_string* argumento.  
+ Para ver os pares de valor e palavra-chave específicos com suporte no provedor, consulte o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access. Essa documentação define a sintaxe básica. A tabela a seguir lista as palavras-chave mais usadas no argumento *init_string*.  
   
 |Palavra-chave|Propriedade OLE DB|Valores válidos e descrição|  
 |-------------|---------------------|----------------------------------|  
-|Fonte de dados|DBPROP_INIT_DATASOURCE|Nome da fonte de dados à qual se conectar. Provedores diferentes interpretam isso de várias formas. Para o provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, isso indica o nome do servidor. Para o provedor OLE DB Jet, indica o caminho completo do arquivo .mdb ou .xls.|  
+|fonte de dados|DBPROP_INIT_DATASOURCE|Nome da fonte de dados à qual se conectar. Provedores diferentes interpretam isso de várias formas. Para o provedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, isso indica o nome do servidor. Para o provedor OLE DB Jet, indica o caminho completo do arquivo .mdb ou .xls.|  
 |Local|DBPROP_INIT_LOCATION|Local do banco de dados ao qual se conectar.|  
 |Propriedades estendidas|DBPROP_INIT_PROVIDERSTRING|A cadeia de conexão específica do provedor.|  
 |Tempo limite de conexão|DBPROP_INIT_TIMEOUT|Valor de tempo limite após o qual a tentativa de conexão falha.|  
@@ -70,7 +70,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Catálogo|DBPROP_INIT_CATALOG|O nome do catálogo inicial ou padrão durante a conexão à fonte de dados.|  
 |Segurança Integrada|DBPROP_AUTH_INTEGRATED|SSPI, para especificar a Autenticação do Windows|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função OPENDATASOURCE pode ser usada para acessar dados remotos de fontes de dados OLE DB somente quando a opção do Registro DisallowAdhocAccess está definida explicitamente como 0 para o provedor especificado, e a opção de configuração avançada Ad Hoc Distributed Queries está habilitada. Quando essas opções não estão definidas, o comportamento padrão não permite acesso ad hoc.  
   
  A função OPENDATASOURCE pode ser usada nos mesmos locais da sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] que um nome de servidor vinculado. Portanto, OPENDATASOURCE pode ser usada como a primeira parte de um nome de quatro partes que faz referência a um nome de tabela ou exibição em uma instrução SELECT, INSERT, UPDATE ou DELETE, ou a um procedimento armazenado remoto em uma instrução EXECUTE. Ao executar procedimentos armazenados remotos, OPENDATASOURCE deve fazer referência a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE não aceita variáveis para seus argumentos.  
@@ -80,7 +80,7 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  A Autenticação do Windows é muito mais segura do que a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre que possível, você deve usar a Autenticação do Windows. OPENDATASOURCE não deve ser usada com senhas explícitas na cadeia de conexão.  
   
- Os requisitos de conexão de cada provedor são semelhantes aos requisitos desses parâmetros durante a criação de servidores vinculados. Os detalhes dos muitos provedores comuns estão listados no tópico [sp_addlinkedserver &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Os requisitos de conexão de cada provedor são semelhantes aos requisitos desses parâmetros durante a criação de servidores vinculados. Os detalhes dos muitos provedores comuns estão listados no tópico [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  Qualquer chamada para OPENDATASOURCE, OPENQUERY ou OPENROWSET na cláusula FROM é avaliada separada e independentemente de qualquer chamada para essas funções usadas como o destino da atualização, mesmo se argumentos idênticos forem fornecidos às duas chamadas. Em particular, as condições de filtro ou junção aplicadas no resultado de uma dessas chamadas não têm efeito sobre os resultado da outra.  
   
@@ -104,7 +104,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
 'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

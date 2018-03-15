@@ -61,20 +61,20 @@ CREATE CONTRACT contract_name
 > [!NOTE]  
 >  Não crie um contrato que usa a palavra-chave ANY para o *contract_name*. Quando você especifica ANY para um nome de serviço em CREATE BROKER PRIORITY, a prioridade é considerada para todos os contratos. Ela não fica limitada a um contrato cujo nome é ANY.  
   
- AUTORIZAÇÃO *owner_name*  
- Define o proprietário do contrato para o usuário ou a função de banco de dados especificada. Quando o usuário atual é **dbo** ou **sa**, *owner_name* pode ser o nome de qualquer usuário ou função válida. Caso contrário, *owner_name* deve ser o nome do usuário atual, o nome de um usuário que o usuário atual tem permissões de representação ou o nome de uma função ao qual pertence o usuário atual. Quando esta cláusula é omitida, o contrato pertence ao usuário atual.  
+ AUTHORIZATION *owner_name*  
+ Define o proprietário do contrato para o usuário ou a função de banco de dados especificada. Quando o usuário atual é **dbo** ou **sa**, *owner_name* pode ser o nome de qualquer usuário ou função válida. Caso contrário, *owner_name* deverá ser o nome do usuário atual, o nome de um usuário para o qual o usuário atual tem permissões de representação ou o nome de uma função à qual o usuário atual pertence. Quando esta cláusula é omitida, o contrato pertence ao usuário atual.  
   
  *message_type_name*  
  É o nome de um tipo de mensagem a ser incluído como parte do contrato.  
   
  SENT BY  
- Especifica qual ponto de extremidade pode enviar uma mensagem do tipo indicado. Os contratos documentam as mensagens que os serviços podem usar para ter conversas específicas. Cada conversa tem dois pontos de extremidade: o *iniciador* ponto de extremidade, o serviço que iniciou a conversa, e o *destino* ponto de extremidade, o serviço que o iniciador está contatando.  
+ Especifica qual ponto de extremidade pode enviar uma mensagem do tipo indicado. Os contratos documentam as mensagens que os serviços podem usar para ter conversas específicas. Cada conversa contém dois pontos de extremidade: o ponto do *iniciador*, o serviço que iniciou a conversa, e o ponto de *destino*, o serviço que o iniciador está contatando.  
   
  INITIATOR  
- Indica que somente o iniciador da conversa pode enviar mensagens do tipo especificado. Um serviço que inicia uma conversa é conhecido como o *iniciador* da conversa.  
+ Indica que somente o iniciador da conversa pode enviar mensagens do tipo especificado. Um serviço que inicia uma conversa é chamado de *iniciador* da conversa.  
   
  TARGET  
- Indica que somente o destino da conversa pode enviar mensagens do tipo especificado. Um serviço que aceita uma conversa que foi iniciada por outro serviço é conhecido como o *destino* da conversa.  
+ Indica que somente o destino da conversa pode enviar mensagens do tipo especificado. Um serviço que aceita uma conversa iniciada por outro serviço é chamado de *destino* da conversa.  
   
  ANY  
  Indica que as mensagens deste tipo podem ser enviadas pelo iniciador e pelo destino.  
@@ -83,20 +83,20 @@ CREATE CONTRACT contract_name
  Indica que este contrato dá suporte a mensagens do tipo padrão. Por padrão, todos os bancos de dados contêm um tipo de mensagem denominado DEFAULT. Esse tipo de mensagem usa uma validação de NONE. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. O Microsoft SQL Server também fornece um contrato DEFAULT que especifica o tipo de mensagem DEFAULT.  
   
 ## <a name="remarks"></a>Remarks  
- A ordem de tipos de mensagem no contrato não é significativa. Depois que o destino recebe a primeira mensagem, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que cada lado da conversa envie qualquer mensagem permitida para aquele lado a qualquer hora. Por exemplo, se o iniciador da conversa pode enviar o tipo de mensagem **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que o iniciador envie qualquer número de **SubmitExpense**mensagens durante a conversa.  
+ A ordem de tipos de mensagem no contrato não é significativa. Depois que o destino recebe a primeira mensagem, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que cada lado da conversa envie qualquer mensagem permitida para aquele lado a qualquer hora. Por exemplo, se o iniciador da conversa puder enviar o tipo de mensagem **//Adventure-Works.com/Expenses/SubmitExpense**, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permitirá que o iniciador envie qualquer quantidade de mensagens **SubmitExpense** durante a conversa.  
   
  Os tipos e as direções de mensagens não podem ser alterados em um contrato. Para alterar a AUTHORIZATION para um contrato, use a instrução ALTER AUTHORIZATION.  
   
  Um contrato deve permitir que o iniciador envie uma mensagem. A instrução CREATE CONTRACT falha quando o contrato não contém pelo menos um tipo de mensagem que seja SENT BY ANY ou SENT BY INITIATOR.  
   
- Independentemente do contrato, um serviço pode sempre receber os tipos de mensagem `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error`, e `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa esses tipos de mensagem para mensagens de sistema enviadas ao aplicativo.  
+ Independentemente do contrato, um serviço pode sempre receber os tipos de mensagem `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error` e `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa esses tipos de mensagem para mensagens de sistema enviadas ao aplicativo.  
   
  Um contrato não pode ser um objeto temporário. Os nomes de contrato que começam com # são permitidos, mas são objetos permanentes.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, membros do **db_ddladmin** ou **db_owner** funções de banco de dados fixas e **sysadmin** pode criar contratos a função de servidor fixa.  
+ Por padrão, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** ou da função de servidor fixa **sysadmin** podem criar contratos.  
   
- Por padrão, o proprietário do contrato, membros do **db_ddladmin** ou **db_owner** fixa de funções de banco de dados e os membros do **sysadmin** função de servidor fixa têm referências permissão em um contrato.  
+ Por padrão, o proprietário do contrato, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e os membros da função de servidor fixa **sysadmin** têm a permissão REFERENCES em um contrato.  
   
  O usuário que executa a instrução CREATE CONTRACT deve ter a permissão REFERENCES em todos os tipos de mensagem especificados.  
   
@@ -129,7 +129,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

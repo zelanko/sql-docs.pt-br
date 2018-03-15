@@ -1,5 +1,5 @@
 ---
-title: ENTRADA (Transact-SQL) | Microsoft Docs
+title: SIGN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de exato dados numéricos aproximados ou categoria de tipo, exceto para o **bit** tipo de dados.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
   
 |Expressão especificada|Tipo de retorno|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**smallint/int/tinyint**|**int**|  
-|**Money/smallmoney**|**money**|  
-|**numérico/decimal**|**numérico/decimal**|  
+|**int/smallint/tinyint**|**int**|  
+|**money/smallmoney**|**money**|  
+|**numeric/decimal**|**numeric/decimal**|  
 |**Outros tipos**|**float**|  
   
 ## <a name="examples"></a>Exemplos  
@@ -103,8 +103,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir retorna os valores de entrada de três números.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir retorna os valores SIGN de três números.  
   
 ```  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
@@ -117,8 +117,8 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 -1     0      1
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

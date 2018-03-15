@@ -1,5 +1,5 @@
 ---
-title: "Criar função de aplicativo (Transact-SQL) | Microsoft Docs"
+title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,20 +56,20 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Especifica o nome da função de aplicativo. Esse nome ainda não deve ser usado para referenciar qualquer entidade no banco de dados.  
   
- SENHA **='***senha***'**  
- Especifica a senha que os usuários de banco de dados usam para ativar a função do aplicativo. Você sempre deve usar senhas fortes. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Especifica a senha que os usuários de banco de dados usam para ativar a função do aplicativo. Você sempre deve usar senhas fortes. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA  **=**  *schema_name*  
+ DEFAULT_SCHEMA **=***schema_name*  
  Especifica o primeiro esquema que é pesquisado pelo servidor quando ele resolve os nomes de objetos para essa função. Se DEFAULT_SCHEMA for deixado indefinido, a função de aplicativo usará DBO como seu esquema padrão. *schema_name* pode ser um esquema que não existe no banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  A complexidade de Senha é verificada quando as senhas de função de aplicativo são definidas. Os aplicativos que invocam funções de aplicativo devem armazenar suas senhas. As senhas de função de aplicativo devem sempre ser criptografadas ao serem armazenadas.  
   
- Funções de aplicativo são visíveis no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) exibição do catálogo.  
+ As funções de aplicativo são visíveis na exibição do catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
- Para obter informações sobre como usar funções de aplicativo, consulte [funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  
+ Para obter informações sobre como usar funções de aplicativo, veja [Funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -87,11 +87,11 @@ CREATE APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_setapprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [ALTERAR a função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [Remover função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de Aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [Política de senha](../../relational-databases/security/password-policy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

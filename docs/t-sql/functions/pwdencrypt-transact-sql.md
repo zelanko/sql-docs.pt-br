@@ -48,8 +48,8 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *senha*  
- É a senha a ser criptografada. *senha* é **sysname**.  
+ *password*  
+ É a senha a ser criptografada. *password* é **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary(128)**  
@@ -57,8 +57,8 @@ PWDENCRYPT ( 'password' )
 ## <a name="permissions"></a>Permissões  
  PWDENCRYPT está disponível para o público.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

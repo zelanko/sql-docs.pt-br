@@ -1,5 +1,5 @@
 ---
-title: GetDescendant (mecanismo de banco de dados) | Microsoft Docs
+title: GetDescendant (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 ## <a name="arguments"></a>Argumentos  
 *child1*  
-NULO ou o **hierarchyid** de um filho do nó atual.
+NULL ou a **hierarchyid** de um filho do nó atual.
   
-*Child2*  
-NULO ou o **hierarchyid** de um filho do nó atual.
+*child2*  
+NULL ou a **hierarchyid** de um filho do nó atual.
   
 ## <a name="return-types"></a>Tipos de retorno  
 **Tipo de retorno do SQL Server: hierarchyid**
   
-**Tipo de retorno CLR: SqlHierarchyId**
+**Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Retorna um nó filho que é um descendente do pai.
 -   Se o pai for o NULL, retornará NULL.  
 -   Se o pai não for NULL, e child1 e child2 forem NULL, retornará um filho do pai.  
@@ -71,12 +71,12 @@ Retorna um nó filho que é um descendente do pai.
 -   Se child2 não for NULL e não for um filho de pai, ocorrerá uma exceção.  
 -   Se child1 >= child2, ocorrerá uma exceção.  
   
-GetDescendant é determinística. Portanto, se GetDescendant for chamado com as mesmas entradas, sempre produzirá a mesma saída. Contudo, a identidade exata do filho produzida pode variar de acordo com sua relação com os outros nós, como mostrado no exemplo C.
+GetDescendant é determinístico. Portanto, se GetDescendant for chamado com as mesmas entradas, sempre produzirá a mesma saída. Contudo, a identidade exata do filho produzida pode variar de acordo com sua relação com os outros nós, como mostrado no exemplo C.
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Inserindo uma linha como o nó menos descendente  
-Um funcionário novo é contratado, subordinado a um funcionário existente no nó `/3/1/`. Execute o seguinte código para inserir a nova linha usando o método GetDescendant sem argumentos para especificar o novo nó de linhas como `/3/1/1/`:
+Um funcionário novo é contratado, subordinado a um funcionário existente no nó `/3/1/`. Execute o seguinte código para inserir a nova linha usando o método GetDescendant sem argumentos para especificar o nó das novas linhas como `/3/1/1/`:
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Inserindo uma linha como um nó mais descendente  
-Outro novo funcionário é contratado, relatórios ao mesmo gerente como no exemplo A. Execute o código a seguir para inserir a nova linha usando o método GetDescendant usando o argumento child 1 para especificar que o nó da nova linha virá depois do nó do exemplo A , tornando-se `/3/1/2/`:
+Outro funcionário novo é contratado, subordinado ao mesmo gerente, como no exemplo A. Execute o seguinte código para inserir a nova linha usando o método GetDescendant com o argumento child 1 para especificar que o nó da nova linha virá depois do nó do exemplo A, tornando-se `/3/1/2/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. Inserindo uma linha entre dois nós existentes  
-Um terceiro funcionário é contratado, reportando ao mesmo gerente como no exemplo A. Este exemplo insere a nova linha em um nó maior que o `FirstNewEmployee` no exemplo A, e menor do que o `SecondNewEmployee` no exemplo B. Execute o código a seguir por meio do método GetDescendant. Use tanto o argumento child1 como child2 para especificar que o nó da nova linha será o nó `/3/1/1.1/`:
+Um terceiro funcionário é contratado, subordinado ao mesmo gerente, como no exemplo A. Esse exemplo insere a nova linha em um nó maior que `FirstNewEmployee` no exemplo A e menor que `SecondNewEmployee` no exemplo B. Execute o código a seguir usando o método GetDescendant. Use tanto o argumento child1 como child2 para especificar que o nó da nova linha será o nó `/3/1/1.1/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-Depois de concluir os exemplos A, B e C, os nós adicionados à tabela serão computadores par com o seguinte **hierarchyid** valores:
+Depois de concluir os exemplos A, B e C, os nós adicionados à tabela serão pares com os seguintes valores de **hierarchyid**:
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ Depois de concluir os exemplos A, B e C, os nós adicionados à tabela serão co
 O nó `/3/1/1.1/` é maior que o nó `/3/1/1/`, mas está no mesmo nível na hierarquia.
   
 ### <a name="d-scalar-examples"></a>D. Exemplos de escalar  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dá suporte a inserções e exclusões de qualquer arbitrárias **hierarchyid** nós. Usando GetDescendant (), sempre é possível gerar um nó entre quaisquer dois **hierarchyid** nós. Execute o código a seguir para gerar nós de exemplo com o uso de `GetDescendant`:
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a inserções e exclusões arbitrárias de nós **hierarchyid**. Usando GetDescendant(), sempre é possível gerar um nó entre dois nós **hierarchyid**. Execute o código a seguir para gerar nós de exemplo com o uso de `GetDescendant`:
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

@@ -1,5 +1,5 @@
 ---
-title: "Permissões de esquema GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT de esquema (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um esquema. Para obter uma lista de permissões, consulte a seção Comentários posteriormente neste tópico.  
   
- ESQUEMA ON **::** esquema*Name*  
- Especifica o esquema no qual a permissão está sendo concedida. O qualificador de escopo **::** é necessária.  
+ ON SCHEMA **::** schema*_name*  
+ Especifica o esquema no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade de segurança para o qual a permissão está sendo concedida. Um dos seguintes:  
@@ -81,7 +81,7 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
@@ -93,7 +93,7 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|Delete (excluir)|CONTROL|Delete (excluir)|  
 |Execute|CONTROL|Execute|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -150,18 +150,18 @@ GRANT INSERT ON SCHEMA :: HumanResources TO guest;
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Negar permissões de esquema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [Permissões de esquema REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões DENY de esquema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [Permissões REVOKE de esquema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

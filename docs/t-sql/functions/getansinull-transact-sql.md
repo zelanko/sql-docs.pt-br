@@ -49,13 +49,13 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- '*banco de dados*'  
- O nome do banco de dados para o qual as informações de nulidade devem ser retornadas. *banco de dados*é **char** ou **nchar**. Se **char**, *banco de dados* é convertido implicitamente em **nchar**.  
+ '*database*'  
+ O nome do banco de dados para o qual as informações de nulidade devem ser retornadas. *database* é **char** ou **nchar**. Se for **char**, *database* será convertido implicitamente em **nchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando a nulidade do banco de dados especificado permite valores nulos e a nulidade de coluna ou de tipo de dados não é explicitamente definida, GETANSINULL retorna 1. Esse é o padrão ANSI NULL.  
   
  Para habilitar o comportamento padrão ANSI NULL, uma destas condições deve ser definida:  
@@ -85,7 +85,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

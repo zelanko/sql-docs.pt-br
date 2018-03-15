@@ -1,5 +1,5 @@
 ---
-title: "Permissões de objeto GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT do objeto (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="grant-object-permissions-transact-sql"></a>CONCEDER permissões de objeto (Transact-SQL)
+# <a name="grant-object-permissions-transact-sql"></a>Permissões GRANT do objeto (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede permissões em uma tabela, exibição, função com valor de tabela, procedimento armazenado, procedimento armazenado estendido, função escalar, função de agregação, fila de serviço ou sinônimo.  
@@ -62,7 +62,7 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um objeto contido em esquema. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  ALL  
@@ -77,22 +77,22 @@ GRANT <permission> [ ,...n ] ON
 PRIVILEGES  
  Incluído para conformidade com 92 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]. Não altera o comportamento de ALL.  
   
-*coluna*  
- Especifica o nome de uma coluna em uma tabela, exibição ou função com valor de tabela na qual a permissão está sendo concedida. Os parênteses () são necessários. Apenas permissões SELECT, REFERENCES e UPDATE podem ser concedidas em uma coluna. *coluna* pode ser especificado na cláusula de permissões ou depois do nome protegível.  
+*column*  
+ Especifica o nome de uma coluna em uma tabela, exibição ou função com valor de tabela na qual a permissão está sendo concedida. Os parênteses ( ) são necessários. Apenas permissões SELECT, REFERENCES e UPDATE podem ser concedidas em uma coluna. *column* pode ser especificada na cláusula de permissões ou depois do nome protegível.  
   
 > [!CAUTION]  
 >  Um DENY em nível de tabela não tem precedência sobre um GRANT em nível de coluna. Essa inconsistência na hierarquia de permissões foi preservada para compatibilidade com versões anteriores.  
   
- ON [objeto::] [ *schema_name* ]. *object_name*  
- Especifica o objeto no qual a permissão está sendo concedida. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo (::) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) é necessário.  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Especifica o objeto no qual a permissão está sendo concedida. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo (::) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) será obrigatório.  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica a entidade de segurança para o qual a permissão está sendo concedida.  
   
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de conceder a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -118,12 +118,12 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
   
- As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, consulte [exibições de catálogo de objeto &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+ As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Um objeto é um protegível em nível de esquema contido pelo esquema que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um objeto são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -131,7 +131,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|Delete (excluir)|CONTROL|Delete (excluir)|  
 |Execute|CONTROL|Execute|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -212,16 +212,16 @@ GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [REVOGAR permissões de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Exibições de catálogo de objeto &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Nome do índice existente a ser removido.  
   
- *\<objeto >* é a tabela que contém a coluna XML indexada. Use um destes formatos:  
+ *\< object>* É a tabela que contém a coluna XML indexada. Use um destes formatos:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,7 +68,7 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >* para obter informações sobre as opções de descarte de índice, consulte [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Para obter informações sobre as opções de descarte de índice, confira [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   
@@ -82,7 +82,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Criar, alterar e remover índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

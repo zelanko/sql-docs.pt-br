@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>Tipos de retorno
 **sysname**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 CURRENT_USER retorna o nome do contexto de segurança atual. Se CURRENT_USER for executado depois que uma chamada para EXECUTE AS alternar o contexto, CURRENT_USER retornará o nome do contexto representado. Se uma entidade de segurança do Windows acessou o banco de dados por meio de associação em um grupo, o nome da entidade de segurança do Windows será retornado em vez do nome do grupo.
   
-Para retornar o logon do usuário atual, consulte [SUSER_NAME &#40; Transact-SQL &#41; ](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40; Transact-SQL &#41; ](../../t-sql/functions/system-user-transact-sql.md).
+Para retornar o logon do usuário atual, consulte [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
   
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>Consulte também
-[User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

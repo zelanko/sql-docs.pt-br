@@ -1,5 +1,5 @@
 ---
-title: "Diretrizes para usar os métodos de tipo de dados xml | Microsoft Docs"
+title: "Diretrizes de uso dos métodos de tipo de dados xml | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve as diretrizes para usar o **xml** métodos de tipo de dados.  
+  Este tópico descreve as diretrizes de uso dos métodos de tipo de dados **xml**.  
   
 ## <a name="the-print-statement"></a>A instrução PRINT  
- O **xml** métodos de tipo de dados não podem ser usados na instrução PRINT, conforme mostrado no exemplo a seguir. O **xml** métodos de tipo de dados são tratados como subconsultas e subconsultas não são permitidas na instrução PRINT. Como resultado, o exemplo seguinte retorna um erro:  
+ Os métodos de tipo de dados **xml** não podem ser usados na instrução PRINT como mostra o exemplo a seguir. Os métodos de tipo de dados **xml** são tratados como subconsultas, que não são permitidas na instrução PRINT. Como resultado, o exemplo seguinte retorna um erro:  
   
 ```  
 DECLARE @x xml  
@@ -43,7 +43,7 @@ SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)   
 ```  
   
- Uma solução é primeiramente atribuir o resultado da **Value ()** método para uma variável de **xml** digite e, em seguida, especifique a variável na consulta.  
+ Uma das soluções é primeiramente atribuir o resultado do método **value()** a uma variável do tipo **xml** e, em seguida, especificar a variável na consulta.  
   
 ```  
 DECLARE @x xml  
@@ -54,10 +54,10 @@ PRINT @c
 ```  
   
 ## <a name="the-group-by-clause"></a>A Cláusula GROUP BY  
- O **xml** métodos de tipo de dados são tratados internamente como subconsultas. Como GROUP BY exige um valor escalar e não permite agregações e subconsultas, não é possível especificar o **xml** métodos de tipo de dados na cláusula GROUP BY. Uma solução é chamar uma função definida pelo usuário que usa métodos XML internamente.  
+ Os métodos de tipo de dados **xml** são tratados internamente como subconsultas. Como GROUP BY exige um escalar e não permite agregações e subconsultas, não é possível especificar os métodos de tipo de dados **xml** na cláusula GROUP BY. Uma solução é chamar uma função definida pelo usuário que usa métodos XML internamente.  
   
 ## <a name="reporting-errors"></a>Relatório de erros  
- Quando o relatório de erros, **xml** métodos de tipo de dados geram um único erro no seguinte formato:  
+ Ao relatar erros, os métodos de tipo de dados **xml** geram um único erro no seguinte formato:  
   
 ```  
 Msg errorNumber, Level levelNumber, State stateNumber:  
@@ -72,22 +72,22 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ```  
   
 ## <a name="singleton-checks"></a>Verificações de singleton  
- As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma **Node ()**-**Value ()** combinação para extrair valores de atributo não pode requerer a especificação ordinal. Isso é demonstrado no próximo exemplo.  
+ As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()**-**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.  
   
 ### <a name="example-known-singleton"></a>Exemplo: Singleton conhecido  
- Neste exemplo, o **Nodes ()** método gera uma linha separada para cada <`book`> elemento. O **Value ()** método que é avaliado em um <`book`> nó extrai o valor de @genre e, sendo um atributo é um singleton.  
+ Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento <`book`>. O método **value()** que é avaliado em um nó <`book`> extrai o valor de @genre e, sendo um atributo, é um singleton.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  
 FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)  
 ```  
   
- O esquema de XML é usado para verificação de tipo de XML digitado. Se um nó é especificado como um singleton no esquema XML, o compilador usa essa informação e não ocorre nenhum erro. Caso contrário, um ordinal que selecione um único nó é obrigatório. Em particular, o uso de eixo descendente ou independente (/ /) eixo, como em/livro / / título, desobriga a inferência de cardinalidade de singleton para o \<título > elemento, mesmo se o esquema XML especifica dessa forma. Portanto, você deve reescrevê-lo como (/livro//título)[1].  
+ O esquema de XML é usado para verificação de tipo de XML digitado. Se um nó é especificado como um singleton no esquema XML, o compilador usa essa informação e não ocorre nenhum erro. Caso contrário, um ordinal que selecione um único nó é obrigatório. Particularmente, o uso de eixo descendente ou independente (//), como em /book//title, desobriga a inferência de cardinalidade singleton para o elemento \<title>, ainda que o esquema XML o especifique dessa forma. Portanto, você deve reescrevê-lo como (/livro//título)[1].  
   
- É importante ficar atento à diferença entre //nome[1] e (//nome)[1] para a verificação de tipo. O primeiro retorna uma sequência de \<-nome > nós em que cada nó é o mais à esquerda \<-nome > nó entre seus irmãos. O segundo retorna o primeiro singleton \<-nome > nó na ordem do documento na instância XML.  
+ É importante ficar atento à diferença entre //nome[1] e (//nome)[1] para a verificação de tipo. O primeiro retorna uma sequência de nós \<first-name>, em que cada nó é o nó \<first-name> na extremidade mais à esquerda entre seus irmãos. O segundo retorna o primeiro nó singleton \<first-name> em ordem de documento na instância de XML.  
   
 ### <a name="example-using-value"></a>Exemplo: Usando value()  
- A consulta a seguir em uma coluna XML não digitada resulta em um erro de compilação estático. Isso ocorre porque **Value ()** espera um nó de singleton, como o primeiro argumento e o compilador não pode determinar se apenas um \<sobrenome > nó ocorrerá em tempo de execução:  
+ A seguinte consulta em uma coluna XML não tipada resulta em um erro estático e de compilação. Isso ocorre porque **value()** espera um nó singleton como o primeiro argumento e o compilador não pode determinar se apenas um nó de \<last-name> ocorrerá em tempo de execução:  
   
 ```  
 SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName  
@@ -110,7 +110,7 @@ FROM   T
   
  Esta consulta retorna o valor do primeiro elemento `<last-name>` em cada instância de XML.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos de Tipos de Dados XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   

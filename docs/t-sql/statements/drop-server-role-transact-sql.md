@@ -1,5 +1,5 @@
 ---
-title: "REMOVER a função de servidor (Transact-SQL) | Microsoft Docs"
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ DROP SERVER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_da_função*  
+ *role_name*  
  Especifica a função de servidor definida pelo usuário a ser descartada do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As funções definidas pelo usuário que possuem protegíveis não podem ser descartadas do servidor. Para descartar uma função de servidor definida pelo usuário que possui protegíveis, é necessário primeiro transferir a propriedade dos protegíveis ou descartá-los.  
   
- As funções de servidor definidas pelo usuário que possuem membros não podem ser descartadas. Para descartar uma função de servidor definida pelo usuário que tem membros, primeiro você deve remover os membros da função usando [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ As funções de servidor definidas pelo usuário que possuem membros não podem ser descartadas. Para remover uma função de servidor definida pelo usuário que tem membros, você deve, primeiro, remover os membros da função usando [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
  A funções de servidor fixas não podem ser removidas.  
   
- Você pode exibir informações sobre associação de função consultando o [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) exibição do catálogo.  
+ Obtenha informações sobre a associação de função consultando a exibição do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL na função de servidor ou a permissão ALTER ANY SERVER ROLE.  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. Para exibir a associação de função  
- Para exibir a associação de função, use o **função de servidor (membros**) página [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou executar a consulta a seguir:  
+ Para exibir a associação de função, use a página **Função de Servidor(Membros**) no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou execute a seguinte consulta:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -98,11 +98,11 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

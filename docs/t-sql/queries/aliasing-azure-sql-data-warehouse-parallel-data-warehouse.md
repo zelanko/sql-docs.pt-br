@@ -1,5 +1,5 @@
 ---
-title: Alias (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
+title: Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (Azure SQL Data Warehouse, Parallel Data Warehouse)
+# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Usar alias permite que a substituição temporária de uma cadeia de caracteres curta e fácil de lembrar no lugar de um nome de tabela ou coluna em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] consultas. Aliases de tabela geralmente são usados em consultas de junção, porque a sintaxe de junção requer nomes de objeto totalmente qualificado ao fazer referência a colunas.  
+  O uso de aliases permite a substituição temporária por uma cadeia de caracteres curta e fácil de lembrar de um nome de tabela ou de coluna em consultas do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Os aliases de tabela geralmente são usados em consultas JOIN, porque a sintaxe de JOIN requer nomes de objeto totalmente qualificados ao referenciar colunas.  
   
- Os aliases devem ser palavras individuais em conformidade com as regras de nomenclatura de objeto. Para obter mais informações, consulte "Regras de nomenclatura de objeto" o [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Aliases não podem conter espaços em branco e não podem ser colocados entre aspas simples ou duplas.  
+ Os aliases precisam ser palavras individuais em conformidade com as regras de nomenclatura de objeto. Para obter mais informações, consulte "Regras de nomenclatura de objeto" em [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Aliases não podem conter espaços em branco e não podem ser colocados entre aspas simples nem duplas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +39,20 @@ object_source [ AS ] alias
   
 ## <a name="arguments"></a>Argumentos  
  *object_source*  
- O nome da coluna ou tabela de origem.  
+ O nome da tabela ou da coluna de origem.  
   
  AS  
- Preposições um alias opcional. Ao trabalhar com o alias de variável de intervalo, a palavra-chave é proibido.  
+ Uma preposição de alias opcional. Ao trabalhar com o uso de alias de variável de intervalo, a palavra-chave AS é proibida.  
   
  *alias*  
- O nome de referência temporário desejado para a tabela ou coluna. Qualquer nome de objeto válido pode ser usado. Para obter mais informações, consulte "Regras de nomenclatura de objeto" o [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ O nome de referência temporário desejado para a tabela ou coluna. Qualquer nome de objeto válido pode ser usado. Para obter mais informações, consulte "Regras de nomenclatura de objeto" em [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir mostra uma consulta com várias junções. Alias de tabela e coluna são demonstradas neste exemplo.  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir mostra uma consulta com várias junções. O uso de alias de tabela e de coluna é demonstrado neste exemplo.  
   
--   Alias de coluna: Ambas as colunas e expressões que envolvem colunas na lista de seleção são um alias neste exemplo. `SalesTerritoryRegion AS SalesTR`Demonstra um alias de coluna simples. `Sum(SalesAmountQuota) AS TotalSales`Demonstra  
+-   Alias de coluna: as colunas e as expressões que envolvem as colunas na lista de seleção recebem um alias neste exemplo. `SalesTerritoryRegion AS SalesTR` demonstra um alias de coluna simples. `Sum(SalesAmountQuota) AS TotalSales` demonstra  
   
--   Alias de tabela: `dbo.DimSalesTerritory AS st` mostra a criação do `st` alias para o `dbo.DimSalesTerritory` tabela.  
+-   Alias de tabela: `dbo.DimSalesTerritory AS st` mostra a criação do alias de `st` para a tabela `dbo.DimSalesTerritory`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -67,7 +67,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ```  
   
- A palavra-chave que pode ser excluído, conforme mostrado abaixo, mas geralmente é incluído para fins de legibilidade.  
+ A palavra-chave AS pode ser excluída, conforme é mostrado abaixo, mas geralmente ela é incluída para facilitar a leitura.  
   
 ```  
 -- Uses AdventureWorks  
@@ -81,9 +81,9 @@ WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'
 GROUP BY LastName, SalesTerritoryRegion;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

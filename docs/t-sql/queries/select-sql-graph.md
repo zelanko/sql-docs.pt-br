@@ -1,5 +1,5 @@
 ---
-title: "Selecione (gráfico SQL) | Microsoft Docs"
+title: SELECT (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -50,5 +50,5 @@ SELECT
 
 ## <a name="examples"></a>Exemplos  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 

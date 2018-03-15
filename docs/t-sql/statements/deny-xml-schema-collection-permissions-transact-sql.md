@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de coleção de esquema XML (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de coleção de esquemas XML (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -67,10 +67,10 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser recusada em uma coleção de esquemas XML. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- COLEÇÃO de ESQUEMAS XML ON:: [ *schema_name *.* *] *XML_schema_collection_name*  
- Especifica a coleção de esquemas XML na qual a permissão está sendo recusada. O qualificador de escopo (::) é necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) é necessário.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ Especifica a coleção de esquemas XML na qual a permissão está sendo recusada. O qualificador de escopo (::) é necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) será obrigatório.  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica a entidade à qual a permissão está sendo negada.  
   
  CASCADE  
@@ -104,7 +104,7 @@ DENY permission  [ ,...n ] ON
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
 ## <a name="remarks"></a>Remarks  
- Informações sobre coleções de esquema XML são visíveis no [xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) exibição do catálogo.  
+ As informações sobre coleções de esquema XML são visíveis na exibição do catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Uma coleção de esquema XML é um protegível em nível de esquema contido pelo esquema pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser recusadas em uma coleção de esquemas XML são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -129,9 +129,9 @@ DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CONCEDER permissões de coleção de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [REVOKE XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [Permissões REVOKE de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   

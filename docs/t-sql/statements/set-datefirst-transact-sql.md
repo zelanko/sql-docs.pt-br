@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Define o primeiro dia da semana como um número de 1 a 7.  
   
- Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *número* | **@***number_var*  
+ *number* | **@***number_var*  
  É um inteiro que indica o primeiro dia da semana. Pode ser um dos seguintes valores.  
   
 |Valor|O primeiro dia da semana é|  
@@ -75,8 +75,8 @@ SET DATEFIRST 7 ;
 |**6**|Sábado|  
 |**7** (padrão, EUA Inglês)|Domingo|  
   
-## <a name="remarks"></a>Comentários  
- Para ver a configuração atual de SET DATEFIRST, use o [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) função.  
+## <a name="remarks"></a>Remarks  
+ Para visualizar a configuração atual de SET DATEFIRST, use a função [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  A configuração de SET DATEFIRST é definida no momento da execução e não no momento da análise.  
   
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

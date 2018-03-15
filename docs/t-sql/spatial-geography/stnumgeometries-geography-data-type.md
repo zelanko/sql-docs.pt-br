@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o número de **geometrias** que compõem um **geografia** instância.  
+  Retorna o número de **geometries** que compõem uma instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método retornará 1 se o **geografia** instância não é um **MultiPoint**, **MultiLineString**, **MultiPolygon**, ou **GeometryCollection** instância, ou 0 se o **geografia** instância está vazia.  
+ Esse método retorna 1 se a instância de **geography** não é uma instância de **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, ou 0 se a instância de **geography** está vazia.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um `MultiPoint` instância e usa `STNumGeometries()` para descobrir como muitos **geometrias** contém a instância.  
+ O exemplo a seguir cria uma instância de `MultiPoint` e usa `STNumGeometries()` para descobrir quantas **geometries** a instância contém.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

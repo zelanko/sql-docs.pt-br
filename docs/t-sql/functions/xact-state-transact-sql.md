@@ -52,7 +52,7 @@ XACT_STATE()
 ## <a name="return-type"></a>Tipo de retorno  
  **smallint**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  XACT_STATE retorna um dos valores a seguir.  
   
 |Valor de retorno|Significado|  
@@ -61,7 +61,7 @@ XACT_STATE()
 |0|Não há transação de usuário ativa para a solicitação atual.|  
 |-1|A solicitação atual tem uma transação de usuário ativa, mas ocorreu um erro que fez a transação ser classificada como não confirmável. A solicitação não pode confirmar a transação ou reverter para um ponto de salvamento; ela só pode solicitar uma reversão completa da transação. A solicitação não pode executar nenhuma operação de gravação reverter a transação. A solicitação só pode executar operações de leitura até reverter a transação. Depois que a transação é revertida, a solicitação pode executar operações de leitura e gravação e pode começar uma nova transação.<br /><br /> Quando um lote termina sua execução, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reverte automaticamente qualquer transação ativa não confirmável. Se nenhuma mensagem de erro foi enviada quando a transação entrou em um estado não confirmável, quando o lote terminar, uma mensagem de erro será enviada ao aplicativo cliente. Essa mensagem indica que uma transação não confirmável foi detectada e revertida.|  
   
- Ambos o XACT_STATE e @@TRANCOUNT funções podem ser usadas para detectar se a solicitação atual tem uma transação de usuário ativa. @@TRANCOUNT não pode ser usado para determinar se a transação foi classificada como uma transação não confirmável. XACT_STATE não pode ser usado para determinar se há transações aninhadas.  
+ As funções XACT_STATE e @@TRANCOUNT podem ambas ser usadas para detectar se a solicitação atual tem uma transação de usuário ativa. @@TRANCOUNT não pode ser usado para determinar se essa transação foi classificada como uma transação não confirmável. XACT_STATE não pode ser usado para determinar se há transações aninhadas.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `XACT_STATE` no bloco `CATCH` de uma construção `TRY…CATCH` para determinar se uma transação será confirmada ou revertida. Como `SET XACT_ABORT` é `ON`, o erro de violação de restrição faz a transação entrar em um estado não confirmável.  
@@ -112,7 +112,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

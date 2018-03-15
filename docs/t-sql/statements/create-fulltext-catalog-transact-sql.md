@@ -1,5 +1,5 @@
 ---
-title: "CRIAR o catálogo de texto completo (Transact-SQL) | Microsoft Docs"
+title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 
   Cria um catálogo de texto completo para um banco de dados. Um catálogo de texto completo pode ter vários índices de texto completo, mas um índice de texto completo só pode fazer parte de um único catálogo de texto completo. Cada banco de dados pode conter zero ou mais catálogos de texto completo.  
   
- Não é possível criar catálogos de texto completo no **mestre**, **modelo**, ou **tempdb** bancos de dados.  
+ Não é possível criar catálogos de texto completo nos bancos de dados **master**, **model** ou **tempdb**.  
   
 > [!IMPORTANT]  
 >  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um catálogo de texto completo é um objeto virtual e não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.  
@@ -77,24 +77,24 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula não tem nenhum efeito.  
   
- NO caminho **'***rootpath***'**  
+ IN PATH **'***rootpath***'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula não tem nenhum efeito.  
   
  ACCENT_SENSITIVITY = {ON|OFF}  
- Especifica se o catálogo a ser alterado diferencia ou não acentos para indexação de texto completo. Quando esta propriedade é alterada, o índice deve ser recriado. O padrão é usar a diferenciação de acentos especificada no agrupamento de banco de dados. Para exibir o agrupamento de banco de dados, use o **sys. Databases** exibição do catálogo.  
+ Especifica se o catálogo a ser alterado diferencia ou não acentos para indexação de texto completo. Quando esta propriedade é alterada, o índice deve ser recriado. O padrão é usar a diferenciação de acentos especificada no agrupamento de banco de dados. Para exibir o agrupamento de banco de dados, use a exibição do catálogo **sys.databases**.  
   
- Para determinar a configuração atual da propriedade sensibilidade de acentuação de um catálogo de texto completo, use a função FULLTEXTCATALOGPROPERTY com o **accentsensitivity** valor da propriedade contra *catalog_name*. Se o valor retornado é '1', o catálogo de texto completo diferencia acentuação; se o valor é '0', o catálogo não diferencia acentuação.  
+ Para determinar a configuração atual da propriedade de distinção de acentos de um catálogo de texto completo, use a função FULLTEXTCATALOGPROPERTY com o valor da propriedade **accentsensitivity** em *catalog_name*. Se o valor retornado é '1', o catálogo de texto completo diferencia acentuação; se o valor é '0', o catálogo não diferencia acentuação.  
   
  AS DEFAULT  
  Especifica que o catálogo é o padrão. Quando forem criados índices de texto completo sem um catálogo de texto completo explicitamente especificado, o catálogo padrão será usado. Se um catálogo de texto completo existente já estiver marcado como AS DEFAULT, a configuração AS DEFAULT tornará esse catálogo o padrão.  
   
- AUTORIZAÇÃO *owner_name*  
- Define o proprietário do catálogo de texto completo como o nome de um usuário ou uma função de banco de dados. Se *owner_name* é uma função, a função deve ser o nome de uma função que o usuário atual é membro ou o usuário que executa a instrução deve ser o proprietário do banco de dados ou o administrador do sistema.  
+ AUTHORIZATION *owner_name*  
+ Define o proprietário do catálogo de texto completo como o nome de um usuário ou uma função de banco de dados. Se *owner_name* for uma função, a função deverá ser o nome de uma função da qual o usuário atual é membro ou o usuário que executa a instrução deverá ser o proprietário do banco de dados ou o administrador do sistema.  
   
- Se *owner_name* é um nome de usuário, o nome de usuário deve ser um dos seguintes:  
+ Se *owner_name* for um nome de usuário, o nome de usuário deverá ser um dos seguintes:  
   
 -   O nome do usuário que executa a instrução.  
   
@@ -102,13 +102,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   O usuário que executa o comando deve ser o proprietário de banco de dados ou administrador do sistema.  
   
- *owner_name* também deve ser concedida a permissão TAKE OWNERSHIP no catálogo de texto completo especificado.  
+ *owner_name* também deve ter a permissão TAKE OWNERSHIP no catálogo de texto completo especificado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As IDs de catálogos de texto completo iniciam em 00005 e são incrementadas em um para cada catálogo novo criado.  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ter permissão CREATE FULLTEXT CATALOG no banco de dados, ou ser um membro do **db_owner**, ou **db_ddladmin** funções de banco de dados fixas.  
+ O usuário deve ter a permissão CREATE FULLTEXT CATALOG no banco de dados ou ser um membro das funções de banco de dados fixas **db_owner** ou **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um catálogo de texto completo e também um índice de texto completo.  
@@ -122,10 +122,10 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [REMOVER o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
  
   

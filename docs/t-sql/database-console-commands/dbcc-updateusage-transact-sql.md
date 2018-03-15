@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Argumentos  
 *database_name* | *database_id* | 0  
-É o nome ou a ID do banco de dados na qual serão relatadas e corrigidas as estatísticas de uso de espaço. Se 0 for especificado, será usado o banco de dados atual. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+É o nome ou a ID do banco de dados na qual serão relatadas e corrigidas as estatísticas de uso de espaço. Se 0 for especificado, será usado o banco de dados atual. Os nomes de banco de dados precisam estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 É o nome ou a ID da tabela ou exibição indexada para a qual serão relatadas e corrigidas as estatísticas de uso de espaço. Os nomes de tabelas e exibições devem obedecer às regras de identificadores.  
@@ -89,7 +89,7 @@ DBCC UPDATEUSAGE corrige as contagens das linhas, páginas usadas, páginas rese
 O DBCC CHECKDB foi aprimorado para detectar quando as contagens de páginas ou de linhas se tornam negativas. Quando detectada, a saída do DBCC CHECKDB contém um aviso e uma recomendação para executar DBCC UPDATEUSAGE para resolver o problema.
   
 ## <a name="best-practices"></a>Práticas recomendadas  
-Recomendamos o seguinte:
+Recomendamos o uso do seguinte:
 -   Não execute DBCC UPDATEUSAGE rotineiramente. Como DBCC UPDATEUSAGE pode levar algum tempo para ser executado em tabelas ou bancos de dados grandes, não deve ser usado, a não ser que você suspeite que valores incorretos estão sendo retornados por sp_spaceused.
 -   Considere a execução de DBCC UPDATEUSAGE rotineiramente (por exemplo, semanalmente) somente se o banco de dados passar por modificações de DDL (Linguagem de definição de dados) frequentes, como instruções CREATE, ALTER ou DROP.  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Atualizando contagens de páginas ou de linhas ou de ambas para a tabela Employee  
-O exemplo a seguir relata as informações atualizadas de contagem de página ou linha para o `Employee` tabela o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.
+O exemplo a seguir relata informações de contagem de páginas ou de linhas atualizadas para a tabela `Employee` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -135,7 +135,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

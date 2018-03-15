@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Testa se uma cadeia de caracteres contém JSON válido.  
+  Testa se uma cadeia de caracteres contém um JSON válido.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,17 +48,17 @@ ISJSON ( expression )
  A cadeia de caracteres a ser testada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna 1 se a cadeia de caracteres contém JSON válido; Caso contrário, retornará 0. Retornará nulo se *expressão* é nulo.  
+ Retornará 1 se a cadeia de caracteres contiver um JSON válido, caso contrário, retornará 0. Retornará nulo se a *expressão* for nula.  
   
  Não retorna erros.  
   
-## <a name="remarks"></a>Comentários  
- **ISJSON** não verifica a exclusividade de chaves no mesmo nível.  
+## <a name="remarks"></a>Remarks  
+ **ISJSON** não verifica a exclusividade das chaves no mesmo nível.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="example-1"></a>Exemplo 1  
-O exemplo a seguir executa um bloco de instruções condicionalmente se o valor do parâmetro `@param` contém JSON válido.  
+O exemplo a seguir executará um bloco de instruções condicionalmente se o valor do parâmetro `@param` contiver um JSON válido.  
   
 ```sql  
 DECLARE @param <data type>
@@ -80,7 +80,7 @@ FROM tab1
 WHERE ISJSON(json_col) > 0 
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Dados JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

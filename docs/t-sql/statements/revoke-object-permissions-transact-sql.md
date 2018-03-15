@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de objeto (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE do objeto (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um objeto contido em esquema. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  ALL  
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  Permissões de função com valor de tabela: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Procedimento armazenado permissões: executar.  
+ Permissões de procedimento armazenado: EXECUTE.  
   
  Permissões de tabela: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -82,13 +82,13 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  PRIVILEGES  
  Incluído para conformidade com 92 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]. Não altera o comportamento de ALL.  
   
- *coluna*  
- Especifica o nome de uma coluna em uma tabela, exibição ou função com valor de tabela na qual a permissão está sendo revogada. Os parênteses () são necessários. Apenas permissões SELECT, REFERENCES e UPDATE podem ser negadas em uma coluna. *coluna* pode ser especificado na cláusula de permissões ou depois do nome protegível.  
+ *column*  
+ Especifica o nome de uma coluna em uma tabela, exibição ou função com valor de tabela na qual a permissão está sendo revogada. Os parênteses ( ) são necessários. Apenas permissões SELECT, REFERENCES e UPDATE podem ser negadas em uma coluna. *column* pode ser especificada na cláusula de permissões ou depois do nome protegível.  
   
- ON [objeto::] [ *schema_name* ]. *object_name*  
- Especifica o objeto no qual a permissão está sendo revogada. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo (::) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) é necessário.  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Especifica o objeto no qual a permissão está sendo revogada. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo (::) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) será obrigatório.  
   
- {DO | PARA} \<database_principal > especifica a entidade da qual a permissão está sendo revogada.  
+ { FROM | TO } \<database_principal> Especifica a entidade de segurança da qual a permissão está sendo revogada.  
   
  GRANT OPTION  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  A revogação em cascata de uma permissão WITH GRANT OPTION concedida revogará as opções GRANT e DENY dessa permissão.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de revogar a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -128,8 +128,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
- As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, consulte [exibições de catálogo de objeto &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Um objeto é um protegível em nível de esquema contido pelo esquema que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um objeto são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -137,7 +137,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|Delete (excluir)|CONTROL|Delete (excluir)|  
 |Execute|CONTROL|Execute|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -184,16 +184,16 @@ REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [Permissões de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [Exibições de catálogo de objeto &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

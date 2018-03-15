@@ -58,7 +58,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  É o nome do esquema ao qual o índice pertence.  
   
  *table_or_view_name*  
- É o nome da exibição indexada ou de tabela. *table_or_view_name* devem ser delimitados por aspas simples e pode ser totalmente qualificada pelo nome do banco de dados e esquema.  
+ É o nome da exibição indexada ou de tabela. *table_or_view_name* deve ser delimitado por aspas simples e totalmente qualificado pelo nome do banco de dados e do esquema.  
   
  *index_id*  
  É a ID do índice. *index_ID* é **int**.  
@@ -99,9 +99,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

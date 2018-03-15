@@ -33,22 +33,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="arithmetic-operators-transact-sql"></a>Operadores aritméticos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Os operadores aritméticos desempenham operações matemáticas em duas expressões de um ou mais dos tipos de dados da categoria de tipo de dados numéricos. Para obter mais informações sobre categorias de tipo de dados, consulte [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+  Os operadores aritméticos desempenham operações matemáticas em duas expressões de um ou mais dos tipos de dados da categoria de tipo de dados numéricos. Para obter mais informações sobre as categorias de tipo de dados, confira [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Operador|Significado|  
 |--------------|-------------|  
 |[+ (Somar)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
 |[- (Subtrair)](../../t-sql/language-elements/subtract-transact-sql.md)|Subtração|  
 |[* (Multiplicar)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplicação|  
-|[/ (Divisão)](../../t-sql/language-elements/divide-transact-sql.md)|Divisão|  
-|[% (Módulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Retorna o resto inteiro de uma divisão. Por exemplo, 12% 5 = 2 porque o resto de 12 dividido por 5 é 2.|  
+|[/ (dividir)](../../t-sql/language-elements/divide-transact-sql.md)|Divisão|  
+|[% (módulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Retorna o resto inteiro de uma divisão. Por exemplo, 12% 5 = 2 porque o resto de 12 dividido por 5 é 2.|  
   
- O sinal de adição (+) e menos (-) operadores podem ser usados para executar operações aritméticas em **datetime** e **smalldatetime** valores.  
+ Os operadores de adição (+) e de subtração (-) também podem ser usados para executar operações aritméticas em valores de **datetime** e **smalldatetime**.  
   
- Para obter mais informações sobre a precisão e escala do resultado de uma operação aritmética, consulte [precisão, escala e comprimento &#40; Transact-SQL &#41; ](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+ Para obter mais informações sobre a precisão e a escala do resultado de uma operação aritmética, confira [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   

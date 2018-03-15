@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Retorna um pseudo-aleatório **float** valor de 0 a 1, exclusivo.  
+  Retorna um valor **float** pseudoaleatório de 0 a 1, exclusivo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ RAND ( [ seed ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *semente*  
- É um número inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, ou **int**) que fornece o valor de semente. Se *semente* não for especificado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] atribui um valor de semente aleatório. Para um valor de semente especificado, o resultado retornado é sempre o mesmo.  
+ *seed*  
+ É um número inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint** ou **int**) que fornece o valor de semente. Se *seed* não estiver especificado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] atribuirá um valor de semente aleatório. Para um valor de semente especificado, o resultado retornado é sempre o mesmo.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Chamadas repetitivas de RAND() com o mesmo valor de semente retornam os mesmos resultados.  
   
  Para uma conexão, se RAND() for chamada com uma valor de semente especificado, todas as chamadas subsequentes de RAND() produzirão resultados com base na chamada de RAND() propagada. Por exemplo, a consulta a seguir sempre retornará a mesma sequência de números.  
@@ -77,7 +77,7 @@ WHILE @counter < 5
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

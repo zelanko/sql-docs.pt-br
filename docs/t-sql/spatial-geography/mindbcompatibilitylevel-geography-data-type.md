@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna a compatibilidade de banco de dados mínimo que reconhece o **geografia** tipo de dados.  
+  Retorna a compatibilidade mínima de banco de dados que reconhece o tipo de dados **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **int**  
+ Tipo de retorno do CLR: **int**  
   
 ## <a name="remarks"></a>Remarks  
- Use `MinDbCompatibilityLevel()` para testar a compatibilidade de um objeto espacial antes de alterar o nível de compatibilidade em um banco de dados. Inválido **geografia** digite retorna 110.  
+ Use `MinDbCompatibilityLevel()` para testar a compatibilidade de um objeto espacial antes de alterar o nível de compatibilidade em um banco de dados. Um tipo de **geografia** inválido retorna 110.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -96,8 +96,8 @@ END
   
  A primeira instrução SELECT retorna 110 e a segunda instrução SELECT retorna 100.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Compatibilidade com versões anteriores do mecanismo de banco de dados SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

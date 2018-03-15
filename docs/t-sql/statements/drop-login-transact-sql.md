@@ -1,5 +1,5 @@
 ---
-title: LOGON DROP (Transact-SQL) | Microsoft Docs
+title: DROP LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ DROP LOGIN login_name
  *login_name*  
  Especifica o nome do logon a ser descartado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um logon não pode ser removido enquanto estiver ativo. Um logon que possui qualquer protegível, objeto em nível de servidor ou trabalho do SQL Server Agent não pode ser descartado.  
   
  É possível descartar um logon para o qual usuários de banco de dados são mapeados; porém, isso criará usuários órfãos. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
- Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessárias para autenticar uma conexão e as regras de firewall de nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e certifique-se de que um banco de dados tem a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY LOGIN no servidor.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-login"></a>A. Descartar um logon  
+### <a name="a-dropping-a-login"></a>A. Removendo um logon  
  O exemplo a seguir descarta o logon `WilliJo`.  
   
 ```  
@@ -73,7 +73,7 @@ GO
 ```  
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

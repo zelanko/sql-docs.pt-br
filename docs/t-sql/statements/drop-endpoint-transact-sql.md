@@ -57,7 +57,7 @@ DROP ENDPOINT endPointName
  Não podem ser executadas instruções ENDPOINT DDL em uma transação de usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ser um membro do **sysadmin** função de servidor fixa, o proprietário do ponto de extremidade, ou ter recebido a permissão CONTROL no ponto de extremidade.  
+ O usuário deve ser membro da função de servidor fixa **sysadmin**, o proprietário do ponto de extremidade ou ter recebido a permissão CONTROL no ponto de extremidade.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove um ponto de extremidade criado anteriormente, denominado `sql_endpoint`.  
@@ -66,7 +66,7 @@ DROP ENDPOINT endPointName
 DROP ENDPOINT sql_endpoint;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

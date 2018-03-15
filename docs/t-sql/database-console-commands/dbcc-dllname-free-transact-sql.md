@@ -1,5 +1,5 @@
 ---
-title: Nomedadll DBCC (FREE) (Transact-SQL) | Microsoft Docs
+title: DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Descarrega especificado procedimento armazenado estendido DLL da memória.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Descarrega da memória a DLL de procedimento armazenado estendido especificada.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,7 +61,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 Quando um procedimento armazenado estendido é executado, o DLL permanece carregado pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até que o servidor seja desativado. Esta instrução permite a um DLL ser descarregado da memória sem desativar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para exibir os arquivos DLL carregados no momento pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Quando um DLL válido é especificado, DBCC *nomedadll* (FREE) retorna:
+Quando uma DLL válida é especificada, o DBCC *nomedadll* (FREE) retorna:
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -71,13 +71,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir supõe que `xp_sample` é implementado como xp_sample.dll e foi executado. DBCC \< *nomedadll*> (FREE) descarrega o arquivo xp_sample.dll associado a `xp_sample` procedimento estendido.
+O exemplo a seguir considera que `xp_sample` esteja implementado como xp_sample.dll e tenha sido executado. DBCC \<*dllname*> (FREE) descarrega o arquivo xp_sample.dll associado ao procedimento estendido `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Características de execução de procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
 [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  

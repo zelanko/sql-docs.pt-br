@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de chave assimétrica (Transact-SQL) | Microsoft Docs"
+title: "Permissões de chave assimétrica DENY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em uma chave assimétrica. Listada abaixo.  
   
- NA chave ASSIMÉTRICA **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Especifica a chave assimétrica na qual a permissão está sendo negada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma chave assimétrica é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em uma chave assimétrica estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de chave assimétrica|Indicado pela permissão de chave assimétrica|Implícito na permissão de banco de dados|  
@@ -114,7 +114,7 @@ DENY { permission  [ ,...n ] }
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL na chave assimétrica. Se a cláusula AS for usada, o principal especificado deve possuir a chave assimétrica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

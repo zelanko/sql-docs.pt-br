@@ -60,27 +60,27 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta o procedimento apenas se ele já existe.  
+ Remove condicionalmente o procedimento somente se ele já existe.  
   
  *schema_name*  
  O nome do esquema ao qual o procedimento pertence. Não é possível especificar um nome de servidor ou de banco de dados.  
   
- *procedimento*  
+ *procedure*  
  O nome do procedimento armazenado ou grupo de procedimentos armazenados a ser removido. Não é possível descartar procedimentos individuais em um grupo de procedimentos numerados; todo o grupo de procedimentos é descartado.  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
- Antes de remover qualquer procedimento armazenado, verifique se há objetos dependentes e modifique esses objetos adequadamente. Descartar um procedimento armazenado pode gerar falha de objetos e scripts dependentes quando esses objetos não forem atualizados. Para obter mais informações, consulte [exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
+ Antes de remover qualquer procedimento armazenado, verifique se há objetos dependentes e modifique esses objetos adequadamente. Descartar um procedimento armazenado pode gerar falha de objetos e scripts dependentes quando esses objetos não forem atualizados. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>Metadados  
- Para exibir uma lista de procedimentos existentes, consulte o **sys. Objects** exibição do catálogo. Para exibir a definição do procedimento, consulte o **sql_modules** exibição do catálogo.  
+ Para exibir uma lista de procedimentos existentes, veja a exibição de catálogo **sys.objects**. Para exibir a definição do procedimento, veja a exibição do catálogo **sys.sql_modules**.  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer **controle** permissão no procedimento, ou **ALTER** permissão no esquema ao qual o procedimento pertence ou associação no **db_ddladmin** função de servidor fixa .  
+ Requer a permissão **CONTROL** no procedimento, ou a permissão **ALTER** no esquema ao qual o procedimento pertence ou a associação na função de servidor fixa **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove o procedimento armazenado `dbo.uspMyProc` do banco de dados atual.  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- O exemplo a seguir remove o `dbo.uspMyProc` procedimento armazenado se ele existe, mas não causa um erro se o procedimento não existe. Essa sintaxe é novo no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ O exemplo a seguir remove o procedimento armazenado `dbo.uspMyProc` se ele existe, mas não causa um erro se o procedimento não existe. Essa sintaxe é nova no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -107,7 +107,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Excluir um procedimento armazenado](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** é um inteiro que representa o identificador de referência espacial (SRID) da instância.  
+  **STSrid** é um inteiro que representa o SRID (identificador de referência espacial) da instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **int**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  Essa propriedade pode ser modificada.  
@@ -67,8 +67,8 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Identificadores de referência espacial &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Métodos do OGC em instâncias de geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

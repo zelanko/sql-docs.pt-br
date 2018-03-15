@@ -65,17 +65,17 @@ CollationDesignator_<ComparisonStyle>
   
 -   Turco: usa página de código 1254.  
   
- *Propriedades CaseSensitivity*  
- **CI** Especifica maiusculas de minúsculas, **CS** Especifica diferencia maiusculas de minúsculas.  
+ *CaseSensitivity*  
+ **CI** especifica que não diferencia maiúsculas de minúsculas, **CS** especifica que diferencia maiúsculas de minúsculas.  
   
  *AccentSensitivity*  
- **AI** Especifica diferenciação de acentos, **AS** Especifica acentos.  
+ **AI** especifica que não diferencia acentos, **AS** especifica que diferencia acento.  
   
  *KanatypeSensitive*  
- **Omitido** especifica não diferencia caracteres kana, **KS** Especifica kana.  
+ **Omitido** especifica que não diferencia caracteres kana, **KS** especifica que faz distinção de caracteres kana.  
   
  *WidthSensitivity*  
- **Omitido** Especifica diferenciação de largura, **WS** Especifica diferenciação de largura.  
+ **Omitido** especifica que não diferencia largura, **WS** especifica que distingue largura.  
   
  **BIN**  
  Especifica a ordem de classificação binária compatível com versões anteriores que será usada.  
@@ -83,7 +83,7 @@ CollationDesignator_<ComparisonStyle>
  **BIN2**  
  Especifica a ordem de classificação binária que usa semântica de comparação de ponto de código.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dependendo da versão do agrupamento, alguns pontos de código podem estar indefinidos. Por exemplo, compare:  
   
 ```  
@@ -122,7 +122,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  A tabela a seguir lista todos os agrupamentos do Windows com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-|Localidade do Windows|Agrupamento versão 100|Agrupamento versão 90|  
+|Localidade do Windows|Agrupamento Versão 100|Agrupamento versão 90|  
 |--------------------|---------------------------|--------------------------|  
 |Alsaciano (França)|Latin1_General_100_|Não disponível|  
 |Amárico (Etiópia)|Latin1_General_100_|Não disponível|  
@@ -173,7 +173,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Mohawk (Canadá)|Mohawk_100_|Não disponível|  
 |Mongol (RPC)|Cyrillic_General_100_|Não disponível|  
 |Nepalês (Nepal)|Nepali_100_<sup>1</sup>|Não disponível|  
-|Norueguês (Bokmål, Noruega)|Norwegian_100_|Não disponível|  
+|Norueguês, (Bokmål, Noruega)|Norwegian_100_|Não disponível|  
 |Norueguês (Nynorsk, Noruega)|Norwegian_100_|Não disponível|  
 |Occitano (França)|French_100_|Não disponível|  
 |Oriá (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Preterido, não disponível no nível do servidor no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] nem em versões mais recentes|Lithuanian_Classic|Lithuanian_Classic|  
 |Preterido, não disponível no nível do servidor no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] nem em versões mais recentes|Macedônio|Macedônio|  
   
- <sup>1</sup>agrupamentos do Windows somente Unicode só podem ser aplicados aos dados de nível de coluna ou expressão. Eles não podem ser usados como agrupamentos de banco de dados ou de servidor.  
+ <sup>1</sup>Agrupamentos do Windows somente em Unicode podem ser aplicados apenas a dados nos níveis de coluna ou de expressão. Eles não podem ser usados como agrupamentos de banco de dados ou de servidor.  
   
- <sup>2</sup>como o agrupamento de chinês (Taiwan), chinês (Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.  
+ <sup>2</sup>Como o agrupamento de chinês (Taiwan), chinês (Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabela &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

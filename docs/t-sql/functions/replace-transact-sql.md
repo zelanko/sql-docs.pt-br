@@ -50,23 +50,23 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
 ## <a name="arguments"></a>Argumentos  
  *string_expression*  
- É a cadeia de caracteres [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser pesquisada. *string_expression* pode ser de um tipo de dados caractere ou binário.  
+ É a [expression](../../t-sql/language-elements/expressions-transact-sql.md) de cadeia de caracteres a ser pesquisada. *string_expression* pode ser de um tipo de dados de caractere ou binários.  
   
  *string_*pattern  
- É a subcadeia de caracteres a ser localizada. *string_pattern* pode ser de um tipo de dados caractere ou binário. *string_pattern* não pode ser uma cadeia de caracteres vazia (") e não deve exceder o número máximo de bytes que cabe em uma página.  
+ É a subcadeia de caracteres a ser localizada. *string_pattern* pode ser de um caractere ou de tipo de dados binários. *string_pattern* não pode ser uma cadeia de caracteres vazia (") e não deve exceder o número máximo de bytes que cabem em uma página.  
   
  *string_*replacement  
- É a cadeia de caracteres de substituição. *string_replacement* pode ser de um tipo de dados caractere ou binário.  
+ É a cadeia de caracteres de substituição. *string_replacement* pode ser de um tipo de dados de caractere ou binários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna **nvarchar** se um dos argumentos de entrada é do **nvarchar** o tipo de dados; caso contrário, REPLACE retornará **varchar**.  
+ Retorna **nvarchar** se um dos argumentos de entrada é do tipo de dados **nvarchar**; caso contrário, REPLACE retorna **varchar**.  
   
  Retornará NULL se qualquer um dos argumentos for NULL.  
   
- Se *string_expression* não é do tipo **varchar (max)** ou **nvarchar (max), REPLACE** trunca o valor de retorno em 8.000 bytes. Para retornar valores maiores que 8.000 bytes, *string_expression* devem ser convertidos explicitamente a um tipo de dados de valor grande.  
+ Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max), REPLACE** truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente em um tipo de dados de valor grande.  
   
 ## <a name="remarks"></a>Remarks  
- REPLACE efetua comparações com base no agrupamento da entrada. Para realizar uma comparação em um agrupamento especificado, você pode usar [COLLATE](~/t-sql/statements/collations.md) para aplicar um agrupamento explícito à entrada.  
+ REPLACE efetua comparações com base no agrupamento da entrada. Para fazer uma comparação em um agrupamento especificado, use [COLLATE](~/t-sql/statements/collations.md) para aplicar um agrupamento explícito à entrada.  
   
  0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em REPLACE.  
   
@@ -103,7 +103,7 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -114,5 +114,5 @@ This is a desk
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

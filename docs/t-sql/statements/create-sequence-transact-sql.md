@@ -1,5 +1,5 @@
 ---
-title: "CRIAR a SEQUÊNCIA (Transact-SQL) | Microsoft Docs"
+title: CREATE SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Cria um objeto de sequência e especifica suas propriedades. Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode ser configurada para reiniciar (em um ciclo) quando se esgotar. As sequências, ao contrário de colunas de identidade, não são associadas a tabelas específicas. Os aplicativos fazem referência a um objeto de sequência para recuperar seu próximo valor. A relação entre sequências e tabelas é controlada pelo aplicativo. Os aplicativos de usuário podem referenciar um objeto de sequência e coordenar os valores nas várias linhas e tabelas.  
   
- Ao contrário de valores de colunas de identidade que são gerados quando linhas são inseridas, um aplicativo pode obter o próximo número de sequência sem inserir a linha chamando o [função NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para obter vários números de sequência de uma vez.  
+ Ao contrário de valores de colunas de identidade que são gerados quando as linhas são inseridas, um aplicativo pode obter o próximo número de sequência sem inserir a linha por meio da chamada da [função NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para obter vários números de sequência de uma vez.  
   
  Para obter informações e cenários que usam **CREATE SEQUENCE** e a função **NEXT VALUE FOR** , consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
@@ -68,52 +68,52 @@ CREATE SEQUENCE [schema_name . ] sequence_name
  [ built_in_integer_type | user-defined_integer_type  
  Uma sequência pode ser definida como qualquer tipo de inteiro. Os seguintes tipos são permitidos:  
   
--   **tinyint** -intervalo de 0 a 255.  
+-   **tinyint** – intervalo de 0 a 255  
   
--   **smallint** -intervalo de -32.768 a 32.767  
+-   **smallint** – intervalo de -32.768 a 32.767  
   
--   **int** -intervalo de -2.147.483.648 a 2.147.483.647  
+-   **int** – intervalo de -2.147.483.648 a 2.147.483.647  
   
--   **bigint** -intervalo 9.223.372.036.854.775.808 a 9.223.372.036.854.775.807.  
+-   **bigint** – intervalo 9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
   
--   **decimal** e **numérico** com uma escala de 0.  
+-   **decimal** e **numeric** com uma escala de 0.  
   
 -   Qualquer tipo de dados definido pelo usuário (tipo de alias) que seja baseado em um dos tipos permitidos.  
   
- Se nenhum tipo de dados for fornecido, o **bigint** tipo de dados é usado como o padrão.  
+ Se nenhum tipo de dados for fornecido, o tipo de dados **bigint** será usado como o padrão.  
   
- Iniciar com \<constante >  
- O primeiro valor retornado pelo objeto de sequência. O **iniciar** valor deve ser um valor menor ou igual ao máximo e maior ou igual ao valor mínimo do objeto de sequência. O valor de início padrão para um novo objeto de sequência é o valor mínimo para um objeto de sequência e o valor máximo de um objeto de sequência decrescente.  
+ START WITH \<constant>  
+ O primeiro valor retornado pelo objeto de sequência. O valor **START** deve ser menor ou igual ao valor máximo e maior ou igual ao valor mínimo do objeto de sequência. O valor de início padrão para um novo objeto de sequência é o valor mínimo para um objeto de sequência e o valor máximo de um objeto de sequência decrescente.  
   
- INCREMENT BY \<constante >  
- Valor usado para incrementar (ou decrementar, se negativo) o valor do objeto de sequência para cada chamada para o **NEXT VALUE FOR** função. Se o incremento for um valor negativo, o objeto de sequência será decrescente, caso contrário, será crescente. O incremento não pode ser 0. O incremento padrão para um novo objeto de sequência é 1.  
+ INCREMENT BY \<constant>  
+ O valor usado para incrementar (ou decrementar, se negativo) o valor do objeto de sequência para cada chamada da função **NEXT VALUE FOR**. Se o incremento for um valor negativo, o objeto de sequência será decrescente, caso contrário, será crescente. O incremento não pode ser 0. O incremento padrão para um novo objeto de sequência é 1.  
   
- [MINVALUE \<constante > | **Nenhum MINVALUE** ]  
+ [ MINVALUE \<constant> | **NO MINVALUE** ]  
  Especifica os limites do objeto de sequência. O valor mínimo padrão de um novo objeto de sequência é o valor mínimo do tipo de dados do objeto de sequência. É zero para o tipo de dados **tinyint** e um número negativo para todos os outros tipos de dados.  
   
- [MAXVALUE \<constante > | **Nenhum MAXVALUE**  
+ [ MAXVALUE \<constant> | **NO MAXVALUE**  
  Especifica os limites do objeto de sequência. O valor máximo padrão para um novo objeto de sequência é o valor máximo do tipo de dados do objeto de sequência.  
   
- [CICLO | **NENHUM CICLO** ]  
+ [ CYCLE | **NO CYCLE** ]  
  Propriedade que especifica se o objeto de sequência deve reiniciar do valor mínimo (ou máximo para objetos de sequência decrescente) ou deve lançar uma exceção quando seu valor mínimo ou máximo é excedido. A opção de ciclo padrão para novos objetos de sequência é NO CYCLE.  
   
  Observe que o ciclo é reiniciado a partir do valor mínimo ou máximo, não do valor inicial.  
   
- [ **CACHE** [\<constante >] | NENHUM CACHE]  
+ [ **CACHE** [\<constant> ] | NO CACHE ]  
  Aumenta o desempenho de aplicativos que usam objetos de sequência por meio da minimização do número de E/S de disco necessárias para gerar números de sequência. Padrões para o CACHE.  
   
- Por exemplo, se um tamanho de cache de 50 for escolhido, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não manterá 50 valores individuais em cache. Somente permanecem em cache o valor atual e o número de valores restantes no cache. Isso significa que a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência.  
+ Por exemplo, se um tamanho de cache de 50 for escolhido, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não manterá 50 valores individuais em cache. Somente permanecem em cache o valor atual e o número de valores restantes no cache. Isso significa que a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência.  
   
 > [!NOTE]  
 >  Se a opção de cache for habilitada sem a especificação de um tamanho de cache, o Mecanismo de Banco de Dados selecionará um tamanho. Porém, os usuários não devem confiar que a seleção será consistente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar o método de cálculo do tamanho do cache sem aviso prévio.  
   
- Quando criado com o **CACHE** , um desligamento inesperado (como uma falha de energia) pode resultar na perda de números de sequência restantes no cache.  
+ Quando criado com a opção **CACHE**, um desligamento inesperado (uma falta de energia, por exemplo) pode acarretar a perda dos números de sequência restantes no cache.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Os números de sequência são gerados fora do escopo da transação atual. Eles serão consumidos se a transação que usa o número de sequência for confirmada ou revertida.  
   
 ### <a name="cache-management"></a>Gerenciamento de cache  
- Para melhorar o desempenho, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pré-aloca o número de números de sequência especificados pelo **CACHE** argumento.  
+ Para aprimorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pré-aloca o número de números de sequência especificado pelo argumento **CACHE**.  
   
  Por exemplo, uma nova sequência é criada com um valor inicial de 1 e um tamanho de cache de 15. Quando o primeiro valor é necessário, valores de 1 a 15 são disponibilizados da memória. O último valor em cache (15) é gravado nas tabelas do sistema no disco. Quando todos os 15 números são usados, a solicitação seguinte (pelo número 16) faz com que o cache seja alocado novamente. O novo valor colocado no cache por último (30) será gravado nas tabelas do sistema.  
   
@@ -121,17 +121,17 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  Após a reinicialização do SQL Server e quando um número de sequência for necessário, o número inicial será lido nas tabelas do sistema (23). A quantidade de cache de 15 números (23-38) é alocada para a memória e o próximo número não de cache (39) é gravado nas tabelas do sistema.  
   
- Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para de modo anormal para um evento, como uma falha de energia, a sequência reiniciará com o número lido nas tabelas do sistema (39). Qualquer sequência de números alocados na memória (mas nunca solicitados por um usuário ou aplicativo) serão perdidos. Essa funcionalidade pode deixar intervalos, mas garante que o mesmo valor nunca será emitido duas vezes para um único objeto de sequência, a menos que ele está definido como **ciclo** ou reiniciado manualmente.  
+ Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] parar de modo anormal para um evento, como uma falha de energia, a sequência reiniciará com o número lido nas tabelas do sistema (39). Todos os números de sequência alocados à memória (mas nunca solicitados por um usuário ou aplicativo) são perdidos. Essa funcionalidade pode deixar intervalos, mas garante que o mesmo valor nunca seja emitido duas vezes para um único objeto de sequência, a menos que seja definido como **CYCLE** ou reiniciado manualmente.  
   
  O cache é mantido na memória por meio do acompanhamento do valor atual (o último valor emitido) e o número de valores restantes no cache. Portanto, a quantidade de memória usada pelo cache sempre é duas instâncias do tipo de dados do objeto de sequência.  
   
- A definição do argumento de cache **NO CACHE** grava o valor de sequência atual nas tabelas do sistema toda vez que uma sequência é usada. Isso pode prejudicar o desempenho ao aumentar o acesso ao disco, mas reduz a possibilidade de intervalos não intencionais. Ainda poderão ocorrer intervalos se os números forem solicitados usando o **NEXT VALUE FOR** ou **sp_sequence_get_range** funções, mas, em seguida, os números não são usados ou são usadas em transações não confirmadas.  
+ A configuração do argumento de cache como **NO CACHE** grava o valor de sequência atual nas tabelas do sistema sempre que uma sequência é usada. Isso pode prejudicar o desempenho ao aumentar o acesso ao disco, mas reduz a possibilidade de intervalos não intencionais. Ainda poderão ocorrer intervalos se os números forem solicitados com o uso das funções **NEXT VALUE FOR** ou **sp_sequence_get_range**, mas, neste caso, os números não são usados ou são utilizados em transações não confirmadas.  
   
- Quando um objeto de sequência usa o **CACHE** opção, se você reiniciar o objeto de sequência, ou alterar o **INCREMENTO**, **ciclo**, **MINVALUE**, **MAXVALUE**, ou as propriedades de tamanho do cache, ela fará com que o cache seja gravado nas tabelas do sistema antes da alteração. Em seguida, o cache é recarregado a partir do valor atual (ou seja, nenhum número é ignorado). A alteração do tamanho do cache entra em vigor imediatamente.  
+ Quando um objeto de sequência usa a opção **CACHE**, se você reiniciar esse objeto ou alterar **INCREMENT**, **CYCLE**, **MINVALUE**, **MAXVALUE** ou as propriedades de tamanho de cache, isso fará com que o cache seja gravado nas tabelas do sistema, antes da alteração. Em seguida, o cache é recarregado a partir do valor atual (ou seja, nenhum número é ignorado). A alteração do tamanho do cache entra em vigor imediatamente.  
   
- **Opção CACHE quando os valores armazenados em cache estão disponíveis**  
+ **Opção CACHE quando os valores em cache estão disponíveis**  
   
- O seguinte processo ocorre sempre que um objeto de sequência é solicitado para gerar o próximo valor para o **CACHE** opção se houver valores não usados disponíveis no cache de memória para o objeto de sequência.  
+ O processo a seguir ocorre sempre que um objeto de sequência recebe uma solicitação para gerar o próximo valor para a opção **CACHE**, caso haja valores não usados disponíveis no cache na memória para o objeto de sequência.  
   
 1.  O próximo valor para o objeto de sequência é calculado.  
   
@@ -139,9 +139,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 3.  O valor calculado é retornado à instrução de chamada.  
   
- **Opção de CACHE quando o cache está esgotado**  
+ **Opção CACHE quando o cache está esgotado**  
   
- O seguinte processo ocorre sempre que um objeto de sequência é solicitado para gerar o próximo valor para o **CACHE** opção se o cache está esgotado:  
+ O seguinte processo ocorre sempre que um objeto de sequência recebe uma solicitação para gerar o próximo valor para a opção **CACHE**, quando o cache está esgotado:  
   
 1.  O próximo valor para o objeto de sequência é calculado.  
   
@@ -149,9 +149,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 3.  A linha da tabela do sistema para o objeto de sequência está bloqueada, e o valor calculado na etapa 2 (o último valor) é gravado na tabela do sistema. Um xevent de cache esgotado é disparado para notificar o usuário sobre o novo valor contínuo.  
   
- **NENHUMA opção de CACHE**  
+ **Opção NO CACHE**  
   
- O seguinte processo ocorre sempre que um objeto de sequência é solicitado para gerar o próximo valor para o **NO CACHE** opção:  
+ O processo a seguir ocorre sempre que um objeto de sequência recebe uma solicitação para gerar o próximo valor para a opção **NO CACHE**:  
   
 1.  O próximo valor para o objeto de sequência é calculado.  
   
@@ -167,9 +167,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ### <a name="permissions"></a>Permissões  
  Requer a permissão **CREATE SEQUENCE**, **ALTER**ou **CONTROL** no SCHEMA.  
   
--   Membros de db_owner e db_ddladmin banco de dados fixa podem criar, alterar e remover objetos de sequência.  
+-   Membros das funções de banco de dados fixas db_owner e db_ddladmin podem criar, alterar e remover objetos de sequência.  
   
--   Membros de db_owner e db_datawriter banco de dados fixa podem atualizar objetos de sequência fazendo com que a geração de números.  
+-   Os membros das funções de banco de dados fixas db_owner e db_datawriter podem atualizar os objetos de sequência fazendo com que gerem números.  
   
  O exemplo a seguir concede ao usuário permissão AdventureWorks\Larry criar sequências no esquema de teste.  
   
@@ -177,19 +177,19 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
- Propriedade de um objeto de sequência pode ser transferida usando o **ALTER AUTHORIZATION** instrução.  
+ A propriedade de um objeto de sequência pode ser transferida usando a instrução **ALTER AUTHORIZATION**.  
   
  Se uma sequência utilizar um tipo de dados definido pelo usuário, o autor da sequência deverá ter a permissão REFERENCES nesse tipo.  
   
-### <a name="audit"></a>Auditoria  
- Para auditar **CREATE SEQUENCE**, monitor de **SCHEMA_OBJECT_CHANGE_GROUP**.  
+### <a name="audit"></a>Auditar o  
+ Para auditar **CREATE SEQUENCE**, monitore o **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemplos  
- Para obter exemplos de como criar sequências e usar o **NEXT VALUE FOR** função para gerar números de sequência, consulte [números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Para obter exemplos de como criar sequências e usar a função **NEXT VALUE FOR** para gerar números de sequência, veja [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- A maioria dos exemplos a seguir cria objetos de sequência em um esquema denominado Test.  
+ A maioria dos exemplos a seguir cria objetos de sequência em um esquema denominado Teste.  
   
- Para criar o esquema de teste, execute a seguinte instrução.  
+ Para criar o esquema de Teste, execute a instrução a seguir.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Criando uma sequência que aumenta em 1  
- No exemplo a seguir, Thierry cria uma sequência denominada CountBy1 que aumenta em um toda vez que ela é usada.  
+ No exemplo a seguir, Thierry cria uma sequência chamada CountBy1, que aumenta em incrementos de um cada vez que é utilizada.  
   
 ```  
 CREATE SEQUENCE Test.CountBy1  
@@ -262,7 +262,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`current_value`|`-9223372036854775808`|  
   
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Criando uma sequência com um tipo de dados específico  
- O exemplo a seguir cria uma sequência usando o **smallint** tipo de dados, com um intervalo de -32.768 a 32.767.  
+ O exemplo a seguir cria uma sequência usando o tipo de dados **smallint**, com um intervalo de -32.768 a 32.767.  
   
 ```  
 CREATE SEQUENCE SmallSeq  
@@ -270,7 +270,7 @@ CREATE SEQUENCE SmallSeq
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Criando uma sequência com todos os argumentos  
- O exemplo a seguir cria uma sequência chamada DecSeq usando o **decimal** tipo de dados, com um intervalo de 0 a 255. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
+ O exemplo a seguir cria uma sequência chamada DecSeq usando o tipo de dados **decimal**, com um intervalo de 0 a 255. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
   
 ```  
 CREATE SEQUENCE Test.DecSeq  
@@ -302,10 +302,10 @@ FROM sys.sequences
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [PRÓXIMO valor para &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

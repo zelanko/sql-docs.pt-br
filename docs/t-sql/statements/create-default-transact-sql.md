@@ -1,5 +1,5 @@
 ---
-title: "Criar padrão (Transact-SQL) | Microsoft Docs"
+title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  É o nome do esquema ao qual o padrão pertence.  
   
  *default_name*  
- É o nome do padrão. Os nomes padrão devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
+ É o nome do padrão. Os nomes padrão devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
   
  *constant_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de todas as colunas ou outros objetos de banco de dados). Podem ser usadas qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. Funções definidas pelo usuário não podem ser usadas. Coloque constantes de caractere e data entre aspas simples (**'**); monetárias, inteiro e constantes de ponto flutuante não requerem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Podem ser usadas qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. Funções definidas pelo usuário não podem ser usadas. Coloque constantes de caractere e de data entre aspas simples (**'**); constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
 ## <a name="remarks"></a>Remarks  
- Um nome padrão pode ser criado somente no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando um padrão é criado, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
+ Um nome padrão pode ser criado somente no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando um padrão for criado, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
   
- Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, n/d não pode ser usado como um padrão para um **numérico** coluna.  
+ Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, N/A não pode ser usado como padrão para uma coluna **numeric**.  
   
  Se o valor padrão for muito longo para a coluna à qual está associado, ele será truncado.  
   
  Instruções CREATE DEFAULT não podem ser combinadas com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote.  
   
- Um padrão deve ser descartado antes de criar um novo de mesmo nome e o padrão deve ser desassociado executando **sp_unbindefault** antes de ser descartado.  
+ Um padrão deve ser removido antes da criação de um novo com o mesmo nome, mas primeiro sua associação deve ser desfeita com a execução de **sp_unbindefault**.  
   
  Se uma coluna tiver um padrão e uma regra associado a ele, o valor do padrão não deve violar a regra. Um padrão que entra em conflito com uma regra nunca é inserido, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma mensagem de erro sempre que tenta inseri-lo.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|padrão|NULL|NULL|  
 |**NOT NULL**|Erro|padrão|erro|erro|  
   
- Para renomear um padrão, use **sp_rename**. Para um relatório em um padrão, use **sp_help**.  
+ Para renomear um padrão, use **sp_rename**. Para obter um relatório sobre um padrão, use **sp_help**.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar CREATE DEFAULT, no mínimo, um usuário deve ter a permissão CREATE DEFAULT no banco de dados atual e a permissão ALTER no esquema no qual o padrão está sendo criado.  
@@ -120,14 +120,14 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Remover padrão &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [Remover regra &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

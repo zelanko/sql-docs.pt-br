@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *número* | @*number_var*  
+ *number* | @*number_var*  
  É o número inteiro de filas a serem processadas antes de finalizar a consulta específica.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  O uso de SET ROWCOUNT não afetará as instruções DELETE, INSERT e UPDATE em uma futura versão do SQL Server. Evite usar SET ROWCOUNT com instruções DELETE, INSERT e UPDATE em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que a utilizam atualmente. Para um comportamento semelhante, use a sintaxe de TOP. Para obter mais informações, consulte [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  O uso de SET ROWCOUNT não afetará as instruções DELETE, INSERT e UPDATE em uma futura versão do SQL Server. Evite usar SET ROWCOUNT com instruções DELETE, INSERT e UPDATE em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que a utilizam atualmente. Para um comportamento semelhante, use a sintaxe de TOP. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Para desligar esta opção de forma que todas as linhas sejam retornadas, especifique SET ROWCOUNT 0.  
   
@@ -107,7 +107,7 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT para de processar depois do número especificado de linhas. No exemplo a seguir, observe que mais de 20 linhas atendem aos critérios de `AccountType = 'Assets'`. Porém, depois de aplicar SET ROWCOUNT, você pode ver que nem todas as linhas foram retornadas.  
   
 ```  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Para retornar todas as linhas, defina o número de linhas como 0.  
+ Para retornar todas as linhas, defina ROWCOUNT como 0.  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

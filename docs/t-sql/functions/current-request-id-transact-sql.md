@@ -47,8 +47,8 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>Tipos de retorno
 **smallint**
   
-## <a name="remarks"></a>Comentários  
-Para localizar informações sobre a solicitação atual e a sessão atual, use @@SPID e current_request_id (), respectivamente.
+## <a name="remarks"></a>Remarks  
+Para localizar informações exatas sobre a sessão e a solicitação atuais, use @@SPID e CURRENT_REQUEST_ID(), respectivamente.
   
 ## <a name="see-also"></a>Consulte também
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: Join Hints (Transact-SQL) | Microsoft Docs
+title: "Dicas de junção (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Hints (Transact-SQL) - Join
+# <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Dicas de junção especificam que o otimizador de consulta força uma estratégia de junção entre duas tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações gerais sobre junções e a sintaxe de junção, consulte [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Dicas de junção especificam que o otimizador de consulta força uma estratégia de junção entre duas tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações gerais sobre junções e a sintaxe de junção, confira [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente, o otimizador de consulta seleciona o melhor plano de execução para uma consulta, é recomendável que dicas, incluindo \<as dicas join_hint >, ser usados apenas como último recurso por desenvolvedores experientes e administradores de banco de dados.
+>  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costuma selecionar o melhor plano de execução para uma consulta, é recomendável que as dicas, como \<join_hint>, sejam usadas apenas como um último recurso por desenvolvedores e administradores de banco de dados experientes.
   
  **Aplica-se a:**  
   
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

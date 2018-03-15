@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- É o ID de objeto de um disparador. Se *object_id* for especificado, o número de vezes que o disparador especificado foi executado para a instrução é retornada. Se *object_id* não for especificado, o número de vezes que todos os disparadores foram executados para a instrução será retornada.  
+ É o ID de objeto de um disparador. Se *object_id* for especificada, será retornado o número de vezes que o gatilho especificado foi executado para a instrução. Se *object_id* não for especificada, será retornado o número de vezes que todos os gatilhos foram executados para a instrução.  
   
  **'** *trigger_type* **'**  
- Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores AFTER ou disparadores INSTEAD OF. Especifique **AFTER** para disparadores AFTER. Especifique **IOT** para gatilhos INSTEAD OF. Se *trigger_type* for especificado, *trigger_event_category* também deve ser especificado.  
+ Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores AFTER ou disparadores INSTEAD OF. Especifique **AFTER** para gatilhos AFTER. Especifique **IOT** para gatilhos INSTEAD OF. Se *trigger_type* for especificado, *trigger_event_category* também deverá ser especificado.  
   
  **'** *trigger_event_category* **'**  
- Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores DML ou DDL. Especifique **DML** para gatilhos DML. Especifique **DDL** para gatilhos DDL. Se *trigger_event_category* for especificado, *trigger_type* também deve ser especificado. Observe que apenas **AFTER** pode ser especificado com **DDL**, como gatilhos DDL só podem ser gatilhos AFTER.  
+ Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores DML ou DDL. Especifique **DML** para gatilhos DML. Especifique **DDL** para gatilhos DDL. Se *trigger_event_category* for especificado, *trigger_type* também deverá ser especificado. Observe que apenas **AFTER** pode ser especificado com **DDL**, porque gatilhos DDL apenas podem ser gatilhos AFTER.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando nenhum parâmetro for especificado, TRIGGER_NESTLEVEL retornará o número total de disparadores na pilha de chamada. Isto inclui ele próprio. Pode ocorrer omissão de parâmetros quando um disparador executar comandos que causem o acionamento de outro disparador ou criar uma sucessão de disparadores de acionamento.  
   
- Para retornar o número total de disparadores na pilha de chamadas para uma categoria de tipo e eventos de gatilho específico, especifique *object_id* = 0.  
+ Para retornar o número total de gatilhos na pilha de chamadas para um tipo de gatilho e uma categoria de evento específicos, especifique *object_id* = 0.  
   
  TRIGGER_NESTLEVEL retornará 0 se for executado fora de um disparador e quaisquer parâmetros não forem NULL.  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

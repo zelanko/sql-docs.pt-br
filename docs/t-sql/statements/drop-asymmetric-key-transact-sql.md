@@ -1,5 +1,5 @@
 ---
-title: "Remova a chave ASSIMÉTRICA (Transact-SQL) | Microsoft Docs"
+title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,12 +56,12 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  É o nome da chave assimétrica a ser descartada do banco de dados.  
   
  REMOVE PROVIDER KEY  
- Remove uma chave EKM (Gerenciamento de Chave Extensível) de um dispositivo EKM. Para obter mais informações sobre o gerenciamento extensível de chaves, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Remove uma chave EKM (Gerenciamento de Chave Extensível) de um dispositivo EKM. Para obter mais informações sobre o gerenciamento extensível de chaves, consulte [EKM &#40;Gerenciamento extensível de chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Comentários  
- Uma chave assimétrica com a qual uma chave simétrica no banco de dados foi criptografada, ou para a qual um usuário ou logon é mapeado, não pode ser descartada. Antes de descartar essa chave, você deve descartar qualquer usuário ou logon mapeados para ela. Você também deve descartar ou alterar qualquer chave simétrica criptografada com a chave assimétrica. Você pode usar a opção DROP ENCRYPTION de [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) para remover a criptografia por uma chave assimétrica.  
+## <a name="remarks"></a>Remarks  
+ Uma chave assimétrica com a qual uma chave simétrica no banco de dados foi criptografada, ou para a qual um usuário ou logon é mapeado, não pode ser descartada. Antes de descartar essa chave, você deve descartar qualquer usuário ou logon mapeados para ela. Você também deve descartar ou alterar qualquer chave simétrica criptografada com a chave assimétrica. É possível usar a opção DROP ENCRYPTION de [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) para remover a criptografia por meio de uma chave assimétrica.  
   
- Metadados de chaves assimétricas podem ser acessados usando o [asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) exibição do catálogo. As chaves em si não podem ser exibidas diretamente de dentro do banco de dados.  
+ Os metadados de chaves assimétricas podem ser acessados com a exibição do catálogo [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md). As chaves em si não podem ser exibidas diretamente de dentro do banco de dados.  
   
  Se a chave assimétrica for mapeada para uma chave EKM no dispositivo EKM e a opção REMOVE PROVIDER KEY não for especificada, a chave será descartada do banco de dados mas não do dispositivo, e um aviso será emitido. Um aviso será emitido.  
   
@@ -76,10 +76,10 @@ USE AdventureWorks2012;
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
+ [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
   
   

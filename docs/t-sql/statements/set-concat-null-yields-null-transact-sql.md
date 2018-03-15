@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Controla se os resultados de concatenação são tratados como valores de cadeia de caracteres nula ou vazia.  
+  Controla se os resultados de concatenação serão tratados como valores de cadeia de caracteres nulos ou vazios.  
   
 > [!IMPORTANT]  
 >  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CONCAT_NULL_YIELDS_NULL sempre estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET CONCAT_NULL_YIELDS_NULL for ON, a concatenação de um valor nulo com uma cadeia de caracteres gera um resultado NULL. Por exemplo, `SELECT 'abc' + NULL` gera `NULL`. Quando SET CONCAT_NULL_YIELDS_NULL for OFF, a concatenação de um valor nulo com uma cadeia de caracteres gera a própria cadeia de caracteres (o valor nulo é tratado como uma cadeia de caracteres vazia). Por exemplo, `SELECT 'abc' + NULL` gera `abc`.  
   
- Se SET CONCAT_NULL_YIELDS_NULL não for especificado, a configuração de **CONCAT_NULL_YIELDS_NULL** aplica-se a opção de banco de dados.  
+ Se SET CONCAT_NULL_YIELDS_NULL não for especificado, a configuração da opção de banco de dados **CONCAT_NULL_YIELDS_NULL** será aplicada.  
   
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL é a mesma configuração CONCAT_NULL_YIELDS_NULL de ALTER DATABASE.  
   
  A configuração de SET CONCAT_NULL_YIELDS_NULL é definida na execução ou em tempo de execução, e não no momento da análise.  
   
- SET CONCAT_NULL_YIELDS_NULL deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET CONCAT_NULL_YIELDS_NULL for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE nas tabelas com índices em colunas computadas ou exibições indexadas falhará. Para obter mais informações sobre as configurações de opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre quando você uso das instruções SET" em [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ SET CONCAT_NULL_YIELDS_NULL deve ser ON quando você estiver criando ou alterando índices em colunas computadas ou exibições indexadas. Se SET CONCAT_NULL_YIELDS_NULL for OFF, toda instrução CREATE, UPDATE, INSERT e DELETE nas tabelas com índices em colunas computadas ou exibições indexadas falhará. Para obter mais informações sobre as configurações da opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre o uso das instruções SET" em [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
  Quando CONCAT_NULL_YIELDS_NULL é definido como OFF, a concatenação de cadeia de caracteres entre limites de servidor não acontece.  
   
@@ -102,8 +102,8 @@ SELECT 'abc' + NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

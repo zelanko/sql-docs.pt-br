@@ -1,5 +1,5 @@
 ---
-title: '&lt;= (Menor ou igual a) (Transact-SQL) | Microsoft Docs'
+title: '&lt;= (menor ou igual a) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (Menor ou igual a) (Transact-SQL)
+# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (menor ou igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Compara duas expressões (um operador de comparação). Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda tiver um valor menor ou igual ao do operando da direita; caso contrário, o resultado será FALSE.  
@@ -53,14 +53,14 @@ expression <= expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using--in-a-simple-query"></a>A. Usando < = em uma consulta simples  
+### <a name="a-using--in-a-simple-query"></a>A. Usando <= em uma consulta simples  
  O exemplo a seguir retorna todas as linhas da tabela `HumanResources.Department` contendo um valor em `DepartmentID` que seja inferior ou igual ao valor 3.  
   
 ```  
@@ -86,8 +86,8 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

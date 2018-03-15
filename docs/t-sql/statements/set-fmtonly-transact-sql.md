@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   Retorna apenas metadados ao cliente. Pode ser usado para testar o formato da resposta sem realmente executar a consulta.  
   
 > [!NOTE]  
->  Não use este recurso. Esse recurso foi substituído pelo [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.DM exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), e [sys.DM exec_describe_first_result_set_for_object &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
+>  Não use este recurso. Esse recurso foi substituído por [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) e [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET FMTONLY { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nenhuma linha é processada ou enviada ao cliente devido à solicitação quando SET FMTONLY está ON.  
   
  A configuração de SET FMTONLY é definida no momento da execução e não no momento da análise.  
@@ -61,7 +61,7 @@ SET FMTONLY { ON | OFF }
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>R: exiba as informações de cabeçalho de coluna para uma consulta sem realmente executar a consulta.  
+### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: Exibir as informações de cabeçalho de coluna para uma consulta sem realmente executar a consulta.  
  O exemplo a seguir altera a configuração de `SET FMTONLY` para `ON` e executa uma instrução `SELECT`. A configuração faz com que a instrução retorne apenas a informações de coluna; nenhuma linha de dados é retornada.  
   
 ```  
@@ -76,10 +76,10 @@ SET FMTONLY OFF;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. Exiba as informações de cabeçalho de coluna para uma consulta sem realmente executar a consulta.  
- O exemplo a seguir mostra como retornar apenas as informações de cabeçalho (metadados) de coluna para uma consulta. O lote começa com FMTONLY definido como OFF e alterações FMTONLY ON antes da instrução SELECT. Isso faz com que a instrução SELECT retornar somente os cabeçalhos de coluna; Nenhuma linha de dados é retornada.  
+ O exemplo a seguir mostra como retornar apenas as informações de cabeçalho (metadados) de coluna para uma consulta. O lote começa com FMTONLY definido como OFF e alterações FMTONLY ON antes da instrução SELECT. Isso faz com que a instrução SELECT retorne somente os cabeçalhos de coluna; nenhuma linha de dados é retornada.  
   
 ```  
 -- Uses AdventureWorks  
@@ -94,7 +94,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

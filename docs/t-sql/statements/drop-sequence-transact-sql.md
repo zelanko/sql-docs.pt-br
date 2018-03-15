@@ -1,5 +1,5 @@
 ---
-title: "SEQUÊNCIA de DROP (Transact-SQL) | Microsoft Docs"
+title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Descarta condicionalmente a sequência somente se ele já existe.  
+ Remove condicionalmente a sequência somente se ela já existe.  
   
  *database_name*  
  É o nome do banco de dados no qual o objeto de sequência foi criado.  
@@ -61,7 +61,7 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  *sequence_name*  
  É o nome da sequência a ser removida. O tipo é **sysname**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Depois de gerar um número, um objeto de sequência não tem nenhuma relação contínua com o número que gerou; portanto, o objeto de sequência pode ser removido, embora o número gerado ainda esteja em uso.  
   
  Um objeto de sequência pode ser removido enquanto é referenciado por um procedimento armazenado, ou pode ser disparado, pois não é associado ao esquema. Um objeto de sequência não poderá ser removido se for referenciado como um valor padrão em uma tabela. A mensagem de erro listará o objeto que referencia a sequência.  
@@ -81,8 +81,8 @@ GO
 ### <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ou CONTROL no esquema.  
   
-### <a name="audit"></a>Auditoria  
- Para auditar **DROP SEQUENCE**, monitor de **SCHEMA_OBJECT_CHANGE_GROUP**.  
+### <a name="audit"></a>Auditar o  
+ Para auditar **DROP SEQUENCE**, monitore **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove do banco de dados atual um objeto de sequência denominado `CountBy1`.  
@@ -92,10 +92,10 @@ DROP SEQUENCE CountBy1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Criar SEQUÊNCIA de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [PRÓXIMO valor para &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

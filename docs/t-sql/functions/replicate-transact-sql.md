@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *string_expression*  
- É uma expressão de um tipo de dados binário ou cadeia de caracteres. *string_expression* pode ser um caractere ou dados binários.  
+ É uma expressão de um tipo de dados binário ou cadeia de caracteres. *string_expression* pode ser dados de caractere ou binários.  
   
 > [!NOTE]  
->  Se *string_expression* não é do tipo **varchar (max)** ou **nvarchar (max)**, REPLICATE truncará o valor de retorno em 8.000 bytes. Para retornar valores maiores que 8.000 bytes, *string_expression* devem ser explicitamente convertidos para o tipo de dados de valor grande apropriado.  
+>  Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max)**, REPLICATE truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente no tipo de dados de valor grande apropriado.  
   
  *integer_expression*  
- É uma expressão de qualquer tipo de inteiro, incluindo **bigint**. Se *integer_expression* é negativa, NULL será retornado.  
+ É uma expressão de qualquer tipo inteiro, incluindo **bigint**. Se *integer_expression* for negativa, NULL será retornado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o mesmo tipo *string_expression*.  
+ Retorna o mesmo tipo que *numeric_expression*.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: usando REPLICATE  
- O exemplo a seguir replica um `0` caractere quatro vezes na frente de um `ItemCode` valor.  
+### <a name="c-using-replicate"></a>C: Usando REPLICATE  
+ O exemplo a seguir replica um caractere `0` quatro vezes na frente de um valor `ItemCode`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- Aqui estão as primeiras linhas no conjunto de resultados.  
+ Estas são as primeiras linhas do conjunto de resultados.  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -151,10 +151,10 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

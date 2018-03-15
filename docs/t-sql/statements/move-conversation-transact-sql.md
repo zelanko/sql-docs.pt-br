@@ -1,5 +1,5 @@
 ---
-title: Mover a CONVERSA (Transact-SQL) | Microsoft Docs
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,18 +55,18 @@ MOVE CONVERSATION conversation_handle
   
 ## <a name="arguments"></a>Argumentos  
  *conversation_handle*  
- É uma variável ou constante que contém o identificador de conversa da conversa a ser movida. *conversation_handle* deve ser do tipo **uniqueidentifier**.  
+ É uma variável ou constante que contém o identificador de conversa da conversa a ser movida. *conversation_handle* precisa ser do tipo **uniqueidentifier**.  
   
  TO *conversation_group_id*  
- É uma variável ou constante que contém o identificador do grupo de conversa para o qual a conversa será movida. *conversation_group_id* deve ser do tipo **uniqueidentifier**.  
+ É uma variável ou constante que contém o identificador do grupo de conversa para o qual a conversa será movida. *conversation_group_id* precisa ser do tipo **uniqueidentifier**.  
   
 ## <a name="remarks"></a>Remarks  
  A instrução MOVE CONVERSATION move a conversa especificada por *conversation_handle* para o grupo de conversa identificado por *conversation_group_id*. Os diálogos só podem ser redirecionados entre grupos de conversa que são associados com a mesma fila.  
   
 > [!IMPORTANT]  
->  Se a instrução MOVE CONVERSATION não é a primeira instrução em um lote ou procedimento armazenado, a instrução anterior deverá ser encerrada com um ponto e vírgula (**;**), o [!INCLUDE[tsql](../../includes/tsql-md.md)] terminador de instrução.  
+>  Se a instrução MOVE CONVERSATION não for a primeira instrução de um procedimento em lote ou armazenado, a instrução anterior deverá ser terminada com ponto e vírgula (**;**), o terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- A instrução MOVE CONVERSATION bloqueia o grupo de conversação associado *conversation_handle* e o grupo de conversa especificado por *conversation_group_id* até que a transação que contém a instrução é confirmada ou revertida.  
+ A instrução MOVE CONVERSATION bloqueia o grupo de conversa associado a *conversation_handle* e o grupo de conversa especificado por *conversation_group_id* até que a transação que contém a instrução seja confirmada ou revertida.  
   
  MOVE CONVERSATION não é válida em uma função definida pelo usuário.  
   
@@ -88,7 +88,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

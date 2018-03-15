@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- É a ID do objeto a ser usado. *object_id* é **int**e considera-se que representam um objeto no contexto do banco de dados atual.  
+ É a ID do objeto a ser usado. *object_id* é **int** e considera-se que representa um objeto no contexto de banco de dados atual.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como OBJECT_DEFINITION, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentários  
- O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* está no contexto do banco de dados atual. O agrupamento da definição de objeto sempre corresponde ao do contexto de banco de dados que está fazendo a chamada.  
+## <a name="remarks"></a>Remarks  
+ O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. O agrupamento da definição de objeto sempre corresponde ao do contexto de banco de dados que está fazendo a chamada.  
   
  OBJECT_DEFINITION se aplica aos tipos de objeto seguintes:  
   
@@ -69,7 +69,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   D = Padrão (restrição ou autônomo)  
   
--   P = procedimento armazenado SQL  
+-   P = Procedimento armazenado SQL  
   
 -   FN = Função escalar SQL  
   
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [OBJECT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

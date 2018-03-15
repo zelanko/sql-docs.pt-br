@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>& #x 40; & #x 40. TRANCOUNT (Transact-SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o número de instruções BEGIN TRANSACTION que ocorreram na conexão atual.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Comentários  
- A instrução BEGIN TRANSACTION incrementa@TRANCOUNT em 1. ROLLBACK TRANSACTION reduz @@TRANCOUNT como 0, com exceção de ROLLBACK TRANSACTION *savepoint_name*, que não afeta@TRANCOUNT. COMMIT TRANSACTION ou COMMIT WORK diminui@TRANCOUNT em 1.  
+## <a name="remarks"></a>Remarks  
+ A instrução BEGIN TRANSACTION incrementa @@TRANCOUNT em 1. ROLLBACK TRANSACTION diminui @@TRANCOUNT para 0, com exceção de *savepoint_name* de ROLLBACK TRANSACTION, que não afeta @@TRANCOUNT. COMMIT TRANSACTION ou COMMIT WORK diminui @@TRANCOUNT em 1.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -101,10 +101,10 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

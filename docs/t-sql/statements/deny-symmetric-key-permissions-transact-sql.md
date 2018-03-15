@@ -1,5 +1,5 @@
 ---
-title: "Negar permissões de chave simétrica (Transact-SQL) | Microsoft Docs"
+title: "Permissões DENY de chave simétrica (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -60,19 +60,19 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em uma chave simétrica. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CHAVE SIMÉTRICA de ON::*asymmetric_key_name*  
+ ON SYMMETRIC KEY ::*asymmetric_key_name*  
  Especifica a chave simétrica na qual a permissão está sendo negada. O qualificador de escopo (::) é necessário.  
   
- PARA \< *database_principal*>  
+ TO \<*database_principal*>  
  Especifica a entidade a partir da qual a permissão está sendo revogada.  
   
  CASCADE  
  Indica que a permissão que está sendo negada também é negada a outros principais aos quais ela foi concedida por esse principal.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica uma entidade de segurança da qual a entidade de segurança que executa essa consulta deriva seu direito de negar a permissão.  
   
  *Database_user*  
@@ -99,8 +99,8 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Comentários  
- Informações sobre chaves simétricas são visíveis no [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ As informações sobre chaves simétricas podem ser visualizadas na exibição do catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Uma chave simétrica é um protegível no nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em uma chave simétrica são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
@@ -124,10 +124,10 @@ DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [CONCEDER permissões de chave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [Permissões de chave simétrica REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [Permissões GRANT de chave simétrica &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [Permissões REVOKE de chave simétrica &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

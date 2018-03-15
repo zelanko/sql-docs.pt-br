@@ -29,15 +29,15 @@ ms.lasthandoff: 01/25/2018
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Uma transação é um grupo de uma ou mais instruções de banco de dados que são totalmente confirmada ou revertida inteiramente. Cada transação é atômico, consistente, isolado e durável (ACID). Se a transação tiver êxito, todas as instruções dentro dele são confirmadas. Se a transação falhar, que é pelo menos uma das instruções no grupo falha, todo o grupo é revertido.  
+  Uma transação é um grupo de uma ou mais instruções de banco de dados que são totalmente confirmadas ou totalmente revertidas. Cada transação tem ACID (atomicidade, consistência, isolamento e durabilidade). Se a transação tiver êxito, todas as instruções dentro dela serão confirmadas. Se a transação falhar, ou seja, se pelo menos uma das instruções no grupo falhar, todo o grupo será revertido.  
   
- O início e término de transações depende da configuração de confirmação automática e as instruções BEGIN TRANSACTION, COMMIT e ROLLBACK. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]suporta os seguintes tipos de transações:  
+ O início e o término das transações dependem da configuração de AUTOCOMMIT e das instruções BEGIN TRANSACTION, COMMIT e ROLLBACK. O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] é compatível com os seguintes tipos de transações:  
   
--   *Transações explícitas* começam com a instrução BEGIN TRANSACTION e terminam com a instrução COMMIT ou ROLLBACK.  
+-   As *transações explícitas* começam com a instrução BEGIN TRANSACTION e terminam com a instrução COMMIT ou ROLLBACK.  
   
--   *Transações de confirmação automática* iniciar automaticamente em uma sessão e não começam com a instrução BEGIN TRANSACTION. Quando a configuração de confirmação automática for ON, cada instrução é executada em uma transação e nenhuma explícita confirmação ou REVERSÃO é necessária. Quando a configuração de confirmação automática for OFF, uma instrução COMMIT ou ROLLBACK é necessário para determinar o resultado da transação. Em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], transações de confirmação automática começarem imediatamente após uma instrução COMMIT ou ROLLBACK, ou após uma instrução SET AUTOCOMMIT OFF.  
+-   *Transações de confirmação automática*: começam automaticamente em uma sessão e não começam com a instrução BEGIN TRANSACTION. Quando a configuração de AUTOCOMMIT for ON, cada instrução será executada em uma transação e não será necessária nenhuma instrução COMMIT ou ROLLBACK explícita. Quando a configuração de AUTOCOMMIT for OFF, uma instrução COMMIT ou ROLLBACK será necessária para determinar o resultado da transação. No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], as transações de confirmação automática começam imediatamente após uma instrução COMMIT ou ROLLBACK, ou após uma instrução SET AUTOCOMMIT OFF.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,62 +51,62 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="arguments"></a>Argumentos  
  BEGIN TRANSACTION  
- Marca o ponto de partida de uma transação explícita.  
+ Marca o ponto inicial de uma transação explícita.  
   
- CONFIRMAÇÃO [TRABALHO]  
- Marca o fim de uma transação explícita ou confirmação automática. Essa instrução faz com que as alterações na transação confirmada permanentemente no banco de dados. A instrução COMMIT é idêntico ao COMMIT TRANSACTION, COMMIT TRAN e COMMIT WORK.  
+ COMMIT [ WORK ]  
+ Marca o fim de uma transação explícita ou de confirmação automática. Essa instrução faz com que as alterações na transação sejam confirmadas permanentemente no banco de dados. A instrução COMMIT é idêntica a COMMIT WORK, COMMIT TRAN e COMMIT TRANSACTION.  
   
- REVERSÃO [TRABALHO]  
- Reverte uma transação para o início da transação. Nenhuma alteração para a transação é confirmada no banco de dados. A instrução ROLLBACK é idêntico ao ROLLBACK WORK, ROLLBACK TRAN e ROLLBACK TRANSACTION.  
+ ROLLBACK [ WORK ]  
+ Reverte uma transação para o início da transação. Nenhuma alteração da transação é confirmada no banco de dados. A instrução ROLLBACK é idêntica a ROLLBACK WORK, ROLLBACK TRAN e ROLLBACK TRANSACTION.  
   
- CONFIRMAÇÃO AUTOMÁTICA DO CONJUNTO { **ON** | OFF}  
- Determina como as transações podem iniciar e terminar.  
+ SET AUTOCOMMIT { **ON** | OFF }  
+ Determina como as transações podem ser iniciadas e terminadas.  
   
  ON  
- Cada instrução é executada em sua própria transação e nenhuma instrução COMMIT ou ROLLBACK explícita é necessária. Transações explícitas são permitidas quando a confirmação automática está ativada.  
+ Cada instrução é executada em sua própria transação e não é necessária nenhuma instrução COMMIT ou ROLLBACK explícita. As transações explícitas são permitidas quando AUTOCOMMIT é ON.  
   
  OFF  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]inicia uma transação automaticamente quando uma transação ainda não está em andamento. Todas as instruções subsequentes são executadas como parte da transação e COMMIT ou ROLLBACK é necessária para determinar o resultado da transação. Assim que uma transação é confirmada ou revertida neste modo de operação, o modo permaneça em OFF, e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inicia uma nova transação. Transações explícitas não são permitidas quando a confirmação automática é desativada.  
+ O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inicia uma transação automaticamente quando ainda não há uma transação em andamento. Todas as próximas instruções são executadas como parte da transação e a instrução COMMIT ou ROLLBACK é necessária para determinar o resultado da transação. Assim que uma transação é confirmada ou revertida neste modo de operação, o modo permanece OFF e o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inicia uma nova transação. As transações explícitas não são permitidas quando AUTOCOMMIT é OFF.  
   
- Se você alterar a configuração de confirmação automática em uma transação ativa, a configuração afeta a transação atual e não têm efeito até que a transação seja concluída.  
+ Se você alterar a configuração de AUTOCOMMIT em uma transação ativa, a configuração não afetará a transação atual e não terá nenhum efeito até que a transação seja concluída.  
   
- Se a confirmação automática for ON, executar outra instrução de confirmação automática definida como ON não tem nenhum efeito. Da mesma forma, se a confirmação automática for OFF, executar outro SET AUTOCOMMIT OFF não tem nenhum efeito.  
+ Se AUTOCOMMIT for ON, executar outra instrução SET AUTOCOMMIT ON como ON não terá nenhum efeito. Da mesma forma, se AUTOCOMMIT for OFF, executar outra SET AUTOCOMMIT OFF não terá nenhum efeito.  
   
- SET IMPLICIT_TRANSACTIONS {ON | **OFF** }  
- Isso alterna os modos mesmo como AUTOCOMMIT definido. Quando ON, SET IMPLICIT_TRANSACTIONS define a conexão em modo de transação implícita. Quando OFF, ele retorna a conexão para o modo de confirmação automática.  Para obter mais informações, consulte [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+ SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
+ Isso alterna os mesmos modos como SET AUTOCOMMIT. Quando ON, SET IMPLICIT_TRANSACTIONS define a conexão em modo de transação implícita. Quando está OFF, ele retorna a conexão para o modo de confirmação automática.  Para obter mais informações, confira [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Nenhuma permissão específica é necessária para executar as instruções relacionadas à transação. São necessárias permissões para executar as instruções dentro da transação.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
- Se a confirmação ou REVERSÃO são executados, e não há nenhuma transação ativa, um erro é gerado.  
+ Se COMMIT ou ROLLBACK for executada e não houver nenhuma transação ativa, um erro será gerado.  
   
- Se um BEGIN TRANSACTION é executado enquanto uma transação já está em andamento, um erro será gerado. Isso pode ocorrer se um BEGIN TRANSACTION ocorre após uma instrução BEGIN TRANSACTION bem-sucedida ou quando a sessão está em SET AUTOCOMMIT OFF.  
+ Se BEGIN TRANSACTION for executada enquanto uma transação já estiver em andamento, um erro será gerado. Isso poderá ocorrer se um BEGIN TRANSACTION ocorrer após uma instrução BEGIN TRANSACTION bem-sucedida ou quando a sessão estiver em SET AUTOCOMMIT OFF.  
   
- Se um erro que não seja um erro de tempo de execução de instrução impede a conclusão bem-sucedida de uma transação explícita, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] reverte a transação e libera todos os recursos mantidos pela transação automaticamente. Por exemplo, se conexão de rede do cliente para uma instância de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] for interrompida ou o cliente fizer logoff do aplicativo, todas as transações não confirmadas para a conexão serão revertidas quando a rede notificar a instância da quebra.  
+ Se um erro que não seja de instrução de tempo de execução impedir que uma transação explícita seja concluída com sucesso, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] reverterá a transação e liberará todos os recursos mantidos pela transação automaticamente. Por exemplo, se a conexão de rede do cliente com uma instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] for interrompida ou o cliente fizer logoff do aplicativo, todas as transações não confirmadas para a conexão serão revertidas quando a rede notificar a instância sobre a interrupção.  
   
- Se ocorrer um erro de tempo de execução de instrução em um lote, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comporta consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** definida como **ON** e a transação inteira é revertida. Para obter mais informações sobre o **XACT_ABORT** configuração, consulte [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Uma sessão só pode executar uma transação em um determinado momento; Não há suporte para pontos de salvamento e transações aninhadas.  
+ Uma sessão só pode executar uma única transação em um determinado momento. Não há compatibilidade com pontos de salvamento e transações aninhadas.  
   
- É responsabilidade do [!INCLUDE[DWsql](../../includes/dwsql-md.md)] programador emitir confirmação apenas em um momento quando todos os dados referidos pela transação esteja logicamente correto.  
+ É responsabilidade do programador do [!INCLUDE[DWsql](../../includes/dwsql-md.md)] emitir COMMIT apenas em um momento em que todos os dados referenciados pela transação estejam logicamente corretos.  
   
- Quando uma sessão é encerrada antes de uma transação é concluída, a transação será revertida.  
+ Quando uma sessão for terminada antes de uma transação ser concluída, a transação será revertida.  
   
- Modos de transação são gerenciados no nível da sessão. Por exemplo, se uma sessão começa uma transação explícita ou define a confirmação automática como OFF ou define IMPLICIT_TRANSACTIONS como ON, ele não terá efeito nos modos de transação de qualquer outra sessão.  
+ Os modos de transação são gerenciados no nível da sessão. Por exemplo, se uma sessão começar uma transação explícita ou definir AUTOCOMMIT como OFF ou IMPLICIT_TRANSACTIONS como ON, ela não terá efeito nos modos de transação de nenhuma outra sessão.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Não é possível reverter uma transação depois que uma instrução COMMIT é emitida porque as modificações de dados foi feitas uma parte permanente do banco de dados.  
+ Não é possível reverter uma transação depois que uma instrução COMMIT é emitida porque as modificações nos dados tornaram-se permanentes no banco de dados.  
   
- O [criar banco de dados &#40; Depósito de dados SQL do Azure &#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [descartar o banco de dados &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md) comandos não podem ser usados dentro de uma transação explícita.  
+ Os comandos [CREATE DATABASE &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]não tem uma transação de mecanismo de compartilhamento. Isso significa que em qualquer ponto no tempo, somente uma sessão pode estar executando o trabalho em qualquer transação no sistema.  
+ O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] não tem nenhum mecanismo de compartilhamento de transação. Isso significa que em um determinado momento, somente uma sessão pode estar executando o trabalho em uma transação no sistema.  
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]usa bloqueio para garantir a integridade de transações e manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo. O bloqueio é usado por transações implícitas e explícitas. Cada transação solicita bloqueios de tipos diferentes de recursos, como tabelas ou bancos de dados do qual depende a transação. Todos os [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] bloqueios são tabela nível ou superior. Os bloqueios não permitem que outras transações modifiquem os recursos de uma maneira que causaria problemas para a transação que solicita o bloqueio. Cada transação libera seus bloqueios quando ele não tem uma dependência dos recursos bloqueados; transações explícitas mantêm bloqueios até que a transação é concluída quando ele for confirmado ou revertido.  
+ O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa o bloqueio para garantir a integridade das transações e manter a consistência dos bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo. O bloqueio é usado por transações implícitas e explícitas. Cada transação solicita bloqueios de diferentes tipos de recursos, como tabelas ou bancos de dados dos quais a transação depende. Todos os bloqueios do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ocorrem no nível da tabela ou acima. Os bloqueios não permitem que outras transações modifiquem os recursos de uma maneira que causaria problemas para a transação que solicita o bloqueio. Cada transação libera seus bloqueios quando deixa de depender dos recursos bloqueados. As transações explícitas mantêm os bloqueios até que a transação seja concluída, como confirmada ou revertida.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Usando uma transação explícita  
   
@@ -117,8 +117,8 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```  
   
-### <a name="b-rolling-back-a-transaction"></a>B. Reverter uma transação  
- O exemplo a seguir mostra o efeito da reversão de uma transação.  Neste exemplo, a instrução ROLLBACK reverterá a instrução INSERT, mas a tabela criada ainda existirão.  
+### <a name="b-rolling-back-a-transaction"></a>B. Revertendo uma transação  
+ O exemplo a seguir mostra o efeito da reversão de uma transação.  Neste exemplo, a instrução ROLLBACK reverterá a instrução INSERT, mas a tabela criada ainda continuará a existir.  
   
 ```  
 CREATE TABLE ValueTable (id int);  
@@ -128,14 +128,14 @@ BEGIN TRANSACTION;
 ROLLBACK;  
 ```  
   
-### <a name="c-setting-autocommit"></a>C. Configuração de confirmação automática  
- O exemplo a seguir define a configuração de confirmação automática `ON`.  
+### <a name="c-setting-autocommit"></a>C. Configurando AUTOCOMMIT  
+ O exemplo a seguir define a configuração de AUTOCOMMIT como `ON`.  
   
 ```  
 SET AUTOCOMMIT ON;  
 ```  
   
- O exemplo a seguir define a configuração de confirmação automática `OFF`.  
+ O exemplo a seguir define a configuração de AUTOCOMMIT como `OFF`.  
   
 ```  
 SET AUTOCOMMIT OFF;  
@@ -151,7 +151,7 @@ INSERT INTO ValueTable VALUES(2);
 COMMIT;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

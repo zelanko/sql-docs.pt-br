@@ -64,22 +64,22 @@ AS select_statement
  *view_name*  
  É a exibição a ser alterada.  
   
- *coluna*  
+ *column*  
  É o nome de uma ou mais colunas, separadas por vírgulas, que farão parte da exibição especificada.  
   
 > [!IMPORTANT]  
 >  As permissões de coluna serão mantidas apenas quando as colunas tiverem o mesmo nome antes e depois que ALTER VIEW for executado.  
   
 > [!NOTE]  
->  Nas colunas da exibição, as permissões de um nome de coluna são aplicadas por uma instrução CREATE VIEW ou ALTER VIEW, independentemente da fonte dos dados subjacentes. Por exemplo, se as permissões são concedidas no **SalesOrderID** coluna em uma instrução CREATE VIEW, uma instrução ALTER VIEW poderá renomear o **SalesOrderID** coluna, como **OrderRef**e ainda terá as permissões associadas à exibição usando **SalesOrderID**.  
+>  Nas colunas da exibição, as permissões de um nome de coluna são aplicadas por uma instrução CREATE VIEW ou ALTER VIEW, independentemente da fonte dos dados subjacentes. Por exemplo, se forem concedidas permissões na coluna **SalesOrderID** em uma instrução CREATE VIEW, uma instrução ALTER VIEW poderá renomear a coluna **SalesOrderID**, como para **OrderRef**, e ainda terá as permissões associadas à exibição usando **SalesOrderID**.  
   
  ENCRYPTION  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Criptografa as entradas em [sys. syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução ALTER VIEW. O uso de WITH ENCRYPTION impede que a exibição seja publicada como parte da replicação do SQL Server.  
+ Criptografa as entradas em [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contêm o texto da instrução ALTER VIEW. O uso de WITH ENCRYPTION impede que a exibição seja publicada como parte da replicação do SQL Server.  
   
  SCHEMABINDING  
- Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usar SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.** *objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
+ Associa a exibição ao esquema da tabela ou tabelas subjacentes. Quando SCHEMABINDING for especificado, as tabelas base não poderão ser modificadas de um modo que possa afetar a definição da exibição. A própria definição da exibição deve primeiramente ser modificada ou descartada a fim de remover dependências na tabela a ser modificada. Quando você usa SCHEMABINDING, o *select_statement* deve incluir os nomes de duas partes (*esquema***.***objeto*) de tabelas, exibições ou funções definidas pelo usuário que são referenciadas. Todos os objetos referenciados devem estar no mesmo banco de dados.  
   
  As exibições ou tabelas que participam de uma exibição, criadas com a cláusula SCHEMABINDING não podem ser descartadas, a menos que a exibição seja descartada ou alterada, de tal forma que não mais tenha associação de esquema. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro. Além disso, haverá falha na execução de instruções ALTER TABLE nas tabelas que participam de exibições com associação de esquema se essas instruções afetarem a definição da exibição.  
   
@@ -88,7 +88,7 @@ AS select_statement
   
  Para exibições criadas com VIEW_METADATA, os metadados do modo de procura retornam o nome da exibição e não os nomes de tabela base quando descreverem colunas da exibição no conjunto de resultados.  
   
- Quando uma exibição é criada com WITH VIEW_METADATA, todas as suas colunas, exceto um **timestamp** coluna, serão atualizáveis se a exibição tiver INSERT ou UPDATE INSTEAD OF dispara. Para obter mais informações, consulte a seção comentários no [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Quando uma exibição for criada com WITH VIEW_METADATA, todas as suas colunas, com exceção de uma coluna **timestamp**, serão atualizáveis se a exibição tiver disparadores INSERT ou UPDATE INSTEAD OF. Para obter mais informações, veja a seção Comentários em [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  AS  
  São as ações que a exibição deve efetuar.  
@@ -97,10 +97,10 @@ AS select_statement
  É a instrução SELECT que define a exibição.  
   
  WITH CHECK OPTION  
- Força todas as instruções de modificação de dados que são executadas em relação à exibição sigam os conjunto de critérios de *select_statement*.  
+ Força que todas as instruções de modificação de dados que são executadas em relação à exibição sigam o conjunto de critérios da *select_statement*.  
   
-## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre ALTER VIEW, consulte comentários em [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Para obter mais informações sobre ALTER VIEW, veja comentários em [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
 >  Se a definição da exibição anterior foi criada com WITH ENCRYPTION ou CHECK OPTION, essas opções estarão habilitadas apenas se foram incluídas em ALTER VIEW.  
@@ -140,10 +140,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

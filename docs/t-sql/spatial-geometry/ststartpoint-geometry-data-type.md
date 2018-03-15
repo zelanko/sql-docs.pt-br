@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o ponto inicial de um **geometria** instância.
+Retorna o ponto inicial de uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,14 +44,14 @@ Retorna o ponto inicial de um **geometria** instância.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- `STStartPoint()`é o equivalente de [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
+ `STStartPoint()` é o equivalente de [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `LineString` e usa `STStartPoint()` para recuperar o ponto inicial da instância.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0;
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STPointN &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

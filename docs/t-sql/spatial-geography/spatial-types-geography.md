@@ -1,5 +1,5 @@
 ---
-title: Geografia (Transact-SQL) | Microsoft Docs
+title: geografia (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>Tipos espaciais - geografia
+# <a name="spatial-types---geography"></a>Tipos espaciais – geografia
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  O tipo de dados espaciais de geografia, **geografia**, é implementado como um .NET common language runtime (CLR) tipo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo representa dados em um sistema de coordenadas de terra redonda. O tipo de dados de geografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
+  O tipo de dados espaciais de geografia, **geography**, é implementado como um tipo de dados CLR (Common Language Runtime) do .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo representa dados em um sistema de coordenadas de terra redonda. O tipo de dados de geografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dá suporte a um conjunto de métodos para o **geografia** tipo de dados espaciais. Isso inclui métodos sobre **geografia** que são definidos pelo padrão Open Geospatial Consortium (OGC) e um conjunto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] extensões para esse padrão.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é compatível com um conjunto de métodos do tipo de dados espaciais de **geografia**. Estão inclusos métodos de **geografia** que são definidos pelo padrão OGC (Open Geospatial Consortium) e um conjunto de extensões da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para esse padrão.  
  
- A tolerância de erro para o **geografia** métodos podem ser tão grandes quanto 1.0 e-7 * extensões. Consultem as extensões para a distância máxima aproximada entre pontos do **geografia**objeto.
+ A tolerância de erro para os métodos de **geografia** pode chegar até as extensões de 1.0e-7 *. As extensões referem-se à distância máxima aproximada entre os pontos do objeto de **geografia**.
   
 
 ## <a name="registering-the-geography-type"></a>Registrando o tipo de geografia  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. Mostrando como adicionar e consultar dados de geografia  
- Os exemplos a seguir mostram como adicionar e consultar dados de geografia. O primeiro exemplo cria uma tabela com uma coluna de identidade e uma `geography` coluna, `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
+ Os exemplos a seguir mostram como adicionar e consultar dados de geografia. O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography`, a `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. Usando geografia em uma coluna computada  
- O exemplo a seguir cria uma tabela com uma coluna computada persistente usando um **geografia** tipo.  
+ O exemplo a seguir cria uma tabela com uma coluna computada persistente usando um tipo de **geografia**.  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -98,7 +98,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   

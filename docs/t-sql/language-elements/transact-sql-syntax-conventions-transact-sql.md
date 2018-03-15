@@ -1,5 +1,5 @@
 ---
-title: "Convenções de sintaxe Transact-SQL (Transact-SQL) | Microsoft Docs"
+title: "Convenções da sintaxe Transact-SQL (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
 |&#124; (barra vertical)|Separa itens de sintaxe que se encontram entre colchetes ou entre chaves. Você pode usar só um dos itens.|  
 |`[ ]` (colchetes)|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |{ } (chaves)|Itens de sintaxe exigidos. Não digite as chaves.|  
-|[**,**...*n*]|Indica que o item precedente pode ser repetido  *n*  número de vezes. As ocorrências são separadas por vírgulas.|  
-|[...*n*]|Indica que o item precedente pode ser repetido  *n*  número de vezes. As ocorrências são separadas por espaços em branco.|  
+|[**,**...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
+|[...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por espaços em branco.|  
 |;|Terminador de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o sinal de ponto-e-vírgula não seja obrigatório na maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
-|\<label> ::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<rótulo >.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo \<conjunto de agrupamentos >; e uma lista é uma coleção de conjuntos, por exemplo \<lista de elementos composta >.|  
+|\<label> ::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<label>.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo, \<grouping set>, e uma lista é uma coleção de conjuntos, por exemplo, \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Nomes de partes múltiplas  
  A menos que especificado de outra forma, todas as referências [!INCLUDE[tsql](../../includes/tsql-md.md)] ao nome de um objeto de banco de dados podem ser um nome de quatro partes, do seguinte modo:  
@@ -75,15 +75,15 @@ ms.lasthandoff: 01/25/2018
  Especifica um nome de servidor vinculado ou remoto.  
   
  *database_name*  
- Especifica o nome de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o objeto reside em uma instância local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *database_name* Especifica um catálogo de OLE DB.  
+ Especifica o nome de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o objeto reside em uma instância local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *database_name* especifica um catálogo OLE DB.  
   
  *schema_name*  
- Especifica o nome do esquema que contém o objeto, se o objeto estiver em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *schema_name* Especifica um nome de esquema OLE DB.  
+ Especifica o nome do esquema que contém o objeto, se o objeto estiver em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando o objeto está em um servidor vinculado, *schema_name* especifica um nome de esquema OLE DB.  
   
  *object_name*  
  Refere-se ao nome do objeto.  
   
- Quando se refere a um objeto específico, nem sempre é preciso especificar o servidor, o banco de dados e o esquema para que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifique o objeto. No entanto, se o objeto não pode ser encontrado, um erro será retornado.  
+ Quando se refere a um objeto específico, nem sempre é preciso especificar o servidor, o banco de dados e o esquema para que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifique o objeto. Porém, se o objeto não puder ser encontrado, um erro será retornado.  
   
 > [!NOTE]  
 >  Para evitar erros de resolução de nome, recomendamos especificar o nome de esquema sempre que você especificar um objeto no escopo do esquema.  
@@ -92,14 +92,14 @@ ms.lasthandoff: 01/25/2018
   
 |Formato de referência de objeto|Description|  
 |-----------------------------|-----------------|  
-|*server* **.** *database* **.** *schema* **.** *objeto*|Nome de quatro partes.|  
-|*server* **.** *database* **..** *objeto*|O nome do esquema é omitido.|  
-|*server* **..** *schema* **.** *objeto*|O nome do banco de dados é omitido.|  
-|*servidor* **...**  *objeto*|Os nomes do banco de dados e do esquema são omitidos.|  
-|*database* **.** *schema* **.** *objeto*|O nome do servidor é omitido.|  
-|*database* **..** *objeto*|Os nomes do servidor e do esquema são omitidos.|  
-|*schema* **.** *objeto*|Os nomes do servidor e do banco de dados são omitidos.|  
-|*objeto*|Os nomes do servidor, do banco de dados e do esquema são omitidos.|  
+|*server* **.** *database* **.** *schema* **.** *object*|Nome de quatro partes.|  
+|*server* **.** *database* **..** *object*|O nome do esquema é omitido.|  
+|*server* **..** *schema* **.** *object*|O nome do banco de dados é omitido.|  
+|*server* **...** *object*|Os nomes do banco de dados e do esquema são omitidos.|  
+|*database* **.** *schema* **.** *object*|O nome do servidor é omitido.|  
+|*database* **..** *object*|Os nomes do servidor e do esquema são omitidos.|  
+|*schema* **.** *object*|Os nomes do servidor e do banco de dados são omitidos.|  
+|*object*|Os nomes do servidor, do banco de dados e do esquema são omitidos.|  
   
 ## <a name="code-example-conventions"></a>Convenções de exemplo de código  
  Salvo indicação em contrário, os exemplos fornecidos na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foram testados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e suas configurações padrão para as seguintes opções:  
@@ -118,14 +118,14 @@ ms.lasthandoff: 01/25/2018
   
  A maioria dos exemplos de código na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)] foi testada em servidores executando uma ordem de classificação com diferenciação de maiúsculas e minúsculas. Os servidores de teste executaram, normalmente, a página de código ANSI/ISO 1252.  
   
- Muitos exemplos de código do prefixo constantes de cadeia de caracteres Unicode com a letra **N**. Sem o **N** prefixo, a cadeia de caracteres é convertido para a página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
+ Muitos exemplos de código incluem um prefixo em constantes de cadeia de caracteres Unicode com a letra **N**. Sem o prefixo **N**, a cadeia de caracteres é convertida na página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
   
 ## <a name="applies-to-references"></a>Referências de "Aplica-se a"  
- O [!INCLUDE[tsql](../../includes/tsql-md.md)] referência inclui artigos relacionados ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Na parte superior de cada artigo é uma seção indicando quais produtos suportam o assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não está disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O **criar grupo de disponibilidade** artigo indica que ele se aplica ao **do SQL Server (SQL Server 2012 até a versão atual)** porque ela não se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Na parte superior de cada artigo, há uma seção indicando quais produtos se referem ao assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível no produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao **SQL Server (SQL Server 2012 à versão atual)** porque ele não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Em alguns casos, o assunto geral do artigo pode ser usado em um produto, mas não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O **CREATE USER** instrução pode ser usada em qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produto, no entanto, a **com senha** sintaxe não pode ser usada com versões anteriores. Nesse caso, adicionais **aplica-se a** seções são inseridas em descrições de argumento apropriado no corpo do artigo.  
+ Em alguns casos, o assunto geral do artigo pode ser usado em um produto, mas não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A instrução **CREATE USER** pode ser usada em qualquer produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, a sintaxe **WITH PASSWORD** não pode ser usada com versões anteriores. Nesse caso, seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriadas no corpo do artigo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

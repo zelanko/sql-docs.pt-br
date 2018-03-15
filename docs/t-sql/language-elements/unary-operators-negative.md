@@ -1,5 +1,5 @@
 ---
-title: '- (Negativo) (Transact-SQL) | Microsoft Docs'
+title: '- (Negative) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>Operadores unários - negativo
+# <a name="unary-operators---negative"></a>Operadores unários – Negative
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o negativo do valor de uma expressão numérica (um operador unário). Os operadores unários desempenham uma operação em apenas uma expressão de qualquer um dos tipos de dados da categoria de tipo de dados numéricos.   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos tipos de dados da categoria de tipo de dados numéricos, exceto a data e hora categoria.  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida de qualquer tipo de dados da categoria de tipo de dados numéricos, exceto a categoria de data e hora.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Retorna o tipo de dados de *numeric_expression*, exceto que sem um sinal **tinyint** expressão é promovida para um **smallint** resultados.  
+ Retorna o tipo de dados de *numeric_expression*, exceto que uma expressão **tinyint** sem sinal é promovida a um resultado **smallint** com sinal.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -109,7 +109,7 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Retornando o negativo de uma constante positiva  
  O exemplo a seguir retorna o negativo de uma constante positiva.  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Retornando o sinal positivo de uma constante negativa  
- O exemplo a seguir retorna o sinal positivo de uma constante negativa.  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Retornando o positivo de uma constante negativa  
+ O exemplo a seguir retorna o positivo de uma constante negativa.  
   
 ```  
 USE ssawPDW;  
@@ -142,7 +142,7 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. Retornando o negativo de uma coluna  
- O exemplo a seguir retorna o negativo do `BaseRate` valor para cada funcionário de `dimEmployee` tabela.  
+ O exemplo a seguir retorna o negativo do valor de `BaseRate` para cada funcionário da tabela `dimEmployee`.  
   
 ```  
 USE ssawPDW;  
@@ -150,10 +150,10 @@ USE ssawPDW;
 SELECT - BaseRate FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

@@ -56,19 +56,19 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  É a ID de um certificado no banco de dados atual. *certificate_ID* é **int**.  
   
  *@cleartext*  
- É uma variável do tipo **nvarchar**, **char**, **varchar**, ou **nchar** que contém os dados que serão assinados.  
+ É uma variável do tipo **nvarchar**, **char**, **varchar** ou **nchar** que contém os dados que serão assinados.  
   
- **'** *senha* **'**  
- É a senha com que a chave privada do certificado foi criptografada. *senha* é **nvarchar (128)**.  
+ **'** *password* **'**  
+ É a senha com que a chave privada do certificado foi criptografada. A *password* é **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Requer a permissão CONTROL no certificado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir assina o texto em `@SensitiveData` com certificado `ABerglundCert07`, depois de descriptografar o certificado com a senha "pGFD4bb925DGvbd2439587y". Em seguida, ele insere o texto não criptografado e a assinatura em tabela `SignedData04`.  
+ O exemplo a seguir assina o texto em `@SensitiveData` com o certificado `ABerglundCert07`, depois de descriptografar o certificado com a senha "pGFD4bb925DGvbd2439587y". Em seguida, ele insere o texto não criptografado e a assinatura em tabela `SignedData04`.  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -81,12 +81,12 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [VERIFYSIGNEDBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Remover certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

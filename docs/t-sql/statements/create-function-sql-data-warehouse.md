@@ -1,5 +1,5 @@
 ---
-title: "Criar função (SQL Data Warehouse) | Microsoft Docs"
+title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-function-sql-data-warehouse"></a>Criar função (SQL Data Warehouse)
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Uma função definida pelo usuário é um [!INCLUDE[tsql](../../includes/tsql-md.md)] rotina que aceita parâmetros, executa uma ação, como um cálculo complexo e retorna o resultado dessa ação como um valor. O valor de retorno deve ser um valor escalar (único). Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
+  Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor retornado deve ser um valor escalar (único). Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
   
 -   Em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], como SELECT  
   
@@ -75,7 +75,7 @@ RETURNS return_data_type
  É o nome do esquema ao qual a função definida pelo usuário pertence.  
   
  *function_name*  
- É o nome da função definida pelo usuário. Nomes de função devem estar de acordo com as regras para identificadores e devem ser exclusivos no banco de dados e seu esquema.  
+ É o nome da função definida pelo usuário. Os nomes de funções devem obedecer às regras de identificadores e devem ser exclusivos dentro do banco de dados e em seu esquema.  
   
 > [!NOTE]  
 >  São necessários parênteses depois do nome de função mesmo que um parâmetro não seja especificado.  
@@ -88,23 +88,23 @@ RETURNS return_data_type
  Especifique um nome de parâmetro usando um sinal de arroba (@) como o primeiro caractere. O nome do parâmetro deve estar em conformidade com as regras de identificadores. Os parâmetros são locais para a função. Os mesmos nomes de parâmetro podem ser usados em outras funções. Os parâmetros só podem assumir o lugar de constantes. Eles não podem ser usados no lugar de nomes de tabela, nomes de coluna ou nomes de outros objetos de banco de dados.  
   
 > [!NOTE]  
->  ANSI_WARNINGS não é cumprido quando você passa parâmetros em um procedimento armazenado, em uma função definida pelo usuário ou quando declara ou define variáveis em uma instrução de lote. Por exemplo, se a variável é definida como **caractere (3)**e definido como um valor maior do que três caracteres, os dados são truncados para o tamanho definido e a inserção ou atualização instrução tem sucesso.  
+>  ANSI_WARNINGS não é cumprido quando você passa parâmetros em um procedimento armazenado, em uma função definida pelo usuário ou quando declara ou define variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char(3)** e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução INSERT ou UPDATE terá êxito.  
   
  *parameter_data_type*  
- É o tipo de dados do parâmetro. Para [!INCLUDE[tsql](../../includes/tsql-md.md)] funções, todos os tipos de dados escalares com suporte no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de hora (rowversion) não é um tipo com suporte.  
+ É o tipo de dados de parâmetro. Para funções [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os tipos de dados escalares compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de data/hora (rowversion) não é um tipo compatível.  
   
  [ =*default* ]  
- É um valor padrão para o parâmetro. Se um *padrão* valor for definido, a função pode ser executada sem especificar um valor para esse parâmetro.  
+ É um valor padrão para o parâmetro. Se um valor *default* for definido, a função poderá ser executada sem a necessidade de especificar um valor para esse parâmetro.  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão.  
   
  *return_data_type*  
- É o valor de retorno de uma função escalar definida pelo usuário. Para [!INCLUDE[tsql](../../includes/tsql-md.md)] funções, todos os tipos de dados escalares com suporte no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de hora (rowversion) não é um tipo com suporte. Os tipos não escalares de cursor e a tabela não são permitidos.  
+ É o valor de retorno de uma função escalar definida pelo usuário. Para funções [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os tipos de dados escalares compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de data/hora (rowversion) não é um tipo compatível. Os tipos não escalares de cursor e tabela não são permitidos.  
   
  *function_body*  
- Série de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.  O function_body não pode conter uma instrução SELECT e não pode fazer referência a dados do banco de dados.  O function_body não é possível fazer referência a tabelas ou exibições. O corpo da função pode chamar outras funções determinísticas, mas não é possível chamar funções não determinísticas. 
+ Série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  O function_body não pode conter uma instrução SELECT e não pode referenciar os dados do banco de dados.  O function_body não pode referenciar tabelas nem exibições. O corpo da função pode chamar outras funções determinísticas, mas não pode chamar funções não determinísticas. 
   
- Em funções escalares, *function_body* é uma série de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções que juntas são avaliadas como um valor escalar.  
+ Em funções escalares, *function_body* é uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que juntas são avaliadas para um valor escalar.  
   
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
@@ -124,18 +124,18 @@ RETURNS return_data_type
   
  Uma função poderá ser associada a esquemas apenas se as condições a seguir forem verdadeiras:  
   
--   Quaisquer funções definidas pelo usuário referenciadas pela função são também associadas a esquema.  
+-   As funções definidas pelo usuário referenciadas pela função também são associadas a esquema.  
   
--   As funções e outros UDFs referenciados pela função são referenciados usando um nome de parte única ou de duas partes.  
+-   As funções e outras UDFs referenciadas pela função são referenciadas usando um nome de uma ou duas partes.  
   
--   Somente funções internas e outros UDFs no mesmo banco de dados podem ser referenciados dentro do corpo de UDFs.  
+-   Somente funções internas e outras UDFs no mesmo banco de dados podem ser referenciadas no corpo de UDFs.  
   
 -   O usuário que executou a instrução CREATE FUNCTION tem permissão REFERENCES nos objetos do banco de dados referidos pela função.  
   
- Para remover SCHEMABINDING use ALTER  
+ Para remover SCHEMABINDING, use ALTER  
   
- RETORNA NULL EM ENTRADA NULL | **CHAMADO EM ENTRADA NULL**  
- Especifica o **OnNULLCall** atributo de uma função com valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ Especifica o atributo **OnNULLCall** de uma função de valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
  Se uma função definida pelo usuário não for criada com a cláusula SCHEMABINDING, as alterações feitas nos objetos subjacentes poderão afetar a definição da função e produzir resultados inesperados quando ela for chamada. É recomendável que você implemente um dos seguintes métodos para garantir que a função não se torne desatualizada devido a alterações em seus objetos subjacentes:  
@@ -149,7 +149,7 @@ RETURNS return_data_type
   
 -   Instruções de controle de fluxo com exceção das instruções TRY...CATCH.  
   
--   Instruções DECLARE que definem variáveis de dados local.  
+-   Instruções DECLARE que definem variáveis de dados locais.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Funções definidas pelo usuário não podem ser usadas para executar ações que modificam o estado do banco de dados.  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  Funções definidas pelo usuário podem ser aninhadas, isto é, uma função definida pelo usuário pode chamar outra. O nível de aninhamento é incrementado quando a execução da função é iniciada, e reduzido quando a execução da função chamada é concluída. Até 32 níveis de funções definidas pelo usuário podem ser aninhados. Se o máximo de níveis de aninhamento for excedido haverá falha em toda a cadeia de funções da chamada de aninhamento.   
   
 ## <a name="metadata"></a>Metadados  
- Esta seção lista as exibições de catálogo do sistema que você pode usar para retornar metadados sobre funções definidas pelo usuário.  
+ Esta seção lista as exibições do catálogo do sistema que podem ser usadas para retornar metadados sobre funções definidas pelo usuário.  
   
- [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : exibe a definição de [!INCLUDE[tsql](../../includes/tsql-md.md)] funções definidas pelo usuário. Por exemplo:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): exibe a definição de funções definidas pelo usuário do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [sys. Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.  
   
- [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : exibe os objetos subjacentes referenciados por uma função.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): exibe os objetos subjacentes referenciados por uma função.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CREATE FUNCTION no banco de dados e a permissão ALTER no esquema no qual a função está sendo criada.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Usando uma função com valor escalar definida pelo usuário para alterar um tipo de dados  
- Essa função simple usa uma **int** de tipo de dados como uma entrada e retorna um **decimal(10,2)** tipo de dados como uma saída.  
+ Essa função simples usa um tipo de dados **int** como uma entrada e retorna um tipo de dados **decimal(10,2)** como uma saída.  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -197,9 +197,9 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [Remover função (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

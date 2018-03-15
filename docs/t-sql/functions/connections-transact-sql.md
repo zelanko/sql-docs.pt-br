@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONEXÕES (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -51,12 +51,12 @@ Retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a últ
 ## <a name="return-types"></a>Tipos de retorno
 **inteiro**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Conexões são diferentes de usuários. Por exemplo, aplicativos podem abrir várias conexões em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem que o usuário perceba.
   
-Para exibir um relatório que contém várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estatísticas, inclusive tentativas de conexão, executadas **sp_monitor**.
+Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo tentativas de conexão, execute **sp_monitor**.
   
-@@MAX_CONNECTIONS é o número máximo de conexões permitidas simultaneamente no servidor. @@CONNECTIONS é incrementado com cada tentativa de logon, portanto @@CONNECTIONS pode ser maior que @@MAX_CONNECTIONS .
+@@MAX_CONNECTIONS é o número máximo de conexões permitidas simultaneamente com o servidor. @@CONNECTIONS é incrementado a cada tentativa de logon e, portanto, @@CONNECTIONS pode ser maior que @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir mostra o retorno do número de tentativas de logon a partir da data e hora atuais.
@@ -76,7 +76,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções estatísticas do sistema &#40;Transact-SQL&#4#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+[Funções estatísticas do sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   

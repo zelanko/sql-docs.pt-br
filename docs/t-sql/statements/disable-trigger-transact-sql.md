@@ -65,23 +65,23 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria gatilhos em bancos de dados que são publicados para replicação de mesclagem. Ao especificar ALL em bancos de dados publicados, esses gatilhos são desabilitados, interrompendo a replicação. Verifique se o banco de dados atual não foi publicado para replicação de mesclagem antes de especificar ALL.  
   
  *object_name*  
- É o nome da tabela ou exibição na qual o gatilho DML *trigger_name* foi criado para executar.  
+ É o nome da tabela ou da exibição na qual o gatilho DML *trigger_name* foi criado para ser executado.  
   
  DATABASE  
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com escopo de banco de dados.  
+ Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do banco de dados.  
   
  ALL SERVER  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com escopo no servidor. ALL SERVER também é aplicado a gatilhos de logon.  
+ Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do servidor. ALL SERVER também é aplicado a gatilhos de logon.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
- Os gatilhos são habilitados por padrão ao serem criados. Ao desabilitar um gatilho, você não o descarta. O gatilho ainda existe como um objeto no banco de dados atual. Porém, o gatilho não é acionado quando qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em que ele tenha sido programado é executada. Os gatilhos podem ser reabilitados usando [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Gatilhos DML definidos nas tabelas podem ser também ser habilitado ou desabilitado usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Os gatilhos são habilitados por padrão ao serem criados. Ao desabilitar um gatilho, você não o descarta. O gatilho ainda existe como um objeto no banco de dados atual. Porém, o gatilho não é acionado quando qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em que ele tenha sido programado é executada. Os gatilhos podem ser reabilitados usando [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- Alterar o gatilho usando a **ALTER TRIGGER** instrução permite que o gatilho.  
+ Alterar o gatilho usando a instrução **ALTER TRIGGER** habilita o gatilho.  
   
 ## <a name="permissions"></a>Permissões  
  Para desabilitar um gatilho DML, no mínimo, um usuário deve ter a permissão ALTER na tabela ou exibição na qual o gatilho foi criado.  
@@ -122,7 +122,7 @@ DISABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

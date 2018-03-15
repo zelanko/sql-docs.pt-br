@@ -1,14 +1,15 @@
 ---
 title: "Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes transacionais, o agente de distribuição continuará a replicar automaticamente se a assinatura estiver usando o nome do ouvinte do grupo de disponibilidade do assinante. Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   
 ## <a name="what-is-supported"></a>O que tem suporte  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao failover automático do publicador, ao failover automático dos assinantes transacionais e ao failover manual dos assinantes de mesclagem. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. O AlwaysOn não pode ser combinado com cenários Websync e ssNoVersion Compact.  
-  
- **Failover de uma assinatura pull de mesclagem**  
-  
- Uma assinatura pull apresenta falha após o failover do grupo de disponibilidade porque o agente de pull não pode localizar os trabalhos armazenados no banco de dados **msdb** da instância de servidor que hospeda a réplica primária, que não está disponível porque a instância do servidor apresentou falha.  
-  
- **Failover de uma assinatura push de mesclagem**  
-  
- Uma assinatura push apresenta falha após o failover do grupo de disponibilidade porque o agente de push não pode mais se conectar ao banco de dados de assinatura original no assinante original.  
+ A replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem suporte para o failover automático do publicador e de assinantes transacionais. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. Os assinantes de mesclagem podem fazer parte de um grupo de disponibilidade. No entanto, é necessário realizar ações manuais para configurar o novo assinante após um failover. Não é possível combinar Grupos de Disponibilidade com cenários Websync e ssNoVersion Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Como criar uma assinatura transacional em um ambiente AlwaysOn  
  Para a replicação transacional, use as seguintes etapas para configurar e fazer o failover de um grupo de disponibilidade do assinante:  

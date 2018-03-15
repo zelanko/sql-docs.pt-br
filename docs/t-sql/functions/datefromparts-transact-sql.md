@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um **data** valor para o ano especificado, mês e dia.
+Retorna um valor de **date** para o ano, o mês e o dia especificados.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*ano*  
+*year*  
 Expressão de inteiro que especifica um ano.
   
-*mês*  
+*month*  
 Expressão de inteiro que especifica um mês, de 1 a 12.
   
-*dia*  
+*day*  
 Expressão de inteiro que especifica um dia.
   
 ## <a name="return-types"></a>Tipos de retorno
 **date**
   
-## <a name="remarks"></a>Comentários  
-**DATEFROMPARTS** retorna um **data** valor com a parte de data definida como o ano especificado, o mês e o dia e a parte de hora definida como o padrão. Se os argumentos não são válidos, um erro é gerado. Se os argumentos necessários forem nulos, nulo será retornado.
+## <a name="remarks"></a>Remarks  
+**DATEFROMPARTS** retorna um valor de **date** com a parte de data definida como o ano, o mês e o dia especificados e a parte de hora definida com o padrão. Se os argumentos não forem válidos, um erro será gerado. Se os argumentos necessários forem nulos, nulo será retornado.
   
 Essa função é capaz de ser remota para servidores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e acima. Ela não será remota para servidores de versão anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir demonstra o **DATEFROMPARTS** função.
+O exemplo a seguir demonstra a função **DATEFROMPARTS**.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

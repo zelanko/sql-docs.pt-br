@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *tipo*  
  É o nome do tipo de dados.  
   
- *propriedade*  
- É o tipo das informações a serem retornadas para o tipo de dados. *propriedade* pode ser um dos valores a seguir.  
+ *property*  
+ É o tipo das informações a serem retornadas para o tipo de dados. *property* pode ser um dos valores a seguir.  
   
 |Propriedade|Description|Valor retornado|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Tipo de dados permite valores nulos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado.|  
-|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: O proprietário do esquema não é necessariamente o proprietário de tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
-|**Precisão**|Precisão para o tipo de dados.|O número de dígitos ou caracteres.<br /><br /> -1 = **xml** ou tipo de dados de valor grande<br /><br /> NULL = Tipo de dados não localizado.|  
-|**Escala**|Escala para o tipo de dados.|O número de lugares decimais para o tipo de dados.<br /><br /> NULL = não é de tipo de dados **numérico** ou não encontrado.|  
+|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: o proprietário do esquema não é necessariamente o proprietário do tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
+|**Precisão**|Precisão para o tipo de dados.|O número de dígitos ou caracteres.<br /><br /> -1 = **xml** ou um tipo de dados de valor grande<br /><br /> NULL = Tipo de dados não localizado.|  
+|**Escala**|Escala para o tipo de dados.|O número de lugares decimais para o tipo de dados.<br /><br /> NULL = o tipo de dados não é **numeric** ou não foi encontrado.|  
 |**UsesAnsiTrim**|Configuração de preenchimento ANSI era ON quando o tipo de dados foi criado.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado ou não é um tipo de dados binário ou de cadeia de caracteres.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -86,14 +86,14 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [TYPE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

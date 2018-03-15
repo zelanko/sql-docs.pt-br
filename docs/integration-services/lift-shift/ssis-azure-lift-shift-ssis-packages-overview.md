@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
 Agora você pode mover suas cargas de trabalho e pacotes do SQL Server Integration Services (SSIS) para a nuvem do Azure.
@@ -91,6 +91,8 @@ Para implantar projetos e executar pacotes no Banco de Dados SQL, você pode usa
 -   Uma ferramenta de linha de comando
 -   PowerShell
 -   C# e o modelo do objeto de gerenciamento do SSIS
+
+Para começar, confira [Implantar, executar e monitorar um pacote SSIS no Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="monitor-packages"></a>Monitorar pacotes
 Para monitorar pacotes em execução no SSMS, você pode usar uma das ferramentas de relatório a seguir no SSMS.

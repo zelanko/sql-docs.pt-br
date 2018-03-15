@@ -1,5 +1,5 @@
 ---
-title: Transactions (Transact-SQL) | Microsoft Docs
+title: "Transações (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   Uma transação é uma única unidade de trabalho. Se uma transação tiver êxito, todas as modificações de dados feitas durante a transação estarão confirmadas e se tornarão parte permanente do banco de dados. Se uma transação encontrar erros e precisar ser cancelada ou revertida, todas as modificações de dados serão apagadas.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]opera nos seguintes modos de transação:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opera nos seguintes modos de transação:  
   
  Transações de confirmação automática  
  Cada instrução individual é uma transação.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 01/25/2018
  Aplicável apenas a MARS (Conjuntos de Resultados Ativos Múltiplos), a transação [!INCLUDE[tsql](../../includes/tsql-md.md)] explícita ou implícita iniciada em uma sessão MARS se torna uma transação de escopo de lote. A transação de escopo de lote que não é confirmada ou revertida quando um lote é concluído, será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> Para considerações especiais relacionadas a produtos de Data Warehouse, consulte [transações (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> Para considerações especiais relacionadas a produtos de Data Warehouse, confira [Transações (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
 
 ## <a name="in-this-section"></a>Nesta seção  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fornece as seguintes instruções de transação:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções de transação:  
   
 |||  
 |-|-|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 |[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   

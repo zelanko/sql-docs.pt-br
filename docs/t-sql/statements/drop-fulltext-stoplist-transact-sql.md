@@ -57,11 +57,11 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  É o nome da lista de palavras irrelevantes de texto completo a ser descartada do banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Haverá falha em DROP FULLTEXT STOPLIST se qualquer índice de texto completo fizer referência à lista de palavras irrelevantes de texto completo que está sendo descartada.  
   
 ## <a name="permissions"></a>Permissões  
- Para remover uma lista de palavras irrelevantes é necessário ter permissão DROP na lista de palavras irrelevantes ou associação de **db_owner** ou **db_ddladmin** funções de banco de dados fixas.  
+ Para remover uma lista de palavras irrelevantes, é necessário ter permissão DROP na lista de palavras irrelevantes ou associação nas funções fixas **db_owner** ou **db_ddladmin** do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir descarta uma lista de palavras irrelevantes de texto completo denominada `myStoplist`.  
@@ -70,10 +70,10 @@ DROP FULLTEXT STOPLIST stoplist_name
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [CREATE FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

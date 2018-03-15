@@ -1,5 +1,5 @@
 ---
-title: Adicionar assinatura (Transact-SQL) | Microsoft Docs
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  É a classe do módulo ao qual a assinatura é adicionada. O padrão para módulos de escopo de esquema é OBJECT.  
   
- *nome_de_módulo*  
+ *module_name*  
  É o nome de um procedimento armazenado, função, assembly ou gatilho a serem assinados ou referendados.  
   
- CERTIFICADO *cert_name*  
+ CERTIFICATE *cert_name*  
  É o nome de um certificado com o qual assinar ou referendar o procedimento armazenado, função, assembly ou gatilho.  
   
- COM a senha ='*senha*'  
+ WITH PASSWORD ='*password*'  
  É a senha necessária para descriptografar a chave privada do certificado ou chave assimétrica. Esta cláusula só será necessária se a chave privada não for protegida pela chave mestra de banco de dados.  
   
- ASSINATURA =*signed_blob*  
+ SIGNATURE =*signed_blob*  
  Especifica o BLOB (objeto binário grande) assinado do módulo. Esta cláusula será útil se você quiser enviar um módulo sem enviar a chave privada. Ao usar esta cláusula, somente o módulo, a assinatura e a chave pública são necessários para adicionar o objeto binário grande a um banco de dados. *signed_blob* é o próprio blob em formato hexadecimal.  
   
- CHAVE ASSIMÉTRICA *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  É o nome de uma chave assimétrica com a qual assinar ou referendar o procedimento armazenado, função, assembly ou gatilho.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O módulo que é assinado ou referendado e o certificado ou chave assimétrica usados para assiná-lo já devem existir. Todo caractere no módulo é incluído no cálculo de assinatura. Isso inclui retornos de carro à esquerda e alimentação de linha.  
   
  Um módulo pode ser assinado e referendado por qualquer número de certificados e chaves assimétricas.  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  Ao recriar um procedimento para a assinatura, todas as instruções no lote original devem corresponder ao lote de recriação. Se qualquer parte do lote for diferente, mesmo em espaços ou comentários, a assinatura resultante será diferente.  
   
 ## <a name="countersignatures"></a>Referendas  
- Ao executar um módulo assinado, as assinaturas serão acrescentadas temporariamente ao token do SQL, mas as assinaturas serão perdidas se o módulo executar outro módulo ou se o módulo finalizar a execução. Uma referenda é uma forma especial de assinatura. Por si só, uma referenda não concede permissões, porém, permite que as assinaturas feitas pelo mesmo certificado ou chave assimétrica sejam mantidas enquanto durar a chamada feita ao objeto referendado.  
+ Ao executar um módulo assinado, as assinaturas serão adicionadas temporariamente ao token do SQL, mas as assinaturas serão perdidas se o módulo executar outro módulo ou se o módulo terminar a execução. Uma referenda é uma forma especial de assinatura. Por si só, uma referenda não concede permissões, porém, permite que as assinaturas feitas pelo mesmo certificado ou chave assimétrica sejam mantidas enquanto durar a chamada feita ao objeto referendado.  
   
- Por exemplo, presuma que a usuária Alice chame o procedimento ProcSelectT1ForAlice, que chama o procedimento procSelectT1, que seleciona da tabela T1. Alice tem permissão de EXECUTE em ProcSelectT1ForAlice e procSelectT1, mas ela não tem permissão de SELECT em T1 e nenhum encadeamento de propriedade é envolvido nesta cadeia inteira. Alice não pode acessar a tabela T1 diretamente ou pelo uso de ProcSelectT1ForAlice e procSelectT1. Como desejamos que Alice use sempre ProcSelectT1ForAlice para acesso, nós não desejamos conceder permissão para ela executar procSelectT1. Como podemos fazer isso?  
+ Por exemplo, presuma que a usuária Alice chame o procedimento ProcSelectT1ForAlice, que chama o procedimento procSelectT1, que seleciona da tabela T1. Alice tem permissão de EXECUTE em ProcSelectT1ForAlice e procSelectT1, mas ela não tem permissão de SELECT em T1 e nenhum encadeamento de propriedade é envolvido nesta cadeia inteira. Alice não pode acessar a tabela T1 diretamente ou pelo uso de ProcSelectT1ForAlice e procSelectT1. Considerando que desejamos que Alice use sempre ProcSelectT1ForAlice para obter acesso, não desejamos conceder permissão a ela para executar procSelectT1. Como podemos fazer isso?  
   
 -   Se nós assinarmos procSelectT1, de modo que procSelectT1 acesse T1, Alice poderá invocar procSelectT1 diretamente e não terá que chamar ProcSelectT1ForAlice.  
   
@@ -106,7 +106,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Assinar ProcSelectT1ForAlice não funcionaria por si só, porque a assinatura seria perdida na chamada para procSelectT1.  
   
-No entanto, ao assinar procSelectT1 com o mesmo certificado usado para assinar ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manterá a assinatura na cadeia de chamada e permitirá acesso a T1. Se Alice tentar chamar procSelectT1 diretamente, ela não poderá acessar T1, porque a referenda não concede nenhum direito. O exemplo C abaixo mostra o [!INCLUDE[tsql](../../includes/tsql-md.md)] para este exemplo.  
+Porém, ao referendar procSelectT1 com o mesmo certificado usado para assinar ProcSelectT1ForAlice, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manterá a assinatura na cadeia de chamada e permitirá o acesso a T1. Se Alice tentar chamar procSelectT1 diretamente, ela não poderá acessar T1, porque a referenda não concede nenhum direito. O exemplo C abaixo mostra o [!INCLUDE[tsql](../../includes/tsql-md.md)] para este exemplo.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER no objeto e a permissão CONTROL no certificado ou chave assimétrica. Se uma chave privada associada estiver protegida por uma senha, o usuário também precisará ter a senha.  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Remover assinatura &#40; Transact-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET NOEXEC é ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila cada lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não as executa. Quando SET NOEXEC é OFF, todos os lotes são executados depois de compilação.  
   
  A execução de instruções no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem duas fases: compilação e execução. Esta configuração é útil para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide a sintaxe e os nomes de objeto no código [!INCLUDE[tsql](../../includes/tsql-md.md)] durante a execução. Também é útil para depurar instruções que geralmente fariam parte de um lote maior de instruções.  
@@ -115,9 +115,9 @@ SET NOEXEC OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

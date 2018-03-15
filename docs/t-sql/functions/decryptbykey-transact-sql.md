@@ -50,17 +50,17 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *texto cifrado*  
- São os dados que foram criptografados com a chave. *texto cifrado* é **varbinary**.  
+ *ciphertext*  
+ São os dados que foram criptografados com a chave. O *ciphertext* é **varbinary**.  
   
  **@ciphertext**  
- É uma variável do tipo **varbinary** que contém dados que foram criptografados com a chave.  
+ É uma variável do tipo **varbinary** que contém dados criptografados com a chave.  
   
  *add_authenticator*  
  Indica se um autenticador foi criptografado junto com o texto não criptografado. Deve ser igual ao valor passado para EncryptByKey durante a criptografia dos dados. *add_authenticator* é **int**.  
   
- *autenticador*  
- São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. *autenticador* é **sysname**.  
+ *authenticator*  
+ São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. O *authenticator* é **sysname**.  
   
  **@authenticator**  
  É uma variável que contém dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey.  
@@ -68,13 +68,13 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DecryptByKey usa uma chave simétrica. Essa chave simétrica já deve estar aberta no banco de dados. Podem haver várias chaves abertas ao mesmo tempo. Não é necessário abrir a chave imediatamente antes de descriptografar o texto de codificado.  
   
  A criptografia e a descriptografia simétricas são relativamente rápidas e adequadas para trabalhar com grandes quantidades de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer que a chave simétrica tenha sido aberta na sessão atual. Para obter mais informações, consulte [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+ Requer que a chave simétrica tenha sido aberta na sessão atual. Para obter mais informações, consulte [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -119,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

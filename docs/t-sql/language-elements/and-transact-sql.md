@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Combina duas expressões Boolianas e retorna **TRUE** quando ambas as expressões forem **TRUE**. Quando mais de um operador lógico for usado em uma instrução, o **AND** operadores são avaliados primeiro. É possível alterar a ordem de avaliação usando parênteses.  
+  Combina duas expressões boolianas e retorna **TRUE** quando ambas as expressões são **TRUE**. Quando mais de um operador lógico é usado em uma instrução, os operadores **AND** são avaliados primeiro. É possível alterar a ordem de avaliação usando parênteses.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que retorna um valor booliano: **TRUE**, **FALSE**, ou **desconhecido**.  
+ É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida que retorna um valor booliano: **TRUE**, **FALSE** ou **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
@@ -65,7 +65,7 @@ boolean_expression AND boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**DESCONHECIDO**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -100,9 +100,9 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

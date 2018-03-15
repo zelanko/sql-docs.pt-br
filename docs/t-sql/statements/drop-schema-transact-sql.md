@@ -57,20 +57,20 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta o esquema somente se ele já existe.  
+ Remove condicionalmente o esquema somente se ele já existir.  
   
  *schema_name*  
  É o nome pelo qual o esquema é conhecido no banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O esquema que está sendo descartado não deve conter nenhum objeto. Se o esquema contiver objetos, a instrução DROP falhará.  
   
- Informações sobre esquemas são visíveis no [schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) exibição do catálogo.  
+ As informações sobre esquemas estão visíveis na exibição do catálogo [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
   
- **Cuidado**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Cuidado** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no esquema ou a permissão ALTER ANY SCHEMA no banco de dados.  
@@ -95,8 +95,8 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
- [Criar esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DESCARTE o esquema (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

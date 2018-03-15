@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Erro (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o número do erro da última instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] executada.  
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/18/2018
 ## <a name="remarks"></a>Remarks  
  Retornará 0 se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] anterior não tiver encontrado nenhum erro.  
   
- Retornará um número de erro se a instrução anterior encontrar um erro. Se o erro foi um dos erros na exibição do catálogo sys. messages, em seguida,@ERROR contém o valor da coluna message_id para esse erro. Você pode exibir o texto associado com um @@ERROR número do erro em sys. messages.  
+ Retornará um número de erro se a instrução anterior encontrar um erro. Se o erro for um dos encontrados na exibição de catálogo sys.messages, @@ERROR conterá o valor da coluna sys.messages.message_id para esse erro. É possível exibir o texto associado a um número de erro @@ERROR em sys.messages.  
   
- Como @@ERROR está desmarcada e redefinir em cada instrução executada, verifique-o imediatamente após a instrução que está sendo verificada ou salvá-lo em uma variável local que pode ser verificada mais tarde.  
+ Uma vez que @@ERROR é apagado e redefinido em cada instrução executada, consulte-o imediatamente após a instrução ser verificada ou salve-o em uma variável local que possa ser verificada mais tarde.  
   
- Use a construção TRY...CATCH para manipular erros. O bloco TRY... CATCH construir também dá suporte a mais funções do sistema (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE) que retornam mais informações de erro @@ERROR. TRY...CATCH também oferece suporte a uma função ERROR_NUMBER não limitada a retornar o número de erro na instrução imediatamente após a instrução que gerou um erro. Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Use a construção TRY...CATCH para manipular erros. O constructo TRY...CATCH também é compatível com funções de sistema adicionais (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE) que retornam mais informações de erro que @@ERROR. TRY...CATCH também oferece suporte a uma função ERROR_NUMBER não limitada a retornar o número de erro na instrução imediatamente após a instrução que gerou um erro. Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando @@ERROR para sair de um procedimento condicionalmente  
- O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `DELETE` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
+ O exemplo seguinte usa instruções `IF...ELSE` para testar `@@ERROR` depois de uma instrução `DELETE` em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Usando @@ERROR com @@ROWCOUNT   
+### <a name="c-using-error-with-rowcount"></a>C. Usando @@ERROR com @@ROWCOUNT  
  O exemplo a seguir usa `@@ERROR` com `@@ROWCOUNT` para validar a operação de uma instrução `UPDATE`. O valor de `@@ERROR` é verificado para não haver indicação de erro, e `@@ROWCOUNT` é usado para garantir que a atualização foi aplicada com sucesso na linha da tabela.  
   
 ```  
@@ -172,16 +172,16 @@ GO
 ```  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys. messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 

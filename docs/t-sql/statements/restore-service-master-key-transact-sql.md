@@ -1,5 +1,5 @@
 ---
-title: "CHAVE MESTRA de serviço de restauração (Transact-SQL) | Microsoft Docs"
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ARQUIVO **='***path_to_file***'**  
+ FILE **='***path_to_file***'**  
  Especifica o caminho completo, inclusive o nome do arquivo, para a chave mestra do serviço. *path_to_file* pode ser um caminho local ou um caminho UNC para um local de rede.  
   
- SENHA **='***senha***'**  
+ PASSWORD **='***password***'**  
  Especifica a senha exigida para decifrar a chave mestra de serviço que está sendo importada de um arquivo.  
   
  FORCE  
  Força a substituição da chave mestra de serviço, mesmo com o risco de perda de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando a chave mestra de serviço é restaurada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptografa todas as chaves e segredos que foram criptografados com a chave mestra de serviço atual e, em seguida, criptografa a chave mestra de serviço carregada do arquivo de backup.  
   
  Se qualquer uma dessas descriptografias falhar, a restauração falhará. É possível usar a opção FORCE para ignorar erros, mas essa opção causará a perda dos dados que não puderem ser descriptografados.  
@@ -85,10 +85,10 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Chave mestra de serviço](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTERAR a chave MESTRA de serviço &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [CHAVE MESTRA de serviço de BACKUP &#40; Transact-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Chave Mestra do Serviço](../../relational-databases/security/encryption/service-master-key.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

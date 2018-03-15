@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ARQUIVO ='*path_to_file*'  
+ FILE ='*path_to_file*'  
  Especifica o caminho completo, inclusive o nome do arquivo, para a chave mestra do banco de dados armazenado. *path_to_file* pode ser um caminho local ou um caminho UNC para um local de rede.  
   
- DECRYPTION BY PASSWORD ='*senha*'  
+ DECRYPTION BY PASSWORD ='*password*'  
  Especifica a senha exigida para decifrar a chave mestra de banco de dados que está sendo importada de um arquivo.  
   
- ENCRYPTION BY PASSWORD ='*senha*'  
+ ENCRYPTION BY PASSWORD ='*password*'  
  Especifica a senha usada para criptografar a chave mestra de banco de dados depois que ela é carregada no banco de dados.  
   
  FORCE  
  Especifica que o processo RESTORE deve continuar, mesmo que a chave mestra de banco de dados atual não seja aberta ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não puder descriptografar algumas chaves particulares criptografadas com ela.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando a chave mestra é restaurada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptografa todas as chaves atualmente criptografadas com a chave mestra ativa e criptografa essas chaves com a chave mestra restaurada. Essa operação de uso intensivo de recursos deve ser agendada em um período de baixa demanda. Se a chave mestra de banco de dados atual não for aberta ou não puder ser aberta, ou se qualquer chave criptografada com ela não puder ser descriptografada, a operação de restauração falhará.  
   
  Use a opção de FORCE somente se a chave mestra for irrecuperável ou se descriptografia falhar. As informações que só são criptografadas por uma chave irrecuperável serão perdidas.  
@@ -93,7 +93,7 @@ RESTORE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  

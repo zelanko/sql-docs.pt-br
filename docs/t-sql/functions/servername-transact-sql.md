@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servername-transact-sql"></a>& #x 40; & #x 40. SERVERNAME (Transact-SQL)
+# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o nome do servidor local que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,10 +49,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentários  
- A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define o nome do servidor como o nome do computador durante instalação. Para alterar o nome do servidor, use **sp_addserver**e, em seguida, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Remarks  
+ A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define o nome do servidor como o nome do computador durante instalação. Para alterar o nome do servidor, use **sp_addserver** e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas, @@SERVERNAME retorna as informações de nome o seguinte servidor local se o nome do servidor local não foi alterado desde a instalação.  
+ Com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas, @@SERVERNAME retornará as seguintes informações de nome do servidor local se o nome do servidor local não for alterado depois da instalação.  
   
 |Instância|Informações do servidor|  
 |--------------|------------------------|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/21/2017
 |instância clusterizada de failover - instância padrão|'*virtualservername*'|  
 |instância clusterizada de failover - instância nomeada|'*virtualservername*\\*instancename*'|  
   
- Embora o @@SERVERNAME função e a propriedade SERVERNAME da função SERVERPROPERTY podem retornar cadeias de caracteres com formatos semelhantes, as informações podem ser diferentes. Uma propriedade SERVERNAME relata automaticamente alterações no nome de rede do computador.  
+ Embora a função @@SERVERNAME e a propriedade SERVERNAME da função SERVERPROPERTY possam retornar cadeias de caracteres com formatos semelhantes, as informações podem ser diferentes. Uma propriedade SERVERNAME relata automaticamente alterações no nome de rede do computador.  
   
- Por outro lado, @@SERVERNAME não relata tais alterações. @@SERVERNAME relata as alterações feitas para o nome do servidor local usando o **sp_addserver** ou **sp_dropserver** procedimento armazenado.  
+ Por outro lado, @@SERVERNAME não relata essas alterações. @@SERVERNAME relata alterações feitas no nome do servidor local usando o procedimento armazenado **sp_addserver** ou **sp_dropserver**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o uso de `@@SERVERNAME`.  
@@ -81,9 +81,9 @@ ACCTG
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   

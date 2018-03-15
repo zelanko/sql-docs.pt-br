@@ -47,7 +47,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *float_expression*  
-É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float**.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float**.
   
 ## <a name="return-types"></a>Tipos de retorno
 **float**
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>Exemplos
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 O exemplo a seguir retorna o COS do ângulo especificado.
@@ -90,7 +90,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>Consulte também
-[Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

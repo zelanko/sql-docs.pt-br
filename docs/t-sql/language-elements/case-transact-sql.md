@@ -79,22 +79,22 @@ END
   
 ## <a name="arguments"></a>Argumentos  
  *input_expression*  
- É a expressão avaliada quando o formato CASE simples é usado. *input_expression* é qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É a expressão avaliada quando o formato CASE simples é usado. *input_expression* é qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  WHEN *when_expression*  
- É uma expressão simple para o qual *input_expression* é comparada quando o formato CASE simples é usado. *when_expression* é qualquer expressão válida. Os tipos de dados de *input_expression* e cada *when_expression* devem ser as mesmas ou deve ser uma conversão implícita.  
+ É uma expressão simples com a qual *input_expression* é comparada quando o formato CASE simples é usado. *when_expression* é qualquer expressão válida. Os tipos de dados de *input_expression* e cada *when_expression* devem ser os mesmos ou devem ser uma conversão implícita.  
   
  THEN *result_expression*  
- É a expressão retornada quando *input_expression* é igual a *when_expression* for avaliada como TRUE, ou *Boolean_expression* for avaliada como TRUE. *expressões de resultado* é qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É a expressão retornada quando *input_expression* igual a *when_expression* é avaliada como TRUE ou *Boolean_expression* é avaliada como TRUE. *result expression* é qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  ELSE *else_result_expression*  
- É a expressão retornada se nenhuma operação de comparação for avaliada como TRUE. Se esse argumento for omitido e nenhuma operação de comparação for avaliada como TRUE, CASE retornará NULL. *else_result_expression* é qualquer expressão válida. Os tipos de dados de *else_result_expression* e *result_expression* devem ser as mesmas ou deve ser uma conversão implícita.  
+ É a expressão retornada se nenhuma operação de comparação for avaliada como TRUE. Se esse argumento for omitido e nenhuma operação de comparação for avaliada como TRUE, CASE retornará NULL. *else_result_expression* é qualquer expressão válida. Os tipos de dados de *else_result_expression* e qualquer *result_expression* devem ser os mesmos ou devem ser uma conversão implícita.  
   
- Quando *Boolean_expression*  
+ WHEN *Boolean_expression*  
  É a expressão booliana avaliada quando o formato CASE simples é usado. *Boolean_expression* é qualquer expressão booliana válida.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o tipo de precedência mais alto do conjunto de tipos em *result_expressions* e opcional *else_result_expression*. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Retorna o tipo de precedência mais alto do conjunto de tipos em *result_expressions* e a *else_result_expression* opcional. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### <a name="return-values"></a>Valores de retorno  
  **Expressão CASE simples:**  
@@ -105,22 +105,22 @@ END
   
 -   Na ordem especificada, avalia input_expression = when_expression para cada cláusula WHEN.  
   
--   Retorna o *result_expression* do primeiro *input_expression* = *when_expression* que é avaliada como TRUE.  
+-   Retorna a *result_expression* da primeira *input_expression* = *when_expression* que é avaliada como TRUE.  
   
--   Se nenhum *input_expression* = *when_expression* for avaliada como TRUE, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retorna o *else_result_expression* se for de uma cláusula ELSE especificado, ou um valor nulo se nenhuma cláusula ELSE for especificada.  
+-   Se nenhuma *input_expression* = *when_expression* for avaliada como TRUE, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará a *else_result_expression*, caso uma cláusula ELSE tenha sido especificada, ou um valor NULL, caso nenhuma cláusula ELSE tenha sido especificada.  
   
  **Expressão CASE pesquisada:**  
   
--   É avaliada na ordem especificada, *Boolean_expression* para cada cláusula WHEN.  
+-   Avalia, na ordem especificada, a *Boolean_expression* de cada cláusula WHEN.  
   
--   Retorna *result_expression* do primeiro *Boolean_expression* que é avaliada como TRUE.  
+-   Retorna *result_expression* da primeira *Boolean_expression* que é avaliada como TRUE.  
   
--   Se nenhum *Boolean_expression* for avaliada como TRUE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna o *else_result_expression* se uma cláusula ELSE for especificada, ou um valor nulo se nenhuma cláusula ELSE for especificada.  
+-   Se nenhuma *Boolean_expression* for avaliada como TRUE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará a *else_result_expression*, caso uma cláusula ELSE tenha sido especificada, ou um valor NULL, caso nenhuma cláusula ELSE tenha sido especificada.  
   
 ## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite apenas 10 níveis de aninhamento em expressões CASE.  
   
- A expressão CASE não pode ser usada para controlar o fluxo de execução de instruções Transact-SQL, blocos de instruções, funções definidas pelo usuário e procedimentos armazenados. Para obter uma lista dos métodos de controle de fluxo, consulte [linguagem de controle de fluxo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+ A expressão CASE não pode ser usada para controlar o fluxo de execução de instruções Transact-SQL, blocos de instruções, funções definidas pelo usuário e procedimentos armazenados. Para obter uma lista dos métodos de controle de fluxo, consulte [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  A instrução CASE avalia suas condições em sequência e para com a primeira condição satisfatória. Em algumas situações, uma expressão é avaliada antes de uma instrução CASE receber os resultados da expressão como sua entrada. É possível que haja erros na avaliação dessas expressões. As expressões agregadas que aparecem em argumentos WHEN de uma instrução CASE são avaliadas primeiro e, em seguida, são fornecidas para a instrução CASE. Por exemplo, a seguinte consulta gera um erro de divisão por zero ao gerar o valor da agregação MAX. Isso ocorre antes da avaliação da expressão CASE.  
   
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. Usando CASE em uma instrução SET  
- O exemplo a seguir usa a expressão CASE em uma instrução SET na função com valor de tabela `dbo.GetContactInfo`. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], todo os dados relacionados com pessoas são armazenados na tabela `Person.Person`. Por exemplo, a pessoa pode ser um funcionário, representante de fornecedor ou um cliente. A função retorna o nome e sobrenome de um determinado `BusinessEntityID` e o tipo de contato para essa pessoa. A expressão CASE na instrução SET determina o valor a ser exibido para a coluna `ContactType` com base na existência da `BusinessEntityID` coluna o `Employee`, `Vendor`, ou `Customer` tabelas.  
+ O exemplo a seguir usa a expressão CASE em uma instrução SET na função com valor de tabela `dbo.GetContactInfo`. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], todo os dados relacionados com pessoas são armazenados na tabela `Person.Person`. Por exemplo, a pessoa pode ser um funcionário, um representante de fornecedor ou um cliente. A função retorna o nome e o sobrenome de determinado `BusinessEntityID` e o tipo de contato dessa pessoa. A expressão CASE na instrução SET determina o valor a ser exibido para a coluna `ContactType` com base na existência da coluna `BusinessEntityID` nas tabelas `Employee`, `Vendor` ou `Customer`.  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. Usando CASE em uma cláusula HAVING  
- O exemplo a seguir usa a expressão CASE em uma cláusula HAVING para restringir as linhas retornadas pela instrução SELECT. A instrução retorna a taxa horária máxima para cada cargo no `HumanResources.Employee` tabela. A cláusula HAVING restringe os títulos aos que são mantidos por homens com uma taxa de pagamento máxima maior que 40 dólares ou por mulheres com uma taxa de pagamento máxima maior que 42 dólares.  
+ O exemplo a seguir usa a expressão CASE em uma cláusula HAVING para restringir as linhas retornadas pela instrução SELECT. A instrução retorna a taxa horária máxima para cada cargo na tabela `HumanResources.Employee`. A cláusula HAVING restringe os títulos aos que são mantidos por homens com uma taxa de pagamento máxima maior que 40 dólares ou por mulheres com uma taxa de pagamento máxima maior que 42 dólares.  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Usando uma instrução SELECT com uma expressão CASE  
- Dentro de uma instrução SELECT, a expressão CASE permite valores a serem substituídos no conjunto de resultados com base nos valores de comparação. O exemplo a seguir usa a expressão CASE para alterar a exibição de categorias de linha de produto para torná-las mais compreensíveis. Quando um valor não existe, o texto "não para venda ' é exibida.  
+ Dentro de uma instrução SELECT, a expressão CASE permite que os valores sejam substituídos no conjunto de resultados com base nos valores de comparação. O exemplo a seguir usa a expressão CASE para alterar a exibição de categorias de linhas de produtos a fim de torná-las mais compreensíveis. Quando um valor não existe, o texto "Não destinado à venda" é exibido.  
   
 ```  
 -- Uses AdventureWorks  
@@ -356,8 +356,8 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE (banco de dados do SQL Azure) | Microsoft Docs
+title: ALTER DATABASE (Banco de Dados SQL do Azure) | Microsoft Docs
 ms.custom: 
 ms.date: 02/13/2018
 ms.prod: 
@@ -18,16 +18,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6c303c5abe51eaee2208028ea13991d2d557f1b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (banco de dados do SQL Azure)
+# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Modifica um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Altera o nome de um objetivo de banco de dados, a edição e o serviço de um banco de dados, um pool Elástico de junção e define opções de banco de dados.  
+  Modifica um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Altera o nome de um banco de dados, a edição e o objetivo de serviço de um banco de dados, une a um pool elástico e define as opções do banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -192,7 +192,7 @@ ALTER DATABASE { database_name }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- Para obter descrições completas das opções set, consulte [opções ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [alterar o nível de compatibilidade do banco de dados &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Para obter descrições completas das opções set, confira [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
@@ -201,16 +201,16 @@ ALTER DATABASE { database_name }
  CURRENT  
  Designa que o banco de dados em uso deve ser alterado.  
   
- MODIFY NAME **= * new_database_name*  
- Renomeia o banco de dados com o nome especificado como *new_database_name*. O exemplo a seguir altera o nome de um banco de dados `db1` para `db2`:   
+ MODIFY NAME **=***new_database_name*  
+ Renomeia o banco de dados com o nome especificado como *novo_nome_do_banco_de_dados*. O exemplo a seguir altera o nome de um banco de dados `db1` para `db2`:   
 
 ```  
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
 ```    
 
- MODIFICAR (edição  **=**  ['basic' | 'padrão' | 'premium']).    
- Altera a camada de serviço do banco de dados. Suporte para 'premiumrs' foi removido. Para perguntas, use este alias de email: premium-rs@microsoft.com.
+ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' ])    
+ Altera a camada de serviço do banco de dados. O suporte para 'premiumrs' foi removido. Em caso de dúvidas, use este alias de email: premium-rs@microsoft.com.
 
 O exemplo a seguir altera a edição para `premium`:
   
@@ -219,9 +219,9 @@ ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ``` 
 
-A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é definida como um valor fora do intervalo válido admitido por essa edição.  
+A alteração da edição falhará se a propriedade MAXSIZE do banco de dados estiver definida como um valor fora do intervalo válido compatível com essa edição.  
 
- MODIFICAR (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada. A tabela a seguir lista os valores MAXSIZE com suporte e os padrões (D) para as camadas de serviço do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
@@ -246,9 +246,9 @@ A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é
 |500 GB|N/A|√|√|√ (D)|√|  
 |750 GB|N/A|√|√|√|√|  
 |1024 GB|N/A|√|√|√|√ (D)|  
-|De 1024 GB até 4096 GB em incrementos de 256 GB *|N/A|N/A|N/A|N/A|√|√|  
+|De 1024 GB até 4096 GB em incrementos de 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
- \* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB, sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, MAXSIZE maior que 1 TB está atualmente disponível nas seguintes regiões: US East2, oeste dos EUA, nos Gov Virgínia, Europa Ocidental, Alemanha Central, Sul Leste da Ásia, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para limitações atuais, consulte [único bancos de dados](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, MAXSIZE maior do que 1 TB está disponível no momento nas seguintes regiões: Leste dos EUA2, Oeste dos EUA, Gov. EUA – Virgínia, Europa Ocidental, Alemanha Central, Sudeste Asiático, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para ver as limitações atuais, consulte [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) (Bancos de dados únicos).  
 
   
  As regras a seguir se aplicam aos argumentos MAXSIZE e EDITION:  
@@ -257,71 +257,71 @@ A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é
   
 -   Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 500 MB.  
   
--   Se MAXSIZE nem EDITION for especificado, a edição é definida como padrão (S0) e MAXSIZE for definido como 250 GB.  
+-   Se nem MAXSIZE nem EDITION forem especificados, EDITION será definido como Standard (S0) e MAXZISE será definido como 250 GB.  
  
 
- MODIFICAR (SERVICE_OBJECTIVE = \<objetivo de serviço >)  
- Especifica o nível de desempenho. A exemplo a seguir altera o objetivo de um banco de dados premium do serviço `P6`:
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
+ Especifica o nível de desempenho. A exemplo a seguir altera o objetivo de serviço de um banco de dados Premium para `P6`:
  
 ```  
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, ou`P15`. Para descrições de objetivo de serviço e obter mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, consulte [camadas de serviço de banco de dados SQL do Azure e níveis de desempenho](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se o SERVICE_OBJECTIVE especificado não é suportada pela edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION. Suporte a PRS dos objetivos de serviço foram removidos. Para perguntas, use este alias de email: premium-rs@microsoft.com. 
+ Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11` ou `P15`. Para obter descrições do objetivo de serviço e mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, confira [Camadas de serviço e níveis de desempenho do Banco de Dados SQL do Azure](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se o SERVICE_OBJECTIVE especificado não for compatível com a edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION. O suporte para objetivos de serviço PRS foi removido. Em caso de dúvidas, use este alias de email: premium-rs@microsoft.com. 
   
  MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
- Para adicionar um banco de dados existente para um pool Elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool Elástico. Você também pode usar esta opção para alterar o banco de dados para um pool Elástico diferente no mesmo servidor. Para obter mais informações, consulte [criar e gerenciar um pool Elástico de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool Elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um nível de desempenho do banco de dados único.  
+ Para adicionar um banco de dados existente a um pool elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool elástico. Você também pode usar esta opção para alterar o banco de dados para um pool elástico diferente no mesmo servidor. Para obter mais informações, confira [Criar e gerenciar um pool elástico do Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um único nível de desempenho do banco de dados.  
 
- Adicionar SECUNDÁRIO ON SERVER \<partner_server_name >  
- Cria um banco de dados replicação geográfica secundária com o mesmo nome em um servidor de parceiro, tornando o banco de dados local em uma replicação geográfica primário e começa a replicação de dados assíncrona do primário para o novo secundário. Se um banco de dados com o mesmo nome já existir no secundário, o comando falhará. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados local que se torna o principal.  
+ ADD SECONDARY ON SERVER \<partner_server_name>  
+ Cria um banco de dados de replicação geográfica secundário com o mesmo nome em um servidor parceiro, tornando o banco de dados local o primário da replicação geográfica e começa a replicação de dados assíncrona do primário para o novo secundário. Se um banco de dados com o mesmo nome já existir no secundário, o comando falhará. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados local que se torna o primário.  
   
- COM ALLOW_CONNECTIONS {TODOS | **NÃO** }  
- Quando ALLOW_CONNECTIONS não for especificado, ele é definido como não, por padrão. Se estiver definido como todos, é um banco de dados somente leitura que permite que todos os logons com as permissões apropriadas para se conectar.  
+ WITH ALLOW_CONNECTIONS { **ALL** | NO }  
+ Quando ALLOW_CONNECTIONS não for especificado, ele será definido como ALL por padrão. Se estiver definido como ALL, ele será um banco de dados somente leitura que permite que todos os logons com as permissões apropriadas se conectem.  
   
- COM SERVICE_OBJECTIVE {'S0' | 'S1' | 'S2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | '/S12' | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15'}  
- Quando o SERVICE_OBJECTIVE não for especificado, o banco de dados secundário é criado no mesmo nível de serviço do banco de dados primário. Quando SERVICE_OBJECTIVE for especificado, o banco de dados secundário é criado no nível especificado. Essa opção oferece suporte à criação secundários replicados geograficamente com os níveis de serviço mais baratos. O SERVICE_OBJECTIVE especificado deve estar dentro a mesma edição como a origem. Por exemplo, você não pode especificar S0 se a edição premium.  
+ WITH SERVICE_OBJECTIVE { 'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
+ Quando SERVICE_OBJECTIVE não for especificado, o banco de dados secundário será criado no mesmo nível de serviço que o banco de dados primário. Quando SERVICE_OBJECTIVE for especificado, o banco de dados secundário será criado no nível especificado. Essa opção permite a criação de secundários replicados geograficamente com níveis de serviço mais baratos. O SERVICE_OBJECTIVE especificado precisa estar na mesma edição que a origem. Por exemplo, não é possível especificar S0 se a edição for Premium.  
   
  ELASTIC_POOL (name = \<elastic_pool_name)  
- Quando ELASTIC_POOL não for especificado, o banco de dados secundário não é criado em um pool Elástico. Quando ELASTIC_POOL for especificado, o banco de dados secundário é criado no pool especificado.  
+ Quando ELASTIC_POOL não for especificado, o banco de dados secundário não será criado em um pool elástico. Quando ELASTIC_POOL for especificado, o banco de dados secundário será criado no pool especificado.  
   
 > [!IMPORTANT]  
->  O usuário que executa o comando Adicionar SECUNDÁRIO deve ser DBManager no servidor primário, ter membros de db_owner no banco de dados local e DBManager no servidor secundário.  
+>  O usuário que executa o comando ADD SECONDARY precisa ser DBManager no servidor primário, ter associação a db_owner no banco de dados local e DBManager no servidor secundário.  
   
- Remover SECUNDÁRIO ON SERVER \<partner_server_name >  
- Remove a replicação geográfica secundário banco de dados especificado no servidor especificado. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados primário.  
+ REMOVE SECONDARY ON SERVER \<partner_server_name>  
+ Remove o banco de dados secundário replicado geograficamente especificado no servidor indicado. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados primário.  
   
 > [!IMPORTANT]  
->  O usuário que executa o comando Remover SECUNDÁRIO deve ser DBManager no servidor primário.  
+>  O usuário que executa o comando REMOVE SECONDARY precisa ser DBManager no servidor primário.  
   
  FAILOVER  
- Promove o banco de dados secundário na parceria de replicação geográfica na qual o comando é executado para se tornar primário e rebaixa o primário atual para se tornar o novo secundário. Como parte desse processo, o modo de replicação geográfica temporariamente é alternado de modo assíncrono, de modo síncrono. Durante o processo de failover:  
+ Promove o banco de dados secundário na parceria de replicação geográfica na qual o comando é executado para tornar-se o primário e rebaixa o primário atual para tornar-se o novo secundário. Como parte desse processo, o modo de replicação geográfica é temporariamente alternado de modo assíncrono para modo síncrono. Durante o processo de failover:  
   
-1.  O principal para colocar novas transações.  
+1.  O primário deixa de assumir novas transações.  
   
 2.  Todas as transações pendentes são liberadas para o secundário.  
   
-3.  O secundário se torna o principal e começa a replicação geográfica assíncrona com o antigo primário / secundário novo.  
+3.  O secundário torna-se o primário e inicia a replicação geográfica assíncrona com o antigo primário que agora é o novo secundário.  
   
- Esta sequência garante que nenhuma perda de dados. O período durante o qual os bancos de dados não estão disponíveis é de 0 a 25 segundos, enquanto as funções são alternadas. A operação total deve levar não mais do que cerca de um minuto. Se o banco de dados primário estiver indisponível quando esse comando é emitido, o comando falhará com uma mensagem de erro indicando que o banco de dados primário não está disponível. Se o processo de failover não for concluída e aparece preso, você pode usar o comando para forçar o failover e aceitar a perda de dados - e, em seguida, se for necessário recuperar os dados perdidos, chamar devops (CSS) para recuperar os dados perdidos.  
+ Esta sequência garante que não haja nenhuma perda de dados. O período durante o qual os dois bancos de dados não estão disponíveis é de 0 a 25 segundos, enquanto as funções são trocadas. A operação total não deve durar mais que cerca de um minuto. Se o banco de dados primário estiver indisponível quando esse comando for emitido, o comando falhará com uma mensagem de erro indicando que o banco de dados primário não está disponível. Se o processo de failover não for concluído e parecer paralisado, você poderá usar o comando para forçar o failover e aceitar a perda de dados. Em seguida, se for necessário recuperar os dados perdidos, chame DevOps (CSS).  
   
 > [!IMPORTANT]  
->  O usuário que executa o comando FAILOVER deve ser DBManager no servidor primário e o servidor secundário.  
+>  O usuário que executa o comando FAILOVER precisa ser DBManager no servidor primário e no servidor secundário.  
   
  FORCE_FAILOVER_ALLOW_DATA_LOSS  
- Promove o banco de dados secundário na parceria de replicação geográfica na qual o comando é executado para se tornar primário e rebaixa o primário atual para se tornar o novo secundário. Use este comando somente quando a réplica primária atual não está mais disponível. Ele foi projetado para recuperação de desastres, quando a restauração de disponibilidade é crítico e perda de dados é aceitável.  
+ Promove o banco de dados secundário na parceria de replicação geográfica na qual o comando é executado para tornar-se o primário e rebaixa o primário atual para tornar-se o novo secundário. Use este comando somente quando o primário atual não estiver mais disponível. Ele foi projetado somente para recuperação de desastre, quando a restauração da disponibilidade é crítica e a perda de alguns dados é aceitável.  
   
  Durante um failover forçado:  
   
-1.  O banco de dados secundário especificado imediatamente se torna o banco de dados primário e começa a aceitar novas transações.  
+1.  O banco de dados secundário especificado torna-se imediatamente o banco de dados primário e começa a aceitar novas transações.  
   
-2.  Quando a primária original pode reconectar-se com o novo primário, um backup incremental é colocado no original primário, e a primária original se torna um novo secundário.  
+2.  Quando o primário original pode se reconectar com o novo primário, um backup incremental é realizado no primário original e ele se torna o novo secundário.  
   
-3.  Para recuperar dados esse backup incremental no primário antigo, o usuário emprega devops/CSS.  
+3.  Para recuperar dados desse backup incremental no antigo primário, o usuário emprega DevOps/CSS.  
   
-4.  Se houver secundários adicionais, sejam reconfigurados automaticamente para se tornar secundários do novo primário. Esse processo é assíncrono e pode haver um atraso até que esse processo for concluído. Até que a reconfiguração seja concluída, secundários continuarão secundários do antigo primário.  
+4.  Se houver outros secundários, eles serão reconfigurados automaticamente para tornarem-se secundários do novo primário. Esse processo é assíncrono e pode haver um atraso até que ele seja concluído. Até que a reconfiguração seja concluída, os secundários continuarão como secundários do antigo primário.  
   
 > [!IMPORTANT]  
->  O usuário que executa o comando FORCE_FAILOVER_ALLOW_DATA_LOSS deve ser DBManager no servidor primário e o servidor secundário.  
+>  O usuário que executa o comando FORCE_FAILOVER_ALLOW_DATA_LOSS precisa ser DBManager no servidor primário e no servidor secundário.  
   
 ## <a name="remarks"></a>Remarks  
  Para remover um banco de dados, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
@@ -355,7 +355,7 @@ ALTER DATABASE current
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-check-the-edition-options-and-change-them"></a>A. Verifique as opções de edição e alterá-los:
+### <a name="a-check-the-edition-options-and-change-them"></a>A. Verifique as opções de edição e altere-as:
 
 ```
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
@@ -365,8 +365,8 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Mover um banco de dados para um pool Elástico diferente  
- Move um banco de dados existente em um pool chamado pool1:  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Movendo um banco de dados para um pool elástico diferente  
+ Move um banco de dados existente para um pool chamado pool1:  
   
 ```  
 ALTER DATABASE db1   
@@ -374,16 +374,16 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```  
   
 ### <a name="c-add-a-geo-replication-secondary"></a>C. Adicionar um secundário de replicação geográfica  
- Cria um banco de dados secundário não legível db1 no servidor `secondaryserver` de db1 no servidor local.  
+ Cria o banco de dados secundário legível db1 no servidor `secondaryserver` do db1 no servidor local.  
   
 ```  
 ALTER DATABASE db1   
 ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = NO )  
+WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. Remover um secundário de replicação geográfica  
- Remove o banco de dados secundário db1 no servidor `secondaryserver`.  
+ Remove o banco de dados secundário db1 do servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1   
@@ -391,14 +391,14 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```  
   
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Failover para um secundário de replicação geográfica  
- Promove db1 um banco de dados secundário no servidor `secondaryserver` se torne o novo banco de dados primário quando executada no servidor `secondaryserver`.  
+ Promove o banco de dados secundário db1 no servidor `secondaryserver` para tornar-se o novo banco de dados primário quando executado no servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar banco de dados &#40; Banco de dados SQL do Azure &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
+ [CREATE DATABASE &#40;Banco de Dados SQL do Azure&#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

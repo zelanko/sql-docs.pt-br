@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 É o nome do assembly.
   
 *property_name*  
-É o nome de uma propriedade sobre a qual recuperar informações. *Property_Name* pode ser um dos valores a seguir.
+É o nome de uma propriedade sobre a qual recuperar informações. *property_name* pode ser um dos valores a seguir.
   
-|Value|Description|  
+|Valor|Description|  
 |---|---|
 |**CultureInfo**|Localidade do assembly.|  
 |**PublicKey**|Chave pública ou token de chave pública do assembly.|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir presume que um assembly de `HelloWorld` esteja registrado no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obter mais informações, consulte [exemplo Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+O exemplo a seguir presume que um assembly de `HelloWorld` esteja registrado no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obter mais informações, confira [Exemplo de Olá, Mundo](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

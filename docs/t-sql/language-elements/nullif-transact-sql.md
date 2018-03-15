@@ -49,17 +49,17 @@ NULLIF ( expression , expression )
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer escalar válida [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) escalar válida.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o mesmo tipo que a primeira *expressão*.  
+ Retorna o mesmo tipo que a primeira *expression*.  
   
- NULLIF retornará a primeira *expressão* se as duas expressões não forem iguais. Se as expressões forem iguais, NULLIF retornará um valor nulo do tipo do primeiro *expressão*.  
+ NULLIF retorna a primeira *expression* se as duas expressões não são iguais. Se as expressões forem iguais, NULLIF retornará um valor nulo do tipo da primeira *expression*.  
   
 ## <a name="remarks"></a>Remarks  
  NULLIF é equivalente a uma expressão CASE pesquisada em que as duas expressões são iguais e a expressão resultante é NULL.  
   
- É recomendável não usar funções dependentes de tempo, como RAND(), dentro de uma função NULLIF. Isso pode causar a função a ser avaliada duas vezes e retornar resultados diferentes nas duas invocações.  
+ É recomendável não usar funções dependentes de tempo, como RAND(), dentro de uma função NULLIF. Isto pode fazer com que a função seja avaliada duas vezes e retorne resultados diferentes nas duas invocações.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: retornando valores de orçamento que não contêm dados  
- O exemplo a seguir cria um `budgets` carrega dados de tabela e usa `NULLIF` para retornar um valor nulo se nenhuma `current_year` nem `previous_year` contém dados.  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: Retornando valores de orçamento que não contêm dados  
+ O exemplo a seguir cria uma tabela `budgets`, carrega dados e usa `NULLIF` para retornar um valor nulo se `current_year` nem `previous_year` contém dados.  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -150,10 +150,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal e numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

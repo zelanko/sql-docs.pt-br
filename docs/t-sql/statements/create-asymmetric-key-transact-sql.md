@@ -1,5 +1,5 @@
 ---
-title: "Crie a chave ASSIMÉTRICA (Transact-SQL) | Microsoft Docs"
+title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -77,55 +77,55 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- DE *Asym_Key_Source*  
+ FROM *Asym_Key_Source*  
  Especifica a fonte da qual carregar o par de chaves assimétricas.  
   
- AUTORIZAÇÃO *database_principal_name*  
+ AUTHORIZATION *database_principal_name*  
  Especifica o proprietário da chave assimétrica. O proprietário não pode ser uma função ou um grupo. Se esta opção for omitida, o proprietário será o usuário atual.  
   
- ARQUIVO ='*path_to_strong name_file*'  
+ FILE ='*path_to_strong-name_file*'  
  Especifica o caminho de um arquivo com nome forte a partir do qual o par de chaves deve ser carregado.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- ARQUIVO executável ='*path_to_executable_file*'  
+ EXECUTABLE FILE ='*path_to_executable_file*'  
  Especifica um arquivo de assembly a partir do qual a chave pública deve ser carregada. Limitado a 260 caracteres por MAX_PATH da API do Windows.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- ASSEMBLY *nome_do_assembly*  
+ ASSEMBLY *Assembly_Name*  
  Especifica o nome de um assembly a partir do qual a chave pública deve ser carregada.  
   
-CRIPTOGRAFIA por  *\<key_name_in_provider >* Especifica como a chave é criptografada. Pode ser um certificado, uma senha ou chave assimétrica.  
+ENCRYPTION BY *\<key_name_in_provider>* Especifica como a chave é criptografada. Pode ser um certificado, uma senha ou chave assimétrica.  
   
  KEY_NAME ='*key_name_in_provider*'  
- Especifica o nome da chave do provedor externo. Para obter mais informações sobre o gerenciamento de chaves externas, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Especifica o nome da chave do provedor externo. Para obter mais informações sobre o gerenciamento de chave externa, veja [EKM &#40;Gerenciamento extensível de chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  CREATION_DISPOSITION = CREATE_NEW  
  Cria uma chave nova no dispositivo de Gerenciamento Extensível de Chaves. PROV_KEY_NAME deve ser usado para especificar nome da chave no dispositivo. Se já existir uma chave no dispositivo, a instrução falhará e será apresentado um erro.  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
- Mapeia um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chave assimétrica para uma chave de gerenciamento extensível de chaves existente. PROV_KEY_NAME deve ser usado para especificar nome da chave no dispositivo. Se CREATION_DISPOSITION = OPEN_EXISTING não for fornecido, o padrão será CREATE_NEW.  
+ Mapeia uma chave assimétrica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma chave de Gerenciamento Extensível de Chaves existente. PROV_KEY_NAME deve ser usado para especificar nome da chave no dispositivo. Se CREATION_DISPOSITION = OPEN_EXISTING não for fornecido, o padrão será CREATE_NEW.  
   
- ALGORITMO = \<algoritmo >  
- Cinco algoritmos podem ser fornecidos; RSA_4096, RSA_3072, RSA_2048, RSA_1024 e RSA_512.  
+ ALGORITHM = \<algorithm>  
+ Cinco algoritmos podem ser fornecidos: RSA_4096, RSA_3072, RSA_2048, RSA_1024 e RSA_512.  
   
- RSA_1024 e RSA_512 são preteridos. Para usar RSA_1024 ou RSA_512 (não recomendado) você deve definir o nível de compatibilidade do banco de dados no banco de dados 120 ou inferior.  
+ RSA_1024 e RSA_512 são preteridos. Para usar RSA_1024 ou RSA_512 (não recomendado) você deve definir o nível de compatibilidade do banco de dados para 120 ou inferior.  
   
- SENHA = '*senha*'  
- Especifica a senha com a qual a chave privada deve ser criptografada. Se essa cláusula não estiver presente, a chave privada será criptografada com a chave mestra do banco de dados. *senha* um máximo de 128 caracteres. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD = '*password*'  
+ Especifica a senha com a qual a chave privada deve ser criptografada. Se essa cláusula não estiver presente, a chave privada será criptografada com a chave mestra do banco de dados. *password* tem um máximo de 128 caracteres. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Comentários  
- Um *chave assimétrica* é uma entidade protegível no nível do banco de dados. Em sua forma padrão, esta entidade contém uma chave pública e uma chave privada. Quando executado sem a cláusula FROM, CREATE ASYMMETRIC KEY gera um par de chaves novo. Quando executado com a cláusula FROM, CREATE ASYMMETRIC KEY importa um par de chaves de um arquivo ou uma chave pública de um assembly.  
+## <a name="remarks"></a>Remarks  
+ Uma *chave assimétrica* é uma entidade protegível no nível do banco de dados. Em sua forma padrão, esta entidade contém uma chave pública e uma chave privada. Quando executado sem a cláusula FROM, CREATE ASYMMETRIC KEY gera um par de chaves novo. Quando executado com a cláusula FROM, CREATE ASYMMETRIC KEY importa um par de chaves de um arquivo ou uma chave pública de um assembly.  
   
  Por padrão, a chave privada é protegida pela chave-mestre de banco de dados. Se nenhuma chave-mestre de banco de dados tiver sido criada, será exigida uma senha para proteger a chave privada. Se houver uma chave-mestre de banco de dados, a senha será opcional.  
   
  A chave privada pode ter 512, 1024 ou 2048 bits.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão CREATE ASYMMETRIC KEY no banco de dados. Se a cláusula AUTHORIZATION estiver especificada, exigirá a permissão IMPERSONATE na entidade de segurança do banco de dados ou a permissão ALTER na função de aplicativo. Somente logons do Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons e funções de aplicativo podem possuir chaves assimétricas. Grupos e funções não podem possuir chaves assimétricas.  
+ Requer a permissão CREATE ASYMMETRIC KEY no banco de dados. Se a cláusula AUTHORIZATION estiver especificada, exigirá a permissão IMPERSONATE na entidade de segurança do banco de dados ou a permissão ALTER na função de aplicativo. Somente logons do Windows, logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e funções de aplicativo podem ter chaves assimétricas. Grupos e funções não podem possuir chaves assimétricas.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -162,7 +162,7 @@ CREATE ASYMMETRIC KEY EKM_askey1
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

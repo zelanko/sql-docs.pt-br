@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  Funções aritméticas, como ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS e SIGN, retornam um valor com o mesmo tipo de dados que o valor de entrada. Funções trigonométricas e outras, incluindo EXP, LOG, LOG10, SQUARE e SQRT, convertem seus valores para **float** e retornar um **float** valor.  
+>  Funções aritméticas, como ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS e SIGN, retornam um valor com o mesmo tipo de dados que o valor de entrada. Funções trigonométricas e outras, incluindo EXP, LOG, LOG10, SQUARE e SQRT, convertem seus valores de entrada em **float** e retornam um valor **float**.  
   
- Todas as funções matemáticas, com exceção de RAND, são funções deterministas. Isso significa que elas retornam os mesmos resultados sempre que são chamadas com um conjunto específico de valores de entrada. RAND só é determinista quando um parâmetro de propagação é especificado. Para obter mais informações sobre determinismo de função, consulte [determinísticas e funções não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Todas as funções matemáticas, com exceção de RAND, são funções deterministas. Isso significa que elas retornam os mesmos resultados sempre que são chamadas com um conjunto específico de valores de entrada. RAND só é determinista quando um parâmetro de propagação é especificado. Para obter mais informações sobre determinismo de funções, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Consulte também  
-  [Operadores aritméticos &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+  [Operadores aritméticos &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

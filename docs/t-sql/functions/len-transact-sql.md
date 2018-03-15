@@ -39,7 +39,7 @@ ms.lasthandoff: 01/18/2018
   Retorna o número de caracteres da expressão da cadeia de caracteres especificada, excluindo espaços em branco à direita.  
   
 > [!NOTE]  
->  Para retornar o número de bytes usados para representar uma expressão, use o [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) função.  
+>  Para retornar o número de bytes usado para representar uma expressão, use a função [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ LEN ( string_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *string_expression*  
- É a cadeia de caracteres [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser avaliada. *string_expression* pode ser uma constante, variável ou coluna de caracteres ou dados binários.  
+ É a [expression](../../t-sql/language-elements/expressions-transact-sql.md) da cadeia de caracteres a ser avaliada. *character_expression* pode ser uma constante, uma variável ou uma coluna de dados de caracteres e binários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **bigint** se *expressão* é o **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** tipos de dados. Caso contrário, **int**.  
+ **bigint** if *expression* é dos tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**; caso contrário, **int**.  
   
- Se você estiver usando agrupamentos de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Se você estiver usando agrupamentos de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- LEN exclui os espaços em branco. Se esse for um problema, considere o uso de [DATALENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) função trim não a cadeia de caracteres. Se o processamento de uma cadeia de caracteres unicode, DATALENGTH retornará duas vezes o número de caracteres. O exemplo a seguir demonstra LEN e DATALENGTH com um espaço à direita.  
+ LEN exclui os espaços em branco. Se isso for um problema, considere usar a função [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), que não corta a cadeia de caracteres. Se estiver processando uma cadeia de caracteres unicode, DATALENGTH retornará duas vezes o número de caracteres. O exemplo a seguir demonstra LEN e DATALENGTH com um espaço à direita.  
   
 ```  
 DECLARE @v1 varchar(40),  
@@ -82,7 +82,7 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna o número de caracteres na coluna `FirstName` e os nomes e sobrenomes de funcionários localizados em `Australia`.  
   
 ```  
@@ -103,14 +103,14 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)   
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

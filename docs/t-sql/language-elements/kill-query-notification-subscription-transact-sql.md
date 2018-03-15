@@ -1,5 +1,5 @@
 ---
-title: "ELIMINAR assinatura de notificação de consulta (Transact-SQL) | Microsoft Docs"
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  Remove todas as assinaturas na instância.  
   
  *subscription_id*  
- Remove a assinatura com a id da assinatura *subscription_id*.  
+ Remove a assinatura com a ID da assinatura *subscription_id*.  
   
 ## <a name="remarks"></a>Remarks  
  A instrução KILL QUERY NOTIFICATION SUBSCRIPTION remove assinaturas de notificação de consulta sem produzir uma mensagem de notificação.  
   
- *SUBSCRIPTION_ID* é a id da assinatura, conforme mostrado na exibição de gerenciamento dinâmico [sys.DM qn_subscriptions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* é a ID da assinatura, conforme mostrado na exibição de gerenciamento dinâmico [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
   
  Se a identificação de assinatura especificada não existir, a instrução produzirá um erro.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para executar essa instrução é restrito a membros do **sysadmin** função de servidor fixa.  
+ A permissão para executar essa instrução está restrita a membros da função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -82,7 +82,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

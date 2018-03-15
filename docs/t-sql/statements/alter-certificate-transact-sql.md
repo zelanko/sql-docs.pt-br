@@ -75,22 +75,22 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  É o nome exclusivo pelo qual o certificado é conhecido no banco de dados.  
   
- ARQUIVO **='***path_to_private_key***'**  
+ FILE **='***path_to_private_key***'**  
  Especifica o caminho completo, incluindo o nome de arquivo, até a chave privada. Esse parâmetro pode ser um caminho local ou um caminho de UNC a um local de rede. Esse arquivo será acessado dentro do contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao usar essa opção, verifique se a conta de serviço tem acesso ao arquivo especificado.  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  Especifica a senha que é obrigatória para descriptografar a chave privada.  
   
- CRIPTOGRAFIA por senha **='***senha***'**  
- Especifica a senha usada para criptografar a chave privada do certificado no banco de dados. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
+ ENCRYPTION BY PASSWORD **='***password***'**  
+ Especifica a senha usada para criptografar a chave privada do certificado no banco de dados. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  
  Especifica que a chave privada não deve mais ser mantida dentro do banco de dados.  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON | OFF}  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Disponibiliza o certificado para o iniciador de uma conversa de caixa de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A chave privada deve corresponder à chave pública especificada por *certificate_name*.  
   
  A cláusula DECRYPTION BY PASSWORD pode ser omitida se a senha no arquivo estiver protegida com uma senha nula.  
@@ -146,9 +146,9 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Remover certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

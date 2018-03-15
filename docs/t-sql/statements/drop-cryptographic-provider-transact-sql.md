@@ -1,5 +1,5 @@
 ---
-title: "Remover provedor CRIPTOGRÁFICO (Transact-SQL) | Microsoft Docs"
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  É o nome do provedor de Gerenciamento Extensível de Chaves.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para excluir um provedor de EKM (Gerenciamento Extensível de Chaves), todas as sessões que usam o provedor devem ser encerradas.  
   
  Um provedor de EKM poderá ser descartado apenas se não houver nenhuma credencial mapeada para ele.  
@@ -73,7 +73,7 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   

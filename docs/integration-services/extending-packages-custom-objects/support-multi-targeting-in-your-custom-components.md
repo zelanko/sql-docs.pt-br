@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Suporte multiplataforma em seus componentes personalizados
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para criar, manter e executar pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Para obter o SSDT para Visual Studio 2015, consulte [Baixar o SQL Server Data Tools mais recente](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Mensagem de erro.** Não é possível converter o objeto COM do tipo 'System.__ComObject para o tipo de interface 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100'. Esta operação falhou porque a chamada de QueryInterface no componente COM para a interface com IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' falhou devido ao seguinte erro: não há suporte para essa interface (exceção de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Solução.** Se sua extensão personalizada faz referência a assemblies de interoperabilidade do SSIS como Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, defina o valor da propriedade **Embed Interop Types** para **False".
+**Solução.** Se a extensão personalizada fizer referência a assemblies de interoperabilidade do SSIS, como Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, defina o valor da propriedade **Embed Interop Types** como **False**.
 
 ![Embed Interop Types](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

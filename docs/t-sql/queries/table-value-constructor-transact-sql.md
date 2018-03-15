@@ -1,5 +1,5 @@
 ---
-title: Tabela do construtor de valor (Transact-SQL) | Microsoft Docs
+title: Construtor de valor de tabela (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Especifica um conjunto de expressões de valores de linha a ser construído em uma tabela. O construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] permite especificar várias linhas de dados em uma única instrução DML. O construtor de valor de tabela pode ser especificado na cláusula VALUES da instrução INSERT, em USING \<tabela de origem > cláusula da instrução MERGE e na definição de uma tabela derivada na cláusula FROM.  
+  Especifica um conjunto de expressões de valores de linha a ser construído em uma tabela. O construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] permite especificar várias linhas de dados em uma única instrução DML. O construtor de valor de tabela pode ser especificado na cláusula VALUES da instrução INSERT, na cláusula USING \<source table> da instrução MERGE e na definição de uma tabela derivada na cláusula FROM.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  É uma constante, uma variável ou uma expressão. A expressão não pode conter uma instrução EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Construtores de valor de tabela podem ser usados em uma das duas maneiras: diretamente na lista de valores de uma instrução INSERT... VALORES de declaração, ou como uma tabela derivada em qualquer lugar que tabelas derivadas são permitidos. Erro 10738 será retornado se o número de linhas excede o máximo. Para inserir mais linhas do que permite que o limite, use um dos seguintes métodos:  
+ Construtores de valor de tabela podem ser usados de uma das duas maneiras: diretamente na lista VALUES de uma instrução INSERT … VALUES ou como uma tabela derivada em qualquer lugar em que tabelas derivadas sejam permitidas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais linhas do que o limite permite, use um dos seguintes métodos:  
   
 -   Crie várias instruções INSERT  
   
 -   Use uma tabela derivada  
   
--   Os dados de importação em massa usando o **bcp** utilitário ou a instrução BULK INSERT  
+-   Importe em massa os dados usando o utilitário **bcp** ou a instrução BULK INSERT  
   
  Somente são permitidos valores escalares exclusivos como uma expressão de valor de linha. Uma subconsulta que envolve várias colunas não é permitida como uma expressão de valor de linha. Por exemplo, o código a seguir resulta em um erro de sintaxe porque a terceira lista de expressões de valores de linha contém uma subconsulta com várias colunas.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>Tipos de dados  
- Os valores especificados em uma instrução INSERT de várias linhas seguem as propriedades de conversão de tipos de dados da sintaxe UNION ALL. Isso resulta na conversão implícita de tipos não correspondentes ao tipo de maior [precedência](../../t-sql/data-types/data-type-precedence-transact-sql.md). Se a conversão não for uma conversão implícita com suporte, um erro será retornado. Por exemplo, a instrução a seguir insere um valor inteiro e um valor de caractere em uma coluna de tipo **char**.  
+ Os valores especificados em uma instrução INSERT de várias linhas seguem as propriedades de conversão de tipos de dados da sintaxe UNION ALL. Isso resulta na conversão implícita de tipos não correspondentes no tipo de [precedência](../../t-sql/data-types/data-type-precedence-transact-sql.md) mais alta. Se a conversão não for uma conversão implícita com suporte, um erro será retornado. Por exemplo, a instrução a seguir insere um valor inteiro e um valor de caractere em uma coluna do tipo **char**.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -188,8 +188,8 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

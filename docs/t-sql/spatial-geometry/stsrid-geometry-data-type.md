@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **int**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo do CLR: **SqlInt32**  
   
 ## <a name="examples"></a>Exemplos  
- O primeiro exemplo cria um **geometria** de instância com o valor SRID 13 e usa `STSrid` para confirmar o SRID.  
+ O primeiro exemplo cria uma instância de **geometry** com o valor de SRID igual a 13 e usa `STSrid` para confirmar a SRID.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STX &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

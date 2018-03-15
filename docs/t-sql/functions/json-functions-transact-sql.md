@@ -33,16 +33,16 @@ Use as funções descritas nas páginas nesta seção para validar ou alterar o 
   
 |Função|Description|  
 |--------------|-----------------|  
-|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Testa se uma cadeia de caracteres contém JSON válido.|  
+|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Testa se uma cadeia de caracteres contém um JSON válido.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extrai um valor escalar de uma cadeia de caracteres JSON.|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|Extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.|
 
- Para obter mais informações sobre o suporte interno para JSON em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [dados JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-data-sql-server.md).  
+ Para obter mais informações sobre o suporte interno para JSON no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
     
-## <a name="see-also"></a>Consulte também  
- [Validar, consultar e alterar dados JSON com funções internas &#40; SQL Server &#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [Expressões de caminho JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Dados JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Validar, consultar e alterar dados JSON com funções internas &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

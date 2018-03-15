@@ -1,5 +1,5 @@
 ---
-title: "Criar notificação de eventos (Transact-SQL) | Microsoft Docs"
+title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumentos  
  *event_notification_name*  
- É o nome da notificação de eventos. Um nome de notificação de evento deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo dentro do escopo no qual eles são criados: servidor, banco de dados ou *object_name*.  
+ É o nome da notificação de eventos. O nome de uma notificação de eventos deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo no escopo em que é criado: SERVER, DATABASE ou *object_name*.  
   
  SERVER  
  Aplica o escopo da notificação de eventos à instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se for especificada, a notificação será acionada sempre que o evento especificado na cláusula FOR ocorrer em qualquer lugar na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -72,8 +72,8 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  QUEUE  
  Aplica o escopo da notificação em uma fila específica no banco de dados atual. QUEUE pode ser especificado somente se FOR QUEUE_ACTIVATION ou FOR BROKER_QUEUE_DISABLED também for especificado.  
   
- *nome_da_fila*  
- É o nome da fila para a qual a notificação de eventos se aplica. *nome_da_fila* podem ser especificadas de somente se QUEUE for especificado.  
+ *queue_name*  
+ É o nome da fila para a qual a notificação de eventos se aplica. *queue_name* poderá ser especificado apenas se QUEUE for especificado.  
   
  WITH FAN_IN  
  Instrui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a enviar somente uma mensagem por evento para qualquer serviço especificado para todas as notificações de eventos que:  
@@ -89,20 +89,20 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Por exemplo, três notificações de eventos são criadas. Todas as notificações de eventos especificam FOR ALTER_TABLE, WITH FAN_IN, a mesma cláusula TO SERVICE e são criadas pelo mesmo SID. Quando uma instrução ALTER TABLE é executada, as mensagens criadas por essas três notificações de eventos são mescladas em uma. Portanto, o serviço de destino recebe só uma mensagem do evento.  
   
  *event_type*  
- É o nome de um tipo de evento que faz com que a notificação de eventos seja executada. *event_type* pode ser um [!INCLUDE[tsql](../../includes/tsql-md.md)] tipo de evento DDL, um tipo de evento de rastreamento do SQL ou um [!INCLUDE[ssSB](../../includes/sssb-md.md)] tipo de evento. Para obter uma lista dos [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de eventos DDL, consulte [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os tipos de evento [!INCLUDE[ssSB](../../includes/sssb-md.md)] são QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED. Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ É o nome de um tipo de evento que faz com que a notificação de eventos seja executada. *event_type* pode ser um tipo de evento DDL [!INCLUDE[tsql](../../includes/tsql-md.md)], um tipo de evento de Rastreamento do SQL ou um tipo de evento [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista dos tipos de evento [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL qualificados, consulte [DDL Events](../../relational-databases/triggers/ddl-events.md). Os tipos de evento [!INCLUDE[ssSB](../../includes/sssb-md.md)] são QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED. Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  *event_group*  
- É o nome de um grupo predefinido de tipos de evento [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de Rastreamento do SQL. Uma notificação de eventos pode ser acionada depois da execução de qualquer evento que pertence a um grupo de eventos. Para obter uma lista dos grupos de eventos DDL, o [!INCLUDE[tsql](../../includes/tsql-md.md)] eventos que eles cobrem e o escopo no qual eles podem ser definidos, consulte [grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md).  
+ É o nome de um grupo predefinido de tipos de evento [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de Rastreamento do SQL. Uma notificação de eventos pode ser acionada depois da execução de qualquer evento que pertence a um grupo de eventos. Para obter uma lista dos grupos de eventos DDL, os eventos [!INCLUDE[tsql](../../includes/tsql-md.md)] abrangidos por eles e o escopo em que podem ser definidos, consulte [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
- *event_group* também age como uma macro, quando a instrução CREATE EVENT NOTIFICATION termina, adicionando os tipos de evento abrangidos ao **Events** exibição do catálogo.  
+ *event_group* também age como uma macro, quando a instrução CREATE EVENT NOTIFICATION termina, com a adição dos tipos de evento abrangidos à exibição do catálogo **sys.events**.  
   
  **'** *broker_service* **'**  
  Especifica o serviço de destino que recebe os dados da instância de eventos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre uma ou mais conversas com o serviço de destino para a notificação de eventos. Esse serviço deve respeitar o mesmo tipo de mensagem de eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o contrato usados para enviar a mensagem.  
   
  As conversas permanecem abertas até que a notificação de eventos seja descartada. Alguns erros podem fazer as conversas fecharem antes. O encerramento explícito de algumas ou todas as conversas pode impedir que o serviço de destino receba mais mensagens.  
   
- { **'***broker_instance_specifier***'** | **'banco de dados atual'** }  
- Especifica uma instância do service broker na qual *broker_service* seja resolvido. O valor de um agente de serviços específico pode ser adquirido ao consultar o **service_broker_guid** coluna o **sys. Databases** exibição do catálogo. Use **'banco de dados atual'** para especificar a instância do service broker no banco de dados atual. **'banco de dados atual'** é uma cadeia de caracteres de maiusculas e minúsculas literal.  
+ { **'***broker_instance_specifier***'** | **'current database'** }  
+ Especifica uma instância do Service Broker na qual *broker_service* é resolvido. O valor para um agente de serviços específico pode ser adquirido ao consultar a coluna **service_broker_guid** da exibição do catálogo **sys.databases**. Use **'current database'** para especificar a instância do Service Broker no banco de dados atual. **'current database'** é um literal de cadeia de caracteres que não diferencia maiúsculas de minúsculas.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
@@ -113,7 +113,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  O serviço de destino que recebe as notificações de eventos deve honrar esse contrato preexistente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser configurada para notificações de eventos que enviam mensagens a um agente de serviços em um servidor remoto. A segurança de caixa de diálogo deve ser configurada manualmente, de acordo com o modelo de segurança completo. Para obter mais informações, consulte [configurar a segurança de diálogo para notificações de evento](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md).  
+>  [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser configurada para notificações de eventos que enviam mensagens a um agente de serviços em um servidor remoto. A segurança de caixa de diálogo deve ser configurada manualmente, de acordo com o modelo de segurança completo. Para obter mais informações, veja [Configurar a segurança de diálogo para notificações de evento](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md).  
   
  Se uma transação de eventos que ativa uma notificação for revertida, o envio da notificação de eventos também será revertido. As notificações de eventos não são acionadas por uma ação definida em um gatilho quando a transação é confirmada ou revertida no gatilho. Como os eventos de rastreamento não são associados por transações, as notificações de eventos baseadas nos eventos de rastreamentos são enviadas independentemente de a transação que as acionou estar revertida.  
   
@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Nos exemplos A e B abaixo, o GUID na cláusula `TO SERVICE 'NotifyService'` ('8140a771-3c4b-4479-8ac0-81008ab17984') é específico do computador no qual o exemplo foi configurado. Para essa instância, esse era o GUID para o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção argumentos acima, você pode adquirir o **'***broker_instance_specifier***'** consultando a coluna service_broker_guid do sys. Databases exibição do catálogo.  
+>  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'***broker_instance_specifier***'** consultando a coluna service_broker_guid da exibição do catálogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Criando uma notificação de eventos no escopo do servidor  
  O exemplo a seguir cria os objetos obrigatórios para configurar um serviço de destino usando o [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O serviço de destino faz referência ao tipo de mensagem e ao contrato do serviço de inicialização específico para notificações de eventos. Em seguida, uma notificação de evento é criada nesse serviço de destino, que envia uma notificação sempre que um evento de rastreamento `Object_Created` acontece na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -195,11 +195,11 @@ WHERE name = 'Notify_ALTER_T1';
   
 ## <a name="see-also"></a>Consulte Também  
  [Notificações de eventos](../../relational-databases/service-broker/event-notifications.md)   
- [Remover notificações de eventos &#40; Transact-SQL &#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
+ [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [server_event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)   
- [Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)   
- [server_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)   
+ [sys.server_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
   
   

@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Condicionalmente descarta o usuário somente se ele já existe.  
+ Remove condicionalmente o usuário somente se ele já existir.  
   
  *user_name*  
  Especifica o nome pelo qual o usuário é identificado nesse banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os usuários que possuem itens protegíveis não podem ser descartados do banco de dados. Antes de descartar um usuário de banco de dados que possui itens protegíveis, primeiramente descarte ou transfira a propriedade desses itens.  
   
  O usuário guest não pode ser descartado, mas o usuário guest pode ser desabilitado revogando sua permissão CONNECT com a execução de REVOKE CONNECT FROM GUEST em qualquer banco de dados que não seja master ou tempdb.  
@@ -85,7 +85,7 @@ DROP USER AbolrousHazem;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **geometria** instância de tipo de dados.
+Retorna o nível mínimo de compatibilidade do banco de dados que reconhece a instância do tipo de dados de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,9 +41,9 @@ Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **int**  
+ Tipo de retorno do CLR: **int**  
   
 ## <a name="remarks"></a>Remarks  
  Use `MinDbCompatibilityLevel()` para testar a compatibilidade de um objeto espacial antes de alterar o nível de compatibilidade em um banco de dados.  
@@ -72,7 +72,7 @@ Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **
  END
 ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

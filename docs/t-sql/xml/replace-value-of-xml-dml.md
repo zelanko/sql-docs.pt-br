@@ -1,5 +1,5 @@
 ---
-title: Substituir o valor de (XML DML) | Microsoft Docs
+title: replace value of (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ with Expression2
   
 ## <a name="arguments"></a>Argumentos  
  *Expression1*  
- Identifica um nó cujo valor será atualizado. Deve identificar apenas um único nó. Ou seja, *Expression1* deve ser um singleton estático. Se o XML for digitado, o tipo do nó deverá ser um tipo simples. Se forem selecionados vários nós, um erro será gerado. Se *Expression1* retorna uma sequência vazia, nenhuma substituição de valor ocorrerá e nenhum erro será retornado. *Expression1* deve retornar um único elemento que simplesmente digitou conteúdo (lista ou tipos atômicos), um nó de texto ou um nó de atributo. *Expression1* não pode ser um tipo de união, um tipo complexo, uma instrução de processamento, um nó de documento ou um nó de comentário. Se for, um erro será retornado.  
+ Identifica um nó cujo valor será atualizado. Deve identificar apenas um único nó. Ou seja, a *Expression1* precisa ser um singleton estático. Se o XML for digitado, o tipo do nó deverá ser um tipo simples. Se forem selecionados vários nós, um erro será gerado. Se *Expression1* retornar uma sequência vazia, não ocorrerá nenhuma substituição de valor e nenhum erro será retornado. *Expression1* precisa retornar um único elemento que tenha um conteúdo de tipo simples (tipos de lista ou atômicos), um nó de texto ou um nó de atributo. *Expression1* não pode ser um tipo de união, um tipo complexo, uma instrução de processamento, um nó de documento nem um nó de comentário. Se for, um erro será retornado.  
   
  *Expression2*  
- Identifica o novo valor do nó. Isso pode ser uma expressão que retorna um nó digitado simples, porque **Data ()** será usado implicitamente. Se o valor é uma lista de valores, o **atualizar** instrução substituirá o valor antigo com a lista. Modificar uma instância XML digitada, *Expression2* devem ser do mesmo tipo ou um subtipo de *expressão*1. Caso contrário, um erro é retornado. Modificar uma instância XML não digitada, *Expression2* deve ser uma expressão que pode ser atomizada. Caso contrário, um erro é retornado.  
+ Identifica o novo valor do nó. Pode ser uma expressão que retorna um nó simplesmente tipado, porque **data()** será usado implicitamente. Se o valor for uma lista de valores, a instrução **update** substituirá o valor antigo pela lista. Ao modificar uma instância XML tipada, *Expression2* precisará ser do mesmo tipo ou de um subtipo da *Expression*1. Caso contrário, um erro é retornado. Ao modificar uma instância XML não tipada, *Expression2* precisará ser uma expressão que possa ser atomizada. Caso contrário, um erro é retornado.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir do **substituir o valor de** instrução XML DML ilustra como atualizar nós em um documento XML.  
+ Os exemplos a seguir da instrução XML DML **replace value of** ilustra como atualizar nós em um documento XML.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. Substituindo valores em uma instância XML  
- No exemplo a seguir, uma instância de documento é atribuída primeiro a uma variável do **xml** tipo. Em seguida, **substituir o valor de** instruções XML DML atualizam os valores no documento.  
+ No exemplo a seguir, uma instância de documento é atribuída primeiro a uma variável do tipo **XML**. Em seguida, as instruções XML DML **replace value of** atualizam os valores no documento.  
   
 ```  
 DECLARE @myDoc xml;  
@@ -87,7 +87,7 @@ SELECT @myDoc;
  Observe que o destino atualizado deve ser, no máximo, um nó que seja explicitamente especificado na expressão de caminho adicionando um "[1]" no fim da expressão.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Usando a expressão if para determinar o valor de substituição  
- Você pode especificar o **se** expressão em Expression2 do **substituir o valor de XML DML** instrução, conforme mostrado no exemplo a seguir. Expression1 identifica que o atributo LaborHours do primeiro centro de trabalho será atualizado. Expression2 usa uma **se** expressão para determinar o novo valor do atributo LaborHours.  
+ É possível especificar a expressão **if** na Expression2 da instrução **replace value of XML DML**, como mostra o exemplo a seguir. Expression1 identifica que o atributo LaborHours do primeiro centro de trabalho será atualizado. A Expression2 usa uma expressão **if** para determinar o novo valor do atributo LaborHours.  
   
 ```  
 DECLARE @myDoc xml  
@@ -197,12 +197,12 @@ select Instructions
 from T  
 ```  
   
- Observe o uso de **cast** ao substituir o valor LotSize. Isso é necessário quando o valor dever ser de um tipo específico. Neste exemplo, se 500 fosse o valor, a conversão explícita não seria necessária.  
+ Observe o uso de **cast** ao substituir o valor de LotSize. Isso é necessário quando o valor dever ser de um tipo específico. Neste exemplo, se 500 fosse o valor, a conversão explícita não seria necessária.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML &#40;linguagem de manipulação de dados XML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

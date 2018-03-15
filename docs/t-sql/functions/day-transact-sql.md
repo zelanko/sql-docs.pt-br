@@ -1,5 +1,5 @@
 ---
-title: DIA (Transact-SQL) | Microsoft Docs
+title: DAY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna um inteiro que representa o dia (dia do mês) especificada *data*.
+Retorna um inteiro que representa o dia (dia do mês) da *date* especificada.
   
-Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,15 +53,15 @@ DAY ( date )
   
 ## <a name="arguments"></a>Argumentos  
 *date*  
-É uma expressão que pode ser resolvida para um **tempo**, **data**, **smalldatetime**, **datetime**, **datetime2**, ou **datetimeoffset** valor. O *data* argumento pode ser uma expressão, a expressão de coluna, a variável definida pelo usuário ou a cadeia de caracteres literal.
+É uma expressão que pode ser resolvida em um valor **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. O argumento *date* pode ser uma expressão, uma expressão de coluna, uma variável definida pelo usuário ou um literal de cadeia de caracteres.
   
 ## <a name="return-type"></a>Tipo de retorno  
 **int**
   
 ## <a name="return-value"></a>Valor de retorno  
-DAY retorna o mesmo valor como [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**dia**, *data*).
+DAY retorna o mesmo valor que [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*).
   
-Se *data* contém apenas uma parte de hora, o valor de retorno é 1, o dia base.
+Se *date* contiver apenas uma parte de hora, o valor retornado será 1, o dia base.
   
 ## <a name="examples"></a>Exemplos  
 A instrução a seguir retorna `30`. Este é o número do dia.
@@ -70,7 +70,7 @@ A instrução a seguir retorna `30`. Este é o número do dia.
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-A instrução a seguir retorna `1900, 1, 1`. O argumento para *data* é o número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como janeiro 1, 1900.
+A instrução a seguir retorna `1900, 1, 1`. O argumento para *date* é o número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como janeiro 1, 1900.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

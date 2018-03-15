@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   Retorna informações sobre a chave de índice. Retorna NULL para índices XML.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [index_columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,8 +53,8 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *object_id*  
- É o número de identificação do objeto da tabela ou exibição indexada. *object_id* é **int**.  
+ *object_ID*  
+ É o número de identificação do objeto da tabela ou exibição indexada. *object_ID* é **int**.  
   
  *index_ID*  
  É o número de identificação do índice. *index_ID* é **int**.  
@@ -62,12 +62,12 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *key_ID*  
  É a posição da coluna de chave do índice. *key_ID* é **int**.  
   
- *propriedade*  
- O nome do arquivo da propriedade para o qual as informações serão retornadas. *propriedade* é uma cadeia de caracteres e pode ser um dos valores a seguir.  
+ *property*  
+ O nome do arquivo da propriedade para o qual as informações serão retornadas. *property* é uma cadeia de caracteres e pode ter um dos valores a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**ColumnId**|ID de coluna no *key_ID* posição do índice.|  
+|**ColumnId**|ID de Coluna na posição *key_ID* do índice.|  
 |**IsDescending**|Ordem na qual a coluna de índice é armazenada.<br /><br /> 1 = Descendente 0 = Ascendente|  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -102,9 +102,9 @@ Column ID   Asc or Desc order
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [INDEX_COL &#40; Transact-SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+ [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

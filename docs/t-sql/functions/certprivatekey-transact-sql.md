@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>Argumentos  
 *certificate_ID*  
-É o **certificate_id** do certificado. Isso está disponível de Certificates ou usando o [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) função. *Cert_ID* é do tipo **int**
+É a **certificate_id** do certificado. Isso está disponível em sys.certificates ou por meio da função [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* é do tipo **int**
   
 *encryption_password*  
 A senha usada para criptografar o valor binário retornado.
@@ -65,8 +65,8 @@ A senha usada para descriptografar o valor binário retornado.
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Comentários  
-**CERTENCODED** e **CERTPRIVATEKEY** são usados juntos para retornar diferentes partes de um certificado em formato binário.
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** e **CERTPRIVATEKEY** são usados em conjunto para retornar diferentes partes de um certificado em formato binário.
   
 ## <a name="permissions"></a>Permissões  
 **CERTPRIVATEKEY** está disponível para o público.
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Para obter um exemplo mais complexo que usa **CERTPRIVATEKEY** e **CERTENCODED** para copiar um certificado para outro banco de dados, consulte o exemplo B no tópico [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).
+Para obter um exemplo mais complexo que usa **CERTPRIVATEKEY** e **CERTENCODED** para copiar um certificado para outro banco de dados, consulte o exemplo B no tópico [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>Consulte também
 [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[Criar certificado &#40; Transact-SQL &#41; ](../../t-sql/statements/create-certificate-transact-sql.md) 
- [Funções de segurança &#40; Transact-SQL &#41; ](../../t-sql/functions/security-functions-transact-sql.md) 
- [Certificates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

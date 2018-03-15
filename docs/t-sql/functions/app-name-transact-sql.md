@@ -1,5 +1,5 @@
 ---
-title: App_name (Transact-SQL) | Microsoft Docs
+title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,12 +53,12 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>Comentários  
-Use **APP_NAME** quando você deseja executar ações diferentes para diferentes aplicativos. Por exemplo, formatar uma data de maneira diferente para diferentes aplicativos ou retornar uma mensagem informativa para determinados aplicativos.
+## <a name="remarks"></a>Remarks  
+Use **APP_NAME** quando desejar executar ações diferentes para aplicativos diferentes. Por exemplo, formatar uma data de maneira diferente para diferentes aplicativos ou retornar uma mensagem informativa para determinados aplicativos.
   
-Para definir um nome de aplicativo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], no **conectar ao mecanismo de banco de dados** caixa de diálogo, clique em **opções**. Sobre o **parâmetros adicionais de Conexão** guia, forneça um **aplicativo** atributo no formato`;app='application_name'`
+Para definir um nome de aplicativo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados**, clique em **Opções**. Na guia **Parâmetros de Conexão Adicionais**, forneça um atributo **app** no formato `;app='application_name'`
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir verifica se o aplicativo cliente que iniciou esse processo é uma sessão do `SQL Server Management Studio` e fornece uma data no formato US ou ANSI.
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Funções](../../t-sql/functions/functions.md)
   
   

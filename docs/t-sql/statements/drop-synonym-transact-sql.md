@@ -1,5 +1,5 @@
 ---
-title: "SINÔNIMO de DROP (Transact-SQL) | Microsoft Docs"
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,18 +50,18 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Condicionalmente descarta o sinônimo somente se ele já existe.  
+ Remove condicionalmente o sinônimo somente se ele já existe.  
   
- *esquema*  
+ *schema*  
  Especifica o esquema no qual o sinônimo existe. Se o esquema não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o esquema padrão do usuário atual.  
   
  *synonym_name*  
  É o nome do sinônimo a ser descartado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Referências a sinônimos não são associadas a esquemas. Portanto, você pode descartar um sinônimo a qualquer momento. As referências a sinônimos descartados só serão localizadas no momento da execução.  
   
  É possível criar, descartar e referenciar sinônimos em SQL dinâmico.  
@@ -92,8 +92,8 @@ DROP SYNONYM MyProduct;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criar sinônimo &#40; Transact-SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

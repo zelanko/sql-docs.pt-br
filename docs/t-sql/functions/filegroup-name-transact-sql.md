@@ -57,10 +57,10 @@ FILEGROUP_NAME ( filegroup_id )
  É o número de ID do grupo de arquivos para o qual o nome de grupo de arquivos será retornado. *filegroup_id* é **smallint**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Comentários  
- *filegroup_id* corresponde do **data_space_id** coluna o **sys. filegroups** exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_id* corresponde à coluna **data_space_id** da exibição de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o nome de grupo de arquivos para o ID de grupo de arquivos `1` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -81,9 +81,9 @@ PRIMARY
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys. filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

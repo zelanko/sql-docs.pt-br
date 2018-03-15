@@ -1,5 +1,5 @@
 ---
-title: ALTERAR o tipo de mensagem (Transact-SQL) | Microsoft Docs
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,7 +70,7 @@ ALTER MESSAGE TYPE message_type_name
  O corpo da mensagem deve conter XML bem formado.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- O corpo da mensagem deve conter XML que obedece a um esquema na coleção de esquema especificada. O *schema_collection_name* deve ser o nome de uma coleção de esquema XML existente.  
+ O corpo da mensagem deve conter XML que obedece a um esquema na coleção de esquema especificada. O *schema_collection_name* precisa ser o nome de uma coleção de esquema XML existente.  
   
 ## <a name="remarks"></a>Remarks  
  Alterar a validação de um tipo de mensagem não afeta as mensagens que já foram entregues a uma fila.  
@@ -78,7 +78,7 @@ ALTER MESSAGE TYPE message_type_name
  Para alterar a AUTHORIZATION para um tipo de mensagem, use a instrução ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para alterar um tipo de mensagem assume como padrão o proprietário do tipo de mensagem, membros do **db_ddladmin** ou **db_owner** fixa de funções de banco de dados e os membros do **sysadmin**função de servidor fixa.  
+ A permissão para alterar um tipo de mensagem assume como padrão o proprietário do tipo de mensagem, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e os membros da função de servidor fixa **sysadmin**.  
   
  Quando a instrução ALTER MESSAGE TYPE especifica uma coleção de esquema, o usuário que executa a instrução deve ter a permissão REFERENCES na coleção de esquema especificada.  
   
@@ -91,7 +91,7 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   

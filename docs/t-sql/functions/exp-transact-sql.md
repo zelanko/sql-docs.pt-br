@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna o valor exponencial do **float** expressão.  
+  Retorna o valor exponencial da expressão **float** especificada.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Comentários  
- A constante **e** (2,718281...), é a base dos logaritmos naturais.  
+## <a name="remarks"></a>Remarks  
+ A constante **e** (2,718281...) é a base de logaritmos naturais.  
   
- O expoente de um número é a constante **e** elevado à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
+ O expoente de um número é a constante **e** elevada à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
   
- O exponencial do logaritmo natural de um número é o número em si: EXP (LOG (*n*)) =  *n* . E o logaritmo natural do exponencial de um número é o número em si: LOG (EXP (*n*)) =  *n* .  
+ O exponencial do logaritmo natural de um número é o próprio número: EXP (LOG (*n*)) = *n*. E o logaritmo natural do exponencial de um número é o próprio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -96,7 +96,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. Localizando o expoente de um número  
  O exemplo a seguir retorna o valor exponencial do valor especificado (`10`).  
@@ -126,10 +126,10 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [LOG &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

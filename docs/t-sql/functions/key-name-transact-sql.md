@@ -46,14 +46,14 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *texto cifrado*  
- É o texto criptografado pela chave simétrica. *cyphertext* é do tipo **varbinary (8000)**.  
+ *ciphertext*  
+ É o texto criptografado pela chave simétrica. *cyphertext* é do tipo **varbinary(8000)**.  
   
- *Key_GUID*  
- É o GUID da chave simétrica. *Key_GUID* é do tipo **uniqueidentifier**.  
+ *key_guid*  
+ É o GUID da chave simétrica. *key_guid* é do tipo **uniqueidentifier**.  
   
 ## <a name="returned-types"></a>Tipos retornados  
- **varchar (128)**  
+ **varchar(128)**  
   
 ## <a name="permissions"></a>Permissões  
  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a visibilidade dos metadados está limitada aos protegíveis que pertencem a um usuário ou nos quais ele tem alguma permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -61,7 +61,7 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Exibindo o nome de uma chave simétrica com o uso de key_guid  
- O **mestre** banco de dados contém uma chave simétrica chamada # # MS_ServiceMasterKey # #. O exemplo a seguir obtém o GUID dessa chave da exibição de gerenciamento dinâmico sys.symmetric_keys, o atribui a uma variável e, em seguida, passa essa variável para a função KEY_NAME para demonstrar como retornar o nome que corresponde ao GUID.  
+ O banco de dados **master** contém uma chave simétrica chamada ##MS_ServiceMasterKey##. O exemplo a seguir obtém o GUID dessa chave da exibição de gerenciamento dinâmico sys.symmetric_keys, o atribui a uma variável e, em seguida, passa essa variável para a função KEY_NAME para demonstrar como retornar o nome que corresponde ao GUID.  
   
 ```  
 USE master;  
@@ -115,9 +115,9 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

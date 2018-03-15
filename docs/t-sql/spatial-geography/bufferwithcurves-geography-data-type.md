@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retorna um **geografia** instância que representa o conjunto de todos os pontos cuja distância da chamada **geografia** instância é menor que ou igual a *distância* parâmetro.  
+  Retorna uma instância de **geography** que representa o conjunto de todos os pontos cuja distância da instância de **geography** de chamada é menor ou igual ao parâmetro *distance*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,36 +45,36 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- É um **float** que indica a distância máxima em que os pontos que formam o buffer podem estar da instância de geography.  
+ É um **float** que indica a distância máxima em que os pontos que formam o buffer podem estar da instância de geografia.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
- Os critérios a seguir lançará um **ArgumentException**.  
+ Os critérios a seguir gerarão uma **ArgumentException**.  
   
 -   Nenhum parâmetro é transmitido ao método como `@g.BufferWithCurves()`  
   
 -   Um parâmetro não numérico é transmitido ao método como `@g.BufferWithCurves('a')`  
   
--   **NULO** é transmitido ao método, como`@g.BufferWithCurves(NULL)`  
+-   **NULL** é passado ao método, como `@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>Remarks  
  A tabela a seguir mostra os resultados retornados para obter valores de distância diferentes.  
   
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
-|distância < 0|Zero ou um|Vazio **GeometryCollection** instância|  
-|distância \< 0|Dois ou mais|Um **CurvePolygon** ou **GeometryCollection** instância com um buffer negativo.<br /><br /> Observação: Um buffer negativo pode criar vazio **GeometryCollection**|
-|distância = 0|Todas as dimensões|Cópia de invocando **geografia** instância|  
-|distância > 0|Todas as dimensões|**CurvePolygon** ou **GeometryCollection** instância|  
+|distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
+|distância \< 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo.<br /><br /> Observação: um buffer negativo pode criar uma **GeometryCollection** vazia|
+|distância = 0|Todas as dimensões|Cópia da instância de **geography** de invocação|  
+|distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
 > [!NOTE]  
->  Como *distância* é um **float**, um valor muito pequeno pode equivaler a zero nos cálculos.  Quando isso ocorre, em seguida, uma cópia da chamada **geografia** instância será retornada.  
+>  Como *distance* é um **float**, um valor muito pequeno pode ser igualado a zero nos cálculos.  Quando isto ocorre, uma cópia da instância de **geography** de chamada é retornada.  
   
- Se um **cadeia de caracteres** parâmetro é passado para o método, em seguida, ele será convertido em um **float** ou lançará um `ArgumentException`.  
+ Se um parâmetro **string** for passado ao método, ele será convertido em um **float** ou gerará uma `ArgumentException`.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -95,17 +95,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chamando BufferWithCurves() com um valor de parâmetro < 0 que retorna uma GeometryCollection vazia  
- O exemplo a seguir mostra o que ocorre quando o *distância* parâmetro for igual a -2:  
+ O seguinte exemplo mostra o que ocorre quando o parâmetro *distance* é igual a -2:  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- Isso **selecione** instrução retorna`GEOMETRYCOLLECTION EMPTY`  
+ Esta instrução **SELECT** retorna `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Chamando BufferWithCurves() com um valor de parâmetro = 0  
- O exemplo a seguir retorna uma cópia da chamada **geografia** instância:  
+ O seguinte exemplo retorna uma cópia da instância de **geography** de chamada:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Chamando BufferWithCurves() com um valor de parâmetro diferente de zero que é extremamente pequeno  
- O exemplo a seguir também retorna uma cópia da chamada **geografia** instância:  
+ O seguinte exemplo também retorna uma cópia da instância de **geography** de chamada:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/25/2018
   
  Observe que os dois exemplos anteriores transmitiram uma cadeia de caracteres literal ao método `BufferWithCurves()`. O primeiro exemplo funciona porque o literal de cadeia de caracteres pode ser convertido em um valor numérico. Porém, o segundo exemplo lança `ArgumentException`.  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [BufferWithCurves &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   

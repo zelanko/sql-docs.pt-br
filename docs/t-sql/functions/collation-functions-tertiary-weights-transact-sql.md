@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funções de agrupamento - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funções de agrupamento – TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna uma cadeia de caracteres binária de pesos para cada caractere em uma expressão de cadeia de caracteres não Unicode definida com um agrupamento SQL terciário.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *non_Unicode_character_string_expression*  
-É uma cadeia de caracteres [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **char**, **varchar**, ou **varchar (max)** definidas em um agrupamento SQL terciário. Para obter uma lista desses agrupamentos, consulte Comentários.
+É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de cadeia de caracteres do tipo **char**, **varchar** ou **varchar(max)** definida em um agrupamento SQL terciário. Para obter uma lista desses agrupamentos, consulte Comentários.
   
 ## <a name="return-types"></a>Tipos de retorno
-TERTIARY_WEIGHTS retorna **varbinary** quando *non_Unicode_character_string_expression* é **char** ou **varchar**e retorna **varbinary (max)** quando *non_Unicode_character_string_expression* é **varchar (max)**.
+TERTIARY_WEIGHTS retorna **varbinary** quando *non_Unicode_character_string_expression* é **char** ou **varchar** e retorna **varbinary(max)** quando *non_Unicode_character_string_expression* é **varchar(max)**.
   
-## <a name="remarks"></a>Comentários  
-TERTIARY_WEIGHTS retorna NULL quando *non_Unicode_character_string_expression* não está definida com um agrupamento SQL terciário. A tabela a seguir mostra agrupamentos SQL terciários.
+## <a name="remarks"></a>Remarks  
+TERTIARY_WEIGHTS retorna NULL quando *non_Unicode_character_string_expression* não é definido com um agrupamento SQL terciário. A tabela a seguir mostra agrupamentos SQL terciários.
   
 |ID da ordem de classificação|Agrupamento SQL|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS retorna NULL quando *non_Unicode_character_string_expression* n
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS foi planejado para uso na definição de uma coluna computada que está definida nos valores de um **char**, **varchar**, ou **varchar (max)** coluna. Definição de um índice na coluna computada e **char**, **varchar**, ou **varchar (max)** coluna pode melhorar o desempenho quando o **char**, **varchar**, ou **varchar (max)** coluna é especificada na cláusula ORDER BY de uma consulta.
+TERTIARY_WEIGHTS foi planejado para uso na definição de uma coluna computada que é definida com base nos valores de uma coluna **char**, **varchar** ou **varchar(max)**. A definição de um índice na coluna computada e na coluna **char**, **varchar** ou **varchar(max)** pode melhorar o desempenho quando a coluna **char**, **varchar** ou **varchar(max)** é especificada na cláusula ORDER BY de uma consulta.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir cria uma coluna computada em uma tabela, que aplica a função `TERTIARY_WEIGHTS` aos valores de uma coluna `char`.
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[ORDEM por cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

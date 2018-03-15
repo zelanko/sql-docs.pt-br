@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Habilita ou desabilita um provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o provedor alterar o arquivo .dll usado para implementar o Gerenciamento de Chaves Extensível [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário usar a instrução ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Quando o caminho do arquivo .dll é atualizado usando a instrução ALTER CRYPTOGRAPHIC PROVIDER, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa as seguintes ações:  
@@ -83,16 +83,16 @@ Quando o arquivo de cabeçalho usado para criar a dll de provedor EKM provedor e
  Requer a permissão CONTROL no provedor criptográfico.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera um provedor criptográfico, chamado `SecurityProvider` em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para uma versão mais recente de um arquivo. dll. Essa nova versão é denominado `c:\SecurityProvider\SecurityProvider_v2.dll` e é instalado no servidor. O certificado do provedor deve ser instalado no servidor.  
+ O exemplo a seguir altera um provedor criptográfico, chamado `SecurityProvider` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para uma versão mais nova de um arquivo .dll. Essa nova versão é chamada `c:\SecurityProvider\SecurityProvider_v2.dll` e é instalada no servidor. O certificado do provedor deve ser instalado no servidor.  
   
-1. Desabilite o provedor para executar a atualização. Isso será encerrado abrir todas as sessões de criptografia.  
+1. Desabilite o provedor para executar o upgrade. Isso encerrará todas as sessões de criptografia abertas.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Atualize o arquivo. dll do provedor. O GUID deve ser o mesmo que a versão anterior, mas a versão pode ser diferente.  
+2. Faça upgrade do arquivo. dll do provedor. O GUID deve ser o mesmo que a versão anterior, mas a versão pode ser diferente.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
@@ -106,7 +106,7 @@ ENABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

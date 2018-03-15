@@ -65,7 +65,7 @@ Especifica uma constante que indica que a fonte do cursor é um nome de cursor g
 Especifica uma constante que indica que a fonte do cursor é uma variável local.
   
 '*cursor_variable*'  
-É o nome do cursor variável. Uma variável de cursor deve ser definida usando o **cursor** tipo de dados.
+É o nome do cursor variável. Uma variável de cursor deve ser definida usando o tipo de dados **cursor**.
   
 ## <a name="return-types"></a>Tipos de retorno
 **smallint**
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de cursor &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Funções do cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

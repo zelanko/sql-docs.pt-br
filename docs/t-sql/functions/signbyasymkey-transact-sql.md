@@ -53,18 +53,18 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
   
 ## <a name="arguments"></a>Argumentos  
  *Asym_Key_ID*  
- É a ID de uma chave assimétrica no banco de dados atual. *Asym_Key_ID* é**int**.  
+ É a ID de uma chave assimétrica no banco de dados atual. *Asym_Key_ID* é **int**.  
   
  **@plaintext**  
- É uma variável do tipo **nvarchar**, **char**, **varchar**, ou **nchar** que contém os dados que serão assinados com a chave assimétrica.  
+ É uma variável do tipo **nvarchar**, **char**, **varchar** ou **nchar** que contém os dados que serão assinados com a chave assimétrica.  
   
- *senha*  
- É a senha com a qual a chave privada é protegida. *senha* é **nvarchar (128)**.  
+ *password*  
+ É a senha com a qual a chave privada é protegida. A *password* é **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Requer a permissão CONTROL na chave assimétrica.  
   
 ## <a name="examples"></a>Exemplos  
@@ -86,9 +86,9 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

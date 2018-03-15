@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Executa uma cadeia de caracteres de comando ou de cadeia de caracteres dentro de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou um dos seguintes módulos: sistema armazenados procedimento, o procedimento armazenado definido pelo usuário, o procedimento armazenado CLR, função definida pelo usuário de valor escalar ou procedimento armazenado estendido. A instrução EXECUTE pode ser usada para enviar comandos de passagem aos servidores vinculados. Além disso, o contexto no qual uma cadeia de caracteres ou comando é executado pode ser definido explicitamente. É possível definir metadados para o conjunto de resultados usando as opções do WITH RESULT SETS.
+Executa uma cadeia de caracteres de comando, uma cadeia de caracteres em um lote [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um dos seguintes módulos: procedimento armazenado do sistema, procedimento armazenado definido pelo usuário, procedimento armazenado CLR, função de valor escalar definida pelo usuário ou procedimento armazenado estendido. A instrução EXECUTE pode ser usada para enviar comandos de passagem aos servidores vinculados. Além disso, o contexto no qual uma cadeia de caracteres ou comando é executado pode ser definido explicitamente. É possível definir metadados para o conjunto de resultados usando as opções do WITH RESULT SETS.
   
 > [!IMPORTANT]  
 >  Antes de chamar EXECUTE com uma cadeia de caracteres, valide a cadeia de caracteres. Nunca execute um comando construído por uma entrada de usuário que não foi validada.  
@@ -206,30 +206,30 @@ Execute a character string
  @*return_status*  
  É uma variável de inteiro opcional que armazena o status de retorno de um módulo. Essa variável deve ser declarada no lote, procedimento armazenado ou função para ser usada antes em uma instrução EXECUTE.  
   
- Quando usado para invocar uma função valor escalar definida pelo usuário, o @*return_status* variável pode ser de qualquer tipo de dados escalares.  
+ Quando usada para invocar uma função definida pelo usuário com valor escalar, a variável @*return_status* pode ser de qualquer tipo de dados escalar.  
   
  *module_name*  
- É o nome totalmente qualificado do procedimento armazenado ou do valor escalar da função a ser chamada, definida pelo usuário. Nomes de módulo devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os nomes de procedimentos armazenados estendidos sempre têm diferenciação entre maiúsculas e minúsculas, independentemente do agrupamento do servidor.  
+ É o nome totalmente qualificado do procedimento armazenado ou do valor escalar da função a ser chamada, definida pelo usuário. Os nomes de módulos devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os nomes de procedimentos armazenados estendidos sempre têm diferenciação entre maiúsculas e minúsculas, independentemente do agrupamento do servidor.  
   
  Um módulo que tenha sido criado em outro banco de dados poderá ser executado se o usuário que estiver executando o módulo for o proprietário ou se tiver permissão apropriada para executá-lo no referido banco de dados. Um módulo poderá ser executado em outro servidor que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o usuário que estiver executando o módulo tiver a permissão apropriada para usar esse servidor (acesso remoto) e executar o módulo no referido banco de dados. Se você especificar um nome de servidor mas não especificar um nome de banco de dados, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] procurará o módulo no banco de dados padrão do usuário.  
   
  ;*number*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  É um inteiro opcional usado para agrupar procedimentos do mesmo nome. Esse parâmetro não é usado para procedimentos armazenados estendidos.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Para obter mais informações sobre grupos de procedimentos, consulte [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ Para obter mais informações sobre grupos de procedimentos, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  @*module_name_var*  
  É o nome de uma variável localmente definida que representa um nome de módulo.  
   
- Isso pode ser uma variável que contém o nome de uma função definida pelo usuário escalares.  
+ Isso pode ser uma variável que contém o nome de uma função escalar definida pelo usuário compilada nativamente.  
   
  @*parameter*  
- É o parâmetro para *nome_de_módulo*, conforme definido no módulo. Os nomes de parâmetro devem ser precedidos pelo sinal de arroba (@). Quando usado com o @*parameter_name*=*valor* formulário, os nomes de parâmetro e constantes não precisam ser fornecidos na ordem em que eles são definidos no módulo. No entanto, se a @*parameter_name*=*valor* formulário é usado para qualquer parâmetro, ele deve ser usado para todos os parâmetros subsequentes.  
+ É o parâmetro do *module_name*, conforme definido no módulo. Os nomes de parâmetro devem ser precedidos pelo sinal de arroba (@). Quando usados com o formato @*parameter_name*=*value*, os nomes de parâmetro e constantes não precisam ser fornecidos na ordem em que são definidos no módulo. Porém, se o formato @*parameter_name*=*value* for usado para um parâmetro, ele deverá ser usado para todos os parâmetros seguintes.  
   
  Por padrão, os parâmetros são anuláveis.  
   
@@ -250,9 +250,9 @@ Execute a character string
  OUTPUT  
  Especifica que o módulo ou a cadeia de caracteres de comando deve retornar um parâmetro. O parâmetro correspondente no módulo ou na cadeia de caracteres de comando também deve ter sido criado com o uso da palavra-chave OUTPUT. Use essa palavra-chave quando você usar variáveis de cursor como parâmetros.  
   
- Se *valor* é definido como OUTPUT de um módulo executado em um servidor vinculado, qualquer alteração correspondente*parâmetro* executada pelo OLE DB provider será copiada novamente para a variável no final das execução do módulo.  
+ Se *value* for definido como OUTPUT de um módulo executado em um servidor vinculado, as alterações feitas no @*parameter* correspondente pelo Provedor OLE DB serão copiadas novamente para a variável no final da execução do módulo.  
   
- Se os parâmetros de saída estão sendo usados e a intenção é usar os valores de retorno em outras instruções no módulo ou lote de chamada, o valor do parâmetro deve ser passado como uma variável, como*parâmetro* = @*variável* . Não é possível executar um módulo especificando OUTPUT para um parâmetro que não esteja definido como OUTPUT no módulo. Não é possível passar constantes ao módulo usando OUTPUT; o parâmetro de retorno requer um nome de variável. O tipo de dados da variável deve ser declarado e ter um valor atribuído antes da execução do procedimento.  
+ Se os parâmetros OUTPUT estiverem sendo usados e a intenção for usar os valores retornados em outras instruções no lote ou módulo de chamada, o valor do parâmetro deverá ser passado como uma variável, como @*parameter* = @*variable*. Não é possível executar um módulo especificando OUTPUT para um parâmetro que não esteja definido como OUTPUT no módulo. Não é possível passar constantes ao módulo usando OUTPUT; o parâmetro de retorno requer um nome de variável. O tipo de dados da variável deve ser declarado e ter um valor atribuído antes da execução do procedimento.  
   
  Quando EXECUTE é usado em um procedimento armazenado remoto ou para executar um comando de passagem em um servidor vinculado, os parâmetros OUTPUT não podem ser nenhum dos tipos de dados LOB (objeto grande).  
   
@@ -262,16 +262,16 @@ Execute a character string
  Fornece o valor padrão do parâmetro como definido no módulo. Quando o módulo esperar um valor para um parâmetro que não tem um padrão definido e houver um parâmetro ausente ou a palavra-chave DEFAULT estiver especificada, ocorrerá um erro.  
   
  @*string_variable*  
- É o nome de uma variável local. @*string_variable* pode ser qualquer **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados. Isso inclui o **(max)** tipos de dados.  
+ É o nome de uma variável local. @*string_variable* pode ser qualquer tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Incluem os tipos de dados **(max)**.  
   
  [N] '*tsql_string*'  
- É uma cadeia de caracteres constante. *tsql_string* pode ser qualquer **nvarchar** ou **varchar** tipo de dados. Se N for incluído, a cadeia de caracteres será interpretada como **nvarchar** tipo de dados.  
+ É uma cadeia de caracteres constante. *tsql_string* pode ser qualquer tipo de dados **nvarchar** ou **varchar**. Se N for incluído, a cadeia de caracteres será interpretada como o tipo de dados **nvarchar**.  
   
  AS \<context_specification>  
  Especifica o contexto no qual a instrução é executada.  
   
  Logon  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica que o contexto para ser representado é um logon. O escopo de personificação é o servidor.  
   
@@ -279,43 +279,43 @@ Execute a character string
  Especifica que o contexto a ser representado é um usuário no banco de dados atual. O escopo de representação é restrito ao banco de dados atual. Uma opção de contexto para um usuário de banco de dados não herda as permissões em nível de servidor desse usuário.  
   
 > [!IMPORTANT]  
->  Enquanto a opção de contexto para o usuário do banco de dados estiver ativa, qualquer tentativa de acessar os recursos fora do banco de dados causará a falha da instrução. Isso inclui usar *banco de dados* instruções, consultas distribuídas e consultas que fazem referência a outro banco de dados usando identificadores em três ou quatro partes.  
+>  Enquanto a opção de contexto para o usuário do banco de dados estiver ativa, qualquer tentativa de acessar os recursos fora do banco de dados causará a falha da instrução. Isso inclui instruções USE *database*, consultas distribuídas e consultas que referenciam outro banco de dados usando identificadores de três ou quatro partes.  
   
  '*name*'  
- É um usuário ou nome de logon válido. *nome* deve ser um membro da função de servidor fixa sysadmin ou existir como uma entidade no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
+ É um usuário ou nome de logon válido. *name* deve ser membro da função de servidor fixa sysadmin ou existir como uma entidade de segurança em [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
- *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem.  
+ *name* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
   
- Para obter mais informações, consulte [especificando um nome de logon ou usuário](#_user) mais adiante neste tópico.  
+ Para obter mais informações, consulte [Especificando um nome de logon ou usuário](#_user) mais adiante neste tópico.  
   
  [N] '*command_string*'  
- É uma cadeia de caracteres constante que contém o comando a ser passado ao servidor vinculado. Se N for incluído, a cadeia de caracteres será interpretada como **nvarchar** tipo de dados.  
+ É uma cadeia de caracteres constante que contém o comando a ser passado ao servidor vinculado. Se N for incluído, a cadeia de caracteres será interpretada como o tipo de dados **nvarchar**.  
   
  [?]  
- Indica parâmetros para os quais os valores são fornecidos no \<arg-list > de comandos de passagem que são usados em um EXEC('...', \<arg-list>) em \<linkedsrv > instrução.  
+ Indica parâmetros para os quais valores são fornecidos em \<arg-list> de comandos de passagem usados em uma instrução EXEC('…', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Especifica que *command_string* é executada em *linked_server_name* e resultados, se houver, são retornados ao cliente. *linked_server_name* devem se referir a uma definição de servidor vinculado existente no servidor local. Servidores vinculados são definidos usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Especifica que *command_string* é executada em *linked_server_name* e os resultados, se houver, são retornados ao cliente. *linked_server_name* deve referenciar uma definição de servidor vinculado existente no servidor local. Os servidores vinculados são definidos por meio de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- COM \<execute_option >  
+ WITH \<execute_option>  
  Opções de execução possíveis. As opções de RESULT SETS não podem ser especificadas em uma instrução INSERT.EXEC.  
   
 |Termo|Definição|  
 |----------|----------------|  
-|RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é suportado com funções escalares definidas pelo usuário. Se você precisar recompilar, use [sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**CONJUNTOS DE RESULTADOS INDEFINIDOS**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para interpretada funções escalares definidas pelo usuário e compiladas nativamente funções escalares definidas pelo usuário, essa opção não está operacional porque as funções não retornam um conjunto de resultados.|  
-|RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para interpretada funções escalares definidas pelo usuário e compiladas nativamente funções escalares definidas pelo usuário, essa opção não está operacional porque as funções não retornam um conjunto de resultados.|  
-|*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias *result_sets_definition* seções. Inclua cada *result_sets_definition* entre parênteses, separados por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário porque as funções não retornam um conjunto de resultados.|
+|RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é compatível com funções escalares definidas pelo usuário compiladas nativamente. Se precisar recompilar, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
+|**RESULT SETS UNDEFINED**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
+|RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
+|*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias seções de *result_sets_definition*. Coloque cada *result_sets_definition* entre parênteses, separada por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário compiladas nativamente, porque as funções não retornam um conjunto de resultados.|
   
-\<result_sets_definition > **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Descreve os conjuntos de resultados retornados pelas instruções executadas. As cláusulas de result_sets_definition têm o seguinte significado  
   
 |Termo|Definição|  
 |----------|----------------|  
-|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|Consulte a tabela a seguir.|  
+|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|Veja a tabela abaixo.|  
 |db_name|O nome do banco de dados que contém a tabela, a exibição ou a função com valor de tabela.|  
 |schema_name|O nome do esquema proprietário da tabela, da exibição ou da função com valor de tabela.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Especifica que as colunas retornadas serão as especificadas na tabela, exibição ou função com valor de tabela nomeada. Não há suporte para variáveis de tabela, tabelas temporárias e sinônimos na sintaxe de objetos do AS.|  
@@ -332,11 +332,11 @@ Execute a character string
  O conjunto de resultados real retornado durante execução pode diferir do resultado definido usando a cláusula WITH RESULT SETS de uma das seguintes maneiras: número de conjuntos de resultados, número de colunas, nome de coluna, nulidade e tipo de dados. Se o número de conjuntos de resultados for diferente, ocorrerá um erro e o lote será anulado.  
   
 ## <a name="remarks"></a>Remarks  
- Os parâmetros podem ser fornecidos usando *valor* ou usando*parameter_name*=*valor.* . Um parâmetro não faz parte de uma transação; portanto, se um parâmetro for alterado em uma transação que for posteriormente revertida, o parâmetro não será revertido para seu valor anterior. O valor retornado ao chamador será sempre o valor no momento do retorno do módulo.  
+ Os parâmetros podem ser fornecidos com *value* ou @*parameter_name*=*value*. . Um parâmetro não faz parte de uma transação; portanto, se um parâmetro for alterado em uma transação que for posteriormente revertida, o parâmetro não será revertido para seu valor anterior. O valor retornado ao chamador será sempre o valor no momento do retorno do módulo.  
   
- O aninhamento ocorre quando um módulo chama outro ou executa código gerenciado, fazendo referência a um módulo CLR (Common Language Runtime) a um tipo definido pelo usuário ou agregação. O nível de aninhamento é aumentado quando o módulo chamado ou a referência de código gerenciado inicia a execução e diminuído quando ela termina. Exceder o máximo de 32 níveis de aninhamento faz com que toda a cadeia de chamada falhe. O nível de aninhamento atual é armazenado no @@NESTLEVEL função do sistema.  
+ O aninhamento ocorre quando um módulo chama outro ou executa código gerenciado, fazendo referência a um módulo CLR (Common Language Runtime) a um tipo definido pelo usuário ou agregação. O nível de aninhamento é aumentado quando o módulo chamado ou a referência de código gerenciado inicia a execução e diminuído quando ela termina. Exceder o máximo de 32 níveis de aninhamento faz com que toda a cadeia de chamada falhe. O nível de aninhamento atual é armazenado na função do sistema @@NESTLEVEL.  
   
- Como os procedimentos armazenados remotos e estendidos não estão no escopo de uma transação (a menos que emitidos em uma instrução BEGIN DISTRIBUTED TRANSACTION ou quando usados com várias opções de configuração), os comandos executados por meio de chamadas a eles não poderão ser revertidos. Para obter mais informações, consulte [procedimentos armazenados do sistema &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) e [iniciar transação DISTRIBUÍDA &#40; Transact-SQL &#41; ](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ Como os procedimentos armazenados remotos e estendidos não estão no escopo de uma transação (a menos que emitidos em uma instrução BEGIN DISTRIBUTED TRANSACTION ou quando usados com várias opções de configuração), os comandos executados por meio de chamadas a eles não poderão ser revertidos. Para obter mais informações, consulte [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) e [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
  Ao utilizar variáveis de cursor, se você executar um procedimento que passe em uma variável de cursor com um cursor alocado a ele, ocorrerá um erro.  
   
@@ -347,14 +347,14 @@ Execute a character string
 ## <a name="using-execute-with-stored-procedures"></a>Usando EXECUTE com procedimentos armazenados  
  Não será preciso especificar a palavra-chave EXECUTE durante a execução de procedimentos armazenados quando a instrução for a primeira em um lote.  
   
- Procedimentos armazenados do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciam com os caracteres sp_. Eles são armazenados fisicamente no [banco de dados do recurso](../../relational-databases/databases/resource-database.md), mas aparecem logicamente no esquema sys de cada sistema e banco de dados definido pelo usuário. Quando você executa um procedimento armazenado de sistema, em um lote ou dentro de um módulo, como a função ou o procedimento armazenado definido pelo usuário, recomendamos qualificar o nome do procedimento armazenado com o nome do esquema sys.  
+ Procedimentos armazenados do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciam com os caracteres sp_. Eles estão fisicamente armazenados no [banco de dados Resource](../../relational-databases/databases/resource-database.md), mas são exibidos logicamente no esquema sys de cada sistema e banco de dados definido pelo usuário. Quando você executa um procedimento armazenado de sistema, em um lote ou dentro de um módulo, como a função ou o procedimento armazenado definido pelo usuário, recomendamos qualificar o nome do procedimento armazenado com o nome do esquema sys.  
   
  Os procedimentos armazenados estendidos de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciam com os caracteres xp_ e estão contidos no esquema dbo do banco de dados mestre. Quando você executa um procedimento armazenado estendido de sistema, em um lote ou dentro de um módulo, como a função ou o procedimento armazenado definido pelo usuário, recomendamos qualificar o nome do procedimento armazenado com master.dbo.  
   
- Quando você executa um procedimento definido pelo usuário, em um lote ou dentro de um módulo, como a função ou o procedimento armazenado definido pelo usuário, recomendamos qualificar o nome do procedimento armazenado com um nome de esquema. Não recomendamos nomear um procedimento armazenado definido pelo usuário com o mesmo nome de uma procedimento armazenado no sistema. Para obter mais informações sobre a execução de procedimentos armazenados, consulte [executar um procedimento armazenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md).  
+ Quando você executa um procedimento definido pelo usuário, em um lote ou dentro de um módulo, como a função ou o procedimento armazenado definido pelo usuário, recomendamos qualificar o nome do procedimento armazenado com um nome de esquema. Não recomendamos nomear um procedimento armazenado definido pelo usuário com o mesmo nome de uma procedimento armazenado no sistema. Para obter mais informações sobre a execução de procedimentos armazenados, consulte [Executar um procedimento armazenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md).  
   
 ## <a name="using-execute-with-a-character-string"></a>Usando EXECUTE com uma cadeia de caracteres  
- Em versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as cadeias de caracteres estão limitadas a 8.000 bytes. Isso requer a concatenação de cadeias de caracteres grandes para execução dinâmica. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **varchar (max)** e **nvarchar (max)** tipos de dados podem ser especificados que permitem de cadeias de caracteres a ser até 2 gigabytes de dados.  
+ Em versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as cadeias de caracteres estão limitadas a 8.000 bytes. Isso requer a concatenação de cadeias de caracteres grandes para execução dinâmica. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os tipos de dados **varchar(max)** e **nvarchar(max)** podem ser especificados para permitir que as cadeias de caracteres tenham até 2 gigabytes de dados.  
   
  As alterações no contexto de banco de dados duram apenas até o fim da instrução EXECUTE. Por exemplo, depois que `EXEC` na instrução seguinte é executado, o contexto de banco de dados se torna o mestre.  
   
@@ -365,14 +365,14 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Alternância de contexto  
  Você pode usar a cláusula `AS { LOGIN | USER } = ' name '` para alternar o contexto de execução de uma instrução dinâmica. Quando a alternância de contexto for especificada como `EXECUTE ('string') AS <context_specification>`, a duração dessa alternância estará limitada ao escopo da consulta sendo executada.  
   
-###  <a name="_user"></a>Especificando um nome de logon ou usuário  
+###  <a name="_user"></a> Especificando um nome de logon ou usuário  
  O nome de logon ou de usuário especificado em `AS { LOGIN | USER } = ' name '` deve existir como principal em sys.database_principals ou sys.server_principals, respectivamente, ou a instrução falhará. Além disso, as permissões IMPERSONATE devem ser concedidas na entidade de segurança. A menos que o chamador seja o proprietário do banco de dados ou membro da função de servidor fixa sysadmin, o principal deverá existir quando o usuário estiver acessando o banco de dados ou a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de uma associação de grupo do Windows. Por exemplo, considere as seguintes condições:  
   
 -   O grupo CompanyDomain\SQLUsers tem acesso ao banco de dados de vendas.  
   
 -   CompanyDomain\SqlUser1 é membro de SQLUsers e, por isso, tem acesso implícito ao banco de dados de vendas.  
   
- Embora CompanyDomain\SqlUser1 tenha acesso ao banco de dados por meio de associação no SQLUsers grupo, a instrução `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` falhará porque `CompanyDomain\SqlUser1` não existe como uma entidade de segurança no banco de dados.  
+ Embora CompanyDomain\SqlUser1 tenha acesso ao banco de dados por meio da associação ao grupo SQLUsers, a instrução `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` falhará porque `CompanyDomain\SqlUser1` não existe como uma entidade de segurança no banco de dados.  
   
 ### <a name="best-practices"></a>Práticas recomendadas  
  Especifique um logon ou um usuário que tenha os privilégios mínimos necessários para executar as operações definidas na instrução ou módulo. Por exemplo, não especifique um nome de logon que tenha permissões em nível de servidor se apenas as permissões em nível de banco de dados forem necessárias; ou não especifique uma conta de proprietário de banco de dados, a menos que essas permissões sejam solicitadas.  
@@ -384,7 +384,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  Se o módulo acessar outros objetos de banco de dados, a execução ocorrerá quando a permissão EXECUTE estiver no módulo e uma das seguintes condições for verdadeira:  
   
--   O módulo está marcado como EXECUTE AS USER ou SELF, e o seu proprietário tem as permissões correspondentes no objeto mencionado. Para obter mais informações sobre representação dentro de um módulo, consulte [cláusula EXECUTE AS &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+-   O módulo está marcado como EXECUTE AS USER ou SELF, e o seu proprietário tem as permissões correspondentes no objeto mencionado. Para obter mais informações sobre a representação dentro de um módulo, consulte [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 -   O módulo está marcado como EXECUTE AS CALLER e você tem as permissões correspondentes no objeto.  
   
@@ -396,7 +396,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. Usando EXECUTE para passar um único parâmetro  
- O procedimento armazenado `uspGetEmployeeManagers` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] espera um parâmetro (`@EmployeeID`). Os exemplos seguintes executam o `uspGetEmployeeManagers` procedimento com armazenado `Employee ID 6` como seu valor de parâmetro.  
+ O procedimento armazenado `uspGetEmployeeManagers` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] espera um parâmetro (`@EmployeeID`). Os exemplos a seguir executam o procedimento armazenado `uspGetEmployeeManagers` com `Employee ID 6` como seu valor de parâmetro.  
   
 ```  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -410,7 +410,7 @@ EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;
 GO  
 ```  
   
- Se esta é a primeira instrução em um lote ou uma **osql** ou **sqlcmd** script, EXEC não é necessário.  
+ Se o exemplo a seguir for a primeira instrução de um lote ou em um script **osql** ou **sqlcmd**, EXEC não será obrigatório.  
   
 ```  
 dbo.uspGetEmployeeManagers 6;  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Usando EXECUTE com um procedimento armazenado remoto  
  O exemplo a seguir executa o procedimento `uspGetEmployeeManagers` armazenado no servidor remoto `SQLSERVER1` e armazena o status de retorno que indica o êxito ou a falha em `@retstat`.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 DECLARE @retstat int;  
@@ -518,7 +518,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linkedservername"></a>G. Usando EXECUTE com AT linked_server_name  
  O exemplo seguinte envia uma cadeia de caracteres de comando a um servidor remoto. Ele cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução DDL (`CREATE TABLE`) nesse servidor vinculado.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -529,7 +529,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. Usando EXECUTE WITH RECOMPILE  
- O exemplo a seguir executa o `Proc_Test_Defaults` procedimento armazenado e força um novo plano de consulta a ser compilado, usados e descartadas após a execução do módulo.  
+ O exemplo a seguir executa o procedimento armazenado `Proc_Test_Defaults` e força a compilação, o uso e o descarte de um novo plano de consulta após a execução do módulo.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
@@ -537,7 +537,7 @@ GO
 ```  
   
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. Usando EXECUTE com uma função definida pelo usuário  
- O exemplo a seguir executa a função escalar definida pelo usuário `ufnGetSalesOrderStatusText` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. É utilizada a variável `@returnstatus` para armazenar o valor retornado pela função. A função espera um parâmetro de entrada, `@Status`. Isso é definido como um **tinyint** tipo de dados.  
+ O exemplo a seguir executa a função escalar definida pelo usuário `ufnGetSalesOrderStatusText` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. É utilizada a variável `@returnstatus` para armazenar o valor retornado pela função. A função espera um parâmetro de entrada, `@Status`. Isso é definido como um tipo de dados **tinyint**.  
   
 ```  
 DECLARE @returnstatus nvarchar(15);  
@@ -550,7 +550,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Usando EXECUTE para consultar um banco de dados Oracle em um servidor vinculado  
  O exemplo a seguir executa várias instruções `SELECT` no servidor remoto Oracle. O exemplo começa adicionando o servidor Oracle como um servidor vinculado e criando o logon de servidor vinculado.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -593,7 +593,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. Usando um parâmetro com EXECUTE e AT linked_server_name  
  O exemplo a seguir envia uma cadeia de caracteres de comando a um servidor remoto usando um ponto de interrogação (`?`) como espaço reservado de um parâmetro. O exemplo cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução `SELECT` nesse servidor vinculado. A instrução `SELECT` usa o ponto de interrogação como um espaço reservado para o parâmetro `ProductID` (`952`), fornecido após a instrução.  
   
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -609,7 +609,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. Usando EXECUTE para redefinir um único conjunto de resultados  
  Alguns dos exemplos anteriores executaram `EXEC dbo.uspGetEmployeeManagers 6;` que retornou 7 colunas. O exemplo a seguir demonstra o uso da sintaxe `WITH RESULT SET` para alterar os nomes e tipos de dados do conjunto de resultados retornado.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -627,9 +627,9 @@ WITH RESULT SETS
 ```  
   
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. Usando EXECUTE para redefinir dois conjuntos de resultados  
- Ao executar uma instrução que retorna mais de um conjunto de resultados, defina cada conjunto de resultados esperado. O exemplo a seguir em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] cria um procedimento armazenado que retorna dois conjuntos de resultados. Em seguida, o procedimento é executado usando o **com conjuntos de resultados** cláusula e especificando os dois resultados conjunto de definições.  
+ Ao executar uma instrução que retorna mais de um conjunto de resultados, defina cada conjunto de resultados esperado. O exemplo a seguir em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] cria um procedimento armazenado que retorna dois conjuntos de resultados. Em seguida, o procedimento é executado com a cláusula **WITH RESULT SETS** e com a especificação definições de dois conjuntos de resultados.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  
@@ -662,28 +662,28 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Exemplo O: execução de procedimento básico  
- Executar um procedimento armazenado:  
+ Executando um procedimento armazenado:  
   
 ```  
 EXEC proc1;  
 ```  
   
- Chamando um procedimento armazenado com nome determinado em tempo de execução:  
+ Chamando um procedimento armazenado com um nome determinado em tempo de execução:  
   
 ```  
 EXEC ('EXEC ' + @var);  
 ```  
   
- Chamar um procedimento armazenado de dentro de um procedimento armazenado:  
+ Chamando um procedimento armazenado em um procedimento armazenado:  
   
 ```  
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>Exemplo p: cadeias de caracteres de execução  
+### <a name="example-p-executing-strings"></a>Exemplo P: executando cadeias de caracteres  
  Executando uma cadeia de caracteres SQL:  
   
 ```  
@@ -696,7 +696,7 @@ EXEC ('SELECT * FROM sys.types');
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
- Execução de uma variável de cadeia de caracteres:  
+ Executando uma variável de cadeia de caracteres:  
   
 ```  
 DECLARE @stringVar nvarchar(100);  
@@ -704,8 +704,8 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>Exemplo p: procedimentos com parâmetros  
- O exemplo a seguir cria um procedimento com parâmetros e demonstra 3 maneiras de executar o procedimento:  
+### <a name="example-q-procedures-with-parameters"></a>Exemplo Q: procedimentos com parâmetros  
+ O seguinte exemplo cria um procedimento com parâmetros e demonstra três maneiras de executar o procedimento:  
   
 ```  
 -- Uses AdventureWorks  
@@ -728,7 +728,7 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
@@ -741,7 +741,7 @@ GO
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

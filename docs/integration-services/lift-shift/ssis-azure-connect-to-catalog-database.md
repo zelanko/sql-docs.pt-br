@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Conectar-se ao banco de dados do Catálogo do SSISDB no Azure
 
@@ -55,14 +55,20 @@ Antes de começar, verifique se você tem a versão 17.2 ou posterior do SQL Ser
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 
+    ![Conectar-se ao servidor com o SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **Conecte-se ao banco de dados SSISDB**. Selecione **Opções** para expandir a caixa de diálogo **Conectar ao Servidor**. Na caixa de diálogo **conectar ao servidor**, selecione a guia **Propriedades de Conexão**. No campo **Conectar-se ao banco de dados**, selecione ou insira `SSISDB`.
 
     > [!IMPORTANT]
     > Se você não selecionar `SSISDB` quando se conectar, você poderá não ver o Catálogo do SSIS no Pesquisador de Objetos.
 
+    ![Selecionar o banco de dados SSISDB para a conexão](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
 4. Depois, selecione **Conectar**.
 
 5. No Pesquisador de Objetos, expanda **Catálogos do Integration Services** e, em seguida, expanda **SSISDB** para exibir os objetos no banco de dados do Catálogo do SSIS.
+
+    ![Localizar o banco de dados SSISDB no Pesquisador de Objetos do SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 - Implante um pacote. Para obter mais informações, consulte [Implantar um projeto do SSIS com o SSMS (SQL Server Management Studio)](../ssis-quickstart-deploy-ssms.md).

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um ponto arbitrário localizado dentro de um **geometria** instância.
+Retorna um ponto arbitrário localizado no interior de uma instância de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,11 +44,11 @@ Retorna um ponto arbitrário localizado dentro de um **geometria** instância.
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geometry**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Abra o tipo Geospatial Consortium (OGC): **ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará nulo se a instância estiver vazia.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STPointOnSurface().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

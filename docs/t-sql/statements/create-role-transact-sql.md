@@ -1,5 +1,5 @@
 ---
-title: "Criar função (Transact-SQL) | Microsoft Docs"
+title: CREATE ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -54,14 +54,14 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_da_função*  
+ *role_name*  
  É o nome da função a ser criada.  
   
- AUTORIZAÇÃO *owner_name*  
+ AUTHORIZATION *owner_name*  
  É o usuário de banco de dados ou função que terá a propriedade da nova função. Se nenhum usuário for especificado, a função será de propriedade do usuário que executar CREATE ROLE.  
   
-## <a name="remarks"></a>Comentários  
- As funções são protegíveis no nível de banco de dados. Depois de criar uma função, configure as permissões em nível de banco de dados da função usando GRANT, DENY e REVOKE. Para adicionar membros a uma função de banco de dados, use [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Para obter mais informações, consulte [funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md).  
+## <a name="remarks"></a>Remarks  
+ As funções são protegíveis no nível de banco de dados. Depois de criar uma função, configure as permissões em nível de banco de dados da função usando GRANT, DENY e REVOKE. Para adicionar membros a uma função de banco de dados, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Para obter mais informações, veja [Funções em nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  As funções de banco de dados são visíveis nas exibições do catálogo sys.database_role_members e sys.database_principals.  
   
@@ -71,7 +71,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Permissões  
- Requer **Criar função** permissão no banco de dados ou associação a **db_securityadmin** função fixa de banco de dados. Quando você usa o **autorização** opção, as seguintes permissões também são necessárias:  
+ Exige a permissão **CREATE ROLE** no banco de dados, ou a associação na função de banco de dados fixa **db_securityadmin**. Ao usar a opção de **AUTHORIZATION**, as seguintes permissões também são necessárias:  
   
 -   Para atribuir a propriedade de uma função a outro usuário, requer permissão IMPERSONATE naquele usuário.  
   
@@ -80,7 +80,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   Para atribuir a propriedade de uma função a uma função de aplicativo é necessária a permissão ALTER na função de aplicativo.  
   
 ## <a name="examples"></a>Exemplos  
-Os seguintes exemplos usam o banco de dados AdventureWorks.   
+Os seguintes exemplos usam todos o banco de dados AdventureWorks.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Criando uma função de banco de dados pertencente a um usuário de banco de dados  
  O exemplo a seguir cria a função de banco de dados `buyers` que pertence ao usuário `BenMiller`.  
@@ -98,10 +98,10 @@ CREATE ROLE auditors AUTHORIZATION db_securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

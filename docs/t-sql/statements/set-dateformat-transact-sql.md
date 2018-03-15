@@ -43,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Define a ordem das partes do mês, dia e ano para interpretar **data**, **smalldatetime**, **datetime**, **datetime2** e **datetimeoffset** cadeias de caracteres.  
+  Define a ordem das partes do mês, dia e ano para interpretar cadeias de caracteres **date**, **smalldatetime**, **datetime**, **datetime2** e **datetimeoffset**.  
   
- Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,19 +56,19 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *formato* | **@***format_var*  
- É a ordem das partes de data. Os parâmetros válidos são **MDA**, **DMA**, **ymd**, **ydm**, **myd**, e **dym**. Este argumento ou pode ser Unicode ou conjuntos de caracteres de dois bytes (DBCS) convertidos para Unicode. O padrão do Inglês dos EUA é **MDA**. Para o padrão DATEFORMAT de todas as linguagens de suporte, consulte [sp_helplanguage &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
+ *format* | **@***format_var*  
+ É a ordem das partes de data. Os parâmetros válidos são **mdy**, **dmy**, **ymd**, **ydm**, **myd** e **dym**. Este argumento ou pode ser Unicode ou conjuntos de caracteres de dois bytes (DBCS) convertidos para Unicode. O padrão do O padrão em inglês é **mdy**. Para o DATEFORMAT padrão de todos os idiomas com suporte, consulte [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
- DATEFORMAT **ydm** não há suporte para **data**, **datetime2** e **datetimeoffset** tipos de dados.  
+## <a name="remarks"></a>Remarks  
+ Não há suporte para DATEFORMAT **ydm** nos tipos de dados **date**, **datetime2** e **datetimeoffset**.  
   
- O efeito da configuração de DATEFORMAT na interpretação de cadeias de caracteres pode ser diferente para **datetime** e **smalldatetime** valores que **data**, **datetime2** e **datetimeoffset** valores, dependendo do formato de cadeia de caracteres. Esta configuração afeta a interpretação de cadeias de caracteres conforme elas são convertidas em valores de data para armazenamento no banco de dados. Ela não afeta a visualização de valores de tipo de dados de data que são armazenados no banco de dados ou o formato de armazenamento.  
+ O efeito da configuração de DATEFORMAT na interpretação de cadeias de caracteres pode ser diferente para valores de **datetime** e **smalldatetime** comparado a valores **date**, **datetime2** e **datetimeoffset**, dependendo do formato da cadeia de caracteres. Esta configuração afeta a interpretação de cadeias de caracteres conforme elas são convertidas em valores de data para armazenamento no banco de dados. Ela não afeta a visualização de valores de tipo de dados de data que são armazenados no banco de dados ou o formato de armazenamento.  
   
  Alguns formatos de cadeias de caracteres são interpretados independentemente da configuração de DATEFORMAT, como ISO 8601, por exemplo.  
   
  A configuração de DATEFORMAT é definida no momento da execução e não no momento da análise.  
   
- SET DATEFORMAT anula a data implícita Formatar configuração [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
+ SET DATEFORMAT substitui a configuração de formato de data implícita de [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -94,7 +94,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

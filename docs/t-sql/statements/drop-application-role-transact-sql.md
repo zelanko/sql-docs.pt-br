@@ -1,5 +1,5 @@
 ---
-title: "REMOVER a função de aplicativo (Transact-SQL) | Microsoft Docs"
+title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome de função*  
+ *rolename*  
  Especifica o nome da função de aplicativo a ser descartada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a função de aplicativo possuir protegíveis, não poderá ser descartada. Antes de descartar uma função de aplicativo que possui itens protegíveis, é necessário transferir a propriedade dos itens protegíveis primeiro ou descartá-los.  
   
 > [!CAUTION]  
@@ -70,10 +70,10 @@ DROP APPLICATION ROLE weekly_ledger;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTERAR a função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de Aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

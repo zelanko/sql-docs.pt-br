@@ -62,8 +62,8 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* | *database_id*| 0  
- É o nome ou a ID do banco de dados para o qual exibir as informações de transação mais antigas. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ *database_name* | *database_id*| 0  
+ É o nome ou a ID do banco de dados para o qual exibir as informações de transação mais antigas. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Os nomes de banco de dados precisam estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Especifica os resultados em um formato de tabela que pode ser carregado em uma tabela. Use essa opção para criar uma tabela de resultados que possa ser inserida em uma tabela para comparações. Quando essa opção não é especificada, os resultados são formatados para leitura.  
@@ -137,7 +137,7 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

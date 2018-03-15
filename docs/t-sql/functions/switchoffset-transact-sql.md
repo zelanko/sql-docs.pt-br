@@ -40,9 +40,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna um **datetimeoffset** valor é alterado do deslocamento de fuso horário armazenado para um novo deslocamento de fuso horário especificado.  
+  Retorna um valor **datetimeoffset** que é alterado do deslocamento de fuso horário armazenado para um novo deslocamento de fuso horário especificado.  
   
- Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
 ## <a name="arguments"></a>Argumentos  
  *DATETIMEOFFSET*  
- É uma expressão que pode ser resolvida para um **DateTimeOffset (n)** valor.  
+ É uma expressão que pode ser resolvida em um valor **datetimeoffset(n)**.  
   
- *fuso_horário*  
+ *time_zone*  
  É uma cadeia de caracteres no formato [+|-]TZH:TZM ou um inteiro assinado (de minutos) que representa o deslocamento de fuso horário e que se pressupõe estar ajustado e reconhecer horário de verão.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- **DateTimeOffset** com a precisão fracionária de *DATETIMEOFFSET* argumento.  
+ **datetimeoffset** com a precisão fracionária do argumento *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Comentários  
- Use SWITCHOFFSET para selecionar um **datetimeoffset** valor em um deslocamento de fuso horário diferente do deslocamento de fuso horário que foi originalmente armazenado. SWITCHOFFSET não atualiza o armazenado *fuso_horário* valor.  
+## <a name="remarks"></a>Remarks  
+ Use SWITCHOFFSET para selecionar um valor **datetimeoffset** em um deslocamento de fuso horário diferente do deslocamento de fuso horário originalmente armazenado. SWITCHOFFSET não atualiza o valor *time_zone* armazenado.  
   
- SWITCHOFFSET pode ser usado para atualizar um **datetimeoffset** coluna.  
+ SWITCHOFFSET pode ser usado para atualizar uma coluna **datetimeoffset**.  
   
- Usar SWITCHOFFSET com a função GETDATE() pode fazer com que a consulta seja lenta. Isso ocorre porque o otimizador de consulta não pode obter estimativas de cardinalidade precisas para o valor de data e hora. Para resolver esse problema, use a dica de consulta OPTION (RECOMPILE) para forçar o otimizador de consulta a recompilar um plano de consulta na próxima vez que a mesma consulta for executada. O otimizador terá estimativas de cardinalidade exatas e gerará um plano de consulta mais eficiente. Para obter mais informações sobre a dica de consulta RECOMPILE, consulte [dicas de consulta &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ Usar SWITCHOFFSET com a função GETDATE() pode fazer com que a consulta seja lenta. Isso ocorre porque o otimizador de consulta não pode obter estimativas de cardinalidade precisas para o valor de data e hora. Para resolver esse problema, use a dica de consulta OPTION (RECOMPILE) para forçar o otimizador de consulta a recompilar um plano de consulta na próxima vez que a mesma consulta for executada. O otimizador terá estimativas de cardinalidade exatas e gerará um plano de consulta mais eficiente. Para obter mais informações sobre a dica de consulta RECOMPILE, consulte [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -97,9 +97,9 @@ FROM dbo.test;
 --Returns: 1998-09-20 07:45:50.7134500 -05:00  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

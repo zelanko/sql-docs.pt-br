@@ -1,5 +1,5 @@
 ---
-title: Hints (Transact-SQL) | Microsoft Docs
+title: Dicas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Dicas são opções ou estratégias especificadas para aplicação pelo processador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em instruções SELECT, INSERT, UPDATE ou DELETE. As dicas substituem todos os planos de execução que o otimizador de consulta possa selecionar para uma consulta.  
   
 > [!CAUTION]  
->  Porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente, o otimizador de consulta seleciona o melhor plano de execução para uma consulta, é recomendável que \<as dicas join_hint >, \<query_hint >, e \<table_hint > ser usados apenas como último recurso por experiente os desenvolvedores e administradores de banco de dados.
+>  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geralmente seleciona o melhor plano de execução para uma consulta, é recomendável que \<join_hint>, \<query_hint> e \<table_hint> sejam usadas apenas como um último recurso por desenvolvedores e administradores de banco de dados experientes.
   
  As seguintes dicas são descritas nesta seção:  
   

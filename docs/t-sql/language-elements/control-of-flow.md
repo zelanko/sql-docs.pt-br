@@ -1,5 +1,5 @@
 ---
-title: Control-of-Flow | Microsoft Docs
+title: Controle de fluxo | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -42,13 +42,13 @@ ms.lasthandoff: 01/25/2018
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Barra estrela &#40; Bloco de comentário &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [Barra "/" e asterisco &#40;bloco de comentário&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

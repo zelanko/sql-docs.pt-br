@@ -47,27 +47,27 @@ Um tipo de dados que armazena valores de vários tipos de dados com suporte do [
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Comentários  
-**sql_variant** pode ser usado em colunas, parâmetros, variáveis e os valores de retorno de funções definidas pelo usuário. **sql_variant** permite que esses objetos de banco de dados dar suporte a valores de outros tipos de dados.
+## <a name="remarks"></a>Remarks  
+**sql_variant** pode ser usado em colunas, parâmetros, variáveis e nos valores retornados de funções definidas pelo usuário. **sql_variant** permite que esses objetos de banco de dados sejam compatíveis com valores de outros tipos de dados.
   
-Uma coluna do tipo **sql_variant** pode conter linhas de diferentes tipos de dados. Por exemplo, uma coluna definida como **sql_variant** pode armazenar **int**, **binário**, e **char** valores.
+Uma coluna do tipo **sql_variant** pode conter linhas de tipos de dados diferentes. Por exemplo, uma coluna definida como **sql_variant** pode armazenar valores **int**, **binary** e **char**.
   
 **sql_variant** pode ter um comprimento máximo de 8016 bytes. Isso inclui as informações de tipo base e o valor de tipo base. O tamanho máximo do valor de tipo base atual é 8.000 bytes.
   
-Um **sql_variant** tipo de dados deve primeiro ser convertido para o valor de tipo de dados base antes de participar de operações como adição e subtração.
+Um tipo de dados **sql_variant** deve primeiro ser convertido em seu valor de tipo de dados base antes de participar de operações como adição e subtração.
   
-**sql_variant** pode ser atribuído um valor padrão. Esse tipo de dados pode também ter NULL como valor subjacente, mas os valores NULL não terão um tipo base associado. Além disso, **sql_variant** não pode ter outro **sql_variant** como seu tipo base.
+É possível atribuir um valor padrão a **sql_variant**. Esse tipo de dados pode também ter NULL como valor subjacente, mas os valores NULL não terão um tipo base associado. Além disso, **sql_variant** não pode ter outra **sql_variant** como seu tipo base.
   
-Uma chave exclusiva, primária ou estrangeira pode incluir colunas do tipo **sql_variant**, mas o comprimento total dos valores de dados que constituem a chave de uma linha específica não deve ser maior que o comprimento máximo de um índice. Esse é de 900 bytes.
+Uma chave primária exclusiva ou chave estrangeira pode incluir colunas do tipo **sql_variant**, mas o tamanho total dos valores de dados que constituem a chave de uma linha específica não deve ser superior ao tamanho máximo de um índice. Esse é de 900 bytes.
   
-Uma tabela pode ter qualquer número de **sql_variant** colunas.
+Uma tabela pode ter qualquer número de colunas **sql_variant**.
   
-**sql_variant** não pode ser usado em CONTAINSTABLE e FREETEXTTABLE.
+Não é possível usar **sql_variant** em CONTAINSTABLE e FREETEXTTABLE.
   
-ODBC não suporta completamente **sql_variant**. Portanto, as consultas de **sql_variant** colunas são retornadas como dados binários quando você usa o Microsoft OLE DB Provider para ODBC (MSDASQL). Por exemplo, um **sql_variant** coluna que contém os dados de cadeia de caracteres 'ps2091 ' retorna é retornada como 0x505332303931.
+ODBC não é totalmente compatível com **sql_variant**. Desse modo, as consultas de colunas **sql_variant** retornam como valores binários quando você usa o MSDASQL (Provedor Microsoft OLE DB para ODBC). Por exemplo, uma coluna **sql_variant** que contém os dados de cadeia de caracteres 'PS2091' retorna como 0x505332303931.
   
 ## <a name="comparing-sqlvariant-values"></a>Comparando valores sql_variant  
-O **sql_variant** tipo de dados pertence à parte superior da lista de hierarquia de tipo de dados para conversão. Para **sql_variant** comparações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordem de hierarquia de tipo de dados é agrupado nas famílias de tipos de dados.
+O tipo de dados **sql_variant** pertence ao topo da lista de hierarquia de tipo de dados para conversão. Para comparações de **sql_variant**, a ordem da hierarquia de tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é agrupada em famílias de tipos de dados.
   
 |Hierarquia de tipos de dados|Família de tipos de dados|  
 |---|---|
@@ -96,15 +96,15 @@ O **sql_variant** tipo de dados pertence à parte superior da lista de hierarqui
 |**binary**|Binary|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
-As seguintes regras se aplicam a **sql_variant** comparações:
--   Quando **sql_variant** valores de tipos diferentes de dados base são comparados e os tipos de dados base estão em dados diferentes famílias de tipos, o valor cuja família de tipo de dados é mais alta no gráfico da hierarquia é considerado o mais de dois valores.  
--   Quando **sql_variant** valores de tipos diferentes de dados base são comparados e os tipos de dados base estão na mesma família de tipo de dados, o valor cujo tipo de dados base estiver mais baixo no gráfico da hierarquia é convertido implicitamente no outro tipo de dados e a comparação é feita.  
--   Quando **sql_variant** valores de **char**, **varchar**, **nchar**, ou **nvarchar** são de tipos de dados em comparação, seus agrupamentos são primeiro comparados com base nos seguintes critérios: LCID, versão do LCID, sinalizadores de comparação e classificação ID. Todos esses critérios são comparados como valores de inteiro na ordem listada. Se todos esses critérios forem iguais, os valores reais da cadeia de caracteres serão comparados de acordo com o agrupamento.  
+As seguintes regras se aplicam a comparações **sql_variant**:
+-   Quando valores de **sql_variant** de diferentes tipos de dados base são comparados e os tipos de dados base estão em diferentes famílias de tipos de dados, o valor cuja família de tipo de dados aparece no topo do gráfico da hierarquia é considerado o mais alto dos dois valores.  
+-   Quando valores de **sql_variant** de diferentes tipos de dados base são comparados e os tipos de dados base estão na mesma família de tipos de dados, o valor cujo tipo de dados base está na parte mais inferior do gráfico da hierarquia é convertido implicitamente no outro tipo de dados e a comparação é feita.  
+-   Quando valores **sql_variant** de **char**, **varchar**, **nchar**, ou **nvarchar** são de tipos de dados em comparação, seus agrupamentos são primeiro comparados com base nos seguintes critérios: LCID, versão do LCID, sinalizadores de comparação e ID de classificação. Todos esses critérios são comparados como valores de inteiro na ordem listada. Se todos esses critérios forem iguais, os valores reais da cadeia de caracteres serão comparados de acordo com o agrupamento.  
   
 ## <a name="converting-sqlvariant-data"></a>Convertendo dados sql_variant  
-Ao lidar com o **sql_variant** tipo de dados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a conversões implícitas de objetos com outros tipos de dados para o **sql_variant** tipo. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a conversões implícitas de **sql_variant** dados a um objeto com outro tipo de dados.
+Ao lidar com o tipo de dados **sql_variant**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é compatível com conversões implícitas de objetos com outros tipos de dados para o tipo **sql_variant**. Entretanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para conversões implícitas de dados **sql_variant** para um objeto com outro tipo de dados.
   
-## <a name="restrictions"></a>Restrições  
+## <a name="restrictions"></a>Restrictions  
 A tabela a seguir lista os tipos de valores que não podem ser armazenados usando **sql_variant**:
   
 |||  
@@ -119,8 +119,8 @@ A tabela a seguir lista os tipos de valores que não podem ser armazenados usand
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Usando um sql_variant em uma tabela  
- O exemplo a seguir, cria uma tabela com um tipo de dados sql_variant. Em seguida, o exemplo recupera `SQL_VARIANT_PROPERTY` informações sobre o `colA` valor `46279.1` onde `colB`  = `1689`, considerando que `tableA` tem `colA` que é do tipo `sql_variant` e `colB`.  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Usando uma sql_variant em uma tabela  
+ O exemplo a seguir cria uma tabela com um tipo de dados sql_variant. Então o exemplo recupera informações `SQL_VARIANT_PROPERTY` sobre o valor de `colA` `46279.1`, em que `colB` =`1689`, supondo que `tableA` tenha `colA` do tipo `sql_variant` e `colB`.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -132,7 +132,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Observe que cada um destes três valores é uma **sql_variant**.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Observe que cada um desses três valores é uma **sql_variant**.  
   
 ```  
 Base Type    Precision    Scale  
@@ -142,8 +142,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando um sql_variant como uma variável   
- O exemplo a seguir, cria uma variável usando o tipo de dados sql_variant e, em seguida, recupera `SQL_VARIANT_PROPERTY` informações sobre uma variável chamada @v1.  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando uma sql_variant como uma variável   
+ O exemplo a seguir, cria uma variável usando o tipo de dados sql_variant e, em seguida, recupera informações `SQL_VARIANT_PROPERTY` sobre uma variável chamada @v1.  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -156,6 +156,6 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
+[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   

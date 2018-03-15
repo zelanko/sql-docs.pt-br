@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |Termo|Definição|  
 |----------|----------------|  
-|*schema_name*|É o nome do esquema. *schema_name* é um **sysname**. Se *schema_name* não for especificado, SCHEMA_ID retornará a ID do esquema padrão do chamador.|  
+|*schema_name*|É o nome do esquema. *schema_name* é **sysname**. Se *schema_name* não for especificado, SCHEMA_ID retornará a ID do esquema padrão do chamador.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
- NULL será retornado se *schema_name* não é um esquema válido.  
+ NULL será retornado se *schema_name* não for um esquema válido.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID retornará IDs de esquemas de sistema e de esquemas definidos pelo usuário. SCHEMA_ID pode ser chamado em uma lista de seleção, em uma cláusula WHERE e em qualquer lugar em que uma expressão seja permitida.  
   
 ## <a name="examples"></a>Exemplos  
@@ -76,10 +76,10 @@ SELECT SCHEMA_ID();
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

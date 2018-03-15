@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões do Service Broker (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE do Service Broker (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>Argumentos  
  GRANT OPTION FOR  
- Indica que o direito de conceder a permissão especificada diretamente a outros principais será revogado. A permissão em si não será revoga.  
+ Indica que o direito de conceder a permissão especificada diretamente a outros principais será revogado. A permissão em si não será revogada.  
   
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
@@ -69,20 +69,20 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser revogada em um protegível do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista dessas permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CONTRATO **:: * contract_name*  
- Especifica o contrato no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ CONTRACT **::***contract_name*  
+ Especifica o contrato no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- TIPO de mensagem **:: * message_type_name*  
- Especifica o tipo de mensagem no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ MESSAGE TYPE **::***message_type_name*  
+ Especifica o tipo de mensagem no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- A associação de serviço remoto **:: * remote_binding_name*  
- Especifica a associação de serviço remoto na qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ Especifica a associação de serviço remoto na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- ROTA **:: * route_name*  
- Especifica o roteamento no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ ROUTE **::***route_name*  
+ Especifica o roteamento no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- SERVIÇO **:: * message_type_name*  
- Especifica o serviço no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ SERVICE **::***message_type_name*  
+ Especifica o serviço no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada. *database_principal* pode ser um dos seguintes:  
@@ -131,7 +131,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratos do Agente de Serviços  
- Um [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato é um banco de dados protegível em nível que contém o banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato são listados na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
+ Um contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível no nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
 |Permissão do contrato do Agente de Serviços|Indicado pela permissão do contrato do Agente de Serviços|Implícito na permissão de banco de dados|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Rotas do Agente de Serviços  
- Uma rota do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um [!INCLUDE[ssSB](../../includes/sssb-md.md)] rota são listados na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
+ Uma rota do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma rota do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão da rota do Agente de Serviços|Indicado pela permissão da rota do Agente de Serviços|Implícito na permissão de banco de dados|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Serviços do Agente de Serviços  
- Um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um [!INCLUDE[ssSB](../../includes/sssb-md.md)] serviço são listados na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
+ Um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
 |Permissão do serviço do Agente de Serviços|Indicado pela permissão do serviço do Agente de Serviços|Implícito na permissão de banco de dados|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -186,9 +186,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Permissões  
  Requer a permissão de CONTROL no contrato, tipo de mensagem, associação de serviço remoto, rota ou serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Permissões do GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [Negar permissões do Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [Permissões DENY do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

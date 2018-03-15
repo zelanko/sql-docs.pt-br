@@ -55,9 +55,9 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ('Todos' [,*nome_do_pool* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL especifica todos os caches suportados.  
- *nome_do_pool* Especifica um cache de pool do administrador de recursos. Somente as entradas associadas a esse pool serão liberadas.  
+ *pool_name* especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool serão liberadas.  
   
  MARK_IN_USE_FOR_REMOVAL  
  Remove de forma assíncrona as entradas atualmente utilizadas de seus respectivos caches quando elas não são mais utilizadas. As novas entradas criadas no cache depois que o DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL for executado não serão afetadas.  
@@ -69,7 +69,7 @@ DBCC FREESYSTEMCACHE
 A execução de DBCC FREESYSTEMCACHE limpa o cache de planos para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE retorna: "execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
+DBCC FREESYSTEMCACHE retorna: "execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
 Exige a permissão ALTER SERVER STATE no servidor.
@@ -91,10 +91,10 @@ O exemplo seguinte usa a cláusula MARK_IN_USE_FOR_REMOVAL para remover entradas
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
-[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)
+[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
   
   

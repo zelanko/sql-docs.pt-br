@@ -60,8 +60,8 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Tipos de retorno  
  **nchar**  
   
-## <a name="remarks"></a>Comentários  
- Retorna uma cadeia de caracteres que descreve o status da última tentativa de transmissão para a conversa especificada. Retorna uma cadeia de caracteres vazia se a última tentativa de transmissão tiver êxito, se ainda não foi feita nenhuma tentativa de transmissão, ou se o *conversation_handle* não existe.  
+## <a name="remarks"></a>Remarks  
+ Retorna uma cadeia de caracteres que descreve o status da última tentativa de transmissão para a conversa especificada. Retorna uma cadeia de caracteres vazia se a última tentativa de transmissão tiver êxito, se nenhuma tentativa de transmissão for feita ou se *conversation_handle* não existir.  
   
  As informações retornadas por essa função são as mesmas exibidas na coluna last_transmission_error da exibição de gerenciamento sys.transmission_queue. Entretanto, essa função pode ser usada para localizar o status de transmissão para conversas que atualmente não tenham mensagens na fila de transmissão.  
   
@@ -86,8 +86,8 @@ SELECT Status =
   
  Nesse caso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é configurado para permitir que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] se comunique pela rede.  
   
-## <a name="see-also"></a>Consulte também  
- [conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

@@ -50,7 +50,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>Argumentos  
  *table_name*  
- É o nome da tabela cujo valor de identidade é retornado. *table_name* é **varchar**, sem padrão.  
+ É o nome da tabela cujo valor de identidade é retornado. *table_name* é **varchar**, sem nenhum padrão.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **numeric(38,0)**  
@@ -60,8 +60,8 @@ IDENT_CURRENT( 'table_name' )
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas emissoras de metadados, como IDENT_CURRENT, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentários  
- IDENT_CURRENT é semelhante de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] funções de identidade SCOPE_IDENTITY e @@IDENTITY. As três funções retornam valores de identidade gerados por último. No entanto, o escopo e a sessão na qual *último* é definida em cada uma dessas funções são diferentes:  
+## <a name="remarks"></a>Remarks  
+ IDENT_CURRENT é semelhante às funções de identidade SCOPE_IDENTITY e @@IDENTITY do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. As três funções retornam valores de identidade gerados por último. Entretanto, o escopo e a sessão nas quais o *último* está definido em cada uma dessas funções difere:  
   
 -   IDENT_CURRENT retorna o último valor de identidade gerado para uma tabela específica em qualquer sessão e escopo.  
   
@@ -144,12 +144,12 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Inserindo e atualizando dados em uma tabela (Tutorial) | Microsoft Docs
+title: Inserindo e atualizando dados em uma tabela (tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lição 1-3-inserir e atualizar dados em uma tabela
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Agora que você criou o **produtos** tabela, você estará pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lição 1-3: Inserindo e atualizando dados em uma tabela (tutorial)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Agora que você criou a tabela **Products**, está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
@@ -95,7 +95,7 @@ A sintaxe básica é: INSERT, nome da tabela, lista de colunas, VALUES e uma lis
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Lendo os dados em uma tabela &#40;Tutorial&#41;](../t-sql/lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../t-sql/queries/update-transact-sql.md)  
   

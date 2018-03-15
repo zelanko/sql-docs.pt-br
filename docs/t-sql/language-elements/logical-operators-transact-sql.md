@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Operadores lógicos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Os operadores lógicos testam a legitimidade de algumas condições. Operadores lógicos, como operadores de comparação, retornam um **booliano** de tipo de dados com um valor de TRUE, FALSE ou UNKNOWN.  
+  Os operadores lógicos testam a legitimidade de algumas condições. Os operadores lógicos, como operadores de comparação, retornam um tipo de dados **Boolean** com um valor TRUE, FALSE ou UNKNOWN.  
   
 |Operador|Significado|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|TRUE se o operando for igual a um de uma lista de expressões.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE se o operando corresponder a um padrão.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Inverte o valor de qualquer outro operador booliano.|  
-|[OU](../../t-sql/language-elements/or-transact-sql.md)|TRUE se qualquer expressão booliana for TRUE.|  
-|[ALGUNS](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE se algum conjunto de comparações for TRUE.|  
+|[OR](../../t-sql/language-elements/or-transact-sql.md)|TRUE se qualquer expressão booliana for TRUE.|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE se algum conjunto de comparações for TRUE.|  
   
-## <a name="see-also"></a>Consulte também  
- [Precedência do operador &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Precedência do operador &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

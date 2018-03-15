@@ -1,5 +1,5 @@
 ---
-title: "Funções escalares ODBC (Transact-SQL) | Microsoft Docs"
+title: "Funções escalares do ODBC (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>Funções escalares ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Você pode usar [funções escalares ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) no [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. Essas instruções são interpretadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elas podem ser usadas em procedimentos armazenados e em funções definidas pelo usuário. Elas incluem funções de cadeia de caracteres, numéricas, de tempo, de data, de intervalo e de sistema.  
+  É possível usar [Funções escalares do ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas instruções são interpretadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elas podem ser usadas em procedimentos armazenados e em funções definidas pelo usuário. Elas incluem funções de cadeia de caracteres, numéricas, de tempo, de data, de intervalo e de sistema.  
   
 ## <a name="usage"></a>Uso  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 |Função|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Retorna numeric_exp truncado com posições integer_exp à direita da casa decimal. Se integer_exp for negativo, numeric_exp será truncado para &#124; integer_exp &#124; posições à esquerda da vírgula decimal.|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Retorna numeric_exp truncado com posições integer_exp à direita da casa decimal. Se integer_exp for negativo, numeric_exp será truncado com as posições &#124;integer_exp&#124; à esquerda da vírgula decimal.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funções de hora, data e intervalo  
   
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. Usando uma função ODBC em um procedimento armazenado  
  O seguinte exemplo usa uma função ODBC em um procedimento armazenado:  
@@ -254,7 +254,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

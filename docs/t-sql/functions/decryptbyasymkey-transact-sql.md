@@ -52,7 +52,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  *Asym_Key_ID*  
  É a ID de uma chave assimétrica no banco de dados. *Asym_Key_ID* é **int**.  
   
- *texto cifrado*  
+ *ciphertext*  
  É uma cadeia de caracteres de dados que foi criptografada com a chave assimétrica.  
   
  @ciphertext  
@@ -64,14 +64,14 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A criptografia/descriptografia com uma chave assimétrica é muito dispendiosa em comparação a criptografia/descriptografia com uma chave simétrica. Não recomendamos o uso de uma chave assimétrica ao trabalhar com grandes conjuntos de dados, como os dados de usuário em tabelas.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL na chave assimétrica.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir descriptografa o texto cifrado que foi criptografado com a chave assimétrica `JanainaAsymKey02`, que foi armazenada em `AdventureWorks2012.ProtectedData04`. Os dados retornados são descriptografados com a chave assimétrica `JanainaAsymKey02`, que foi descriptografada com a senha `pGFD4bb925DGvbd2439587y`. O texto não criptografado é convertido para o tipo **nvarchar**.  
+ O exemplo a seguir descriptografa o texto cifrado que foi criptografado com a chave assimétrica `JanainaAsymKey02`, que foi armazenada em `AdventureWorks2012.ProtectedData04`. Os dados retornados são descriptografados com a chave assimétrica `JanainaAsymKey02`, que foi descriptografada com a senha `pGFD4bb925DGvbd2439587y`. O texto sem formatação é convertido no tipo **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  
@@ -83,8 +83,8 @@ WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

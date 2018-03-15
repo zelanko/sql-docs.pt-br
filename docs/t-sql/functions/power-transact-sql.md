@@ -46,10 +46,10 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em **float**.  
   
  *y*  
- É a potência à qual elevar *float_expression*. *y* pode ser uma expressão da categoria de tipo de dados numéricos exatos de ou aproximado, exceto para o **bit** tipo de dados.  
+ É a potência à qual elevar *float_expression*. *y* pode ser uma expressão da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o mesmo tipo enviado em *float_expression*. Por exemplo, se um **decimal**(2,0) é enviado como *float_expression*, o resultado retornado é **decimal**(2,0).  
@@ -78,7 +78,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. Usando POWER para mostrar os resultados da conversão de tipo de dados  
- A exemplo a seguir mostra como o *float_expression* preserva o tipo de dados que pode retornar resultados inesperados.  
+ O exemplo a seguir mostra como *float_expression* preserva o tipo de dados que pode retornar resultados inesperados.  
   
 ```  
 SELECT   
@@ -141,10 +141,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>Unidade d: usando POWER para retornar o cubo de um número  
- O exemplo a seguir mostra retorna `POWER` resultados para `2.0` à potência 3.  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: Usando POWER para retornar o cubo de um número  
+ O exemplo a seguir mostra retorna `POWER` resultados para `2.0` à 3ª potência.  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -157,12 +157,12 @@ SELECT POWER(2.0, 3);
 8.0
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [decimal e numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float e real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint, tinyint e #40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Money e smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money e smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

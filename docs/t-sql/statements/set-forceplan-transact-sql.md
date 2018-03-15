@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SET FORCEPLAN basicamente substitui a lógica usada pelo otimizador de consulta para processar uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados retornados pela instrução SELECT são os mesmos independentemente dessa configuração. A única diferença é o modo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa as tabelas para satisfazer a consulta.  
   
  Também podem ser usadas dicas do otimizador de consulta em consultas para afetar a forma como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa a instrução SELECT.  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

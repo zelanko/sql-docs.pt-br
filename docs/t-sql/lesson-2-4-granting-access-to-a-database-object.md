@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lição 2-4-concedendo acesso a um objeto de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Como administrador, você pode executar SELECT do **produtos** tabela e o **vw_Names** exibir e executar o **pr_Names** procedimento; no entanto, Mary não é possível. Para conceder as permissões necessárias à Mary, use a instrução GRANT.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lição 2-4: Concedendo acesso a um objeto de banco de dados
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Como administrador, você pode executar SELECT na tabela **Produtos** e na exibição **vw_Names**, além de executar o procedimento **pr_Names**; no entanto, Marina não pode. Para conceder as permissões necessárias à Mary, use a instrução GRANT.  
   
 ### <a name="procedure-title"></a>Título do procedimento  
   
@@ -51,7 +51,7 @@ Nesse cenário, Mary pode acessar apenas a tabela **Products** usando o procedim
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [resumo: configurando permissões em objetos de banco de dados](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
   

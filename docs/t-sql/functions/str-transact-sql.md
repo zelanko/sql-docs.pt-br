@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- É uma expressão de numérico aproximado (**float**) tipo de dados com um ponto decimal.  
+ É uma expressão de tipo de dados numérico aproximado (**float**) com um separador decimal.  
   
- *comprimento*  
+ *length*  
  É o comprimento total. Isso inclui ponto decimal, sinal, dígitos e espaços. O padrão é 10.  
   
  *decimal*  
- É o número de dígitos à direita da vírgula decimal. *decimal* deve ser menor ou igual a 16. Se *decimal* for maior que 16, o resultado será truncado com dezesseis casas à direita da vírgula decimal.  
+ É o número de dígitos à direita da vírgula decimal. *decimal* deve ser menor ou igual a 16. Se *decimal* for maior que 16, o resultado será truncado com dezesseis casas à direita do separador decimal.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- Se for fornecido, os valores para *comprimento* e *decimal* parâmetros para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma breve *float_expression* é justificado à direita no comprimento especificado e um longo *float_expression* são truncados para o número especificado de casas decimais. Por exemplo, STR (12**,**10), o resultado de 12. É justificado à direita no conjunto de resultados. No entanto, STR (1223**,**2) trunca o conjunto de resultados para * *. As funções de cadeia de caracteres podem ser aninhadas.  
+ Se for fornecidos, os valores para os parâmetros *length* e *decimal* para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma *float_expression* breve é justificada à direita no comprimento especificado e uma *float_expression* longa é truncada para o número especificado de casas decimais. Por exemplo, STR(12**,**10) gera 12 como resultado. É justificado à direita no conjunto de resultados. Entretanto, STR (1223**,**2) trunca o conjunto de resultados com **. As funções de cadeia de caracteres podem ser aninhadas.  
   
 > [!NOTE]  
->  Para converter para dados Unicode, use STR dentro de uma CONVERSÃO ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) função de conversão.  
+>  Para converter para dados Unicode, use STR dentro de uma função de conversão CONVERT ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir converte uma expressão composta de cinco dígitos e um ponto decimal em uma cadeia de caracteres de seis posições. A parte fracionária do número é arredondada para uma casa decimal.  
@@ -115,10 +115,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -51,27 +51,27 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Argumentos  
  *test_expression*  
- É o [expressão](../../t-sql/language-elements/expressions-transact-sql.md) para testar no intervalo definido por *begin_expression*e *end_expression*. *test_expression* deve ser o mesmo tipo de dados que *begin_expression* e *end_expression*.  
+ É a [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser testada no intervalo definido por *begin_expression* e *end_expression*. *test_expression* precisa ser do mesmo tipo de dados que *begin_expression* e *end_expression*.  
   
  NOT  
  Especifica que o resultado do predicado deve ser negado.  
   
  *begin_expression*  
- É qualquer expressão válida. *begin_expression* deve ser o mesmo tipo de dados que *test_expression* e *end_expression*.  
+ É qualquer expressão válida. *begin_expression* precisa ser do mesmo tipo de dados que *test_expression* e *end_expression*.  
   
  *end_expression*  
- É qualquer expressão válida. *end_expression* deve ser o mesmo tipo de dados que *test_expression*e *begin_expression*.  
+ É qualquer expressão válida. *end_expression* precisa ser do mesmo tipo de dados que *test_expression* e *begin_expression*.  
   
  AND  
- Atua como um espaço reservado que indica *test_expression* devem estar dentro do intervalo indicado por *begin_expression* e *end_expression*.  
+ Atua como um espaço reservado que indica se *test_expression* deve estar dentro do intervalo indicado por *begin_expression* e *end_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- BETWEEN retorna **TRUE** se o valor de *test_expression* é maior que ou igual ao valor de *begin_expression* e menor ou igual ao valor de *end_expression*.  
+ BETWEEN retornará **TRUE** se o valor de *test_expression* for maior ou igual ao valor de *begin_expression* e menor ou igual ao valor de *end_expression*.  
   
- NOT BETWEEN retorna **TRUE** se o valor de *test_expression* é menor que o valor de *begin_expression* ou maior que o valor de *end_expression* .  
+ NOT BETWEEN retornará **TRUE** se o valor de *test_expression* for menor que o valor de *begin_expression* ou maior que o valor de *end_expression* .  
   
 ## <a name="remarks"></a>Remarks  
  Para especificar um intervalo exclusivo, use os operadores maior que (>) e menor que (<). Se qualquer entrada para o predicado BETWEEN ou NOT BETWEEN for NULL, o resultado será UNKNOWN.  
@@ -79,7 +79,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-between"></a>A. Usando BETWEEN  
- O exemplo a seguir retorna informações sobre as funções de banco de dados em um banco de dados. A primeira consulta retorna todas as funções. O segundo exemplo usa o `BETWEEN` cláusula para limitar as funções especificado `database_id` valores.  
+ O exemplo a seguir retorna informações sobre as funções de banco de dados em um banco de dados. A primeira consulta retorna todas as funções. O segundo exemplo usa a cláusula `BETWEEN` para limitar as funções aos valores `database_id` especificados.  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. Usando BETWEEN com valores de data e hora  
- O exemplo a seguir recupera linhas nas quais **datetime** valores estão entre `'20011212'` e `'20020105'`, inclusive.  
+ O exemplo a seguir recupera as linhas nas quais os valores de **datetime** estão entre `'20011212'` e `'20020105'`, inclusivo.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,15 +184,15 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- A consulta recupera as linhas esperadas porque os valores de data na consulta e o **datetime** valores armazenados no `RateChangeDate` coluna foram especificadas sem a parte de hora da data. Quando a parte de hora não é especificada, o padrão é 12:00. Observe que uma linha que contém uma parte de hora posterior a 00h00 em 2002-01-05 não será retornada por essa consulta porque está fora do intervalo.  
+ A consulta recupera as linhas esperadas porque os valores de data na consulta e os valores de **datetime** armazenados na coluna `RateChangeDate` foram especificados sem a parte de hora da data. Quando a parte de hora não é especificada, o padrão é 12:00. Observe que uma linha que contém uma parte de hora posterior a 00h00 em 2002-01-05 não será retornada por essa consulta porque está fora do intervalo.  
   
   
-## <a name="see-also"></a>Consulte também  
- [&#62; &#40;Greater Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60; &#40;Less Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#62; &#40;Maior que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; &#40;Menor que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

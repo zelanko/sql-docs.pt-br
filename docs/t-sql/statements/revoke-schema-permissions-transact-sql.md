@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de esquema (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de esquema (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um esquema. As permissões que podem ser revogadas em um esquema são listadas na seção "Comentários", posteriormente neste tópico.  
   
  GRANT OPTION FOR  
@@ -58,8 +58,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- ESQUEMA ON **::** esquema*Name*  
- Especifica o esquema no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ ON SCHEMA **::** schema*_name*  
+ Especifica o esquema no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada. Um dos seguintes:  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um esquema é um item protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um esquema são listadas na tabela a seguir, juntamente com as permissões mais gerais que as incluem implicitamente.  
   
 |Permissão de esquema|Implícito na permissão de esquema|Implícito na permissão de banco de dados|  
@@ -113,7 +113,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|Delete (excluir)|CONTROL|Delete (excluir)|  
 |Execute|CONTROL|Execute|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -126,13 +126,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no esquema.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

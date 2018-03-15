@@ -47,13 +47,13 @@ ms.lasthandoff: 11/21/2017
 
   Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado que é executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados através de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, independentemente de quaisquer linhas da tabela serem afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- Os gatilhos DDL são executados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem, basicamente, a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER e DROP e determinados procedimentos armazenados do sistema que executam operações do tipo DDL. Os gatilhos de logon são disparados em resposta ao evento LOGON que é gerado quando as sessões de um usuário estão sendo estabelecidas. Gatilhos podem ser criados diretamente no [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções ou de métodos de assemblies que são criados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) e carregados em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar vários gatilhos para qualquer instrução específica.  
+ Os gatilhos DDL são executados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem, basicamente, a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER e DROP e determinados procedimentos armazenados do sistema que executam operações do tipo DDL. Os gatilhos de logon são disparados em resposta ao evento LOGON que é gerado quando as sessões de um usuário estão sendo estabelecidas. Os gatilhos podem ser criados diretamente de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de métodos de assemblies criados no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e carregados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar vários gatilhos para qualquer instrução específica.  
   
 > [!IMPORTANT]  
->  Um código mal-intencionado dentro de gatilhos pode ser executado sob privilégios escalonados. Para obter mais informações sobre como reduzir essa ameaça, consulte [gerenciar segurança do gatilho](../../relational-databases/triggers/manage-trigger-security.md).  
+>  Um código mal-intencionado dentro de gatilhos pode ser executado sob privilégios escalonados. Para obter mais informações sobre como reduzir essa ameaça, veja [Gerenciar segurança do gatilho](../../relational-databases/triggers/manage-trigger-security.md).  
   
 > [!NOTE]  
->  A integração do CLR do .NET Framework para SQL Server é discutida neste tópico. Integração CLR não se aplica ao banco de dados do SQL Azure.  
+>  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -165,27 +165,27 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos
-OU ALTER  
- **Aplica-se a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+OR ALTER  
+ **Aplica-se a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
- Condicionalmente altera o disparador somente se ele já existe. 
+ Altera condicionalmente o gatilho somente se ele já existir. 
   
  *schema_name*  
  É o nome do esquema ao qual o gatilho DML pertence. Os gatilhos DML são definidos no escopo do esquema da tabela ou na exibição na qual são criados. *schema_name* não pode ser especificado para gatilhos DDL ou de logon.  
   
  *trigger_name*  
- É o nome do gatilho. Um *trigger_name* devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md), exceto que *trigger_name* não pode começar com # ou # #.  
+ É o nome do gatilho. Um *trigger_name* deve estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md), exceto que *trigger_name* não pode começar com # nem ##.  
   
- *tabela* | *exibição*  
- É a tabela ou exibição na qual o gatilho DML é executado e às vezes referenciado como a tabela de gatilho ou exibição de gatilho. Especifica o nome totalmente qualificado da tabela ou exibição é opcional. Uma exibição só pode ser referenciada por um gatilho INSTEAD OF. Gatilhos DML não podem ser definidos em tabelas temporárias locais ou globais.  
+ *table* | *view*  
+ É a tabela ou exibição na qual o gatilho DML é executado e às vezes referenciado como a tabela de gatilho ou exibição de gatilho. Especificar o nome totalmente qualificado da tabela ou da exibição é opcional. Uma exibição só pode ser referenciada por um gatilho INSTEAD OF. Gatilhos DML não podem ser definidos em tabelas temporárias locais ou globais.  
   
  DATABASE  
- Aplica o escopo de um gatilho DDL ao banco de dados atual. Se especificado, o gatilho é acionado sempre que *event_type* ou *event_group* ocorre no banco de dados atual.  
+ Aplica o escopo de um gatilho DDL ao banco de dados atual. Se especificado, o gatilho será disparado sempre que *event_type* ou *event_group* ocorrer no banco de dados atual.  
   
  ALL SERVER  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aplica o escopo de um gatilho DDL ou de logon ao servidor atual. Se especificado, o gatilho é acionado sempre que *event_type* ou *event_group* ocorrer em qualquer lugar no servidor atual.  
+ Aplica o escopo de um gatilho DDL ou de logon ao servidor atual. Se for especificado, o gatilho será disparado sempre que *event_type* ou *event_group* ocorrer em qualquer local no servidor atual.  
   
  WITH ENCRYPTION  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -197,17 +197,17 @@ OU ALTER
   
  Essa opção é necessária para os gatilhos em tabelas com otimização de memória.  
   
- Para obter mais informações, consulte[cláusula EXECUTE AS &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ Para obter mais informações, veja [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Indica que o gatilho é compilado nativamente.  
+ Indica que o gatilho foi compilado nativamente.  
   
  Essa opção é necessária para os gatilhos em tabelas com otimização de memória.  
   
  SCHEMABINDING  
- Garante que as tabelas referenciadas por um gatilho não podem ser descartadas ou alteradas.  
+ Garante que as tabelas referenciadas por um gatilho não possam ser removidas nem alteradas.  
   
- Essa opção é necessária para os gatilhos em tabelas com otimização de memória e não há suporte para gatilhos em tabelas tradicionais.  
+ Essa opção é obrigatória para gatilhos em tabelas com otimização de memória e não é compatível com gatilhos em tabelas tradicionais.  
   
  FOR | AFTER  
  AFTER especifica que o gatilho DML é disparado apenas quando todas as operações especificadas na instrução SQL de gatilho são executadas com êxito. Todas as verificações de restrição e ações referenciais em cascata também devem obter êxito para que este gatilho seja disparado.  
@@ -217,13 +217,13 @@ OU ALTER
  Gatilhos AFTER não podem ser definidos em exibições.  
   
  INSTEAD OF  
- Especifica que o gatilho DML é executado *em vez de* disparar a instrução SQL, portanto, substituindo as ações das instruções de gatilho. INSTEAD OF não pode ser especificado para gatilhos DDL ou de logon.  
+ Especifica que o gatilho DML será executado *em vez da* instrução SQL de gatilho, substituindo as ações das instruções de gatilho. INSTEAD OF não pode ser especificado para gatilhos DDL ou de logon.  
   
  No máximo, um gatilho INSTEAD OF por instrução INSERT, UPDATE ou DELETE pode ser definido em uma tabela ou exibição. Entretanto, você pode definir exibições sobre exibições, onde cada uma tem seu próprio gatilho INSTEAD OF.  
   
  Os gatilhos INSTEAD OF não são permitidos em exibições atualizáveis que usam WITH CHECK OPTION. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um erro quando um gatilho INSTEAD OF é adicionado a uma WITH CHECK OPTION de exibição atualizável especificado. O usuário deve remover essa opção usando ALTER VIEW antes de definir o gatilho INSTEAD OF.  
   
- {[EXCLUIR] [,] [INSERIR] [,] [ATUALIZAÇÃO]}  
+ { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
  Especifica as instruções de modificação de dados que, quando tentadas nessa tabela ou exibição, ativam o gatilho DML. É necessário especificar pelo menos uma opção. É permitida qualquer combinação dessas opções em qualquer ordem na definição do gatilho.  
   
  Para gatilhos INSTEAD OF, a opção DELETE não é permitida em tabelas que tenham um relacionamento referencial que especifique uma ação ON DELETE em cascata. Da mesma maneira, a opção UPDATE não é permitida em tabelas que tenham um relacionamento referencial que especifique uma ação ON UPDATE em cascata.  
@@ -234,12 +234,12 @@ OU ALTER
  Especifica que um gatilho adicional de um tipo existente deve ser adicionado. WITH APPEND não pode ser usado com gatilhos INSTEAD OF ou se o gatilho AFTER for explicitamente declarado. WITH APPEND só pode ser usado quando FOR é especificado, sem INSTEAD OF ou AFTER, por razões de compatibilidade com versões anteriores. WITH APPEND não poderá ser especificado se EXTERNAL NAME for especificado (quer dizer, se o gatilho for um gatilho CLR).  
   
  *event_type*  
- É o nome de um evento da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] que, após a execução, faz com que um gatilho DDL seja acionado. Os eventos válidos para gatilhos DDL estão listados no [eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+ É o nome de um evento da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] que, após a execução, faz com que um gatilho DDL seja acionado. Os eventos válidos para gatilhos DDL são listados em [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- É o nome de um agrupamento predefinido de eventos da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)]. O gatilho DDL será acionado após a execução de qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de linguagem que pertence a *event_group*. Grupos de eventos válidos para gatilhos DDL são listados na [grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md).  
+ É o nome de um agrupamento predefinido de eventos da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)]. O gatilho DDL é disparado após a execução de qualquer evento de linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertence a *event_group*. Os grupos de eventos válidos para gatilhos DDL são listados em [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
- Depois de CREATE TRIGGER concluiu a execução, *event_group* também atuará como uma macro adicionando os tipos de evento abrangidos por ele à exibição de catálogo trigger_events.  
+ Depois que a execução de CREATE TRIGGER for concluída, o *event_group* também atuará como uma macro pela adição dos tipos de evento abrangidos por ele à exibição do catálogo sys.trigger_events.  
   
  NOT FOR REPLICATION  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -251,31 +251,31 @@ OU ALTER
   
  As ações de gatilho especificadas nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] entram em vigor quando a operação é tentada.  
   
- Os gatilhos podem incluir qualquer número e tipo de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], com exceções. Para obter mais informações, consulte Comentários. Um gatilho é criado para verificar ou alterar dados com base em uma instrução de definição ou modificação de dados. Ele não deve retornar dados ao usuário. O [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções em um gatilho frequentemente incluem [linguagem de controle de fluxo](~/t-sql/language-elements/control-of-flow.md).  
+ Os gatilhos podem incluir qualquer número e tipo de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], com exceções. Para obter mais informações, consulte Comentários. Um gatilho é criado para verificar ou alterar dados com base em uma instrução de definição ou modificação de dados. Ele não deve retornar dados ao usuário. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um gatilho frequentemente incluem [linguagem de controle de fluxo](~/t-sql/language-elements/control-of-flow.md).  
   
- Gatilhos DML usam as tabelas de (conceituais) lógicas inseridas e excluídas. Eles são estruturalmente semelhantes à tabela na qual o gatilho é definido, ou seja, a tabela na qual a ação do usuário é tentada. As tabelas inseridas e excluídas mantém os valores antigos ou novos valores das linhas que podem ser alteradas pela ação do usuário. Por exemplo, para recuperar todos os valores na tabela `deleted`, use:  
+ Gatilhos de DML usam as tabelas (conceituais) lógicas inseridas e excluídas. Eles são estruturalmente semelhantes à tabela na qual o gatilho é definido, ou seja, a tabela na qual a ação do usuário é tentada. As tabelas excluídas e inseridas contêm os valores antigos ou novos das linhas que podem ser alteradas pela ação do usuário. Por exemplo, para recuperar todos os valores na tabela `deleted`, use:  
   
 ```  
 SELECT * FROM deleted;  
 ```  
   
- Para obter mais informações, consulte [usar as tabelas inseridas e excluídas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
+ Para obter mais informações, veja [Usar as tabelas inseridas e excluídas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
   
- Gatilhos DDL e logon capturam informações sobre o evento de disparo usando o [EVENTDATA &#40; Transact-SQL &#41; ](../../t-sql/functions/eventdata-transact-sql.md) função. Para obter mais informações, consulte [usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ Gatilhos DDL e logon capturam informações sobre o evento de gatilho usando a função [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md). Para obter mais informações, veja [Usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]permite a atualização de **texto**, **ntext**, ou **imagem** colunas em vez de disparam em tabelas ou exibições.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a atualização das colunas **text**, **ntext** ou **image** por meio do gatilho INSTEAD OF em tabelas ou exibições.  
   
 > [!IMPORTANT]  
->  **ntext**, **texto**, e **imagem** tipos de dados serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Gatilhos AFTER e INSTEAD OF dão suporte **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** dados nas tabelas inseridas e excluídas.  
+>  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Os gatilhos AFTER e INSTEAD OF dão ambos suporte a dados **varchar(MAX)**, **nvarchar(MAX)** e **varbinary(MAX)** nas tabelas inseridas e excluídas.  
   
- Para gatilhos em tabelas com otimização de memória, o único *sql_statement* permitido no nível superior é um bloco ATÔMICO. O T-SQL permitido dentro do bloco ATÔMICO é limitado pelo T-SQL permitido dentro de PROC. nativos.  
+ Para gatilhos em tabelas com otimização de memória, a única *sql_statement* permitida no nível superior é um bloco ATOMIC. O T-SQL permitido dentro do bloco ATOMIC é limitado pelo T-SQL permitido dentro de procedimentos nativos.  
   
- \<method_specifier > **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ \< method_specifier > **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para um gatilho CLR, especifica o método de associação de um assembly ao gatilho. O método não deve usar nenhum argumento e deve retornar nulo. *class_name* deve ser um válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador e deve existir como uma classe no assembly com visibilidade do assembly. Se a classe tiver um nome qualificado de namespace que use '.' para separar partes do namespace, o nome da classe deverá ser delimitado com [ ] ou " ". A classe não pode ser aninhada.  
+ Para um gatilho CLR, especifica o método de associação de um assembly ao gatilho. O método não deve usar nenhum argumento e deve retornar nulo. *class_name* deve ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve existir como uma classe no assembly com visibilidade do assembly. Se a classe tiver um nome qualificado de namespace que use '.' para separar partes do namespace, o nome da classe deverá ser delimitado com [ ] ou " ". A classe não pode ser aninhada.  
   
 > [!NOTE]  
->  Por padrão, a capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em executar código CLR está desligada. Você pode criar, modificar e descartar objetos de banco de dados que referenciam módulos de código gerenciado, mas essas referências não serão executadas em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que o [opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) é habilitada usando [SP _ configurar](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  Por padrão, a capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em executar código CLR está desligada. Você pode criar, modificar e remover objetos do banco de dados que referenciam módulos de código gerenciado, mas essas referências não serão executadas em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que a [Opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) seja habilitada usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## <a name="remarks-dml-triggers"></a>Comentários de gatilhos DML  
  Os gatilhos DML são usados com frequência para impor as regras de negócio e a integridade dos dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece DRI (declarative referential integrity, integridade referencial declarativa) por meio das instruções ALTER TABLE e CREATE TABLE. Entretanto, DRI não fornece integridade referencial em todos os bancos de dados. A integridade referencial refere-se às regras sobre as relações entre as chaves primárias e estrangeiras de tabelas. Para impor a integridade referencial, use as restrições PRIMARY KEY e FOREIGN KEY em ALTER TABLE e CREATE TABLE. Se houver restrições na tabela de gatilhos, elas serão verificadas após a execução do gatilho INSTEAD OF e antes da execução do gatilho AFTER. Se as restrições forem violadas, as ações do gatilho INSTEAD OF serão revertidas e o gatilho AFTER não será disparado.  
@@ -288,12 +288,12 @@ SELECT * FROM deleted;
   
  Se um gatilho INSTEAD OF definido em uma tabela executar uma instrução na tabela que em geral acionaria o gatilho INSTEAD OF novamente, o gatilho não será chamado de forma recorrente. Em vez disso, a instrução será processada como se a tabela não tivesse o gatilho INSTEAD OF e iniciará a cadeia de operações de restrição e de execuções do gatilho AFTER. Por exemplo, se um gatilho for definido como INSTEAD OF INSERT para uma tabela, e o gatilho executar uma instrução INSTEAD OF na mesma tabela, a instrução INSERT executada pelo gatilho INSTEAD OF não chamará o gatilho novamente. A instrução INSERT executada pelo gatilho inicia o processo de efetuar as ações de restrição e acionar todos os gatilhos AFTER INSERT definidos para a tabela.  
   
- Se um gatilho INSTEAD OF definido em uma exibição executar uma instrução na exibição que em geral acionaria o gatilho INSTEAD OF novamente, ele não será chamado de forma recorrente. Pelo contrário, a instrução será solucionada como as modificações nas tabelas de base subjacentes à exibição. Nesse caso, a definição da exibição deve cumprir todas as restrições de uma exibição atualizável. Para uma definição de exibições atualizáveis, consulte [modificar dados por meio de um modo de exibição](../../relational-databases/views/modify-data-through-a-view.md).  
+ Se um gatilho INSTEAD OF definido em uma exibição executar uma instrução na exibição que em geral acionaria o gatilho INSTEAD OF novamente, ele não será chamado de forma recorrente. Pelo contrário, a instrução será solucionada como as modificações nas tabelas de base subjacentes à exibição. Nesse caso, a definição da exibição deve cumprir todas as restrições de uma exibição atualizável. Para uma definição de exibições atualizáveis, veja [Modificar dados por meio de uma exibição](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Por exemplo, se um gatilho for definido como INSTEAD OF UPDATE, para uma exibição, e o gatilho executar uma instrução UPDATE referenciando a mesma exibição, a instrução INSERT executada pelo gatilho INSTEAD OF não chamará o gatilho novamente. A instrução UPDATE executada pelo gatilho será processada na exibição como se ela não tivesse um gatilho INSTEAD OF. As colunas alteradas pela UPDATE devem ser solucionadas como uma única tabela base. Toda modificação em uma tabela base subjacente inicia a cadeia de aplicações de restrição, e aciona os gatilhos AFTER INSERT definidos para a tabela.  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>Testando as ações UPDATE ou INSERT para colunas específicas  
- É possível criar um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] para executar determinadas ações com base em modificações UPDATE ou INSERT para colunas específicas. Use [Update ()](../../t-sql/functions/update-trigger-functions-transact-sql.md) ou [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) no corpo do gatilho para essa finalidade. UPDATE() testa as tentativas UPDATE ou INSERT em uma coluna. COLUMNS_UPDATED testa ações UPDATE ou INSERT que são executadas em várias colunas e retorna um padrão de bit que indica quais colunas foram inseridas ou atualizadas.  
+ É possível criar um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] para executar determinadas ações com base em modificações UPDATE ou INSERT para colunas específicas. Use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) ou [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) no corpo do gatilho para esse fim. UPDATE() testa as tentativas UPDATE ou INSERT em uma coluna. COLUMNS_UPDATED testa ações UPDATE ou INSERT que são executadas em várias colunas e retorna um padrão de bit que indica quais colunas foram inseridas ou atualizadas.  
   
 ### <a name="trigger-limitations"></a>Limitações de gatilhos  
  CREATE TRIGGER deve ser a primeira instrução no lote e pode ser aplicada apenas a uma tabela.  
@@ -336,19 +336,19 @@ SELECT * FROM deleted;
  Os gatilhos DDL, assim como os gatilhos padrão, executam procedimentos armazenados em resposta a um evento. Contudo, diferentemente dos gatilhos padrão, eles não são executados em resposta a instruções UPDATE, INSERT ou DELETE em uma tabela ou exibição. Em vez disso, eles são executados em resposta a instruções DDL (linguagem de definição de dados). Isso inclui instruções CREATE, ALTER, DROP, GRANT, DENY, REVOKE e UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
 > [!IMPORTANT]  
->  Teste os gatilhos DDL para determinar suas respostas à execução de procedimentos armazenados do sistema. Por exemplo, a instrução CREATE TYPE e o sp_addtype e sp_rename procedimentos armazenados acionarão um gatilho DDL criado em um evento CREATE_TYPE.  
+>  Teste os gatilhos DDL para determinar suas respostas à execução de procedimentos armazenados do sistema. Por exemplo, a instrução CREATE TYPE e os procedimentos armazenados sp_addtype e sp_rename disparam um gatilho DDL que é criado em um evento CREATE_TYPE.  
   
- Para obter mais informações sobre gatilhos DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
+ Para obter mais informações sobre gatilhos DDL, veja [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
  Os gatilhos DDL não são disparados em resposta a eventos que afetem tabelas temporárias locais ou globais e procedimentos armazenados.  
   
- Diferentemente dos gatilhos DML, os gatilhos DDL não têm seu escopo definido para esquemas. Portanto, funções como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTYEX não podem ser usadas para consultar metadados sobre gatilhos DDL. Use as exibições do catálogo em vez disso. Para obter mais informações, consulte [obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ Diferentemente dos gatilhos DML, os gatilhos DDL não têm seu escopo definido para esquemas. Portanto, funções como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTYEX não podem ser usadas para consultar metadados sobre gatilhos DDL. Use as exibições do catálogo em vez disso. Para obter mais informações, veja [Obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
->  Gatilhos DDL com escopo de servidor aparecem no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] do Pesquisador de **gatilhos** pasta. Essa pasta está localizada na pasta **Server Objects** . Gatilhos DDL com escopo de banco de dados aparecem no **gatilhos de banco de dados** pasta. Essa pasta fica localizada na pasta **Programmability** do banco de dados correspondente.  
+>  Gatilhos DDL no escopo do servidor aparecem no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] na pasta **Gatilhos**. Essa pasta está localizada na pasta **Server Objects** . Gatilhos DDL no escopo do banco de dados aparecem na pasta **Gatilhos de Banco de Dados**. Essa pasta fica localizada na pasta **Programmability** do banco de dados correspondente.  
   
 ## <a name="logon-triggers"></a>Gatilhos de logon  
- Os gatilhos de logon executam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [gatilhos de Logon](../../relational-databases/triggers/logon-triggers.md).  
+ Os gatilhos de logon executam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Gatilhos de logon](../../relational-databases/triggers/logon-triggers.md).  
   
  Os gatilhos de logon não são acionados quando a autenticação falha.  
   
@@ -360,7 +360,7 @@ SELECT * FROM deleted;
 ## <a name="general-trigger-considerations"></a>Considerações gerais sobre gatilhos  
   
 ### <a name="returning-results"></a>Retornando resultados  
- A habilidade de retornar resultados de gatilhos será removida na próxima versão do SQL Server. Os gatilhos que retornam conjuntos de resultados podem causar um comportamento inesperado em aplicativos que não são projetados para trabalhar com eles. Evite retornar conjuntos de resultados de gatilhos em novos trabalhos de desenvolvimento e planeje a modificação de aplicativos que atualmente fazem isso. Para impedir que os gatilhos retornem conjuntos de resultados, defina o [gatilhos opção disallow results from](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) como 1.  
+ A habilidade de retornar resultados de gatilhos será removida na próxima versão do SQL Server. Os gatilhos que retornam conjuntos de resultados podem causar um comportamento inesperado em aplicativos que não são projetados para trabalhar com eles. Evite retornar conjuntos de resultados de gatilhos em novos trabalhos de desenvolvimento e planeje a modificação de aplicativos que atualmente fazem isso. Para evitar que os gatilhos retornem conjuntos de resultados, defina a opção [proibir resultados de gatilhos](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) como 1.  
   
  Os gatilhos de logon sempre impedem que conjuntos de resultados sejam retornados e esse comportamento não é configurável. Se um gatilho de logon gerar um conjunto de resultados, o gatilho falhará ao ser executado e a tentativa de logon que o disparou será negada.  
   
@@ -374,27 +374,27 @@ SELECT * FROM deleted;
   
 -   Recursão indireta  
   
-     Com a recursão indireta, um aplicativo atualiza a tabela T1. Isso dispara o gatilho TR1, atualizando a tabela T2. Nesse cenário, o gatilho T2 e é acionado e atualizações da tabela T1.  
+     Com a recursão indireta, um aplicativo atualiza a tabela T1. Isso dispara o gatilho TR1, atualizando a tabela T2. Nesse cenário, o gatilho T2 é disparado e atualiza a tabela T1.  
   
 -   Recursão direta  
   
-     Com a recursão direta, as atualizações de aplicativo da tabela T1. Isso dispara o gatilho TR1, atualizando a tabela T1. Porque a tabela T1 foi atualizada, o gatilho TR1 é disparado novamente, e assim por diante.  
+     Com a recursão direta, o aplicativo atualiza a tabela T1. Isso dispara o gatilho TR1, atualizando a tabela T1. Uma vez que a tabela T1 foi atualizada, o gatilho TR1 é disparado novamente e assim por diante.  
   
- O exemplo a seguir usa as duas recursões de gatilho, direta e indireta suponha que dois gatilhos de atualização, TR1 e TR2, são definidos na tabela T1. Gatilho TR1 atualiza a tabela T1 recursivamente. Uma instrução UPDATE executa cada TR1 e TR2 uma vez. Além disso, a execução de TR1 dispara a execução de TR1 (recursivamente) e TR2. As tabelas inseridas e excluídas de um gatilho específico contêm linhas que correspondem somente à instrução UPDATE que invocou o gatilho.  
+ O exemplo a seguir usa as duas recursões de gatilho, direta e indireta. Suponha que dois gatilhos de atualização, TR1 e TR2, sejam definidos na tabela T1. O gatilho TR1 atualiza a tabela T1 recursivamente. Uma instrução UPDATE executa TR1 e TR2 uma vez. Além disso, a execução de TR1 dispara a execução de TR1 (recursivamente) e de TR2. As tabelas inseridas e excluídas para um gatilho específico contêm linhas que correspondem somente à instrução UPDATE que invocou o gatilho.  
   
 > [!NOTE]  
 >  O comportamento anterior só ocorrerá se a configuração RECURSIVE_TRIGGERS for habilitada através do uso de ALTER DATABASE. Não há nenhuma ordem definida na qual vários gatilhos definidos para um evento específico sejam executados. Cada gatilho deve ser autossuficiente.  
   
- Desabilitar a configuração RECURSIVE_TRIGGERS evita apenas recursões diretas. Para desabilitar a recursão indireta também, defina os gatilhos aninhados servidor opção como 0 usando sp_configure.  
+ Desabilitar a configuração RECURSIVE_TRIGGERS evita apenas recursões diretas. Para desabilitar a recursão indireta também, defina a opção de servidor de gatilhos aninhados como 0 usando sp_configure.  
   
  Se qualquer um dos gatilhos executar uma ROLLBACK TRANSACTION, independentemente do nível de aninhamento, nenhum outro gatilho será executado.  
   
 ### <a name="nested-triggers"></a>Gatilhos aninhados  
  Os gatilhos podem ser aninhados até no máximo 32 níveis. Se um gatilho alterar uma tabela na qual haja outro gatilho, o segundo gatilho será ativado e poderá chamar um terceiro gatilho e assim por diante. Se qualquer gatilho na cadeia iniciar um loop infinito, o nível de aninhamento será excedido e o gatilho será cancelado. Quando um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] executa um código gerenciado fazendo referência a uma rotina, tipo ou agregação CLR, essa referência também conta como um nível no limite de aninhamento de nível 32. Os métodos invocados do código gerenciado não contam em relação a esse limite.  
   
- Para desabilitar gatilhos aninhados, defina a opção nested triggers de sp_configure para 0 (desativado). A configuração padrão permite gatilhos aninhados. Se os gatilhos aninhados estiverem desativados, os gatilhos recursivos também serão desabilitados, independentemente da configuração RECURSIVE_TRIGGERS definida através do uso de ALTER DATABASE.  
+ Para desabilitar gatilhos aninhados, defina a opção de gatilhos aninhados de sp_configure como 0 (desativada). A configuração padrão permite gatilhos aninhados. Se os gatilhos aninhados estiverem desativados, os gatilhos recursivos também serão desabilitados, independentemente da configuração RECURSIVE_TRIGGERS definida através do uso de ALTER DATABASE.  
   
- O primeiro gatilho AFTER aninhado dentro de um INSTEAD OF o gatilho é disparado mesmo se o **gatilhos aninhados** opção de configuração do servidor é definida como 0. Porém, nessa configuração, os gatilhos AFTER posteriores não são disparados. Recomendamos que você examine seus aplicativos para gatilhos aninhados para determinar se os aplicativos estão em conformidade com as regras de negócio em relação a esse comportamento quando o **gatilhos aninhados** opção de configuração do servidor é definida como 0, e, em seguida, faça as modificações apropriadas.  
+ O primeiro gatilho AFTER aninhado dentro de um gatilho INSTEAD OF será disparado mesmo se a opção de configuração do servidor de **gatilhos aninhados** estiver definida como 0. Porém, nessa configuração, os gatilhos AFTER posteriores não são disparados. É recomendável que você examine seus aplicativos para verificar se há gatilhos aninhados e determinar se os aplicativos estão de acordo com as regras de negócio em relação a esse comportamento quando a opção de configuração do servidor de **gatilhos aninhados** estiver definida como 0. Em seguida, faça as modificações apropriadas.  
   
 ### <a name="deferred-name-resolution"></a>Resolução de nome adiada  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que procedimentos armazenados, gatilhos e lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] referenciem tabelas que não existem em tempo de compilação. Essa capacidade é chamada de resolução de nome adiada.  
@@ -436,7 +436,7 @@ GO
 ### <a name="c-using-a-dml-after-trigger-to-enforce-a-business-rule-between-the-purchaseorderheader-and-vendor-tables"></a>C. Usando um gatilho DML AFTER para impor uma regra de negócio entre as tabelas PurchaseOrderHeader e Vendor  
  Como as restrições CHECK só podem referenciar as colunas nas quais a restrição de nível de coluna ou de nível de tabela é definida, qualquer restrição de tabela cruzada (neste caso, as regras de negócio) deverá ser definida como gatilho.  
   
- O exemplo a seguir cria um gatilho DML no banco de dados AdventureWorks2012. Esse gatilho verifica se a avaliação de crédito para o fornecedor é satisfatória (não 5) quando é feita uma tentativa para inserir uma nova ordem de compra para o `PurchaseOrderHeader` tabela. Para obter a classificação de crédito do fornecedor, a tabela `Vendor` deve ser referenciada. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada.  
+ O exemplo a seguir cria um gatilho DML no banco de dados AdventureWorks2012. Esse gatilho realiza uma verificação para ter certeza de que a avaliação de crédito do fornecedor é satisfatória (não 5) quando for tentar inserir uma nova ordem de compra na tabela `PurchaseOrderHeader`. Para obter a classificação de crédito do fornecedor, a tabela `Vendor` deve ser referenciada. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada.  
   
 ```  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
@@ -499,7 +499,7 @@ GO
 ```  
   
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Usando um gatilho DDL no escopo do servidor  
- O exemplo a seguir usa um gatilho DDL para imprimir uma mensagem se qualquer evento CREATE DATABASE ocorrer na instância do servidor atual e usa a função `EVENTDATA` para recuperar o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente. Para obter mais exemplos que usam EVENTDATA em gatilhos DDL, consulte [usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ O exemplo a seguir usa um gatilho DDL para imprimir uma mensagem se qualquer evento CREATE DATABASE ocorrer na instância do servidor atual e usa a função `EVENTDATA` para recuperar o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente. Para obter mais exemplos que usam EVENTDATA em gatilhos DDL, veja [Usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -517,7 +517,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. Usando um gatilho de logon  
- O exemplo de gatilho de logon a seguir nega uma tentativa de fazer logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um membro do *login_test* logon se já houver três sessões de usuário em execução em que o logon.  
+ O exemplo de gatilho de logon a seguir nega uma tentativa de logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um membro do logon *login_test* se já houver três sessões de usuário executadas com esse logon.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -554,15 +554,15 @@ WHERE T.parent_class = 0 AND T.name = 'safety';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
- [TRIGGER_NESTLEVEL &#40; Transact-SQL &#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
+ [TRIGGER_NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
@@ -571,8 +571,8 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_settriggerorder &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
- [Atualizar &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
+ [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
+ [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
  [Obter informações sobre gatilhos DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Obter informações sobre gatilhos DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   

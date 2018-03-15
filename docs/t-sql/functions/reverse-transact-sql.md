@@ -48,13 +48,13 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *string_expression*  
- *string_expression* é um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de um tipo de dados de cadeia de caracteres ou binário. *string_expression* pode ser uma constante, variável ou coluna de caracteres ou dados binários.  
+ *string_expression* é um [expression](../../t-sql/language-elements/expressions-transact-sql.md) de um tipo de dados de cadeia de caracteres ou binário. *character_expression* pode ser uma constante, uma variável ou uma coluna de dados de caracteres e binários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar** ou **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- *string_expression* deve ser de um tipo de dados que é implicitamente conversível em **varchar**. Caso contrário, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para converter explicitamente *string_expression*.  
+ *string_expression* deve ser um tipo de dados implicitamente conversível em **varchar**. Caso contrário, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para converter explicitamente *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
  Durante o uso de agrupamentos de SC, a função REVERSE não inverte a ordem de duas metades de um par substituto.  
@@ -92,14 +92,14 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- O exemplo a seguir faz uma conversão implícita de um **int** de tipo de dados em **varchar** tipo de dados e, em seguida, reverte o resultado.  
+ O exemplo a seguir faz uma conversão implícita de um tipo de dados **int** em um tipo de dados **varchar** e depois inverte o resultado.  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna os nomes de todos os bancos de dados e os nomes com os caracteres invertidos.  
   
 ```  
@@ -107,7 +107,7 @@ SELECT name, REVERSE(name) FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -119,7 +119,7 @@ GO
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

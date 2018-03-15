@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---iif-transact-sql"></a>Funções lógicas - IIF (Transact-SQL)
+# <a name="logical-functions---iif-transact-sql"></a>Funções lógicas – IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retorna um de dois valores, dependendo de a expressão booliana ser avaliada como true ou false no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,16 +52,16 @@ IIF ( boolean_expression, true_value, false_value )
  Se esse argumento não for uma expressão Booliana, será gerado um erro de sintaxe.  
   
  *true_value*  
- Valor a ser retornado se *boolean_expression* for avaliada como true.  
+ Valor a ser retornado se *boolean_expression* for avaliada como verdadeira.  
   
  *false_value*  
- Valor a ser retornado se *boolean_expression* for avaliada como false.  
+ Valor a ser retornado se *boolean_expression* for avaliada como falsa.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o tipo de dados com a precedência mais alta entre os tipos na *true_value* e *false_value*. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Retorna o tipo de dados com a precedência mais alta dos tipos em *true_value* e *false_value*. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
- IIF é uma forma abreviada de gravar uma expressão CASE. Avalia a expressão Booliana passada pelo primeiro argumento e retorna qualquer um dos outros dois argumentos com base no resultado da avaliação. Ou seja, o *true_value* será retornado se a expressão booliana for true e o *false_value* será retornado se a expressão booliana for falsa ou desconhecida. *true_value* e *false_value* pode ser de qualquer tipo. As mesmas regras que se aplicam à expressão CASE para expressões boolianas, manipulação de nulos e tipos de retorno também se aplicam a IIF. Para obter mais informações, consulte [caso &#40; Transact-SQL &#41; ](../../t-sql/language-elements/case-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ IIF é uma forma abreviada de gravar uma expressão CASE. Avalia a expressão Booliana passada pelo primeiro argumento e retorna qualquer um dos outros dois argumentos com base no resultado da avaliação. Ou seja, o *true_value* será retornado se a expressão booliana for verdadeira e o *false_value* será retornado se a expressão booliana for falsa ou desconhecida. *true_value* e *false_value* podem ser de qualquer tipo. As mesmas regras que se aplicam à expressão CASE para expressões boolianas, manipulação de nulos e tipos de retorno também se aplicam a IIF. Para obter mais informações, consulte [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  O fato de IIF ser convertido em CASE também tem um impacto sobre outros aspectos do comportamento dessa função. Como as expressões CASE podem ser aninhadas apenas até o nível de 10, as instruções IIF também podem ser aninhadas apenas até o nível máximo de 10. Além disso, IIF é remota para outros servidores como uma expressão CASE semanticamente equivalente, com todos os comportamentos de uma expressão CASE remota.  
   
@@ -109,8 +109,8 @@ NULL
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Escolher &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

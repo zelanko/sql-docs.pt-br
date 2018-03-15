@@ -52,7 +52,7 @@ IS_OBJECTSIGNED (
  O tipo de classe do protegível.  
   
  *@object_id*  
- O object_id do objeto que está sendo testado. *@object_id*é o tipo **int**.  
+ O object_id do objeto que está sendo testado. *@object_id* é do tipo **int**.  
   
  *@class*  
  A classe do objeto:  
@@ -61,20 +61,20 @@ IS_OBJECTSIGNED (
   
 -   'chave assimétrica'  
   
- *@class*é **sysname**.  
+ *@class* é **sysname**.  
   
  *@thumbprint*  
- A impressão digital SHA do objeto. *@thumbprint*é o tipo **varbinary(32)**.  
+ A impressão digital SHA do objeto. *@thumbprint* é o tipo **varbinary(32)**.  
   
 ## <a name="returned-types"></a>Tipos retornados  
  **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED retorna os seguintes valores:  
   
 |Valor de retorno|Description|  
 |------------------|-----------------|  
-|NULL|O objeto não está assinado ou o objeto não é válido.|  
+|NULL|O objeto não está assinado ou não é válido.|  
 |0|O objeto foi assinado, mas a assinatura não é válida.|  
 |1|O objeto foi assinado.|  
   
@@ -84,7 +84,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. Exibindo propriedades estendidas em um banco de dados  
- O exemplo a seguir testa se a tabela spt_fallback_db do **mestre** banco de dados é assinado pelo certificado autenticado de esquema.  
+ O exemplo a seguir testa se a tabela spt_fallback_db do banco de dados **mestre** foi assinada pelo certificado de autenticação do esquema.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [fn_check_object_signatures &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

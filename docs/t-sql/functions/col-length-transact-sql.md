@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-**'** *tabela* **'**  
-É o nome da tabela para a qual determinar as informações de comprimento de coluna. *tabela* é uma expressão do tipo **nvarchar**.
+**'** *table* **'**  
+É o nome da tabela para a qual determinar as informações de comprimento de coluna. *table* é uma expressão do tipo **nvarchar**.
   
-**'** *coluna* **'**  
-É o nome da coluna para a qual determinar as informações de comprimento de coluna. *coluna* é uma expressão do tipo **nvarchar**.
+**'** *column* **'**  
+É o nome da coluna para a qual determinar as informações de comprimento de coluna. *column* é uma expressão do tipo **nvarchar**.
   
 ## <a name="return-type"></a>Tipo de retorno
 **smallint**
@@ -62,8 +62,8 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas que emitem metadados, como COL_LENGTH, poderão retornar NULL se o usuário não tiver nenhuma permissão para o objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentários  
-Para colunas do tipo **varchar** declarado com o **max** especificador (**varchar (max)**), COL_LENGTH retorna o valor – 1.
+## <a name="remarks"></a>Remarks  
+Para colunas do tipo **varchar** declaradas com o especificador **max** (**varchar(max)**), COL_LENGTH retorna o valor -1.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir mostra os valores de retorno para uma coluna do tipo `varchar(40)` e uma coluna do tipo `nvarchar(40)`.
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>Consulte também
 [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

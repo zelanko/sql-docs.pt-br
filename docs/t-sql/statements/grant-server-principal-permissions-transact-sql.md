@@ -1,5 +1,5 @@
 ---
-title: "Permissões de entidade de servidor GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT de entidade de segurança do servidor (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser concedida em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- LOGON **::** *SQL_Server_login*  
- Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é necessária.  
+ LOGIN **::** *SQL_Server_login*  
+ Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
- FUNÇÃO de servidor **::** *server_role*  
- Especifica a função de servidor definida pelo usuário ao qual a permissão está sendo concedida. O qualificador de escopo (**::**) é necessária.  
+ SERVER ROLE **::** *server_role*  
+ Especifica a função de servidor definida pelo usuário ao qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
   
- PARA \<server_principal > especifica o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou função de servidor ao qual a permissão está sendo concedida.  
+ TO \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a função de servidor ao qual a permissão está sendo concedida.  
   
  *SQL_Server_login*  
  Especifica o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,10 +95,10 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de conceder a permissão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As permissões no escopo de servidor podem ser concedidas somente quando o banco de dados atual é mestre.  
   
- Informações sobre permissões de servidor são visíveis no [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) exibição do catálogo. Informações sobre principais de servidor são visíveis no [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ As informações sobre permissões do servidor são visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). As informações sobre entidades de segurança do servidor são visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Os logons e as funções de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são protegíveis no nível do servidor. As permissões mais específicas e limitadas que podem ser concedidas a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função de servidor são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -144,7 +144,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

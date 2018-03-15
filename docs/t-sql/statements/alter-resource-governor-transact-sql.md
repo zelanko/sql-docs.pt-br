@@ -37,9 +37,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Essa instrução é usada para executar as seguintes ações do administrador de recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Essa instrução é usada para executar as seguintes ações do Resource Governor no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Aplicar as alterações de configuração especificadas ao criar | ALTER | DROP WORKLOAD GROUP ou CREATE | ALTER | DESCARTE o POOL de recursos ou CREATE | ALTER | Instruções DROP EXTERNAL RESOURCE POOL são emitidas.  
+-   Aplicar as alterações de configuração especificadas quando as instruções CREATE|ALTER|DROP WORKLOAD GROUP ou CREATE|ALTER|DROP RESOURCE POOL ou CREATE|ALTER|DROP EXTERNAL RESOURCE POOL forem emitidas.  
   
 -   Habilitar ou desabilitar o Administrador de Recursos.  
   
@@ -64,9 +64,9 @@ ALTER RESOURCE GOVERNOR
   
 ## <a name="arguments"></a>Argumentos  
  DISABLE  
- Desabilita o Administrador de Recursos. Desabilitar administrador de recursos tem os seguintes resultados:  
+ Desabilita o Administrador de Recursos. A desabilitação do Resource Governor gera os seguintes resultados:  
   
--   A função de classificação não é executada.  
+-   A função classificadora não é executada.  
   
 -   Todas as conexões novas são automaticamente classificadas no grupo padrão.  
   
@@ -76,7 +76,7 @@ ALTER RESOURCE GOVERNOR
   
 -   O monitoramento normal do sistema não é afetado.  
   
--   Alterações de configuração podem ser feitas, mas as alterações não entram em vigor até que o administrador de recursos está habilitado.  
+-   As alterações de configuração podem ser feitas, mas as alterações não terão efeito até que o Resource Governor seja habilitado.  
   
 -   Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado, o Administrador de Recursos não carregará sua configuração, mas em vez disso terá apenas os grupos e pools padrão e internos.  
   
@@ -87,28 +87,28 @@ ALTER RESOURCE GOVERNOR
   
 -   Os limites de recursos especificados na configuração do Administrador de Recursos são cumpridos e impostos.  
   
--   As solicitações existentes antes de habilitar o administrador de recursos são afetadas por alterações de configuração que foram feitas ao administrador de recursos foi desabilitado.  
+-   As solicitações existentes antes da habilitação do Resource Governor são afetadas pelas alterações feitas na configuração quando o Resource Governor foi desabilitado.  
   
- Quando o administrador de recursos está em execução, RECONFIGURE aplica qualquer configuração alterações solicitada quando criar | ALTER | DROP WORKLOAD GROUP ou CREATE | ALTER | DESCARTE o POOL de recursos ou CREATE | ALTER | Instruções DROP EXTERNAL RESOURCE POOL são executadas.  
+ Quando o Resource Governor estiver sendo executado, RECONFIGURE aplicará qualquer alteração de configuração solicitada quando as instruções CREATE|ALTER|DROP WORKLOAD GROUP or CREATE|ALTER|DROP RESOURCE POOL or CREATE|ALTER|DROP EXTERNAL RESOURCE POOL forem executadas.  
   
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE deve ser emitida para que qualquer alteração de configuração entre em vigor.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.*** nome_da_função* | NULL}  
- Registra a função de classificação especificada por *function_name*. Essa função classifica cada sessão nova e atribui as solicitações e consultas de sessão a um grupo de carga de trabalho. Quando NULL é usado, novas sessões são automaticamente atribuídas ao grupo de carga de trabalho padrão.  
+ CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ Registra a função de classificação especificada por *schema_name.function_name*. Essa função classifica cada sessão nova e atribui as solicitações e consultas de sessão a um grupo de carga de trabalho. Quando NULL é usado, novas sessões são automaticamente atribuídas ao grupo de carga de trabalho padrão.  
   
  RESET STATISTICS  
- Redefine as estatísticas em todos os grupos de carga de trabalho e pools de recursos. Para obter mais informações, consulte [sys.DM resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) e [sys.DM resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Redefine as estatísticas em todos os grupos de carga de trabalho e pools de recursos. Para obter mais informações, consulte [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) e [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Define o máximo de operações de E/S na fila por volume de disco. Essas operações de E/S podem ser leituras ou gravações de qualquer tamanho.  O valor máximo para MAX_OUTSTANDING_IO_PER_VOLUME é 100. Não é uma porcentagem. Essa configuração é criada para ajustar a administração do recurso de E/S às características de E/S de um volume de disco. É recomendável fazer experiências com valores diferentes e considere o uso de uma ferramenta de calibração como IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), ou SQLIO (preterido) para identificar o valor máximo para o subsistema de armazenamento. Essa configuração fornece uma verificação de segurança no nível do sistema que permite ao SQL Server atender ao mínimo de IOPS para pools de recursos mesmo se outros pools tiverem o MAX_IOPS_PER_VOLUME definido como ilimitado. Para obter mais informações sobre MAX_IOPS_PER_VOLUME, consulte [criar POOL de recursos](../../t-sql/statements/create-resource-pool-transact-sql.md).  
+ Define o máximo de operações de E/S na fila por volume de disco. Essas operações de E/S podem ser leituras ou gravações de qualquer tamanho.  O valor máximo para MAX_OUTSTANDING_IO_PER_VOLUME é 100. Não é uma porcentagem. Essa configuração é criada para ajustar a administração do recurso de E/S às características de E/S de um volume de disco. Recomendamos fazer experiências com valores diferentes e considerar o uso de uma ferramenta de calibração como o IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) ou SQLIO (preterido) para identificar o valor máximo do subsistema de armazenamento. Essa configuração fornece uma verificação de segurança no nível do sistema que permite ao SQL Server atender ao mínimo de IOPS para pools de recursos mesmo se outros pools tiverem o MAX_IOPS_PER_VOLUME definido como ilimitado. Para obter mais informações sobre MAX_IOPS_PER_VOLUME, consulte [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE, e ALTER RESOURCE GOVERNOR RESET STATISTICS não podem ser usados em uma transação de usuário.  
   
- O parâmetro RECONFIGURE é parte da sintaxe do administrador de recursos e não deve ser confundido com [RECONFIGURAR](../../t-sql/language-elements/reconfigure-transact-sql.md), que é uma instrução DDL separada.  
+ O parâmetro RECONFIGURE faz parte da sintaxe do Resource Governor e não deve ser confundido com [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), que é uma instrução DDL separada.  
   
  Recomendamos que você esteja familiarizado com os estados do Administrador de recursos antes de executar as instruções DDL. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -193,7 +193,7 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

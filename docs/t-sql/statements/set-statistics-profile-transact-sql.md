@@ -1,5 +1,5 @@
 ---
-title: "Defina o perfil de estatísticas (Transact-SQL) | Microsoft Docs"
+title: SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando STATISTICS PROFILE está como ON, cada consulta executada retorna seu conjunto de resultados regulares, seguido de um conjunto de resultados adicionais que exibem um perfil da execução de consulta.  
   
  O conjunto de resultados adicionais contém as colunas de SHOWPLAN_ALL da consulta e as colunas adicionais.  
@@ -59,7 +59,7 @@ SET STATISTICS PROFILE { ON | OFF }
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
 |**Linhas**|O número atual de linhas geradas por cada operador.|  
-|**Executa**|Número de vezes que o operador foi executado|  
+|**Executes**|Número de vezes que o operador foi executado|  
   
 ## <a name="permissions"></a>Permissões  
  Para usar SET STATISTICS PROFILE e exibir a saída, os usuários devem ter as seguintes permissões:  
@@ -70,10 +70,10 @@ SET STATISTICS PROFILE { ON | OFF }
   
  Para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que não geram conjuntos de resultados STATISTICS PROFILE , serão necessárias somente as permissões apropriadas para executar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que produzem conjuntos de resultados STATISTICS PROFILE, verifica tanto a permissão de execução de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] e a permissão de SHOWPLAN deve ser bem-sucedida ou a instrução de execução [!INCLUDE[tsql](../../includes/tsql-md.md)] será anulada e nenhuma informação de Showplan será gerada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [Definir STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

@@ -43,9 +43,9 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **nvarchar (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno CLR: **SqlString**  
+ Tipo de retorno do CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  Esse método retornará a cadeia de caracteres "Nulo" quando chamado em instâncias nulas.  
@@ -53,7 +53,7 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
  Em instâncias não nulas, esse método é equivalente a usar `AsTextZM().`  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um `LineString` instância e usa `ToString()` para buscar a descrição de texto da instância.  
+ O exemplo a seguir cria uma instância de `LineString` e usa `ToString()` para buscar a descrição de texto da instância.  
   
 ```  
 DECLARE @g geometry;  
@@ -61,8 +61,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [STAsText &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [STAsText &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

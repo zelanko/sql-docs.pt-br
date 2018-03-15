@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de Assembly (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE do assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -54,11 +54,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um assembly. Listada abaixo.  
   
- NO ASSEMBLY **::***nome_do_assembly*  
- Especifica o assembly no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ ON ASSEMBLY **::***assembly_name*  
+ Especifica o assembly no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada. Um dos seguintes:  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um assembly é um nível de banco de dados protegível contido no banco de dados que é pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um assembly estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de assembly|Implícito na permissão de assembly|Implícito na permissão de banco de dados|  
@@ -118,14 +118,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no assembly  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Criar ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

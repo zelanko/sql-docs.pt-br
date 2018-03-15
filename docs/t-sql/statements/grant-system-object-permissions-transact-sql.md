@@ -1,5 +1,5 @@
 ---
-title: "Permissões de objeto do sistema GRANT (Transact-SQL) | Microsoft Docs"
+title: "Permissões GRANT do objeto do sistema (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,16 +45,16 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [sys]. .  
+ [ sys.] .  
  O qualificador sys só é necessário quando você está referenciando exibições do catálogo e exibições de gerenciamento dinâmico.  
   
  *system_object*  
  Especifica o objeto no qual a permissão está sendo concedida.  
   
- *entidade de segurança*  
+ *principal*  
  Especifica a entidade de segurança para o qual a permissão está sendo concedida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa instrução pode ser usada para conceder permissões em determinados procedimentos armazenados, procedimentos armazenados estendidos, funções com valor de tabela, funções escalares, exibições, exibições do catálogo, exibições de compatibilidade, exibições INFORMATION_SCHEMA, exibições de gerenciamento dinâmico e tabelas do sistema instaladas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ara cada um desses objetos do sistema existe como um registro exclusivo no banco de dados de recursos do servidor (mssqlsystemresource). O banco de dados de recursos é somente leitura. Um link para o objeto é exposto como um registro no esquema sys de todo banco de dados. A permissão para executar ou selecionar um objeto do sistema pode ser concedida, negada e revogada.  
   
  A concessão de permissão para executar ou selecionar um objeto não transmite necessariamente todas as permissões necessárias para usar o objeto. A maioria dos objetos executa operações para as quais são necessárias permissões adicionais. Por exemplo, um usuário ao qual é concedida a permissão EXECUTE no sp_addlinkedserver não pode criar um servidor vinculado a menos que o usuário também seja membro da função de servidor fixa sysadmin.  
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  As permissões em objetos do sistema serão preservadas nas atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis no [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) exibição no banco de dados mestre do catálogo.  
+ Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados mestre.  
   
  A consulta a seguir retorna informações sobre permissões de objetos do sistema:  
   
@@ -83,7 +83,7 @@ GO
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Concedendo a permissão SELECT em uma exibição  
- O exemplo a seguir concede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Sylvester1` permissão para selecionar um modo de exibição que lista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons. Depois, o exemplo concede a permissão adicional necessária para exibir metadados nos logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não sejam de propriedade do usuário.  
+ O exemplo a seguir concede a permissão de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Sylvester1` para selecionar uma exibição que lista logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois, o exemplo concede a permissão adicional necessária para exibir metadados nos logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não sejam de propriedade do usuário.  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,10 +100,10 @@ GRANT EXECUTE ON xp_readmail TO Sylvester1;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [system_objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [REVOGAR permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
- [Negar permissões de objeto do sistema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [Permissões REVOKE do objeto do sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
+ [Permissões DENY de objeto do sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

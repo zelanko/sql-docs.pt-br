@@ -55,25 +55,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SERVICE_NAME*  
+ *service_name*  
  É o nome do serviço a ser alterado. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
- FILA de ON [ *schema_name***.** ] *nome_da_fila*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  Especifica a nova fila deste serviço. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] move todas as mensagens deste serviço da fila atual para uma nova fila.  
   
- Adicionar contrato *contract_name*  
+ ADD CONTRACT *contract_name*  
  Especifica um contrato para acrescentar ao conjunto de contratos exposto por este serviço.  
   
  DROP CONTRACT *contract_name*  
  Especifica um contrato a ser excluído do conjunto de contratos exposto por este serviço. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia uma mensagem de erro em quaisquer conversas existentes com este serviço que usem este contrato.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando a instrução ALTER SERVICE exclui um contrato de um serviço, o serviço não pode mais ser um destino das conversas que usam esse contrato. Portanto, [!INCLUDE[ssSB](../../includes/sssb-md.md)] não permite conversas novas ao serviço naquele contrato. As conversas existentes que usam o contrato não são afetadas.  
   
  Para alterar a AUTHORIZATION para um serviço, use a instrução ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para alterar um serviço assume como padrão o proprietário do serviço, os membros do **db_ddladmin** ou **db_owner** fixa de funções de banco de dados e os membros do **sysadmin** função de servidor fixa.  
+ A permissão para alterar um serviço assume como padrão o proprietário do serviço, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner**e os membros da função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [Remover serviço &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

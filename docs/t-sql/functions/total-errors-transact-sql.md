@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>& #x 40; & #x 40. TOTAL_ERRORS (Transact-SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o número de erros de gravação de disco encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado pela última vez.  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Comentários  
- Nem todos os erros de gravação encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são considerados por esta função. Os erros de gravação não fatais ocasionais são controlados pelo próprio servidor e não são considerados como erros. Para exibir um relatório que contém várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estatísticas, incluindo o número total de erros, execute **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Nem todos os erros de gravação encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são considerados por esta função. Os erros de gravação não fatais ocasionais são controlados pelo próprio servidor e não são considerados como erros. Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o número total de erros, execute **sp_monitor**.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo mostra o número de erros encontrado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da data e hora atuais.  
@@ -71,8 +71,8 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Funções estatísticas do sistema &#40;Transact-SQL&#4#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Funções estatísticas do sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

@@ -55,8 +55,8 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>Comentários  
- SET ANSI_DEFAULTS é uma configuração do lado do servidor que o cliente não modifica. O cliente gerencia suas próprias configurações. Por padrão, essas configurações são o oposto da configuração de servidor. Os usuários não devem modificar a configuração de servidor. Para alterar o comportamento do cliente, os usuários devem usar SQL_COPT_SS_PRESERVE_CURSORS. Para obter mais informações, consulte [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+## <a name="remarks"></a>Remarks  
+ SET ANSI_DEFAULTS é uma configuração do lado do servidor que o cliente não modifica. O cliente gerencia suas próprias configurações. Por padrão, essas configurações são o oposto da configuração de servidor. Os usuários não devem modificar a configuração de servidor. Para alterar o comportamento do cliente, os usuários devem usar SQL_COPT_SS_PRESERVE_CURSORS. Para obter mais informações, veja [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
  Quando ativada (ON), esta opção habilita as seguintes configurações ISO:  
   
@@ -69,9 +69,9 @@ SET ANSI_DEFAULTS ON
   
  Juntas, essas opções SET padrão ISO definem o ambiente de processamento de consulta para a duração da sessão de trabalho do usuário, um disparador em execução ou um procedimento armazenado. Entretanto, essas opções SET não incluem todas as opções exigidas para estar de acordo com padrão ISO.  
   
- Ao trabalhar com índices em colunas computadas e exibições indexadas, quatro desses padrões (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS e QUOTED_IDENTIFIER) devem ser definidos como ON. Esses padrões estão entre as sete opções SET que devem ser atribuídas aos valores necessários para criar e alterar índices em colunas computadas e exibições indexadas. As outras opções de SET são ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) e NUMERIC_ROUNDABORT (OFF). Para obter mais informações sobre as configurações de opção SET necessárias com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre quando você uso das instruções SET" em [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ Ao trabalhar com índices em colunas computadas e exibições indexadas, quatro desses padrões (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS e QUOTED_IDENTIFIER) devem ser definidos como ON. Esses padrões estão entre as sete opções SET que devem ser atribuídas aos valores necessários para criar e alterar índices em colunas computadas e exibições indexadas. As outras opções de SET são ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) e NUMERIC_ROUNDABORT (OFF). Para obter mais informações sobre as configurações da opção SET com exibições indexadas e índices em colunas computadas, veja "Considerações sobre o uso das instruções SET" em [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_DEFAULTS como ON ao conectar-se. O driver e Provedor definem CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS como OFF. As configurações OFF para SET CURSOR_CLOSE_ON_COMMIT e SET IMPLICIT_TRANSACTIONS podem ser definidas nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB do aplicativo antes de conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão para SET ANSI_DEFAULTS é OFF para conexões de aplicativos DB-Library.  
+ O driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC e o Provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definem automaticamente ANSI_DEFAULTS como ON na conexão. O driver e Provedor definem CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS como OFF. As configurações OFF para SET CURSOR_CLOSE_ON_COMMIT e SET IMPLICIT_TRANSACTIONS podem ser definidas nas fontes de dados ODBC, nos atributos de conexão ODBC ou nas propriedades de conexão OLE DB do aplicativo antes de conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão para SET ANSI_DEFAULTS é OFF para conexões de aplicativos DB-Library.  
   
  Quando SET ANSI_DEFAULTS é gerado, SET QUOTED_IDENTIFIER é definido no momento da análise, e as seguintes opções são definidas em tempo de execução:  
   
@@ -99,15 +99,15 @@ SET ANSI_DEFAULTS OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_NULL_DFLT_ON &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   
+ [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET CURSOR_CLOSE_ON_COMMIT &#40; Transact-SQL &#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)   
- [DEFINIDO IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   

@@ -63,14 +63,14 @@ KILL STATS JOB job_id
  As permissões KILL STATS JOB usam como padrão membros das funções de banco de dados fixas sysadmin e processadmin e não podem ser transferidas.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como finalizar a atualização das estatísticas associada a um trabalho em que o *job_id* = `53`.  
+ O exemplo a seguir mostra como encerrar a atualização de estatísticas associadas a um trabalho em que *job_id* = `53`.  
   
 ```  
 KILL STATS JOB 53;  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   

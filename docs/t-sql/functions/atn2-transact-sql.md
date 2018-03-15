@@ -47,7 +47,7 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*float_expression* é um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do **float** tipo de dados.
+*float_expression* É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo de dados **float**.
   
 ## <a name="return-types"></a>Tipos de retorno
 **float**
@@ -70,8 +70,8 @@ The ATN2 of the angle is: 0.265345
   
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float e real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

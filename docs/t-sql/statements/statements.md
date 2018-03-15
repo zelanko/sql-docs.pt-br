@@ -32,33 +32,33 @@ ms.lasthandoff: 11/21/2017
 Este tópico de referência resume as categorias de instruções para uso com o Transact-SQL (T-SQL). Você pode encontrar todas as instruções listadas no painel de navegação esquerdo.
 
 ## <a name="backup-and-restore"></a>Backup e restauração
-As instruções de backup e restauração fornecem maneiras de criar backups e restauração de backups.  Para obter mais informações, consulte o [visão geral de Backup e restauração](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
+As instruções de backup e restauração oferecem maneiras de criar backups e fazer a restauração de backups.  Para obter mais informações, veja a [Visão geral de backup e restauração](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
 ## <a name="data-definition-language"></a>Linguagem de definição de dados
-Instruções de Definition Language (DDL) de dados define as estruturas de dados. Use estas instruções para criar, alterar ou remover estruturas de dados em um banco de dados.
+Instruções DDL (linguagem de definição de dados) definem as estruturas de dados. Use estas instruções para criar, alterar ou remover estruturas de dados em um banco de dados.
 - ALTER
 - Agrupamentos
 - CREATE
 - DROP
-- DESABILITAR O GATILHO
+- DISABLE TRIGGER
 - ENABLE TRIGGER
-- RENOMEAR
+- RENAME
 - UPDATE STATISTICS
 
 ## <a name="data-manipulation-language"></a>Linguagem de manipulação de dados
-Linguagem de manipulação de dados (DML) afeta as informações armazenadas no banco de dados. Use estas instruções para inserir, atualizar e alterar as linhas no banco de dados.
+A DML (linguagem de manipulação de dados) afeta as informações armazenadas no banco de dados. Use estas instruções para inserir, atualizar e alterar as linhas no banco de dados.
 
 - BULK INSERT
-- DELETE
+- Delete (excluir)
 - INSERT
 - MERGE
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>Instruções de permissões
-Instruções de permissões determinam quais logons e usuários podem acessar os dados e executar operações. Para obter mais informações sobre o acesso e autenticação, consulte o [Central de segurança](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+Instruções de permissões determinam quais logons e usuários podem acessar os dados e executar operações. Para obter mais informações sobre o acesso e autenticação, veja a [Central de segurança](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="service-broker-statements"></a>Instruções do Service Broker
-O Service Broker é um recurso que oferece suporte nativo para aplicativos de mensagens e enfileiramento de mensagens. Para obter mais informações, consulte [Service Broker](../../relational-databases/service-broker/event-notifications.md).
+O Service Broker é um recurso que oferece suporte nativo para aplicativos de mensagens e enfileiramento. Para obter mais informações, veja [Service Broker](../../relational-databases/service-broker/event-notifications.md).
 
-## <a name="session-settings"></a>Configurações de sessão
-Instruções SET determinam como os identificadores de sessão atual executar configurações de tempo. Para obter uma visão geral, consulte [instruções SET](set-statements-transact-sql.md).
+## <a name="session-settings"></a>Configurações da sessão
+Instruções SET determinam como os identificadores de sessão atual lidam com configurações de tempo. Para obter uma visão geral, veja [instruções SET](set-statements-transact-sql.md).

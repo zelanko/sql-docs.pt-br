@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR a associação de serviço remoto (Transact-SQL) | Microsoft Docs"
+title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  O nome da associação de serviço remoto a ser alterada. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
- COM usuário = \< *user_name >*  
+ WITH USER = \<*user_name>*  
  Especifica o usuário de banco de dados que possui o certificado associado ao serviço remoto para esta associação. A chave pública deste certificado é usada para criptografia e autenticação de mensagens trocadas com o serviço remoto.  
   
  ANONYMOUS  
  Especifica se a autenticação anônima é usada durante a comunicação com o serviço remoto. Se ANONYMOUS = ON, a autenticação anônima será usada e as credenciais do usuário local não serão transferidas para o serviço remoto. Se ANONYMOUS = OFF, as credenciais de usuário serão tranferidas. Se essa cláusula não for especificada, o padrão será OFF.  
   
-## <a name="remarks"></a>Comentários  
- A chave pública no certificado associado *user_name* é usado para autenticar as mensagens enviadas para o serviço remoto e para criptografar uma chave de sessão que é usada para criptografar a conversa. O certificado para *user_name* deve corresponder ao certificado para um logon no banco de dados que hospeda o serviço remoto.  
+## <a name="remarks"></a>Remarks  
+ A chave pública no certificado associado a *user_name* é usada para autenticar as mensagens enviadas ao serviço remoto e para criptografar uma chave da sessão que, em seguida, é usada para criptografar a conversa. O certificado para *user_name* deve corresponder ao certificado para um logon no banco de dados que hospeda o serviço remoto.  
   
 ## <a name="permissions"></a>Permissões  
- Permissão para alterar uma associação de serviço remoto assume como padrão o proprietário do serviço remoto associação, os membros do **db_owner** fixo de função de banco de dados e membros do **sysadmin** função de servidor fixa.  
+ A permissão para alterar uma associação de serviço remoto usa como padrão o proprietário da associação de serviço remoto, os membros da função de banco de dados fixa **db_owner** e os membros da função de servidor fixa **sysadmin**.  
   
  O usuário que executa a instrução ALTER REMOTE SERVICE BINDING deve ter a permissão de representação para o usuário especificado na instrução.  
   
@@ -77,9 +77,9 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [Remova a associação de serviço remoto &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

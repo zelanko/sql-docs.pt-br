@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argumentos  
  *dividend*  
- É a expressão numérica a ser dividida. *dividendo* deve ser um válido [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos tipos de dados nas categorias de tipo de dados monetários e inteiro ou o **numérico** tipo de dados.  
+ É a expressão numérica a ser dividida. *dividend* deve ser uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de um dos tipos de dados nas categorias de tipo de dados inteiros e monetários ou no tipo de dados **numeric**.  
   
  *divisor*  
- É a expressão numérica pela qual dividir o dividendo. *divisor* deve ser qualquer expressão válida de qualquer um dos tipos de dados nas categorias de tipo de dados monetários e inteiro ou o **numérico** tipo de dados.  
+ É a expressão numérica pela qual dividir o dividendo. *divisor* deve ser qualquer expressão válida de um dos tipos de dados nas categorias de tipos de dados inteiros e monetários ou no tipo de dados **numeric**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos.  
   
 ## <a name="remarks"></a>Remarks  
- Você pode usar o operador de módulo aritmético na lista de seleção da instrução SELECT com qualquer combinação de nomes de coluna, constantes numéricas ou qualquer expressão válida de inteiro de dados monetários digite categorias ou o **numérico** dados tipo.  
+ Use o operador aritmético de módulo na lista de seleção da instrução SELECT com qualquer combinação de nomes de coluna, constantes numéricas ou qualquer expressão válida das categorias de tipo de dados inteiros ou monetários ou o tipo de dados **numeric**.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-example"></a>A. Exemplo simples  
- O exemplo a seguir divide o número 38 por 5. Isso resulta em 7 como a parte inteira do resultado e demonstra como módulo retorna o resto de 3.  
+ O exemplo a seguir divide o número 38 por 5. Isto resulta em 7 como a parte inteira do resultado e demonstra como o módulo retorna o resto de 3.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: exemplo simples de  
- O exemplo a seguir mostra os resultados para o `%` operador durante a divisão de 3 a 2.  
+### <a name="c-simple-example"></a>C: Exemplo simples  
+ O exemplo a seguir mostra os resultados para o operador `%` durante a divisão de 3 por 2.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [%= &#40;Modulus Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= &#40;Atribuição de módulo&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

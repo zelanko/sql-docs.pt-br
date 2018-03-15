@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="backslash-line-continuation-transact-sql"></a>Barra invertida (continuação de linha) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-`\`quebra uma constante de cadeia de caracteres longa, caractere ou binário, em duas ou mais linhas para facilitar a leitura.  
+`\` quebra uma constante de cadeia de caractere, um caractere ou um binário longo, em duas ou mais linhas para facilitar a leitura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,10 +59,10 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<primeira seção da cadeia de caracteres >  
+ \<first section of string>  
  É o início de uma cadeia de caracteres.  
   
- \<continuação de seção de cadeia de caracteres >  
+ \<continued section of string>  
  É a continuação de uma cadeia de caracteres.  
   
 ## <a name="remarks"></a>Remarks  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-splitting-a-character-string"></a>A. Dividir uma cadeia de caracteres  
+### <a name="a-splitting-a-character-string"></a>A. Dividindo uma cadeia de caracteres  
 
 O exemplo a seguir usa uma barra invertida e um retorno de carro para dividir uma cadeia de caracteres em duas linhas.  
   
@@ -88,7 +88,7 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>B. Dividir uma cadeia de caracteres binária  
+### <a name="b-splitting-a-binary-string"></a>B. Dividindo uma cadeia de caracteres binária  
 
 O exemplo a seguir usa uma barra invertida e um retorno de carro para dividir uma cadeia de caracteres binária em duas linhas.  
 
@@ -106,12 +106,12 @@ def AS [ColumnResult];
  0xABCDEF
  ```    
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
  [&#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

@@ -63,7 +63,7 @@ ALTER SERVICE MASTER KEY
   
 ## <a name="arguments"></a>Argumentos  
  FORCE  
- Indica que a chave mestra de serviço deve ser regenerada, mesmo com o risco de perda de dados. Para obter mais informações, consulte [alterar a conta de serviço do SQL Server](#_changing) mais adiante neste tópico.  
+ Indica que a chave mestra de serviço deve ser regenerada, mesmo com o risco de perda de dados. Para obter mais informações, veja [Alterando a conta de serviço do SQL Server](#_changing) mais adiante neste tópico.  
   
  REGENERE  
  Indica que a chave mestra de serviço deve ser gerada novamente.  
@@ -74,7 +74,7 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  Essa opção está obsoleta. Não use. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
- OLD_PASSWORD **='***senha***'**  
+ OLD_PASSWORD **='***password***'**  
  Especifica o nome da antiga senha de serviço do Windows.  
   
 > [!WARNING]  
@@ -86,23 +86,23 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  Essa opção está obsoleta. Não use. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
- Nova_senha **='***senha***'**  
+ NEW_PASSWORD **='***password***'**  
  Especifica o nome da nova senha de serviço do Windows.  
   
 > [!WARNING]  
 >  Essa opção está obsoleta. Não use. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A chave mestra de serviço é gerada automaticamente na primeira vez que é necessária para criptografar a senha, as credenciais ou a chave mestra de banco de dados de um servidor vinculado. A chave mestra de serviço que usa a chave da máquina local ou a API de Proteção de Dados do Windows é criptografada. Essa API usa uma chave que é derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa o algoritmo de criptografia AES para proteger a SMK (chave mestra de serviço) e a DMK (chave mestra de banco de dados). O AES é um algoritmo de criptografia mais novo que o 3DES usado em versões anteriores. Depois de atualizar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o SMK e o DMK devem ser regenerados para atualizar as chave mestras para AES. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a>Alterar a conta de serviço do SQL Server  
- Para alterar a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para gerenciar uma alteração da conta de serviço, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena uma cópia redundante da chave mestra de serviço protegida pela conta da máquina que tem as permissões necessárias para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grupo do serviço. Se o computador for recriado, o mesmo usuário de domínio que foi usado anteriormente pela conta de serviço poderá recuperar a chave mestra de serviço. Isso não funciona com contas locais ou o sistema Local, serviço Local ou serviço de rede. Quando você está movendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outro computador, migre a chave mestra de serviço usando backup e restauração.  
+##  <a name="_changing"></a> Alterando a conta de serviço do SQL Server  
+ Para alterar a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para gerenciar uma alteração da conta de serviço, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena uma cópia redundante da chave mestra de serviço protegida pela conta do computador que tem as permissões necessárias concedidas ao grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o computador for recriado, o mesmo usuário de domínio que foi usado anteriormente pela conta de serviço poderá recuperar a chave mestra de serviço. Isso não funciona com contas locais nem com o Sistema Local, o Serviço Local ou as contas de Serviço de Rede. Quando estiver movendo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outro computador, migre a chave mestra de serviço usando backup e restauração.  
   
  A frase REGENERATE gera a chave mestra de serviço novamente. Quando a chave mestra de serviço é gerada novamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptografa todas as chaves que foram criptografadas com ela e, em seguida, as criptografa com a nova chave mestra de serviço. Essa operação utiliza muitos recursos. É recomendável agendar essa operação em um período de baixa demanda, a menos que a chave esteja comprometida. Se qualquer uma das descriptografias falhar, a instrução inteira falhará.  
   
- A opção FORCE faz com que a o processo de gerar novamente a chave continue mesmo que não possa recuperar a chave mestra atual ou não possa descriptografar todas as chaves particulares criptografadas com ela. Use FORCE somente se a nova geração falhar e você não pode restaurar a chave mestra de serviço usando o [RESTORE SERVICE MASTER KEY](../../t-sql/statements/restore-service-master-key-transact-sql.md) instrução.  
+ A opção FORCE faz com que a o processo de gerar novamente a chave continue mesmo que não possa recuperar a chave mestra atual ou não possa descriptografar todas as chaves particulares criptografadas com ela. Use FORCE somente se a nova geração falhar e não for possível restaurar a chave mestra de serviço usando a instrução [RESTORE SERVICE MASTER KEY](../../t-sql/statements/restore-service-master-key-transact-sql.md).  
   
 > [!CAUTION]  
 >  A chave mestra de serviço é a raiz da hierarquia de criptografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ela protege todas as outras chaves e segredos diretamente ou indiretamente na árvore. Se uma chave dependente não puder ser descriptografada durante uma nova geração forçada, os dados que ela protege serão perdidos.  
@@ -120,9 +120,9 @@ ALTER SERVICE MASTER KEY REGENERATE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [RESTAURAR a chave MESTRA de serviço &#40; Transact-SQL &#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)   
- [CHAVE MESTRA de serviço de BACKUP &#40; Transact-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

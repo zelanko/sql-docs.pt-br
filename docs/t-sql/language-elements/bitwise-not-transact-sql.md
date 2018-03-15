@@ -51,10 +51,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos tipos de dados da categoria de tipo de dados inteiro, o **bit**, ou o **binário** ou **varbinary** dados tipos. *expressão* é tratado como um número binário para a operação bit a bit.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de qualquer um dos tipos de dados da categoria de tipo de dados inteiro ou dos tipos de dados **bit**, **binary** ou **varbinary**. *expression* é tratada como um número binário para a operação bit a bit.  
   
 > [!NOTE]  
->  Apenas uma *expressão* pode ser do **binário** ou **varbinary** tipo de dados em uma operação bit a bit.  
+>  Apenas uma *expression* pode ser do tipo de dados **binary** ou **varbinary** em uma operação bit a bit.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **int** se os valores de entrada são **int**.  
@@ -66,13 +66,13 @@ ms.lasthandoff: 01/25/2018
  **bit** se os valores de entrada são **bit**.  
   
 ## <a name="remarks"></a>Remarks  
- O  **~**  operador bit a bit executa um NOT lógico bit a bit para o *expressão*, obtendo cada bit por vez. Se *expressão* tem um valor de 0, os bits no conjunto de resultados são definidos como 1; caso contrário, o bit no resultado será alterado para um valor de 0. Em outras palavras, uns são alterados para zeros e zeros são alterados para uns.  
+ O operador bit a bit **~** executa uma expressão NOT lógica bit a bit para a *expression*, usando um bit por vez. Se *expression* tiver o valor 0, os bits no conjunto de resultados serão definidos como 1; caso contrário, o bit no resultado será limpo com o valor 0. Em outras palavras, uns são alterados para zeros e zeros são alterados para uns.  
   
 > [!IMPORTANT]  
->  Ao executar qualquer tipo de operação bit a bit, o comprimento do armazenamento da expressão usada na operação bit a bit é importante. Recomenda-se usar esse mesmo número de bytes ao armazenar valores. Por exemplo, armazenar o valor decimal 5 como um **tinyint**, **smallint**, ou **int** produz um valor armazenado com diferentes números de bytes: **tinyint** armazena dados usando 1 byte; **smallint** armazena dados usando 2 bytes, e **int** armazena dados que usa 4 bytes. Portanto, executar uma operação bit a bit em uma **int** valor decimal pode produzir resultados diferentes daqueles usando uma conversão binária ou hexadecimal direta, especialmente quando o  **~**  ( NOT bit a bit) é usado. A operação NOT bit a bit pode ocorrer em uma variável de um comprimento mais curto. Nesse caso, quando o comprimento mais curto for convertido em uma variável de tipo de dados mais longo, os bits nos 8 bits superiores podem não ser definidos com o valor esperado. Recomenda-se converter a variável de tipo de dados menor no tipo de dados maior e depois executar a operação NOT no resultado.  
+>  Ao executar qualquer tipo de operação bit a bit, o comprimento do armazenamento da expressão usada na operação bit a bit é importante. Recomenda-se usar esse mesmo número de bytes ao armazenar valores. Por exemplo, o armazenamento do valor decimal 5 como **tinyint**, **smallint** ou **int** produz um valor armazenado com diferentes números de bytes: **tinyint** armazena dados usando 1 byte; **smallint** armazena dados usando 2 bytes e **int** armazena dados usando 4 bytes. Portanto, a execução de uma operação bit a bit em um valor decimal **int** pode produzir resultados diferentes do que o uso de uma conversão binária ou hexadecimal direta, especialmente quando o operador **~** (expressão NOT bit a bit) é usado. A operação NOT bit a bit pode ocorrer em uma variável de um comprimento mais curto. Nesse caso, quando o comprimento mais curto for convertido em uma variável de tipo de dados mais longo, os bits nos 8 bits superiores podem não ser definidos com o valor esperado. Recomenda-se converter a variável de tipo de dados menor no tipo de dados maior e depois executar a operação NOT no resultado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma tabela usando o **int** tipo para armazenar os valores de dados e insere os dois valores em uma linha.  
+ O exemplo a seguir cria uma tabela usando o tipo de dados **int** para armazenar os valores e insere os dois valores em uma linha.  
   
 ```  
 CREATE TABLE bitwise  
@@ -115,10 +115,10 @@ FROM bitwise;
 ```  
   
  
-## <a name="see-also"></a>Consulte também  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
 

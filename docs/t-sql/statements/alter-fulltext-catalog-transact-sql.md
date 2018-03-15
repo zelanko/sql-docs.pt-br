@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR o catálogo de texto completo (Transact-SQL) | Microsoft Docs"
+title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Argumentos  
  *catalog_name*  
- Especifica o nome do catálogo a ser modificado. Se um catálogo com o nome especificado não existir, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro e não executa a operação de alteração.  
+ Especifica o nome do catálogo a ser modificado. Se não existir um catálogo com o nome especificado, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro e não executará a operação ALTER.  
   
  REBUILD  
  Instrui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a reconstruir o catálogo inteiro. Quando um catálogo é recriado, o catálogo existente é excluído e um novo catálogo é criado em seu lugar. Todas as tabelas que têm referências de indexação de texto completo são associadas ao novo catálogo. A recriação redefine os metadados de texto completo nas tabelas do sistema de banco de dados.  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Especifica se o catálogo a ser alterado diferencia acentuação ou não para indexação e consulta de texto completo.  
   
- Para determinar a configuração atual da propriedade sensibilidade de acentuação de um catálogo de texto completo, use a função FULLTEXTCATALOGPROPERTY com o **accentsensitivity** valor da propriedade contra *catalog_name*. Se a função retornar '1', o catálogo de texto completo diferencia acentuação; se a função retornar '0', o catálogo não diferencia acentuação.  
+ Para determinar a configuração atual da propriedade de distinção de acentos de um catálogo de texto completo, use a função FULLTEXTCATALOGPROPERTY com o valor da propriedade **accentsensitivity** em *catalog_name*. Se a função retornar '1', o catálogo de texto completo diferencia acentuação; se a função retornar '0', o catálogo não diferencia acentuação.  
   
  O padrão de diferenciação de acentuação do catálogo e do banco de dados é o mesmo.  
   
  REORGANIZE  
- Informa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um *a mesclagem mestra*, que envolve a mesclagem dos índices menores criados no processo de indexação em um índice grande. Mesclar os fragmentos de índice de texto completo pode melhorar o desempenho e liberar recursos de disco e memória. Se houver alterações frequentes no catálogo de texto completo, use este comando periodicamente para reorganizar o catálogo de texto completo.  
+ Diz para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executar uma *mesclagem mestra*, que envolve a mesclagem dos índices menores criados no processo de indexação em um índice grande. A mesclagem dos fragmentos de índice de texto completo pode melhorar o desempenho e liberar recursos de memória e disco. Se houver alterações frequentes no catálogo de texto completo, use este comando periodicamente para reorganizar o catálogo de texto completo.  
   
  REORGANIZE também otimiza o índice interno e as estruturas do catálogo.  
   
@@ -79,7 +79,7 @@ ALTER FULLTEXT CATALOG catalog_name
  Especifica que este catálogo é o padrão. Quando forem criados índices de texto completo sem nenhum catálogo especificado, o catálogo padrão será usado. Se houver um catálogo de texto completo padrão, a configuração de AS DEFAULT para este catálogo substituirá o padrão existente.  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ter a permissão ALTER no catálogo de texto completo ou ser um membro do **db_owner**, **db_ddladmin** fixa funções de banco de dados ou função de servidor fixa sysadmin.  
+ O usuário deve ter permissão ALTER no catálogo de texto completo ou ser um membro das funções de banco de dados fixas **db_owner**, **db_ddladmin** ou da função de servidor fixa sysadmin.  
   
 > [!NOTE]  
 >  Para usar ALTER FULLTEXT CATALOG AS DEFAULT, o usuário deve ter permissão ALTER no catálogo de texto completo e permissão CREATE FULLTEXT CATALOG no banco de dados.  
@@ -100,10 +100,10 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [CRIAR o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [REMOVER o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)  
   
   

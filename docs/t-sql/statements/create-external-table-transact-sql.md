@@ -28,29 +28,35 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Cria uma tabela externa PolyBase que faz referência a dados armazenados em um cluster de Hadoop ou armazenamento de BLOBs do Azure. Também pode ser usado para criar uma tabela externa para [consulta de banco de dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+  Cria uma tabela externa para consultas do PolyBase ou do Banco de Dados Elástico. Dependendo do cenário, a sintaxe poderá variar consideravelmente. Uma tabela externa criada para o PolyBase não pode ser usada para consultas de Banco de Dados Elástico.  Da mesma forma, uma tabela externa criada para consultas do Banco de Dados Elástico não pode ser usada para o PolyBase, etc. 
+  
+> [!NOTE]  
+>  O PolyBase é compatível apenas com o SQL Server 2016 (ou superior), o SQL Data Warehouse do Azure e o Parallel Data Warehouse. As consultas do Banco de Dados Elástico são compatíveis apenas com o Banco de Dados SQL do Azure v12 ou posterior.  
+
+
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tabelas externas para acessar dados armazenados em um cluster Hadoop ou no Armazenamento de Blobs do Azure ou uma tabela externa do PolyBase que referencia os dados armazenados em um cluster Hadoop ou no Armazenamento de Blobs do Azure. Também pode ser usado para criar uma tabela externa para uma [consulta de Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  Use uma tabela externa para:  
   
--   Consultar dados de armazenamento de blob do Azure ou Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções.  
+-   Consulte dados do Hadoop ou do Armazenamento de Blobs do Azure com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   Importar e armazenar dados de armazenamento de BLOBs do Azure ou Hadoop em seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
+-   Importe e armazene dados do Hadoop ou do Armazenamento de Blobs do Azure no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Criar uma tabela externa para uso com um banco de dados Elástico  
-     consulta.  
+-   Criar uma tabela externa para uso com uma consulta  
+     do Banco de Dados Elástico.  
      
-- Importar e armazenar dados do repositório Azure Data Lake no Azure SQL Data Warehouse
+- Importar e armazenar dados do Azure Data Lake Store no SQL Data Warehouse do Azure
   
- Consulte também [criar fonte de dados externa &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) e [Remover tabela externa &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-external-table-transact-sql.md).  
+ Consulte também [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -137,195 +143,195 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* . [ schema_name ] . | schema_name. ] *table_name*  
- Um a três - parte nome da tabela para criar. Para uma tabela externa, apenas os metadados da tabela são armazenados no SQL com estatísticas básicas sobre o arquivo e/ou pasta referenciado no armazenamento de BLOBs do Azure ou Hadoop. Nenhum dado real é movido ou armazenado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *database_name*. [ schema_name ]. | schema_name. ] *table_name*  
+ O nome de uma a três partes da tabela a ser criada. Para uma tabela externa, apenas os metadados da tabela são armazenados no SQL, junto com estatísticas básicas sobre o arquivo e/ou a pasta referenciada no Hadoop ou no Armazenamento de Blobs do Azure. Nenhum dado real é movido ou armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE permite que uma ou mais definições de coluna. CREATE EXTERNAL TABLE e CREATE TABLE usam a mesma sintaxe para definir uma coluna. Uma exceção a isso, você não pode usar a restrição padrão em tabelas externas. Para obter detalhes completos sobre definições de coluna e seus tipos de dados, consulte [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) e [criar tabela no banco de dados SQL do Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE permite uma ou mais definições de coluna. CREATE EXTERNAL TABLE e CREATE TABLE usam a mesma sintaxe para definir uma coluna. Uma exceção a isso é o fato de que não é possível usar a DEFAULT CONSTRAINT em tabelas externas. Para obter detalhes completos sobre definições de coluna e seus tipos de dados, consulte [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [CREATE TABLE no Banco de Dados SQL do Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- As definições de coluna, incluindo o número de colunas e tipos de dados deve corresponder aos dados dos arquivos externos. Se houver uma incompatibilidade, as linhas do arquivo serão rejeitadas ao consultar os dados reais.  
+ As definições de coluna, incluindo os tipos de dados e o número de colunas, devem corresponder aos dados nos arquivos externos. Se houver uma incompatibilidade, as linhas do arquivo serão rejeitadas durante a consulta dos dados reais.  
   
- Para tabelas externas que fazem referência a arquivos em fontes de dados externas, as definições de coluna e tipo devem mapear para o esquema exato do arquivo externo. Ao definir os tipos de dados que fazem referência a dados armazenados no Hive do Hadoop, use os seguintes mapeamentos entre tipos de dados SQL e o Hive e converter do tipo em um tipo de dados SQL ao selecionar a partir dele. Os tipos incluem todas as versões do Hive, a menos que indicado de outra forma.
+ Para tabelas externas que referenciam arquivos em fontes de dados externas, as definições de coluna e tipo devem ser mapeadas para o esquema exato do arquivo externo. Ao definir tipos de dados que referenciam dados armazenados no Hadoop/Hive, use os mapeamentos a seguir entre tipos de dados SQL e Hive e converta o tipo em um tipo de dados SQL ao selecionar uma opção nele. Os tipos incluem todas as versões do Hive, a menos que indicado de outra forma.
 
 > [!NOTE]  
->  SQL Server não dá suporte para o Hive _infinito_ valor dos dados em qualquer conversão. PolyBase falhará com um erro de conversão de tipo de dados.
+>  O SQL Server não dá suporte ao valor de dados _infinity_ do Hive em uma conversão. O PolyBase falhará com um erro de conversão de tipo de dados.
 
 
-|Tipo de dados SQL|Tipo de dados .NET|Tipo de dados de hive|Tipo de dados Hadoop/Java|Comentários|  
+|Tipo de dados SQL|Tipo de dados .NET|Tipo de dados do Hive|Tipo de dados do Hadoop/Java|Comentários|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
-|tinyint|Byte|tinyint|ByteWritable|Para apenas números não assinados.|  
-|smallint|Int16|smallint|ShortWritable||  
-|int|Int32|int|IntWritable||  
-|bigint|Int64|bigint|LongWritable||  
+|TINYINT|Byte|TINYINT|ByteWritable|Apenas para números sem sinal.|  
+|SMALLINT|Int16|SMALLINT|ShortWritable||  
+|INT|Int32|INT|IntWritable||  
+|BIGINT|Int64|BIGINT|LongWritable||  
 |bit|Booliano|booleano|BooleanWritable||  
-|float|Double|double|DoubleWritable||  
-|real|Single|float|FloatWritable||  
+|FLOAT|Double|double|DoubleWritable||  
+|REAL|Single|FLOAT|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
-|smallmoney|Decimal|double|DoubleWritable||  
-|NCHAR|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|text||  
-|nvarchar|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
-|char|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
-|varchar|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
-|BINARY|Byte[]|BINARY|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
-|varbinary|Byte[]|BINARY|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
-|date|DateTime|timestamp|TimestampWritable||  
+|SMALLMONEY|Decimal|double|DoubleWritable||  
+|NCHAR|Cadeia de caracteres<br /><br /> Char[]|cadeia de caracteres|text||  
+|NVARCHAR|Cadeia de caracteres<br /><br /> Char[]|cadeia de caracteres|Texto||  
+|char|Cadeia de caracteres<br /><br /> Char[]|cadeia de caracteres|Texto||  
+|varchar|Cadeia de caracteres<br /><br /> Char[]|cadeia de caracteres|Texto||  
+|BINARY|Byte[]|BINARY|BytesWritable|Aplica-se ao Hive 0.8 e posterior.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Aplica-se ao Hive 0.8 e posterior.|  
+|Data|DateTime|timestamp|TimestampWritable||  
 |smalldatetime|DateTime|timestamp|TimestampWritable||  
 |datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
+|DATETIME|DateTime|timestamp|TimestampWritable||  
 |time|TimeSpan|timestamp|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|Aplica-se ao Hive0.11 e posterior.|  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Aplica-se ao Hive 0.11 e posterior.|  
   
- LOCATION =  '*folder_or_filepath*'  
- Especifica a pasta ou o caminho do arquivo e o nome de arquivo para os dados reais no armazenamento de BLOBs do Azure ou Hadoop. Inicia o local da pasta raiz; a pasta raiz é o local de dados especificado na fonte de dados externa.  
+ LOCATION = '*folder_or_filepath*'  
+ Especifica a pasta ou o caminho do arquivo e o nome de arquivo para os dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local começa na pasta raiz; a pasta raiz é o local de dados especificado na fonte de dados externa.  
   
- Se você especificar o local para uma pasta, uma consulta do PolyBase que seleciona da tabela externa recuperará os arquivos da pasta e todas as suas subpastas. Assim como Hadoop, PolyBase não retorna as pastas ocultas. Ele também não retornar os arquivos para o qual o nome do arquivo começa com um sublinhado (_) ou um ponto (.).  
+ Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyBase que seleciona por meio da tabela externa recuperará os arquivos da pasta e todas as suas subpastas. Assim como o Hadoop, o PolyBase não retorna pastas ocultas. Ele também não retorna arquivos dos quais o nome do arquivo começa com um sublinhado (_) ou um ponto final (.).  
   
- Neste exemplo, se local = 'webdata /', uma consulta do PolyBase retornará linhas de mydata.txt e mydata2.txt.  Ela não retornará mydata3.txt porque ela é uma subpasta de uma pasta oculta. Ela não retornará _hidden.txt porque ele é um arquivo oculto.  
+ Neste exemplo, se 'LOCATION='/webdata/', uma consulta do PolyBase retornará linhas de mydata.txt e mydata2.txt.  Ele não retornará mydata3.txt porque ele é uma subpasta de uma pasta oculta. Ele não retornará _hidden.txt porque ele é um arquivo oculto.  
   
- ![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "dados recursivos para tabelas externas")  
+ ![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")  
   
- Para alterar o padrão e somente leitura na pasta raiz, defina o atributo \<polybase.recursive.traversal > como 'false' no arquivo de configuração Core-site.XML. Esse arquivo está localizado em `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
+ Para alterar o padrão e somente leitura da pasta raiz, defina o atributo \<polybase.recursive.traversal> como 'false' no arquivo de configuração core-site.xml. Esse arquivo está localizado em `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
  DATA_SOURCE = *external_data_source_name*  
- Especifica o nome da fonte de dados externa que contém o local dos dados externos. Esse local é o armazenamento de BLOBs do Azure ou um Hadoop. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Especifica o nome da fonte de dados externa que contém o local dos dados externos. Esse local é o Hadoop ou o Armazenamento de Blobs do Azure. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
- Especifica o nome do objeto de formato de arquivo externo que armazena o método de compactação e o tipo de arquivo para os dados externos. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ Especifica o nome do objeto de formato de arquivo externo que armazena o tipo de arquivo e o método de compactação para os dados externos. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
- Rejeitar opções  
- Você pode especificar parâmetros de rejeitar que determinam como manipulará PolyBase *sujas* registra recupera da fonte de dados externa. Um registro de dados é considerado 'sujos' se ele tipos de dados real ou o número de colunas não correspondem as definições de coluna da tabela externa.  
+ Opções de rejeição  
+ Especifique parâmetros de rejeição que determinam como o PolyBase manipulará registros *sujos* recuperados da fonte de dados externa. Um registro de dados é considerado 'sujo' se os tipos de dados reais ou o número de colunas não correspondem às definições de coluna da tabela externa.  
   
- Quando você não especificar ou alterar os valores de rejeitar, PolyBase usa valores padrão. Essas informações sobre os parâmetros de rejeitar são armazenadas como metadados adicionais quando você cria uma tabela externa com a instrução CREATE EXTERNAL TABLE.   Quando uma instrução SELECT futuras ou selecione INTO SELECT seleciona dados da tabela externa, o PolyBase usará as opções de rejeitar para determinar o número ou porcentagem de linhas que pode ser rejeitada antes que a consulta real falhe. . A consulta retornará resultados (parciais) até que o limite de rejeição for excedido; em seguida, falha com a mensagem de erro apropriado.  
+ Quando você não especifica nem altera os valores de rejeição, o PolyBase usa valores padrão. Essas informações sobre os parâmetros de rejeição são armazenadas como metadados adicionais quando você cria uma tabela externa com a instrução CREATE EXTERNAL TABLE.   Quando uma instrução SELECT futura ou instrução INTO SELECT selecionar dados da tabela externa, o PolyBase usará as opções de rejeição para determinar o número ou o percentual de linhas que pode ser rejeitado antes que a consulta real falhe. para obter informações sobre a ferramenta de configuração e recursos adicionais. A consulta retornará resultados (parciais) até que o limite de rejeição seja excedido; em seguida, ela falhará com a mensagem de erro apropriada.  
   
- REJECT_TYPE = **valor** | porcentagem  
- Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou uma porcentagem.  
+ REJECT_TYPE = **value** | percentage  
+ Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.  
   
  value  
- REJECT_VALUE é um valor literal, não uma porcentagem. A consulta do PolyBase falhará quando excede o número de linhas rejeitadas *reject_value*.  
+ REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value*.  
   
- Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = valor, o PolyBase consulta SELECT falhará após 5 linhas foram rejeitadas.  
+ Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, a consulta SELECT do PolyBase falhará depois de 5 linhas serem rejeitadas.  
   
  percentage  
- REJECT_VALUE é uma porcentagem, não é um valor literal. Uma consulta do PolyBase falhará quando o *porcentagem* de linhas com falha excede *reject_value*. A porcentagem de linhas com falha é calculada em intervalos.  
+ REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.  
   
  REJECT_VALUE = *reject_value*  
- Especifica o valor ou a porcentagem de linhas que pode ser rejeitada antes que a consulta falhe.  
+ Especifica o valor ou o percentual de linhas que pode ser rejeitado antes da falha da consulta.  
   
  Para REJECT_TYPE = value, *reject_value* deve ser um inteiro entre 0 e 2.147.483.647.  
   
- Para REJECT_TYPE = porcentagem, *reject_value* deve ser um flutuante entre 0 e 100.  
+ Para REJECT_TYPE = percentage, *reject_value* deve ser um float entre 0 e 100.  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
- Esse atributo é necessário quando você especificar REJECT_TYPE = porcentagem. Determina o número de linhas para tentar recuperar antes que o PolyBase recalcula a porcentagem de linhas rejeitadas.  
+ Esse atributo é obrigatório quando você especifica REJECT_TYPE = percentage. Ele determina o número de linhas de tentativa de recuperação antes que o PolyBase recalcule a percentual de linhas rejeitadas.  
   
- O *reject_sample_value* parâmetro deve ser um inteiro entre 0 e 2.147.483.647.  
+ O parâmetro *reject_sample_value* deve ser um inteiro entre 0 e 2.147.483.647.  
   
- Por exemplo, se REJECT_SAMPLE_VALUE = 1000, PolyBase irá calcular a porcentagem de linhas com falha depois que ele tentou importar 1000 linhas do arquivo de dados externa. Se a porcentagem de linhas com falha for menor que *reject_value*, PolyBase tentará recuperar outro 1000 linhas. Ela continua a recalcular a porcentagem de linhas com falha quando ele tenta importar cada 1000 linhas adicionais.  
+ Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.  
   
 > [!NOTE]  
->  Desde que o PolyBase calcula a porcentagem de linhas com falha em intervalos, a porcentagem real de linhas com falha pode exceder *reject_value*.  
+>  Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.  
   
  Exemplo:  
   
- Este exemplo mostra como as três opções de rejeitar interagem entre si. Por exemplo, se REJECT_TYPE = porcentagem, REJECT_VALUE = 30 e REJECT_SAMPLE_VALUE = 100, o cenário a seguir pode ocorrer:  
+ Este exemplo mostra como as três opções REJECT interagem. Por exemplo, se REJECT_TYPE = percentage, REJECT_VALUE = 30 e REJECT_SAMPLE_VALUE = 100, o seguinte cenário poderá ocorrer:  
   
--   PolyBase tenta recuperar as primeiras 100 linhas; 25 falharão e 75 bem-sucedida.  
+-   O PolyBase tenta recuperar as 100 primeiras linhas; 25 falharão e 75 serão bem-sucedidas.  
   
--   Porcentagem de linhas com falha é calculada como 25%, que é menor que o valor de rejeição de 30%. Portanto, PolyBase continuará a recuperar dados da fonte de dados externa.  
+-   O percentual de linhas com falha é calculado como 25%, que é menor que o valor de rejeição de 30%. Portanto, o PolyBase continuará recuperando dados da fonte de dados externa.  
   
--   PolyBase tenta carregar as próximo de 100 linhas; Esse tempo 25 êxito e falha de 75.  
+-   O PolyBase tenta carregar as próximas 100 linhas; agora, 25 são bem-sucedidas e 75 falham.  
   
--   Porcentagem de linhas com falha é recalculada como 50%. A porcentagem de linhas com falha excedeu o valor de rejeição de 30%.  
+-   O percentual de linhas com falha é recalculado como 50%. O percentual de linhas com falha excedeu o valor de rejeição de 30%.  
   
--   A consulta do PolyBase falhará com 50% rejeitadas linhas depois de tentar retornar as primeiras 200 linhas. Observe que as linhas correspondentes foram retornadas antes que a consulta do PolyBase detecta que excedeu o limite de rejeição.  
+-   A consulta do PolyBase falha com 50% de linhas rejeitadas depois de tentar retornar as 200 primeiras linhas. Observe que as linhas correspondentes foram retornadas antes de a consulta do PolyBase detectar que o limite de rejeição foi excedido.  
   
  Opções de tabela externa fragmentada  
- Especifica a fonte de dados externa (uma fonte de dados do SQL Server) e um método de distribuição para o [consulta de banco de dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+ Especifica a fonte de dados externa (uma fonte de dados não SQL Server) e um método de distribuição para a [consulta do Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  DATA_SOURCE  
- Uma fonte de dados externa, como os dados armazenados em um sistema de arquivos Hadoop, o armazenamento de BLOBs do Azure, ou um [Gerenciador do mapa de fragmentos](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).  
+ Uma fonte de dados externa, como os dados armazenados em um Sistema de Arquivos Hadoop, no Armazenamento de Blobs do Azure ou em um [gerenciador de mapa de fragmentos](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).  
   
  SCHEMA_NAME  
- A cláusula SCHEMA_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela em um esquema diferente do banco de dados remoto. Use isto para resolver a ambiguidade entre os esquemas que existem no locais e remotos bancos de dados.  
+ A cláusula SCHEMA_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela em um esquema diferente no banco de dados remoto. Use isto para remover a ambiguidade entre os esquemas que existem nos bancos de dados locais e remotos.  
   
  OBJECT_NAME  
- A cláusula OBJECT_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela com um nome diferente do banco de dados remoto. Use isto para resolver a ambiguidade entre os nomes de objeto que existem no locais e remotos bancos de dados.  
+ A cláusula OBJECT_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela com um nome diferente no banco de dados remoto. Use isto para remover a ambiguidade entre os nomes de objetos que existem nos bancos de dados locais e remotos.  
   
- DISTRIBUIÇÃO  
- Opcional. Isso só é necessário apenas para bancos de dados do tipo SHARD_MAP_MANAGER. Isso controla se uma tabela é tratada como uma tabela fragmentada ou uma tabela replicada. Com **SHARDED** (*nome de coluna*) tabelas, os dados de tabelas diferentes não se sobrepõem. **REPLICADAS** Especifica que as tabelas têm os mesmos dados em cada fragmento. **ROUND_ROBIN** indica que um método específico do aplicativo é usado para distribuir os dados.  
+ DISTRIBUTION  
+ Opcional. Isso é necessário apenas para bancos de dados do tipo SHARD_MAP_MANAGER. Isso controla se uma tabela é tratada como uma tabela fragmentada ou uma tabela replicada. Com tabelas **SHARDED** (*column name*), os dados de tabelas diferentes não se sobrepõem. **REPLICATED** especifica que as tabelas têm os mesmos dados em cada fragmento. **ROUND_ROBIN** indica que um método específico ao aplicativo é usado para distribuir os dados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer estas permissões de usuário:  
+ Exige estas permissões de usuário:  
   
 -   **CREATE TABLE**  
   
--   **ALTERAR QUALQUER ESQUEMA**  
+-   **ALTER ANY SCHEMA**  
   
--   **ALTERAR QUALQUER FONTE DE DADOS EXTERNA**  
+-   **ALTER ANY EXTERNAL DATA SOURCE**  
   
--   **ALTERAR QUALQUER FORMATO DE ARQUIVO EXTERNO**  
+-   **ALTER ANY EXTERNAL FILE FORMAT**  
 
--   **BANCO DE DADOS DE CONTROLE**
+-   **CONTROL DATABASE**
   
- Observe que o logon que cria a fonte de dados externa deve ter permissão para leitura e gravação para a fonte de dados externa, localizada no armazenamento de BLOBs do Azure ou Hadoop.  
+ Observe que o logon que cria a fonte de dados externa deve ter a permissão de leitura e gravação na fonte de dados externa, localizada no Hadoop ou no Armazenamento de Blobs do Azure.  
 
 
  > [!IMPORTANT]  
 
->  A permissão ALTER ANY EXTERNAL DATA SOURCE concede qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais de banco de dados com escopo no banco de dados. Essa permissão deve ser considerada como altamente privilegiada e, portanto, deve ser concedida somente para entidades confiáveis no sistema.
+>  A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais no escopo do banco de dados no banco de dados. Essa permissão precisa ser considerada como altamente privilegiada e, portanto, ser concedida somente para entidades de segurança confiáveis no sistema.
 
 ## <a name="error-handling"></a>Tratamento de erros  
- Ao executar a instrução CREATE EXTERNAL TABLE, o PolyBase tenta se conectar à fonte de dados externa. Se a tentativa de conexão falhar, a instrução falhará e a tabela externa não será criada. Pode levar um minuto ou mais para o comando falha porque o PolyBase tentativas de conexão antes de falhar, eventualmente, a consulta.  
+ Ao executar a instrução CREATE EXTERNAL TABLE, o PolyBase tenta se conectar à fonte de dados externa. Se a tentativa de conexão falhar, a instrução falhará e a tabela externa não será criada. Pode levar um minuto ou mais para que o comando falhe, porque o PolyBase tenta a conexão novamente antes de, no fim, falhar a consulta.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Em cenários de consulta ad hoc, ou seja, selecione da tabela externa, o PolyBase armazena as linhas recuperadas da fonte de dados externa em uma tabela temporária. Após a conclusão da consulta, o PolyBase remove e exclui a tabela temporária. Nenhum dado permanente é armazenado em tabelas do SQL.  
+ Em cenários de consulta ad hoc, ou seja, SELECT FROM EXTERNAL TABLE, o PolyBase armazena as linhas recuperadas da fonte de dados externa em uma tabela temporária. Após a conclusão da consulta, o PolyBase remove e exclui a tabela temporária. Nenhum dado permanente é armazenado em tabelas SQL.  
   
- Por outro lado, o cenário de importação, ou seja, selecione em da tabela externa, o PolyBase armazena as linhas recuperadas da fonte de dados externa como permanente de dados na tabela SQL. A nova tabela é criada durante a execução de consulta quando Polybase recupera os dados externos.  
+ Por outro lado, no cenário de importação, ou seja, SELECT INTO FROM EXTERNAL TABLE, o PolyBase armazena as linhas recuperadas da fonte de dados externa como dados permanentes na tabela SQL. A nova tabela é criada durante a execução de consulta quando o Polybase recupera os dados externos.  
   
- PolyBase pode enviar alguns da computação de consulta para Hadoop para melhorar o desempenho da consulta. Isso é chamado de aplicação de predicado. Para habilitar isso, especifique a opção de local do Gerenciador de recursos Hadoop no [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ O PolyBase pode enviar por push uma parte da computação de consulta para o Hadoop para melhorar o desempenho da consulta. Isso é chamado de aplicação de predicado. Para habilitar isso, especifique a opção de local do gerenciador de recursos do Hadoop em [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
- Você pode criar várias tabelas externas que fazem referência a fontes de dados externas iguais ou diferentes.  
+ Você pode criar várias tabelas externas que referenciam as mesmas fontes de dados externas ou fontes diferentes.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- CTP2, a funcionalidade de exportação não tem suporte, ou seja, permanentemente armazenar dados do SQL na fonte de dados externa. Essa funcionalidade estará disponível no CTP3.  
+ No CTP2, a funcionalidade de exportação, ou seja, o armazenamento permanente de dados do SQL na fonte de dados externa não é compatível. Essa funcionalidade estará disponível no CTP3.  
   
- Como os dados para uma tabela externa residem fora do dispositivo, não está sob controle do PolyBase e pode ser alterada ou removida a qualquer momento por um processo externo. Por isso, os resultados de consulta em uma tabela externa não há garantia ser determinística. A mesma consulta pode retornar resultados diferentes cada vez que ele é executado em uma tabela externa. Da mesma forma, uma consulta pode falhar se os dados externos são removidos ou realocados.  
+ Como os dados de uma tabela externa residem fora do dispositivo, eles não estão sob o controle do PolyBase e podem ser alterados ou removidos a qualquer momento por um processo externo. Por isso, não há garantia de que os resultados da consulta em uma tabela externa sejam determinísticos. A mesma consulta pode retornar resultados diferentes a cada vez que ela é executada em uma tabela externa. Da mesma forma, uma consulta pode falhar se os dados externos são removidos ou realocados.  
   
- Você pode criar várias tabelas externas que cada referência a fontes de dados externas diferentes. No entanto, se você executar consultas simultaneamente em diferentes fontes de dados do Hadoop, cada fonte de Hadoop deve usar a mesma configuração de configuração do servidor de 'conectividade do hadoop'. Por exemplo, você não pode executar simultaneamente uma consulta em relação a um cluster Cloudera Hadoop e um cluster Hortonworks Hadoop desde que essas configurações diferentes de uso. Para parâmetros de configuração e combinações com suporte, consulte [configuração do PolyBase &#40; Transact-SQL &#41; ](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+ Você pode criar várias tabelas externas que referenciam fontes de dados externas diferentes. No entanto, se você executar consultas simultaneamente em diferentes fontes de dados do Hadoop, cada fonte do Hadoop deverá usar a mesma definição de configuração do servidor 'hadoop connectivity'. Por exemplo, não é possível executar simultaneamente uma consulta em um cluster Cloudera Hadoop e um cluster Hortonworks Hadoop, pois eles usam configurações diferentes. Para obter definições de configuração e combinações compatíveis, consulte [Configuração de conectividade do PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
- Somente essas instruções de linguagem de definição de dados (DDL) são permitidas em tabelas externas:  
+ Somente estas instruções DDL (linguagem de definição de dados) são permitidas em tabelas externas:  
   
 -   CREATE TABLE e DROP TABLE  
   
--   CRIAR estatísticas e DROP STATISTICS  
-Observação: Criar e remover estatísticas em tabelas externas não têm suporte no banco de dados do SQL Azure. 
+-   CREATE STATISTICS e DROP STATISTICS  
+Observação: CREATE e DROP STATISTICS não são permitidas em tabelas externas no Banco de Dados SQL do Azure. 
   
--   Criar modo de exibição e DROP VIEW  
+-   CREATE VIEW e DROP VIEW  
   
- Construções e operações sem suporte:  
+ Constructos e operações não compatíveis:  
   
--   A restrição padrão em colunas de tabela externa  
+-   A restrição DEFAULT em colunas de tabela externa  
   
--   Operações do Data Manipulation Language (DML) de delete, insert e update  
+-   Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização  
   
- Limitações de consulta:  
+ Limitações da consulta:  
   
- PolyBase pode consumir um máximo de 33 k de arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em relação a pastas no HDFS que contêm mais de 33 k de arquivos. É recomendável que você mantenha caminhos de arquivo externo curtos e usa não mais do que 30 k de arquivos por pasta HDFS. Quando há muitos arquivos são referenciados, pode ocorrer uma exceção de falta de memória da máquina Virtual Java (JVM).  
+ O PolyBase pode consumir um máximo de 33 mil arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta do HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em pastas do HDFS que contêm mais de 33 mil arquivos. Recomendamos que você mantenha os caminhos de arquivo externo curtos e use, no máximo, 30 mil arquivos por pasta do HDFS. Quando muitos arquivos são referenciados, pode ocorrer uma exceção de memória insuficiente da JVM (Máquina Virtual Java).  
 
-Limitações de largura de tabela: PolyBase no SQL Server 2016 tem um limite de largura de linha de 32KB, com base no tamanho máximo de uma única linha válido por definição de tabela. Se a soma do esquema de coluna for maior do que 32KB, o PolyBase não poderão consultar os dados. 
+Limitações de largura de tabela: o PolyBase no SQL Server 2016 tem um limite de largura de linha de 32 KB, com base no tamanho máximo de uma única linha válida por definição de tabela. Se a soma do esquema de coluna for maior que 32 KB, o PolyBase não poderá consultar os dados. 
 
-No SQL Data Warehouse, essa limitação foi aumentada para 1MB.
+No SQL Data Warehouse, essa limitação foi aumentada para 1 MB.
 
 
 ## <a name="locking"></a>Bloqueio  
- Compartilhado bloqueio no objeto SCHEMARESOLUTION.  
+ Bloqueio compartilhado no objeto SCHEMARESOLUTION.  
   
 ## <a name="security"></a>Segurança  
- Os arquivos de dados para uma tabela externa é armazenado no armazenamento de BLOBs do Azure ou Hadoop. Esses arquivos de dados são criados e gerenciados por seus próprios processos. É sua responsabilidade de gerenciar a segurança dos dados externos.  
+ Os arquivos de dados para uma tabela externa são armazenados no Hadoop ou no Armazenamento de Blobs do Azure. Esses arquivos de dados são criados e gerenciados por seus próprios processos. É sua responsabilidade gerenciar a segurança dos dados externos.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. Crie uma tabela externa com dados em formato delimitado por texto.  
- Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tenha dados formatados em arquivos de texto delimitado. Define uma fonte de dados externa *minhaFonteDeDados* e um formato de arquivo externo *myfileformat*. Esses objetos de nível de banco de dados, em seguida, são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) e [criar formato de arquivo externo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. Crie uma tabela externa com os dados em um formato delimitado por texto.  
+ Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados em arquivos delimitados por texto. Ele define uma fonte de dados externa *mydatasource* e um formato de arquivo externo *myfileformat*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -355,8 +361,8 @@ WITH (
   
 ```  
   
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Crie uma tabela externa com dados no formato RCFile.  
- Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tenha dados formatados como RCFiles. Define uma fonte de dados externa *mydatasource_rc* e um formato de arquivo externo *myfileformat_rc*. Esses objetos de nível de banco de dados, em seguida, são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) e [criar formato de arquivo externo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Crie uma tabela externa com os dados no formato RCFile.  
+ Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados como RCFiles. Ele define uma fonte de dados externa *mydatasource_rc* e um formato de arquivo externo *myfileformat_rc*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -387,8 +393,8 @@ WITH (
   
 ```  
   
-### <a name="c-create-an-external-table-with-data-in-orc-format"></a>C. Crie uma tabela externa com dados no formato ORC.  
- Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tenha dados formatados como arquivos ORC. Ele define um mydatasource_orc de fonte de dados externa e um myfileformat_orc de formato de arquivo externo. Esses objetos de nível de banco de dados, em seguida, são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) e [criar formato de arquivo externo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+### <a name="c-create-an-external-table-with-data-in-orc-format"></a>C. Crie uma tabela externa com os dados no formato ORC.  
+ Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados como arquivos ORC. Ele define uma fonte de dados externa mydatasource_orc e um formato de arquivo externo myfileformat_orc. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para obter mais informações, consulte [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -419,16 +425,16 @@ WITH (
   
 ```  
   
-### <a name="d-querying-hadoop-data"></a>D. Consultar dados do Hadoop  
- Sequência de cliques é uma tabela externa que se conecta ao arquivo de texto delimitado employee.tbl em um cluster Hadoop. A consulta a seguir se parece com uma consulta em uma tabela padrão. No entanto, essa consulta recupera dados do Hadoop e, em seguida, calcula o ocorrerá.  
+### <a name="d-querying-hadoop-data"></a>D. Consultando dados do Hadoop  
+ Clickstream é uma tabela externa que se conecta ao arquivo de texto delimitado employee.tbl em um cluster Hadoop. A consulta a seguir se parece com uma consulta em uma tabela padrão. No entanto, essa consulta recupera dados do Hadoop e, em seguida, calcula os resultados.  
   
 ```  
 SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx'  
 ;  
 ```  
   
-### <a name="e-join-hadoop-data-with-sql-data"></a>E. Unir dados Hadoop com dados do SQL  
- Essa consulta se parece com uma associação padrão em duas tabelas SQL. A diferença é que o PolyBase recupera os dados de sequência de cliques do Hadoop e une-o para a tabela UrlDescription. Uma tabela é uma tabela externa e a outra é uma tabela SQL padrão.  
+### <a name="e-join-hadoop-data-with-sql-data"></a>E. Unir dados do Hadoop a dados do SQL  
+ Essa consulta se parece com um JOIN padrão em duas tabelas SQL. A diferença é que o PolyBase recupera os dados de Clickstream do Hadoop e, em seguida, une-os na tabela UrlDescription. Uma tabela é uma tabela externa e a outra é uma tabela SQL padrão.  
   
 ```  
 SELECT url.description  
@@ -438,8 +444,8 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. Importar dados do Hadoop em uma tabela SQL  
- Este exemplo cria uma nova tabela ms_user do SQL que armazena o resultado de uma junção entre a tabela SQL padrão *usuário* e a tabela externa *ClickStream*.  
+### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. Importar dados do Hadoop para uma tabela SQL  
+ Este exemplo cria uma nova tabela SQL ms_user que armazena permanentemente o resultado de uma junção entre a tabela SQL padrão *user* e a tabela externa *ClickStream*.  
   
 ```  
 SELECT DISTINCT user.FirstName, user.LastName  
@@ -452,8 +458,8 @@ ON user.user_ip = ms.user_ip
   
 ```  
   
-### <a name="g-create-an-external-table-for-a-sharded-data-source"></a>G. Crie uma tabela externa para uma fonte de dados fragmentados  
- Este exemplo remapeia uma DMV remoto para uma tabela externa usando as cláusulas SCHEMA_NAME e OBJECT_NAME.  
+### <a name="g-create-an-external-table-for-a-sharded-data-source"></a>G. Criar uma tabela externa para uma fonte de dados fragmentada  
+ Este exemplo remapeia uma DMV remota para uma tabela externa usando as cláusulas SCHEMA_NAME e OBJECT_NAME.  
   
 ```  
 CREATE EXTERNAL TABLE [dbo].[all_dm_exec_requests]([session_id] smallint NOT NULL,  
@@ -474,9 +480,9 @@ WITH
 );   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. Importação de dados do ADLS no Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. Importando dados do ADLS para o Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -532,7 +538,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="j-join-hdfs-data-with-pdw-data"></a>J. Unir dados HDFS com dados do PDW  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. Unir dados do HDFS a dados do PDW  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -542,7 +548,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. Importar dados de linha de HDFS para uma tabela distribuída do PDW  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. Importar dados de linha do HDFS para uma Tabela distribuída do PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -551,7 +557,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. Importar dados de linha de HDFS para uma tabela replicada do PDW  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. Importar dados de linha do HDFS para uma Tabela replicada do PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -561,12 +567,12 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos comuns de consulta de metadados (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [Criar tabela como SELECT &#40; Depósito de dados SQL do Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
+ [CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
 

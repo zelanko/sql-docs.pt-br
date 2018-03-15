@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna a dimensão máxima de um **geografia** instância.  
+  Retorna a dimensão máxima de uma instância de **geography**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **int**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- STDimension() retornará -1 se o **geografia** instância está vazia.  
+ STDimension() retorna -1 se a instância de **geography** está vazia.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `STDimension()` para criar uma variável de tabela para manter `geography` instâncias e insere um `Point`, um `LineString`e um `Polygon`.  
+ O exemplo a seguir usa `STDimension()` para criar uma variável de tabela para armazenar instâncias de `geography` e insere um `Point`, uma `LineString`, e um `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- O exemplo retorna as dimensões de cada `geography`instância.  
+ Em seguida, o exemplo retorna as dimensões de cada instância de `geography`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Ponto|0|  
 |LineString|1|  
-|Polígono|2|  
+|Polygon|2|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

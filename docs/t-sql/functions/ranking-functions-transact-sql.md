@@ -1,5 +1,5 @@
 ---
-title: "Funções (Transact-SQL) de classificação | Microsoft Docs"
+title: "Funções de classificação (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
   
 ## <a name="examples"></a>Exemplos  
- A seguir, mostramos as quatro funções de classificação usadas na mesma consulta. Para obter exemplos específicos de função, consulte cada função de classificação.  
+ A seguir, mostramos as quatro funções de classificação usadas na mesma consulta. Para obter exemplos específicos a uma função, veja cada função de classificação.  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,8 +82,8 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Jae|Pak|12|6|2|4|5015682.3752|98055|  
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [SOBRE cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

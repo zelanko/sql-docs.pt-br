@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="predicates"></a>Predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  É uma expressão avaliada como TRUE, FALSE ou UNKNOWN. Os predicados são usados no critério de pesquisa de [onde](../../t-sql/queries/where-transact-sql.md) cláusulas e [HAVING](../../t-sql/queries/select-having-transact-sql.md) cláusulas, as condições de junção de [FROM](../../t-sql/queries/from-transact-sql.md) cláusulas e outras construções em que é um valor booleano Necessário.  
+  É uma expressão avaliada como TRUE, FALSE ou UNKNOWN. Os predicados são usados no critério de pesquisa das cláusulas [WHERE](../../t-sql/queries/where-transact-sql.md) e [HAVING](../../t-sql/queries/select-having-transact-sql.md), nas condições de junção das cláusulas [FROM](../../t-sql/queries/from-transact-sql.md) e em outras construções em que um valor booliano é necessário.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes predicados.  
@@ -49,11 +49,11 @@ ms.lasthandoff: 01/25/2018
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
 |[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Critério de pesquisa &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
+ [Critério de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

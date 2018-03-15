@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Fornece estatísticas de uso do espaço do log de transações para todos os bancos de dados. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também pode ser usado para redefinir as estatísticas de espera e trava.
+Fornece estatísticas de uso do espaço do log de transações para todos os bancos de dados. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],ele também pode ser usado para redefinir as estatísticas de espera e de trava.
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([visualização em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,13 +62,13 @@ LOGSPACE
 Retorna o tamanho atual do log de transações e a porcentagem de espaço usado pelo log para cada banco de dados. Use essas informações para monitorar a quantidade de espaço usado em um log de transações.
 
 > [!IMPORTANT]
-> Para obter mais informações sobre informações de uso de espaço para o log de transações, começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consulte o [comentários](#Remarks) neste tópico.
+> Para obter mais informações sobre informações de uso de espaço para o log de transações, começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], veja a seção [Comentários](#Remarks) neste tópico.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-Zera as estatísticas de trava. Para obter mais informações, consulte [sys.DM os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Zera as estatísticas de trava. Para obter mais informações, confira [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
-Zera as estatísticas de espera. Para obter mais informações, consulte [sys.DM os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Zera as estatísticas de espera. Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
@@ -78,20 +78,20 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
   
 |Nome da coluna|Definição|  
 |---|---|
-|**Nome do Banco de Dados**|Nome do banco de dados da estatística de logs exibida.|  
+|**Database Name**|Nome do banco de dados da estatística de logs exibida.|  
 |**Tamanho do log (MB)**|Tamanho atual alocado ao log. Esse valor sempre é menor que a quantidade alocada originalmente para o espaço de log porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reserva uma quantidade pequena de espaço em disco para informações de cabeçalho internas.|  
-|**Espaço de log usado (%)**|Porcentagem do arquivo de log em uso para armazenar informações de log de transação no momento.|  
+|**Espaço de log usado (%)**|Percentual do arquivo de log em uso no momento para armazenar as informações do log de transações no momento.|  
 |**Status**|Status do arquivo de log. Sempre 0.|  
   
 ## <a name="Remarks"></a> Comentários  
-Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use o [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV em vez de `DBCC SQLPERF(LOGSPACE)`, para retornar informações de uso de espaço para o log de transação por banco de dados.    
+Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], é necessário usar a DMV (exibição de gerenciamento dinâmico) [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) em vez de `DBCC SQLPERF(LOGSPACE)` para retornar as informações de uso de espaço do log de transações por banco de dados.    
  
-O log de transações registra cada transação feita em um banco de dados. Para obter mais informações, consulte [o Log de transações &#40; SQL Server &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) e [arquitetura de Log de transações do SQL Server e guia de gerenciamento](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+O log de transações registra cada transação feita em um banco de dados. Para obter mais informações, confira [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Permissões  
-Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar `DBCC SQLPERF(LOGSPACE)` requer `VIEW SERVER STATE` permissão no servidor. Para redefinir as estatísticas de espera e trava requer `ALTER SERVER STATE` permissão no servidor.
+No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a execução de `DBCC SQLPERF(LOGSPACE)` requer a permissão `VIEW SERVER STATE` no servidor. Para redefinir as estatísticas de espera e trava, é necessária a permissão `ALTER SERVER STATE` no servidor.
   
-Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as camadas Premium requerem o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador. Não há suporte para reiniciar as estatísticas de espera e de trava.
+Nas camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], é necessária a permissão `VIEW DATABASE STATE` no banco de dados. Nas camadas Standard e Básica do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conta do administrador do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] é necessária. Não há suporte para reiniciar as estatísticas de espera e de trava.
   
 ## <a name="examples"></a>Exemplos  
   
@@ -122,7 +122,7 @@ O exemplo a seguir zera as estatísticas de espera da instância do [!INCLUDE[ss
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     

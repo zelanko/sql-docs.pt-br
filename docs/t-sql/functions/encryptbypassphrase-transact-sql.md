@@ -51,17 +51,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *frase secreta*  
+ *passphrase*  
  Uma frase secreta a partir da qual gerar uma chave simétrica.  
   
  @passphrase  
- Uma variável do tipo **nvarchar**, **char**, **varchar**, **binário**, **varbinary**, ou **nchar** contendo uma frase secreta da qual gerar uma chave simétrica.  
+ Uma variável do tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** contendo uma frase secreta da qual gerar uma chave simétrica.  
   
- *texto não criptografado*  
+ *cleartext*  
  O texto não criptografado a ser criptografado.  
   
  @cleartext  
- Uma variável do tipo **nvarchar**, **char**, **varchar**, **binário**, **varbinary**, ou **nchar** que contém o texto não criptografado. O tamanho máximo é 8.000 bytes.  
+ Uma variável do tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** contendo o texto não criptografado. O tamanho máximo é 8.000 bytes.  
   
  *add_authenticator*  
  Indica se um autenticador será criptografado junto com o texto não criptografado. 1 se um autenticador for adicionado. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica se um hash será criptografado junto com o texto não criptografado.  
   
- *autenticador*  
+ *authenticator*  
  Dados do qual derivar um autenticador. **sysname**.  
   
  @authenticator  
  Uma variável contendo dados a partir dos quais o autenticador será derivado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **varbinary** com tamanho máximo de 8.000 bytes.  
+ **varbinary** com no máximo 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma frase secreta é uma senha que inclui espaços. A vantagem de usar uma frase secreta é o fato de ser mais fácil lembrar uma frase ou sentença significativa do que uma cadeia de caracteres comparavelmente longa.  
   
  Esta função não verifica a complexidade da senha.  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

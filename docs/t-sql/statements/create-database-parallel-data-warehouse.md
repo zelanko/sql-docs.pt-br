@@ -1,5 +1,5 @@
 ---
-title: Criar banco de dados (Parallel Data Warehouse) | Microsoft Docs
+title: CREATE DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-database-parallel-data-warehouse"></a>Criar banco de dados (Parallel Data Warehouse)
+# <a name="create-database-parallel-data-warehouse"></a>CREATE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Cria um novo banco de dados em um [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo. Use esta instrução para criar todos os arquivos associados a um banco de dados do dispositivo e para definir as opções de aumento automático para as tabelas de banco de dados e log de transações e o tamanho máximo.  
+  Cria um novo banco de dados em um dispositivo [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use essa instrução para criar todos os arquivos associados a um banco de dados do dispositivo e para definir as opções de tamanho máximo e aumento automático para as tabelas de banco de dados e o log de transações.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,42 +45,42 @@ WITH (
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- O nome do novo banco de dados. Para obter mais informações sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" e "Nomes reservados do banco de dados" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ O nome do novo banco de dados. Para obter mais informações sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" e "Nomes de banco de dados reservados" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- AUMENTO AUTOMÁTICO = ON | **OFF**  
- Especifica se o *replicated_size*, *distributed_size*, e *log_size* parâmetros para este banco de dados crescerá automaticamente conforme necessário, além de seus especificado tamanhos. Valor padrão é **OFF**.  
+ AUTOGROW = ON | **OFF**  
+ Especifica se os parâmetros *replicated_size*, *distributed_size* e *log_size* para esse banco de dados aumentarão automaticamente, conforme necessário, além de seus tamanhos especificados. O valor padrão é **OFF**.  
   
- Se o crescimento automático for ON, *replicated_size*, *distributed_size*, e *log_size* crescerá como necessária (não em blocos do tamanho inicial especificado) com cada inserção de dados atualização ou outra ação que requer mais armazenamento que já foi alocado.  
+ Se AUTOGROW for ON, *replicated_size*, *distributed_size* e *log_size* aumentará conforme necessário (não em blocos do tamanho inicial especificado) com cada inserção de dados, atualização ou outra ação que exige mais armazenamento do que já foi alocado.  
   
- Se o crescimento automático for OFF, os tamanhos não crescerá automaticamente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]retornará um erro durante a tentativa de uma ação que requer *replicated_size*, *distributed_size*, ou *log_size* ultrapassar o valor especificado.  
+ Se AUTOGROW for OFF, os tamanhos não aumentarão automaticamente. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retornará um erro durante a tentativa de uma ação que exige que *replicated_size*, *distributed_size* ou *log_size* aumente além do valor especificado.  
   
- Aumento automático é ON para todos os tamanhos ou OFF para todos os tamanhos. Por exemplo, não é possível definir o crescimento automático ON para *log_size*, mas não defini-lo para *replicated_size*.  
+ AUTOGROW é ON ou OFF para todos os tamanhos. Por exemplo, não é possível definir AUTOGROW ON para *log_size*, mas não defini-lo para *replicated_size*.  
   
  *replicated_size* [ GB ]  
- Um número positivo. Define o tamanho (em gigabytes de número inteiro ou decimal) para o espaço total alocado para tabelas replicadas e os dados correspondentes *em cada nó de computação*. Para mínimo e máximo *replicated_size* requisitos, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Um número positivo. Define o tamanho (em gigabytes de inteiro ou decimal) para o espaço total alocado a tabelas replicadas e os dados correspondentes *em cada nó de Computação*. Para os requisitos de *replicated_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Se o crescimento automático for ON, tabelas replicadas terão permissão para crescer além desse limite.  
+ Se AUTOGROW for ON, as tabelas replicadas terão permissão para aumentar além desse limite.  
   
- Se o crescimento automático for OFF, um erro será retornado se um usuário tentar criar uma nova tabela replicada, inserir dados em um existente replicados da tabela ou atualizar uma existente replicadas a tabela de uma maneira que pode aumentar o tamanho além *replicated_size*.  
+ Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela replicada, inserir dados em uma tabela replicada existente ou atualizar uma tabela replicada existente de uma maneira que aumente o tamanho além de *replicated_size*.  
   
  *distributed_size* [ GB ]  
- Um número positivo. O tamanho, em gigabytes, inteiro ou decimal, para o espaço total alocado para tabelas distribuídas (e os dados correspondentes) *entre o dispositivo*. Para mínimo e máximo *distributed_size* requisitos, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Um número positivo. O tamanho, em gigabytes de inteiro ou decimal, para o espaço total alocado para tabelas distribuídas (e os dados correspondentes) *entre o dispositivo*. Para os requisitos de *distributed_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Se o crescimento automático for ON, tabelas distribuídas terão permissão para crescer além desse limite.  
+ Se AUTOGROW for ON, as tabelas distribuídas terão permissão para aumentar além desse limite.  
   
- Se o crescimento automático for OFF, um erro será retornado se um usuário tentar criar uma nova tabela distribuída, inserir dados em um existente distribuídas de tabela ou atualizar uma tabela existente distribuída de maneira que pode aumentar o tamanho além *distributed_size* .  
+ Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela distribuída, inserir dados em uma tabela distribuída existente ou atualizar uma tabela distribuída existente de uma maneira que aumente o tamanho além de *distributed_size*.  
   
- *log_size* [GB]  
- Um número positivo. O tamanho (em gigabytes de número inteiro ou decimal) para o log de transações *entre o dispositivo*.  
+ *log_size* [ GB ]  
+ Um número positivo. O tamanho (em gigabytes de inteiro ou decimal) para o log de transações *entre o dispositivo*.  
   
- Para mínimo e máximo *log_size* requisitos, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Para os requisitos de *log_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Se o crescimento automático for ON, o arquivo de log pode crescer além desse limite. Use o [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) declaração para reduzir o tamanho dos arquivos de log para o tamanho original.  
+ Se AUTOGROW for ON, o arquivo de log poderá aumentar além desse limite. Use a instrução [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para reduzir o tamanho dos arquivos de log para seu tamanho original.  
   
- Se o crescimento automático for OFF, um erro será retornado para o usuário para qualquer ação que pode aumentar o tamanho do log em um nó de computação individual além *log_size*.  
+ Se AUTOGROW for OFF, um erro será retornado para o usuário para qualquer ação que aumente o tamanho do log em um nó de Computação individual para além de *log_size*.  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **CREATE ANY DATABASE** permissão no banco de dados mestre ou associação de **sysadmin** função de servidor fixa.  
+ Exige a permissão **CREATE ANY DATABASE** no banco de dados mestre ou a associação à função de servidor fixa **sysadmin**.  
   
  O exemplo a seguir fornece a permissão para criar um banco de dados para o usuário Fay de banco de dados.  
   
@@ -92,31 +92,31 @@ GO
 ```  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Bancos de dados são criados com o nível de compatibilidade de banco de dados 120, que é a compatibilidade níveis para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Isso garante que o banco de dados será capaz de usar todos os [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] funcionalidade que usa o PDW.  
+ Os bancos de dados são criados com o nível de compatibilidade de banco de dados 120, que é o nível de compatibilidade do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Isso garante que o banco de dados poderá usar toda as funcionalidade do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usada pelo PDW.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- A instrução CREATE DATABASE não é permitida em uma transação explícita. Para obter mais informações, consulte [instruções](../../t-sql/statements/statements.md).  
+ A instrução CREATE DATABASE não é permitida em uma transação explícita. Para obter mais informações, consulte [Instruções](../../t-sql/statements/statements.md).  
   
- Para obter informações sobre restrições de mínimas e máxima em bancos de dados, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Para obter informações sobre restrições mínimas e máximas em bancos de dados, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- No momento em um banco de dados é criado, deve haver espaço livre suficiente disponível *em cada nó de computação* para alocar o total combinado dos seguintes tamanhos de:  
+ No momento em um banco de dados é criado, deve haver espaço livre suficiente disponível *em cada nó de Computação* para alocar o total combinado dos seguintes tamanhos:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]banco de dados com tabelas com o tamanho de *replicated_table_size*.  
+-   Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho de *replicated_table_size*.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]banco de dados com tabelas com o tamanho do (*distributed_table_size* / número de nós de computação).  
+-   Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho do (*distributed_table_size*/número de nós de Computação).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registra o tamanho do (*log_size* / número de nós de computação).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra em log o tamanho de (*log_size*/número de nós de Computação).  
   
 ## <a name="locking"></a>Bloqueio  
- Leva um bloqueio compartilhado no objeto de banco de dados.  
+ Usa um bloqueio compartilhado no objeto DATABASE.  
   
 ## <a name="metadata"></a>Metadados  
- Depois que essa operação for bem-sucedida, uma entrada para este banco de dados serão exibidos no [sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) e [sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)exibições de metadados.  
+ Depois que essa operação for bem-sucedida, uma entrada para esse banco de dados será mostrada nas exibições de metadados [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) e [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-basic-database-creation-examples"></a>A. Exemplos de criação de banco de dados básicos  
- O exemplo a seguir cria o banco de dados `mytest` com uma alocação de 100 GB de armazenamento por nó de computação para tabelas replicadas, 500 GB por aplicação para tabelas distribuídas e 100 GB por dispositivo para o log de transações. Neste exemplo, o crescimento automático está desativado por padrão.  
+ O exemplo a seguir cria o banco de dados `mytest` com uma alocação de armazenamento de 100 GB por nó de Computação para tabelas replicadas, 500 GB por dispositivo para tabelas distribuídas e 100 GB por dispositivo para o log de transações. Neste exemplo, AUTOGROW está desativado por padrão.  
   
 ```  
 CREATE DATABASE mytest  
@@ -126,7 +126,7 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB );  
 ```  
   
- O exemplo a seguir cria o banco de dados `mytest` com os mesmos parâmetros acima, exceto que o crescimento automático está ativado. Isso permite que o banco de dados cresça fora os parâmetros de tamanho especificado.  
+ O exemplo a seguir cria o banco de dados `mytest` com os mesmos parâmetros acima, exceto que AUTOGROW está ativado. Isso permite que o banco de dados aumente para fora dos parâmetros de tamanho especificados.  
   
 ```  
 CREATE DATABASE mytest  
@@ -138,7 +138,7 @@ CREATE DATABASE mytest
 ```  
   
 ### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. Criando um banco de dados com tamanhos de gigabyte parcial  
- O exemplo a seguir cria o banco de dados `mytest`, com crescimento automático off, uma alocação de armazenamento de 1,5 GB por nó de computação para tabelas replicadas, 5,25 GB por aplicação para tabelas distribuídas e 10 GB por dispositivo para o log de transações.  
+ O exemplo a seguir cria o banco de dados `mytest`, com AUTOGROW desativado, uma alocação de armazenamento de 1,5 GB por nó de Computação para tabelas replicadas, 5,25 GB por dispositivo para tabelas distribuídas e 10 GB por dispositivo para o log de transações.  
   
 ```  
 CREATE DATABASE mytest  
@@ -148,8 +148,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER DATABASE &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

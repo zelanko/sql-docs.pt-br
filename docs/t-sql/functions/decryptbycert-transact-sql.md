@@ -50,31 +50,31 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argumentos  
  *certificate_ID*  
- É a ID de um certificado no banco de dados. *certificado*ID é **int**.  
+ É a ID de um certificado no banco de dados. *certificate*_ID é **int**.  
   
- *texto cifrado*  
+ *ciphertext*  
  É uma cadeia de dados que foi criptografada com a chave pública do certificado.  
   
  @ciphertext  
- É uma variável do tipo **varbinary** que contém dados que foram criptografados com o certificado.  
+ É uma variável do tipo **varbinary** que contém dados criptografados com o certificado.  
   
  *cert_password*  
  É a senha que foi usada para criptografar a chave privada do certificado. Deve ser Unicode.  
   
  @cert_password  
- É uma variável do tipo **nchar** ou **nvarchar** que contém a senha que foi usada para criptografar a chave privada do certificado. Deve ser Unicode.  
+ Uma variável do tipo **nchar** our **nvarchar** que contém a senha usada para criptografar a chave privada do certificado. Deve ser Unicode.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa função descriptografa dados com a chave privada de um certificado. As transformações criptográficas que usam chaves assimétricas consomem recursos significativos. Portanto, EncryptByCert e DecryptByCert não são adequados para a criptografia de rotina de dados de usuário.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no certificado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir seleciona linhas de `[AdventureWorks2012].[ProtectedData04]` marcadas como `data encrypted by certificate JanainaCert02`. O exemplo descriptografa o texto cifrado com a chave privada do certificado `JanainaCert02`, que ele primeiro descriptografa com a senha do certificado, `pGFD4bb925DGvbd2439587y`. Os dados descriptografados são convertidos de **varbinary** para **nvarchar**.  
+ O exemplo a seguir seleciona linhas de `[AdventureWorks2012].[ProtectedData04]` marcadas como `data encrypted by certificate JanainaCert02`. O exemplo descriptografa o texto cifrado com a chave privada do certificado `JanainaCert02`, que ele primeiro descriptografa com a senha do certificado, `pGFD4bb925DGvbd2439587y`. Os dados descriptografados são convertidos de **varbinary** em **nvarchar**.  
   
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
@@ -85,11 +85,11 @@ WHERE Description
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Remover certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

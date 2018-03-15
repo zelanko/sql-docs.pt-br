@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados inteiro, ou o **bit**, **binário**, ou **varbinary** tipos de dados. *expressão* é tratado como um número binário para a operação bit a bit.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida da categoria de tipo de dados inteiro ou dos tipos de dados **bit**, **binary** ou **varbinary**. *expression* é tratada como um número binário para a operação bit a bit.  
   
 > [!NOTE]  
->  Apenas uma *expressão* pode ser do **binário** ou **varbinary** tipo de dados em uma operação bit a bit.  
+>  Apenas uma *expression* pode ser do tipo de dados **binary** ou **varbinary** em uma operação bit a bit.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Retorna um **int** se os valores de entrada são **int**, um **smallint** se os valores de entrada são **smallint**, ou um **tinyint** se os valores de entrada são **tinyint**.  
+ Retorna um **int** se os valores de entrada são **int**, um **smallint** se os valores de entrada são **smallint** ou um **tinyint** se os valores de entrada são **tinyint**.  
   
 ## <a name="remarks"></a>Remarks  
  O operador bit a bit | executa um OR lógico bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado serão definidos como 1 se um ou os dois bits (para o bit atual a ser resolvido) nas expressões de entrada tiverem o valor 1; se nenhum bit nas expressões de entrada for 1, o bit no resultado será definido como 0.  
   
- Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Neste exemplo, o **smallint * expressão* é convertido em um **int**.  
+ Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Neste exemplo, a **smallint***expression* é convertida em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma tabela com **int** dados tipos para mostrar os valores originais e coloca a tabela em uma linha.  
+ O exemplo a seguir cria uma tabela com tipos de dados **int** para mostrar os valores originais e coloca a tabela em uma linha.  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- A consulta a seguir executa o OR bit a bit no **a_int_value** e **b_int_value** colunas.  
+ A consulta a seguir executa o OR bit a bit nas colunas **a_int_value** e **b_int_value**.  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -105,11 +105,11 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;Atribuição de OR bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

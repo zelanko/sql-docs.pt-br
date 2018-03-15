@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor da chave especificada no contexto da sessão atual. O valor é definido usando o [sp_set_session_context &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) procedimento.  
+  Retorna o valor da chave especificada no contexto de sessão atual. O valor é definido com o procedimento [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,27 +52,27 @@ SESSION_CONTEXT(N'key')
  **sql_variant**  
   
 ## <a name="return-value"></a>Valor de retorno  
- O valor associado com a chave especificada no contexto de sessão, ou nulo se nenhum valor foi definido para essa chave.  
+ O valor associado à chave especificada no contexto de sessão ou NULL se nenhum valor foi definido para essa chave.  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer usuário pode ler o contexto de sessão para sua sessão.  
+ Qualquer usuário pode ler o contexto de sessão de sua sessão.  
   
-## <a name="remarks"></a>Comentários  
- Comportamento de MARS do SESSION_CONTEXT é semelhante ao de CONTEXT_INFO. Se um lote MARS define um par chave-valor, o novo valor não retornará em outros lotes MARS na conexão a mesma, a menos que eles começaram a após o lote que definiu o novo valor. Se vários lotes MARS estão ativos em uma conexão, os valores não podem ser definidos como "read_only." Isso evita as condições de corrida e determinismo sobre qual valor de "wins".  
+## <a name="remarks"></a>Remarks  
+ O comportamento de MARS de SESSION_CONTEXT é semelhante ao de CONTEXT_INFO. Se um lote MARS definir um par chave-valor, o novo valor não será retornado em outros lotes MARS na mesma conexão, a menos que eles tenham sido iniciados após a conclusão do lote que definiu o novo valor. Se vários lotes MARS estiverem ativos em uma conexão, os valores não poderão ser definidos como "read_only". Isso impede condições de corrida e não determinismo sobre qual valor "vence".  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo simples a seguir define o valor de contexto de sessão para a chave `user_id` 4 e, em seguida, usa o **SESSION_CONTEXT** função para recuperar o valor.  
+ O exemplo simples a seguir define o valor de contexto de sessão para a chave `user_id` como 4 e, em seguida, usa a função **SESSION_CONTEXT** para recuperar o valor.  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
- [CURRENT_TRANSACTION_ID &#40; Transact-SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [Segurança em nível de linha](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [Definir CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

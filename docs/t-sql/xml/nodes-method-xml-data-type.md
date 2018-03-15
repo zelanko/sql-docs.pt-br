@@ -1,5 +1,5 @@
 ---
-title: "(tipo de dados xml) do método Nodes () | Microsoft Docs"
+title: "Método nodes() (tipo de dados xml) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="nodes-method-xml-data-type"></a>Método de nós() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  O **Nodes ()** método é útil quando você deseja destruir um **xml** instância de tipo de dados em dados relacionais. Isso permite identificar nós que serão mapeados em uma nova linha.  
+  O método **nodes()** é útil quando você deseja fragmentar uma instância de tipo de dados **xml** em dados relacionais. Isso permite identificar nós que serão mapeados em uma nova linha.  
   
- Cada **xml** instância de tipo de dados tem um nó de contexto fornecido implicitamente. Para a instância XML armazenada em uma coluna ou variável, esse é o nó de documento. O nó de documento é o nó implícito na parte superior de cada **xml** instância de tipo de dados.  
+ Toda instância de tipo de dados **xml** tem um nó de contexto fornecido implicitamente. Para a instância XML armazenada em uma coluna ou variável, esse é o nó de documento. O nó de documento é o nó implícito na parte superior de cada instância de tipo de dados **xml**.  
   
- O resultado da **Nodes ()** método é um conjunto de linhas contém cópias lógicas das instâncias XML originais. Nessas cópias lógicas, o nó de contexto de cada instância de linha é definido como um dos nós identificados com a expressão de consulta, para que as consultas subsequentes possam navegar em relação a esses nós de contexto.  
+ O resultado do método **nodes()** é um conjunto de linhas que contém cópias lógicas das instâncias de XML originais. Nessas cópias lógicas, o nó de contexto de cada instância de linha é definido como um dos nós identificados com a expressão de consulta, para que as consultas subsequentes possam navegar em relação a esses nós de contexto.  
   
- Você pode recuperar vários valores do conjunto de linhas. Por exemplo, você pode aplicar o **Value ()** método para o conjunto de linhas retornado por **Nodes ()** e recuperar vários valores de instância XML original. Observe que o **Value ()** método, quando aplicado a instância XML, retorna apenas um valor.  
+ Você pode recuperar vários valores do conjunto de linhas. Por exemplo, você pode aplicar o método **value()** ao conjunto de linhas retornado por **nodes()** e recuperar vários valores da instância de XML original. Observe que o método **value()**, quando aplicado à instância de XML, retorna somente um valor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ nodes (XQuery) as Table(Column)
  *XQuery*  
  É uma cadeia de caracteres literal, uma expressão XQuery. Se a expressão de consulta construir nós, esses nós construídos serão expostos no conjunto de linhas resultante. Se a expressão de consulta resultar em uma sequência vazia, o conjunto de linhas será vazio. Se a expressão de consulta resultar estaticamente em uma sequência que contém valores atômicos em vez de nós, um erro estático será gerado.  
   
- *Tabela*(*coluna*)  
+ *Table*(*Column*)  
  É o nome de tabela e o nome de coluna para o conjunto de linhas resultante.  
   
 ## <a name="remarks"></a>Remarks  
@@ -96,7 +96,7 @@ ModelID      Instructions
              </root>  
 ```  
   
- Em seguida, você pode consultar esse conjunto de linhas usando **xml** métodos de tipo de dados. A consulta a seguir extrai a subárvore do item de contexto para cada linha gerada:  
+ Você pode fazer consultas nesse conjunto de linhas usando métodos de tipo de dados **xml**. A consulta a seguir extrai a subárvore do item de contexto para cada linha gerada:  
   
 ```  
 SELECT T2.Loc.query('.')  
@@ -114,15 +114,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
- Observe que o conjunto de linhas retornado manteve as informações de tipo. Você pode aplicar **xml** tipo de dados métodos, como **Query ()**, **Value ()**, **exist ()**, e **Nodes ()** , como o resultado de uma **Nodes ()** método. No entanto, você não pode aplicar o **Modify ()** método para modificar a instância XML.  
+ Observe que o conjunto de linhas retornado manteve as informações de tipo. Você pode aplicar métodos de tipo de dados **xml**, como **query()**, **value()**, **exist()** e **nodes()**, ao resultado de um método **nodes()**. Entretanto, você não pode aplicar o método **modify()** para modificar a instância de XML.  
   
  Além disso, o nó de contexto no conjunto de linhas não pode ser materializado. Quer dizer, você não pode usá-lo em uma instrução SELECT. Entretanto, é possível usá-lo em IS NULL e COUNT(*).  
   
- Cenários para usar o **Nodes ()** método são as mesmas para usando [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md). Isso fornece uma exibição de conjunto de linhas do XML. No entanto, você não precisa usar cursores ao usar o **Nodes ()** método em uma tabela que contém várias linhas de documentos XML.  
+ Os cenários para uso do método **nodes()** são os mesmos que para [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Isso fornece uma exibição de conjunto de linhas do XML. Entretanto, não é preciso usar cursores ao usar o método **nodes()** em uma tabela que contém várias linhas de documentos XML.  
   
- Observe que o conjunto de linhas retornado pelo **Nodes ()** método é um conjunto de linhas sem nome. Por isso, ele deve ser nomeado explicitamente usando alias.  
+ Observe que o conjunto de linhas retornado pelo método **nodes()** é um conjunto de linhas sem nome. Por isso, ele deve ser nomeado explicitamente usando alias.  
   
- O **Nodes ()** função não pode ser aplicada diretamente para os resultados de uma função definida pelo usuário. Para usar o **Nodes ()** função com o resultado de uma função escalar definida pelo usuário, você pode atribuir o resultado da função definida pelo usuário a uma variável ou usar uma tabela derivada para atribuir um alias de coluna para a função definida pelo usuário valor de retorno e depois usar CROSS APPLY para selecionar no alias.  
+ A função **nodes()** não pode ser se aplicada diretamente aos resultados de uma função definida pelo usuário. Para usar a função **nodes()** com o resultado de uma função escalar definida pelo usuário, atribua o resultado da função definida pelo usuário a uma variável ou use uma tabela derivada para atribuir um alias de coluna ao valor retornado da função definida pelo usuário e, em seguida, use CROSS APPLY para selecionar uma opção no alias.  
   
  O exemplo a seguir mostra uma maneira de usar `CROSS APPLY` para selecionar do resultado de uma função definida pelo usuário.  
   
@@ -204,9 +204,9 @@ go
 ```  
   
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>Especificando o método nodes() em uma coluna do tipo xml  
- As instruções de fabricação de bicicletas são usadas neste exemplo e são armazenadas nas instruções de **xml** coluna de tipo do **ProductModel** tabela.  
+ As instruções de fabricação da bicicleta são usadas neste exemplo e armazenadas na coluna Instructions do tipo **xml** da tabela **ProductModel**.  
   
- No exemplo a seguir, o `nodes()` método é especificado em relação a `Instructions` coluna de **xml** digite o `ProductModel` tabela.  
+ No exemplo a seguir, o método `nodes()` é especificado na coluna `Instructions` do tipo **xml** na tabela `ProductModel`.  
   
  O método `nodes()` define os elementos <`Location`> como nós de contexto especificando o caminho `/MI:root/MI:Location`. O conjunto de linhas resultante inclui cópias lógicas do documento original, uma para cada nó <`Location`> no documento, com o conjunto de nós de contexto definido como o elemento <`Location`>. Portanto, a função `nodes()` oferece um conjunto de nós de contexto <`Location`>.  
   
@@ -216,7 +216,7 @@ go
   
 -   Localizar IDs de local em cada <`Location`>  
   
--   Recuperar etapas de fabricação (<`step`> elementos filho) em cada <`Location`>  
+-   Recuperar etapas de fabricação (elementos filho <`step`>) em cada <`Location`>  
   
  Essa consulta retorna o item de contexto, no qual a sintaxe abreviada `'.'` para `self::node()` é especificada, no método `query()`.  
   
@@ -303,7 +303,7 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Métodos de Tipos de Dados XML](../../t-sql/xml/xml-data-type-methods.md)  

@@ -49,11 +49,11 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *propriedade*  
+ *property*  
  É uma expressão contendo o nome da propriedade em nível de serviço de texto completo. A tabela lista as propriedades e fornece descrições das informações retornadas.  
   
 > [!NOTE]  
->  As propriedades a seguir serão removidas em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, e **ResourceUsage**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
+>  As propriedades a seguir serão removidas em uma versão futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
 |Propriedade|Valor|  
 |--------------|-----------|  
@@ -61,7 +61,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**ConnectTimeout**|Retorna 0. Com suporte somente para compatibilidade com versões anteriores.|  
 |**IsFulltextInstalled**|O componente de texto completo é instalado com a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Texto completo não é instalado.<br /><br /> 1 = Texto completo é instalado.<br /><br /> NULL = Entrada inválida ou erro.|  
 |**DataTimeout**|Retorna 0. Com suporte somente para compatibilidade com versões anteriores.|  
-|**LoadOSResources**|Indica se os separadores de palavra e filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, esta propriedade é desabilitada para evitar alterações de comportamento inadvertido em atualizações feitas no sistema operacional. Habilitar o uso de recursos do sistema operacional fornece acesso a recursos para idiomas e tipos de documentos registrados no Serviço de Indexação [!INCLUDE[msCoName](../../includes/msconame-md.md)], mas que tenha um recurso especifico de instância instalado. Se você habilitar o carregamento de recursos do sistema operacional, certifique-se de que são recursos binários assinados confiáveis; Caso contrário, eles não podem ser carregados quando **VerifySignature** é definido como 1.<br /><br /> 0 = Usa somente filtros e separadores de palavra específicos para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Carrega filtros e separadores de palavra do sistema operacional.|  
+|**LoadOSResources**|Indica se os separadores de palavra e filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, esta propriedade é desabilitada para evitar alterações de comportamento inadvertido em atualizações feitas no sistema operacional. Habilitar o uso de recursos do sistema operacional fornece acesso a recursos para idiomas e tipos de documentos registrados no Serviço de Indexação [!INCLUDE[msCoName](../../includes/msconame-md.md)], mas que tenha um recurso especifico de instância instalado. Ao habilitar o carregamento de recursos do sistema operacional, verifique se eles são recursos binários assinados confiáveis. Caso contrário, não poderão ser carregados quando o **VerifySignature** for definido como 1.<br /><br /> 0 = Usa somente filtros e separadores de palavra específicos para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Carrega filtros e separadores de palavra do sistema operacional.|  
 |**VerifySignature**|Especifica se somente binários assinados são carregados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search Service. Por padrão, somente binários assinados confiáveis são carregados.<br /><br /> 0 = Não verifica se binários são assinados.<br /><br /> 1 = Verifica se somente binários assinados confiáveis são carregados.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -88,9 +88,9 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [FULLTEXTCATALOGPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
   

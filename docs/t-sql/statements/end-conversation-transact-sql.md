@@ -1,5 +1,5 @@
 ---
-title: "Instrução END CONVERSATION (Transact-SQL) | Microsoft Docs"
+title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -60,25 +60,25 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  É o identificador de conversa para que a conversa termine.  
   
- COM o erro =*failure_code*  
+ WITH ERROR =*failure_code*  
  É o código de erro. O *failure_code* é do tipo **int**. O código de falha é um código definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa. O código de falha deve ser maior que 0.  
   
- Descrição =*failure_text*  
- É a mensagem de erro. O *failure_text* é do tipo **nvarchar (3000)**. O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
+ DESCRIPTION =*failure_text*  
+ É a mensagem de erro. O *failure_text* é do tipo **nvarchar(3000)**. O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
   
  WITH CLEANUP  
- Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade de conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] aplicativo. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  
+ Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade da conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  
   
 ## <a name="remarks"></a>Remarks  
- Terminando uma conversa bloqueia o grupo de conversa que fornecido *conversation_handle* pertence. Quando uma conversa é encerrada, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove todas as mensagens para ela da fila de serviço.  
+ O encerramento de uma conversa bloqueia o grupo de conversa ao qual o *conversation_handle* fornecido pertence. Quando uma conversa é encerrada, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove todas as mensagens para ela da fila de serviço.  
   
  Após o término de uma conversa, um aplicativo não pode mais enviar ou receber mensagens para essa conversa. Ambos os participantes em uma conversa devem chamar END CONVERSATION para concluir a conversa. Se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não tiver recebido uma mensagem de término do diálogo ou uma mensagem de erro do outro participante, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] notificará o outro participante de que a conversa terminou. Neste caso, embora o identificador da conversa não seja mais válido, o ponto de extremidade de conversa permanece ativo até a instância que hospeda o serviço remoto confirmar a mensagem.  
   
  Se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ainda não tiver processado uma mensagem de término do diálogo ou de erro para a conversa, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] notificará o lado remoto de que a conversa terminou. As mensagens que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia ao serviço remoto dependem das opções especificadas:  
   
--   Se a conversa terminar sem erros e a conversa com o serviço remoto ainda estiver ativo, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia uma mensagem do tipo `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` para o serviço remoto. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] acionará essa mensagem à fila de transmissão na ordem da conversa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia todas as mensagens dessa conversa que estão atualmente na fila de transmissão antes de enviar esta mensagem.  
+-   Se a conversa terminar sem erros e a conversa com o serviço remoto ainda estiver ativa, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] enviará uma mensagem do tipo `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` ao serviço remoto. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] acionará essa mensagem à fila de transmissão na ordem da conversa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia todas as mensagens dessa conversa que estão atualmente na fila de transmissão antes de enviar esta mensagem.  
   
--   Se a conversa terminar com um erro e a conversa para o serviço remoto ainda estiver ativa, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia uma mensagem do tipo `http://schemas.microsoft.com/SQL/ServiceBroker/Error` para o serviço remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove qualquer outra mensagem desta conversa atualmente na fila de transmissão.  
+-   Se a conversa terminar com um erro e a conversa com o serviço remoto ainda estiver ativa, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] enviará uma mensagem do tipo `http://schemas.microsoft.com/SQL/ServiceBroker/Error` ao serviço remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove qualquer outra mensagem desta conversa atualmente na fila de transmissão.  
   
 -   A cláusula WITH CLEANUP permite que um administrador de banco de dados remova conversas que não são concluídas normalmente. Essa opção remove todas as mensagens e entradas da exibição do catálogo para a conversa. Observe que, neste caso, o lado remoto da conversa não recebe nenhuma indicação de que a conversa terminou, e talvez não receba mensagens que tenham sido enviadas por um aplicativo e ainda não transmitidas pela rede. Evite essa opção a menos que a conversa não possa ser concluída normalmente.  
   
@@ -130,13 +130,13 @@ COMMIT TRANSACTION ;
 ```  
   
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Limpando uma conversa que não pode ser concluída normalmente  
- O exemplo a seguir encerra o diálogo especificado por `@dialog_handle`. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove imediatamente todas as mensagens da fila de serviço e da fila de transmissão, sem notificar o serviço remoto. Desde o final de uma caixa de diálogo com a limpeza não notifica o serviço remoto, você deve usar isso apenas em casos em que o serviço remoto não está disponível para receber um **EndDialog** ou **erro** mensagem.  
+ O exemplo a seguir encerra o diálogo especificado por `@dialog_handle`. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove imediatamente todas as mensagens da fila de serviço e da fila de transmissão, sem notificar o serviço remoto. Como o término de uma caixa de diálogo com a limpeza não notifica o serviço remoto, você deve usar isso apenas nos casos em que o serviço remoto não está disponível para receber uma mensagem **EndDialog** ou **Error**.  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

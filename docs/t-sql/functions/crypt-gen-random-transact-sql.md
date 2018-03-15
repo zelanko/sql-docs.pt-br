@@ -46,13 +46,13 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>Argumentos  
 *length*  
-O comprimento do número que está sendo criado. O máximo é 8000. *comprimento* é do tipo **int**.
+O comprimento do número que está sendo criado. O máximo é 8000. *length* é do tipo **int**.
   
-*semente*  
-Dados opcionais a serem usados como semente aleatória.  Deve haver pelo menos *comprimento* bytes de dados. *semente* é **varbinary (8000)**.
+*seed*  
+Dados opcionais a serem usados como semente aleatória.  Deve haver pelo menos *length* bytes de dados. *seed* é **varbinary(8000)**.
   
 ## <a name="returned-types"></a>Tipos retornados  
-**varbinary (8000)**
+**varbinary(8000)**
   
 ## <a name="permissions"></a>Permissões  
 Esta função é pública e não requer permissões especiais.
@@ -73,6 +73,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[RAND &#40; Transact-SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

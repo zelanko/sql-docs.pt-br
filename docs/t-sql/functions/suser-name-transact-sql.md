@@ -53,15 +53,15 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>Argumentos  
  *server_user_id*  
- É o número de identificação de logon do usuário. *server_user_id*, que é opcional, é **int**. *server_user_id* pode ser o número de identificação de logon de qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] usuário ou grupo que tem permissão para se conectar a uma instância do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *server_user_id* não é especificado, o nome de identificação de logon para o usuário atual será retornado. Se o parâmetro contiver a palavra NULL, retornará NULL.  
+ É o número de identificação de logon do usuário. *server_user_id*, que é opcional, é **int**. *server_user_id* pode ser o número de identificação de logon de qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usuário ou grupo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] que tenha permissão para se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *server_user_id* não for especificado, o nome de identificação de logon do usuário atual será retornado. Se o parâmetro contiver a palavra NULL, retornará NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Comentários  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0, o número de identificação de segurança (SID) substituiu o número de identificação de usuário do servidor (SUID).  
+## <a name="remarks"></a>Remarks  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0, o SID (número de identificação de segurança) substituiu o SUID (número de identificação de usuário do servidor).  
   
- SUSER_NAME retorna um nome de logon somente para um logon que tenha uma entrada no **syslogins** tabela do sistema.  
+ SUSER_NAME retorna um nome de logon apenas para um logon que tenha uma entrada na tabela do sistema **syslogins**.  
   
  SUSER_NAME pode ser usado em uma lista de seleção, cláusula WHERE e em qualquer local em que uma expressão seja permitida, e deve sempre ser seguido de parênteses, mesmo que nenhum parâmetro seja especificado.  
   
@@ -72,8 +72,8 @@ SUSER_NAME ( [ server_user_id ] )
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [SUSER_ID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

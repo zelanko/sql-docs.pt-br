@@ -55,8 +55,8 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  *akey_password*  
  É a senha que protege a chave privada da chave assimétrica. Poderá ser NULL se a chave privada estiver protegida pela chave mestra do banco de dados. *akey_password* é **nvarchar**.  
   
- '*texto cifrado*'  
- São os dados criptografados com a chave. *texto cifrado* é **varbinary**.  
+ '*ciphertext*'  
+ São os dados criptografados com a chave. O *ciphertext* é **varbinary**.  
   
  @ciphertext  
  É uma variável do tipo **varbinary** que contém dados que foram criptografados com a chave.  
@@ -67,8 +67,8 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  @add_authenticator  
  Indica se um autenticador foi criptografado junto com o texto não criptografado. Deve ser igual ao valor que é passado para EncryptByKey ao criptografar os dados.  
   
- *autenticador*  
- São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. *autenticador* é **sysname**.  
+ *authenticator*  
+ São os dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey. O *authenticator* é **sysname**.  
   
  @authenticator  
  É uma variável que contém dados a partir dos quais um autenticador é gerado. Deve corresponder ao valor fornecido para EncryptByKey.  
@@ -76,7 +76,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoAsymKey combina a funcionalidade de OPEN SYMMETRIC KEY e DecryptByKey. Em uma única operação, ele descriptografa uma chave simétrica e a utiliza para descriptografar texto cifrado.  
   
 ## <a name="permissions"></a>Permissões  
@@ -133,10 +133,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber2
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

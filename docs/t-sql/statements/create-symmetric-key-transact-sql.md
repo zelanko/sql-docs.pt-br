@@ -1,5 +1,5 @@
 ---
-title: "CRIAR a chave SIMÉTRICA (Transact-SQL) | Microsoft Docs"
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -79,11 +79,11 @@ CREATE SYMMETRIC KEY key_name
  *Key_name*  
  Especifica o nome exclusivo pelo qual a chave simétrica é conhecida no banco de dados. Os nomes de chaves temporárias devem começar com um símbolo de número (#). Por exemplo, **#temporaryKey900007**. Você não pode criar uma chave simétrica que tenha um nome que inicie com mais que um #. Não é possível criar uma chave simétrica temporária usando um provedor EKM.  
   
- AUTORIZAÇÃO *owner_name*  
+ AUTHORIZATION *owner_name*  
  Especifica o nome do usuário do banco de dados ou função de aplicativo que possuirá essa chave.  
   
- DO provedor *provider_name*  
- Especifica um nome e provedor de gerenciamento extensível de chaves (EKM). A chave não é exportada do dispositivo de EKM. O provedor deve ser definido primeiro com o uso da instrução CREATE PROVIDER. Para obter mais informações sobre como criar provedores de chave externos, consulte [gerenciamento extensível de chaves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ Especifica um nome e provedor de gerenciamento extensível de chaves (EKM). A chave não é exportada do dispositivo de EKM. O provedor deve ser definido primeiro com o uso da instrução CREATE PROVIDER. Para obter mais informações sobre como criar provedores de chave externa, veja [Gerenciamento extensível de chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
@@ -100,17 +100,17 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  Cria uma chave nova no dispositivo de Gerenciamento Extensível de Chaves.  Se já existir uma chave no dispositivo, a instrução falhará com erro.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
  Mapeia uma chave simétrica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma chave de gerenciamento extensível de chaves existente. Se CREATION_DISPOSITION = OPEN_EXISTING não for fornecido, isso será padronizado como CREATE_NEW.  
   
  *certificate_name*  
  Especifica o nome do certificado que será usado para criptografar a chave simétrica. O certificado já deve existir no banco de dados.  
   
- **'** *senha* **'**  
- Especifica uma senha da qual derivar uma chave TRIPLE_DES para proteger a chave simétrica. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre use senhas fortes.  
+ **'** *password* **'**  
+ Especifica uma senha da qual derivar uma chave TRIPLE_DES para proteger a chave simétrica. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre use senhas fortes.  
   
  *symmetric_key_name*  
  Especifica uma chave simétrica usada para criptografar a chave que está sendo criada. A chave especificada já deve existir no banco de dados e deve estar aberta.  
@@ -118,16 +118,16 @@ CREATE SYMMETRIC KEY key_name
  *asym_key_name*  
  Especifica uma chave assimétrica usada para criptografar a chave que está sendo criada. Essa chave assimétrica já deve existir no banco de dados.  
   
- \<algoritmo >  
+ \<algorithm>  
 Especifique o algoritmo de criptografia.   
 > [!WARNING]  
-> A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendados), você deve definir o nível de compatibilidade do banco de dados no banco de dados 120 ou inferior.  
+> A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendado), você deve definir o nível de compatibilidade do banco de dados para 120 ou menos.  
   
 ## <a name="remarks"></a>Remarks  
  Quando uma chave simétrica é criada, a chave simétrica deve ser criptografada usando pelo menos um dos seguintes: senha, certificado, chave simétrica, chave assimétrica ou provedor. A chave pode ter mais de uma criptografia de cada tipo. Em outras palavras, uma única chave simétrica pode ser criptografada com o uso de vários certificados, senhas, chaves simétricas e chaves assimétricas ao mesmo tempo.  
   
 > [!CAUTION]  
->  Quando uma chave simétrica é criptografada com uma senha em vez de um certificado (ou outra chave), o algoritmo de criptografia TRIPLE DES é usado para criptografar a senha. Por esse motivo, as chaves criadas com um algoritmo de criptografia forte, como AES, são protegidas por um algoritmo mais fraco.  
+>  Quando uma chave simétrica é criptografada com uma senha, em vez de um certificado (ou outra chave), o algoritmo de criptografia TRIPLE DES é usado para criptografar a senha. Por esse motivo, as chaves criadas com um algoritmo de criptografia forte, como AES, são protegidas por um algoritmo mais fraco.  
   
  A senha opcional pode ser usada para criptografar a chave simétrica antes de distribuir a chave a vários usuários.  
   
@@ -140,7 +140,7 @@ Especifique o algoritmo de criptografia.
 > [!IMPORTANT]  
 >  Não recomendamos usar as codificações de fluxo RC4 e RC4_128 para proteger dados confidenciais. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não codifica adicionalmente a criptografia executada com essas chaves.  
   
- Informações sobre chaves simétricas são visíveis no [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) exibição do catálogo.  
+ As informações sobre chaves simétricas podem ser visualizadas na exibição do catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  As chaves simétricas não podem ser criptografadas por chaves simétricas criadas no provedor de criptografia.  
   
@@ -150,9 +150,9 @@ Especifique o algoritmo de criptografia.
 -   As chaves simétricas criadas com ALGORITHM = TRIPLE_DES_3KEY usam TRIPLE DES com uma chave de 192 bits.  
 -   As chaves simétricas criadas com ALGORITHM = TRIPLE_DES usam TRIPLE DES com uma chave de 128 bits.  
   
- **Substituição do algoritmo RC4:**  
+ **Reprovação do algoritmo RC4:**  
   
- Uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece um salt automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ O uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece um sal automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  O algoritmo RC4 tem suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.  
@@ -204,7 +204,7 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

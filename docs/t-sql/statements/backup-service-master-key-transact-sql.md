@@ -1,5 +1,5 @@
 ---
-title: "CHAVE MESTRA de serviço de BACKUP (Transact-SQL) | Microsoft Docs"
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ARQUIVO **='***path_to_file***'**  
+ FILE **='***path_to_file***'**  
  Especifica o caminho completo, inclusive o nome de arquivo, para o arquivo para o qual a chave mestra de serviço será exportada. Esse pode ser um caminho local ou um caminho de UNC a um local de rede.  
   
- SENHA **='***senha***'**  
+ PASSWORD **='***password***'**  
  A senha usada para criptografar a chave mestra do serviço está no o arquivo de backup. Esta senha está sujeita à verificação de complexidade. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A chave mestra do serviço deveria ter seu backup feito e ser armazenada em um local seguro, fora do site. Criar este backup deveria ser uma das primeiras ações administrativas executadas no servidor.  
   
 ## <a name="permissions"></a>Permissões  
@@ -73,8 +73,8 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTERAR a chave MESTRA de serviço &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

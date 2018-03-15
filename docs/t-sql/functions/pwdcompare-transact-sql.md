@@ -51,26 +51,26 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Argumentos  
  **'** *clear_text_password* **'**  
- É a senha não criptografada. *clear_text_password* é **sysname** (**nvarchar (128)**).  
+ É a senha não criptografada. *clear_text_password* é **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
  É o hash de criptografia de uma senha. *password_hash* é **varbinary(128)**.  
   
- *Versão*  
- Parâmetro obsoleto que poderá ser definido como 1 se *password_hash* representa um valor de um logon anterior ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] que foi migrado para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior mas nunca convertido a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sistema. *versão* é **int**.  
+ *version*  
+ Parâmetro obsoleto que poderá ser definido como 1 se *password_hash* representar um valor de um logon anterior a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] que foi migrado para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, mas nunca convertido no sistema [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* é **int**.  
   
 > [!CAUTION]  
->  Este parâmetro é fornecido para fins de compatibilidade, mas foi ignorado porque há blobs de hash de senha agora contêm suas próprias descrições de versão. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
+>  Esse parâmetro é fornecido para fins de compatibilidade com versões anteriores, mas é ignorado, pois os blobs de hash de senha agora contêm suas próprias descrições de versão. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
- Retornará 1 se o hash do *clear_text_password* corresponde a *password_hash* parâmetro e 0 se não existir.  
+ Retorna 1 se o hash da *clear_text_password* corresponde ao parâmetro *password_hash*, e 0 se ele não existe.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função PWDCOMPARE não é uma ameaça contra a força de hashes de senha porque o mesmo teste pode ser executado por meio de tentativa de logon usando a senha fornecida como o primeiro parâmetro.  
   
- **PWDCOMPARE** não pode ser usado com as senhas de usuários de banco de dados independente. Não há banco de dados independente equivalente.  
+ Não é possível usar **PWDCOMPARE** com as senhas de usuários de bancos de dados independentes. Não há banco de dados independente equivalente.  
   
 ## <a name="permissions"></a>Permissões  
  PWDENCRYPT está disponível para o público.  
@@ -95,8 +95,8 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [PWDENCRYPT &#40; Transact-SQL &#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

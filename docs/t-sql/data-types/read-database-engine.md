@@ -1,5 +1,5 @@
 ---
-title: Leitura (mecanismo de banco de dados) | Microsoft Docs
+title: Read (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Leitura lê a representação binária de **SqlHierarchyId** do passado **BinaryReader** e define o **SqlHierarchyId** objeto para esse valor. Leitura não pode ser chamada usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em seu lugar, use CAST ou CONVERT.
+O método Read lê a representação binária de **SqlHierarchyId** do **BinaryReader** passado e define o objeto **SqlHierarchyId** com esse valor. Não é possível chamar Read usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em seu lugar, use CAST ou CONVERT.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>Argumentos  
 *r*  
- O **BinaryReader** objeto que gera um fluxo binário correspondente a uma representação binária de um **hierarchyid** nó.  
+ O objeto **BinaryReader** que produz um fluxo binário correspondente a uma representação binária de um nó **hierarchyid**.  
   
 ## <a name="return-types"></a>Tipos de retorno
- **Tipo de retorno CLR: void**  
+ **Tipo de retorno do CLR: nulo**  
   
-## <a name="remarks"></a>Comentários  
- Leitura não valida sua entrada. Se uma entrada binária inválida for fornecida, leitura pode gerar uma exceção. Ou, ele pode ser bem-sucedida e produzir um inválido **SqlHierarchyId** objeto cujos métodos podem gerar resultados inesperados ou gerar uma exceção.  
+## <a name="remarks"></a>Remarks  
+ O método Read não valida sua entrada. Se uma entrada binária inválida for fornecida, Read poderá gerar uma exceção. Ou poderá ser bem-sucedido e produzir um objeto **SqlHierarchyId** inválido cujos métodos podem gerar resultados imprevisíveis ou uma exceção.  
   
- Leitura só pode ser chamada em um recém-criado **SqlHierarchyId** objeto.  
+ O método Read pode ser chamado apenas em um objeto **SqlHierarchyId** recém-criado.  
   
- Leitura é usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando for necessário, como ao gravar dados **hierarchyid** coluna. Leitura também é chamada internamente quando é feita uma conversão entre **varbinary** e **hierarchyid**.  
+ Read é usado internamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando necessário, como ao gravar dados na coluna **hierarchyid**. Read também é chamado internamente quando é feita uma conversão entre **varbinary** e **hierarchyid**.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -66,9 +66,9 @@ SqlHierarchyId hid = new SqlHierarchyId();
 hid.Read(br);   
 ```  
   
-## <a name="see-also"></a>Consulte também  
-[Gravar &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+## <a name="see-also"></a>Consulte Também  
+[Write &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

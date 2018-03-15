@@ -53,7 +53,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  Permite que as opções sejam especificadas.  
   
  NO_INFOMSGS  
- Suprime todas as mensagens informativas que têm níveis de severidade de 0 a 10.  
+ Suprime todas as mensagens informativas com níveis de gravidade de 0 a 10.  
   
 ## <a name="remarks"></a>Remarks  
 O cache de procedimento é usado para armazenar em cache os planos compilados e executáveis a fim de acelerar a execução de lotes. As entradas em um cache de procedimento estão no nível de um lote. O cache de procedimento inclui as seguintes entradas:
@@ -68,16 +68,16 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
 |**num proc buffs**|Número total de páginas usadas por todas as entradas no cache de procedimento.|  
-|**num proc buffs usados**|Número total de páginas usadas por todas as entradas usadas atualmente.|  
-|**num proc buffs ativas**|Somente para compatibilidade com versões anteriores. Número total de páginas usadas por todas as entradas usadas atualmente.|  
-|**tamanho do cache de procedimento**|Número total de entradas no cache de procedimento.|  
-|**proc cache usado**|Número total de entradas usadas atualmente.|  
-|**proc cache ativo**|Somente para compatibilidade com versões anteriores. Número total de entradas usadas atualmente.|  
+|**num proc buffs used**|Número total de páginas usadas por todas as entradas usadas atualmente.|  
+|**num proc buffs active**|Somente para compatibilidade com versões anteriores. Número total de páginas usadas por todas as entradas usadas atualmente.|  
+|**proc cache size**|Número total de entradas no cache de procedimento.|  
+|**proc cache used**|Número total de entradas usadas atualmente.|  
+|**proc cache active**|Somente para compatibilidade com versões anteriores. Número total de entradas usadas atualmente.|  
   
 ## <a name="permissions"></a>Permissões  
 Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

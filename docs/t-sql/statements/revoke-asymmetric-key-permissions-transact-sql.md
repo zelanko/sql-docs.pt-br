@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de chave assimétrica (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de chave assimétrica (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,11 +55,11 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um assembly. Listada abaixo.  
   
- NA chave ASSIMÉTRICA **::***asymmetric_key_name*  
- Especifica a chave assimétrica na qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ Especifica a chave assimétrica na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada. Um dos seguintes:  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Usuário de banco de dados não mapeado para um principal do servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma chave assimétrica é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma chave assimétrica estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de chave assimétrica|Indicado pela permissão de chave assimétrica|Implícito na permissão de banco de dados|  
@@ -119,13 +119,13 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL na chave assimétrica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Criar função de aplicativo &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

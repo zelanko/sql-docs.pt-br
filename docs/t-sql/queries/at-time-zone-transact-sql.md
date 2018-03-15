@@ -32,9 +32,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Converte um *inputdate* para correspondente *datetimeoffset* valor no fuso horário de destino. Se *inputdate* é fornecido sem informação de deslocamento, a função aplicará o deslocamento do fuso horário, supondo que *inputdate* valor é fornecido no fuso horário de destino. Se *inputdate* é fornecido como um *datetimeoffset* valor, que **AT TIME ZONE** cláusula converte-o para o fuso horário de destino usando regras de conversão de fuso horário.  
+  Converte um *inputdate* para o valor de *datetimeoffset* correspondente no fuso horário de destino. Se *inputdate* for fornecido sem as informação de diferença, a função aplicará a diferença do fuso horário considerando que o valor *inputdate* esteja no fuso horário de destino. Se *inputdate* for fornecido como um valor de *datetimeoffset*, a cláusula **AT TIME ZONE** o converterá no fuso horário de destino usando regras de conversão de fuso horário.  
   
- **NO FUSO horário** implementação depende de um mecanismo do Windows para converter **datetime** valores entre fusos horários.  
+ A implementação de **AT TIME ZONE** depende de um mecanismo do Windows para converter os valores de **datetime** entre fusos horários.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>Argumentos  
  *inputdate*  
- É uma expressão que pode ser resolvida para um **smalldatetime**, **datetime**, **datetime2**, ou **datetimeoffset** valor.  
+ É uma expressão que pode ser resolvida para um valor de **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**.  
   
  *timezone*  
- Nome da zona de tempo de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se baseia em fusos horários que são armazenados no registro do Windows. Todos os fusos horários instalados no computador são armazenados no hive do registro a seguir: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Uma lista de fusos horários instalados também é exposta por meio de [time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) exibição.  
+ Nome do fuso horário de destino. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] baseia-se nos fusos horários armazenados no Registro do Windows. Todos os fusos horários instalados no computador são armazenados no hive do Registro a seguir: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Uma lista dos fusos horários instalados também é exposta por meio da exibição [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
- Retorna o tipo de dados **datetimeoffset**  
+ Retorna o tipo de dados de **datetimeoffset**  
   
 ## <a name="return-value"></a>Valor de retorno  
- O **datetimeoffset** valor no fuso horário de destino.  
+ O valor de **datetimeoffset** no fuso horário de destino.  
   
 ## <a name="remarks"></a>Remarks  
- **NO FUSO horário** aplica regras específicas para converter valores de entrada na **smalldatetime**, **datetime** e **datetime2** tipos de dados, que se encaixam em uma intervalo é afetado pela alteração DST:  
+ **AT TIME ZONE** aplica regras específicas para converter os valores de entrada nos tipos de dados **smalldatetime**, **datetime** e **datetime2**, que caem em um intervalo afetado pela alteração de horário de verão:  
   
--   Quando o relógio está definido em frente e há uma lacuna na hora local, duração da qual depende a duração do ajuste de relógio (geralmente 1 hora, mas ele pode ser 30 ou 45 minutos, dependendo de fuso horário). Nesse caso, os pontos no tempo que pertencem a essa lacuna são convertidos com deslocamento *depois* alteração do horário de verão.  
+-   Quando o relógio está adiantado, há uma diferença na hora local cuja duração depende da duração do ajuste do relógio (geralmente é de 1 hora, mas pode ser de 30 ou 45 minutos, dependendo do fuso horário). Nesse caso, os pontos no tempo que pertencem a essa diferença são convertidos com a diferença *depois* da alteração do horário de verão.  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- Quando o relógio for alterado, 2 horas da hora local são sobrepostas em uma hora.  Nesse caso, os pontos no tempo que pertencem ao intervalo sobreposto são apresentados com o deslocamento *antes de* a alteração do relógio:  
+- Quando o relógio for alterado novamente, 2 horas da hora local serão sobrepostas em uma hora.  Nesse caso, os pontos no tempo que pertencem ao intervalo sobreposto são apresentados com a diferença *antes* da alteração do relógio:  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Já que algumas informações (como as regras de fuso horário) são mantidas fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e estão sujeitos a alterações ocasionais, o **AT TIME ZONE** função é classificada como não determinísticas. 
+Como algumas informações (como as regras de fuso horário) são mantidas fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e estão sujeitas a alterações ocasionais, a função **AT TIME ZONE** é classificada como não determinísticas. 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Adicionar um deslocamento de fuso horário de destino para datetime sem informação de deslocamento  
- Use **AT TIME ZONE** para adicionar um deslocamento com base nas regras de fuso horário quando você sabe que o original **datetime** valores são fornecidos no mesmo fuso horário:  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Adicionar uma diferença de fuso horário de destino para datetime sem informação de diferença  
+ Use **AT TIME ZONE** para adicionar uma diferença com base nas regras de fuso horário quando você souber que os valores de **datetime** originais são fornecidos no mesmo fuso horário:  
   
 ```  
 USE AdventureWorks2016;  
@@ -172,8 +172,8 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de data e hora](../../t-sql/data-types/date-and-time-types.md)   
- [Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

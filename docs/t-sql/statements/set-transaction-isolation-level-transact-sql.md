@@ -1,5 +1,5 @@
 ---
-title: "DEFINIR o nível de ISOLAMENTO de transação (Transact-SQL) | Microsoft Docs"
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  O comportamento de READ COMMITTED depende da configuração da opção de banco de dados READ_COMMITTED_SNAPSHOT:  
   
--   Se READ_COMMITTED_SNAPSHOT estiver definido como OFF (o padrão), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará bloqueios compartilhados para impedir que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. O tipo de bloqueio compartilhado determina quando ele será liberado. Os bloqueios de linha são liberados antes que a próxima linha seja processada. Bloqueios de página são liberados quando a próxima página é lida e bloqueios de tabela são liberados quando a instrução é concluída.  
+-   Se READ_COMMITTED_SNAPSHOT estiver definido como OFF (o padrão), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará bloqueios compartilhados para impedir que outras transações modifiquem linhas enquanto a transação atual estiver executando uma operação de leitura. Os bloqueios compartilhados também bloqueiam a instrução de ler linhas modificadas por outras transações até que a outra transação seja concluída. O tipo de bloqueio compartilhado determina quando ele será liberado. Os bloqueios de linha são liberados antes que a próxima linha seja processada. Os bloqueios de página são liberados quando a próxima página é lida e bloqueios de tabela são liberados quando a instrução é finalizada.  
   
     > [!NOTE]  
     >  Se READ_COMMITTED_SNAPSHOT estiver definido como ON, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados conforme se encontravam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Bloqueios de intervalo são colocados no intervalo de valores chave que corresponde às condições de pesquisa de cada instrução executada em uma transação. Isso bloqueia que outras transações atualizem ou insiram qualquer linha que seja qualificada para qualquer uma das instruções executadas pela transação atual. Isto significa que, se qualquer uma das instruções de uma transação for executada uma segunda vez, ela lerá o mesmo conjunto de linhas. Os bloqueios de intervalo são mantidos até que a transação seja concluída. Esse é o mais restritivo dos níveis de isolamento, pois ele bloqueia intervalos de chaves inteiros até que a transação seja concluída. Como a simultaneidade é menor, use essa opção apenas quando necessário. Essa opção tem o mesmo efeito de definir HOLDLOCK em todas as tabelas em todas as instruções SELECT de uma transação.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Apenas uma única opção de nível de isolamento pode ser definida por vez, permanecendo definida para aquela conexão até que seja explicitamente alterada. Todas as operações de leitura executadas na transação operam sob as regras do nível de isolamento especificado, a menos que uma dica de tabela na cláusula FROM de uma instrução especifique comportamento de bloqueio ou controle de versão diferente para uma tabela.  
   
  Os níveis de isolamento da transação definem o tipo de bloqueio adquirido em operações de leitura. Bloqueios compartilhados adquiridos para READ COMMITTED ou REPEATABLE READ geralmente são bloqueios de linha, embora os bloqueios de linha possam ser escalados para bloqueios de página ou de tabela se um número significativo de linhas em uma página ou tabela forem referenciadas pela leitura. Se uma linha for modificada pela transação depois de ter sido lida, a transação irá adquirir um bloqueio exclusivo para proteger essa linha, sendo mantido até que a transação seja concluída. Por exemplo, se uma transação REPEATABLE READ tiver um bloqueio compartilhado em uma linha e a transação modificar essa linha, o bloqueio de linha compartilhado será convertido em bloqueio de linha exclusivo.  
@@ -154,7 +154,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED usando controle de versão de linha  
   
- De modo oposto, consultas executadas com esses níveis de isolamento bloqueiam operações de carregamento em massa otimizados em heaps. Para obter mais informações sobre as operações de carregamento em massa, consulte [importação e exportação de dados &#40; SQL Server &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ De modo oposto, consultas executadas com esses níveis de isolamento bloqueiam operações de carregamento em massa otimizados em heaps. Para obter mais informações sobre as operações de carregamento em massa, veja [Importação e exportação de dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Bancos de dados habilitados por FILESTREAM dão suporte aos seguintes níveis de isolamento de transação.  
   
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

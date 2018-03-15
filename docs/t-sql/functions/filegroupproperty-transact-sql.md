@@ -52,8 +52,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
  *filegroup_name*  
  É uma expressão do tipo **sysname** que representa o nome do grupo de arquivos para o qual retornar as informações de propriedade nomeada.  
   
- *propriedade*  
- É uma expressão do tipo **varchar (128)** contém o nome da propriedade do grupo de arquivos a ser retornada. *propriedade* pode ser um destes valores.  
+ *property*  
+ É uma expressão do tipo **varchar(128)** que contém a propriedade do grupo de arquivos a ser retornada. *property* pode ser um desses valores.  
   
 |Valor|Description|Valor retornado|  
 |-----------|-----------------|--------------------|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- *filegroup_name* corresponde ao **nome** coluna o **sys. filegroups** exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* corresponde à coluna **nome** na exibição de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo retorna a configuração para a propriedade `IsDefault` para o grupo de arquivos primário no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -86,11 +86,11 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [FILEGROUP_ID &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys. filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

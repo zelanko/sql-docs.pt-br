@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um token que representa o contexto da transação atual de uma sessão. O token é usado por um aplicativo para associar operações de fluxo contínuo do sistema de arquivos de FILESTREAM à transação. Para obter uma lista de tópicos FILESTREAM, consulte [objeto binário grande &#40; Blob &#41; Dados &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  Retorna um token que representa o contexto da transação atual de uma sessão. O token é usado por um aplicativo para associar operações de fluxo contínuo do sistema de arquivos de FILESTREAM à transação. Para obter uma lista de tópicos de FILESTREAM, confira [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  Quando você chama GET_FILESTREAM_TRANSACTION_CONTEXT, o chamador recebe acesso de sistema de arquivos à transação durante a sua duração. Para permitir que outro usuário acesse a transação pelo sistema de arquivos, use EXECUTE AS para executar GET_FILESTREAM_TRANSACTION_CONTEXT como outro usuário.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `GET_FILESTREAM_TRANSACTION_CONTEXT` em um [!INCLUDE[tsql](../../includes/tsql-md.md)] transação para obter o contexto de transação.  
+ O exemplo a seguir usa `GET_FILESTREAM_TRANSACTION_CONTEXT` em uma transação [!INCLUDE[tsql](../../includes/tsql-md.md)] para obter o contexto da transação.  
   
 ```csharp  
 using System;  
@@ -282,7 +282,7 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   

@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET NOCOUNT é ON, a conta não é retornada. Quando SET NOCOUNT é OFF, a conta é retornada.  
   
- O @@ROWCOUNT função é atualizada mesmo quando SET NOCOUNT é ON.  
+ A função @@ROWCOUNT é atualizada mesmo quando SET NOCOUNT está ON.  
   
  SET NOCOUNT ON evita o envio de mensagens DONE_IN_PROC ao cliente para cada instrução em um procedimento armazenado. Para procedimentos armazenados que contêm várias instruções que não retornam muitos dados reais, ou para procedimentos que contêm loops [!INCLUDE[tsql](../../includes/tsql-md.md)], configurar SET NOCOUNT como ON pode fornecer um aumento significativo no desempenho, porque o tráfego de rede é reduzido consideravelmente.  
   
@@ -97,7 +97,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

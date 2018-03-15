@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Uma função matemática que retorna o valor absoluto (positivo) da expressão numérica especificada. (`ABS` alterações negativo de valores para valores positivos. `ABS`não tem nenhum efeito em zero ou valores positivos.)
+Uma função matemática que retorna o valor absoluto (positivo) da expressão numérica especificada. (`ABS` altera valores negativos para valores positivos. `ABS` não tem nenhum efeito em zero ou em valores positivos.)
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -87,7 +87,7 @@ Esta é a mensagem de erro:
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Funções internas &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Métodos de Geografia estática estendidos | Microsoft Docs"
+title: "Métodos de geografia estáticos estendidos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Especificações OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 -   [GeomFromGML](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
--   [NULL](../../t-sql/spatial-geography/null-geography-data-type.md)  
+-   [Nulo](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
 -   [Analisar](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Ponto](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia agregados estáticos](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos de geografia agregados estáticos](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
+ [Métodos do OGC em instâncias de geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Métodos estendidos em instâncias de geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [OGC Static Geography Methods](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

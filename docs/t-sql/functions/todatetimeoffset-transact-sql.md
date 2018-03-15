@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna um **datetimeoffset** valor que é convertido de um **datetime2** expressão.  
+  Retorna um valor de **datetimeoffset** que é convertido de uma expressão **datetime2**.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,19 +52,19 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que resolve para um [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) valor.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) resolvida em um valor [datetime2](../../t-sql/data-types/datetime2-transact-sql.md).  
   
 > [!NOTE]  
->  A expressão não pode ser do tipo **texto**, **ntext**, ou **imagem** porque esses tipos não podem ser convertidos implicitamente em **varchar** ou **nvarchar**.  
+>  A expressão não pode ser do tipo **text**, **ntext** ou **image** porque esses tipos não podem ser convertidos implicitamente em **varchar** ou **nvarchar**.  
   
- *fuso_horário*  
+ *time_zone*  
  É uma expressão que representa o deslocamento de fuso horário em minutos (se for um inteiro), por exemplo -120, ou horas e minutos (se for uma cadeia de caracteres), por exemplo ‘+13.00’. O intervalo é de +14 a -14 (em horas). A expressão é interpretada em hora local para time_zone especificado.  
   
 > [!NOTE]  
 >  Se a expressão for uma cadeia de caracteres, deve estar no formato {+|-}TZH:THM.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- **DateTimeOffset**. A precisão fracionária é igual a *datetime* argumento.  
+ **datetimeoffset**. A precisão fracionária é igual à do argumento *datetime*.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -97,10 +97,10 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

@@ -44,16 +44,16 @@ O valor Z (elevação) da instância. A semântica do valor de elevação é def
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- O valor dessa propriedade será nulo se a instância de geometry não for um ponto para qualquer **ponto** instância para que ele não está definido.  
+ O valor dessa propriedade será nulo se a instância de geometria não for um ponto, como também para qualquer instância de **Point** para a qual ele não foi definido.  
   
  Esta propriedade é somente leitura.  
   
- As coordenadas Z não são usados nos cálculos feitos pela biblioteca e não é executada em qualquer cálculo de biblioteca.  
+ As coordenadas Z não são usadas nos cálculos feitos pela biblioteca e não estão presentes em nenhum cálculo de biblioteca.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `Point` com valores Z (elevação) e M (medida) e usa `Z` para buscar o valor Z da instância.  
@@ -64,9 +64,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [M &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+## <a name="see-also"></a>Consulte Também  
+ [M &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

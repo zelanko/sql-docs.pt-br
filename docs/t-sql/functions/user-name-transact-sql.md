@@ -1,5 +1,5 @@
 ---
-title: User_name (Transact-SQL) | Microsoft Docs
+title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Argumentos  
  *id*  
- É o número de identificação associado a um usuário do banco de dados. *ID* é **int**. Os parênteses são necessários.  
+ É o número de identificação associado a um usuário do banco de dados. *id* é **int**. Os parênteses são necessários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>Comentários  
- Quando *id* for omitido, o usuário atual no contexto atual é assumido. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_NAME for chamado sem especificar um *id* após uma execução de instrução, USER_NAME retornará o nome do usuário representado. Se um principal do Windows acessar o banco de dados por meio da associação em um grupo, USER_NAME retornará o principal do Windows em vez do grupo.  
+## <a name="remarks"></a>Remarks  
+ Quando *id* é omitido, o usuário atual no contexto atual é assumido. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_NAME é chamado sem especificar uma *id* depois de uma instrução EXECUTE AS, USER_NAME retorna o nome do usuário representado. Se um principal do Windows acessar o banco de dados por meio da associação em um grupo, USER_NAME retornará o principal do Windows em vez do grupo.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-username-without-an-id"></a>E. Usando USER_NAME sem uma ID  
  O exemplo a seguir localiza o nome do usuário atual sem especificar um ID.  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- Aqui está o conjunto de resultados para um usuário conectado no momento.  
+ Este é o conjunto de resultados para um usuário conectado no momento.  
   
 ```  
 ------------------------------   
@@ -160,14 +160,14 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40; Transact-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

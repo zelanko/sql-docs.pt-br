@@ -1,5 +1,5 @@
 ---
-title: CRIAR o esquema (Transact-SQL) | Microsoft Docs
+title: CREATE SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
@@ -75,7 +75,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *schema_name*  
  É o nome pelo qual o esquema é identificado no banco de dados.  
   
- AUTORIZAÇÃO *owner_name*  
+ AUTHORIZATION *owner_name*  
  Especifica o nome da entidade de segurança no nível de banco de dados que possuirá o esquema. Essa entidade de segurança pode possuir outros esquemas e pode não usar o esquema atual como esquema padrão.  
   
  *table_definition*  
@@ -93,7 +93,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Especifica uma instrução DENY que nega permissões em qualquer item protegível, exceto no esquema novo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  As instruções que contêm CREATE SCHEMA AUTHORIZATION, mas não especificam um nome, são permitidas somente para compatibilidade com versões anteriores. A instrução não causa um erro, mas não cria uma esquema.  
@@ -120,7 +120,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Em alguns casos, um usuário pode criar um banco de dados sem ter uma conta de usuário de banco de dados (uma entidade de banco de dados no banco de dados). Isso acontece nas seguintes situações:  
   
--   Um logon tem **CONTROL SERVER** privilégios.  
+-   Um logon tem privilégios **CONTROL SERVER**.  
   
 -   Um usuário do Windows não tem uma conta de usuário de banco de dados individual (uma entidade de banco de dados no banco de dados), mas acessa um banco de dados como membro de um grupo do Windows que tem uma conta de usuário de banco de dados (uma entidade de banco de dados para o grupo do Windows).  
   
@@ -129,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Esse comportamento é necessário para permitir que usuários com base em grupos do Windows criem e possuam objetos. No entanto, isso pode resultar na criação não intencional de esquemas e usuários. Para evitar criar usuários e esquemas implicitamente, sempre que possível crie entidades de banco de dados explicitamente e atribua um esquema padrão. Ou declare explicitamente um esquema existente ao criar objetos em um banco de dados usando nomes de objetos de duas ou três partes.  
 
 >  [!NOTE]
->  A criação implícita de um usuário do Active Directory do Azure não é possível em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como criar um usuário do AD do Azure de provedor externo deve verificar o status de usuários no AAD, criar o usuário falha com erro 2760: **o nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **falha em CREATE SCHEMA devido a erros anteriores.** Para solucionar esses erros, crie o usuário do AD do Azure de provedor externo primeiro e, em seguida, execute novamente a instrução de criação do objeto.
+>  A criação implícita de um usuário do Azure Active Directory não é possível no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como a criação de um usuário do Azure AD por meio de um provedor externo deve verificar o status de usuários no AAD, a criação do usuário falha com o erro 2760: **O nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **Falha em CREATE SCHEMA devido a erros anteriores.** Para resolver esses erros, crie o usuário do Azure AD por meio do provedor externo primeiro e, em seguida, execute novamente a instrução, criando o objeto.
  
   
 ## <a name="deprecation-notice"></a>Aviso de substituição  
@@ -147,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Criando um esquema e conceder permissões  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Criando um esquema e concedendo permissões  
  O exemplo a seguir cria o esquema `Sprockets` possuído por `Annik` que contém a tabela `NineProngs`. A instrução concede `SELECT` a `Mandar` e nega `SELECT` a `Prasanna`. `Sprockets` e `NineProngs` são criados em uma única instrução.  
   
 ```  
@@ -160,10 +160,10 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Criando um esquema e uma tabela no esquema  
- O exemplo a seguir cria o esquema `Sales` e, em seguida, cria uma tabela `Sales.Region` nesse esquema.  
+ O exemplo a seguir cria um o esquema `Sales` e, em seguida, cria uma tabela `Sales.Region` nesse esquema.  
   
 ```  
 CREATE SCHEMA Sales;  
@@ -176,23 +176,23 @@ WITH (DISTRIBUTION = REPLICATE);
 GO  
 ```  
   
-### <a name="c-setting-the-owner-of-a-schema"></a>C. Definir o proprietário de um esquema  
- O exemplo a seguir cria um esquema `Production` pertencentes a `Mary`.  
+### <a name="c-setting-the-owner-of-a-schema"></a>C. Definindo o proprietário de um esquema  
+ O exemplo a seguir cria um esquema `Production` pertencente a `Mary`.  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [Criar um esquema de banco de dados](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Um método que testa se o **geometria** instância é o mesmo que o tipo especificado. Retornará 1 se o tipo de um **geometria** instância é o mesmo que o tipo especificado ou se o tipo especificado for um ancestral do tipo de instância; caso contrário, retornará 0.
+Um método que testa se a instância de **geometry** é igual ao tipo especificado. Retorna 1 se o tipo de uma instância de **geometry** é o mesmo que o tipo especificado ou se o tipo especificado é um ancestral do tipo de instância; caso contrário, retorna 0.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,15 +45,15 @@ Um método que testa se o **geometria** instância é o mesmo que o tipo especif
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_type*  
- É um **nvarchar (4000)** cadeia de caracteres especificando um dos 15 tipos expostos no **geometria** hierarquia de tipo.  
+ É uma cadeia de caracteres **nvarchar(4000)** que especifica um dos 15 tipos expostos na hierarquia de tipo **geometry**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **bits**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- A entrada para o método deve ser um dos seguintes: **geometria**, **ponto**, **curva**, **LineString**,  **CircularString**, **CompoundCurve**, **superfície**, **polígono**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, e **MultiPoint**. Este método lança um **ArgumentException** se quaisquer outras cadeias de caracteres são usadas para a entrada.  
+ A entrada para o método precisa ser uma das seguintes: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** e **MultiPoint**. Esse método gera uma **ArgumentException** se outra cadeia de caracteres é usada na entrada.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir criará uma instância `MultiPoint` e usará `InstanceOf()` para consultar se a instância é uma `GeometryCollection`.  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

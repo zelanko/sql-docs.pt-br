@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>& #x 40; & #x 40. REMSERVER (Transact-SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Comentários  
- @@REMSERVER permite que um procedimento armazenado verificar o nome do servidor de banco de dados do qual o procedimento é executado.  
+## <a name="remarks"></a>Remarks  
+ @@REMSERVER permite que um procedimento armazenado verifique o nome do servidor de banco de dados do qual o procedimento é executado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria o procedimento `usp_CheckServer` que retorna o nome do servidor remoto.  
@@ -78,7 +78,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)  
   

@@ -49,7 +49,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="arguments"></a>Argumentos  
  *type_name*  
- É o nome do tipo de dados. *type_name* é do tipo **nvarchar**. *type_name* pode ser um sistema ou definido pelo usuário tipo.  
+ É o nome do tipo de dados. *type_name* é do tipo **nvarchar**. *type_name* pode ser um tipo de dados do sistema ou definido pelo usuário.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas que emitem metadados, como TYPE_ID, poderão retornar NULL se o usuário não tiver nenhuma permissão para o objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  TYPE_ID retorna NULL se o nome do tipo não for válido ou se o chamador não tiver permissão suficiente para fazer referência ao tipo.  
   
 ## <a name="examples"></a>Exemplos  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: consultando a ID de tipo de um tipo de dados do sistema  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Pesquisando a TYPE ID de um tipo de dados do sistema  
  O exemplo a seguir retorna o `TYPE ID` do tipo de dados de sistema `datetime`.  
   
 ```  
@@ -100,11 +100,11 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

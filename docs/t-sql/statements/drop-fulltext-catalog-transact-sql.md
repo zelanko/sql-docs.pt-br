@@ -1,5 +1,5 @@
 ---
-title: "DESCARTAR o catálogo de texto completo (Transact-SQL) | Microsoft Docs"
+title: DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ DROP FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Argumentos  
  *catalog_name*  
- É o nome do catálogo a ser removido. Se *catalog_name* não existir, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro e não executar a operação de DESCARTE. O grupo de arquivos do catálogo de texto completo não deve ser marcado como OFFLINE ou READONLY para que o comando tenha êxito.  
+ É o nome do catálogo a ser removido. Se *catalog_name* não existir, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro e não executará a operação DROP. O grupo de arquivos do catálogo de texto completo não deve ser marcado como OFFLINE ou READONLY para que o comando tenha êxito.  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ter permissão DROP no catálogo de texto completo ou ser um membro do **db_owner**, ou **db_ddladmin** funções de banco de dados fixas.  
+ O usuário deve ter a permissão DROP no catálogo de texto completo ou ser um membro das funções de banco de dados fixas **db_owner** ou **db_ddladmin**.  
   
-## <a name="see-also"></a>Consulte também  
- [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [CRIAR o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)  
   
   

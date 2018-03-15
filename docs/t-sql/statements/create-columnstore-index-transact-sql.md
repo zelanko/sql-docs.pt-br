@@ -1,5 +1,5 @@
 ---
-title: "CRIAR um índice COLUMNSTORE (Transact-SQL) | Microsoft Docs"
+title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Converter uma tabela rowstore em um índice columnstore clusterizado ou criar um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho de consulta e compactação de dados de data warehouse cargas de trabalho.  
+Converta uma tabela rowstore em um índice columnstore clusterizado ou crie um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho da consulta e a compactação de dados em cargas de trabalho de data warehouse.  
   
 > [!NOTE]  
-> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado.   Não é necessário criar primeiro uma tabela rowstore e convertê-lo para um índice columnstore clusterizado.  
+> Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado.   Não é mais necessário criar uma tabela rowstore primeiro e, em seguida, convertê-la em um índice columnstore clusterizado.  
 
 > [!TIP]
-> Para obter informações sobre as diretrizes de design de índice, consulte o [guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+> Para obter informações sobre as diretrizes de design de índice, confira o [Guia de design de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-Vá para exemplos:  
+Acesse diretamente os exemplos:  
 -   [Exemplos para converter uma tabela rowstore em columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Exemplos de índices columnstore não clusterizados](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
-Vá para cenários:  
--   [Índices ColumnStore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
--   [Índices ColumnStore para data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+Acesse diretamente os cenários:  
+-   [Índices columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Índices columnstore para data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
-Saiba Mais:  
--   [Guia de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
--   [Resumo de recursos de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
+Saiba mais:  
+-   [Guia de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Resumo de recursos dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,122 +118,122 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 ## <a name="arguments"></a>Argumentos  
 CREATE CLUSTERED COLUMNSTORE INDEX  
-Crie um índice columnstore clusterizado no qual todos os dados são compactados e armazenados por coluna. O índice inclui todas as colunas na tabela e armazena toda a tabela. Se a tabela existente for um heap ou índice clusterizado, a tabela é convertida em um índice columnstore clusterizado. Se a tabela já estiver armazenada como um índice columnstore clusterizado, o índice existente é descartado e recriado.  
+Crie um índice columnstore clusterizado no qual todos os dados serão compactados e armazenados por coluna. O índice inclui todas as colunas na tabela e armazena toda a tabela. Se a tabela existente for um índice de heap ou clusterizado, a tabela será convertida em um índice columnstore clusterizado. Se a tabela já estiver armazenada como um índice columnstore clusterizado, o índice existente será descartado e recriado.  
   
 *index_name*  
-Especifica o nome para o novo índice.  
+Especifica o nome do novo índice.  
   
-Se a tabela já tiver um índice columnstore clusterizado, você pode especificar o mesmo nome que o índice existente, ou você pode usar a opção DROP EXISTING para especificar um novo nome.  
+Se a tabela já tiver um índice columnstore clusterizado, você poderá especificar o mesmo nome que o do índice existente ou usar a opção DROP EXISTING para especificar um novo nome.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um heap ou índice clusterizado de tabela é convertido de rowstore em columnstore. Se a tabela já está columnstore, essa instrução recria o índice columnstore clusterizado.  
+ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
+   Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um índice de heap ou clusterizado, ela será convertida de rowstore para columnstore. Se a tabela já for um columnstore, essa instrução recompilará o índice columnstore clusterizado.  
   
 com  
 DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON especifica para descartar o índice columnstore clusterizado existente e criar um novo índice columnstore.  
+   DROP_EXISTING = ON especifica o descarte do índice columnstore clusterizado existente e a criação de um novo índice columnstore.  
 
-   O padrão, DROP_EXISTING = OFF espera que o nome do índice é o mesmo que o nome existente. Ocorre um erro é o nome do índice especificado já existe.  
+   O padrão, DROP_EXISTING = OFF, espera que o nome do índice seja o mesmo que o nome existente. Ocorrerá um erro se o nome do índice especificado já existir.  
   
 MAXDOP = *max_degree_of_parallelism*  
    Substitui a configuração de servidor degrau máximo de paralelismo existente enquanto durar a operação do índice. Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
-   *max_degree_of_parallelism* valores podem ser:  
+   Os valores de *max_degree_of_parallelism* podem ser:  
    - 1 - Suprima a geração de plano paralelo.  
-   - \>1 - restringe o número máximo de processadores usados em uma operação de índice paralela ao número especificado ou menos, com base na carga de trabalho atual do sistema. Por exemplo, quando MAXDOP = 4, o número de processadores usados será 4 ou menos.  
+   - \>1 – restringe o número máximo de processadores usados em uma operação de índice paralela para o número especificado ou menos, com base na carga de trabalho atual do sistema. Por exemplo, quando MAXDOP = 4, o número de processadores usados é 4 ou menos.  
    - 0 (padrão) - Use o número real de processadores, ou menos, com base na carga de trabalho atual do sistema.  
   
-   Para obter mais informações, consulte [configurar o grau máximo de paralelismo opção de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), e [configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+   Para obter mais informações, confira [Configurar a opção max degree of parallelism de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), e [Configurar operações de índice paralelas](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-COMPRESSION_DELAY = **0** | *atraso* [minutos]  
-   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-   Para uma tabela baseada em disco, *atraso* Especifica o número mínimo de minutos que um rowgroup delta no estado CLOSED deve permanecer no rowgroup delta antes do SQL Server pode compactá-las no rowgroup compactado. Como as tabelas baseadas em disco não controlar inserir e atualizar horários em linhas individuais, o SQL Server aplica o atraso para rowgroups delta no estado fechado.  
-   O padrão é 0 minutos.  
-   Para obter recomendações sobre quando usar COMPRESSION_DELAY, consulte [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+   Para uma tabela baseada em disco, *delay* especifica o número mínimo de minutos que um rowgroup delta no estado CLOSED precisa permanecer no rowgroup delta antes que o SQL Server possa compactá-lo no rowgroup compactado. Como as tabelas baseadas em disco não controlam os tempos de inserção e atualização em linhas individuais, o SQL Server aplica o atraso aos rowgroups delta no estado CLOSED.  
+   O padrão é 0 minuto.  
+   Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:   
 COLUMNSTORE  
-   COLUMNSTORE é o padrão e especifica para compactar com a maior compactação columnstore de alto desempenho. Essa é a opção típica.  
+   COLUMNSTORE é o padrão e especifica compactar com a compactação de columnstore de mais alto desempenho. Essa é a opção típica.  
   
 COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE mais compacta a tabela ou partição para um tamanho menor. Use esta opção para situações como arquivamento que exijam um tamanho menor de armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
+   COLUMNSTORE_ARCHIVE compacta ainda mais a tabela ou a partição para um tamanho menor. Use esta opção para situações como arquivamento, que exigem um tamanho menor de armazenamento e podem dedicar mais tempo para armazenamento e recuperação.  
   
-   Para obter mais informações sobre compactação, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
+   Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
 
 ON  
-   Com as opções ON, você pode especificar opções de armazenamento de dados, como um esquema de partição, um grupo de arquivos específico ou o grupo de arquivos padrão. Se a opção ON não for especificada, o índice usa as configurações de partição ou grupo de arquivos de configurações da tabela existente.  
+   Com as opções ON, você pode especificar opções de armazenamento de dados, como um esquema de partição, um grupo de arquivos específico ou o grupo de arquivos padrão. Se a opção ON não for especificada, o índice usará as configurações da partição ou do grupo de arquivos da tabela existente.  
   
    *partition_scheme_name* **(** *column_name* **)**  
-   Especifica o esquema de partição da tabela. O esquema de partição já deve existir no banco de dados. Para criar o esquema de partição, consulte [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
+   Especifica o esquema de partição da tabela. O esquema de partição já deve existir no banco de dados. Para criar o esquema de partição, confira [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *nome da coluna* Especifica a coluna na qual um índice particionado será particionado. Esta coluna deve corresponder ao tipo de dados, comprimento e precisão do argumento da partição de função que *partition_scheme_name* está usando.  
+   *column_name* especifica a coluna na qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando.  
 
    *filegroup_name*  
    Especifica o grupo de arquivos para armazenamento do índice columnstore clusterizado. Se nenhum local for especificado e a tabela não for particionada, o índice utilizará o mesmo grupo de arquivos da exibição ou tabela subjacente. O grupo de arquivos já deve existir.  
 
    **"**default**"**  
-   Para criar o índice no grupo de arquivos padrão, use "padrão" ou [padrão].  
+   Para criar o índice no grupo de arquivos padrão, use "default" ou [ default ].  
   
    Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. QUOTED_IDENTIFIER está ON por padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-CRIAR UM ÍNDICE COLUMNSTORE [CLUSTER]  
-Criar um índice columnstore não clusterizado na memória em uma tabela rowstore armazenado como um heap ou índice clusterizado. O índice pode ter uma condição filtrada e não precisa incluir todas as colunas da tabela subjacente. O índice columnstore requer espaço suficiente para armazenar uma cópia dos dados. Ele pode ser atualizado e foi atualizado enquanto a tabela subjacente é alterada. O índice columnstore não clusterizado em um índice clusterizado habilita a análise em tempo real.  
+CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+Criar um índice columnstore não clusterizado na memória em uma tabela rowstore armazenado como um heap ou índice clusterizado. O índice pode ter uma condição filtrada e não precisa incluir todas as colunas da tabela subjacente. O índice columnstore requer espaço suficiente para armazenar uma cópia dos dados. Ele pode ser atualizado e é atualizado enquanto a tabela subjacente é alterada. O índice columnstore não clusterizado em um índice clusterizado permite a análise em tempo real.  
   
 *index_name*  
-   Especifica o nome do índice. *index_name* devem ser exclusivos dentro da tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+   Especifica o nome do índice. O *index_name* precisa ser exclusivo na tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column*  [ **,**...*n* ] **)**  
-    Especifica as colunas a serem armazenadas. Um índice não clusterizado columnstore é limitado a 1024 colunas.  
-   Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Consulte [limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados com suporte.  
+ **(** *column* [ **,**...*n* ] **)**  
+    Especifica as colunas a serem armazenadas. Um índice columnstore não clusterizado é limitado a 1024 colunas.  
+   Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Confira [Limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados compatíveis.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Especifica a uma, duas ou nome de três partes da tabela que contém o índice.  
+ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
+   Especifica o nome de uma, duas ou três partes da tabela que contém o índice.  
 
-COM DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON, o índice existente é removido e recriado. O nome de índice especificado deve ser igual ao índice existente atualmente; no entanto, a definição de índice pode ser modificada. Por exemplo, você pode especificar colunas ou opções de índice diferentes.
+WITH DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON O índice existente é descartado e recriado. O nome de índice especificado deve ser igual ao índice existente atualmente; no entanto, a definição de índice pode ser modificada. Por exemplo, você pode especificar colunas ou opções de índice diferentes.
   
-   DROP_EXISTING = OFF, um erro será exibido se o nome do índice especificado já existe. O tipo de índice não pode ser alterado com DROP_EXISTING. Na sintaxe compatível com versões anteriores, WITH DROP_EXISTING é equivalente a WITH DROP_EXISTING = ON.  
+   DROP_EXISTING = OFF Um erro será exibido se o nome do índice especificado já existir. O tipo de índice não pode ser alterado com DROP_EXISTING. Na sintaxe compatível com versões anteriores, WITH DROP_EXISTING é equivalente a WITH DROP_EXISTING = ON.  
 
 MAXDOP = *max_degree_of_parallelism*  
-   Substitui o [configurar o grau máximo de paralelismo opção de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) opção de configuração para a duração da operação de índice. Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
+   Substitui a opção de configuração [Configurar a opção max degree of parallelism de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante a operação de índice. Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
-   *max_degree_of_parallelism* valores podem ser:  
+   Os valores de *max_degree_of_parallelism* podem ser:  
    - 1 - Suprima a geração de plano paralelo.  
-   - \>1 - restringe o número máximo de processadores usados em uma operação de índice paralela ao número especificado ou menos, com base na carga de trabalho atual do sistema. Por exemplo, quando MAXDOP = 4, o número de processadores usados será 4 ou menos.  
+   - \>1 – restringe o número máximo de processadores usados em uma operação de índice paralela para o número especificado ou menos, com base na carga de trabalho atual do sistema. Por exemplo, quando MAXDOP = 4, o número de processadores usados é 4 ou menos.  
    - 0 (padrão) - Use o número real de processadores, ou menos, com base na carga de trabalho atual do sistema.  
   
    Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ONLINE = [ON | OFF]   
-   Aplica-se a: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], em apenas índices columnstore não clusterizado.
-ON Especifica que o índice não clusterizado columnstore permaneça online e disponível enquanto a nova cópia do índice está sendo criado.
+   Aplica-se a: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], apenas em índices columnstore não clusterizados.
+ON especifica que o índice columnstore não clusterizado permanece online e disponível enquanto a nova cópia do índice está sendo criada.
 
-   Desativar Especifica que o índice não está disponível para uso, enquanto a nova cópia está sendo construída. Como esse é um índice não clusterizado, o permanece de tabela base disponível, que apenas o índice columnstore não clusterizado não é usado para atender consultas até que o novo índice seja concluído. 
+   OFF especifica que o índice não está disponível para ser usado enquanto a nova cópia está sendo criada. Como esse é um índice não clusterizado, a tabela base permanece disponível, apenas o índice columnstore não clusterizado não é usado para atender às consultas até que o novo índice seja concluído. 
 
 COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
-   Especifica um limite inferior em quanto tempo uma linha deve permanecer no rowgroup delta antes que seja qualificado para migração para o grupo de linhas compactado. Por exemplo, um cliente pode dizer que se uma linha for alterada para 120 minutos, torná-la elegível para a compactação em formato de armazenamento Colunar. Para um índice columnstore em tabelas baseadas em disco, nós não rastrear o tempo quando uma linha foi inserida ou atualizada, usamos o delta rowgroup fechado tempo como um proxy para a linha em vez disso. A duração padrão é 0 minutos. Uma linha é migrada para o armazenamento Colunar depois que foram acumulado 1 milhão de linhas no rowgroup delta e ele foi marcado como fechado.  
+   Especifica um limite inferior para o tempo em que uma linha deve permanecer no rowgroup delta antes que ela seja qualificada para migrar para o rowgroup compactado. Por exemplo, um cliente pode dizer que se uma linha for alterada para 120 minutos, ele será elegível para a compactação em formato de armazenamento colunar. Para um índice columnstore em tabelas baseadas em disco, não é possível controlar o tempo em que uma linha é inserida ou atualizada, nesse caso, é possível usar o tempo de fechamento do rowgroup delta como um proxy para a linha. A duração padrão é 0 minutos. Uma linha é migrada para o armazenamento colunar depois que 1 milhão de linhas são acumuladas no rowgroup delta e ele é marcado como fechado.  
   
 DATA_COMPRESSION  
    Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:  
 COLUMNSTORE  
-   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE é o padrão e especifica para compactar com a maior compactação columnstore de alto desempenho. Essa é a opção típica.  
+   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE é o padrão e especifica compactar com a compactação de columnstore de mais alto desempenho. Essa é a opção típica.  
   
 COLUMNSTORE_ARCHIVE  
-   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE_ARCHIVE mais compacta a tabela ou partição para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
+   Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE_ARCHIVE compacta ainda mais a tabela ou a partição para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.  
   
- Para obter mais informações sobre compactação, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
+ Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
-ONDE \<filter_expression > [AND \<filter_expression >] aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+WHERE \<filter_expression> [ AND \<filter_expression> ] Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
-   Chamado um predicado de filtro, especifica quais linhas devem ser incluídas no índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cria estatísticas filtradas nas linhas de dados no índice filtrado.  
+   Chamado de predicado de filtro, especifica quais linhas devem ser incluídas no índice. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria estatísticas filtradas nas linhas de dados no índice filtrado.  
   
    O predicado de filtro usa a lógica de comparação simples. Comparações que usam literais NULL não são permitidas com os operadores de comparação. Use os operadores IS NULL e IS NOT NULL em seu lugar.  
   
@@ -242,30 +242,30 @@ ONDE \<filter_expression > [AND \<filter_expression >] aplica-se a: [!INCLUDE[ss
    `WHERE ComponentID IN (533, 324, 753)`  
    `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
    
-   Para obter orientação sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).  
+   Para obter diretrizes sobre índices filtrados, confira [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ON  
-   Essas opções especificam os grupos de arquivos no qual o índice é criado.  
+   Essas opções especificam os grupos de arquivos nos quais o índice é criado.  
   
 *partition_scheme_name* **(** *column_name* **)**  
-   Especifica o esquema de partição que define os grupos de arquivos no qual as partições de um índice particionado é mapeado. O esquema de partição deve existir no banco de dados executando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
-   *nome da coluna* Especifica a coluna na qual um índice particionado será particionado. Esta coluna deve corresponder ao tipo de dados, comprimento e precisão do argumento da partição de função que *partition_scheme_name* está usando. *nome da coluna* não é restrito às colunas na definição do índice. Ao particionar um índice columnstore, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adiciona a coluna de particionamento como uma coluna do índice, se ela já não estiver especificada.  
-   Se *partition_scheme_name* ou *arquivos* não for especificado e a tabela estiver particionada, o índice será colocado no mesmo esquema de partição, usando a mesma coluna de particionamento da tabela subjacente.  
+   Especifica o esquema de partição que define os grupos de arquivos para os qual as partições de um índice particionado são mapeadas. O esquema de partição precisa existir no banco de dados por meio da execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
+   *column_name* especifica a coluna na qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Ao particionar um índice columnstore, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adiciona a coluna de particionamento como uma coluna do índice, se ela já não estiver especificada.  
+   Se *partition_scheme_name* ou *filegroup* não for especificado e a tabela estiver particionada, o índice será colocado no mesmo esquema de partição, usando a mesma coluna de particionamento que a tabela subjacente.  
    Um índice columnstore em uma tabela particionada deve ser alinhado por partição.  
-   Para obter mais informações sobre particionamento de índices, consulte [tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+   Para obter mais informações sobre particionamento de índices, confira [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
 
 *filegroup_name*  
-   Especifica o nome do grupo de arquivos no qual criar o índice. Se *filegroup_name* não for especificado e a tabela não estiver particionada, o índice usa o mesmo grupo de arquivos da tabela subjacente. O grupo de arquivos já deve existir.  
+   Especifica o nome do grupo de arquivos no qual criar o índice. Se *filegroup_name* não for especificado e a tabela não estiver particionada, o índice usará o mesmo grupo de arquivos que a tabela subjacente. O grupo de arquivos já deve existir.  
  
 **"**default**"**  
 Cria o índice especificado no grupo de arquivos padrão.  
   
-Nesse contexto, default não é uma palavra-chave. Ele é um identificador para o grupo de arquivos padrão e deve ser delimitado, como em ON **"**padrão**"** ou ON **[**padrão**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"**default**"** ou ON **[**default**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
   
-##  <a name="GenRemarks"></a>Comentários gerais  
+##  <a name="GenRemarks"></a> Comentários gerais  
  Um índice columnstore pode ser criado em uma tabela temporária. Quando a tabela for removida ou a sessão encerrada, o índice também será removido.  
  
 ## <a name="filtered-indexes"></a>Índices filtrados  
@@ -277,7 +277,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 - A operação INSERT, UPDATE, DELETE ou MERGE modificar os dados de um índice filtrado.  
 - O índice filtrado é usado pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |Opções Set|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,78 +297,78 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
   
 -   O otimizador de consulta não considera o índice no plano de execução para qualquer instrução Transact-SQL.  
   
- Para obter mais informações sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
+ Para obter mais informações sobre índices filtrados, consulte [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitações e restrições  
+##  <a name="LimitRest"></a> Limitações e Restrições  
 
-**Cada coluna em um índice columnstore deve ser de um dos seguintes tipos de dados de negócios comuns:** 
+**Cada coluna em um índice columnstore precisa ser de um dos seguintes tipos de dados de negócios comuns:** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   Data  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)   
+-   nvarchar(max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)
+-   varchar(max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)
+-   varbinary (max) (aplica-se ao [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ao Banco de Dados SQL do Azure no tipo de preço Premium, apenas em índices columnstore clusterizados)
 -   binary [ ( *n* ) ]  
--   Identificador exclusivo (aplica-se a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior)
+-   uniqueidentifier (aplica-se ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posteriores)
   
-Se a tabela subjacente tiver uma coluna de um tipo de dados que não há suporte para índices columnstore, você deve omitir a coluna do índice columnstore não clusterizado.  
+Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com índices columnstore, omita essa coluna do índice columnstore não clusterizado.  
   
-**Colunas que usam qualquer um dos seguintes tipos de dados não podem ser incluídas em um índice columnstore:**
+**As colunas que usam um dos seguintes tipos de dados não podem ser incluídas em um índice columnstore:**
 -   ntext, texto e imagem  
--   nvarchar (max), varchar (max) e varbinary (max) (aplica-se a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e as versões anteriores e índices columnstore não clusterizados) 
+-   nvarchar(max), varchar(max) e varbinary(max) (aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e às versões anteriores e a índices columnstore não clusterizados) 
 -   rowversion (e carimbo de data/hora)  
 -   sql_variant  
 -   Tipos CLR (hierarchyid e tipos espaciais)  
 -   xml  
--   Identificador exclusivo (aplica-se a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+-   uniqueidentifier (aplica-se ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
-**Índices columnstore não clusterizado:**
+**Índices columnstore não clusterizados:**
 -   Não pode ter mais de 1024 colunas.  
 -   Uma tabela com um índice columnstore não clusterizado pode ter restrições exclusivas, restrições de chave primária ou restrições de chave estrangeira, mas as restrições não podem ser incluídas no índice columnstore não clusterizado.  
 -   Não pode ser criado em uma exibição ou exibição indexada.  
 -   Não pode incluir uma coluna esparsa.  
--   Não pode ser alterado usando o **ALTER INDEX** instrução. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recriar um índice columnstore.  
--   Não pode ser criado usando o **incluir** palavra-chave.  
--   Não é possível incluir o **ASC** ou **DESC** palavras-chave para o índice de classificação. Os índices columnstore são ordenados de acordo com os algoritmos de compactação. A classificação eliminará muitos dos benefícios de desempenho.  
--   Não é possível incluir colunas de objeto grande (LOB) do tipo nvarchar (max), varchar (max) e varbinary (max) em índices de repositório de coluna não clusterizado. Somente índices columnstore clusterizados oferecem suporte a tipos de LOB, a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] versão e o banco de dados do SQL Azure configurado no preço premium. Observe que as versões anteriores não dão suporte a tipos LOB em índices columnstore clusterizados e não clusterizados.
+-   Não pode ser alterado usando a instrução **ALTER INDEX**. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  
+-   Ele não pode ser criado usando a palavra-chave **INCLUDE**.  
+-   Não é possível incluir as palavras-chave **ASC** ou **DESC** para classificar o índice. Os índices columnstore são ordenados de acordo com os algoritmos de compactação. A classificação eliminará muitos dos benefícios de desempenho.  
+-   Não é possível incluir colunas de LOB (objeto grande) do tipo nvarchar(max), varchar(max) e varbinary(max) em índices de repositório de colunas não clusterizados. Somente índices columnstore clusterizados permitem os tipos LOB, começando com a versão do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o Banco de Dados SQL do Azure configurado no tipo de preço Premium. Observe que as versões anteriores não são compatíveis com os tipos LOB em índices columnstore clusterizados e não clusterizados.
 
 
- **Índices ColumnStore não podem ser combinados com os seguintes recursos:**  
--   Colunas computadas. Começando com o SQL Server 2017, um índice columnstore clusterizado pode conter uma coluna computada não persistente. No entanto, no SQL Server de 2017, índices columnstore clusterizados não podem conter colunas computadas persistentes e não podem ser criados índices não clusterizados em colunas computadas. 
--   Compactação de página e de linha, e **vardecimal** o formato de armazenamento (um índice columnstore já é compactado em um formato diferente.)  
+ **Os índices columnstore não podem ser combinados com os seguintes recursos:**  
+-   Colunas computadas. Começando com o SQL Server 2017, um índice columnstore clusterizado pode conter uma coluna computada não persistente. No entanto, no SQL Server 2017, os índices columnstore clusterizados não podem conter colunas computadas persistentes e não é possível criar índices não clusterizados em colunas computadas. 
+-   Compactação de página e de linha e o formato de armazenamento **vardecimal** (um índice columnstore já é compactado em um formato diferente.)  
 -   Replicação  
 -   Fluxo de arquivos
 
-Você não pode usar cursores ou gatilhos em uma tabela com um índice columnstore clusterizado. Essa restrição não se aplica a índices columnstore não clusterizado; Você pode usar cursores e gatilhos em uma tabela com um índice columnstore não clusterizado.
+Não é possível usar cursores nem gatilhos em uma tabela com um índice columnstore clusterizado. Essa restrição não se aplica a índices columnstore não clusterizados. É possível usar cursores e gatilhos em uma tabela com um índice columnstore não clusterizado.
 
 **Limitações específicas do SQL Server 2014**  
-Essas limitações se aplicam somente ao SQL Server 2014. Nesta versão, apresentamos índices columnstore clusterizados atualizáveis. Índices columnstore não clusterizados foram ainda somente leitura.  
+Essas limitações aplicam-se somente ao SQL Server 2014. Nesta versão, foram introduzidos os índices columnstore clusterizados atualizáveis. Os índices columnstore não clusterizados ainda eram somente leitura.  
 
--   Controle de alterações. Você não pode usar o controle de alterações com índices columnstore não clusterizado (NCCI) porque eles são somente leitura. Ele funciona para índices columnstore clusterizados (CCI).  
--   O Change data capture. Você não pode usar o change data capture para índice columnstore não clusterizado (NCCI) porque eles são somente leitura. Ele funciona para índices columnstore clusterizados (CCI).  
--   Secundária legível. Você não pode acessar um índice clusterizado columnstore clusterizado (CCI) de um secundário legível de um grupo de disponibilidade sempre OnReadable.  Você pode acessar um índice columnstore não clusterizado (NCCI) de um secundário legível.  
--   Vários conjuntos de resultados ativos (MARS). SQL Server 2014 usa MARS para conexões somente leitura para tabelas com um índice columnstore.    No entanto, SQL Server 2014 não dá suporte a MARS para operações de DML (linguagem) de manipulação de dados simultâneas em uma tabela com um índice columnstore. Quando isso ocorrer, o SQL Server encerra as conexões e anula as transações.  
+-   Controle de alterações. Não é possível usar o controle de alterações com NCCI (índices columnstore não clusterizado) porque eles são somente leitura. Mas funciona para CCI (índices columnstore clusterizados).  
+-   Captura de dados de alterações. Não é possível usar a captura de dados de alterações em NCCI (índices columnstore não clusterizado) porque eles são somente leitura. Mas funciona para CCI (índices columnstore clusterizados).  
+-   Secundário legível. Não é possível acessar um CCI (índice columnstore clusterizado) de um secundário legível de um grupo de disponibilidade Always On legível.  É possível acessar um NCCI (índice columnstore não clusterizado) de um secundário legível.  
+-   MARS (conjunto de resultados ativos múltiplos). O SQL Server 2014 usa o MARS para conexões somente leitura com tabelas que contenham um índice columnstore.    No entanto, o SQL Server 2014 não é compatível com o MARS para operações de DML (linguagem de manipulação de dados) simultâneas em uma tabela com um índice columnstore. Quando isso ocorre, o SQL Server encerra as conexões e anula as transações.  
   
- Para obter informações sobre os benefícios de desempenho e as limitações de índices columnstore, consulte [visão geral de índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
+ Para obter informações sobre os benefícios de desempenho e as limitações dos índices columnstore, confira [Visão geral de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
 ##  <a name="Metadata"></a> Metadados  
  Todas as colunas em um índice columnstore são armazenadas nos metadados como colunas incluídas. O índice columnstore não tem colunas de chave. Essas exibições do sistema fornecem informações sobre índices columnstore.  
@@ -380,7 +380,7 @@ Essas limitações se aplicam somente ao SQL Server 2014. Nesta versão, apresen
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a>Exemplos para converter uma tabela rowstore em columnstore  
+##  <a name="convert"></a> Exemplos para converter uma tabela rowstore em columnstore  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Converter um índice columnstore clusterizado  
  Este exemplo cria uma tabela como um heap e, depois, converte-o em um índice columnstore clusterizado chamado o cci_Simple. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
@@ -413,12 +413,12 @@ WITH (DROP_EXISTING = ON);
 GO  
 ```  
   
-### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Ao converter uma tabela rowstore em um índice columnstore, lidar com índices não clusterizados.  
- Este exemplo mostra como tratar os índices não clusterizados ao converter uma tabela rowstore em um índice columnstore. Na verdade, começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nenhuma ação especial é necessária; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define automaticamente e recria os índices não clusterizados no novo índice columnstore clusterizado.  
+### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Tratar índices não clusterizados ao converter uma tabela rowstore em um índice columnstore.  
+ Este exemplo mostra como tratar os índices não clusterizados ao converter uma tabela rowstore em um índice columnstore. Na verdade, começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nenhuma ação especial é necessária, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define e recompila automaticamente os índices não clusterizados no novo índice columnstore clusterizado.  
   
- Se você deseja descartar os índices não clusterizados, use a instrução DROP INDEX antes de criar o índice columnstore. A opção DROP EXISTING remove somente o índice clusterizado que está sendo convertido. Ele não descarta os índices não clusterizados.  
+ Se você desejar remover os índices não clusterizados, use a instrução DROP INDEX antes de criar o índice columnstore. A opção DROP EXISTING remove somente o índice clusterizado que está sendo convertido. Ela não descarta os índices não clusterizados.  
   
- Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], você não pode criar um índice não clusterizado em um índice columnstore. Este exemplo mostra como nas versões anteriores é necessário descartar os índices não clusterizados antes de criar o índice columnstore.  
+ No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], não era possível criar um índice não clusterizado em um índice columnstore. Este exemplo mostra como nas versões anteriores era necessário remover os índices não clusterizados antes de criar o índice columnstore.  
   
 ```  
   
@@ -479,10 +479,10 @@ GO
   
 3.  Descarte o índice clusterizado.  
   
-    -   Faça isso somente se desejar especificar um novo nome para o índice quando ele for convertido em um índice columnstore clusterizado. Se você não remover o índice clusterizado, o novo índice columnstore clusterizado tem o mesmo nome.  
+    -   Faça isso somente se desejar especificar um novo nome para o índice quando ele for convertido em um índice columnstore clusterizado. Se você não remover o índice clusterizado, o novo índice columnstore clusterizado terá o mesmo nome.  
   
         > [!NOTE]  
-        >  Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados do rowstore usam o nome padrão que é ' ClusteredIndex_\<GUID >'.  
+        >  Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados da rowstore usam o nome padrão que é 'ClusteredIndex_\<GUID>'.  
   
     ```  
     --Process for dropping a clustered index.  
@@ -539,10 +539,10 @@ ON MyFactTable;
 ```  
   
 
-### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Desfragmentar, recriando o índice columnstore clusterizado inteiro  
+### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Desfragmentar recompilando o índice columnstore clusterizado inteiro  
    Aplica-se a: SQL Server 2014  
   
- Há duas maneiras de recriar o índice columnstore clusterizado completo. Você pode usar CREATE CLUSTERED COLUMNSTORE INDEX, ou [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md) e a opção REBUILD. Ambos os métodos geram os mesmos resultados.  
+ Há duas maneiras de recriar o índice columnstore clusterizado completo. Você pode usar CREATE CLUSTERED COLUMNSTORE INDEX ou [ALTER INDEX &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-index-transact-sql.md) e a opção REBUILD. Ambos os métodos geram os mesmos resultados.  
   
 > [!NOTE]  
 >  Começando com o SQL Server 2016, use ALTER INDEX REORGANIZE em vez de reconstruir com os métodos descritos neste exemplo.  
@@ -568,10 +568,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```  
   
-##  <a name="nonclustered"></a>Exemplos de índices columnstore não clusterizados  
+##  <a name="nonclustered"></a> Exemplos de índices columnstore não clusterizados  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Criar um índice columnstore como um índice secundário em uma tabela rowstore  
- Este exemplo cria um índice não clusterizado columnstore em uma tabela rowstore. Somente um índice columnstore pode ser criado nesta situação. O índice columnstore exige armazenamento extra, pois ela contém uma cópia dos dados na tabela rowstore. Este exemplo cria uma tabela simples e um índice clusterizado e, em seguida, demonstra a sintaxe de criação de um índice não clusterizado columnstore.  
+ Este exemplo cria um índice columnstore não clusterizado em uma tabela rowstore. Somente um índice columnstore pode ser criado nesta situação. O índice columnstore exige armazenamento extra, pois contém uma cópia dos dados na tabela rowstore. Este exemplo cria uma tabela simples e um índice clusterizado e, em seguida, demonstra a sintaxe de criação de um índice columnstore não clusterizado.  
   
 ```  
 CREATE TABLE SimpleTable  
@@ -601,10 +601,10 @@ ON "default"
 GO  
 ```  
   
- Para obter um exemplo mais complexo usando tabelas particionadas, consulte [visão geral de índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+ Para obter um exemplo mais complexo do uso de tabelas particionadas, confira [Visão geral de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Criar um índice não clusterizado columnstore com um predicado filtrado  
- O exemplo a seguir cria um índice columnstore não clusterizado filtrado na tabela Production. billofmaterials o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados. O predicado de filtro pode incluir colunas que não sejam de chave no índice filtrado. O predicado deste exemplo seleciona apenas as linhas em que EndDate é não NULL.  
+### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Criar um índice columnstore não clusterizado com um predicado filtrado  
+ O exemplo a seguir cria um índice columnstore não clusterizado filtrado na tabela Production.BillOfMaterials no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O predicado de filtro pode incluir colunas que não sejam de chave no índice filtrado. O predicado deste exemplo seleciona apenas as linhas em que EndDate é não NULL.  
   
 ```  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -619,8 +619,8 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ```  
   
-###  <a name="ncDML"></a> D. Alterar os dados em um índice não clusterizado columnstore  
-   Aplica-se a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
+###  <a name="ncDML"></a> D. Alterar os dados em um índice columnstore não clusterizado  
+   Aplica-se a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
  Quando você cria um índice columnstore não clusterizado em uma tabela, não pode modificar diretamente os dados nessa tabela. Uma consulta com INSERT, UPDATE, DELETE ou MERGE falhará e retornará uma mensagem de erro. Para adicionar ou modificar os dados na tabela, siga um destes procedimentos:  
   
@@ -636,16 +636,16 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Alternar uma partição da tabela com o índice columnstore para uma tabela de preparo vazia. Se houver um índice columnstore na tabela de preparo, desabilite o índice columnstore. Executar quaisquer atualizações. Criar (ou recriar) o índice columnstore. Alternar a tabela de preparo para a partição anterior (não vazia) da tabela principal.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Alterar um índice clusterizado para um índice columnstore clusterizado  
  Usando a instrução CREATE CLUSTERED COLUMNSTORE INDEX com DROP_EXISTING = ON, você pode:  
   
--   Altere um índice clusterizado em um índice columnstore clusterizado.  
+-   Alterar um índice clusterizado para um índice columnstore clusterizado.  
   
--   Recompile um índice columnstore clusterizado.  
+-   Recompilar um índice columnstore clusterizado.  
   
- Este exemplo cria a tabela de xDimProduct como uma tabela rowstore com um índice clusterizado e, em seguida, usa criar índice de COLUMNSTORE CLUSTERIZADO para alterar a tabela de uma tabela rowstore em uma tabela columnstore.  
+ Este exemplo cria a tabela xDimProduct como uma tabela rowstore com um índice clusterizado e, em seguida, usa CREATE CLUSTERED COLUMNSTORE INDEX para alterar a tabela de uma tabela rowstore para uma tabela columnstore.  
   
 ```  
 -- Uses AdventureWorks  
@@ -669,8 +669,8 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Recriar um índice columnstore clusterizado  
- Criar o exemplo anterior, este exemplo usa CREATE CLUSTERED COLUMNSTORE INDEX para recriar o índice columnstore clusterizado existente chamado cci_xDimProduct.  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Recompilar um índice columnstore clusterizado  
+ Com base no exemplo anterior, este exemplo usa CREATE CLUSTERED COLUMNSTORE INDEX para recompilar o índice columnstore clusterizado existente chamado cci_xDimProduct.  
   
 ```  
 --Rebuild the existing clustered columnstore index.  
@@ -682,9 +682,9 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. Alterar o nome de um índice columnstore clusterizado  
  Para alterar o nome de um índice columnstore clusterizado, remova o índice columnstore clusterizado existente e, em seguida, recrie o índice com um novo nome.  
   
- É recomendável somente fazer esta operação com uma pequena tabela ou uma tabela vazia. Demora muito tempo para descartar um índice columnstore clusterizado grandes e a recrie com um nome diferente.  
+ É recomendável fazer esta operação somente com uma tabela pequena ou uma tabela vazia. Demora muito para remover um índice columnstore clusterizado grande e a recompilá-lo com um nome diferente.  
   
- Usando o índice de columnstore clusterizado cci_xDimProduct do exemplo anterior, este exemplo descarta o índice columnstore clusterizado cci_xDimProduct e, em seguida, recrie o índice columnstore clusterizado com o nome mycci_xDimProduct.  
+ Usando o índice columnstore clusterizado cci_xDimProduct do exemplo anterior, este exemplo descarta o índice columnstore clusterizado cci_xDimProduct e, em seguida, recria o índice columnstore clusterizado com o nome mycci_xDimProduct.  
   
 ```  
 --For illustration purposes, drop the clustered columnstore index.   
@@ -698,7 +698,7 @@ WITH ( DROP_EXISTING = OFF );
 ```  
   
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Converter uma tabela columnstore em uma tabela rowstore com um índice clusterizado  
- Pode haver uma situação para a qual você deseja remover um índice columnstore clusterizado e criar um índice clusterizado. Armazena a tabela no formato rowstore. Este exemplo converte uma tabela columnstore em uma tabela rowstore com um índice clusterizado com o mesmo nome. Nenhum dos dados é perdido. Todos os dados vai para a tabela rowstore e as colunas listadas torna-se as colunas de chave no índice clusterizado.  
+ É possível que haja uma situação em você deseje remover um índice columnstore clusterizado e criar um índice clusterizado. Isso armazena a tabela no formato rowstore. Este exemplo converte uma tabela columnstore em uma tabela rowstore com um índice clusterizado com o mesmo nome. Nenhum dos dados é perdido. Todos os dados vão para a tabela rowstore e as colunas listadas tornam-se as colunas de chave no índice clusterizado.  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
@@ -710,8 +710,8 @@ WITH ( DROP_EXISTING = ON);
   
 ```  
   
-### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Converter uma tabela columnstore um heap rowstore  
- Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para descartar o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela de cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuído, mas é armazenado como um heap.  
+### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Converter uma tabela columnstore novamente em um heap rowstore  
+ Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
   
 ```  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

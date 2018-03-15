@@ -1,5 +1,5 @@
 ---
-title: "+ = (Atribuição de adição) (Transact-SQL) | Microsoft Docs"
+title: "+= (Atribuição de adição) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-assignment-transact-sql"></a>+= (Addition Assignment) (Transact-SQL)
+# <a name="-addition-assignment-transact-sql"></a>+= (Atribuição de adição) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Soma dois números e define um valor como o resultado da operação. Por exemplo, se uma variável @x é igual a 35, então @x + = 2 assumirá o valor original de @x, adicionar 2 e conjuntos de @x para esse novo valor (37).  
+  Soma dois números e define um valor como o resultado da operação. Por exemplo, se uma variável @x é igual a 35, @x += 2 assume o valor original de @x, adiciona 2 e define @x com esse novo valor (37).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +49,18 @@ expression += expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de dados na categoria numeric, exceto o **bit** tipo de dados.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de qualquer tipo de dados da categoria numérica, exceto o tipo de dados **bit**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações, consulte [+ &#40; Adição &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/add-transact-sql.md).  
+ Para obter mais informações, consulte [+ &#40;Adição&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40;String Concatenation Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+= &#40;Atribuição de concatenação de cadeia de caracteres&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   

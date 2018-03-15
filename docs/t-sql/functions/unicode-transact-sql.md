@@ -48,10 +48,10 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *ncharacter_expression* **'**  
- É um **nchar** ou **nvarchar** expressão.  
+ É uma expressão **nchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a função UNICODE retorna um ponto de código UCS-2 no intervalo de 0 a 0xFFFF. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e em edições posteriores, ao usar agrupamentos SC, UNICODE retorna um ponto de código UTF-16 no intervalo 0 a 0x10FFFF.  
@@ -145,11 +145,11 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

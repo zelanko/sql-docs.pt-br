@@ -62,7 +62,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *Boolean_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que retorna **TRUE** ou **FALSE**. Se a expressão booliana contiver uma instrução SELECT, a instrução SELECT deverá ser incluída entre parênteses.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que retorna **TRUE** ou **FALSE**. Se a expressão booliana contiver uma instrução SELECT, a instrução SELECT deverá ser incluída entre parênteses.  
   
  {*sql_statement* | *statement_block*}  
  É qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou agrupamento de instruções, conforme definido com um bloco de instruções. Para definir um bloco de instruções, use as palavras-chave BEGIN e END de controle de fluxo.  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: simples Loop While  
- No exemplo a seguir, se o preço médio de tabela de um produto for menor que `$300`, o loop `WHILE` dobrará os preços e selecionará o preço máximo. Se o preço máximo for menor ou igual a `$500`, o loop `WHILE` será reiniciado e dobrará novamente os preços. Esse loop continuará dobrando os preços até que o preço máximo seja maior do que `$500`e, em seguida, encerra o `WHILE` loop.  
+### <a name="c-simple-while-loop"></a>C: Loop While simples  
+ No exemplo a seguir, se o preço médio de tabela de um produto for menor que `$300`, o loop `WHILE` dobrará os preços e selecionará o preço máximo. Se o preço máximo for menor ou igual a `$500`, o loop `WHILE` será reiniciado e dobrará novamente os preços. Esse loop continuará dobrando os preços até que o preço máximo seja maior que `$500`; em seguida, sairá do loop `WHILE`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ END
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

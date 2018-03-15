@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A configuração SET ARITHIGNORE apenas controla se uma mensagem de erro é retornada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um NULL em um cálculo que envolve um erro de estouro ou divisão por zero, independentemente dessa configuração. A configuração SET ARITHABORT pode ser usada para determinar se a consulta foi terminada. Essa configuração não afeta erros que ocorrem durante instruções INSERT, UPDATE e DELETE.  
   
  Se SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir demonstra a divisão por zero e os erros de estouro. Este exemplo não retornará uma mensagem de erro para esses erros porque ARITHIGNORE é OFF.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ O exemplo a seguir demonstra os erros de divisão por zero e de estouro. Esse exemplo não retorna uma mensagem de erro para esses erros porque ARITHIGNORE é OFF.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -116,9 +116,9 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

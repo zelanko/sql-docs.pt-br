@@ -1,5 +1,5 @@
 ---
-title: GetLevel (mecanismo de banco de dados) | Microsoft Docs
+title: GetLevel (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getlevel-database-engine"></a>GetLevel (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um inteiro que representa a profundidade do nó *isso* na árvore.
+Retorna um inteiro que representa a profundidade do nó *this* na árvore.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,17 +51,17 @@ SqlInt16 GetLevel ( )
 ## <a name="return-types"></a>Tipos de retorno  
 **Tipo de retorno do SQL Server: smallint**
   
-**Tipo de retorno CLR: SqlInt16**
+**Tipo de retorno do CLR: SqlInt16**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Usado para determinar o nível de um ou mais nós ou para filtrar os nós de membros de um nível especificado. A raiz da hierarquia é nível 0.
   
-GetLevel é muito útil para índices de pesquisa de primeira amplitude. Para obter mais informações, consulte [dados hierárquicos &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+GetLevel é muito útil para índices de pesquisa de primeira amplitude. Para obter mais informações, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. Retornando o nível de hierarquia como uma coluna  
-O exemplo a seguir retorna uma representação de texto do **hierarchyid**e, em seguida, o nível de hierarquia como o **EmpLevel** coluna para todas as linhas na tabela:
+O seguinte exemplo retorna uma representação de texto da **hierarchyid** e, em seguida, o nível de hierarquia como a coluna **EmpLevel** para todas as linhas na tabela:
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -90,7 +90,7 @@ WHERE OrgNode.GetLevel() = 0;
 ```  
   
 ### <a name="d-clr-example"></a>D. Exemplo de CLR  
-O trecho de código a seguir chama o método GetLevel ():
+O seguinte trecho de código chama o método GetLevel():
   
 ```sql
 this.GetLevel()  

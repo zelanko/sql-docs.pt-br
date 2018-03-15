@@ -73,7 +73,7 @@ DEFAULT <xml_namespace_uri>
  Um URI que identifica o namespace XML que está sendo declarado. *xml_namespace_uri* é uma cadeia de caracteres SQL.  
   
  *xml_namespace_prefix*  
- Especifica um prefixo a ser mapeado e associado com o valor URI de namespace especificado em *xml_namespace_uri*. *xml_namespace_prefix* deve ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador.  
+ Especifica um prefixo a ser mapeado e associado ao valor URI do namespace especificado em *xml_namespace_uri*. *xml_namespace_prefix* deve ser um identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
  Quando você usa a cláusula WITH XMLNAMESPACES em uma instrução que também inclui uma expressão de tabela comum, a cláusula WITH XMLNAMESPACES deve preceder a expressão na instrução.  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Os valores de cadeia de caracteres URI são codificados de acordo com a página de código de agrupamento de banco de dados atual e são convertidos internamente em Unicode.  
   
--   O namespace XML URI será espaço em branco reduzido segundo espaço em branco XSD recolher regras que são usadas para **xs: anyURI**. Além disso, observe que são executados definições de entidade ou cancelamentos de definição em valores URI de namespaces XML.  
+-   O URI de namespace de XML terá o espaço em branco reduzido segundo as regras de redução de espaço em branco XSD usadas para **xs:anyURI**. Além disso, observe que são executados definições de entidade ou cancelamentos de definição em valores URI de namespaces XML.  
   
 -   Será verificado no URI de namespace XML se há caracteres XML 1.0 que não sejam válidos, e será gerado um erro se algum for encontrado (por exemplo, U+0007).  
   
@@ -105,9 +105,9 @@ DEFAULT <xml_namespace_uri>
 -   A palavra-chave XMLNAMESPACES é reservada no contexto da cláusula WITH.  
   
 ## <a name="examples"></a>Exemplos  
- Para obter exemplos, consulte [adicionar Namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Para obter exemplos, consulte [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

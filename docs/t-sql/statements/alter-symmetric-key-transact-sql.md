@@ -1,5 +1,5 @@
 ---
-title: "ALTERAR a chave SIMÉTRICA (Transact-SQL) | Microsoft Docs"
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,19 +72,19 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  Descarta a criptografia pelo método especificado. Você não pode remover todas as criptografias de uma chave simétrica.  
   
- CERTIFICADO *Certificate_name*  
+ CERTIFICATE *Certificate_name*  
  Especifica o certificado que é usado para criptografar a chave simétrica. Esse certificado já deve existir no banco de dados.  
   
- SENHA **='***senha***'**  
- Especifica a senha usada para criptografar a chave simétrica. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Especifica a senha usada para criptografar a chave simétrica. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- CHAVE SIMÉTRICA *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  Especifica a chave simétrica usada para criptografar a chave simétrica que está sendo alterada. Essa chave simétrica já deve existir no banco de dados e deve estar aberta.  
   
- CHAVE ASSIMÉTRICA *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Especifica a chave assimétrica que é usada para criptografar a chave simétrica que está sendo alterada. Essa chave assimétrica já deve existir no banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  Quando uma chave simétrica é criptografada com uma senha, e não com a chave pública da chave mestre do banco de dados, o algoritmo de criptografia TRIPLE_DES é usado. Por esse motivo, as chaves criadas com um algoritmo de criptografia forte, como AES, são protegidas por um algoritmo mais fraco.  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

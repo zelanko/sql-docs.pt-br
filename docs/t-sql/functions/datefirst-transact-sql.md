@@ -45,12 +45,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna o valor atual, para uma sessão de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Retorna o valor atual, para uma sessão, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de dados de data e hora e funções, consulte [data e hora tipos de dados e funções &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ Para obter uma visão geral de todos os [!INCLUDE[tsql](../../includes/tsql-md.m
 ## <a name="return-type"></a>Tipo de retorno  
 **tinyint**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 SET DATEFIRST especifica o primeiro dia da semana. O padrão do inglês dos EUA é 7, domingo.
   
 A configuração desse idioma afeta a interpretação das cadeias de caracteres ao longo da conversão em valores de data para armazenamento no banco de dados, e a exibição dos valores de data armazenados no banco de dados. Essa configuração não afeta o formato de armazenamento de dados de data. No exemplo a seguir, o idioma é definido primeiramente como `Italian`. A instrução `SELECT @@DATEFIRST;` retorna `1`. O idioma é definido como `us_english`. A instrução `SELECT @@DATEFIRST;` retorna `7`.
@@ -96,14 +96,14 @@ First Day         Today
 ```  
   
 ## <a name="example"></a>Exemplo
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de configuração &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

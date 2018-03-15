@@ -62,7 +62,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
   
  Não é possível descartar uma coleção de esquema XML que está em uso. Desse modo, a coleção que está sendo descartada não pode ser:  
   
--   Associada a nenhum **xml** parâmetro de tipo ou coluna.  
+-   Associada a nenhum parâmetro ou coluna do tipo **XML**.  
   
 -   Especificada em nenhuma restrição de tabela.  
   
@@ -91,11 +91,11 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

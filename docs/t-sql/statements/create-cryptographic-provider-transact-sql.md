@@ -1,5 +1,5 @@
 ---
-title: "CRIAR um provedor CRIPTOGRÁFICO (Transact-SQL) | Microsoft Docs"
+title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  É o nome do provedor de Gerenciamento Extensível de Chaves.  
   
  *path_of_DLL*  
- É o caminho do arquivo .dll que implementa o Gerenciamento Extensível de Chaves do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao usar o **SQL Server Connector para Cofre de chaves do Microsoft Azure** o local padrão é **' C:\Program Files\Microsoft SQL Server Connector para Microsoft Azure chave Vault\Microsoft.AzureKeyVaultService.EKM.dll '**.  
+ É o caminho do arquivo .dll que implementa o Gerenciamento Extensível de Chaves do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao usar o **Conector do SQL Server para Microsoft Azure Key Vault**, a localização padrão é **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as chaves criadas por um provedor farão referência ao provedor por meio de seu GUID. O GUID é retido em todas as versões da DLL.  
   
- A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificado, que deve ter sua raiz instalada no **autoridades de certificação raiz confiáveis** local em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [SQL Server certificados e chaves assimétricas](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local  **	Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Quando uma dll de provedor EKM não implementar todos os métodos necessários, CREATE CRYPTOGRAPHIC PROVIDER poderá retornar o erro 33085:  
   
@@ -75,10 +75,10 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão CONTROL SERVER ou associação no **sysadmin** função de servidor fixa.  
+ Exige a permissão CONTROL SERVER ou a associação à função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um provedor criptográfico chamado `SecurityProvider` na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo. dll. O arquivo. dll é nomeado `c:\SecurityProvider\SecurityProvider_v1.dll` e é instalado no servidor. O certificado do provedor deve ser instalado primeiro no servidor.  
+ O exemplo a seguir cria um provedor criptográfico chamado `SecurityProvider` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com base em um arquivo .dll. O arquivo .dll é nomeado `c:\SecurityProvider\SecurityProvider_v1.dll` e instalado no servidor. O certificado do provedor deve ser instalado primeiro no servidor.  
   
 ```  
 -- Install the provider  
@@ -86,7 +86,7 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

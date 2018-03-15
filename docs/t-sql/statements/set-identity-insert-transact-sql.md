@@ -60,7 +60,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  É o nome de uma tabela com uma coluna de identidade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em qualquer momento, somente uma tabela em uma sessão pode ter a propriedade IDENTITY_INSERT definida como ON. Se uma tabela já possui essa propriedade definida como ON, e uma instrução SET IDENTITY_INSERT ON for emitida para outra tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro declarando que SET IDENTITY_INSERT já é ON e informará para o que a tabela está definida como ON.  
   
  Se o valor inserido for maior que o valor de identidade atual para a tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará automaticamente o novo valor inserido como valor de identidade atual.  
@@ -119,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

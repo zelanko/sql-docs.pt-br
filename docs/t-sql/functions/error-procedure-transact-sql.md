@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor de retorno  
  Quando chamado em um bloco CATCH, retorna o nome do procedimento armazenado no qual o erro ocorreu.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ERROR_PROCEDURE pode ser chamado em qualquer lugar dentro do escopo de um bloco CATCH.  
   
- ERROR_PROCEDURE retorna o nome do procedimento armazenado ou gatilho no qual o erro ocorreu, independentemente do número de vezes que ele é chamado ou se é chamado dentro do escopo do bloco CATCH. Isso contrasta com as funções, como@ERROR, que retorna o número do erro na instrução imediatamente posterior àquela que causou o erro ou na primeira instrução do bloco CATCH.  
+ ERROR_PROCEDURE retorna o nome do procedimento armazenado ou gatilho no qual o erro ocorreu, independentemente do número de vezes que ele é chamado ou se é chamado dentro do escopo do bloco CATCH. Isso é diferente de funções como @@ERROR, que retornam apenas o número de erro na instrução imediatamente posterior àquela que causou o erro ou na primeira instrução do bloco CATCH.  
   
  Em blocos CATCH aninhados, ERROR_PROCEDURE retorna o nome do procedimento armazenado ou do gatilho específico do escopo do bloco CATCH no qual é referenciado. Por exemplo, o bloco CATCH de uma construção TRY…CATCH pode ter uma construção TRY…CATCH aninhada. No bloco CATCH aninhado, ERROR_PROCEDURE retorna o nome do procedimento armazenado ou do gatilho no qual ocorreu o erro que invocou o bloco CATCH aninhado. Se ERROR_PROCEDURE for executado no bloco CATCH externo, ele retornará o nome do procedimento armazenado ou gatilho no qual ocorreu o erro que invocou aquele bloco CATCH.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Usando ERROR_PROCEDURE em um bloco CATCH  
  O exemplo de código a seguir mostra um procedimento armazenado que gera um erro de divisão por zero. `ERROR_PROCEDURE` retorna o nome do procedimento armazenado no qual ocorreu o erro.  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

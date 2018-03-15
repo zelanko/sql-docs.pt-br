@@ -51,13 +51,13 @@ FILEGROUP_ID ( 'filegroup_name' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *filegroup_name* **'**  
- É uma expressão do tipo **sysname** que representa o nome do grupo de arquivos para o qual retornar a ID do grupo de arquivos.  
+ É uma expressão de tipo **sysname** que representa o nome do grupo de arquivos para o qual retornar a ID de grupo de arquivos.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- *filegroup_name* corresponde ao **nome** coluna o **sys. filegroups** exibição do catálogo.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* corresponde à coluna **nome** na exibição de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a ID de grupo de arquivos para o grupo de arquivos nomeado `PRIMARY` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -78,9 +78,9 @@ Filegroup ID
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys. filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

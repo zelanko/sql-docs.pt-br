@@ -29,7 +29,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Lição 3: Excluindo objetos de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Esta lição curta remove os objetos que você criou na lição 1 e 2 e, em seguida, descarta o banco de dados.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Esta breve lição remove os objetos que você criou nas Lições 1 e 2 e, em seguida, remove o banco de dados.  
   
 Esta lição contém um tópico:  
   

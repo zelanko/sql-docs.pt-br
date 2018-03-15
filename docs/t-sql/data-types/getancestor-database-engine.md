@@ -1,5 +1,5 @@
 ---
-title: GetAncestor (mecanismo de banco de dados) | Microsoft Docs
+title: GetAncestor (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (Mecanismo do Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna um **hierarchyid** que representa o  *n* º ancestral *isso*.
+Retorna uma **hierarchyid** que representa o *n*º ancestral de *this*.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Argumentos  
 *n*  
-Um **int**, que representa o número de níveis para subir na hierarquia.
+Um **int**, que representa o número de níveis para elevar na hierarquia.
   
 ## <a name="return-types"></a>Tipos de retorno
 **Tipo de retorno do SQL Server: hierarchyid**
   
-**Tipo de retorno CLR: SqlHierarchyId**
+**Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Usado para testar se cada nó da saída possui o nó atual como um ancestral no nível específico.
   
-Se um número maior que [GetLevel ()](../../t-sql/data-types/getlevel-database-engine.md) é passado, NULL será retornado.
+Se um número maior que [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) for passado, NULL será retornado.
   
 Se um número negativo for passado, ocorrerá uma exceção.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. Retornando a linha atual  
-Para retornar o nó atual usando `GetAncestor(0)`, execute o seguinte código.
+Para retornar o nó atual usando `GetAncestor(0)`, execute o código a seguir.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[IsDescendantOf &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

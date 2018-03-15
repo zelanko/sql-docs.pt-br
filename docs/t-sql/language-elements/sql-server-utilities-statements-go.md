@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server - GO
+# <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server – GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece comandos que não estão [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, mas são reconhecidos pelo **sqlcmd** e **osql** utilitários e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de códigos. Estes comandos podem ser usados para facilitar a legibilidade e a execução de lotes e scripts.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece comandos que não são instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas que são reconhecidos pelos utilitários **sqlcmd** e **osql** e pelo Editor de Códigos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Estes comandos podem ser usados para facilitar a legibilidade e a execução de lotes e scripts.  
   
-  GO sinaliza o término de um lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitários.  
+  O GO sinaliza o término de um lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para os utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ GO [count]
  É um número inteiro positivo. O lote que precede GO será executado pelo número de vezes especificado.  
   
 ## <a name="remarks"></a>Remarks  
- GO não é um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução; ele é um comando reconhecido pelo **sqlcmd** e **osql** utilitários e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de códigos.  
+ O GO não é uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], ele é um comando reconhecido pelos utilitários **sqlcmd** e **osql** e pelo Editor de Códigos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Os utilitários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretam GO como um sinal de que eles devem enviar o lote atual de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O lote atual de instruções é composto de todas as instruções digitadas desde o último GO, ou desde o início da sessão ad hoc ou script, se esse for o primeiro GO.  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria dois lotes. O primeiro lote contém apenas um `USE``AdventureWorks2012` para definir o contexto do banco de dados. As instruções restantes usam uma variável local. Portanto, todas as declarações de variável local devem ser agrupadas em um único lote. Isso é feito sem que haja um comando `GO` até depois da última instrução que faz referência à variável.  
+ O exemplo a seguir cria dois lotes. O primeiro lote contém apenas uma instrução `USE``AdventureWorks2012` para definir o contexto do banco de dados. As instruções restantes usam uma variável local. Portanto, todas as declarações de variável local devem ser agrupadas em um único lote. Isso é feito sem que haja um comando `GO` até depois da última instrução que faz referência à variável.  
   
 ```  
 USE AdventureWorks2012;  

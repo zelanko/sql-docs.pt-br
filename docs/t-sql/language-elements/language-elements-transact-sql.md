@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 ## <a name="in-this-section"></a>Nesta seção  
 [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Barra estrela &#40; Bloco de comentário &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Barra "/" e asterisco &#40;bloco de comentário&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
 [CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULO e desconhecido (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL e UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
 [Transações (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   

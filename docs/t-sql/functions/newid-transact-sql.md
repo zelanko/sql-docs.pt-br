@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>Tipos de retorno  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `NEWID()` é compatível com RFC4122.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. Usando uma função NEWID com uma variável  
- O exemplo a seguir usa `NEWID()` para atribuir um valor a uma variável declarada como o **uniqueidentifier** tipo de dados. O valor de **uniqueidentifier** variável de tipo de dados é impresso antes do valor ser testado.  
+ O exemplo a seguir usa `NEWID()` para atribuir um valor a uma variável declarada como o tipo de dados **uniqueidentifier**. O valor da variável de tipo de dados **uniqueidentifier** é impresso antes de o valor ser testado.  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. Usando NEWID em uma instrução CREATE TABLE  
   
-**Aplica-se a**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- O exemplo a seguir cria o `cust` de tabela com um **uniqueidentifier** tipo de dados e usa NEWID para preencher a tabela com um valor padrão. Ao atribuir o valor padrão de `NEWID()`, cada linha existente e nova possui um valor exclusivo para a coluna `CustomerID`.  
+ O exemplo a seguir cria a tabela `cust` com um tipo de dados **uniqueidentifier** e usa NEWID para preenchê-la com um valor padrão. Ao atribuir o valor padrão de `NEWID()`, cada linha existente e nova possui um valor exclusivo para a coluna `CustomerID`.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. Usando uniqueidentifier e atribuição de variável  
- O exemplo a seguir declara uma variável local chamada `@myid` como uma variável do **uniqueidentifier** tipo de dados. Em seguida, é atribuído um valor à variável usando-se a instrução `SET`.  
+ O exemplo a seguir declara uma variável local chamada `@myid` como uma variável do tipo de dados **uniqueidentifier**. Em seguida, é atribuído um valor à variável usando-se a instrução `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -124,14 +124,14 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções de sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

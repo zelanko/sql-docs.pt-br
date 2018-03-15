@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-O tipo de um **geometria** instância é nula. Retornará 0 se a instância não for nula.
+O tipo de uma instância de **geometry** é nulo. Retornará 0 se a instância não for nula.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +42,17 @@ O tipo de um **geometria** instância é nula. Retornará 0 se a instância não
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **bits**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo CLR: **SqlBoolean**  
+ Tipo do CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull`pode ser usado para testar se um **geometria** instância é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
+ O `IsNull` pode ser usado para testar se uma instância de **geometry** é nula. O resultado pode ser um pouco confuso, retornando 0 se a instância não for nula, mas null se a instância for nula.  
   
  Esse método é usado basicamente pela infraestrutura do SQL Server; é recomendável o uso de `IsNull` para testar se uma instância é nula.  
   
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

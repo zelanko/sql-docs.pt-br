@@ -52,7 +52,7 @@ COL_NAME ( table_id , column_id )
 É o número de identificação da tabela que contém a coluna. *table_id* é do tipo **int**.
   
 *column_id*  
-É o número de identificação da coluna. *column_id* parâmetro é do tipo **int**.
+É o número de identificação da coluna. O parâmetro de *column_id* é do tipo **int**.
   
 ## <a name="return-types"></a>Tipos de retorno
 **sysname**
@@ -62,13 +62,13 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que funções internas que emitem metadados, como COL_NAME, poderão retornar NULL se o usuário não tiver permissão para o objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentários  
-O *table_id* e *column_id* juntos produzem uma cadeia de caracteres de nome de coluna.
+## <a name="remarks"></a>Remarks  
+Os parâmetros de *table_id* e *column_id* juntos produzem uma cadeia de caracteres de nome de coluna.
   
-Para obter mais informações sobre como obter os números de identificação de tabela e coluna, consulte [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Para obter mais informações sobre como obter números de identificação de tabela e de coluna, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna o nome da primeira coluna em uma amostra `Employee` tabela.
+O exemplo a seguir retorna o nome da primeira coluna em uma tabela `Employee` de exemplo.
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Consulte também
 [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funções de metadados &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Funções de metadados &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

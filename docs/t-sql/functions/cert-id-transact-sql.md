@@ -54,8 +54,8 @@ Cert_ID ( 'cert_name' )
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
-## <a name="remarks"></a>Comentários  
-Nomes de certificado são visíveis no [Certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) exibição do catálogo.
+## <a name="remarks"></a>Remarks  
+Os nomes de certificados ficam visíveis na exibição do catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permissões  
 Requer algumas permissões no certificado e que a permissão VIEW DEFINITION não seja negada ao chamador no certificado.

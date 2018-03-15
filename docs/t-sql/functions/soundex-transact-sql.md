@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- É um caractere alfanumérico [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caracteres. *character_expression* pode ser uma constante, variável ou coluna.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de dados de caractere. *character_expression* pode ser uma constante, variável ou coluna.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar**  
   
-## <a name="remarks"></a>Comentários  
- SOUNDEX converte uma cadeia de caracteres alfanumérica em código de quatro caracteres que se baseia no som da cadeia de caracteres quando ela é falada. O primeiro caractere do código é o primeiro caractere do *character_expression*, convertido em letras maiusculas. O segundo até o quarto caractere do código são números que representam as letras da expressão. As letras A, E, I, O, U, H, W e Y serão ignoradas, a menos que elas sejam a primeira letra da cadeia de caracteres. Zeros serão adicionados ao término, se necessário, para gerar um código de quatro caracteres. Para obter mais informações sobre o código SOUNDEX, consulte [o sistema de indexação Soundex](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX converte uma cadeia de caracteres alfanumérica em código de quatro caracteres que se baseia no som da cadeia de caracteres quando ela é falada. O primeiro caractere do código é o primeiro caractere de *character_expression*, convertido em maiúsculas. O segundo até o quarto caractere do código são números que representam as letras da expressão. As letras A, E, I, O, U, H, W e Y serão ignoradas, a menos que elas sejam a primeira letra da cadeia de caracteres. Zeros serão adicionados ao término, se necessário, para gerar um código de quatro caracteres. Para obter mais informações sobre o código SOUNDEX, consulte [O sistema de indexação Soundex](https://www.archives.gov/research/census/soundex.html).  
   
  Os códigos de SOUNDEX de cadeias de caracteres diferentes podem ser comparados para verificar a similaridade do som das cadeias de caracteres quando faladas. A função DIFFERENCE executa um SOUNDEX de duas cadeias de caracteres, e retorna um número inteiro que representa o grau de similaridade dos códigos de SOUNDEX dessas cadeias de caracteres.  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Válido para um agrupamento Latin1_General.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Válido para um agrupamento Latin1_General.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Válido para um agrupamento Latin1_General.  
   
 ```  
 -----------   
@@ -124,9 +124,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DIFERENÇA &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Credencial (Transact-SQL) no escopo do banco de dados REVOKE | Microsoft Docs
+title: Credencial REVOKE no escopo do banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>Credencial (Transact-SQL) no escopo do banco de dados REVOKE
+# <a name="revoke-database-scoped-credential-transact-sql"></a>Credencial REVOKE no escopo do banco de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Revoga permissões em uma credencial no escopo do banco de dados.  
@@ -57,11 +57,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em uma credencial no escopo do banco de dados. Listada abaixo.  
   
- CERTIFICADO ON **::***credential_name*  
- Especifica a credencial no escopo do banco de dados no qual a permissão está sendo revogada. O qualificador de escopo "::" é obrigatório.  
+ ON CERTIFICATE **::***credential_name*  
+ Especifica a credencial no escopo do banco de dados na qual a permissão está sendo revogada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  
  Especifica a entidade a partir da qual a permissão está sendo revogada. Um dos seguintes:  
@@ -107,10 +107,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Comentários  
- Uma credencial no escopo do banco de dados é um banco de dados-nível protegível contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma credencial no escopo do banco de dados estão listadas abaixo, junto com as permissões mais gerais que as incluem implicitamente.  
+## <a name="remarks"></a>Remarks  
+ Uma credencial no escopo do banco de dados é um item protegível no nível do banco de dados contido pelo banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma credencial no escopo do banco de dados estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
-|Permissão de credencial no escopo do banco de dados|Indicado pela permissão de credencial no escopo do banco de dados|Implícito na permissão de banco de dados|  
+|Permissão de credencial no escopo do banco de dados|Implícito pela permissão de credencial no escopo do banco de dados|Implícito na permissão de banco de dados|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -121,10 +121,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>Permissões  
  Requer permissão CONTROL na credencial no escopo do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [Escopo do banco de dados GRANT credencial (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENY (Transact-SQL) de credencial no escopo do banco de dados](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [Credencial GRANT no escopo do banco de dados (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [Credencial no escopo do banco de dados DENY (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  

@@ -73,22 +73,22 @@ ALTER SCHEMA schema_name
  É a classe da entidade para a qual o proprietário está sendo alterado. Objeto é o padrão.  
   
  *securable_name*  
- É o nome de uma parte ou de duas partes de um escopo de esquema protegível a ser movido para o esquema.  
+ É o nome de uma ou duas partes de um protegível no escopo do esquema a ser movido para o esquema.  
   
 ## <a name="remarks"></a>Remarks  
  Os usuários e esquemas são completamente separados.  
   
  ALTER SCHEMA só pode ser usado para mover protegíveis entre esquemas no mesmo banco de dados. Para alterar ou descartar um protegível dentro de um esquema, use a instrução ALTER ou DROP específica para esse protegível.  
   
- Se um nome de uma parte é usado para *securable_name*, as regras de resolução de nome atualmente em vigor serão usadas para localizar o protegível.  
+ Se o nome de uma parte for usado para *securable_name*, as regras de resolução de nomes atualmente em vigor serão usadas para localizar o protegível.  
   
  Todas as permissões associadas ao protegível serão descartadas quando o protegível for movido para o novo esquema. Se o proprietário do protegível tiver sido definido explicitamente, o proprietário permanecerá inalterado. Se o proprietário do protegível tiver sido definido como SCHEMA OWNER, o proprietário permanecerá como SCHEMA OWNER; entretanto, após a movimentação, SCHEMA OWNER reconhecerá o proprietário do novo esquema. O principal_id do novo proprietário será NULL.  
   
- Mover um procedimento armazenado, função, exibição ou gatilho não alterará o nome do esquema, se presente, do objeto na coluna de definição do [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo ou obtido usando o [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função interna. Portanto, é recomendável que ALTER SCHEMA não ser usado para mover esses tipos de objetos. Em vez disso, descartar e recriar o objeto em seu novo esquema.  
+ A movimentação de um procedimento armazenado, uma função, uma exibição ou um gatilho não alterará o nome do esquema, se presente, do objeto correspondente na coluna de definição da exibição do catálogo [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou obtido com a função interna [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md). Portanto, recomendamos que ALTER SCHEMA não seja usado para mover esses tipos de objeto. Em vez disso, remova e recrie o objeto em seu novo esquema.  
   
- Movimentação de um objeto como uma tabela ou um sinônimo não atualizará automaticamente as referências a esse objeto. Você deve modificar todos os objetos que fazem referência o objeto transferido manualmente. Por exemplo, se você mover uma tabela e essa tabela for referenciada em um gatilho, você deve modificar o gatilho para refletir o novo nome de esquema. Use [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de movê-lo.  
+ A movimentação de um objeto, como uma tabela ou um sinônimo, não atualizará automaticamente as referências a esse objeto. É necessário modificar manualmente todos os objetos que referenciam o objeto transferido. Por exemplo, se você mover uma tabela e essa tabela for referenciada em um gatilho, será necessário modificar o gatilho para que ele reflita o novo nome do esquema. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de movê-lo.  
 
- Para alterar o esquema de uma tabela usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique na tabela e, em seguida, clique em **Design**. Pressione **F4** para abrir a janela Propriedades. No **esquema** , selecione um novo esquema.  
+ Para alterar o esquema de uma tabela usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de Objetos, clique com o botão direito do mouse na tabela e, em seguida, clique em **Design**. Pressione **F4** para abrir a janela Propriedades. Na caixa **Esquema**, selecione um novo esquema.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Permissões  
  Para transferir um protegível de outro esquema, o usuário atual deve ter permissão CONTROL sobre o protegível (não esquema) e permissão ALTER sobre o esquema de destino.  
   
- Se o protegível tem uma especificação EXECUTE AS OWNER e o proprietário é definido como proprietário do esquema, o usuário também deve ter a permissão IMPERSONATE o proprietário do esquema de destino.  
+ Se o protegível tiver uma especificação EXECUTE AS OWNER e o proprietário estiver definido como SCHEMA OWNER, o usuário também deverá ter a permissão IMPERSONATE no proprietário do esquema de destino.  
   
  Todas as permissões associadas ao protegível que estão sendo transferidas serão descartadas após o deslocamento.  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transferindo a propriedade de uma tabela  
- O exemplo a seguir cria uma tabela `Region` no `dbo` esquema, cria um `Sales` esquema e, em seguida, move o `Region` tabela o `dbo` esquema para o `Sales` esquema.  
+ O exemplo a seguir cria uma tabela `Region` no esquema `dbo`, cria um esquema `Sales` e, em seguida, move a tabela `Region` do esquema `dbo` para o esquema `Sales`.  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -160,7 +160,7 @@ ALTER SCHEMA Sales TRANSFER OBJECT::dbo.Region;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

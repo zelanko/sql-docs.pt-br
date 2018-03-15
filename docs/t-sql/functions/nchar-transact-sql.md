@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Quando o agrupamento do banco de dados não contiver o sinalizador de caractere suplementar (SC), esse será um número inteiro positivo de 0 a 65535 (0 a 0xFFFF). Se for especificado um valor fora deste intervalo, será retornado NULL. Para obter mais informações sobre caracteres suplementares, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando o agrupamento do banco de dados não contiver o sinalizador de caractere suplementar (SC), esse será um número inteiro positivo de 0 a 65535 (0 a 0xFFFF). Se for especificado um valor fora deste intervalo, será retornado NULL. Para obter mais informações sobre caracteres suplementares, veja [Suporte para agrupamento e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Quando o agrupamento do banco de dados não oferecer suporte ao sinalizador de caractere suplementar (SC), esse será um número inteiro positivo de 0 a 1114111 (0 a 0x10FFFF). Se for especificado um valor fora deste intervalo, será retornado NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **nchar (1)** quando o agrupamento de banco de dados padrão não oferece suporte a caracteres suplementares.  
+ **nchar(1)** quando o agrupamento de banco de dados padrão não é compatível com caracteres suplementares.  
   
- **nvarchar(2)** quando o agrupamento de banco de dados padrão oferece suporte a caracteres suplementares.  
+ **nvarchar(2)** quando o agrupamento de banco de dados padrão é compatível com caracteres suplementares.  
   
- Se o parâmetro *integer_expression* estiver no intervalo 0 - 0xFFFF, somente um caractere será retornado. Para valores mais altos, NCHAR retorna o par alternativo correspondente. Não construa um par alternativo usando `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Em vez disso, use um agrupamento de banco de dados com suporte para caracteres suplementares e especifique o ponto de código Unicode para o par substituto. O exemplo a seguir demonstra o método de estilo antigo de construir um par substituto e o método preferencial de especificar o ponto de código Unicode.  
+ Se o parâmetro *integer_expression* estiver no intervalo de 0 a 0xFFFF, somente um caractere será retornado. Para valores mais altos, NCHAR retorna o par alternativo correspondente. Não construa um par alternativo usando `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Em vez disso, use um agrupamento de banco de dados com suporte para caracteres suplementares e especifique o ponto de código Unicode para o par substituto. O exemplo a seguir demonstra o método de estilo antigo de construir um par substituto e o método preferencial de especificar o ponto de código Unicode.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -218,12 +218,12 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

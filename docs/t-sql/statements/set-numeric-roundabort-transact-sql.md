@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET NUMERIC_ROUNDABORT é ON, um erro é gerado depois de ocorrer uma perda de precisão em uma expressão. Quando é OFF, perdas de precisão não geram mensagens de erro e o resultado é arredondado à precisão da coluna ou variável que armazena o resultado.  
   
  A perda de precisão ocorre quando é feita uma tentativa de armazenar um valor com uma precisão fixa em uma coluna ou variável com menos precisão.  
@@ -65,7 +65,7 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  A configuração de SET NUMERIC_ROUNDABORT é definida na execução ou em tempo de execução, e não no momento da análise.
 
- SET NUMERIC_ROUNDABORT deve ser OFF quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET NUMERIC_ROUNDABORT for ON, CREATE, as instruções UPDATE, INSERT e DELETE em tabelas com índices em colunas computadas ou exibições indexadas falharem. Para obter mais informações sobre as configurações de opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre quando você uso das instruções SET" em [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
+ SET NUMERIC_ROUNDABORT deve ser OFF quando você estiver criando ou alterando índices em colunas computadas ou modos de exibição indexados. Se SET NUMERIC_ROUNDABORT for ON, as instruções CREATE, UPDATE, INSERT e DELETE nas tabelas com índices em colunas computadas ou exibições indexadas falharão. Para obter mais informações sobre as configurações da opção SET com exibições indexadas e índices em colunas computadas, consulte "Considerações sobre o uso das instruções SET" em [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
  Para exibir a configuração atual dessa configuração, execute a seguinte consulta:
   
@@ -146,9 +146,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>- (Subtraction) (Transact-SQL)
+# <a name="--subtraction-transact-sql"></a>- (Subtração) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Subtrai dois números (um operador de subtração aritmético). Também pode subtrair um número, em dias, de uma data.  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>Argumentos  
  *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer um dos tipos de dados do que o valor numérico tipo de dados de categoria, exceto o **bit** tipo de dados. Não pode ser usado com **data**, **tempo**, **datetime2**, ou **datetimeoffset** tipos de dados.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida de um dos tipos de dados da categoria de tipo de dados numéricos, exceto o tipo de dados **bit**. Não pode ser usado com os tipos de dados **date**, **time**, **datetime2** ou **datetimeoffset**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C: usando subtração em uma instrução SELECT  
- O exemplo a seguir calcula a diferença em uma taxa base entre o funcionário com a maior taxa de base e o funcionário com a taxa de imposto mais baixa, do `dimEmployee` tabela.  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C: Usando uma subtração em uma instrução SELECT  
+ O exemplo a seguir calcula a diferença em uma taxa base entre o funcionário com a taxa base mais alta e o funcionário com a taxa de imposto mais baixa, por meio da tabela `dimEmployee`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -108,13 +108,13 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [-= &#40;Subtraction Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [Operadores aritméticos &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+ [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Operadores aritméticos &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
  [- &#40;Negative&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
   

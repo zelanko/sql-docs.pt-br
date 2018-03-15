@@ -1,5 +1,5 @@
 ---
-title: "Criar função de partição (Transact-SQL) | Microsoft Docs"
+title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,7 +59,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 ## <a name="arguments"></a>Argumentos  
  *partition_function_name*  
- É o nome da função de partição. Nomes de função de partição devem ser exclusivo no banco de dados e estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ É o nome da função de partição. Os nomes de funções de partição devem ser exclusivos no banco de dados e estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
  É o tipo de dados da coluna usada para particionamento. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
@@ -67,18 +67,18 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  A coluna real, conhecida como uma coluna de particionamento, é especificada na instrução CREATE TABLE ou CREATE INDEX.  
   
  *boundary_value*  
- Especifica os valores de limite para cada partição de uma tabela particionada ou índice que usa *partition_function_name*. Se *boundary_value* está vazio, a função de partição mapeia toda a tabela ou índice usando *partition_function_name* em uma única partição. É possível usar somente uma coluna de divisão, especificada em uma instrução CREATE TABLE ou CREATE INDEX.  
+ Especifica os valores de limite para cada partição de uma tabela particionada ou índice que usa *partition_function_name*. Se *boundary_value*estiver vazio, a função de partição mapeará para uma única partição toda a tabela ou todo o índice usando *partition_function_name*. É possível usar somente uma coluna de divisão, especificada em uma instrução CREATE TABLE ou CREATE INDEX.  
   
- *boundary_value* é uma expressão constante que pode fazer referência a variáveis. Isso inclui variáveis ou funções de tipo definido pelo usuário e funções definidas pelo usuário. Não pode fazer referência a expressões [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou ser implicitamente conversível para o tipo de dados fornecido no *input_parameter_type*e não pode ser truncado durante a conversão implícita de forma que o tamanho e a escala do valor não corresponde do correspondente *input_parameter_type*.  
+ *boundary_value* é uma expressão constante que pode fazer referência a variáveis. Isso inclui variáveis ou funções de tipo definido pelo usuário e funções definidas pelo usuário. Não pode fazer referência a expressões [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou poder ser implicitamente convertido no tipo de dados fornecido em *input_parameter_type*, e não pode ser truncado durante conversão implícita de modo que o tamanho e a escala do valor não sejam equivalentes a seu *input_parameter_type* correspondente.  
   
 > [!NOTE]  
 >  Se *boundary_value* consiste em **datetime** ou **smalldatetime** literais, esses literais serão avaliados supondo que us_english é o idioma da sessão. Este comportamento é preterido. Para certificar-se de que a definição da função de partição se comporta conforme esperado para todos os idiomas de sessão, recomendamos usar constantes que sejam interpretadas da mesma maneira para todas as configurações de idioma, tal como o formato aaaammdd; ou converter explicitamente literais em um estilo específico. Para determinar a sessão de idioma de seu servidor, execute `SELECT @@LANGUAGE`.  
   
- *... n*  
- Especifica o número de valores fornecidos por *boundary_value*, não deve exceder 14.999. O número de partições criadas é igual a  *n*  + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O mecanismo de banco de dados retornará um erro se  *n*  inclui valores duplicados.  
+ *...n*  
+ Especifica o número de valores fornecidos por *boundary_value*, não excedendo 14.999. O número de partições criadas é igual a *n* + 1. Os valores não precisam ser listados em ordem. Se os valores não estiverem em ordem, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] os classifica, cria a função e retorna um aviso de que os valores não foram fornecidos em ordem. O Mecanismo de Banco de Dados retornará um erro se *n* incluir qualquer valor duplicado.  
   
- **ESQUERDA** | CERTO  
- Especifica para qual lado de cada intervalo de valor de limite, esquerda ou direita, o *boundary_value* [ **,***... n* ] pertence, quando valores de intervalo são classificados pela [!INCLUDE[ssDE](../../includes/ssde-md.md)]em ordem crescente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
+ **LEFT** | RIGHT  
+ Especifica a qual lado de cada intervalo de valor de limite, esquerdo ou direito, o *boundary_value* [ **,***...n* ] pertence quando valores de intervalo são classificados pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] em ordem crescente da esquerda para a direita. Se não for especificado, LEFT será o padrão.  
   
 ## <a name="remarks"></a>Remarks  
  O escopo de uma função de partição é limitado ao banco de dados em que é criado. No banco de dados, as funções das partições residem em um namespace separado das outras funções.  
@@ -108,10 +108,10 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Valores**|**Col1** <= `1`|**Col1**  >  `1` AND **col1** <= `100`|**Col1**  >  `100` AND **col1** <=`1000`|**Col1** > `1000`|  
+|**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Criando uma função de partição RANGE RIGHT em uma coluna int  
- A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,***... n* ] como no exemplo anterior, exceto que ela especifica RANGE RIGHT.  
+ A função de partição a seguir usa os mesmos valores para *boundary_value* [ **,***...n* ] que o do exemplo anterior, com exceção de que ela especifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -122,10 +122,10 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Valores**|**Col1** \<`1`|**Col1**  >=  `1` AND **col1** \<`100`|**Col1**  >=  `100` AND **col1** \<`1000`|**Col1** >= `1000`| 
+|**Valores**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Criando uma função de partição RANGE RIGHT em uma coluna datetime  
- A função de partição a seguir particiona uma tabela ou índice em 12 partições, uma para cada mês de registros um ano de valores em uma **datetime** coluna.  
+ A função de partição a seguir particiona uma tabela ou um índice em 12 partições, uma para cada mês de valores válidos no ano em uma coluna **datetime**.  
   
 ```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
@@ -134,11 +134,11 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
                '20030901', '20031001', '20031101', '20031201');  
 ```  
   
- A tabela a seguir mostra como uma tabela ou índice que usa essa função de partição na coluna de particionamento **datecol** seria particionada.  
+ A tabela a seguir mostra como uma tabela ou um índice que usa essa função de partição na coluna de particionamento **datecol** seria particionada.  
   
 |Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**Valores**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
+|**Valores**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. Criando uma função de partição em uma coluna char  
  A função de partição a seguir particiona uma tabela ou um índice em quatro partições.  
@@ -152,7 +152,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Valores**|**Col1** \< `EX`...|**Col1**  >=  `EX` AND **col1** \< `RXE`...|**Col1**  >=  `RXE` AND **col1** \< `XR`...|**Col1** >= `XR`| 
+|**Valores**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. Criando 15.000 partições  
  A função de partição a seguir particiona uma tabela ou um índice em 15.000 partições.  
@@ -174,7 +174,7 @@ GO
 ```  
   
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. Criando partições para vários anos  
- A função de partição a seguir particiona uma tabela ou índice em 50 partições em um **datetime2** coluna. Há uma partição para cada mês entre janeiro de 2007 e janeiro de 2011.  
+ A função de partição a seguir particiona uma tabela ou um índice em 50 partições em uma coluna **datetime2**. Há uma partição para cada mês entre janeiro de 2007 e janeiro de 2011.  
   
 ```sql  
 --Create date partition function with increment by month.  
@@ -194,18 +194,18 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
- [$PARTITION &#40; Transact-SQL &#41;](../../t-sql/functions/partition-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [$PARTITION &#40;Transact-SQL&#41;](../../t-sql/functions/partition-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [partition_functions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [partition_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

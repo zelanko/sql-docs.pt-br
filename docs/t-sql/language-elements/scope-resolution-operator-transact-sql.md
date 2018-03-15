@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="-scope-resolution-transact-sql"></a>:: (Resolução de escopo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  O operador de resolução do escopo **::** fornece acesso a membros estáticos de um tipo de dados composto. Um tipo de dados composto é aquele que contém vários tipos de dados simples e métodos, como os tipos internos do CLR e tipos personalizados de SQLCLR User-Defined (UDTs).  
+  O operador de resolução de escopo **::** fornece acesso a membros estáticos de um tipo de dados composto. Um tipo de dados composto é aquele que contém vários métodos e tipos de dados simples, como os tipos CLR internos e UDTs (tipos definidos pelo usuário) SQLCLR personalizados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como usar o operador de resolução de escopo para acessar o membro `GetRoot()` do tipo `hierarchyid`.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>Consulte também  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

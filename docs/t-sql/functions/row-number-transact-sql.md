@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Definem a saída de um resultado de números. Mais especificamente, retorna o número sequencial de uma linha dentro de uma partição de um conjunto de resultados, começando em 1 para a primeira linha em cada partição. 
+  Numera a saída de um conjunto de resultados. Mais especificamente, retorna o número sequencial de uma linha em uma partição de um conjunto de resultados, começando em 1 na primeira linha de cada partição. 
   
-`ROW_NUMBER`e `RANK` são semelhantes. `ROW_NUMBER`números de todas as linhas em sequência (por exemplo 1, 2, 3, 4, 5). `RANK`fornece o mesmo valor numérico para ties (por exemplo 1, 2, 2, 4, 5).   
+`ROW_NUMBER` e `RANK` são semelhantes. `ROW_NUMBER` numera todas as linhas em sequência (por exemplo 1, 2, 3, 4, 5). `RANK` fornece o mesmo valor numérico para empates (por exemplo 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> `ROW_NUMBER`é um valor temporário calculado quando a consulta é executada. Para manter os números em uma tabela, consulte [propriedade IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUÊNCIA](../../t-sql/statements/create-sequence-transact-sql.md). 
+> `ROW_NUMBER` é um valor temporário calculado quando a consulta é executada. Para persistir números em uma tabela, consulte [Propriedade IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -56,30 +56,30 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>Argumentos  
  PARTITION BY *value_expression*  
- Divide o conjunto de resultados produzido pelo [FROM](../../t-sql/queries/from-transact-sql.md) cláusula em partições às quais a função ROW_NUMBER é aplicada. *value_expression* Especifica a coluna pela qual o conjunto de resultados é particionado. Se `PARTITION BY` não for especificado, a função tratará todas as linhas do conjunto como um único grupo de resultados de consulta. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Divide o conjunto de resultados produzido pela cláusula [FROM](../../t-sql/queries/from-transact-sql.md) nas partições às quais a função ROW_NUMBER é aplicada. *value_expression* especifica a coluna pela qual o conjunto de resultados é particionado. Se `PARTITION BY` não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
- O `ORDER BY` cláusula determina a sequência na qual as linhas são atribuídas seus exclusivo `ROW_NUMBER` dentro de uma partição especificada. É obrigatório. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ A cláusula `ORDER BY` determina a sequência na qual as linhas recebem seu `ROW_NUMBER` exclusivo em uma partição especificada. É obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Não há nenhuma garantia de que as linhas retornadas por uma consulta usando `ROW_NUMBER()` serão ordenadas exatamente os mesmos, com cada execução, a menos que as seguintes condições forem verdadeiras.  
+ Não há nenhuma garantia de que as linhas retornadas por uma consulta que usa `ROW_NUMBER()` serão ordenadas exatamente da mesma maneira com cada execução, a menos que as condições a seguir sejam verdadeiras.  
   
 1.  Os valores da coluna particionada sejam exclusivos.  
   
-2.  Valores da `ORDER BY` colunas são exclusivas.  
+2.  Os valores das `ORDER BY` colunas são exclusivos.  
   
-3.  Combinações de valores da coluna de partição e `ORDER BY` colunas são exclusivas.  
+3.  As combinações de valores da coluna de partição e colunas `ORDER BY` são exclusivas.  
   
- `ROW_NUMBER()`é não determinística. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ `ROW_NUMBER()` é não determinístico. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-examples"></a>A. Exemplos simples 
 
-A consulta a seguir retorna as tabelas do quatro sistema em ordem alfabética.
+A consulta a seguir retorna as quatro tabelas do sistema em ordem alfabética.
 
 ```sql
 SELECT 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-Para adicionar uma coluna de número de linha na frente de cada linha, adicionar uma coluna com o `ROW_NUMBER` função, nesse caso denominada `Row#`. Você deve mover o `ORDER BY` cláusula até o `OVER` cláusula.
+Para adicionar uma coluna de número de linha na frente de cada linha, adicione uma coluna com a função `ROW_NUMBER`, nesse caso, chamada `Row#`. É necessário mover a cláusula `ORDER BY` até a cláusula `OVER`.
 
 ```sql
 SELECT 
@@ -110,14 +110,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|N º de linha |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |modelo |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-Adicionando um `PARTITION BY` cláusula o `recovery_model_desc` coluna reiniciará a numeração quando o `recovery_model_desc` o valor é alterado. 
+A adição de uma cláusula `PARTITION BY` à coluna `recovery_model_desc` reiniciará a numeração quando o valor `recovery_model_desc` for alterado. 
  
 ```sql
 SELECT 
@@ -129,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|N º de linha |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |modelo |FULL |
 |1 |master |SIMPLE |
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Retornando o número de linha para vendedores  
- O exemplo a seguir retorna o `ROW_NUMBER` para representantes de vendas com base em suas cotas de vendas atribuída.  
+ O exemplo a seguir retorna o `ROW_NUMBER` de representantes de vendas com base em suas cotas de vendas atribuídas.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>F. Usando ROW_NUMBER () com PARTITION  
- O exemplo a seguir mostra o uso da função `ROW_NUMBER` com o argumento `PARTITION BY`. Isso faz com que o `ROW_NUMBER` função para numerar linhas em cada partição.  
+ O exemplo a seguir mostra o uso da função `ROW_NUMBER` com o argumento `PARTITION BY`. Isso faz com que a função `ROW_NUMBER` numere as linhas em cada partição.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -288,9 +288,9 @@ RowNumber  LastName            Territory  SalesQuota
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [Classificação &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento - COLLATIONPROPERTY (Transact-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna a propriedade de um agrupamento especificado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
@@ -47,17 +47,17 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argumentos  
 *collation_name*  
-É o nome do agrupamento. *collation_name* é **nvarchar (128)**, sem padrão.
+É o nome do agrupamento. *collation_name* é **nvarchar(128)** e não tem padrão.
   
-*propriedade*  
-É a propriedade do agrupamento. *propriedade* é **varchar (128)**, e pode ser qualquer um dos seguintes valores:
+*property*  
+É a propriedade do agrupamento. *property* é **varchar(128)** e pode ser um dos seguintes valores:
   
 |Nome da propriedade|Description|  
 |---|---|
-|**CodePage**|Página de código de não Unicode do agrupamento. Consulte [Mapeando tabelas do Apêndice G DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e [páginas de código do Apêndice H](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
-|**LCID**|Windows LCID do agrupamento. Consulte [estrutura LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
-|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, ambos (\_BIN) e (\_BIN2), bem como quando todas as propriedades são confidenciais. Valores de máscara de bits:<br /><br /> Ignorar maiusculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: Embora ele afeta o comportamento da comparação, a variação seletor-diferencia (\_VSS) opção não é representada nesse valor.|  
-|**Versão**|A versão do agrupamento, extraída do campo de versão da identificação do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome de retorno 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
+|**CodePage**|Página de código de não Unicode do agrupamento. Consulte [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e [Apêndice H: Páginas de código](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
+|**LCID**|Windows LCID do agrupamento. Consulte [Estrutura de LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
+|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, (\_BIN) e (\_BIN2), bem como quando todas as propriedades são confidenciais. Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: embora isso afete o comportamento da comparação, a opção diferenciação de seletor de variação (\_VSS) não é representada nesse valor.|  
+|**Versão**|A versão do agrupamento, extraída do campo de versão da identificação do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome retornam 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
   
 ## <a name="return-types"></a>Tipos de retorno
 **sql_variant**
@@ -74,7 +74,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
 1252   
 ```  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')  

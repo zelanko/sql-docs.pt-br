@@ -1,5 +1,5 @@
 ---
-title: "REVOGAR permissões de coleção de esquema XML (Transact-SQL) | Microsoft Docs"
+title: "Permissões REVOKE de coleção de esquemas XML (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,8 +63,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser revogada em uma coleção de esquemas XML. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- COLEÇÃO de ESQUEMAS XML ON:: [ *schema_name *.* *] *XML_schema_collection_name*  
- Especifica a coleção de esquema XML na qual a permissão está sendo revogada. O qualificador de escopo (::) é necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) é necessário.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ Especifica a coleção de esquema XML na qual a permissão está sendo revogada. O qualificador de escopo (::) é necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (.) será obrigatório.  
   
  GRANT OPTION  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
@@ -78,10 +78,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  A revogação em cascata de uma permissão WITH GRANT OPTION concedida revogará as opções GRANT e DENY dessa permissão.  
   
- {PARA | FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  Especifica a entidade a partir da qual a permissão está sendo revogada.  
   
- AS \<database_principal > especifica uma entidade da qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de revogar a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
 ## <a name="remarks"></a>Remarks  
- Informações sobre coleções de esquema XML são visíveis no [xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) exibição do catálogo.  
+ As informações sobre coleções de esquema XML são visíveis na exibição do catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  A instrução falhará se CASCADE não for especificado ao revogar uma permissão de um principal ao qual ela foi concedida com GRANT OPTION especificado.  
   
@@ -135,9 +135,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>Consulte também  
- [CONCEDER permissões de coleção de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [Negar permissões de coleção de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões GRANT de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [Permissões DENY de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   

@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Tipos de retorno  
  **sysname**  
   
-## <a name="remarks"></a>Comentários  
- Essa função pode ser útil ao examinar a identidade do contexto de conexão original. Enquanto funções como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) e [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) retornar o contexto de execução atual, ORIGINAL_LOGIN retorna a identidade do logon conectado primeiro à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nessa sessão.  
+## <a name="remarks"></a>Remarks  
+ Essa função pode ser útil ao examinar a identidade do contexto de conexão original. Enquanto funções como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) e [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) retornam o contexto de execução atual, ORIGINAL_LOGIN retorna a identidade do logon que se conectou primeiro à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na sessão.  
   
- Retorna NULL em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Retorna NULL no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir alterna o contexto de execução da sessão atual do chamador das instruções para `login1`. As funções `SUSER_SNAME` e `ORIGINAL_LOGIN` são usadas para retornar o usuário da sessão atual (o usuário para quem o contexto foi alternado) e a conta de logon original.  
@@ -85,8 +85,8 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [EXECUTE AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [REVERTER &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

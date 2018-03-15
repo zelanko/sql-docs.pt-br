@@ -33,26 +33,26 @@ ms.lasthandoff: 11/21/2017
 
 Um tipo de dados para parâmetros OUTPUT de variáveis ou procedimento armazenado que contém uma referência a um cursor.
   
-## <a name="remarks"></a>Comentários  
-As operações que podem fazer referência a variáveis e parâmetros que têm um **cursor** são do tipo de dados:
--   DECLARE  *@local_variable*  e defina  *@local_variable*  instruções.  
+## <a name="remarks"></a>Remarks  
+As operações que podem fazer referência a variáveis e parâmetros que têm o tipo de dados **cursor** são:
+-   As instruções DECLARE *@local_variable* e SET *@local_variable*.  
 -   As instruções de cursor OPEN, FETCH, CLOSE e DEALLOCATE.  
 -   Parâmetros de saída de procedimento armazenado.  
 -   A função CURSOR_STATUS.  
--   O **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables**, e **sp_describe_cursor_columns** armazenado do sistema procedimentos.  
+-   Os procedimentos armazenados do sistema **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables** e **sp_describe_cursor_columns**.  
   
-O **cursor_name** coluna de saída de **sp_cursor_list** e **sp_describe_cursor** retorna o nome da variável do cursor.
+A coluna de saída **cursor_name** de **sp_cursor_list** e de **sp_describe_cursor** retorna o nome da variável de cursor.
   
-Qualquer variável criada com o **cursor** tipo de dados não são nulas.
+Qualquer variável criada com o tipo de dados **cursor** é anulável.
   
-O **cursor** tipo de dados não pode ser usado para uma coluna em uma instrução CREATE TABLE.
+O tipo de dados **cursor** não pode ser usado para uma coluna em uma instrução CREATE TABLE.
   
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
-[Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
+[Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[DECLARE CURSOR &#40; Transact-SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
   

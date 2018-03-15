@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  Se a privacidade for uma preocupação, não use esta função. É possível adivinhar o valor do próximo GUID gerado e, assim, acessar os dados associados ao GUID.  
   
- NEWSEQUENTIALID é um wrapper sobre o Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) função, com algumas [bytes embaralhamento aplicadas](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID é um wrapper na função [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) do Windows, com [embaralhamento de bytes aplicado](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
->  A função UuidCreateSequential tem dependências de hardware. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters de valores sequenciais podem desenvolver quando os bancos de dados (como bancos de dados independentes) são movidos para outros computadores. Ao usar o AlwaysOn e em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters de valores sequenciais podem desenvolver se o banco de dados faz failover para um computador diferente.  
+>  A função UuidCreateSequential tem dependências de hardware. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters de valores sequenciais podem se desenvolver quando os bancos de dados (como bancos de dados independentes) são movidos para outros computadores. Ao usar o Always On e no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters de valores sequenciais podem se desenvolver se o banco de dados faz failover para outro computador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Tipo de retorno  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Comentários  
- Newsequentialid () só pode ser usado com restrições padrão nas colunas da tabela do tipo **uniqueidentifier**. Por exemplo:  
+## <a name="remarks"></a>Remarks  
+ NEWSEQUENTIALID() apenas pode ser usado com restrições DEFAULT em colunas de tabela do tipo **uniqueidentifier**. Por exemplo:  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -78,8 +78,8 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  Cada GUID gerado usando NEWSEQUENTIALID é exclusivo nesse computador. Os GUIDs gerados com NEWSEQUENTIALID serão exclusivos entre vários computadores somente se o computador de origem tiver uma placa de rede.  
   
-## <a name="see-also"></a>Consulte também  
- [NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
- [Operadores de comparação &#40; Transact-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
+ [Operadores de comparação &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

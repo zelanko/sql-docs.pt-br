@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna o número de ID de um principal no banco de dados atual. Para obter mais informações sobre entidades de segurança, consulte [entidades &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Retorna o número de ID de um principal no banco de dados atual. Para obter mais informações sobre entidades de segurança, veja [Entidades de segurança &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,13 +50,13 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 ## <a name="arguments"></a>Argumentos  
 *principal_name*  
 É uma expressão do tipo **sysname** que representa a entidade de segurança.  
-Quando *principal_name* é omitido, a ID do usuário atual será retornada. Os parênteses são necessários.
+Quando *principal_name* é omitido, a ID do usuário atual é retornada. Os parênteses são necessários.
   
 ## <a name="return-types"></a>Tipos de retorno
 **int**  
 NULL quando a entidade de banco de dados não existe
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DATABASE_PRINCIPAL_ID pode ser usado em uma lista de seleção, cláusula WHERE ou em qualquer local em que uma expressão for permitida. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  

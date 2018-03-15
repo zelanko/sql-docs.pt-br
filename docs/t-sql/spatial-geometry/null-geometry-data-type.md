@@ -1,5 +1,5 @@
 ---
-title: NULL (tipo de dados geometry) | Microsoft Docs
+title: Null (tipo de dados geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Uma propriedade somente leitura que fornece uma instância nula da **geometria** tipo.
+Uma propriedade somente leitura que fornece uma instância nula do tipo de **geometry**.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,9 +45,9 @@ Null
 ## <a name="arguments"></a>Argumentos  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **geometry**  
+ Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo CLR: **SqlGeometry**  
+ Tipo do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -60,7 +60,7 @@ SET @g = geometry::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos estendidos](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

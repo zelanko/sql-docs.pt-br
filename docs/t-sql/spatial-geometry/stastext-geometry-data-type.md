@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retorna a representação de texto do Open Geospatial Consortium (OGC) conhecido (WKT) de um **geometria** instância. Esse texto não conterá nenhum valor Z (elevação) ou M (medida) executado pela instância.
+Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) de uma instância de **geometry**. Esse texto não conterá nenhum valor Z (elevação) ou M (medida) executado pela instância.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ Retorna a representação de texto do Open Geospatial Consortium (OGC) conhecido
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **nvarchar (max)**  
+ Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno CLR: **SqlChars**  
+ Tipo de retorno do CLR: **SqlChars**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `LineString` de geometria de (0,0) a (2,3) do texto. `STAsText()` retorna o resultado em texto.  
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retorna um **datetimeoffset** valor para a data e hora especificadas e com os deslocamentos e precisão especificados.
+Retorna um valor de **datetimeoffset** para a data e hora especificadas e com deslocamentos e precisão especificados.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*ano*  
+*year*  
 Expressão de inteiro que especifica um ano.
   
-*mês*  
+*month*  
 Expressão de inteiro que especifica um mês.
   
-*dia*  
+*day*  
 Expressão de inteiro que especifica um dia.
   
-*hora*  
+*hour*  
 Expressão de inteiro que especifica horas.
   
-*minuto*  
+*minute*  
 Expressão de inteiro que especifica minutos.
   
 *segundos*  
 Expressão de inteiro que especifica segundos.
   
-*frações*  
+*fractions*  
 Expressão de inteiro que especifica frações.
   
 *hour_offset*  
@@ -73,15 +73,15 @@ Expressão de inteiro que especifica a parte de hora do deslocamento de fuso hor
 Expressão de inteiro que especifica a parte de minutos do deslocamento de fuso horário.
   
 *precisão*  
-Literal de inteiro que especifica a precisão do **datetimeoffset** valor a ser retornado.
+Literal de inteiro que especifica a precisão do valor de **datetimeoffset** a ser retornado.
   
 ## <a name="return-types"></a>Tipos de retorno
-**DateTimeOffset (** *precisão* **)**
+**datetimeoffset(** *precision* **)**
   
-## <a name="remarks"></a>Comentários  
-**DATETIMEOFFSETFROMPARTS** retorna um completamente inicializado **datetimeoffset** tipo de dados. Os argumentos de deslocamento são usados para representar o deslocamento de fuso horário. Se os argumentos de deslocamento forem omitidos, será assumido que o deslocamento de fuso horário é 00:00, ou seja, não há deslocamento de fuso horário. Se os argumentos de deslocamento forem especificados, ambos os argumentos devem estar presentes e ambos devem ser positivos ou negativos. Se *minute_offset* for especificado sem *hour_offset*, um erro será gerado. Se outros argumentos não forem válidos, um erro será lançado. Se os argumentos necessários forem nulos, null é retornado. No entanto, se o *precisão* argumento for nulo, será gerado um erro.
+## <a name="remarks"></a>Remarks  
+**DATETIMEOFFSETFROMPARTS** retorna um tipo de dados **datetimeoffset** totalmente inicializado. Os argumentos de deslocamento são usados para representar o deslocamento de fuso horário. Se os argumentos de deslocamento forem omitidos, será assumido que o deslocamento de fuso horário é 00:00, ou seja, não há deslocamento de fuso horário. Se os argumentos de deslocamento forem especificados, ambos os argumentos devem estar presentes e ambos devem ser positivos ou negativos. Se *minute_offset* for especificado sem *hour_offset*, um erro será gerado. Se outros argumentos não forem válidos, um erro será lançado. Se os argumentos obrigatórios forem nulos, nulo será retornado. Porém, se o argumento *precision* for nulo, um erro será gerado.
   
-O *frações* depende do argumento de *precisão* argumento. Por exemplo, se *precisão* for 7, cada fração representará 100 nanosegundos; se *precisão* é 3 e, em seguida, cada fração representará um milissegundo. Se o valor de *precisão* for zero, o valor de *frações* também deve ser zero; caso contrário, ocorrerá um erro.
+O argumento *fractions* depende do argumento *precision*. Por exemplo, se *precision* for 7, cada fração representará 100 nanosegundos; se *precision* for 3, cada fração representará um milissegundo. Se o valor de *precision* for zero, o valor de *fractions* também deverá ser zero; caso contrário, um erro será gerado.
   
 Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Exemplo simples com frações de um segundo  
-O exemplo a seguir demonstra o uso do *frações* e *precisão* parâmetros:
-1.   Quando *frações* tem um valor de 5 e *precisão* tem um valor de 1, em seguida, o valor de *frações* representa 5 a 10 de segundo.  
-1.   Quando *frações* tem um valor de 50 e *precisão* tem um valor de 2, em seguida, o valor de *frações* representa 50/100 de um segundo.  
-1.   Quando *frações* tem um valor de 500 e *precisão* tem um valor de 3, em seguida, o valor de *frações* representará 500/1000 de um segundo.  
+O seguinte exemplo demonstra o uso dos parâmetros *fractions* e *precision*:
+1.   Quando *fractions* tem um valor igual a 5 e *precision* tem um valor igual a 1, o valor de *fractions* representa 5/10 de um segundo.  
+1.   Quando *fractions* tem um valor igual a 50 e *precision* tem um valor igual a 2, o valor de *fractions* representa 50/100 de um segundo.  
+1.   Quando *fractions* tem um valor igual a 500 e *precision* tem um valor igual a 3, o valor de *fractions* representa 500/1.000 de um segundo.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

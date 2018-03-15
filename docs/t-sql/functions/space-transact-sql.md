@@ -1,5 +1,5 @@
 ---
-title: "ESPAÇO (Transact-SQL) | Microsoft Docs"
+title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- É um inteiro positivo que indica o número de espaços. Se *integer_expression* é negativo, uma cadeia de caracteres nula será retornada.  
+ É um inteiro positivo que indica o número de espaços. Se *integer_expression* for negativo, uma cadeia de caracteres nula será retornada.  
   
- Para obter mais informações, consulte [expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para incluir espaços em dados Unicode ou retornar mais de 8000 espaços de caractere, use REPLICATE em vez de SPACE.  
   
 ## <a name="examples"></a>Exemplos  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir arruma os sobrenomes e concatena uma vírgula, dois espaços e o nome das pessoas listadas na tabela `DimCustomer` de `AdventureWorksPDW2012`.  
   
 ```  
@@ -82,9 +82,9 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [REPLICAR &#40; Transact-SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
+ [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

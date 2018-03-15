@@ -50,7 +50,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  O valor a ser convertido. Qualquer expressão válida.  
   
  *data_type*  
- O tipo de dados no qual converter *expressão*.  
+ O tipo de dados no qual converter *expression*.  
   
  *length*  
  Inteiro opcional que especifica o comprimento do tipo de dados de destino.  
@@ -61,9 +61,9 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  Retorna uma conversão de valor ao tipo de dados especificado se a conversão for bem-sucedida; caso contrário, retorna nulo.  
   
 ## <a name="remarks"></a>Remarks  
- **TRY_CAST** usa o valor passado para ele e tenta convertê-lo em especificado *data_type*. Se a conversão for bem-sucedida, **TRY_CAST** retorna o valor conforme o especificado *data_type*; se ocorrer um erro, null será retornado. No entanto se você solicitar uma conversão que não é permitida explicitamente, em seguida, **TRY_CAST** falhará com um erro.  
+ **TRY_CAST** usa o valor passado para ele e tenta convertê-lo no *data_type* especificado. Se a conversão for bem-sucedida, **TRY_CAST** retornará o valor como o *data_type* especificado; se um erro ocorrer, será retornado um valor nulo. Porém, se você solicitar uma conversão que não é permitida explicitamente, **TRY_CAST** falhará com um erro.  
   
- **TRY_CAST** não é uma palavra-chave reservada novo e está disponível em todos os níveis de compatibilidade. **TRY_CAST** tem a mesma semântica **TRY_CONVERT** ao se conectar a servidores remotos.  
+ **TRY_CAST** não é uma nova palavra-chave reservada e está disponível em todos os níveis de compatibilidade. **TRY_CAST** tem a mesma semântica de **TRY_CONVERT** ao se conectar a servidores remotos.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -141,7 +141,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

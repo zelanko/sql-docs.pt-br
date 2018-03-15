@@ -79,11 +79,11 @@ Quando você executa um desses comandos DBCC, o [!INCLUDE[ssDE](../../includes/s
 Às vezes um instantâneo de banco de dados interno não é necessário ou não pode ser criado. Quando isso ocorre, o comando DBCC é executado no banco de dados real. Se o banco de dados estiver online, o comando DBCC usará o bloqueio de tabela para assegurar a consistência dos objetos que está verificando. Esse comportamento equivale a ter a opção WITH TABLOCK especificada.
   
 O instantâneo de banco de dados interno não é criado quando um comando DBCC é executado:
--   Contra **mestre**e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado no modo de usuário único.  
--   Em um banco de dados diferente de **mestre**, mas o banco de dados foi colocado em modo de usuário único usando a instrução ALTER DATABASE.  
+-   Em um banco de dados **mestre**, e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada no modo de usuário único.  
+-   Em um banco de dados diferente do **mestre**, mas o banco de dados foi colocado em modo de usuário único usando a instrução ALTER DATABASE.  
 -   Em um banco de dados somente leitura.  
 -   Em um banco de dados definido como modo de emergência usando a instrução ALTER DATABASE.  
--   Contra **tempdb**. Nesse caso, o instantâneo de banco de dados não pode ser criado em razão de restrições internas.  
+-   No **tempdb**. Nesse caso, o instantâneo de banco de dados não pode ser criado em razão de restrições internas.  
 -   Usando a opção WITH TABLOCK. Nesse caso, o DBCC honra a solicitação e não cria um instantâneo de banco de dados.  
   
 Os comandos DBCC usam bloqueio de tabela em vez de instantâneos de banco de dados internos quando o comando é executado de acordo com:
@@ -93,26 +93,26 @@ Os comandos DBCC usam bloqueio de tabela em vez de instantâneos de banco de dad
 -   Um volume que não oferece suporte a 'alternate streams'  
   
 > [!NOTE]  
->  A tentativa de executar DBCC CHECKALLOC, ou parte equivalente de DBCC CHECKDB, usando a opção WITH TABLOCK requer bloqueio X de banco de dados. Esse bloqueio de banco de dados não pode ser definido em **tempdb** ou **mestre** e talvez falhe em todos os outros bancos de dados.  
+>  A tentativa de executar DBCC CHECKALLOC, ou parte equivalente de DBCC CHECKDB, usando a opção WITH TABLOCK requer bloqueio X de banco de dados. Esse bloqueio de banco de dados não pode ser definido no **tempdb** nem no **mestre** e provavelmente falhará em todos os outros bancos de dados.  
   
 > [!NOTE]  
->  Falha no DBCC CHECKDB quando ele é executado no **mestre** se um instantâneo de banco de dados interno não pode ser criado.  
+>  O DBCC CHECKDB falhará ao ser executado no **mestre** se um instantâneo de banco de dados interno não puder ser criado.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Relatório de andamento de comandos DBCC  
-O **exec_requests** exibição de catálogo contém informações sobre o andamento e a fase atual da execução dos comandos DBCC CHECKDB, CHECKFILEGROUP e CHECKTABLE. O **percent_complete** coluna indica a porcentagem total do comando e o **comando** coluna informa a fase atual da execução do comando.
+A exibição de catálogo **sys.dm_exec_requests** contém informações sobre o andamento e a fase atual da execução dos comandos DBCC CHECKDB, CHECKFILEGROUP e CHECKTABLE. A coluna **percent_complete** indica o percentual total do comando, e a coluna **command** relata a fase atual da execução do comando.
   
 A definição de uma unidade de andamento depende da fase atual de execução do comando DBCC. O andamento é informado ocasionalmente na granularidade de uma página de banco de dados. Em outras fases ele é informado da granularidade de um único banco de dados ou correção de alocação. A tabela a seguir descreve cada fase da execução e a granularidade em que o comando informa sobre o andamento.
   
 |Fase de execução|Description|Granularidade do relatório de andamento|  
 |---------------------|-----------------|------------------------------------|  
-|DBCC TABLE CHECK|A consistência lógica e física dos objetos no banco de dados é verificada nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor de relatório de andamento é atualizado para cada banco de dados de 1000 páginas que são verificados.|  
+|DBCC TABLE CHECK|A consistência lógica e física dos objetos no banco de dados é verificada nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor do relatório de andamento é atualizado a cada 1000 páginas do banco de dados verificadas.|  
 |DBCC TABLE REPAIR|As correções de banco de dados são executadas nessa fase, se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de objeto que precisem ser corrigidos.|Andamento relatado no nível de correção individual.<br /><br /> O contador é atualizado para todas as correções concluídas.|  
-|DBCC ALLOC CHECK|As estruturas de alocação do banco de dados são verificadas durante essa fase.<br /><br /> Observação: O DBCC CHECKALLOC executa as mesmas verificações.|Andamento não é relatado.|  
+|DBCC ALLOC CHECK|As estruturas de alocação do banco de dados são verificadas durante essa fase.<br /><br /> Observação: o DBCC CHECKALLOC executa as mesmas verificações.|O andamento não é relatado|  
 |DBCC ALLOC REPAIR|As correções de banco de dados são realizadas nessa fase se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de alocação que precisem ser corrigidos.|O andamento não é relatado.|  
 |DBCC SYS CHECK|As tabelas do sistema de banco de dados são verificadas nessa fase.|Andamento relatado no nível da página do banco de dados.<br /><br /> O valor do relatório de andamento é atualizado a cada 1.000 páginas do banco de dados verificado.|  
 |DBCC SYS REPAIR|As correções de banco de dados são realizadas nessa fase se REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS for especificado e houver erros de tabelas do sistema que precisem ser corrigidos.|Andamento relatado no nível de correção individual.<br /><br /> O contador é atualizado para todas as correções concluídas.|  
-|DBCC SSB CHECK|Os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente de Serviços são verificados nessa fase.<br /><br /> Observação: Nesta fase não é executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
-|DBCC CHECKCATALOG|A consistência dos catálogos de banco de dados é verificada nessa fase.<br /><br /> Observação: Nesta fase não é executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
+|DBCC SSB CHECK|Os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente de Serviços são verificados nessa fase.<br /><br /> Observação: esta fase não será executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
+|DBCC CHECKCATALOG|A consistência dos catálogos de banco de dados é verificada nessa fase.<br /><br /> Observação: esta fase não será executada quando DBCC CHECKTABLE for executado.|O andamento não é relatado.|  
 |DBCC IVIEW CHECK|A consistência lógica de todas as exibições indexadas presentes no banco de dados é verificada nessa fase.|O andamento é relatado no nível da exibição de banco de dados individual que está sendo verificada.|  
   
 ## <a name="informational-statements"></a>Instruções informativas  

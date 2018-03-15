@@ -52,21 +52,21 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta o assembly apenas se ele já existe.  
+ Descarta condicionalmente o assembly somente se ele já existir.  
   
  *assembly_name*  
  É o nome do assembly que você deseja descartar.  
   
  WITH NO DEPENDENTS  
- Se especificado, descarta somente *nome_do_assembly* e nenhum dos assemblies dependentes que são referenciados pelo assembly. Se não for especificado, DROP ASSEMBLY descarta *nome_do_assembly* e todos os assemblies dependentes.  
+ Se for especificado, descartará somente o *assembly_name* e nenhum dos assemblies dependentes referenciados pelo assembly. Se não for especificado, DROP ASSEMBLY descartará o *assembly_name* e todos os assemblies dependentes.  
   
 ## <a name="remarks"></a>Remarks  
  O descarte de um assembly remove o mesmo e todos os seus arquivos associados, tais como código fonte e arquivos de depuração, do banco de dados  
   
- Se WITH NO DEPENDENTS não for especificado, DROP ASSEMBLY descarta *nome_do_assembly* e todos os assemblies dependentes. Se houver falha em uma tentativa de descarte de quaisquer assemblies dependentes, DROP ASSEMBLY retornará um erro.  
+ Se WITH NO DEPENDENTS não for especificado, DROP ASSEMBLY descartará o *assembly_name* e todos os assemblies dependentes. Se houver falha em uma tentativa de descarte de quaisquer assemblies dependentes, DROP ASSEMBLY retornará um erro.  
   
  DROP ASSEMBLY retornará um erro se o assembly for referenciado por outro assembly que exista no banco de dados ou se for usado por funções CLR (Common Language Runtime), procedimentos armazenados, disparadores, tipos definidos pelo usuário ou agregações no banco de dados atual.  
   
@@ -82,10 +82,10 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 DROP ASSEMBLY Helloworld ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Obtendo informações sobre Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
+ [Obtendo informações sobre assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

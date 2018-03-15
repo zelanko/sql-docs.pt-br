@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o nome de banco de dados especificado pelo usuário na cadeia de caracteres de conexão do banco de dados. Este é o banco de dados que é especificado usando o **sqlcmd-d** opção (USE *banco de dados*) ou expressão de fonte de dados ODBC (catálogo inicial =*databasename*).  
+  Retorna o nome de banco de dados especificado pelo usuário na cadeia de caracteres de conexão do banco de dados. Esse é o banco de dados especificado com o uso da opção **sqlcmd-d** (USE *database*) ou a expressão de fonte de dados ODBC (catálogo inicial =*databasename*).  
   
  Este banco de dados não é igual ao banco de dados do usuário padrão.  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o banco de dados inicial não for especificado, a função retornará uma cadeia de caracteres vazia.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
  [Utilitário osql](../../tools/osql-utility.md)   
- [Cliente nativo do SQL Server &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>& #x 40; & #x 40. NESTLEVEL (Transact-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o nível aninhando da execução de procedimento armazenado atual (inicialmente 0) no servidor local.  
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O nível é incrementado sempre que um procedimento armazenado chama outro procedimento armazenado ou executa código gerenciado fazendo referência a uma rotina, um tipo ou uma agregação CLR (Common Language Runtime). Quando o máximo de 32 for excedido, a transação será terminada.  
   
- Quando @@NESTLEVEL é executado em um [!INCLUDE[tsql](../../includes/tsql-md.md)] cadeia de caracteres, o valor retornado de é 1 + atual nível de aninhamento. Quando @@NESTLEVEL for executado dinamicamente usando sp_executesql o valor retornado será 2 + o nível de aninhamento atual.  
+ Quando @@NESTLEVEL é executado em uma cadeia de caracteres [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor retornado é 1 + o nível de aninhamento atual. Quando @@NESTLEVEL é executado dinamicamente usando sp_executesql, o valor retornado é 2 + o nível de aninhamento atual.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Usando@NESTLEVEL em um procedimento  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Usando @@NESTLEVEL em um procedimento  
  O exemplo a seguir cria dois procedimentos: um que chama o outro e um que exibe a configuração `@@NESTLEVEL` de cada um deles.  
   
 ```  
@@ -92,7 +92,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. Chamando @@NESTLEVEL  
- O exemplo a seguir mostra a diferença nos valores retornados por `SELECT`, `EXEC`, e `sp_executesql` quando cada um deles chama `@@NESTLEVEL`.  
+ O exemplo a seguir mostra a diferença nos valores retornados por `SELECT`, `EXEC` e `sp_executesql` quando cada um deles chama `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

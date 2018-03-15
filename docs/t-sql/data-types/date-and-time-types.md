@@ -33,14 +33,14 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte às fun�
   
 ## <a name="in-this-section"></a>Nesta seção
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[Data e hora &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[tempo &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>Consulte também
-[Dados de data e hora tipos e funções &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

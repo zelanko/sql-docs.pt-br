@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>& #x 40; & #x 40. TIMETICKS (Transact-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o número de microssegundos por tique.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A quantidade de tempo por tique depende do computador. Cada tique no sistema operacional é 31,25 milissegundos, ou trinta milésimos de um segundo.  
   
 ## <a name="examples"></a>Exemplos  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções estatísticas do sistema &#40;Transact-SQL&#4#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções estatísticas do sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Alterar CREDENCIAIS (Transact-SQL) | Microsoft Docs
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,18 +54,18 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica o nome da credencial que está sendo alterada.  
   
- IDENTIDADE **='***identity_name***'**  
+ IDENTITY **='***identity_name***'**  
  Especifica o nome da conta a ser usada ao conectar o servidor externamente.  
   
- SEGREDO **='***segredo***'**  
- Especifica o segredo necessário para a autenticação de saída. *segredo* é opcional.  
+ SECRET **='***secret***'**  
+ Especifica o segredo necessário para a autenticação de saída. *secret* é opcional.  
   
-## <a name="remarks"></a>Comentários  
- Quando uma credencial é alterada, os valores de *identity_name* e *segredo* são redefinidos. Se o argumento SECRET opcional não for especificado, o valor do segredo armazenado será definido como NULL.  
+## <a name="remarks"></a>Remarks  
+ Quando uma credencial é alterada, os valores de *identity_name* e *secret* são redefinidos. Se o argumento SECRET opcional não for especificado, o valor do segredo armazenado será definido como NULL.  
   
  O segredo é criptografado com a chave mestra de serviço. Se a chave mestra de serviço for gerada novamente, o segredo será criptografado usando a nova chave mestra de serviço.  
   
- Informações sobre as credenciais são visíveis no **Credentials** exibição do catálogo.  
+ As informações sobre as credenciais são visíveis na exibição do catálogo **sys.credentials**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY CREDENTIAL. Se a credencial for uma credencial do sistema, será necessária a permissão CONTROL SERVER.  
@@ -89,11 +89,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Credenciais &#40; mecanismo de banco de dados &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

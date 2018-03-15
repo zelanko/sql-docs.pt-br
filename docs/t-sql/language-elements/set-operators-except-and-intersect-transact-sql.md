@@ -36,14 +36,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-operators---except-and-intersect-transact-sql"></a>Definir operadores - exceto e INTERSECT (Transact-SQL)
+# <a name="set-operators---except-and-intersect-transact-sql"></a>Operadores de conjunto – EXCEPT e INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna linhas distintas comparando os resultados de duas consultas.  
   
  EXCETO retorna linhas distintas da consulta de entrada à esquerda que não são produzidas pela consulta de entrada à direita.  
   
- INTERSECT retorna linhas distintas que são produzidas pelo operador de consultas de entrada à esquerda e à direita.  
+ INTERSECT retorna linhas distintas que são produzidas pelo operador das consultas de entrada à esquerda e à direita.  
   
  As regras básicas para combinar os conjuntos de resultados de duas consultas que usam EXCEPT ou INTERSECT são as seguintes:  
   
@@ -63,20 +63,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  \<*query_specification*> | ( \<*query_expression*> )  
- É uma especificação ou expressão de consulta que retorna dados a serem comparados com os dados de outra especificação ou expressão de consulta. As definições das colunas que fazem parte de uma operação EXCEPT ou INTERSECT não precisam ser iguais, mas devem ser compatíveis na conversão implícita. Quando tipos de dados diferem, o tipo que é usado para executar a comparação e retornar resultados é determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ É uma especificação ou expressão de consulta que retorna dados a serem comparados com os dados de outra especificação ou expressão de consulta. As definições das colunas que fazem parte de uma operação EXCEPT ou INTERSECT não precisam ser iguais, mas devem ser compatíveis na conversão implícita. Quando os tipos de dados diferem, o tipo usado para fazer a comparação e retornar resultados é determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
  Quando os tipos são iguais mas diferem em precisão, escala ou extensão, o resultado é determinado com base nas mesmas regras para expressões de combinação. Para obter mais informações, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- A especificação de consulta ou uma expressão não pode retornar **xml**, **texto**, **ntext**, **imagem**, ou colunas de tipo definido pelo usuário CLR não binários como esses tipos de dados não são comparáveis.  
+ A especificação ou expressão de consulta não pode retornar colunas **xml**, **text**, **ntext**, **image** ou colunas de tipo de dado CLR definido pelo usuário não binárias porque esses tipos de dados não são comparáveis.  
   
  EXCEPT  
- Retorna qualquer valor distinto da consulta à esquerda do operador EXCEPT que também não são retornados da consulta à direita.  
+ Retorna qualquer valor distinto da consulta à esquerda do operador EXCEPT que não seja retornado da consulta direita.  
   
  INTERSECT  
  Retorna qualquer valor distinto retornado pela consulta à esquerda e à direita do operador INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
- Quando os tipos de dados de colunas comparáveis retornadas pelas consultas à esquerda e à direita do EXCEPT ou INTERSECT operadores são os tipos de dados de caractere com agrupamentos diferentes, a comparação necessária é executada de acordo com as regras de [ precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md). Se essa conversão não puder ser executada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
+ Quando os tipos de dados de colunas comparáveis retornadas pelas consultas à direita e à esquerda dos operadores EXCEPT ou INTERSECT são tipos de dados de caractere com agrupamentos diferentes, a comparação necessária é executada de acordo com as regras de [precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md). Se essa conversão não puder ser executada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
   
  Ao comparar valores de colunas para determinar linhas DISTINTAS, dois valores NULL são considerados iguais.  
   
@@ -102,10 +102,10 @@ ms.lasthandoff: 01/25/2018
   
  Cursores estáticos e somente de avanço rápido têm suporte total no conjunto de resultados quando são usados com uma operação EXCEPT ou INTERSECT. Se um cursor dinâmico ou controlado por conjunto de chaves for usado com uma operação EXCEPT ou INTERSECT, o cursor do conjunto de resultados da operação será convertido em um cursor estático.  
   
- Quando uma operação EXCEPT é exibida, usando o recurso de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a operação é exibida como uma [semi antijunção esquerda](../../relational-databases/showplan-logical-and-physical-operators-reference.md), e uma operação INTERSECT é exibida como uma [semijunção à esquerda](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
+ Quando uma operação EXCEPT é exibida usando o recurso Plano de Execução Gráfico no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a operação é exibida como uma [left anti semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md), e uma operação INTERSECT é exibida como uma [left semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir mostram como usar o `INTERSECT` e `EXCEPT` operadores. A primeira consulta retorna todos os valores da tabela `Production.Product` para comparar com os resultados de `INTERSECT` e `EXCEPT`.  
+ Os exemplos a seguir mostram o uso dos operadores `INTERSECT` e `EXCEPT`. A primeira consulta retorna todos os valores da tabela `Production.Product` para comparar com os resultados de `INTERSECT` e `EXCEPT`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -154,7 +154,7 @@ FROM Production.Product ;
 --Result: 0 Rows (work orders without products)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Os exemplos a seguir mostram como usar os operadores `INTERSECT` e `EXCEPT`. A primeira consulta retorna todos os valores da tabela `FactInternetSales` para comparar com os resultados de `INTERSECT` e `EXCEPT`.  
   
 ```  

@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lição 1: Criando objetos de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Esta lição mostra como criar um banco de dados, crie uma tabela no banco de dados e, em seguida, acessar e alterar os dados na tabela. Como esta lição é uma introdução ao uso de [!INCLUDE[tsql](../includes/tsql-md.md)], ela não usa nem descreve as várias opções disponíveis para essas instruções.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Esta lição mostra como criar um banco de dados, criar uma tabela no banco de dados e então acessar e alterar os dados na tabela. Como esta lição é uma introdução ao uso de [!INCLUDE[tsql](../includes/tsql-md.md)], ela não usa nem descreve as várias opções disponíveis para essas instruções.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] As instruções podem ser escritas e enviadas ao [!INCLUDE[ssDE](../includes/ssde-md.md)] das seguintes maneiras:  
   

@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Retorna o número de identificação para um usuário de banco de dados.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,14 +54,14 @@ USER_ID ( [ 'user' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *usuário*  
- É o nome de usuário a ser usado. *usuário* é **nchar**. Se um **char** valor for especificado, ele será convertido implicitamente em **nchar**. Os parênteses são necessários.  
+ *user*  
+ É o nome de usuário a ser usado. *user* é **nchar**. Se um valor de **char** for especificado, ele será convertido implicitamente em **nchar**. Os parênteses são necessários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Comentários  
- Quando *usuário* for omitido, o usuário atual é assumido. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_ID é chamado depois de EXECUTE AS, USER_ID retorna a ID do contexto representado.  
+## <a name="remarks"></a>Remarks  
+ Quando *user* é omitido, considera-se o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_ID é chamado depois de EXECUTE AS, USER_ID retorna a ID do contexto representado.  
   
  Quando uma entidade do Windows não é mapeada para um banco de dados específico, o usuário acessa um banco de dados por meio da associação em um grupo, USER_ID retorna 0 (a ID de público). Se esse principal criar um objeto sem especificar um esquema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criará um usuário e esquema implícitos mapeados para a entidade de segurança do Windows. O usuário criado em tais casos não pode ser usado para conectar ao banco de dados. As chamadas a USER_ID de um principal do Windows mapeado para um usuário implícito retornarão a ID do usuário implícito.  
   
@@ -76,10 +76,10 @@ SELECT USER_ID('Harold');
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [DATABASE_PRINCIPAL_ID &#40; Transact-SQL &#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
+ [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

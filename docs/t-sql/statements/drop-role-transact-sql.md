@@ -1,5 +1,5 @@
 ---
-title: "FUNÇÃO DROP (Transact-SQL) | Microsoft Docs"
+title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SE EXISTIR*  
+ *IF EXISTS*  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Condicionalmente descarta a função somente se ele já existe.  
+ Remove condicionalmente a função somente se ela já existe.  
   
- *nome_da_função*  
+ *role_name*  
  Especifica a função a ser descartada do banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As funções que possuem itens protegíveis não podem ser descartadas do banco de dados. Para descartar uma função de banco de dados que possui protegíveis, é necessário primeiro transferir a propriedade dos protegíveis ou descartá-los do banco de dados. As funções que possuem membros não podem ser descartadas do banco de dados. Para descartar uma função que possui membros, você deve primeiro remover os membros da função.  
   
- Para remover membros de uma função de banco de dados, use [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ Para remover membros de uma função de banco de dados, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  
   
  Você não pode usar DROP ROLE para descartar uma função de banco de dados fixa.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- Para remover uma função de servidor, use [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ Para remover uma função de servidor, use [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer **ALTER ANY ROLE** no banco de dados, ou **controle** permissão na função ou associação de **db_securityadmin**.  
+ Exige a permissão **ALTER ANY ROLE** no banco de dados, ou a permissão **CONTROL** na função ou a associação em **db_securityadmin**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir descarta a função de banco de dados `purchasing` do `AdventureWorks2012` banco de dados.  
+ O exemplo a seguir remove a função de banco de dados `purchasing` do banco de dados `AdventureWorks2012`.  
   
 ```  
 DROP ROLE purchasing;  
@@ -92,9 +92,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
- [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

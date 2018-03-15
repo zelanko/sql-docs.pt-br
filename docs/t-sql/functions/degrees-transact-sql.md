@@ -1,5 +1,5 @@
 ---
-title: GRAUS (Transact-SQL) | Microsoft Docs
+title: DEGREES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de exato dados numéricos aproximados ou categoria de tipo, exceto para o **bit** tipo de dados.  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Retorna o mesmo tipo que *numeric_expression*.  
@@ -69,8 +69,8 @@ The number of degrees in PI/2 radians is 90
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

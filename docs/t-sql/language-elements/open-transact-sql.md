@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Abre uma [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor de servidor e popula o cursor executando o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução especificada no DECLARE CURSOR ou conjunto *cursor_variable* instrução.  
+  Abre um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] e popula o cursor executando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada na instrução DECLARE CURSOR ou SET *cursor_variable*.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>Argumentos  
  GLOBAL  
- Especifica que *cursor_name* refere-se a um cursor global.  
+ Especifica que *cursor_name* se refere a um cursor global.  
   
  *cursor_name*  
- É o nome do cursor declarado. Se uma global e um cursor local existirem com *cursor_name* como seu nome, *cursor_name* refere-se ao cursor global se GLOBAL for especificado; caso contrário, *cursor_name* refere-se ao cursor local.  
+ É o nome do cursor declarado. Se um cursor global e um cursor local existirem com *cursor_name* como seus nomes, *cursor_name* se referirá ao cursor global quando GLOBAL for especificado, caso contrário, *cursor_name* se referirá ao cursor local.  
   
  *cursor_variable_name*  
  É o nome de uma variável de cursor que faz referência a um cursor.  
@@ -62,7 +62,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="remarks"></a>Remarks  
  Se o cursor for declarado com a opção INSENSITIVE ou STATIC, OPEN criará uma tabela temporária para manter o conjunto de resultados. OPEN falha quando o tamanho de qualquer linha no conjunto de resultados excede o tamanho máximo de linha para tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o cursor for declarado com a opção KEYSET, OPEN criará uma tabela temporária para manter o conjunto de chaves. As tabelas temporárias são armazenadas em tempdb.  
   
- Depois que um cursor foi aberto, use o @@CURSOR_ROWS linhas de função a receber o número de qualificação no último cursor aberto.  
+ Depois que um cursor for aberto, use a função @@CURSOR_ROWS para receber o número de linhas qualificadas no último cursor aberto.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte à geração de cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] controlados por conjunto de chaves ou estáticos de forma assíncrona. [!INCLUDE[tsql](../../includes/tsql-md.md)] , como OPEN ou FETCH, são em lote, de modo que não é preciso gerar cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] assincronamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a dar suporte a cursores de servidor de API (interface de programação de aplicativo) estáticos ou controlados por conjunto de chaves assíncronos nos quais OPEN de baixa latência é uma preocupação devido às viagens de ida e volta do cliente para cada operação de cursor.  
@@ -88,7 +88,7 @@ CLOSE Employee_Cursor;
 DEALLOCATE Employee_Cursor;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   

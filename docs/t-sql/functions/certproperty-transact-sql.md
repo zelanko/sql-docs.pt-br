@@ -52,7 +52,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Argumentos  
 *Cert_ID*  
-É a ID do certificado. *Cert_ID* é int.
+É a ID do certificado. *Cert_ID* é um int.
   
 *Expiry_Date*  
 É a data de expiração do certificado.
@@ -78,13 +78,13 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ## <a name="return-types"></a>Tipos de retorno
 A especificação de propriedade deve ser incluída entre aspas simples.
   
-O tipo de retorno depende da propriedade especificada na chamada de função. Todos retornam valores são encapsulados no tipo de retorno de **sql_variant**.
--   *Expiry_Date* e *Start_Date* retornar **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *assunto*, e *String_SID* retornar **nvarchar**.  
+O tipo de retorno depende da propriedade especificada na chamada de função. Todos os valores retornados são encapsulados no tipo de retorno de **sql_variant**.
+-   *Expiry_Date* e *Start_Date* retornam **datetime**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *Subject* e *String_SID* retornam **nvarchar**.  
 -   *SID* retorna **varbinary**.  
   
-## <a name="remarks"></a>Comentários  
-Informações sobre certificados são visíveis no [Certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) exibição do catálogo.
+## <a name="remarks"></a>Remarks  
+As informações sobre certificados são visíveis na exibição do catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permissões  
 Requer algumas permissões no certificado e que a permissão VIEW DEFINITION não seja negada ao chamador no certificado.
@@ -110,10 +110,10 @@ GO
   
 ## <a name="see-also"></a>Consulte também
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 
- [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[Certificates &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
- [Exibições do catálogo de segurança &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
+[Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[Certificados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[Exibições do catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

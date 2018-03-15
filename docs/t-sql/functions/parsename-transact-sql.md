@@ -56,7 +56,7 @@ PARSENAME ( 'object_name' , object_piece )
  É o nome do objeto para o qual a parte de objeto especificada deve ser recuperada. *object_name* é **sysname**. Este parâmetro é um nome de objeto opcionalmente qualificado. Se todas as partes do nome do objeto forem qualificadas, esse nome poderá ter quatro partes: o nome do servidor, o nome do banco de dados, o nome do proprietário e o nome do objeto.  
   
  *object_piece*  
- É a parte do objeto a ser retornada. *object_piece* é do tipo **int**e pode ter estes valores:  
+ É a parte do objeto a ser retornada. *object_piece* é do tipo **int** e pode ter estes valores:  
   
  1 = Nome do objeto  
   
@@ -72,11 +72,11 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="remarks"></a>Remarks  
  PARSENAME retornará o NULL se uma das seguintes condições for verdadeira:  
   
--   O *object_name* ou *object_piece* é NULL.  
+-   *object_name* ou *object_piece* é NULL.  
   
 -   Um erro de sintaxe ocorre.  
   
- A parte do objeto solicitado tem um comprimento de 0 e não é válido [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. Um nome de objeto de comprimento zero processa o nome qualificado completo como não válido.  
+ A parte do objeto solicitada tem um tamanho igual a 0 e não é um identificador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Um nome de objeto de comprimento zero processa o nome qualificado completo como não válido.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `PARSENAME` para retornar informações sobre a tabela `Person` no banco de dados `AdventureWorks2012`.  
@@ -118,11 +118,11 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

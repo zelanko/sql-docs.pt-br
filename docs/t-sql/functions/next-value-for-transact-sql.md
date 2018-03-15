@@ -1,5 +1,5 @@
 ---
-title: Ao lado de valor (Transact-SQL) | Microsoft Docs
+title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Gera um número de sequência do objeto de sequência especificado.  
   
- Para obter uma discussão completa de criação e o uso de sequências, consulte [números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para gerar reservar um intervalo de números de sequência.  
+ Para obter uma discussão completa sobre a criação e o uso de sequências, consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para gerar e reservar um intervalo de números de sequência.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,28 +64,28 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  O nome do objeto de sequência que gera o número.  
   
  *over_order_by_clause*  
- Determina a ordem na qual o valor da sequência é atribuído às linhas de uma partição. Para obter mais informações, consulte [a cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Determina a ordem na qual o valor da sequência é atribuído às linhas de uma partição. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna um número usando o tipo da sequência.  
   
-## <a name="remarks"></a>Comentários  
- O **NEXT VALUE FOR** função pode ser usada em procedimentos armazenados e gatilhos.  
+## <a name="remarks"></a>Remarks  
+ A função **NEXT VALUE FOR** pode ser usada em procedimentos armazenados e gatilhos.  
   
- Quando o **NEXT VALUE FOR** função é usada em uma consulta ou restrição padrão, se o mesmo objeto de sequência é usado mais de uma vez, ou se o mesmo objeto de sequência é usado na instrução que fornece os valores e em uma restrição padrão está sendo executado, será retornado o mesmo valor para todas as colunas que referenciam a mesma sequência em uma linha no conjunto de resultados.  
+ Quando a função **NEXT VALUE FOR** for usada em uma consulta ou restrição padrão, se o mesmo objeto de sequência for usado mais de uma vez ou se o mesmo objeto de sequência for usado na instrução que fornece os valores e em uma restrição padrão em execução, o mesmo valor será retornado para todas as colunas que referenciam a mesma sequência em uma linha no conjunto de resultados.  
   
- O **NEXT VALUE FOR** função é não determinística e só é permitida em contextos em que o número de valores de sequência gerados é bem definido. Abaixo está a definição de quantos valores serão usados para cada objeto de sequência referenciado em uma determinada instrução:  
+ A função **NEXT VALUE FOR** é não determinística e apenas é permitida em contextos em que o número de valores de sequência gerados é bem definido. Abaixo está a definição de quantos valores serão usados para cada objeto de sequência referenciado em uma determinada instrução:  
   
--   **Selecione** -para cada objeto de sequência referenciado, um novo valor é gerado uma vez por linha no resultado da instrução.  
+-   **SELECT** – Para cada objeto de sequência referenciado, um novo valor é gerado uma vez por linha no resultado da instrução.  
   
--   **INSERIR** ... **VALORES** -para cada objeto de sequência referenciado, um novo valor é gerado uma vez para cada linha inserida na instrução.  
+-   **INSERT** … **VALUES** – Para cada objeto de sequência referenciado, um novo valor é gerado uma vez para cada linha inserida na instrução.  
   
--   **ATUALIZAÇÃO** -para cada objeto de sequência referenciado, um novo valor é gerado para cada linha que está sendo atualizada pela instrução.  
+-   **UPDATE** – Para cada objeto de sequência referenciado, um novo valor é gerado para cada linha atualizada pela instrução.  
   
--   Instruções de procedimentos (como **DECLARE**, **definir**, etc.)-para cada objeto de sequência referenciado, um novo valor é gerado para cada instrução.  
+-   Instruções procedurais (como **DECLARE**, **SET**, etc.) – Para cada objeto de sequência referenciado, um novo valor é gerado para cada instrução.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- O **NEXT VALUE FOR** função não pode ser usada nas seguintes situações:  
+ A função **NEXT VALUE FOR** não pode ser usada nas seguintes situações:  
   
 -   Quando um banco de dados está em modo somente leitura.  
   
@@ -97,15 +97,15 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Em exibições, em funções definidas pelo usuário, ou em colunas computadas.  
   
--   Em uma instrução usando o **DISTINCT**, **união**, **UNION ALL**, **EXCEPT** ou **INTERSECT** operador.  
+-   Em uma instrução que usa o operador **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** ou **INTERSECT**.  
   
--   Em uma instrução usando o **ORDER BY** cláusula, a menos que **NEXT VALUE FOR** ... **SOBRE** (**ORDER BY** ...) é usado.  
+-   Em uma instrução que usa a cláusula **ORDER BY**, a menos que **NEXT VALUE FOR** … **OVER** (**ORDER BY**…) seja usado.  
   
--   Nas seguintes cláusulas: **BUSCAR**, **sobre**, **saída**, **ON**, **PIVOT**,  **UNPIVOT**, **Agrupar por**, **HAVING**, **de computação**, **COMPUTE BY**, ou **deFORXML**.  
+-   Nas seguintes cláusulas: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** ou **FOR XML**.  
   
--   Em expressões condicionais usando **caso**, **escolha**, **COALESCE**, **IIF**, **ISNULL**, ou  **NULLIF**.  
+-   Em expressões condicionais que usam **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** ou **NULLIF**.  
   
--   Em um **valores** cláusula não é parte de um **inserir** instrução.  
+-   Em uma cláusula **VALUES** que não faz parte de uma instrução **INSERT**.  
   
 -   Na definição de uma restrição de verificação.  
   
@@ -113,14 +113,14 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Como padrão em um tipo de tabela definido pelo usuário.  
   
--   Em uma instrução que usa **superior**, **deslocamento**, ou quando o **ROWCOUNT** opção é definida.  
+-   Em uma instrução que usa **TOP**, **OFFSET** ou quando a opção **ROWCOUNT** é definida.  
   
--   No **onde** cláusula de uma instrução.  
+-   Na cláusula **WHERE** de uma instrução.  
   
--   Em um **mesclar** instrução. (Exceto quando o **NEXT VALUE FOR** função é usada em uma restrição padrão na tabela de destino e o padrão é usado no **criar** instrução o **mesclar** instrução.)  
+-   Em uma instrução **MERGE**. (Exceto quando a função **NEXT VALUE FOR** é usada em uma restrição padrão na tabela de destino e o padrão é usado na instrução **CREATE** da instrução **MERGE**.)  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>Usando um objeto de sequência em uma restrição padrão  
- Ao usar o **NEXT VALUE FOR** função em uma restrição padrão, as seguintes regras se aplicam:  
+ Ao usar a função **NEXT VALUE FOR** em uma restrição padrão, as seguintes regras se aplicam:  
   
 -   Um único objeto de sequência pode ser referenciado de restrições padrão em várias tabelas.  
   
@@ -132,49 +132,49 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   A mesma sequência de número é retornada para todas as colunas em uma linha se diversas restrições padrão usam o mesmo objeto de sequência, ou se o mesmo objeto de sequência for usado na instrução que fornece os valores, e em uma restrição padrão que é executada.  
   
--   Referências a **NEXT VALUE FOR** função em uma restrição padrão não é possível especificar o **sobre** cláusula.  
+-   As referências à função **NEXT VALUE FOR** em uma restrição padrão não podem especificar a cláusula **OVER**.  
   
 -   Um objeto de sequência referenciado em uma restrição padrão pode ser alterado.  
   
--   No caso de um `INSERT … SELECT` ou `INSERT … EXEC` instrução onde os dados inseridos vêm de uma consulta usando um **ORDER BY** cláusula, os valores retornados pelo **NEXT VALUE FOR** função será gerados na ordem especificada pelo **ORDER BY** cláusula.  
+-   No caso de uma instrução `INSERT … SELECT` ou `INSERT … EXEC` em que os dados inseridos são obtidos de uma consulta que usa uma cláusula **ORDER BY**, os valores retornados pela função **NEXT VALUE FOR** serão gerados na ordem especificada pela cláusula **ORDER BY**.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Usando um objeto de sequência com uma cláusula OVER ORDER BY  
- O **NEXT VALUE FOR** function dá suporte à geração de valores de sequência classificados aplicando a **sobre** cláusula para o **NEXT VALUE FOR** chamar. Usando o **sobre** cláusula, um usuário garante que os valores retornados são gerados na ordem do **sobre** da cláusula **ordem B**Subcláusula Y. As seguintes regras adicionais se aplicam ao usar o **NEXT VALUE FOR** funcionar com o **sobre** cláusula:  
+ A função **NEXT VALUE FOR** é compatível com a geração de valores de sequência classificados com a aplicação da cláusula **OVER** à chamada **NEXT VALUE FOR**. Usando a cláusula **OVER**, um usuário tem a garantia de que os valores retornados são gerados na ordem da subcláusula **ORDER B**Y da cláusula **OVER**. As seguintes regras adicionais aplicam-se ao usar a função **NEXT VALUE FOR** com a cláusula **OVER**:  
   
--   Diversas chamadas para o **NEXT VALUE FOR** de função para o mesmo gerador de sequência em uma única instrução deve usar o mesmo **sobre** definição de cláusula.  
+-   Diversas chamadas à função **NEXT VALUE FOR** para o mesmo gerador de sequência em uma única instrução devem todas usar a mesma definição de cláusula **OVER**.  
   
--   Diversas chamadas para o **NEXT VALUE FOR** função que referência geradores de sequência diferentes em uma única instrução podem ter diferentes **sobre** definições de cláusula.  
+-   Diversas chamadas à função **NEXT VALUE FOR** que referenciam diferentes geradores de sequência em uma única instrução podem ter diferentes definições de cláusula **OVER**.  
   
--   Um **sobre** cláusula aplicada para o **NEXT VALUE FOR** função não oferece suporte a **PARTITION BY** Subcláusula.  
+-   Uma cláusula **OVER** aplicada à função **NEXT VALUE FOR** não dá suporte à subcláusula **PARTITION BY**.  
   
--   Se todas as chamadas para o **NEXT VALUE FOR** funcionar em um **selecione** instrução Especifica o **sobre** cláusula, um **ORDER BY** cláusula pode ser usada em o **selecione** instrução.  
+-   Se todas as chamadas à função **NEXT VALUE FOR** em uma instrução **SELECT** especificarem a cláusula **OVER**, uma cláusula **ORDER BY** poderá ser usada na instrução **SELECT**.  
   
--   O **sobre** cláusula é permitida com o **NEXT VALUE FOR** funcionam quando usados em um **selecione** instrução ou `INSERT … SELECT …` instrução. Usar o **sobre** cláusula com o **NEXT VALUE FOR** função não é permitida em **atualização** ou **mesclar** instruções.  
+-   A cláusula **OVER** é permitida com a função **NEXT VALUE FOR** quando usada em uma instrução **SELECT** ou `INSERT … SELECT …`. O uso da cláusula **OVER** com a função **NEXT VALUE FOR** não é permitido em instruções **UPDATE** ou **MERGE**.  
   
 -   Se outro processo estiver acessando o objeto de sequência ao mesmo tempo, os números retornados poderão ter intervalos.  
   
 ## <a name="metadata"></a>Metadados  
- Para obter informações sobre sequências, consulte o [sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) exibição do catálogo.  
+ Para obter informações sobre sequências, consulte a exibição do catálogo [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer **atualização** permissão no objeto de sequência ou o esquema da sequência. Para obter um exemplo de concessão de permissão, consulte o exemplo F posteriormente neste tópico.  
+ Exige a permissão **UPDATE** no objeto de sequência ou o esquema da sequência. Para obter um exemplo de concessão de permissão, consulte o exemplo F posteriormente neste tópico.  
   
 ### <a name="ownership-chaining"></a>Encadeamento de propriedade  
  Objetos de sequência oferecem suporte a encadeamento de propriedade. Se o objeto de sequência tiver o mesmo proprietário que o procedimento armazenado de chamada, gatilho ou tabela (tendo um objeto de sequência como uma restrição padrão), nenhuma verificação de permissão será exigida no objeto de sequência. Se o objeto de sequência não tiver o mesmo proprietário que o procedimento armazenado de chamada, gatilho ou tabela, uma verificação de permissão será exigida no objeto de sequência.  
   
- Quando o **NEXT VALUE FOR** função é usada como um valor padrão em uma tabela, os usuários precisam **inserir** permissão na tabela, e **atualização** permissão no objeto de sequência , para inserir dados usando o padrão.  
+ Quando a função **NEXT VALUE FOR** é usada como um valor padrão em uma tabela, os usuários precisam das permissões **INSERT** na tabela e **UPDATE** no objeto de sequência para inserir dados usando o padrão.  
   
 -   Se a restrição padrão tiver o mesmo proprietário que o objeto de sequência, nenhuma permissão será exigida no objeto de sequência quando a restrição padrão for chamada.  
   
 -   Se a restrição padrão e o objeto de sequência não tiverem o mesmo proprietário, as permissões serão exigidas no objeto de sequência mesmo que seja chamada através de uma restrição padrão.  
   
-### <a name="audit"></a>Auditoria  
- Para auditar o **NEXT VALUE FOR** funcionar, monitore o SCHEMA_OBJECT_ACCESS_GROUP.  
+### <a name="audit"></a>Auditar o  
+ Para auditar a função **NEXT VALUE FOR**, monitore o SCHEMA_OBJECT_ACCESS_GROUP.  
   
 ## <a name="examples"></a>Exemplos  
- Para obter exemplos de como criar sequências e usando o **NEXT VALUE FOR** função para gerar números de sequência, consulte [números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Para obter exemplos de como criar sequências e usar a função **NEXT VALUE FOR** para gerar números de sequência, consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  Os exemplos a seguir usam uma sequência chamada `CountBy1` em um esquema chamado `Test`. Execute a seguinte instrução para criar a sequência `Test.CountBy1`. Os exemplos C e E usam o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], portanto, a sequência `CountBy1` é criada naquele banco de dados.  
   
@@ -235,7 +235,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. Usando a função NEXT VALUE FOR na definição de uma restrição padrão  
- Usando o **NEXT VALUE FOR** oferece suporte a função na definição de uma restrição padrão. Para obter um exemplo do uso de **NEXT VALUE FOR** em uma **CREATE TABLE** instrução, consulte o exemplo C[números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). O exemplo a seguir usa `ALTER TABLE` para adicionar uma sequência como um padrão em uma tabela atual.  
+ Há compatibilidade com o uso da função **NEXT VALUE FOR** na definição de uma restrição padrão. Para obter um exemplo de como usar **NEXT VALUE FOR** em uma instrução **CREATE TABLE**, veja o exemplo C em [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). O exemplo a seguir usa `ALTER TABLE` para adicionar uma sequência como um padrão em uma tabela atual.  
   
 ```  
 CREATE TABLE Test.MyTable  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Usando a função NEXT VALUE FOR com SELECT … INTO  
- O exemplo a seguir usa o `SELECT … INTO` instrução para criar uma tabela chamada `Production.NewLocation` e usa o `NEXT VALUE FOR` função para numerar cada linha.  
+ O exemplo a seguir usa a instrução `SELECT … INTO` para criar uma tabela chamada `Production.NewLocation` e usa a função `NEXT VALUE FOR` para numerar cada linha.  
   
 ```  
 USE AdventureWorks2012 ;   
@@ -301,15 +301,15 @@ GO
 ```  
   
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. Concedendo permissão para executar NEXT VALUE FOR  
- O exemplo a seguir concede **atualização** permissão a um usuário chamado `AdventureWorks\Larry` permissão para executar `NEXT VALUE FOR` usando o `Test.CounterSeq` sequência.  
+ O exemplo a seguir concede a permissão **UPDATE** a uma permissão `AdventureWorks\Larry` nomeada pelo usuário para executar `NEXT VALUE FOR` usando a sequência `Test.CounterSeq`.  
   
 ```  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criar SEQUÊNCIA de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

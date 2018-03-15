@@ -49,9 +49,9 @@ EOMONTH ( start_date [, month_to_add ] )
  Expressão de data que especifica a data para a qual retornar o último dia do mês.  
   
  *month_to_add*  
- Expressão de inteiro opcional que especifica o número de meses a adicionar a *start_date*.  
+ Expressão de inteiro opcional que especifica o número de meses a serem adicionados a *start_date*.  
   
- Se esse argumento for especificado, então **EOMONTH** adiciona o número especificado de meses para *start_date*e, em seguida, retorna o último dia do mês da data resultante. Se essa adição exceder o intervalo de datas válido, um erro será lançado.  
+ Se esse argumento for especificado, **EOMONTH** adicionará o número de meses especificado a *start_date* e, em seguida, retornará o último dia do mês da data resultante. Se essa adição exceder o intervalo de datas válido, um erro será lançado.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **date**  

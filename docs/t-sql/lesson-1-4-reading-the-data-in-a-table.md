@@ -1,5 +1,5 @@
 ---
-title: Lendo os dados em uma tabela (Tutorial) | Microsoft Docs
+title: Lendo os dados em uma tabela (tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-4---reading-the-data-in-a-table"></a>Lição 1-4-lendo os dados em uma tabela
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Use a instrução SELECT para ler os dados em uma tabela. A instrução SELECT é um das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] mais importantes e há muitas variações na sintaxe. Para este tutorial, você trabalhará com cinco versões simples.  
+# <a name="lesson-1-4---reading-the-data-in-a-table"></a>Lição 1-4 – Lendo os dados de uma tabela
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Use a instrução SELECT para ler os dados em uma tabela. A instrução SELECT é um das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] mais importantes e há muitas variações na sintaxe. Para este tutorial, você trabalhará com cinco versões simples.  
   
 ### <a name="to-read-the-data-in-a-table"></a>Ler os dados em uma tabela  
   
@@ -95,7 +95,7 @@ Para obter informações sobre algumas funções que você pode usar para trabal
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Resumo: Criando objetos de banco de dados](../t-sql/lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [SELECT &#40;Transact-SQL&#41;](../t-sql/queries/select-transact-sql.md)  
   
   

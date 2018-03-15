@@ -67,10 +67,10 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>Argumentos  
  *match_expression*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo de dados de caractere.  
+ É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida do tipo de dados de caractere.  
   
  *pattern*  
- É a cadeia de caracteres específica de caracteres a ser pesquisado em *match_expression*e pode incluir os seguintes caracteres curinga válidos. *padrão de* pode ter um máximo de 8.000 bytes.  
+ É a cadeia de caracteres específica a ser pesquisada em *match_expression* e pode incluir os caracteres curinga válidos a seguir. *pattern* pode ter um máximo de 8.000 bytes.  
   
 |Caractere curinga|Description|Exemplo|  
 |------------------------|-----------------|-------------|  
@@ -80,18 +80,18 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Qualquer caractere único que não esteja no intervalo (^[a-f]) ou conjunto ([^abcdef]) especificado.|WHERE au_lname LIKE 'de[^l]%' localiza todos os sobrenomes de autor que comecem com de e a letra seguinte não seja l.|  
   
  *escape_character*  
- É um caractere colocado na frente de um caractere curinga para indicar que o curinga deve ser interpretado como um caractere comum, e não como um curinga. *escape_character* é uma expressão de caractere que não tem padrão e deve ser avaliada somente como um caractere.  
+ É um caractere colocado na frente de um caractere curinga para indicar que o curinga deve ser interpretado como um caractere comum, e não como um curinga. *escape_character* é uma expressão de caractere que não tem nenhum padrão e deve ser avaliada somente para um caractere.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- LIKE retornará TRUE se o *match_expression* corresponde especificado *padrão*.  
+ LIKE retorna TRUE se a *match_expression* corresponde ao *pattern* especificado.  
   
 ## <a name="remarks"></a>Remarks  
  Ao executar comparações de cadeias de caracteres usando LIKE, todos os caracteres na cadeia padrão são significativos. Isso inclui espaços à esquerda ou à direita. Se uma comparação em uma consulta deve retornar todas as linhas com uma cadeia de caracteres LIKE 'abc ' (abc seguido de um único espaço), não será retornada nenhuma linha na qual o valor daquela coluna seja abc (abc sem espaço). Entretanto, os espaços em branco à direita da expressão cujo padrão é correspondido são ignorados. Se uma comparação em uma consulta deve retornar todas as linhas com a cadeia de caracteres LIKE 'abc' (abc sem espaço), serão retornadas todas as linhas que comecem com abc e que tenham zero ou mais espaços em branco à direita.  
   
- Uma comparação de cadeia de caracteres usando um padrão que contém **char** e **varchar** dados não podem passar uma comparação LIKE devido a como os dados são armazenados. Você deve entender o armazenamento de cada tipo de dados e onde uma comparação LIKE pode falhar. O exemplo a seguir passa um local **char** variável para um procedimento armazenado e, em seguida, usa correspondência de padrões para localizar todos os funcionários cujos sobrenomes comecem com um conjunto especificado de caracteres.  
+ Uma comparação de cadeia de caracteres que usa um padrão que contém dados **char** e **varchar** pode não passar uma comparação LIKE devido à maneira como os dados são armazenados. Você deve entender o armazenamento de cada tipo de dados e onde uma comparação LIKE pode falhar. O exemplo a seguir passa uma variável **char** local para um procedimento armazenado e usa a correspondência de padrões para localizar todos os funcionários cujos sobrenomes começam com um conjunto de caracteres especificado.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +107,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- No `FindEmployee` procedimento, nenhuma linha será retornada porque o **char** variável (`@EmpLName`) contém espaços em branco à direita sempre que o nome contém menos de 20 caracteres. Porque o `LastName` coluna é **varchar**, não há nenhum espaço em branco à direita. Este procedimento falha porque os espaços em branco à direita são significativos.  
+ No procedimento `FindEmployee`, nenhuma linha é retornada porque a variável **char** (`@EmpLName`) contém espaços em branco à direita sempre que o nome contém menos de 20 caracteres. Como a coluna `LastName` é **varchar**, não há nenhum espaço em branco à direita. Este procedimento falha porque os espaços em branco à direita são significativos.  
   
- No entanto, o exemplo a seguir terá êxito porque os espaços em branco não são adicionados a um **varchar** variável.  
+ Entretanto, o exemplo a seguir obtém êxito porque não são adicionados espaços em branco à direita a uma variável **varchar**.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>Correspondência de padrão com o uso de LIKE  
- LIKE oferece suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *padrão*, e *escape_character*, se presente) são tipos de dados de caractere ASCII, correspondência de padrão ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Quando você usa dados Unicode (**nchar** ou **nvarchar** tipos de dados) com LIKE, espaços em branco à direita são significativos; no entanto, para dados não Unicode, os espaços em branco não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE oferece suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *pattern* e *escape_character*, se presente) são tipos de dados de caractere ASCII, a correspondência de padrões ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Ao usar dados Unicode (tipos de dados **nchar** ou **nvarchar**) com LIKE, os espaços em branco à direita são significativos; entretanto, para dados não Unicode, os espaços em branco à direita não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A seguir é apresentada uma série de exemplos que mostram as diferenças em linhas retornadas entre a correspondência de padrão LIKE ASCII e Unicode.  
   
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Usando os caracteres curinga [ ]  
- O exemplo a seguir localiza funcionários no `Person` tabela com o nome de `Cheryl` ou `Sheryl`.  
+ O exemplo a seguir localiza funcionários na tabela `Person` com o nome `Cheryl` ou `Sheryl`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +320,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Usando LIKE com o caractere curinga %  
- O exemplo a seguir localiza todos os funcionários a `DimEmployee` tabela com números de telefone que começam com `612`.  
+ O exemplo a seguir localiza todos os funcionários na tabela `DimEmployee` com números de telefone que começam com `612`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Usando NOT LIKE com o caractere curinga %  
- O exemplo a seguir localiza todos os números de telefone no `DimEmployee` tabela que não começam com `612`.  .  
+ O exemplo a seguir localiza todos os números de telefone na tabela `DimEmployee` que não começam com `612`.  para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -346,8 +346,8 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. Usando LIKE com o caractere curinga de _  
- O exemplo a seguir localiza todos os números de telefone que tem um código de área, começando com `6` e terminando em `2` no `DimEmployee` tabela. Observe que o caractere curinga % também é incluído no final do padrão de pesquisa, já que o código de área é a primeira parte do número de telefone e caracteres adicionais existirem depois do valor de coluna.  
+### <a name="g-using-like-with-the--wildcard-character"></a>G. Usando LIKE com o caractere curinga _  
+ O exemplo a seguir localiza todos os números de telefone que têm um código de área que começa com `6` e termina em `2` na tabela `DimEmployee`. Observe que o caractere curinga % também é incluído no final do padrão de pesquisa, já que o código de área é a primeira parte do número de telefone e há caracteres adicionais após o valor de coluna.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -358,8 +358,8 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
